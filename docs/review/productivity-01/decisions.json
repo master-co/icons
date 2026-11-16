@@ -1,0 +1,543 @@
+[
+  {
+    "name": "keyboard",
+    "purpose": "輸入裝置設定與快捷鍵入口。",
+    "confusable": "touchpad",
+    "observation": "Lucide兩排密集鍵點，Tabler較扁寬；鍵點與空白鍵是必要線索。",
+    "decision": "採19×14框，16px只留三鍵與空白鍵；20／24補第二排，圓角後鍵點仍離邊。",
+    "dash": "鍵盤不是選取範圍，虛線會破壞外殼。",
+    "opacity": "每個保留鍵都是辨識訊號，無須淡化。"
+  },
+  {
+    "name": "mouse",
+    "purpose": "滑鼠裝置與指標偏好。",
+    "confusable": "tablet",
+    "observation": "Lucide膠囊殼與Tabler方圓殼都只留滾輪，不畫左右按鍵密線。",
+    "decision": "圓弧上下殼接直線保持切線，單一短滾輪；三尺寸維持窄直輪廓。",
+    "dash": "物理外殼需連續，沒有隱藏邊界。",
+    "opacity": "殼與滾輪同為主要訊號，保持實色。"
+  },
+  {
+    "name": "mouse-pointer",
+    "purpose": "游標選取工具。",
+    "confusable": "send",
+    "observation": "Lucide有尾桿，Iconoir只有折返三角；尾桿可區別紙飛機。",
+    "decision": "用大開口三角凹口搭配右下尾桿，局部小圓角保留尖端，16px仍能看出凹口。",
+    "dash": "非選取框，不使用虛線輪廓。",
+    "opacity": "尾桿是游標識別線，不作淡化。"
+  },
+  {
+    "name": "touchpad",
+    "purpose": "觸控板硬體設定。",
+    "confusable": "tablet",
+    "observation": "Lucide用矩形與底部雙鍵，Hugeicons用手指操作；選擇靜態裝置以減少手勢歧義。",
+    "decision": "18×15橫框，下方雙鍵完整連接，分割位置與圓角留有足夠空間。",
+    "dash": "按鍵邊界是真實構造，採實線。",
+    "opacity": "上下區域都承載裝置辨識，不降低按鍵對比。"
+  },
+  {
+    "name": "tablet",
+    "purpose": "平板預覽與裝置類型。",
+    "confusable": "smartphone",
+    "observation": "兩份原稿均以較寬直立框和單點區別手機；不需要畫螢幕內框。",
+    "decision": "14×19框寬於既有手機，單點保留底部空白，三圓角只改外殼半徑。",
+    "dash": "顯示實體裝置，不代表待放置版面。",
+    "opacity": "單點與框構成全部訊號，實色較清楚。"
+  },
+  {
+    "name": "laptop",
+    "purpose": "桌面端裝置與預覽。",
+    "confusable": "monitor",
+    "observation": "Lucide與Iconoir皆有薄底座；Iconoir額外觸控點在16px可省。",
+    "decision": "螢幕底緣由底座單筆共享，避免重描；略展開的底座與monitor支腳區別。",
+    "dash": "完整裝置輪廓沒有隱藏部分。",
+    "opacity": "底座不能被淡化，否則易讀成顯示器。"
+  },
+  {
+    "name": "bluetooth",
+    "purpose": "藍牙連線設定。",
+    "confusable": "usb",
+    "observation": "兩份原稿都保留通用交叉符號，差異在尖角和上下幅度。",
+    "decision": "縱軸居中，交叉共用節點，小局部圓角不吃掉兩個三角開口。",
+    "dash": "連線種類符號本身不是斷線狀態。",
+    "opacity": "交叉筆畫無前後層級，不淡化。"
+  },
+  {
+    "name": "usb",
+    "purpose": "USB有線連線或週邊。",
+    "confusable": "network",
+    "observation": "Lucide斜向、Tabler直向；圓、方與箭頭三種端點是共通識別。",
+    "decision": "採直向主幹及錯位左右分支，保留圓方端點內孔，16px不追加接頭細節。",
+    "dash": "不表示中斷或待連線，所以支幹用實線。",
+    "opacity": "三種端點均必要，降低其中一支會改變符號。"
+  },
+  {
+    "name": "cast",
+    "purpose": "螢幕投放。",
+    "confusable": "wifi",
+    "observation": "兩份原稿都讓左下波紋遮擋螢幕，顯示框可區別一般Wi-Fi。",
+    "decision": "螢幕左下開口避讓兩道同心弧，弧與點等距，無背景色遮蓋。",
+    "dash": "波紋代表投放訊號，不是斷線，保留連續弧。",
+    "opacity": "兩道弧已足夠分層，不需逐筆淡化。"
+  },
+  {
+    "name": "accessibility",
+    "purpose": "無障礙功能入口；以輪椅符號作通用視覺提示並搭配文字。",
+    "confusable": "user",
+    "observation": "Lucide與Iconoir都採輪椅人物，前傾姿態較複雜；保留頭、座與開口輪。",
+    "decision": "直立中立人物、開口輪及清楚腳托；16px移除推進姿態細節，輪與腿不黏合。",
+    "dash": "人物與輪為主輪廓，虛線沒有語意。",
+    "opacity": "所有部分都用於辨識，無次要裝飾可淡化。"
+  },
+  {
+    "name": "server",
+    "purpose": "伺服器資源與主機列表。",
+    "confusable": "hard-drive",
+    "observation": "Lucide兩個獨立機架、Tabler相接機架；獨立框能保留層間留白。",
+    "decision": "兩層6高機架相隔4，各留單燈；圓潤模式仍有足夠中間空隙。",
+    "dash": "機架是完整設備，不表示虛擬佔位。",
+    "opacity": "兩層同等重要，不以深淺暗示故障。"
+  },
+  {
+    "name": "hard-drive",
+    "purpose": "本地儲存空間與磁碟。",
+    "confusable": "server",
+    "observation": "Lucide與Iconoir採梯形上殼與前面板；面板指示點可簡化。",
+    "decision": "上殼接面板，16px只留一點，20／24兩點；面板上緣無重複描邊。",
+    "dash": "完整硬體外殼使用實線。",
+    "opacity": "前面板是區別普通盒子的線索，保持對比。"
+  },
+  {
+    "name": "cpu",
+    "purpose": "處理器與運算資源。",
+    "confusable": "memory-stick",
+    "observation": "兩份原稿都用方晶片與外引腳；引腳數量決定小尺寸密度。",
+    "decision": "16px每邊兩腳、20／24每邊三腳，中心6單位孔保留空白，四角不堆引腳。",
+    "dash": "引腳代表接點，不是未完成邊界。",
+    "opacity": "內核與引腳同為必要識別，無層級差。"
+  },
+  {
+    "name": "memory-stick",
+    "purpose": "記憶體容量與硬體。",
+    "confusable": "cpu",
+    "observation": "Lucide以短芯片筆畫保持疏朗，Tabler有側凹槽與密集接點。",
+    "decision": "首稿空心小芯片在16px過密，改為兩條短實線；20／24三條，底部四接點保留中央間隙，刪除無用頂部凹線。",
+    "dash": "記憶體接腳為實體結構，不用虛線。",
+    "opacity": "芯片以簡化取代淡化，主體保持可辨識。"
+  },
+  {
+    "name": "network",
+    "purpose": "網路節點拓樸。",
+    "confusable": "workflow",
+    "observation": "Lucide一對二節點，Iconoir二對一；共同訊號為三個節點及垂直接線。",
+    "decision": "居中上節點及對稱下節點，6單位孔與中段空白；每條接線只到框邊。",
+    "dash": "表示已建立的拓樸，非待連線狀態。",
+    "opacity": "所有節點等權，不製造主從明暗。"
+  },
+  {
+    "name": "workflow",
+    "purpose": "自動化工作流程。",
+    "confusable": "network",
+    "observation": "Lucide簡單兩步，Hugeicons帶決策菱形；本圖優先表達步驟連接而非完整流程圖。",
+    "decision": "兩個錯位步驟由轉角箭頭連接，保留方向與7×6內框，與對稱網路區別。",
+    "dash": "流程本身不表示草稿，連線維持實線。",
+    "opacity": "步驟不代表完成狀態，不能以淡化暗示未啟用。"
+  },
+  {
+    "name": "git-branch",
+    "purpose": "版本控制分支。",
+    "confusable": "git-merge",
+    "observation": "Lucide與Iconoir的支線都自下往右上分開；圓節點優於方框以區別工作流程。",
+    "decision": "三個同半徑節點，支線端點切向接到圓底，不穿過節點孔。",
+    "dash": "正式分支非預測路徑，採實線。",
+    "opacity": "主線與分支都是識別訊號，不降低分支權重。"
+  },
+  {
+    "name": "git-merge",
+    "purpose": "合併版本分支。",
+    "confusable": "git-branch",
+    "observation": "Lucide與Tabler的右節點較低，曲線匯入直線；兩者可藉節點高度區別。",
+    "decision": "沿用分支左側母型，右節點下移，曲線水平接右節點左緣，沒有穿孔。",
+    "dash": "已存在的合併關係不是虛線預覽。",
+    "opacity": "不以明暗表達尚未定義的合併狀態。"
+  },
+  {
+    "name": "braces",
+    "purpose": "物件、JSON與結構化資料。",
+    "confusable": "code",
+    "observation": "Lucide和Tabler都以對稱花括號辨識，中央凹口比裝飾端點重要。",
+    "decision": "兩側Q曲線收束中央尖點，上下端保持短平段，16px中央留白充足。",
+    "dash": "文字語法符號不可分段描繪。",
+    "opacity": "左右括號是成對結構，維持相同對比。"
+  },
+  {
+    "name": "webhook",
+    "purpose": "事件回呼與服務整合。",
+    "confusable": "share",
+    "observation": "兩份原稿都以三個開口圓鉤連成回呼循環；須保留每個開口。",
+    "decision": "三個等距圓鉤與連桿以120度旋轉構成，末端停在下一鉤內而不碰外圈，16px三個開口仍可見。",
+    "dash": "回呼符號已由開口表示聯繫，不再加虛線。",
+    "opacity": "三個循環鉤同權，漸淡會誤導方向。"
+  },
+  {
+    "name": "text",
+    "purpose": "文字工具與字型設定入口。",
+    "confusable": "heading",
+    "observation": "Lucide與Iconoir都用帶端點的T，與既有H標題語意不同。",
+    "decision": "15單位橫冠與單一中幹，下端短襯線平衡重心，三尺寸不加入小裝飾。",
+    "dash": "字形本身不能拆成虛線。",
+    "opacity": "橫冠與中幹都重要，維持等重。"
+  },
+  {
+    "name": "wrap-text",
+    "purpose": "內容自動換行。",
+    "confusable": "undo",
+    "observation": "兩份原稿以兩行文字及折返箭頭，箭頭必須與第二行連續。",
+    "decision": "上行直線，第二行圓弧折返至下行，左下短線與箭頭留出空白，固定方向不隨RTL鏡射。",
+    "dash": "換行不是截斷或未輸入文字，不用虛線。",
+    "opacity": "折返箭頭是核心訊號，不淡化。"
+  },
+  {
+    "name": "highlighter",
+    "purpose": "文字螢光標記。",
+    "confusable": "pencil",
+    "observation": "Lucide開口筆桿、Tabler封閉筆桿；寬鑿形筆頭可區別細鉛筆。",
+    "decision": "閉合寬筆桿、斜平筆尖與下方標記線，短接頭局部限圓角，16px仍有筆尖空間。",
+    "dash": "標記為連續筆跡，不應表現虛線。",
+    "opacity": "目前為工具入口而非已選中文字，無填色淡化需求。"
+  },
+  {
+    "name": "eraser",
+    "purpose": "擦除繪圖或格式。",
+    "confusable": "highlighter",
+    "observation": "兩份原稿以斜方塊、斜分割與平底辨識橡皮擦。",
+    "decision": "較寬的橡皮塊及單一分界線，落地平段延伸成擦除基線，與筆形工具不同。",
+    "dash": "擦除工具不等於已刪除區域，輪廓用實線。",
+    "opacity": "用分割線區分橡皮兩端，不需透明填色。"
+  },
+  {
+    "name": "paintbrush",
+    "purpose": "畫筆、塗繪與樣式工具。",
+    "confusable": "pencil",
+    "observation": "Lucide寬平刷、Hugeicons細筆；數位編輯入口適合保留柔軟筆毛而非硬尖。",
+    "decision": "細柄圓頭與下方弧形筆毛，共用接縫；筆毛尖端向左彎，區別鉛筆與螢光筆。",
+    "dash": "筆毛與筆柄完整，不使用虛線。",
+    "opacity": "以曲線表達材質差別，無需淡化筆毛。"
+  },
+  {
+    "name": "palette",
+    "purpose": "色彩與配色設定。",
+    "confusable": "circle",
+    "observation": "Lucide較多色孔、Iconoir點較細；右下握口使外輪廓成立。",
+    "decision": "以連續曲線形成握口，16px保留三點、20／24四點，點遠離外框與凹口。",
+    "dash": "調色盤不是選色區域框，不用虛線。",
+    "opacity": "單色工具不預設色階，不以透明度暗示顏色。"
+  },
+  {
+    "name": "indent-increase",
+    "purpose": "增加段落縮排。",
+    "confusable": "indent-decrease",
+    "observation": "兩份原稿以三條文字線及右指chevron表達內縮。",
+    "decision": "右側文字共用三行長度，左箭頭與文字相隔3.5單位；固定操作符號方向。",
+    "dash": "文字行是段落提示，不代表省略內容。",
+    "opacity": "三行與箭頭均保持實色，以方向而非深淺分辨。"
+  },
+  {
+    "name": "indent-decrease",
+    "purpose": "減少段落縮排。",
+    "confusable": "indent-increase",
+    "observation": "兩份原稿都只反轉左側箭頭，保留文字位置。",
+    "decision": "與增加縮排共享母型，只反轉左箭頭，九組輸出保持對稱留白。",
+    "dash": "段落與箭頭不表示待處理狀態。",
+    "opacity": "不藉淡化區別反向操作，維持同等重量。"
+  },
+  {
+    "name": "subscript",
+    "purpose": "文字下標。",
+    "confusable": "superscript",
+    "observation": "Lucide與Tabler均使用x及低位2；位置比字形裝飾重要。",
+    "decision": "x保持主字高度，小2用開放曲線及短平底，右側留白；16px仍能區分上下位置。",
+    "dash": "排版字形須連續，虛線會失去辨識。",
+    "opacity": "數字是唯一狀態訊號，不能淡化。"
+  },
+  {
+    "name": "superscript",
+    "purpose": "文字上標。",
+    "confusable": "subscript",
+    "observation": "兩份原稿與下標共享x及小2，只改數字高度。",
+    "decision": "完全共用下標字形，2抬高10單位；主字與上標不相碰。",
+    "dash": "上標字形非佔位符，不用虛線。",
+    "opacity": "上標數字維持同描邊對比，確保小尺寸可見。"
+  },
+  {
+    "name": "file-code",
+    "purpose": "程式碼類型文件。",
+    "confusable": "file-text",
+    "observation": "兩份原稿在文件內放相對角括號，外框折角仍是辨識基礎。",
+    "decision": "直接沿用原生file母型，括號置於下半部，縮短端點避免貼近側框；不加第三筆斜線。",
+    "dash": "文件與語法括號需完整，無虛線意義。",
+    "opacity": "兩側括號同等重要，不能淡化其中之一。"
+  },
+  {
+    "name": "file-image",
+    "purpose": "圖片資產檔案。",
+    "confusable": "image",
+    "observation": "Lucide與Hugeicons均以圖片山形及圓點放在文件內，部分方案讓山接框。",
+    "decision": "採獨立單山與小圓點，與外框不黏合；保留真實file折角及16px母型。",
+    "dash": "圖片標記不是選取區域，不用虛線。",
+    "opacity": "山與圓點已足以提示內容，無需面積填色。"
+  },
+  {
+    "name": "file-video",
+    "purpose": "影片檔案與媒體附件。",
+    "confusable": "play",
+    "observation": "兩份原稿採外掛攝影機，16px需容納外框及雙重小框；可用播放三角表達影片內容。",
+    "decision": "完整file框內放單一播放三角，省去密集攝影機孔洞；視訊通話仍使用video。",
+    "dash": "播放符號與文件都是完整物件。",
+    "opacity": "三角是類型線索，淡化會失去影片識別。"
+  },
+  {
+    "name": "file-audio",
+    "purpose": "音訊與音樂檔案。",
+    "confusable": "file-video",
+    "observation": "Lucide把音符放外側，Tabler在文件內；單音符已足夠，不需五線譜。",
+    "decision": "單一圓音頭、直桿及短旗，全部放入file下半部，音頭孔與框保留間隔。",
+    "dash": "音符不是波形截斷，不採分段。",
+    "opacity": "音頭和旗均為識別，維持實色。"
+  },
+  {
+    "name": "file-archive",
+    "purpose": "壓縮檔與ZIP附件。",
+    "confusable": "file-lock",
+    "observation": "Lucide分段齒軌配拉環，Tabler交錯齒較密；首稿連續短桿與方環誤似鎖頭。",
+    "decision": "改為兩段拉鍊齒軌及獨立圓拉環，維持完整file框；三尺寸調整段長間距，明暗與55%前景色檢查。",
+    "dash": "採用虛線表達分離的拉鍊齒，連續線會像鑰匙或鎖；僅齒軌分段，主框實線。",
+    "dashUsed": true,
+    "opacity": "齒軌不再淡化，以免16px齒點消失。"
+  },
+  {
+    "name": "folder-minus",
+    "purpose": "移除資料夾或取消集合成員。",
+    "confusable": "folder-x",
+    "observation": "Lucide把減號置內，Tabler把狀態放外側；內置能完整保留母型。",
+    "decision": "沿用folder尺寸，減號與原folder-plus同中心；與拒絕叉號清楚區分。",
+    "dash": "減號已表達移除，框不需要變虛線。",
+    "opacity": "狀態不是停用淡色，保持對比。"
+  },
+  {
+    "name": "folder-check",
+    "purpose": "已確認、同步完成的資料夾。",
+    "confusable": "folder-plus",
+    "observation": "兩份原稿皆保留資料夾標籤及勾號，差別為內置或外掛。",
+    "decision": "採內置勾號與原生資料夾，勾的低點離底框足夠，16px不接成一塊。",
+    "dash": "確認狀態代表完成，不需未完成邊界。",
+    "opacity": "勾為唯一狀態訊號，不淡化。"
+  },
+  {
+    "name": "folder-x",
+    "purpose": "拒絕或無效資料夾項目。",
+    "confusable": "folder-minus",
+    "observation": "Lucide內叉，Tabler外叉；內叉較易與既有folder-plus保持家族一致。",
+    "decision": "共享folder及小叉mark，交點居中、四端避開外框，三圓角比例穩定。",
+    "dash": "錯誤由叉號表達，虛線會增加未建立的歧義。",
+    "opacity": "無效不等於不可見，圖形維持實色交由介面處理停用色。"
+  },
+  {
+    "name": "folder-up",
+    "purpose": "上傳資料夾。",
+    "confusable": "folder-down",
+    "observation": "兩份原稿都以資料夾及向上箭頭，外置版需開框。",
+    "decision": "箭頭放內部，向上尖端遠離標籤轉折；使用與向下完全共用的軸長。",
+    "dash": "傳輸方向由箭頭表達，不需要虛線。",
+    "opacity": "不以淡化暗示傳輸進度，保持圖示中立。"
+  },
+  {
+    "name": "folder-down",
+    "purpose": "下載資料夾。",
+    "confusable": "folder-up",
+    "observation": "Lucide與Tabler的下箭頭都保留明確箭尖，不能只剩直桿。",
+    "decision": "共享上傳母型，僅箭尖反轉，底端距母型底框仍有清楚間隔。",
+    "dash": "不是待建立的資料夾，所以用完整實線框。",
+    "opacity": "不加入進度式淡化，方向保持高辨識。"
+  },
+  {
+    "name": "calendar-plus",
+    "purpose": "建立新的行事曆事件。",
+    "confusable": "calendar-check",
+    "observation": "兩份原稿使用右下外掛加號；原庫calendar-check為內置，應先維持本庫家族。",
+    "decision": "共享原生日曆框、表頭和綁定，加號內置15高度，避免另開缺口改變比例。",
+    "dash": "新增操作不是尚未完成的日曆，不需虛線框。",
+    "opacity": "加號和日期框同為識別，沒有淡化需求。"
+  },
+  {
+    "name": "calendar-minus",
+    "purpose": "移除排程項目。",
+    "confusable": "calendar-x",
+    "observation": "兩份原稿以外掛減號；與plus共用構造比另選開框更一致。",
+    "decision": "與calendar-plus完全共用框及中心，只減去縱筆，保留取消事件的叉號差異。",
+    "dash": "減號已表達動作，不再以虛線重複暗示移除。",
+    "opacity": "狀態符號不能因淡化失去辨識。"
+  },
+  {
+    "name": "calendar-x",
+    "purpose": "取消或拒絕行事曆事件。",
+    "confusable": "calendar-minus",
+    "observation": "Lucide內叉、Tabler外叉；內置較合本庫既有calendar-check。",
+    "decision": "共享日曆框及小叉mark，保持表頭下方空白，16px交點未黏到框。",
+    "dash": "取消由叉號表達，不讓外框變成草稿語意。",
+    "opacity": "取消圖示保持對比，不等於停用元件。"
+  },
+  {
+    "name": "calendar-clock",
+    "purpose": "事件時間與排程設定。",
+    "confusable": "clock",
+    "observation": "兩份原稿以較大時鐘遮擋日曆右下角，保留表頭及綁定。",
+    "decision": "沿用原生表頭與綁定，只切開鐘所在外框；4.5半徑鐘保留指針，沒有白色遮蓋。",
+    "dash": "兩個物件由開框表現遮擋，不需要虛線隱藏邊。",
+    "opacity": "時鐘是主狀態，不能淡化；日曆也需辨識。"
+  },
+  {
+    "name": "calendar-range",
+    "purpose": "開始與結束日期範圍。",
+    "confusable": "calendar-days",
+    "observation": "Lucide與Hugeicons使用兩行日期點及連續段，與零散日期格不同。",
+    "decision": "兩行錯位短線連同起訖點，保持四單位行距，不以密集日期格表示範圍。",
+    "dash": "連續日期範圍用實線更準確，虛線會像不連續選取。",
+    "opacity": "不加入選取底色以維持單色中立，短線已承載範圍。"
+  },
+  {
+    "name": "timer",
+    "purpose": "工作計時與倒數入口。",
+    "confusable": "clock",
+    "observation": "Lucide與Iconoir都用頂部按鈕區別時鐘，指針角度不同。",
+    "decision": "圓面上移留足底部空白，頂部與側邊按鈕清楚連接，單指針避免小尺寸交點擁擠。",
+    "dash": "本圖為計時工具，不代表剩餘進度弧。",
+    "opacity": "未顯示時間比例，所以不建立明暗區段。"
+  },
+  {
+    "name": "clipboard-list",
+    "purpose": "剪貼簿工作項目列表。",
+    "confusable": "clipboard",
+    "observation": "兩份原稿均以兩排點與短線，夾頭及正文需分離。",
+    "decision": "16px保留一列點與短線，20／24兩列；沿用原生夾頭，不壓縮其空洞。",
+    "dash": "清單項目不是文字佔位，保持實線。",
+    "opacity": "僅保留必要列，無需淡化次列。"
+  },
+  {
+    "name": "clipboard-copy",
+    "purpose": "複製內容到剪貼簿。",
+    "confusable": "clipboard-paste",
+    "observation": "Lucide向內箭頭，Tabler四角框；箭頭可與既有向外paste形成對應。",
+    "decision": "直接共用clipboard-paste三筆開框，箭頭反向指入；RTL仍固定操作方向。",
+    "dash": "複製箭頭比虛線選區更明確，因此無需虛線。",
+    "opacity": "箭頭是主要動作線索，保持實色。"
+  },
+  {
+    "name": "clipboard-x",
+    "purpose": "取消剪貼簿工作項目。",
+    "confusable": "clipboard-check",
+    "observation": "Lucide與Tabler均在原夾板中間加入叉號，不另加徽章框。",
+    "decision": "完整共享原生clipboard，叉號中心與既有check一致；不添加多餘文字線。",
+    "dash": "取消由叉號表達，不改外框成未完成語意。",
+    "opacity": "叉號無次要部分，不淡化。"
+  },
+  {
+    "name": "clipboard-pen",
+    "purpose": "編輯剪貼簿記錄。",
+    "confusable": "clipboard-paste",
+    "observation": "兩份原稿都讓斜筆覆蓋右下角，應切開母型而不是覆蓋白底。",
+    "decision": "原生夾頭及左右上角保持不變，右下開口放筆；16px省去筆帽分割，20／24保留。",
+    "dash": "遮擋關係用真實開口，不使用虛線殘留邊。",
+    "opacity": "筆與夾板都是辨識訊號，保持等對比。"
+  },
+  {
+    "name": "message-plus",
+    "purpose": "建立對話或留言。",
+    "confusable": "message",
+    "observation": "Lucide內加號、Tabler外加號並附文字；內置較適合既有簡約訊息母型。",
+    "decision": "直接使用既有message外框與尾巴，在空白中心加號，不加入文字短線。",
+    "dash": "建立動作用加號足夠，不用虛線佔位框。",
+    "opacity": "加號為核心識別，維持實色。"
+  },
+  {
+    "name": "message-circle-question",
+    "purpose": "提問、對話說明與客服問題。",
+    "confusable": "help-circle",
+    "observation": "Lucide問號內置、Tabler外置；保留尾巴才可與一般說明圓區別。",
+    "decision": "完整圓對話框內置開放問號，尾巴局部微圓；問號與點距離足以在16px分開。",
+    "dash": "提問不是尚未發送狀態，不改虛線。",
+    "opacity": "問號與尾巴都必要，無次要層可淡化。"
+  },
+  {
+    "name": "message-circle-warning",
+    "purpose": "對話警示或需要處理的訊息。",
+    "confusable": "message-circle-question",
+    "observation": "兩份原稿使用驚嘆號及圓訊息輪廓，內置與外掛各有密度差。",
+    "decision": "與提問共用圓框及尾巴，只換為直筆與圓點，避免警示家族不同輪廓。",
+    "dash": "警示不等於待建立訊息，保留實線框。",
+    "opacity": "警示筆畫不能因淡化減少可見性。"
+  },
+  {
+    "name": "mail-check",
+    "purpose": "已確認或處理完成的郵件。",
+    "confusable": "mail-x",
+    "observation": "兩份原稿都讓勾號佔用右下角，信封折線保留。",
+    "decision": "沿用原生mail上緣和折線，只打開右下框，勾號不碰信封V形內線。",
+    "dash": "遮擋以真正缺口處理，不畫虛線隱邊。",
+    "opacity": "勾與信封同時可辨識，無需壓低其中一層。"
+  },
+  {
+    "name": "mail-x",
+    "purpose": "拒收、失敗或移除郵件。",
+    "confusable": "mail-check",
+    "observation": "Lucide與Tabler採相同位置的外掛叉號，與勾號可共用信封開口。",
+    "decision": "完整共用mail-check開框，只換叉號，四個端點與折線分離。",
+    "dash": "叉號已表達失敗／移除，不再加斷線訊號。",
+    "opacity": "不把錯誤圖示畫成停用淡色，讓介面設定顏色。"
+  },
+  {
+    "name": "bell-ring",
+    "purpose": "響鈴或開啟提醒。",
+    "confusable": "bell",
+    "observation": "Lucide圓弧振動線、Tabler斜短線；圓弧與既有柔和鐘體更一致。",
+    "decision": "原bell完全保留，外側增加兩條對稱弧，與鐘肩有清楚間距，不加上方小凸點。",
+    "dash": "單道振動弧已足夠，不切成細碎虛線。",
+    "opacity": "不表示聲量梯度，兩側振動弧同權。"
+  },
+  {
+    "name": "user-x",
+    "purpose": "移除、封鎖或取消使用者。",
+    "confusable": "user-minus",
+    "observation": "Lucide與Iconoir都用人物加右側叉號；需與既有加減勾家族一致。",
+    "decision": "直接使用既有狀態人物的頭與肩，叉號與user-plus相同位置，不壓縮頭部。",
+    "dash": "狀態以叉號表達，人物仍為實體帳戶。",
+    "opacity": "無需淡化人物表示移除，避免可讀性下降。"
+  },
+  {
+    "name": "user-cog",
+    "purpose": "帳戶設定與權限管理。",
+    "confusable": "settings",
+    "observation": "Lucide與Tabler把齒輪放右下並切開肩部，齒輪不能壓住整個人物。",
+    "decision": "保留狀態人物頭部，左肩開放避讓六齒設定輪；齒輪中心孔及外齒在16px仍可辨識。",
+    "dash": "肩部為遮擋而開口，不應補虛線。",
+    "opacity": "齒輪是主要動作訊號，不淡化以掩飾密度。"
+  },
+  {
+    "name": "megaphone",
+    "purpose": "公告、廣播與團隊通知。",
+    "confusable": "volume",
+    "observation": "Lucide喇叭加握柄、Tabler更幾何；握柄使其與音量揚聲器不同。",
+    "decision": "擴口輪廓、窄後腔及下方握柄共享接點，局部圓角保留擴口方向。",
+    "dash": "公告工具是完整物件，不需虛線聲波。",
+    "opacity": "不加聲波及淡化效果，讓輪廓本身成立。"
+  },
+  {
+    "name": "handshake",
+    "purpose": "協作、合作夥伴與達成共識。",
+    "confusable": "heart",
+    "observation": "Lucide保留雙袖與交握手，Tabler以心形包住交握；採雙袖避免變成單純喜歡。",
+    "decision": "外側雙袖、中央握合拇指與下方指節形成主輪廓，16px刪一條指節線；不加入愛心外殼。",
+    "dash": "接觸的雙手不能以虛線切斷。",
+    "opacity": "兩手平等，不使用深淺暗示主從。"
+  }
+]

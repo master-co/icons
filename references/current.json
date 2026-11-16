@@ -1,0 +1,8 @@
+{
+  "manifests": [
+    "references/ui-v1/manifest.json",
+    "references/organization-01/manifest.json",
+    "references/productivity-01/manifest.json"
+  ],
+  "before": "references/productivity-01/master-before.json"
+}

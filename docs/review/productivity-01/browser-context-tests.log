@@ -1,0 +1,47 @@
+$ playwright test tests/browser/scenarios.spec.mjs '--project=chromium-*' '--project=webkit-*'
+[WebServer] $ node scripts/dev.mjs
+[WebServer] (node:28733) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 16 tests using 3 workers
+
+(node:28779) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:28781) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:28780) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   3 [chromium-1x] › tests/browser/scenarios.spec.mjs:51:1 › organization scope search, layout and pin controls work offline (322ms)
+  ✓   4 [chromium-1x] › tests/browser/scenarios.spec.mjs:64:1 › new productivity controls work in the delivered offline workspace (520ms)
+(node:28803) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 [chromium-1x] › tests/browser/scenarios.spec.mjs:32:1 › reference pagination covers new drawings, before masters and offline source originals (2.3s)
+(node:28811) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   5 [chromium-2x] › tests/browser/scenarios.spec.mjs:9:1 › all contexts render in light/dark and desktop/mobile; controls and navigation work (2.2s)
+  ✓   7 [chromium-2x] › tests/browser/scenarios.spec.mjs:51:1 › organization scope search, layout and pin controls work offline (257ms)
+  ✓   8 [chromium-2x] › tests/browser/scenarios.spec.mjs:64:1 › new productivity controls work in the delivered offline workspace (520ms)
+(node:28821) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   6 [chromium-2x] › tests/browser/scenarios.spec.mjs:32:1 › reference pagination covers new drawings, before masters and offline source originals (2.3s)
+(node:28850) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   2 [chromium-1x] › tests/browser/scenarios.spec.mjs:9:1 › all contexts render in light/dark and desktop/mobile; controls and navigation work (5.8s)
+(node:28898) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  11 [webkit-1x] › tests/browser/scenarios.spec.mjs:51:1 › organization scope search, layout and pin controls work offline (528ms)
+  ✓   9 [webkit-1x] › tests/browser/scenarios.spec.mjs:9:1 › all contexts render in light/dark and desktop/mobile; controls and navigation work (2.4s)
+(node:28954) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  12 [webkit-1x] › tests/browser/scenarios.spec.mjs:64:1 › new productivity controls work in the delivered offline workspace (692ms)
+(node:28970) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  10 [webkit-1x] › tests/browser/scenarios.spec.mjs:32:1 › reference pagination covers new drawings, before masters and offline source originals (2.7s)
+(node:28983) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  15 [webkit-2x] › tests/browser/scenarios.spec.mjs:51:1 › organization scope search, layout and pin controls work offline (510ms)
+  ✓  16 [webkit-2x] › tests/browser/scenarios.spec.mjs:64:1 › new productivity controls work in the delivered offline workspace (674ms)
+  ✓  13 [webkit-2x] › tests/browser/scenarios.spec.mjs:9:1 › all contexts render in light/dark and desktop/mobile; controls and navigation work (2.4s)
+  ✓  14 [webkit-2x] › tests/browser/scenarios.spec.mjs:32:1 › reference pagination covers new drawings, before masters and offline source originals (2.7s)
+
+  16 passed (12.6s)

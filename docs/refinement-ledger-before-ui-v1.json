@@ -1,0 +1,435 @@
+{
+  "date": "2026-11-16",
+  "scope": "Original 48 named drawings only; expansion removed at user request",
+  "statusMeaning": "visually-reviewed-candidate is not final user approval",
+  "icons": [
+    {
+      "name": "arrow-right",
+      "concept": "arrow-right",
+      "status": "awaiting-comparison"
+    },
+    {
+      "name": "arrow-up",
+      "concept": "arrow-right",
+      "status": "awaiting-comparison"
+    },
+    {
+      "name": "chevron-right",
+      "concept": "chevron-right",
+      "status": "awaiting-comparison"
+    },
+    {
+      "name": "chevron-down",
+      "concept": "chevron-right",
+      "status": "awaiting-comparison"
+    },
+    {
+      "name": "arrow-up-right",
+      "concept": "arrow-right",
+      "status": "awaiting-comparison"
+    },
+    {
+      "name": "undo",
+      "concept": "undo",
+      "status": "awaiting-comparison"
+    },
+    {
+      "name": "download",
+      "concept": "download",
+      "status": "awaiting-comparison"
+    },
+    {
+      "name": "upload",
+      "concept": "upload",
+      "status": "awaiting-comparison"
+    },
+    {
+      "name": "plus",
+      "concept": "plus",
+      "status": "awaiting-comparison"
+    },
+    {
+      "name": "minus",
+      "concept": "minus",
+      "status": "awaiting-comparison"
+    },
+    {
+      "name": "check",
+      "concept": "check",
+      "status": "awaiting-comparison"
+    },
+    {
+      "name": "x",
+      "concept": "x",
+      "status": "awaiting-comparison"
+    },
+    {
+      "name": "search",
+      "concept": "search",
+      "status": "awaiting-comparison"
+    },
+    {
+      "name": "filter",
+      "concept": "filter",
+      "status": "awaiting-comparison"
+    },
+    {
+      "name": "more-horizontal",
+      "concept": "more-horizontal",
+      "status": "awaiting-comparison"
+    },
+    {
+      "name": "sliders",
+      "concept": "sliders",
+      "status": "awaiting-comparison"
+    },
+    {
+      "name": "file",
+      "concept": "file",
+      "status": "awaiting-comparison"
+    },
+    {
+      "name": "file-text",
+      "concept": "file",
+      "status": "awaiting-comparison"
+    },
+    {
+      "name": "folder",
+      "concept": "folder",
+      "status": "awaiting-comparison"
+    },
+    {
+      "name": "folder-plus",
+      "concept": "folder",
+      "status": "awaiting-comparison"
+    },
+    {
+      "name": "calendar",
+      "concept": "calendar",
+      "status": "awaiting-comparison"
+    },
+    {
+      "name": "clipboard",
+      "concept": "clipboard",
+      "status": "awaiting-comparison"
+    },
+    {
+      "name": "copy",
+      "concept": "copy",
+      "status": "awaiting-comparison"
+    },
+    {
+      "name": "trash",
+      "concept": "trash",
+      "status": "awaiting-comparison"
+    },
+    {
+      "name": "user",
+      "concept": "user",
+      "status": "visually-reviewed-candidate",
+      "batch": "01",
+      "issue": "頭部偏小、肩線過平。",
+      "change": "增加頭部比例，重建肩部曲線與頸部留白。",
+      "references": [
+        {
+          "library": "Hugeicons Free",
+          "name": "user",
+          "url": "https://github.com/hugeicons/hugeicons/blob/834e28d965946c1ee60d080027fe9dae4adc58d0/icons/user.svg",
+          "commit": "834e28d965946c1ee60d080027fe9dae4adc58d0",
+          "sha256": "4177b1e305a7b2990767cedc9a10664d6d4e77b5140fc133b5dbc6ce6af17900",
+          "match": "exact"
+        },
+        {
+          "library": "Iconoir",
+          "name": "user",
+          "url": "https://github.com/iconoir-icons/iconoir/blob/39834e3f193bc0cca2c36bebb6a650471977433d/icons/regular/user.svg",
+          "commit": "39834e3f193bc0cca2c36bebb6a650471977433d",
+          "sha256": "53e6505904aafd797da6ea432aa148b7858104454e4e9b65895a879e74451ea3",
+          "match": "exact"
+        },
+        {
+          "library": "Lucide",
+          "name": "user",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/user.svg",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "sha256": "eae3b3b2400031ddd5ec869327d127a96014e5f63aa6e06658dd5d4e90661aa8",
+          "match": "exact"
+        },
+        {
+          "library": "Tabler",
+          "name": "user",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/user.svg",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "sha256": "63554429f551522ea578a9bf72d1d350bd0ffdb8ede3af92a05e92d71cab6b9c",
+          "match": "exact"
+        }
+      ],
+      "evidence": "work/refinement-01",
+      "remaining": "Candidate proportions; overall library consistency still pending."
+    },
+    {
+      "name": "users",
+      "concept": "users",
+      "status": "visually-reviewed-candidate",
+      "batch": "01",
+      "issue": "主副人物比例與 user 缺乏共同規則。",
+      "change": "共用人物構圖，調整副人物輪廓與前後間距。",
+      "references": [
+        {
+          "library": "Hugeicons Free",
+          "name": "user",
+          "url": "https://github.com/hugeicons/hugeicons/blob/834e28d965946c1ee60d080027fe9dae4adc58d0/icons/user.svg",
+          "commit": "834e28d965946c1ee60d080027fe9dae4adc58d0",
+          "sha256": "4177b1e305a7b2990767cedc9a10664d6d4e77b5140fc133b5dbc6ce6af17900",
+          "match": "family"
+        },
+        {
+          "library": "Iconoir",
+          "name": "user",
+          "url": "https://github.com/iconoir-icons/iconoir/blob/39834e3f193bc0cca2c36bebb6a650471977433d/icons/regular/user.svg",
+          "commit": "39834e3f193bc0cca2c36bebb6a650471977433d",
+          "sha256": "53e6505904aafd797da6ea432aa148b7858104454e4e9b65895a879e74451ea3",
+          "match": "family"
+        },
+        {
+          "library": "Lucide",
+          "name": "user",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/user.svg",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "sha256": "eae3b3b2400031ddd5ec869327d127a96014e5f63aa6e06658dd5d4e90661aa8",
+          "match": "family"
+        },
+        {
+          "library": "Tabler",
+          "name": "user",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/user.svg",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "sha256": "63554429f551522ea578a9bf72d1d350bd0ffdb8ede3af92a05e92d71cab6b9c",
+          "match": "family"
+        },
+        {
+          "library": "Lucide",
+          "name": "users",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/users.svg",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "sha256": "eeed488a1ec95ba730dd69996536fb65061d6ea273afb2429ae47e65eebf401c",
+          "match": "exact"
+        },
+        {
+          "library": "Tabler",
+          "name": "users",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/users.svg",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "sha256": "a9892bcba1adad20184c0b50641b1a96a56fb9ef5135ff60462c664874021cc3",
+          "match": "exact"
+        }
+      ],
+      "evidence": "work/refinement-01",
+      "remaining": "Candidate proportions; overall library consistency still pending."
+    },
+    {
+      "name": "mail",
+      "concept": "mail",
+      "status": "awaiting-comparison"
+    },
+    {
+      "name": "message",
+      "concept": "message",
+      "status": "awaiting-comparison"
+    },
+    {
+      "name": "bell",
+      "concept": "bell",
+      "status": "visually-reviewed-candidate",
+      "batch": "01",
+      "issue": "直側壁接鐘口生硬，鐘舌過小。",
+      "change": "鐘口以連續曲線外展，調整鐘舌比例與間隔。",
+      "references": [
+        {
+          "library": "Hugeicons Free",
+          "name": "bell",
+          "url": "https://github.com/hugeicons/hugeicons/blob/834e28d965946c1ee60d080027fe9dae4adc58d0/icons/notification-03.svg",
+          "commit": "834e28d965946c1ee60d080027fe9dae4adc58d0",
+          "sha256": "ebb629ba676a6bda3eb98f5ccfa4271d1d72da2b7499082ac77928840fb4c57b",
+          "match": "exact"
+        },
+        {
+          "library": "Iconoir",
+          "name": "bell",
+          "url": "https://github.com/iconoir-icons/iconoir/blob/39834e3f193bc0cca2c36bebb6a650471977433d/icons/regular/bell.svg",
+          "commit": "39834e3f193bc0cca2c36bebb6a650471977433d",
+          "sha256": "ca69a7e35657312381b90b0d45174fd8ffa43614120eb8ba49d3f71a049e392d",
+          "match": "exact"
+        },
+        {
+          "library": "Lucide",
+          "name": "bell",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/bell.svg",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "sha256": "394889e9631fe3a9a63be9a479a95b451b708e432d895978d21d9130b5ee5dbe",
+          "match": "exact"
+        },
+        {
+          "library": "Tabler",
+          "name": "bell",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/bell.svg",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "sha256": "7ef4f0c56a58fc7ea27ded1c2ee5bc753d63f8851ce85b33da48ddeefe53faf8",
+          "match": "exact"
+        }
+      ],
+      "evidence": "work/refinement-01",
+      "remaining": "Candidate proportions; overall library consistency still pending."
+    },
+    {
+      "name": "bell-off",
+      "concept": "bell",
+      "status": "visually-reviewed-candidate",
+      "batch": "01",
+      "issue": "斷口過大，鐘體輪廓不完整。",
+      "change": "沿用 bell 母型，補回鐘頂、左側壁與鐘口，保留斜線空隙。",
+      "references": [
+        {
+          "library": "Hugeicons Free",
+          "name": "bell",
+          "url": "https://github.com/hugeicons/hugeicons/blob/834e28d965946c1ee60d080027fe9dae4adc58d0/icons/notification-03.svg",
+          "commit": "834e28d965946c1ee60d080027fe9dae4adc58d0",
+          "sha256": "ebb629ba676a6bda3eb98f5ccfa4271d1d72da2b7499082ac77928840fb4c57b",
+          "match": "family"
+        },
+        {
+          "library": "Iconoir",
+          "name": "bell",
+          "url": "https://github.com/iconoir-icons/iconoir/blob/39834e3f193bc0cca2c36bebb6a650471977433d/icons/regular/bell.svg",
+          "commit": "39834e3f193bc0cca2c36bebb6a650471977433d",
+          "sha256": "ca69a7e35657312381b90b0d45174fd8ffa43614120eb8ba49d3f71a049e392d",
+          "match": "family"
+        },
+        {
+          "library": "Lucide",
+          "name": "bell",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/bell.svg",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "sha256": "394889e9631fe3a9a63be9a479a95b451b708e432d895978d21d9130b5ee5dbe",
+          "match": "family"
+        },
+        {
+          "library": "Tabler",
+          "name": "bell",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/bell.svg",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "sha256": "7ef4f0c56a58fc7ea27ded1c2ee5bc753d63f8851ce85b33da48ddeefe53faf8",
+          "match": "family"
+        },
+        {
+          "library": "Lucide",
+          "name": "bell-off",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/bell-off.svg",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "sha256": "14ad2775c3a594f09a79c195531778ae51302f847a9c558f720340d1e450bd6a",
+          "match": "exact"
+        },
+        {
+          "library": "Tabler",
+          "name": "bell-off",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/bell-off.svg",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "sha256": "15ac20136bcc58b3a7f792cd1b648f4cb1c05c555d92b23f00efdc8819a41c99",
+          "match": "exact"
+        }
+      ],
+      "evidence": "work/refinement-01",
+      "remaining": "Candidate proportions; overall library consistency still pending."
+    },
+    {
+      "name": "lock",
+      "concept": "lock",
+      "status": "awaiting-comparison"
+    },
+    {
+      "name": "unlock",
+      "concept": "lock",
+      "status": "awaiting-comparison"
+    },
+    {
+      "name": "circle",
+      "concept": "circle",
+      "status": "awaiting-comparison"
+    },
+    {
+      "name": "square",
+      "concept": "square",
+      "status": "awaiting-comparison"
+    },
+    {
+      "name": "star",
+      "concept": "star",
+      "status": "awaiting-comparison"
+    },
+    {
+      "name": "heart",
+      "concept": "heart",
+      "status": "awaiting-comparison"
+    },
+    {
+      "name": "info-circle",
+      "concept": "info-circle",
+      "status": "awaiting-comparison"
+    },
+    {
+      "name": "check-circle",
+      "concept": "check",
+      "status": "awaiting-comparison"
+    },
+    {
+      "name": "alert-triangle",
+      "concept": "alert-triangle",
+      "status": "awaiting-comparison"
+    },
+    {
+      "name": "loader",
+      "concept": "loader",
+      "status": "awaiting-comparison"
+    },
+    {
+      "name": "home",
+      "concept": "home",
+      "status": "awaiting-comparison"
+    },
+    {
+      "name": "settings",
+      "concept": "settings",
+      "status": "awaiting-comparison"
+    },
+    {
+      "name": "grid",
+      "concept": "grid",
+      "status": "awaiting-comparison"
+    },
+    {
+      "name": "list",
+      "concept": "list",
+      "status": "awaiting-comparison"
+    },
+    {
+      "name": "chart-bar",
+      "concept": "chart-bar",
+      "status": "awaiting-comparison"
+    },
+    {
+      "name": "database",
+      "concept": "database",
+      "status": "awaiting-comparison"
+    },
+    {
+      "name": "code",
+      "concept": "code",
+      "status": "awaiting-comparison"
+    },
+    {
+      "name": "terminal",
+      "concept": "terminal",
+      "status": "awaiting-comparison"
+    }
+  ]
+}

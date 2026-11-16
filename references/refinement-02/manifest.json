@@ -1,0 +1,626 @@
+{
+  "batch": "02",
+  "entries": [
+    {
+      "name": "monitor",
+      "references": [
+        {
+          "name": "monitor",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/monitor.svg",
+          "localPath": "references/refinement-02/lucide-monitor.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/monitor.svg",
+          "sha256": "d1a443233345724859de8e4fb48968ba91e885e12ddbd710701548bd91b39428",
+          "license": "ISC AND MIT",
+          "match": "exact"
+        },
+        {
+          "name": "device-desktop",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/device-desktop.svg",
+          "localPath": "references/refinement-02/tabler-device-desktop.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/device-desktop.svg",
+          "sha256": "2fdd2150904a844185250f26453a02f31ee9d77a1f936a1df9c2ecd77cfc788d",
+          "license": "MIT",
+          "match": "exact"
+        }
+      ]
+    },
+    {
+      "name": "laptop",
+      "references": [
+        {
+          "name": "laptop-minimal",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/laptop-minimal.svg",
+          "localPath": "references/refinement-02/lucide-laptop-minimal.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/laptop-minimal.svg",
+          "sha256": "090de3f059daafa912f6553ae2043f4d7fe49531178bdd7661828ecc7aeee424",
+          "license": "ISC AND MIT",
+          "match": "exact"
+        },
+        {
+          "name": "device-laptop",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/device-laptop.svg",
+          "localPath": "references/refinement-02/tabler-device-laptop.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/device-laptop.svg",
+          "sha256": "2a0fffa65ddefd1017cbd7bd71675d72b5ca0748176cc39cda17600108665ed9",
+          "license": "MIT",
+          "match": "exact"
+        }
+      ]
+    },
+    {
+      "name": "smartphone",
+      "references": [
+        {
+          "name": "smartphone",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/smartphone.svg",
+          "localPath": "references/refinement-02/lucide-smartphone.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/smartphone.svg",
+          "sha256": "f9fdb700b50feb5fc6436f53eb9813e9eb56a9071ac4cdcba69c7f7c1c13877d",
+          "license": "ISC AND MIT",
+          "match": "exact"
+        },
+        {
+          "name": "smart-phone-01",
+          "library": "Hugeicons Free",
+          "repository": "hugeicons/hugeicons",
+          "commit": "834e28d965946c1ee60d080027fe9dae4adc58d0",
+          "path": "icons/smart-phone-01.svg",
+          "localPath": "references/refinement-02/hugeicons-free-smart-phone-01.svg",
+          "url": "https://github.com/hugeicons/hugeicons/blob/834e28d965946c1ee60d080027fe9dae4adc58d0/icons/smart-phone-01.svg",
+          "sha256": "9a4bf80b666863a193eedf3bcbf002b3c7f201b1e2a6fc627a9641e1f8d85bd7",
+          "license": "MIT",
+          "match": "exact"
+        }
+      ]
+    },
+    {
+      "name": "foldable-phone",
+      "references": [
+        {
+          "name": "smartphone",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/smartphone.svg",
+          "localPath": "references/refinement-02/lucide-smartphone.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/smartphone.svg",
+          "sha256": "f9fdb700b50feb5fc6436f53eb9813e9eb56a9071ac4cdcba69c7f7c1c13877d",
+          "license": "ISC AND MIT",
+          "match": "family"
+        },
+        {
+          "name": "flip-phone",
+          "library": "Hugeicons Free",
+          "repository": "hugeicons/hugeicons",
+          "commit": "834e28d965946c1ee60d080027fe9dae4adc58d0",
+          "path": "icons/flip-phone.svg",
+          "localPath": "references/refinement-02/hugeicons-free-flip-phone.svg",
+          "url": "https://github.com/hugeicons/hugeicons/blob/834e28d965946c1ee60d080027fe9dae4adc58d0/icons/flip-phone.svg",
+          "sha256": "12d722c8da1e551971be3a8b03c620a95603f9b5cc7612bdf0b7af1ea8fc0a28",
+          "license": "MIT",
+          "match": "family"
+        }
+      ]
+    },
+    {
+      "name": "flip-phone",
+      "references": [
+        {
+          "name": "flip-phone",
+          "library": "Hugeicons Free",
+          "repository": "hugeicons/hugeicons",
+          "commit": "834e28d965946c1ee60d080027fe9dae4adc58d0",
+          "path": "icons/flip-phone.svg",
+          "localPath": "references/refinement-02/hugeicons-free-flip-phone.svg",
+          "url": "https://github.com/hugeicons/hugeicons/blob/834e28d965946c1ee60d080027fe9dae4adc58d0/icons/flip-phone.svg",
+          "sha256": "12d722c8da1e551971be3a8b03c620a95603f9b5cc7612bdf0b7af1ea8fc0a28",
+          "license": "MIT",
+          "match": "exact"
+        },
+        {
+          "name": "device-mobile",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/device-mobile.svg",
+          "localPath": "references/refinement-02/tabler-device-mobile.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/device-mobile.svg",
+          "sha256": "2f9d4b1a140f3b9c9057efa5964bc8a7a135ce5d32dfe4752ebdad9d086d5413",
+          "license": "MIT",
+          "match": "family"
+        }
+      ]
+    },
+    {
+      "name": "tablet",
+      "references": [
+        {
+          "name": "tablet",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/tablet.svg",
+          "localPath": "references/refinement-02/lucide-tablet.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/tablet.svg",
+          "sha256": "cf58f791bd83c5340362fc0694d3f766aa82b9abfe291ef72e15a3ac3da54125",
+          "license": "ISC AND MIT",
+          "match": "exact"
+        },
+        {
+          "name": "device-tablet",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/device-tablet.svg",
+          "localPath": "references/refinement-02/tabler-device-tablet.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/device-tablet.svg",
+          "sha256": "b1b1e9763f930f6231e192d863a535cec4816ee2f297f7eec201989a6b166cb6",
+          "license": "MIT",
+          "match": "exact"
+        }
+      ]
+    },
+    {
+      "name": "ereader",
+      "references": [
+        {
+          "name": "device-tablet",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/device-tablet.svg",
+          "localPath": "references/refinement-02/tabler-device-tablet.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/device-tablet.svg",
+          "sha256": "b1b1e9763f930f6231e192d863a535cec4816ee2f297f7eec201989a6b166cb6",
+          "license": "MIT",
+          "match": "family"
+        },
+        {
+          "name": "notebook-text",
+          "library": "Hugeicons Free",
+          "repository": "hugeicons/hugeicons",
+          "commit": "834e28d965946c1ee60d080027fe9dae4adc58d0",
+          "path": "icons/notebook-text.svg",
+          "localPath": "references/refinement-02/hugeicons-free-notebook-text.svg",
+          "url": "https://github.com/hugeicons/hugeicons/blob/834e28d965946c1ee60d080027fe9dae4adc58d0/icons/notebook-text.svg",
+          "sha256": "deb871c742d0e177642e1c0ce3dcfdddcf3e53bb3589761b7c899834b54f6db5",
+          "license": "MIT",
+          "match": "structure"
+        }
+      ]
+    },
+    {
+      "name": "smartwatch",
+      "references": [
+        {
+          "name": "device-watch",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/device-watch.svg",
+          "localPath": "references/refinement-02/tabler-device-watch.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/device-watch.svg",
+          "sha256": "13803e231e11dd851a67e03bc8ea6a5b5d04048c55661e5fe8fc4049604829f4",
+          "license": "MIT",
+          "match": "exact"
+        },
+        {
+          "name": "smart-watch-01",
+          "library": "Hugeicons Free",
+          "repository": "hugeicons/hugeicons",
+          "commit": "834e28d965946c1ee60d080027fe9dae4adc58d0",
+          "path": "icons/smart-watch-01.svg",
+          "localPath": "references/refinement-02/hugeicons-free-smart-watch-01.svg",
+          "url": "https://github.com/hugeicons/hugeicons/blob/834e28d965946c1ee60d080027fe9dae4adc58d0/icons/smart-watch-01.svg",
+          "sha256": "a7c0931d5cb90da304238bcaf7efc99cdf0b924c2f35f7c5cb27ae2d9d5c81f7",
+          "license": "MIT",
+          "match": "exact"
+        }
+      ]
+    },
+    {
+      "name": "fitness-tracker",
+      "references": [
+        {
+          "name": "device-watch-stats",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/device-watch-stats.svg",
+          "localPath": "references/refinement-02/tabler-device-watch-stats.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/device-watch-stats.svg",
+          "sha256": "545d92c95ce7bca4dfc5bc0d54bd3521dc8705e0a27d390202db32b8223208e0",
+          "license": "MIT",
+          "match": "family"
+        },
+        {
+          "name": "smart-watch-02",
+          "library": "Hugeicons Free",
+          "repository": "hugeicons/hugeicons",
+          "commit": "834e28d965946c1ee60d080027fe9dae4adc58d0",
+          "path": "icons/smart-watch-02.svg",
+          "localPath": "references/refinement-02/hugeicons-free-smart-watch-02.svg",
+          "url": "https://github.com/hugeicons/hugeicons/blob/834e28d965946c1ee60d080027fe9dae4adc58d0/icons/smart-watch-02.svg",
+          "sha256": "6d4263369125c4e956a50ebd8ef74c48377527d8d72ae3e11ee32493837f282d",
+          "license": "MIT",
+          "match": "family"
+        }
+      ]
+    },
+    {
+      "name": "keyboard",
+      "references": [
+        {
+          "name": "keyboard",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/keyboard.svg",
+          "localPath": "references/refinement-02/lucide-keyboard.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/keyboard.svg",
+          "sha256": "f509925ca81964ed06251ad4702e989bb81a566ffc74d15c2226b4f07ded67be",
+          "license": "ISC AND MIT",
+          "match": "exact"
+        },
+        {
+          "name": "keyboard",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/keyboard.svg",
+          "localPath": "references/refinement-02/tabler-keyboard.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/keyboard.svg",
+          "sha256": "9e290c3ff26878fad5fcf338eb5c8dc203651a20cc1806fd6d6f40625668c90b",
+          "license": "MIT",
+          "match": "exact"
+        }
+      ]
+    },
+    {
+      "name": "mouse",
+      "references": [
+        {
+          "name": "mouse",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/mouse.svg",
+          "localPath": "references/refinement-02/lucide-mouse.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/mouse.svg",
+          "sha256": "e4238ad7b69d3c3d713fdc2284c8fb20c04781afe0be445539ce4f904c0a0e47",
+          "license": "ISC AND MIT",
+          "match": "exact"
+        },
+        {
+          "name": "pc-mouse",
+          "library": "Iconoir",
+          "repository": "iconoir-icons/iconoir",
+          "commit": "39834e3f193bc0cca2c36bebb6a650471977433d",
+          "path": "icons/regular/pc-mouse.svg",
+          "localPath": "references/refinement-02/iconoir-pc-mouse.svg",
+          "url": "https://github.com/iconoir-icons/iconoir/blob/39834e3f193bc0cca2c36bebb6a650471977433d/icons/regular/pc-mouse.svg",
+          "sha256": "198ea34e3c194e72d205b8d469bc476ca9f60d881418d65ffcc11edc697bfe50",
+          "license": "MIT",
+          "match": "exact"
+        }
+      ]
+    },
+    {
+      "name": "trackpad",
+      "references": [
+        {
+          "name": "touchpad",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/touchpad.svg",
+          "localPath": "references/refinement-02/lucide-touchpad.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/touchpad.svg",
+          "sha256": "9d743d5ae640f51599fb006450e07469123aca45c228021610e7bfa78e494547",
+          "license": "ISC AND MIT",
+          "match": "exact"
+        },
+        {
+          "name": "touchpad-01",
+          "library": "Hugeicons Free",
+          "repository": "hugeicons/hugeicons",
+          "commit": "834e28d965946c1ee60d080027fe9dae4adc58d0",
+          "path": "icons/touchpad-01.svg",
+          "localPath": "references/refinement-02/hugeicons-free-touchpad-01.svg",
+          "url": "https://github.com/hugeicons/hugeicons/blob/834e28d965946c1ee60d080027fe9dae4adc58d0/icons/touchpad-01.svg",
+          "sha256": "a70841797623dc0834f5cb4af66c66c2a984335eae84b38daebd0021972d1ce4",
+          "license": "MIT",
+          "match": "exact"
+        }
+      ]
+    },
+    {
+      "name": "trackball",
+      "references": [
+        {
+          "name": "pc-mouse",
+          "library": "Iconoir",
+          "repository": "iconoir-icons/iconoir",
+          "commit": "39834e3f193bc0cca2c36bebb6a650471977433d",
+          "path": "icons/regular/pc-mouse.svg",
+          "localPath": "references/refinement-02/iconoir-pc-mouse.svg",
+          "url": "https://github.com/iconoir-icons/iconoir/blob/39834e3f193bc0cca2c36bebb6a650471977433d/icons/regular/pc-mouse.svg",
+          "sha256": "198ea34e3c194e72d205b8d469bc476ca9f60d881418d65ffcc11edc697bfe50",
+          "license": "MIT",
+          "match": "family"
+        },
+        {
+          "name": "touchpad-02",
+          "library": "Hugeicons Free",
+          "repository": "hugeicons/hugeicons",
+          "commit": "834e28d965946c1ee60d080027fe9dae4adc58d0",
+          "path": "icons/touchpad-02.svg",
+          "localPath": "references/refinement-02/hugeicons-free-touchpad-02.svg",
+          "url": "https://github.com/hugeicons/hugeicons/blob/834e28d965946c1ee60d080027fe9dae4adc58d0/icons/touchpad-02.svg",
+          "sha256": "fc8a41f7a2f5a641e9b3b33c3c69cdebee38dd408af6799b08778da19d53020e",
+          "license": "MIT",
+          "match": "structure"
+        }
+      ]
+    },
+    {
+      "name": "joystick",
+      "references": [
+        {
+          "name": "joystick",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/joystick.svg",
+          "localPath": "references/refinement-02/lucide-joystick.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/joystick.svg",
+          "sha256": "73e5481260335dc44f627ceacd0c5b954fc41bfd2ccd8b8e6b80d3f638174090",
+          "license": "ISC AND MIT",
+          "match": "exact"
+        },
+        {
+          "name": "joystick-01",
+          "library": "Hugeicons Free",
+          "repository": "hugeicons/hugeicons",
+          "commit": "834e28d965946c1ee60d080027fe9dae4adc58d0",
+          "path": "icons/joystick-01.svg",
+          "localPath": "references/refinement-02/hugeicons-free-joystick-01.svg",
+          "url": "https://github.com/hugeicons/hugeicons/blob/834e28d965946c1ee60d080027fe9dae4adc58d0/icons/joystick-01.svg",
+          "sha256": "bfe557ed9c2fcbf80e0dcf9bfba9984c06f287271b1b4aefb8c375febd8df3dd",
+          "license": "MIT",
+          "match": "exact"
+        }
+      ]
+    },
+    {
+      "name": "gamepad",
+      "references": [
+        {
+          "name": "gamepad-2",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/gamepad-2.svg",
+          "localPath": "references/refinement-02/lucide-gamepad-2.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/gamepad-2.svg",
+          "sha256": "b0671de7afbebdafc4d655d867d9851947170b906fb187e749410039df867509",
+          "license": "ISC AND MIT",
+          "match": "exact"
+        },
+        {
+          "name": "device-gamepad-2",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/device-gamepad-2.svg",
+          "localPath": "references/refinement-02/tabler-device-gamepad-2.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/device-gamepad-2.svg",
+          "sha256": "16b925ed58791c114e354e90f5d67a8c2bb348ee596d8ade64ce9d1f4b90026b",
+          "license": "MIT",
+          "match": "exact"
+        }
+      ]
+    },
+    {
+      "name": "arcade",
+      "references": [
+        {
+          "name": "arcade",
+          "library": "Iconoir",
+          "repository": "iconoir-icons/iconoir",
+          "commit": "39834e3f193bc0cca2c36bebb6a650471977433d",
+          "path": "icons/regular/arcade.svg",
+          "localPath": "references/refinement-02/iconoir-arcade.svg",
+          "url": "https://github.com/iconoir-icons/iconoir/blob/39834e3f193bc0cca2c36bebb6a650471977433d/icons/regular/arcade.svg",
+          "sha256": "40ab7c95f423f65693fac2ada27ca19210f2e346ee39ceac9dd06787ab05d700",
+          "license": "MIT",
+          "match": "exact"
+        },
+        {
+          "name": "gameboy",
+          "library": "Hugeicons Free",
+          "repository": "hugeicons/hugeicons",
+          "commit": "834e28d965946c1ee60d080027fe9dae4adc58d0",
+          "path": "icons/gameboy.svg",
+          "localPath": "references/refinement-02/hugeicons-free-gameboy.svg",
+          "url": "https://github.com/hugeicons/hugeicons/blob/834e28d965946c1ee60d080027fe9dae4adc58d0/icons/gameboy.svg",
+          "sha256": "8e0bd1a37516095113b41520bea280744a4df9ea61f79669b3f5b0be29a62bf7",
+          "license": "MIT",
+          "match": "family"
+        }
+      ]
+    },
+    {
+      "name": "vr-headset",
+      "references": [
+        {
+          "name": "device-vision-pro",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/device-vision-pro.svg",
+          "localPath": "references/refinement-02/tabler-device-vision-pro.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/device-vision-pro.svg",
+          "sha256": "e4a4ae9b4e060ecd969159177926d554787db8bcaf187ddc1214d174d401eea4",
+          "license": "MIT",
+          "match": "family"
+        },
+        {
+          "name": "virtual-reality-vr-01",
+          "library": "Hugeicons Free",
+          "repository": "hugeicons/hugeicons",
+          "commit": "834e28d965946c1ee60d080027fe9dae4adc58d0",
+          "path": "icons/virtual-reality-vr-01.svg",
+          "localPath": "references/refinement-02/hugeicons-free-virtual-reality-vr-01.svg",
+          "url": "https://github.com/hugeicons/hugeicons/blob/834e28d965946c1ee60d080027fe9dae4adc58d0/icons/virtual-reality-vr-01.svg",
+          "sha256": "98345658e88c21d9266009a4c20efbded473289d23dbe47c869718579652cbb2",
+          "license": "MIT",
+          "match": "exact"
+        }
+      ]
+    },
+    {
+      "name": "ar-glasses",
+      "references": [
+        {
+          "name": "glasses",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/glasses.svg",
+          "localPath": "references/refinement-02/lucide-glasses.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/glasses.svg",
+          "sha256": "8a260083626ebe0ce7c30fa88f31dc27c01244ca9c99147ad785f9c04aa0aacb",
+          "license": "ISC AND MIT",
+          "match": "family"
+        },
+        {
+          "name": "augmented-reality-ar",
+          "library": "Hugeicons Free",
+          "repository": "hugeicons/hugeicons",
+          "commit": "834e28d965946c1ee60d080027fe9dae4adc58d0",
+          "path": "icons/augmented-reality-ar.svg",
+          "localPath": "references/refinement-02/hugeicons-free-augmented-reality-ar.svg",
+          "url": "https://github.com/hugeicons/hugeicons/blob/834e28d965946c1ee60d080027fe9dae4adc58d0/icons/augmented-reality-ar.svg",
+          "sha256": "d8ec46338bef9588a946830808e7cf052780e507cd97d1fb78ef21581b585343",
+          "license": "MIT",
+          "match": "exact"
+        }
+      ]
+    },
+    {
+      "name": "cpu",
+      "references": [
+        {
+          "name": "cpu",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/cpu.svg",
+          "localPath": "references/refinement-02/lucide-cpu.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/cpu.svg",
+          "sha256": "ec83bb69ec029d367d749afc445b39c8e95891ebf99b0400652677c2b149b99c",
+          "license": "ISC AND MIT",
+          "match": "exact"
+        },
+        {
+          "name": "cpu",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/cpu.svg",
+          "localPath": "references/refinement-02/tabler-cpu.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/cpu.svg",
+          "sha256": "d9ecd8e0f4a140f8a0c272d3cb6d7e380c6a57f2d5e823980dc40024fa7387ac",
+          "license": "MIT",
+          "match": "exact"
+        }
+      ]
+    },
+    {
+      "name": "brain",
+      "references": [
+        {
+          "name": "brain",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/brain.svg",
+          "localPath": "references/refinement-02/tabler-brain.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/brain.svg",
+          "sha256": "0075dfb728a3b28fddf35c0e0129733874d8eee9e4d745b2079a9adbef2797f5",
+          "license": "MIT",
+          "match": "exact"
+        },
+        {
+          "name": "brain",
+          "library": "Iconoir",
+          "repository": "iconoir-icons/iconoir",
+          "commit": "39834e3f193bc0cca2c36bebb6a650471977433d",
+          "path": "icons/regular/brain.svg",
+          "localPath": "references/refinement-02/iconoir-brain.svg",
+          "url": "https://github.com/iconoir-icons/iconoir/blob/39834e3f193bc0cca2c36bebb6a650471977433d/icons/regular/brain.svg",
+          "sha256": "6554ae3dac728b400dc30a22d933fb97275f0e5b8b29fce761f690312fe2399a",
+          "license": "MIT",
+          "match": "exact"
+        },
+        {
+          "name": "brain-01",
+          "library": "Hugeicons Free",
+          "repository": "hugeicons/hugeicons",
+          "commit": "834e28d965946c1ee60d080027fe9dae4adc58d0",
+          "path": "icons/brain-01.svg",
+          "localPath": "references/refinement-02/hugeicons-free-brain-01.svg",
+          "url": "https://github.com/hugeicons/hugeicons/blob/834e28d965946c1ee60d080027fe9dae4adc58d0/icons/brain-01.svg",
+          "sha256": "03a55709ddcd47adcef8b62eff8da252f52513322423575c6e0497def05786e8",
+          "license": "MIT",
+          "match": "exact"
+        }
+      ]
+    },
+    {
+      "name": "pineapple",
+      "references": [
+        {
+          "name": "apple",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/apple.svg",
+          "localPath": "references/refinement-02/tabler-apple.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/apple.svg",
+          "sha256": "50db86a52b9566ed3ce80a0a29382b0d976f8ed3dc56261f1a898cbd7ca2dc08",
+          "license": "MIT",
+          "match": "structure"
+        },
+        {
+          "name": "apple-01",
+          "library": "Hugeicons Free",
+          "repository": "hugeicons/hugeicons",
+          "commit": "834e28d965946c1ee60d080027fe9dae4adc58d0",
+          "path": "icons/apple-01.svg",
+          "localPath": "references/refinement-02/hugeicons-free-apple-01.svg",
+          "url": "https://github.com/hugeicons/hugeicons/blob/834e28d965946c1ee60d080027fe9dae4adc58d0/icons/apple-01.svg",
+          "sha256": "e54d2586da1867ac8e3c53290acd3ea75b362537ee16bc659a30e340c3ff2bb7",
+          "license": "MIT",
+          "match": "structure"
+        }
+      ]
+    }
+  ]
+}

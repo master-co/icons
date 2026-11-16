@@ -1,0 +1,59 @@
+$ playwright test '--project=chromium-*' '--project=webkit-*'
+[WebServer] $ node scripts/dev.mjs
+[WebServer] (node:27898) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 28 tests using 3 workers
+
+(node:27963) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:27964) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:27962) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 [chromium-1x] › tests/browser/gallery.spec.mjs:79:1 › standalone review works without a server and retains comparison / ZIP export (273ms)
+  ✓   3 [chromium-1x] › tests/browser/gallery.spec.mjs:49:1 › all SVG presets parse and rasterize without clipping at this DPR (697ms)
+  ✓   2 [chromium-1x] › tests/browser/gallery.spec.mjs:9:1 › search, presets, accessible detail, downloads, keyboard and responsive layouts (733ms)
+  ✓   6 [chromium-1x] › tests/browser/scenarios.spec.mjs:51:1 › organization scope search, layout and pin controls work offline (255ms)
+  ✓   7 [chromium-1x] › tests/browser/scenarios.spec.mjs:64:1 › new productivity controls work in the delivered offline workspace (519ms)
+(node:28020) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   8 [chromium-2x] › tests/browser/gallery.spec.mjs:9:1 › search, presets, accessible detail, downloads, keyboard and responsive layouts (830ms)
+  ✓   5 [chromium-1x] › tests/browser/scenarios.spec.mjs:32:1 › reference pagination covers new drawings, before masters and offline source originals (2.4s)
+(node:28027) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   9 [chromium-2x] › tests/browser/gallery.spec.mjs:49:1 › all SVG presets parse and rasterize without clipping at this DPR (779ms)
+  ✓  10 [chromium-2x] › tests/browser/gallery.spec.mjs:79:1 › standalone review works without a server and retains comparison / ZIP export (251ms)
+  ✓  11 [chromium-2x] › tests/browser/scenarios.spec.mjs:9:1 › all contexts render in light/dark and desktop/mobile; controls and navigation work (2.2s)
+  ✓  13 [chromium-2x] › tests/browser/scenarios.spec.mjs:51:1 › organization scope search, layout and pin controls work offline (257ms)
+  ✓  12 [chromium-2x] › tests/browser/scenarios.spec.mjs:32:1 › reference pagination covers new drawings, before masters and offline source originals (2.3s)
+  ✓   4 [chromium-1x] › tests/browser/scenarios.spec.mjs:9:1 › all contexts render in light/dark and desktop/mobile; controls and navigation work (5.8s)
+(node:28066) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:28081) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  14 [chromium-2x] › tests/browser/scenarios.spec.mjs:64:1 › new productivity controls work in the delivered offline workspace (521ms)
+(node:28108) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  15 [webkit-1x] › tests/browser/gallery.spec.mjs:9:1 › search, presets, accessible detail, downloads, keyboard and responsive layouts (956ms)
+  ✓  17 [webkit-1x] › tests/browser/gallery.spec.mjs:79:1 › standalone review works without a server and retains comparison / ZIP export (484ms)
+  ✓  16 [webkit-1x] › tests/browser/gallery.spec.mjs:49:1 › all SVG presets parse and rasterize without clipping at this DPR (2.5s)
+  ✓  20 [webkit-1x] › tests/browser/scenarios.spec.mjs:51:1 › organization scope search, layout and pin controls work offline (440ms)
+  ✓  18 [webkit-1x] › tests/browser/scenarios.spec.mjs:9:1 › all contexts render in light/dark and desktop/mobile; controls and navigation work (2.3s)
+(node:28180) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  19 [webkit-1x] › tests/browser/scenarios.spec.mjs:32:1 › reference pagination covers new drawings, before masters and offline source originals (2.5s)
+(node:28188) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  21 [webkit-1x] › tests/browser/scenarios.spec.mjs:64:1 › new productivity controls work in the delivered offline workspace (663ms)
+(node:28200) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  24 [webkit-2x] › tests/browser/gallery.spec.mjs:79:1 › standalone review works without a server and retains comparison / ZIP export (463ms)
+  ✓  22 [webkit-2x] › tests/browser/gallery.spec.mjs:9:1 › search, presets, accessible detail, downloads, keyboard and responsive layouts (1.1s)
+  ✓  23 [webkit-2x] › tests/browser/gallery.spec.mjs:49:1 › all SVG presets parse and rasterize without clipping at this DPR (2.4s)
+  ✓  27 [webkit-2x] › tests/browser/scenarios.spec.mjs:51:1 › organization scope search, layout and pin controls work offline (413ms)
+  ✓  25 [webkit-2x] › tests/browser/scenarios.spec.mjs:9:1 › all contexts render in light/dark and desktop/mobile; controls and navigation work (2.3s)
+  ✓  26 [webkit-2x] › tests/browser/scenarios.spec.mjs:32:1 › reference pagination covers new drawings, before masters and offline source originals (2.5s)
+  ✓  28 [webkit-2x] › tests/browser/scenarios.spec.mjs:64:1 › new productivity controls work in the delivered offline workspace (679ms)
+
+  28 passed (15.9s)

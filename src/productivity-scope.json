@@ -1,0 +1,362 @@
+[
+  {
+    "name": "keyboard",
+    "label": "鍵盤",
+    "category": "devices",
+    "categoryLabel": "裝置與互動"
+  },
+  {
+    "name": "mouse",
+    "label": "滑鼠",
+    "category": "devices",
+    "categoryLabel": "裝置與互動"
+  },
+  {
+    "name": "mouse-pointer",
+    "label": "游標",
+    "category": "devices",
+    "categoryLabel": "裝置與互動"
+  },
+  {
+    "name": "touchpad",
+    "label": "觸控板",
+    "category": "devices",
+    "categoryLabel": "裝置與互動"
+  },
+  {
+    "name": "tablet",
+    "label": "平板",
+    "category": "devices",
+    "categoryLabel": "裝置與互動"
+  },
+  {
+    "name": "laptop",
+    "label": "筆記型電腦",
+    "category": "devices",
+    "categoryLabel": "裝置與互動"
+  },
+  {
+    "name": "bluetooth",
+    "label": "藍牙",
+    "category": "devices",
+    "categoryLabel": "裝置與互動"
+  },
+  {
+    "name": "usb",
+    "label": "USB連線",
+    "category": "devices",
+    "categoryLabel": "裝置與互動"
+  },
+  {
+    "name": "cast",
+    "label": "投放螢幕",
+    "category": "devices",
+    "categoryLabel": "裝置與互動"
+  },
+  {
+    "name": "accessibility",
+    "label": "無障礙",
+    "category": "devices",
+    "categoryLabel": "裝置與互動"
+  },
+  {
+    "name": "server",
+    "label": "伺服器",
+    "category": "systems",
+    "categoryLabel": "系統與工作流程"
+  },
+  {
+    "name": "hard-drive",
+    "label": "硬碟",
+    "category": "systems",
+    "categoryLabel": "系統與工作流程"
+  },
+  {
+    "name": "cpu",
+    "label": "處理器",
+    "category": "systems",
+    "categoryLabel": "系統與工作流程"
+  },
+  {
+    "name": "memory-stick",
+    "label": "記憶體",
+    "category": "systems",
+    "categoryLabel": "系統與工作流程"
+  },
+  {
+    "name": "network",
+    "label": "網路拓樸",
+    "category": "systems",
+    "categoryLabel": "系統與工作流程"
+  },
+  {
+    "name": "workflow",
+    "label": "工作流程",
+    "category": "systems",
+    "categoryLabel": "系統與工作流程"
+  },
+  {
+    "name": "git-branch",
+    "label": "版本分支",
+    "category": "systems",
+    "categoryLabel": "系統與工作流程"
+  },
+  {
+    "name": "git-merge",
+    "label": "合併分支",
+    "category": "systems",
+    "categoryLabel": "系統與工作流程"
+  },
+  {
+    "name": "braces",
+    "label": "結構化資料",
+    "category": "systems",
+    "categoryLabel": "系統與工作流程"
+  },
+  {
+    "name": "webhook",
+    "label": "Webhook",
+    "category": "systems",
+    "categoryLabel": "系統與工作流程"
+  },
+  {
+    "name": "text",
+    "label": "文字",
+    "category": "typography",
+    "categoryLabel": "進階文字編輯"
+  },
+  {
+    "name": "wrap-text",
+    "label": "自動換行",
+    "category": "typography",
+    "categoryLabel": "進階文字編輯"
+  },
+  {
+    "name": "highlighter",
+    "label": "螢光標記",
+    "category": "typography",
+    "categoryLabel": "進階文字編輯"
+  },
+  {
+    "name": "eraser",
+    "label": "橡皮擦",
+    "category": "typography",
+    "categoryLabel": "進階文字編輯"
+  },
+  {
+    "name": "paintbrush",
+    "label": "筆刷",
+    "category": "typography",
+    "categoryLabel": "進階文字編輯"
+  },
+  {
+    "name": "palette",
+    "label": "調色盤",
+    "category": "typography",
+    "categoryLabel": "進階文字編輯"
+  },
+  {
+    "name": "indent-increase",
+    "label": "增加縮排",
+    "category": "typography",
+    "categoryLabel": "進階文字編輯"
+  },
+  {
+    "name": "indent-decrease",
+    "label": "減少縮排",
+    "category": "typography",
+    "categoryLabel": "進階文字編輯"
+  },
+  {
+    "name": "subscript",
+    "label": "下標",
+    "category": "typography",
+    "categoryLabel": "進階文字編輯"
+  },
+  {
+    "name": "superscript",
+    "label": "上標",
+    "category": "typography",
+    "categoryLabel": "進階文字編輯"
+  },
+  {
+    "name": "file-code",
+    "label": "程式檔案",
+    "category": "file-operations",
+    "categoryLabel": "檔案類型與傳輸"
+  },
+  {
+    "name": "file-image",
+    "label": "圖片檔案",
+    "category": "file-operations",
+    "categoryLabel": "檔案類型與傳輸"
+  },
+  {
+    "name": "file-video",
+    "label": "影片檔案",
+    "category": "file-operations",
+    "categoryLabel": "檔案類型與傳輸"
+  },
+  {
+    "name": "file-audio",
+    "label": "音訊檔案",
+    "category": "file-operations",
+    "categoryLabel": "檔案類型與傳輸"
+  },
+  {
+    "name": "file-archive",
+    "label": "壓縮檔案",
+    "category": "file-operations",
+    "categoryLabel": "檔案類型與傳輸"
+  },
+  {
+    "name": "folder-minus",
+    "label": "移除資料夾",
+    "category": "file-operations",
+    "categoryLabel": "檔案類型與傳輸"
+  },
+  {
+    "name": "folder-check",
+    "label": "已確認資料夾",
+    "category": "file-operations",
+    "categoryLabel": "檔案類型與傳輸"
+  },
+  {
+    "name": "folder-x",
+    "label": "拒絕資料夾",
+    "category": "file-operations",
+    "categoryLabel": "檔案類型與傳輸"
+  },
+  {
+    "name": "folder-up",
+    "label": "上傳資料夾",
+    "category": "file-operations",
+    "categoryLabel": "檔案類型與傳輸"
+  },
+  {
+    "name": "folder-down",
+    "label": "下載資料夾",
+    "category": "file-operations",
+    "categoryLabel": "檔案類型與傳輸"
+  },
+  {
+    "name": "calendar-plus",
+    "label": "新增排程",
+    "category": "scheduling",
+    "categoryLabel": "排程與剪貼簿"
+  },
+  {
+    "name": "calendar-minus",
+    "label": "移除排程",
+    "category": "scheduling",
+    "categoryLabel": "排程與剪貼簿"
+  },
+  {
+    "name": "calendar-x",
+    "label": "取消排程",
+    "category": "scheduling",
+    "categoryLabel": "排程與剪貼簿"
+  },
+  {
+    "name": "calendar-clock",
+    "label": "排程時間",
+    "category": "scheduling",
+    "categoryLabel": "排程與剪貼簿"
+  },
+  {
+    "name": "calendar-range",
+    "label": "日期範圍",
+    "category": "scheduling",
+    "categoryLabel": "排程與剪貼簿"
+  },
+  {
+    "name": "timer",
+    "label": "計時器",
+    "category": "scheduling",
+    "categoryLabel": "排程與剪貼簿"
+  },
+  {
+    "name": "clipboard-list",
+    "label": "工作清單",
+    "category": "scheduling",
+    "categoryLabel": "排程與剪貼簿"
+  },
+  {
+    "name": "clipboard-copy",
+    "label": "複製到剪貼簿",
+    "category": "scheduling",
+    "categoryLabel": "排程與剪貼簿"
+  },
+  {
+    "name": "clipboard-x",
+    "label": "取消剪貼簿項目",
+    "category": "scheduling",
+    "categoryLabel": "排程與剪貼簿"
+  },
+  {
+    "name": "clipboard-pen",
+    "label": "編輯剪貼簿",
+    "category": "scheduling",
+    "categoryLabel": "排程與剪貼簿"
+  },
+  {
+    "name": "message-plus",
+    "label": "新增對話",
+    "category": "collaboration",
+    "categoryLabel": "協作與帳戶狀態"
+  },
+  {
+    "name": "message-circle-question",
+    "label": "對話提問",
+    "category": "collaboration",
+    "categoryLabel": "協作與帳戶狀態"
+  },
+  {
+    "name": "message-circle-warning",
+    "label": "對話警示",
+    "category": "collaboration",
+    "categoryLabel": "協作與帳戶狀態"
+  },
+  {
+    "name": "mail-check",
+    "label": "已確認郵件",
+    "category": "collaboration",
+    "categoryLabel": "協作與帳戶狀態"
+  },
+  {
+    "name": "mail-x",
+    "label": "拒收郵件",
+    "category": "collaboration",
+    "categoryLabel": "協作與帳戶狀態"
+  },
+  {
+    "name": "bell-ring",
+    "label": "響鈴通知",
+    "category": "collaboration",
+    "categoryLabel": "協作與帳戶狀態"
+  },
+  {
+    "name": "user-x",
+    "label": "移除使用者",
+    "category": "collaboration",
+    "categoryLabel": "協作與帳戶狀態"
+  },
+  {
+    "name": "user-cog",
+    "label": "帳戶設定",
+    "category": "collaboration",
+    "categoryLabel": "協作與帳戶狀態"
+  },
+  {
+    "name": "megaphone",
+    "label": "公告",
+    "category": "collaboration",
+    "categoryLabel": "協作與帳戶狀態"
+  },
+  {
+    "name": "handshake",
+    "label": "協作",
+    "category": "collaboration",
+    "categoryLabel": "協作與帳戶狀態"
+  }
+]
