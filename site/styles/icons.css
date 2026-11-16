@@ -38,8 +38,9 @@
  .explorer-search { min-width:0; }
  .explorer-toolbar .explorer-category { display:none; }
  .explorer-actions { display:flex; flex-direction:column; gap:.75rem; }
- .explorer-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(6.5rem,1fr)); gap:0; overflow:hidden; isolation:isolate; }
- .explorer-tile { display:flex; position:relative; flex-direction:column; align-items:center; justify-content:center; gap:1rem; min-height:7.75rem; padding:.75rem .375rem; background:transparent; border:0; color:var(--color-text-strong); border-radius:0; box-shadow:1px 0 var(--color-line-hair),0 1px var(--color-line-hair); cursor:pointer; transition:background .15s; }
+ /* Keep native-size density; larger specimens need both wider cells and more vertical breathing room. */
+ .explorer-grid { --explorer-cell-width:max(6.5rem,calc(var(--display-size) * 2.5 + 2.75rem)); --explorer-cell-height:max(7.75rem,calc(var(--display-size) * 2 + 4.75rem)); --explorer-cell-gap:max(1rem,calc(var(--display-size) * .375)); display:grid; grid-template-columns:repeat(auto-fill,minmax(min(100%,var(--explorer-cell-width)),1fr)); gap:0; overflow:hidden; isolation:isolate; }
+ .explorer-tile { display:flex; position:relative; flex-direction:column; align-items:center; justify-content:center; gap:var(--explorer-cell-gap); min-height:var(--explorer-cell-height); padding:.75rem .375rem; background:transparent; border:0; color:var(--color-text-strong); border-radius:0; box-shadow:1px 0 var(--color-line-hair),0 1px var(--color-line-hair); cursor:pointer; transition:background .15s; }
  .explorer-cell { display:grid; place-items:center; height:max(2rem,var(--display-size)); }
  .explorer-mask { display:block; background:currentColor; mask-image:var(--glyph); mask-size:contain; mask-repeat:no-repeat; mask-position:center; }
  .explorer-name { font-size:.625rem; color:var(--color-text-muted); max-width:100%; overflow-wrap:anywhere; text-align:center; }
@@ -48,7 +49,7 @@
  .explorer-pagination { position:sticky; bottom:var(--collection-inset); align-self:start; display:flex; align-items:center; justify-content:space-between; gap:.5rem; min-height:var(--explorer-footer-height); padding-top:1rem; margin:0; border-top:1px solid var(--color-line-hair); font-size:.75rem; color:var(--color-text-muted); }
  .explorer-pagination > span { white-space:nowrap; }
  .explorer-empty { grid-column:1/-1; padding:4rem 1rem; text-align:center; color:var(--color-text-muted); }
- .optical-grid { grid-template-columns:repeat(auto-fill,minmax(15rem,1fr)); }
+ .optical-grid { --explorer-cell-gap:1rem; grid-template-columns:repeat(auto-fill,minmax(min(100%,15rem),1fr)); }
  .optical-tile { min-height:9rem; }
  .optical-row { display:flex; gap:2rem; align-items:end; }
  .optical-cell { display:flex; flex-direction:column; gap:1rem; align-items:center; }
@@ -87,7 +88,6 @@
   .home-stats { grid-template-columns:repeat(2,1fr); }
   .home-close { padding-block:3rem; }
   .collection-container { padding-top:1.25rem; }
-  .explorer-grid { grid-template-columns:repeat(3,minmax(0,1fr)); }
   .optical-grid { grid-template-columns:1fr; }
  }
 }

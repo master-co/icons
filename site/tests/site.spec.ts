@@ -172,6 +172,82 @@ test('larger display sizes use valid masters and export the selected dimensions'
  await page.reload()
  await expect(page.locator('input[name=size]')).toHaveAttribute('aria-valuetext','64 px')
 })
+test('size guidance is disclosed by the help tooltip without occupying a field row',async({page})=>{
+ for(const [locale,label,message] of [
+  ['', 'Display size', 'Larger sizes use the 24 px master. ZIP downloads contain the native 24 px SVGs.'],
+  ['/tw', '顯示尺寸', '較大尺寸使用 24 px 母版。ZIP 下載內容為原生 24 px SVG。']
+ ]){
+  await page.goto(`${locale}/icons?size=64`)
+  await expect(page.locator('astro-island[ssr]')).toHaveCount(0)
+  const help=page.getByRole('button',{name:label,exact:true})
+  const tip=page.locator('.tooltip[popover="hint"]')
+  const geometry=await help.evaluate(button=>{
+   const row=button.parentElement!
+   const withHelp=row.getBoundingClientRect().height
+   button.style.display='none'
+   const withoutHelp=row.getBoundingClientRect().height
+   button.style.removeProperty('display')
+   const baseline=(element:Element)=>{
+    const marker=document.createElement('span')
+    marker.style.cssText='display:inline-block;width:0;height:0;padding:0;margin:0;vertical-align:baseline'
+    element.append(marker)
+    const y=marker.getBoundingClientRect().bottom
+    marker.remove()
+    return y
+   }
+   return {withHelp,withoutHelp,labelBaseline:baseline(row.querySelector('label')!),helpBaseline:baseline(button)}
+  })
+  expect(geometry.withHelp).toBe(geometry.withoutHelp)
+  expect(geometry.helpBaseline).toBeCloseTo(geometry.labelBaseline,1)
+  await expect(tip).toBeHidden()
+  await expect(page.getByRole('slider',{name:label,exact:true})).toHaveAccessibleDescription(message)
+  await help.click()
+  await expect(tip).toBeVisible()
+  await expect(tip).toHaveText(message)
+  await page.keyboard.press('Escape')
+  await expect(tip).toBeHidden()
+  await page.mouse.move(0,0)
+  await help.focus()
+  await help.press('Enter')
+  await expect(tip).toBeVisible()
+  await page.keyboard.press('Escape')
+  await expect(tip).toBeHidden()
+  await expect(help).toBeFocused()
+ }
+})
+test('larger icons reduce column density and retain room on narrow screens',async({page})=>{
+ await page.goto('/icons?size=24')
+ await expect(page.locator('astro-island[ssr]')).toHaveCount(0)
+ const grid=page.getByTestId('icon-grid')
+ const slider=page.getByRole('slider',{name:'Display size',exact:true})
+ const measure=()=>grid.evaluate(e=>({columns:getComputedStyle(e).gridTemplateColumns.split(' ').length,height:e.querySelector('button')!.getBoundingClientRect().height}))
+ const native=await measure()
+ let previous=native
+ for(const size of [32,48,64]){
+  await slider.press('ArrowRight')
+  await expect(slider).toHaveAttribute('aria-valuetext',`${size} px`)
+  const current=await measure()
+  expect(current.columns).toBeLessThan(previous.columns)
+  expect(current.height).toBeGreaterThan(previous.height)
+  previous=current
+ }
+ await page.setViewportSize({width:390,height:844})
+ const large=await measure()
+ await slider.press('Home');await slider.press('ArrowRight');await slider.press('ArrowRight')
+ await expect(slider).toHaveAttribute('aria-valuetext','24 px')
+ expect((await measure()).columns).toBeGreaterThan(large.columns)
+ await slider.press('End')
+ for(const width of [390,320]){
+  await page.setViewportSize({width,height:844})
+  expect(await page.evaluate(()=>document.documentElement.scrollWidth)).toBe(width)
+  const tile=(await grid.locator('button').first().boundingBox())!
+  const icon=(await grid.locator('.explorer-mask').first().boundingBox())!
+  expect(icon.x-tile.x).toBeGreaterThan(24)
+ }
+ await page.getByRole('button',{name:'Size comparison',exact:true}).click()
+ expect((await measure()).columns).toBe(1)
+ expect(await page.evaluate(()=>document.documentElement.scrollWidth)).toBe(320)
+})
 test('static page retains icons and download links without JavaScript',async({browser,baseURL})=>{
  const context=await browser.newContext({javaScriptEnabled:false,baseURL})
  const page=await context.newPage();await page.goto('/icons')

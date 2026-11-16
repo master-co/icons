@@ -74,9 +74,12 @@
  <div class="scroll-area flex flex-col gap(20) p(5) mx(-5) mt(-5) grid-cols(2)@media(width<64rem) grid-cols(1)@media(width<48rem) gap(16)@media(width<48rem)">
   <label class="field explorer-search"><span>{t('Search icons')}</span><input bind:this={search} class="input" type="search" bind:value={query} oninput={()=>page=1} placeholder={t('Search by name or purpose…')} /></label>
   <div class="field">
-   <div class="flex items-center justify-between"><label for={`${instanceId}-size`}>{t('Display size')}</label><output for={`${instanceId}-size`} aria-hidden="true">{size} px</output></div>
+   <div class="flex items-baseline justify-between">
+    <div class="flex items-baseline gap(4)"><label for={`${instanceId}-size`}>{t('Display size')}</label><button type="button" class="link link-quiet (font-size:.75rem) fg-text-muted" aria-label={t('Display size')} aria-describedby={`${instanceId}-size-hint`} {...{interestfor:`${instanceId}-size-hint`}} popovertarget={`${instanceId}-size-hint`}>?</button></div>
+    <output for={`${instanceId}-size`} aria-hidden="true">{size} px</output>
+   </div>
    <input id={`${instanceId}-size`} class="slider" type="range" name="size" min="0" max={displaySizes.length-1} step="1" value={displaySizes.indexOf(size)} aria-valuetext={`${size} px`} aria-describedby={size>24?`${instanceId}-size-hint`:undefined} oninput={(event)=>size=displaySizes[event.currentTarget.valueAsNumber]??24} />
-   {#if size>24}<p id={`${instanceId}-size-hint`} class="field-hint">{t('Larger sizes use the 24 px master. ZIP downloads contain the native 24 px SVGs.')}</p>{/if}
+   <div id={`${instanceId}-size-hint`} class="tooltip" popover="hint" role="tooltip">{t('Larger sizes use the 24 px master. ZIP downloads contain the native 24 px SVGs.')}</div>
   </div>
   <div class="field"><span id={`${instanceId}-corners`}>{t('Corners')}</span><div class="segmented w-full" role="radiogroup" aria-labelledby={`${instanceId}-corners`}>{#each corners as c}<label class="segmented-item"><input class="segmented-input" type="radio" name="corner" value={c} bind:group={corner}/>{cornerLabel(c)}</label>{/each}</div></div>
   <div class="explorer-actions">
