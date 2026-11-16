@@ -1,5 +1,6 @@
 <script lang="ts">
  import {onMount, tick, type Snippet} from 'svelte'
+ import '@master/internal-site/styles/system/sidebar.css'
  import {renderSvg, getOpticalSize, type IconDefinition} from '@master/icons'
  type Entry={name:string;component:string;label:string;category:string;keywords:string[];pilot?:boolean}
  let {entries,categories,copy,children}:{entries:Entry[];categories:{id:string;label:string}[];copy:Record<string,string>;children?:Snippet}=$props()
@@ -91,12 +92,12 @@
  </div>
   <div class="field scroll-area explorer-categories">
    <span id={`${instanceId}-categories`}>{t('Category')}</span>
-   <nav class="nav" aria-labelledby={`${instanceId}-categories`}>
+   <nav class="ui-nav-group (font-weight:400)" aria-labelledby={`${instanceId}-categories`}>
    {#each categoryOptions as option}
-    <a class="nav-item" href={categoryURL(option.id)} aria-current={category===option.id?'page':undefined} onclick={(event)=>{
+    <a class="ui-nav-link" href={categoryURL(option.id)} aria-current={category===option.id?'page':undefined} onclick={(event)=>{
      if(event.metaKey||event.ctrlKey||event.shiftKey||event.altKey)return
      event.preventDefault();category=option.id;page=1
-    }}><span class="grow(1)">{option.label}</span><span class="nav-end" aria-hidden="true">{option.count}</span></a>
+    }}><span class="grow(1)">{option.label}</span><span class="fg-text-muted (font-size:.75rem) (font-variant-numeric:tabular-nums) pl(12)" aria-hidden="true">{option.count}</span></a>
    {/each}
   </nav>
   </div>
