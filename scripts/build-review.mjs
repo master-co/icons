@@ -1,0 +1,13 @@
+import { cp, mkdir, readFile, writeFile, rm } from 'node:fs/promises';
+import { resolve } from 'node:path';
+import { repoRoot, packageRoot } from './lib/paths.mjs';
+import { comparisonReferences, beforeDefinitions } from './lib/review-data.mjs';
+process.chdir(repoRoot);
+await rm('dist', {recursive:true, force:true});
+await cp(resolve(packageRoot,'dist'), 'dist', {recursive:true});
+await mkdir('dist/preview', {recursive:true});
+for (const file of ['index.html','app.js','style.css','scenarios.js','productivity-scenarios.js','expansion-scenarios.js']) await cp(`preview/${file}`,`dist/preview/${file}`);
+for (const dir of ['references','licenses']) await cp(dir,`dist/${dir}`,{recursive:true});
+const json=async file=>JSON.parse(await readFile(file,'utf8'));
+await writeFile('dist/preview/data.json',JSON.stringify({catalog:await json('dist/catalog.json'),definitions:await json('dist/definitions.json'),references:await comparisonReferences(),before:await beforeDefinitions(),review:await json('docs/refinement-ledger.json'),license:await readFile('LICENSE','utf8')})+'\n');
+await import('./standalone.mjs');

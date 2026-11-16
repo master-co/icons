@@ -1,8 +1,8 @@
 // Render current geometry for manual cross-family review; does not approve it.
 import {readFile,writeFile,mkdir} from 'node:fs/promises';
 import {chromium} from '@playwright/test';
-import {catalog,conceptCount} from '../src/catalog.mjs';
-import {renderSvg,escapeXml as esc} from '../src/runtime.mjs';
+import {catalog,conceptCount} from '../packages/icons/src/catalog.mjs';
+import {renderSvg,escapeXml as esc} from '../packages/icons/src/runtime.mjs';
 const cycle=process.argv[2]||'craft-03',out=`docs/review/${cycle}`,defs=JSON.parse(await readFile('dist/definitions.json'));
 const ledger=JSON.parse(await readFile('docs/refinement-ledger.json'));
 await mkdir(out+'/overview',{recursive:true});

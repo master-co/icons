@@ -1,0 +1,17 @@
+## Name the control \{#controls\}
+
+An icon beside visible text is decorative. Leave `label` unset: the renderer sets `aria-hidden="true"`. For an icon-only button, give the button an accessible name.
+
+```tsx
+<button aria-label="Search"><SearchIcon size={20} /></button>
+```
+
+## Name a standalone icon \{#standalone\}
+
+When an icon conveys information by itself, provide `label`. The renderer adds `role="img"` and the accessible label.
+
+```tsx
+<SearchIcon label="Search" />
+```
+
+Do not rely on color alone to convey state. Keep keyboard focus visible, provide a large enough activation area, and place essential explanations in text.

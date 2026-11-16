@@ -1,7 +1,7 @@
 import{readFile,mkdir,writeFile}from'node:fs/promises';
 import{resolve}from'node:path';
 import{chromium}from'@playwright/test';
-import{renderSvg}from'../src/runtime.mjs';
+import{renderSvg}from'../packages/icons/src/runtime.mjs';
 const out=resolve(process.argv[2]||'work/catalog-review');await mkdir(out,{recursive:true});
 const catalog=JSON.parse(await readFile('dist/catalog.json','utf8')),defs=JSON.parse(await readFile('dist/definitions.json','utf8'));
 const icons=[...catalog.icons].sort((a,b)=>a.category.localeCompare(b.category)||a.name.localeCompare(b.name)),limit=96,pages=Math.ceil(icons.length/limit),browser=await chromium.launch(),page=await browser.newPage({viewport:{width:1440,height:1100},deviceScaleFactor:1});

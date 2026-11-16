@@ -1,5 +1,5 @@
 import{readFile,writeFile,mkdir}from'node:fs/promises';import{chromium,webkit}from'@playwright/test';
-import{renderSvg}from'../src/runtime.mjs';import{draw}from'../src/drawings.mjs';import{context}from'../src/geometry.mjs';import{paintedRegion,offsetRegion,clearance,pathKit,regionPathData}from'../src/occlusion.mjs';
+import{renderSvg}from'../packages/icons/src/runtime.mjs';import{draw}from'../packages/icons/src/drawings.mjs';import{context}from'../packages/icons/src/geometry.mjs';import{paintedRegion,offsetRegion,clearance,pathKit,regionPathData}from'../packages/icons/src/occlusion.mjs';
 const names=['phone-off','mail-x','file-lock','folder-lock'],out='docs/review/clearance-01';await mkdir(out,{recursive:true});
 const before=JSON.parse(await readFile('references/clearance-01/master-before.json')),defs={};
 for(const name of names){defs[name]={name,variants:{}};for(const size of[16,20,24]){defs[name].variants[size]={};for(const corner of['sharp','soft','rounded'])defs[name].variants[size][corner]={nodes:draw(name,context(size,corner)),strokeWidth:context(size,corner).stroke};}}

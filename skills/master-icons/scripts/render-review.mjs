@@ -37,7 +37,7 @@ for (const name of names) {
   }
 }
 const builtAt = (await stat(join(repo, 'dist/definitions.json'))).mtimeMs;
-for (const file of ['src/drawings.mjs', 'src/geometry.mjs', 'src/catalog.mjs', 'src/runtime.mjs']) {
+for (const file of ['packages/icons/src/drawings.mjs', 'packages/icons/src/geometry.mjs', 'packages/icons/src/catalog.mjs', 'packages/icons/src/runtime.mjs']) {
   if ((await stat(join(repo, file))).mtimeMs > builtAt) throw new Error(`${file} is newer than dist. Build before capturing review evidence.`);
 }
 const { renderSvg } = await import(pathToFileURL(join(repo, 'dist/runtime.js')).href);

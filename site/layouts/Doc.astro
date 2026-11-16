@@ -1,0 +1,7 @@
+---
+import '@master/internal-site/styles/documents.css'
+import Doc from '@master/internal-site/layouts/Doc.astro'
+import type { ComponentProps } from 'astro/types'
+type Props = ComponentProps<typeof Doc>
+---
+<Doc {...Astro.props} footerProps={{navGroups:[{name:'Navigation',links:[{name:'Icons',href:'/icons'},{name:'Guide',href:'/guide/getting-started'},{name:'License',href:'/guide/license'}]}]}}><slot /></Doc>

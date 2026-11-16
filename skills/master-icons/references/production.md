@@ -6,16 +6,16 @@
 
 | 路徑 | 職責 |
 | --- | --- |
-| src/drawings.mjs / src/families/ | 家族模組入口、概念母型、原生座標、細節簡化 |
-| src/geometry.mjs | 原生尺寸、線寬與輪廓工具 |
-| src/catalog.mjs | 名稱、搜尋詞、分類與方向政策 |
-| src/provenance.mjs（若存在） | 明確的既有第三方聲明，與審稿分組分開 |
-| src/runtime.mjs、src/react.mjs | SVG / React 輸出語意 |
+| packages/icons/src/drawings.mjs / packages/icons/src/families/ | 家族模組入口、概念母型、原生座標、細節簡化 |
+| packages/icons/src/geometry.mjs | 原生尺寸、線寬與輪廓工具 |
+| packages/icons/src/catalog.mjs | 名稱、搜尋詞、分類與方向政策 |
+| packages/icons/src/provenance.mjs（若存在） | 明確的既有第三方聲明，與審稿分組分開 |
+| packages/icons/src/runtime.mjs、packages/icons/src/react.mjs | SVG / React 輸出語意 |
 | scripts/build.mjs | 生成 SVG、固定／動態入口、ZIP、預覽 |
 | preview/ | 互動審查介面 |
 | references/ | 外部比較圖稿，不是待自動轉換的來源資料夾 |
 
-icons/ 與 dist/ 是生成結果。改原始幾何並重新建置，不直接修 SVG 後忘記回寫。若專案結構改了，依實際結構調整，不建立第二套競爭管線。
+packages/icons/icons/ 與 packages/icons/dist/ 是套件生成結果，根 dist/ 是審稿輸出。改原始幾何並重新建置，不直接修 SVG 後忘記回寫。若專案結構改了，依實際結構調整，不建立第二套競爭管線。
 
 ## 作者工作
 
@@ -34,7 +34,7 @@ SVG 使用 currentColor、保留 viewBox，沒有腳本、外部引用、嵌入�
 - 生成器、exports、授權封裝：再查可重現性、實際 tarball、靜態入口 tree shaking 與 notices。
 - 只改研究文字：檢查內容與連結；不為低影響文件變更重跑全部 browser tests。
 
-常用命令以 package.json 為準：pnpm build、pnpm validate、pnpm check、pnpm test:browser、pnpm check:reproducible、pnpm check:package。沒有執行的項目不可寫通過；當機或環境不支援不可當成功。
+常用命令以 package.json 為準：bun run build、bun run validate、bun run check、bun run test:browser、bun run check:reproducible、bun run check:package。沒有執行的項目不可寫通過；當機或環境不支援不可當成功。
 
 ## Skill 與成果維護
 

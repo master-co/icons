@@ -2,7 +2,7 @@
 
 ## 目前 alpha 起點
 
-先讀 repository 的 src/geometry.mjs 和 docs/design-system.md。下表是 2026-11-16 基準，不覆蓋使用者後續決定。
+先讀 repository 的 packages/icons/src/geometry.mjs 和 docs/design-system.md。下表是 2026-11-16 基準，不覆蓋使用者後續決定。
 
 | 原生母版 | 主描邊 | soft 框角 | rounded 框角 | 主要輪廓 inset 起點 | 獨立元素間隙審查目標 |
 | --- | ---: | ---: | ---: | ---: | ---: |

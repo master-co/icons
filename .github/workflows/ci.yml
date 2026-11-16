@@ -1,23 +1,27 @@
-name: Validate icons
+name: Validate icons and site
 on:
   push:
   pull_request:
 jobs:
   validate:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node: [24, 26]
     steps:
       - uses: actions/checkout@v4
-      - uses: pnpm/action-setup@v4
-        with:
-          version: 12.15.0
       - uses: actions/setup-node@v4
         with:
-          node-version: 26
-          cache: pnpm
-      - run: pnpm install --frozen-lockfile
-      - run: pnpm check
-      - run: pnpm check:reproducible
-      - run: pnpm check:package
-      - run: pnpm exec playwright install --with-deps chromium firefox webkit
-      - run: pnpm test:browser
-      - run: git diff --exit-code -- icons
+          node-version: ${{ matrix.node }}
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: 1.4.4
+      - run: bun install --frozen-lockfile
+      - run: bun run check
+      - run: bun run check:reproducible
+      - run: bun run check:package
+      - run: bun x --no-install playwright install --with-deps chromium firefox webkit
+      - run: bun run test:browser
+      - run: bun run test:site
+      - run: bun run test:site:dev
+      - run: git diff --exit-code -- packages/icons/icons

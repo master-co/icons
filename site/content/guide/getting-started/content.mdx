@@ -1,0 +1,25 @@
+## Use a local workspace \{#workspace\}
+
+Master Icons is a private alpha. It is not published to npm. In this monorepo, declare `"@master/icons": "workspace:*"` in your application's dependencies, then run:
+
+```sh
+bun install
+bun run build:icons
+```
+
+For another project, create an archive from this repository and install that file:
+
+```sh
+cd packages/icons
+bun pm pack --filename ../../work/master-icons-alpha.tgz
+# In your application:
+bun add /absolute/path/to/master-icons/work/master-icons-alpha.tgz
+```
+
+The package supports Node.js 22 and later. Developing this repository uses Node.js 24 and Bun 1.4.4.
+
+## Choose an integration \{#integration\}
+
+Use [SVG or JavaScript](/guide/svg) in any framework, or [React components](/guide/react). Svelte applications can use inline SVG or the JavaScript renderer; there is no published Svelte component API.
+
+Start at 24px with soft corners. For a dense interface, choose the 16px or 20px optical drawing. See [sizes and corners](/guide/optical-sizes).

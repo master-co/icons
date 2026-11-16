@@ -1,0 +1,20 @@
+---
+import {readFile} from 'node:fs/promises'
+import Explorer from '../../components/Explorer.svelte'
+import Footer from '@master/internal-site/components/Footer.svelte'
+import translations from '../../i18n/translations'
+const locale=Astro.props.params?.locale??Astro.params.locale??'en'
+const copy=translations[locale]??translations.en
+const t=(key:string)=>copy[key]??key
+const catalog=JSON.parse(await readFile(new URL('../../../packages/icons/dist/catalog.json',import.meta.url),'utf8'))
+const entries=catalog.icons.map(({name,component,label,category,keywords,pilot}:any)=>({name,component,label,category,keywords,pilot}))
+const categories=catalog.categories.map(({id}:any)=>({id,label:'category:'+id}))
+export const metadata={title:'Browse Master Icons',description:'Interface icons at their native size.'}
+export async function generateMetadata({params}:{params:{locale:string}}){const copy=translations[params.locale]??translations.en;return{title:copy['Browse Master Icons'],description:copy['Interface icons at their native size.']}}
+---
+<main class="icons-container">
+ <header class="collection-intro"><p class="eyebrow">Master Icons / {t('Collection')}</p><h1>{t('Find the right shape.')}</h1><p class="lead">{t('Search the full collection. Compare native sizes and choose your corners.')}</p></header>
+ <Explorer client:load {entries} {categories} {copy}/>
+ <noscript><p>{t('Enable JavaScript for filtering and details. SVG and ZIP downloads remain available.')}</p><a href="/icons/24/soft/search.svg" download>{t('Download SVG')}</a></noscript>
+</main>
+<Footer client:load navGroups={[{name:'Navigation',links:[{name:'Icons',href:'/icons'},{name:'Guide',href:'/guide/getting-started'},{name:'License',href:'/guide/license'}]}]}/>

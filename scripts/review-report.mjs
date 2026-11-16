@@ -1,10 +1,10 @@
-import {catalog,conceptCount} from '../src/catalog.mjs';
+import {catalog,conceptCount} from '../packages/icons/src/catalog.mjs';
 import {scenarios} from '../preview/scenarios.js';
 
 // Read existing review decisions; this renderer never changes review status.
 import {readFile,writeFile} from 'node:fs/promises';
 import {relative} from 'node:path';
-import {renderSvg,escapeXml} from '../src/runtime.mjs';
+import {renderSvg,escapeXml} from '../packages/icons/src/runtime.mjs';
 const json=async p=>JSON.parse(await readFile(p,'utf8'));
 const ledger=await json('docs/refinement-ledger.json'),defs=await json('dist/definitions.json');
 const cycle=ledger.reviewCycle||'craft-01',modified=ledger.icons.filter(r=>r.change.kind==='modified').length,retained=ledger.icons.filter(r=>r.change.kind==='retained').length;

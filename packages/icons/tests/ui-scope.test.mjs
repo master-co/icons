@@ -6,7 +6,7 @@ import {renderToStaticMarkup} from 'react-dom/server';
 import {catalog} from '../src/catalog.mjs';
 import * as icons from '../dist/react/index.js';
 import {renderSvg} from '../dist/runtime.js';
-const defs=JSON.parse(await readFile('dist/definitions.json'));
+const defs=JSON.parse(await readFile('packages/icons/dist/definitions.json'));
 const children=svg=>svg.slice(svg.indexOf('>')+1,svg.lastIndexOf('</svg>')).replace(/><\/(circle|line|path|rect|ellipse)>/g,'/>');
 test('all named React exports match authored SVG for every optical and corner master',()=>{
  for(const entry of catalog)for(const size of [16,20,24])for(const corner of ['sharp','soft','rounded']){
@@ -81,7 +81,7 @@ test('craft-03 refinements preserve an explicit independent and root review hist
  assert.deepEqual(changed(root,final),['hard-drive','package']);
  const nextBaseline=JSON.parse(await readFile('references/craft-04/master-before.json'));
  for(const name of Object.keys(baseline))assert.deepEqual(nextBaseline[name].variants,final[name].variants,name);
- const originals=JSON.parse(await readFile('src/core-names.json'));
+ const originals=JSON.parse(await readFile('packages/icons/src/core-names.json'));
  assert.deepEqual(changed(baseline,final).filter(n=>originals.includes(n)),['bell-off','copy']);
 });
 
@@ -95,16 +95,16 @@ test('semantic perforations retain flat ends independently of frame corner style
 });
 
 test('every productivity drawing appears in a labelled product scenario',async()=>{
- const scope=JSON.parse(await readFile('src/productivity-scope.json'));
- const {scenarios,scenarioMarkup}=await import('../preview/scenarios.js');
+ const scope=JSON.parse(await readFile('packages/icons/src/productivity-scope.json'));
+ const {scenarios,scenarioMarkup}=await import('../../../preview/scenarios.js');
  const used=new Set();
  for(const[id]of scenarios)scenarioMarkup(name=>{assert.ok(defs[name],name);used.add(name);return '<svg></svg>';},id);
  for(const{name}of scope)assert.ok(used.has(name),'Missing real-context placement: '+name);
 });
 
 test('every expansion drawing is used in a labelled interface scenario',async()=>{
- const scope=JSON.parse(await readFile('src/expansion-scope.json'));
- const {scenarios,scenarioMarkup}=await import('../preview/scenarios.js');const used=new Set();
+ const scope=JSON.parse(await readFile('packages/icons/src/expansion-scope.json'));
+ const {scenarios,scenarioMarkup}=await import('../../../preview/scenarios.js');const used=new Set();
  for(const[id]of scenarios)scenarioMarkup(name=>{assert.ok(defs[name],name);used.add(name);return '<svg></svg>';},id);
  for(const{name}of scope)assert.ok(used.has(name),'Missing real-context placement: '+name);
 });

@@ -1,0 +1,16 @@
+## SVG files \{#svg\}
+
+Download a single SVG from the [collection](/icons), or use the package subpath `@master/icons/svg/20/soft/search.svg`. The archive contains all icons for the selected size and corner style, together with their licenses.
+
+Inline SVG uses `currentColor`. An external SVG loaded through `<img>` does not inherit the surrounding text color.
+
+## JavaScript renderer \{#javascript\}
+
+```js
+import { Search, renderSvg } from '@master/icons';
+const svg = renderSvg(Search, { size: 20, corner: 'soft', label: 'Search' });
+```
+
+`renderSvg` returns SVG markup. Use it with this package's trusted icon definitions. The `size` option controls display size; `opticalSize` can select 16, 20 or 24 explicitly. By default, the closest optical drawing is selected.
+
+`color` defaults to `currentColor`, `corner` to `soft`, and `direction` to `ltr`. Only `arrow-left`, `arrow-right`, `chevron-left`, `chevron-right`, `chevrons-left`, `chevrons-right`, `undo` and `redo` mirror when `direction` is `rtl`.

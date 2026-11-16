@@ -3,7 +3,7 @@ import { readFile, writeFile, mkdir } from 'node:fs/promises';
 import { unzipSync, strFromU8 } from 'fflate';
 import { pathToFileURL } from 'node:url';
 import { resolve } from 'node:path';
-import { catalog as sourceCatalog } from '../../src/catalog.mjs';
+import { catalog as sourceCatalog } from '../../packages/icons/src/catalog.mjs';
 const conceptCount=sourceCatalog.length;
 
 test('search, presets, accessible detail, downloads, keyboard and responsive layouts',async({page},info)=>{

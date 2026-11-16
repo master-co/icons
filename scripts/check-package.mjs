@@ -2,11 +2,11 @@ import { execFileSync } from 'node:child_process';
 import { mkdir, mkdtemp, writeFile, rename } from 'node:fs/promises';
 import { resolve } from 'node:path';
 import assert from 'node:assert/strict';
-import { catalog } from '../src/catalog.mjs';
+import { catalog } from '../packages/icons/src/catalog.mjs';
 
 await mkdir('work',{recursive:true});
 const archive=resolve('work/master-icons-alpha.tgz');
-execFileSync('pnpm',['pack','--out',archive],{stdio:['ignore','ignore','pipe'],maxBuffer:8*1024*1024});
+execFileSync('bun',['pm','pack','--filename',archive],{cwd:resolve('packages/icons'),stdio:['ignore','ignore','pipe'],maxBuffer:8*1024*1024});
 const entries=execFileSync('tar',['-tzf',archive],{encoding:'utf8',maxBuffer:8*1024*1024}).trim().split('\n');
 assert.equal(entries.filter(x=>x.endsWith('.svg')).length,catalog.length*9);
 for(const path of ['package/LICENSE','package/THIRD_PARTY_NOTICES.md','package/licenses/hugeicons-MIT.txt','package/licenses/lucide.txt','package/dist/runtime.d.ts'])assert.ok(entries.includes(path),path);

@@ -3,7 +3,7 @@ import {mkdir} from 'node:fs/promises';
 import {pathToFileURL} from 'node:url';
 import {resolve} from 'node:path';
 import {scenarios} from '../../preview/scenarios.js';
-import {catalog} from '../../src/catalog.mjs';
+import {catalog} from '../../packages/icons/src/catalog.mjs';
 import {beforeDefinitions} from '../../scripts/lib/review-data.mjs';
 const ids=scenarios.map(x=>x[0]),before=await beforeDefinitions();
 test('all contexts render in light/dark and desktop/mobile; controls and navigation work',async({page},info)=>{

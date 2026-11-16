@@ -1,0 +1,21 @@
+---
+title: "SVG 與 JavaScript"
+description: "不依賴框架即可使用圖示。"
+---
+
+## SVG 檔案 \{#svg\}
+
+從[圖庫](/icons)下載單顆 SVG，或使用套件子路徑 `@master/icons/svg/20/soft/search.svg`。整組封裝包含所選尺寸與圓角的全部圖示及授權文件。
+
+Inline SVG 使用 `currentColor`。透過 `<img>` 載入的外部 SVG 不會繼承周圍文字的顏色。
+
+## JavaScript 渲染器 \{#javascript\}
+
+```js
+import { Search, renderSvg } from '@master/icons';
+const svg = renderSvg(Search, { size: 20, corner: 'soft', label: 'Search' });
+```
+
+`renderSvg` 回傳 SVG 標記，請搭配本套件可信任的圖示定義使用。`size` 控制顯示尺寸；`opticalSize` 可明確指定 16、20 或 24，預設選擇最接近的光學圖稿。
+
+`color` 預設為 `currentColor`，`corner` 為 `soft`，`direction` 為 `ltr`。設定 `direction` 為 `rtl` 時，只有 `arrow-left`、`arrow-right`、`chevron-left`、`chevron-right`、`chevrons-left`、`chevrons-right`、`undo` 與 `redo` 會鏡射。

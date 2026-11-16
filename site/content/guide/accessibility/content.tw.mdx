@@ -1,0 +1,22 @@
+---
+title: "無障礙"
+description: "讓圖示與周圍控制項具備清楚語意。"
+---
+
+## 命名控制項 \{#controls\}
+
+可見文字旁的圖示屬於裝飾。省略 `label`，渲染器便會設定 `aria-hidden="true"`。只有圖示的按鈕應在按鈕本身提供無障礙名稱。
+
+```tsx
+<button aria-label="Search"><SearchIcon size={20} /></button>
+```
+
+## 命名獨立圖示 \{#standalone\}
+
+圖示獨自傳達資訊時，請提供 `label`。渲染器會加入 `role="img"` 與無障礙標籤。
+
+```tsx
+<SearchIcon label="Search" />
+```
+
+不要只靠顏色傳達狀態。保留清楚的鍵盤焦點、足夠大的操作範圍，並以文字提供必要說明。

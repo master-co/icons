@@ -1,7 +1,7 @@
 // Render evidence only; this script never approves a drawing.
 import {readFile,writeFile,mkdir} from 'node:fs/promises';
 import {chromium,webkit} from '@playwright/test';
-import {renderSvg} from '../src/runtime.mjs';
+import {renderSvg} from '../packages/icons/src/runtime.mjs';
 const json=async p=>JSON.parse(await readFile(p,'utf8'));
 const before=(await json('references/layers-01/master-before.json')).layers;
 const definitions=await json('dist/definitions.json');

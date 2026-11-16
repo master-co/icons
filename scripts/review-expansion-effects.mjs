@@ -2,7 +2,7 @@
 import {readFile,writeFile,mkdir} from 'node:fs/promises';
 import {chromium,webkit} from '@playwright/test';
 import {createElement} from 'react';import{renderToStaticMarkup}from'react-dom/server';
-import {renderSvg} from '../src/runtime.mjs';import {catalog} from '../src/catalog.mjs';
+import {renderSvg} from '../packages/icons/src/runtime.mjs';import {catalog} from '../packages/icons/src/catalog.mjs';
 import * as react from '../dist/react/index.js';
 const defs=JSON.parse(await readFile('dist/definitions.json')),out=`docs/review/${process.argv[2]||'craft-03'}`;await mkdir(out,{recursive:true});
 const names=['selection','ticket','file-archive','chart-area','file-question'];

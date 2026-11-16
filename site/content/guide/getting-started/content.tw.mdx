@@ -1,0 +1,30 @@
+---
+title: "開始使用"
+description: "將 private alpha 接入本機專案。"
+---
+
+## 使用本機 workspace \{#workspace\}
+
+Master Icons 目前為 private alpha，尚未發布至 npm。在此 monorepo 的應用程式依賴中加入 `"@master/icons": "workspace:*"`，然後執行：
+
+```sh
+bun install
+bun run build:icons
+```
+
+若要在其他專案使用，先在此儲存庫產生封裝檔案，再安裝該檔案：
+
+```sh
+cd packages/icons
+bun pm pack --filename ../../work/master-icons-alpha.tgz
+# In your application:
+bun add /absolute/path/to/master-icons/work/master-icons-alpha.tgz
+```
+
+套件支援 Node.js 22 以上；開發此儲存庫使用 Node.js 24 與 Bun 1.4.4。
+
+## 選擇接入方式 \{#integration\}
+
+任何框架都可使用 [SVG 或 JavaScript](/guide/svg)，React 專案則可使用 [React 元件](/guide/react)。Svelte 應用程式可以使用 inline SVG 或 JavaScript 渲染器；目前沒有發布 Svelte 元件 API。
+
+預設從 24px 與微圓開始。密集介面可選 16px 或 20px 的光學圖稿，詳見[尺寸與圓角](/guide/optical-sizes)。

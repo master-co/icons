@@ -8,31 +8,37 @@ Layers 精修與審查教訓見 [Layers 01](docs/layers-01.md)。前輪試作、
 
 ## 開始使用
 
-需要 Node.js 22+ 與 pnpm 12.15.0。
+需要 Node.js 24 以上與 Bun 1.4.4；本機建議使用 Node.js 26 的最新修補版本。圖示套件本身仍支援 Node.js 22+。
 
 ```sh
-pnpm install --frozen-lockfile
-pnpm dev
+bun install --frozen-lockfile
+bun run dev              # 正式網站：http://127.0.0.1:4321
+bun run dev:review       # 獨立審稿：http://127.0.0.1:4173
 ```
 
-開啟 <http://127.0.0.1:4173>。預覽每頁 96 顆，尺寸比較每頁 24 顆；包含搜尋、分類、原生尺寸／圓角對照、二十一個實際情境、全部 392 顆的兩份上游原稿與修改前／後對照、單個 SVG 與整組 ZIP 下載。
+正式網站提供英文與 `/tw` 繁中版，包含圖示搜尋、分類、光學尺寸與圓角比較、SVG／React 複製、SVG／ZIP 下載，以及使用文件。Master Site 整合 Astro 7、Svelte 5、Master CSS 2 與 Master UI；網站 origin 可透過 `PUBLIC_URL` 設定，預設為本機。
 
 ```sh
-pnpm build        # SVG、React、型別、目錄、9 組 ZIP、離線預覽
-pnpm check        # build + 資產驗證 + API / tree shaking + TypeScript
-pnpm exec playwright install chromium firefox webkit
-pnpm test:browser
-pnpm check:reproducible
-pnpm check:package
+bun run build             # 套件、審稿與正式網站
+bun run build:icons       # 套件與九組 ZIP
+bun run build:review      # 使用已建置套件產生審稿與離線頁
+bun run build:site        # 使用已建置套件產生 site/out
+bun run check             # 建置、資產驗證、套件測試與網站型別
+bun x --no-install playwright install chromium firefox webkit
+bun run test:browser      # 獨立審稿含 file:// 離線驗證
+bun run test:site         # 雙語網站與互動驗證
+bun run test:site:dev     # 實際開發伺服器路由驗證
+bun run check:reproducible
+bun run check:package
 ```
 
-`dist/preview.html` 可直接離線開啟。圖示與比較圖以壓縮資料內嵌；ZIP 依所選尺寸／圓角在本地產生；文件連結由同層的 Markdown 提供。剪貼簿權限不足時會選取文字供手動複製。
+離線審稿頁 `dist/preview.html` 可直接開啟，保留來源與前後比較、全部情境及本地 ZIP 產生。正式網站不包含上游比較原稿或審查紀錄。剪貼簿權限不足時提供手動複製。
 
 ## SVG 與 React
 
-SVG 位於 `icons/{16|20|24}/{sharp|soft|rounded}/`。使用 `currentColor`；以 `<img>` 引入外部 SVG 不會繼承頁面顏色，需要 inline SVG 或自行指定顏色。
+SVG 位於 `packages/icons/icons/{16|20|24}/{sharp|soft|rounded}/`。使用 `currentColor`；以 `<img>` 引入外部 SVG 不會繼承頁面顏色，需要 inline SVG 或自行指定顏色。
 
-以下為本地套件名稱，請用 workspace / `pnpm link` 接入，或 `pnpm pack --out work/master-icons-alpha.tgz` 後安裝產物。尚無公開 npm 安裝承諾。
+以下為本地套件名稱，請用 workspace 接入，或 `bun run check:package` 後安裝產物。尚無公開 npm 安裝承諾。
 
 ```tsx
 // 動態入口：只帶入用到的圖示，每個包含九份圖稿。
@@ -67,15 +73,15 @@ const svg = renderSvg(Search, { size: 20, corner: 'soft', label: '搜尋' });
 
 | 路徑 | 用途 |
 | --- | --- |
-| src/drawings.mjs / src/families/ / src/expansion/ | 圖稿入口、原始核心與可讀的家族繪製模組 |
-| src/core-names.json / src/ui-scope.json / src/organization-scope.json / src/productivity-scope.json / src/expansion-scope.json / src/concepts.mjs | 原始 48、162+10+60+112名稱與概念分組 |
-| src/geometry.mjs | 尺寸、線寬、幾何圓角工具 |
-| src/catalog.mjs | 名稱、中英搜尋詞、分類、方向規則 |
-| icons/ | 生成並納入版本控制的 SVG |
-| preview/ | 審查介面 |
-| references/ | 固定 commit、SHA-256 的上游圖稿；不打包成 Master 圖示 |
-| dist/ | 生成的 JS、型別、manifest、ZIP、離線預覽；不納入版本控制 |
-| docs/ | [研究](docs/research.md)、[規範](docs/design-system.md)、[決策](docs/decisions.md)、[驗證](docs/validation.md) |
+| packages/icons/ | 圖稿來源、生成 SVG、JS／React 套件與套件測試 |
+| site/ | Master Site + Astro／Svelte 的雙語正式網站 |
+| preview/ | 獨立審稿 workspace，保留完整對照與情境 |
+| scripts/ | 根建置協調、來源與證據驗證、審稿工具 |
+| references/ | 固定 commit、SHA-256 的上游圖稿與歷史快照 |
+| docs/ | 研究、規範、決策與審查證據 |
+| dist/ | 審稿工具與離線交付，不納入版本控制 |
+
+開發模式會監看圖稿來源並重新建置。套件建置不執行審稿介面建置；根 `scripts/build.mjs` 保留為既有研究腳本的協調入口。正式網站透過 `workspace:*` 引用本套件，其他 Master 依賴使用固定發布版本。詳見 [網站開發](site/README.md) 與 [架構遷移驗證](docs/architecture-migration.md)。
 
 圖庫維持 alpha，持續接受語意與工藝審查。solid、多字重、Vue/Svelte、Iconify、Figma library 尚未實作。
 

@@ -1,0 +1,13 @@
+{
+  "name": "@master/icons-review",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "cd .. && node scripts/dev.mjs",
+    "build": "cd .. && bun run build:icons && bun run build:review"
+  },
+  "dependencies": {
+    "@master/icons": "workspace:*",
+    "fflate": "^0.8.3"
+  }
+}

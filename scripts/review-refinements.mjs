@@ -1,6 +1,6 @@
 import {readFile,writeFile,mkdir} from 'node:fs/promises';
 import {chromium,webkit,firefox} from '@playwright/test';
-import {renderSvg} from '../src/runtime.mjs';
+import {renderSvg} from '../packages/icons/src/runtime.mjs';
 import {beforeDefinitions} from './lib/review-data.mjs';
 const cycle=process.argv[2]||'craft-01';
 const out='docs/review/'+cycle,defs=JSON.parse(await readFile('dist/definitions.json')),before=await beforeDefinitions();

@@ -1,5 +1,5 @@
 import {comparisonReferences,beforeDefinitions} from './lib/review-data.mjs';
-import{readFile,mkdir,writeFile}from'node:fs/promises';import{resolve}from'node:path';import{chromium}from'@playwright/test';import{renderSvg}from'../src/runtime.mjs';import{draw,drawings}from'../src/drawings.mjs';import{context}from'../src/geometry.mjs';
+import{readFile,mkdir,writeFile}from'node:fs/promises';import{resolve}from'node:path';import{chromium}from'@playwright/test';import{renderSvg}from'../packages/icons/src/runtime.mjs';import{draw,drawings}from'../packages/icons/src/drawings.mjs';import{context}from'../packages/icons/src/geometry.mjs';
 const label=process.argv[2],names=process.argv[3]?.split(',');if(!label||!names)throw Error('Usage: node scripts/review-ui-batch.mjs batch name,name');
 const out=resolve('work/ui-v1/review/'+label);await mkdir(out,{recursive:true});const refs=(await comparisonReferences()).references,before=await beforeDefinitions();
 const defs={};for(const name of names)if(drawings[name]){const variants={};for(const size of[16,20,24]){variants[size]={};for(const c of['sharp','soft','rounded'])variants[size][c]={nodes:draw(name,context(size,c)),strokeWidth:context(size,c).stroke};}defs[name]={name,direction:'fixed',variants};}

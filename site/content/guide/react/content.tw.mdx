@@ -1,0 +1,24 @@
+---
+title: "React"
+description: "在 React 使用動態或固定光學圖稿。"
+---
+
+## 動態圖示 \{#dynamic\}
+
+支援 React 18 與 19。React 為選用的 peer dependency，請在使用端應用程式中安裝。
+
+```tsx
+import { SearchIcon } from '@master/icons/react';
+<SearchIcon size={20} corner="rounded" label="Search" />
+```
+
+動態入口會為每個匯入的圖示包含九份圖稿。元件接受標準 SVG props、事件，並透過 `forwardRef` 傳遞 ref。
+
+## 固定圖示 \{#fixed\}
+
+```tsx
+import { SearchIcon } from '@master/icons/react/16/soft';
+<button aria-label="Search"><SearchIcon /></button>
+```
+
+固定入口只包含一種光學尺寸與圓角，不接受 `corner` 或 `opticalSize`；修改 `size` 只會縮放該圖稿。在介面中使用一致的固定入口，即可統一視覺語言。

@@ -2,9 +2,9 @@
 import {readFile,writeFile,mkdir} from 'node:fs/promises';
 import {chromium} from '@playwright/test';
 import {comparisonReferences,beforeDefinitions} from './lib/review-data.mjs';
-import {draw} from '../src/drawings.mjs';
-import {context} from '../src/geometry.mjs';
-import {renderSvg} from '../src/runtime.mjs';
+import {draw} from '../packages/icons/src/drawings.mjs';
+import {context} from '../packages/icons/src/geometry.mjs';
+import {renderSvg} from '../packages/icons/src/runtime.mjs';
 const batches=JSON.parse(await readFile('docs/review/ui-v1/batches.json'));
 const refs=(await comparisonReferences()).references,before=await beforeDefinitions();
 const out=process.argv[2]||'work/craft-01/initial',only=process.argv[3];
