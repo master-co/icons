@@ -23,7 +23,7 @@ const commerce = {
   },
   ticket: (g) => {
     const f = figure(g), k = Math.min(g.r * 24 / g.s, 1.5);
-    return [f.path(`M${2.5 + k} 5H${21.5 - k}Q21.5 5 21.5 ${5 + k}V9A3 3 0 0 0 21.5 15V${19 - k}Q21.5 19 ${21.5 - k} 19H${2.5 + k}Q2.5 19 2.5 ${19 - k}V15A3 3 0 0 0 2.5 9V${5 + k}Q2.5 5 ${2.5 + k} 5Z`), ["path", { ...f.line(15, 7.5, 15, 16.5)[1], "stroke-dasharray": g.s === 16 ? `${f.u(2.5)} ${f.u(4)}` : `${f.u(1.5)} ${f.u(2.25)}` }]];
+    return [f.path(`M${2.5 + k} 5H${21.5 - k}Q21.5 5 21.5 ${5 + k}V9A3 3 0 0 0 21.5 15V${19 - k}Q21.5 19 ${21.5 - k} 19H${2.5 + k}Q2.5 19 2.5 ${19 - k}V15A3 3 0 0 0 2.5 9V${5 + k}Q2.5 5 ${2.5 + k} 5Z`), ["path", { ...f.line(15, 7.5, 15, 16.5)[1], "stroke-linecap": "butt", "stroke-dasharray": g.s === 16 ? `${f.u(2.5)} ${f.u(4)}` : `${f.u(1.5)} ${f.u(2.25)}` }]];
   },
   gift: (g) => {
     const f = figure(g);

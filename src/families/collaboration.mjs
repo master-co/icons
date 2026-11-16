@@ -13,10 +13,10 @@ function mailState(g,state) {
 }
 function accountGear(g) {
   const f=figure(g),cx=17,cy=17,points=[];
-  for(let tooth=0;tooth<6;tooth++)for(const[offset,radius]of [[0,3.6],[12,4.8],[36,4.8],[48,3.6]]){
+  for(let tooth=0;tooth<6;tooth++)for(const[offset,radius]of [[0,4.2],[12,5.2],[36,5.2],[48,4.2]]){
     const a=(tooth*60+offset)*Math.PI/180;points.push([cx+Math.cos(a)*radius,cy+Math.sin(a)*radius]);
   }
-  return [f.contour(points,true,g.tip*.4),f.circle(cx,cy,1.3)];
+  return [f.contour(points,true,g.tip*.4),f.circle(cx,cy,1.85)];
 }
 export const collaboration = {
   'message-plus':g=>[...coreDrawings.message(g),...mark(g,'plus',12,10)],
@@ -40,16 +40,24 @@ export const collaboration = {
     return [person(g,true)[0],f.path('M3.25 20.75V19C3.25 15.5 6.35 14.25 7.85 14.25H9.5'),...accountGear(g)];
   },
   megaphone(g) {
-    const f=figure(g);
-    return [f.contour([[3,9],[8,9],[20,4],[20,20],[8,15],[3,15]],true,g.r),
-      f.line(8,9,8,15),f.contour([[7,15],[9,21],[12,21],[10,15.8333]],false,g.tip)];
+    const f=figure(g),k=g.corner==='sharp'?0:g.corner==='soft'?.8:1.4;
+    // Redrawn after Lucide's curved horn and bent grip; pinned provenance is
+    // retained. Structural curves remain curved even in the sharp preset.
+    return [f.path(`M${3+k} 7H10.5C14 7 17.2 5.3 ${20.5-k} ${3.5+k*.5}Q20.5 3.5 20.5 ${3.5+k}V${17.5-k}Q20.5 17.5 ${20.5-k} ${17.5-k*.5}C17.2 15.7 14 14 10.5 14H${3+k}Q3 14 3 ${14-k}V${7+k}Q3 7 ${3+k} 7Z`),
+      f.line(8,7,8,14),
+      f.path('M6 14C6.1 16.5 6.9 19 8.3 20.5C9.2 21.8 11.5 21.2 11.5 19.8C11.5 19.2 10.3 17 10.3 14')];
   },
   handshake(g) {
     const f=figure(g),r=Math.min(g.r,g.v(.35,.45,.6));
-    return [f.contour([[2,8],[5,5],[8,7.5],[5,15],[2,13]],true,r),
-      f.contour([[22,8],[19,5],[16,7.5],[19,15],[22,13]],true,r),
-      f.contour([[8,7.5],[9.5,6],[12,6]],false,g.tip),
-      f.path('M16 7.5L14.5 6H12L9 9Q8 10 9 11Q10 12 11 11L13 9.5L18 14Q19 15 18 16L14 20Q13 21 12 20L5 15'),
-      f.line(14.5,18,12,15.5),...(g.s===16?[]:[f.line(16.5,16,14,13.5)])];
+    // Lucide's overlapping thumb and rounded finger returns informed this
+    // redraw. Shorten the internal upper seam at 16; keep the grip silhouette.
+    return [
+      f.path(`M${g.s===16?'15.3 14.4':'14.3 13.4'}L16.6 15.7C18.5 17.6 21 15.1 19.1 13.2L15 9.1C13.9 8 12.4 8 11.3 9.1L10.1 10.3C8.2 12.2 5.7 9.7 7.6 7.8L10.4 5C12.2 3.4 14.6 3.2 16.6 4.4C17.3 4.8 17.9 5.1 18.6 4.9L20.6 4.5`),
+      f.path('M11.3 16.5L13.6 18.8C15.5 20.7 18.5 17.6 16.6 15.7'),
+      f.contour([[3.5,3.5],[2.5,13.5],[8.4,19.4]],false,r),
+      f.path('M8.4 19.4C10.3 21.3 13.2 18.4 11.3 16.5'),
+      f.line(3.4,4.5,11.1,4.5),
+      f.contour([[20.5,3.5],[21.5,13.5],[19.4,13.5]],false,r),
+    ];
   },
 };

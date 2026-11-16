@@ -68,7 +68,8 @@ function render(){
   if(state.view==='reference')renderReference(ticket);
   if(state.selected)renderDetail();
 }
-function svgWithLicense(name){const notice=license.replace('Copyright (c) 2026 Master and contributors',`Copyright (c) 2026 Master and contributors${meta(name).source.copyright?'\n'+meta(name).source.copyright:''}`);return `<!--\n${notice.trim()}\n-->\n${glyph(name)}\n`;}
+function iconNotice(entry){const source=entry.source;return license.trim().replace('Copyright (c) 2026 Master and contributors',`Copyright (c) 2026 Master and contributors${source.copyright&&!source.notice?'\n'+source.copyright:''}`)+(source.notice?'\n\n'+source.notice.trim():'');}
+function svgWithLicense(name){return `<!--\n${iconNotice(meta(name))}\n-->\n${glyph(name)}\n`;}
 function renderDetail(){const entry=meta(state.selected);$('#dialog-title').textContent=entry.label;$('#dialog-name').textContent=entry.name;$('#dialog-category').textContent=entry.categoryLabel;$('#detail-large').innerHTML=glyph(entry.name,state.size,state.corner,state.size*4);$('#detail-sizes').innerHTML=catalog.sizes.map(s=>`<div><span class="glyph">${glyph(entry.name,s)}</span><small>${s}px 原生</small></div>`).join('');$('#detail-corners').innerHTML=catalog.corners.map(c=>`<div><span class="glyph">${glyph(entry.name,state.size,c)}</span><small>${cornerLabels[c]}</small></div>`).join('');$('#detail-code').textContent=glyph(entry.name).replace(/></g,'>\n<');if(objectUrl)URL.revokeObjectURL(objectUrl);objectUrl=URL.createObjectURL(new Blob([svgWithLicense(entry.name)],{type:'image/svg+xml'}));$('#download-icon').href=objectUrl;$('#download-icon').download=`${entry.name}-${state.size}-${state.corner}.svg`;}
 
 async function copy(text){try{await navigator.clipboard.writeText(text);announce('已複製');}catch{$('#detail-code').textContent=text;const range=document.createRange();range.selectNodeContents($('#detail-code'));const sel=getSelection();sel.removeAllRanges();sel.addRange(range);announce('無法直接存取剪貼簿，已選取內容，可手動複製。');}}
@@ -109,7 +110,7 @@ $('#download-set').addEventListener('click',async event=>{
   try{
     const files={LICENSE:strToU8(license),'THIRD_PARTY_NOTICES.md':strToU8(data.thirdPartyNotices)};
     for(const [name,text]of Object.entries(data.upstreamLicenses))files['licenses/'+name]=strToU8(text);
-    for(const entry of catalog.icons){const notice=license.replace('Copyright (c) 2026 Master and contributors',`Copyright (c) 2026 Master and contributors${entry.source.copyright?'\n'+entry.source.copyright:''}`);files[entry.name+'.svg']=strToU8('<!--\n'+notice.trim()+'\n-->\n'+renderSvg(definitions[entry.name],{size,opticalSize:size,corner})+'\n');}
+    for(const entry of catalog.icons)files[entry.name+'.svg']=strToU8('<!--\n'+iconNotice(entry)+'\n-->\n'+renderSvg(definitions[entry.name],{size,opticalSize:size,corner})+'\n');
     const url=URL.createObjectURL(new Blob([zipSync(files,{level:6,mtime:new Date(2026,10,16)})],{type:'application/zip'}));
     const a=document.createElement('a');a.href=url;a.download=`master-icons-${size}-${corner}.zip`;a.click();setTimeout(()=>URL.revokeObjectURL(url),60000);announce(`已打包 ${catalog.icons.length.toLocaleString()} 個 SVG`);
   }catch(error){announce('下載失敗：'+error.message);}finally{button.removeAttribute('aria-busy');}

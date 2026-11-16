@@ -28,9 +28,9 @@ export const scheduling = {
       f.line(7.5,18,12.5,18),f.dot(16.5,18,g.stroke/2)];
   },
   timer(g) {
-    const f=figure(g);
+    const f=figure(g),diagonal=7.5/Math.sqrt(2);
     return [f.circle(12,13.5,7.5),f.line(9.5,2.5,14.5,2.5),f.line(12,2.5,12,6),
-      f.line(17.5,8,20,5.5),f.line(12,13.5,15,10.5)];
+      f.line(12+diagonal,13.5-diagonal,20,5.5),f.line(12,13.5,15,10.5)];
   },
   'clipboard-list'(g) {
     const f=figure(g),ys=g.s===16?[14]:[11.5,16.5];

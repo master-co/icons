@@ -23,13 +23,16 @@ export const fileOperations = {
   },
   'file-audio'(g) {
     const f=figure(g);
-    return [...file(g),f.circle(10.5,17,1.5),f.contour([[12,17],[12,10.5],[15.5,12]],false,g.tip)];
+    // A filled notehead is both conventional and clearer than a subpixel hole.
+    return [...file(g),f.dot(10.5,17,g.v(1.15,1.45,1.75)),f.contour([[12,17],[12,10.5],[15.5,12]],false,g.tip)];
   },
   'file-archive'(g) {
-    const f=figure(g),track=f.line(12,9,12,13);
+    const f=figure(g),small=g.s===16,track=f.line(12,9,12,small?13.125:13);
     // Separated zipper teeth are semantic, not a faded or broken file outline.
     return [...file(g),[track[0],{...track[1],
-      'stroke-dasharray':`${g.v(.6,.75,.9)} ${g.v(1.6,2,2.4)}`}],f.circle(12,17,1.5)];
+      ...(small?{'stroke-width':1}:{}),
+      'stroke-linecap':'butt',
+      'stroke-dasharray':`${g.v(.75,.75,.9)} ${g.v(1.25,2,2.4)}`}],f.circle(12,small?16.5:17,small?1.9:1.5)];
   },
   'folder-minus':g=>[...folder(g),...mark(g,'minus',12,14)],
   'folder-check':g=>[...folder(g),...mark(g,'check',12,14)],

@@ -1,0 +1,21 @@
+$ playwright test '--project=chromium-*' '--project=webkit-*' --grep 'adapted redraw'
+[WebServer] $ node scripts/dev.mjs
+[WebServer] (node:37609) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 4 tests using 3 workers
+
+(node:37700) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:37701) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:37699) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  2 [chromium-2x] › tests/browser/gallery.spec.mjs:88:1 › adapted redraw downloads preserve upstream notices in valid SVG and ZIP files (613ms)
+  ✓  3 [chromium-1x] › tests/browser/gallery.spec.mjs:88:1 › adapted redraw downloads preserve upstream notices in valid SVG and ZIP files (614ms)
+(node:37752) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 [webkit-1x] › tests/browser/gallery.spec.mjs:88:1 › adapted redraw downloads preserve upstream notices in valid SVG and ZIP files (1.0s)
+  ✓  4 [webkit-2x] › tests/browser/gallery.spec.mjs:88:1 › adapted redraw downloads preserve upstream notices in valid SVG and ZIP files (954ms)
+
+  4 passed (4.1s)

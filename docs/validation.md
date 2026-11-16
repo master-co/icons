@@ -1,38 +1,29 @@
-# 常見產品工作流程批次 · 驗證紀錄
+# Craft 01 · 驗證紀錄
 
-2026-11-16，0.1.0-alpha.0。前批次見 [專案組織](validation-organization-01.md) 與 [通用介面](validation-ui-v1.md)。
+2026-11-16，0.1.0-alpha.0。前輪紀錄保存在 [工作流程批次](validation-productivity-01.md)。本輪重新目視全部 280 個命名圖稿，精修 14 顆、保留 266 顆；基本概念仍為 182，九組輸出共 2,520 份 SVG。沒有新增名稱或公開 API。
 
-依 [本輪規劃](productivity-01-plan.md) 完成60個命名圖稿，分為六組各10顆。新增31個基本概念及29個類型／狀態／方向圖稿，全庫共280個命名圖稿、182個基本概念、2,520份SVG。搜尋別名不增加圖稿。
-
-原始48、通用介面162、專案組織10及本輪60以四份明確清單驗證精確聯集。此前220個完整definition（包括九組幾何及方向）均與本輪前快照相同。先前刪除的倉促擴充圖稿未恢復。
-
-| 檢查 | 本輪結果 |
+| 檢查 | 結果 |
 | --- | --- |
-| build / validate | 通過2,520份SVG結構、hash、命名與匯出、九組完整性、重複幾何、來源checksum、審查幾何及證據hash、九組ZIP |
-| API、React、tree shaking | 13個Node測試通過；全部280顆×九組SVG／React幾何一致；固定入口tree shaking、無障礙及顯式RTL集合保持相容 |
-| TypeScript | pnpm test:types通過 |
-| 固定來源 | 560份當期比較與48份歷史比較checksum通過；本輪120份來自固定版本Lucide、Tabler、Iconoir、Hugeicons Free原稿 |
-| Chromium／WebKit DPR1／2 | 28項瀏覽器測試通過，含2,520×4＝10,080次全組合raster檢查，無空白／裁切；情境排版修正後相關16項再通過 |
-| 來源預覽 | 本地與file://全部24頁、280顆可載入；220顆顯示真實本輪前稿，60顆明示無舊稿 |
-| 實際情境 | 共13頁，新增裝置、整合、排程、團隊協作；擴充檔案與編輯器。所有新圖稿均有情境位置。52張桌面／390px手機明暗畫面，手機導覽與工具列無頁面溢位 |
-| 新增互動 | 離線藍牙開關、回呼模擬、排程新增／移除、完成工作清除、清單編輯、團隊通知、對話新增、成員權限與移除訪客通過 |
-| 實際套件消費 | 5,632個封裝檔案；資料、SVG subpath、固定／動態React、新FileArchive／Webhook／Handshake等匯出通過；比較原稿未混入圖示套件 |
-| 可重現建置 | UTC與Asia/Taipei的6,309個輸出逐位元相同 |
-| 製作skill | master-icons v0.3.1驗證通過，版本化與已安裝內容一致；既有輪廓、細節、曲線與效果規則完整保留 |
+| build / validate | 2,520 份 SVG 結構、hash、名稱及匯出、九組完整性、重複幾何、來源 checksum、逐項前後幾何及證據 hash、九組授權 ZIP 通過 |
+| API、React、tree shaking | 15 個 Node 測試通過；280 × 九組 SVG／React 一致，固定入口 tree shaking、無障礙、顯式 RTL 相容 |
+| 歷史與精修範圍 | 真實 280 顆前稿保留；只有明確列出的 14 顆改動，其餘逐位元一致；原始 48 中只修改 chart-bar 的 16px |
+| TypeScript | pnpm test:types 通過 |
+| 固定來源 | 560 份當期及 48 份歷史比較 checksum 通過；megaphone／handshake 的 Lucide 角色更新為 adaptation-source |
+| Chromium／WebKit DPR 1／2 | 原完整 28 項及新增授權下載 4 項均通過；10,080 次全組合 raster 無空白／裁切 |
+| 離線及本地流程 | 全部 24 頁、280 顆來源／Master／真實前稿可載入；單 SVG 與 ZIP 中的 Lucide notices 完整，下載 SVG 可被 XML parser 解析 |
+| 實際情境 | 13 頁、52 張桌面／390px 手機明暗畫面；手機導覽與工具列無頁面溢位，既有情境互動通過 |
+| 套件消費 | 5,633 個封裝檔案；實際消費端資料、runtime、固定／動態 React、SVG subpath 及適用 notices 通過 |
+| 可重現建置 | UTC 與 Asia/Taipei 的 6,310 個輸出逐位元相同 |
+| 製作 skill | master-icons v0.4.0 驗證通過，版本化與已安裝副本相同 |
 
-Firefox已再次嘗試，仍以 `Could not find profile folder` 結束，列為未驗證。見 [啟動紀錄](review/productivity-01/firefox.json)。
+Firefox 再次啟動失敗，訊息為 `Could not find profile folder`，仍列為未驗證：[啟動紀錄](review/craft-01/firefox.json)。
 
-## 目視與修整
+## 目視證據
 
-每組先並列固定來源，再繪製Master並檢查16／20／24、sharp／soft／rounded、明暗、文字與55%前景色。逐項用途、相近概念、來源觀察、選擇及效果判斷見 [60顆決策](review/productivity-01/decisions.json) 及 [全庫報告](review/ui-v1/index.html#keyboard)。
+28 批逐顆檢查兩份固定來源、三尺寸三圓角、明暗背景、文字旁及 55% 前景色。每顆均有具體保留／修改理由，見 [280 顆決策](review/craft-01/decisions.json) 與 [完整來源及前後報告](review/ui-v1/index.html)。14 顆精修另有 Chromium／WebKit、DPR 1／2 的原生前後畫面；代表證據為 [第一組](review/craft-01/refined-1-webkit-2x-dark.png)、[第二組](review/craft-01/refined-2-chromium-2x-light.png)、[家族並排](review/craft-01/families-light.png)。
 
-- memory-stick首稿的空心小晶片密度過高，改為短實線；16px兩筆，20／24三筆。保留 [首稿](review/productivity-01/iterations/systems-1/native.png) 及同目錄幾何。
-- file-archive首稿短桿與方環誤似鎖頭，改為分段拉鍊齒軌與圓拉環；保留 [首稿](review/productivity-01/iterations/files-1/native.png) 及同目錄幾何。
-- keyboard、cpu、palette、clipboard-list、clipboard-pen、handshake有明確16px細節減量。file／folder／calendar狀態共用原生母型；需外掛標記時以真實幾何缺口避讓，不以白底或淡化遮掩。
-- [跨家族並排](review/productivity-01/families-dark.png) 檢查新舊圖稿的尺寸、重心及密度。情境審查修正了工作清單圖示與文字距離過大的排版問題。
+ticket 撕線與 file-archive 齒軌使用平切端帽，外框維持各自角型；16px 齒軌另調段長、間距及局部線寬。chart-area 保留 0.2 面積透明度。SVG／React、九組、明暗及 55% 前景的效果檢查見 [淺底](review/craft-01/effects-chromium-1x-light.png)、[深底](review/craft-01/effects-webkit-2x-dark.png)。其他圖示不因審查而機械加入效果。
 
-file-archive採用虛線是為了表達分離的拉鍊齒；主要文件框保持實線。端帽沿用三種角型，段長與間距隨原生尺寸變化。以Chromium／WebKit DPR1／2查看SVG／React並列、九組輸出、明暗及55%前景色：[淺底](review/productivity-01/effects-chromium-1x-light.png)、[深底](review/productivity-01/effects-webkit-2x-dark.png)。既有ticket虛線及chart-area的0.2透明度仍保留。本輪其他59顆不使用虛線，60顆均未新增透明度或漸層；個別理由逐項記錄。
+[完整瀏覽器紀錄](review/craft-01/browser-tests.log) · [授權下載紀錄](review/craft-01/browser-notices.log) · [套件](review/craft-01/package.log) · [可重現性](review/craft-01/reproducible.log)。
 
-[完整瀏覽器紀錄](review/productivity-01/browser-tests.log) · [情境修正後紀錄](review/productivity-01/browser-context-tests.log) · [套件](review/productivity-01/package.log) · [可重現性](review/productivity-01/reproducible.log)。
-
-280筆審查仍為Codex目視候選，使用者最終設計定案待確認。工程通過與設計定案分開；維持private alpha，未發布npm或推送遠端。
+使用者已肯定 indent-increase、indent-decrease、megaphone、handshake、ticket 的本輪修正。其餘仍為 Codex 目視候選；工程通過、目視審查及使用者最終定案分開記錄。維持 private alpha，未發布 npm 或推送遠端。

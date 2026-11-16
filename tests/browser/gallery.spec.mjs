@@ -84,3 +84,21 @@ test('standalone review works without a server and retains comparison / ZIP expo
   const zip=unzipSync(await readFile(await (await downloaded).path()));
   expect(Object.keys(zip).filter(x=>x.endsWith('.svg'))).toHaveLength(conceptCount);
 });
+
+test('adapted redraw downloads preserve upstream notices in valid SVG and ZIP files',async({page})=>{
+ for(const url of ['/',pathToFileURL(resolve('dist/preview.html')).href]){
+  await page.goto(url);
+  for(const name of['megaphone','handshake']){
+   await page.getByRole('searchbox').fill(name);await page.locator(`.icon-card[data-icon="${name}"]`).click();
+   const pending=page.waitForEvent('download');await page.locator('#download-icon').click();
+   const source=await readFile(await(await pending).path(),'utf8');
+   expect(source).toContain('ISC License');expect(source).toContain('Copyright (c) 2026 Lucide Icons and Contributors');
+   expect(await page.evaluate(svg=>new DOMParser().parseFromString(svg,'image/svg+xml').querySelector('parsererror')?.textContent||'',source)).toBe('');
+   await page.keyboard.press('Escape');
+  }
+  const pending=page.waitForEvent('download');await page.locator('#download-set').click();
+  const zip=unzipSync(await readFile(await(await pending).path()));
+  expect(strFromU8(zip['licenses/lucide.txt'])).toContain('ISC License');
+  for(const name of['megaphone','handshake'])expect(strFromU8(zip[name+'.svg'])).toContain('ISC License');
+ }
+});

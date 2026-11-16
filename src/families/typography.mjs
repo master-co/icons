@@ -2,7 +2,10 @@ import { figure } from './shared.mjs';
 
 function indent(g,increase) {
   const f=figure(g),tip=increase?7.5:3.5,tail=increase?3.5:7.5;
-  return [f.line(11,5,20.5,5),f.line(11,12,20.5,12),f.line(11,19,20.5,19),
+  // Tabler's line-length relationship communicates the action as well as the
+  // arrow. Keep Master's spacing, endpoints, stroke and native corner treatment.
+  const outerStart=increase?9:13,middleStart=increase?13:11;
+  return [f.line(outerStart,5,20.5,5),f.line(middleStart,12,20.5,12),f.line(outerStart,19,20.5,19),
     f.contour([[tail,8],[tip,12],[tail,16]],false,g.tip)];
 }
 function script(g,raised) {

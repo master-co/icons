@@ -2,7 +2,7 @@
 
 微圓、簡約、為介面原生尺寸設計的開源圖示。**0.1.0-alpha.0** 包含 **280 個命名圖示、182 個基本概念**；16 / 20 / 24 三尺寸與 sharp / soft / rounded 三圓角，共 **2,520 份 SVG**。
 
-原始 48 個名稱及最近精修完整保留；依 `src/ui-scope.json` 新繪 162 個通用介面與商務圖示，其後依 `src/organization-scope.json` 新繪 10 個專案與文件組織圖示；本輪依 `src/productivity-scope.json` 新增60顆，既有220顆完整定義不變。先前刪除的擴充圖稿未恢復。方向、開關與狀態另計命名圖稿，搜尋別名不增計圖示。套件維持 private alpha；工程檢查、設計目視與使用者定案分開記錄。
+範圍由原始48個名稱、`src/ui-scope.json`的162顆、`src/organization-scope.json`的10顆及`src/productivity-scope.json`的60顆組成。本輪 Craft 01 重新逐顆審查280顆、精修14顆、保留266顆，沒有新增名稱。先前刪除的擴充圖稿未恢復。方向、開關與狀態另計命名圖稿，搜尋別名不增計圖示。套件維持 private alpha；工程檢查、設計目視與使用者定案分開記錄。
 
 ## 開始使用
 
@@ -79,7 +79,7 @@ const svg = renderSvg(Search, { size: 20, corner: 'soft', label: '搜尋' });
 
 ## 授權
 
-Master 圖示為 MIT。12 個代表圖示以 Hugeicons Free 為參考重構研究，保守保留其 MIT 來源聲明；其餘 268 個命名圖稿由本專案繪製。完整來源與固定版本見 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。比較頁另含 Tabler、Iconoir、Lucide 的原始圖稿及各自授權，這些圖稿不進入 Master SVG / React 套件。
+Master 圖示為 MIT。12 個代表圖示以 Hugeicons Free 為參考重構研究，保守保留其 MIT 來源聲明；另外266個由本專案繪製；megaphone及handshake依Lucide構造重繪，保守保留其ISC來源及授權。完整來源與固定版本見 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。比較頁另含 Tabler、Iconoir、Lucide 的原始圖稿及各自授權，比較原稿不進入 Master SVG / React 套件；適用的來源notices與授權隨套件交付。
 
 ## 製作 skill
 
@@ -94,6 +94,6 @@ node scripts/review-catalog.mjs work/catalog-review
 node skills/master-icons/scripts/render-review.mjs --repo . --icons user,users,bell,bell-off --out work/detail-review
 ```
 
-逐顆判斷見 [離線審查報告](docs/review/ui-v1/index.html) 與 [審查紀錄](docs/refinement-ledger.json)。28 批圖稿均已查看來源並列、九組原生尺寸、明暗及文字場景；48 顆保留原稿、232 顆新繪，使用者最終定案待確認。驗證器會拒絕缺少紀錄、圖稿已變更或證據不符的審查。Firefox 本機啟動失敗，列為未驗證。
+逐顆判斷見 [離線審查報告](docs/review/ui-v1/index.html) 與 [審查紀錄](docs/refinement-ledger.json)。28 批圖稿均已查看來源並列、九組原生尺寸、明暗及文字場景；本輪14顆精修、266顆保留幾何，使用者最終定案待確認。驗證器會拒絕缺少紀錄、圖稿已變更或證據不符的審查。Firefox 本機啟動失敗，列為未驗證。
 
-本輪60顆涵蓋裝置、系統、文字工具、檔案類型、排程及協作，增加31個基本概念與29個類型／狀態／方向圖稿。[規劃](docs/productivity-01-plan.md) · [本輪總覽](docs/review/productivity-01/overview-light.png)。file-archive使用尺寸專用的分段拉鍊齒軌，已檢查SVG／React及明暗低對比；其他新增圖稿不為展示效果而加入虛線或淡化。
+本輪重點是光學孔洞、頭肩留白、精確接點，以及依使用者指定精修的縮排增減、擴音器、握手和票券撕線。[精修紀錄](docs/craft-01.md) · [重點前後稿](docs/review/craft-01/summary.png)。ticket與file-archive的虛線使用獨立的平切端帽，不受外框圓角預設影響；chart-area保留20%面積透明度。製作skill已更新至0.4.0，專案版與安裝版同步。

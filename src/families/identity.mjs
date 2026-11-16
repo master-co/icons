@@ -10,7 +10,8 @@ function userState(g, state) {
 const identity = {
   contact: (g) => {
     const f = figure(g);
-    return [f.rect(5, 3, 15, 18), f.line(3, 7, 6.5, 7), f.line(3, 17, 6.5, 17), f.circle(12.5, 9, 2.3), f.path("M9 17V16C9 12.5 16 12.5 16 16V17")];
+    // Keep the portrait's head separate from its shoulders at native 16px.
+    return [f.rect(5, 3, 15, 18), f.line(3, 7, 6.5, 7), f.line(3, 17, 6.5, 17), f.circle(12.5, 8, 2), f.path("M9 17V16C9 12.5 16 12.5 16 16V17")];
   },
   "user-plus": (g) => userState(g, "plus"),
   "user-minus": (g) => userState(g, "minus"),

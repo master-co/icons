@@ -1,3 +1,7 @@
+# Craft 01 · 2026-11-16
+
+本輪逐項重新審查280顆，精修14顆、保留266顆。使用者後續指定Tabler式縮排行長關係、Lucide式擴音器／握手曲面，以及票券撕線平切端帽，均納入。[詳細決策](craft-01.md)。以下保留歷史輪次紀錄，歷史端帽／不變規則以本輪授權精修為準。
+
 > 最新批次：依 productivity-scope.json 新增60顆，既有220顆完整定義不變。總計280名稱／182基本概念；規劃見 productivity-01-plan.md，逐顆判斷見 review/productivity-01/decisions.json。新增file-archive虛線齒軌；保留記憶體及壓縮檔的真實首稿。
 
 > 前批次：依 organization-scope.json 新增10個專案與文件組織圖示，既有210個不變。總計220名稱／151基本概念；本批規劃與結果見 organization-01-plan.md、validation.md。

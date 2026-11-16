@@ -45,7 +45,7 @@ test('reference pagination covers new drawings, before masters and offline sourc
   }
   expect(compared).toBe(catalog.length);
  }
- await page.getByRole('searchbox').fill('file-archive');await expect(page.locator('.reference-table tbody tr')).toHaveCount(1);await expect(page.locator('.reference-table tbody svg')).toHaveCount(3);await expect(page.locator('.reference-table')).toContainText('無舊稿');
+ await page.getByRole('searchbox').fill('file-archive');await expect(page.locator('.reference-table tbody tr')).toHaveCount(1);await expect(page.locator('.reference-table tbody svg')).toHaveCount(4);await expect(page.locator('.reference-table')).not.toContainText('無舊稿');
 });
 
 test('organization scope search, layout and pin controls work offline',async({page})=>{

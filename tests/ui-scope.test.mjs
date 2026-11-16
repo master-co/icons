@@ -18,9 +18,12 @@ test('RTL changes only the approved navigation set, preserving geometry transfor
  const mirrors=new Set(['arrow-left','arrow-right','chevron-left','chevron-right','chevrons-left','chevrons-right','undo','redo']);
  for(const entry of catalog){const ltr=renderSvg(defs[entry.name]),rtl=renderSvg(defs[entry.name],{direction:'rtl'});assert.equal(ltr!==rtl,mirrors.has(entry.name),entry.name);}
 });
-test('original 48 native masters retain the latest pre-expansion refinements exactly',async()=>{
- const before=JSON.parse(await readFile('references/ui-v1/master-before.json'));
- for(const [name,definition]of Object.entries(before))assert.deepEqual(defs[name].variants,definition.variants,name);
+test('original 48 names and all unreviewed masters remain compatible',async()=>{
+ const original=JSON.parse(await readFile('references/ui-v1/master-before.json'));
+ const baseline=JSON.parse(await readFile('references/craft-01/master-before.json'));
+ for(const [name,definition]of Object.entries(original))assert.deepEqual(baseline[name].variants,definition.variants,name);
+ for(const name of Object.keys(original))if(name!=='chart-bar')assert.deepEqual(defs[name].variants,original[name].variants,name);
+ for(const size of[20,24])assert.deepEqual(defs['chart-bar'].variants[size],original['chart-bar'].variants[size]);
 });
 test('real semantic paint effects survive SVG and React across all sizes',()=>{
  for(const size of[16,20,24]){
@@ -31,16 +34,37 @@ test('real semantic paint effects survive SVG and React across all sizes',()=>{
  }
 });
 
-test('the previous 210 drawings remain unchanged in the organization batch',async()=>{
+test('the saved 280 baseline preserves the 210 drawings before organization',async()=>{
  const before=JSON.parse(await readFile('references/organization-01/master-before.json'));
+ const baseline=JSON.parse(await readFile('references/craft-01/master-before.json'));
  assert.equal(Object.keys(before).length,210);
- for(const [name,definition]of Object.entries(before))assert.deepEqual(defs[name],definition,name);
+ for(const [name,definition]of Object.entries(before))assert.deepEqual(baseline[name],definition,name);
 });
 
-test('all previous 220 definitions remain unchanged in the productivity batch',async()=>{
+test('the saved 280 baseline preserves all 220 pre-productivity definitions',async()=>{
  const before=JSON.parse(await readFile('references/productivity-01/master-before.json'));
+ const baseline=JSON.parse(await readFile('references/craft-01/master-before.json'));
  assert.equal(Object.keys(before).length,220);
- for(const [name,definition]of Object.entries(before))assert.deepEqual(defs[name],definition,name);
+ for(const [name,definition]of Object.entries(before))assert.deepEqual(baseline[name],definition,name);
+});
+
+test('only explicitly reviewed refinements differ from the complete baseline',async()=>{
+ const before=JSON.parse(await readFile('references/craft-01/master-before.json'));
+ const decisions=JSON.parse(await readFile('docs/review/craft-01/decisions.json'));
+ const expected=['chart-bar','contact','mouse-pointer','usb','accessibility','file-audio','file-archive','timer','user-cog','handshake','indent-increase','indent-decrease','megaphone','ticket'].sort();
+ const changed=Object.keys(before).filter(name=>JSON.stringify(defs[name])!==JSON.stringify(before[name])).sort();
+ assert.deepEqual(changed,expected);
+ assert.deepEqual(decisions.filter(x=>x.kind==='modified').map(x=>x.name).sort(),expected);
+ for(const d of decisions)if(d.kind==='retained')assert.deepEqual(defs[d.name],before[d.name],d.name);
+});
+
+test('semantic perforations retain flat ends independently of frame corner styles',()=>{
+ for(const name of['ticket','file-archive'])for(const size of[16,20,24])for(const corner of['sharp','soft','rounded']){
+  const dashed=defs[name].variants[size][corner].nodes.filter(([,a])=>a['stroke-dasharray']);
+  assert.equal(dashed.length,1);assert.equal(dashed[0][1]['stroke-linecap'],'butt');
+  const markup=renderToStaticMarkup(createElement(icons[catalog.find(x=>x.name===name).component],{size,corner}));
+  assert.match(markup,/stroke-linecap="butt"/);
+ }
 });
 
 test('every productivity drawing appears in a labelled product scenario',async()=>{

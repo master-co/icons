@@ -16,7 +16,7 @@ export const devices = {
   },
   'mouse-pointer'(g) {
     const f=figure(g);
-    return [f.contour([[4,3],[20.5,10],[13,12.5],[10,20.5]],true,g.tip),f.line(13,13,19.5,20)];
+    return [f.contour([[4,3],[20.5,10],[13,12.5],[10,20.5]],true,g.tip),f.line(13,12.5,19.5,20)];
   },
   touchpad(g) {
     const f=figure(g);
@@ -37,10 +37,15 @@ export const devices = {
   },
   usb(g) {
     const f=figure(g),r=Math.min(g.r,g.v(.3,.4,.5));
-    return [f.circle(12,20,1.5),f.line(12,18.5,12,3),
+    // At 16px the terminal holes would be only .75px wide. Filled circle and
+    // square terminals preserve USB's three distinct signals without tiny holes.
+    const terminal=(x,y)=>g.s===16?f.dot(x,y,1):f.circle(x,y,1.5);
+    const square=f.rect(16.5,5,3,3,r);
+    if(g.s===16)Object.assign(square[1],{fill:'currentColor',stroke:'none'});
+    return [terminal(12,20),f.line(12,18.5,12,3),
       f.contour([[9.5,5.5],[12,3],[14.5,5.5]],false,g.tip),
-      f.contour([[12,16],[6.5,12.5],[6.5,10]],false,r),f.circle(6.5,8,1.5),
-      f.contour([[12,13],[18,10],[18,8]],false,r),f.rect(16.5,5,3,3,r)];
+      f.contour([[12,16],[6.5,12.5],[6.5,9.5]],false,r),terminal(6.5,8),
+      f.contour([[12,13],[18,10],[18,8]],false,r),square];
   },
   cast(g) {
     const f=figure(g);
@@ -49,7 +54,7 @@ export const devices = {
   },
   accessibility(g) {
     const f=figure(g);
-    return [f.circle(12.5,4,1.6),f.contour([[11,8],[10,13],[17,13],[19,20],[22,19]],false,g.tip),
+    return [g.s===16?f.dot(12.5,4,1.25):f.circle(12.5,4,1.6),f.contour([[11,8],[10,13],[17,13],[19,20],[22,19]],false,g.tip),
       f.line(10.6,10,16,10),f.path('M6.5 10.5A5.5 5.5 0 1 0 13 18.5')];
   },
 };
