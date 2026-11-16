@@ -8,7 +8,7 @@ test('development server resolves Master Site routes on first and repeated reque
     const response=await request.get(url)
     expect(response.status(),`${url}, pass ${pass}`).toBe(200)
     const html=await response.text()
-    expect(html).toContain('<h1')
+    expect(html).toContain(route==='/icons'?'data-testid="icon-grid"':'<h1')
     expect(html).not.toContain('Unexpectedly unable to find a component instance')
    }
   }

@@ -11,22 +11,23 @@
     "build": "node ../scripts/check-site-node.mjs && bun run prepare-site && astro build",
     "preview": "astro preview --host 127.0.0.1 --port 4321 --ignore-lock",
     "type-check": "node ../scripts/check-site-node.mjs && bun run prepare-site && astro sync && astro-check --tsconfig tsconfig.json && svelte-check --tsconfig tsconfig.json",
-    "i18n:audit": "node --import tsx scripts/i18n.ts audit"
+    "i18n:audit": "node --import tsx scripts/i18n.ts audit",
+    "check:ui": "master-ui check --strict"
   },
   "dependencies": {
-    "@master/icons": "workspace:*",
-    "@master/internal-site": "0.2.14",
-    "@master/ui": "0.0.8",
-    "astro": "7.4.2",
-    "svelte": "5.57.2",
-    "vite": "8.3.5",
     "@master/css": "2.1.5",
     "@master/css-astro": "2.1.5",
     "@master/css-compiler": "2.1.5",
     "@master/css-language-service": "2.1.5",
     "@master/css-preset": "2.1.5",
     "@master/css-schema": "2.1.5",
-    "@master/css-tooling": "2.1.5"
+    "@master/css-tooling": "2.1.5",
+    "@master/icons": "workspace:*",
+    "@master/internal-site": "0.2.14",
+    "@master/ui": "0.0.9",
+    "astro": "7.4.2",
+    "svelte": "5.57.2",
+    "vite": "8.3.5"
   },
   "devDependencies": {
     "@astrojs/check": "0.9.12",

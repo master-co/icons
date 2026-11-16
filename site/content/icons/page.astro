@@ -12,9 +12,9 @@ const categories=catalog.categories.map(({id}:any)=>({id,label:'category:'+id}))
 export const metadata={title:'Browse Master Icons',description:'Interface icons at their native size.'}
 export async function generateMetadata({params}:{params:{locale:string}}){const copy=translations[params.locale]??translations.en;return{title:copy['Browse Master Icons'],description:copy['Interface icons at their native size.']}}
 ---
-<main class="icons-container">
- <header class="collection-intro"><p class="eyebrow">Master Icons / {t('Collection')}</p><h1>{t('Find the right shape.')}</h1><p class="lead">{t('Search the full collection. Compare native sizes and choose your corners.')}</p></header>
- <Explorer client:load {entries} {categories} {copy}/>
+<main class="icons-container collection-container" aria-label={t('Browse Master Icons')}>
+ <Explorer client:load {entries} {categories} {copy}>
+  <Footer client:load class="explorer-footer" />
+ </Explorer>
  <noscript><p>{t('Enable JavaScript for filtering and details. SVG and ZIP downloads remain available.')}</p><a href="/icons/24/soft/search.svg" download>{t('Download SVG')}</a></noscript>
 </main>
-<Footer client:load navGroups={[{name:'Navigation',links:[{name:'Icons',href:'/icons'},{name:'Guide',href:'/guide/getting-started'},{name:'License',href:'/guide/license'}]}]}/>

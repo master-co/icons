@@ -1,0 +1,32 @@
+## Master UI
+
+This project builds its interface with Master UI: classes on native elements, each described by a contract.
+
+- Read the contract before writing a component's markup: `npx master-ui contract <name>`, and `npx master-ui list` to find one. Do not write markup from memory.
+- Never invent a Master UI component class. Use the installed or locally owned contract, and keep project-defined classes outside the library's class families.
+- Mark a state with the attribute the contract lists (`disabled`, `aria-pressed="true"`, `open`). Never add a class for a state.
+- A component is a class on a native element in any framework. Do not wrap one in a component to rename it. The patterns that hold state have a component to copy: `npx master-ui add` lists them, and `ui/` may already hold one.
+- To change how something looks, take the lowest step that works: a utility on the element, a theme token, a public custom property, a theme file, and only then `npx master-ui own <name>`. A project rule may select a library class to set its documented custom properties; change its implementation through owned source.
+- Run `npx master-ui check` after changing markup. Fix every error and read each warning. Check the affected interactions in a browser, including the keyboard, a narrow viewport and both color schemes.
+
+## Project commands and scope
+
+Run commands from this directory (`site/`), the Astro/Svelte application root. Use Bun; replace the `npx master-ui` examples above with `bun x --no-install master-ui` to use the installed version.
+
+The project uses Master CSS source compilation and one full `@master/ui` import in `styles/globals.css`. The entry `styles/site.ts` is registered in `site.config.ts`. The official skill is in `.agents/skills/master-ui/SKILL.md`; read it before Master UI work. There are no locally owned components or `master-ui.json`.
+
+Preserve the shared Master Site header, existing application behavior and unrelated icon artwork. Do not add behavior scripts or framework components as part of stylesheet setup.
+
+Validation commands (all from `site/`):
+
+- `bun run dev` — local application, including icon source watching.
+- `bun run check:ui` — strict Master UI contract checks; there is no separate lint script.
+- `bun run type-check` — Astro and Svelte type checking.
+- `bun run i18n:audit` — translation coverage and review audit.
+- `bun run build` — prepare content and build the static website.
+- `bun x --no-install playwright test -c playwright.config.ts` — website browser tests (build first; uses port 4321).
+- `bun x --no-install playwright test -c playwright.dev.config.ts` — cold development server smoke tests.
+- `bun run --cwd ../packages/icons test` — icon package tests.
+- `bun run --cwd ../packages/icons test:types` — icon public API TypeScript tests.
+
+After markup or stylesheet changes, verify the affected interface in light and dark modes, at desktop and narrow widths, and using the keyboard. Report any browser or check that could not run.
