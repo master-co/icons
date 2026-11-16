@@ -39,9 +39,9 @@ assert.match(renderToStaticMarkup(createElement(PinOffIcon,{size:20,label:'Unpin
 assert.match(renderSvg(User,{size:16}), /viewBox="0 0 16 16"/);
 assert.match(renderSvg(Bell), /<svg/);
 assert.match(renderSvg(Ticket,{size:16}), /stroke-dasharray/);
-assert.match(renderSvg(ChartArea), /opacity="0.2"/);
+assert.doesNotMatch(renderSvg(ChartArea), /opacity=|fill="currentColor"/);
 assert.match(renderToStaticMarkup(createElement(TicketIcon,{size:16})), /stroke-dasharray/);
-assert.match(renderToStaticMarkup(createElement(ChartAreaIcon)), /opacity="0.2"/);
+assert.doesNotMatch(renderToStaticMarkup(createElement(ChartAreaIcon)), /opacity=|fill="currentColor"/);
 assert.equal(escapeXml('<'), '&lt;');
 assert.match(renderSvg(Search), /viewBox="0 0 24 24"/);
 assert.match(renderToStaticMarkup(createElement(SearchIcon,{size:20,label:'Search'})), /aria-label="Search"/);

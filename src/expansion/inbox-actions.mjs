@@ -4,9 +4,8 @@ import {knockout} from '../occlusion.mjs';
 
 function reply(g,all=false){
   const f=figure(g),x=all?9:4,wing=all?3.5:5;
-  const join=x+(g.corner==='sharp'?g.stroke*12/g.s:0);
-  return [f.contour([[x+wing,10-wing],[x,10],[x+wing,10+wing]],false,g.tip),
-    f.path(`M ${join} 10 H 14 C 18 10 20 12 20 16 V 18`),
+  const join=x;
+  return [...f.arrow([f.path(`M ${join} 10 H 14 C 18 10 20 12 20 16 V 18`)],[[x+wing,10-wing],[x,10],[x+wing,10+wing]]).reverse(),
     ...(all?[f.contour([[6.5,6.5],[3,10],[6.5,13.5]],false,g.tip)]:[])];
 }
 

@@ -26,8 +26,7 @@ function syncArrows(g){
 }
 function driveTransfer(g,up){
   const f=figure(g),y=up?3:10,h=3;
-  const arrow=[f.line(12,3+(up&&g.corner==='sharp'?g.stroke*12/g.s:0),12,10-(!up&&g.corner==='sharp'?g.stroke*12/g.s:0)),
-    f.contour([[12-h,y+(up?h:-h)],[12,y],[12+h,y+(up?h:-h)]],false,g.tip)];
+  const arrow=f.arrow([f.line(12,3,12,10)],[[12-h,y+(up?h:-h)],[12,y],[12+h,y+(up?h:-h)]]);
   // Keep the actual drive chassis, including its sloping top, under the arrow.
   return knockout(systems['hard-drive'](g),arrow,g);
 }

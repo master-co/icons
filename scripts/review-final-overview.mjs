@@ -3,7 +3,7 @@ import {readFile,writeFile,mkdir} from 'node:fs/promises';
 import {chromium} from '@playwright/test';
 import {catalog,conceptCount} from '../src/catalog.mjs';
 import {renderSvg,escapeXml as esc} from '../src/runtime.mjs';
-const out='docs/review/craft-03',defs=JSON.parse(await readFile('dist/definitions.json'));
+const cycle=process.argv[2]||'craft-03',out=`docs/review/${cycle}`,defs=JSON.parse(await readFile('dist/definitions.json'));
 const ledger=JSON.parse(await readFile('docs/refinement-ledger.json'));
 await mkdir(out+'/overview',{recursive:true});
 const names=[...catalog].sort((a,b)=>a.concept.localeCompare(b.concept)||a.name.localeCompare(b.name)).map(x=>x.name);
@@ -18,9 +18,9 @@ for(let i=0;i<7;i++){
 }
 const html=wrap('Master Icons · 全庫跨家族並排',`<p>${catalog.length} 個命名圖稿 / ${conceptCount} 個基本概念 · 每顆原生 16 / 20 / 24px · 以概念排列</p><button onclick="document.body.classList.toggle('dark')">切換明暗</button><nav>${Array.from({length:7},(_,i)=>`<a href="overview/page-${i+1}-light.png">分頁 ${i+1}</a>`).join('')}</nav><div class="grid">${cells(names)}</div>`);
 await writeFile(`${out}/families.html`,html);await page.setContent(html);await page.locator('body').evaluate(el=>el.classList.add('dark'));await page.screenshot({path:`${out}/families-dark.png`,fullPage:true});
-const selected=['copy','eye-off','clipboard-pen','calendar-clock','mail-check','user-cog','package','hard-drive'];
+const selected=process.argv[3]?.split(',')||['copy','eye-off','clipboard-pen','calendar-clock','mail-check','user-cog','package','hard-drive'];
 let pairs='';
-for(const name of selected){const r=ledger.icons.find(x=>x.name===name),before=JSON.parse(await readFile(r.change.before.path))[name];pairs+=`<article class="pair"><h2>${name}</h2><div class="compare">${[[before,'Before'],[defs[name],'Master']].map(([d,label])=>`<section><div class="large">${renderSvg(d,{size:24,corner:'sharp'})}<small>${label}<br>24px sharp · 3× 診斷</small></div><div class="samples">${[16,20,24].map(size=>renderSvg(d,{size})).join('')}</div></section>`).join('')}</div><div class="caption">${esc(r.change.reason)}</div></article>`;}
-const summary=wrap('Master Icons · 精修前後',`<p>既有 280 顆中精修 24 顆；此處列出 8 個案例。下排為原生 16 / 20 / 24px soft，上排用於看清切口與接點。</p><div class="pairs">${pairs}</div>`);
+for(const name of selected){const focusCorner=name==='keyboard-return'?'rounded':name==='languages'||name==='italic'?'sharp':'soft';const r=ledger.icons.find(x=>x.name===name),before=JSON.parse(await readFile(r.change.before.path))[name];pairs+=`<article class="pair"><h2>${name}</h2><div class="compare">${[[before,'Before'],[defs[name],'Master']].map(([d,label])=>`<section><div class="large">${renderSvg(d,{size:24,corner:focusCorner})}<small>${label}<br>24px ${focusCorner} · 3× 診斷</small></div><div class="samples">${[16,20,24].map(size=>renderSvg(d,{size})).join('')}</div></section>`).join('')}</div><div class="caption">${esc(r.change.reason)}</div></article>`;}
+const summary=wrap('Master Icons · 精修前後',`<p>${esc(ledger.reviewSummary)} 此處列出 ${selected.length} 個案例。下排為原生 16 / 20 / 24px soft，上排用於看清切口與接點。</p><div class="pairs">${pairs}</div>`);
 await writeFile(`${out}/summary.html`,summary);await page.setContent(summary);await page.screenshot({path:`${out}/summary.png`,fullPage:true});
-await browser.close();console.log('Rendered 392 cross-family drawings and eight true before/after examples; manual inspection required.');
+await browser.close();console.log(`Rendered ${names.length} drawings and ${selected.length} before/after examples; manual inspection required.`);

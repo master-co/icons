@@ -12,22 +12,26 @@ function tag(g, stack = false) {
 const files = {
   "clipboard-paste": (g) => {
     const f = figure(g);
-    return knockout(coreDrawings.clipboard(g), [f.line(12,14.5,21,14.5),
-      f.contour([[17.5,11],[21,14.5],[17.5,18]])],g);
+    return knockout(coreDrawings.clipboard(g), f.arrow([f.line(12,14.5,21,14.5)],[[17.5,11],[21,14.5],[17.5,18]]),g);
   },
   tag: (g) => tag(g),
   tags: (g) => {
     const f = figure(g);
-    return [...tag(g, true), f.contour([[2, 10], [2, 16], [8.5, 22]], false, g.r)];
+    // Congruent labels, translated perpendicular to their common diagonal.
+    const points=[[6,3],[12,3],[21,12],[15,18],[6,9]],r=Math.min(g.r,g.v(1.15,1.4,1.65));
+    const front=f.contour(points,true,r),back=f.contour(points.map(([x,y])=>[x-3.5,y+3.5]),true,r);
+    return knockout([back],[front,f.dot(9,6,g.stroke/2)],g,{silhouettes:[front]});
   },
   bookmark,
   "bookmark-check": (g) => [...bookmark(g), ...mark(g, "check", 12, 10)],
   "folder-open": (g) => {
     const f = figure(g);
-    return [
-      f.contour([[3, 19.5], [3, 4.5], [9.5, 4.5], [12, 7], [20, 7], [20, 9]], false, g.r),
-      f.contour([[3, 19.5], [6.5, 11], [22, 11], [19, 19.5]], true, g.r)
-    ];
+    // One continuous perimeter: the lower-left hinge cannot leave a cap
+    // behind when the front flap's corner is rounded.
+    return [f.contour([[5.5,15],[7,11],[22,11],[19,19.5],[3,19.5],
+      [3,4.5],[9.5,4.5],[12,7],[20,7],[20,11]],false,
+      [0,g.r*.5,Math.min(g.r,1.5),Math.min(g.r,1.5),g.r,g.r,
+        Math.min(g.r,.75),Math.min(g.r,.75),Math.min(g.r,1),0])];
   },
   archive: (g) => {
     const f = figure(g);

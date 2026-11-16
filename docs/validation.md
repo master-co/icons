@@ -1,23 +1,17 @@
-# Craft 03／Expansion 01 · 工程與目視驗收
+# Craft 04 · 工程與目視驗證
 
-2026-11-16，private alpha。392 個命名圖稿／244 個基本概念／3,528 份 SVG。前輪結果保存於 [Layers 01](validation-layers-01.md)，不得當作本輪新增圖稿的驗收證據。
+2026-11-16 · private alpha。392個命名圖稿、244個基本概念、3,528份SVG；49顆精修，沒有新增名稱。前輪完整結果保存於 [Craft 03](validation-craft-03.md)。
 
-已執行：建置及精確範圍驗證通過；全部 3,528 SVG hash、784 份目前來源 checksum、392 顆審查及圖稿 hash、名稱與匯出、重複幾何通過。全九組 SVG／React 一致、原始48相容性、歷史精修範圍、tree shaking 及 TypeScript 通過。另有4項針對接縫、資料庫留白、環內碎屑與尖角越界的回歸檢查通過。
+本輪 pnpm check 通過：精確名稱集合、來源checksum、全部SVG結構與hash、逐顆審查hash、重複幾何、React／SVG九組一致、無障礙／RTL、tree shaking與TypeScript。27項Node測試通過，新增回歸檢查涵蓋箭尖局部收口且不破壞折返路線、A橫槓／包蓋分界不越界、扳手反射對稱及精修範圍。既有虛線及逐筆透明度序列化測試保留。
 
-主代理及獨立子代理的逐顆目視紀錄已完成；21個情境頁已接入，112個新增名稱均有實際標籤與使用位置。本輪 Chromium／WebKit DPR 1／2 共36項流程已通過（首輪32項通過；補充資料庫中文搜尋別名後，相關4項重跑通過）。全庫14,112次SVG渲染沒有檢出裁切。21個情境在明暗與1280/390寬度通過；調整搜尋欄間距後另重跑4項情境流程通過。完整23項Node測試與型別通過，7,873檔案的消費端套件通過，8,790個輸出於UTC與台北時區逐位元一致。Firefox本輪重試仍因 Could not find profile folder 無法啟動，列為未驗證。
+Chromium／WebKit DPR1／2共36項瀏覽器流程通過；3,528×4＝14,112次圖稿渲染未檢出裁切。離線圖庫、來源、下載、搜尋、21情境的桌面／手機明暗流程通過。7,873檔案消費端套件與SVG／React入口通過；8,791個建置輸出在UTC與Asia/Taipei時區逐位元一致。
 
-目視收尾完成：主代理實看全庫392顆按概念並排的14張明暗原生總覽，及五個效果／低對比案例在兩瀏覽器、DPR 1／2的8張證據。獨立子代理逐張實看21情境的84張桌面／手機明暗截圖，發現手機訂單表的更多操作欄被水平溢出遮住；已將顧客姓名移至訂單號下方，保留金額與狀態。修後四張重新目視確認，兩瀏覽器DPR 1／2的全情境流程另重跑4項通過，並加入操作按鈕完整位於可見容器的檢查。
+目視：五批49顆逐顆來源對照、前後稿、九母版、明暗、文字旁與55%前景均已實看；另實看7顆相近接縫並保留。效果頁檢視Chromium1x淺底與WebKit2x深底，chart-area已無填面、ticket平切撕線仍保留。情境複核工作偏好桌面淺底、開發服務桌面深底、檔案手機淺底及Dashboard手機深底。其餘情境有流程與截圖，未宣稱本輪重新目視全84張或全392顆。參見 [實看紀錄](review/craft-04/visual-followup.json)。
 
-392筆離線逐顆報告在Chromium與WebKit實際開啟，搜尋、修改前／新繪區別、九組圖稿、明暗、手機無橫向溢出及276個不同本地連結均通過。八個前後稿總覽與報告桌面／手機畫面已目視確認。全九組逐顆審查仍以中央ledger及原始批次證據為準，不以並排總覽代替。
+逐顆離線報告在Chromium、WebKit通過搜尋、明暗、九母版、前稿與新稿區別、手機版面及296個本地連結檢查。Skill0.5.3結構驗證通過，專案與已安裝副本同步。
 
-[跨家族目視](review/craft-03/cross-family-review.json) · [效果目視](review/craft-03/effects-review.json) · [情境獨立目視](review/craft-03/scenario-visual-review.json) · [離線逐顆報告檢查](review/craft-03/report-check.json) · [手機表格修後流程](review/craft-03/browser-table-layout.log)。
+限制：Firefox沿用前輪profile啟動失敗，這次未重試，仍未驗證。volume-low在16px與通用volume同稿的限制保留。55%前景檢查不代表任意低對比配色的無障礙保證。Codex目視與使用者最終定案分開記錄。
 
-已知限制：Firefox啟動未成功，因此不宣稱其渲染已驗證；volume-low在16px與通用volume同稿，不應用這對圖示區分高／低音量。55%前景的效果檢查只代表所測背景，非任意低對比配色的無障礙保證。
+[核心檢查](review/craft-04/core-checks.log) · [瀏覽器](review/craft-04/browser-tests.log) · [消費端](review/craft-04/package.log) · [可重現建置](review/craft-04/reproducible.log) · [離線報告](review/craft-04/report-check.json)。
 
-Skill 0.5.2 的結構驗證通過，專案及本機安裝副本完全一致。這項驗證不代替圖稿或skill行為品質的審查。
-
-不以建置或數量達標自動批准設計。使用者最終定案待確認；未發布 npm 或推送遠端。
-
-[核心檢查](review/craft-03/core-checks.log) · [搜尋流程修後](review/craft-03/browser-search.log) · [情境流程修後](review/craft-03/browser-contexts.log) · [Firefox](review/craft-03/firefox.log) · [消費端](review/craft-03/package.log) · [可重現建置](review/craft-03/reproducible.log)。
-
-離線交付實測：[交付檔案驗證](review/craft-03/delivery-check.json)。實際輸出目錄的11,389個檔案逐項驗證checksum；SVG目錄及完整ZIP各3,528份、React套件7,873檔案相符。Chromium／WebKit DPR1／2以file://開啟交付圖庫與報告，搜尋、來源原稿、九組圖稿、單檔下載、修後手機操作及276個本地報告連結通過，未發出網路請求。完整ZIP另以CRC及交付manifest逐項核對。
+未發布npm、未推送遠端。

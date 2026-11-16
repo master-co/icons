@@ -22,14 +22,15 @@ test('original 48 names and all unreviewed masters remain compatible',async()=>{
  const original=JSON.parse(await readFile('references/ui-v1/master-before.json'));
  const baseline=JSON.parse(await readFile('references/craft-01/master-before.json'));
  for(const [name,definition]of Object.entries(original))assert.deepEqual(baseline[name].variants,definition.variants,name);
- for(const name of Object.keys(original))if(!['chart-bar','copy','bell-off'].includes(name))assert.deepEqual(defs[name].variants,original[name].variants,name);
+ const approved=(JSON.parse(await readFile('docs/review/craft-04/decisions.json'))).expectedModifiedNames;
+ for(const name of Object.keys(original))if(!['chart-bar','copy','bell-off',...approved].includes(name))assert.deepEqual(defs[name].variants,original[name].variants,name);
  for(const size of[20,24])assert.deepEqual(defs['chart-bar'].variants[size],original['chart-bar'].variants[size]);
 });
 test('real semantic paint effects survive SVG and React across all sizes',()=>{
  for(const size of[16,20,24]){
   const ticket=renderSvg(defs.ticket,{size}),area=renderSvg(defs['chart-area'],{size});
   assert.match(renderSvg(defs['file-archive'],{size}),/stroke-dasharray=/);
-  assert.match(ticket,/stroke-dasharray=/);assert.match(area,/opacity="0.2"/);
+  assert.match(ticket,/stroke-dasharray=/);assert.doesNotMatch(area,/opacity=|fill="currentColor"/);
   assert.doesNotMatch(ticket+area,/<defs|gradient|mask/);
  }
 });
@@ -78,7 +79,8 @@ test('craft-03 refinements preserve an explicit independent and root review hist
  assert.deepEqual(changed(baseline,independent),decision.expectedModifiedNames.toSorted());
  assert.deepEqual(changed(independent,root),['clipboard-pen']);
  assert.deepEqual(changed(root,final),['hard-drive','package']);
- for(const name of Object.keys(baseline))assert.deepEqual(defs[name].variants,final[name].variants,name);
+ const nextBaseline=JSON.parse(await readFile('references/craft-04/master-before.json'));
+ for(const name of Object.keys(baseline))assert.deepEqual(nextBaseline[name].variants,final[name].variants,name);
  const originals=JSON.parse(await readFile('src/core-names.json'));
  assert.deepEqual(changed(baseline,final).filter(n=>originals.includes(n)),['bell-off','copy']);
 });
@@ -105,4 +107,14 @@ test('every expansion drawing is used in a labelled interface scenario',async()=
  const {scenarios,scenarioMarkup}=await import('../preview/scenarios.js');const used=new Set();
  for(const[id]of scenarios)scenarioMarkup(name=>{assert.ok(defs[name],name);used.add(name);return '<svg></svg>';},id);
  for(const{name}of scope)assert.ok(used.has(name),'Missing real-context placement: '+name);
+});
+
+
+test('craft-04 changes exactly its explicit reviewed set and retains all 392 names',async()=>{
+ const baseline=JSON.parse(await readFile('references/craft-04/master-before.json'));
+ const review=JSON.parse(await readFile('docs/review/craft-04/decisions.json'));
+ assert.deepEqual(Object.keys(defs).sort(),Object.keys(baseline).sort());
+ const changed=Object.keys(baseline).filter(n=>JSON.stringify(baseline[n].variants)!==JSON.stringify(defs[n].variants));
+ assert.deepEqual(changed.sort(),review.expectedModifiedNames.toSorted());
+ for(const r of review.retainedChecks)assert.deepEqual(defs[r.name].variants,baseline[r.name].variants,r.name);
 });

@@ -1,0 +1,37 @@
+{
+  "date": "2026-11-16",
+  "reviewer": "root",
+  "refinements": {
+    "batches": 5,
+    "names": 49,
+    "inspected": [
+      "comparison.png",
+      "native.png",
+      "native-dark.png",
+      "diagnostic.png"
+    ],
+    "allSizes": true,
+    "allCorners": true
+  },
+  "retainedSeams": [
+    "ban",
+    "globe",
+    "pencil",
+    "paint-bucket",
+    "cloud-sync",
+    "database-backup",
+    "shopping-cart"
+  ],
+  "effectsInspected": [
+    "effects-chromium-1x-light.png",
+    "effects-webkit-2x-dark.png"
+  ],
+  "scenariosInspected": [
+    "workspace-tools-1280-light.png",
+    "developer-1280-dark.png",
+    "files-390-light.png",
+    "dashboard-390-dark.png"
+  ],
+  "summaryInspected": true,
+  "limits": "其他情境完成流程及截圖，但本輪沒有逐張重新目視84張，也沒有全392顆重新設計審定。"
+}

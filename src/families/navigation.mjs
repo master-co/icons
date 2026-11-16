@@ -21,7 +21,7 @@ const navigation = {
   redo: (g) => mirror(coreDrawings.undo(g), g),
   "external-link": (g) => {
     const f = figure(g);
-    return knockout([f.rect(4,5,15,15)], [f.line(10,14,20,4),f.contour([[14,4],[20,4],[20,10]])],g);
+    return knockout([f.rect(4,5,15,15)], f.arrow([f.line(10,14,20,4)],[[14,4],[20,4],[20,10]]),g);
   },
   link: (g) => {
     const f = figure(g);
@@ -42,19 +42,17 @@ const navigation = {
   },
   "log-in": (g) => {
     const f = figure(g);
-    return [f.contour([[14, 4], [20, 4], [20, 20], [14, 20]], false, g.r), f.line(3, 12, 14, 12), f.contour([[9, 7], [14, 12], [9, 17]])];
+    return [f.contour([[14, 4], [20, 4], [20, 20], [14, 20]], false, g.r), ...f.arrow([f.line(3,12,14,12)],[[9,7],[14,12],[9,17]])];
   },
   "log-out": (g) => {
     const f = figure(g);
-    return [f.contour([[10, 4], [4, 4], [4, 20], [10, 20]], false, g.r), f.line(10, 12, 21, 12), f.contour([[16, 7], [21, 12], [16, 17]])];
+    return [f.contour([[10, 4], [4, 4], [4, 20], [10, 20]], false, g.r), ...f.arrow([f.line(10,12,21,12)],[[16,7],[21,12],[16,17]])];
   },
   refresh: (g) => {
     const f = figure(g);
     return [
-      f.path("M4 10A8.2 8.2 0 0 1 18 6L20 8"),
-      f.contour([[20, 3.5], [20, 8], [15.5, 8]]),
-      f.path("M20 14A8.2 8.2 0 0 1 6 18L4 16"),
-      f.contour([[4, 20.5], [4, 16], [8.5, 16]])
+      ...f.arrow([f.path("M4 10A8.2 8.2 0 0 1 18 6L20 8")],[[20,3.5],[20,8],[15.5,8]]),
+      ...f.arrow([f.path("M20 14A8.2 8.2 0 0 1 6 18L4 16")],[[4,20.5],[4,16],[8.5,16]])
     ];
   }
 };

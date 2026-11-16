@@ -1,12 +1,13 @@
-import { knockout } from '../occlusion.mjs';
+import { knockout, joinedArrow } from '../occlusion.mjs';
 import { path, line, circle, rect, contour, n } from '../geometry.mjs';
 
 // Coordinates are selected in native 16/20/24 grids. Dense icons have explicit
 // optical edits below. Only trivial, low-density symbols share proportional forms.
 const dot=(x,y,g)=>circle(x,y,g.stroke/2,{fill:'currentColor',stroke:'none'});
+const arrow=(shaft,points,g)=>joinedArrow(shaft,contour(points,g.tip),points,g);
 const horizontal=g=>{
   const {s,c,v,tip}=g, a=v(2.5,3,3.5), b=s-a, h=v(3.5,4.5,5.5);
-  return [line(a,c,b,c),contour([[c,c-h],[b,c],[c,c+h]],tip)];
+  return arrow([line(a,c,b,c)],[[c,c-h],[b,c],[c,c+h]],g);
 };
 const rotated=(nodes,angle,c)=>nodes.map(([tag,attrs])=>[tag,{...attrs,transform:`rotate(${angle} ${c} ${c})`}]);
 function file(g,text=false){
@@ -61,10 +62,10 @@ export const coreDrawings={
   'arrow-up':g=>rotated(horizontal(g),-90,g.c),
   'chevron-right':g=>[contour([[g.v(6,7.5,9),g.v(3.5,4.5,5.5)],[g.v(10.5,13,15.5),g.c],[g.v(6,7.5,9),g.v(12.5,15.5,18.5)]],g.tip)],
   'chevron-down':g=>rotated(coreDrawings['chevron-right'](g),90,g.c),
-  'arrow-up-right':g=>{const {s,v,tip}=g,a=v(4,5,6),b=s-a;return [line(a,b,b,a),contour([[a,a],[b,a],[b,b]],tip)];},
-  'undo':g=>{const {s,c,v,tip}=g,x=v(3,4,4.5),y=v(6,7.5,9),b=v(13,16,19);return [contour([[x+v(3,3.5,4.5),y-v(3,3.5,4.5)],[x,y],[x+v(3,3.5,4.5),y+v(3,3.5,4.5)]],tip),path(`M${x} ${y}H${c+v(1.5,2,2.5)}A${v(3.5,4.25,5)} ${v(3.5,4.25,5)} 0 0 1 ${c+v(1.5,2,2.5)} ${b}H${v(6,7,8)}`)];},
-  'download':g=>{const {s,c,v,r,tip}=g,l=v(2.5,3,3.5),b=v(13.5,17,20.5),y=v(9,11,13),h=v(3,3.5,4.5);return [line(c,v(2,2.5,3),c,y),contour([[c-h,y-h],[c,y],[c+h,y-h]],tip),contour([[l,b-v(3,3.5,4)],[l,b],[s-l,b],[s-l,b-v(3,3.5,4)]],r)];},
-  'upload':g=>{const {s,c,v,r,tip}=g,l=v(2.5,3,3.5),b=v(13.5,17,20.5),y=v(2.5,3,3.5),h=v(3,3.5,4.5);return [line(c,y,c,v(10,12,14.5)),contour([[c-h,y+h],[c,y],[c+h,y+h]],tip),contour([[l,b-v(3,3.5,4)],[l,b],[s-l,b],[s-l,b-v(3,3.5,4)]],r)];},
+  'arrow-up-right':g=>{const {s,v,tip}=g,a=v(4,5,6),b=s-a;return arrow([line(a,b,b,a)],[[a,a],[b,a],[b,b]],g);},
+  'undo':g=>{const {s,c,v,tip}=g,x=v(3,4,4.5),y=v(6,7.5,9),b=v(13,16,19);return arrow([path(`M${x} ${y}H${c+v(1.5,2,2.5)}A${v(3.5,4.25,5)} ${v(3.5,4.25,5)} 0 0 1 ${c+v(1.5,2,2.5)} ${b}H${v(6,7,8)}`)],[[x+v(3,3.5,4.5),y-v(3,3.5,4.5)],[x,y],[x+v(3,3.5,4.5),y+v(3,3.5,4.5)]],g).reverse();},
+  'download':g=>{const {s,c,v,r,tip}=g,l=v(2.5,3,3.5),b=v(13.5,17,20.5),y=v(9,11,13),h=v(3,3.5,4.5);return [...arrow([line(c,v(2,2.5,3),c,y)],[[c-h,y-h],[c,y],[c+h,y-h]],g),contour([[l,b-v(3,3.5,4)],[l,b],[s-l,b],[s-l,b-v(3,3.5,4)]],r)];},
+  'upload':g=>{const {s,c,v,r,tip}=g,l=v(2.5,3,3.5),b=v(13.5,17,20.5),y=v(2.5,3,3.5),h=v(3,3.5,4.5);return [...arrow([line(c,y,c,v(10,12,14.5))],[[c-h,y+h],[c,y],[c+h,y+h]],g),contour([[l,b-v(3,3.5,4)],[l,b],[s-l,b],[s-l,b-v(3,3.5,4)]],r)];},
   'plus':g=>[line(g.v(3,4,4.5),g.c,g.v(13,16,19.5),g.c),line(g.c,g.v(3,4,4.5),g.c,g.v(13,16,19.5))],
   'minus':g=>[line(g.v(3,4,4.5),g.c,g.v(13,16,19.5),g.c)],
   'check':g=>[contour([[g.v(3,3.5,4),g.v(8,10,12)],[g.v(6.5,8,9.5),g.v(11.5,14.5,17)],[g.v(13,16.5,20),g.v(4.5,5.5,7)]],g.tip)],

@@ -2,7 +2,7 @@
 
 微圓、簡約、為介面原生尺寸設計的開源圖示。**0.1.0-alpha.0** 包含 **392 個命名圖示、244 個基本概念**；16 / 20 / 24 三尺寸與 sharp / soft / rounded 三圓角，共 **3,528 份 SVG**。
 
-範圍由原始48個名稱，以及 `ui-scope.json` 的162顆、`organization-scope.json` 的10顆、`productivity-scope.json` 的60顆、`expansion-scope.json` 的112顆組成。Craft 03 重新逐顆審查既有280顆：精修24顆、保留256顆；Expansion 01 的112個新增命名圖稿均完成來源並列、九母版明暗與獨立子代理複核。先前刪除的擴充圖稿未恢復。方向、開關與狀態不另算基本概念，搜尋別名不增加圖稿。套件維持 private alpha；工程檢查、設計目視與使用者定案分開記錄。本輪跨情境及瀏覽器驗收進度見 `docs/validation.md`。
+範圍由原始48個名稱，以及 `ui-scope.json` 的162顆、`organization-scope.json` 的10顆、`productivity-scope.json` 的60顆、`expansion-scope.json` 的112顆組成。Craft 04 針對使用者回饋及同類接點精修49顆，詳見 `docs/craft-04.md`。前輪 Craft 03 重新逐顆審查既有280顆：精修24顆、保留256顆；Expansion 01 的112個新增命名圖稿均完成來源並列、九母版明暗與獨立子代理複核。先前刪除的擴充圖稿未恢復。方向、開關與狀態不另算基本概念，搜尋別名不增加圖稿。套件維持 private alpha；工程檢查、設計目視與使用者定案分開記錄。本輪跨情境及瀏覽器驗收進度見 `docs/validation.md`。
 
 Layers 精修與審查教訓見 [Layers 01](docs/layers-01.md)。前輪試作、逐項待辦與固定線寬限制見 [遮擋輪廓避讓](docs/clearance-01.md)。
 

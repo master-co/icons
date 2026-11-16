@@ -34,7 +34,7 @@ const commerce = {
   },
   repeat: (g) => {
     const f = figure(g);
-    return [f.path("M3.5 10V9Q3.5 6 6.5 6H20.5"), f.contour([[17, 2.5], [20.5, 6], [17, 9.5]]), f.path("M20.5 14V15Q20.5 18 17.5 18H3.5"), f.contour([[7, 14.5], [3.5, 18], [7, 21.5]])];
+    return [...f.arrow([f.path("M3.5 10V9Q3.5 6 6.5 6H20.5")],[[17,2.5],[20.5,6],[17,9.5]]),...f.arrow([f.path("M20.5 14V15Q20.5 18 17.5 18H3.5")],[[7,14.5],[3.5,18],[7,21.5]])];
   },
   "shopping-cart": (g) => {
     const f = figure(g);

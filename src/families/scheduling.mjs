@@ -34,8 +34,7 @@ export const scheduling = {
   },
   'clipboard-copy'(g) {
     const f=figure(g);
-    return knockout(coreDrawings.clipboard(g),[f.line(12,14.5,21,14.5),
-      f.contour([[15.5,11],[12,14.5],[15.5,18]],false,g.tip)],g);
+    return knockout(coreDrawings.clipboard(g),f.arrow([f.line(12,14.5,21,14.5)],[[15.5,11],[12,14.5],[15.5,18]]),g);
   },
   'clipboard-x':g=>[...coreDrawings.clipboard(g),...mark(g,'x',12,14)],
   'clipboard-pen':clipboardPen,

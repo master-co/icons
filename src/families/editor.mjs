@@ -30,7 +30,10 @@ const editor = {
   },
   move: (g) => {
     const f = figure(g);
-    return [f.line(3, 12, 21, 12), f.line(12, 3, 12, 21), f.contour([[8.5, 6.5], [12, 3], [15.5, 6.5]]), f.contour([[17.5, 8.5], [21, 12], [17.5, 15.5]]), f.contour([[8.5, 17.5], [12, 21], [15.5, 17.5]]), f.contour([[6.5, 8.5], [3, 12], [6.5, 15.5]])];
+    const vertical=f.arrow([f.line(12,3,12,21)],[[8.5,6.5],[12,3],[15.5,6.5]]);
+    const horizontal=f.arrow([f.line(3,12,21,12)],[[17.5,8.5],[21,12],[17.5,15.5]]);
+    return [...f.arrow([vertical[0]],[[8.5,17.5],[12,21],[15.5,17.5]]),vertical[1],
+      ...f.arrow([horizontal[0]],[[6.5,8.5],[3,12],[6.5,15.5]]),horizontal[1]];
   },
   "zoom-in": (g) => zoom(g, true),
   "zoom-out": (g) => zoom(g, false),
@@ -40,7 +43,7 @@ const editor = {
   },
   italic: (g) => {
     const f = figure(g);
-    return [f.line(10, 4.5, 19, 4.5), f.line(5, 19.5, 14, 19.5), f.line(14.5, 4.5, 9.5, 19.5)];
+    return [f.line(10, 4.5, 19, 4.5), f.line(5, 19.5, 14, 19.5), ["path",{...f.line(14.5,4.5,9.5,19.5)[1],"stroke-linecap":"butt"}]];
   },
   underline: (g) => {
     const f = figure(g);
@@ -70,7 +73,7 @@ const editor = {
   },
   "rotate-left": (g) => {
     const f = figure(g);
-    return [f.path("M4 13A8 8 0 1 0 6.3 6.3L3.5 9"), f.contour([[3.5, 3.5], [3.5, 9], [9, 9]])];
+    return f.arrow([f.path("M4 13A8 8 0 1 0 6.3 6.3L3.5 9")],[[3.5,3.5],[3.5,9],[9,9]]);
   },
   "rotate-right": (g) => editor["rotate-left"](g).map(([t, a]) => [t, { ...a, transform: `translate(${g.s} 0) scale(-1 1)` }])
 };

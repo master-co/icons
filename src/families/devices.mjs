@@ -42,8 +42,7 @@ export const devices = {
     const terminal=(x,y)=>g.s===16?f.dot(x,y,1):f.circle(x,y,1.5);
     const square=f.rect(16.5,5,3,3,r);
     if(g.s===16)Object.assign(square[1],{fill:'currentColor',stroke:'none'});
-    return [terminal(12,20),f.line(12,18.5,12,3),
-      f.contour([[9.5,5.5],[12,3],[14.5,5.5]],false,g.tip),
+    return [terminal(12,20),...f.arrow([f.line(12,18.5,12,3)],[[9.5,5.5],[12,3],[14.5,5.5]]),
       f.contour([[12,16],[6.5,12.5],[6.5,9.5]],false,r),terminal(6.5,8),
       f.contour([[12,13],[18,10],[18,8]],false,r),square];
   },

@@ -10,11 +10,11 @@ const connectivity = {
   cloud: (g) => cloud(g),
   "cloud-upload": (g) => {
     const f = figure(g);
-    return knockout(cloud(g), [f.line(12, 12, 12, 22), f.contour([[8.5, 15.5], [12, 12], [15.5, 15.5]])], g);
+    return knockout(cloud(g), f.arrow([f.line(12,12,12,22)],[[8.5,15.5],[12,12],[15.5,15.5]]), g);
   },
   "cloud-download": (g) => {
     const f = figure(g);
-    return knockout(cloud(g), [f.line(12, 12, 12, 22), f.contour([[8.5, 18.5], [12, 22], [15.5, 18.5]])], g);
+    return knockout(cloud(g), f.arrow([f.line(12,12,12,22)],[[8.5,18.5],[12,22],[15.5,18.5]]), g);
   },
   wifi: (g) => {
     const f = figure(g);

@@ -21,8 +21,7 @@ export const typography = {
   },
   'wrap-text'(g) {
     const f=figure(g);
-    return [f.line(3,5,21,5),f.path('M3 11H17A3.5 3.5 0 0 1 17 18H11'),
-      f.line(3,18,6,18),f.contour([[14,15],[11,18],[14,21]],false,g.tip)];
+    return [f.line(3,5,21,5),...f.arrow([f.path('M3 11H17A3.5 3.5 0 0 1 17 18H11')],[[14,15],[11,18],[14,21]]),f.line(3,18,6,18)];
   },
   highlighter(g) {
     const f=figure(g),r=Math.min(g.r,g.v(.5,.65,.8));

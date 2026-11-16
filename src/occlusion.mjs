@@ -1,5 +1,6 @@
 // Authoring-only Boolean geometry. PathKit/WASM never enters SVG or React output.
 import {readFile} from 'node:fs/promises';
+import {contour} from './geometry.mjs';
 import {createRequire} from 'node:module';
 import PathKitInit from 'pathkit-wasm';
 const require=createRequire(import.meta.url);
@@ -70,6 +71,27 @@ export function enclosedDetails(outline,details,g) {
     if(!ink.op(inside,P.PathOp.INTERSECT))throw new Error('Detail containment failed');
     return [outline,['path',{d:regionPathData(ink),fill:'currentColor',stroke:'none','fill-rule':ink.getFillTypeString()}]];
   }finally{inside.delete();ink.delete();}
+}
+// The shaft may enter a chevron, but its cap may not redefine the tip.
+// Keep the rear half-plane open, and constrain only the forward join to the
+// head's actual painted envelope plus its enclosed wedge. No knockout gap.
+export function joinedArrow(shaft,head,points,g) {
+  const [a,tip,b]=points,mid=[(a[0]+b[0])/2,(a[1]+b[1])/2];
+  const length=Math.hypot(tip[0]-mid[0],tip[1]-mid[1]);
+  const axis=[(tip[0]-mid[0])/length,(tip[1]-mid[1])/length],side=[-axis[1],axis[0]],far=g.s*4;
+  const at=(u,v)=>[mid[0]+axis[0]*u+side[0]*v,mid[1]+axis[1]*u+side[1]*v];
+  const allowed=geometry(contour([at(0,-far),at(0,far),at(-far,far),at(-far,-far)],0,true));
+  const wedge=geometry(head),edge=paintedRegion([head],g),ink=paintedRegion(shaft,g);
+  const forbidden=geometry(['circle',{cx:tip[0],cy:tip[1],r:g.stroke*2+g.tip}]);
+  try {
+    allowed.op(wedge,P.PathOp.UNION);allowed.op(edge,P.PathOp.UNION);
+    // Restrict the edit to the joint: a return arc can legitimately travel
+    // ahead of the tip elsewhere in the same icon.
+    forbidden.op(allowed,P.PathOp.DIFFERENCE);
+    const removed=ink.copy();try{removed.op(forbidden,P.PathOp.INTERSECT);if(!removed.toSVGString().trim())return [...shaft,head];}finally{removed.delete();}
+    ink.op(forbidden,P.PathOp.DIFFERENCE);
+    return [['path',{d:regionPathData(ink),fill:'currentColor',stroke:'none','fill-rule':ink.getFillTypeString()}],head];
+  }finally{allowed.delete();wedge.delete();edge.delete();ink.delete();forbidden.delete();}
 }
 export function knockout(background,foreground,g,{silhouettes=[]}={}) {
   const back=paintedRegion(background,g),front=paintedRegion(foreground,g);

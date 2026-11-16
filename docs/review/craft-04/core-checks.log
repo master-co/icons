@@ -1,0 +1,42 @@
+$ pnpm build && pnpm validate && pnpm test && pnpm test:types
+$ node scripts/build.mjs
+Built 392 icons × 3 sizes × 3 corners = 3528 SVGs, React exports and local preview.
+$ node scripts/validate.mjs
+Validated 244 base concepts / 392 named drawings, 3528 SVG hashes, geometry, notices, 48 historical + 784 current pinned references, and 9 licensed ZIPs.
+$ node --test tests/*.test.mjs
+✔ structural seams do not paint outside the actual package and drive shells (25.136ms)
+✔ database state drawings retain empty upper compartments after Boolean operations (36.721458ms)
+✔ circular foreground badges leave no background fragments inside their loops (24.098209ms)
+✔ clipboard pen sharp miter and all new service badges stay within the native canvas (74.454291ms)
+✔ keyboard return trims only the tip and keeps its return route and connected shaft (33.688875ms)
+✔ languages crossbar and briefcase seam stay inside their structural shells (6.412584ms)
+✔ wrench jaw, shoulders and handle share a genuine reflection axis (14.416042ms)
+✔ occluded ink stays outside the foreground clearance, including solid badge interiors (58.698875ms)
+✔ all four phone cuts follow parallel offset boundaries, instead of rounded path endpoints (5.970333ms)
+✔ per-stroke dashes and opacity survive React serialization (2.710042ms)
+✔ optical selection has explicit boundaries and rejects invalid input (0.428083ms)
+✔ dense small masters remove detail and corner profiles alter actual geometry (0.078709ms)
+✔ SVG escaping, decorative defaults, and opt-in directional policy (0.215667ms)
+✔ React exports match SVG geometry, preserve a11y and consume design props (2.897042ms)
+✔ static React imports tree shake unrelated icons and unused optical masters (27.168167ms)
+✔ all named React exports match authored SVG for every optical and corner master (97.475958ms)
+✔ RTL changes only the approved navigation set, preserving geometry transforms (2.547833ms)
+✔ original 48 names and all unreviewed masters remain compatible (5.500458ms)
+✔ real semantic paint effects survive SVG and React across all sizes (0.322708ms)
+✔ the saved 280 baseline preserves the 210 drawings before organization (5.977625ms)
+✔ the saved 280 baseline preserves all 220 pre-productivity definitions (5.39425ms)
+✔ only explicitly reviewed refinements differ from the complete baseline (30.640833ms)
+✔ craft-03 refinements preserve an explicit independent and root review history (27.005375ms)
+✔ semantic perforations retain flat ends independently of frame corner styles (0.625875ms)
+✔ every productivity drawing appears in a labelled product scenario (8.23825ms)
+✔ every expansion drawing is used in a labelled interface scenario (0.587667ms)
+✔ craft-04 changes exactly its explicit reviewed set and retains all 392 names (7.895042ms)
+ℹ tests 27
+ℹ suites 0
+ℹ pass 27
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 341.527959
+$ tsc -p tests/tsconfig.json

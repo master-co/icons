@@ -1,0 +1,493 @@
+{
+  "date": "2026-11-16",
+  "baseline": "83ed131f",
+  "expectedModifiedNames": [
+    "arrow-right",
+    "arrow-up",
+    "arrow-up-right",
+    "undo",
+    "download",
+    "upload",
+    "arrow-left",
+    "arrow-down",
+    "redo",
+    "refresh",
+    "external-link",
+    "log-in",
+    "log-out",
+    "sort-ascending",
+    "sort-descending",
+    "sort-unsorted",
+    "chart-area",
+    "trending-up",
+    "trending-down",
+    "folder-open",
+    "clipboard-paste",
+    "tags",
+    "rotate-left",
+    "rotate-right",
+    "move",
+    "italic",
+    "briefcase",
+    "history",
+    "cloud-upload",
+    "cloud-download",
+    "repeat",
+    "usb",
+    "workflow",
+    "wrap-text",
+    "folder-up",
+    "folder-down",
+    "clipboard-copy",
+    "languages",
+    "wrench",
+    "keyboard-return",
+    "shuffle",
+    "repeat-one",
+    "screen-share",
+    "reply",
+    "reply-all",
+    "forward",
+    "variable",
+    "hard-drive-upload",
+    "hard-drive-download"
+  ],
+  "decisions": [
+    {
+      "name": "arrow-right",
+      "kind": "modified",
+      "reason": "箭桿端帽在某些圓角／尺寸超出箭翼的實際墨線包絡；按箭尖局部輪廓收口，移除突出而維持連通。保留箭翼角度、箭桿長度及既有方向語意。",
+      "sourceObservation": "Lucide/arrow-right（exact）、Tabler/arrow-right（exact）並列檢查：成熟原稿的箭翼與箭桿形成清楚接合；Master 保留既有母型與比例，修正方／圓端帽在圓角箭尖的外溢。保留箭翼角度、箭桿長度及既有方向語意。",
+      "beforeHash": "96a618298c5fd2430c460df90d6b8bbd546a08b4f8b18a53f3e835ee9240feaa",
+      "afterHash": "3d1e4fe9368a458aec242b59b6f84ef4ecacb60470dcadca5585c1f75dd23fec"
+    },
+    {
+      "name": "arrow-up",
+      "kind": "modified",
+      "reason": "箭桿端帽在某些圓角／尺寸超出箭翼的實際墨線包絡；按箭尖局部輪廓收口，移除突出而維持連通。保留箭翼角度、箭桿長度及既有方向語意。",
+      "sourceObservation": "Lucide/arrow-up（exact）、Tabler/arrow-up（exact）並列檢查：成熟原稿的箭翼與箭桿形成清楚接合；Master 保留既有母型與比例，修正方／圓端帽在圓角箭尖的外溢。保留箭翼角度、箭桿長度及既有方向語意。",
+      "beforeHash": "fde04c3c58a682b29999742817f2885f5c1f6fe5a3a142a0081a2b2e8992c880",
+      "afterHash": "ffa53943644b4e8b56b6e599ea044e70d18b76cdc4fb0121d18fd3bc1618889d"
+    },
+    {
+      "name": "arrow-up-right",
+      "kind": "modified",
+      "reason": "箭桿端帽在某些圓角／尺寸超出箭翼的實際墨線包絡；按箭尖局部輪廓收口，移除突出而維持連通。保留箭翼角度、箭桿長度及既有方向語意。",
+      "sourceObservation": "Lucide/arrow-up-right（exact）、Tabler/arrow-up-right（exact）並列檢查：成熟原稿的箭翼與箭桿形成清楚接合；Master 保留既有母型與比例，修正方／圓端帽在圓角箭尖的外溢。保留箭翼角度、箭桿長度及既有方向語意。",
+      "beforeHash": "c724ef2ab768ca2dab6062d8f7fb03bf966d2b1727e815b1815183e262a11afb",
+      "afterHash": "27d523390165f8849b625a9ba9085cc38dec5b83ed93bfeed14761147026d83f"
+    },
+    {
+      "name": "undo",
+      "kind": "modified",
+      "reason": "箭桿端帽在某些圓角／尺寸超出箭翼的實際墨線包絡；按箭尖局部輪廓收口，移除突出而維持連通。保留完整折返／循環路線，避免以全域半平面裁掉其他弧段。",
+      "sourceObservation": "Lucide/undo（exact）、Iconoir/undo（exact）並列檢查：成熟原稿的箭翼與箭桿形成清楚接合；Master 保留既有母型與比例，修正方／圓端帽在圓角箭尖的外溢。保留完整折返／循環路線，避免以全域半平面裁掉其他弧段。",
+      "beforeHash": "0b9963ca31c65a4e5a624f8f28a93b066b10462770046efa434e2f4d5e97fbdb",
+      "afterHash": "665126edb4ab39672524c814fa96cdae4c4759727a4dcc3b26a065d885ef9a10"
+    },
+    {
+      "name": "download",
+      "kind": "modified",
+      "reason": "箭桿端帽在某些圓角／尺寸超出箭翼的實際墨線包絡；按箭尖局部輪廓收口，移除突出而維持連通。保留箭翼角度、箭桿長度及既有方向語意。",
+      "sourceObservation": "Lucide/download（exact）、Tabler/download（exact）並列檢查：成熟原稿的箭翼與箭桿形成清楚接合；Master 保留既有母型與比例，修正方／圓端帽在圓角箭尖的外溢。保留箭翼角度、箭桿長度及既有方向語意。",
+      "beforeHash": "3aba5dee7700bada9046f75afa5df85df7a3dd0beb129d02978470e59d7ec204",
+      "afterHash": "18afce6a3b0767e874480ecfa61c6396369b233e0f9f1e55fe2dd225ba686e15"
+    },
+    {
+      "name": "upload",
+      "kind": "modified",
+      "reason": "箭桿端帽在某些圓角／尺寸超出箭翼的實際墨線包絡；按箭尖局部輪廓收口，移除突出而維持連通。保留箭翼角度、箭桿長度及既有方向語意。",
+      "sourceObservation": "Lucide/upload（exact）、Tabler/upload（exact）並列檢查：成熟原稿的箭翼與箭桿形成清楚接合；Master 保留既有母型與比例，修正方／圓端帽在圓角箭尖的外溢。保留箭翼角度、箭桿長度及既有方向語意。",
+      "beforeHash": "ecc9d9589d2931bbea796850fde375cfc68ac8f10ea77bfb8351ec92ff550ccb",
+      "afterHash": "6fedc362317be72f2c4d9299b9d1c915e67f980aee0bb6c8101716464b494690"
+    },
+    {
+      "name": "arrow-left",
+      "kind": "modified",
+      "reason": "箭桿端帽在某些圓角／尺寸超出箭翼的實際墨線包絡；按箭尖局部輪廓收口，移除突出而維持連通。保留箭翼角度、箭桿長度及既有方向語意。",
+      "sourceObservation": "Lucide/arrow-left（exact）、Tabler/arrow-left（exact）並列檢查：成熟原稿的箭翼與箭桿形成清楚接合；Master 保留既有母型與比例，修正方／圓端帽在圓角箭尖的外溢。保留箭翼角度、箭桿長度及既有方向語意。",
+      "beforeHash": "1885c592d9b988f55883737947ab547f5b221847a18506918f63d09acc85e738",
+      "afterHash": "fcdd391b1ff6fc410fbdbd81489b29a52788c0f9d623e0f5859e24f4cd9f96a6"
+    },
+    {
+      "name": "arrow-down",
+      "kind": "modified",
+      "reason": "箭桿端帽在某些圓角／尺寸超出箭翼的實際墨線包絡；按箭尖局部輪廓收口，移除突出而維持連通。保留箭翼角度、箭桿長度及既有方向語意。",
+      "sourceObservation": "Lucide/arrow-down（exact）、Tabler/arrow-down（exact）並列檢查：成熟原稿的箭翼與箭桿形成清楚接合；Master 保留既有母型與比例，修正方／圓端帽在圓角箭尖的外溢。保留箭翼角度、箭桿長度及既有方向語意。",
+      "beforeHash": "55f4cc35dcdca92d038377da4f2bd8a879d2c553910d2489a038e897e31fd2f4",
+      "afterHash": "6b4a36dafb8721523f3b4433182a8b63f8653538a049a79354d9c3f4e3f48e2c"
+    },
+    {
+      "name": "redo",
+      "kind": "modified",
+      "reason": "箭桿端帽在某些圓角／尺寸超出箭翼的實際墨線包絡；按箭尖局部輪廓收口，移除突出而維持連通。保留完整折返／循環路線，避免以全域半平面裁掉其他弧段。",
+      "sourceObservation": "Lucide/redo（exact）、Iconoir/redo（exact）並列檢查：成熟原稿的箭翼與箭桿形成清楚接合；Master 保留既有母型與比例，修正方／圓端帽在圓角箭尖的外溢。保留完整折返／循環路線，避免以全域半平面裁掉其他弧段。",
+      "beforeHash": "bd48ccc07f008bc9c83b4887b6a5a204053806bb1b55774b3bc68940cf2b6aa3",
+      "afterHash": "cda865327c6490e8e05b327b5726ed0ac56bbc4ae4e7237357e18b2bb62635eb"
+    },
+    {
+      "name": "refresh",
+      "kind": "modified",
+      "reason": "箭桿端帽在某些圓角／尺寸超出箭翼的實際墨線包絡；按箭尖局部輪廓收口，移除突出而維持連通。保留完整折返／循環路線，避免以全域半平面裁掉其他弧段。",
+      "sourceObservation": "Lucide/refresh-cw（exact）、Tabler/refresh（exact）並列檢查：成熟原稿的箭翼與箭桿形成清楚接合；Master 保留既有母型與比例，修正方／圓端帽在圓角箭尖的外溢。保留完整折返／循環路線，避免以全域半平面裁掉其他弧段。",
+      "beforeHash": "2ac981f5ad6acd8250a7cf799074abbbe4d1cb609676c65a9de6480dddd49d04",
+      "afterHash": "8634965bedc6916cb34e39a0633ff0c649ff639fe7bb8d5ce25bf1430633322a"
+    },
+    {
+      "name": "external-link",
+      "kind": "modified",
+      "reason": "箭桿端帽在某些圓角／尺寸超出箭翼的實際墨線包絡；按箭尖局部輪廓收口，移除突出而維持連通。保留箭翼角度、箭桿長度及既有方向語意。",
+      "sourceObservation": "Lucide/external-link（exact）、Tabler/external-link（exact）並列檢查：成熟原稿的箭翼與箭桿形成清楚接合；Master 保留既有母型與比例，修正方／圓端帽在圓角箭尖的外溢。保留箭翼角度、箭桿長度及既有方向語意。",
+      "beforeHash": "83875ae5e4622ac580c5dad3f360b82f591e59e1c97ae9bc09e63d57e849b6ed",
+      "afterHash": "77b265df320b359243f919e1078895acd4c3013f228911d00bdb0691362de0e1"
+    },
+    {
+      "name": "log-in",
+      "kind": "modified",
+      "reason": "箭桿端帽在某些圓角／尺寸超出箭翼的實際墨線包絡；按箭尖局部輪廓收口，移除突出而維持連通。保留箭翼角度、箭桿長度及既有方向語意。",
+      "sourceObservation": "Lucide/log-in（exact）、Tabler/login（exact）並列檢查：成熟原稿的箭翼與箭桿形成清楚接合；Master 保留既有母型與比例，修正方／圓端帽在圓角箭尖的外溢。保留箭翼角度、箭桿長度及既有方向語意。",
+      "beforeHash": "ed171866dae9148addf0b152c97d89736aa764e0c3d9af4e14c01f34ebd623af",
+      "afterHash": "87438a8ca439c36f82a55fad111882497d64c4dc184ea78b7e3742eb8438e923"
+    },
+    {
+      "name": "log-out",
+      "kind": "modified",
+      "reason": "箭桿端帽在某些圓角／尺寸超出箭翼的實際墨線包絡；按箭尖局部輪廓收口，移除突出而維持連通。保留箭翼角度、箭桿長度及既有方向語意。",
+      "sourceObservation": "Lucide/log-out（exact）、Tabler/logout（exact）並列檢查：成熟原稿的箭翼與箭桿形成清楚接合；Master 保留既有母型與比例，修正方／圓端帽在圓角箭尖的外溢。保留箭翼角度、箭桿長度及既有方向語意。",
+      "beforeHash": "26f544876e1dcc10ef3d1f99190f1a92a832864d8bdedbd6ac68ad45ea02a894",
+      "afterHash": "0a9ca55e6ea6d5921f51004a57fddeaad640530279c1fb478f0b4f5c4b2841a7"
+    },
+    {
+      "name": "sort-ascending",
+      "kind": "modified",
+      "reason": "箭桿端帽在某些圓角／尺寸超出箭翼的實際墨線包絡；按箭尖局部輪廓收口，移除突出而維持連通。保留排序／趨勢方向與折線；不改為 RTL 鏡射。",
+      "sourceObservation": "Lucide/list-sort-ascending（exact）、Tabler/sort-ascending（exact）並列檢查：成熟原稿的箭翼與箭桿形成清楚接合；Master 保留既有母型與比例，修正方／圓端帽在圓角箭尖的外溢。保留排序／趨勢方向與折線；不改為 RTL 鏡射。",
+      "beforeHash": "1a3abda2af584e0e2e2e77efaaf0de52e75e912183ba27b8f29ad846dc6ba1a1",
+      "afterHash": "2d3553ceb4e59602fff9ff6603609ae41bf19ab79059543c50bb1b3b6c665d64"
+    },
+    {
+      "name": "sort-descending",
+      "kind": "modified",
+      "reason": "箭桿端帽在某些圓角／尺寸超出箭翼的實際墨線包絡；按箭尖局部輪廓收口，移除突出而維持連通。保留排序／趨勢方向與折線；不改為 RTL 鏡射。",
+      "sourceObservation": "Lucide/list-sort-descending（exact）、Tabler/sort-descending（exact）並列檢查：成熟原稿的箭翼與箭桿形成清楚接合；Master 保留既有母型與比例，修正方／圓端帽在圓角箭尖的外溢。保留排序／趨勢方向與折線；不改為 RTL 鏡射。",
+      "beforeHash": "30fd2e17dec93b9e1c6b15a767c617d5a482006182df4ce48c4385eea0198647",
+      "afterHash": "6f40a377ac5383c927d7df1228a9e1a60bfe444f73adbae6724353045bc4e9cf"
+    },
+    {
+      "name": "sort-unsorted",
+      "kind": "modified",
+      "reason": "箭桿端帽在某些圓角／尺寸超出箭翼的實際墨線包絡；按箭尖局部輪廓收口，移除突出而維持連通。保留排序／趨勢方向與折線；不改為 RTL 鏡射。",
+      "sourceObservation": "Lucide/arrow-up-down（exact）、Tabler/arrows-sort（exact）並列檢查：成熟原稿的箭翼與箭桿形成清楚接合；Master 保留既有母型與比例，修正方／圓端帽在圓角箭尖的外溢。保留排序／趨勢方向與折線；不改為 RTL 鏡射。",
+      "beforeHash": "28d5e430b4c7318ed9cd395d6dcdf7ed757911f2259f60ae2cd8bfd0d7603332",
+      "afterHash": "8a4f0db5a8454fe0be4fa696285879ef76ce33e5c7695d34e6abb1d498ba834d"
+    },
+    {
+      "name": "chart-area",
+      "kind": "modified",
+      "reason": "移除20%透明填面；折線、右邊及底邊合為封閉輪廓，以區域邊界表達面積，消除分開描邊的重疊端帽；座標軸與區域維持間隙。",
+      "sourceObservation": "Lucide 以封閉輪廓區別面積和折線，Tabler 也不依賴淡色面；依使用者偏好改為 outline，保留封閉底邊辨識。",
+      "beforeHash": "035c0027fa8ae7a7f77d3cdaac0635968db0f53086060e1803e0cba652bc03a4",
+      "afterHash": "731414d8564119ce07ffbc7ef8cd3d93d207298ab1d11f225021d01380a25773"
+    },
+    {
+      "name": "trending-up",
+      "kind": "modified",
+      "reason": "箭桿端帽在某些圓角／尺寸超出箭翼的實際墨線包絡；按箭尖局部輪廓收口，移除突出而維持連通。保留排序／趨勢方向與折線；不改為 RTL 鏡射。",
+      "sourceObservation": "Lucide/trending-up（exact）、Tabler/trending-up（exact）並列檢查：成熟原稿的箭翼與箭桿形成清楚接合；Master 保留既有母型與比例，修正方／圓端帽在圓角箭尖的外溢。保留排序／趨勢方向與折線；不改為 RTL 鏡射。",
+      "beforeHash": "a9c8dcd7b64b70f21c12d1d22c0097d9fe3f22ec14b41ab123157414d91e6925",
+      "afterHash": "02ca1f08b90922e0f5240f6999279ec6cec5d7acc90cc21b6c2c600e5b91fcd3"
+    },
+    {
+      "name": "trending-down",
+      "kind": "modified",
+      "reason": "箭桿端帽在某些圓角／尺寸超出箭翼的實際墨線包絡；按箭尖局部輪廓收口，移除突出而維持連通。保留排序／趨勢方向與折線；不改為 RTL 鏡射。",
+      "sourceObservation": "Lucide/trending-down（exact）、Tabler/trending-down（exact）並列檢查：成熟原稿的箭翼與箭桿形成清楚接合；Master 保留既有母型與比例，修正方／圓端帽在圓角箭尖的外溢。保留排序／趨勢方向與折線；不改為 RTL 鏡射。",
+      "beforeHash": "000ad4866f7699ef820742b84f48198baa9a3b9f57413e50480a35fa6bbcd85c",
+      "afterHash": "f6968336b60e703d34681db0bacb0b2ccc3bc289d1f20559311434377dc85e75"
+    },
+    {
+      "name": "folder-open",
+      "kind": "modified",
+      "reason": "獨立前後片在倒角後出現端點突出與右上斷接；重建連續外輪廓，讓前翻片、底部及背殼共享接合，內側短邊保留開啟語意。",
+      "sourceObservation": "Lucide 前翻片內端停在殼內、外部接合連續；Tabler 也以斜前板表開啟。Master 採單一連續外輪廓，避免兩個獨立倒角相碰。",
+      "beforeHash": "15038d5bba5f5b774b27d22b24a61b2736d6f511cd357b8199b806126e8592a0",
+      "afterHash": "7e9ec08162cb42e6dc9ca74b61c3a9472d11c905d3d5b37f9e7190904fd7978e"
+    },
+    {
+      "name": "clipboard-paste",
+      "kind": "modified",
+      "reason": "箭桿端帽在某些圓角／尺寸超出箭翼的實際墨線包絡；按箭尖局部輪廓收口，移除突出而維持連通。保留容器與箭頭的既有間隙或遮擋，僅調整箭桿接點。",
+      "sourceObservation": "Lucide/clipboard-paste（exact）、Iconoir/paste-clipboard（exact）並列檢查：成熟原稿的箭翼與箭桿形成清楚接合；Master 保留既有母型與比例，修正方／圓端帽在圓角箭尖的外溢。保留容器與箭頭的既有間隙或遮擋，僅調整箭桿接點。",
+      "beforeHash": "72f3578187869cf47abad05a1640f414e5332d54bba006ef6b3b8f466b7ffad2",
+      "afterHash": "94ec1feb32210f4f09027d0e9611eb175e7ed51682a5e532ecef7677ed60f2ad"
+    },
+    {
+      "name": "tags",
+      "kind": "modified",
+      "reason": "後片以任意折線模擬，與前標籤的斜率及回折不一致。改用同一標籤母型平移，按前片實際外緣及封閉占用區剪出後片露邊，孔與雙層間隙保持清楚。",
+      "sourceObservation": "Lucide 的後方露邊有完整回折，Tabler 以一致標籤輪廓表達多張；Master 採同母型平移及透明避讓，避免漂浮裝飾線。",
+      "beforeHash": "90b8aa5dc4e2375b972bdb048ae8ea95c0c7f8dcb54c29d81ccc96106c4423ca",
+      "afterHash": "799a82a5fb990272c2731438f2474872ba6ccb71a783147fc935fcfbcbb85af4"
+    },
+    {
+      "name": "rotate-left",
+      "kind": "modified",
+      "reason": "箭桿端帽在某些圓角／尺寸超出箭翼的實際墨線包絡；按箭尖局部輪廓收口，移除突出而維持連通。循環弧線遠端及開口保持原形；僅修箭尖接點。",
+      "sourceObservation": "Lucide/rotate-ccw（exact）、Tabler/rotate（exact）並列檢查：成熟原稿的箭翼與箭桿形成清楚接合；Master 保留既有母型與比例，修正方／圓端帽在圓角箭尖的外溢。循環弧線遠端及開口保持原形；僅修箭尖接點。",
+      "beforeHash": "96ba95cf037cd9b6ab6cb173ff6610f06cf6fd50707acd6d51d46b10c4481db0",
+      "afterHash": "ec5eea6c453c9f3898e9c95441e67092995b7787c4d3fe02cbfb1eb830370626"
+    },
+    {
+      "name": "rotate-right",
+      "kind": "modified",
+      "reason": "箭桿端帽在某些圓角／尺寸超出箭翼的實際墨線包絡；按箭尖局部輪廓收口，移除突出而維持連通。循環弧線遠端及開口保持原形；僅修箭尖接點。",
+      "sourceObservation": "Lucide/rotate-cw（exact）、Tabler/rotate-clockwise（exact）並列檢查：成熟原稿的箭翼與箭桿形成清楚接合；Master 保留既有母型與比例，修正方／圓端帽在圓角箭尖的外溢。循環弧線遠端及開口保持原形；僅修箭尖接點。",
+      "beforeHash": "c902ab69a1a653feec9162d4147ebc4a9853745023f5befa6c0ef5be98fdaa55",
+      "afterHash": "015d274d5a3aa26ef7f0b380ae99f6a60422e352276a6697a29352b0cb107bd6"
+    },
+    {
+      "name": "move",
+      "kind": "modified",
+      "reason": "箭桿端帽在某些圓角／尺寸超出箭翼的實際墨線包絡；按箭尖局部輪廓收口，移除突出而維持連通。保留箭翼角度、箭桿長度及既有方向語意。",
+      "sourceObservation": "Lucide/move（exact）、Tabler/arrows-move（exact）並列檢查：成熟原稿的箭翼與箭桿形成清楚接合；Master 保留既有母型與比例，修正方／圓端帽在圓角箭尖的外溢。保留箭翼角度、箭桿長度及既有方向語意。",
+      "beforeHash": "ef97ba3c324936558aa2d0a6ab7549fe45c4ce1d9a3adccda684d02f61405824",
+      "afterHash": "9ef2cff6276ea7ff895aa66dd3cf798d07bdf86c6ae3002e1d2781478dd34a9c"
+    },
+    {
+      "name": "italic",
+      "kind": "modified",
+      "reason": "sharp 斜主幹的方端帽超出上下水平襯線；主幹改平切端帽，仍進入襯線，保留字形傾角及兩端連接。",
+      "sourceObservation": "Lucide 與 Tabler 的 italic 皆以斜主幹及兩道襯線辨識；Master 收回主幹端帽突出，不改字形寬高。",
+      "beforeHash": "333785aae991ea0643342576405ac0a5a53b75b0da7fc3b4f08b0f751e44a63c",
+      "afterHash": "457acce003781779dccc600e47cb8f2deb809d9939c47d9f49f223cc11698f0f"
+    },
+    {
+      "name": "briefcase",
+      "kind": "modified",
+      "reason": "弧形前蓋分界的斜向方端帽伸出左右外框；依閉合殼體內部限制分界墨線，保留外框、把手與扣帶的結構接合。",
+      "sourceObservation": "Tabler 的包蓋弧線與外殼接合，Lucide 偏重直向分隔；Master 保留弧形包蓋構造，只修分界外溢。",
+      "beforeHash": "a55f40d9b4e0f45e7f57b3af16bc78e879ecd948c25e9fd32bd99d409ce565ea",
+      "afterHash": "90bbcdd8c54e20fe659fad13d0ea37daed01e543e0332b8bf90561923a1813f4"
+    },
+    {
+      "name": "history",
+      "kind": "modified",
+      "reason": "箭桿端帽在某些圓角／尺寸超出箭翼的實際墨線包絡；按箭尖局部輪廓收口，移除突出而維持連通。循環弧線遠端及開口保持原形；僅修箭尖接點。",
+      "sourceObservation": "Tabler/history（exact）、Hugeicons Free/history（exact）並列檢查：成熟原稿的箭翼與箭桿形成清楚接合；Master 保留既有母型與比例，修正方／圓端帽在圓角箭尖的外溢。循環弧線遠端及開口保持原形；僅修箭尖接點。",
+      "beforeHash": "96195ef25e35fcbe61329b58eb149c33487df685a4fed1ce97ad8ab0ba558f12",
+      "afterHash": "d431ccdadfa85e1c8b2d555c1c18b9b38c4662d3e27d0eb4401bd6c179f189bd"
+    },
+    {
+      "name": "cloud-upload",
+      "kind": "modified",
+      "reason": "箭桿端帽在某些圓角／尺寸超出箭翼的實際墨線包絡；按箭尖局部輪廓收口，移除突出而維持連通。保留容器與箭頭的既有間隙或遮擋，僅調整箭桿接點。",
+      "sourceObservation": "Lucide/cloud-upload（exact）、Tabler/cloud-upload（exact）並列檢查：成熟原稿的箭翼與箭桿形成清楚接合；Master 保留既有母型與比例，修正方／圓端帽在圓角箭尖的外溢。保留容器與箭頭的既有間隙或遮擋，僅調整箭桿接點。",
+      "beforeHash": "5173b83749c788fcd031b0dda400e0e14772f26bc76eb390ebf1cbba19775c58",
+      "afterHash": "b27b9b767a49172636393bf5be92cb3e3e78effaa35a3107eb70f8c633d6a7b5"
+    },
+    {
+      "name": "cloud-download",
+      "kind": "modified",
+      "reason": "箭桿端帽在某些圓角／尺寸超出箭翼的實際墨線包絡；按箭尖局部輪廓收口，移除突出而維持連通。保留容器與箭頭的既有間隙或遮擋，僅調整箭桿接點。",
+      "sourceObservation": "Lucide/cloud-download（exact）、Tabler/cloud-download（exact）並列檢查：成熟原稿的箭翼與箭桿形成清楚接合；Master 保留既有母型與比例，修正方／圓端帽在圓角箭尖的外溢。保留容器與箭頭的既有間隙或遮擋，僅調整箭桿接點。",
+      "beforeHash": "818632787c1e2cebb58cc548c0b816f2a51896a5655fa5edb004cfa10a7b2e10",
+      "afterHash": "1039e7db0dc49e3a0921cc7dd9f9859c082eead4d7f8e5d586c5b6f717824dd3"
+    },
+    {
+      "name": "repeat",
+      "kind": "modified",
+      "reason": "箭桿端帽在某些圓角／尺寸超出箭翼的實際墨線包絡；按箭尖局部輪廓收口，移除突出而維持連通。保留完整折返／循環路線，避免以全域半平面裁掉其他弧段。",
+      "sourceObservation": "Lucide/repeat（exact）、Tabler/repeat（exact）並列檢查：成熟原稿的箭翼與箭桿形成清楚接合；Master 保留既有母型與比例，修正方／圓端帽在圓角箭尖的外溢。保留完整折返／循環路線，避免以全域半平面裁掉其他弧段。",
+      "beforeHash": "e1fa284976ebd80391b5e6bbf7b724ef1e3732e4441090f1eda4d9f4cef6cd4c",
+      "afterHash": "ad90ed9c7e87b263e07f34b025cea57c446359f661afb2f21f799a19c5f07b2a"
+    },
+    {
+      "name": "usb",
+      "kind": "modified",
+      "reason": "箭桿端帽在某些圓角／尺寸超出箭翼的實際墨線包絡；按箭尖局部輪廓收口，移除突出而維持連通。保留箭翼角度、箭桿長度及既有方向語意。",
+      "sourceObservation": "Lucide/usb（exact）、Tabler/usb（exact）並列檢查：成熟原稿的箭翼與箭桿形成清楚接合；Master 保留既有母型與比例，修正方／圓端帽在圓角箭尖的外溢。保留箭翼角度、箭桿長度及既有方向語意。",
+      "beforeHash": "fb05757c00666d8ac2f0d467ca2cd5dec0f5025af9c83630e10d11c6c5391a36",
+      "afterHash": "838c1e001cf10c71f8458912d317c8cb7ddf893b19a3042d576c6fb9cf1f96ef"
+    },
+    {
+      "name": "workflow",
+      "kind": "modified",
+      "reason": "箭桿端帽在某些圓角／尺寸超出箭翼的實際墨線包絡；按箭尖局部輪廓收口，移除突出而維持連通。保留箭翼角度、箭桿長度及既有方向語意。",
+      "sourceObservation": "Lucide/workflow（exact）、Hugeicons Free/workflow（exact）並列檢查：成熟原稿的箭翼與箭桿形成清楚接合；Master 保留既有母型與比例，修正方／圓端帽在圓角箭尖的外溢。保留箭翼角度、箭桿長度及既有方向語意。",
+      "beforeHash": "42570c995daf9c9b01bcc8c75be82d0d979e0be5335f848bc9feaf98b90330e3",
+      "afterHash": "31a68e0c764c0d1ba73a0292ed5c9c4c929c4b79f2a43ebf9cac74123e6b675f"
+    },
+    {
+      "name": "wrap-text",
+      "kind": "modified",
+      "reason": "箭桿端帽在某些圓角／尺寸超出箭翼的實際墨線包絡；按箭尖局部輪廓收口，移除突出而維持連通。保留完整折返／循環路線，避免以全域半平面裁掉其他弧段。",
+      "sourceObservation": "Lucide/text-wrap（exact）、Iconoir/wrap-text（exact）並列檢查：成熟原稿的箭翼與箭桿形成清楚接合；Master 保留既有母型與比例，修正方／圓端帽在圓角箭尖的外溢。保留完整折返／循環路線，避免以全域半平面裁掉其他弧段。",
+      "beforeHash": "8bb10ede7161c01b539ffefb32d324f79487cf86542bf697dedf6925b5849b10",
+      "afterHash": "767a7091a7125a4ba75ece0c79de08d57ae30fe5cd78469b9eca29773758f558"
+    },
+    {
+      "name": "folder-up",
+      "kind": "modified",
+      "reason": "箭桿端帽在某些圓角／尺寸超出箭翼的實際墨線包絡；按箭尖局部輪廓收口，移除突出而維持連通。保留容器與箭頭的既有間隙或遮擋，僅調整箭桿接點。",
+      "sourceObservation": "Lucide/folder-up（exact）、Tabler/folder-up（exact）並列檢查：成熟原稿的箭翼與箭桿形成清楚接合；Master 保留既有母型與比例，修正方／圓端帽在圓角箭尖的外溢。保留容器與箭頭的既有間隙或遮擋，僅調整箭桿接點。",
+      "beforeHash": "d5b166bc5ed9c73fd86147cf3174fa41a980f39498b39362a67d22c5d65b3a12",
+      "afterHash": "6be95a9c70df611f9f9c09b0923eb9006c89fd1a4628f8cfef002ce7bf07928b"
+    },
+    {
+      "name": "folder-down",
+      "kind": "modified",
+      "reason": "箭桿端帽在某些圓角／尺寸超出箭翼的實際墨線包絡；按箭尖局部輪廓收口，移除突出而維持連通。保留容器與箭頭的既有間隙或遮擋，僅調整箭桿接點。",
+      "sourceObservation": "Lucide/folder-down（exact）、Tabler/folder-down（exact）並列檢查：成熟原稿的箭翼與箭桿形成清楚接合；Master 保留既有母型與比例，修正方／圓端帽在圓角箭尖的外溢。保留容器與箭頭的既有間隙或遮擋，僅調整箭桿接點。",
+      "beforeHash": "55164025c40535574f38139bec4a2a95d643bb5a82ed9ec60b384137bc8316e6",
+      "afterHash": "afcfc542e77d1594a1f4ba1d98b2cd65fe2b3008818c0d71bd97b588b02d6cda"
+    },
+    {
+      "name": "clipboard-copy",
+      "kind": "modified",
+      "reason": "箭桿端帽在某些圓角／尺寸超出箭翼的實際墨線包絡；按箭尖局部輪廓收口，移除突出而維持連通。保留容器與箭頭的既有間隙或遮擋，僅調整箭桿接點。",
+      "sourceObservation": "Lucide/clipboard-copy（exact）、Tabler/clipboard-copy（exact）並列檢查：成熟原稿的箭翼與箭桿形成清楚接合；Master 保留既有母型與比例，修正方／圓端帽在圓角箭尖的外溢。保留容器與箭頭的既有間隙或遮擋，僅調整箭桿接點。",
+      "beforeHash": "ac72b597bd2bbb1cde15dde6fde815a43c375a01da3230a748aa9aeb9f691afe",
+      "afterHash": "7ebdc78cbfe8d74522566bcb3f4df95dd46f2e7cb7a64cf1b6c1866b9f0c3f0c"
+    },
+    {
+      "name": "languages",
+      "kind": "modified",
+      "reason": "A 橫槓的方端帽在 sharp 伸出兩側斜筆；把橫槓實際墨線限制於 A 的內部，保留斜邊描邊與完整連接，不製造淨空。",
+      "sourceObservation": "Lucide 與 Phosphor translate 均保留完整 A 字輪廓和內橫槓；Master 針對斜筆外緣收口，不改字形比例與中英組合。",
+      "beforeHash": "93588694505548aa53cf121a8db783cb53cc204bfb1234001caaee84eda1b776",
+      "afterHash": "145ab336112faf7a7250058453001210dcc4bc8e5fb1ac63add47a289f7c5d9a"
+    },
+    {
+      "name": "wrench",
+      "kind": "modified",
+      "reason": "原鉗口、肩部及柄的自由曲線偏離共同軸線，沒有可成立的不對稱機械理由；先沿垂直軸建立鏡像，再整體旋轉45度，兩側肩部與握柄一致。",
+      "sourceObservation": "Lucide、Iconoir 的開口與柄均沿工具軸形成穩定重心。Master 改為先建立真正對稱母型，結構曲線不因 sharp 拉直。",
+      "beforeHash": "bcf36ac7eee99399d882219c2ea75c4291a3723dce5a24e319fb99b730049a1b",
+      "afterHash": "0cab6ff8d8a2b4408116aee3e01aef8ced79237dbb3f803d3286dcc76f299584"
+    },
+    {
+      "name": "keyboard-return",
+      "kind": "modified",
+      "reason": "圓角箭尖內縮後，箭桿端帽仍停在原頂點；限制接點附近箭桿墨線於箭翼包絡內，保留折返彎、水平段、鍵帽及箭桿連通。",
+      "sourceObservation": "Phosphor key-return 的鍵帽與左返箭頭完整，Lucide corner-down-left 僅為折返結構參考。Master 保留鍵帽與折返構造，修正各圓角實際墨線接合。",
+      "beforeHash": "29415f9c70b2b6e2fee5f5506c0d5f81f0c25bc6c22110191e483349d01da7c7",
+      "afterHash": "8984ebe616fd62aeef2033aebbd039e65e2ddebeb91232842e2013f934f0d898"
+    },
+    {
+      "name": "shuffle",
+      "kind": "modified",
+      "reason": "箭桿端帽在某些圓角／尺寸超出箭翼的實際墨線包絡；按箭尖局部輪廓收口，移除突出而維持連通。兩端箭頭分別收口，再維持交叉處原有前景避讓。",
+      "sourceObservation": "Lucide/shuffle（exact）、Radix/shuffle（exact）並列檢查：成熟原稿的箭翼與箭桿形成清楚接合；Master 保留既有母型與比例，修正方／圓端帽在圓角箭尖的外溢。兩端箭頭分別收口，再維持交叉處原有前景避讓。",
+      "beforeHash": "a95594fbb7fe9c78ce1a0c069812d30b08f00b9e8128ae378281544f50a30d7b",
+      "afterHash": "e80cd7443d0b80aa66efa217ecfad91a60f97878fa658426833f10835bbb938d"
+    },
+    {
+      "name": "repeat-one",
+      "kind": "modified",
+      "reason": "箭桿端帽在某些圓角／尺寸超出箭翼的實際墨線包絡；按箭尖局部輪廓收口，移除突出而維持連通。保留完整折返／循環路線，避免以全域半平面裁掉其他弧段。",
+      "sourceObservation": "Lucide/repeat-1（exact）、Tabler/repeat-once（exact）並列檢查：成熟原稿的箭翼與箭桿形成清楚接合；Master 保留既有母型與比例，修正方／圓端帽在圓角箭尖的外溢。保留完整折返／循環路線，避免以全域半平面裁掉其他弧段。",
+      "beforeHash": "3129979e14f431f47e52370be2a07d81b4202f9a71b3ff8c4a59c3dc0f879ee1",
+      "afterHash": "ad2c3ea2b7a29a65ec7cc3904029bd799bab305e60e1a3ea1bb1ffef4fd15170"
+    },
+    {
+      "name": "screen-share",
+      "kind": "modified",
+      "reason": "箭桿端帽在某些圓角／尺寸超出箭翼的實際墨線包絡；按箭尖局部輪廓收口，移除突出而維持連通。保留容器與箭頭的既有間隙或遮擋，僅調整箭桿接點。",
+      "sourceObservation": "Lucide/screen-share（exact）、Tabler/screen-share（exact）並列檢查：成熟原稿的箭翼與箭桿形成清楚接合；Master 保留既有母型與比例，修正方／圓端帽在圓角箭尖的外溢。保留容器與箭頭的既有間隙或遮擋，僅調整箭桿接點。",
+      "beforeHash": "0df8ecf091cc96d0d574f6b8db17062a37ff5b3f02f42750fc47b82e598bca81",
+      "afterHash": "dfbc7333452e50bcf92d7a593a915cf2b665558af2148a4d7ea0032ec7d21851"
+    },
+    {
+      "name": "reply",
+      "kind": "modified",
+      "reason": "箭桿端帽在某些圓角／尺寸超出箭翼的實際墨線包絡；按箭尖局部輪廓收口，移除突出而維持連通。保留完整折返／循環路線，避免以全域半平面裁掉其他弧段。",
+      "sourceObservation": "Lucide/reply（exact）、Iconoir/reply（exact）並列檢查：成熟原稿的箭翼與箭桿形成清楚接合；Master 保留既有母型與比例，修正方／圓端帽在圓角箭尖的外溢。保留完整折返／循環路線，避免以全域半平面裁掉其他弧段。",
+      "beforeHash": "0b270989d975535626ade10c7f7612d05d07371bd57a6e741f38623202ccf2f9",
+      "afterHash": "998c9ea338db4ae14aef1a390c3905d661ac7382e52517a303fba6e27ad30ea8"
+    },
+    {
+      "name": "reply-all",
+      "kind": "modified",
+      "reason": "箭桿端帽在某些圓角／尺寸超出箭翼的實際墨線包絡；按箭尖局部輪廓收口，移除突出而維持連通。保留完整折返／循環路線，避免以全域半平面裁掉其他弧段。",
+      "sourceObservation": "Lucide/reply-all（exact）、Tabler/arrow-back-up-double（exact）並列檢查：成熟原稿的箭翼與箭桿形成清楚接合；Master 保留既有母型與比例，修正方／圓端帽在圓角箭尖的外溢。保留完整折返／循環路線，避免以全域半平面裁掉其他弧段。",
+      "beforeHash": "b6adf6e8f730c68e608cc9d274041b1315ec51c374e3f53b628a2de5e47bebed",
+      "afterHash": "5864916805fc502cf036d87a50a83135482c8d2de9f46d9435e9a1ed0c5c5fe9"
+    },
+    {
+      "name": "forward",
+      "kind": "modified",
+      "reason": "箭桿端帽在某些圓角／尺寸超出箭翼的實際墨線包絡；按箭尖局部輪廓收口，移除突出而維持連通。保留完整折返／循環路線，避免以全域半平面裁掉其他弧段。",
+      "sourceObservation": "Lucide/forward（exact）、Iconoir/arrow-email-forward（exact）並列檢查：成熟原稿的箭翼與箭桿形成清楚接合；Master 保留既有母型與比例，修正方／圓端帽在圓角箭尖的外溢。保留完整折返／循環路線，避免以全域半平面裁掉其他弧段。",
+      "beforeHash": "8f8af8f8a25890e0d5b55fef9158e4ae406f27b5c1097d012c8eaa60388a5f57",
+      "afterHash": "973dfdbb4d284d73b12ccb70a487120f4e1f0abe1ae76264f0675a18fce85a3c"
+    },
+    {
+      "name": "variable",
+      "kind": "modified",
+      "reason": "原先兩條直斜線更像關閉／乘號；依數學 x 的筆勢重畫曲線腰部與起收筆，維持括號空隙，sharp 也保留字形曲面。",
+      "sourceObservation": "Tabler variable 的 x 有曲線與書寫起收筆，Lucide 較接近幾何交叉。依使用者指定採字形解法，獨立調整 Master 曲率及比例。",
+      "beforeHash": "6986c838cd6ac2f5feacd1836abd4755a5bd6f3105be61cfb44338c0a636a8f7",
+      "afterHash": "18342d4e1ec74d41400158ef0109d5fc01714b0828ceab97f7f0f8bf33ad410f"
+    },
+    {
+      "name": "hard-drive-upload",
+      "kind": "modified",
+      "reason": "箭桿端帽在某些圓角／尺寸超出箭翼的實際墨線包絡；按箭尖局部輪廓收口，移除突出而維持連通。保留容器與箭頭的既有間隙或遮擋，僅調整箭桿接點。",
+      "sourceObservation": "Lucide/hard-drive-upload（exact）、Hugeicons Free/hard-drive-upload（exact）並列檢查：成熟原稿的箭翼與箭桿形成清楚接合；Master 保留既有母型與比例，修正方／圓端帽在圓角箭尖的外溢。保留容器與箭頭的既有間隙或遮擋，僅調整箭桿接點。",
+      "beforeHash": "d904a996bb9520367054f9c270b885410fdab01ec4165a76fdf6153c926184e7",
+      "afterHash": "a9689264cf3ece70775c94b931a67a389a3af7e4f9ef954eeec89e139c3a1e2a"
+    },
+    {
+      "name": "hard-drive-download",
+      "kind": "modified",
+      "reason": "箭桿端帽在某些圓角／尺寸超出箭翼的實際墨線包絡；按箭尖局部輪廓收口，移除突出而維持連通。保留容器與箭頭的既有間隙或遮擋，僅調整箭桿接點。",
+      "sourceObservation": "Lucide/hard-drive-download（exact）、Hugeicons Free/hard-drive-download（exact）並列檢查：成熟原稿的箭翼與箭桿形成清楚接合；Master 保留既有母型與比例，修正方／圓端帽在圓角箭尖的外溢。保留容器與箭頭的既有間隙或遮擋，僅調整箭桿接點。",
+      "beforeHash": "9a3e89f6a8cf2fae59dd429c0f992eb6a77329b512a0bdb2ae0822bf1fad8a0a",
+      "afterHash": "a7ab724d164df7a6250b3a5f136224dc316530999a59e223da2f2eadfd7c51f9"
+    }
+  ],
+  "retainedChecks": [
+    {
+      "name": "ban",
+      "kind": "retained",
+      "reason": "斜線與環形為結構相接，原生三尺寸未見尖刺或斷點。",
+      "evidence": "docs/review/craft-04/seams/native.png"
+    },
+    {
+      "name": "globe",
+      "kind": "retained",
+      "reason": "經緯線按徑向與外圓相接，未見與斜箭尖相同的端帽外溢。",
+      "evidence": "docs/review/craft-04/seams/native.png"
+    },
+    {
+      "name": "pencil",
+      "kind": "retained",
+      "reason": "筆身橫分界近垂直於長邊，原生接合平順。",
+      "evidence": "docs/review/craft-04/seams/native.png"
+    },
+    {
+      "name": "paint-bucket",
+      "kind": "retained",
+      "reason": "傾斜桶身分界已使用平切端帽，未見外溢。",
+      "evidence": "docs/review/craft-04/seams/native.png"
+    },
+    {
+      "name": "cloud-sync",
+      "kind": "retained",
+      "reason": "弧線端點已用平切端帽，與箭翼接合並保留開口，無需套用新裁切。",
+      "evidence": "docs/review/craft-04/seams/native.png"
+    },
+    {
+      "name": "database-backup",
+      "kind": "retained",
+      "reason": "前景循環弧線已有平切端帽，保留箭尖與孔洞。",
+      "evidence": "docs/review/craft-04/seams/native.png"
+    },
+    {
+      "name": "shopping-cart",
+      "kind": "retained",
+      "reason": "斜支架與籃筐結構相接，原生明暗檢查無明顯突出。",
+      "evidence": "docs/review/craft-04/seams/native.png"
+    }
+  ]
+}

@@ -30,7 +30,7 @@ export const systems = {
   workflow(g) {
     const f=figure(g),r=Math.min(g.r,g.v(.65,.85,1.1));
     return [f.rect(3,3,7,6,r),f.rect(14,15,7,6,r),
-      f.contour([[6.5,9],[6.5,18],[14,18]],false,g.r),f.contour([[11.5,15.5],[14,18],[11.5,20.5]],false,g.tip)];
+      ...f.arrow([f.contour([[6.5,9],[6.5,18],[14,18]],false,g.r)],[[11.5,15.5],[14,18],[11.5,20.5]])];
   },
   'git-branch'(g) {
     const f=figure(g);

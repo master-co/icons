@@ -1,3 +1,4 @@
+import {enclosedDetails} from '../occlusion.mjs';
 import { figure, mark } from "./shared.mjs";
 import { person } from "./core.mjs";
 function shield(g) {
@@ -40,7 +41,7 @@ const identity = {
   },
   briefcase: (g) => {
     const f = figure(g);
-    return [f.rect(3, 7, 18, 14), f.contour([[8, 7], [8, 3], [16, 3], [16, 7]], false, Math.min(g.r, 1)), f.path("M3 11C7 15 17 15 21 11"), f.line(12, 13.5, 12, 16)];
+    return [...enclosedDetails(f.rect(3,7,18,14),[f.path("M3 11C7 15 17 15 21 11")],g), f.contour([[8, 7], [8, 3], [16, 3], [16, 7]], false, Math.min(g.r, 1)), f.line(12, 13.5, 12, 16)];
   }
 };
 export {

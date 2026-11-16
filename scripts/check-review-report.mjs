@@ -11,4 +11,4 @@ for(const [engine,type] of [['chromium',chromium],['webkit',webkit]]){
  const hrefs=await page.locator('a').evaluateAll(xs=>xs.map(x=>x.getAttribute('href')));let checked=0;for(const href of new Set(hrefs)){if(/^(https?:|#)/.test(href))continue;await access(resolve(dirname(file),decodeURIComponent(href.split('#')[0])));checked++;}
  assert.deepEqual(errors,[]);results.push({engine,records:392,localLinks:checked,search:true,beforeAndNew:true,nineVariants:true,theme:true,mobileNoOverflow:true,errors});await b.close();
 }
-await writeFile('docs/review/craft-03/report-check.json',JSON.stringify(results,null,2)+'\n');console.log(results);
+await writeFile(`docs/review/${process.argv[2]||'craft-03'}/report-check.json`,JSON.stringify(results,null,2)+'\n');console.log(results);

@@ -19,15 +19,14 @@ function fastForward(g){
 }
 
 function shuffle(g){
-  const f=figure(g),end=21-(g.corner==='sharp'?g.stroke*12/g.s:0);
+  const f=figure(g),end=21;
   // A square cap extends half a stroke. Keep it inside the chevron's joint
   // instead of adding a tiny rectangular step outside the miter.
   const ascending=f.path(`M 3 18 H 5 C 10 18 12 6 17 6 H ${end}`);
   const descending=f.path(`M 3 6 H 5 C 10 6 12 18 17 18 H ${end}`);
   // A crossing depicts independent routes, unlike a joined graph node.
-  return [...knockout([descending],[ascending],g),
-    f.contour([[18,3],[21,6],[18,9]],false,g.tip),
-    f.contour([[18,15],[21,18],[18,21]],false,g.tip)];
+  const a=f.arrow([ascending],[[18,3],[21,6],[18,9]]),b=f.arrow([descending],[[18,15],[21,18],[18,21]]);
+  return knockout(b,a,g);
 }
 
 export const playback={
@@ -41,6 +40,6 @@ export const playback={
   'repeat-one':g=>{const f=figure(g);return [...commerce.repeat(g),f.contour([[10.5,11],[12,9.5],[12,14.5]],false,g.tip)];},
   'volume-low':g=>{const f=figure(g);return [media.volume(g)[0],f.path('M15.5 9C17 10.5 17 13.5 15.5 15')];},
   'video-off':g=>knockout(media.video(g),[figure(g).line(3,3,21,21)],g),
-  'screen-share':g=>{const f=figure(g),d=g.corner==='sharp'?g.stroke*12/g.s/Math.sqrt(2):0;
-    const arrow=[f.line(14,10,21-d,3+d),f.contour([[16,3],[21,3],[21,8]],false,g.tip)];return knockout(layout.monitor(g),arrow,g);},
+  'screen-share':g=>{const f=figure(g);
+    const arrow=f.arrow([f.line(14,10,21,3)],[[16,3],[21,3],[21,8]]);return knockout(layout.monitor(g),arrow,g);},
 };

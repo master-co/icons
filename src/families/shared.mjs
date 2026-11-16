@@ -1,3 +1,4 @@
+import {joinedArrow} from '../occlusion.mjs';
 import { path, line, circle, rect, contour, n } from '../geometry.mjs';
 
 // Coordinates in these helpers describe a 24-unit construction grid. Simple
@@ -7,6 +8,10 @@ export function figure(g) {
   const k=g.s/24, u=x=>n(x*k);
   return {
     u,
+    arrow:(shaft,points,r=g.tip)=>{
+      const native=points.map(([x,y])=>[u(x),u(y)]);
+      return joinedArrow(shaft,contour(native,r),native,g);
+    },
     line:(x1,y1,x2,y2)=>line(u(x1),u(y1),u(x2),u(y2)),
     circle:(x,y,r)=>circle(u(x),u(y),u(r)),
     dot:(x,y,r=g.v(.8,.95,1.05))=>circle(u(x),u(y),r,{fill:'currentColor',stroke:'none'}),

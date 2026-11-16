@@ -5,7 +5,7 @@ import { file, folder } from './core.mjs';
 function folderArrow(g,up) {
   // Reserve visible air below the inner arrow in each native master.
   const f=figure(g),bottom=g.v(16.5,17,17.5),tip=up?10.5:bottom,tail=up?bottom:10.5,wing=up?13.5:bottom-3;
-  return [...folder(g),f.line(12,tail,12,tip),f.contour([[9,wing],[12,tip],[15,wing]],false,g.tip)];
+  return [...folder(g),...f.arrow([f.line(12,tail,12,tip)],[[9,wing],[12,tip],[15,wing]])];
 }
 export const fileOperations = {
   'file-code'(g) {

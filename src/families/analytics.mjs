@@ -1,8 +1,8 @@
 import { coreDrawings } from "./core.mjs";
-import { figure, opacity } from "./shared.mjs";
+import { figure } from "./shared.mjs";
 function sort(g, descending) {
   const f = figure(g), lengths = descending ? [9, 6, 3] : [3, 6, 9];
-  return [...lengths.map((w, i) => f.line(3, 6 + i * 6, 3 + w, 6 + i * 6)), f.line(18, 5, 18, 19), f.contour(descending ? [[15, 16], [18, 19], [21, 16]] : [[15, 8], [18, 5], [21, 8]])];
+  return [...lengths.map((w, i) => f.line(3, 6 + i * 6, 3 + w, 6 + i * 6)), ...f.arrow([f.line(18,5,18,19)],descending?[[15,16],[18,19],[21,16]]:[[15,8],[18,5],[21,8]])];
 }
 function axes(g) {
   return [figure(g).contour([[3.5, 4], [3.5, 20.5], [21, 20.5]], false, Math.min(g.r, 1))];
@@ -17,8 +17,8 @@ const analytics = {
   },
   "chart-line": (g) => [...axes(g), trace(g)],
   "chart-area": (g) => {
-    const f = figure(g), fill = f.path("M7 14L11 10L15 13L20.5 6.5V17H7Z");
-    return [opacity(["path", { ...fill[1], fill: "currentColor", stroke: "none" }], 0.2), ...axes(g), trace(g), f.contour([[7, 14], [7, 17], [20.5, 17], [20.5, 6.5]], false, g.tip)];
+    const f = figure(g);
+    return [...axes(g), f.contour([[7,14],[11,10],[15,13],[20.5,6.5],[20.5,17],[7,17]],true,g.tip)];
   },
   "chart-pie": (g) => {
     const f = figure(g);
@@ -30,11 +30,11 @@ const analytics = {
   },
   "trending-up": (g) => {
     const f = figure(g);
-    return [f.contour([[3, 17], [9, 11], [13, 15], [21, 7]]), f.contour([[15, 7], [21, 7], [21, 13]])];
+    return f.arrow([f.contour([[3,17],[9,11],[13,15],[21,7]])],[[15,7],[21,7],[21,13]]);
   },
   "trending-down": (g) => {
     const f = figure(g);
-    return [f.contour([[3, 7], [9, 13], [13, 9], [21, 17]]), f.contour([[15, 17], [21, 17], [21, 11]])];
+    return f.arrow([f.contour([[3,7],[9,13],[13,9],[21,17]])],[[15,17],[21,17],[21,11]]);
   },
   activity: (g) => {
     const f = figure(g);
@@ -52,7 +52,7 @@ const analytics = {
   "sort-descending": (g) => sort(g, true),
   "sort-unsorted": (g) => {
     const f = figure(g);
-    return [f.line(7, 4, 7, 20), f.contour([[3.5, 7.5], [7, 4], [10.5, 7.5]]), f.line(17, 4, 17, 20), f.contour([[13.5, 16.5], [17, 20], [20.5, 16.5]])];
+    return [...f.arrow([f.line(7,4,7,20)],[[3.5,7.5],[7,4],[10.5,7.5]]),...f.arrow([f.line(17,4,17,20)],[[13.5,16.5],[17,20],[20.5,16.5]])];
   }
 };
 export {
