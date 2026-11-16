@@ -2,7 +2,7 @@
 
 ## 目前 alpha 起點
 
-先讀 repository 的 packages/icons/src/geometry.mjs 和 docs/design-system.md。下表是 2026-11-16 基準，不覆蓋使用者後續決定。
+先讀 repository 的 packages/icons/src/geometry.mjs 和 docs/design-system.md。下表是 2026-11-16 的預設基準，具體值與後續變更以目前原始碼及設計規範為準。
 
 | 原生母版 | 主描邊 | soft 框角 | rounded 框角 | 主要輪廓 inset 起點 | 獨立元素間隙審查目標 |
 | --- | ---: | ---: | ---: | ---: | ---: |
@@ -59,4 +59,4 @@ Craft 01 的實際取捨：
 
 以撕線或拉鏈齒軌表達切割／機械結構時，短矩形比膠囊更合語意。可對該 path 明確設 `stroke-linecap="butt"`，外框仍用自己的角型。反過來，流動路徑的圓端帽也可能合理；不要訂成「所有虛線一律平切」。
 
-round／square cap 約使每段可見長度增加一個線寬、空隙減少一個線寬；butt 不增加。換端帽後要重看段長，不能只加屬性：原本靠圓帽撐大的極短 dash，平切後可能變成難辨的碎點。本輪 file-archive 在 16px 重新設定兩個 0.75px 齒段和 1.25px 間隔；ticket 的撕線維持自身較長節奏。這些是已檢視的案例值，不是所有圖示的模板。
+round／square cap 約使每段可見長度增加一個線寬、空隙減少一個線寬；butt 不增加。換端帽後要重看段長，不能只加屬性：原本靠圓帽撐大的極短 dash，平切後可能變成難辨的碎點。Craft 01 的 file-archive 在 16px 重新設定兩個 0.75px 齒段和 1.25px 間隔；ticket 的撕線維持自身較長節奏。這些是已檢視的案例值，不是所有圖示的模板。
