@@ -75,7 +75,7 @@
   <label class="field explorer-search"><span>{t('Search icons')}</span><input bind:this={search} class="input" type="search" bind:value={query} oninput={()=>page=1} placeholder={t('Search by name or purpose…')} /></label>
   <div class="field">
    <div class="flex items-baseline justify-between">
-    <div class="flex items-baseline gap(4)"><label for={`${instanceId}-size`}>{t('Display size')}</label><button type="button" class="link link-quiet (font-size:.75rem) fg-text-muted" aria-label={t('Display size')} aria-describedby={`${instanceId}-size-hint`} {...{interestfor:`${instanceId}-size-hint`}} popovertarget={`${instanceId}-size-hint`}>?</button></div>
+    <div class="flex items-baseline gap(6)"><label for={`${instanceId}-size`}>{t('Display size')}</label><button type="button" class="field-help" aria-label={t('Display size')} aria-describedby={`${instanceId}-size-hint`} {...{interestfor:`${instanceId}-size-hint`}} popovertarget={`${instanceId}-size-hint`}>?</button></div>
     <output for={`${instanceId}-size`} aria-hidden="true">{size} px</output>
    </div>
    <input id={`${instanceId}-size`} class="slider" type="range" name="size" min="0" max={displaySizes.length-1} step="1" value={displaySizes.indexOf(size)} aria-valuetext={`${size} px`} aria-describedby={size>24?`${instanceId}-size-hint`:undefined} oninput={(event)=>size=displaySizes[event.currentTarget.valueAsNumber]??24} />

@@ -30,7 +30,7 @@ test('sidebar dividers align with controls and scroll viewports preserve keyboar
  await expect(page.locator('astro-island[ssr]')).toHaveCount(0)
  const sidebar=page.locator('.explorer-sidebar')
  const edge=(await sidebar.boundingBox())!
- for(const selector of ['.explorer-toolbar','.explorer-categories','.explorer-pagination','.explorer-search input']){
+ for(const selector of ['.explorer-toolbar','.explorer-categories > span','.explorer-categories .nav','.explorer-pagination','.explorer-search input']){
   const box=(await page.locator(selector).boundingBox())!
   expect(box.x).toBe(edge.x)
   expect(box.width).toBe(edge.width)
@@ -49,6 +49,9 @@ test('sidebar dividers align with controls and scroll viewports preserve keyboar
  await expect(download).toBeInViewport()
  expect(await scroll.evaluate(e=>e.scrollTop)).toBeGreaterThan(0)
  const categories=page.locator('.explorer-categories')
+ const clip=(await categories.boundingBox())!
+ expect(clip.x).toBeLessThan(edge.x)
+ expect(clip.x+clip.width).toBeGreaterThan(edge.x+edge.width)
  const last=categories.getByRole('link').last()
  await last.focus()
  await expect(last).toBeInViewport()
