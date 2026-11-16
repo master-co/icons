@@ -1,0 +1,231 @@
+{
+  "date": "2026-11-17",
+  "reviewer": "Codex",
+  "status": "visually-reviewed-candidate",
+  "icons": [
+    {
+      "name": "brand-openai",
+      "variantsSha256": "1228dc063cd94221fedff0e4aa29647cabe360825aea03a534b7220bf6931e63",
+      "sourceSha256": "7be72f1fea831d3ba81a545cee79b7e0ae69449d5d7837c9571ccbfb4aa1e00b",
+      "sheet": 5,
+      "label": "OpenAI",
+      "profile": "dense",
+      "optical": {
+        "16": {
+          "extent": 13.5,
+          "dx": 0,
+          "dy": 0
+        },
+        "20": {
+          "extent": 16.75,
+          "dx": 0,
+          "dy": 0
+        },
+        "24": {
+          "extent": 20,
+          "dx": 0,
+          "dy": 0
+        }
+      },
+      "observation": "採官方新版 monoblossom，使用既有墨線 bounds 對齊中心，避免原稿 721px 畫布留白造成二次縮小；13.5/16.75/20 佔幅保留六瓣交織與中心孔。",
+      "effects": "No decorative effects. Original silhouette retained; native-size envelope and placement only.",
+      "status": "visually-reviewed-candidate"
+    },
+    {
+      "name": "brand-chatgpt",
+      "variantsSha256": "1228dc063cd94221fedff0e4aa29647cabe360825aea03a534b7220bf6931e63",
+      "sourceSha256": "7be72f1fea831d3ba81a545cee79b7e0ae69449d5d7837c9571ccbfb4aa1e00b",
+      "sheet": 5,
+      "label": "ChatGPT",
+      "profile": "dense",
+      "optical": {
+        "16": {
+          "extent": 13.5,
+          "dx": 0,
+          "dy": 0
+        },
+        "20": {
+          "extent": 16.75,
+          "dx": 0,
+          "dy": 0
+        },
+        "24": {
+          "extent": 20,
+          "dx": 0,
+          "dy": 0
+        }
+      },
+      "observation": "與 OpenAI 共用官方 Blossom，同尺寸下路徑及定位完全相同；保留 ChatGPT 名稱與匯出，不發明不同標誌。",
+      "effects": "No decorative effects. Original silhouette retained; native-size envelope and placement only.",
+      "status": "visually-reviewed-candidate"
+    },
+    {
+      "name": "brand-microsoft",
+      "variantsSha256": "43916e38f60cbffcb40a87d6c2a51c8cf1f7463b676281bdeef4553f7d4ccb27",
+      "sourceSha256": "f0fdaef83e59660c4da6e3988ca41fbe907e420cb86b48a94746caefec015bf9",
+      "sheet": 5,
+      "label": "Microsoft",
+      "profile": "solid",
+      "optical": {
+        "16": {
+          "extent": 14,
+          "dx": 0,
+          "dy": 0
+        },
+        "20": {
+          "extent": 16,
+          "dx": 0,
+          "dy": 0
+        },
+        "24": {
+          "extent": 20,
+          "dx": 0,
+          "dy": 0
+        }
+      },
+      "observation": "16/20/24 佔幅採 14/16/20，將外框邊界對齊整數座標；四方格及中央十字縫保留原始比例。20px 從 17 降為 16 以避免半像素外框。",
+      "effects": "No decorative effects. Original silhouette retained; native-size envelope and placement only.",
+      "status": "visually-reviewed-candidate"
+    },
+    {
+      "name": "brand-linkedin",
+      "variantsSha256": "69ce8f8995e67cfaa1fa0eb591d220b2f76aee7d4736f84d7078e934ba6f6ef3",
+      "sourceSha256": "2687ac468d96bd03e748dc8646ef6465cb4cc7f34b96e1d0bc86fcb3dd79121a",
+      "sheet": 5,
+      "label": "LinkedIn",
+      "profile": "solid",
+      "optical": {
+        "16": {
+          "extent": 14,
+          "dx": 0,
+          "dy": 0
+        },
+        "20": {
+          "extent": 16,
+          "dx": 0,
+          "dy": 0
+        },
+        "24": {
+          "extent": 20,
+          "dx": 0,
+          "dy": 0
+        }
+      },
+      "observation": "將 16/24 佔幅從 13/19 放大到 14/20；外框對齊整數座標，i 圓點與 n 字腹更清楚，原稿圓角未被 UI 角型修改。",
+      "effects": "No decorative effects. Original silhouette retained; native-size envelope and placement only.",
+      "status": "visually-reviewed-candidate"
+    },
+    {
+      "name": "brand-slack",
+      "variantsSha256": "95a9c52ebcb7280aca27a606ba3edf0002ccb409ac7d111a0431dcb33ef84147",
+      "sourceSha256": "f23c317b279f53dcd2260a6cd2e279f7a696f87dcb3da259d6201f05bbc45b0d",
+      "sheet": 5,
+      "label": "Slack",
+      "profile": "dense",
+      "optical": {
+        "16": {
+          "extent": 14,
+          "dx": 0,
+          "dy": 0
+        },
+        "20": {
+          "extent": 17,
+          "dx": 0,
+          "dy": 0
+        },
+        "24": {
+          "extent": 20,
+          "dx": 0,
+          "dy": 0
+        }
+      },
+      "observation": "採 14/17/20 佔幅，保持圓點、短筆與中央間隔分離；16px 低對比下細節較弱，但未額外加粗品牌輪廓。",
+      "effects": "No decorative effects. Original silhouette retained; native-size envelope and placement only.",
+      "status": "visually-reviewed-candidate"
+    },
+    {
+      "name": "brand-cursor",
+      "variantsSha256": "d8470f462fb2f918f18e39d45e54820e9dbb24abbf877e38e3f8d049a73c4112",
+      "sourceSha256": "71572a9be192cc069ec22b48d785e61d754eeed7edb7d082d615f6d5620f70ec",
+      "sheet": 5,
+      "label": "Cursor",
+      "profile": "standard",
+      "optical": {
+        "16": {
+          "extent": 14,
+          "dx": 0,
+          "dy": 0
+        },
+        "20": {
+          "extent": 17,
+          "dx": 0,
+          "dy": 0
+        },
+        "24": {
+          "extent": 20,
+          "dx": 0,
+          "dy": 0
+        }
+      },
+      "observation": "採現行立方體輪廓；16px 從 13 增至 14，20px 從 16.5 增至 17，讓內部三角留白在原生尺寸更清楚；24px 保持 20。",
+      "effects": "No decorative effects. Original silhouette retained; native-size envelope and placement only.",
+      "status": "visually-reviewed-candidate"
+    },
+    {
+      "name": "brand-supabase",
+      "variantsSha256": "7895278bf4b5dde9fb6beb67c92883434bdbf9916d765135c4c18ae11289ba46",
+      "sourceSha256": "61bf16d93be418f723ae1e137e57afdad4f185352fbc6dea9482af1e0a89ccf7",
+      "sheet": 5,
+      "label": "Supabase",
+      "profile": "standard",
+      "optical": {
+        "16": {
+          "extent": 13.5,
+          "dx": 0,
+          "dy": 0
+        },
+        "20": {
+          "extent": 16.5,
+          "dx": 0,
+          "dy": 0
+        },
+        "24": {
+          "extent": 20,
+          "dx": 0,
+          "dy": 0
+        }
+      },
+      "observation": "採 13.5/16.5/20 佔幅，保留兩段閃電的垂直轉折與圓滑端點；與 Vite 並排檢查，不額外增加接縫。",
+      "effects": "No decorative effects. Original silhouette retained; native-size envelope and placement only.",
+      "status": "visually-reviewed-candidate"
+    },
+    {
+      "name": "brand-vite",
+      "variantsSha256": "4087f3bbc47defef284f06304c65819bad2524d3a0c370fcc0358dd7d23364ec",
+      "sourceSha256": "642bb261d6476ddf326b8ed7757543b3443a93a77fef1e434021fc201defa21c",
+      "sheet": 5,
+      "label": "Vite",
+      "profile": "standard",
+      "optical": {
+        "16": {
+          "extent": 13.5,
+          "dx": 0,
+          "dy": 0
+        },
+        "20": {
+          "extent": 16.5,
+          "dx": 0,
+          "dy": 0
+        },
+        "24": {
+          "extent": 20,
+          "dx": 0,
+          "dy": 0
+        }
+      },
+      "observation": "採新版階梯閃電，13.5/16.5/20 佔幅保持上下缺口和右下斜尖；輪廓與 Supabase 的雙段閃電明確不同。",
+      "effects": "No decorative effects. Original silhouette retained; native-size envelope and placement only.",
+      "status": "visually-reviewed-candidate"
+    }
+  ]
+}

@@ -1,3 +1,4 @@
+import {brandCatalog} from '../packages/icons/src/brands.mjs';
 import { cp, mkdir, readFile, writeFile, rm } from 'node:fs/promises';
 import { resolve } from 'node:path';
 import { repoRoot, packageRoot } from './lib/paths.mjs';
@@ -9,5 +10,7 @@ await mkdir('dist/preview', {recursive:true});
 for (const file of ['index.html','app.js','style.css','scenarios.js','productivity-scenarios.js','expansion-scenarios.js']) await cp(`preview/${file}`,`dist/preview/${file}`);
 for (const dir of ['references','licenses']) await cp(dir,`dist/${dir}`,{recursive:true});
 const json=async file=>JSON.parse(await readFile(file,'utf8'));
-await writeFile('dist/preview/data.json',JSON.stringify({catalog:await json('dist/catalog.json'),definitions:await json('dist/definitions.json'),references:await comparisonReferences(),before:await beforeDefinitions(),review:await json('docs/refinement-ledger.json'),license:await readFile('LICENSE','utf8')})+'\n');
+const comparisons=await comparisonReferences();
+comparisons.references.push(...brandCatalog.map(b=>({name:b.name,library:b.source.library,sourceName:b.label,match:'exact',url:b.source.reference,localPath:b.source.localPath})));
+await writeFile('dist/preview/data.json',JSON.stringify({catalog:await json('dist/catalog.json'),definitions:await json('dist/definitions.json'),references:comparisons,before:await beforeDefinitions(),review:await json('docs/refinement-ledger.json'),license:await readFile('LICENSE','utf8')})+'\n');
 await import('./standalone.mjs');

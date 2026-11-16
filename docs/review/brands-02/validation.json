@@ -1,0 +1,44 @@
+{
+  "date": "2026-11-17",
+  "addedNames": 8,
+  "brandNames": 72,
+  "distinctBrandSilhouettes": 71,
+  "brandSvgFiles": 648,
+  "allNamedIcons": 464,
+  "allConcepts": 315,
+  "allSvgFiles": 4176,
+  "packageTests": {
+    "passed": 44,
+    "failed": 0
+  },
+  "browserTests": {
+    "passed": 6,
+    "failed": 0,
+    "browsers": [
+      "chromium",
+      "webkit"
+    ],
+    "locales": [
+      "en",
+      "tw"
+    ]
+  },
+  "passed": [
+    "build:icons",
+    "build:review",
+    "build:site",
+    "validate",
+    "test:types",
+    "check:package",
+    "offline brand gallery and OpenAI/ChatGPT comparisons",
+    "brand ZIP round-trip"
+  ],
+  "zip": {
+    "path": "work/master-icons-brands.zip",
+    "sha256": "c6e872f5b74619b99ddbcd1e849eff47dd11c115b371585bfeaa7620d4b5cd5c"
+  },
+  "limits": [
+    "Firefox not retried; the previous run failed to launch the installed browser.",
+    "Automated and Codex visual review; no human recognition study."
+  ]
+}

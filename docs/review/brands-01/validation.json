@@ -1,0 +1,49 @@
+{
+  "date": "2026-11-17",
+  "brands": 64,
+  "namedIcons": 456,
+  "svgFiles": 4104,
+  "brandSvgFiles": 576,
+  "packageTests": {
+    "passed": 43,
+    "failed": 0
+  },
+  "brandBrowserTests": {
+    "passed": 4,
+    "failed": 0,
+    "browsers": [
+      "chromium",
+      "webkit"
+    ],
+    "locales": [
+      "en",
+      "tw"
+    ],
+    "viewportWidths": [
+      1440,
+      390
+    ],
+    "themes": [
+      "light",
+      "dark"
+    ]
+  },
+  "passed": [
+    "build:icons",
+    "build:review",
+    "build:site",
+    "validate",
+    "test:types",
+    "site type-check",
+    "site i18n:audit",
+    "check:package",
+    "offline brand gallery and source comparison",
+    "brand ZIP round-trip integrity"
+  ],
+  "unverified": [
+    {
+      "browser": "firefox",
+      "reason": "Installed Nightly fails to launch: Could not find profile folder."
+    }
+  ]
+}

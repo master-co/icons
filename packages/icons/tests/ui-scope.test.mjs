@@ -128,8 +128,9 @@ test('craft-05 preserves its immutable baseline and has a current individual rev
  const review=JSON.parse(await readFile('docs/review/craft-05/decisions.json'));
  const ledger=JSON.parse(await readFile('docs/refinement-ledger.json'));
  assert.equal(sha(raw),review.baselineSha256);
- assert.deepEqual(Object.keys(defs).sort(),Object.keys(baseline).sort());
- assert.deepEqual(review.reviewedNames.toSorted(),Object.keys(defs).sort());
+ const uiNames=Object.keys(defs).filter(name=>!name.startsWith('brand-')).sort();
+ assert.deepEqual(uiNames,Object.keys(baseline).sort());
+ assert.deepEqual(review.reviewedNames.toSorted(),uiNames);
  const changed=Object.keys(baseline).filter(n=>JSON.stringify(baseline[n].variants)!==JSON.stringify(defs[n].variants)).sort();
  assert.deepEqual(changed,review.expectedModifiedNames.toSorted());
  assert.equal(review.decisions.length,392);

@@ -1,0 +1,532 @@
+{
+  "date": "2026-11-17",
+  "icons": [
+    {
+      "name": "brand-master",
+      "variantsSha256": "bf42f0465a8cd02485428485da37b4b9ac394fe08d1372bded5ac8de31dc53a7",
+      "sourceSha256": "d8b29949bd1ba7d7c4d12b83fc4f0902b65db6e22eedb9a98b8fa82fce85b22a",
+      "sheet": 1
+    },
+    {
+      "name": "brand-apple",
+      "variantsSha256": "40db404cf9f1488d7fb9517ee90d48cc2bedcfd7243138c01457add45576e07d",
+      "sourceSha256": "2a1509dccd25e6d2bc7a11a8e52941077e1a48555e192ce638699b9f083c2a7c",
+      "sheet": 1
+    },
+    {
+      "name": "brand-google",
+      "variantsSha256": "f90e16ad5853f8d46c8625aa5e2e055ce51fb787b05903baacf77467206b2506",
+      "sourceSha256": "d8cf9fb2d5e234e03254f1d6400d8cc8160c309b010d031a64f37084b5a21d01",
+      "sheet": 1
+    },
+    {
+      "name": "brand-gmail",
+      "variantsSha256": "1a0cbb07e911bac738edc3e6b4bf044851cccfff69a1a2c58e024269143863b3",
+      "sourceSha256": "a537f5d85d9a27efa3a5d6086e8df6072ee93f76b4d176639a5e483f74b74b9f",
+      "sheet": 1
+    },
+    {
+      "name": "brand-google-drive",
+      "variantsSha256": "ac9c4c2bab9c7590cb1970c764606a31feadc39659c4277a78b1aa20690c9897",
+      "sourceSha256": "7e678aba9e463140ec8603f0e6cc78bb80f6caf9cd3ee73335026a90729a1a40",
+      "sheet": 1
+    },
+    {
+      "name": "brand-google-gemini",
+      "variantsSha256": "d3e6013f1887e33baba132af9bdb4be8cd876f8605c9c6c23bd16bb3cfcc1f2f",
+      "sourceSha256": "a6228d8846040401e941a39ed17459785e8324dbb7b870ce84233c9b3e9863a0",
+      "sheet": 1
+    },
+    {
+      "name": "brand-facebook",
+      "variantsSha256": "c79539b93757d1c9c43df99c81a988ee5965a510499895ccde767052a787f974",
+      "sourceSha256": "b06d18d844ed621b89faffb1a33440cc0ec4f1ffea9f36191f50db19a47c59a6",
+      "sheet": 1
+    },
+    {
+      "name": "brand-instagram",
+      "variantsSha256": "90f1c08fdfd4cc30ead9d8fb5a98fb87c413fe8fb139a698807aa09ea1669497",
+      "sourceSha256": "f53af2d1fc5292ba1433b5c1faf50005ce6a997fa302d1816989929f379a59dc",
+      "sheet": 1
+    },
+    {
+      "name": "brand-threads",
+      "variantsSha256": "e7f80d5114133da2e299918757fb935acd4cf9dde9bc6f22fad8c53acaeb4a65",
+      "sourceSha256": "3511f687f9a5713a3700130627f8d3611fb4cd54d3a9757071c93652c7fe16e8",
+      "sheet": 1
+    },
+    {
+      "name": "brand-tiktok",
+      "variantsSha256": "6378339e2eca8f6ab777efe6455dce86be4aa06e56d9345434541992ac53a219",
+      "sourceSha256": "6f54ac8d325faacea8935bdc44cbed60206a6b408641799e5fea1cba7c1a0af7",
+      "sheet": 1
+    },
+    {
+      "name": "brand-x",
+      "variantsSha256": "833ab7e22397c6d66acf3b0ea300c51cbe160d193ddd2615f0a5057abaf162f4",
+      "sourceSha256": "693e68863eceb8dc9f72e2acd386ab9c20a10858dab2c076212f7084cb7a32fe",
+      "sheet": 1
+    },
+    {
+      "name": "brand-bluesky",
+      "variantsSha256": "009bf11063429459c0635acfab29e30e2bd2020697800f152ac91a4476079fa2",
+      "sourceSha256": "49752973164fbbf4464fbb4776f011c1eff207e5d7ad9254e031af025814eb75",
+      "sheet": 1
+    },
+    {
+      "name": "brand-mastodon",
+      "variantsSha256": "5062ce3bc00f543f93f615f8070e1c832e4d730787b4bcbc094cc3379a1cf972",
+      "sourceSha256": "b27197d1e47e19f31a80bf5d08b3dc9a8d073083436215f672e8e1016178cbe4",
+      "sheet": 1
+    },
+    {
+      "name": "brand-reddit",
+      "variantsSha256": "44aaaaae158bf00920474a715414a19cef5a2af3339b788bb21f2c39680adf94",
+      "sourceSha256": "00e5008d56567543cf956561e61d5bf9bf629f520c7488a4d9a00164c29dd8ba",
+      "sheet": 1
+    },
+    {
+      "name": "brand-discord",
+      "variantsSha256": "d76befcbe37dfc03298f056e0b8f40da2fc98c8a71f4d658cec7949554ad3450",
+      "sourceSha256": "1d364b72c9eaf1fe37d17ca88cd8fb541308dc0f3b09e2ab3b824f380b3493d5",
+      "sheet": 1
+    },
+    {
+      "name": "brand-telegram",
+      "variantsSha256": "eea2efc606ab142567fe4438f0c6f1978b5bd1db1785c364ed913a4a1f88978f",
+      "sourceSha256": "147fd8f8923e7e5f463fe98c0eb9913bead6b2ae59935728cda141002ec8a7c9",
+      "sheet": 1
+    },
+    {
+      "name": "brand-whatsapp",
+      "variantsSha256": "dfb4906d02ed77b0d3c10bb728b24ab0f1039435c5b90cc33f63e00914cc1a9c",
+      "sourceSha256": "8fb209a53a61618c3483594b3e070481a35575d6aaecbe00a6fe386670c8fb1c",
+      "sheet": 2
+    },
+    {
+      "name": "brand-line",
+      "variantsSha256": "31158057232801610df29561b9c02cf8ef89b59ba6013320465caab95cbe9ded",
+      "sourceSha256": "b62430462354f95914536d7205128647d5563cdb805bc9aca000300aaed816c8",
+      "sheet": 2
+    },
+    {
+      "name": "brand-wechat",
+      "variantsSha256": "f97b2db4a7573f02773c4df21559d38d31e3e1f56bfe77986db6aa58ae7e884f",
+      "sourceSha256": "74b48b3d315337ce79cb644933b5f975e19996f564fcc4138ed67d45674c43ca",
+      "sheet": 2
+    },
+    {
+      "name": "brand-signal",
+      "variantsSha256": "bcebb4a1b5f6123d98a942fe64bec27a77d14860ca831f32647dba8cda8c3dde",
+      "sourceSha256": "391f46b8feaef281a44dfdf40035d9a4546ded17d2c3eb88d6614762779f1930",
+      "sheet": 2
+    },
+    {
+      "name": "brand-snapchat",
+      "variantsSha256": "43b0f68dc549dcacf33d35620f59ab5792b19a37b24494b84dd8ba8a0e14f6ac",
+      "sourceSha256": "fbbc31c5544954fbf7525dddbc0d3e79990bb89461f54a94917b6dffc2c5130e",
+      "sheet": 2
+    },
+    {
+      "name": "brand-pinterest",
+      "variantsSha256": "d61547dd8da7c48bb60324f10807bef5c6ac8db386c19dcae7b20b94ed6f4966",
+      "sourceSha256": "d0736c4b1390f895ed9bc156cc887d3bd65c5b66258c00ad07888e9ec7d729ad",
+      "sheet": 2
+    },
+    {
+      "name": "brand-youtube",
+      "variantsSha256": "f3dddcdee94bd11c5c388f165ab2727f9cbcc30ddf08109fe30854b8a60f4bfe",
+      "sourceSha256": "5038808acbbc4e6edda16cbeb1cc6dec80e4e4ee4e227e039c41229fa222aa8c",
+      "sheet": 2
+    },
+    {
+      "name": "brand-twitch",
+      "variantsSha256": "19c481fc567087982808e3f380530b53f7598cf892e23016f3750bdbb5b4b38d",
+      "sourceSha256": "dbe27bc02a01b8d89b6259cacef328c9fa70bb13c29f38c36eb1421863f6f0b6",
+      "sheet": 2
+    },
+    {
+      "name": "brand-spotify",
+      "variantsSha256": "6e8aa1cc54f793c67d18b6182d565b07a922accc7ac417f0f80d1e5e5bc71357",
+      "sourceSha256": "b9ec9bec7769c35643981586d6ea0d675aaf3871b32f8a291bcac7a87fff0bc1",
+      "sheet": 2
+    },
+    {
+      "name": "brand-soundcloud",
+      "variantsSha256": "4cbd79d0977b5132ca1147f65c5268c75a6068629c7cf03a8714643f4d05b142",
+      "sourceSha256": "02bac3d2cb8c1091aeae61219803dadbb4364dd636e50f60567d25dfcde7c12c",
+      "sheet": 2
+    },
+    {
+      "name": "brand-vimeo",
+      "variantsSha256": "b8cb4120cdb792e828468876670f6ac30594fd907b8ba3b6e9fe3ad9a35bc67a",
+      "sourceSha256": "8769e0252009f9babc5f1de2ba6c0638411a2104e7f6f3af6b13cc8310cbd992",
+      "sheet": 2
+    },
+    {
+      "name": "brand-github",
+      "variantsSha256": "41e458c6c782a09c0f0f178411a3c691d90d1ddbd6f48699bd61921c77dd0c38",
+      "sourceSha256": "3bf8cceead820aec50d4ee825a3fd02c5a1cd6665cc9cf4cbf3d9c8861a204bb",
+      "sheet": 2
+    },
+    {
+      "name": "brand-gitlab",
+      "variantsSha256": "542b8af98f71e4928303149e0d960c226d60f10cc849dd9c9f432906f1fac2ab",
+      "sourceSha256": "c7c39058bd1b6f9f40334383bd5136bb8c5ba5e6a24200f2d1f18365e2526e28",
+      "sheet": 2
+    },
+    {
+      "name": "brand-bitbucket",
+      "variantsSha256": "454d83a54860c5e2a35deb236a4144ea26cbc0b431ea96f399cf535b689194dc",
+      "sourceSha256": "887f3bbce5d63f56958fb3dbe3c1b850314ef71a1f21dd5f2099637f01e4b241",
+      "sheet": 2
+    },
+    {
+      "name": "brand-figma",
+      "variantsSha256": "68d70afd63ceb3562c3d1592dd1c013044162b75b63e84125bcbf5523561813c",
+      "sourceSha256": "2f86fca501dfed321a62f28743f29d9dd738dac91668eac5260ab746d1ef8840",
+      "sheet": 2
+    },
+    {
+      "name": "brand-framer",
+      "variantsSha256": "64822e335dd4153bf659c7d1ca2de3939481bbc4d13100de912fb043ca1b9cd7",
+      "sourceSha256": "c6c80c9ba890e199e94d35340fb4cf2d5790f339d9846800d68283e3e58e6031",
+      "sheet": 2
+    },
+    {
+      "name": "brand-sketch",
+      "variantsSha256": "01c7f10aebd385fdd4ace4dee77926756edeb37b1d81d260c0cad657a278fbe6",
+      "sourceSha256": "8657fd9aef98e8f55a23a4f102f25541ae333c77a6356d7982cfa58655ecc0fa",
+      "sheet": 3
+    },
+    {
+      "name": "brand-notion",
+      "variantsSha256": "b4c0e81317b61c5bb2cca54a1baa01cacc76e9dcf9513e679ab64ae475c3055e",
+      "sourceSha256": "b17d2a2b592a06252efef522d5205f0c7a958f748d40df1011ed081417e42f85",
+      "sheet": 3
+    },
+    {
+      "name": "brand-linear",
+      "variantsSha256": "af7843626c79f75182f038768e769b10f6bcf6813a5a01ef10150753a8f51b29",
+      "sourceSha256": "90b91b61090f4f9c94f9cb24769642278f03e8eedcfe5680738cf3a186bfc00f",
+      "sheet": 3
+    },
+    {
+      "name": "brand-trello",
+      "variantsSha256": "b94e1d7863e9c90b01f142b383e77cc401f4ea8fd4e4782bea91b2191327cae3",
+      "sourceSha256": "d1069cc5fc0174978356b5deb34c732dda5812875ea79d90d4a834169db55f04",
+      "sheet": 3
+    },
+    {
+      "name": "brand-asana",
+      "variantsSha256": "e80fa320022366d4453ec14e8b5f61b6287be5c5ab5f366c68bc3c448d0621fa",
+      "sourceSha256": "ecdcda759ad672b2f4c90a872ba69ed0071e019741e01308f4bbbf8d4c54be0c",
+      "sheet": 3
+    },
+    {
+      "name": "brand-dropbox",
+      "variantsSha256": "dadafcc3d4ff3742bad315038457b022c9dc6672871bff540164a2b0315dd3af",
+      "sourceSha256": "1c9ea4ac8e318f3f6a598568df1a38ece03b7bc52a3a72d48c9e760340d7aeec",
+      "sheet": 3
+    },
+    {
+      "name": "brand-zoom",
+      "variantsSha256": "f0669a3a6456cfb7535bbc7ccc19eec9c65ee52d7795a770e6c09cb4a4dd7af8",
+      "sourceSha256": "da5b2f13d38ca61c88a227f58e3bebcbcbb55412d97678ecff49ae7c603f9a7b",
+      "sheet": 3
+    },
+    {
+      "name": "brand-vercel",
+      "variantsSha256": "949f3550bf4c141078d783dbb2f7f38af5ad5a045a8456d389ba3ea793074918",
+      "sourceSha256": "57f1e4135486c566e9878fddd259f7f6bf8ec43f31e7e6e38a36d9e814a1c0e0",
+      "sheet": 3
+    },
+    {
+      "name": "brand-netlify",
+      "variantsSha256": "a80632fc4da411c8fd3273dd232c9bd95923d9357038eb806e071383f16edd40",
+      "sourceSha256": "adbe4ef3579ca1ef95e1903ff8599a5a55e5c6531fab3f7edaf2b4adee0f4ef9",
+      "sheet": 3
+    },
+    {
+      "name": "brand-cloudflare",
+      "variantsSha256": "f78b261d8cd5862a53000f8018412b3b95073ef65b4498a2f9d562465330ea83",
+      "sourceSha256": "408096d99907fd99e0863cb5d73f77a72537c6a85fd8d5e2704178a83a891f08",
+      "sheet": 3
+    },
+    {
+      "name": "brand-docker",
+      "variantsSha256": "65d3777f642a29114a0370d585e4cfb5d13cab95275080535f1ff8a79780fc1f",
+      "sourceSha256": "65571291c261ef869c31540a38f3ca0f0ee3bb73f179c172211c8860f19a6359",
+      "sheet": 3
+    },
+    {
+      "name": "brand-kubernetes",
+      "variantsSha256": "30ecd2137392c1ae61932960afdfe41d8662c3d0257d48239d3516ea1925c9e6",
+      "sourceSha256": "ceee2f4e87fa1533600672190c156194039f744fa9b5da10e83f002178e84b47",
+      "sheet": 3
+    },
+    {
+      "name": "brand-npm",
+      "variantsSha256": "db396a9b7dfc8f5af4798ab80f5da49b5233743fe264adf9d11de40a4c4352aa",
+      "sourceSha256": "00b410dc2c839cfa62910a065eaf28a48cbdb4babe503cf34d475cc94ba03be1",
+      "sheet": 3
+    },
+    {
+      "name": "brand-node-js",
+      "variantsSha256": "f983efd8a072925989dd78565e1726dcd835ea6d8530db7cd394e832dfc671f3",
+      "sourceSha256": "021851b758cde7d3e04819c3ac02047d0ff281c712e8387afa0c76a6dac6db6c",
+      "sheet": 3
+    },
+    {
+      "name": "brand-react",
+      "variantsSha256": "be0d74b34357e0983d1e0fdefbd868bc7c2f7f33b1f4b9d2e60621e063156c28",
+      "sourceSha256": "ab9136a1a4a8be72ac6743e1bdd1912d878bd68d57787ea7a6c6838e3b23c01c",
+      "sheet": 3
+    },
+    {
+      "name": "brand-svelte",
+      "variantsSha256": "bc6b767facc075977c51bb4703c991f7454bcbc36ae2834b7356da3bd9848d58",
+      "sourceSha256": "a38cef0f4fc36bc63519ce34d24a91022f19ec6998ea402c5e155c7479a46f4c",
+      "sheet": 3
+    },
+    {
+      "name": "brand-astro",
+      "variantsSha256": "6cc691cd3b264005a96e89ad193bb40d7fb531684142ae9e649a454f6cbe8611",
+      "sourceSha256": "fe8e943b26bf966824341377875056270af186e500bdf4732c803b51c0b4f674",
+      "sheet": 4
+    },
+    {
+      "name": "brand-next-js",
+      "variantsSha256": "f046a81d1d7125809f575709673671e7a56f133604203238e3f79b88ff859244",
+      "sourceSha256": "593e14da3ddb65be4c8fa6a178f2f48a01a8bd39ea384f679cd7182b520da502",
+      "sheet": 4
+    },
+    {
+      "name": "brand-nuxt",
+      "variantsSha256": "2a1b5e79eca61b6e7c93c99993db6b2886f93badfcead94fb1219ad72eafab33",
+      "sourceSha256": "7058584a5afd4eb2a71938f0401d02ab0f4b993919471c4f2ce588a9cc854e50",
+      "sheet": 4
+    },
+    {
+      "name": "brand-typescript",
+      "variantsSha256": "7204cc1d68d156a44a54b171f3655b891173a2c1634b6391b2ef5b2edca8529f",
+      "sourceSha256": "7f023e8d1e767370306ec9437d2de5d5af97491d6208dd7799a3808a7c10a36a",
+      "sheet": 4
+    },
+    {
+      "name": "brand-python",
+      "variantsSha256": "31b7637e4b79e5e27db9be4473f2c36af4ac4d9d61387ae95880092711c7ad3b",
+      "sourceSha256": "a90c00fd441482b4867ad5d7fa68db56aab4891f1b1e6879fe1ea3b355cf378f",
+      "sheet": 4
+    },
+    {
+      "name": "brand-go",
+      "variantsSha256": "1de17be8809dc3485e7f9596f5ba4a2b8e11dbecf632b8159120e57425df9852",
+      "sourceSha256": "36a745fe15584bf138d02ae6abcbdd155bc1cd4f4976634ad34861b2059db559",
+      "sheet": 4
+    },
+    {
+      "name": "brand-shopify",
+      "variantsSha256": "9d21d8d03801249738a3c3e5cd1ec8127970e72dd226752bd6c6a564a614e864",
+      "sourceSha256": "a5ea31f53511bb0b3663cb73ff96eaa8d0451fe9cad586625adfc02b729e4d4d",
+      "sheet": 4
+    },
+    {
+      "name": "brand-stripe",
+      "variantsSha256": "ee95501dfd761beae232fda492121e6d14245c51dd448fd49d6f57992cfdee8c",
+      "sourceSha256": "130c6d957b8977f5eda2928267b9df531ca038a400a801765d263801bb1bd870",
+      "sheet": 4
+    },
+    {
+      "name": "brand-paypal",
+      "variantsSha256": "7abf615048ba41baafd0f639958b8518b442f28c57173738b28151b0341e6e87",
+      "sourceSha256": "e8ea6928d3386f81dc6d4c1f58b48e7a29d29bb578b2e3dd808638bd97c63d33",
+      "sheet": 4
+    },
+    {
+      "name": "brand-patreon",
+      "variantsSha256": "d828cd6391250a126ad317ff8dc901237021f7c27817fb91ef493f15a2326e99",
+      "sourceSha256": "19b2589a0ab396e942aac60d7a8bd84b3d8c207bae1fa668c7b2f539e31decaa",
+      "sheet": 4
+    },
+    {
+      "name": "brand-ko-fi",
+      "variantsSha256": "efd62b6ae31f52fba7ca553eab06995c760668198b64605591f0ec771d5fedfb",
+      "sourceSha256": "864a4d997519f937a57b11b4f052c100ca31d55936936ffaec5e653283f29e52",
+      "sheet": 4
+    },
+    {
+      "name": "brand-steam",
+      "variantsSha256": "3db41262be7036724e5ff32d38ee4c69a735b9a50cf15aee43e828ee56c7b5c9",
+      "sourceSha256": "5eef8f31106b81956ed908490bcf8c73abe476aa58bb9041acdf70b0d42ebcae",
+      "sheet": 4
+    },
+    {
+      "name": "brand-epic-games",
+      "variantsSha256": "46f468d8bcfc0cefdb3438f96ceae8ac27c66173bfa50114a7d9703d409c5d5f",
+      "sourceSha256": "a19b1eb5a46edc11a7dc7f1ce6fa1701ea4e4cf451feec88441c523f4b50cde3",
+      "sheet": 4
+    },
+    {
+      "name": "brand-claude",
+      "variantsSha256": "a0f16dc11ef384337199219f2f900c55197474402a89187c57f1ce241cfa8c7d",
+      "sourceSha256": "2d6fda79eb18ddccca35b799eeb3cece0dfabc22520ce3b10abd25668df9fa93",
+      "sheet": 4
+    },
+    {
+      "name": "brand-anthropic",
+      "variantsSha256": "5ed27e7995fe084d652db9adf51f5b579e57f8d8fa8e2e0c234c9daec3358f25",
+      "sourceSha256": "1cc599f6ebce2016dc388cf84e54a52c6b13487655c7e243554d654c7bce1882",
+      "sheet": 4
+    },
+    {
+      "name": "brand-perplexity",
+      "variantsSha256": "09b2644de3be320685855cb66ecb942fd3c2877be7479773d6b90fd05e1ba5b8",
+      "sourceSha256": "57220c29378ce5e615e7244d2fdfcf5a44fad40dad81a99f2e0e4260c726ca74",
+      "sheet": 4
+    },
+    {
+      "name": "brand-openai",
+      "variantsSha256": "1228dc063cd94221fedff0e4aa29647cabe360825aea03a534b7220bf6931e63",
+      "sourceSha256": "7be72f1fea831d3ba81a545cee79b7e0ae69449d5d7837c9571ccbfb4aa1e00b",
+      "sheet": 5
+    },
+    {
+      "name": "brand-chatgpt",
+      "variantsSha256": "1228dc063cd94221fedff0e4aa29647cabe360825aea03a534b7220bf6931e63",
+      "sourceSha256": "7be72f1fea831d3ba81a545cee79b7e0ae69449d5d7837c9571ccbfb4aa1e00b",
+      "sheet": 5
+    },
+    {
+      "name": "brand-microsoft",
+      "variantsSha256": "43916e38f60cbffcb40a87d6c2a51c8cf1f7463b676281bdeef4553f7d4ccb27",
+      "sourceSha256": "f0fdaef83e59660c4da6e3988ca41fbe907e420cb86b48a94746caefec015bf9",
+      "sheet": 5
+    },
+    {
+      "name": "brand-linkedin",
+      "variantsSha256": "69ce8f8995e67cfaa1fa0eb591d220b2f76aee7d4736f84d7078e934ba6f6ef3",
+      "sourceSha256": "2687ac468d96bd03e748dc8646ef6465cb4cc7f34b96e1d0bc86fcb3dd79121a",
+      "sheet": 5
+    },
+    {
+      "name": "brand-slack",
+      "variantsSha256": "95a9c52ebcb7280aca27a606ba3edf0002ccb409ac7d111a0431dcb33ef84147",
+      "sourceSha256": "f23c317b279f53dcd2260a6cd2e279f7a696f87dcb3da259d6201f05bbc45b0d",
+      "sheet": 5
+    },
+    {
+      "name": "brand-cursor",
+      "variantsSha256": "d8470f462fb2f918f18e39d45e54820e9dbb24abbf877e38e3f8d049a73c4112",
+      "sourceSha256": "71572a9be192cc069ec22b48d785e61d754eeed7edb7d082d615f6d5620f70ec",
+      "sheet": 5
+    },
+    {
+      "name": "brand-supabase",
+      "variantsSha256": "7895278bf4b5dde9fb6beb67c92883434bdbf9916d765135c4c18ae11289ba46",
+      "sourceSha256": "61bf16d93be418f723ae1e137e57afdad4f185352fbc6dea9482af1e0a89ccf7",
+      "sheet": 5
+    },
+    {
+      "name": "brand-vite",
+      "variantsSha256": "4087f3bbc47defef284f06304c65819bad2524d3a0c370fcc0358dd7d23364ec",
+      "sourceSha256": "642bb261d6476ddf326b8ed7757543b3443a93a77fef1e434021fc201defa21c",
+      "sheet": 5
+    }
+  ],
+  "evidence": [
+    {
+      "path": "docs/review/brands-01/sheet-1-light-1x.png",
+      "sha256": "2fd8142986d1e433626e5e3b1ca206abf4c3701724c4597e07a74f8eea03deaf"
+    },
+    {
+      "path": "docs/review/brands-01/sheet-2-light-1x.png",
+      "sha256": "f55d28869692d9b0e5354e5f20bb75070bd0483c6f8db9c41445afa5506fedb1"
+    },
+    {
+      "path": "docs/review/brands-01/sheet-3-light-1x.png",
+      "sha256": "14e8b3dc8caa1fa50ac857f4e806102949bc997cb4c854964d2f883ac44a9661"
+    },
+    {
+      "path": "docs/review/brands-01/sheet-4-light-1x.png",
+      "sha256": "9aad4b4132f9a5b23ef014459e0e1288e1352f0a524d746d99736f03cb68103b"
+    },
+    {
+      "path": "docs/review/brands-01/sheet-5-light-1x.png",
+      "sha256": "2f2ade50d19f7dc6eeb3b28b596eb696df941324b8f4d424ba2ff4a58a680bad"
+    },
+    {
+      "path": "docs/review/brands-01/sheet-1-dark-1x.png",
+      "sha256": "562dfd81ff7f4203423cc03fd8471fdcb76ba0f06a72efa445524232d2f03e56"
+    },
+    {
+      "path": "docs/review/brands-01/sheet-2-dark-1x.png",
+      "sha256": "19f24a4a75f36e6c29092c5ed7b1afb4793e1e26bd454b25098b0e895aaade6c"
+    },
+    {
+      "path": "docs/review/brands-01/sheet-3-dark-1x.png",
+      "sha256": "6686f8497f99b66b143b29c3a7ed16499de1af73262cb7bee11ab798936e98ff"
+    },
+    {
+      "path": "docs/review/brands-01/sheet-4-dark-1x.png",
+      "sha256": "3ee169c0a665f8905d319f38b376a8004a683760f9884284935f8f3e08c1693d"
+    },
+    {
+      "path": "docs/review/brands-01/sheet-5-dark-1x.png",
+      "sha256": "14390b422ac8402ed05e1d9823cab2732d64b93705ae94af78f7300c70caa1c4"
+    },
+    {
+      "path": "docs/review/brands-01/sheet-1-light-2x.png",
+      "sha256": "127d2ce13cf9eab6a50024dc5f4916f4e539f024affd4f0dfaad5b80fd4eee88"
+    },
+    {
+      "path": "docs/review/brands-01/sheet-2-light-2x.png",
+      "sha256": "d90ef24558626bd883e20504dd6d853824f2d6f67771228b5a68bafeba38c52e"
+    },
+    {
+      "path": "docs/review/brands-01/sheet-3-light-2x.png",
+      "sha256": "9cd758ad894debaea457c40603f1f8241ad8f81777565652c375e80e87721bac"
+    },
+    {
+      "path": "docs/review/brands-01/sheet-4-light-2x.png",
+      "sha256": "25fe759eb2b5e8b68bef54e1c50714516b58aa2d65eab99662eb5494b58ce736"
+    },
+    {
+      "path": "docs/review/brands-01/sheet-5-light-2x.png",
+      "sha256": "25eef564747ae289a1893ec171d22b25b491bf8565dd923bd5bf9bd1657cb6f4"
+    },
+    {
+      "path": "docs/review/brands-01/sheet-1-dark-2x.png",
+      "sha256": "88913a4a2dc7b290158b6cf31eeacf4978e851d281e8749f14bbc2e194e8a593"
+    },
+    {
+      "path": "docs/review/brands-01/sheet-2-dark-2x.png",
+      "sha256": "b299e640a8cfb57b8a202d61e0dcbd4fe60c7c246fc755601054af67fefdf2de"
+    },
+    {
+      "path": "docs/review/brands-01/sheet-3-dark-2x.png",
+      "sha256": "fa78787512cb40111b60c6425de32d83c99fe729b6e357712ebc54ef5f5ff942"
+    },
+    {
+      "path": "docs/review/brands-01/sheet-4-dark-2x.png",
+      "sha256": "167e6be9ca89f3ccc948c29ffacee62b2595635cd783e9592735661cd72fcc94"
+    },
+    {
+      "path": "docs/review/brands-01/sheet-5-dark-2x.png",
+      "sha256": "62c0ea4f1fc2fa867218800712d80faaf26a34b024aefe40dfbce9df8042ea88"
+    }
+  ],
+  "checks": {
+    "clippedPaths": 0,
+    "renderedCombinations": 648,
+    "themes": [
+      "light",
+      "dark"
+    ],
+    "dpr": [
+      1,
+      2
+    ]
+  },
+  "visualDecisions": "decisions.json"
+}

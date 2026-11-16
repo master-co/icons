@@ -8,6 +8,7 @@ import { draw } from '../src/drawings.mjs';
 import { catalog, pilot, categories, conceptCount } from '../src/catalog.mjs';
 import { renderSvg } from '../src/runtime.mjs';
 import { preservedNotices, adaptedSources } from '../src/provenance.mjs';
+import {brandNotice} from '../src/brands.mjs';
 
 const root=resolve(dirname(fileURLToPath(import.meta.url)),'..');
 const repo=resolve(root,'../..');
@@ -24,7 +25,9 @@ const lucideLicense=await readFile(resolve(repo,'licenses/lucide.txt'),'utf8');
 // XML comments cannot contain '--'; only normalize the license separator.
 const lucideNotice=lucideLicense.replace(/^---$/gm,'—');
 const notices=await readFile(resolve(repo,'THIRD_PARTY_NOTICES.md'),'utf8');
+const brandLicenses=Object.fromEntries(await Promise.all(['simple-icons-CC0.txt','simple-icons-DISCLAIMER.md','openai-brand.txt'].map(async name=>['licenses/'+name,strToU8(await readFile(resolve(repo,'licenses',name),'utf8'))])));
 const bundles=Object.fromEntries(sizes.flatMap(s=>corners.map(c=>[`${s}-${c}`,{'LICENSE':strToU8(license),'licenses/hugeicons-MIT.txt':strToU8(hugeLicense),'licenses/lucide.txt':strToU8(lucideLicense),'THIRD_PARTY_NOTICES.md':strToU8(notices)}])));
+for(const bundle of Object.values(bundles))Object.assign(bundle,brandLicenses);
 await rm(resolve(root,'dist'),{recursive:true,force:true});
 // icons/ is generated and checked in for plain SVG consumers.
 await rm(resolve(root,'icons'),{recursive:true,force:true});
@@ -41,7 +44,7 @@ for(const entry of catalog){
   await put(`dist/react/icons/${entry.name}.js`,`import { ${dataName} } from '../../data/${entry.name}.js';\nimport { iconElement } from '../../react-runtime.js';\nimport { forwardRef } from 'react';\nexport const ${entry.component} = /* @__PURE__ */ forwardRef(function ${entry.component}(props,ref) { return iconElement(${dataName},{...props,ref}); });\n`);
   for(const size of sizes)for(const corner of corners){
     const svg=renderSvg(definition,{size,opticalSize:size,corner});
-    const notice='<!--\n'+license.trim().replace('Copyright (c) 2026 Master and contributors','Copyright (c) 2026 Master and contributors'+(preservedNotices[entry.name]?'\n'+preservedNotices[entry.name]:''))+(adaptedSources[entry.name]?'\n\n'+lucideNotice.trim():'')+'\n-->\n';
+    const notice='<!--\n'+license.trim().replace('Copyright (c) 2026 Master and contributors','Copyright (c) 2026 Master and contributors'+(preservedNotices[entry.name]?'\n'+preservedNotices[entry.name]:''))+(adaptedSources[entry.name]?'\n\n'+lucideNotice.trim():'')+(entry.rendering==='brand-silhouette'?'\n\n'+brandNotice(entry):'')+'\n-->\n';
     await put(`icons/${size}/${corner}/${entry.name}.svg`,notice+svg+'\n');
     bundles[`${size}-${corner}`][`${entry.name}.svg`]=strToU8(notice+svg+'\n');
     inventory.push({name:entry.name,opticalSize:size,corner,path:`icons/${size}/${corner}/${entry.name}.svg`,sha256:hash(notice+svg+'\n')});
@@ -62,6 +65,7 @@ await put('dist/runtime.js',await readFile(resolve(root,'src/runtime.mjs'),'utf8
 await put('dist/runtime.d.ts',await readFile(resolve(root,'src/runtime.d.ts'),'utf8'));
 await put('dist/react-runtime.js',await readFile(resolve(root,'src/react.mjs'),'utf8'));
 const provenance=catalog.map(entry=>{
+  if(entry.rendering==='brand-silhouette')return {...entry,source:{...entry.source,notice:brandNotice(entry)},variants:9};
   if(adaptedSources[entry.name])return {...entry,source:{...adaptedSources[entry.name],notice:lucideNotice},variants:9};
   const ref=preservedNotices[entry.name]?upstream.find(x=>x.name===entry.name):undefined;
   if(preservedNotices[entry.name]&&!ref)throw new Error(`Missing preserved source: ${entry.name}`);

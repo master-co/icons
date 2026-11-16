@@ -6,6 +6,8 @@ import { unzipSync, strFromU8 } from 'fflate';
 import { catalog, conceptCount } from '../packages/icons/src/catalog.mjs';
 import { preservedNotices, adaptedSources } from '../packages/icons/src/provenance.mjs';
 import { drawings } from '../packages/icons/src/drawings.mjs';
+import {brandCatalog} from '../packages/icons/src/brands.mjs';
+import brandSources from '../packages/icons/src/brands.json' with {type:'json'};
 const json = async file => JSON.parse(await readFile(file,'utf8'));
 const sha = data => createHash('sha256').update(data).digest('hex');
 const manifest = await json('dist/catalog.json');
@@ -14,7 +16,7 @@ const coreNames=await json('packages/icons/src/core-names.json');
 assert.equal(coreNames.length,48);
 const expansionScope=await json('packages/icons/src/expansion-scope.json');
 const expansionBaseline=await json('references/craft-03/master-before.json');
-const scope=[...await json('packages/icons/src/ui-scope.json'),...await json('packages/icons/src/organization-scope.json'),...await json('packages/icons/src/productivity-scope.json'),...expansionScope];
+const scope=[...await json('packages/icons/src/ui-scope.json'),...await json('packages/icons/src/organization-scope.json'),...await json('packages/icons/src/productivity-scope.json'),...expansionScope,...brandCatalog];
 assert.deepEqual(catalog.map(x=>x.name).sort(),[...coreNames,...scope.map(x=>x.name)].sort(),'Exact original + approved UI scope');
 assert.equal(manifest.conceptCount,conceptCount);
 const names=new Set(catalog.map(x=>x.name));
@@ -28,7 +30,13 @@ assert.equal((await readdir('packages/icons/icons',{recursive:true})).filter(x=>
 const geometries=new Map();
 for(const entry of catalog){
   const key=JSON.stringify(definitions[entry.name].variants[24].sharp.nodes.map(n=>JSON.stringify(n)).sort());
-  assert.ok(!geometries.has(key),`Duplicate geometry: ${entry.name} / ${geometries.get(key)}`);geometries.set(key,entry.name);
+  if(entry.aliasOf){
+    const canonical=catalog.find(x=>x.name===entry.aliasOf);
+    assert.ok(canonical && canonical.category==='brands' && entry.category==='brands');
+    assert.equal(entry.concept,canonical.concept);
+    assert.deepEqual(definitions[entry.name].variants,definitions[entry.aliasOf].variants,entry.name+': alias geometry must match');
+    assert.equal(geometries.get(key),entry.aliasOf,entry.name+': alias must follow its canonical mark');
+  }else{assert.ok(!geometries.has(key),`Duplicate geometry: ${entry.name} / ${geometries.get(key)}`);geometries.set(key,entry.name);}
 }
 const arity={M:2,L:2,H:1,V:1,C:6,S:4,Q:4,T:2,A:7,Z:0};
 const validTags = new Set(['path','line','rect','circle','ellipse']);
@@ -43,7 +51,12 @@ for(const item of manifest.inventory){
   assert.ok(master.strokeWidth>0 && master.nodes.length>0);
   for(const [tag,attrs] of master.nodes){
     assert.ok(validTags.has(tag),tag);
-    if(tag==='path')for(const m of attrs.d.matchAll(/([a-df-z])([^a-df-z]*)/gi)){
+    if(tag==='path'&&item.name.startsWith('brand-')){
+      // SVG allows compact arc flags (e.g. 00-4); the outline parser below
+      // and PathKit do not. Check exact source identity plus browser evidence.
+      assert.ok(brandSources.find(b=>b.name===item.name).paths.includes(attrs.d),item.path+': altered brand contour');
+    }
+    if(tag==='path'&&!item.name.startsWith('brand-'))for(const m of attrs.d.matchAll(/([a-df-z])([^a-df-z]*)/gi)){
       const c=m[1].toUpperCase(),values=m[2].match(/-?\d*\.?\d+(?:e[-+]?\d+)?/gi)||[];
       assert.ok(c in arity,item.path+': unknown path command');
       assert.ok(arity[c]?(values.length>=arity[c]&&values.length%arity[c]===0):values.length===0,item.path+': invalid path arguments');
@@ -60,13 +73,27 @@ for(const ref of references.references){
   assert.equal(sha(await readFile(ref.localPath)),ref.sha256,ref.localPath);
 }
 const uiRefs=await loadComparisonReferences();
-assert.equal(uiRefs.references.length,catalog.length*2);
-for(const entry of catalog)assert.equal(uiRefs.references.filter(r=>r.name===entry.name).length,2,entry.name);
+const uiCatalog=catalog.filter(x=>x.category!=='brands');
+assert.equal(uiRefs.references.length,uiCatalog.length*2);
+for(const entry of uiCatalog)assert.equal(uiRefs.references.filter(r=>r.name===entry.name).length,2,entry.name);
+// Brands use the actual identity source, not unrelated outline-library proxies.
+const brandReview=await json('docs/review/brands-01/evidence.json');
+const brandDecisions=await json('docs/review/brands-01/decisions.json');
+assert.deepEqual(brandReview.icons.map(x=>x.name).sort(),brandCatalog.map(x=>x.name).sort());
+assert.deepEqual(brandDecisions.icons.map(x=>x.name).sort(),brandCatalog.map(x=>x.name).sort());
+for(const entry of brandCatalog){
+  const decision=brandDecisions.icons.find(x=>x.name===entry.name);
+  assert.equal(decision.status,'visually-reviewed-candidate');
+  assert.equal(decision.variantsSha256,sha(JSON.stringify(definitions[entry.name].variants)),entry.name+': stale brand decision');
+  assert.equal(sha(await readFile(entry.source.localPath)),entry.source.sha256,entry.name+': source changed');
+  assert.equal(brandReview.icons.find(x=>x.name===entry.name).variantsSha256,sha(JSON.stringify(definitions[entry.name].variants)),entry.name+': stale brand review');
+}
+for(const evidence of brandReview.evidence)assert.equal(sha(await readFile(evidence.path)),evidence.sha256,evidence.path);
 for(const ref of uiRefs.references){assert.match(ref.commit,/^[a-f0-9]{40}$/);assert.equal(sha(await readFile(ref.localPath)),ref.sha256,ref.localPath);}
 // A successful build cannot approve a drawing or silently reuse a stale review.
 const ledger=await json('docs/refinement-ledger.json');
 assert.equal(ledger.schemaVersion,2);
-assert.deepEqual(ledger.icons.map(x=>x.name).sort(),[...names].sort(),'Every drawing needs an individual review');
+assert.deepEqual(ledger.icons.map(x=>x.name).sort(),uiCatalog.map(x=>x.name).sort(),'Every UI drawing needs an individual review; brands have their own source ledger');
 const verifiedEvidence=new Set();
 const reviewBaselines=new Map();
 for(const record of ledger.icons){
@@ -102,6 +129,7 @@ for(const name of await readdir('dist/downloads')){
   assert.match(strFromU8(zip['licenses/hugeicons-MIT.txt']),/MIT/);
   assert.ok(zip.LICENSE && zip['THIRD_PARTY_NOTICES.md']);
   assert.ok(zip['licenses/lucide.txt']);
+  assert.ok(zip['licenses/simple-icons-CC0.txt'] && zip['licenses/simple-icons-DISCLAIMER.md']);
   for(const name of Object.keys(adaptedSources))assert.match(strFromU8(zip[name+'.svg']),/ISC License/);
 }
 console.log(`Validated ${conceptCount} base concepts / ${catalog.length} named drawings, ${total} SVG hashes, geometry, notices, 48 historical + ${uiRefs.references.length} current pinned references, and 9 licensed ZIPs.`);

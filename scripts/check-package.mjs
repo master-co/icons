@@ -9,7 +9,7 @@ const archive=resolve('work/master-icons-alpha.tgz');
 execFileSync('bun',['pm','pack','--filename',archive],{cwd:resolve('packages/icons'),stdio:['ignore','ignore','pipe'],maxBuffer:8*1024*1024});
 const entries=execFileSync('tar',['-tzf',archive],{encoding:'utf8',maxBuffer:8*1024*1024}).trim().split('\n');
 assert.equal(entries.filter(x=>x.endsWith('.svg')).length,catalog.length*9);
-for(const path of ['package/LICENSE','package/THIRD_PARTY_NOTICES.md','package/licenses/hugeicons-MIT.txt','package/licenses/lucide.txt','package/dist/runtime.d.ts'])assert.ok(entries.includes(path),path);
+for(const path of ['package/LICENSE','package/THIRD_PARTY_NOTICES.md','package/licenses/hugeicons-MIT.txt','package/licenses/lucide.txt','package/licenses/simple-icons-CC0.txt','package/licenses/simple-icons-DISCLAIMER.md','package/licenses/openai-brand.txt','package/dist/runtime.d.ts'])assert.ok(entries.includes(path),path);
 assert.ok(!entries.some(x=>/\/(references|preview|tests|work|node_modules)\//.test(x)));
 const consumer=await mkdtemp(resolve('work/package-consumer-'));
 execFileSync('tar',['-xzf',archive,'-C',consumer]);

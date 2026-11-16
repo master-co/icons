@@ -17,7 +17,7 @@
  let trigger:HTMLButtonElement | undefined
  let request=0
  const cache=new Map<string,IconDefinition>()
- const label=(entry:Entry)=>copy['Icons']==='圖示'?entry.label:entry.name.replaceAll('-',' ')
+ const label=(entry:Entry)=>entry.category==='brands'||copy['Icons']==='圖示'?entry.label:entry.name.replaceAll('-',' ')
  const filtered=$derived(entries.filter(x=>(category==='all'||category==='pilot'&&x.pilot||x.category===category)&&(!query.trim()||`${x.name} ${x.label} ${x.keywords.join(' ')}`.toLowerCase().includes(query.trim().toLowerCase()))))
  const limit=$derived(view==='optical'?24:96)
  const pages=$derived(Math.max(1,Math.ceil(filtered.length/limit)))
