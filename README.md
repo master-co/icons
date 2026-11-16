@@ -2,7 +2,7 @@
 
 微圓、簡約、為介面原生尺寸設計的開源圖示。**0.1.0-alpha.0** 包含 **280 個命名圖示、182 個基本概念**；16 / 20 / 24 三尺寸與 sharp / soft / rounded 三圓角，共 **2,520 份 SVG**。
 
-範圍由原始48個名稱、`src/ui-scope.json`的162顆、`src/organization-scope.json`的10顆及`src/productivity-scope.json`的60顆組成。本輪 Craft 01 重新逐顆審查280顆、精修14顆、保留266顆，沒有新增名稱。先前刪除的擴充圖稿未恢復。方向、開關與狀態另計命名圖稿，搜尋別名不增計圖示。套件維持 private alpha；工程檢查、設計目視與使用者定案分開記錄。
+範圍由原始48個名稱、`src/ui-scope.json`的162顆、`src/organization-scope.json`的10顆及`src/productivity-scope.json`的60顆組成。前輪 Craft 01 精修14顆；本輪 Craft 02 由子代理再次獨立逐顆審查280顆，追加精修2顆、保留278顆，沒有新增名稱。先前刪除的擴充圖稿未恢復。方向、開關與狀態另計命名圖稿，搜尋別名不增計圖示。套件維持 private alpha；工程檢查、設計目視與使用者定案分開記錄。
 
 ## 開始使用
 
@@ -94,6 +94,6 @@ node scripts/review-catalog.mjs work/catalog-review
 node skills/master-icons/scripts/render-review.mjs --repo . --icons user,users,bell,bell-off --out work/detail-review
 ```
 
-逐顆判斷見 [離線審查報告](docs/review/ui-v1/index.html) 與 [審查紀錄](docs/refinement-ledger.json)。28 批圖稿均已查看來源並列、九組原生尺寸、明暗及文字場景；本輪14顆精修、266顆保留幾何，使用者最終定案待確認。驗證器會拒絕缺少紀錄、圖稿已變更或證據不符的審查。Firefox 本機啟動失敗，列為未驗證。
+逐顆判斷見 [離線審查報告](docs/review/ui-v1/index.html) 與 [審查紀錄](docs/refinement-ledger.json)。28 批圖稿均已查看來源並列、九組原生尺寸、明暗及文字場景；本輪2顆精修、278顆保留幾何；先前獲使用者肯定的五顆保留，全庫最終定案仍待確認。驗證器會拒絕缺少紀錄、圖稿已變更或證據不符的審查。Firefox 本機啟動失敗，列為未驗證。
 
-本輪重點是光學孔洞、頭肩留白、精確接點，以及依使用者指定精修的縮排增減、擴音器、握手和票券撕線。[精修紀錄](docs/craft-01.md) · [重點前後稿](docs/review/craft-01/summary.png)。ticket與file-archive的虛線使用獨立的平切端帽，不受外框圓角預設影響；chart-area保留20%面積透明度。製作skill已更新至0.4.0，專案版與安裝版同步。
+前輪精修光學孔洞、頭肩留白、精確接點，以及使用者指定的縮排增減、擴音器、握手和票券撕線；本輪將這些教訓用於全庫複審，修正highlighter工作端及phone-off母型曲線。[本輪紀錄](docs/craft-02.md) · [前後稿](docs/review/craft-02/summary.png) · [前輪紀錄](docs/craft-01.md)。ticket與file-archive的虛線使用獨立的平切端帽，不受外框圓角預設影響；chart-area保留20%面積透明度。製作skill已更新至0.4.1，專案版與安裝版同步。

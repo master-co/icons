@@ -4,7 +4,7 @@ description: 製作、精修與審查 Master Icons 的中立微圓 SVG 圖示。
 license: MIT
 metadata:
   author: master-co
-  version: "0.4.0"
+  version: "0.4.1"
 ---
 
 # Master Icons

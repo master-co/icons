@@ -1,5 +1,6 @@
 import { figure } from "./shared.mjs";
 import { headphones } from "./media.mjs";
+const receiverCorner = g => g.corner === "sharp" ? 0 : g.corner === "soft" ? 0.6 : 1.1;
 const support = {
   bug: (g) => {
     const f = figure(g);
@@ -26,12 +27,14 @@ const support = {
     return [f.contour([[3, 3], [17, 3], [17, 13], [8, 13], [3, 17]], true, g.r), f.contour([[21, 8], [21, 21], [16, 17], [11, 17]], false, g.r)];
   },
   phone: (g) => {
-    const f = figure(g), k = g.corner === "sharp" ? 0 : g.corner === "soft" ? 0.6 : 1.1;
+    const f = figure(g), k = receiverCorner(g);
     return [f.path(`M5 3H${8 - k}Q8 3 ${8 + k * 0.4} ${3 + k}L${10 - k * 0.4} ${8 - k}Q10 8 ${10 - k} ${8 + k * 0.7}L7.5 10C9 13 11 15 14 16.5L${16 - k * 0.7} ${14 + k}Q16 14 ${16 + k} ${14 + k * 0.4}L${21 - k} ${16 - k * 0.4}Q21 16 21 ${16 + k}V19C21 20.5 20 21 18.5 21C10 21 3 14 3 5.5Q3 3 5 3Z`)];
   },
   "phone-off": (g) => {
-    const f = figure(g);
-    return [f.path("M5.5 13C3.9 10.5 3 8 3 5.5Q3 3 5 3H8L10 8L7.5 10L8.5 11.7"), f.path("M9.5 18.3C12 20 15 21 18.5 21C20 21 21 20.5 21 19V16L16 14L14 16.5L12.5 15.6"), f.line(3, 21, 21, 3)];
+    const f = figure(g), k = receiverCorner(g);
+    // Keep the receiver ends from phone; only the slash interrupts the body.
+    return [f.path(`M5.5 13C3.9 10.5 3 8 3 5.5Q3 3 5 3H${8-k}Q8 3 ${8+k*.4} ${3+k}L${10-k*.4} ${8-k}Q10 8 ${10-k} ${8+k*.7}L7.5 10L8.5 11.7`),
+      f.path(`M9.5 18.3C12 20 15 21 18.5 21C20 21 21 20.5 21 19V${16+k}Q21 16 ${21-k} ${16-k*.4}L${16+k} ${14+k*.4}Q16 14 ${16-k*.7} ${14+k}L14 16.5L12.5 15.6`), f.line(3, 21, 21, 3)];
   },
   headset: (g) => {
     const f = figure(g);

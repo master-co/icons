@@ -27,7 +27,9 @@ export const typography = {
   highlighter(g) {
     const f=figure(g),r=Math.min(g.r,g.v(.5,.65,.8));
     return [f.contour([[8,12],[17,3],[21,7],[12,16]],true,r),
-      f.contour([[8,12],[5.5,14.5],[5,19],[9.5,18.5],[12,16]],false,g.tip),
+      // A broad, flat chisel edge distinguishes the marker from a pencil.
+      // Preserve its working edge even when the barrel corners are rounded.
+      f.contour([[8,12],[5.5,14.5],[5.5,18.5],[9,18.5],[12,16]],false,[0,g.tip,0,0,0]),
       f.line(3,21.5,13,21.5)];
   },
   eraser(g) {

@@ -1,0 +1,2242 @@
+[
+  {
+    "name": "arrow-right",
+    "batch": "craft2-core-01",
+    "kind": "retained",
+    "reason": "保留原稿：水平推進：箭桿與箭翼在同一接點相連，微圓端帽不鈍化方向。",
+    "beforeSha256": "96a618298c5fd2430c460df90d6b8bbd546a08b4f8b18a53f3e835ee9240feaa",
+    "afterSha256": "96a618298c5fd2430c460df90d6b8bbd546a08b4f8b18a53f3e835ee9240feaa"
+  },
+  {
+    "name": "arrow-up",
+    "batch": "craft2-core-01",
+    "kind": "retained",
+    "reason": "保留原稿：向上：垂直桿與兩翼重心平衡；保留與右箭頭一致的翼長。",
+    "beforeSha256": "fde04c3c58a682b29999742817f2885f5c1f6fe5a3a142a0081a2b2e8992c880",
+    "afterSha256": "fde04c3c58a682b29999742817f2885f5c1f6fe5a3a142a0081a2b2e8992c880"
+  },
+  {
+    "name": "chevron-right",
+    "batch": "craft2-core-01",
+    "kind": "retained",
+    "reason": "保留原稿：向右展開：單一折線已足夠，折角沒有多餘曲線。",
+    "beforeSha256": "72b9d5a158715c8d0005cea54f5d5ace89754b72cf1c50536ab531a700fe5792",
+    "afterSha256": "72b9d5a158715c8d0005cea54f5d5ace89754b72cf1c50536ab531a700fe5792"
+  },
+  {
+    "name": "chevron-down",
+    "batch": "craft2-core-01",
+    "kind": "retained",
+    "reason": "保留原稿：向下展開：左右兩翼等重，16px 仍呈清楚V形而非圓槽。",
+    "beforeSha256": "3fa512daad04842354eaaf3b05792dc690dc305e79d4d19ec461648a34c2bbf0",
+    "afterSha256": "3fa512daad04842354eaaf3b05792dc690dc305e79d4d19ec461648a34c2bbf0"
+  },
+  {
+    "name": "arrow-up-right",
+    "batch": "craft2-core-01",
+    "kind": "retained",
+    "reason": "保留原稿：右上導向：直角雙翼與對角桿相交清楚，尖端不用裝飾曲線。",
+    "beforeSha256": "c724ef2ab768ca2dab6062d8f7fb03bf966d2b1727e815b1815183e262a11afb",
+    "afterSha256": "c724ef2ab768ca2dab6062d8f7fb03bf966d2b1727e815b1815183e262a11afb"
+  },
+  {
+    "name": "undo",
+    "batch": "craft2-core-01",
+    "kind": "retained",
+    "reason": "保留原稿：復原：回轉弧本身為結構，sharp亦保留曲面；箭頭和回尾不相碰。",
+    "beforeSha256": "0b9963ca31c65a4e5a624f8f28a93b066b10462770046efa434e2f4d5e97fbdb",
+    "afterSha256": "0b9963ca31c65a4e5a624f8f28a93b066b10462770046efa434e2f4d5e97fbdb"
+  },
+  {
+    "name": "download",
+    "batch": "craft2-core-01",
+    "kind": "retained",
+    "reason": "保留原稿：下載：箭頭和承接盤有穩定留白，盤角隨預設改變而不改方向。",
+    "beforeSha256": "3aba5dee7700bada9046f75afa5df85df7a3dd0beb129d02978470e59d7ec204",
+    "afterSha256": "3aba5dee7700bada9046f75afa5df85df7a3dd0beb129d02978470e59d7ec204"
+  },
+  {
+    "name": "upload",
+    "batch": "craft2-core-01",
+    "kind": "retained",
+    "reason": "保留原稿：上傳：上升箭桿與盤口分離，長桿不擠壓上端尖頭。",
+    "beforeSha256": "ecc9d9589d2931bbea796850fde375cfc68ac8f10ea77bfb8351ec92ff550ccb",
+    "afterSha256": "ecc9d9589d2931bbea796850fde375cfc68ac8f10ea77bfb8351ec92ff550ccb"
+  },
+  {
+    "name": "plus",
+    "batch": "craft2-core-01",
+    "kind": "retained",
+    "reason": "保留原稿：新增：兩軸長度均衡，中心交叉不重描、不需要額外效果。",
+    "beforeSha256": "5025f8d18c79106a001bdf445acb5acffae6fca1d5fbcb200c17b0c08287801f",
+    "afterSha256": "5025f8d18c79106a001bdf445acb5acffae6fca1d5fbcb200c17b0c08287801f"
+  },
+  {
+    "name": "minus",
+    "batch": "craft2-core-01",
+    "kind": "retained",
+    "reason": "保留原稿：減少：獨立短橫置中，適度圓帽可保留操作符號語氣。",
+    "beforeSha256": "18801b1d7bd059243a27d7d1b5d7243cca5d95de65e48082e98924693aad189f",
+    "afterSha256": "18801b1d7bd059243a27d7d1b5d7243cca5d95de65e48082e98924693aad189f"
+  },
+  {
+    "name": "check",
+    "batch": "craft2-core-01",
+    "kind": "retained",
+    "reason": "保留原稿：完成：長短臂比例自然，底部折點仍清楚，不強行畫成對稱。",
+    "beforeSha256": "9d1b67edc7f586b3e967c80f77bdff5ecf474229e31753ba53de359f0c112ed2",
+    "afterSha256": "9d1b67edc7f586b3e967c80f77bdff5ecf474229e31753ba53de359f0c112ed2"
+  },
+  {
+    "name": "x",
+    "batch": "craft2-core-01",
+    "kind": "retained",
+    "reason": "保留原稿：關閉：兩斜線同長同重，交點置中且無虛線語意。",
+    "beforeSha256": "eaaa4a7f7cbe8a6e905a58163ae7cf424c4ca371d4ce0039e2dc6be09b08b5ef",
+    "afterSha256": "eaaa4a7f7cbe8a6e905a58163ae7cf424c4ca371d4ce0039e2dc6be09b08b5ef"
+  },
+  {
+    "name": "search",
+    "batch": "craft2-core-02",
+    "kind": "retained",
+    "reason": "保留原稿：搜尋：鏡圈孔與斜柄清晰銜接，圓是物件結構，三角型共用合理。",
+    "beforeSha256": "fb7387d361fb1eee833d3247189d35e26f3c85b5cbfac7b83fda6509d7060440",
+    "afterSha256": "fb7387d361fb1eee833d3247189d35e26f3c85b5cbfac7b83fda6509d7060440"
+  },
+  {
+    "name": "filter",
+    "batch": "craft2-core-02",
+    "kind": "retained",
+    "reason": "保留原稿：篩選：漏斗頸部開孔仍可辨；側向收口保留與向下箭頭的差別。",
+    "beforeSha256": "e67e706331900b5affd895ac60acbc0f58b41d7543d59baff13614bb13c50f5e",
+    "afterSha256": "e67e706331900b5affd895ac60acbc0f58b41d7543d59baff13614bb13c50f5e"
+  },
+  {
+    "name": "more-horizontal",
+    "batch": "craft2-core-02",
+    "kind": "retained",
+    "reason": "保留原稿：更多橫列：三實點等距，16px 不保留無意義微孔。",
+    "beforeSha256": "514e611de36556991281d02549eeb606d7d6526d7117bf0828088c0de47f4ce4",
+    "afterSha256": "514e611de36556991281d02549eeb606d7d6526d7117bf0828088c0de47f4ce4"
+  },
+  {
+    "name": "sliders",
+    "batch": "craft2-core-02",
+    "kind": "retained",
+    "reason": "保留原稿：調整：兩軌與圓滑鈕交代位置差，孔和橫軌沒有糊成一團。",
+    "beforeSha256": "e263e8984c0d54c8e827dfc1a06ad3610cc14439f1685ccc5fa9cc34652801d0",
+    "afterSha256": "e263e8984c0d54c8e827dfc1a06ad3610cc14439f1685ccc5fa9cc34652801d0"
+  },
+  {
+    "name": "file",
+    "batch": "craft2-core-02",
+    "kind": "retained",
+    "reason": "保留原稿：檔案：紙張折角銜接輪廓，內折線不從轉角冒出短尾。",
+    "beforeSha256": "141768f6c7766d80c46a01fc15ade166a843528a0ce622f46a473120db6ddfe7",
+    "afterSha256": "141768f6c7766d80c46a01fc15ade166a843528a0ce622f46a473120db6ddfe7"
+  },
+  {
+    "name": "file-text",
+    "batch": "craft2-core-02",
+    "kind": "retained",
+    "reason": "保留原稿：文字檔：16px 減為一行、較大兩行，折角下方仍有留白。",
+    "beforeSha256": "cd8f9c23f4ea1d1d6636b2eb60566798ab27f36b4e118c26b60ee989b6afaf6b",
+    "afterSha256": "cd8f9c23f4ea1d1d6636b2eb60566798ab27f36b4e118c26b60ee989b6afaf6b"
+  },
+  {
+    "name": "folder",
+    "batch": "craft2-core-02",
+    "kind": "retained",
+    "reason": "保留原稿：資料夾：斜肩和分頁共同構成語意，微圓處理沒有改成整體膠囊。",
+    "beforeSha256": "d65f2c83ded255ade686bb4019898e0457d1275b3d87545de2decace8b7024d8",
+    "afterSha256": "d65f2c83ded255ade686bb4019898e0457d1275b3d87545de2decace8b7024d8"
+  },
+  {
+    "name": "folder-plus",
+    "batch": "craft2-core-02",
+    "kind": "retained",
+    "reason": "保留原稿：新增資料夾：加號位於內容區，保留分頁輪廓，不與底邊相碰。",
+    "beforeSha256": "eb567da90457bd74469e83d8d2c34b47b2c8787f72a86a7bc67ad506d2a9f14c",
+    "afterSha256": "eb567da90457bd74469e83d8d2c34b47b2c8787f72a86a7bc67ad506d2a9f14c"
+  },
+  {
+    "name": "calendar",
+    "batch": "craft2-core-02",
+    "kind": "retained",
+    "reason": "保留原稿：行事曆：16px 用少量日期點，裝訂端與上框相接而不是浮置。",
+    "beforeSha256": "a5d654a64c9365c0a1551f24fe8d4e18a5576b40a39fab17e508fad4d7ddce66",
+    "afterSha256": "a5d654a64c9365c0a1551f24fe8d4e18a5576b40a39fab17e508fad4d7ddce66"
+  },
+  {
+    "name": "clipboard",
+    "batch": "craft2-core-02",
+    "kind": "retained",
+    "reason": "保留原稿：剪貼簿：夾子遮擋關係清楚；小尺寸保留夾子內孔。",
+    "beforeSha256": "d8ea373fe67b3f3aa910f8189acb98ee6c5eff7eb28f76f3c9051daf90a6fcb1",
+    "afterSha256": "d8ea373fe67b3f3aa910f8189acb98ee6c5eff7eb28f76f3c9051daf90a6fcb1"
+  },
+  {
+    "name": "copy",
+    "batch": "craft2-core-02",
+    "kind": "retained",
+    "reason": "保留原稿：複製：後頁顯露邊界與前頁分離，沒有透過前頁畫出的冗餘內線。",
+    "beforeSha256": "25d1ccb31e3e3384b4146664a5728b37ec154eae5248b1d21ebea62d3cc049a8",
+    "afterSha256": "25d1ccb31e3e3384b4146664a5728b37ec154eae5248b1d21ebea62d3cc049a8"
+  },
+  {
+    "name": "trash",
+    "batch": "craft2-core-02",
+    "kind": "retained",
+    "reason": "保留原稿：刪除：桶身斜度穩定，16px 只留一條內肋；蓋與桶口間距可辨。",
+    "beforeSha256": "c857c4ae8ef78de23ae39a0d5ac4d56528baafd65b13965ef9076b27c0780843",
+    "afterSha256": "c857c4ae8ef78de23ae39a0d5ac4d56528baafd65b13965ef9076b27c0780843"
+  },
+  {
+    "name": "user",
+    "batch": "craft2-core-03",
+    "kind": "retained",
+    "reason": "保留原稿：個人：頭圓與肩弧分離，肩部是自然結構曲線，不應sharp化成折線。",
+    "beforeSha256": "d31615f64e5d37aed096ec714c0fd6303bf88a68c18bf3f0f01f3c21fdc4c30c",
+    "afterSha256": "d31615f64e5d37aed096ec714c0fd6303bf88a68c18bf3f0f01f3c21fdc4c30c"
+  },
+  {
+    "name": "users",
+    "batch": "craft2-core-03",
+    "kind": "retained",
+    "reason": "保留原稿：多人：第二人只顯露頭肩，重疊靠輪廓截斷而非透明度假遮擋。",
+    "beforeSha256": "ee421579320a64ea9c17528170a1696ecb6bb095ac75975a2c30fac4be382e4a",
+    "afterSha256": "ee421579320a64ea9c17528170a1696ecb6bb095ac75975a2c30fac4be382e4a"
+  },
+  {
+    "name": "mail",
+    "batch": "craft2-core-03",
+    "kind": "retained",
+    "reason": "保留原稿：郵件：信封V形折線抵達兩上角，16px 未形成多餘小三角孔。",
+    "beforeSha256": "56f88d34308a99ea4db6f8084a73a24f32b5e1d311104a389af5307dd61041df",
+    "afterSha256": "56f88d34308a99ea4db6f8084a73a24f32b5e1d311104a389af5307dd61041df"
+  },
+  {
+    "name": "message",
+    "batch": "craft2-core-03",
+    "kind": "retained",
+    "reason": "保留原稿：訊息：氣泡尾巴與邊框共用輪廓，保留偏左尾的方向。",
+    "beforeSha256": "9153ed7cd7375de2d9d894efd80c451aad11bc5291cb2347b7256c152e0aa1c0",
+    "afterSha256": "9153ed7cd7375de2d9d894efd80c451aad11bc5291cb2347b7256c152e0aa1c0"
+  },
+  {
+    "name": "bell",
+    "batch": "craft2-core-03",
+    "kind": "retained",
+    "reason": "保留原稿：通知：鐘罩側曲線與下擺自然銜接，鐘舌下方有留白。",
+    "beforeSha256": "4439f97b6cb31c4f514813cf71d380a1b18953751209bbc3cbfc7c5437d330b4",
+    "afterSha256": "4439f97b6cb31c4f514813cf71d380a1b18953751209bbc3cbfc7c5437d330b4"
+  },
+  {
+    "name": "bell-off",
+    "batch": "craft2-core-03",
+    "kind": "retained",
+    "reason": "保留原稿：關閉通知：斜線切口清晰，殘餘鐘罩及鐘舌仍可辨認母型。",
+    "beforeSha256": "46192f4314296818939a049245c8115130a12deff74308efa4e4d8ab5bc1b91b",
+    "afterSha256": "46192f4314296818939a049245c8115130a12deff74308efa4e4d8ab5bc1b91b"
+  },
+  {
+    "name": "lock",
+    "batch": "craft2-core-03",
+    "kind": "retained",
+    "reason": "保留原稿：鎖定：鎖梁與鎖體相連，鑰匙訊號簡化短線而非微孔。",
+    "beforeSha256": "07fbe9f7a14bce603bfc487b24ce2c9f15ff17d54f3d5e9136cff39a0e115aa8",
+    "afterSha256": "07fbe9f7a14bce603bfc487b24ce2c9f15ff17d54f3d5e9136cff39a0e115aa8"
+  },
+  {
+    "name": "unlock",
+    "batch": "craft2-core-03",
+    "kind": "retained",
+    "reason": "保留原稿：解鎖：鎖梁開口有足夠空間，與lock差異由構造而非效果表達。",
+    "beforeSha256": "f0eb1b7fdb33af47f9c0203036a2da18ef70267ac894e9223d3fd21d39e0b8b9",
+    "afterSha256": "f0eb1b7fdb33af47f9c0203036a2da18ef70267ac894e9223d3fd21d39e0b8b9"
+  },
+  {
+    "name": "circle",
+    "batch": "craft2-core-03",
+    "kind": "retained",
+    "reason": "保留原稿：圓形：完整圓周墨量均勻，不需要套角型變成其他形狀。",
+    "beforeSha256": "76c677aa55401ff95f5be37d3ffa9d0654c341c899d1699dd7afe2c3f8327faf",
+    "afterSha256": "76c677aa55401ff95f5be37d3ffa9d0654c341c899d1699dd7afe2c3f8327faf"
+  },
+  {
+    "name": "square",
+    "batch": "craft2-core-03",
+    "kind": "retained",
+    "reason": "保留原稿：方形：角型有實際幾何差異；rounded仍保留平直邊。",
+    "beforeSha256": "b9dc531dae9eecab8e0a77368ba48ee99b4cb26a4711bf37afe140db4768f040",
+    "afterSha256": "b9dc531dae9eecab8e0a77368ba48ee99b4cb26a4711bf37afe140db4768f040"
+  },
+  {
+    "name": "star",
+    "batch": "craft2-core-03",
+    "kind": "retained",
+    "reason": "保留原稿：星標：五角外尖與內凹共同辨識，微圓沒有吃掉尖端長度。",
+    "beforeSha256": "5c4b2abc425584514fcff70498281b4722e69bb4a6f3c9b6b28edfdb8a6271c8",
+    "afterSha256": "5c4b2abc425584514fcff70498281b4722e69bb4a6f3c9b6b28edfdb8a6271c8"
+  },
+  {
+    "name": "heart",
+    "batch": "craft2-core-03",
+    "kind": "retained",
+    "reason": "保留原稿：喜愛：兩瓣與中央凹口曲率連續；底尖保留而不圓成水滴。",
+    "beforeSha256": "626e67d6ff1e3be70aba933d68c7feefbd460d0e80800bfe48ef416d5e27875c",
+    "afterSha256": "626e67d6ff1e3be70aba933d68c7feefbd460d0e80800bfe48ef416d5e27875c"
+  },
+  {
+    "name": "info-circle",
+    "batch": "craft2-core-04",
+    "kind": "retained",
+    "reason": "保留原稿：資訊：i的實點和短幹分離；內外圈之間留白均衡。",
+    "beforeSha256": "df39dd812cc832ef815613851c543912e761cbbfae17fd4869eafafeaac04fff",
+    "afterSha256": "df39dd812cc832ef815613851c543912e761cbbfae17fd4869eafafeaac04fff"
+  },
+  {
+    "name": "check-circle",
+    "batch": "craft2-core-04",
+    "kind": "retained",
+    "reason": "保留原稿：確認狀態：勾號未接觸圓環，16px 仍清楚長短兩臂。",
+    "beforeSha256": "aceba48e4999280e5c8e3dd8e560bea5243cf9ae14d81c7e603311b97007836e",
+    "afterSha256": "aceba48e4999280e5c8e3dd8e560bea5243cf9ae14d81c7e603311b97007836e"
+  },
+  {
+    "name": "alert-triangle",
+    "batch": "craft2-core-04",
+    "kind": "retained",
+    "reason": "保留原稿：警告：三角頂角不過圓，驚嘆點和直幹分開，sharp保留語氣。",
+    "beforeSha256": "1780316dd33a05aa61d3e78da1f5b1f9449b6b7b7ae1827069cdebae42c3f7c9",
+    "afterSha256": "1780316dd33a05aa61d3e78da1f5b1f9449b6b7b7ae1827069cdebae42c3f7c9"
+  },
+  {
+    "name": "loader",
+    "batch": "craft2-core-04",
+    "kind": "retained",
+    "reason": "保留原稿：載入：單一開弧足以暗示循環，缺口明確，不用無語意漸淡。",
+    "beforeSha256": "a96f72ea75dd351e538285d7a010a0e113b0aca503171bda71060170bcd1ca2d",
+    "afterSha256": "a96f72ea75dd351e538285d7a010a0e113b0aca503171bda71060170bcd1ca2d"
+  },
+  {
+    "name": "home",
+    "batch": "craft2-core-04",
+    "kind": "retained",
+    "reason": "保留原稿：首頁：屋頂尖端與門洞均保留；門與底線接合有結構理由。",
+    "beforeSha256": "3f941cd38d09d7fb75dde130dcffc7d363fc757689dd4d85e376a59a53d2ce81",
+    "afterSha256": "3f941cd38d09d7fb75dde130dcffc7d363fc757689dd4d85e376a59a53d2ce81"
+  },
+  {
+    "name": "settings",
+    "batch": "craft2-core-04",
+    "kind": "retained",
+    "reason": "保留原稿：設定：齒根弧形與中心孔均可讀，沒有將全體曲線換成硬多邊形。",
+    "beforeSha256": "53a06bfbd924f3412823d0ff2732a82efcd1a7f6ee5a3ccf89f2eaac2dbb6242",
+    "afterSha256": "53a06bfbd924f3412823d0ff2732a82efcd1a7f6ee5a3ccf89f2eaac2dbb6242"
+  },
+  {
+    "name": "grid",
+    "batch": "craft2-core-04",
+    "kind": "retained",
+    "reason": "保留原稿：格狀版面：四格尺寸和距離相等，16px 內孔仍存在。",
+    "beforeSha256": "f652b92fbdb90878212b8bad1171f44bce72d6cf3ee44d05f6d4a16e06d3f2b0",
+    "afterSha256": "f652b92fbdb90878212b8bad1171f44bce72d6cf3ee44d05f6d4a16e06d3f2b0"
+  },
+  {
+    "name": "list",
+    "batch": "craft2-core-04",
+    "kind": "retained",
+    "reason": "保留原稿：清單：圓點與橫線有共同基線，三行節奏均勻。",
+    "beforeSha256": "b809278b6403aa6166cf22f14536e10bdab26acfa57ef1ce6b8fa9653f7843d7",
+    "afterSha256": "b809278b6403aa6166cf22f14536e10bdab26acfa57ef1ce6b8fa9653f7843d7"
+  },
+  {
+    "name": "chart-bar",
+    "batch": "craft2-core-04",
+    "kind": "retained",
+    "reason": "保留原稿：長條圖：上一輪16px擴柱後三個內孔仍清晰；大尺寸比例保留。",
+    "beforeSha256": "e65266c0274cd8d75d75d3a4a730af4bf5672fa0b728aa06004b3e3dad0c2604",
+    "afterSha256": "e65266c0274cd8d75d75d3a4a730af4bf5672fa0b728aa06004b3e3dad0c2604"
+  },
+  {
+    "name": "database",
+    "batch": "craft2-core-04",
+    "kind": "retained",
+    "reason": "保留原稿：資料庫：頂部橢圓與側邊共同表達圓柱；16px移除中層減密。",
+    "beforeSha256": "c8c066f10076478d2dd6c13edc415c2e37df07fbd4c9d5322fc7bb730862d941",
+    "afterSha256": "c8c066f10076478d2dd6c13edc415c2e37df07fbd4c9d5322fc7bb730862d941"
+  },
+  {
+    "name": "code",
+    "batch": "craft2-core-04",
+    "kind": "retained",
+    "reason": "保留原稿：程式碼：兩括號與斜線間距可辨，沒有為一致圓角彎曲斜桿。",
+    "beforeSha256": "f80de2db50b0a03117b9b96434e557c3f4c8f37c65feb4e2bf7e250a1ef694c1",
+    "afterSha256": "f80de2db50b0a03117b9b96434e557c3f4c8f37c65feb4e2bf7e250a1ef694c1"
+  },
+  {
+    "name": "terminal",
+    "batch": "craft2-core-04",
+    "kind": "retained",
+    "reason": "保留原稿：終端機：視窗內的提示符和底線分離，框角與內容角型不互相擠壓。",
+    "beforeSha256": "cbacf5e1e1072c0b62a9795ee4ae2df0bd2be511b44db3a7118d4db6b4ec8838",
+    "afterSha256": "cbacf5e1e1072c0b62a9795ee4ae2df0bd2be511b44db3a7118d4db6b4ec8838"
+  },
+  {
+    "name": "arrow-left",
+    "batch": "craft2-ui-01",
+    "kind": "retained",
+    "reason": "保留原稿：往左：與右箭頭共用翼長與桿長，反向不改可見重量。",
+    "beforeSha256": "1885c592d9b988f55883737947ab547f5b221847a18506918f63d09acc85e738",
+    "afterSha256": "1885c592d9b988f55883737947ab547f5b221847a18506918f63d09acc85e738"
+  },
+  {
+    "name": "arrow-down",
+    "batch": "craft2-ui-01",
+    "kind": "retained",
+    "reason": "保留原稿：往下：尖端在垂直中軸，兩翼與桿交會沒有額外圓結。",
+    "beforeSha256": "55f4cc35dcdca92d038377da4f2bd8a879d2c553910d2489a038e897e31fd2f4",
+    "afterSha256": "55f4cc35dcdca92d038377da4f2bd8a879d2c553910d2489a038e897e31fd2f4"
+  },
+  {
+    "name": "chevron-left",
+    "batch": "craft2-ui-01",
+    "kind": "retained",
+    "reason": "保留原稿：向左收合：保持單折線結構，與右chevron對稱而非重畫近似稿。",
+    "beforeSha256": "7767f7e7f8af79c921171f3f662f313a964f7fd58921beaadaaa9c33cd73f689",
+    "afterSha256": "7767f7e7f8af79c921171f3f662f313a964f7fd58921beaadaaa9c33cd73f689"
+  },
+  {
+    "name": "chevron-up",
+    "batch": "craft2-ui-01",
+    "kind": "retained",
+    "reason": "保留原稿：向上收合：頂點適度收圓，沒有將短翼縮成弧點。",
+    "beforeSha256": "13eff1ad85b261da903f6a03f737462f44e65d82b2ed5f935939fdc603c0598a",
+    "afterSha256": "13eff1ad85b261da903f6a03f737462f44e65d82b2ed5f935939fdc603c0598a"
+  },
+  {
+    "name": "chevrons-left",
+    "batch": "craft2-ui-01",
+    "kind": "retained",
+    "reason": "保留原稿：快速往左：兩個折線保持獨立間隔，16px仍見雙重訊號。",
+    "beforeSha256": "3cd56977cec67d5312760c1948173bff72d70fa7eed93b50796b2c9d34db0ffb",
+    "afterSha256": "3cd56977cec67d5312760c1948173bff72d70fa7eed93b50796b2c9d34db0ffb"
+  },
+  {
+    "name": "chevrons-right",
+    "batch": "craft2-ui-01",
+    "kind": "retained",
+    "reason": "保留原稿：快速往右：雙chevron的節奏和左向一致；不需尾線。",
+    "beforeSha256": "b7e3f34b30c4877162219f77eb7b13bc1f42673fd2e531c611e718c7d2901fd4",
+    "afterSha256": "b7e3f34b30c4877162219f77eb7b13bc1f42673fd2e531c611e718c7d2901fd4"
+  },
+  {
+    "name": "menu",
+    "batch": "craft2-ui-01",
+    "kind": "retained",
+    "reason": "保留原稿：選單：三等長橫線的端帽一致，16px行間空白充足。",
+    "beforeSha256": "8e771db03367b781bca454190653ec2b9c910104a5ffd281a0295dfc3b2e16c0",
+    "afterSha256": "8e771db03367b781bca454190653ec2b9c910104a5ffd281a0295dfc3b2e16c0"
+  },
+  {
+    "name": "more-vertical",
+    "batch": "craft2-ui-01",
+    "kind": "retained",
+    "reason": "保留原稿：更多直列：三實點有等距垂直軸，無微孔與多餘框。",
+    "beforeSha256": "2f1727f2d4051dfa8047a2bec0b76f52514fc2a8825641b18356f64feec921b0",
+    "afterSha256": "2f1727f2d4051dfa8047a2bec0b76f52514fc2a8825641b18356f64feec921b0"
+  },
+  {
+    "name": "redo",
+    "batch": "craft2-ui-01",
+    "kind": "retained",
+    "reason": "保留原稿：重做：與undo的回轉弧同源，保留結構曲線而非銳角迴路。",
+    "beforeSha256": "bd48ccc07f008bc9c83b4887b6a5a204053806bb1b55774b3bc68940cf2b6aa3",
+    "afterSha256": "bd48ccc07f008bc9c83b4887b6a5a204053806bb1b55774b3bc68940cf2b6aa3"
+  },
+  {
+    "name": "refresh",
+    "batch": "craft2-ui-01",
+    "kind": "retained",
+    "reason": "保留原稿：重新整理：兩段圓弧與兩箭頭清楚分工，箭頭前方仍有循環開口。",
+    "beforeSha256": "2ac981f5ad6acd8250a7cf799074abbbe4d1cb609676c65a9de6480dddd49d04",
+    "afterSha256": "2ac981f5ad6acd8250a7cf799074abbbe4d1cb609676c65a9de6480dddd49d04"
+  },
+  {
+    "name": "external-link",
+    "batch": "craft2-ui-02",
+    "kind": "retained",
+    "reason": "保留原稿：外部連結：右上箭頭突破框的開口，與普通右上箭頭有容器語意差異。",
+    "beforeSha256": "107cc10acd64acf703ee15878dba4195986dd36eb562fa167be77408317aef73",
+    "afterSha256": "107cc10acd64acf703ee15878dba4195986dd36eb562fa167be77408317aef73"
+  },
+  {
+    "name": "link",
+    "batch": "craft2-ui-02",
+    "kind": "retained",
+    "reason": "保留原稿：連結：兩半鏈環與中央短線相接，圓弧是鏈節結構。",
+    "beforeSha256": "c933b6d55efdd4ad9a9f4d10ef9fba74bbf66ce7a48e46d0d91b3f773e075178",
+    "afterSha256": "c933b6d55efdd4ad9a9f4d10ef9fba74bbf66ce7a48e46d0d91b3f773e075178"
+  },
+  {
+    "name": "unlink",
+    "batch": "craft2-ui-02",
+    "kind": "retained",
+    "reason": "保留原稿：取消連結：鏈節分離與斷裂短線共同表達解除，短線不是機械撕線，圓端合理。",
+    "beforeSha256": "c8a9b1e4de2f289ecd653929ac9ff69085fbf005b11344c67c009bca9e53dd38",
+    "afterSha256": "c8a9b1e4de2f289ecd653929ac9ff69085fbf005b11344c67c009bca9e53dd38"
+  },
+  {
+    "name": "log-in",
+    "batch": "craft2-ui-02",
+    "kind": "retained",
+    "reason": "保留原稿：登入：箭頭朝門框內，兩者之間清楚留白，方向不靠淡化表達。",
+    "beforeSha256": "ed171866dae9148addf0b152c97d89736aa764e0c3d9af4e14c01f34ebd623af",
+    "afterSha256": "ed171866dae9148addf0b152c97d89736aa764e0c3d9af4e14c01f34ebd623af"
+  },
+  {
+    "name": "log-out",
+    "batch": "craft2-ui-02",
+    "kind": "retained",
+    "reason": "保留原稿：登出：門框在後、箭頭離開，與登入的主客關係明確。",
+    "beforeSha256": "26f544876e1dcc10ef3d1f99190f1a92a832864d8bdedbd6ac68ad45ea02a894",
+    "afterSha256": "26f544876e1dcc10ef3d1f99190f1a92a832864d8bdedbd6ac68ad45ea02a894"
+  },
+  {
+    "name": "dashboard",
+    "batch": "craft2-ui-02",
+    "kind": "retained",
+    "reason": "保留原稿：儀表板：四格高低錯落，保留與均分grid的概念差別。",
+    "beforeSha256": "48af88086c101d3335834a49588b9e5ac7083ce7001e8dd3e3ca42d60bed35b6",
+    "afterSha256": "48af88086c101d3335834a49588b9e5ac7083ce7001e8dd3e3ca42d60bed35b6"
+  },
+  {
+    "name": "app-window",
+    "batch": "craft2-ui-02",
+    "kind": "retained",
+    "reason": "保留原稿：應用視窗：標題列和內容區比例清晰，16px減少控制點避免擁擠。",
+    "beforeSha256": "bd9052b9f34ce9c9f6159bde613bf6b695c32f978a55a383bc3b4697224c8d97",
+    "afterSha256": "bd9052b9f34ce9c9f6159bde613bf6b695c32f978a55a383bc3b4697224c8d97"
+  },
+  {
+    "name": "panel-left",
+    "batch": "craft2-ui-02",
+    "kind": "retained",
+    "reason": "保留原稿：左側欄：窄欄與主區域以一條共用界線分隔，不重描邊。",
+    "beforeSha256": "7957d4fd7ec7a1df99116f34806e9305a0b1b3e75390ad1cdee638bc4261fb3b",
+    "afterSha256": "7957d4fd7ec7a1df99116f34806e9305a0b1b3e75390ad1cdee638bc4261fb3b"
+  },
+  {
+    "name": "panel-right",
+    "batch": "craft2-ui-02",
+    "kind": "retained",
+    "reason": "保留原稿：右側欄：窄欄靠右，母型和左欄一致，框角不侵入欄寬。",
+    "beforeSha256": "5025fd56cff28268dd8809695e7b2f45643bb7c26d743baf446ba337a2034ace",
+    "afterSha256": "5025fd56cff28268dd8809695e7b2f45643bb7c26d743baf446ba337a2034ace"
+  },
+  {
+    "name": "panel-top",
+    "batch": "craft2-ui-02",
+    "kind": "retained",
+    "reason": "保留原稿：頂部面板：較薄頂欄與大內容區清晰，非等高layout-rows。",
+    "beforeSha256": "46c57d93d31aa638e8015c8dad0290f8a30829bc3413302075d9f2a642ebdca4",
+    "afterSha256": "46c57d93d31aa638e8015c8dad0290f8a30829bc3413302075d9f2a642ebdca4"
+  },
+  {
+    "name": "panel-bottom",
+    "batch": "craft2-ui-03",
+    "kind": "retained",
+    "reason": "保留原稿：底部面板：窄底欄與頂欄成家族，分界與外框銜接完整。",
+    "beforeSha256": "af7a1cde6e8e34467c3d68db8d9d2c83c94c0650e6934b4e81419fbffee7e7f8",
+    "afterSha256": "af7a1cde6e8e34467c3d68db8d9d2c83c94c0650e6934b4e81419fbffee7e7f8"
+  },
+  {
+    "name": "layout-columns",
+    "batch": "craft2-ui-03",
+    "kind": "retained",
+    "reason": "保留原稿：分欄：居中分界得到等寬兩欄，無語意必要的內陰影。",
+    "beforeSha256": "9bb3ebb37cd9afb7aca242f45b3d5e175d0ec82ca6a64ce44789cf9319b0f983",
+    "afterSha256": "9bb3ebb37cd9afb7aca242f45b3d5e175d0ec82ca6a64ce44789cf9319b0f983"
+  },
+  {
+    "name": "layout-rows",
+    "batch": "craft2-ui-03",
+    "kind": "retained",
+    "reason": "保留原稿：分列：居中分界得到等高兩列，保持和columns共同框形。",
+    "beforeSha256": "789e8382446dc4acad89ef4957ccd73f5504a31c0bbc14b3393f8f42056dce1f",
+    "afterSha256": "789e8382446dc4acad89ef4957ccd73f5504a31c0bbc14b3393f8f42056dce1f"
+  },
+  {
+    "name": "maximize",
+    "batch": "craft2-ui-03",
+    "kind": "retained",
+    "reason": "保留原稿：最大化：四個外角構成擴展邊界，刻意開放中段不誤作斷線。",
+    "beforeSha256": "e7262eb0d886c6c178a76a8ab23107b79309e7882893a84890a7287e25f49d3d",
+    "afterSha256": "e7262eb0d886c6c178a76a8ab23107b79309e7882893a84890a7287e25f49d3d"
+  },
+  {
+    "name": "minimize",
+    "batch": "craft2-ui-03",
+    "kind": "retained",
+    "reason": "保留原稿：最小化：四角指向中心，轉折方向明確，與maximize非單純縮小關係。",
+    "beforeSha256": "adf17369e7ffe9176ef66b56511b035049eed056efa6a6741eacdfea3a5150fd",
+    "afterSha256": "adf17369e7ffe9176ef66b56511b035049eed056efa6a6741eacdfea3a5150fd"
+  },
+  {
+    "name": "grip-vertical",
+    "batch": "craft2-ui-03",
+    "kind": "retained",
+    "reason": "保留原稿：垂直拖曳：六點保持兩列三行，實點比空心小圓可靠。",
+    "beforeSha256": "8dc9b02657ac1a448a5465aacde43ff23e8fc1059079c3614ef0ec71d946c8f5",
+    "afterSha256": "8dc9b02657ac1a448a5465aacde43ff23e8fc1059079c3614ef0ec71d946c8f5"
+  },
+  {
+    "name": "grip-horizontal",
+    "batch": "craft2-ui-03",
+    "kind": "retained",
+    "reason": "保留原稿：水平拖曳：六點保持三列兩行，對應垂直握柄的等距節奏。",
+    "beforeSha256": "2f9e533898e2a1db1ac31e074a8cd996b0eb019ce00da90534ca913d61e3885b",
+    "afterSha256": "2f9e533898e2a1db1ac31e074a8cd996b0eb019ce00da90534ca913d61e3885b"
+  },
+  {
+    "name": "monitor",
+    "batch": "craft2-ui-03",
+    "kind": "retained",
+    "reason": "保留原稿：桌面螢幕：螢幕、支柱、底腳有明確相接；底腳不太寬而搶主體。",
+    "beforeSha256": "543cde07e3c6e049fbea253e7774207af1da9dff0349b48ce65a39f92d8f5b8e",
+    "afterSha256": "543cde07e3c6e049fbea253e7774207af1da9dff0349b48ce65a39f92d8f5b8e"
+  },
+  {
+    "name": "smartphone",
+    "batch": "craft2-ui-03",
+    "kind": "retained",
+    "reason": "保留原稿：手機：細長外殼和短底線可辨，底線保留距框留白。",
+    "beforeSha256": "fb7fdefbb733920e0f79bee20c1d2e776883a13be7c7b655cb08a399f9429eb4",
+    "afterSha256": "fb7fdefbb733920e0f79bee20c1d2e776883a13be7c7b655cb08a399f9429eb4"
+  },
+  {
+    "name": "globe",
+    "batch": "craft2-ui-03",
+    "kind": "retained",
+    "reason": "保留原稿：全球：經線弧與緯線是結構曲線，兩極交點雖密但仍能辨圓球。",
+    "beforeSha256": "8de3280e640aa2d044035c8a60477b5187cc14236831aabd2ff997f425afe84b",
+    "afterSha256": "8de3280e640aa2d044035c8a60477b5187cc14236831aabd2ff997f425afe84b"
+  },
+  {
+    "name": "checkbox",
+    "batch": "craft2-ui-04",
+    "kind": "retained",
+    "reason": "保留原稿：未勾選：完整空框為必要控件語意，三角型只改適合框角。",
+    "beforeSha256": "c902df536032799d1b4a67beab26b027baaf5342265099324761a666963a40d9",
+    "afterSha256": "c902df536032799d1b4a67beab26b027baaf5342265099324761a666963a40d9"
+  },
+  {
+    "name": "checkbox-checked",
+    "batch": "craft2-ui-04",
+    "kind": "retained",
+    "reason": "保留原稿：已勾選：勾號置入相同框體，長臂未碰右上角。",
+    "beforeSha256": "b29afb6dbb4dc97a4c1a0f69fda71ec4acfcbe943adafb3420fb7cbcf01207a7",
+    "afterSha256": "b29afb6dbb4dc97a4c1a0f69fda71ec4acfcbe943adafb3420fb7cbcf01207a7"
+  },
+  {
+    "name": "checkbox-indeterminate",
+    "batch": "craft2-ui-04",
+    "kind": "retained",
+    "reason": "保留原稿：部分選取：中間橫線長度和框內空白平衡，未誤成填滿矩形。",
+    "beforeSha256": "07fbcd34b07f7904c5cead3489bdf52f3a1b6145931d48ec710db4ab060c4cf4",
+    "afterSha256": "07fbcd34b07f7904c5cead3489bdf52f3a1b6145931d48ec710db4ab060c4cf4"
+  },
+  {
+    "name": "radio",
+    "batch": "craft2-ui-04",
+    "kind": "retained",
+    "reason": "保留原稿：未選單選：圓環保持開孔，與selected有直接母型關係。",
+    "beforeSha256": "c9e7a9cdc4eeb163e2169e9c9d57acc57d57c4b667495a8e53ba44f056f75061",
+    "afterSha256": "c9e7a9cdc4eeb163e2169e9c9d57acc57d57c4b667495a8e53ba44f056f75061"
+  },
+  {
+    "name": "radio-selected",
+    "batch": "craft2-ui-04",
+    "kind": "retained",
+    "reason": "保留原稿：已選單選：實心內點與外環間有完整環狀空白。",
+    "beforeSha256": "5e1ee029efcb9ba722eaa546f0f0fbe0b377a4f39772b7145896518b3db3b7c5",
+    "afterSha256": "5e1ee029efcb9ba722eaa546f0f0fbe0b377a4f39772b7145896518b3db3b7c5"
+  },
+  {
+    "name": "toggle-off",
+    "batch": "craft2-ui-04",
+    "kind": "retained",
+    "reason": "保留原稿：關閉切換：左側實點和膠囊軌道一起表達狀態，sharp仍保留物理圓端。",
+    "beforeSha256": "9dc68b54cd6f42808a9395662472a88fb682a56bbc87d3ea13caa8d1ffdf7f46",
+    "afterSha256": "9dc68b54cd6f42808a9395662472a88fb682a56bbc87d3ea13caa8d1ffdf7f46"
+  },
+  {
+    "name": "toggle-on",
+    "batch": "craft2-ui-04",
+    "kind": "retained",
+    "reason": "保留原稿：開啟切換：只移動圓點而不改軌道比例，右側留白與off對稱。",
+    "beforeSha256": "980a6bb96e5caee1f92ebe3cd25d8e8f0e4474929244a3b41b4d64be38d80b1f",
+    "afterSha256": "980a6bb96e5caee1f92ebe3cd25d8e8f0e4474929244a3b41b4d64be38d80b1f"
+  },
+  {
+    "name": "text-cursor",
+    "batch": "craft2-ui-04",
+    "kind": "retained",
+    "reason": "保留原稿：文字游標：上下短襯線透過弧形接軸，保留I形而非普通直線。",
+    "beforeSha256": "a7827062a8847da76cd1db3df2c86b3397d140d10e703ef252105f76a01f3142",
+    "afterSha256": "a7827062a8847da76cd1db3df2c86b3397d140d10e703ef252105f76a01f3142"
+  },
+  {
+    "name": "asterisk",
+    "batch": "craft2-ui-04",
+    "kind": "retained",
+    "reason": "保留原稿：必填星號：六支短臂等重，尖端沒有因過度圓角縮成圓點。",
+    "beforeSha256": "d698c99208d6b8f4be751ca1b313f893f7dbc9a832e25fe389960a38a5e7a7c9",
+    "afterSha256": "d698c99208d6b8f4be751ca1b313f893f7dbc9a832e25fe389960a38a5e7a7c9"
+  },
+  {
+    "name": "eye",
+    "batch": "craft2-ui-04",
+    "kind": "retained",
+    "reason": "保留原稿：可見：眼瞼曲線自然收尖，瞳孔與眼瞼保持分離。",
+    "beforeSha256": "5634bf141cac3f0b230a2cbd85247af5c6cd5983a1ab019dbd7bf09c5a78c232",
+    "afterSha256": "5634bf141cac3f0b230a2cbd85247af5c6cd5983a1ab019dbd7bf09c5a78c232"
+  },
+  {
+    "name": "eye-off",
+    "batch": "craft2-ui-05",
+    "kind": "retained",
+    "reason": "保留原稿：隱藏：斜線穿眼的兩側留切口，仍可辨眼瞼與部分瞳孔。",
+    "beforeSha256": "de4e91df81873ca50b79775e6f5696a4ec02fce7bcb360aebac51bf1fe25ff7c",
+    "afterSha256": "de4e91df81873ca50b79775e6f5696a4ec02fce7bcb360aebac51bf1fe25ff7c"
+  },
+  {
+    "name": "help-circle",
+    "batch": "craft2-ui-05",
+    "kind": "retained",
+    "reason": "保留原稿：說明：問號上弧、收筆、下點分工，與外圓環保持距離。",
+    "beforeSha256": "4482afb00ad1e5e7bc267e045eb34cfe34bd9dbaba63be70eecbfc8a3473c3e9",
+    "afterSha256": "4482afb00ad1e5e7bc267e045eb34cfe34bd9dbaba63be70eecbfc8a3473c3e9"
+  },
+  {
+    "name": "ban",
+    "batch": "craft2-ui-05",
+    "kind": "retained",
+    "reason": "保留原稿：禁止：斜槓應實際接圓框，這是正確結構接點，不應為增加留白剪斷。",
+    "beforeSha256": "8efbed8a14cd6df962ae7f2206f2991b20ee29f70014cfafdb5df79048dd0a73",
+    "afterSha256": "8efbed8a14cd6df962ae7f2206f2991b20ee29f70014cfafdb5df79048dd0a73"
+  },
+  {
+    "name": "x-circle",
+    "batch": "craft2-ui-05",
+    "kind": "retained",
+    "reason": "保留原稿：錯誤狀態：X與外圓各自完整，16px未變成放射輪。",
+    "beforeSha256": "2f107a8fb2682e33e45b0f3544f5455e1167bd7a031a22e7349135c10c502f1f",
+    "afterSha256": "2f107a8fb2682e33e45b0f3544f5455e1167bd7a031a22e7349135c10c502f1f"
+  },
+  {
+    "name": "minus-circle",
+    "batch": "craft2-ui-05",
+    "kind": "retained",
+    "reason": "保留原稿：移除狀態：橫線短於圓內徑，兩端留白一致。",
+    "beforeSha256": "a418c763c0569bf7e2fb7912a251126ac8b6da75ffcf77d96f93d03730cb945d",
+    "afterSha256": "a418c763c0569bf7e2fb7912a251126ac8b6da75ffcf77d96f93d03730cb945d"
+  },
+  {
+    "name": "table",
+    "batch": "craft2-ui-05",
+    "kind": "retained",
+    "reason": "保留原稿：資料表：表頭與首欄提供表格辨識，16px減少一條列線。",
+    "beforeSha256": "36d51787f6b502ea99a01cfa9e2c6f37ec08fce8cef698cd5a72bd75706696ff",
+    "afterSha256": "36d51787f6b502ea99a01cfa9e2c6f37ec08fce8cef698cd5a72bd75706696ff"
+  },
+  {
+    "name": "sort-ascending",
+    "batch": "craft2-ui-05",
+    "kind": "retained",
+    "reason": "保留原稿：升冪排序：短至長的內容行與上箭頭共同表意，已具indent所示的內容語意。",
+    "beforeSha256": "1a3abda2af584e0e2e2e77efaaf0de52e75e912183ba27b8f29ad846dc6ba1a1",
+    "afterSha256": "1a3abda2af584e0e2e2e77efaaf0de52e75e912183ba27b8f29ad846dc6ba1a1"
+  },
+  {
+    "name": "sort-descending",
+    "batch": "craft2-ui-05",
+    "kind": "retained",
+    "reason": "保留原稿：降冪排序：長至短的內容行配下箭頭，保留與ascending的完整行長反轉。",
+    "beforeSha256": "30fd2e17dec93b9e1c6b15a767c617d5a482006182df4ce48c4385eea0198647",
+    "afterSha256": "30fd2e17dec93b9e1c6b15a767c617d5a482006182df4ce48c4385eea0198647"
+  },
+  {
+    "name": "sort-unsorted",
+    "batch": "craft2-ui-05",
+    "kind": "retained",
+    "reason": "保留原稿：可排序：上下雙箭頭有獨立軸，兩箭尖沒有擠在中心。",
+    "beforeSha256": "28d5e430b4c7318ed9cd395d6dcdf7ed757911f2259f60ae2cd8bfd0d7603332",
+    "afterSha256": "28d5e430b4c7318ed9cd395d6dcdf7ed757911f2259f60ae2cd8bfd0d7603332"
+  },
+  {
+    "name": "filter-clear",
+    "batch": "craft2-ui-06",
+    "kind": "retained",
+    "reason": "保留原稿：清除篩選：漏斗為主體、右下X為修飾；中斷底角使二者不重疊。",
+    "beforeSha256": "b732aa10cde1f303d1776011d45c3c3024bfbf36bb16a9cceb2ce5285bccd509",
+    "afterSha256": "b732aa10cde1f303d1776011d45c3c3024bfbf36bb16a9cceb2ce5285bccd509"
+  },
+  {
+    "name": "chart-line",
+    "batch": "craft2-ui-06",
+    "kind": "retained",
+    "reason": "保留原稿：折線分析：資料折線浮於座標軸內，拐點保持數據語意，不任意畫成平滑波。",
+    "beforeSha256": "2ba4e1f39dd67e2e65da793b2ff8976d89b7bcb10e0decf5d5bac1317ae918ad",
+    "afterSha256": "2ba4e1f39dd67e2e65da793b2ff8976d89b7bcb10e0decf5d5bac1317ae918ad"
+  },
+  {
+    "name": "chart-area",
+    "batch": "craft2-ui-06",
+    "kind": "retained",
+    "reason": "保留原稿：面積分析：底部封閉面加低透明填色有語意，主輪廓仍實線，淺深55%均可辨。",
+    "beforeSha256": "035c0027fa8ae7a7f77d3cdaac0635968db0f53086060e1803e0cba652bc03a4",
+    "afterSha256": "035c0027fa8ae7a7f77d3cdaac0635968db0f53086060e1803e0cba652bc03a4"
+  },
+  {
+    "name": "chart-pie",
+    "batch": "craft2-ui-06",
+    "kind": "retained",
+    "reason": "保留原稿：圓餅分析：分隔半徑應接圓周與中心，這類接點不屬多餘相碰。",
+    "beforeSha256": "a68310ba32681f6eb4c50352d665e6fde435d5f2c94a77b9c6bf3e4268ce1bda",
+    "afterSha256": "a68310ba32681f6eb4c50352d665e6fde435d5f2c94a77b9c6bf3e4268ce1bda"
+  },
+  {
+    "name": "chart-donut",
+    "batch": "craft2-ui-06",
+    "kind": "retained",
+    "reason": "保留原稿：環形分析：中孔、外環與分隔清楚，16px未因細內圈變成實心圓餅。",
+    "beforeSha256": "5c5709a8e3a8ff8228f8546be0e4c6a1a1b5eeea9517adf8669032c27333db78",
+    "afterSha256": "5c5709a8e3a8ff8228f8546be0e4c6a1a1b5eeea9517adf8669032c27333db78"
+  },
+  {
+    "name": "trending-up",
+    "batch": "craft2-ui-06",
+    "kind": "retained",
+    "reason": "保留原稿：上升趨勢：曲折資料線與末端箭頭整合，方向明確，保留折點。",
+    "beforeSha256": "a9c8dcd7b64b70f21c12d1d22c0097d9fe3f22ec14b41ab123157414d91e6925",
+    "afterSha256": "a9c8dcd7b64b70f21c12d1d22c0097d9fe3f22ec14b41ab123157414d91e6925"
+  },
+  {
+    "name": "trending-down",
+    "batch": "craft2-ui-06",
+    "kind": "retained",
+    "reason": "保留原稿：下降趨勢：同源折線向下，右下箭頭沒有被圓角吃掉。",
+    "beforeSha256": "000ad4866f7699ef820742b84f48198baa9a3b9f57413e50480a35fa6bbcd85c",
+    "afterSha256": "000ad4866f7699ef820742b84f48198baa9a3b9f57413e50480a35fa6bbcd85c"
+  },
+  {
+    "name": "activity",
+    "batch": "craft2-ui-06",
+    "kind": "retained",
+    "reason": "保留原稿：活動訊號：高低峰比例有節奏，尖峰是波形必要訊號，不能套大圓角。",
+    "beforeSha256": "b2f6779545288e29855491d9079f02a09f7f17b3d459903a9450021c871344dd",
+    "afterSha256": "b2f6779545288e29855491d9079f02a09f7f17b3d459903a9450021c871344dd"
+  },
+  {
+    "name": "gauge",
+    "batch": "craft2-ui-06",
+    "kind": "retained",
+    "reason": "保留原稿：儀表：弧形錶框、少量刻度及斜指針有分工，16px減刻度後清楚。",
+    "beforeSha256": "495113d223c8acf882fc6f74ea6cbb6d5c746a840fc24da6cd6d7350bf34a8ec",
+    "afterSha256": "495113d223c8acf882fc6f74ea6cbb6d5c746a840fc24da6cd6d7350bf34a8ec"
+  },
+  {
+    "name": "folder-open",
+    "batch": "craft2-ui-07",
+    "kind": "retained",
+    "reason": "保留原稿：開啟資料夾：斜前片與直後片共用下緣，開口有前後關係而不靠透明度。",
+    "beforeSha256": "15038d5bba5f5b774b27d22b24a61b2736d6f511cd357b8199b806126e8592a0",
+    "afterSha256": "15038d5bba5f5b774b27d22b24a61b2736d6f511cd357b8199b806126e8592a0"
+  },
+  {
+    "name": "archive",
+    "batch": "craft2-ui-07",
+    "kind": "retained",
+    "reason": "保留原稿：封存：蓋子稍寬於箱身，短把手位於內容中心，結構端點完整。",
+    "beforeSha256": "65238fd6ad5caabe0219d30d90372f1c19da4e1205a54801b7e4c5fbda759933",
+    "afterSha256": "65238fd6ad5caabe0219d30d90372f1c19da4e1205a54801b7e4c5fbda759933"
+  },
+  {
+    "name": "file-plus",
+    "batch": "craft2-ui-07",
+    "kind": "retained",
+    "reason": "保留原稿：新增檔案：加號避開紙角與底邊，保留相同文件母型。",
+    "beforeSha256": "73a46cbb48cbf594ea5b0c7c04a80c6dc4b8f82b7e7c754e5736ee90cc09a72b",
+    "afterSha256": "73a46cbb48cbf594ea5b0c7c04a80c6dc4b8f82b7e7c754e5736ee90cc09a72b"
+  },
+  {
+    "name": "file-check",
+    "batch": "craft2-ui-07",
+    "kind": "retained",
+    "reason": "保留原稿：確認檔案：內勾號清晰長短臂，留白與file-plus相當。",
+    "beforeSha256": "bf71e89fac461da451c9839a2aa2a698bf38a2de84d0450a6b4373675e3c75a2",
+    "afterSha256": "bf71e89fac461da451c9839a2aa2a698bf38a2de84d0450a6b4373675e3c75a2"
+  },
+  {
+    "name": "file-x",
+    "batch": "craft2-ui-07",
+    "kind": "retained",
+    "reason": "保留原稿：移除檔案：X內縮於文件內容區，沒有碰折角形成額外叉點。",
+    "beforeSha256": "686b4c44e35c855805a9aaa796d7320d9cb9789b8f1f1b32807fd2de74508abc",
+    "afterSha256": "686b4c44e35c855805a9aaa796d7320d9cb9789b8f1f1b32807fd2de74508abc"
+  },
+  {
+    "name": "paperclip",
+    "batch": "craft2-ui-07",
+    "kind": "retained",
+    "reason": "保留原稿：附件：回形針迴轉使用連續弧，sharp不應把金屬彎曲處變成折角。",
+    "beforeSha256": "36884f8c57e8d3cd8a8524b39e51831d0be0428dd35f9291d6df753900fdf666",
+    "afterSha256": "36884f8c57e8d3cd8a8524b39e51831d0be0428dd35f9291d6df753900fdf666"
+  },
+  {
+    "name": "save",
+    "batch": "craft2-ui-07",
+    "kind": "retained",
+    "reason": "保留原稿：儲存：磁片切角、上槽及下標籤構造清楚；下格接底邊合理。",
+    "beforeSha256": "d84848fccc101d60d4c128d830782679f3cd4b063957edea2a8c1234ff4e39e5",
+    "afterSha256": "d84848fccc101d60d4c128d830782679f3cd4b063957edea2a8c1234ff4e39e5"
+  },
+  {
+    "name": "print",
+    "batch": "craft2-ui-07",
+    "kind": "retained",
+    "reason": "保留原稿：列印：進紙、機殼與出紙有清楚遮擋，16px未成多重疊框。",
+    "beforeSha256": "a6fce7fd19190efa0da838eeee0f039d44dc7fa71d690cd9dfd1c0ba18ffff5d",
+    "afterSha256": "a6fce7fd19190efa0da838eeee0f039d44dc7fa71d690cd9dfd1c0ba18ffff5d"
+  },
+  {
+    "name": "scan",
+    "batch": "craft2-ui-07",
+    "kind": "retained",
+    "reason": "保留原稿：掃描：四角是取景邊界、橫線是掃描動作，開放結構保留。",
+    "beforeSha256": "2d9594cb14494e792621a55df08f486b8852e007d02e10c69f0ed2460246d060",
+    "afterSha256": "2d9594cb14494e792621a55df08f486b8852e007d02e10c69f0ed2460246d060"
+  },
+  {
+    "name": "clipboard-check",
+    "batch": "craft2-ui-07",
+    "kind": "retained",
+    "reason": "保留原稿：完成清單：夾板與勾號分離，夾子內孔及下方內容均清楚。",
+    "beforeSha256": "16f38ebeba85b8d116fbd27b71de01044fff76ea05e41eaf3e5c46a537deb4f3",
+    "afterSha256": "16f38ebeba85b8d116fbd27b71de01044fff76ea05e41eaf3e5c46a537deb4f3"
+  },
+  {
+    "name": "clipboard-paste",
+    "batch": "craft2-ui-08",
+    "kind": "retained",
+    "reason": "保留原稿：貼上：側向箭頭從開口進出剪貼簿，與copy的雙頁可區別。",
+    "beforeSha256": "6052005989c4bd0d39feb007207b7c1ce117dd9a5ee85e4ec1df67ad03b0e493",
+    "afterSha256": "6052005989c4bd0d39feb007207b7c1ce117dd9a5ee85e4ec1df67ad03b0e493"
+  },
+  {
+    "name": "tag",
+    "batch": "craft2-ui-08",
+    "kind": "retained",
+    "reason": "保留原稿：標籤：切角輪廓和實點孔訊號簡潔，16px不畫微型空心孔。",
+    "beforeSha256": "0bdb41366a8430845c178185ba532e93b66d97fa30056d7f546def10370a426a",
+    "afterSha256": "0bdb41366a8430845c178185ba532e93b66d97fa30056d7f546def10370a426a"
+  },
+  {
+    "name": "tags",
+    "batch": "craft2-ui-08",
+    "kind": "retained",
+    "reason": "保留原稿：多標籤：後片僅露側邊，前片保持完整，層次不用額外透明度。",
+    "beforeSha256": "90b8aa5dc4e2375b972bdb048ae8ea95c0c7f8dcb54c29d81ccc96106c4423ca",
+    "afterSha256": "90b8aa5dc4e2375b972bdb048ae8ea95c0c7f8dcb54c29d81ccc96106c4423ca"
+  },
+  {
+    "name": "bookmark",
+    "batch": "craft2-ui-08",
+    "kind": "retained",
+    "reason": "保留原稿：書籤：底凹口仍是V形，rounded只柔化角而不填平辨識訊號。",
+    "beforeSha256": "7866fd20bc8532f1f094ff914f108af66363d4cdc5cd4747c650385a1796c91b",
+    "afterSha256": "7866fd20bc8532f1f094ff914f108af66363d4cdc5cd4747c650385a1796c91b"
+  },
+  {
+    "name": "bookmark-check",
+    "batch": "craft2-ui-08",
+    "kind": "retained",
+    "reason": "保留原稿：已收藏：勾號置上半部，與底部V形留白明確。",
+    "beforeSha256": "e5bd7c8dd7d750dee221fe3017977f7060ffb340e4d00bedaab838480f4b2be1",
+    "afterSha256": "e5bd7c8dd7d750dee221fe3017977f7060ffb340e4d00bedaab838480f4b2be1"
+  },
+  {
+    "name": "pencil",
+    "batch": "craft2-ui-08",
+    "kind": "retained",
+    "reason": "保留原稿：編輯鉛筆：斜筆桿、筆尖和尾部橫切分工，接點沒有多餘凸頭。",
+    "beforeSha256": "f98a356eef8ff7956a45ec8ac6f27746327573bbde71c034dcfe45dc6bd8246b",
+    "afterSha256": "f98a356eef8ff7956a45ec8ac6f27746327573bbde71c034dcfe45dc6bd8246b"
+  },
+  {
+    "name": "pen-tool",
+    "batch": "craft2-ui-08",
+    "kind": "retained",
+    "reason": "保留原稿：鋼筆工具：尖端、墨孔和尾座保留構造，孔與外邊在16px仍可辨。",
+    "beforeSha256": "34024711cd1184edba6379a1b1477daccf1182a9cb15b0bd1e8675dc73e1226c",
+    "afterSha256": "34024711cd1184edba6379a1b1477daccf1182a9cb15b0bd1e8675dc73e1226c"
+  },
+  {
+    "name": "crop",
+    "batch": "craft2-ui-08",
+    "kind": "retained",
+    "reason": "保留原稿：裁切：兩條L形的交疊是裁框語意；不為增加白隙剪斷交叉。",
+    "beforeSha256": "deea38d8b443cb762b9123199d7bad56ad50bab483d0f4c52871c8afb6b0dc13",
+    "afterSha256": "deea38d8b443cb762b9123199d7bad56ad50bab483d0f4c52871c8afb6b0dc13"
+  },
+  {
+    "name": "rotate-left",
+    "batch": "craft2-ui-08",
+    "kind": "retained",
+    "reason": "保留原稿：向左旋轉：箭頭接回圓弧，開口可見，曲線不需要依sharp拉直。",
+    "beforeSha256": "96ba95cf037cd9b6ab6cb173ff6610f06cf6fd50707acd6d51d46b10c4481db0",
+    "afterSha256": "96ba95cf037cd9b6ab6cb173ff6610f06cf6fd50707acd6d51d46b10c4481db0"
+  },
+  {
+    "name": "rotate-right",
+    "batch": "craft2-ui-08",
+    "kind": "retained",
+    "reason": "保留原稿：向右旋轉：與左轉共用圓弧及缺口尺度，末端箭頭朝向明確。",
+    "beforeSha256": "c902ab69a1a653feec9162d4147ebc4a9853745023f5befa6c0ef5be98fdaa55",
+    "afterSha256": "c902ab69a1a653feec9162d4147ebc4a9853745023f5befa6c0ef5be98fdaa55"
+  },
+  {
+    "name": "move",
+    "batch": "craft2-ui-09",
+    "kind": "retained",
+    "reason": "保留原稿：移動：四向箭翼同長，中間共享軸；不需為箭頭加曲面。",
+    "beforeSha256": "ef97ba3c324936558aa2d0a6ab7549fe45c4ce1d9a3adccda684d02f61405824",
+    "afterSha256": "ef97ba3c324936558aa2d0a6ab7549fe45c4ce1d9a3adccda684d02f61405824"
+  },
+  {
+    "name": "zoom-in",
+    "batch": "craft2-ui-09",
+    "kind": "retained",
+    "reason": "保留原稿：放大：鏡圈內加號和邊框分離，握柄與search母型相接。",
+    "beforeSha256": "801dbee261dc3b14acf916c893abcec22ba2def918aacffd9e8ba1e56bed10d2",
+    "afterSha256": "801dbee261dc3b14acf916c893abcec22ba2def918aacffd9e8ba1e56bed10d2"
+  },
+  {
+    "name": "zoom-out",
+    "batch": "craft2-ui-09",
+    "kind": "retained",
+    "reason": "保留原稿：縮小：內橫線短於鏡圈直徑，與zoom-in一致留白。",
+    "beforeSha256": "da2de7217d772266c3f20a4c4d9c735b69c1acd71a59ff4f9bc12f8cc2a1b626",
+    "afterSha256": "da2de7217d772266c3f20a4c4d9c735b69c1acd71a59ff4f9bc12f8cc2a1b626"
+  },
+  {
+    "name": "bold",
+    "batch": "craft2-ui-09",
+    "kind": "retained",
+    "reason": "保留原稿：粗體：B上下兩瓣自然不等高，結構曲線保留，中央接點完整。",
+    "beforeSha256": "a18eb0f9a15b26426d6a410a786bbf4cb1d8bc61e29c3d6b527eeb4ce66d33f4",
+    "afterSha256": "a18eb0f9a15b26426d6a410a786bbf4cb1d8bc61e29c3d6b527eeb4ce66d33f4"
+  },
+  {
+    "name": "italic",
+    "batch": "craft2-ui-09",
+    "kind": "retained",
+    "reason": "保留原稿：斜體：整體斜軸與上下短橫表達傾斜，無需額外透視。",
+    "beforeSha256": "333785aae991ea0643342576405ac0a5a53b75b0da7fc3b4f08b0f751e44a63c",
+    "afterSha256": "333785aae991ea0643342576405ac0a5a53b75b0da7fc3b4f08b0f751e44a63c"
+  },
+  {
+    "name": "underline",
+    "batch": "craft2-ui-09",
+    "kind": "retained",
+    "reason": "保留原稿：底線：U底弧和獨立底線有清晰間隔，16px未黏合。",
+    "beforeSha256": "ac8d3a087f50e49ac81724485d530e83fe0439926b7b23c3616571893442ef30",
+    "afterSha256": "ac8d3a087f50e49ac81724485d530e83fe0439926b7b23c3616571893442ef30"
+  },
+  {
+    "name": "strikethrough",
+    "batch": "craft2-ui-09",
+    "kind": "retained",
+    "reason": "保留原稿：刪除線：S中央刻意斷開讓橫線穿過，避免三筆重疊黑結。",
+    "beforeSha256": "29c40e5b5b5c1db06b575d499a8a1d6e7a8187ecd96fb7debd9cdedf64f8468f",
+    "afterSha256": "29c40e5b5b5c1db06b575d499a8a1d6e7a8187ecd96fb7debd9cdedf64f8468f"
+  },
+  {
+    "name": "heading",
+    "batch": "craft2-ui-09",
+    "kind": "retained",
+    "reason": "保留原稿：標題：H橫桿接左右直柱，使用純字形訊號不加裝飾襯線。",
+    "beforeSha256": "31d0d0a0bf9fbb91be2ccaa731b0acb5ceca4fefe8fdde6dbd63a9262d8d4376",
+    "afterSha256": "31d0d0a0bf9fbb91be2ccaa731b0acb5ceca4fefe8fdde6dbd63a9262d8d4376"
+  },
+  {
+    "name": "align-left",
+    "batch": "craft2-ui-09",
+    "kind": "retained",
+    "reason": "保留原稿：靠左：不等長文字線共享左緣，內容本身已承載對齊語意。",
+    "beforeSha256": "965d1ac3213a799da174d198e9c6a9ff726a520afb35b5434f709380fc3e686a",
+    "afterSha256": "965d1ac3213a799da174d198e9c6a9ff726a520afb35b5434f709380fc3e686a"
+  },
+  {
+    "name": "align-center",
+    "batch": "craft2-ui-09",
+    "kind": "retained",
+    "reason": "保留原稿：置中：短行居中於長行，左右留白相等而非只移一個箭頭。",
+    "beforeSha256": "8a8dbfda8e6b936696b02477f8d15bf335cf38a612d50267482f10c4bea8da71",
+    "afterSha256": "8a8dbfda8e6b936696b02477f8d15bf335cf38a612d50267482f10c4bea8da71"
+  },
+  {
+    "name": "align-right",
+    "batch": "craft2-ui-10",
+    "kind": "retained",
+    "reason": "保留原稿：靠右：行長交替且右緣一致，和align-left互為合理家族。",
+    "beforeSha256": "706fc867e58ff601e2a77fac5806494ef1271c9227846414d55dae34b55b8e3d",
+    "afterSha256": "706fc867e58ff601e2a77fac5806494ef1271c9227846414d55dae34b55b8e3d"
+  },
+  {
+    "name": "align-justify",
+    "batch": "craft2-ui-10",
+    "kind": "retained",
+    "reason": "保留原稿：左右對齊：四行等長，與三行menu藉行數及密度區分。",
+    "beforeSha256": "62d804ecb04f1ac156f5bde350daad37121cfb24ed0ee6d3693710d5e3168085",
+    "afterSha256": "62d804ecb04f1ac156f5bde350daad37121cfb24ed0ee6d3693710d5e3168085"
+  },
+  {
+    "name": "list-ordered",
+    "batch": "craft2-ui-10",
+    "kind": "retained",
+    "reason": "保留原稿：有序清單：兩行和手繪1/2保留數字差異，16px未增加第三行擠壓。",
+    "beforeSha256": "a1816a98a863c5b1cf6d68451a4b6bd117a0379996ee7a81202c08c920e838a1",
+    "afterSha256": "a1816a98a863c5b1cf6d68451a4b6bd117a0379996ee7a81202c08c920e838a1"
+  },
+  {
+    "name": "list-checks",
+    "batch": "craft2-ui-10",
+    "kind": "retained",
+    "reason": "保留原稿：檢查清單：三個小勾均保留長短臂，與橫行之間有穩定間隙。",
+    "beforeSha256": "337cc0108547205db7a50bf8064de7c7dc1d9fbf1bcdd7cefd6b4cf01bccb9a2",
+    "afterSha256": "337cc0108547205db7a50bf8064de7c7dc1d9fbf1bcdd7cefd6b4cf01bccb9a2"
+  },
+  {
+    "name": "quote",
+    "batch": "craft2-ui-10",
+    "kind": "retained",
+    "reason": "保留原稿：引言：兩個引號的下回折表達語意，開孔與尾部仍可讀。",
+    "beforeSha256": "9fe33db8d3798d139c71ee7a84671cd19c79e7afc60f53ba68d67e9f4c45d54b",
+    "afterSha256": "9fe33db8d3798d139c71ee7a84671cd19c79e7afc60f53ba68d67e9f4c45d54b"
+  },
+  {
+    "name": "image",
+    "batch": "craft2-ui-10",
+    "kind": "retained",
+    "reason": "保留原稿：單張圖片：日點用實心，單一山峰接框形成景物，不額外堆多峰。",
+    "beforeSha256": "59ad869544219d688e90d6fd85d62f481de6a896d03857c419c78feb3401a669",
+    "afterSha256": "59ad869544219d688e90d6fd85d62f481de6a896d03857c419c78feb3401a669"
+  },
+  {
+    "name": "images",
+    "batch": "craft2-ui-10",
+    "kind": "retained",
+    "reason": "保留原稿：多張圖片：後框只露左下，前框山景完整，重疊不靠背景色遮罩。",
+    "beforeSha256": "453a49df9945ff3ebbc875172a532a273a40ce69dc0dcc3bbea1634a4fc53708",
+    "afterSha256": "453a49df9945ff3ebbc875172a532a273a40ce69dc0dcc3bbea1634a4fc53708"
+  },
+  {
+    "name": "camera",
+    "batch": "craft2-ui-10",
+    "kind": "retained",
+    "reason": "保留原稿：相機：頂部抬肩與中央鏡圈有明確比例，16px鏡孔不消失。",
+    "beforeSha256": "eaa607a4cb8e074877362c2c673160e468d8eda4906e096f081cde4a44bed40f",
+    "afterSha256": "eaa607a4cb8e074877362c2c673160e468d8eda4906e096f081cde4a44bed40f"
+  },
+  {
+    "name": "video",
+    "batch": "craft2-ui-10",
+    "kind": "retained",
+    "reason": "保留原稿：視訊：矩形機身和右側鏡頭自然相接，梯形尖角不過度圓。",
+    "beforeSha256": "2d10f2e863c25666f62a8a4836ae12a90878d35fa8fa74c852b25c5b6e01eda9",
+    "afterSha256": "2d10f2e863c25666f62a8a4836ae12a90878d35fa8fa74c852b25c5b6e01eda9"
+  },
+  {
+    "name": "play",
+    "batch": "craft2-ui-10",
+    "kind": "retained",
+    "reason": "保留原稿：播放：三角形視覺重心朝右，微圓仍保留方向尖端。",
+    "beforeSha256": "1e8be68d57bfd8808f235dbf5b49b26546e8806f6978d6a247e121db62f69c33",
+    "afterSha256": "1e8be68d57bfd8808f235dbf5b49b26546e8806f6978d6a247e121db62f69c33"
+  },
+  {
+    "name": "pause",
+    "batch": "craft2-ui-11",
+    "kind": "retained",
+    "reason": "保留原稿：暫停：兩直槽等高等寬，小尺寸孔仍可辨，保持outline家族。",
+    "beforeSha256": "8664e2d086d25b5bf9b13fb35915fe574be138609a66f1df3b74ee20c2b76ebe",
+    "afterSha256": "8664e2d086d25b5bf9b13fb35915fe574be138609a66f1df3b74ee20c2b76ebe"
+  },
+  {
+    "name": "stop",
+    "batch": "craft2-ui-11",
+    "kind": "retained",
+    "reason": "保留原稿：停止：方框尺寸略小於通用square，與播放三角可見重量相當。",
+    "beforeSha256": "dda495620718639dc1d6fa010dd4ea10562aa4c6ccfa7452a0654dd81b7f7fef",
+    "afterSha256": "dda495620718639dc1d6fa010dd4ea10562aa4c6ccfa7452a0654dd81b7f7fef"
+  },
+  {
+    "name": "skip-back",
+    "batch": "craft2-ui-11",
+    "kind": "retained",
+    "reason": "保留原稿：上一個：左向三角與終點直線分離，保留播放控制固定方向。",
+    "beforeSha256": "7b8fce283c163445f238aa67d94512c7e4cc144eba18602b0aac45271bc9552c",
+    "afterSha256": "7b8fce283c163445f238aa67d94512c7e4cc144eba18602b0aac45271bc9552c"
+  },
+  {
+    "name": "skip-forward",
+    "batch": "craft2-ui-11",
+    "kind": "retained",
+    "reason": "保留原稿：下一個：右向三角和右直線有同樣間距，與skip-back成對。",
+    "beforeSha256": "0753727cd4bae044feeeca373e02b105f30fefe224d3fe467f7e1253c30c0791",
+    "afterSha256": "0753727cd4bae044feeeca373e02b105f30fefe224d3fe467f7e1253c30c0791"
+  },
+  {
+    "name": "volume",
+    "batch": "craft2-ui-11",
+    "kind": "retained",
+    "reason": "保留原稿：音量：喇叭輪廓和外側聲波分離，16px僅一波避免過密。",
+    "beforeSha256": "52b2da08839882907145539452c499df19cb1b8cf1b610f0c67cbea3fd99e9e7",
+    "afterSha256": "52b2da08839882907145539452c499df19cb1b8cf1b610f0c67cbea3fd99e9e7"
+  },
+  {
+    "name": "volume-off",
+    "batch": "craft2-ui-11",
+    "kind": "retained",
+    "reason": "保留原稿：靜音：X取代聲波，主喇叭未縮小，狀態優先清楚而非多重斜線。",
+    "beforeSha256": "8b06cacd0808b6b51199a9060dc90d8de74c6f9906ebce1e36862197a0ee04ac",
+    "afterSha256": "8b06cacd0808b6b51199a9060dc90d8de74c6f9906ebce1e36862197a0ee04ac"
+  },
+  {
+    "name": "microphone",
+    "batch": "craft2-ui-11",
+    "kind": "retained",
+    "reason": "保留原稿：麥克風：膠囊拾音頭與U形支架各有空白，底部短柱接支架中心。",
+    "beforeSha256": "0a8051140cd7a01577fbdd50540c022c52bbe8621fb8f215ff57a4752b11ffbe",
+    "afterSha256": "0a8051140cd7a01577fbdd50540c022c52bbe8621fb8f215ff57a4752b11ffbe"
+  },
+  {
+    "name": "microphone-off",
+    "batch": "craft2-ui-11",
+    "kind": "retained",
+    "reason": "保留原稿：關閉麥克風：斜線兩旁有實際切口，支架與頭部仍可辨母型。",
+    "beforeSha256": "669a838bcb33815674c424b581408a45db1b172572ee3763534eb527946adfad",
+    "afterSha256": "669a838bcb33815674c424b581408a45db1b172572ee3763534eb527946adfad"
+  },
+  {
+    "name": "headphones",
+    "batch": "craft2-ui-11",
+    "kind": "retained",
+    "reason": "保留原稿：耳機：頭帶與兩耳罩自然相連，16px內孔仍存在，不把整體圓弧做成方框。",
+    "beforeSha256": "c3e30abff027342a497740e9cc9faf72137da7a4c9ef06992591e5a9d21870e2",
+    "afterSha256": "c3e30abff027342a497740e9cc9faf72137da7a4c9ef06992591e5a9d21870e2"
+  },
+  {
+    "name": "user-plus",
+    "batch": "craft2-ui-12",
+    "kind": "retained",
+    "reason": "保留原稿：新增使用者：加號在頭部右方，人物頭肩仍是主體，沒有額外框。",
+    "beforeSha256": "617121dc0dc6f914d83abb0b120b7c2bfdd9b93b566fb2b477351fedcd5006ac",
+    "afterSha256": "617121dc0dc6f914d83abb0b120b7c2bfdd9b93b566fb2b477351fedcd5006ac"
+  },
+  {
+    "name": "user-minus",
+    "batch": "craft2-ui-12",
+    "kind": "retained",
+    "reason": "保留原稿：移除使用者：減號與人物有獨立空白，與plus共享頭肩位置。",
+    "beforeSha256": "49b6bfbdafc503dc5ccf7e5d7348312bf8970cc6b80b13cbcd8680d3639f93ad",
+    "afterSha256": "49b6bfbdafc503dc5ccf7e5d7348312bf8970cc6b80b13cbcd8680d3639f93ad"
+  },
+  {
+    "name": "user-check",
+    "batch": "craft2-ui-12",
+    "kind": "retained",
+    "reason": "保留原稿：確認使用者：勾號避開頭圓與肩部，長臂維持辨識比例。",
+    "beforeSha256": "8c07158d22833898b620a1c3e4ed035bafa414d157c7fe823d09e6005ff76105",
+    "afterSha256": "8c07158d22833898b620a1c3e4ed035bafa414d157c7fe823d09e6005ff76105"
+  },
+  {
+    "name": "shield",
+    "batch": "craft2-ui-12",
+    "kind": "retained",
+    "reason": "保留原稿：防護：盾牌的上冠與下緣自然曲面，sharp保留其結構曲線。",
+    "beforeSha256": "6ef0558ecac8f0acfb213e3e3aff7ed81f91104a62de1dee7a1d3c48de100826",
+    "afterSha256": "6ef0558ecac8f0acfb213e3e3aff7ed81f91104a62de1dee7a1d3c48de100826"
+  },
+  {
+    "name": "shield-check",
+    "batch": "craft2-ui-12",
+    "kind": "retained",
+    "reason": "保留原稿：防護完成：內勾號與盾牌下尖不碰撞，母型比例不因狀態改變。",
+    "beforeSha256": "af65263c9e82cabea9567282a1ae52de462d296966805618674956aa27a5561f",
+    "afterSha256": "af65263c9e82cabea9567282a1ae52de462d296966805618674956aa27a5561f"
+  },
+  {
+    "name": "shield-alert",
+    "batch": "craft2-ui-12",
+    "kind": "retained",
+    "reason": "保留原稿：防護警告：驚嘆號直幹與下點分離，盾牌外輪廓完整。",
+    "beforeSha256": "0b9298b0f504daf6b0a67469174c78d539975a1bec184112c503e66697c5b041",
+    "afterSha256": "0b9298b0f504daf6b0a67469174c78d539975a1bec184112c503e66697c5b041"
+  },
+  {
+    "name": "key",
+    "batch": "craft2-ui-12",
+    "kind": "retained",
+    "reason": "保留原稿：金鑰：大頭圈與斜桿接合，兩小齒保持清楚；孔屬必要語意不能改實點。",
+    "beforeSha256": "f4c059b4dc8fef52674ef7e266bb2f4642745159d135a319973679f874269a36",
+    "afterSha256": "f4c059b4dc8fef52674ef7e266bb2f4642745159d135a319973679f874269a36"
+  },
+  {
+    "name": "fingerprint",
+    "batch": "craft2-ui-12",
+    "kind": "retained",
+    "reason": "保留原稿：指紋：多條嵌套曲線有不同收筆，16px仍見通道，沒有套矩形圓角。",
+    "beforeSha256": "6c6ca18da7a3f0aef713985aa52ca112b4cbeb0b06160453008e1c2f414fc414",
+    "afterSha256": "6c6ca18da7a3f0aef713985aa52ca112b4cbeb0b06160453008e1c2f414fc414"
+  },
+  {
+    "name": "building",
+    "batch": "craft2-ui-12",
+    "kind": "retained",
+    "reason": "保留原稿：企業建物：實心窗點替代微孔，門洞接底線交代入口。",
+    "beforeSha256": "58a7d6514cab47806b7bdb7d94b2cf0a677e55ce441e5f10d98df4bd23e0f3d4",
+    "afterSha256": "58a7d6514cab47806b7bdb7d94b2cf0a677e55ce441e5f10d98df4bd23e0f3d4"
+  },
+  {
+    "name": "briefcase",
+    "batch": "craft2-ui-12",
+    "kind": "retained",
+    "reason": "保留原稿：公事包：上提把、弧形包蓋和短扣環自然銜接，曲面本來已完整。",
+    "beforeSha256": "a55f40d9b4e0f45e7f57b3af16bc78e879ecd948c25e9fd32bd99d409ce565ea",
+    "afterSha256": "a55f40d9b4e0f45e7f57b3af16bc78e879ecd948c25e9fd32bd99d409ce565ea"
+  },
+  {
+    "name": "contact",
+    "batch": "craft2-ui-13",
+    "kind": "retained",
+    "reason": "保留原稿：通訊錄：上一輪頭部上移後，16px頭肩不再黏合；裝訂與人像仍分離。",
+    "beforeSha256": "de6e30a4d327c1b245e2332fba56863aa04ac7af0b8ee3427c540d5b67002e46",
+    "afterSha256": "de6e30a4d327c1b245e2332fba56863aa04ac7af0b8ee3427c540d5b67002e46"
+  },
+  {
+    "name": "mail-open",
+    "batch": "craft2-ui-13",
+    "kind": "retained",
+    "reason": "保留原稿：已開郵件：信封上蓋與袋身形成連續折面，V形折線留足內容空白。",
+    "beforeSha256": "f801c94a0405c14e306341410846adf270d2959e50f6fe384bc3dbe2ae135ad4",
+    "afterSha256": "f801c94a0405c14e306341410846adf270d2959e50f6fe384bc3dbe2ae135ad4"
+  },
+  {
+    "name": "inbox",
+    "batch": "craft2-ui-13",
+    "kind": "retained",
+    "reason": "保留原稿：收件匣：前緣凹口和外框有明確盤體關係，轉折與留白均可讀。",
+    "beforeSha256": "477cd5a1d94f1d3728c5c83531be6341e55f56dfbc7157f3ea6f6309b7036c4f",
+    "afterSha256": "477cd5a1d94f1d3728c5c83531be6341e55f56dfbc7157f3ea6f6309b7036c4f"
+  },
+  {
+    "name": "send",
+    "batch": "craft2-ui-13",
+    "kind": "retained",
+    "reason": "保留原稿：傳送：紙飛機尖頭和中央折線相接，平直折面是語意，不宜曲面化。",
+    "beforeSha256": "d66b32e2a6917f8b5237ea43fee509d5a9d2ac6a203f3ee2fc5b013ff57467f6",
+    "afterSha256": "d66b32e2a6917f8b5237ea43fee509d5a9d2ac6a203f3ee2fc5b013ff57467f6"
+  },
+  {
+    "name": "messages",
+    "batch": "craft2-ui-13",
+    "kind": "retained",
+    "reason": "保留原稿：對話串：前後氣泡尾各自完整，第二框只露兩邊避免重疊密度。",
+    "beforeSha256": "3caf1621ec18af06d4ae8f4a6ff809e30e3c7f4d7682cd3cf3a57371bf60a2e1",
+    "afterSha256": "3caf1621ec18af06d4ae8f4a6ff809e30e3c7f4d7682cd3cf3a57371bf60a2e1"
+  },
+  {
+    "name": "phone",
+    "batch": "craft2-ui-13",
+    "kind": "retained",
+    "reason": "保留原稿：通話：聽筒彎曲中段和局部圓角端部自然，握持曲線不受sharp取消。",
+    "beforeSha256": "e50ef77401512c2fcc3fe5c3667ed575bd0f7cc49dfdbf3a0c27486c813e5557",
+    "afterSha256": "e50ef77401512c2fcc3fe5c3667ed575bd0f7cc49dfdbf3a0c27486c813e5557"
+  },
+  {
+    "name": "phone-off",
+    "batch": "craft2-ui-13",
+    "kind": "modified",
+    "reason": "修改後通過目視檢查：關閉通話：原稿的兩端仍是硬直折，與phone母型端部不一致；按phone相同局部k曲角精修兩端，保留斜線切口及中段曲率。",
+    "beforeSha256": "52b0ebdfa58318ab818e482737fe1de1915bdb8abd8696839680713533fa5b09",
+    "afterSha256": "07f11457203566c5633b916162df77b4db2a48909d6d5294e44a047b27f48c69"
+  },
+  {
+    "name": "headset",
+    "batch": "craft2-ui-13",
+    "kind": "retained",
+    "reason": "保留原稿：客服耳麥：頭帶、耳罩和下方話桿相接，話桿不從耳罩外漂浮。",
+    "beforeSha256": "3336b327b713f0562ac7ccb44b6e9c012ebdde35d714f3d0e22312d4dc4f959c",
+    "afterSha256": "3336b327b713f0562ac7ccb44b6e9c012ebdde35d714f3d0e22312d4dc4f959c"
+  },
+  {
+    "name": "at-sign",
+    "batch": "craft2-ui-13",
+    "kind": "retained",
+    "reason": "保留原稿：電子信箱：@內圈和右部延伸有語意相接，外弧收尾與內部保持留白。",
+    "beforeSha256": "c4126c268c8f89bddba1041698c2ec15cb433bd4d1bffb6f61922c82b8654efc",
+    "afterSha256": "c4126c268c8f89bddba1041698c2ec15cb433bd4d1bffb6f61922c82b8654efc"
+  },
+  {
+    "name": "share",
+    "batch": "craft2-ui-13",
+    "kind": "retained",
+    "reason": "保留原稿：分享：三節點和兩支連線交代分派，圓圈內孔仍可見，節點不宜改實點抹去家族訊號。",
+    "beforeSha256": "8869c79e350b3b98319ae6936d05f0acc3369e4973086f469d556a03ef4c052e",
+    "afterSha256": "8869c79e350b3b98319ae6936d05f0acc3369e4973086f469d556a03ef4c052e"
+  },
+  {
+    "name": "bug",
+    "batch": "craft2-ui-14",
+    "kind": "retained",
+    "reason": "保留原稿：問題回報：蟲身、頭及三對腳足以辨認；16px省略背部中線降低密度。",
+    "beforeSha256": "c53b7b35748d25b33ca85391c4c5b267119488ee59af6614a2f42c71c55680d1",
+    "afterSha256": "c53b7b35748d25b33ca85391c4c5b267119488ee59af6614a2f42c71c55680d1"
+  },
+  {
+    "name": "flag",
+    "batch": "craft2-ui-14",
+    "kind": "retained",
+    "reason": "保留原稿：旗標：旗面本身波浪曲線傳達柔性材質，sharp不應拉成矩形。",
+    "beforeSha256": "6ced0a1bd5b1bf2e16558ff96886ad157b47b5eb95357ab01737770e4fecc927",
+    "afterSha256": "6ced0a1bd5b1bf2e16558ff96886ad157b47b5eb95357ab01737770e4fecc927"
+  },
+  {
+    "name": "clock",
+    "batch": "craft2-ui-14",
+    "kind": "retained",
+    "reason": "保留原稿：時間：長短指針共用中心點，周圍環狀留白均衡。",
+    "beforeSha256": "6ecc7094c451a1374594b33a410e69bdef667ca55e9e71bb03bdfc9878585c15",
+    "afterSha256": "6ecc7094c451a1374594b33a410e69bdef667ca55e9e71bb03bdfc9878585c15"
+  },
+  {
+    "name": "history",
+    "batch": "craft2-ui-14",
+    "kind": "retained",
+    "reason": "保留原稿：歷史：回轉箭頭與時鐘組合，比純refresh多了時間語意。",
+    "beforeSha256": "96195ef25e35fcbe61329b58eb149c33487df685a4fed1ce97ad8ab0ba558f12",
+    "afterSha256": "96195ef25e35fcbe61329b58eb149c33487df685a4fed1ce97ad8ab0ba558f12"
+  },
+  {
+    "name": "calendar-days",
+    "batch": "craft2-ui-14",
+    "kind": "retained",
+    "reason": "保留原稿：日期：日期點與橫行區別於calendar一般點陣，16px仍清楚。",
+    "beforeSha256": "56504bd26b61cfa2df6a81053f7b3f87a760828313a5a947bc49eb1af2af5c8c",
+    "afterSha256": "56504bd26b61cfa2df6a81053f7b3f87a760828313a5a947bc49eb1af2af5c8c"
+  },
+  {
+    "name": "calendar-check",
+    "batch": "craft2-ui-14",
+    "kind": "retained",
+    "reason": "保留原稿：日期確認：勾號在日期區域內，未侵入上方裝訂與表頭。",
+    "beforeSha256": "7a8ba1b55d485a09184021d811275e4edca975aba669b7fef0f374903d6e81c9",
+    "afterSha256": "7a8ba1b55d485a09184021d811275e4edca975aba669b7fef0f374903d6e81c9"
+  },
+  {
+    "name": "alarm-clock",
+    "batch": "craft2-ui-14",
+    "kind": "retained",
+    "reason": "保留原稿：鬧鐘：外側雙鈴、底腳與內部指針清晰，16px仍辨機械鬧鐘。",
+    "beforeSha256": "506acd5ab08ed26a7f28adaae45310de8d23f5e443c1193d2a02aa4ede711479",
+    "afterSha256": "506acd5ab08ed26a7f28adaae45310de8d23f5e443c1193d2a02aa4ede711479"
+  },
+  {
+    "name": "sun",
+    "batch": "craft2-ui-14",
+    "kind": "retained",
+    "reason": "保留原稿：淺色主題：八條短光線和中心圓分開，端帽柔和符合光芒抽象。",
+    "beforeSha256": "72382353e560a5e153aa8e878a4912f9cc90afe63c784ef7a865c4416b77fc3e",
+    "afterSha256": "72382353e560a5e153aa8e878a4912f9cc90afe63c784ef7a865c4416b77fc3e"
+  },
+  {
+    "name": "moon",
+    "batch": "craft2-ui-14",
+    "kind": "retained",
+    "reason": "保留原稿：深色主題：月牙內外弧自然，兩尖端保留薄厚差，不畫成封閉圓圈。",
+    "beforeSha256": "07ae987010312cdaec56723d5a98d4e3040bf3ff383f787c16d1f2f36a720aec",
+    "afterSha256": "07ae987010312cdaec56723d5a98d4e3040bf3ff383f787c16d1f2f36a720aec"
+  },
+  {
+    "name": "cloud",
+    "batch": "craft2-ui-15",
+    "kind": "retained",
+    "reason": "保留原稿：雲端：高低雲瓣與平底構成連續外輪廓，不以圓角工具拼接多圓。",
+    "beforeSha256": "64ae0f571f7fb42922c39dd99201955b3a388399ff6b94197b8f285bc07347c0",
+    "afterSha256": "64ae0f571f7fb42922c39dd99201955b3a388399ff6b94197b8f285bc07347c0"
+  },
+  {
+    "name": "cloud-upload",
+    "batch": "craft2-ui-15",
+    "kind": "retained",
+    "reason": "保留原稿：上傳雲端：底部開口容納上箭頭，主雲瓣仍完整可辨。",
+    "beforeSha256": "a9bc8cb9882bd046fe359be097cf3834df46f925c7cfcfa4eea5eec163527027",
+    "afterSha256": "a9bc8cb9882bd046fe359be097cf3834df46f925c7cfcfa4eea5eec163527027"
+  },
+  {
+    "name": "cloud-download",
+    "batch": "craft2-ui-15",
+    "kind": "retained",
+    "reason": "保留原稿：下載雲端：下箭頭和兩側雲瓣保持間隙，與上傳共享母型。",
+    "beforeSha256": "68cc1604666e19ea6202875a21087e29b111afded5f2580ebe333763c21e4a3f",
+    "afterSha256": "68cc1604666e19ea6202875a21087e29b111afded5f2580ebe333763c21e4a3f"
+  },
+  {
+    "name": "wifi",
+    "batch": "craft2-ui-15",
+    "kind": "retained",
+    "reason": "保留原稿：無線網路：同心弧形與基點間距均勻；波紋不是機械撕線，可用圓端。",
+    "beforeSha256": "09303b690dd5a9d222547e3da4186aa458b1e80ee1e4f4f1dafcc9bbeeb9ee9a",
+    "afterSha256": "09303b690dd5a9d222547e3da4186aa458b1e80ee1e4f4f1dafcc9bbeeb9ee9a"
+  },
+  {
+    "name": "wifi-off",
+    "batch": "craft2-ui-15",
+    "kind": "retained",
+    "reason": "保留原稿：關閉無線網路：各弧切口避開斜線，仍可辨無線訊號，不靠白色遮罩。",
+    "beforeSha256": "e176f96f7e620d9c80d0a0fb2a5f02ecd7ea7128c0ed8f016e4aad86e00f9564",
+    "afterSha256": "e176f96f7e620d9c80d0a0fb2a5f02ecd7ea7128c0ed8f016e4aad86e00f9564"
+  },
+  {
+    "name": "plug",
+    "batch": "craft2-ui-15",
+    "kind": "retained",
+    "reason": "保留原稿：電源插頭：插腳接入外殼，底部導線和殼體共軸。",
+    "beforeSha256": "ec970387a94ea120b980d9f53a3603aeaacff08b68014f3fff5090fbacb5537e",
+    "afterSha256": "ec970387a94ea120b980d9f53a3603aeaacff08b68014f3fff5090fbacb5537e"
+  },
+  {
+    "name": "unplug",
+    "batch": "craft2-ui-15",
+    "kind": "retained",
+    "reason": "保留原稿：拔除連線：兩半接頭分離且軸向一致，斷開動作由物件間距表達。",
+    "beforeSha256": "07968b6c60f02f6c691a1ac47c08ae544884b056cba087f5f3012b0ee8b957a3",
+    "afterSha256": "07968b6c60f02f6c691a1ac47c08ae544884b056cba087f5f3012b0ee8b957a3"
+  },
+  {
+    "name": "battery",
+    "batch": "craft2-ui-15",
+    "kind": "retained",
+    "reason": "保留原稿：電池：本體與外端子分離，空電池內部不加無用陰影。",
+    "beforeSha256": "538395df9c92eb0c51af1dfef3e11edfada085d1b0178109cbc7599dbd771f23",
+    "afterSha256": "538395df9c92eb0c51af1dfef3e11edfada085d1b0178109cbc7599dbd771f23"
+  },
+  {
+    "name": "battery-charging",
+    "batch": "craft2-ui-15",
+    "kind": "retained",
+    "reason": "保留原稿：充電：閃電穿過電池中間開口，尖角保留，未和上下框疊成黑塊。",
+    "beforeSha256": "a47b90dc82cede92218e5f06432e9b3cd69bdaab11f2efbc842138d5003ba015",
+    "afterSha256": "a47b90dc82cede92218e5f06432e9b3cd69bdaab11f2efbc842138d5003ba015"
+  },
+  {
+    "name": "shopping-cart",
+    "batch": "craft2-ui-16",
+    "kind": "retained",
+    "reason": "保留原稿：購物車：斜車籃與底架比例清晰，16px雙輪為實點避免無用途微孔。",
+    "beforeSha256": "165a7da6bf16907d985c7f96c908de6ad7b7b0d87866373af9b5d6527f76ecd8",
+    "afterSha256": "165a7da6bf16907d985c7f96c908de6ad7b7b0d87866373af9b5d6527f76ecd8"
+  },
+  {
+    "name": "shopping-bag",
+    "batch": "craft2-ui-16",
+    "kind": "retained",
+    "reason": "保留原稿：購物袋：提把自然圓弧伸入袋口，袋身微斜而不誇張透視。",
+    "beforeSha256": "902e0f20e26e9479583a6768c2faf3f64c5ed1a30edf653f73c8d88c8a345d16",
+    "afterSha256": "902e0f20e26e9479583a6768c2faf3f64c5ed1a30edf653f73c8d88c8a345d16"
+  },
+  {
+    "name": "store",
+    "batch": "craft2-ui-16",
+    "kind": "retained",
+    "reason": "保留原稿：店面：雨棚三片弧瓣和店門共構語意，曲線屬材質與構造。",
+    "beforeSha256": "cf0d0611ac5187b1474b5a5d7e1a2911e34b6a7c8a6854571464b9b831ba72cc",
+    "afterSha256": "cf0d0611ac5187b1474b5a5d7e1a2911e34b6a7c8a6854571464b9b831ba72cc"
+  },
+  {
+    "name": "package",
+    "batch": "craft2-ui-16",
+    "kind": "retained",
+    "reason": "保留原稿：包裹：三面分界在共同頂點相接；16px省略膠帶線避免過密。",
+    "beforeSha256": "602ef95173d2fc6371d6dd10a3b0c9143713a3fbdcf8e1bf127529e4a622c3dd",
+    "afterSha256": "602ef95173d2fc6371d6dd10a3b0c9143713a3fbdcf8e1bf127529e4a622c3dd"
+  },
+  {
+    "name": "truck",
+    "batch": "craft2-ui-16",
+    "kind": "retained",
+    "reason": "保留原稿：配送：車廂、駕駛室和車輪有清楚遮擋，輪圈內孔可見，未碰窗邊。",
+    "beforeSha256": "75eff221156128564c854da13ed964694b473ca67937db5c41fa10ca7a4648a8",
+    "afterSha256": "75eff221156128564c854da13ed964694b473ca67937db5c41fa10ca7a4648a8"
+  },
+  {
+    "name": "map-pin",
+    "batch": "craft2-ui-16",
+    "kind": "retained",
+    "reason": "保留原稿：地點：大輪廓下尖與內圈有穩定留白，尖端不應圓成蛋形。",
+    "beforeSha256": "0df3be6da13b551e5687e09141ce81e423dfe5de755bc0c687af7f6385221892",
+    "afterSha256": "0df3be6da13b551e5687e09141ce81e423dfe5de755bc0c687af7f6385221892"
+  },
+  {
+    "name": "map",
+    "batch": "craft2-ui-16",
+    "kind": "retained",
+    "reason": "保留原稿：地圖：三折面藉上下高低差表達，折線必須與外緣相接。",
+    "beforeSha256": "05b293773afec2c90996104a523be91f03088acffb544f1afc1f8401cbc8c8a6",
+    "afterSha256": "05b293773afec2c90996104a523be91f03088acffb544f1afc1f8401cbc8c8a6"
+  },
+  {
+    "name": "credit-card",
+    "batch": "craft2-ui-16",
+    "kind": "retained",
+    "reason": "保留原稿：付款卡：磁條和短識別線有充分間距，圓角僅應用外框。",
+    "beforeSha256": "7b19bb1d4fe37de61714ca3df6f1222893466882a006bcc46699c0df7dd27064",
+    "afterSha256": "7b19bb1d4fe37de61714ca3df6f1222893466882a006bcc46699c0df7dd27064"
+  },
+  {
+    "name": "wallet",
+    "batch": "craft2-ui-16",
+    "kind": "retained",
+    "reason": "保留原稿：錢包：前袋與摺頁有明確前後關係，扣點不畫微孔。",
+    "beforeSha256": "ed1f5dd194822c9bcf37ef849e91b1cca1b8c0bcad5801518a778cdf6967c5c1",
+    "afterSha256": "ed1f5dd194822c9bcf37ef849e91b1cca1b8c0bcad5801518a778cdf6967c5c1"
+  },
+  {
+    "name": "banknote",
+    "batch": "craft2-ui-17",
+    "kind": "retained",
+    "reason": "保留原稿：鈔票：中央圓形與側實點避開幣別，內圈孔在16px保持。",
+    "beforeSha256": "a5a1939f7e9fd8b250edc7b534678e0b0ad982faf32aa5d8217559a38968b578",
+    "afterSha256": "a5a1939f7e9fd8b250edc7b534678e0b0ad982faf32aa5d8217559a38968b578"
+  },
+  {
+    "name": "coins",
+    "batch": "craft2-ui-17",
+    "kind": "retained",
+    "reason": "保留原稿：硬幣：兩堆圓柱透過上下橢圓及側邊呈現厚度，後堆輪廓在前堆前截止。",
+    "beforeSha256": "55d24ea6487fef182eb6ea5ac9996df9b92d4c850fdaefeb121fede34839234e",
+    "afterSha256": "55d24ea6487fef182eb6ea5ac9996df9b92d4c850fdaefeb121fede34839234e"
+  },
+  {
+    "name": "receipt",
+    "batch": "craft2-ui-17",
+    "kind": "retained",
+    "reason": "保留原稿：收據：底部鋸齒是紙邊辨識訊號，微圓沒有抹成直線；內容兩行留白足夠。",
+    "beforeSha256": "0de92a4623e3d9c592eca0d67cd41899615ffd4363eac6e533907bcd3074f1ca",
+    "afterSha256": "0de92a4623e3d9c592eca0d67cd41899615ffd4363eac6e533907bcd3074f1ca"
+  },
+  {
+    "name": "invoice",
+    "batch": "craft2-ui-17",
+    "kind": "retained",
+    "reason": "保留原稿：帳單：小計點線和一般file-text有區分，16px刪除最底小點減密。",
+    "beforeSha256": "264594864d0eb25d9049dfbb2ad489f40e0ceb594fd6593daa3e375b34d2aa41",
+    "afterSha256": "264594864d0eb25d9049dfbb2ad489f40e0ceb594fd6593daa3e375b34d2aa41"
+  },
+  {
+    "name": "percent",
+    "batch": "craft2-ui-17",
+    "kind": "retained",
+    "reason": "保留原稿：百分比：兩環與斜線分離，保留必要環孔而非盲目改實點。",
+    "beforeSha256": "a62af410847f27cc1fe4f6ce3d32480282f740418954ddfd52d61b3733de4f00",
+    "afterSha256": "a62af410847f27cc1fe4f6ce3d32480282f740418954ddfd52d61b3733de4f00"
+  },
+  {
+    "name": "ticket",
+    "batch": "craft2-ui-17",
+    "kind": "retained",
+    "reason": "保留原稿：票券：使用者肯定的平端撕線保留；框角和兩側半圓缺口各自合理，九組均不改回圓帽。",
+    "beforeSha256": "7bdfab8cc9b2c89c1f71524c00f48d64e857c4094a507b6571037c7e681193de",
+    "afterSha256": "7bdfab8cc9b2c89c1f71524c00f48d64e857c4094a507b6571037c7e681193de"
+  },
+  {
+    "name": "gift",
+    "batch": "craft2-ui-17",
+    "kind": "retained",
+    "reason": "保留原稿：禮物：蝴蝶結曲線為柔性帶材結構，盒身與直帶相接，孔仍可辨。",
+    "beforeSha256": "2a4460197dfe3d82c0169ff097a15bfa4d5ebdf7038a08d651246ed312ede03f",
+    "afterSha256": "2a4460197dfe3d82c0169ff097a15bfa4d5ebdf7038a08d651246ed312ede03f"
+  },
+  {
+    "name": "repeat",
+    "batch": "craft2-ui-17",
+    "kind": "retained",
+    "reason": "保留原稿：重複：上下箭頭以回轉短弧連接，和圓形refresh的語意差別清楚。",
+    "beforeSha256": "e1fa284976ebd80391b5e6bbf7b724ef1e3732e4441090f1eda4d9f4cef6cd4c",
+    "afterSha256": "e1fa284976ebd80391b5e6bbf7b724ef1e3732e4441090f1eda4d9f4cef6cd4c"
+  },
+  {
+    "name": "kanban",
+    "batch": "craft2-organization-01",
+    "kind": "retained",
+    "reason": "保留原稿：看板：欄標題和不同高度卡片共同表達分欄任務，內孔在16px存活。",
+    "beforeSha256": "af73eafabe18458706dc3a06394503dc2d17f19dc45388433d35d439632735c7",
+    "afterSha256": "af73eafabe18458706dc3a06394503dc2d17f19dc45388433d35d439632735c7"
+  },
+  {
+    "name": "list-tree",
+    "batch": "craft2-organization-01",
+    "kind": "retained",
+    "reason": "保留原稿：階層清單：共同樹幹接兩分支，三條內容線保持層次差。",
+    "beforeSha256": "f81e3cac97b224f49c6a66e9ea43fabb0cd15635a3bf21176f915cde49fd93b3",
+    "afterSha256": "f81e3cac97b224f49c6a66e9ea43fabb0cd15635a3bf21176f915cde49fd93b3"
+  },
+  {
+    "name": "folder-tree",
+    "batch": "craft2-organization-01",
+    "kind": "retained",
+    "reason": "保留原稿：資料夾階層：兩個資料夾分頁輪廓清楚，樹幹和資料夾各自保有留白。",
+    "beforeSha256": "6ad6c067c31d6087766f869d99e3d42c48fb64a8144f4ac8b50e7c45d9a8c6eb",
+    "afterSha256": "6ad6c067c31d6087766f869d99e3d42c48fb64a8144f4ac8b50e7c45d9a8c6eb"
+  },
+  {
+    "name": "layers",
+    "batch": "craft2-organization-01",
+    "kind": "retained",
+    "reason": "保留原稿：圖層：上層封閉菱形和後兩層開線分離，間距有節奏。",
+    "beforeSha256": "97a8f4c5e55620a9c95f3e8732c94745b27d19cad42264083b72cf0f02ee0bd0",
+    "afterSha256": "97a8f4c5e55620a9c95f3e8732c94745b27d19cad42264083b72cf0f02ee0bd0"
+  },
+  {
+    "name": "pin",
+    "batch": "craft2-organization-01",
+    "kind": "retained",
+    "reason": "保留原稿：釘選：釘頭、縮頸、裙部與針腳共構，不加不必要曲面。",
+    "beforeSha256": "81845d3eb63437489b3384e62f2de89f504179511deba422a00143ee372aaba1",
+    "afterSha256": "81845d3eb63437489b3384e62f2de89f504179511deba422a00143ee372aaba1"
+  },
+  {
+    "name": "pin-off",
+    "batch": "craft2-organization-01",
+    "kind": "retained",
+    "reason": "保留原稿：取消釘選：斜線切割釘型後仍保留上帽與下針，缺口不以透明度掩飾。",
+    "beforeSha256": "ebef3f6101ddfdde5cd8ae00581db53840c79508c16cacd9d9c2f233b6cfcc6b",
+    "afterSha256": "ebef3f6101ddfdde5cd8ae00581db53840c79508c16cacd9d9c2f233b6cfcc6b"
+  },
+  {
+    "name": "folder-search",
+    "batch": "craft2-organization-01",
+    "kind": "retained",
+    "reason": "保留原稿：資料夾搜尋：右下角為放大鏡留空，資料夾分頁未縮小變形。",
+    "beforeSha256": "62c28d08302ecc928214b12fc416b078eb8cfc8928adb27ae81befe2dd6334a5",
+    "afterSha256": "62c28d08302ecc928214b12fc416b078eb8cfc8928adb27ae81befe2dd6334a5"
+  },
+  {
+    "name": "file-search",
+    "batch": "craft2-organization-01",
+    "kind": "retained",
+    "reason": "保留原稿：檔案搜尋：紙張折角保留，放大鏡孔及斜柄清楚，與folder-search同尺度。",
+    "beforeSha256": "f168457c73741b137a9fa4c0360d81ba9d0b8cac14953853944872cff23c79d3",
+    "afterSha256": "f168457c73741b137a9fa4c0360d81ba9d0b8cac14953853944872cff23c79d3"
+  },
+  {
+    "name": "folder-lock",
+    "batch": "craft2-organization-01",
+    "kind": "retained",
+    "reason": "保留原稿：鎖定資料夾：小鎖獨立置右下，鎖梁與框體可辨，不用微小鑰匙孔。",
+    "beforeSha256": "b0b7f03014283b4d019ef674a1a083ac8cb66be26502f6dabff4669531c4b97b",
+    "afterSha256": "b0b7f03014283b4d019ef674a1a083ac8cb66be26502f6dabff4669531c4b97b"
+  },
+  {
+    "name": "file-lock",
+    "batch": "craft2-organization-01",
+    "kind": "retained",
+    "reason": "保留原稿：鎖定檔案：外文件在狀態區截斷，母型與小鎖各自清楚。",
+    "beforeSha256": "0dc6431b9f1f87e0fc19171ad09a835b13bd3702cd3ae98ad3ab19f448d09d41",
+    "afterSha256": "0dc6431b9f1f87e0fc19171ad09a835b13bd3702cd3ae98ad3ab19f448d09d41"
+  },
+  {
+    "name": "keyboard",
+    "batch": "craft2-productivity-01",
+    "kind": "retained",
+    "reason": "保留原稿：鍵盤：鍵點和空白鍵形成鍵盤節奏，16px縮少鍵點，無無意義微孔。",
+    "beforeSha256": "bb45fe6465d7fd35d2f8906b79b434e190d2ba4d8fba4e2e96f5d35d5380051b",
+    "afterSha256": "bb45fe6465d7fd35d2f8906b79b434e190d2ba4d8fba4e2e96f5d35d5380051b"
+  },
+  {
+    "name": "mouse",
+    "batch": "craft2-productivity-01",
+    "kind": "retained",
+    "reason": "保留原稿：滑鼠：橢圓殼與短滾輪線構造簡潔，殼體曲線在sharp也保留。",
+    "beforeSha256": "5328fe98331ec5829d097a7b03c3f39b19cdb31f96fdc8d8cbd8ad769cda73f4",
+    "afterSha256": "5328fe98331ec5829d097a7b03c3f39b19cdb31f96fdc8d8cbd8ad769cda73f4"
+  },
+  {
+    "name": "mouse-pointer",
+    "batch": "craft2-productivity-01",
+    "kind": "retained",
+    "reason": "保留原稿：指標：上一輪尾線接同一凹口座標，這次九組未見多餘黑結或裂縫。",
+    "beforeSha256": "01bf9588027fcd80cc09f232041c98d1b49d79b189114d8da64b7f4ff5bc9c1a",
+    "afterSha256": "01bf9588027fcd80cc09f232041c98d1b49d79b189114d8da64b7f4ff5bc9c1a"
+  },
+  {
+    "name": "touchpad",
+    "batch": "craft2-productivity-01",
+    "kind": "retained",
+    "reason": "保留原稿：觸控板：底部雙鍵和大片上區清楚，分割點與外框銜接。",
+    "beforeSha256": "d9a17b0d066be883f3597c9ad9328893178d3ad96846422483c4eec29b93e233",
+    "afterSha256": "d9a17b0d066be883f3597c9ad9328893178d3ad96846422483c4eec29b93e233"
+  },
+  {
+    "name": "tablet",
+    "batch": "craft2-productivity-01",
+    "kind": "retained",
+    "reason": "保留原稿：平板：比例比手機寬，單一底點保留設備辨識而不堆裝飾。",
+    "beforeSha256": "ceced8869fe1edc51d170442ae8deef3692213269c0f887c6c09d17a08898af6",
+    "afterSha256": "ceced8869fe1edc51d170442ae8deef3692213269c0f887c6c09d17a08898af6"
+  },
+  {
+    "name": "laptop",
+    "batch": "craft2-productivity-01",
+    "kind": "retained",
+    "reason": "保留原稿：筆電：螢幕與下方斜底座構成開蓋狀態，無多餘鍵盤細線。",
+    "beforeSha256": "d6cda39b609883979b421a979a6a8f1d01513a7ebf3da63803fefe152783a967",
+    "afterSha256": "d6cda39b609883979b421a979a6a8f1d01513a7ebf3da63803fefe152783a967"
+  },
+  {
+    "name": "bluetooth",
+    "batch": "craft2-productivity-01",
+    "kind": "retained",
+    "reason": "保留原稿：藍牙：折線符號需保留特定交叉，尖角不隨rounded抹成圓圈。",
+    "beforeSha256": "2fbc923636be0a7f9814d3097c02040c1a74f3351f3a6a8c6f4a3a7f2c1b589b",
+    "afterSha256": "2fbc923636be0a7f9814d3097c02040c1a74f3351f3a6a8c6f4a3a7f2c1b589b"
+  },
+  {
+    "name": "usb",
+    "batch": "craft2-productivity-01",
+    "kind": "retained",
+    "reason": "保留原稿：USB：上一輪16px端點改實心後圓、方、箭頭三種訊號仍可辨；節點連接完整。",
+    "beforeSha256": "fb05757c00666d8ac2f0d467ca2cd5dec0f5025af9c83630e10d11c6c5391a36",
+    "afterSha256": "fb05757c00666d8ac2f0d467ca2cd5dec0f5025af9c83630e10d11c6c5391a36"
+  },
+  {
+    "name": "cast",
+    "batch": "craft2-productivity-01",
+    "kind": "retained",
+    "reason": "保留原稿：投放螢幕：螢幕左下開口讓訊號弧形穿出，三弧與基點留白足夠。",
+    "beforeSha256": "c9bc35e1b087606d7a8c68c22abf07a11c78e6c55031df65c61a64fa57aa1b3d",
+    "afterSha256": "c9bc35e1b087606d7a8c68c22abf07a11c78e6c55031df65c61a64fa57aa1b3d"
+  },
+  {
+    "name": "accessibility",
+    "batch": "craft2-productivity-01",
+    "kind": "retained",
+    "reason": "保留原稿：無障礙：16px實心人頭與身體分離，輪弧、手臂、腿部姿勢清楚。",
+    "beforeSha256": "adb81355a15feba01578ea3a7fa7a5047a6723aa935936a98d32ff60837277dd",
+    "afterSha256": "adb81355a15feba01578ea3a7fa7a5047a6723aa935936a98d32ff60837277dd"
+  },
+  {
+    "name": "server",
+    "batch": "craft2-productivity-02",
+    "kind": "retained",
+    "reason": "保留原稿：伺服器：上下機匣和燈點形成雙層結構，圓角不把長方機匣縮成膠囊。",
+    "beforeSha256": "9c2163bad6675d71709f7cf9a58fa4f12403b4243cf4234939ddfb84ea785dca",
+    "afterSha256": "9c2163bad6675d71709f7cf9a58fa4f12403b4243cf4234939ddfb84ea785dca"
+  },
+  {
+    "name": "hard-drive",
+    "batch": "craft2-productivity-02",
+    "kind": "retained",
+    "reason": "保留原稿：硬碟：上斜面與前面板相接，16px單燈減密；不新增多餘透視線。",
+    "beforeSha256": "218001e375e62d5770234f05ab010aa87bdd2ea8b210cc217991131449271967",
+    "afterSha256": "218001e375e62d5770234f05ab010aa87bdd2ea8b210cc217991131449271967"
+  },
+  {
+    "name": "cpu",
+    "batch": "craft2-productivity-02",
+    "kind": "retained",
+    "reason": "保留原稿：處理器：中心晶片孔與外框分離，16px每邊減至兩腳保持疏密。",
+    "beforeSha256": "760a432445fb1c86ff68c49f875567be8d79d3e63022b22692255ec0a7499e72",
+    "afterSha256": "760a432445fb1c86ff68c49f875567be8d79d3e63022b22692255ec0a7499e72"
+  },
+  {
+    "name": "memory-stick",
+    "batch": "craft2-productivity-02",
+    "kind": "retained",
+    "reason": "保留原稿：記憶體：長基板、內部記憶單元短線及下接點足以辨認，不強制所有機械接腳平切。",
+    "beforeSha256": "0664eeae9bb156a814d2b39cb50ffe390194093fcdbfa9a25e29f31f049ea06f",
+    "afterSha256": "0664eeae9bb156a814d2b39cb50ffe390194093fcdbfa9a25e29f31f049ea06f"
+  },
+  {
+    "name": "network",
+    "batch": "craft2-productivity-02",
+    "kind": "retained",
+    "reason": "保留原稿：網路：三節點與中間分支清楚相連，線不穿進方框內部。",
+    "beforeSha256": "645475109269c1d1397975ee6a5b67a78b2126463448f83b694a3143475194ae",
+    "afterSha256": "645475109269c1d1397975ee6a5b67a78b2126463448f83b694a3143475194ae"
+  },
+  {
+    "name": "workflow",
+    "batch": "craft2-productivity-02",
+    "kind": "retained",
+    "reason": "保留原稿：工作流程：轉折連線指向下一節點的邊界，方向由箭頭和兩框的相對位置共同表達。",
+    "beforeSha256": "42570c995daf9c9b01bcc8c75be82d0d979e0be5335f848bc9feaf98b90330e3",
+    "afterSha256": "42570c995daf9c9b01bcc8c75be82d0d979e0be5335f848bc9feaf98b90330e3"
+  },
+  {
+    "name": "git-branch",
+    "batch": "craft2-productivity-02",
+    "kind": "retained",
+    "reason": "保留原稿：Git分支：分支弧線自然轉入主軸，節點圓孔保持，無不必要銳角接點。",
+    "beforeSha256": "db485a91b528ce3b0d8ccb739c8e8816a397952b02ae205865a253e4992a6368",
+    "afterSha256": "db485a91b528ce3b0d8ccb739c8e8816a397952b02ae205865a253e4992a6368"
+  },
+  {
+    "name": "git-merge",
+    "batch": "craft2-productivity-02",
+    "kind": "retained",
+    "reason": "保留原稿：Git合併：彎曲分支進側節點，主幹保持直線，和branch拓撲有明確差異。",
+    "beforeSha256": "85ba3e4b1047f3c4c6b868c1a3546e40216b87cb97b2bb9c50646b16ab5f5a80",
+    "afterSha256": "85ba3e4b1047f3c4c6b868c1a3546e40216b87cb97b2bb9c50646b16ab5f5a80"
+  },
+  {
+    "name": "braces",
+    "batch": "craft2-productivity-02",
+    "kind": "retained",
+    "reason": "保留原稿：大括號：中央收腰與上下彎鉤連續，曲線是字形必需，不靠全域圓角模擬。",
+    "beforeSha256": "0a37d4f7d0d330fe5a3a4c05e4312f6073dff6d88cfd1f6cd3b2e44eff9430d6",
+    "afterSha256": "0a37d4f7d0d330fe5a3a4c05e4312f6073dff6d88cfd1f6cd3b2e44eff9430d6"
+  },
+  {
+    "name": "webhook",
+    "batch": "craft2-productivity-02",
+    "kind": "retained",
+    "reason": "保留原稿：Webhook：三等距開鉤和連臂形成閉合流向意象，16px仍能看見三個開口。",
+    "beforeSha256": "e652d54439b8836f2c5878ea0e844db2570e806f31fc6a5816fc6330e2c0d88f",
+    "afterSha256": "e652d54439b8836f2c5878ea0e844db2570e806f31fc6a5816fc6330e2c0d88f"
+  },
+  {
+    "name": "text",
+    "batch": "craft2-productivity-03",
+    "kind": "retained",
+    "reason": "保留原稿：文字：T形橫帽與直幹接點明確，底部短襯線不過重。",
+    "beforeSha256": "89e88f84d9cb0a4bc071838127d31eca4f113cacc521a3cb15077b5f4bc5a1e7",
+    "afterSha256": "89e88f84d9cb0a4bc071838127d31eca4f113cacc521a3cb15077b5f4bc5a1e7"
+  },
+  {
+    "name": "wrap-text",
+    "batch": "craft2-productivity-03",
+    "kind": "retained",
+    "reason": "保留原稿：自動換行：回彎箭頭與兩行文字構成換行動作，短末行和箭頭保持距離。",
+    "beforeSha256": "8bb10ede7161c01b539ffefb32d324f79487cf86542bf697dedf6925b5849b10",
+    "afterSha256": "8bb10ede7161c01b539ffefb32d324f79487cf86542bf697dedf6925b5849b10"
+  },
+  {
+    "name": "highlighter",
+    "batch": "craft2-productivity-03",
+    "kind": "modified",
+    "reason": "修改後通過目視檢查：螢光標記：舊筆尖像pencil的單尖，改為平切寬工作刃；筆身保留微圓、刀口保持平直，16px筆尖孔和下方畫線仍分離。",
+    "beforeSha256": "67b709c4047d45a84cd82cbf41379fad495bca12d75b253837c25a2951be66cc",
+    "afterSha256": "05eaa3b0217f9d7f915b64a4d0825938ac23e1fbb76058d95cc456c68cd91708"
+  },
+  {
+    "name": "eraser",
+    "batch": "craft2-productivity-03",
+    "kind": "retained",
+    "reason": "保留原稿：橡皮擦：斜雙色分界和底部擦拭線清楚，外殼角型與平工作面共存。",
+    "beforeSha256": "e60f66b804b36c2ecffc19cbbf273dc714d3bcc448f1687c18ea2679d4affd19",
+    "afterSha256": "e60f66b804b36c2ecffc19cbbf273dc714d3bcc448f1687c18ea2679d4affd19"
+  },
+  {
+    "name": "paintbrush",
+    "batch": "craft2-productivity-03",
+    "kind": "retained",
+    "reason": "保留原稿：畫筆：刷毛鼓起曲線與細筆柄自然接合，毛尖不因rounded消失。",
+    "beforeSha256": "39ce45a8d38689bcd4ca21bdd4daec81d3779f459ed278b5c12fe8fb72e59f01",
+    "afterSha256": "39ce45a8d38689bcd4ca21bdd4daec81d3779f459ed278b5c12fe8fb72e59f01"
+  },
+  {
+    "name": "palette",
+    "batch": "craft2-productivity-03",
+    "kind": "retained",
+    "reason": "保留原稿：調色盤：主體凹口曲線自然，色點依尺寸減量，無多餘輪廓切割。",
+    "beforeSha256": "f4b72f5f15d3b67fb0b8ef33f4346e240398af13c78edc565ea4e23bde7f1baf",
+    "afterSha256": "f4b72f5f15d3b67fb0b8ef33f4346e240398af13c78edc565ea4e23bde7f1baf"
+  },
+  {
+    "name": "indent-increase",
+    "batch": "craft2-productivity-03",
+    "kind": "retained",
+    "reason": "保留原稿：增加縮排：保留使用者肯定稿；內縮中行和箭頭共同表意，較長上下行提供比較基準。",
+    "beforeSha256": "446cac8b920ffb5f65919e7d6f8d4163ae3a3045b3faf2b9ad9b8863981ac730",
+    "afterSha256": "446cac8b920ffb5f65919e7d6f8d4163ae3a3045b3faf2b9ad9b8863981ac730"
+  },
+  {
+    "name": "indent-decrease",
+    "batch": "craft2-productivity-03",
+    "kind": "retained",
+    "reason": "保留原稿：減少縮排：保留使用者肯定稿；中行相對上下行向外伸出，內容確實表達反向動作。",
+    "beforeSha256": "c078c822ea7fd945bc4ceb1e8a78e2e7820781c08951b7f668bfe94717ab4be3",
+    "afterSha256": "c078c822ea7fd945bc4ceb1e8a78e2e7820781c08951b7f668bfe94717ab4be3"
+  },
+  {
+    "name": "subscript",
+    "batch": "craft2-productivity-03",
+    "kind": "retained",
+    "reason": "保留原稿：下標：小2低於X基線，曲線數字和字母間距清晰，16px未糊成點。",
+    "beforeSha256": "30a1188b5395675f26c1dd4292883f9fc8f6341eba18a231f483f5eb93cea3e6",
+    "afterSha256": "30a1188b5395675f26c1dd4292883f9fc8f6341eba18a231f483f5eb93cea3e6"
+  },
+  {
+    "name": "superscript",
+    "batch": "craft2-productivity-03",
+    "kind": "retained",
+    "reason": "保留原稿：上標：小2高於X，保持與下標的同一字形比例，位置才是狀態差。",
+    "beforeSha256": "e01c32a5ef29d4e3320518582ae625c04ce49af983dee6810a3eb586a323b4dd",
+    "afterSha256": "e01c32a5ef29d4e3320518582ae625c04ce49af983dee6810a3eb586a323b4dd"
+  },
+  {
+    "name": "file-code",
+    "batch": "craft2-productivity-04",
+    "kind": "retained",
+    "reason": "保留原稿：程式檔：文件內只用兩括號，16px不再塞斜線，與一般code同語意。",
+    "beforeSha256": "a83812382dc818b3e177d1ac92abf2df4693b98cf20f81b3d3218da629cbd3cf",
+    "afterSha256": "a83812382dc818b3e177d1ac92abf2df4693b98cf20f81b3d3218da629cbd3cf"
+  },
+  {
+    "name": "file-image",
+    "batch": "craft2-productivity-04",
+    "kind": "retained",
+    "reason": "保留原稿：圖片檔：山形與實心日點避開折角，小尺寸不堆第二山峰。",
+    "beforeSha256": "4ac1da68aaa6c67755cc951f56708a845a7b03b96a3a23cbfe4c92b28db2c95e",
+    "afterSha256": "4ac1da68aaa6c67755cc951f56708a845a7b03b96a3a23cbfe4c92b28db2c95e"
+  },
+  {
+    "name": "file-video",
+    "batch": "craft2-productivity-04",
+    "kind": "retained",
+    "reason": "保留原稿：影片檔：播放三角置中內容區，文件折角仍清楚，沒有多餘機身符號。",
+    "beforeSha256": "91de83ff00f3004091605a469de11d5a46673c399d82cd774e8fb96a22640685",
+    "afterSha256": "91de83ff00f3004091605a469de11d5a46673c399d82cd774e8fb96a22640685"
+  },
+  {
+    "name": "file-audio",
+    "batch": "craft2-productivity-04",
+    "kind": "retained",
+    "reason": "保留原稿：聲音檔：上一輪實心音符頭避免微孔，音符桿與頭連接，右上旗尾未碰折角。",
+    "beforeSha256": "d535c15a510211cf0378240f942737083d1ae0b68f933f65c86a9a64f711131e",
+    "afterSha256": "d535c15a510211cf0378240f942737083d1ae0b68f933f65c86a9a64f711131e"
+  },
+  {
+    "name": "file-archive",
+    "batch": "craft2-productivity-04",
+    "kind": "retained",
+    "reason": "保留原稿：壓縮檔：齒軌已平端，16px兩齒和較大拉環分離；不用透明度掩飾密度。",
+    "beforeSha256": "ebc1deef4dffde462c474c80c191ace4e2bd577da0d686cd7e13e125a4031efe",
+    "afterSha256": "ebc1deef4dffde462c474c80c191ace4e2bd577da0d686cd7e13e125a4031efe"
+  },
+  {
+    "name": "folder-minus",
+    "batch": "craft2-productivity-04",
+    "kind": "retained",
+    "reason": "保留原稿：減少資料夾：內橫線維持母型內容中心，未碰下邊框。",
+    "beforeSha256": "5b2cd339ac8f29c5bd11b10151202a69abc3d24708aa2edb012fc36567c136a5",
+    "afterSha256": "5b2cd339ac8f29c5bd11b10151202a69abc3d24708aa2edb012fc36567c136a5"
+  },
+  {
+    "name": "folder-check",
+    "batch": "craft2-productivity-04",
+    "kind": "retained",
+    "reason": "保留原稿：確認資料夾：勾號長短臂清楚，不改文件夾輪廓以容納狀態。",
+    "beforeSha256": "288ec41f6137550c2a39a736c19110a6d20cb36d9c021fd770b462dbf57308fc",
+    "afterSha256": "288ec41f6137550c2a39a736c19110a6d20cb36d9c021fd770b462dbf57308fc"
+  },
+  {
+    "name": "folder-x",
+    "batch": "craft2-productivity-04",
+    "kind": "retained",
+    "reason": "保留原稿：移除資料夾：X置中，與相鄰plus/minus相近可見重量。",
+    "beforeSha256": "c0edbed2437ccd908b73470a9058837e30af0df9f3cdf4dfa42d27fb31a3deb5",
+    "afterSha256": "c0edbed2437ccd908b73470a9058837e30af0df9f3cdf4dfa42d27fb31a3deb5"
+  },
+  {
+    "name": "folder-up",
+    "batch": "craft2-productivity-04",
+    "kind": "retained",
+    "reason": "保留原稿：上傳資料夾：箭尖指向上但避開分頁肩，箭桿未接底邊。",
+    "beforeSha256": "9b4d192f76df175b3fc361982a71f6a09e77b3d012d5429be8edfbd6689c2f07",
+    "afterSha256": "9b4d192f76df175b3fc361982a71f6a09e77b3d012d5429be8edfbd6689c2f07"
+  },
+  {
+    "name": "folder-down",
+    "batch": "craft2-productivity-04",
+    "kind": "retained",
+    "reason": "保留原稿：下載資料夾：箭頭下端與底邊留白，保留與上傳相同母型尺度。",
+    "beforeSha256": "4d8a73e7f82f59d0f44b6f081b64b35471dca53c5b4904b3c90eef2a8e722fb2",
+    "afterSha256": "4d8a73e7f82f59d0f44b6f081b64b35471dca53c5b4904b3c90eef2a8e722fb2"
+  },
+  {
+    "name": "calendar-plus",
+    "batch": "craft2-productivity-05",
+    "kind": "retained",
+    "reason": "保留原稿：新增日期：加號置日期區，表頭和裝訂仍清楚。",
+    "beforeSha256": "9a0334c1eada5b378ee9b4b43cb0c9d0a19f79f8ae5f04423906cb72378e10fc",
+    "afterSha256": "9a0334c1eada5b378ee9b4b43cb0c9d0a19f79f8ae5f04423906cb72378e10fc"
+  },
+  {
+    "name": "calendar-minus",
+    "batch": "craft2-productivity-05",
+    "kind": "retained",
+    "reason": "保留原稿：減少日期：內橫線不靠邊，與calendar-plus使用同一內容中心。",
+    "beforeSha256": "d0598b046f35b375d9a0d2c9034331a8b2a49ff52973286edb424be563749c1a",
+    "afterSha256": "d0598b046f35b375d9a0d2c9034331a8b2a49ff52973286edb424be563749c1a"
+  },
+  {
+    "name": "calendar-x",
+    "batch": "craft2-productivity-05",
+    "kind": "retained",
+    "reason": "保留原稿：取消日期：X保持獨立，三角型只改框角而不改狀態符號的語意。",
+    "beforeSha256": "9efa48983297020c3f2bf85a0442d29c4737b84b176585c306290aee9bd640e0",
+    "afterSha256": "9efa48983297020c3f2bf85a0442d29c4737b84b176585c306290aee9bd640e0"
+  },
+  {
+    "name": "calendar-clock",
+    "batch": "craft2-productivity-05",
+    "kind": "retained",
+    "reason": "保留原稿：日期時間：右下時鐘為獨立圓，日曆在其周圍截斷，非直接疊兩全框。",
+    "beforeSha256": "3a4379c2e13b1c01d3327d44eda3e727bcaa6e769bb3653002f84ee00f803bbe",
+    "afterSha256": "3a4379c2e13b1c01d3327d44eda3e727bcaa6e769bb3653002f84ee00f803bbe"
+  },
+  {
+    "name": "calendar-range",
+    "batch": "craft2-productivity-05",
+    "kind": "retained",
+    "reason": "保留原稿：日期範圍：兩行的起訖點與短橫線形成範圍訊號；保留與calendar-days差異。",
+    "beforeSha256": "8b3cc767addc164e020e55548a96fc1b7e801096e3b34268070501ca19cfed68",
+    "afterSha256": "8b3cc767addc164e020e55548a96fc1b7e801096e3b34268070501ca19cfed68"
+  },
+  {
+    "name": "timer",
+    "batch": "craft2-productivity-05",
+    "kind": "retained",
+    "reason": "保留原稿：計時器：上一輪按鈕依圓心半徑求接點，圓框與斜按鈕無假接縫。",
+    "beforeSha256": "98034fcf6c3d674d5c496cd863a6a6042b031d6e576490080c7f46ce2c03312a",
+    "afterSha256": "98034fcf6c3d674d5c496cd863a6a6042b031d6e576490080c7f46ce2c03312a"
+  },
+  {
+    "name": "clipboard-list",
+    "batch": "craft2-productivity-05",
+    "kind": "retained",
+    "reason": "保留原稿：剪貼清單：16px只一列，點和文字線與夾子下方保持空白。",
+    "beforeSha256": "4159b3f0c400af2f31e9d8ddee4233ab7218ac01f99a79be85182425749460c1",
+    "afterSha256": "4159b3f0c400af2f31e9d8ddee4233ab7218ac01f99a79be85182425749460c1"
+  },
+  {
+    "name": "clipboard-copy",
+    "batch": "craft2-productivity-05",
+    "kind": "retained",
+    "reason": "保留原稿：複製到剪貼簿：向內箭頭和框開口表達輸入，與paste的向外箭頭成對。",
+    "beforeSha256": "7a6be1d4863a7c3bebdc4bc999e31a1abb05af73f13eee9f2b2e994c7b24cec6",
+    "afterSha256": "7a6be1d4863a7c3bebdc4bc999e31a1abb05af73f13eee9f2b2e994c7b24cec6"
+  },
+  {
+    "name": "clipboard-x",
+    "batch": "craft2-productivity-05",
+    "kind": "retained",
+    "reason": "保留原稿：取消剪貼：X和夾板框分離，夾子孔及狀態均可辨。",
+    "beforeSha256": "b21fd00e8cea64f1ffcb0ec1d2886eb9a71e677b5240729d93f47e3f099df08e",
+    "afterSha256": "b21fd00e8cea64f1ffcb0ec1d2886eb9a71e677b5240729d93f47e3f099df08e"
+  },
+  {
+    "name": "clipboard-pen",
+    "batch": "craft2-productivity-05",
+    "kind": "retained",
+    "reason": "保留原稿：編輯剪貼簿：右下筆尖與框缺口有充分留白；16px移除筆尾分割線。",
+    "beforeSha256": "e267135e5e27a5392def11d2f530e70f36aff42a6e06c19636e84446432cad87",
+    "afterSha256": "e267135e5e27a5392def11d2f530e70f36aff42a6e06c19636e84446432cad87"
+  },
+  {
+    "name": "message-plus",
+    "batch": "craft2-productivity-06",
+    "kind": "retained",
+    "reason": "保留原稿：新增對話：加號在矩形氣泡內容中心，尾巴和狀態互不干擾。",
+    "beforeSha256": "b9a6893f0ec41c8427970f0c20f052754806976bdf9ea5648a443a526f7f705f",
+    "afterSha256": "b9a6893f0ec41c8427970f0c20f052754806976bdf9ea5648a443a526f7f705f"
+  },
+  {
+    "name": "message-circle-question",
+    "batch": "craft2-productivity-06",
+    "kind": "retained",
+    "reason": "保留原稿：詢問訊息：圓氣泡和問號有獨立空間，尾巴讓它不同於help-circle。",
+    "beforeSha256": "72bc8f519ff72a1215a289bccda01f4c3898c0247666910c1a05677285bf3029",
+    "afterSha256": "72bc8f519ff72a1215a289bccda01f4c3898c0247666910c1a05677285bf3029"
+  },
+  {
+    "name": "message-circle-warning",
+    "batch": "craft2-productivity-06",
+    "kind": "retained",
+    "reason": "保留原稿：警告訊息：直幹、下點與氣泡尾形成清楚層級，沒有為一致性硬改為方框。",
+    "beforeSha256": "371acfc15b8b2530563c0267970ceec896411d0ea33d2847418b341a4ec3196e",
+    "afterSha256": "371acfc15b8b2530563c0267970ceec896411d0ea33d2847418b341a4ec3196e"
+  },
+  {
+    "name": "mail-check",
+    "batch": "craft2-productivity-06",
+    "kind": "retained",
+    "reason": "保留原稿：已確認郵件：右下勾號取代框角，信封V折線保留。",
+    "beforeSha256": "3a14384dc20efc10a42df4bea7ec568eca6cf747774ba26294076bcb16f066b7",
+    "afterSha256": "3a14384dc20efc10a42df4bea7ec568eca6cf747774ba26294076bcb16f066b7"
+  },
+  {
+    "name": "mail-x",
+    "batch": "craft2-productivity-06",
+    "kind": "retained",
+    "reason": "保留原稿：失敗郵件：右下X與信封母型不重疊，和mail-check共享開口。",
+    "beforeSha256": "671b001ff1de7d2d9a9c92387b4d2f765e0cf51dea98f2c394605743a1b2188d",
+    "afterSha256": "671b001ff1de7d2d9a9c92387b4d2f765e0cf51dea98f2c394605743a1b2188d"
+  },
+  {
+    "name": "bell-ring",
+    "batch": "craft2-productivity-06",
+    "kind": "retained",
+    "reason": "保留原稿：響鈴：兩側短弧表達震動，主鐘罩仍保持bell的曲線與比例。",
+    "beforeSha256": "1906e241113229fb17a6c514e1583e317044e7449352cf8fc8700becb6c7ce9e",
+    "afterSha256": "1906e241113229fb17a6c514e1583e317044e7449352cf8fc8700becb6c7ce9e"
+  },
+  {
+    "name": "user-x",
+    "batch": "craft2-productivity-06",
+    "kind": "retained",
+    "reason": "保留原稿：移除帳戶：X與人像頭肩分離，與user-plus同一主體大小。",
+    "beforeSha256": "9e34fb729871688ba647ae4c1fe661de55fa1e577be8c757b0c9128b947998de",
+    "afterSha256": "9e34fb729871688ba647ae4c1fe661de55fa1e577be8c757b0c9128b947998de"
+  },
+  {
+    "name": "user-cog",
+    "batch": "craft2-productivity-06",
+    "kind": "retained",
+    "reason": "保留原稿：帳戶設定：上一輪放大的齒環和孔在16px清楚，頭部未與齒輪相碰。",
+    "beforeSha256": "bda93fa0dc3ac88ccaabf6edc205f9d1dddb786ec97bb630741e95d43fd38ff4",
+    "afterSha256": "bda93fa0dc3ac88ccaabf6edc205f9d1dddb786ec97bb630741e95d43fd38ff4"
+  },
+  {
+    "name": "megaphone",
+    "batch": "craft2-productivity-06",
+    "kind": "retained",
+    "reason": "保留原稿：擴音器：保留使用者肯定稿；喇叭上下擴張曲線與彎握柄屬結構，sharp只改局部接角。",
+    "beforeSha256": "ca2ce2a0d80ae0d5ab390c66f3a6f0092a8e0458b83361fcbd0915d6c464590a",
+    "afterSha256": "ca2ce2a0d80ae0d5ab390c66f3a6f0092a8e0458b83361fcbd0915d6c464590a"
+  },
+  {
+    "name": "handshake",
+    "batch": "craft2-productivity-06",
+    "kind": "retained",
+    "reason": "保留原稿：合作握手：保留使用者肯定稿；拇指包覆、掌部相接及手指回折清楚，16px只縮短內縫。",
+    "beforeSha256": "de59097b798283288d9495f9a6d087963a31befb2b9b9e45bb2a4ed20b69bf12",
+    "afterSha256": "de59097b798283288d9495f9a6d087963a31befb2b9b9e45bb2a4ed20b69bf12"
+  }
+]

@@ -49,13 +49,20 @@ test('the saved 280 baseline preserves all 220 pre-productivity definitions',asy
 });
 
 test('only explicitly reviewed refinements differ from the complete baseline',async()=>{
- const before=JSON.parse(await readFile('references/craft-01/master-before.json'));
- const decisions=JSON.parse(await readFile('docs/review/craft-01/decisions.json'));
- const expected=['chart-bar','contact','mouse-pointer','usb','accessibility','file-audio','file-archive','timer','user-cog','handshake','indent-increase','indent-decrease','megaphone','ticket'].sort();
- const changed=Object.keys(before).filter(name=>JSON.stringify(defs[name])!==JSON.stringify(before[name])).sort();
- assert.deepEqual(changed,expected);
- assert.deepEqual(decisions.filter(x=>x.kind==='modified').map(x=>x.name).sort(),expected);
- for(const d of decisions)if(d.kind==='retained')assert.deepEqual(defs[d.name],before[d.name],d.name);
+ const firstPass=JSON.parse(await readFile('references/craft-02/master-before.json'));
+ const rounds=[
+  ['craft-01',firstPass,['chart-bar','contact','mouse-pointer','usb','accessibility','file-audio','file-archive','timer','user-cog','handshake','indent-increase','indent-decrease','megaphone','ticket']],
+  ['craft-02',defs,['highlighter','phone-off']],
+ ];
+ for(const[cycle,after,names]of rounds){
+  const before=JSON.parse(await readFile(`references/${cycle}/master-before.json`));
+  const decisions=JSON.parse(await readFile(`docs/review/${cycle}/decisions.json`));
+  const expected=names.sort();
+  const changed=Object.keys(before).filter(name=>JSON.stringify(after[name])!==JSON.stringify(before[name])).sort();
+  assert.deepEqual(changed,expected,cycle);
+  assert.deepEqual(decisions.filter(x=>x.kind==='modified').map(x=>x.name).sort(),expected,cycle);
+  for(const d of decisions)if(d.kind==='retained')assert.deepEqual(after[d.name],before[d.name],cycle+'/'+d.name);
+ }
 });
 
 test('semantic perforations retain flat ends independently of frame corner styles',()=>{
