@@ -25,7 +25,7 @@ const lucideLicense=await readFile(resolve(repo,'licenses/lucide.txt'),'utf8');
 // XML comments cannot contain '--'; only normalize the license separator.
 const lucideNotice=lucideLicense.replace(/^---$/gm,'—');
 const notices=await readFile(resolve(repo,'THIRD_PARTY_NOTICES.md'),'utf8');
-const brandLicenses=Object.fromEntries(await Promise.all(['simple-icons-CC0.txt','simple-icons-DISCLAIMER.md','openai-brand.txt'].map(async name=>['licenses/'+name,strToU8(await readFile(resolve(repo,'licenses',name),'utf8'))])));
+const brandLicenses=Object.fromEntries(await Promise.all(['simple-icons-CC0.txt','simple-icons-DISCLAIMER.md','openai-brand.txt','brand-additions.txt'].map(async name=>['licenses/'+name,strToU8(await readFile(resolve(repo,'licenses',name),'utf8'))])));
 const bundles=Object.fromEntries(sizes.flatMap(s=>corners.map(c=>[`${s}-${c}`,{'LICENSE':strToU8(license),'licenses/hugeicons-MIT.txt':strToU8(hugeLicense),'licenses/lucide.txt':strToU8(lucideLicense),'THIRD_PARTY_NOTICES.md':strToU8(notices)}])));
 for(const bundle of Object.values(bundles))Object.assign(bundle,brandLicenses);
 await rm(resolve(root,'dist'),{recursive:true,force:true});

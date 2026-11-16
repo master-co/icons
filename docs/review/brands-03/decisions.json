@@ -1,0 +1,456 @@
+{
+  "date": "2026-11-17",
+  "reviewer": "Codex",
+  "method": "Source beside native 16/20/24 in all corners; light/dark, 55% foreground, DPR1 plus selected DPR2 diagnostics inspected. Dcard includes archived PNG beside its documented trace. Not a human recognition study.",
+  "status": "visually-reviewed-candidate",
+  "icons": [
+    {
+      "name": "brand-vue-js",
+      "variantsSha256": "0ab393c37dfa7c918a3f2b4353e189b5e0dbc23adaa22e825906d9d5e1101dbf",
+      "sourceSha256": "2a57b59bd3ff2880f971f7f6cce2378d20bdfb1a54150a0a7ca9fd2fe1bfa781",
+      "sheet": 5,
+      "label": "Vue.js",
+      "profile": "standard",
+      "optical": {
+        "16": {
+          "extent": 14,
+          "dx": 0,
+          "dy": 0.25
+        },
+        "20": {
+          "extent": 17,
+          "dx": 0,
+          "dy": 0.25
+        },
+        "24": {
+          "extent": 20,
+          "dx": 0,
+          "dy": 0.25
+        }
+      },
+      "observation": "V 的上下留白按原稿保留，14/17/20 佔幅；整體下移 .25px，平衡上端較重的橫向筆畫與下方尖端。",
+      "effects": "No decorative effects; source vector shape retained, monochrome paint and optical placement only.",
+      "status": "visually-reviewed-candidate"
+    },
+    {
+      "name": "brand-javascript",
+      "variantsSha256": "ce1b6e9cc39aeaabbc86f8d894d5305ad987473f61674c1cc9753812bf6edd7c",
+      "sourceSha256": "c9be35a7a861ebe80ae4ee706d05004b99ee59fc63db69da6dcc10776718434b",
+      "sheet": 5,
+      "label": "JavaScript",
+      "profile": "solid",
+      "optical": {
+        "16": {
+          "extent": 14,
+          "dx": 0,
+          "dy": 0
+        },
+        "20": {
+          "extent": 16,
+          "dx": 0,
+          "dy": 0
+        },
+        "24": {
+          "extent": 20,
+          "dx": 0,
+          "dy": 0
+        }
+      },
+      "observation": "14/16/20 的方形外框對齊整數座標；保留 JS 字形與右下留白，三種角型不改品牌方框。",
+      "effects": "No decorative effects; source vector shape retained, monochrome paint and optical placement only.",
+      "status": "visually-reviewed-candidate"
+    },
+    {
+      "name": "brand-bun",
+      "variantsSha256": "52eaa0834594d76622102bc9d628bcc535afd4f1daf08a19e2ab3c42f5d82d28",
+      "sourceSha256": "f356fc1ec5659e73e9b1e881ef2785a4fc4e0e3d82b446e6484f55303546dc6d",
+      "sheet": 5,
+      "label": "Bun",
+      "profile": "dense",
+      "optical": {
+        "16": {
+          "extent": 14,
+          "dx": 0,
+          "dy": 0
+        },
+        "20": {
+          "extent": 17.5,
+          "dx": 0,
+          "dy": 0
+        },
+        "24": {
+          "extent": 21,
+          "dx": 0,
+          "dy": 0
+        }
+      },
+      "observation": "14/17.5/21 保留圓眼與頂部麵團線條；16px 的頂部細線較弱，不額外描邊或填死。",
+      "effects": "No decorative effects; source vector shape retained, monochrome paint and optical placement only.",
+      "status": "visually-reviewed-candidate"
+    },
+    {
+      "name": "brand-github-copilot",
+      "variantsSha256": "da63f6a4bee7ad10c3abd4e08d8d458c8a49c40c277673d5f6517458ec81453b",
+      "sourceSha256": "c72c1e0018e84b3128c5a1ac43ec2be135ac6ec4eb9c0ea18ed76416d23f2af3",
+      "sheet": 5,
+      "label": "GitHub Copilot",
+      "profile": "dense",
+      "optical": {
+        "16": {
+          "extent": 14,
+          "dx": 0,
+          "dy": 0
+        },
+        "20": {
+          "extent": 17,
+          "dx": 0,
+          "dy": 0
+        },
+        "24": {
+          "extent": 20,
+          "dx": 0,
+          "dy": 0
+        }
+      },
+      "observation": "14/17/20 保留眼鏡、耳側與下方三個孔；16px 仍可分辨雙眼，縮小時需足夠對比。",
+      "effects": "No decorative effects; source vector shape retained, monochrome paint and optical placement only.",
+      "status": "visually-reviewed-candidate"
+    },
+    {
+      "name": "brand-hugging-face",
+      "variantsSha256": "5fdca892998a773d7165d4e34ed6204302fa1d6d6586473dd469c4b0c80cea1b",
+      "sourceSha256": "aa81744034eecf4ac6b3fb7108dd71223965c7af3c534932391314563b150109",
+      "sheet": 5,
+      "label": "Hugging Face",
+      "profile": "dense",
+      "optical": {
+        "16": {
+          "extent": 14,
+          "dx": 0,
+          "dy": 0
+        },
+        "20": {
+          "extent": 17.5,
+          "dx": 0,
+          "dy": 0
+        },
+        "24": {
+          "extent": 21,
+          "dx": 0,
+          "dy": 0
+        }
+      },
+      "observation": "14/17.5/21 保留臉部與雙手指縫；低對比 16px 細節較密，搭配名稱更可靠。",
+      "effects": "No decorative effects; source vector shape retained, monochrome paint and optical placement only.",
+      "status": "visually-reviewed-candidate"
+    },
+    {
+      "name": "brand-aws",
+      "variantsSha256": "e520610c0ce43fe51e907a8a1893072ea749eec0ebdc1acacdc0285b9a4c4c17",
+      "sourceSha256": "f67734a0f5a7f925c84b6a9ea6e5489fe7af96e4ae167da6b71506a5d6afcab4",
+      "sheet": 5,
+      "label": "AWS",
+      "profile": "wide",
+      "optical": {
+        "16": {
+          "extent": 14,
+          "dx": 0,
+          "dy": 0
+        },
+        "20": {
+          "extent": 18,
+          "dx": 0,
+          "dy": 0
+        },
+        "24": {
+          "extent": 22,
+          "dx": 0,
+          "dy": 0
+        }
+      },
+      "observation": "橫向 aws 字標採 14/18/22，微笑箭頭與字標不拆開；16px 字高有限，必須搭配名稱。採固定歷史向量版本。",
+      "effects": "No decorative effects; source vector shape retained, monochrome paint and optical placement only.",
+      "status": "visually-reviewed-candidate"
+    },
+    {
+      "name": "brand-firebase",
+      "variantsSha256": "1a8cb524c6bccf87887d006ab7395be5f80a81181173f2f3b5f4f52f6ef11936",
+      "sourceSha256": "3f46d84a41479d7789cc36b82c2b6852e6bbbfd30ebee5b7a3aef7d49758295a",
+      "sheet": 5,
+      "label": "Firebase",
+      "profile": "standard",
+      "optical": {
+        "16": {
+          "extent": 13.5,
+          "dx": 0,
+          "dy": 0
+        },
+        "20": {
+          "extent": 16.5,
+          "dx": 0,
+          "dy": 0
+        },
+        "24": {
+          "extent": 20,
+          "dx": 0,
+          "dy": 0
+        }
+      },
+      "observation": "13.5/16.5/20 保留火焰內的交疊白縫與底部曲線；細輪廓不以 UI 線寬加粗。",
+      "effects": "No decorative effects; source vector shape retained, monochrome paint and optical placement only.",
+      "status": "visually-reviewed-candidate"
+    },
+    {
+      "name": "brand-postgresql",
+      "variantsSha256": "b37cdc30f477b0c4fb192b89f7351fa9ebd33f9e1a1a60dc953c37be2093f875",
+      "sourceSha256": "c8ccadbd88c9312c2ad3734c4861b31d3485ce179ee91d64793143f83cfa745c",
+      "sheet": 5,
+      "label": "PostgreSQL",
+      "profile": "dense",
+      "optical": {
+        "16": {
+          "extent": 14,
+          "dx": 0,
+          "dy": 0
+        },
+        "20": {
+          "extent": 17.5,
+          "dx": 0,
+          "dy": 0
+        },
+        "24": {
+          "extent": 21,
+          "dx": 0,
+          "dy": 0
+        }
+      },
+      "observation": "14/17.5/21 提供象頭最大的合理佔幅；象鼻與雙耳可分辨，但 16px 原稿細線對比偏弱，建議文字輔助。",
+      "effects": "No decorative effects; source vector shape retained, monochrome paint and optical placement only.",
+      "status": "visually-reviewed-candidate"
+    },
+    {
+      "name": "brand-microsoft-teams",
+      "variantsSha256": "890befd6bcd46aac4e7db7821562aa448f2ee691820df3fdbf9a17fd89950dcc",
+      "sourceSha256": "9c509b9aea846e4a773d59df7fe3d29843e9e05c3579ce167d1e7e5ba14be1d1",
+      "sheet": 6,
+      "label": "Microsoft Teams",
+      "profile": "dense",
+      "optical": {
+        "16": {
+          "extent": 14,
+          "dx": 0,
+          "dy": 0
+        },
+        "20": {
+          "extent": 17,
+          "dx": 0,
+          "dy": 0
+        },
+        "24": {
+          "extent": 20,
+          "dx": 0,
+          "dy": 0
+        }
+      },
+      "observation": "14/17/20 保留 T 方塊、兩個頭部及下方輪廓；使用有版本紀錄的歷史標誌，不宣稱現行彩色重設版。",
+      "effects": "No decorative effects; source vector shape retained, monochrome paint and optical placement only.",
+      "status": "visually-reviewed-candidate"
+    },
+    {
+      "name": "brand-outlook",
+      "variantsSha256": "b71f2cfb516cc95a4b6f9889c2a6bf365b1e25a766b3616243d94e561a890ee0",
+      "sourceSha256": "f2fcdd8cbd3be6855935de2ab3fb7010aef607963fb157c64ac308e693a18f87",
+      "sheet": 6,
+      "label": "Outlook",
+      "profile": "dense",
+      "optical": {
+        "16": {
+          "extent": 14,
+          "dx": 0,
+          "dy": 0
+        },
+        "20": {
+          "extent": 17,
+          "dx": 0,
+          "dy": 0
+        },
+        "24": {
+          "extent": 20,
+          "dx": 0,
+          "dy": 0
+        }
+      },
+      "observation": "14/17/20 保留 O 方塊、郵件網格與信封斜線；16px 網格較密。使用固定歷史標誌。",
+      "effects": "No decorative effects; source vector shape retained, monochrome paint and optical placement only.",
+      "status": "visually-reviewed-candidate"
+    },
+    {
+      "name": "brand-google-meet",
+      "variantsSha256": "b67b4840b037f840e9cbe218369987343d17923420e584ad9446cd1ce005dfeb",
+      "sourceSha256": "ae7adb7a21d438caca54f88c2b864975893017eab16f4c0a4746c07b4cf24c74",
+      "sheet": 6,
+      "label": "Google Meet",
+      "profile": "wide",
+      "optical": {
+        "16": {
+          "extent": 14,
+          "dx": 0,
+          "dy": 0
+        },
+        "20": {
+          "extent": 17,
+          "dx": 0,
+          "dy": 0
+        },
+        "24": {
+          "extent": 20,
+          "dx": 0,
+          "dy": 0
+        }
+      },
+      "observation": "14/17/20 保留鏡頭、中央留白及四角斜切；填色轉單色後仍保留分段白縫。",
+      "effects": "No decorative effects; source vector shape retained, monochrome paint and optical placement only.",
+      "status": "visually-reviewed-candidate"
+    },
+    {
+      "name": "brand-canva",
+      "variantsSha256": "87ea56b478911f6ccc1e7acc137efc94a988879ceedb223cc1abfd28b588ca85",
+      "sourceSha256": "0d90ba2030f2ad642e19234241467280e97034a151905d60e05f0fc9fc41dcff",
+      "sheet": 6,
+      "label": "Canva",
+      "profile": "solid",
+      "optical": {
+        "16": {
+          "extent": 14,
+          "dx": 0,
+          "dy": 0
+        },
+        "20": {
+          "extent": 17,
+          "dx": 0,
+          "dy": 0
+        },
+        "24": {
+          "extent": 20,
+          "dx": 0,
+          "dy": 0
+        }
+      },
+      "observation": "由 wide 改為 solid；24px 佔幅從 22 降至 20，20px 從 18 降至 17，降低圓盤重量；16px 保持14，細字仍需名稱輔助。",
+      "effects": "No decorative effects; source vector shape retained, monochrome paint and optical placement only.",
+      "status": "visually-reviewed-candidate"
+    },
+    {
+      "name": "brand-dribbble",
+      "variantsSha256": "2600621821f2b5a74194ebc4978c67607d63c15ea1e4c9e88f175fe6c12dd2fe",
+      "sourceSha256": "5779a646c6d72f76c07d8a6d87fda783dee55c32f7657857649454dc4f696a43",
+      "sheet": 6,
+      "label": "Dribbble",
+      "profile": "standard",
+      "optical": {
+        "16": {
+          "extent": 13.5,
+          "dx": 0,
+          "dy": 0
+        },
+        "20": {
+          "extent": 16.5,
+          "dx": 0,
+          "dy": 0
+        },
+        "24": {
+          "extent": 20,
+          "dx": 0,
+          "dy": 0
+        }
+      },
+      "observation": "13.5/16.5/20 保留圓形與三條弧線，交會區不額外加粗；淺深背景均無裁切。",
+      "effects": "No decorative effects; source vector shape retained, monochrome paint and optical placement only.",
+      "status": "visually-reviewed-candidate"
+    },
+    {
+      "name": "brand-wordpress",
+      "variantsSha256": "2f0d0362cfe47947ab4336191d6e06035c3948e2bb673edb34f444d148ebda55",
+      "sourceSha256": "8877151b8978c3c961d16659ba28603a4015872e79fbbb770d09b68b0da8a4ff",
+      "sheet": 6,
+      "label": "WordPress",
+      "profile": "dense",
+      "optical": {
+        "16": {
+          "extent": 14,
+          "dx": 0,
+          "dy": 0
+        },
+        "20": {
+          "extent": 17,
+          "dx": 0,
+          "dy": 0
+        },
+        "24": {
+          "extent": 20,
+          "dx": 0,
+          "dy": 0
+        }
+      },
+      "observation": "14/17/20 保留外環、W 與上端端點；16px 字腹仍有分隔，未改襯線。",
+      "effects": "No decorative effects; source vector shape retained, monochrome paint and optical placement only.",
+      "status": "visually-reviewed-candidate"
+    },
+    {
+      "name": "brand-dcard",
+      "variantsSha256": "ba54abb8f198543003be05ecdc07e33fc94e123c61de5d34105df949969374a2",
+      "sourceSha256": "71492b4537b0a2c04e6199106a1f809e617900eb50018765daddac80ab539f4e",
+      "sheet": 6,
+      "label": "Dcard",
+      "profile": "solid",
+      "optical": {
+        "16": {
+          "extent": 14,
+          "dx": 0,
+          "dy": 0
+        },
+        "20": {
+          "extent": 16,
+          "dx": 0,
+          "dy": 0
+        },
+        "24": {
+          "extent": 20,
+          "dx": 0,
+          "dy": 0
+        }
+      },
+      "observation": "採 2021-07-31 存檔 app mark 的向量轉描；14/16/20 方形佔幅。保留 D、眼與笑口，統一藍色及長陰影為單色，白區挖空。512px 二值形狀 IoU 99.658%，非官方原始向量。原規範48px最小尺寸與本庫小尺寸預覽分開記載。",
+      "effects": "Archived raster vectorized; blue shades and shadow unified, white knockout retained.",
+      "status": "visually-reviewed-candidate"
+    },
+    {
+      "name": "brand-shopee",
+      "variantsSha256": "e6de8325187fea90e21f44383d1c6cd367e37355fed6658223268db04dec8461",
+      "sourceSha256": "b51a59e1463937286acca1b03bf9dd11df629fcde3f6fa91822f55d7bcb976bd",
+      "sheet": 6,
+      "label": "Shopee",
+      "profile": "standard",
+      "optical": {
+        "16": {
+          "extent": 13.5,
+          "dx": 0,
+          "dy": 0
+        },
+        "20": {
+          "extent": 16.5,
+          "dx": 0,
+          "dy": 0
+        },
+        "24": {
+          "extent": 20,
+          "dx": 0,
+          "dy": 0
+        }
+      },
+      "observation": "13.5/16.5/20 保留袋口提把與 S 字腹；16px 提把較細，與 Shopify 的傾斜提袋維持不同輪廓。",
+      "effects": "No decorative effects; source vector shape retained, monochrome paint and optical placement only.",
+      "status": "visually-reviewed-candidate"
+    }
+  ]
+}

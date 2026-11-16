@@ -31,5 +31,5 @@ export const brandDrawings=Object.fromEntries(brands.map(brand=>[brand.name,g=>{
 
 export function brandNotice(entry){
   const s=entry.source;
-  return `Brand artwork: ${entry.label}.\nSource: ${s.reference}\n${s.library}; ${s.license}.\n${s.modifications}\nBrand names and marks belong to their respective owners; no affiliation or endorsement is implied.\nThe code license does not grant trademark rights. See THIRD_PARTY_NOTICES.md.`;
+  return `Brand artwork: ${entry.label}.\nSource: ${s.reference}\n${s.library}; ${s.license}.\n${s.modifications}\nBrand names and marks belong to their respective owners; no affiliation or endorsement is implied.\nThe code license does not grant trademark rights. See THIRD_PARTY_NOTICES.md.${s.licenseFile?'\nAdditional artwork terms: '+s.licenseFile:''}${s.notice?'\n\n'+s.notice:''}`;
 }

@@ -135,3 +135,45 @@ Microsoft, LinkedIn and Slack retain the source silhouettes from Simple Icons v1
 | `brand-vite` | [Simple Icons](https://github.com/simple-icons/simple-icons/blob/17cd4ee07612198a1d8777a060d4100423762a8b/icons/vite.svg) | [Official source / guidelines](https://github.com/voidzero-dev/community-design-resources/blob/55902097229cf01cf2a4ceb376f992f5cf306756/brand-assets/vite/vite-icon-color-bracketless.svg) |
 
 Source SVGs are preserved in `references/brands-02/`. Paths retain their source geometry, with individual 16 / 20 / 24 placement and occupied size. The OpenAI archive includes oversized canvas padding and enclosing clip rectangles: placement uses its unchanged ink bounds, and redundant clips are omitted.
+
+## Brand silhouettes · brands-03
+
+Adds 16 names with original source hashes and individual optical envelopes. Simple Icons references use pinned commits `17cd4ee07612198a1d8777a060d4100423762a8b` or historical v12.4.0 `32b07a5b798b84b97f2cbbb5b69ec7cb80472f73`. Historical AWS, Canva, Teams and Outlook silhouettes are recorded as such, not asserted to be current redesigns.
+
+Source-specific artwork terms, attribution and license texts are retained in [brand-additions.txt](licenses/brand-additions.txt), distributed with the package and every ZIP. Vue artwork is CC-BY-NC-SA-4.0 with additional permissions from Evan You; JavaScript and GitHub Copilot retain their upstream MIT notices; Teams and Outlook retain Microsoft Fabric asset terms. These assets are not all covered by the Master code license or Simple Icons CC0 dedication.
+
+Dcard uses a vector trace of the archived app icon from the linked Commons revision, whose metadata identifies Dcard as author. The original PNG, trace, hashes and measured trace fidelity are retained. Blue shades are unified, the long shadow omitted, and white becomes negative space. The official guide specifies a 48px minimum for app marks; the 16/20/24px exports are optical previews and do not claim compliance with that minimum. See [batch record](docs/brands-03.md).
+
+| Export | Artwork / version | License / terms |
+| --- | --- | --- |
+| `brand-vue-js` | [Simple Icons](https://github.com/simple-icons/simple-icons/blob/17cd4ee07612198a1d8777a060d4100423762a8b/icons/vuedotjs.svg) | CC-BY-NC-SA-4.0 |
+| `brand-javascript` | [Simple Icons](https://github.com/simple-icons/simple-icons/blob/17cd4ee07612198a1d8777a060d4100423762a8b/icons/javascript.svg) | MIT |
+| `brand-bun` | [Simple Icons](https://github.com/simple-icons/simple-icons/blob/17cd4ee07612198a1d8777a060d4100423762a8b/icons/bun.svg) | CC0-1.0 |
+| `brand-github-copilot` | [Simple Icons](https://github.com/simple-icons/simple-icons/blob/17cd4ee07612198a1d8777a060d4100423762a8b/icons/githubcopilot.svg) | MIT |
+| `brand-hugging-face` | [Simple Icons](https://github.com/simple-icons/simple-icons/blob/17cd4ee07612198a1d8777a060d4100423762a8b/icons/huggingface.svg) | CC0-1.0 |
+| `brand-aws` | [Simple Icons](https://github.com/simple-icons/simple-icons/blob/32b07a5b798b84b97f2cbbb5b69ec7cb80472f73/icons/amazonwebservices.svg) | CC0-1.0 |
+| `brand-firebase` | [Simple Icons](https://github.com/simple-icons/simple-icons/blob/17cd4ee07612198a1d8777a060d4100423762a8b/icons/firebase.svg) | CC0-1.0 |
+| `brand-postgresql` | [Simple Icons](https://github.com/simple-icons/simple-icons/blob/17cd4ee07612198a1d8777a060d4100423762a8b/icons/postgresql.svg) | CC0-1.0 |
+| `brand-microsoft-teams` | [Simple Icons](https://github.com/simple-icons/simple-icons/blob/32b07a5b798b84b97f2cbbb5b69ec7cb80472f73/icons/microsoftteams.svg) | LicenseRef-Microsoft-Fabric-Assets |
+| `brand-outlook` | [Simple Icons](https://github.com/simple-icons/simple-icons/blob/32b07a5b798b84b97f2cbbb5b69ec7cb80472f73/icons/microsoftoutlook.svg) | LicenseRef-Microsoft-Fabric-Assets |
+| `brand-google-meet` | [Simple Icons](https://github.com/simple-icons/simple-icons/blob/17cd4ee07612198a1d8777a060d4100423762a8b/icons/googlemeet.svg) | CC0-1.0 |
+| `brand-canva` | [Simple Icons](https://github.com/simple-icons/simple-icons/blob/32b07a5b798b84b97f2cbbb5b69ec7cb80472f73/icons/canva.svg) | CC0-1.0 |
+| `brand-dribbble` | [Simple Icons](https://github.com/simple-icons/simple-icons/blob/17cd4ee07612198a1d8777a060d4100423762a8b/icons/dribbble.svg) | CC0-1.0 |
+| `brand-wordpress` | [Simple Icons](https://github.com/simple-icons/simple-icons/blob/17cd4ee07612198a1d8777a060d4100423762a8b/icons/wordpress.svg) | CC0-1.0 |
+| `brand-dcard` | [Dcard artwork via Wikimedia Commons](https://commons.wikimedia.org/w/index.php?title=File:Dcard_Favicon_x520.png&oldid=887105692) | LicenseRef-Dcard-Brand |
+| `brand-shopee` | [Simple Icons](https://github.com/simple-icons/simple-icons/blob/17cd4ee07612198a1d8777a060d4100423762a8b/icons/shopee.svg) | CC0-1.0 |
+
+
+## Atlas sports simplicity refinement
+
+`football` retains its Tabler-derived central-pentagon construction (MIT; licenses/tabler.txt), with a small panel proportion adjustment. The intermediate Phosphor-style peripheral panels were rejected and are preserved only in review history. `tennis-racket` further adapts Hugeicons Free's open frame and sparse net indication (MIT; licenses/hugeicons-MIT.txt). Current evidence and preserved earlier decisions: `docs/review/atlas-craft-12/ledger.json`.
+
+
+## Atlas 15-outdoor
+
+Individual comparisons and changes: `docs/review/atlas-craft-13/ledger.json`. Pinned source originals and checksums: `references/atlas-craft-13/manifest.json`.
+
+- Adapted Phosphor constructions: `binoculars`, `hiking`. MIT; licenses/phosphor.txt.
+- Adapted Lucide constructions: `flashlight`, `axe`, `shovel`, `pickaxe`, `footprints`, `kayak`. ISC; licenses/lucide.txt.
+- Adapted Hugeicons Free constructions: `fishing-hook`. MIT; licenses/hugeicons-MIT.txt.
+- Adapted Tabler constructions: `campfire`. MIT; licenses/tabler.txt.

@@ -2,7 +2,7 @@
 
 微圓、簡約，為 Dashboard、App 與 Web 介面設計的 SVG 圖示。
 
-Master Icons 著重輪廓、比例、留白與小尺寸的細節取捨。目前為 **0.1.0-alpha.0**，包含 **464 個命名圖示、315 個基本概念**；介面圖示提供 16 / 20 / 24 三種光學尺寸，以及 sharp / soft / rounded 三種角型；品牌圖示按尺寸調整留白、共用角型圖稿，共 **4,176 份 SVG**。方向與狀態版本計入命名數，搜尋別名不另計數。
+Master Icons 著重輪廓、比例、留白與小尺寸的細節取捨。目前為 **0.1.0-alpha.0**，包含 **480 個命名圖示、331 個基本概念**；介面圖示提供 16 / 20 / 24 三種光學尺寸，以及 sharp / soft / rounded 三種角型；品牌圖示按尺寸調整留白、共用角型圖稿，共 **4,320 份 SVG**。方向與狀態版本計入命名數，搜尋別名不另計數。
 
 ## 設計與輸出
 
@@ -13,7 +13,7 @@ Master Icons 著重輪廓、比例、留白與小尺寸的細節取捨。目前�
 
 圖庫仍在 alpha 階段，圖形與 API 可能調整。這些設計取向不代表所有圖示、顯示尺寸或背景都已達到相同完成度；各批已執行的檢查與限制見 [驗證紀錄](docs/validation.md) 及對應批次報告，報告僅涵蓋其記載的版本與範圍。
 
-品牌分類包含 72 個品牌與平台名稱，包含 Master、GitHub、Figma、Instagram、LINE、YouTube、Claude、OpenAI、ChatGPT、Microsoft、LinkedIn、Slack、Cursor、Supabase、Vite 等。品牌使用單色實心輪廓、個別尺寸留白，三種角型保留相同標誌；不隨描邊設定變形。來源紀錄見 [第三方聲明](THIRD_PARTY_NOTICES.md)。
+品牌分類包含 88 個品牌與平台名稱，包含 Master、GitHub、Figma、Instagram、LINE、YouTube、Claude、OpenAI、ChatGPT、Microsoft、LinkedIn、Slack、Cursor、Supabase、Vite 等。品牌使用單色實心輪廓、個別尺寸留白，三種角型保留相同標誌；不隨描邊設定變形。來源紀錄見 [第三方聲明](THIRD_PARTY_NOTICES.md)。
 
 ## 本地開始使用
 
@@ -114,6 +114,6 @@ node skills/master-icons/scripts/render-review.mjs --repo . --icons user,users,b
 
 Master 自行製作的程式碼與介面圖稿採用 [MIT License](LICENSE)；涉及上游素材的部分同時保留其適用聲明。目前保留 12 顆 Hugeicons Free 研究重繪的 MIT notices，以及 `megaphone`、`handshake`、`layers` 三顆 Lucide 改作的 ISC 與相關上游聲明。名稱、固定版本、修改方式及授權詳見 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。
 
-品牌資產另列來源：63 顆採用 Simple Icons 的 CC0 資產，Master 標誌使用自有素材；相關聲明與品牌使用資訊見 [品牌來源](THIRD_PARTY_NOTICES.md#brand-silhouettes--brands-01)。品牌資產與 Master 的程式碼授權分開記載。
+品牌資產另列來源：採用 Simple Icons、官方向量及註明來源的 Dcard 點陣轉描，Master 標誌使用自有素材；相關聲明與品牌使用資訊見 [品牌來源](THIRD_PARTY_NOTICES.md#brand-silhouettes--brands-01)。品牌資產與 Master 的程式碼授權分開記載；Vue、JavaScript、Copilot、Teams／Outlook 與 Dcard 的個別聲明見 [新增批次](docs/brands-03.md)。
 
 `references/` 中的比較原稿屬於各上游專案，保留各自授權，且不納入圖示套件。適用於改作圖稿的 notices 則隨單檔 SVG、套件及 ZIP 提供。Master Icons 與上述參考專案沒有隸屬或背書關係。

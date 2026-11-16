@@ -86,6 +86,7 @@ for(const entry of brandCatalog){
   assert.equal(decision.status,'visually-reviewed-candidate');
   assert.equal(decision.variantsSha256,sha(JSON.stringify(definitions[entry.name].variants)),entry.name+': stale brand decision');
   assert.equal(sha(await readFile(entry.source.localPath)),entry.source.sha256,entry.name+': source changed');
+  if(entry.source.originalPath)assert.equal(sha(await readFile(entry.source.originalPath)),entry.source.originalSha256,entry.name+': original raster changed');
   assert.equal(brandReview.icons.find(x=>x.name===entry.name).variantsSha256,sha(JSON.stringify(definitions[entry.name].variants)),entry.name+': stale brand review');
 }
 for(const evidence of brandReview.evidence)assert.equal(sha(await readFile(evidence.path)),evidence.sha256,evidence.path);
@@ -129,7 +130,7 @@ for(const name of await readdir('dist/downloads')){
   assert.match(strFromU8(zip['licenses/hugeicons-MIT.txt']),/MIT/);
   assert.ok(zip.LICENSE && zip['THIRD_PARTY_NOTICES.md']);
   assert.ok(zip['licenses/lucide.txt']);
-  assert.ok(zip['licenses/simple-icons-CC0.txt'] && zip['licenses/simple-icons-DISCLAIMER.md']);
+  assert.ok(zip['licenses/simple-icons-CC0.txt'] && zip['licenses/simple-icons-DISCLAIMER.md'] && zip['licenses/brand-additions.txt']);
   for(const name of Object.keys(adaptedSources))assert.match(strFromU8(zip[name+'.svg']),/ISC License/);
 }
 console.log(`Validated ${conceptCount} base concepts / ${catalog.length} named drawings, ${total} SVG hashes, geometry, notices, 48 historical + ${uiRefs.references.length} current pinned references, and 9 licensed ZIPs.`);

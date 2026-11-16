@@ -1,0 +1,200 @@
+{
+  "date": "2026-11-17",
+  "scope": "16 brand additions in a shared worktree; concurrent Atlas UI and framework/stroke work retained",
+  "brands": 88,
+  "distinctSilhouettes": 87,
+  "brandSVGs": 792,
+  "addedSVGs": 144,
+  "existingBrandRecordsUnchanged": 72,
+  "existingBrandGeometryHashesUnchanged": 72,
+  "checks": {
+    "packageBuild": "passed",
+    "reviewBuild": "passed",
+    "siteBuild": "passed",
+    "unitTests": {
+      "passed": 45,
+      "failed": 0
+    },
+    "types": {
+      "status": "passed",
+      "nodeOptions": "--max-old-space-size=8192",
+      "astroFiles": 6203,
+      "svelteErrors": 0,
+      "svelteWarnings": 0
+    },
+    "i18nAudit": "passed",
+    "packageConsumer": "passed: data, runtime, React, Vue, Preact, Svelte, Astro, fixed entries, SVG subpaths and notices",
+    "browser": {
+      "passed": 6,
+      "failed": 0,
+      "engines": [
+        "chromium",
+        "webkit"
+      ],
+      "locales": [
+        "en",
+        "tw"
+      ],
+      "flows": [
+        "24 recent names at 16px",
+        "88-brand category",
+        "Chinese aliases: 蝦皮 / 狄卡",
+        "AWS long-form alias",
+        "keyboard",
+        "SVG download and source match",
+        "all 9 masters",
+        "stroke invariance",
+        "390px light/dark without overflow"
+      ],
+      "firefox": "Not rerun; previous local profile startup limitation"
+    },
+    "wholeWorkspaceValidation": {
+      "icons": 620,
+      "concepts": 471,
+      "svgHashes": 5580,
+      "downloadZIPs": 9,
+      "status": "passed"
+    },
+    "standaloneBrandZIP": "792 SVGs; byte-for-byte round-trip passed",
+    "traceReproducibility": "byte-for-byte passed; scripts/trace-dcard.py",
+    "diffWhitespace": "passed"
+  },
+  "sourceHashes": [
+    {
+      "name": "brand-vue-js",
+      "sha256": "2a57b59bd3ff2880f971f7f6cce2378d20bdfb1a54150a0a7ca9fd2fe1bfa781"
+    },
+    {
+      "name": "brand-javascript",
+      "sha256": "c9be35a7a861ebe80ae4ee706d05004b99ee59fc63db69da6dcc10776718434b"
+    },
+    {
+      "name": "brand-bun",
+      "sha256": "f356fc1ec5659e73e9b1e881ef2785a4fc4e0e3d82b446e6484f55303546dc6d"
+    },
+    {
+      "name": "brand-github-copilot",
+      "sha256": "c72c1e0018e84b3128c5a1ac43ec2be135ac6ec4eb9c0ea18ed76416d23f2af3"
+    },
+    {
+      "name": "brand-hugging-face",
+      "sha256": "aa81744034eecf4ac6b3fb7108dd71223965c7af3c534932391314563b150109"
+    },
+    {
+      "name": "brand-aws",
+      "sha256": "f67734a0f5a7f925c84b6a9ea6e5489fe7af96e4ae167da6b71506a5d6afcab4"
+    },
+    {
+      "name": "brand-firebase",
+      "sha256": "3f46d84a41479d7789cc36b82c2b6852e6bbbfd30ebee5b7a3aef7d49758295a"
+    },
+    {
+      "name": "brand-postgresql",
+      "sha256": "c8ccadbd88c9312c2ad3734c4861b31d3485ce179ee91d64793143f83cfa745c"
+    },
+    {
+      "name": "brand-microsoft-teams",
+      "sha256": "9c509b9aea846e4a773d59df7fe3d29843e9e05c3579ce167d1e7e5ba14be1d1"
+    },
+    {
+      "name": "brand-outlook",
+      "sha256": "f2fcdd8cbd3be6855935de2ab3fb7010aef607963fb157c64ac308e693a18f87"
+    },
+    {
+      "name": "brand-google-meet",
+      "sha256": "ae7adb7a21d438caca54f88c2b864975893017eab16f4c0a4746c07b4cf24c74"
+    },
+    {
+      "name": "brand-canva",
+      "sha256": "0d90ba2030f2ad642e19234241467280e97034a151905d60e05f0fc9fc41dcff"
+    },
+    {
+      "name": "brand-dribbble",
+      "sha256": "5779a646c6d72f76c07d8a6d87fda783dee55c32f7657857649454dc4f696a43"
+    },
+    {
+      "name": "brand-wordpress",
+      "sha256": "8877151b8978c3c961d16659ba28603a4015872e79fbbb770d09b68b0da8a4ff"
+    },
+    {
+      "name": "brand-dcard",
+      "sha256": "71492b4537b0a2c04e6199106a1f809e617900eb50018765daddac80ab539f4e"
+    },
+    {
+      "name": "brand-shopee",
+      "sha256": "b51a59e1463937286acca1b03bf9dd11df629fcde3f6fa91822f55d7bcb976bd"
+    }
+  ],
+  "reviewEvidence": [
+    {
+      "path": "docs/review/brands-01/sheet-5-light-1x.png",
+      "sha256": "9376a62cf6d7ab18fa3c89741872c98b21617d2b9beca998984d74f23c0bd64c"
+    },
+    {
+      "path": "docs/review/brands-01/sheet-6-light-1x.png",
+      "sha256": "4275f3acf7afe8376c7d4c7b8748da4e2ebf1a4e8a106b3a060f494ef89fd0ec"
+    },
+    {
+      "path": "docs/review/brands-01/sheet-5-dark-1x.png",
+      "sha256": "6249f8995f384dbc63c60df896e26493a4adab38b2d39bc073500aa59ae0fb41"
+    },
+    {
+      "path": "docs/review/brands-01/sheet-6-dark-1x.png",
+      "sha256": "ef30a899fe4d440f77bb7971e2b4f79455664343e878657040900063f4e4bbf6"
+    },
+    {
+      "path": "docs/review/brands-01/sheet-5-light-2x.png",
+      "sha256": "34fa9e8d038a3127456e8cc0712ddd0b5ce1449eeca3c741feaca2f5f175657e"
+    },
+    {
+      "path": "docs/review/brands-01/sheet-6-light-2x.png",
+      "sha256": "855669b99c4a4c4c6e71a186836cdc02c063fc32aefe033c68010935372d4a3a"
+    },
+    {
+      "path": "docs/review/brands-01/sheet-5-dark-2x.png",
+      "sha256": "36afbdc4feaa62449669480327a8c2422243d8f0497fb77a1b0eba707ea1f8b7"
+    },
+    {
+      "path": "docs/review/brands-01/sheet-6-dark-2x.png",
+      "sha256": "c675ef3d9cdfbb37a43d0cda32396f8b8b55c7d9e963a5bd5d840537b704428b"
+    },
+    {
+      "path": "docs/review/brands-03/overview.png",
+      "sha256": "9e4c9a9a13f97fea176550611c210c62464f03840742a5194a70bbde28e95fac"
+    }
+  ],
+  "logs": [
+    {
+      "commandLog": "work/brands-03/build.log",
+      "sha256": "fe8173d27bc74a0107f48ea47bc36487ce20e2c3e9576e06c5ff9cbd6fb257ed"
+    },
+    {
+      "commandLog": "work/brands-03/review-build.log",
+      "sha256": "96d8a9516780904d36fad5d75f1902eb6c696c6a1834c71ace2d9bf0fd257a34"
+    },
+    {
+      "commandLog": "work/brands-03/site-build.log",
+      "sha256": "4f5c2aa4b06949c7d406ddedc2415fb0dc395ad2c2a46b74853a9a613a9547cd"
+    },
+    {
+      "commandLog": "work/brands-03/tests.log",
+      "sha256": "4f928c3edbfeb258e820235a59242c3e200ac55438312c5884f59455d7d28d5d"
+    },
+    {
+      "commandLog": "work/brands-03/types.log",
+      "sha256": "41c8c228d62852c0b1c08bc7eff4952dbf0a267ec1862b108dc5f9b5d98028b0"
+    },
+    {
+      "commandLog": "work/brands-03/package.log",
+      "sha256": "85b4459dd161aaa26953a33080c72869163a18087574aade8604775e42d2e0de"
+    },
+    {
+      "commandLog": "work/brands-03/browser.log",
+      "sha256": "91a7cc9f1e400485dc928f3a91983d5bc5194cd8615ef3b1976d137e460a25a1"
+    },
+    {
+      "commandLog": "work/brands-03/validate.log",
+      "sha256": "12e6b4082989d8f33824beadd18343f7d4178d4fd11ca5037faeb059bb881348"
+    }
+  ]
+}
