@@ -1,0 +1,1137 @@
+[
+  {
+    "name": "triangle",
+    "purpose": "三角形形狀工具",
+    "recognitionCues": "等腰三角輪廓與水平底邊",
+    "confusableWith": [
+      "alert-triangle",
+      "play"
+    ],
+    "sourceObservation": "Lucide 與 Tabler 均以圓潤等腰三角表達基本形狀；Master 保持相近慣用比例，沒有警告驚嘆號。",
+    "references": [
+      {
+        "name": "triangle",
+        "library": "Lucide",
+        "repository": "lucide-icons/lucide",
+        "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+        "path": "icons/triangle.svg",
+        "localPath": "references/expansion-01/lucide-triangle.svg",
+        "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/triangle.svg",
+        "sha256": "07ef0fa398d74189b9d59ce313534a4b01fad705d52b36f8e4e8fc57a3437023",
+        "license": "ISC AND MIT",
+        "sourceName": "triangle",
+        "match": "exact",
+        "role": "comparison-only"
+      },
+      {
+        "name": "triangle",
+        "library": "Tabler",
+        "repository": "tabler/tabler-icons",
+        "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+        "path": "icons/outline/triangle.svg",
+        "localPath": "references/expansion-01/tabler-triangle.svg",
+        "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/triangle.svg",
+        "sha256": "0877611238926f6fe6f0dfc42670a427e68a5063303b80d90c5b543700f23b78",
+        "license": "MIT",
+        "sourceName": "triangle",
+        "match": "exact",
+        "role": "comparison-only"
+      }
+    ],
+    "effects": {
+      "dashes": {
+        "used": false,
+        "reason": "不採用；三角形以連續實體輪廓表達，沒有未完成或隱藏邊界。"
+      },
+      "opacity": {
+        "used": false,
+        "reason": "不採用；三角形的主體及必要訊號以留白分離，淡化不增加語意。"
+      },
+      "gradients": {
+        "used": false,
+        "reason": "本期不新增連續漸層或mask，以原生輪廓及必要逐筆透明度處理。"
+      }
+    },
+    "change": {
+      "kind": "new",
+      "reason": "按銳角局部限縮半徑，sharp/soft/rounded有實際輪廓差別，rounded頂尖仍保留三角辨識；16px輪廓沒有局部黑塊。",
+      "before": null
+    },
+    "visualReview": {
+      "status": "new-after-visual-review",
+      "reviewer": "root",
+      "date": "2026-11-16",
+      "batch": "expansion-06",
+      "variantsSha256": "8b3c66e3bea052ba3af094834243781054e110a8629b78c5d9342af10477ec24",
+      "checks": [
+        "two-pinned-source-comparisons",
+        "16/20/24",
+        "sharp/soft/rounded",
+        "light/dark",
+        "55-percent-foreground",
+        "adjacent-text"
+      ],
+      "evidence": [
+        {
+          "path": "docs/review/ui-v1/expansion-06/comparison.png",
+          "sha256": "5a748ddb5a4e62d623a8fbf6ae5ebe19d0210508cd29c110e7ca878fc3714d19"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-06/comparison-dark.png",
+          "sha256": "a3ef91280ca9895fe5a4b1283904711c2ad989efc332d713adeb88da0841b11c"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-06/native.png",
+          "sha256": "46d984f0dd5456972fb51517c900fbb57567affcc485e270c52c331bbe80a835"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-06/native-dark.png",
+          "sha256": "0da24b4e4baf79ead582d5dd4122136ab38be6aa3ee6608083ae6fa23945da6e"
+        }
+      ]
+    },
+    "status": "visually-reviewed-candidate",
+    "userApproval": "pending"
+  },
+  {
+    "name": "diamond",
+    "purpose": "菱形形狀工具",
+    "recognitionCues": "四個等長斜邊、上下左右頂點",
+    "confusableWith": [
+      "component",
+      "gem"
+    ],
+    "sourceObservation": "Lucide diamond 是菱形；Tabler同名diamond實為寶石，已改用其square-rotated。兩份正確來源都有寬闊內部負空間，Master採局部縮小的框角避免rounded縮小過多。",
+    "references": [
+      {
+        "name": "diamond",
+        "library": "Lucide",
+        "repository": "lucide-icons/lucide",
+        "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+        "path": "icons/diamond.svg",
+        "localPath": "references/expansion-01/lucide-diamond.svg",
+        "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/diamond.svg",
+        "sha256": "2a2f4ccad87409bed020191ebfb30ff806dca49a1b687d0be96f4d7343da8d7c",
+        "license": "ISC AND MIT",
+        "sourceName": "diamond",
+        "match": "exact",
+        "role": "comparison-only"
+      },
+      {
+        "name": "diamond",
+        "library": "Tabler",
+        "repository": "tabler/tabler-icons",
+        "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+        "path": "icons/outline/square-rotated.svg",
+        "localPath": "references/expansion-01/tabler-square-rotated.svg",
+        "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/square-rotated.svg",
+        "sha256": "fc11acec6de8f3961d011c14458616835b3d9e0375b4f31d2619b5e924233c41",
+        "license": "MIT",
+        "sourceName": "square-rotated",
+        "match": "exact",
+        "role": "comparison-only"
+      }
+    ],
+    "effects": {
+      "dashes": {
+        "used": false,
+        "reason": "不採用；菱形以連續實體輪廓表達，沒有未完成或隱藏邊界。"
+      },
+      "opacity": {
+        "used": false,
+        "reason": "不採用；菱形的主體及必要訊號以留白分離，淡化不增加語意。"
+      },
+      "gradients": {
+        "used": false,
+        "reason": "本期不新增連續漸層或mask，以原生輪廓及必要逐筆透明度處理。"
+      }
+    },
+    "change": {
+      "kind": "new",
+      "reason": "四頂點共用角型規則，soft微圓與rounded較圓但仍是同一大小等邊菱形；不以寶石切面增加無關細節。",
+      "before": null
+    },
+    "visualReview": {
+      "status": "new-after-visual-review",
+      "reviewer": "root",
+      "date": "2026-11-16",
+      "batch": "expansion-06",
+      "variantsSha256": "e6425ad3871f9d327584578abf19e656ea7721a740467e399535b57b316823bb",
+      "checks": [
+        "two-pinned-source-comparisons",
+        "16/20/24",
+        "sharp/soft/rounded",
+        "light/dark",
+        "55-percent-foreground",
+        "adjacent-text"
+      ],
+      "evidence": [
+        {
+          "path": "docs/review/ui-v1/expansion-06/comparison.png",
+          "sha256": "5a748ddb5a4e62d623a8fbf6ae5ebe19d0210508cd29c110e7ca878fc3714d19"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-06/comparison-dark.png",
+          "sha256": "a3ef91280ca9895fe5a4b1283904711c2ad989efc332d713adeb88da0841b11c"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-06/native.png",
+          "sha256": "46d984f0dd5456972fb51517c900fbb57567affcc485e270c52c331bbe80a835"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-06/native-dark.png",
+          "sha256": "0da24b4e4baf79ead582d5dd4122136ab38be6aa3ee6608083ae6fa23945da6e"
+        }
+      ]
+    },
+    "status": "visually-reviewed-candidate",
+    "userApproval": "pending"
+  },
+  {
+    "name": "hexagon",
+    "purpose": "六角形形狀工具",
+    "recognitionCues": "上下頂角及兩條直立側邊",
+    "confusableWith": [
+      "circle",
+      "badge-check"
+    ],
+    "sourceObservation": "Lucide與Tabler皆採尖頂六角形而非平頂方向。Master保留此慣用輪廓，用約120度內角的局部半徑維持六邊辨識。",
+    "references": [
+      {
+        "name": "hexagon",
+        "library": "Lucide",
+        "repository": "lucide-icons/lucide",
+        "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+        "path": "icons/hexagon.svg",
+        "localPath": "references/expansion-01/lucide-hexagon.svg",
+        "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/hexagon.svg",
+        "sha256": "d6fe215b28eaccc1d50b89b967ae0bd6368ed602a89fd90b3c02688c15f133df",
+        "license": "ISC AND MIT",
+        "sourceName": "hexagon",
+        "match": "exact",
+        "role": "comparison-only"
+      },
+      {
+        "name": "hexagon",
+        "library": "Tabler",
+        "repository": "tabler/tabler-icons",
+        "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+        "path": "icons/outline/hexagon.svg",
+        "localPath": "references/expansion-01/tabler-hexagon.svg",
+        "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/hexagon.svg",
+        "sha256": "62491a2d256dca698f9a491433f4840091f87e813ac2b76ba58056809a92e8b4",
+        "license": "MIT",
+        "sourceName": "hexagon",
+        "match": "exact",
+        "role": "comparison-only"
+      }
+    ],
+    "effects": {
+      "dashes": {
+        "used": false,
+        "reason": "不採用；六角形以連續實體輪廓表達，沒有未完成或隱藏邊界。"
+      },
+      "opacity": {
+        "used": false,
+        "reason": "不採用；六角形的主體及必要訊號以留白分離，淡化不增加語意。"
+      },
+      "gradients": {
+        "used": false,
+        "reason": "本期不新增連續漸層或mask，以原生輪廓及必要逐筆透明度處理。"
+      }
+    },
+    "change": {
+      "kind": "new",
+      "reason": "三角型的實際輪廓不同但可見寬度穩定；16px六條邊仍可辨，不增加中間圓孔而誤讀為螺帽。",
+      "before": null
+    },
+    "visualReview": {
+      "status": "new-after-visual-review",
+      "reviewer": "root",
+      "date": "2026-11-16",
+      "batch": "expansion-06",
+      "variantsSha256": "8aaa49657027ac456f884da45424688605c57e809063bd13cbf3f6c4808dfa19",
+      "checks": [
+        "two-pinned-source-comparisons",
+        "16/20/24",
+        "sharp/soft/rounded",
+        "light/dark",
+        "55-percent-foreground",
+        "adjacent-text"
+      ],
+      "evidence": [
+        {
+          "path": "docs/review/ui-v1/expansion-06/comparison.png",
+          "sha256": "5a748ddb5a4e62d623a8fbf6ae5ebe19d0210508cd29c110e7ca878fc3714d19"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-06/comparison-dark.png",
+          "sha256": "a3ef91280ca9895fe5a4b1283904711c2ad989efc332d713adeb88da0841b11c"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-06/native.png",
+          "sha256": "46d984f0dd5456972fb51517c900fbb57567affcc485e270c52c331bbe80a835"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-06/native-dark.png",
+          "sha256": "0da24b4e4baf79ead582d5dd4122136ab38be6aa3ee6608083ae6fa23945da6e"
+        }
+      ]
+    },
+    "status": "visually-reviewed-candidate",
+    "userApproval": "pending"
+  },
+  {
+    "name": "contrast",
+    "purpose": "對比度調整",
+    "recognitionCues": "外圓與內部單側半圓",
+    "confusableWith": [
+      "moon",
+      "circle",
+      "chart-pie"
+    ],
+    "sourceObservation": "Lucide與Tabler採外圓及內半圓輪廓。Master保留外環，將內半圓作實心以維持16px的明暗對比訊號。",
+    "references": [
+      {
+        "name": "contrast",
+        "library": "Lucide",
+        "repository": "lucide-icons/lucide",
+        "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+        "path": "icons/contrast.svg",
+        "localPath": "references/expansion-01/lucide-contrast.svg",
+        "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/contrast.svg",
+        "sha256": "a9f1a6166c479cd3e546625b09686a7e97322c850a9b146f270f912e886c395c",
+        "license": "ISC AND MIT",
+        "sourceName": "contrast",
+        "match": "exact",
+        "role": "comparison-only"
+      },
+      {
+        "name": "contrast",
+        "library": "Tabler",
+        "repository": "tabler/tabler-icons",
+        "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+        "path": "icons/outline/contrast.svg",
+        "localPath": "references/expansion-01/tabler-contrast.svg",
+        "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/contrast.svg",
+        "sha256": "9a8ccd2b4942bef00ad9e927a4b6548427880e9fd4d4be9c0818ddf2f434a834",
+        "license": "MIT",
+        "sourceName": "contrast",
+        "match": "exact",
+        "role": "comparison-only"
+      }
+    ],
+    "effects": {
+      "dashes": {
+        "used": false,
+        "reason": "不採用；對比以連續實體輪廓表達，沒有未完成或隱藏邊界。"
+      },
+      "opacity": {
+        "used": false,
+        "reason": "不採用透明度；實心半圓與留白直接表達兩側明暗，低對比色下輪廓更穩定。"
+      },
+      "gradients": {
+        "used": false,
+        "reason": "本期不新增連續漸層或mask，以原生輪廓及必要逐筆透明度處理。"
+      }
+    },
+    "change": {
+      "kind": "new",
+      "reason": "半圓實心與外環之間保留可見空白，減少小半圓的狹窄孔洞；屬實心幾何而非透明度效果。",
+      "before": null
+    },
+    "visualReview": {
+      "status": "new-after-visual-review",
+      "reviewer": "root",
+      "date": "2026-11-16",
+      "batch": "expansion-06",
+      "variantsSha256": "97a66ca4466d36815cfeac673fc2e6cc8dbfa7acad12a5eb9c9759af76fc1c33",
+      "checks": [
+        "two-pinned-source-comparisons",
+        "16/20/24",
+        "sharp/soft/rounded",
+        "light/dark",
+        "55-percent-foreground",
+        "adjacent-text"
+      ],
+      "evidence": [
+        {
+          "path": "docs/review/ui-v1/expansion-06/comparison.png",
+          "sha256": "5a748ddb5a4e62d623a8fbf6ae5ebe19d0210508cd29c110e7ca878fc3714d19"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-06/comparison-dark.png",
+          "sha256": "a3ef91280ca9895fe5a4b1283904711c2ad989efc332d713adeb88da0841b11c"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-06/native.png",
+          "sha256": "46d984f0dd5456972fb51517c900fbb57567affcc485e270c52c331bbe80a835"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-06/native-dark.png",
+          "sha256": "0da24b4e4baf79ead582d5dd4122136ab38be6aa3ee6608083ae6fa23945da6e"
+        }
+      ]
+    },
+    "status": "visually-reviewed-candidate",
+    "userApproval": "pending"
+  },
+  {
+    "name": "blend",
+    "purpose": "圖層混合模式",
+    "recognitionCues": "兩個等大交疊圓與中央交集",
+    "confusableWith": [
+      "copy",
+      "link",
+      "layers"
+    ],
+    "sourceObservation": "Lucide blend與Tabler blend-mode都以兩個同尺寸交疊圓表意；原候選Radix mix的不同形狀混合不是同一圖層構造，因此改配Tabler。",
+    "references": [
+      {
+        "name": "blend",
+        "library": "Lucide",
+        "repository": "lucide-icons/lucide",
+        "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+        "path": "icons/blend.svg",
+        "localPath": "references/expansion-01/lucide-blend.svg",
+        "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/blend.svg",
+        "sha256": "cff13925b80ff33a4f9c58114105c7077e2a24bbf1c5b9eb361d7bc706f92240",
+        "license": "ISC AND MIT",
+        "sourceName": "blend",
+        "match": "exact",
+        "role": "comparison-only"
+      },
+      {
+        "name": "blend",
+        "library": "Tabler",
+        "repository": "tabler/tabler-icons",
+        "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+        "path": "icons/outline/blend-mode.svg",
+        "localPath": "references/expansion-01/tabler-blend-mode.svg",
+        "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/blend-mode.svg",
+        "sha256": "6f39c9c87862a95778fb6224b3b39a7b4e5260bd09aea8848040dbcd19edc26b",
+        "license": "MIT",
+        "sourceName": "blend-mode",
+        "match": "exact",
+        "role": "comparison-only"
+      }
+    ],
+    "effects": {
+      "dashes": {
+        "used": false,
+        "reason": "不採用；混合以連續實體輪廓表達，沒有未完成或隱藏邊界。"
+      },
+      "opacity": {
+        "used": false,
+        "reason": "評估後不採用；兩圓同等參與混合，淡化其中一圓會引入前後主次。輪廓交集已能表達重疊，不需漸層。"
+      },
+      "gradients": {
+        "used": false,
+        "reason": "本期不新增連續漸層或mask，以原生輪廓及必要逐筆透明度處理。"
+      }
+    },
+    "change": {
+      "kind": "new",
+      "reason": "兩圓保留完整穿透輪廓，中央交集本身就是混合訊號，不能依一般遮擋規則裁掉；同半徑同重量，16px仍分辨雙圓。",
+      "before": null
+    },
+    "visualReview": {
+      "status": "new-after-visual-review",
+      "reviewer": "root",
+      "date": "2026-11-16",
+      "batch": "expansion-06",
+      "variantsSha256": "c4e7cb2498f09ce11e63538e4c78332afc5e878b9f5a4f94793a426342b806fe",
+      "checks": [
+        "two-pinned-source-comparisons",
+        "16/20/24",
+        "sharp/soft/rounded",
+        "light/dark",
+        "55-percent-foreground",
+        "adjacent-text"
+      ],
+      "evidence": [
+        {
+          "path": "docs/review/ui-v1/expansion-06/comparison.png",
+          "sha256": "5a748ddb5a4e62d623a8fbf6ae5ebe19d0210508cd29c110e7ca878fc3714d19"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-06/comparison-dark.png",
+          "sha256": "a3ef91280ca9895fe5a4b1283904711c2ad989efc332d713adeb88da0841b11c"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-06/native.png",
+          "sha256": "46d984f0dd5456972fb51517c900fbb57567affcc485e270c52c331bbe80a835"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-06/native-dark.png",
+          "sha256": "0da24b4e4baf79ead582d5dd4122136ab38be6aa3ee6608083ae6fa23945da6e"
+        }
+      ]
+    },
+    "status": "visually-reviewed-candidate",
+    "userApproval": "pending"
+  },
+  {
+    "name": "distribute-horizontal",
+    "purpose": "沿水平方向均勻分布物件",
+    "recognitionCues": "左右兩個直立物件、各自中心導線",
+    "confusableWith": [
+      "align-center",
+      "layout-columns",
+      "distribute-vertical"
+    ],
+    "sourceObservation": "Lucide以兩個物件的中心線表達水平分布。Tabler layout-distribute-vertical則以兩側直立邊界與中間物件表達相同空間軸；來源名稱與Master的操作軸命名不同，已依圖形重配。",
+    "references": [
+      {
+        "name": "distribute-horizontal",
+        "library": "Lucide",
+        "repository": "lucide-icons/lucide",
+        "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+        "path": "icons/align-horizontal-distribute-center.svg",
+        "localPath": "references/expansion-01/lucide-align-horizontal-distribute-center.svg",
+        "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/align-horizontal-distribute-center.svg",
+        "sha256": "649b13d2a25599200a3fb3aa57b3856e19969e5fffbea7c011f79734862b9354",
+        "license": "ISC AND MIT",
+        "sourceName": "align-horizontal-distribute-center",
+        "match": "exact",
+        "role": "comparison-only"
+      },
+      {
+        "name": "distribute-horizontal",
+        "library": "Tabler",
+        "repository": "tabler/tabler-icons",
+        "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+        "path": "icons/outline/layout-distribute-vertical.svg",
+        "localPath": "references/expansion-01/tabler-layout-distribute-vertical.svg",
+        "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/layout-distribute-vertical.svg",
+        "sha256": "ac35c055d85122802934825252a26ee56e5e14116999c67504b714eafde43c60",
+        "license": "MIT",
+        "sourceName": "layout-distribute-vertical",
+        "match": "exact",
+        "role": "comparison-only"
+      }
+    ],
+    "effects": {
+      "dashes": {
+        "used": false,
+        "reason": "不採用；水平等距分佈以連續實體輪廓表達，沒有未完成或隱藏邊界。"
+      },
+      "opacity": {
+        "used": false,
+        "reason": "不採用；水平等距分佈的主體及必要訊號以留白分離，淡化不增加語意。"
+      },
+      "gradients": {
+        "used": false,
+        "reason": "本期不新增連續漸層或mask，以原生輪廓及必要逐筆透明度處理。"
+      }
+    },
+    "change": {
+      "kind": "new",
+      "reason": "採左右中心導線和不同高度物件，導線只露出物件外部且端點接實際邊界，不穿過內孔造成密度；固定方向不做RTL鏡射。",
+      "before": null
+    },
+    "visualReview": {
+      "status": "new-after-visual-review",
+      "reviewer": "root",
+      "date": "2026-11-16",
+      "batch": "expansion-06",
+      "variantsSha256": "a662e359cdfc52b1712ec624e8ece38aa10537a22e504714d45c6bfbc1e8390c",
+      "checks": [
+        "two-pinned-source-comparisons",
+        "16/20/24",
+        "sharp/soft/rounded",
+        "light/dark",
+        "55-percent-foreground",
+        "adjacent-text"
+      ],
+      "evidence": [
+        {
+          "path": "docs/review/ui-v1/expansion-06/comparison.png",
+          "sha256": "5a748ddb5a4e62d623a8fbf6ae5ebe19d0210508cd29c110e7ca878fc3714d19"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-06/comparison-dark.png",
+          "sha256": "a3ef91280ca9895fe5a4b1283904711c2ad989efc332d713adeb88da0841b11c"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-06/native.png",
+          "sha256": "46d984f0dd5456972fb51517c900fbb57567affcc485e270c52c331bbe80a835"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-06/native-dark.png",
+          "sha256": "0da24b4e4baf79ead582d5dd4122136ab38be6aa3ee6608083ae6fa23945da6e"
+        }
+      ]
+    },
+    "status": "visually-reviewed-candidate",
+    "userApproval": "pending"
+  },
+  {
+    "name": "distribute-vertical",
+    "purpose": "沿垂直方向均勻分布物件",
+    "recognitionCues": "上下兩個橫向物件、各自中心導線",
+    "confusableWith": [
+      "align-center",
+      "layout-rows",
+      "distribute-horizontal"
+    ],
+    "sourceObservation": "Lucide採上下中心線；Tabler layout-distribute-horizontal使用上下邊界和中間物件。Master明確按分布方向命名，不能僅因Tabler檔名相似便配錯。",
+    "references": [
+      {
+        "name": "distribute-vertical",
+        "library": "Lucide",
+        "repository": "lucide-icons/lucide",
+        "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+        "path": "icons/align-vertical-distribute-center.svg",
+        "localPath": "references/expansion-01/lucide-align-vertical-distribute-center.svg",
+        "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/align-vertical-distribute-center.svg",
+        "sha256": "5d7184d1b3b8533d3de1cb9f55dac9864a468c7245252a392cf404008f0d59b1",
+        "license": "ISC AND MIT",
+        "sourceName": "align-vertical-distribute-center",
+        "match": "exact",
+        "role": "comparison-only"
+      },
+      {
+        "name": "distribute-vertical",
+        "library": "Tabler",
+        "repository": "tabler/tabler-icons",
+        "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+        "path": "icons/outline/layout-distribute-horizontal.svg",
+        "localPath": "references/expansion-01/tabler-layout-distribute-horizontal.svg",
+        "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/layout-distribute-horizontal.svg",
+        "sha256": "24ee1d6982fb1d267d2c26fd51b004fe28c2a403b5ece947249363a1ec427d34",
+        "license": "MIT",
+        "sourceName": "layout-distribute-horizontal",
+        "match": "exact",
+        "role": "comparison-only"
+      }
+    ],
+    "effects": {
+      "dashes": {
+        "used": false,
+        "reason": "不採用；垂直等距分佈以連續實體輪廓表達，沒有未完成或隱藏邊界。"
+      },
+      "opacity": {
+        "used": false,
+        "reason": "不採用；垂直等距分佈的主體及必要訊號以留白分離，淡化不增加語意。"
+      },
+      "gradients": {
+        "used": false,
+        "reason": "本期不新增連續漸層或mask，以原生輪廓及必要逐筆透明度處理。"
+      }
+    },
+    "change": {
+      "kind": "new",
+      "reason": "由水平母型旋轉90度，共享框體寬度、局部角型與導線接點；九組輸出中小框內部沒有橫線穿孔。",
+      "before": null
+    },
+    "visualReview": {
+      "status": "new-after-visual-review",
+      "reviewer": "root",
+      "date": "2026-11-16",
+      "batch": "expansion-06",
+      "variantsSha256": "07f41b4e7cda000c80687fc36d9c6bfb5956fcced6bd8805d95285b755a11a95",
+      "checks": [
+        "two-pinned-source-comparisons",
+        "16/20/24",
+        "sharp/soft/rounded",
+        "light/dark",
+        "55-percent-foreground",
+        "adjacent-text"
+      ],
+      "evidence": [
+        {
+          "path": "docs/review/ui-v1/expansion-06/comparison.png",
+          "sha256": "5a748ddb5a4e62d623a8fbf6ae5ebe19d0210508cd29c110e7ca878fc3714d19"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-06/comparison-dark.png",
+          "sha256": "a3ef91280ca9895fe5a4b1283904711c2ad989efc332d713adeb88da0841b11c"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-06/native.png",
+          "sha256": "46d984f0dd5456972fb51517c900fbb57567affcc485e270c52c331bbe80a835"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-06/native-dark.png",
+          "sha256": "0da24b4e4baf79ead582d5dd4122136ab38be6aa3ee6608083ae6fa23945da6e"
+        }
+      ]
+    },
+    "status": "visually-reviewed-candidate",
+    "userApproval": "pending"
+  },
+  {
+    "name": "compass",
+    "purpose": "方位與指南針",
+    "recognitionCues": "外圓與斜向雙尖針",
+    "confusableWith": [
+      "navigation",
+      "locate"
+    ],
+    "sourceObservation": "Lucide以乾淨外圓和針表意；Tabler另有四向刻度。Master採無刻度版本，留下16px指南針內部負空間。",
+    "references": [
+      {
+        "name": "compass",
+        "library": "Lucide",
+        "repository": "lucide-icons/lucide",
+        "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+        "path": "icons/compass.svg",
+        "localPath": "references/expansion-01/lucide-compass.svg",
+        "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/compass.svg",
+        "sha256": "c5a4d147bf48424f48b514712dd61c1b07cb689612a7baef87c88870092c1659",
+        "license": "ISC AND MIT",
+        "sourceName": "compass",
+        "match": "exact",
+        "role": "comparison-only"
+      },
+      {
+        "name": "compass",
+        "library": "Tabler",
+        "repository": "tabler/tabler-icons",
+        "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+        "path": "icons/outline/compass.svg",
+        "localPath": "references/expansion-01/tabler-compass.svg",
+        "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/compass.svg",
+        "sha256": "7f1b14b0e5c4dddf2cbbc429a0c2b297bf040cbdb4d8841062919d00ba95fc1a",
+        "license": "MIT",
+        "sourceName": "compass",
+        "match": "exact",
+        "role": "comparison-only"
+      }
+    ],
+    "effects": {
+      "dashes": {
+        "used": false,
+        "reason": "不採用；指南針以連續實體輪廓表達，沒有未完成或隱藏邊界。"
+      },
+      "opacity": {
+        "used": false,
+        "reason": "不採用；指南針的主體及必要訊號以留白分離，淡化不增加語意。"
+      },
+      "gradients": {
+        "used": false,
+        "reason": "本期不新增連續漸層或mask，以原生輪廓及必要逐筆透明度處理。"
+      }
+    },
+    "change": {
+      "kind": "new",
+      "reason": "雙尖針與外環保持間隙，兩側針尖清楚，局部tip半徑不抹平成橢圓；不加中心點擠壓內孔。",
+      "before": null
+    },
+    "visualReview": {
+      "status": "new-after-visual-review",
+      "reviewer": "root",
+      "date": "2026-11-16",
+      "batch": "expansion-06",
+      "variantsSha256": "c0870b81e6d1a96196699a36c7edbbef307dd3ea6319bfe50a5ff02284f48f06",
+      "checks": [
+        "two-pinned-source-comparisons",
+        "16/20/24",
+        "sharp/soft/rounded",
+        "light/dark",
+        "55-percent-foreground",
+        "adjacent-text"
+      ],
+      "evidence": [
+        {
+          "path": "docs/review/ui-v1/expansion-06/comparison.png",
+          "sha256": "5a748ddb5a4e62d623a8fbf6ae5ebe19d0210508cd29c110e7ca878fc3714d19"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-06/comparison-dark.png",
+          "sha256": "a3ef91280ca9895fe5a4b1283904711c2ad989efc332d713adeb88da0841b11c"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-06/native.png",
+          "sha256": "46d984f0dd5456972fb51517c900fbb57567affcc485e270c52c331bbe80a835"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-06/native-dark.png",
+          "sha256": "0da24b4e4baf79ead582d5dd4122136ab38be6aa3ee6608083ae6fa23945da6e"
+        }
+      ]
+    },
+    "status": "visually-reviewed-candidate",
+    "userApproval": "pending"
+  },
+  {
+    "name": "navigation",
+    "purpose": "地圖目前行進方向",
+    "recognitionCues": "東北尖端、尾部凹口",
+    "confusableWith": [
+      "send",
+      "mouse-pointer",
+      "compass"
+    ],
+    "sourceObservation": "Lucide以斜向方向箭頭，Tabler以朝上的中軸箭頭表達導航。Master採東北方向及明確尾凹，與既有send的折紙內線區分。",
+    "references": [
+      {
+        "name": "navigation",
+        "library": "Lucide",
+        "repository": "lucide-icons/lucide",
+        "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+        "path": "icons/navigation.svg",
+        "localPath": "references/expansion-01/lucide-navigation.svg",
+        "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/navigation.svg",
+        "sha256": "3c1adf655f06c733013ddf00848c3efe905ed70d7b3eba7a6be5e60e65880503",
+        "license": "ISC AND MIT",
+        "sourceName": "navigation",
+        "match": "exact",
+        "role": "comparison-only"
+      },
+      {
+        "name": "navigation",
+        "library": "Tabler",
+        "repository": "tabler/tabler-icons",
+        "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+        "path": "icons/outline/navigation.svg",
+        "localPath": "references/expansion-01/tabler-navigation.svg",
+        "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/navigation.svg",
+        "sha256": "30df2817b9f3667661422bd6a3e8b6a502f08a58be779f47769b23f29aa54402",
+        "license": "MIT",
+        "sourceName": "navigation",
+        "match": "exact",
+        "role": "comparison-only"
+      }
+    ],
+    "effects": {
+      "dashes": {
+        "used": false,
+        "reason": "不採用；導航方向以連續實體輪廓表達，沒有未完成或隱藏邊界。"
+      },
+      "opacity": {
+        "used": false,
+        "reason": "不採用；導航方向的主體及必要訊號以留白分離，淡化不增加語意。"
+      },
+      "gradients": {
+        "used": false,
+        "reason": "本期不新增連續漸層或mask，以原生輪廓及必要逐筆透明度處理。"
+      }
+    },
+    "change": {
+      "kind": "new",
+      "reason": "箭頭尖端使用局部tip半徑，凹口不過圓；此為方位圖形，不隨RTL反轉。",
+      "before": null
+    },
+    "visualReview": {
+      "status": "new-after-visual-review",
+      "reviewer": "root",
+      "date": "2026-11-16",
+      "batch": "expansion-06",
+      "variantsSha256": "dbebd0ad88ca05da1a525ba48746353e9507873cb10f5cb5aa9c0c46eb264f23",
+      "checks": [
+        "two-pinned-source-comparisons",
+        "16/20/24",
+        "sharp/soft/rounded",
+        "light/dark",
+        "55-percent-foreground",
+        "adjacent-text"
+      ],
+      "evidence": [
+        {
+          "path": "docs/review/ui-v1/expansion-06/comparison.png",
+          "sha256": "5a748ddb5a4e62d623a8fbf6ae5ebe19d0210508cd29c110e7ca878fc3714d19"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-06/comparison-dark.png",
+          "sha256": "a3ef91280ca9895fe5a4b1283904711c2ad989efc332d713adeb88da0841b11c"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-06/native.png",
+          "sha256": "46d984f0dd5456972fb51517c900fbb57567affcc485e270c52c331bbe80a835"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-06/native-dark.png",
+          "sha256": "0da24b4e4baf79ead582d5dd4122136ab38be6aa3ee6608083ae6fa23945da6e"
+        }
+      ]
+    },
+    "status": "visually-reviewed-candidate",
+    "userApproval": "pending"
+  },
+  {
+    "name": "route",
+    "purpose": "起訖點之間的路線",
+    "recognitionCues": "起點終點圓、兩個平滑轉彎",
+    "confusableWith": [
+      "git-branch",
+      "share",
+      "trending-up"
+    ],
+    "sourceObservation": "Lucide採連續S路徑連到起訖圓，Tabler端點和路徑較分離。Master採連續連接，以同半徑端點和共切線的回彎建立行程。",
+    "references": [
+      {
+        "name": "route",
+        "library": "Lucide",
+        "repository": "lucide-icons/lucide",
+        "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+        "path": "icons/route.svg",
+        "localPath": "references/expansion-01/lucide-route.svg",
+        "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/route.svg",
+        "sha256": "604820e266c9b2addc2fab610c9f11e1ab3a154bbbc2bc8625401adaa66ab3ee",
+        "license": "ISC AND MIT",
+        "sourceName": "route",
+        "match": "exact",
+        "role": "comparison-only"
+      },
+      {
+        "name": "route",
+        "library": "Tabler",
+        "repository": "tabler/tabler-icons",
+        "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+        "path": "icons/outline/route.svg",
+        "localPath": "references/expansion-01/tabler-route.svg",
+        "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/route.svg",
+        "sha256": "383e4d1290ea525748767973343b3f20ea979b3638f9b3896b417e032c6ebe6f",
+        "license": "MIT",
+        "sourceName": "route",
+        "match": "exact",
+        "role": "comparison-only"
+      }
+    ],
+    "effects": {
+      "dashes": {
+        "used": false,
+        "reason": "評估後不採用；此圖表達已定義的完整起訖路線，連續線比未完成/候選路徑虛線更明確。"
+      },
+      "opacity": {
+        "used": false,
+        "reason": "不採用；路徑的主體及必要訊號以留白分離，淡化不增加語意。"
+      },
+      "gradients": {
+        "used": false,
+        "reason": "本期不新增連續漸層或mask，以原生輪廓及必要逐筆透明度處理。"
+      }
+    },
+    "change": {
+      "kind": "new",
+      "reason": "線端接圓環的實際外緣，沒有隱藏微縫；兩彎曲線與橫線切向一致，16px端點內孔仍開放。",
+      "before": null
+    },
+    "visualReview": {
+      "status": "new-after-visual-review",
+      "reviewer": "root",
+      "date": "2026-11-16",
+      "batch": "expansion-06",
+      "variantsSha256": "86e7ed269a02e1da90a163490c0f269bf912d91164ec861a711c06cadb414796",
+      "checks": [
+        "two-pinned-source-comparisons",
+        "16/20/24",
+        "sharp/soft/rounded",
+        "light/dark",
+        "55-percent-foreground",
+        "adjacent-text"
+      ],
+      "evidence": [
+        {
+          "path": "docs/review/ui-v1/expansion-06/comparison.png",
+          "sha256": "5a748ddb5a4e62d623a8fbf6ae5ebe19d0210508cd29c110e7ca878fc3714d19"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-06/comparison-dark.png",
+          "sha256": "a3ef91280ca9895fe5a4b1283904711c2ad989efc332d713adeb88da0841b11c"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-06/native.png",
+          "sha256": "46d984f0dd5456972fb51517c900fbb57567affcc485e270c52c331bbe80a835"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-06/native-dark.png",
+          "sha256": "0da24b4e4baf79ead582d5dd4122136ab38be6aa3ee6608083ae6fa23945da6e"
+        }
+      ]
+    },
+    "status": "visually-reviewed-candidate",
+    "userApproval": "pending"
+  },
+  {
+    "name": "signpost",
+    "purpose": "指引、路標與目的地方向",
+    "recognitionCues": "立柱及單向箭形牌面",
+    "confusableWith": [
+      "flag",
+      "arrow-right"
+    ],
+    "sourceObservation": "Lucide牌面左右均有尖端，Phosphor採左側平邊、右側單向尖頭。Master採單向牌面，減少與雙向箭頭的歧義。",
+    "references": [
+      {
+        "name": "signpost",
+        "library": "Lucide",
+        "repository": "lucide-icons/lucide",
+        "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+        "path": "icons/signpost.svg",
+        "localPath": "references/expansion-01/lucide-signpost.svg",
+        "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/signpost.svg",
+        "sha256": "9d611730cd28566263eff7df6d31e41df27fe6d6253c0cdb6da9ba7a912dd339",
+        "license": "ISC AND MIT",
+        "sourceName": "signpost",
+        "match": "exact",
+        "role": "comparison-only"
+      },
+      {
+        "name": "signpost",
+        "library": "Phosphor",
+        "repository": "phosphor-icons/core",
+        "commit": "2b75f3ad12b420c9504ef05df8d2564a28f8500e",
+        "path": "assets/regular/signpost.svg",
+        "localPath": "references/expansion-01/phosphor-signpost.svg",
+        "url": "https://github.com/phosphor-icons/core/blob/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular/signpost.svg",
+        "sha256": "f9b4d04cc8d4ff89a83630c8782b625a200762d94ce982da9bb31246d5df32ff",
+        "license": "MIT",
+        "sourceName": "signpost",
+        "match": "exact",
+        "role": "comparison-only"
+      }
+    ],
+    "effects": {
+      "dashes": {
+        "used": false,
+        "reason": "不採用；路標以連續實體輪廓表達，沒有未完成或隱藏邊界。"
+      },
+      "opacity": {
+        "used": false,
+        "reason": "不採用；路標的主體及必要訊號以留白分離，淡化不增加語意。"
+      },
+      "gradients": {
+        "used": false,
+        "reason": "本期不新增連續漸層或mask，以原生輪廓及必要逐筆透明度處理。"
+      }
+    },
+    "change": {
+      "kind": "new",
+      "reason": "立柱上下段接牌面的同一位置，不穿過牌面；尖頭採局部tip，牌面方角局部微圓，不把整塊牌面收成膠囊。",
+      "before": null
+    },
+    "visualReview": {
+      "status": "new-after-visual-review",
+      "reviewer": "root",
+      "date": "2026-11-16",
+      "batch": "expansion-06",
+      "variantsSha256": "701b1845d4a7c7249067e17b8498182c45567838357e351f4455df043b7f2328",
+      "checks": [
+        "two-pinned-source-comparisons",
+        "16/20/24",
+        "sharp/soft/rounded",
+        "light/dark",
+        "55-percent-foreground",
+        "adjacent-text"
+      ],
+      "evidence": [
+        {
+          "path": "docs/review/ui-v1/expansion-06/comparison.png",
+          "sha256": "5a748ddb5a4e62d623a8fbf6ae5ebe19d0210508cd29c110e7ca878fc3714d19"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-06/comparison-dark.png",
+          "sha256": "a3ef91280ca9895fe5a4b1283904711c2ad989efc332d713adeb88da0841b11c"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-06/native.png",
+          "sha256": "46d984f0dd5456972fb51517c900fbb57567affcc485e270c52c331bbe80a835"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-06/native-dark.png",
+          "sha256": "0da24b4e4baf79ead582d5dd4122136ab38be6aa3ee6608083ae6fa23945da6e"
+        }
+      ]
+    },
+    "status": "visually-reviewed-candidate",
+    "userApproval": "pending"
+  },
+  {
+    "name": "map-pinned",
+    "purpose": "已標記位置的地圖",
+    "recognitionCues": "帶內孔地標針及下方地圖平面",
+    "confusableWith": [
+      "map-pin",
+      "map",
+      "locate"
+    ],
+    "sourceObservation": "Lucide與Tabler都用較小的地標針覆在地圖底面上。Master保留map-pin的圓頭、內孔與下部收束比例，再為平面騰出垂直空間。",
+    "references": [
+      {
+        "name": "map-pinned",
+        "library": "Lucide",
+        "repository": "lucide-icons/lucide",
+        "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+        "path": "icons/map-pinned.svg",
+        "localPath": "references/expansion-01/lucide-map-pinned.svg",
+        "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/map-pinned.svg",
+        "sha256": "2dedd29b37abb0dfbc24825952e8a9906148c21b428abffc3f52a443e88b799f",
+        "license": "ISC AND MIT",
+        "sourceName": "map-pinned",
+        "match": "exact",
+        "role": "comparison-only"
+      },
+      {
+        "name": "map-pinned",
+        "library": "Tabler",
+        "repository": "tabler/tabler-icons",
+        "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+        "path": "icons/outline/map-pinned.svg",
+        "localPath": "references/expansion-01/tabler-map-pinned.svg",
+        "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/map-pinned.svg",
+        "sha256": "4caaec253218233a19cf69fbdbacbdd66865a066b6dfdbba27cf343a0ca6dc62",
+        "license": "MIT",
+        "sourceName": "map-pinned",
+        "match": "exact",
+        "role": "comparison-only"
+      }
+    ],
+    "effects": {
+      "dashes": {
+        "used": false,
+        "reason": "不採用；地圖位置以連續實體輪廓表達，沒有未完成或隱藏邊界。"
+      },
+      "opacity": {
+        "used": false,
+        "reason": "不採用；地圖位置的主體及必要訊號以留白分離，淡化不增加語意。"
+      },
+      "gradients": {
+        "used": false,
+        "reason": "本期不新增連續漸層或mask，以原生輪廓及必要逐筆透明度處理。"
+      }
+    },
+    "change": {
+      "kind": "new",
+      "reason": "平面上緣依前景地標整體剪影等距避讓；負空間真透明，16px仍有完整平面底邊及可辨識地標孔，未用矩形挖角。",
+      "before": null
+    },
+    "visualReview": {
+      "status": "new-after-visual-review",
+      "reviewer": "root",
+      "date": "2026-11-16",
+      "batch": "expansion-06",
+      "variantsSha256": "090cfce5598f972065b4f03b55edfd08c79e66b5a7315e3bff8aebf221275afd",
+      "checks": [
+        "two-pinned-source-comparisons",
+        "16/20/24",
+        "sharp/soft/rounded",
+        "light/dark",
+        "55-percent-foreground",
+        "adjacent-text"
+      ],
+      "evidence": [
+        {
+          "path": "docs/review/ui-v1/expansion-06/comparison.png",
+          "sha256": "5a748ddb5a4e62d623a8fbf6ae5ebe19d0210508cd29c110e7ca878fc3714d19"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-06/comparison-dark.png",
+          "sha256": "a3ef91280ca9895fe5a4b1283904711c2ad989efc332d713adeb88da0841b11c"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-06/native.png",
+          "sha256": "46d984f0dd5456972fb51517c900fbb57567affcc485e270c52c331bbe80a835"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-06/native-dark.png",
+          "sha256": "0da24b4e4baf79ead582d5dd4122136ab38be6aa3ee6608083ae6fa23945da6e"
+        }
+      ]
+    },
+    "status": "visually-reviewed-candidate",
+    "userApproval": "pending"
+  }
+]

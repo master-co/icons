@@ -1,0 +1,952 @@
+[
+  {
+    "name": "git-commit",
+    "purpose": "版本提交節點",
+    "recognitionCues": "水平版本線與中央圓節點",
+    "confusableWith": [
+      "git-branch",
+      "minus",
+      "sliders"
+    ],
+    "sourceObservation": "Lucide git-commit-horizontal與Feather git-commit都以水平線穿接中央圓環。Master保持慣用語法，以比branch節點略大的單一圓環建立中心。",
+    "references": [
+      {
+        "name": "git-commit",
+        "library": "Lucide",
+        "repository": "lucide-icons/lucide",
+        "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+        "path": "icons/git-commit-horizontal.svg",
+        "localPath": "references/expansion-01/lucide-git-commit-horizontal.svg",
+        "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/git-commit-horizontal.svg",
+        "sha256": "ca299006eb3a4f6f0d1852212370a8125ba8194429e15c5b571c7f4edabcd49c",
+        "license": "ISC AND MIT",
+        "sourceName": "git-commit-horizontal",
+        "match": "exact",
+        "role": "comparison-only"
+      },
+      {
+        "name": "git-commit",
+        "library": "Feather",
+        "repository": "feathericons/feather",
+        "commit": "3dc050d97405062eba78aa57115c0a15c63abdaa",
+        "path": "icons/git-commit.svg",
+        "localPath": "references/expansion-01/feather-git-commit.svg",
+        "url": "https://github.com/feathericons/feather/blob/3dc050d97405062eba78aa57115c0a15c63abdaa/icons/git-commit.svg",
+        "sha256": "56e9014e6eabcd5b2ad6e2e0f2dc9e8754f905fe5c4d2a1ea9f271387a76d150",
+        "license": "MIT",
+        "sourceName": "git-commit",
+        "match": "exact",
+        "role": "comparison-only"
+      }
+    ],
+    "effects": {
+      "dashes": {
+        "used": false,
+        "reason": "不採用；版本提交以連續實體輪廓表達，沒有未完成或隱藏邊界。"
+      },
+      "opacity": {
+        "used": false,
+        "reason": "不採用；版本提交的主體及必要訊號以留白分離，淡化不增加語意。"
+      },
+      "gradients": {
+        "used": false,
+        "reason": "本期不新增連續漸層或mask，以原生輪廓及必要逐筆透明度處理。"
+      }
+    },
+    "change": {
+      "kind": "new",
+      "reason": "左右線精確接到圓周，不穿過節點孔，也不製造不必要遮擋淨空；三尺寸圓孔與兩側線長平衡。",
+      "before": null
+    },
+    "visualReview": {
+      "status": "new-after-visual-review",
+      "reviewer": "root",
+      "date": "2026-11-16",
+      "batch": "expansion-11",
+      "variantsSha256": "b63b214117951517dfa6051b8798847c29f0e62e940521ff031c42a04769c42f",
+      "checks": [
+        "two-pinned-source-comparisons",
+        "16/20/24",
+        "sharp/soft/rounded",
+        "light/dark",
+        "55-percent-foreground",
+        "adjacent-text"
+      ],
+      "evidence": [
+        {
+          "path": "docs/review/ui-v1/expansion-11/comparison.png",
+          "sha256": "bc3a93ceaf9f3c8b92bb3f595c66862a63951e32d908267ba30ee6d742dc3386"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-11/comparison-dark.png",
+          "sha256": "85db926236b32f0c6f386a26bd6850635cd6b175b1b0f658af6fea587f486463"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-11/native.png",
+          "sha256": "feedfef47f59ab315cc6d10ea86d776eefc68fb1a4abb335bdc7f1f9dc21418d"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-11/native-dark.png",
+          "sha256": "1deb4295047cfb5de21aca69c965b0041a3d23969e47e0239988ae8f5a8414ac"
+        }
+      ]
+    },
+    "status": "visually-reviewed-candidate",
+    "userApproval": "pending"
+  },
+  {
+    "name": "git-pull-request",
+    "purpose": "程式碼合併請求入口",
+    "recognitionCues": "左側主支線與右側彎回的獨立節點",
+    "confusableWith": [
+      "git-compare",
+      "git-merge",
+      "git-branch"
+    ],
+    "sourceObservation": "Lucide採無箭頭的雙支線，Tabler以箭頭強化請求方向。Master選擇前者的安靜結構，共用既有Git家族的圓節點尺寸及左右位置。",
+    "references": [
+      {
+        "name": "git-pull-request",
+        "library": "Lucide",
+        "repository": "lucide-icons/lucide",
+        "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+        "path": "icons/git-pull-request.svg",
+        "localPath": "references/expansion-01/lucide-git-pull-request.svg",
+        "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/git-pull-request.svg",
+        "sha256": "6dbc18c42d08f225e3fc0a34fe5bf62d8b2abae83ada8163f3bbb649f2b8d25f",
+        "license": "ISC AND MIT",
+        "sourceName": "git-pull-request",
+        "match": "exact",
+        "role": "comparison-only"
+      },
+      {
+        "name": "git-pull-request",
+        "library": "Tabler",
+        "repository": "tabler/tabler-icons",
+        "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+        "path": "icons/outline/git-pull-request.svg",
+        "localPath": "references/expansion-01/tabler-git-pull-request.svg",
+        "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/git-pull-request.svg",
+        "sha256": "0288b91bc889b45e0f04e4bfea34927ec270f9f8d6e79fea17968beacf034fc0",
+        "license": "MIT",
+        "sourceName": "git-pull-request",
+        "match": "exact",
+        "role": "comparison-only"
+      }
+    ],
+    "effects": {
+      "dashes": {
+        "used": false,
+        "reason": "不採用；合併請求以連續實體輪廓表達，沒有未完成或隱藏邊界。"
+      },
+      "opacity": {
+        "used": false,
+        "reason": "不採用；合併請求的主體及必要訊號以留白分離，淡化不增加語意。"
+      },
+      "gradients": {
+        "used": false,
+        "reason": "本期不新增連續漸層或mask，以原生輪廓及必要逐筆透明度處理。"
+      }
+    },
+    "change": {
+      "kind": "new",
+      "reason": "左側保持直線，右側向左轉但不接上主支線，區別已合併的git-merge；16px保留兩個孔及中間留白。",
+      "before": null
+    },
+    "visualReview": {
+      "status": "new-after-visual-review",
+      "reviewer": "root",
+      "date": "2026-11-16",
+      "batch": "expansion-11",
+      "variantsSha256": "b04f3fb194ac2c363639655a264ad18de4edac337bfbe30cbd58806047dc5c76",
+      "checks": [
+        "two-pinned-source-comparisons",
+        "16/20/24",
+        "sharp/soft/rounded",
+        "light/dark",
+        "55-percent-foreground",
+        "adjacent-text"
+      ],
+      "evidence": [
+        {
+          "path": "docs/review/ui-v1/expansion-11/comparison.png",
+          "sha256": "bc3a93ceaf9f3c8b92bb3f595c66862a63951e32d908267ba30ee6d742dc3386"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-11/comparison-dark.png",
+          "sha256": "85db926236b32f0c6f386a26bd6850635cd6b175b1b0f658af6fea587f486463"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-11/native.png",
+          "sha256": "feedfef47f59ab315cc6d10ea86d776eefc68fb1a4abb335bdc7f1f9dc21418d"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-11/native-dark.png",
+          "sha256": "1deb4295047cfb5de21aca69c965b0041a3d23969e47e0239988ae8f5a8414ac"
+        }
+      ]
+    },
+    "status": "visually-reviewed-candidate",
+    "userApproval": "pending"
+  },
+  {
+    "name": "git-compare",
+    "purpose": "比較兩個版本分支",
+    "recognitionCues": "對向彎回的兩條分支與端點",
+    "confusableWith": [
+      "git-pull-request",
+      "git-merge",
+      "git-fork"
+    ],
+    "sourceObservation": "Lucide以兩條方向相反的彎線，Tabler再加箭頭。Master與pull-request共用節點及右側彎線，左線改為對向回彎。",
+    "references": [
+      {
+        "name": "git-compare",
+        "library": "Lucide",
+        "repository": "lucide-icons/lucide",
+        "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+        "path": "icons/git-compare.svg",
+        "localPath": "references/expansion-01/lucide-git-compare.svg",
+        "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/git-compare.svg",
+        "sha256": "de8b659f5abc7f2ea88a4569744a788fe085ddc407cf3235a15d261e1dda4647",
+        "license": "ISC AND MIT",
+        "sourceName": "git-compare",
+        "match": "exact",
+        "role": "comparison-only"
+      },
+      {
+        "name": "git-compare",
+        "library": "Tabler",
+        "repository": "tabler/tabler-icons",
+        "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+        "path": "icons/outline/git-compare.svg",
+        "localPath": "references/expansion-01/tabler-git-compare.svg",
+        "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/git-compare.svg",
+        "sha256": "9ef3863ebb3ecdeb94687c924e701b34222569e660cfb036ccdc3088409eb0c5",
+        "license": "MIT",
+        "sourceName": "git-compare",
+        "match": "exact",
+        "role": "comparison-only"
+      }
+    ],
+    "effects": {
+      "dashes": {
+        "used": false,
+        "reason": "不採用；比較分支以連續實體輪廓表達，沒有未完成或隱藏邊界。"
+      },
+      "opacity": {
+        "used": false,
+        "reason": "不採用；比較分支的主體及必要訊號以留白分離，淡化不增加語意。"
+      },
+      "gradients": {
+        "used": false,
+        "reason": "本期不新增連續漸層或mask，以原生輪廓及必要逐筆透明度處理。"
+      }
+    },
+    "change": {
+      "kind": "new",
+      "reason": "兩端保持對稱空間，與pull-request的直立主支線有可見差異；固定Git圖形方向，不套用RTL導覽鏡射。",
+      "before": null
+    },
+    "visualReview": {
+      "status": "new-after-visual-review",
+      "reviewer": "root",
+      "date": "2026-11-16",
+      "batch": "expansion-11",
+      "variantsSha256": "c4c6db2c3505bcb0b0beda9e152f14ff44c3ef11982546cb55ddf66bcc64db17",
+      "checks": [
+        "two-pinned-source-comparisons",
+        "16/20/24",
+        "sharp/soft/rounded",
+        "light/dark",
+        "55-percent-foreground",
+        "adjacent-text"
+      ],
+      "evidence": [
+        {
+          "path": "docs/review/ui-v1/expansion-11/comparison.png",
+          "sha256": "bc3a93ceaf9f3c8b92bb3f595c66862a63951e32d908267ba30ee6d742dc3386"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-11/comparison-dark.png",
+          "sha256": "85db926236b32f0c6f386a26bd6850635cd6b175b1b0f658af6fea587f486463"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-11/native.png",
+          "sha256": "feedfef47f59ab315cc6d10ea86d776eefc68fb1a4abb335bdc7f1f9dc21418d"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-11/native-dark.png",
+          "sha256": "1deb4295047cfb5de21aca69c965b0041a3d23969e47e0239988ae8f5a8414ac"
+        }
+      ]
+    },
+    "status": "visually-reviewed-candidate",
+    "userApproval": "pending"
+  },
+  {
+    "name": "git-fork",
+    "purpose": "建立程式庫分叉",
+    "recognitionCues": "上方雙節點匯入共同下方節點",
+    "confusableWith": [
+      "git-branch",
+      "network",
+      "workflow"
+    ],
+    "sourceObservation": "Lucide與Tabler均以三圓節點和U形上支架表達fork。Master沿用既有git-branch的節點半徑，並把下方節點置中。",
+    "references": [
+      {
+        "name": "git-fork",
+        "library": "Lucide",
+        "repository": "lucide-icons/lucide",
+        "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+        "path": "icons/git-fork.svg",
+        "localPath": "references/expansion-01/lucide-git-fork.svg",
+        "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/git-fork.svg",
+        "sha256": "51716f93bafd37ae56e9e054fa7c0a158d3de061cf15f5b383447b8c3f70c432",
+        "license": "ISC AND MIT",
+        "sourceName": "git-fork",
+        "match": "exact",
+        "role": "comparison-only"
+      },
+      {
+        "name": "git-fork",
+        "library": "Tabler",
+        "repository": "tabler/tabler-icons",
+        "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+        "path": "icons/outline/git-fork.svg",
+        "localPath": "references/expansion-01/tabler-git-fork.svg",
+        "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/git-fork.svg",
+        "sha256": "df5183da62050e9bc3c0e138b94e62ac03ca54083a8587c77865b7e4929e7dc2",
+        "license": "MIT",
+        "sourceName": "git-fork",
+        "match": "exact",
+        "role": "comparison-only"
+      }
+    ],
+    "effects": {
+      "dashes": {
+        "used": false,
+        "reason": "不採用；分叉以連續實體輪廓表達，沒有未完成或隱藏邊界。"
+      },
+      "opacity": {
+        "used": false,
+        "reason": "不採用；分叉的主體及必要訊號以留白分離，淡化不增加語意。"
+      },
+      "gradients": {
+        "used": false,
+        "reason": "本期不新增連續漸層或mask，以原生輪廓及必要逐筆透明度處理。"
+      }
+    },
+    "change": {
+      "kind": "new",
+      "reason": "兩條上支線共用一條水平連接，下方幹線接在中央；沒有重複描邊或靠圓端帽掩蓋的微縫。",
+      "before": null
+    },
+    "visualReview": {
+      "status": "new-after-visual-review",
+      "reviewer": "root",
+      "date": "2026-11-16",
+      "batch": "expansion-11",
+      "variantsSha256": "62622a7904b143edc6e37c0ff8be0636b2137fcbc3a693750d4be875dcbb84cf",
+      "checks": [
+        "two-pinned-source-comparisons",
+        "16/20/24",
+        "sharp/soft/rounded",
+        "light/dark",
+        "55-percent-foreground",
+        "adjacent-text"
+      ],
+      "evidence": [
+        {
+          "path": "docs/review/ui-v1/expansion-11/comparison.png",
+          "sha256": "bc3a93ceaf9f3c8b92bb3f595c66862a63951e32d908267ba30ee6d742dc3386"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-11/comparison-dark.png",
+          "sha256": "85db926236b32f0c6f386a26bd6850635cd6b175b1b0f658af6fea587f486463"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-11/native.png",
+          "sha256": "feedfef47f59ab315cc6d10ea86d776eefc68fb1a4abb335bdc7f1f9dc21418d"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-11/native-dark.png",
+          "sha256": "1deb4295047cfb5de21aca69c965b0041a3d23969e47e0239988ae8f5a8414ac"
+        }
+      ]
+    },
+    "status": "visually-reviewed-candidate",
+    "userApproval": "pending"
+  },
+  {
+    "name": "brackets",
+    "purpose": "方括號與陣列語法",
+    "recognitionCues": "成對開口方括號",
+    "confusableWith": [
+      "braces",
+      "code",
+      "variable"
+    ],
+    "sourceObservation": "Lucide與Tabler皆保留長直立桿及短水平端。Master維持方括號的方正語意，只使用小型局部角半徑。",
+    "references": [
+      {
+        "name": "brackets",
+        "library": "Lucide",
+        "repository": "lucide-icons/lucide",
+        "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+        "path": "icons/brackets.svg",
+        "localPath": "references/expansion-01/lucide-brackets.svg",
+        "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/brackets.svg",
+        "sha256": "c1f80dbc01d04b8eae56d2c9033de7ab46054c19607690be66c8ddb8ae6cc11c",
+        "license": "ISC AND MIT",
+        "sourceName": "brackets",
+        "match": "exact",
+        "role": "comparison-only"
+      },
+      {
+        "name": "brackets",
+        "library": "Tabler",
+        "repository": "tabler/tabler-icons",
+        "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+        "path": "icons/outline/brackets.svg",
+        "localPath": "references/expansion-01/tabler-brackets.svg",
+        "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/brackets.svg",
+        "sha256": "72b9ec4b0843d8510e8e02412d2ecaa8456e5b23ca1f0d2b88244aa1ece697fb",
+        "license": "MIT",
+        "sourceName": "brackets",
+        "match": "exact",
+        "role": "comparison-only"
+      }
+    ],
+    "effects": {
+      "dashes": {
+        "used": false,
+        "reason": "不採用；陣列以連續實體輪廓表達，沒有未完成或隱藏邊界。"
+      },
+      "opacity": {
+        "used": false,
+        "reason": "不採用；陣列的主體及必要訊號以留白分離，淡化不增加語意。"
+      },
+      "gradients": {
+        "used": false,
+        "reason": "本期不新增連續漸層或mask，以原生輪廓及必要逐筆透明度處理。"
+      }
+    },
+    "change": {
+      "kind": "new",
+      "reason": "大留白不需填入裝飾字元；rounded也不改成圓括號，與braces及variable外形分明。",
+      "before": null
+    },
+    "visualReview": {
+      "status": "new-after-visual-review",
+      "reviewer": "root",
+      "date": "2026-11-16",
+      "batch": "expansion-11",
+      "variantsSha256": "9b52f74bbe581f26145dcf1f779c9d53cb3cebc282c67095a669c64bb978835a",
+      "checks": [
+        "two-pinned-source-comparisons",
+        "16/20/24",
+        "sharp/soft/rounded",
+        "light/dark",
+        "55-percent-foreground",
+        "adjacent-text"
+      ],
+      "evidence": [
+        {
+          "path": "docs/review/ui-v1/expansion-11/comparison.png",
+          "sha256": "bc3a93ceaf9f3c8b92bb3f595c66862a63951e32d908267ba30ee6d742dc3386"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-11/comparison-dark.png",
+          "sha256": "85db926236b32f0c6f386a26bd6850635cd6b175b1b0f658af6fea587f486463"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-11/native.png",
+          "sha256": "feedfef47f59ab315cc6d10ea86d776eefc68fb1a4abb335bdc7f1f9dc21418d"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-11/native-dark.png",
+          "sha256": "1deb4295047cfb5de21aca69c965b0041a3d23969e47e0239988ae8f5a8414ac"
+        }
+      ]
+    },
+    "status": "visually-reviewed-candidate",
+    "userApproval": "pending"
+  },
+  {
+    "name": "regex",
+    "purpose": "啟用正規表示式比對",
+    "recognitionCues": "句點與六臂星號的慣用組合",
+    "confusableWith": [
+      "asterisk",
+      "sparkles",
+      "code"
+    ],
+    "sourceObservation": "Lucide與Tabler均採左下點、右上星號。Master把點改為實心並按原生尺寸調整點徑，避免16px出現沒有語意的小孔。",
+    "references": [
+      {
+        "name": "regex",
+        "library": "Lucide",
+        "repository": "lucide-icons/lucide",
+        "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+        "path": "icons/regex.svg",
+        "localPath": "references/expansion-01/lucide-regex.svg",
+        "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/regex.svg",
+        "sha256": "d58a62a2bdb82f1dc8ae7a67f96448c41ce478bee0cf34ef7df2b8035ec61660",
+        "license": "ISC AND MIT",
+        "sourceName": "regex",
+        "match": "exact",
+        "role": "comparison-only"
+      },
+      {
+        "name": "regex",
+        "library": "Tabler",
+        "repository": "tabler/tabler-icons",
+        "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+        "path": "icons/outline/regex.svg",
+        "localPath": "references/expansion-01/tabler-regex.svg",
+        "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/regex.svg",
+        "sha256": "a241f7277a7cb20db72a8929a7ba46c80b66274c325d124eded91dc16eee95ec",
+        "license": "MIT",
+        "sourceName": "regex",
+        "match": "exact",
+        "role": "comparison-only"
+      }
+    ],
+    "effects": {
+      "dashes": {
+        "used": false,
+        "reason": "不採用；正規表示式以連續實體輪廓表達，沒有未完成或隱藏邊界。"
+      },
+      "opacity": {
+        "used": false,
+        "reason": "不採用；正規表示式的主體及必要訊號以留白分離，淡化不增加語意。"
+      },
+      "gradients": {
+        "used": false,
+        "reason": "本期不新增連續漸層或mask，以原生輪廓及必要逐筆透明度處理。"
+      }
+    },
+    "change": {
+      "kind": "new",
+      "reason": "三條交叉直線形成星號，不加裝飾閃光曲面；句點保持可見，點與星號不相黏。",
+      "before": null
+    },
+    "visualReview": {
+      "status": "new-after-visual-review",
+      "reviewer": "root",
+      "date": "2026-11-16",
+      "batch": "expansion-11",
+      "variantsSha256": "41670547090d5947f3b498718d7dc55675bfeb467027db75cd66dd0c89e7533f",
+      "checks": [
+        "two-pinned-source-comparisons",
+        "16/20/24",
+        "sharp/soft/rounded",
+        "light/dark",
+        "55-percent-foreground",
+        "adjacent-text"
+      ],
+      "evidence": [
+        {
+          "path": "docs/review/ui-v1/expansion-11/comparison.png",
+          "sha256": "bc3a93ceaf9f3c8b92bb3f595c66862a63951e32d908267ba30ee6d742dc3386"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-11/comparison-dark.png",
+          "sha256": "85db926236b32f0c6f386a26bd6850635cd6b175b1b0f658af6fea587f486463"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-11/native.png",
+          "sha256": "feedfef47f59ab315cc6d10ea86d776eefc68fb1a4abb335bdc7f1f9dc21418d"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-11/native-dark.png",
+          "sha256": "1deb4295047cfb5de21aca69c965b0041a3d23969e47e0239988ae8f5a8414ac"
+        }
+      ]
+    },
+    "status": "visually-reviewed-candidate",
+    "userApproval": "pending"
+  },
+  {
+    "name": "variable",
+    "purpose": "變數與代入值",
+    "recognitionCues": "成對圓括號包住x",
+    "confusableWith": [
+      "brackets",
+      "x",
+      "code"
+    ],
+    "sourceObservation": "Lucide使用簡單交叉x，Tabler使用帶字形曲率的x。Master採向量交叉線與對稱結構括弧，不引入字型依賴。",
+    "references": [
+      {
+        "name": "variable",
+        "library": "Lucide",
+        "repository": "lucide-icons/lucide",
+        "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+        "path": "icons/variable.svg",
+        "localPath": "references/expansion-01/lucide-variable.svg",
+        "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/variable.svg",
+        "sha256": "f4fc3aef41ad0bc89dd028537ee83ec82ffbaf09fc5cdff06120b9a59b60e4fa",
+        "license": "ISC AND MIT",
+        "sourceName": "variable",
+        "match": "exact",
+        "role": "comparison-only"
+      },
+      {
+        "name": "variable",
+        "library": "Tabler",
+        "repository": "tabler/tabler-icons",
+        "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+        "path": "icons/outline/variable.svg",
+        "localPath": "references/expansion-01/tabler-variable.svg",
+        "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/variable.svg",
+        "sha256": "741e10b625fbe6652390f779573dc49fd91fdd1b55fafb030ca4613dd5bdb6e2",
+        "license": "MIT",
+        "sourceName": "variable",
+        "match": "exact",
+        "role": "comparison-only"
+      }
+    ],
+    "effects": {
+      "dashes": {
+        "used": false,
+        "reason": "不採用；變數以連續實體輪廓表達，沒有未完成或隱藏邊界。"
+      },
+      "opacity": {
+        "used": false,
+        "reason": "不採用；變數的主體及必要訊號以留白分離，淡化不增加語意。"
+      },
+      "gradients": {
+        "used": false,
+        "reason": "本期不新增連續漸層或mask，以原生輪廓及必要逐筆透明度處理。"
+      }
+    },
+    "change": {
+      "kind": "new",
+      "reason": "括弧在sharp仍保留物理曲率，x與括弧有清楚間距；16px仍可看成完整的(x)，而非刪除叉號。",
+      "before": null
+    },
+    "visualReview": {
+      "status": "new-after-visual-review",
+      "reviewer": "root",
+      "date": "2026-11-16",
+      "batch": "expansion-11",
+      "variantsSha256": "6986c838cd6ac2f5feacd1836abd4755a5bd6f3105be61cfb44338c0a636a8f7",
+      "checks": [
+        "two-pinned-source-comparisons",
+        "16/20/24",
+        "sharp/soft/rounded",
+        "light/dark",
+        "55-percent-foreground",
+        "adjacent-text"
+      ],
+      "evidence": [
+        {
+          "path": "docs/review/ui-v1/expansion-11/comparison.png",
+          "sha256": "bc3a93ceaf9f3c8b92bb3f595c66862a63951e32d908267ba30ee6d742dc3386"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-11/comparison-dark.png",
+          "sha256": "85db926236b32f0c6f386a26bd6850635cd6b175b1b0f658af6fea587f486463"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-11/native.png",
+          "sha256": "feedfef47f59ab315cc6d10ea86d776eefc68fb1a4abb335bdc7f1f9dc21418d"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-11/native-dark.png",
+          "sha256": "1deb4295047cfb5de21aca69c965b0041a3d23969e47e0239988ae8f5a8414ac"
+        }
+      ]
+    },
+    "status": "visually-reviewed-candidate",
+    "userApproval": "pending"
+  },
+  {
+    "name": "file-json",
+    "purpose": "JSON與結構化資料檔案",
+    "recognitionCues": "文件折角與內置成對大括號",
+    "confusableWith": [
+      "file-code",
+      "file-text",
+      "braces"
+    ],
+    "sourceObservation": "Lucide file-braces為同語意的大括號文件；Tabler file-code-2的方括號僅為文件內置語法的構造參考。Master保留自己的file母型並加入小型大括號。",
+    "references": [
+      {
+        "name": "file-json",
+        "library": "Lucide",
+        "repository": "lucide-icons/lucide",
+        "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+        "path": "icons/file-braces.svg",
+        "localPath": "references/expansion-01/lucide-file-braces.svg",
+        "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/file-braces.svg",
+        "sha256": "f1ea60ee7f303887033d9b05c9b8c903b31c01dc2d8d15082f5c4d1a8899aa6a",
+        "license": "ISC AND MIT",
+        "sourceName": "file-braces",
+        "match": "exact",
+        "role": "comparison-only"
+      },
+      {
+        "name": "file-json",
+        "library": "Tabler",
+        "repository": "tabler/tabler-icons",
+        "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+        "path": "icons/outline/file-code-2.svg",
+        "localPath": "references/expansion-01/tabler-file-code-2.svg",
+        "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/file-code-2.svg",
+        "sha256": "f9286df55ed777c9ac6a5d5fdeaa35281663596ad661bd8efca2040424531b28",
+        "license": "MIT",
+        "sourceName": "file-code-2",
+        "match": "structure-only",
+        "role": "comparison-only"
+      }
+    ],
+    "effects": {
+      "dashes": {
+        "used": false,
+        "reason": "不採用；JSON文件以連續實體輪廓表達，沒有未完成或隱藏邊界。"
+      },
+      "opacity": {
+        "used": false,
+        "reason": "不採用；JSON文件的主體及必要訊號以留白分離，淡化不增加語意。"
+      },
+      "gradients": {
+        "used": false,
+        "reason": "本期不新增連續漸層或mask，以原生輪廓及必要逐筆透明度處理。"
+      }
+    },
+    "change": {
+      "kind": "new",
+      "reason": "左右括號在文件內容區內對稱放置，不碰折角及底邊；省略字母JSON避免在16px形成難讀文字。",
+      "before": null
+    },
+    "visualReview": {
+      "status": "new-after-visual-review",
+      "reviewer": "root",
+      "date": "2026-11-16",
+      "batch": "expansion-11",
+      "variantsSha256": "deef5c914eed6d40a20a0b0a7f8090c2d4db21aeb81b01ba3e879822e4c834b9",
+      "checks": [
+        "two-pinned-source-comparisons",
+        "16/20/24",
+        "sharp/soft/rounded",
+        "light/dark",
+        "55-percent-foreground",
+        "adjacent-text"
+      ],
+      "evidence": [
+        {
+          "path": "docs/review/ui-v1/expansion-11/comparison.png",
+          "sha256": "bc3a93ceaf9f3c8b92bb3f595c66862a63951e32d908267ba30ee6d742dc3386"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-11/comparison-dark.png",
+          "sha256": "85db926236b32f0c6f386a26bd6850635cd6b175b1b0f658af6fea587f486463"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-11/native.png",
+          "sha256": "feedfef47f59ab315cc6d10ea86d776eefc68fb1a4abb335bdc7f1f9dc21418d"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-11/native-dark.png",
+          "sha256": "1deb4295047cfb5de21aca69c965b0041a3d23969e47e0239988ae8f5a8414ac"
+        }
+      ]
+    },
+    "status": "visually-reviewed-candidate",
+    "userApproval": "pending"
+  },
+  {
+    "name": "folder-code",
+    "purpose": "程式碼目錄與原始碼資料夾",
+    "recognitionCues": "既有資料夾與內置尖括號",
+    "confusableWith": [
+      "folder",
+      "file-json",
+      "code"
+    ],
+    "sourceObservation": "Lucide將尖括號放入資料夾，Tabler放在右下並裁切外框。Master採內置語法，利用資料夾較寬的內容空間，保留完整母型。",
+    "references": [
+      {
+        "name": "folder-code",
+        "library": "Lucide",
+        "repository": "lucide-icons/lucide",
+        "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+        "path": "icons/folder-code.svg",
+        "localPath": "references/expansion-01/lucide-folder-code.svg",
+        "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/folder-code.svg",
+        "sha256": "09903380d416c9bb1ebe4e8ce6c7a4dd0884f26d2da7d359cfa04ddaa6e418e9",
+        "license": "ISC AND MIT",
+        "sourceName": "folder-code",
+        "match": "exact",
+        "role": "comparison-only"
+      },
+      {
+        "name": "folder-code",
+        "library": "Tabler",
+        "repository": "tabler/tabler-icons",
+        "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+        "path": "icons/outline/folder-code.svg",
+        "localPath": "references/expansion-01/tabler-folder-code.svg",
+        "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/folder-code.svg",
+        "sha256": "5ab984313ef5d4cff183aeca2c2c7325b3327793c56f4e5148d90f991d62ea71",
+        "license": "MIT",
+        "sourceName": "folder-code",
+        "match": "exact",
+        "role": "comparison-only"
+      }
+    ],
+    "effects": {
+      "dashes": {
+        "used": false,
+        "reason": "不採用；程式資料夾以連續實體輪廓表達，沒有未完成或隱藏邊界。"
+      },
+      "opacity": {
+        "used": false,
+        "reason": "不採用；程式資料夾的主體及必要訊號以留白分離，淡化不增加語意。"
+      },
+      "gradients": {
+        "used": false,
+        "reason": "本期不新增連續漸層或mask，以原生輪廓及必要逐筆透明度處理。"
+      }
+    },
+    "change": {
+      "kind": "new",
+      "reason": "尖括號與外框沒有碰撞，不強加knockout；左右箭翼及中間空隙在三尺寸清楚，不用額外斜線增加密度。",
+      "before": null
+    },
+    "visualReview": {
+      "status": "new-after-visual-review",
+      "reviewer": "root",
+      "date": "2026-11-16",
+      "batch": "expansion-11",
+      "variantsSha256": "c2b456683b3b43435a13fd87073f3a13ef412bedf6601f5d25c727fda299ce25",
+      "checks": [
+        "two-pinned-source-comparisons",
+        "16/20/24",
+        "sharp/soft/rounded",
+        "light/dark",
+        "55-percent-foreground",
+        "adjacent-text"
+      ],
+      "evidence": [
+        {
+          "path": "docs/review/ui-v1/expansion-11/comparison.png",
+          "sha256": "bc3a93ceaf9f3c8b92bb3f595c66862a63951e32d908267ba30ee6d742dc3386"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-11/comparison-dark.png",
+          "sha256": "85db926236b32f0c6f386a26bd6850635cd6b175b1b0f658af6fea587f486463"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-11/native.png",
+          "sha256": "feedfef47f59ab315cc6d10ea86d776eefc68fb1a4abb335bdc7f1f9dc21418d"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-11/native-dark.png",
+          "sha256": "1deb4295047cfb5de21aca69c965b0041a3d23969e47e0239988ae8f5a8414ac"
+        }
+      ]
+    },
+    "status": "visually-reviewed-candidate",
+    "userApproval": "pending"
+  },
+  {
+    "name": "puzzle",
+    "purpose": "擴充功能與可組合模組",
+    "recognitionCues": "拼圖片的凸榫與凹槽",
+    "confusableWith": [
+      "component",
+      "plugin",
+      "settings"
+    ],
+    "sourceObservation": "Lucide採斜向拼片，Tabler採正向拼片。Master選擇正向母型，頂部及右側凸榫、左側及底部凹槽建立可拼接構造。",
+    "references": [
+      {
+        "name": "puzzle",
+        "library": "Lucide",
+        "repository": "lucide-icons/lucide",
+        "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+        "path": "icons/puzzle.svg",
+        "localPath": "references/expansion-01/lucide-puzzle.svg",
+        "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/puzzle.svg",
+        "sha256": "6d80d0c3b214c96945ed0f1c6ee0e4c4ea3911c6cc91c75751fdba08c31eab02",
+        "license": "ISC AND MIT",
+        "sourceName": "puzzle",
+        "match": "exact",
+        "role": "comparison-only"
+      },
+      {
+        "name": "puzzle",
+        "library": "Tabler",
+        "repository": "tabler/tabler-icons",
+        "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+        "path": "icons/outline/puzzle.svg",
+        "localPath": "references/expansion-01/tabler-puzzle.svg",
+        "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/puzzle.svg",
+        "sha256": "b51d3edacb69bde36e0914ba64998fe47875f25f0699a599a5407adf3ba6d14c",
+        "license": "MIT",
+        "sourceName": "puzzle",
+        "match": "exact",
+        "role": "comparison-only"
+      }
+    ],
+    "effects": {
+      "dashes": {
+        "used": false,
+        "reason": "不採用；擴充功能以連續實體輪廓表達，沒有未完成或隱藏邊界。"
+      },
+      "opacity": {
+        "used": false,
+        "reason": "不採用；擴充功能的主體及必要訊號以留白分離，淡化不增加語意。"
+      },
+      "gradients": {
+        "used": false,
+        "reason": "本期不新增連續漸層或mask，以原生輪廓及必要逐筆透明度處理。"
+      }
+    },
+    "change": {
+      "kind": "new",
+      "reason": "榫槽由連續曲線表達，sharp也保留此構造；外殼四角依預設改變，16px無多餘內線，凸榫不越出畫布。",
+      "before": null
+    },
+    "visualReview": {
+      "status": "new-after-visual-review",
+      "reviewer": "root",
+      "date": "2026-11-16",
+      "batch": "expansion-11",
+      "variantsSha256": "a030932a3eb3be419421fa23febe503db79bf55d9e35e08236e204135ebcf3f5",
+      "checks": [
+        "two-pinned-source-comparisons",
+        "16/20/24",
+        "sharp/soft/rounded",
+        "light/dark",
+        "55-percent-foreground",
+        "adjacent-text"
+      ],
+      "evidence": [
+        {
+          "path": "docs/review/ui-v1/expansion-11/comparison.png",
+          "sha256": "bc3a93ceaf9f3c8b92bb3f595c66862a63951e32d908267ba30ee6d742dc3386"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-11/comparison-dark.png",
+          "sha256": "85db926236b32f0c6f386a26bd6850635cd6b175b1b0f658af6fea587f486463"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-11/native.png",
+          "sha256": "feedfef47f59ab315cc6d10ea86d776eefc68fb1a4abb335bdc7f1f9dc21418d"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-11/native-dark.png",
+          "sha256": "1deb4295047cfb5de21aca69c965b0041a3d23969e47e0239988ae8f5a8414ac"
+        }
+      ]
+    },
+    "status": "visually-reviewed-candidate",
+    "userApproval": "pending"
+  }
+]

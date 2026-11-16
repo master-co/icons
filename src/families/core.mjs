@@ -1,3 +1,4 @@
+import { knockout } from '../occlusion.mjs';
 import { path, line, circle, rect, contour, n } from '../geometry.mjs';
 
 // Coordinates are selected in native 16/20/24 grids. Dense icons have explicit
@@ -21,16 +22,13 @@ function folder(g,plus=false){
   return result;
 }
 function bell(g,off=false){
+  if(off){const a=g.v(2.5,3,3.5);return knockout(bell(g),[line(a,a,g.s-a,g.s-a)],g);}
   const {s,c,v,r}=g;
   const side=v(4.25,5.25,6.25), right=s-side;
   const top=v(2.5,3,3.5), dome=v(6,7.5,9), waist=v(8.25,10.25,12.25);
   const rim=v(11.75,14.75,17.75), edge=v(2.75,3.25,3.75), k=Math.min(r,v(.5,.65,.8));
   const crown=`M${side} ${dome}C${side} ${top+v(1.75,2.25,2.75)} ${c-v(2,2.5,3)} ${top} ${c} ${top}C${c+v(2,2.5,3)} ${top} ${right} ${top+v(1.75,2.25,2.75)} ${right} ${dome}`;
-  const out=off?[
-    path(`M${c-v(1.6,2,2.4)} ${top+v(.45,.55,.65)}C${c-v(.9,1.1,1.3)} ${top} ${c-v(.5,.6,.7)} ${top} ${c} ${top}C${c+v(2,2.5,3)} ${top} ${right} ${top+v(1.75,2.25,2.75)} ${right} ${dome}V${v(8,10,12)}`),
-    path(`M${side} ${v(6.5,8,9.5)}V${waist}C${side} ${waist+v(1.5,2,2.5)} ${edge+v(.5,.75,1)} ${rim-v(1,1.25,1.5)} ${edge} ${rim-k}Q${edge-k/2} ${rim} ${edge+k} ${rim}H${c+v(1,1.5,2.25)}`),
-    line(v(2.5,3,3.5),v(2.5,3,3.5),s-v(2.5,3,3.5),s-v(2.5,3,3.5)),
-  ]:[path(`${crown}V${waist}C${right} ${waist+v(1.5,2,2.5)} ${s-edge-v(.5,.75,1)} ${rim-v(1,1.25,1.5)} ${s-edge} ${rim-k}Q${s-edge+k/2} ${rim} ${s-edge-k} ${rim}H${edge+k}Q${edge-k/2} ${rim} ${edge} ${rim-k}C${edge+v(.5,.75,1)} ${rim-v(1,1.25,1.5)} ${side} ${waist+v(1.5,2,2.5)} ${side} ${waist}Z`)];
+  const out=[path(`${crown}V${waist}C${right} ${waist+v(1.5,2,2.5)} ${s-edge-v(.5,.75,1)} ${rim-v(1,1.25,1.5)} ${s-edge} ${rim-k}Q${s-edge+k/2} ${rim} ${s-edge-k} ${rim}H${edge+k}Q${edge-k/2} ${rim} ${edge} ${rim-k}C${edge+v(.5,.75,1)} ${rim-v(1,1.25,1.5)} ${side} ${waist+v(1.5,2,2.5)} ${side} ${waist}Z`)];
   out.push(path(`M${c-v(1.15,1.4,1.75)} ${v(14,17.5,20.75)}Q${c} ${v(15,18.75,22.25)} ${c+v(1.15,1.4,1.75)} ${v(14,17.5,20.75)}`));
   return out;
 }
@@ -83,7 +81,7 @@ export const coreDrawings={
     return out.concat(points.map(([x,y])=>dot(x,y,g)));
   },
   'clipboard':g=>{const {s,c,v,r}=g,l=v(3.5,4.5,5),t=v(3.5,4.5,5.5),b=v(14,17.5,21),w=v(5,6,7),h=v(2.5,3,3.5);return [contour([[c-w/2,t],[l,t],[l,b],[s-l,b],[s-l,t],[c+w/2,t]],r),rect(c-w/2,v(2,2.5,3),w,h,Math.min(r,1))];},
-  'copy':g=>{const {s,v,r}=g,l=v(5.5,7,8.5),t=v(5.5,7,8.5),b=v(14,17.5,21),a=v(2,2.5,3);return [contour([[v(3.5,4.5,5.5),v(10,12.5,15)],[a,v(10,12.5,15)],[a,a],[v(10,12.5,15),a],[v(10,12.5,15),v(3.5,4.5,5.5)]],r),rect(l,t,b-l,b-t,r)];},
+  'copy':g=>{const {s,v,r}=g,l=v(5.5,7,8.5),t=v(5.5,7,8.5),b=v(14,17.5,21),a=v(2,2.5,3);const rear=v(10,12.5,15),front=rect(l,t,b-l,b-t,r);return knockout([rect(a,a,rear-a,rear-a,r)],[front],g,{silhouettes:[front]});},
   'trash':g=>{const {s,c,v,r}=g,t=v(4.5,5.5,6.5),l=v(4,5,6),b=v(14,17.5,21);const out=[line(v(2.5,3,3.5),t,v(13.5,17,20.5),t),contour([[l,t],[l+v(0.5,0.5,0.5),b],[s-l-v(0.5,0.5,0.5),b],[s-l,t]],Math.min(r,1.5)),contour([[c-v(2,2.5,3),t],[c-v(2,2.5,3),v(2,2.5,3)],[c+v(2,2.5,3),v(2,2.5,3)],[c+v(2,2.5,3),t]],Math.min(r,1))];if(s===16)out.push(line(c,7.5,c,11));else out.push(line(c-v(1.5,1.5,2),v(9,9,10.5),c-v(1.5,1.5,2),v(12,14,17)),line(c+v(1.5,1.5,2),v(9,9,10.5),c+v(1.5,1.5,2),v(12,14,17)));return out;},
   'user':g=>person(g),
   'users':g=>person(g,true),

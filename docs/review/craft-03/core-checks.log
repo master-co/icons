@@ -1,0 +1,38 @@
+$ pnpm build && pnpm validate && pnpm test && pnpm test:types
+$ node scripts/build.mjs
+Built 392 icons × 3 sizes × 3 corners = 3528 SVGs, React exports and local preview.
+$ node scripts/validate.mjs
+Validated 244 base concepts / 392 named drawings, 3528 SVG hashes, geometry, notices, 48 historical + 784 current pinned references, and 9 licensed ZIPs.
+$ node --test tests/*.test.mjs
+✔ structural seams do not paint outside the actual package and drive shells (22.298416ms)
+✔ database state drawings retain empty upper compartments after Boolean operations (34.524083ms)
+✔ circular foreground badges leave no background fragments inside their loops (22.954042ms)
+✔ clipboard pen sharp miter and all new service badges stay within the native canvas (73.693208ms)
+✔ occluded ink stays outside the foreground clearance, including solid badge interiors (54.16525ms)
+✔ all four phone cuts follow parallel offset boundaries, instead of rounded path endpoints (6.13175ms)
+✔ per-stroke dashes and opacity survive React serialization (2.655667ms)
+✔ optical selection has explicit boundaries and rejects invalid input (0.416667ms)
+✔ dense small masters remove detail and corner profiles alter actual geometry (0.083208ms)
+✔ SVG escaping, decorative defaults, and opt-in directional policy (0.422458ms)
+✔ React exports match SVG geometry, preserve a11y and consume design props (3.071625ms)
+✔ static React imports tree shake unrelated icons and unused optical masters (22.338709ms)
+✔ all named React exports match authored SVG for every optical and corner master (89.395375ms)
+✔ RTL changes only the approved navigation set, preserving geometry transforms (2.431541ms)
+✔ original 48 names and all unreviewed masters remain compatible (4.814ms)
+✔ real semantic paint effects survive SVG and React across all sizes (0.2515ms)
+✔ the saved 280 baseline preserves the 210 drawings before organization (5.0215ms)
+✔ the saved 280 baseline preserves all 220 pre-productivity definitions (5.241916ms)
+✔ only explicitly reviewed refinements differ from the complete baseline (31.163875ms)
+✔ craft-03 refinements preserve an explicit independent and root review history (25.685125ms)
+✔ semantic perforations retain flat ends independently of frame corner styles (0.693875ms)
+✔ every productivity drawing appears in a labelled product scenario (8.539833ms)
+✔ every expansion drawing is used in a labelled interface scenario (0.693458ms)
+ℹ tests 23
+ℹ suites 0
+ℹ pass 23
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 303.606625
+$ tsc -p tests/tsconfig.json

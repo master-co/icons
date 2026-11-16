@@ -1,0 +1,948 @@
+[
+  {
+    "name": "music",
+    "purpose": "音樂內容或音軌",
+    "recognitionCues": "兩個音符頭、符桿與連接橫梁",
+    "confusableWith": [
+      "audio-waveform",
+      "file-audio"
+    ],
+    "sourceObservation": "Feather使用斜向連梁和圓環符頭，Tabler採水平雙線連梁。Master選斜梁和實心橢圓符頭，減少小尺寸沒有辨識用途的環孔。",
+    "references": [
+      {
+        "name": "music",
+        "library": "Feather",
+        "repository": "feathericons/feather",
+        "commit": "3dc050d97405062eba78aa57115c0a15c63abdaa",
+        "path": "icons/music.svg",
+        "localPath": "references/expansion-01/feather-music.svg",
+        "url": "https://github.com/feathericons/feather/blob/3dc050d97405062eba78aa57115c0a15c63abdaa/icons/music.svg",
+        "sha256": "3c53d3e342c7251d0b5ac3630b799f4ab6461062271072cf070aadcb59ae49c0",
+        "license": "MIT",
+        "sourceName": "music",
+        "match": "exact",
+        "role": "comparison-only"
+      },
+      {
+        "name": "music",
+        "library": "Tabler",
+        "repository": "tabler/tabler-icons",
+        "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+        "path": "icons/outline/music.svg",
+        "localPath": "references/expansion-01/tabler-music.svg",
+        "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/music.svg",
+        "sha256": "afd2fe98e580e1d4e9bf45d88165894b0e683e9141f63c312585d778b73d02c5",
+        "license": "MIT",
+        "sourceName": "music",
+        "match": "exact",
+        "role": "comparison-only"
+      }
+    ],
+    "effects": {
+      "dashes": {
+        "used": false,
+        "reason": "不採用；音樂以連續實體輪廓表達，沒有未完成或隱藏邊界。"
+      },
+      "opacity": {
+        "used": false,
+        "reason": "不採用；音樂的主體及必要訊號以留白分離，淡化不增加語意。"
+      },
+      "gradients": {
+        "used": false,
+        "reason": "本期不新增連續漸層或mask，以原生輪廓及必要逐筆透明度處理。"
+      }
+    },
+    "change": {
+      "kind": "new",
+      "reason": "符桿接實心符頭右上緣，沒有細孔消失的問題；兩頭等大、上下錯位維持音樂節奏，三尺寸均讀作成對音符。",
+      "before": null
+    },
+    "visualReview": {
+      "status": "new-after-visual-review",
+      "reviewer": "root",
+      "date": "2026-11-16",
+      "batch": "expansion-07",
+      "variantsSha256": "2ea7b1a8faef3b4158b66316f48c58d0ea33f5984bf82469c1e76710f9ff4d99",
+      "checks": [
+        "two-pinned-source-comparisons",
+        "16/20/24",
+        "sharp/soft/rounded",
+        "light/dark",
+        "55-percent-foreground",
+        "adjacent-text"
+      ],
+      "evidence": [
+        {
+          "path": "docs/review/ui-v1/expansion-07/comparison.png",
+          "sha256": "c366d5a1bf91b410c6d3d62d91b4e848d8e264fecc838fb54742119e82e7f6ff"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-07/comparison-dark.png",
+          "sha256": "518ac665893334984759037d340dbefb9cb56c741813001c5cc3d95447d75c00"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-07/native.png",
+          "sha256": "e170a380e33ce970782bbafc030478de173c66169b0181082ee7b84652ead8dc"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-07/native-dark.png",
+          "sha256": "7dcafdbae9e3eafbca027ea6e04ac891378890904d6147ba7d73223d55566ab9"
+        }
+      ]
+    },
+    "status": "visually-reviewed-candidate",
+    "userApproval": "pending"
+  },
+  {
+    "name": "audio-waveform",
+    "purpose": "音訊波形與錄音內容",
+    "recognitionCues": "連續起伏、不同振幅的聲波",
+    "confusableWith": [
+      "activity",
+      "chart-bar"
+    ],
+    "sourceObservation": "Lucide以連續曲面波形表達聲波，Tabler採不同高度的獨立直桿。Master採連續波形以區別條圖，所有峰谷與直線切向相接。",
+    "references": [
+      {
+        "name": "audio-waveform",
+        "library": "Lucide",
+        "repository": "lucide-icons/lucide",
+        "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+        "path": "icons/audio-waveform.svg",
+        "localPath": "references/expansion-01/lucide-audio-waveform.svg",
+        "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/audio-waveform.svg",
+        "sha256": "d4b6f62b0d72b7ad223f9abeb51e64875e4533123d7898d07acfa74154eb14b3",
+        "license": "ISC AND MIT",
+        "sourceName": "audio-waveform",
+        "match": "exact",
+        "role": "comparison-only"
+      },
+      {
+        "name": "audio-waveform",
+        "library": "Tabler",
+        "repository": "tabler/tabler-icons",
+        "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+        "path": "icons/outline/waveform.svg",
+        "localPath": "references/expansion-01/tabler-waveform.svg",
+        "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/waveform.svg",
+        "sha256": "09df55e76cd8ff8d6e2af5568e7218f971e73ddc7bfd3ba13f926b1b36bed3f7",
+        "license": "MIT",
+        "sourceName": "waveform",
+        "match": "exact",
+        "role": "comparison-only"
+      }
+    ],
+    "effects": {
+      "dashes": {
+        "used": false,
+        "reason": "不採用；音訊波形以連續實體輪廓表達，沒有未完成或隱藏邊界。"
+      },
+      "opacity": {
+        "used": false,
+        "reason": "不採用；音訊波形的主體及必要訊號以留白分離，淡化不增加語意。"
+      },
+      "gradients": {
+        "used": false,
+        "reason": "本期不新增連續漸層或mask，以原生輪廓及必要逐筆透明度處理。"
+      }
+    },
+    "change": {
+      "kind": "new",
+      "reason": "三個回彎各有足夠空隙；尖銳預設也保留訊號波形的結構曲線，不以圓角參數把曲面拉直。",
+      "before": null
+    },
+    "visualReview": {
+      "status": "new-after-visual-review",
+      "reviewer": "root",
+      "date": "2026-11-16",
+      "batch": "expansion-07",
+      "variantsSha256": "63ab5dcda0dd938aded0754a0e1db9c1dd53b9711fac94454977058b17a637db",
+      "checks": [
+        "two-pinned-source-comparisons",
+        "16/20/24",
+        "sharp/soft/rounded",
+        "light/dark",
+        "55-percent-foreground",
+        "adjacent-text"
+      ],
+      "evidence": [
+        {
+          "path": "docs/review/ui-v1/expansion-07/comparison.png",
+          "sha256": "c366d5a1bf91b410c6d3d62d91b4e848d8e264fecc838fb54742119e82e7f6ff"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-07/comparison-dark.png",
+          "sha256": "518ac665893334984759037d340dbefb9cb56c741813001c5cc3d95447d75c00"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-07/native.png",
+          "sha256": "e170a380e33ce970782bbafc030478de173c66169b0181082ee7b84652ead8dc"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-07/native-dark.png",
+          "sha256": "7dcafdbae9e3eafbca027ea6e04ac891378890904d6147ba7d73223d55566ab9"
+        }
+      ]
+    },
+    "status": "visually-reviewed-candidate",
+    "userApproval": "pending"
+  },
+  {
+    "name": "subtitles",
+    "purpose": "字幕顯示與設定",
+    "recognitionCues": "螢幕框內兩行分段文字",
+    "confusableWith": [
+      "app-window",
+      "file-text",
+      "text"
+    ],
+    "sourceObservation": "Lucide captions與Tabler subtitles都用兩行短線而非CC文字。Master延續不依字型的線段訊號，用錯開斷點表達文字行。",
+    "references": [
+      {
+        "name": "subtitles",
+        "library": "Lucide",
+        "repository": "lucide-icons/lucide",
+        "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+        "path": "icons/captions.svg",
+        "localPath": "references/expansion-01/lucide-captions.svg",
+        "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/captions.svg",
+        "sha256": "37c4e3ed84224b7d07ee6f5b0f51cc2c5d17e8bf80f86c48059cdcc747607a55",
+        "license": "ISC AND MIT",
+        "sourceName": "captions",
+        "match": "exact",
+        "role": "comparison-only"
+      },
+      {
+        "name": "subtitles",
+        "library": "Tabler",
+        "repository": "tabler/tabler-icons",
+        "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+        "path": "icons/outline/subtitles.svg",
+        "localPath": "references/expansion-01/tabler-subtitles.svg",
+        "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/subtitles.svg",
+        "sha256": "06ed290d22b6d464e055f41b7be7196029984b8d20644912c444d3da3f000e56",
+        "license": "MIT",
+        "sourceName": "subtitles",
+        "match": "exact",
+        "role": "comparison-only"
+      }
+    ],
+    "effects": {
+      "dashes": {
+        "used": false,
+        "reason": "不採用；字幕以連續實體輪廓表達，沒有未完成或隱藏邊界。"
+      },
+      "opacity": {
+        "used": false,
+        "reason": "不採用；字幕的主體及必要訊號以留白分離，淡化不增加語意。"
+      },
+      "gradients": {
+        "used": false,
+        "reason": "本期不新增連續漸層或mask，以原生輪廓及必要逐筆透明度處理。"
+      }
+    },
+    "change": {
+      "kind": "new",
+      "reason": "兩行與邊框保有間距，16px仍能讀到四段而非一塊格柵；rounded只影響外框，不把文字線縮成小圓點。",
+      "before": null
+    },
+    "visualReview": {
+      "status": "new-after-visual-review",
+      "reviewer": "root",
+      "date": "2026-11-16",
+      "batch": "expansion-07",
+      "variantsSha256": "64c4d4a051cadc4cf7de692e126d587b9fe54a592ceec37516ef24fd217ab2fb",
+      "checks": [
+        "two-pinned-source-comparisons",
+        "16/20/24",
+        "sharp/soft/rounded",
+        "light/dark",
+        "55-percent-foreground",
+        "adjacent-text"
+      ],
+      "evidence": [
+        {
+          "path": "docs/review/ui-v1/expansion-07/comparison.png",
+          "sha256": "c366d5a1bf91b410c6d3d62d91b4e848d8e264fecc838fb54742119e82e7f6ff"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-07/comparison-dark.png",
+          "sha256": "518ac665893334984759037d340dbefb9cb56c741813001c5cc3d95447d75c00"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-07/native.png",
+          "sha256": "e170a380e33ce970782bbafc030478de173c66169b0181082ee7b84652ead8dc"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-07/native-dark.png",
+          "sha256": "7dcafdbae9e3eafbca027ea6e04ac891378890904d6147ba7d73223d55566ab9"
+        }
+      ]
+    },
+    "status": "visually-reviewed-candidate",
+    "userApproval": "pending"
+  },
+  {
+    "name": "fast-forward",
+    "purpose": "加速向前播放",
+    "recognitionCues": "兩個朝右的三角形",
+    "confusableWith": [
+      "skip-forward",
+      "play",
+      "chevrons-right"
+    ],
+    "sourceObservation": "Lucide雙三角較圓且鄰接，Phosphor較尖；Master採兩個分離且等大的三角，與單三角加終止桿的skip-forward區別。",
+    "references": [
+      {
+        "name": "fast-forward",
+        "library": "Lucide",
+        "repository": "lucide-icons/lucide",
+        "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+        "path": "icons/fast-forward.svg",
+        "localPath": "references/expansion-01/lucide-fast-forward.svg",
+        "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/fast-forward.svg",
+        "sha256": "c98610ef43162ca32661429bbee8c263049a8277cefbceed932be46e986f682c",
+        "license": "ISC AND MIT",
+        "sourceName": "fast-forward",
+        "match": "exact",
+        "role": "comparison-only"
+      },
+      {
+        "name": "fast-forward",
+        "library": "Phosphor",
+        "repository": "phosphor-icons/core",
+        "commit": "2b75f3ad12b420c9504ef05df8d2564a28f8500e",
+        "path": "assets/regular/fast-forward.svg",
+        "localPath": "references/expansion-01/phosphor-fast-forward.svg",
+        "url": "https://github.com/phosphor-icons/core/blob/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular/fast-forward.svg",
+        "sha256": "81893a7203a6ff8ea2ff8fb294413ed5bc059ade85e141cc547ae61f1b9eb667",
+        "license": "MIT",
+        "sourceName": "fast-forward",
+        "match": "exact",
+        "role": "comparison-only"
+      }
+    ],
+    "effects": {
+      "dashes": {
+        "used": false,
+        "reason": "不採用；快進以連續實體輪廓表達，沒有未完成或隱藏邊界。"
+      },
+      "opacity": {
+        "used": false,
+        "reason": "不採用；快進的主體及必要訊號以留白分離，淡化不增加語意。"
+      },
+      "gradients": {
+        "used": false,
+        "reason": "本期不新增連續漸層或mask，以原生輪廓及必要逐筆透明度處理。"
+      }
+    },
+    "change": {
+      "kind": "new",
+      "reason": "初稿尖端與下一三角的實際描邊空隙太窄，已重排為4單位中心距；sharp的miter尖端及16px仍明確分離，兩三角內孔保留。",
+      "before": null
+    },
+    "visualReview": {
+      "status": "new-after-visual-review",
+      "reviewer": "root",
+      "date": "2026-11-16",
+      "batch": "expansion-07",
+      "variantsSha256": "84fc19665392e3bf9f33c93ad055be6525286de359bfc66f3ff4b2bd6e60a64d",
+      "checks": [
+        "two-pinned-source-comparisons",
+        "16/20/24",
+        "sharp/soft/rounded",
+        "light/dark",
+        "55-percent-foreground",
+        "adjacent-text"
+      ],
+      "evidence": [
+        {
+          "path": "docs/review/ui-v1/expansion-07/comparison.png",
+          "sha256": "c366d5a1bf91b410c6d3d62d91b4e848d8e264fecc838fb54742119e82e7f6ff"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-07/comparison-dark.png",
+          "sha256": "518ac665893334984759037d340dbefb9cb56c741813001c5cc3d95447d75c00"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-07/native.png",
+          "sha256": "e170a380e33ce970782bbafc030478de173c66169b0181082ee7b84652ead8dc"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-07/native-dark.png",
+          "sha256": "7dcafdbae9e3eafbca027ea6e04ac891378890904d6147ba7d73223d55566ab9"
+        }
+      ]
+    },
+    "status": "visually-reviewed-candidate",
+    "userApproval": "pending"
+  },
+  {
+    "name": "rewind",
+    "purpose": "加速倒轉播放",
+    "recognitionCues": "兩個朝左的三角形",
+    "confusableWith": [
+      "skip-back",
+      "chevrons-left",
+      "fast-forward"
+    ],
+    "sourceObservation": "Lucide與Phosphor均將向前雙三角反轉得到倒轉，Master共享fast-forward母型，避免角型與間距漂移。",
+    "references": [
+      {
+        "name": "rewind",
+        "library": "Lucide",
+        "repository": "lucide-icons/lucide",
+        "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+        "path": "icons/rewind.svg",
+        "localPath": "references/expansion-01/lucide-rewind.svg",
+        "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/rewind.svg",
+        "sha256": "ef1ccc6c71ffb5d32db1ec49f04e0aa332770212a6b4d05638ef319b7eaa22d8",
+        "license": "ISC AND MIT",
+        "sourceName": "rewind",
+        "match": "exact",
+        "role": "comparison-only"
+      },
+      {
+        "name": "rewind",
+        "library": "Phosphor",
+        "repository": "phosphor-icons/core",
+        "commit": "2b75f3ad12b420c9504ef05df8d2564a28f8500e",
+        "path": "assets/regular/rewind.svg",
+        "localPath": "references/expansion-01/phosphor-rewind.svg",
+        "url": "https://github.com/phosphor-icons/core/blob/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular/rewind.svg",
+        "sha256": "98d15fb0be07114297bfdcbd14a346b12b759c91e3b6644d1fd3ae4d2f7f99c1",
+        "license": "MIT",
+        "sourceName": "rewind",
+        "match": "exact",
+        "role": "comparison-only"
+      }
+    ],
+    "effects": {
+      "dashes": {
+        "used": false,
+        "reason": "不採用；快退以連續實體輪廓表達，沒有未完成或隱藏邊界。"
+      },
+      "opacity": {
+        "used": false,
+        "reason": "不採用；快退的主體及必要訊號以留白分離，淡化不增加語意。"
+      },
+      "gradients": {
+        "used": false,
+        "reason": "本期不新增連續漸層或mask，以原生輪廓及必要逐筆透明度處理。"
+      }
+    },
+    "change": {
+      "kind": "new",
+      "reason": "使用母型明確水平反射，圖稿本身固定、不隨RTL再鏡射；尖端間隙與三尺寸內孔和向前一致。",
+      "before": null
+    },
+    "visualReview": {
+      "status": "new-after-visual-review",
+      "reviewer": "root",
+      "date": "2026-11-16",
+      "batch": "expansion-07",
+      "variantsSha256": "3fb88957ab152cb55c5c19039c1437887a7da7717c394e8195a7db41c1033305",
+      "checks": [
+        "two-pinned-source-comparisons",
+        "16/20/24",
+        "sharp/soft/rounded",
+        "light/dark",
+        "55-percent-foreground",
+        "adjacent-text"
+      ],
+      "evidence": [
+        {
+          "path": "docs/review/ui-v1/expansion-07/comparison.png",
+          "sha256": "c366d5a1bf91b410c6d3d62d91b4e848d8e264fecc838fb54742119e82e7f6ff"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-07/comparison-dark.png",
+          "sha256": "518ac665893334984759037d340dbefb9cb56c741813001c5cc3d95447d75c00"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-07/native.png",
+          "sha256": "e170a380e33ce970782bbafc030478de173c66169b0181082ee7b84652ead8dc"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-07/native-dark.png",
+          "sha256": "7dcafdbae9e3eafbca027ea6e04ac891378890904d6147ba7d73223d55566ab9"
+        }
+      ]
+    },
+    "status": "visually-reviewed-candidate",
+    "userApproval": "pending"
+  },
+  {
+    "name": "shuffle",
+    "purpose": "隨機播放順序",
+    "recognitionCues": "兩條交叉曲線與右側雙箭頭",
+    "confusableWith": [
+      "repeat",
+      "git-merge",
+      "route"
+    ],
+    "sourceObservation": "Lucide與Radix都以交叉路徑區別循環播放；Lucide交叉附近有分段。Master以完整雙曲線作母型，再從後方曲線扣除前景實際輪廓的等距避讓。",
+    "references": [
+      {
+        "name": "shuffle",
+        "library": "Lucide",
+        "repository": "lucide-icons/lucide",
+        "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+        "path": "icons/shuffle.svg",
+        "localPath": "references/expansion-01/lucide-shuffle.svg",
+        "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/shuffle.svg",
+        "sha256": "7051f9ba993df6e7fefd9e3ffccb5d812e0f83c89e1287a850111295202edee0",
+        "license": "ISC AND MIT",
+        "sourceName": "shuffle",
+        "match": "exact",
+        "role": "comparison-only"
+      },
+      {
+        "name": "shuffle",
+        "library": "Radix",
+        "repository": "radix-ui/icons",
+        "commit": "112af91ad275a63c3a29b0da2588342af74ef9bf",
+        "path": "packages/radix-icons/icons/shuffle.svg",
+        "localPath": "references/expansion-01/radix-shuffle.svg",
+        "url": "https://github.com/radix-ui/icons/blob/112af91ad275a63c3a29b0da2588342af74ef9bf/packages/radix-icons/icons/shuffle.svg",
+        "sha256": "d84ee7a7a4786892edd9f236f9ddede9695d969c7fbecb1f1b827049fe1fca9d",
+        "license": "MIT",
+        "sourceName": "shuffle",
+        "match": "exact",
+        "role": "comparison-only"
+      }
+    ],
+    "effects": {
+      "dashes": {
+        "used": false,
+        "reason": "不採用；隨機播放以連續實體輪廓表達，沒有未完成或隱藏邊界。"
+      },
+      "opacity": {
+        "used": false,
+        "reason": "不採用；隨機播放的主體及必要訊號以留白分離，淡化不增加語意。"
+      },
+      "gradients": {
+        "used": false,
+        "reason": "本期不新增連續漸層或mask，以原生輪廓及必要逐筆透明度處理。"
+      }
+    },
+    "change": {
+      "kind": "new",
+      "reason": "交叉代表兩條獨立路徑而不是匯流結點；避讓保持透明，16px可沿任一路徑讀到箭頭，沒有圓帽侵入淨空。獨立複核另發現sharp箭桿square端帽在箭尖形成小階梯，已按半描邊回縮該端點，使實際端帽終止於箭尖接點。",
+      "before": null
+    },
+    "visualReview": {
+      "status": "new-after-visual-review",
+      "reviewer": "root",
+      "date": "2026-11-16",
+      "batch": "expansion-07",
+      "variantsSha256": "a95594fbb7fe9c78ce1a0c069812d30b08f00b9e8128ae378281544f50a30d7b",
+      "checks": [
+        "two-pinned-source-comparisons",
+        "16/20/24",
+        "sharp/soft/rounded",
+        "light/dark",
+        "55-percent-foreground",
+        "adjacent-text"
+      ],
+      "evidence": [
+        {
+          "path": "docs/review/ui-v1/expansion-07/comparison.png",
+          "sha256": "c366d5a1bf91b410c6d3d62d91b4e848d8e264fecc838fb54742119e82e7f6ff"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-07/comparison-dark.png",
+          "sha256": "518ac665893334984759037d340dbefb9cb56c741813001c5cc3d95447d75c00"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-07/native.png",
+          "sha256": "e170a380e33ce970782bbafc030478de173c66169b0181082ee7b84652ead8dc"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-07/native-dark.png",
+          "sha256": "7dcafdbae9e3eafbca027ea6e04ac891378890904d6147ba7d73223d55566ab9"
+        }
+      ]
+    },
+    "status": "visually-reviewed-candidate",
+    "userApproval": "pending"
+  },
+  {
+    "name": "repeat-one",
+    "purpose": "單一項目循環播放",
+    "recognitionCues": "既有循環箭頭加中央數字1",
+    "confusableWith": [
+      "repeat",
+      "refresh"
+    ],
+    "sourceObservation": "Lucide repeat-1和Tabler repeat-once都將1置於循環內。Master直接繼承repeat母型，中央以向量短鉤和直桿構成1。",
+    "references": [
+      {
+        "name": "repeat-one",
+        "library": "Lucide",
+        "repository": "lucide-icons/lucide",
+        "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+        "path": "icons/repeat-1.svg",
+        "localPath": "references/expansion-01/lucide-repeat-1.svg",
+        "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/repeat-1.svg",
+        "sha256": "d74c0581fd9410e52108d74aa07b011162000382238266775aaf7a2d18ba6c68",
+        "license": "ISC AND MIT",
+        "sourceName": "repeat-1",
+        "match": "exact",
+        "role": "comparison-only"
+      },
+      {
+        "name": "repeat-one",
+        "library": "Tabler",
+        "repository": "tabler/tabler-icons",
+        "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+        "path": "icons/outline/repeat-once.svg",
+        "localPath": "references/expansion-01/tabler-repeat-once.svg",
+        "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/repeat-once.svg",
+        "sha256": "e6054cfd9523434fcef087f2453c025d2df05ecd4d99391b53efcc776bc779f9",
+        "license": "MIT",
+        "sourceName": "repeat-once",
+        "match": "exact",
+        "role": "comparison-only"
+      }
+    ],
+    "effects": {
+      "dashes": {
+        "used": false,
+        "reason": "不採用；單曲循環以連續實體輪廓表達，沒有未完成或隱藏邊界。"
+      },
+      "opacity": {
+        "used": false,
+        "reason": "不採用；單曲循環的主體及必要訊號以留白分離，淡化不增加語意。"
+      },
+      "gradients": {
+        "used": false,
+        "reason": "本期不新增連續漸層或mask，以原生輪廓及必要逐筆透明度處理。"
+      }
+    },
+    "change": {
+      "kind": "new",
+      "reason": "1與兩條循環邊界不相碰，16px仍保留單項限定訊號；不靠字型或淡化表示狀態。",
+      "before": null
+    },
+    "visualReview": {
+      "status": "new-after-visual-review",
+      "reviewer": "root",
+      "date": "2026-11-16",
+      "batch": "expansion-07",
+      "variantsSha256": "3129979e14f431f47e52370be2a07d81b4202f9a71b3ff8c4a59c3dc0f879ee1",
+      "checks": [
+        "two-pinned-source-comparisons",
+        "16/20/24",
+        "sharp/soft/rounded",
+        "light/dark",
+        "55-percent-foreground",
+        "adjacent-text"
+      ],
+      "evidence": [
+        {
+          "path": "docs/review/ui-v1/expansion-07/comparison.png",
+          "sha256": "c366d5a1bf91b410c6d3d62d91b4e848d8e264fecc838fb54742119e82e7f6ff"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-07/comparison-dark.png",
+          "sha256": "518ac665893334984759037d340dbefb9cb56c741813001c5cc3d95447d75c00"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-07/native.png",
+          "sha256": "e170a380e33ce970782bbafc030478de173c66169b0181082ee7b84652ead8dc"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-07/native-dark.png",
+          "sha256": "7dcafdbae9e3eafbca027ea6e04ac891378890904d6147ba7d73223d55566ab9"
+        }
+      ]
+    },
+    "status": "visually-reviewed-candidate",
+    "userApproval": "pending"
+  },
+  {
+    "name": "volume-low",
+    "purpose": "低音量狀態",
+    "recognitionCues": "同一喇叭輪廓與單條聲波",
+    "confusableWith": [
+      "volume",
+      "volume-off"
+    ],
+    "sourceObservation": "Lucide volume-1和Tabler volume-2都以單弧表示較低音量；來源數字命名不同，按實際波弧數對照。Master沿用volume喇叭與內弧。",
+    "references": [
+      {
+        "name": "volume-low",
+        "library": "Lucide",
+        "repository": "lucide-icons/lucide",
+        "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+        "path": "icons/volume-1.svg",
+        "localPath": "references/expansion-01/lucide-volume-1.svg",
+        "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/volume-1.svg",
+        "sha256": "e8520e1c57f8bf84579ecacf5463cd3ac55ab1597e62b2844ecd95d753233bf2",
+        "license": "ISC AND MIT",
+        "sourceName": "volume-1",
+        "match": "exact",
+        "role": "comparison-only"
+      },
+      {
+        "name": "volume-low",
+        "library": "Tabler",
+        "repository": "tabler/tabler-icons",
+        "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+        "path": "icons/outline/volume-2.svg",
+        "localPath": "references/expansion-01/tabler-volume-2.svg",
+        "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/volume-2.svg",
+        "sha256": "ebd7a0c84ed8775d7bc5ecda2301182be63ddc19edd33a1fb8d56fc853038f0c",
+        "license": "MIT",
+        "sourceName": "volume-2",
+        "match": "exact",
+        "role": "comparison-only"
+      }
+    ],
+    "effects": {
+      "dashes": {
+        "used": false,
+        "reason": "不採用；低音量以連續實體輪廓表達，沒有未完成或隱藏邊界。"
+      },
+      "opacity": {
+        "used": false,
+        "reason": "不採用；低音量的主體及必要訊號以留白分離，淡化不增加語意。"
+      },
+      "gradients": {
+        "used": false,
+        "reason": "本期不新增連續漸層或mask，以原生輪廓及必要逐筆透明度處理。"
+      }
+    },
+    "change": {
+      "kind": "new",
+      "reason": "20/24保留單弧區別通用volume的雙弧；16與既有通用volume的簡化稿相同，明確記為同概念的小尺寸共用圖稿，未宣稱獨立基本概念。通用volume不是高音量狀態；16px不得將其當成高/低音量的互異狀態配對。",
+      "before": null
+    },
+    "visualReview": {
+      "status": "new-after-visual-review",
+      "reviewer": "root",
+      "date": "2026-11-16",
+      "batch": "expansion-07",
+      "variantsSha256": "f87394100fe61fae68bc96047b67a2b82912033627b351a450f4e039968a3d37",
+      "checks": [
+        "two-pinned-source-comparisons",
+        "16/20/24",
+        "sharp/soft/rounded",
+        "light/dark",
+        "55-percent-foreground",
+        "adjacent-text"
+      ],
+      "evidence": [
+        {
+          "path": "docs/review/ui-v1/expansion-07/comparison.png",
+          "sha256": "c366d5a1bf91b410c6d3d62d91b4e848d8e264fecc838fb54742119e82e7f6ff"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-07/comparison-dark.png",
+          "sha256": "518ac665893334984759037d340dbefb9cb56c741813001c5cc3d95447d75c00"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-07/native.png",
+          "sha256": "e170a380e33ce970782bbafc030478de173c66169b0181082ee7b84652ead8dc"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-07/native-dark.png",
+          "sha256": "7dcafdbae9e3eafbca027ea6e04ac891378890904d6147ba7d73223d55566ab9"
+        }
+      ]
+    },
+    "status": "visually-reviewed-candidate",
+    "userApproval": "pending"
+  },
+  {
+    "name": "video-off",
+    "purpose": "關閉攝影機或視訊",
+    "recognitionCues": "既有攝影機母型加斜線",
+    "confusableWith": [
+      "video",
+      "camera",
+      "microphone-off"
+    ],
+    "sourceObservation": "Lucide與Tabler採帶斜線的攝影機，保留右側鏡頭輪廓。Master直接裁切既有video母型，右側鏡頭角型完全繼承。",
+    "references": [
+      {
+        "name": "video-off",
+        "library": "Lucide",
+        "repository": "lucide-icons/lucide",
+        "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+        "path": "icons/video-off.svg",
+        "localPath": "references/expansion-01/lucide-video-off.svg",
+        "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/video-off.svg",
+        "sha256": "a2e53dcae00b37cbb7fb75373f28fa6b7c455b8b5e992cc620e3890dde80a178",
+        "license": "ISC AND MIT",
+        "sourceName": "video-off",
+        "match": "exact",
+        "role": "comparison-only"
+      },
+      {
+        "name": "video-off",
+        "library": "Tabler",
+        "repository": "tabler/tabler-icons",
+        "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+        "path": "icons/outline/video-off.svg",
+        "localPath": "references/expansion-01/tabler-video-off.svg",
+        "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/video-off.svg",
+        "sha256": "dbe33bc813aac9701a7fb55ad4192084404f618b35c606797775f9b8ba7da0f5",
+        "license": "MIT",
+        "sourceName": "video-off",
+        "match": "exact",
+        "role": "comparison-only"
+      }
+    ],
+    "effects": {
+      "dashes": {
+        "used": false,
+        "reason": "不採用；關閉攝影以連續實體輪廓表達，沒有未完成或隱藏邊界。"
+      },
+      "opacity": {
+        "used": false,
+        "reason": "不採用；關閉攝影的主體及必要訊號以留白分離，淡化不增加語意。"
+      },
+      "gradients": {
+        "used": false,
+        "reason": "本期不新增連續漸層或mask，以原生輪廓及必要逐筆透明度處理。"
+      }
+    },
+    "change": {
+      "kind": "new",
+      "reason": "以斜線實際描邊外緣外擴裁切後景，三尺寸切口一致；未使用白邊或透明度，深底仍是真正留白。",
+      "before": null
+    },
+    "visualReview": {
+      "status": "new-after-visual-review",
+      "reviewer": "root",
+      "date": "2026-11-16",
+      "batch": "expansion-07",
+      "variantsSha256": "fa28a80ff584c649a483458e4822ed49f1ba57485aa30b5ca52e478c7868ce4c",
+      "checks": [
+        "two-pinned-source-comparisons",
+        "16/20/24",
+        "sharp/soft/rounded",
+        "light/dark",
+        "55-percent-foreground",
+        "adjacent-text"
+      ],
+      "evidence": [
+        {
+          "path": "docs/review/ui-v1/expansion-07/comparison.png",
+          "sha256": "c366d5a1bf91b410c6d3d62d91b4e848d8e264fecc838fb54742119e82e7f6ff"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-07/comparison-dark.png",
+          "sha256": "518ac665893334984759037d340dbefb9cb56c741813001c5cc3d95447d75c00"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-07/native.png",
+          "sha256": "e170a380e33ce970782bbafc030478de173c66169b0181082ee7b84652ead8dc"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-07/native-dark.png",
+          "sha256": "7dcafdbae9e3eafbca027ea6e04ac891378890904d6147ba7d73223d55566ab9"
+        }
+      ]
+    },
+    "status": "visually-reviewed-candidate",
+    "userApproval": "pending"
+  },
+  {
+    "name": "screen-share",
+    "purpose": "分享螢幕",
+    "recognitionCues": "桌面顯示器與右上外送箭頭",
+    "confusableWith": [
+      "monitor",
+      "external-link",
+      "upload"
+    ],
+    "sourceObservation": "Lucide和Tabler均保留螢幕底座並用右上箭頭標記分享。Master保留既有monitor的寬高與底座，用真透明避讓處理框角。",
+    "references": [
+      {
+        "name": "screen-share",
+        "library": "Lucide",
+        "repository": "lucide-icons/lucide",
+        "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+        "path": "icons/screen-share.svg",
+        "localPath": "references/expansion-01/lucide-screen-share.svg",
+        "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/screen-share.svg",
+        "sha256": "f2d0bf052add73292a97301fe5bb78e2a5cc9091716a8849f58fdd746960d49e",
+        "license": "ISC AND MIT",
+        "sourceName": "screen-share",
+        "match": "exact",
+        "role": "comparison-only"
+      },
+      {
+        "name": "screen-share",
+        "library": "Tabler",
+        "repository": "tabler/tabler-icons",
+        "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+        "path": "icons/outline/screen-share.svg",
+        "localPath": "references/expansion-01/tabler-screen-share.svg",
+        "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/screen-share.svg",
+        "sha256": "f61281aa1d83fdf20e822318865dfc6714e9483892621460acab9188f061200a",
+        "license": "MIT",
+        "sourceName": "screen-share",
+        "match": "exact",
+        "role": "comparison-only"
+      }
+    ],
+    "effects": {
+      "dashes": {
+        "used": false,
+        "reason": "不採用；分享畫面以連續實體輪廓表達，沒有未完成或隱藏邊界。"
+      },
+      "opacity": {
+        "used": false,
+        "reason": "不採用；分享畫面的主體及必要訊號以留白分離，淡化不增加語意。"
+      },
+      "gradients": {
+        "used": false,
+        "reason": "本期不新增連續漸層或mask，以原生輪廓及必要逐筆透明度處理。"
+      }
+    },
+    "change": {
+      "kind": "new",
+      "reason": "箭桿與箭頭共用同一尖端，背景邊框依完整箭頭輪廓避讓，未預先挖掉大矩形角落；16px底座與外送方向均清楚。獨立複核另發現sharp斜箭桿square端帽在箭尖形成小階梯，已沿斜線回縮半描邊，保持chevron尖角。",
+      "before": null
+    },
+    "visualReview": {
+      "status": "new-after-visual-review",
+      "reviewer": "root",
+      "date": "2026-11-16",
+      "batch": "expansion-07",
+      "variantsSha256": "0df8ecf091cc96d0d574f6b8db17062a37ff5b3f02f42750fc47b82e598bca81",
+      "checks": [
+        "two-pinned-source-comparisons",
+        "16/20/24",
+        "sharp/soft/rounded",
+        "light/dark",
+        "55-percent-foreground",
+        "adjacent-text"
+      ],
+      "evidence": [
+        {
+          "path": "docs/review/ui-v1/expansion-07/comparison.png",
+          "sha256": "c366d5a1bf91b410c6d3d62d91b4e848d8e264fecc838fb54742119e82e7f6ff"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-07/comparison-dark.png",
+          "sha256": "518ac665893334984759037d340dbefb9cb56c741813001c5cc3d95447d75c00"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-07/native.png",
+          "sha256": "e170a380e33ce970782bbafc030478de173c66169b0181082ee7b84652ead8dc"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-07/native-dark.png",
+          "sha256": "7dcafdbae9e3eafbca027ea6e04ac891378890904d6147ba7d73223d55566ab9"
+        }
+      ]
+    },
+    "status": "visually-reviewed-candidate",
+    "userApproval": "pending"
+  }
+]

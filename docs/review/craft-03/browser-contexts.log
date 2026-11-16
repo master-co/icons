@@ -1,0 +1,20 @@
+[WebServer] $ node scripts/dev.mjs
+[WebServer] (node:58466) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 4 tests using 3 workers
+
+(node:58523) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:58524) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:58522) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 [chromium-2x] › tests/browser/scenarios.spec.mjs:9:1 › all contexts render in light/dark and desktop/mobile; controls and navigation work (3.3s)
+(node:58585) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  2 [webkit-1x] › tests/browser/scenarios.spec.mjs:9:1 › all contexts render in light/dark and desktop/mobile; controls and navigation work (3.5s)
+  ✓  4 [webkit-2x] › tests/browser/scenarios.spec.mjs:9:1 › all contexts render in light/dark and desktop/mobile; controls and navigation work (3.5s)
+  ✓  3 [chromium-1x] › tests/browser/scenarios.spec.mjs:9:1 › all contexts render in light/dark and desktop/mobile; controls and navigation work (9.0s)
+
+  4 passed (11.2s)

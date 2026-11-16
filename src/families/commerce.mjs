@@ -1,3 +1,4 @@
+import { knockout, enclosedDetails } from '../occlusion.mjs';
 import { file } from "./core.mjs";
 import { figure } from "./shared.mjs";
 const commerce = {
@@ -7,7 +8,9 @@ const commerce = {
   },
   coins: (g) => {
     const f = figure(g);
-    return [f.path("M3 7A5 2.5 0 1 0 13 7A5 2.5 0 1 0 3 7ZM3 7V12.5Q3 15 7.5 15"), f.path("M10 14A5.5 2.5 0 1 0 21 14A5.5 2.5 0 1 0 10 14ZM10 14V18A5.5 2.5 0 0 0 21 18V14")];
+    const front=f.path("M10 14A5.5 2.5 0 1 0 21 14A5.5 2.5 0 1 0 10 14ZM10 14V18A5.5 2.5 0 0 0 21 18V14");
+    const silhouette=f.path("M10 14A5.5 2.5 0 0 1 21 14V18A5.5 2.5 0 0 1 10 18Z");
+    return knockout([f.path("M3 7A5 2.5 0 1 0 13 7A5 2.5 0 1 0 3 7ZM3 7V12.5A5 2.5 0 0 0 13 12.5V7")],[front],g,{silhouettes:[silhouette]});
   },
   receipt: (g) => {
     const f = figure(g);
@@ -47,7 +50,7 @@ const commerce = {
   },
   package: (g) => {
     const f = figure(g);
-    return [f.contour([[12, 2.5], [21, 7.5], [21, 17], [12, 22], [3, 17], [3, 7.5]], true, g.r), f.contour([[3, 7.5], [12, 12.5], [21, 7.5]]), f.line(12, 12.5, 12, 22), ...g.s === 16 ? [] : [f.line(7.5, 5, 16.5, 10)]];
+    return enclosedDetails(f.contour([[12, 2.5], [21, 7.5], [21, 17], [12, 22], [3, 17], [3, 7.5]], true, g.r), [f.contour([[3, 7.5], [12, 12.5], [21, 7.5]]), f.line(12, 12.5, 12, 22), ...(g.s === 16 ? [] : [f.line(7.5, 5, 16.5, 10)])], g);
   },
   truck: (g) => {
     const f = figure(g);

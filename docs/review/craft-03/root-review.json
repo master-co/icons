@@ -1,0 +1,707 @@
+{
+  "date": "2026-11-16",
+  "scope": "22 modified existing drawings; all source comparisons and nine native variants, light/dark and low contrast",
+  "records": [
+    {
+      "name": "copy",
+      "reviewer": "root",
+      "status": "modified-after-visual-review",
+      "observation": "後方紙張以相同矩形母型恢復，沿前方紙張實際剪影扣除，露邊清楚，前後大小與圓角連貫。",
+      "variantsSha256": "ef99f7f48003173cb104a39462e5687a805f25dc8086af35080fcc4c8864d7e2",
+      "evidence": [
+        {
+          "path": "docs/review/craft-03/root-a/comparison.png",
+          "sha256": "cbfde0790604dcc3e7abdf85eff28477c0cf742ca737b8b4d3b2601b8bd36353"
+        },
+        {
+          "path": "docs/review/craft-03/root-a/comparison-dark.png",
+          "sha256": "a834e1595c3d2eb4ee8d7200075e3c1784bac534f74c6da3320f0400998cf714"
+        },
+        {
+          "path": "docs/review/craft-03/root-a/native.png",
+          "sha256": "7641b08bd5c9f234355f43541642b0d76b69d1b74253d730ca55a7f0e3ebed28"
+        },
+        {
+          "path": "docs/review/craft-03/root-a/native-dark.png",
+          "sha256": "da1d80a0d325b16ea65a7e2e645279e12ea9d467c8794c808a7bb87575de6627"
+        }
+      ]
+    },
+    {
+      "name": "bell-off",
+      "reviewer": "root",
+      "status": "modified-after-visual-review",
+      "observation": "鈴身左右曲線與bell母型一致；切口服從斜線，底部鈴舌仍完整，無狀態稿另畫身形的漂移。",
+      "variantsSha256": "ab1129ec25975cbf464c186d72812253b56f66b3f636ca1418975ecbe5c8d9da",
+      "evidence": [
+        {
+          "path": "docs/review/craft-03/root-a/comparison.png",
+          "sha256": "cbfde0790604dcc3e7abdf85eff28477c0cf742ca737b8b4d3b2601b8bd36353"
+        },
+        {
+          "path": "docs/review/craft-03/root-a/comparison-dark.png",
+          "sha256": "a834e1595c3d2eb4ee8d7200075e3c1784bac534f74c6da3320f0400998cf714"
+        },
+        {
+          "path": "docs/review/craft-03/root-a/native.png",
+          "sha256": "7641b08bd5c9f234355f43541642b0d76b69d1b74253d730ca55a7f0e3ebed28"
+        },
+        {
+          "path": "docs/review/craft-03/root-a/native-dark.png",
+          "sha256": "da1d80a0d325b16ea65a7e2e645279e12ea9d467c8794c808a7bb87575de6627"
+        }
+      ]
+    },
+    {
+      "name": "external-link",
+      "reviewer": "root",
+      "status": "modified-after-visual-review",
+      "observation": "右上箭頭及斜桿周圍的缺口比原矩形開口自然；框體仍完整可讀，沒有箭頭旁碎線。",
+      "variantsSha256": "83875ae5e4622ac580c5dad3f360b82f591e59e1c97ae9bc09e63d57e849b6ed",
+      "evidence": [
+        {
+          "path": "docs/review/craft-03/root-a/comparison.png",
+          "sha256": "cbfde0790604dcc3e7abdf85eff28477c0cf742ca737b8b4d3b2601b8bd36353"
+        },
+        {
+          "path": "docs/review/craft-03/root-a/comparison-dark.png",
+          "sha256": "a834e1595c3d2eb4ee8d7200075e3c1784bac534f74c6da3320f0400998cf714"
+        },
+        {
+          "path": "docs/review/craft-03/root-a/native.png",
+          "sha256": "7641b08bd5c9f234355f43541642b0d76b69d1b74253d730ca55a7f0e3ebed28"
+        },
+        {
+          "path": "docs/review/craft-03/root-a/native-dark.png",
+          "sha256": "da1d80a0d325b16ea65a7e2e645279e12ea9d467c8794c808a7bb87575de6627"
+        }
+      ]
+    },
+    {
+      "name": "eye-off",
+      "reviewer": "root",
+      "status": "modified-after-visual-review",
+      "observation": "重新使用完整eye，兩段瞳孔與外眼弧在16px仍可分離；負空間穿透有一致方向，未見微孔黏合。",
+      "variantsSha256": "b671f31a5756c3e547ed773958bf67c4942db6f4a8a3d7fadf5131f1825124d1",
+      "evidence": [
+        {
+          "path": "docs/review/craft-03/root-a/comparison.png",
+          "sha256": "cbfde0790604dcc3e7abdf85eff28477c0cf742ca737b8b4d3b2601b8bd36353"
+        },
+        {
+          "path": "docs/review/craft-03/root-a/comparison-dark.png",
+          "sha256": "a834e1595c3d2eb4ee8d7200075e3c1784bac534f74c6da3320f0400998cf714"
+        },
+        {
+          "path": "docs/review/craft-03/root-a/native.png",
+          "sha256": "7641b08bd5c9f234355f43541642b0d76b69d1b74253d730ca55a7f0e3ebed28"
+        },
+        {
+          "path": "docs/review/craft-03/root-a/native-dark.png",
+          "sha256": "da1d80a0d325b16ea65a7e2e645279e12ea9d467c8794c808a7bb87575de6627"
+        }
+      ]
+    },
+    {
+      "name": "clipboard-paste",
+      "reviewer": "root",
+      "status": "modified-after-visual-review",
+      "observation": "右側箭頭避讓後恢復下方板框，夾頭與板身比例未變；剪貼簿身份比過寬的原缺角完整。",
+      "variantsSha256": "72f3578187869cf47abad05a1640f414e5332d54bba006ef6b3b8f466b7ffad2",
+      "evidence": [
+        {
+          "path": "docs/review/craft-03/root-a/comparison.png",
+          "sha256": "cbfde0790604dcc3e7abdf85eff28477c0cf742ca737b8b4d3b2601b8bd36353"
+        },
+        {
+          "path": "docs/review/craft-03/root-a/comparison-dark.png",
+          "sha256": "a834e1595c3d2eb4ee8d7200075e3c1784bac534f74c6da3320f0400998cf714"
+        },
+        {
+          "path": "docs/review/craft-03/root-a/native.png",
+          "sha256": "7641b08bd5c9f234355f43541642b0d76b69d1b74253d730ca55a7f0e3ebed28"
+        },
+        {
+          "path": "docs/review/craft-03/root-a/native-dark.png",
+          "sha256": "da1d80a0d325b16ea65a7e2e645279e12ea9d467c8794c808a7bb87575de6627"
+        }
+      ]
+    },
+    {
+      "name": "strikethrough",
+      "reviewer": "root",
+      "status": "modified-after-visual-review",
+      "observation": "S曲線按橫桿外緣切除，切口貼合筆畫而非兩個任意圓端，16px仍辨識S與刪除線。",
+      "variantsSha256": "64108d4bc32bb1362845ca2d21a03a7c5c1577ff8f36ef038930f96c7866bb4d",
+      "evidence": [
+        {
+          "path": "docs/review/craft-03/root-a/comparison.png",
+          "sha256": "cbfde0790604dcc3e7abdf85eff28477c0cf742ca737b8b4d3b2601b8bd36353"
+        },
+        {
+          "path": "docs/review/craft-03/root-a/comparison-dark.png",
+          "sha256": "a834e1595c3d2eb4ee8d7200075e3c1784bac534f74c6da3320f0400998cf714"
+        },
+        {
+          "path": "docs/review/craft-03/root-a/native.png",
+          "sha256": "7641b08bd5c9f234355f43541642b0d76b69d1b74253d730ca55a7f0e3ebed28"
+        },
+        {
+          "path": "docs/review/craft-03/root-a/native-dark.png",
+          "sha256": "da1d80a0d325b16ea65a7e2e645279e12ea9d467c8794c808a7bb87575de6627"
+        }
+      ]
+    },
+    {
+      "name": "microphone-off",
+      "reviewer": "root",
+      "status": "modified-after-visual-review",
+      "observation": "麥克風母型與外架弧線保留；斜線切口清楚，16px下部支架沒有殘留孤立短刺。",
+      "variantsSha256": "3958a7a304d7c70077f68c3cc51868e822b4e2eeef2a6aa5fe3d4cf725ff8c3b",
+      "evidence": [
+        {
+          "path": "docs/review/craft-03/root-a/comparison.png",
+          "sha256": "cbfde0790604dcc3e7abdf85eff28477c0cf742ca737b8b4d3b2601b8bd36353"
+        },
+        {
+          "path": "docs/review/craft-03/root-a/comparison-dark.png",
+          "sha256": "a834e1595c3d2eb4ee8d7200075e3c1784bac534f74c6da3320f0400998cf714"
+        },
+        {
+          "path": "docs/review/craft-03/root-a/native.png",
+          "sha256": "7641b08bd5c9f234355f43541642b0d76b69d1b74253d730ca55a7f0e3ebed28"
+        },
+        {
+          "path": "docs/review/craft-03/root-a/native-dark.png",
+          "sha256": "da1d80a0d325b16ea65a7e2e645279e12ea9d467c8794c808a7bb87575de6627"
+        }
+      ]
+    },
+    {
+      "name": "cloud-upload",
+      "reviewer": "root",
+      "status": "modified-after-visual-review",
+      "observation": "雲底從完整母型扣出箭桿淨空，沒有重畫左右雲瓣；箭翼與雲頂的負空間仍足夠。",
+      "variantsSha256": "5173b83749c788fcd031b0dda400e0e14772f26bc76eb390ebf1cbba19775c58",
+      "evidence": [
+        {
+          "path": "docs/review/craft-03/root-a/comparison.png",
+          "sha256": "cbfde0790604dcc3e7abdf85eff28477c0cf742ca737b8b4d3b2601b8bd36353"
+        },
+        {
+          "path": "docs/review/craft-03/root-a/comparison-dark.png",
+          "sha256": "a834e1595c3d2eb4ee8d7200075e3c1784bac534f74c6da3320f0400998cf714"
+        },
+        {
+          "path": "docs/review/craft-03/root-a/native.png",
+          "sha256": "7641b08bd5c9f234355f43541642b0d76b69d1b74253d730ca55a7f0e3ebed28"
+        },
+        {
+          "path": "docs/review/craft-03/root-a/native-dark.png",
+          "sha256": "da1d80a0d325b16ea65a7e2e645279e12ea9d467c8794c808a7bb87575de6627"
+        }
+      ]
+    },
+    {
+      "name": "cloud-download",
+      "reviewer": "root",
+      "status": "modified-after-visual-review",
+      "observation": "下箭頭翼尖和雲底避讓一致，保留完整雲瓣曲率及箭頭落點，沒有長短不一的圓帽缺口。",
+      "variantsSha256": "818632787c1e2cebb58cc548c0b816f2a51896a5655fa5edb004cfa10a7b2e10",
+      "evidence": [
+        {
+          "path": "docs/review/craft-03/root-a/comparison.png",
+          "sha256": "cbfde0790604dcc3e7abdf85eff28477c0cf742ca737b8b4d3b2601b8bd36353"
+        },
+        {
+          "path": "docs/review/craft-03/root-a/comparison-dark.png",
+          "sha256": "a834e1595c3d2eb4ee8d7200075e3c1784bac534f74c6da3320f0400998cf714"
+        },
+        {
+          "path": "docs/review/craft-03/root-a/native.png",
+          "sha256": "7641b08bd5c9f234355f43541642b0d76b69d1b74253d730ca55a7f0e3ebed28"
+        },
+        {
+          "path": "docs/review/craft-03/root-a/native-dark.png",
+          "sha256": "da1d80a0d325b16ea65a7e2e645279e12ea9d467c8794c808a7bb87575de6627"
+        }
+      ]
+    },
+    {
+      "name": "wifi-off",
+      "reviewer": "root",
+      "status": "modified-after-visual-review",
+      "observation": "訊號弧線與母型一致，裁切後的左右弧段維持共同弧心感；16px信號點與斜線仍可分。",
+      "variantsSha256": "fa5c29d31554754b40661c7051cc9d59db055aa967b358f7776cd80db2b77fbd",
+      "evidence": [
+        {
+          "path": "docs/review/craft-03/root-a/comparison.png",
+          "sha256": "cbfde0790604dcc3e7abdf85eff28477c0cf742ca737b8b4d3b2601b8bd36353"
+        },
+        {
+          "path": "docs/review/craft-03/root-a/comparison-dark.png",
+          "sha256": "a834e1595c3d2eb4ee8d7200075e3c1784bac534f74c6da3320f0400998cf714"
+        },
+        {
+          "path": "docs/review/craft-03/root-a/native.png",
+          "sha256": "7641b08bd5c9f234355f43541642b0d76b69d1b74253d730ca55a7f0e3ebed28"
+        },
+        {
+          "path": "docs/review/craft-03/root-a/native-dark.png",
+          "sha256": "da1d80a0d325b16ea65a7e2e645279e12ea9d467c8794c808a7bb87575de6627"
+        }
+      ]
+    },
+    {
+      "name": "battery-charging",
+      "reviewer": "root",
+      "status": "modified-after-visual-review",
+      "observation": "電池左右框沿閃電筆畫而非固定開口避讓，內部留白均衡，端子仍清楚。",
+      "variantsSha256": "07025e902e89aa52ddc81e6c82ebb5389154adac3808472c6d7fa6ed6e24e85a",
+      "evidence": [
+        {
+          "path": "docs/review/craft-03/root-b/comparison.png",
+          "sha256": "76b5b2da36a7440db3400296adbfc43b9d18c6b7c6a6b3fbc6cdfda8a0831bf2"
+        },
+        {
+          "path": "docs/review/craft-03/root-b/comparison-dark.png",
+          "sha256": "c8fe379037213cd3d7df41de308c834da16207baa2102cb5a3009ec6a237bb4b"
+        },
+        {
+          "path": "docs/review/craft-03/root-b/native.png",
+          "sha256": "a4afff771a5fb4fead28e2263b3bd8a1f36b8009cfa604a7c412bcffbd9c6257"
+        },
+        {
+          "path": "docs/review/craft-03/root-b/native-dark.png",
+          "sha256": "35ca092671347edd963f85da59640d351a33e8876793f0a59370ec1655c5d58b"
+        }
+      ]
+    },
+    {
+      "name": "coins",
+      "reviewer": "root",
+      "status": "modified-after-visual-review",
+      "observation": "後方圓柱補回完整厚度和底弧，再由前方幣疊剪影裁切；前後兩組橢圓維持可讀層次。",
+      "variantsSha256": "2f84a99661429601066740e5d49b1f32b703a86a01ab98ea6d77b346f235380a",
+      "evidence": [
+        {
+          "path": "docs/review/craft-03/root-b/comparison.png",
+          "sha256": "76b5b2da36a7440db3400296adbfc43b9d18c6b7c6a6b3fbc6cdfda8a0831bf2"
+        },
+        {
+          "path": "docs/review/craft-03/root-b/comparison-dark.png",
+          "sha256": "c8fe379037213cd3d7df41de308c834da16207baa2102cb5a3009ec6a237bb4b"
+        },
+        {
+          "path": "docs/review/craft-03/root-b/native.png",
+          "sha256": "a4afff771a5fb4fead28e2263b3bd8a1f36b8009cfa604a7c412bcffbd9c6257"
+        },
+        {
+          "path": "docs/review/craft-03/root-b/native-dark.png",
+          "sha256": "35ca092671347edd963f85da59640d351a33e8876793f0a59370ec1655c5d58b"
+        }
+      ]
+    },
+    {
+      "name": "pin-off",
+      "reviewer": "root",
+      "status": "modified-after-visual-review",
+      "observation": "圖釘頭、腰與針部依同一母型裁切，斜線下方針段保留語意，不誤當碎片刪除。",
+      "variantsSha256": "547b2296946d32d9d46bd88c7fbae87294dc326b0eac2ab9abe4d478632e5854",
+      "evidence": [
+        {
+          "path": "docs/review/craft-03/root-b/comparison.png",
+          "sha256": "76b5b2da36a7440db3400296adbfc43b9d18c6b7c6a6b3fbc6cdfda8a0831bf2"
+        },
+        {
+          "path": "docs/review/craft-03/root-b/comparison-dark.png",
+          "sha256": "c8fe379037213cd3d7df41de308c834da16207baa2102cb5a3009ec6a237bb4b"
+        },
+        {
+          "path": "docs/review/craft-03/root-b/native.png",
+          "sha256": "a4afff771a5fb4fead28e2263b3bd8a1f36b8009cfa604a7c412bcffbd9c6257"
+        },
+        {
+          "path": "docs/review/craft-03/root-b/native-dark.png",
+          "sha256": "35ca092671347edd963f85da59640d351a33e8876793f0a59370ec1655c5d58b"
+        }
+      ]
+    },
+    {
+      "name": "folder-search",
+      "reviewer": "root",
+      "status": "modified-after-visual-review",
+      "observation": "放大鏡圈內沒有資料夾底線穿透，原本的大矩形缺角縮為等距輪廓避讓，文件夾完整度提高。",
+      "variantsSha256": "097d8c68aa2115ea6d452c72c2c0c3e2b674f17bdf81e02ad0c31ff7dd0001c9",
+      "evidence": [
+        {
+          "path": "docs/review/craft-03/root-b/comparison.png",
+          "sha256": "76b5b2da36a7440db3400296adbfc43b9d18c6b7c6a6b3fbc6cdfda8a0831bf2"
+        },
+        {
+          "path": "docs/review/craft-03/root-b/comparison-dark.png",
+          "sha256": "c8fe379037213cd3d7df41de308c834da16207baa2102cb5a3009ec6a237bb4b"
+        },
+        {
+          "path": "docs/review/craft-03/root-b/native.png",
+          "sha256": "a4afff771a5fb4fead28e2263b3bd8a1f36b8009cfa604a7c412bcffbd9c6257"
+        },
+        {
+          "path": "docs/review/craft-03/root-b/native-dark.png",
+          "sha256": "35ca092671347edd963f85da59640d351a33e8876793f0a59370ec1655c5d58b"
+        }
+      ]
+    },
+    {
+      "name": "file-search",
+      "reviewer": "root",
+      "status": "modified-after-visual-review",
+      "observation": "頁面右下角恢復到鏡圈外緣淨空，頁折與放大鏡沒有碰線，16px孔仍可辨。",
+      "variantsSha256": "e53ab60488fc03ca1be06514f2cc4e36284fa14777013f618f262d5e6ca765ac",
+      "evidence": [
+        {
+          "path": "docs/review/craft-03/root-b/comparison.png",
+          "sha256": "76b5b2da36a7440db3400296adbfc43b9d18c6b7c6a6b3fbc6cdfda8a0831bf2"
+        },
+        {
+          "path": "docs/review/craft-03/root-b/comparison-dark.png",
+          "sha256": "c8fe379037213cd3d7df41de308c834da16207baa2102cb5a3009ec6a237bb4b"
+        },
+        {
+          "path": "docs/review/craft-03/root-b/native.png",
+          "sha256": "a4afff771a5fb4fead28e2263b3bd8a1f36b8009cfa604a7c412bcffbd9c6257"
+        },
+        {
+          "path": "docs/review/craft-03/root-b/native-dark.png",
+          "sha256": "35ca092671347edd963f85da59640d351a33e8876793f0a59370ec1655c5d58b"
+        }
+      ]
+    },
+    {
+      "name": "folder-up",
+      "reviewer": "root",
+      "status": "modified-after-visual-review",
+      "observation": "16px箭尾上收後與底邊產生真實空隙，較大尺寸仍保留舒展箭身，母型保持。",
+      "variantsSha256": "d5b166bc5ed9c73fd86147cf3174fa41a980f39498b39362a67d22c5d65b3a12",
+      "evidence": [
+        {
+          "path": "docs/review/craft-03/root-b/comparison.png",
+          "sha256": "76b5b2da36a7440db3400296adbfc43b9d18c6b7c6a6b3fbc6cdfda8a0831bf2"
+        },
+        {
+          "path": "docs/review/craft-03/root-b/comparison-dark.png",
+          "sha256": "c8fe379037213cd3d7df41de308c834da16207baa2102cb5a3009ec6a237bb4b"
+        },
+        {
+          "path": "docs/review/craft-03/root-b/native.png",
+          "sha256": "a4afff771a5fb4fead28e2263b3bd8a1f36b8009cfa604a7c412bcffbd9c6257"
+        },
+        {
+          "path": "docs/review/craft-03/root-b/native-dark.png",
+          "sha256": "35ca092671347edd963f85da59640d351a33e8876793f0a59370ec1655c5d58b"
+        }
+      ]
+    },
+    {
+      "name": "folder-down",
+      "reviewer": "root",
+      "status": "modified-after-visual-review",
+      "observation": "16px箭尖上提，消除幾乎碰到底邊的端點；上下箭頭家族的筆畫與翼寬一致。",
+      "variantsSha256": "55164025c40535574f38139bec4a2a95d643bb5a82ed9ec60b384137bc8316e6",
+      "evidence": [
+        {
+          "path": "docs/review/craft-03/root-b/comparison.png",
+          "sha256": "76b5b2da36a7440db3400296adbfc43b9d18c6b7c6a6b3fbc6cdfda8a0831bf2"
+        },
+        {
+          "path": "docs/review/craft-03/root-b/comparison-dark.png",
+          "sha256": "c8fe379037213cd3d7df41de308c834da16207baa2102cb5a3009ec6a237bb4b"
+        },
+        {
+          "path": "docs/review/craft-03/root-b/native.png",
+          "sha256": "a4afff771a5fb4fead28e2263b3bd8a1f36b8009cfa604a7c412bcffbd9c6257"
+        },
+        {
+          "path": "docs/review/craft-03/root-b/native-dark.png",
+          "sha256": "35ca092671347edd963f85da59640d351a33e8876793f0a59370ec1655c5d58b"
+        }
+      ]
+    },
+    {
+      "name": "calendar-clock",
+      "reviewer": "root",
+      "status": "modified-after-visual-review",
+      "observation": "時鐘完整剪影排除日期框，不讓框邊穿入鐘內；上方日曆釘與橫線沒有因裁切而改形。",
+      "variantsSha256": "b3d11a1057036c52020ded34b750900a847d83a961c636ac38ec4e4cbf7c98b3",
+      "evidence": [
+        {
+          "path": "docs/review/craft-03/root-b/comparison.png",
+          "sha256": "76b5b2da36a7440db3400296adbfc43b9d18c6b7c6a6b3fbc6cdfda8a0831bf2"
+        },
+        {
+          "path": "docs/review/craft-03/root-b/comparison-dark.png",
+          "sha256": "c8fe379037213cd3d7df41de308c834da16207baa2102cb5a3009ec6a237bb4b"
+        },
+        {
+          "path": "docs/review/craft-03/root-b/native.png",
+          "sha256": "a4afff771a5fb4fead28e2263b3bd8a1f36b8009cfa604a7c412bcffbd9c6257"
+        },
+        {
+          "path": "docs/review/craft-03/root-b/native-dark.png",
+          "sha256": "35ca092671347edd963f85da59640d351a33e8876793f0a59370ec1655c5d58b"
+        }
+      ]
+    },
+    {
+      "name": "clipboard-copy",
+      "reviewer": "root",
+      "status": "modified-after-visual-review",
+      "observation": "向內箭頭沿共同夾板母型避讓，保留右框到箭桿外緣，與paste方向清楚對應。",
+      "variantsSha256": "ac72b597bd2bbb1cde15dde6fde815a43c375a01da3230a748aa9aeb9f691afe",
+      "evidence": [
+        {
+          "path": "docs/review/craft-03/root-b/comparison.png",
+          "sha256": "76b5b2da36a7440db3400296adbfc43b9d18c6b7c6a6b3fbc6cdfda8a0831bf2"
+        },
+        {
+          "path": "docs/review/craft-03/root-b/comparison-dark.png",
+          "sha256": "c8fe379037213cd3d7df41de308c834da16207baa2102cb5a3009ec6a237bb4b"
+        },
+        {
+          "path": "docs/review/craft-03/root-b/native.png",
+          "sha256": "a4afff771a5fb4fead28e2263b3bd8a1f36b8009cfa604a7c412bcffbd9c6257"
+        },
+        {
+          "path": "docs/review/craft-03/root-b/native-dark.png",
+          "sha256": "35ca092671347edd963f85da59640d351a33e8876793f0a59370ec1655c5d58b"
+        }
+      ]
+    },
+    {
+      "name": "clipboard-pen",
+      "reviewer": "root",
+      "status": "modified-after-visual-review",
+      "observation": "root發現sharp筆尾miter外緣超過viewBox，將整支筆再左移0.75設計單位。三尺寸最右外緣降為15.7172/19.6024/23.4874，底部也在界內；九母版目視未見孤立角碎片，遮擋淨空維持。",
+      "variantsSha256": "c5eb3b3845499b4be676d22370e540708955bf308f57754aa62ccc46372d2587",
+      "evidence": [
+        {
+          "path": "docs/review/craft-03/root-b/comparison.png",
+          "sha256": "76b5b2da36a7440db3400296adbfc43b9d18c6b7c6a6b3fbc6cdfda8a0831bf2"
+        },
+        {
+          "path": "docs/review/craft-03/root-b/comparison-dark.png",
+          "sha256": "c8fe379037213cd3d7df41de308c834da16207baa2102cb5a3009ec6a237bb4b"
+        },
+        {
+          "path": "docs/review/craft-03/root-b/native.png",
+          "sha256": "a4afff771a5fb4fead28e2263b3bd8a1f36b8009cfa604a7c412bcffbd9c6257"
+        },
+        {
+          "path": "docs/review/craft-03/root-b/native-dark.png",
+          "sha256": "35ca092671347edd963f85da59640d351a33e8876793f0a59370ec1655c5d58b"
+        }
+      ]
+    },
+    {
+      "name": "mail-check",
+      "reviewer": "root",
+      "status": "modified-after-visual-review",
+      "observation": "勾號重新定位後，信封右下切口服從兩臂輪廓，保留較完整信封，無多餘短角。",
+      "variantsSha256": "41a6d16d07722719bd9796b4c4c1db54f4fa30328c4e457fd96ff12aa893b5e6",
+      "evidence": [
+        {
+          "path": "docs/review/craft-03/root-b/comparison.png",
+          "sha256": "76b5b2da36a7440db3400296adbfc43b9d18c6b7c6a6b3fbc6cdfda8a0831bf2"
+        },
+        {
+          "path": "docs/review/craft-03/root-b/comparison-dark.png",
+          "sha256": "c8fe379037213cd3d7df41de308c834da16207baa2102cb5a3009ec6a237bb4b"
+        },
+        {
+          "path": "docs/review/craft-03/root-b/native.png",
+          "sha256": "a4afff771a5fb4fead28e2263b3bd8a1f36b8009cfa604a7c412bcffbd9c6257"
+        },
+        {
+          "path": "docs/review/craft-03/root-b/native-dark.png",
+          "sha256": "35ca092671347edd963f85da59640d351a33e8876793f0a59370ec1655c5d58b"
+        }
+      ]
+    },
+    {
+      "name": "user-cog",
+      "reviewer": "root",
+      "status": "modified-after-visual-review",
+      "observation": "肩線由完整person母型扣出齒輪剪影，齒輪孔內沒有肩線穿透，16px頭肩與齒輪仍有層次。",
+      "variantsSha256": "0bfa45f5ea2c6edae5ba20ef2983dfc5fa3cb59b66d04d5ca0b58ab5ef0d3cbe",
+      "evidence": [
+        {
+          "path": "docs/review/craft-03/root-b/comparison.png",
+          "sha256": "76b5b2da36a7440db3400296adbfc43b9d18c6b7c6a6b3fbc6cdfda8a0831bf2"
+        },
+        {
+          "path": "docs/review/craft-03/root-b/comparison-dark.png",
+          "sha256": "c8fe379037213cd3d7df41de308c834da16207baa2102cb5a3009ec6a237bb4b"
+        },
+        {
+          "path": "docs/review/craft-03/root-b/native.png",
+          "sha256": "a4afff771a5fb4fead28e2263b3bd8a1f36b8009cfa604a7c412bcffbd9c6257"
+        },
+        {
+          "path": "docs/review/craft-03/root-b/native-dark.png",
+          "sha256": "35ca092671347edd963f85da59640d351a33e8876793f0a59370ec1655c5d58b"
+        }
+      ]
+    }
+  ],
+  "additionalCorrection": {
+    "name": "clipboard-pen",
+    "beforePath": "docs/review/craft-03/final/definitions.json",
+    "bounds": [
+      {
+        "size": 16,
+        "corner": "sharp",
+        "before": {
+          "fLeft": 2.875,
+          "fTop": 1.375,
+          "fRight": 16.217178344726562,
+          "fBottom": 15.736557960510254
+        },
+        "after": {
+          "fLeft": 2.875,
+          "fTop": 1.375,
+          "fRight": 15.717178344726562,
+          "fBottom": 15.736557960510254
+        }
+      },
+      {
+        "size": 16,
+        "corner": "soft",
+        "before": {
+          "fLeft": 2.875,
+          "fTop": 1.375,
+          "fRight": 15.875455856323242,
+          "fBottom": 15.589506149291992
+        },
+        "after": {
+          "fLeft": 2.875,
+          "fTop": 1.375,
+          "fRight": 15.375455856323242,
+          "fBottom": 15.589506149291992
+        }
+      },
+      {
+        "size": 16,
+        "corner": "rounded",
+        "before": {
+          "fLeft": 2.875,
+          "fTop": 1.375,
+          "fRight": 15.73048210144043,
+          "fBottom": 15.527076721191406
+        },
+        "after": {
+          "fLeft": 2.875,
+          "fTop": 1.375,
+          "fRight": 15.23048210144043,
+          "fBottom": 15.527076721191406
+        }
+      },
+      {
+        "size": 20,
+        "corner": "sharp",
+        "before": {
+          "fLeft": 3.75,
+          "fTop": 1.75,
+          "fRight": 20.227365493774414,
+          "fBottom": 19.633895874023438
+        },
+        "after": {
+          "fLeft": 3.75,
+          "fTop": 1.75,
+          "fRight": 19.602365493774414,
+          "fBottom": 19.633895874023438
+        }
+      },
+      {
+        "size": 20,
+        "corner": "soft",
+        "before": {
+          "fLeft": 3.75,
+          "fTop": 1.75,
+          "fRight": 19.8338565826416,
+          "fBottom": 19.46453094482422
+        },
+        "after": {
+          "fLeft": 3.75,
+          "fTop": 1.75,
+          "fRight": 19.2088565826416,
+          "fBottom": 19.46453094482422
+        }
+      },
+      {
+        "size": 20,
+        "corner": "rounded",
+        "before": {
+          "fLeft": 3.75,
+          "fTop": 1.75,
+          "fRight": 19.68888282775879,
+          "fBottom": 19.402128219604492
+        },
+        "after": {
+          "fLeft": 3.75,
+          "fTop": 1.75,
+          "fRight": 19.063880920410156,
+          "fBottom": 19.402128219604492
+        }
+      },
+      {
+        "size": 24,
+        "corner": "sharp",
+        "before": {
+          "fLeft": 4.125,
+          "fTop": 2.125,
+          "fRight": 24.237436294555664,
+          "fBottom": 23.53119659423828
+        },
+        "after": {
+          "fLeft": 4.125,
+          "fTop": 2.125,
+          "fRight": 23.487436294555664,
+          "fBottom": 23.53119659423828
+        }
+      },
+      {
+        "size": 24,
+        "corner": "soft",
+        "before": {
+          "fLeft": 4.125,
+          "fTop": 2.125,
+          "fRight": 23.792158126831055,
+          "fBottom": 23.339563369750977
+        },
+        "after": {
+          "fLeft": 4.125,
+          "fTop": 2.125,
+          "fRight": 23.042158126831055,
+          "fBottom": 23.339563369750977
+        }
+      },
+      {
+        "size": 24,
+        "corner": "rounded",
+        "before": {
+          "fLeft": 4.125,
+          "fTop": 2.125,
+          "fRight": 23.647180557250977,
+          "fBottom": 23.277158737182617
+        },
+        "after": {
+          "fLeft": 4.125,
+          "fTop": 2.125,
+          "fRight": 22.897180557250977,
+          "fBottom": 23.277158737182617
+        }
+      }
+    ]
+  },
+  "engineering": "pending full integration"
+}

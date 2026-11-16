@@ -1,0 +1,40 @@
+[WebServer] $ node scripts/dev.mjs
+[WebServer] (node:57608) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 1 test using 1 worker
+
+(node:57654) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 [firefox-1x] › tests/browser/gallery.spec.mjs:80:1 › standalone review works without a server and retains comparison / ZIP export (0ms)
+
+
+  1) [firefox-1x] › tests/browser/gallery.spec.mjs:80:1 › standalone review works without a server and retains comparison / ZIP export 
+
+    Error: browserType.launch: Failed to launch the browser process.
+    Browser logs:
+
+    <launching> /Users/aron/Library/Caches/ms-playwright/firefox-1572/firefox/Nightly.app/Contents/MacOS/firefox -no-remote -headless -profile /var/folders/44/hzd1c4x50d7gk3ypjmfs8z740000gn/T/playwright_firefoxdev_profile-s0sRX0 -juggler-pipe -silent
+    <launched> pid=57655
+    [pid=57655][err] *** You are running in headless mode.
+    [pid=57655][err] Could not find profile folder.
+    [pid=57655] <process did exit: exitCode=1, signal=null>
+    [pid=57655] starting temporary directories cleanup
+    Call log:
+      - <launching> /Users/aron/Library/Caches/ms-playwright/firefox-1572/firefox/Nightly.app/Contents/MacOS/firefox -no-remote -headless -profile /var/folders/44/hzd1c4x50d7gk3ypjmfs8z740000gn/T/playwright_firefoxdev_profile-s0sRX0 -juggler-pipe -silent
+      - <launched> pid=57655
+      - [pid=57655][err] *** You are running in headless mode.
+      - [pid=57655][err] Could not find profile folder.
+      - [pid=57655] <process did exit: exitCode=1, signal=null>
+      - [pid=57655] starting temporary directories cleanup
+      - [pid=57655] <gracefully close start>
+      - [pid=57655] <kill>
+      - [pid=57655] <skipped force kill spawnedProcess.killed=false processClosed=true>
+      - [pid=57655] finished temporary directories cleanup
+      - [pid=57655] <gracefully close end>
+
+
+    Error Context: test-results/gallery-standalone-review--97ba3-tains-comparison-ZIP-export-firefox-1x/error-context.md
+
+  1 failed
+    [firefox-1x] › tests/browser/gallery.spec.mjs:80:1 › standalone review works without a server and retains comparison / ZIP export 

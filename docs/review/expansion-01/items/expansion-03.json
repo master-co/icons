@@ -1,0 +1,754 @@
+[
+  {
+    "name": "book",
+    "purpose": "文件庫、教材或書籍項目。",
+    "recognitionCues": "封閉書封、弧形書脊與下方頁緣。",
+    "confusableWith": [
+      "book-open",
+      "notebook"
+    ],
+    "sourceObservation": "Lucide book和Tabler book-2以閉合書封及下方頁緣區別文件；Tabler另有封面短線。Master保留書脊回彎和頁緣，刪去非必要封面裝飾。來源選擇改為book-2，避免把Tabler的展開book誤標成閉合原稿。",
+    "references": [
+      {
+        "name": "book",
+        "library": "Lucide",
+        "repository": "lucide-icons/lucide",
+        "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+        "path": "icons/book.svg",
+        "localPath": "references/expansion-01/lucide-book.svg",
+        "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/book.svg",
+        "sha256": "1a94c0af6224104124e873af2f6ba73d5a17dc536360a03cdb826eab858826a5",
+        "license": "ISC AND MIT",
+        "sourceName": "book",
+        "match": "exact",
+        "role": "comparison-only"
+      },
+      {
+        "name": "book",
+        "library": "Tabler",
+        "repository": "tabler/tabler-icons",
+        "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+        "path": "icons/outline/book-2.svg",
+        "localPath": "references/expansion-01/tabler-book-2.svg",
+        "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/book-2.svg",
+        "sha256": "b033f93e20d3c27a5123a603de584cdc54b50d32f53a16172726efcf05624505",
+        "license": "MIT",
+        "sourceName": "book-2",
+        "match": "exact",
+        "role": "comparison-only"
+      }
+    ],
+    "effects": {
+      "dashes": {
+        "used": false,
+        "reason": "不採用；書籍以連續實體輪廓表達，沒有未完成或隱藏邊界。"
+      },
+      "opacity": {
+        "used": false,
+        "reason": "不採用；書籍的主體及必要訊號以留白分離，淡化不增加語意。"
+      },
+      "gradients": {
+        "used": false,
+        "reason": "本期不新增連續漸層或mask，以原生輪廓及必要逐筆透明度處理。"
+      }
+    },
+    "change": {
+      "kind": "new",
+      "reason": "新繪後目視通過：書脊與頁緣連續，16px底部頁帶仍有空隙；右側局部圓角不破壞書本比例。",
+      "before": null
+    },
+    "visualReview": {
+      "status": "new-after-visual-review",
+      "reviewer": "root",
+      "date": "2026-11-16",
+      "batch": "expansion-03",
+      "variantsSha256": "7cfdaf642f7c5c5a30ad745d762b14170e24d0a6a1f54d0460e921db395f919a",
+      "checks": [
+        "two-pinned-source-comparisons",
+        "16/20/24",
+        "sharp/soft/rounded",
+        "light/dark",
+        "55-percent-foreground",
+        "adjacent-text"
+      ],
+      "evidence": [
+        {
+          "path": "docs/review/ui-v1/expansion-03/comparison.png",
+          "sha256": "a6756144d4e38baf7d4289b14cf3f6653a8d439cd3d6245810f6c92471ba77ad"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-03/comparison-dark.png",
+          "sha256": "ac7ae0f7115d89c71ebfdb48f7d42a2f540b3b578cb9dbfba415d39db828d50f"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-03/native.png",
+          "sha256": "078db2c18c91bea58920de6fcbe849328c8a7f8cd1a15a79b8902825107c9e02"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-03/native-dark.png",
+          "sha256": "eea5d5d5a90c08df018370188c47b0cab7d9fe5d88578e1eaf3626f96ebf52af"
+        }
+      ]
+    },
+    "status": "visually-reviewed-candidate",
+    "userApproval": "pending"
+  },
+  {
+    "name": "book-open",
+    "purpose": "開始閱讀、開啟說明或文件。",
+    "recognitionCues": "展開雙頁、中央書脊及上下葉面曲線。",
+    "confusableWith": [
+      "book",
+      "notebook"
+    ],
+    "sourceObservation": "Lucide的展開頁面較平，Heroicons用上下弧面表達攤開厚度。Master保留連續葉面與中央書脊，讓側角局部變化，不因sharp把整個頁面拉直。",
+    "references": [
+      {
+        "name": "book-open",
+        "library": "Lucide",
+        "repository": "lucide-icons/lucide",
+        "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+        "path": "icons/book-open.svg",
+        "localPath": "references/expansion-01/lucide-book-open.svg",
+        "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/book-open.svg",
+        "sha256": "9b9bed0ff057283d5c5c5a1c71f8d3e927db26a56639603a92fdf7b25961510e",
+        "license": "ISC AND MIT",
+        "sourceName": "book-open",
+        "match": "exact",
+        "role": "comparison-only"
+      },
+      {
+        "name": "book-open",
+        "library": "Heroicons",
+        "repository": "tailwindlabs/heroicons",
+        "commit": "616b7a4dbbf3d011760af8066262cd5c6b3868f3",
+        "path": "optimized/24/outline/book-open.svg",
+        "localPath": "references/expansion-01/heroicons-book-open.svg",
+        "url": "https://github.com/tailwindlabs/heroicons/blob/616b7a4dbbf3d011760af8066262cd5c6b3868f3/optimized/24/outline/book-open.svg",
+        "sha256": "dc4fab6a62dcebe7c1c31096a7062151363b803b62919ba47ef32ba37ad127df",
+        "license": "MIT",
+        "sourceName": "book-open",
+        "match": "exact",
+        "role": "comparison-only"
+      }
+    ],
+    "effects": {
+      "dashes": {
+        "used": false,
+        "reason": "不採用；閱讀以連續實體輪廓表達，沒有未完成或隱藏邊界。"
+      },
+      "opacity": {
+        "used": false,
+        "reason": "不採用；閱讀的主體及必要訊號以留白分離，淡化不增加語意。"
+      },
+      "gradients": {
+        "used": false,
+        "reason": "本期不新增連續漸層或mask，以原生輪廓及必要逐筆透明度處理。"
+      }
+    },
+    "change": {
+      "kind": "new",
+      "reason": "新繪後目視通過：左右頁形對稱而非兩個分離矩形；16px中央書脊清楚，文字旁寬度和其他內容圖示相容。",
+      "before": null
+    },
+    "visualReview": {
+      "status": "new-after-visual-review",
+      "reviewer": "root",
+      "date": "2026-11-16",
+      "batch": "expansion-03",
+      "variantsSha256": "f98360b3fd15ab37eaed8d5b54889e38f29dd1043f9c4fcfd1e8015dab42b3c4",
+      "checks": [
+        "two-pinned-source-comparisons",
+        "16/20/24",
+        "sharp/soft/rounded",
+        "light/dark",
+        "55-percent-foreground",
+        "adjacent-text"
+      ],
+      "evidence": [
+        {
+          "path": "docs/review/ui-v1/expansion-03/comparison.png",
+          "sha256": "a6756144d4e38baf7d4289b14cf3f6653a8d439cd3d6245810f6c92471ba77ad"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-03/comparison-dark.png",
+          "sha256": "ac7ae0f7115d89c71ebfdb48f7d42a2f540b3b578cb9dbfba415d39db828d50f"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-03/native.png",
+          "sha256": "078db2c18c91bea58920de6fcbe849328c8a7f8cd1a15a79b8902825107c9e02"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-03/native-dark.png",
+          "sha256": "eea5d5d5a90c08df018370188c47b0cab7d9fe5d88578e1eaf3626f96ebf52af"
+        }
+      ]
+    },
+    "status": "visually-reviewed-candidate",
+    "userApproval": "pending"
+  },
+  {
+    "name": "notebook",
+    "purpose": "筆記、記錄或工作日誌。",
+    "recognitionCues": "直向筆記本、左側裝訂與右側束帶。",
+    "confusableWith": [
+      "book",
+      "file-text"
+    ],
+    "sourceObservation": "Lucide使用穿越書脊的短裝訂線及右束帶，Phosphor偏封面文字與窄書脊。Master採裝訂訊號，不加封面文字；16px減為三段裝訂。",
+    "references": [
+      {
+        "name": "notebook",
+        "library": "Lucide",
+        "repository": "lucide-icons/lucide",
+        "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+        "path": "icons/notebook.svg",
+        "localPath": "references/expansion-01/lucide-notebook.svg",
+        "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/notebook.svg",
+        "sha256": "03c9f3fa8ead15c1f64c7dd4269d4c0376d1e88f7c534acbbb716f2995942821",
+        "license": "ISC AND MIT",
+        "sourceName": "notebook",
+        "match": "exact",
+        "role": "comparison-only"
+      },
+      {
+        "name": "notebook",
+        "library": "Phosphor",
+        "repository": "phosphor-icons/core",
+        "commit": "2b75f3ad12b420c9504ef05df8d2564a28f8500e",
+        "path": "assets/regular/notebook.svg",
+        "localPath": "references/expansion-01/phosphor-notebook.svg",
+        "url": "https://github.com/phosphor-icons/core/blob/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular/notebook.svg",
+        "sha256": "508be681b27a34b9388e748ca4b8800b4531a38bfb7d6cb390546cba6ea90208",
+        "license": "MIT",
+        "sourceName": "notebook",
+        "match": "exact",
+        "role": "comparison-only"
+      }
+    ],
+    "effects": {
+      "dashes": {
+        "used": false,
+        "reason": "不採用；筆記本以連續實體輪廓表達，沒有未完成或隱藏邊界。"
+      },
+      "opacity": {
+        "used": false,
+        "reason": "不採用；筆記本的主體及必要訊號以留白分離，淡化不增加語意。"
+      },
+      "gradients": {
+        "used": false,
+        "reason": "本期不新增連續漸層或mask，以原生輪廓及必要逐筆透明度處理。"
+      }
+    },
+    "change": {
+      "kind": "new",
+      "reason": "新繪後目視通過：16px三個裝訂接點分離，20／24保留四段；束帶留有內孔，不用雙重描邊疊出黑邊。",
+      "before": null
+    },
+    "visualReview": {
+      "status": "new-after-visual-review",
+      "reviewer": "root",
+      "date": "2026-11-16",
+      "batch": "expansion-03",
+      "variantsSha256": "f9c39bee759bae9cf410de576657bac1d88ba9d109092e36919057abdc17631e",
+      "checks": [
+        "two-pinned-source-comparisons",
+        "16/20/24",
+        "sharp/soft/rounded",
+        "light/dark",
+        "55-percent-foreground",
+        "adjacent-text"
+      ],
+      "evidence": [
+        {
+          "path": "docs/review/ui-v1/expansion-03/comparison.png",
+          "sha256": "a6756144d4e38baf7d4289b14cf3f6653a8d439cd3d6245810f6c92471ba77ad"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-03/comparison-dark.png",
+          "sha256": "ac7ae0f7115d89c71ebfdb48f7d42a2f540b3b578cb9dbfba415d39db828d50f"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-03/native.png",
+          "sha256": "078db2c18c91bea58920de6fcbe849328c8a7f8cd1a15a79b8902825107c9e02"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-03/native-dark.png",
+          "sha256": "eea5d5d5a90c08df018370188c47b0cab7d9fe5d88578e1eaf3626f96ebf52af"
+        }
+      ]
+    },
+    "status": "visually-reviewed-candidate",
+    "userApproval": "pending"
+  },
+  {
+    "name": "sticky-note",
+    "purpose": "便箋、備忘或畫布註記。",
+    "recognitionCues": "方紙與右下折起的角。",
+    "confusableWith": [
+      "file",
+      "notebook"
+    ],
+    "sourceObservation": "Lucide sticky-note使用右上折角，Tabler note使用右下折角。Master選右下翻起的方紙，與既有右上折角file區分；摺痕端點與外框保持真實共同接點。",
+    "references": [
+      {
+        "name": "sticky-note",
+        "library": "Lucide",
+        "repository": "lucide-icons/lucide",
+        "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+        "path": "icons/sticky-note.svg",
+        "localPath": "references/expansion-01/lucide-sticky-note.svg",
+        "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/sticky-note.svg",
+        "sha256": "a1370d25eb7dc9c42ca4a69adb82818fec950f1d441f88fd3ea84cd6ac10f875",
+        "license": "ISC AND MIT",
+        "sourceName": "sticky-note",
+        "match": "exact",
+        "role": "comparison-only"
+      },
+      {
+        "name": "sticky-note",
+        "library": "Tabler",
+        "repository": "tabler/tabler-icons",
+        "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+        "path": "icons/outline/note.svg",
+        "localPath": "references/expansion-01/tabler-note.svg",
+        "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/note.svg",
+        "sha256": "878840a8839bb2d3b022d581a5aed038c9ced883f09687ec6e28b46bfc12f1f9",
+        "license": "MIT",
+        "sourceName": "note",
+        "match": "exact",
+        "role": "comparison-only"
+      }
+    ],
+    "effects": {
+      "dashes": {
+        "used": false,
+        "reason": "不採用；便箋以連續實體輪廓表達，沒有未完成或隱藏邊界。"
+      },
+      "opacity": {
+        "used": false,
+        "reason": "不採用；便箋的主體及必要訊號以留白分離，淡化不增加語意。"
+      },
+      "gradients": {
+        "used": false,
+        "reason": "本期不新增連續漸層或mask，以原生輪廓及必要逐筆透明度處理。"
+      }
+    },
+    "change": {
+      "kind": "new",
+      "reason": "新繪後目視通過：三角折面在16px仍存在；外框採微圓，但折角接觸點保留銳接，不讓圓角把端點推離。",
+      "before": null
+    },
+    "visualReview": {
+      "status": "new-after-visual-review",
+      "reviewer": "root",
+      "date": "2026-11-16",
+      "batch": "expansion-03",
+      "variantsSha256": "791bc5bf0a8f6fc54cf7701aa2fd3708523c22eb901bb239c81f5d8c9d8277ac",
+      "checks": [
+        "two-pinned-source-comparisons",
+        "16/20/24",
+        "sharp/soft/rounded",
+        "light/dark",
+        "55-percent-foreground",
+        "adjacent-text"
+      ],
+      "evidence": [
+        {
+          "path": "docs/review/ui-v1/expansion-03/comparison.png",
+          "sha256": "a6756144d4e38baf7d4289b14cf3f6653a8d439cd3d6245810f6c92471ba77ad"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-03/comparison-dark.png",
+          "sha256": "ac7ae0f7115d89c71ebfdb48f7d42a2f540b3b578cb9dbfba415d39db828d50f"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-03/native.png",
+          "sha256": "078db2c18c91bea58920de6fcbe849328c8a7f8cd1a15a79b8902825107c9e02"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-03/native-dark.png",
+          "sha256": "eea5d5d5a90c08df018370188c47b0cab7d9fe5d88578e1eaf3626f96ebf52af"
+        }
+      ]
+    },
+    "status": "visually-reviewed-candidate",
+    "userApproval": "pending"
+  },
+  {
+    "name": "newspaper",
+    "purpose": "新聞、更新公告或資訊摘要。",
+    "recognitionCues": "折卷側頁、主版頭與文字行。",
+    "confusableWith": [
+      "file-text",
+      "book"
+    ],
+    "sourceObservation": "Lucide的主版頭與側卷頁很清楚，Heroicons以多欄塊表達報紙。Master保留單一主版頭和側卷，16px只畫一條摘要線，避免等比例縮小所有欄位。",
+    "references": [
+      {
+        "name": "newspaper",
+        "library": "Lucide",
+        "repository": "lucide-icons/lucide",
+        "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+        "path": "icons/newspaper.svg",
+        "localPath": "references/expansion-01/lucide-newspaper.svg",
+        "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/newspaper.svg",
+        "sha256": "f5147e2a92a0ca16edea01782b09afeea7f9ebcda029d3f38ae93a3058ed1b78",
+        "license": "ISC AND MIT",
+        "sourceName": "newspaper",
+        "match": "exact",
+        "role": "comparison-only"
+      },
+      {
+        "name": "newspaper",
+        "library": "Heroicons",
+        "repository": "tailwindlabs/heroicons",
+        "commit": "616b7a4dbbf3d011760af8066262cd5c6b3868f3",
+        "path": "optimized/24/outline/newspaper.svg",
+        "localPath": "references/expansion-01/heroicons-newspaper.svg",
+        "url": "https://github.com/tailwindlabs/heroicons/blob/616b7a4dbbf3d011760af8066262cd5c6b3868f3/optimized/24/outline/newspaper.svg",
+        "sha256": "6781875d79a1f5f2af86298ffd868f427eea0edbdcf7a20b51d8f86aa18e80b3",
+        "license": "MIT",
+        "sourceName": "newspaper",
+        "match": "exact",
+        "role": "comparison-only"
+      }
+    ],
+    "effects": {
+      "dashes": {
+        "used": false,
+        "reason": "不採用；新聞與公告以連續實體輪廓表達，沒有未完成或隱藏邊界。"
+      },
+      "opacity": {
+        "used": false,
+        "reason": "不採用；新聞與公告的主體及必要訊號以留白分離，淡化不增加語意。"
+      },
+      "gradients": {
+        "used": false,
+        "reason": "本期不新增連續漸層或mask，以原生輪廓及必要逐筆透明度處理。"
+      }
+    },
+    "change": {
+      "kind": "new",
+      "reason": "新繪後目視通過：側卷圓底與主版下緣接合，16px版頭內孔保持開放；沒有多個小方孔或過密文字線。",
+      "before": null
+    },
+    "visualReview": {
+      "status": "new-after-visual-review",
+      "reviewer": "root",
+      "date": "2026-11-16",
+      "batch": "expansion-03",
+      "variantsSha256": "1502efec928d1f9b8ad32db0de12a52fe478047a12b3e3c2f25dfa032cf91ae4",
+      "checks": [
+        "two-pinned-source-comparisons",
+        "16/20/24",
+        "sharp/soft/rounded",
+        "light/dark",
+        "55-percent-foreground",
+        "adjacent-text"
+      ],
+      "evidence": [
+        {
+          "path": "docs/review/ui-v1/expansion-03/comparison.png",
+          "sha256": "a6756144d4e38baf7d4289b14cf3f6653a8d439cd3d6245810f6c92471ba77ad"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-03/comparison-dark.png",
+          "sha256": "ac7ae0f7115d89c71ebfdb48f7d42a2f540b3b578cb9dbfba415d39db828d50f"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-03/native.png",
+          "sha256": "078db2c18c91bea58920de6fcbe849328c8a7f8cd1a15a79b8902825107c9e02"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-03/native-dark.png",
+          "sha256": "eea5d5d5a90c08df018370188c47b0cab7d9fe5d88578e1eaf3626f96ebf52af"
+        }
+      ]
+    },
+    "status": "visually-reviewed-candidate",
+    "userApproval": "pending"
+  },
+  {
+    "name": "bookmark-plus",
+    "purpose": "新增收藏或閱讀書籤。",
+    "recognitionCues": "沿用書籤母型，內置加號。",
+    "confusableWith": [
+      "bookmark",
+      "bookmark-minus"
+    ],
+    "sourceObservation": "Lucide把加號放書籤內，Tabler將加號置於右下並挖開主體。Master依既有bookmark-check家族使用內置訊號，保持同一母型與底部缺口。",
+    "references": [
+      {
+        "name": "bookmark-plus",
+        "library": "Lucide",
+        "repository": "lucide-icons/lucide",
+        "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+        "path": "icons/bookmark-plus.svg",
+        "localPath": "references/expansion-01/lucide-bookmark-plus.svg",
+        "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/bookmark-plus.svg",
+        "sha256": "3c6b08ce8d32ea6c16606f2ce44d9f51d292b179947350a2ae91494a7905281b",
+        "license": "ISC AND MIT",
+        "sourceName": "bookmark-plus",
+        "match": "exact",
+        "role": "comparison-only"
+      },
+      {
+        "name": "bookmark-plus",
+        "library": "Tabler",
+        "repository": "tabler/tabler-icons",
+        "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+        "path": "icons/outline/bookmark-plus.svg",
+        "localPath": "references/expansion-01/tabler-bookmark-plus.svg",
+        "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/bookmark-plus.svg",
+        "sha256": "c12f7cc93229ed3f7803f3bf2035d6d37b8c6e34fd07ac19948e476182b9653c",
+        "license": "MIT",
+        "sourceName": "bookmark-plus",
+        "match": "exact",
+        "role": "comparison-only"
+      }
+    ],
+    "effects": {
+      "dashes": {
+        "used": false,
+        "reason": "不採用；新增書籤以連續實體輪廓表達，沒有未完成或隱藏邊界。"
+      },
+      "opacity": {
+        "used": false,
+        "reason": "不採用；新增書籤的主體及必要訊號以留白分離，淡化不增加語意。"
+      },
+      "gradients": {
+        "used": false,
+        "reason": "本期不新增連續漸層或mask，以原生輪廓及必要逐筆透明度處理。"
+      }
+    },
+    "change": {
+      "kind": "new",
+      "reason": "新繪後目視通過：加號與框完全不接觸，16px仍留空隙；此處不需knockout，避免無碰撞也切出缺口。",
+      "before": null
+    },
+    "visualReview": {
+      "status": "new-after-visual-review",
+      "reviewer": "root",
+      "date": "2026-11-16",
+      "batch": "expansion-03",
+      "variantsSha256": "fecf115f773c08b39ea26048e3b5183136983f398f530597d7d363229ffd65fd",
+      "checks": [
+        "two-pinned-source-comparisons",
+        "16/20/24",
+        "sharp/soft/rounded",
+        "light/dark",
+        "55-percent-foreground",
+        "adjacent-text"
+      ],
+      "evidence": [
+        {
+          "path": "docs/review/ui-v1/expansion-03/comparison.png",
+          "sha256": "a6756144d4e38baf7d4289b14cf3f6653a8d439cd3d6245810f6c92471ba77ad"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-03/comparison-dark.png",
+          "sha256": "ac7ae0f7115d89c71ebfdb48f7d42a2f540b3b578cb9dbfba415d39db828d50f"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-03/native.png",
+          "sha256": "078db2c18c91bea58920de6fcbe849328c8a7f8cd1a15a79b8902825107c9e02"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-03/native-dark.png",
+          "sha256": "eea5d5d5a90c08df018370188c47b0cab7d9fe5d88578e1eaf3626f96ebf52af"
+        }
+      ]
+    },
+    "status": "visually-reviewed-candidate",
+    "userApproval": "pending"
+  },
+  {
+    "name": "bookmark-minus",
+    "purpose": "移除收藏或閱讀書籤。",
+    "recognitionCues": "同一書籤母型，內置減號。",
+    "confusableWith": [
+      "bookmark",
+      "bookmark-plus"
+    ],
+    "sourceObservation": "Lucide與Tabler分別採內置及右下減號。Master和bookmark-plus／check共用外框與標記中心，狀態切換不改主體比例。",
+    "references": [
+      {
+        "name": "bookmark-minus",
+        "library": "Lucide",
+        "repository": "lucide-icons/lucide",
+        "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+        "path": "icons/bookmark-minus.svg",
+        "localPath": "references/expansion-01/lucide-bookmark-minus.svg",
+        "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/bookmark-minus.svg",
+        "sha256": "5367d4c90a66e525e743ea7be4b160274a870b0ce43024f74a011d7d8e2a0836",
+        "license": "ISC AND MIT",
+        "sourceName": "bookmark-minus",
+        "match": "exact",
+        "role": "comparison-only"
+      },
+      {
+        "name": "bookmark-minus",
+        "library": "Tabler",
+        "repository": "tabler/tabler-icons",
+        "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+        "path": "icons/outline/bookmark-minus.svg",
+        "localPath": "references/expansion-01/tabler-bookmark-minus.svg",
+        "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/bookmark-minus.svg",
+        "sha256": "b2fbe509685f1cbabe62a72f2ae53745e3017681cd2f76458dad40ce19d456aa",
+        "license": "MIT",
+        "sourceName": "bookmark-minus",
+        "match": "exact",
+        "role": "comparison-only"
+      }
+    ],
+    "effects": {
+      "dashes": {
+        "used": false,
+        "reason": "不採用；移除書籤以連續實體輪廓表達，沒有未完成或隱藏邊界。"
+      },
+      "opacity": {
+        "used": false,
+        "reason": "不採用；移除書籤的主體及必要訊號以留白分離，淡化不增加語意。"
+      },
+      "gradients": {
+        "used": false,
+        "reason": "本期不新增連續漸層或mask，以原生輪廓及必要逐筆透明度處理。"
+      }
+    },
+    "change": {
+      "kind": "new",
+      "reason": "新繪後目視通過：減號不碰書籤兩側，三角型底部凹口保留；不因符號為減號就強制外挖。",
+      "before": null
+    },
+    "visualReview": {
+      "status": "new-after-visual-review",
+      "reviewer": "root",
+      "date": "2026-11-16",
+      "batch": "expansion-03",
+      "variantsSha256": "6907f9a0f081d784a80f32e517b81bbf83149a9c0a6e94fb2adc3b0b26523931",
+      "checks": [
+        "two-pinned-source-comparisons",
+        "16/20/24",
+        "sharp/soft/rounded",
+        "light/dark",
+        "55-percent-foreground",
+        "adjacent-text"
+      ],
+      "evidence": [
+        {
+          "path": "docs/review/ui-v1/expansion-03/comparison.png",
+          "sha256": "a6756144d4e38baf7d4289b14cf3f6653a8d439cd3d6245810f6c92471ba77ad"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-03/comparison-dark.png",
+          "sha256": "ac7ae0f7115d89c71ebfdb48f7d42a2f540b3b578cb9dbfba415d39db828d50f"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-03/native.png",
+          "sha256": "078db2c18c91bea58920de6fcbe849328c8a7f8cd1a15a79b8902825107c9e02"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-03/native-dark.png",
+          "sha256": "eea5d5d5a90c08df018370188c47b0cab7d9fe5d88578e1eaf3626f96ebf52af"
+        }
+      ]
+    },
+    "status": "visually-reviewed-candidate",
+    "userApproval": "pending"
+  },
+  {
+    "name": "file-question",
+    "purpose": "待釐清、未知或需要說明的文件。",
+    "recognitionCues": "既有文件母型加內部問號。",
+    "confusableWith": [
+      "file",
+      "help-circle"
+    ],
+    "sourceObservation": "Lucide file-question-mark及Tabler file-unknown保留文件折角配問號；Tabler問號較緊。Master沿用現有file，重新安排問號高度與下點，避免底部或折角靠太近。",
+    "references": [
+      {
+        "name": "file-question",
+        "library": "Lucide",
+        "repository": "lucide-icons/lucide",
+        "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+        "path": "icons/file-question-mark.svg",
+        "localPath": "references/expansion-01/lucide-file-question-mark.svg",
+        "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/file-question-mark.svg",
+        "sha256": "d87955d7556dc82bc527efe2db22d39841c04ee09d50e0ef1f6806db16c1b9ed",
+        "license": "ISC AND MIT",
+        "sourceName": "file-question-mark",
+        "match": "exact",
+        "role": "comparison-only"
+      },
+      {
+        "name": "file-question",
+        "library": "Tabler",
+        "repository": "tabler/tabler-icons",
+        "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+        "path": "icons/outline/file-unknown.svg",
+        "localPath": "references/expansion-01/tabler-file-unknown.svg",
+        "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/file-unknown.svg",
+        "sha256": "9e46d53aebe09cd97559b2fb066a0dbfa6e6136a15901a5999ccd8252080c153",
+        "license": "MIT",
+        "sourceName": "file-unknown",
+        "match": "exact",
+        "role": "comparison-only"
+      }
+    ],
+    "effects": {
+      "dashes": {
+        "used": false,
+        "reason": "不採用；待釐清文件以連續實體輪廓表達，沒有未完成或隱藏邊界。"
+      },
+      "opacity": {
+        "used": false,
+        "reason": "不採用；待釐清文件的主體及必要訊號以留白分離，淡化不增加語意。"
+      },
+      "gradients": {
+        "used": false,
+        "reason": "本期不新增連續漸層或mask，以原生輪廓及必要逐筆透明度處理。"
+      }
+    },
+    "change": {
+      "kind": "new",
+      "reason": "新繪後目視通過：16px問號與點分開，折角和問號沒有重疊；文件輪廓、線寬與其他file狀態保持一致。",
+      "before": null
+    },
+    "visualReview": {
+      "status": "new-after-visual-review",
+      "reviewer": "root",
+      "date": "2026-11-16",
+      "batch": "expansion-03",
+      "variantsSha256": "16c58db504d48ae7277938d1843b2104dc100d9d24a9b04f79907058ad94afe9",
+      "checks": [
+        "two-pinned-source-comparisons",
+        "16/20/24",
+        "sharp/soft/rounded",
+        "light/dark",
+        "55-percent-foreground",
+        "adjacent-text"
+      ],
+      "evidence": [
+        {
+          "path": "docs/review/ui-v1/expansion-03/comparison.png",
+          "sha256": "a6756144d4e38baf7d4289b14cf3f6653a8d439cd3d6245810f6c92471ba77ad"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-03/comparison-dark.png",
+          "sha256": "ac7ae0f7115d89c71ebfdb48f7d42a2f540b3b578cb9dbfba415d39db828d50f"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-03/native.png",
+          "sha256": "078db2c18c91bea58920de6fcbe849328c8a7f8cd1a15a79b8902825107c9e02"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-03/native-dark.png",
+          "sha256": "eea5d5d5a90c08df018370188c47b0cab7d9fe5d88578e1eaf3626f96ebf52af"
+        }
+      ]
+    },
+    "status": "visually-reviewed-candidate",
+    "userApproval": "pending"
+  }
+]

@@ -1,0 +1,762 @@
+[
+  {
+    "name": "cloud-check",
+    "purpose": "雲端狀態已確認或同步完成",
+    "recognitionCues": "雲朵母型與下方勾號",
+    "confusableWith": [
+      "cloud-sync",
+      "cloud",
+      "check"
+    ],
+    "sourceObservation": "Lucide將勾號放在雲下方中央，Tabler放在右下。Master沿用既有cloud-upload/download的中央下方狀態區，保持同族重心。",
+    "references": [
+      {
+        "name": "cloud-check",
+        "library": "Lucide",
+        "repository": "lucide-icons/lucide",
+        "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+        "path": "icons/cloud-check.svg",
+        "localPath": "references/expansion-01/lucide-cloud-check.svg",
+        "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/cloud-check.svg",
+        "sha256": "9c4a27648d72679fabc4c7d96337151620a36dfad4e439011030cf25d8e2ecbb",
+        "license": "ISC AND MIT",
+        "sourceName": "cloud-check",
+        "match": "exact",
+        "role": "comparison-only"
+      },
+      {
+        "name": "cloud-check",
+        "library": "Tabler",
+        "repository": "tabler/tabler-icons",
+        "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+        "path": "icons/outline/cloud-check.svg",
+        "localPath": "references/expansion-01/tabler-cloud-check.svg",
+        "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/cloud-check.svg",
+        "sha256": "7be221c707cd31960ba39beac4e9f0e124981dfbcd2d78adc4861388174367c5",
+        "license": "MIT",
+        "sourceName": "cloud-check",
+        "match": "exact",
+        "role": "comparison-only"
+      }
+    ],
+    "effects": {
+      "dashes": {
+        "used": false,
+        "reason": "不採用；雲端已同步以連續實體輪廓表達，沒有未完成或隱藏邊界。"
+      },
+      "opacity": {
+        "used": false,
+        "reason": "不採用；雲端已同步的主體及必要訊號以留白分離，淡化不增加語意。"
+      },
+      "gradients": {
+        "used": false,
+        "reason": "本期不新增連續漸層或mask，以原生輪廓及必要逐筆透明度處理。"
+      }
+    },
+    "change": {
+      "kind": "new",
+      "reason": "雲輪廓依勾號墨線外緣等距避讓，左右雲邊仍完整可辨；不靠透明度或背景色形成缺口。",
+      "before": null
+    },
+    "visualReview": {
+      "status": "new-after-visual-review",
+      "reviewer": "root",
+      "date": "2026-11-16",
+      "batch": "expansion-12",
+      "variantsSha256": "64572d6bd8ddad2cfd9b3cb0d2d033dbb2d751c8e4ac5dc61624a36d66475b14",
+      "checks": [
+        "two-pinned-source-comparisons",
+        "16/20/24",
+        "sharp/soft/rounded",
+        "light/dark",
+        "55-percent-foreground",
+        "adjacent-text"
+      ],
+      "evidence": [
+        {
+          "path": "docs/review/ui-v1/expansion-12/comparison.png",
+          "sha256": "cb3b2b8508768a9b31d575d5cae69f1487e431e97514b746e7d7868705cdc158"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-12/comparison-dark.png",
+          "sha256": "7263251691767a5025d0e6d9763f1eaa29cba342febcec31157896985e94907e"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-12/native.png",
+          "sha256": "764545790736d668b3f30d12ba41240b7a5b706c49beb832f2136467507d940d"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-12/native-dark.png",
+          "sha256": "4cbb0af72a53353248a1cf64dbf76a31b088f6cf7f3c12f41e4133cb8c24c023"
+        }
+      ]
+    },
+    "status": "visually-reviewed-candidate",
+    "userApproval": "pending"
+  },
+  {
+    "name": "cloud-off",
+    "purpose": "停用雲端連線或雲端功能",
+    "recognitionCues": "雲朵與穿越主體的禁用斜線",
+    "confusableWith": [
+      "cloud",
+      "wifi-off",
+      "cloud-check"
+    ],
+    "sourceObservation": "Lucide與Tabler均使用左上至右下的禁用斜線。Master以既有雲母型生成實際輪廓避讓，保留自有雲峰曲率。",
+    "references": [
+      {
+        "name": "cloud-off",
+        "library": "Lucide",
+        "repository": "lucide-icons/lucide",
+        "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+        "path": "icons/cloud-off.svg",
+        "localPath": "references/expansion-01/lucide-cloud-off.svg",
+        "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/cloud-off.svg",
+        "sha256": "f1fa323fe513c96400971a5dac55823d88e41cc2c8cc9219c3ca4c62d46ebe62",
+        "license": "ISC AND MIT",
+        "sourceName": "cloud-off",
+        "match": "exact",
+        "role": "comparison-only"
+      },
+      {
+        "name": "cloud-off",
+        "library": "Tabler",
+        "repository": "tabler/tabler-icons",
+        "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+        "path": "icons/outline/cloud-off.svg",
+        "localPath": "references/expansion-01/tabler-cloud-off.svg",
+        "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/cloud-off.svg",
+        "sha256": "1be5aaa7b8b0fc3b508abf84e77d3ac73ad5540c6616a75577d416cf953565bc",
+        "license": "MIT",
+        "sourceName": "cloud-off",
+        "match": "exact",
+        "role": "comparison-only"
+      }
+    ],
+    "effects": {
+      "dashes": {
+        "used": false,
+        "reason": "不採用；雲端離線以連續實體輪廓表達，沒有未完成或隱藏邊界。"
+      },
+      "opacity": {
+        "used": false,
+        "reason": "不採用；雲端離線的主體及必要訊號以留白分離，淡化不增加語意。"
+      },
+      "gradients": {
+        "used": false,
+        "reason": "本期不新增連續漸層或mask，以原生輪廓及必要逐筆透明度處理。"
+      }
+    },
+    "change": {
+      "kind": "new",
+      "reason": "雲體在斜線兩側形成等距真透明切口，未留下被斜線穿過的內線或細屑；固定斜線方向。",
+      "before": null
+    },
+    "visualReview": {
+      "status": "new-after-visual-review",
+      "reviewer": "root",
+      "date": "2026-11-16",
+      "batch": "expansion-12",
+      "variantsSha256": "dea0c3797314ed9febbdf9acded84582e8153af161f66804f0cd553cd1bb9648",
+      "checks": [
+        "two-pinned-source-comparisons",
+        "16/20/24",
+        "sharp/soft/rounded",
+        "light/dark",
+        "55-percent-foreground",
+        "adjacent-text"
+      ],
+      "evidence": [
+        {
+          "path": "docs/review/ui-v1/expansion-12/comparison.png",
+          "sha256": "cb3b2b8508768a9b31d575d5cae69f1487e431e97514b746e7d7868705cdc158"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-12/comparison-dark.png",
+          "sha256": "7263251691767a5025d0e6d9763f1eaa29cba342febcec31157896985e94907e"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-12/native.png",
+          "sha256": "764545790736d668b3f30d12ba41240b7a5b706c49beb832f2136467507d940d"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-12/native-dark.png",
+          "sha256": "4cbb0af72a53353248a1cf64dbf76a31b088f6cf7f3c12f41e4133cb8c24c023"
+        }
+      ]
+    },
+    "status": "visually-reviewed-candidate",
+    "userApproval": "pending"
+  },
+  {
+    "name": "cloud-sync",
+    "purpose": "雲端雙向同步",
+    "recognitionCues": "雲朵與一對相反方向循環箭頭",
+    "confusableWith": [
+      "cloud-check",
+      "refresh",
+      "database-backup"
+    ],
+    "sourceObservation": "Lucide與Iconoir均在雲下方放循環箭頭。Master採兩段同半徑圓弧與對向箭頭，沿用雲母型，將環形徽標內部視為前景占用區。",
+    "references": [
+      {
+        "name": "cloud-sync",
+        "library": "Lucide",
+        "repository": "lucide-icons/lucide",
+        "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+        "path": "icons/cloud-sync.svg",
+        "localPath": "references/expansion-01/lucide-cloud-sync.svg",
+        "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/cloud-sync.svg",
+        "sha256": "dce6d0285f49acc0c969b6d0904ab584e86955ad272290b4b8fcc468df3706a1",
+        "license": "ISC AND MIT",
+        "sourceName": "cloud-sync",
+        "match": "exact",
+        "role": "comparison-only"
+      },
+      {
+        "name": "cloud-sync",
+        "library": "Iconoir",
+        "repository": "iconoir-icons/iconoir",
+        "commit": "39834e3f193bc0cca2c36bebb6a650471977433d",
+        "path": "icons/regular/cloud-sync.svg",
+        "localPath": "references/expansion-01/iconoir-cloud-sync.svg",
+        "url": "https://github.com/iconoir-icons/iconoir/blob/39834e3f193bc0cca2c36bebb6a650471977433d/icons/regular/cloud-sync.svg",
+        "sha256": "5fd370a78763d613de6b9c3e02541a03a2384b9b1dea276f5e2005a93b71ec93",
+        "license": "MIT",
+        "sourceName": "cloud-sync",
+        "match": "exact",
+        "role": "comparison-only"
+      }
+    ],
+    "effects": {
+      "dashes": {
+        "used": false,
+        "reason": "不採用；雲端同步中以連續實體輪廓表達，沒有未完成或隱藏邊界。"
+      },
+      "opacity": {
+        "used": false,
+        "reason": "不採用；雲端同步中的主體及必要訊號以留白分離，淡化不增加語意。"
+      },
+      "gradients": {
+        "used": false,
+        "reason": "本期不新增連續漸層或mask，以原生輪廓及必要逐筆透明度處理。"
+      }
+    },
+    "change": {
+      "kind": "new",
+      "reason": "重畫初稿的非對稱曲線，清除原雲線在環內留下的碎片；環形徽標完整剪影避讓，箭弧接點採平切避免sharp凸耳，原生16px仍能看出雙向循環。",
+      "before": null
+    },
+    "visualReview": {
+      "status": "new-after-visual-review",
+      "reviewer": "root",
+      "date": "2026-11-16",
+      "batch": "expansion-12",
+      "variantsSha256": "0ce25096448ea003d2702a96c56c077dd627909f28842f19b8d7a8354c0fdc67",
+      "checks": [
+        "two-pinned-source-comparisons",
+        "16/20/24",
+        "sharp/soft/rounded",
+        "light/dark",
+        "55-percent-foreground",
+        "adjacent-text"
+      ],
+      "evidence": [
+        {
+          "path": "docs/review/ui-v1/expansion-12/comparison.png",
+          "sha256": "cb3b2b8508768a9b31d575d5cae69f1487e431e97514b746e7d7868705cdc158"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-12/comparison-dark.png",
+          "sha256": "7263251691767a5025d0e6d9763f1eaa29cba342febcec31157896985e94907e"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-12/native.png",
+          "sha256": "764545790736d668b3f30d12ba41240b7a5b706c49beb832f2136467507d940d"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-12/native-dark.png",
+          "sha256": "4cbb0af72a53353248a1cf64dbf76a31b088f6cf7f3c12f41e4133cb8c24c023"
+        }
+      ]
+    },
+    "status": "visually-reviewed-candidate",
+    "userApproval": "pending"
+  },
+  {
+    "name": "database-backup",
+    "purpose": "資料庫備份與恢復入口",
+    "recognitionCues": "資料庫圓柱與逆向循環箭頭",
+    "confusableWith": [
+      "database",
+      "database-search",
+      "history"
+    ],
+    "sourceObservation": "Lucide使用單一回復箭頭，Iconoir使用雙箭頭循環。Master選單一回復箭頭區別cloud-sync，沿用既有database分層及16px簡化。",
+    "references": [
+      {
+        "name": "database-backup",
+        "library": "Lucide",
+        "repository": "lucide-icons/lucide",
+        "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+        "path": "icons/database-backup.svg",
+        "localPath": "references/expansion-01/lucide-database-backup.svg",
+        "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/database-backup.svg",
+        "sha256": "7c3390be2ace227565d806d568579e1a5a54847be026a1d25117aea2df51971a",
+        "license": "ISC AND MIT",
+        "sourceName": "database-backup",
+        "match": "exact",
+        "role": "comparison-only"
+      },
+      {
+        "name": "database-backup",
+        "library": "Iconoir",
+        "repository": "iconoir-icons/iconoir",
+        "commit": "39834e3f193bc0cca2c36bebb6a650471977433d",
+        "path": "icons/regular/database-backup.svg",
+        "localPath": "references/expansion-01/iconoir-database-backup.svg",
+        "url": "https://github.com/iconoir-icons/iconoir/blob/39834e3f193bc0cca2c36bebb6a650471977433d/icons/regular/database-backup.svg",
+        "sha256": "0a46f4b59946e3dc0182615d334c13f42ef0b2392d254e8ae14f36a8a6481590",
+        "license": "MIT",
+        "sourceName": "database-backup",
+        "match": "exact",
+        "role": "comparison-only"
+      }
+    ],
+    "effects": {
+      "dashes": {
+        "used": false,
+        "reason": "不採用；資料備份以連續實體輪廓表達，沒有未完成或隱藏邊界。"
+      },
+      "opacity": {
+        "used": false,
+        "reason": "不採用；資料備份的主體及必要訊號以留白分離，淡化不增加語意。"
+      },
+      "gradients": {
+        "used": false,
+        "reason": "本期不新增連續漸層或mask，以原生輪廓及必要逐筆透明度處理。"
+      }
+    },
+    "change": {
+      "kind": "new",
+      "reason": "循環箭頭內部作為徽標剪影隔離，沒有資料庫線穿進孔內；先將每筆資料庫描邊化為正規區域，再做布林裁切，修正原始描邊直接聯集造成上層被誤填黑的問題。",
+      "before": null
+    },
+    "visualReview": {
+      "status": "new-after-visual-review",
+      "reviewer": "root",
+      "date": "2026-11-16",
+      "batch": "expansion-12",
+      "variantsSha256": "fd3fd29b8de7b8537a40ab01ba218c14577b26b17b20594b82ff6050b586e88a",
+      "checks": [
+        "two-pinned-source-comparisons",
+        "16/20/24",
+        "sharp/soft/rounded",
+        "light/dark",
+        "55-percent-foreground",
+        "adjacent-text"
+      ],
+      "evidence": [
+        {
+          "path": "docs/review/ui-v1/expansion-12/comparison.png",
+          "sha256": "cb3b2b8508768a9b31d575d5cae69f1487e431e97514b746e7d7868705cdc158"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-12/comparison-dark.png",
+          "sha256": "7263251691767a5025d0e6d9763f1eaa29cba342febcec31157896985e94907e"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-12/native.png",
+          "sha256": "764545790736d668b3f30d12ba41240b7a5b706c49beb832f2136467507d940d"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-12/native-dark.png",
+          "sha256": "4cbb0af72a53353248a1cf64dbf76a31b088f6cf7f3c12f41e4133cb8c24c023"
+        }
+      ]
+    },
+    "status": "visually-reviewed-candidate",
+    "userApproval": "pending"
+  },
+  {
+    "name": "database-search",
+    "purpose": "搜尋資料庫內容",
+    "recognitionCues": "資料庫圓柱與右下放大鏡",
+    "confusableWith": [
+      "database",
+      "file-search",
+      "list-search"
+    ],
+    "sourceObservation": "Lucide及Tabler都以右下鏡圈對應資料庫搜尋。Master使用與mail-search/list-search一致的鏡圈尺度，鏡柄精確接到圓周。",
+    "references": [
+      {
+        "name": "database-search",
+        "library": "Lucide",
+        "repository": "lucide-icons/lucide",
+        "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+        "path": "icons/database-search.svg",
+        "localPath": "references/expansion-01/lucide-database-search.svg",
+        "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/database-search.svg",
+        "sha256": "4214032d6c73f59eab0b12b5c55c167b1e42fcf8bc0a6f7254a09241c94739a9",
+        "license": "ISC AND MIT",
+        "sourceName": "database-search",
+        "match": "exact",
+        "role": "comparison-only"
+      },
+      {
+        "name": "database-search",
+        "library": "Tabler",
+        "repository": "tabler/tabler-icons",
+        "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+        "path": "icons/outline/database-search.svg",
+        "localPath": "references/expansion-01/tabler-database-search.svg",
+        "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/database-search.svg",
+        "sha256": "e936f5adb97a9db1ed2728e860bf771b19a2899cd5b13a863104a488afa1b483",
+        "license": "MIT",
+        "sourceName": "database-search",
+        "match": "exact",
+        "role": "comparison-only"
+      }
+    ],
+    "effects": {
+      "dashes": {
+        "used": false,
+        "reason": "不採用；資料庫查詢以連續實體輪廓表達，沒有未完成或隱藏邊界。"
+      },
+      "opacity": {
+        "used": false,
+        "reason": "不採用；資料庫查詢的主體及必要訊號以留白分離，淡化不增加語意。"
+      },
+      "gradients": {
+        "used": false,
+        "reason": "本期不新增連續漸層或mask，以原生輪廓及必要逐筆透明度處理。"
+      }
+    },
+    "change": {
+      "kind": "new",
+      "reason": "依完整鏡圈剪影扣除資料庫後方墨線，內孔保持空白；16px沿用database不畫中層線的規則，20/24保留分層。",
+      "before": null
+    },
+    "visualReview": {
+      "status": "new-after-visual-review",
+      "reviewer": "root",
+      "date": "2026-11-16",
+      "batch": "expansion-12",
+      "variantsSha256": "64159cc02f5039c6f9f9ef8487739885288f5e117a55a2926ef00d6e8873ce2d",
+      "checks": [
+        "two-pinned-source-comparisons",
+        "16/20/24",
+        "sharp/soft/rounded",
+        "light/dark",
+        "55-percent-foreground",
+        "adjacent-text"
+      ],
+      "evidence": [
+        {
+          "path": "docs/review/ui-v1/expansion-12/comparison.png",
+          "sha256": "cb3b2b8508768a9b31d575d5cae69f1487e431e97514b746e7d7868705cdc158"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-12/comparison-dark.png",
+          "sha256": "7263251691767a5025d0e6d9763f1eaa29cba342febcec31157896985e94907e"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-12/native.png",
+          "sha256": "764545790736d668b3f30d12ba41240b7a5b706c49beb832f2136467507d940d"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-12/native-dark.png",
+          "sha256": "4cbb0af72a53353248a1cf64dbf76a31b088f6cf7f3c12f41e4133cb8c24c023"
+        }
+      ]
+    },
+    "status": "visually-reviewed-candidate",
+    "userApproval": "pending"
+  },
+  {
+    "name": "server-cog",
+    "purpose": "伺服器設定與維護",
+    "recognitionCues": "兩層伺服器與右下齒輪",
+    "confusableWith": [
+      "server",
+      "settings",
+      "database"
+    ],
+    "sourceObservation": "Lucide將齒輪置中，Tabler置於右下。Master選右下狀態位置並共用已精修user-cog的齒輪幾何，避免狀態齒輪各自漂移。",
+    "references": [
+      {
+        "name": "server-cog",
+        "library": "Lucide",
+        "repository": "lucide-icons/lucide",
+        "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+        "path": "icons/server-cog.svg",
+        "localPath": "references/expansion-01/lucide-server-cog.svg",
+        "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/server-cog.svg",
+        "sha256": "6c48e7bf726c71ced40e79b1961258b24b5a752c6cec158a68a49f6f01a3852a",
+        "license": "ISC AND MIT",
+        "sourceName": "server-cog",
+        "match": "exact",
+        "role": "comparison-only"
+      },
+      {
+        "name": "server-cog",
+        "library": "Tabler",
+        "repository": "tabler/tabler-icons",
+        "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+        "path": "icons/outline/server-cog.svg",
+        "localPath": "references/expansion-01/tabler-server-cog.svg",
+        "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/server-cog.svg",
+        "sha256": "495e0a26f23a2c8eb534e8d62935c1ef21e9cd783451423844e4902a96bdabe5",
+        "license": "MIT",
+        "sourceName": "server-cog",
+        "match": "exact",
+        "role": "comparison-only"
+      }
+    ],
+    "effects": {
+      "dashes": {
+        "used": false,
+        "reason": "不採用；伺服器設定以連續實體輪廓表達，沒有未完成或隱藏邊界。"
+      },
+      "opacity": {
+        "used": false,
+        "reason": "不採用；伺服器設定的主體及必要訊號以留白分離，淡化不增加語意。"
+      },
+      "gradients": {
+        "used": false,
+        "reason": "本期不新增連續漸層或mask，以原生輪廓及必要逐筆透明度處理。"
+      }
+    },
+    "change": {
+      "kind": "new",
+      "reason": "齒輪含內部作剪影避讓，伺服器線不穿過中心孔；保留上機完整框、兩個狀態燈和下機左半辨識，16px中心孔仍可見。",
+      "before": null
+    },
+    "visualReview": {
+      "status": "new-after-visual-review",
+      "reviewer": "root",
+      "date": "2026-11-16",
+      "batch": "expansion-12",
+      "variantsSha256": "5859b347669e33471e454eefb18f8a90646af075c875aae1035d9765b444b20f",
+      "checks": [
+        "two-pinned-source-comparisons",
+        "16/20/24",
+        "sharp/soft/rounded",
+        "light/dark",
+        "55-percent-foreground",
+        "adjacent-text"
+      ],
+      "evidence": [
+        {
+          "path": "docs/review/ui-v1/expansion-12/comparison.png",
+          "sha256": "cb3b2b8508768a9b31d575d5cae69f1487e431e97514b746e7d7868705cdc158"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-12/comparison-dark.png",
+          "sha256": "7263251691767a5025d0e6d9763f1eaa29cba342febcec31157896985e94907e"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-12/native.png",
+          "sha256": "764545790736d668b3f30d12ba41240b7a5b706c49beb832f2136467507d940d"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-12/native-dark.png",
+          "sha256": "4cbb0af72a53353248a1cf64dbf76a31b088f6cf7f3c12f41e4133cb8c24c023"
+        }
+      ]
+    },
+    "status": "visually-reviewed-candidate",
+    "userApproval": "pending"
+  },
+  {
+    "name": "hard-drive-upload",
+    "purpose": "從本機儲存裝置上傳",
+    "recognitionCues": "硬碟機身與向上箭頭",
+    "confusableWith": [
+      "hard-drive-download",
+      "upload",
+      "hard-drive"
+    ],
+    "sourceObservation": "Lucide與Hugeicons用正面硬碟加上箭頭。Master保留既有hard-drive斜頂機身，使母型及狀態稿共享同一設備輪廓。",
+    "references": [
+      {
+        "name": "hard-drive-upload",
+        "library": "Lucide",
+        "repository": "lucide-icons/lucide",
+        "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+        "path": "icons/hard-drive-upload.svg",
+        "localPath": "references/expansion-01/lucide-hard-drive-upload.svg",
+        "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/hard-drive-upload.svg",
+        "sha256": "ba3ac89d5253ad283743192200d7b546602df4b2c650772a68c4a8a1ed1aa447",
+        "license": "ISC AND MIT",
+        "sourceName": "hard-drive-upload",
+        "match": "exact",
+        "role": "comparison-only"
+      },
+      {
+        "name": "hard-drive-upload",
+        "library": "Hugeicons Free",
+        "repository": "hugeicons/hugeicons",
+        "commit": "834e28d965946c1ee60d080027fe9dae4adc58d0",
+        "path": "icons/hard-drive-upload.svg",
+        "localPath": "references/expansion-01/hugeicons-free-hard-drive-upload.svg",
+        "url": "https://github.com/hugeicons/hugeicons/blob/834e28d965946c1ee60d080027fe9dae4adc58d0/icons/hard-drive-upload.svg",
+        "sha256": "0af5f422e45817849b6daa455d081cfb219af3d51fdb1a56524760284ccda62f",
+        "license": "MIT",
+        "sourceName": "hard-drive-upload",
+        "match": "exact",
+        "role": "comparison-only"
+      }
+    ],
+    "effects": {
+      "dashes": {
+        "used": false,
+        "reason": "不採用；磁碟上傳以連續實體輪廓表達，沒有未完成或隱藏邊界。"
+      },
+      "opacity": {
+        "used": false,
+        "reason": "不採用；磁碟上傳的主體及必要訊號以留白分離，淡化不增加語意。"
+      },
+      "gradients": {
+        "used": false,
+        "reason": "本期不新增連續漸層或mask，以原生輪廓及必要逐筆透明度處理。"
+      }
+    },
+    "change": {
+      "kind": "new",
+      "reason": "箭頭依實際外緣切開斜頂，前面板及指示燈保留；同時修正母型頂面與面板在rounded產生凸耳的接點，改成共同外殼與受外殼約束的分界線。",
+      "before": null
+    },
+    "visualReview": {
+      "status": "new-after-visual-review",
+      "reviewer": "root",
+      "date": "2026-11-16",
+      "batch": "expansion-12",
+      "variantsSha256": "d904a996bb9520367054f9c270b885410fdab01ec4165a76fdf6153c926184e7",
+      "checks": [
+        "two-pinned-source-comparisons",
+        "16/20/24",
+        "sharp/soft/rounded",
+        "light/dark",
+        "55-percent-foreground",
+        "adjacent-text"
+      ],
+      "evidence": [
+        {
+          "path": "docs/review/ui-v1/expansion-12/comparison.png",
+          "sha256": "cb3b2b8508768a9b31d575d5cae69f1487e431e97514b746e7d7868705cdc158"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-12/comparison-dark.png",
+          "sha256": "7263251691767a5025d0e6d9763f1eaa29cba342febcec31157896985e94907e"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-12/native.png",
+          "sha256": "764545790736d668b3f30d12ba41240b7a5b706c49beb832f2136467507d940d"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-12/native-dark.png",
+          "sha256": "4cbb0af72a53353248a1cf64dbf76a31b088f6cf7f3c12f41e4133cb8c24c023"
+        }
+      ]
+    },
+    "status": "visually-reviewed-candidate",
+    "userApproval": "pending"
+  },
+  {
+    "name": "hard-drive-download",
+    "purpose": "下載至本機儲存裝置",
+    "recognitionCues": "硬碟機身與向下箭頭",
+    "confusableWith": [
+      "hard-drive-upload",
+      "download",
+      "hard-drive"
+    ],
+    "sourceObservation": "Lucide與Hugeicons使用下箭頭指向正面硬碟；Master與upload共用斜頂機身及箭頭工作區，只改方向。",
+    "references": [
+      {
+        "name": "hard-drive-download",
+        "library": "Lucide",
+        "repository": "lucide-icons/lucide",
+        "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+        "path": "icons/hard-drive-download.svg",
+        "localPath": "references/expansion-01/lucide-hard-drive-download.svg",
+        "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/hard-drive-download.svg",
+        "sha256": "4bbb0e0da04dee454a87dd037abce74d9380abb250f509487a85bd5b2a318be1",
+        "license": "ISC AND MIT",
+        "sourceName": "hard-drive-download",
+        "match": "exact",
+        "role": "comparison-only"
+      },
+      {
+        "name": "hard-drive-download",
+        "library": "Hugeicons Free",
+        "repository": "hugeicons/hugeicons",
+        "commit": "834e28d965946c1ee60d080027fe9dae4adc58d0",
+        "path": "icons/hard-drive-download.svg",
+        "localPath": "references/expansion-01/hugeicons-free-hard-drive-download.svg",
+        "url": "https://github.com/hugeicons/hugeicons/blob/834e28d965946c1ee60d080027fe9dae4adc58d0/icons/hard-drive-download.svg",
+        "sha256": "09eca60cb27436b3826addeff6e7fee89a39e6a6c726011c2dc6e32e73c96363",
+        "license": "MIT",
+        "sourceName": "hard-drive-download",
+        "match": "exact",
+        "role": "comparison-only"
+      }
+    ],
+    "effects": {
+      "dashes": {
+        "used": false,
+        "reason": "不採用；磁碟下載以連續實體輪廓表達，沒有未完成或隱藏邊界。"
+      },
+      "opacity": {
+        "used": false,
+        "reason": "不採用；磁碟下載的主體及必要訊號以留白分離，淡化不增加語意。"
+      },
+      "gradients": {
+        "used": false,
+        "reason": "本期不新增連續漸層或mask，以原生輪廓及必要逐筆透明度處理。"
+      }
+    },
+    "change": {
+      "kind": "new",
+      "reason": "箭尖止於面板上方，與面板有清楚空隙；sharp箭桿按端帽外伸回退，接點不多出細小台階，16px保留單一狀態燈。",
+      "before": null
+    },
+    "visualReview": {
+      "status": "new-after-visual-review",
+      "reviewer": "root",
+      "date": "2026-11-16",
+      "batch": "expansion-12",
+      "variantsSha256": "9a3e89f6a8cf2fae59dd429c0f992eb6a77329b512a0bdb2ae0822bf1fad8a0a",
+      "checks": [
+        "two-pinned-source-comparisons",
+        "16/20/24",
+        "sharp/soft/rounded",
+        "light/dark",
+        "55-percent-foreground",
+        "adjacent-text"
+      ],
+      "evidence": [
+        {
+          "path": "docs/review/ui-v1/expansion-12/comparison.png",
+          "sha256": "cb3b2b8508768a9b31d575d5cae69f1487e431e97514b746e7d7868705cdc158"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-12/comparison-dark.png",
+          "sha256": "7263251691767a5025d0e6d9763f1eaa29cba342febcec31157896985e94907e"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-12/native.png",
+          "sha256": "764545790736d668b3f30d12ba41240b7a5b706c49beb832f2136467507d940d"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-12/native-dark.png",
+          "sha256": "4cbb0af72a53353248a1cf64dbf76a31b088f6cf7f3c12f41e4133cb8c24c023"
+        }
+      ]
+    },
+    "status": "visually-reviewed-candidate",
+    "userApproval": "pending"
+  }
+]

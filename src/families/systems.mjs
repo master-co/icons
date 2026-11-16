@@ -1,3 +1,4 @@
+import { enclosedDetails } from '../occlusion.mjs';
 import { figure, rotate } from './shared.mjs';
 
 export const systems = {
@@ -7,8 +8,8 @@ export const systems = {
   },
   'hard-drive'(g) {
     const f=figure(g);
-    return [f.contour([[3,13],[6.5,4.5],[17.5,4.5],[21,13]],false,g.r),
-      f.rect(3,13,18,7),f.dot(7,16.5,g.stroke/2),...(g.s===16?[]:[f.dot(11,16.5,g.stroke/2)])];
+    return [...enclosedDetails(f.contour([[3,13],[6.5,4.5],[17.5,4.5],[21,13],[21,20],[3,20]],true,g.r),
+      [f.line(3,13,21,13)],g),f.dot(7,16.5,g.stroke/2),...(g.s===16?[]:[f.dot(11,16.5,g.stroke/2)])];
   },
   cpu(g) {
     const f=figure(g),pins=g.s===16?[8,16]:[8,12,16];

@@ -17,6 +17,14 @@ test('all contexts render in light/dark and desktop/mobile; controls and navigat
   await expect(page.locator('.scenario-screen')).toHaveAttribute('data-scenario-screen',id);
   expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
   if(width===390)await expect(page.locator('.scene-mobile-nav')).toBeVisible();
+  if(width===390&&id==='table'){
+   // Essential row actions must be on screen without horizontal scrolling.
+   const wrapper=await page.locator('.scene-order-table').evaluate(el=>el.parentElement.getBoundingClientRect().toJSON());
+   for(const action of await page.locator('#scene-orders [data-context-action="details"]').all()){
+    const box=await action.boundingBox();expect(box.x).toBeGreaterThanOrEqual(wrapper.x);expect(box.x+box.width).toBeLessThanOrEqual(wrapper.right+0.5);
+   }
+   await expect(page.locator('.scene-mobile-customer').first()).toBeVisible();
+  }
   if(info.project.name==='chromium-1x')await page.locator('.scenario-screen').screenshot({path:`work/quality/scenarios/${info.project.name}/${id}-${width}-${theme}.png`});
  }
  await page.locator('.scenario-picker [data-scenario="settings"]').click();
@@ -77,4 +85,26 @@ test('new productivity controls work in the delivered offline workspace',async({
  await page.getByRole('button',{name:'新增對話',exact:true}).click();await expect(page.locator('#team-questions .scene-row')).toHaveCount(3);
  await page.getByRole('button',{name:'管理成員權限',exact:true}).click();await expect(page.locator('#team-permissions')).toBeVisible();
  await page.getByRole('button',{name:'移除訪客',exact:true}).click();await expect(page.locator('#team-guest .scene-row')).toHaveCount(0);
+});
+
+test('expansion tools manipulate local table, mail, media and order states offline',async({page})=>{
+ await page.goto(pathToFileURL(resolve('dist/preview.html')).href+'?view=context&scenario=data-studio');
+ const pick=async id=>page.locator(`.scenario-picker [data-scenario="${id}"]`).click();
+ await page.getByRole('button',{name:'新增列',exact:true}).click();await expect(page.locator('#expansion-data-table tr')).toHaveCount(4);
+ await page.getByRole('button',{name:'刪除末列',exact:true}).click();await expect(page.locator('#expansion-data-table tr')).toHaveCount(3);
+ await page.getByRole('button',{name:'新增欄',exact:true}).click();await expect(page.locator('#expansion-data-table tr').first().locator('td')).toHaveCount(4);
+ await page.getByRole('button',{name:'刪除末欄',exact:true}).click();
+ await page.getByRole('button',{name:'合併首列前兩格',exact:true}).click();await expect(page.locator('#expansion-data-table td').first()).toHaveAttribute('colspan','2');
+ await page.getByRole('button',{name:'拆分儲存格',exact:true}).click();await expect(page.locator('#expansion-data-table tr').first().locator('td')).toHaveCount(3);
+ await page.getByRole('button',{name:'收起資料欄',exact:true}).click();await expect(page.locator('#expansion-chart-mode')).toBeHidden();
+ await page.getByRole('button',{name:'展開資料欄',exact:true}).click();await expect(page.locator('#expansion-chart-mode')).toBeVisible();
+ await pick('knowledge');await page.getByRole('button',{name:'收藏本篇',exact:true}).click();await expect(page.locator('#knowledge-bookmark')).toHaveText('已收藏本篇');
+ await pick('mailbox');await page.getByRole('textbox',{name:'搜尋郵件',exact:true}).fill('邀請');await expect(page.locator('#expansion-mail-list .scene-row:visible')).toHaveCount(1);
+ await page.getByRole('button',{name:'全部回覆',exact:true}).click();await expect(page.locator('#mail-recipient')).toContainText('設計團隊');
+ await pick('canvas');await page.getByRole('button',{name:'框選',exact:true}).click();await expect(page.locator('#expansion-tool-status')).toHaveText('目前工具：框選');
+ const shape=await page.locator('#expansion-canvas-shape').innerHTML();await page.getByRole('button',{name:'六角形',exact:true}).click();expect(await page.locator('#expansion-canvas-shape').innerHTML()).not.toBe(shape);
+ await pick('media');await page.getByRole('button',{name:'快轉 10 秒',exact:true}).click();await expect(page.locator('#expansion-playhead')).toHaveText('播放位置：58 秒');
+ await pick('fulfillment');await page.getByRole('button',{name:'加入訂單',exact:true}).click();await expect(page.locator('#fulfillment-cart')).toHaveText('2 件商品');
+ await page.getByRole('button',{name:'建立退貨',exact:true}).click();await expect(page.locator('#fulfillment-package')).toHaveText('退貨草稿已建立');
+ await pick('developer');await page.getByRole('button',{name:'建立備份',exact:true}).click();await expect(page.locator('#expansion-service-status')).toHaveText('模擬備份已建立');
 });

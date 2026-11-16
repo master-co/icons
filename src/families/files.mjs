@@ -1,3 +1,4 @@
+import { knockout } from '../occlusion.mjs';
 import { figure, mark, rotate } from "./shared.mjs";
 import { file, coreDrawings } from "./core.mjs";
 function bookmark(g) {
@@ -11,13 +12,8 @@ function tag(g, stack = false) {
 const files = {
   "clipboard-paste": (g) => {
     const f = figure(g);
-    return [
-      coreDrawings.clipboard(g)[1],
-      f.contour([[8.5, 5.5], [5, 5.5], [5, 21], [17, 21]], false, g.r),
-      f.contour([[15.5, 5.5], [19, 5.5], [19, 8]], false, g.r),
-      f.line(12, 14.5, 21, 14.5),
-      f.contour([[17.5, 11], [21, 14.5], [17.5, 18]])
-    ];
+    return knockout(coreDrawings.clipboard(g), [f.line(12,14.5,21,14.5),
+      f.contour([[17.5,11],[21,14.5],[17.5,18]])],g);
   },
   tag: (g) => tag(g),
   tags: (g) => {

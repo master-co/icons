@@ -1,0 +1,2093 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "craft_v051_audit independent subagent",
+  "reviewedAt": "2026-11-16T12:10:53.657341+00:00",
+  "skill": "master-icons v0.5.1",
+  "scope": "Final UI scenario visual review for existing 280 plus expansion 112; evaluates the icons actually present in the 21 scenario pages, not a claim that all 392 appear in scenarios.",
+  "method": "Individually opened all 84 full screenshots through view_image, then independently reopened four updated table screenshots. No contact-sheet downscaling, no generated-image auto-approval. Initial PNGs frozen before root UI correction; visual findings written after inspection.",
+  "summary": {
+    "scenarioCount": 21,
+    "initialScreenshotsActuallyViewed": 84,
+    "recheckScreenshotsActuallyViewed": 4,
+    "currentScreenshotCount": 84,
+    "unviewed": 0,
+    "initialIssues": 1,
+    "affectedInitialScreenshots": 2,
+    "resolvedIssues": 1,
+    "unresolvedIssues": 0,
+    "iconGeometryChangesRequested": 0,
+    "finalDecision": "pass-visual"
+  },
+  "limitations": [
+    "This is screenshot-based visual inspection; it does not independently certify browser interaction, keyboard use, screen-reader semantics or numeric contrast ratios.",
+    "Chromium/WebKit DPR 1/2 workflow verification belongs to the parent engineering report. These 84 PNGs are the supplied scenario evidence, not every browser/DPR combination.",
+    "Design visual acceptance and user final approval remain separate."
+  ],
+  "records": [
+    {
+      "scenario": "dashboard",
+      "initialDecision": "retain",
+      "finalDecision": "pass-visual",
+      "sameRowWeightAndProportion": "統計卡的折線、購物袋、使用者與活動列 file-check、message、cloud-upload 線重相容；小圖示沒有被數值或次要文字淹沒。",
+      "mobileAndTextAdjacency": "手機統計文字換行仍保留完整圖形，最近活動與四項底部導覽完整可見。",
+      "evidence": [
+        {
+          "path": "docs/review/craft-03/scenarios-initial/dashboard-1280-light.png",
+          "sha256": "898d244edd0f6aad6d7b6d9913e03293f00e6682658184578210abd498c62c17",
+          "pixelDimensions": [
+            1184,
+            752
+          ],
+          "actuallyOpenedWith": "view_image",
+          "visualInspectionCompleted": true,
+          "viewportWidth": 1280,
+          "theme": "light",
+          "initialDecision": "pass-visual",
+          "finding": "統計卡的折線、購物袋、使用者與活動列 file-check、message、cloud-upload 線重相容；小圖示沒有被數值或次要文字淹沒。",
+          "themeObservation": "白底深色線條的輪廓與內孔可見。",
+          "issueIds": []
+        },
+        {
+          "path": "docs/review/craft-03/scenarios-initial/dashboard-1280-dark.png",
+          "sha256": "2d4e775edaf2cb2a9ab776684fa6bb40d0cfab15fe9d9461a44b855d6cb07f1a",
+          "pixelDimensions": [
+            1184,
+            752
+          ],
+          "actuallyOpenedWith": "view_image",
+          "visualInspectionCompleted": true,
+          "viewportWidth": 1280,
+          "theme": "dark",
+          "initialDecision": "pass-visual",
+          "finding": "統計卡的折線、購物袋、使用者與活動列 file-check、message、cloud-upload 線重相容；小圖示沒有被數值或次要文字淹沒。",
+          "themeObservation": "深底淺色線條的輪廓、內孔與次要色圖示仍可見。",
+          "issueIds": []
+        },
+        {
+          "path": "docs/review/craft-03/scenarios-initial/dashboard-390-light.png",
+          "sha256": "a415642f7bfcb0f8bd7e1f0c2705138784172b72ca6a9e70571aba58554103e7",
+          "pixelDimensions": [
+            350,
+            1077
+          ],
+          "actuallyOpenedWith": "view_image",
+          "visualInspectionCompleted": true,
+          "viewportWidth": 390,
+          "theme": "light",
+          "initialDecision": "pass-visual",
+          "finding": "手機統計文字換行仍保留完整圖形，最近活動與四項底部導覽完整可見。",
+          "themeObservation": "白底深色線條的輪廓與內孔可見。",
+          "issueIds": []
+        },
+        {
+          "path": "docs/review/craft-03/scenarios-initial/dashboard-390-dark.png",
+          "sha256": "05c0203da2f4359dd3bc805c61d82fea6c781e199c2e24712de47951c7261213",
+          "pixelDimensions": [
+            350,
+            1077
+          ],
+          "actuallyOpenedWith": "view_image",
+          "visualInspectionCompleted": true,
+          "viewportWidth": 390,
+          "theme": "dark",
+          "initialDecision": "pass-visual",
+          "finding": "手機統計文字換行仍保留完整圖形，最近活動與四項底部導覽完整可見。",
+          "themeObservation": "深底淺色線條的輪廓、內孔與次要色圖示仍可見。",
+          "issueIds": []
+        }
+      ]
+    },
+    {
+      "scenario": "table",
+      "initialDecision": "refine-ui",
+      "finalDecision": "pass-visual-after-ui-fix",
+      "sameRowWeightAndProportion": "篩選、排序、下載、列選取、付款狀態與分頁圖示彼此比例一致；桌面三筆資料的 more 操作皆完整。",
+      "mobileAndTextAdjacency": "初始手機三筆資料的右側 more 按鈕只露出左邊框，ellipsis 不可見；此為容器水平溢出，非圖稿缺陷。修後顧客姓名置於訂單號下，狀態、金額、完整操作鈕並存。",
+      "evidence": [
+        {
+          "path": "docs/review/craft-03/scenarios-initial/table-1280-light.png",
+          "sha256": "66080263d83a9eb231f59d7290217b61199fe7ae85ac574c697fc0123e39ce59",
+          "pixelDimensions": [
+            1184,
+            669
+          ],
+          "actuallyOpenedWith": "view_image",
+          "visualInspectionCompleted": true,
+          "viewportWidth": 1280,
+          "theme": "light",
+          "initialDecision": "pass-visual",
+          "finding": "篩選、排序、下載、列選取、付款狀態與分頁圖示彼此比例一致；桌面三筆資料的 more 操作皆完整。",
+          "themeObservation": "白底深色線條的輪廓與內孔可見。",
+          "issueIds": []
+        },
+        {
+          "path": "docs/review/craft-03/scenarios-initial/table-1280-dark.png",
+          "sha256": "4a6a1b913ac47c28dc63bb1e38ae10a5e31d757887895767ecdeb994a2d7ed9c",
+          "pixelDimensions": [
+            1184,
+            669
+          ],
+          "actuallyOpenedWith": "view_image",
+          "visualInspectionCompleted": true,
+          "viewportWidth": 1280,
+          "theme": "dark",
+          "initialDecision": "pass-visual",
+          "finding": "篩選、排序、下載、列選取、付款狀態與分頁圖示彼此比例一致；桌面三筆資料的 more 操作皆完整。",
+          "themeObservation": "深底淺色線條的輪廓、內孔與次要色圖示仍可見。",
+          "issueIds": []
+        },
+        {
+          "path": "docs/review/craft-03/scenarios-initial/table-390-light.png",
+          "sha256": "5f1bd78ad895ae2d1340899a9f7ff544c9d6f0890a2d331e4edeefb5bf66c0b7",
+          "pixelDimensions": [
+            350,
+            737
+          ],
+          "actuallyOpenedWith": "view_image",
+          "visualInspectionCompleted": true,
+          "viewportWidth": 390,
+          "theme": "light",
+          "initialDecision": "issue",
+          "finding": "初始手機三筆資料的右側 more 按鈕只露出左邊框，ellipsis 不可見；此為容器水平溢出，非圖稿缺陷。修後顧客姓名置於訂單號下，狀態、金額、完整操作鈕並存。",
+          "themeObservation": "白底深色線條的輪廓與內孔可見。",
+          "issueIds": [
+            "scenario-table-mobile-actions"
+          ]
+        },
+        {
+          "path": "docs/review/craft-03/scenarios-initial/table-390-dark.png",
+          "sha256": "c5e394ee7822eff43c4199c83e0743cee69aed3263a1c41e7b27209cbbc257ad",
+          "pixelDimensions": [
+            350,
+            737
+          ],
+          "actuallyOpenedWith": "view_image",
+          "visualInspectionCompleted": true,
+          "viewportWidth": 390,
+          "theme": "dark",
+          "initialDecision": "issue",
+          "finding": "初始手機三筆資料的右側 more 按鈕只露出左邊框，ellipsis 不可見；此為容器水平溢出，非圖稿缺陷。修後顧客姓名置於訂單號下，狀態、金額、完整操作鈕並存。",
+          "themeObservation": "深底淺色線條的輪廓、內孔與次要色圖示仍可見。",
+          "issueIds": [
+            "scenario-table-mobile-actions"
+          ]
+        }
+      ]
+    },
+    {
+      "scenario": "settings",
+      "initialDecision": "retain",
+      "finalDecision": "pass-visual",
+      "sameRowWeightAndProportion": "building、mail、key 與眼睛尾端控制的間距清楚；lock／globe、bell／toggle、shield-check 與 save 不混淆。",
+      "mobileAndTextAdjacency": "手機 radio 群組堆疊合理；通知切換保留同排，低強調盾牌勾號與儲存按鈕可辨識，設定導覽完整。",
+      "evidence": [
+        {
+          "path": "docs/review/craft-03/scenarios-initial/settings-1280-light.png",
+          "sha256": "011c10eac7a8b693c76979df623f94869f3242145420503b6e218f607b39d272",
+          "pixelDimensions": [
+            1184,
+            788
+          ],
+          "actuallyOpenedWith": "view_image",
+          "visualInspectionCompleted": true,
+          "viewportWidth": 1280,
+          "theme": "light",
+          "initialDecision": "pass-visual",
+          "finding": "building、mail、key 與眼睛尾端控制的間距清楚；lock／globe、bell／toggle、shield-check 與 save 不混淆。",
+          "themeObservation": "白底深色線條的輪廓與內孔可見。",
+          "issueIds": []
+        },
+        {
+          "path": "docs/review/craft-03/scenarios-initial/settings-1280-dark.png",
+          "sha256": "815e628e71542535fd939e6383aafd89dc4644712ad4e0357dd46aa61c993241",
+          "pixelDimensions": [
+            1184,
+            788
+          ],
+          "actuallyOpenedWith": "view_image",
+          "visualInspectionCompleted": true,
+          "viewportWidth": 1280,
+          "theme": "dark",
+          "initialDecision": "pass-visual",
+          "finding": "building、mail、key 與眼睛尾端控制的間距清楚；lock／globe、bell／toggle、shield-check 與 save 不混淆。",
+          "themeObservation": "深底淺色線條的輪廓、內孔與次要色圖示仍可見。",
+          "issueIds": []
+        },
+        {
+          "path": "docs/review/craft-03/scenarios-initial/settings-390-light.png",
+          "sha256": "918c835647ad84a5a20477ec9284c558d6c4ffd49155828432519d2a36c3cf93",
+          "pixelDimensions": [
+            350,
+            901
+          ],
+          "actuallyOpenedWith": "view_image",
+          "visualInspectionCompleted": true,
+          "viewportWidth": 390,
+          "theme": "light",
+          "initialDecision": "pass-visual",
+          "finding": "手機 radio 群組堆疊合理；通知切換保留同排，低強調盾牌勾號與儲存按鈕可辨識，設定導覽完整。",
+          "themeObservation": "白底深色線條的輪廓與內孔可見。",
+          "issueIds": []
+        },
+        {
+          "path": "docs/review/craft-03/scenarios-initial/settings-390-dark.png",
+          "sha256": "08794ad401e8eb44a270481bd54bbdae11652349db43bc426257229d3687edf8",
+          "pixelDimensions": [
+            350,
+            901
+          ],
+          "actuallyOpenedWith": "view_image",
+          "visualInspectionCompleted": true,
+          "viewportWidth": 390,
+          "theme": "dark",
+          "initialDecision": "pass-visual",
+          "finding": "手機 radio 群組堆疊合理；通知切換保留同排，低強調盾牌勾號與儲存按鈕可辨識，設定導覽完整。",
+          "themeObservation": "深底淺色線條的輪廓、內孔與次要色圖示仍可見。",
+          "issueIds": []
+        }
+      ]
+    },
+    {
+      "scenario": "files",
+      "initialDecision": "retain",
+      "finalDecision": "pass-visual",
+      "sameRowWeightAndProportion": "資料列的 folder、file、image 重量接近；file-code、video、audio、archive 與資料夾狀態的必要線索可見。",
+      "mobileAndTextAdjacency": "手機主工具列換行 3+2、傳輸按鈕換行 2+1；沒有縮小圖示或隱藏操作，檔案導覽完整。",
+      "evidence": [
+        {
+          "path": "docs/review/craft-03/scenarios-initial/files-1280-light.png",
+          "sha256": "72dbba15a5e58565bda7733293b2e60c08c43e7e0e6a724a59fbfa8654cd4972",
+          "pixelDimensions": [
+            1184,
+            1243
+          ],
+          "actuallyOpenedWith": "view_image",
+          "visualInspectionCompleted": true,
+          "viewportWidth": 1280,
+          "theme": "light",
+          "initialDecision": "pass-visual",
+          "finding": "資料列的 folder、file、image 重量接近；file-code、video、audio、archive 與資料夾狀態的必要線索可見。",
+          "themeObservation": "白底深色線條的輪廓與內孔可見。",
+          "issueIds": []
+        },
+        {
+          "path": "docs/review/craft-03/scenarios-initial/files-1280-dark.png",
+          "sha256": "892fe8b525787bf1713fcacf2eff33bf195ff23a4ec00f0436487cc580c67497",
+          "pixelDimensions": [
+            1184,
+            1243
+          ],
+          "actuallyOpenedWith": "view_image",
+          "visualInspectionCompleted": true,
+          "viewportWidth": 1280,
+          "theme": "dark",
+          "initialDecision": "pass-visual",
+          "finding": "資料列的 folder、file、image 重量接近；file-code、video、audio、archive 與資料夾狀態的必要線索可見。",
+          "themeObservation": "深底淺色線條的輪廓、內孔與次要色圖示仍可見。",
+          "issueIds": []
+        },
+        {
+          "path": "docs/review/craft-03/scenarios-initial/files-390-light.png",
+          "sha256": "1d85bc7450c30399633b4fce0be295f818660530b08600e3dcf98a0bb1c2c8f3",
+          "pixelDimensions": [
+            350,
+            1340
+          ],
+          "actuallyOpenedWith": "view_image",
+          "visualInspectionCompleted": true,
+          "viewportWidth": 390,
+          "theme": "light",
+          "initialDecision": "pass-visual",
+          "finding": "手機主工具列換行 3+2、傳輸按鈕換行 2+1；沒有縮小圖示或隱藏操作，檔案導覽完整。",
+          "themeObservation": "白底深色線條的輪廓與內孔可見。",
+          "issueIds": []
+        },
+        {
+          "path": "docs/review/craft-03/scenarios-initial/files-390-dark.png",
+          "sha256": "6b68df47a78e68786413aac90d6b31565201151625d0889b704dab59a7f7ef24",
+          "pixelDimensions": [
+            350,
+            1340
+          ],
+          "actuallyOpenedWith": "view_image",
+          "visualInspectionCompleted": true,
+          "viewportWidth": 390,
+          "theme": "dark",
+          "initialDecision": "pass-visual",
+          "finding": "手機主工具列換行 3+2、傳輸按鈕換行 2+1；沒有縮小圖示或隱藏操作，檔案導覽完整。",
+          "themeObservation": "深底淺色線條的輪廓、內孔與次要色圖示仍可見。",
+          "issueIds": []
+        }
+      ]
+    },
+    {
+      "scenario": "editor",
+      "initialDecision": "retain",
+      "finalDecision": "pass-visual",
+      "sameRowWeightAndProportion": "文字、對齊、引言、連結、圖片與 indent 增減在同一工具列有一致視覺節奏；小型上下標仍可辨識。",
+      "mobileAndTextAdjacency": "手機工具列多行排列完整，最後一行仍顯示操作；內容區、儲存勾號、預覽與底部導覽未擠壓圖示。",
+      "evidence": [
+        {
+          "path": "docs/review/craft-03/scenarios-initial/editor-1280-light.png",
+          "sha256": "992180e544ed3cb2032d2bdda3df4b99f426c5e5d9096256ed107483beb28a3c",
+          "pixelDimensions": [
+            1184,
+            657
+          ],
+          "actuallyOpenedWith": "view_image",
+          "visualInspectionCompleted": true,
+          "viewportWidth": 1280,
+          "theme": "light",
+          "initialDecision": "pass-visual",
+          "finding": "文字、對齊、引言、連結、圖片與 indent 增減在同一工具列有一致視覺節奏；小型上下標仍可辨識。",
+          "themeObservation": "白底深色線條的輪廓與內孔可見。",
+          "issueIds": []
+        },
+        {
+          "path": "docs/review/craft-03/scenarios-initial/editor-1280-dark.png",
+          "sha256": "b48f6f05724c548afaf8347fecf18a9219c253c346e853edd0dd10ed23b6616b",
+          "pixelDimensions": [
+            1184,
+            657
+          ],
+          "actuallyOpenedWith": "view_image",
+          "visualInspectionCompleted": true,
+          "viewportWidth": 1280,
+          "theme": "dark",
+          "initialDecision": "pass-visual",
+          "finding": "文字、對齊、引言、連結、圖片與 indent 增減在同一工具列有一致視覺節奏；小型上下標仍可辨識。",
+          "themeObservation": "深底淺色線條的輪廓、內孔與次要色圖示仍可見。",
+          "issueIds": []
+        },
+        {
+          "path": "docs/review/craft-03/scenarios-initial/editor-390-light.png",
+          "sha256": "5d3ad1633f45bc59109f37775b0aeae078758e135286e12fd7b8a3a5e9acb4e9",
+          "pixelDimensions": [
+            350,
+            823
+          ],
+          "actuallyOpenedWith": "view_image",
+          "visualInspectionCompleted": true,
+          "viewportWidth": 390,
+          "theme": "light",
+          "initialDecision": "pass-visual",
+          "finding": "手機工具列多行排列完整，最後一行仍顯示操作；內容區、儲存勾號、預覽與底部導覽未擠壓圖示。",
+          "themeObservation": "白底深色線條的輪廓與內孔可見。",
+          "issueIds": []
+        },
+        {
+          "path": "docs/review/craft-03/scenarios-initial/editor-390-dark.png",
+          "sha256": "5bc466a3b0442edea06637a88190b6516f7478b044ed176a54b85aa38d190748",
+          "pixelDimensions": [
+            350,
+            823
+          ],
+          "actuallyOpenedWith": "view_image",
+          "visualInspectionCompleted": true,
+          "viewportWidth": 390,
+          "theme": "dark",
+          "initialDecision": "pass-visual",
+          "finding": "手機工具列多行排列完整，最後一行仍顯示操作；內容區、儲存勾號、預覽與底部導覽未擠壓圖示。",
+          "themeObservation": "深底淺色線條的輪廓、內孔與次要色圖示仍可見。",
+          "issueIds": []
+        }
+      ]
+    },
+    {
+      "scenario": "messages",
+      "initialDecision": "retain",
+      "finalDecision": "pass-visual",
+      "sameRowWeightAndProportion": "對話標頭的 phone、video、more 與輸入端 paperclip、send 大小相容；配送 truck 與客服 headset 的細節在文字旁清楚。",
+      "mobileAndTextAdjacency": "手機標頭三個操作鈕、附件與傳送端點皆留在容器內；訊息導覽選取狀態清楚。",
+      "evidence": [
+        {
+          "path": "docs/review/craft-03/scenarios-initial/messages-1280-light.png",
+          "sha256": "edfc1a55e4e42f8f827cb11dcfdfec5f25e1b4e9a18d9930d198c0f370ac51bb",
+          "pixelDimensions": [
+            1184,
+            649
+          ],
+          "actuallyOpenedWith": "view_image",
+          "visualInspectionCompleted": true,
+          "viewportWidth": 1280,
+          "theme": "light",
+          "initialDecision": "pass-visual",
+          "finding": "對話標頭的 phone、video、more 與輸入端 paperclip、send 大小相容；配送 truck 與客服 headset 的細節在文字旁清楚。",
+          "themeObservation": "白底深色線條的輪廓與內孔可見。",
+          "issueIds": []
+        },
+        {
+          "path": "docs/review/craft-03/scenarios-initial/messages-1280-dark.png",
+          "sha256": "dedceb429208fe1bf22717d6dc3e7d279ceae3c8490365221220efb13ec22038",
+          "pixelDimensions": [
+            1184,
+            649
+          ],
+          "actuallyOpenedWith": "view_image",
+          "visualInspectionCompleted": true,
+          "viewportWidth": 1280,
+          "theme": "dark",
+          "initialDecision": "pass-visual",
+          "finding": "對話標頭的 phone、video、more 與輸入端 paperclip、send 大小相容；配送 truck 與客服 headset 的細節在文字旁清楚。",
+          "themeObservation": "深底淺色線條的輪廓、內孔與次要色圖示仍可見。",
+          "issueIds": []
+        },
+        {
+          "path": "docs/review/craft-03/scenarios-initial/messages-390-light.png",
+          "sha256": "f82d118313558f5b144ff643490db149f8f1a53853cd1a14528b8f180407abab",
+          "pixelDimensions": [
+            350,
+            698
+          ],
+          "actuallyOpenedWith": "view_image",
+          "visualInspectionCompleted": true,
+          "viewportWidth": 390,
+          "theme": "light",
+          "initialDecision": "pass-visual",
+          "finding": "手機標頭三個操作鈕、附件與傳送端點皆留在容器內；訊息導覽選取狀態清楚。",
+          "themeObservation": "白底深色線條的輪廓與內孔可見。",
+          "issueIds": []
+        },
+        {
+          "path": "docs/review/craft-03/scenarios-initial/messages-390-dark.png",
+          "sha256": "e50f5a7b60266485e2615e008299a543829296a146595ea5507ea192ff003380",
+          "pixelDimensions": [
+            350,
+            698
+          ],
+          "actuallyOpenedWith": "view_image",
+          "visualInspectionCompleted": true,
+          "viewportWidth": 390,
+          "theme": "dark",
+          "initialDecision": "pass-visual",
+          "finding": "手機標頭三個操作鈕、附件與傳送端點皆留在容器內；訊息導覽選取狀態清楚。",
+          "themeObservation": "深底淺色線條的輪廓、內孔與次要色圖示仍可見。",
+          "issueIds": []
+        }
+      ]
+    },
+    {
+      "scenario": "orders",
+      "initialDecision": "retain",
+      "finalDecision": "pass-visual",
+      "sameRowWeightAndProportion": "package、map-pin、truck、receipt、ticket、credit-card 與 checkout lock 在各自語意位置成立；無明顯重心偏移。",
+      "mobileAndTextAdjacency": "手機卡片堆疊後數量增減、優惠輸入與結帳鎖均完整顯示，沒有邊界裁切。",
+      "evidence": [
+        {
+          "path": "docs/review/craft-03/scenarios-initial/orders-1280-light.png",
+          "sha256": "086421e09af27475c5e558c1042dc170e21f7322b3e3168e1a6fcc0883246991",
+          "pixelDimensions": [
+            1184,
+            597
+          ],
+          "actuallyOpenedWith": "view_image",
+          "visualInspectionCompleted": true,
+          "viewportWidth": 1280,
+          "theme": "light",
+          "initialDecision": "pass-visual",
+          "finding": "package、map-pin、truck、receipt、ticket、credit-card 與 checkout lock 在各自語意位置成立；無明顯重心偏移。",
+          "themeObservation": "白底深色線條的輪廓與內孔可見。",
+          "issueIds": []
+        },
+        {
+          "path": "docs/review/craft-03/scenarios-initial/orders-1280-dark.png",
+          "sha256": "615b643a93fbf22a37678f7e7464d70029c8ab020e97b94d31b12adb547fd2ea",
+          "pixelDimensions": [
+            1184,
+            597
+          ],
+          "actuallyOpenedWith": "view_image",
+          "visualInspectionCompleted": true,
+          "viewportWidth": 1280,
+          "theme": "dark",
+          "initialDecision": "pass-visual",
+          "finding": "package、map-pin、truck、receipt、ticket、credit-card 與 checkout lock 在各自語意位置成立；無明顯重心偏移。",
+          "themeObservation": "深底淺色線條的輪廓、內孔與次要色圖示仍可見。",
+          "issueIds": []
+        },
+        {
+          "path": "docs/review/craft-03/scenarios-initial/orders-390-light.png",
+          "sha256": "e3e5891b47fa4b4c1dbdf9327a097a2e22f7105da7e2a65a81480a9f662b7be4",
+          "pixelDimensions": [
+            350,
+            972
+          ],
+          "actuallyOpenedWith": "view_image",
+          "visualInspectionCompleted": true,
+          "viewportWidth": 390,
+          "theme": "light",
+          "initialDecision": "pass-visual",
+          "finding": "手機卡片堆疊後數量增減、優惠輸入與結帳鎖均完整顯示，沒有邊界裁切。",
+          "themeObservation": "白底深色線條的輪廓與內孔可見。",
+          "issueIds": []
+        },
+        {
+          "path": "docs/review/craft-03/scenarios-initial/orders-390-dark.png",
+          "sha256": "58cfa155be67286fe47c55c70db9c8d390d98b0acb49b23a550be85b5fa6999e",
+          "pixelDimensions": [
+            350,
+            972
+          ],
+          "actuallyOpenedWith": "view_image",
+          "visualInspectionCompleted": true,
+          "viewportWidth": 390,
+          "theme": "dark",
+          "initialDecision": "pass-visual",
+          "finding": "手機卡片堆疊後數量增減、優惠輸入與結帳鎖均完整顯示，沒有邊界裁切。",
+          "themeObservation": "深底淺色線條的輪廓、內孔與次要色圖示仍可見。",
+          "issueIds": []
+        }
+      ]
+    },
+    {
+      "scenario": "billing",
+      "initialDecision": "retain",
+      "finalDecision": "pass-visual",
+      "sameRowWeightAndProportion": "repeat、calendar-check、radio、credit-card、invoice／file-text 與下載圖示相容；付款及日期的次要色仍可讀。",
+      "mobileAndTextAdjacency": "手機三個下載按鈕完整可見且光學尺寸一致，管理方案齒輪與標頭不碰撞。",
+      "evidence": [
+        {
+          "path": "docs/review/craft-03/scenarios-initial/billing-1280-light.png",
+          "sha256": "2ef5dab59f1f33ace475dbf22e3bfcd6e8c340972bb0ff3146f4e93cf2601bd7",
+          "pixelDimensions": [
+            1184,
+            585
+          ],
+          "actuallyOpenedWith": "view_image",
+          "visualInspectionCompleted": true,
+          "viewportWidth": 1280,
+          "theme": "light",
+          "initialDecision": "pass-visual",
+          "finding": "repeat、calendar-check、radio、credit-card、invoice／file-text 與下載圖示相容；付款及日期的次要色仍可讀。",
+          "themeObservation": "白底深色線條的輪廓與內孔可見。",
+          "issueIds": []
+        },
+        {
+          "path": "docs/review/craft-03/scenarios-initial/billing-1280-dark.png",
+          "sha256": "ce15638a53865ac9eb79e3ed09cbc1a8bffa77b5487adf40e50bf9bd8e1a6596",
+          "pixelDimensions": [
+            1184,
+            585
+          ],
+          "actuallyOpenedWith": "view_image",
+          "visualInspectionCompleted": true,
+          "viewportWidth": 1280,
+          "theme": "dark",
+          "initialDecision": "pass-visual",
+          "finding": "repeat、calendar-check、radio、credit-card、invoice／file-text 與下載圖示相容；付款及日期的次要色仍可讀。",
+          "themeObservation": "深底淺色線條的輪廓、內孔與次要色圖示仍可見。",
+          "issueIds": []
+        },
+        {
+          "path": "docs/review/craft-03/scenarios-initial/billing-390-light.png",
+          "sha256": "ac519f3fa3bba54da84f35a43afd3f4fbab28f32eae682c1acdc23df7118179f",
+          "pixelDimensions": [
+            350,
+            936
+          ],
+          "actuallyOpenedWith": "view_image",
+          "visualInspectionCompleted": true,
+          "viewportWidth": 390,
+          "theme": "light",
+          "initialDecision": "pass-visual",
+          "finding": "手機三個下載按鈕完整可見且光學尺寸一致，管理方案齒輪與標頭不碰撞。",
+          "themeObservation": "白底深色線條的輪廓與內孔可見。",
+          "issueIds": []
+        },
+        {
+          "path": "docs/review/craft-03/scenarios-initial/billing-390-dark.png",
+          "sha256": "cda1a8a538a121518dfb86300727299cbdc62d48a79d16407c26d123fa152942",
+          "pixelDimensions": [
+            350,
+            936
+          ],
+          "actuallyOpenedWith": "view_image",
+          "visualInspectionCompleted": true,
+          "viewportWidth": 390,
+          "theme": "dark",
+          "initialDecision": "pass-visual",
+          "finding": "手機三個下載按鈕完整可見且光學尺寸一致，管理方案齒輪與標頭不碰撞。",
+          "themeObservation": "深底淺色線條的輪廓、內孔與次要色圖示仍可見。",
+          "issueIds": []
+        }
+      ]
+    },
+    {
+      "scenario": "team",
+      "initialDecision": "retain",
+      "finalDecision": "pass-visual",
+      "sameRowWeightAndProportion": "megaphone、handshake 的曲線細節在情境尺寸可見；message-question／alert、mail-check／x、user-x／cog 均能辨識。",
+      "mobileAndTextAdjacency": "手機成員列右側操作完整，通知鈴與新增訊息按鈕不遮住文字或相鄰圖示。",
+      "evidence": [
+        {
+          "path": "docs/review/craft-03/scenarios-initial/team-1280-light.png",
+          "sha256": "f17e293ecbf3af324f5f4d0777a310cb55c13b9d18901d2c4449687b8f3d5527",
+          "pixelDimensions": [
+            1184,
+            676
+          ],
+          "actuallyOpenedWith": "view_image",
+          "visualInspectionCompleted": true,
+          "viewportWidth": 1280,
+          "theme": "light",
+          "initialDecision": "pass-visual",
+          "finding": "megaphone、handshake 的曲線細節在情境尺寸可見；message-question／alert、mail-check／x、user-x／cog 均能辨識。",
+          "themeObservation": "白底深色線條的輪廓與內孔可見。",
+          "issueIds": []
+        },
+        {
+          "path": "docs/review/craft-03/scenarios-initial/team-1280-dark.png",
+          "sha256": "248845a0f07f8a0836e13d204d5f6371e2bba699d904fc0bd66d59906eca9e3a",
+          "pixelDimensions": [
+            1184,
+            676
+          ],
+          "actuallyOpenedWith": "view_image",
+          "visualInspectionCompleted": true,
+          "viewportWidth": 1280,
+          "theme": "dark",
+          "initialDecision": "pass-visual",
+          "finding": "megaphone、handshake 的曲線細節在情境尺寸可見；message-question／alert、mail-check／x、user-x／cog 均能辨識。",
+          "themeObservation": "深底淺色線條的輪廓、內孔與次要色圖示仍可見。",
+          "issueIds": []
+        },
+        {
+          "path": "docs/review/craft-03/scenarios-initial/team-390-light.png",
+          "sha256": "41014f35fe915999dd4f956cebcad912ed1589e68b9a43a05371bf7b5ab08ef1",
+          "pixelDimensions": [
+            350,
+            1099
+          ],
+          "actuallyOpenedWith": "view_image",
+          "visualInspectionCompleted": true,
+          "viewportWidth": 390,
+          "theme": "light",
+          "initialDecision": "pass-visual",
+          "finding": "手機成員列右側操作完整，通知鈴與新增訊息按鈕不遮住文字或相鄰圖示。",
+          "themeObservation": "白底深色線條的輪廓與內孔可見。",
+          "issueIds": []
+        },
+        {
+          "path": "docs/review/craft-03/scenarios-initial/team-390-dark.png",
+          "sha256": "bc6a1faa6b42797d332595afb429e47a1b49740be0e2c6fd305b0f4f60b550d8",
+          "pixelDimensions": [
+            350,
+            1099
+          ],
+          "actuallyOpenedWith": "view_image",
+          "visualInspectionCompleted": true,
+          "viewportWidth": 390,
+          "theme": "dark",
+          "initialDecision": "pass-visual",
+          "finding": "手機成員列右側操作完整，通知鈴與新增訊息按鈕不遮住文字或相鄰圖示。",
+          "themeObservation": "深底淺色線條的輪廓、內孔與次要色圖示仍可見。",
+          "issueIds": []
+        }
+      ]
+    },
+    {
+      "scenario": "organization",
+      "initialDecision": "retain",
+      "finalDecision": "pass-visual",
+      "sameRowWeightAndProportion": "folder-search／file-search 與鎖狀態有清楚訊號；layers 的可見層寬與旁邊 layout-columns 重量相容。",
+      "mobileAndTextAdjacency": "手機搜尋圖示與文字間距足夠；三張看板卡與 kanban／list-tree／pin-off 操作均不裁切。",
+      "evidence": [
+        {
+          "path": "docs/review/craft-03/scenarios-initial/organization-1280-light.png",
+          "sha256": "9ba7888080409cee7f0a241826148a69bfeec5f302ba7dddf7b464e4d3c9980b",
+          "pixelDimensions": [
+            1184,
+            803
+          ],
+          "actuallyOpenedWith": "view_image",
+          "visualInspectionCompleted": true,
+          "viewportWidth": 1280,
+          "theme": "light",
+          "initialDecision": "pass-visual",
+          "finding": "folder-search／file-search 與鎖狀態有清楚訊號；layers 的可見層寬與旁邊 layout-columns 重量相容。",
+          "themeObservation": "白底深色線條的輪廓與內孔可見。",
+          "issueIds": []
+        },
+        {
+          "path": "docs/review/craft-03/scenarios-initial/organization-1280-dark.png",
+          "sha256": "4684ca1b0ff82241e918981ff73f865dd5728baff37fbfe643246b583a88fd80",
+          "pixelDimensions": [
+            1184,
+            803
+          ],
+          "actuallyOpenedWith": "view_image",
+          "visualInspectionCompleted": true,
+          "viewportWidth": 1280,
+          "theme": "dark",
+          "initialDecision": "pass-visual",
+          "finding": "folder-search／file-search 與鎖狀態有清楚訊號；layers 的可見層寬與旁邊 layout-columns 重量相容。",
+          "themeObservation": "深底淺色線條的輪廓、內孔與次要色圖示仍可見。",
+          "issueIds": []
+        },
+        {
+          "path": "docs/review/craft-03/scenarios-initial/organization-390-light.png",
+          "sha256": "f3fd0812534a7a3d74b687869ad9a4a52e854fabcc0683f14228415aee135027",
+          "pixelDimensions": [
+            350,
+            1342
+          ],
+          "actuallyOpenedWith": "view_image",
+          "visualInspectionCompleted": true,
+          "viewportWidth": 390,
+          "theme": "light",
+          "initialDecision": "pass-visual",
+          "finding": "手機搜尋圖示與文字間距足夠；三張看板卡與 kanban／list-tree／pin-off 操作均不裁切。",
+          "themeObservation": "白底深色線條的輪廓與內孔可見。",
+          "issueIds": []
+        },
+        {
+          "path": "docs/review/craft-03/scenarios-initial/organization-390-dark.png",
+          "sha256": "c87199b0c4b8974826446c02a748e8c0fe038adc8c88052bceeadc7c7cba0280",
+          "pixelDimensions": [
+            350,
+            1342
+          ],
+          "actuallyOpenedWith": "view_image",
+          "visualInspectionCompleted": true,
+          "viewportWidth": 390,
+          "theme": "dark",
+          "initialDecision": "pass-visual",
+          "finding": "手機搜尋圖示與文字間距足夠；三張看板卡與 kanban／list-tree／pin-off 操作均不裁切。",
+          "themeObservation": "深底淺色線條的輪廓、內孔與次要色圖示仍可見。",
+          "issueIds": []
+        }
+      ]
+    },
+    {
+      "scenario": "schedule",
+      "initialDecision": "retain",
+      "finalDecision": "pass-visual",
+      "sameRowWeightAndProportion": "calendar-plus／minus／x／clock 與 stopwatch、clipboard-copy／x／pen 的狀態標記彼此清楚，母型大小穩定。",
+      "mobileAndTextAdjacency": "手機操作換行後仍完整，clipboard-pen 未越框；主行事曆圖與文字的垂直對位成立。",
+      "evidence": [
+        {
+          "path": "docs/review/craft-03/scenarios-initial/schedule-1280-light.png",
+          "sha256": "3b8d3143432e5ff2ff6eec1e7a5333fa20a65e507d94b5d69aa673304201ac57",
+          "pixelDimensions": [
+            1184,
+            567
+          ],
+          "actuallyOpenedWith": "view_image",
+          "visualInspectionCompleted": true,
+          "viewportWidth": 1280,
+          "theme": "light",
+          "initialDecision": "pass-visual",
+          "finding": "calendar-plus／minus／x／clock 與 stopwatch、clipboard-copy／x／pen 的狀態標記彼此清楚，母型大小穩定。",
+          "themeObservation": "白底深色線條的輪廓與內孔可見。",
+          "issueIds": []
+        },
+        {
+          "path": "docs/review/craft-03/scenarios-initial/schedule-1280-dark.png",
+          "sha256": "0d179f788a0e7a28cd439f91e35bea38cd24c506af3cd5a0b1521997c30632e6",
+          "pixelDimensions": [
+            1184,
+            567
+          ],
+          "actuallyOpenedWith": "view_image",
+          "visualInspectionCompleted": true,
+          "viewportWidth": 1280,
+          "theme": "dark",
+          "initialDecision": "pass-visual",
+          "finding": "calendar-plus／minus／x／clock 與 stopwatch、clipboard-copy／x／pen 的狀態標記彼此清楚，母型大小穩定。",
+          "themeObservation": "深底淺色線條的輪廓、內孔與次要色圖示仍可見。",
+          "issueIds": []
+        },
+        {
+          "path": "docs/review/craft-03/scenarios-initial/schedule-390-light.png",
+          "sha256": "b91f1110b583d85a0d619a365138ea9c0520a0c20d9f76e6a10522277bdbb171",
+          "pixelDimensions": [
+            350,
+            919
+          ],
+          "actuallyOpenedWith": "view_image",
+          "visualInspectionCompleted": true,
+          "viewportWidth": 390,
+          "theme": "light",
+          "initialDecision": "pass-visual",
+          "finding": "手機操作換行後仍完整，clipboard-pen 未越框；主行事曆圖與文字的垂直對位成立。",
+          "themeObservation": "白底深色線條的輪廓與內孔可見。",
+          "issueIds": []
+        },
+        {
+          "path": "docs/review/craft-03/scenarios-initial/schedule-390-dark.png",
+          "sha256": "aebc7299c2cfbf7cf83c10c88c51226b41a4560587f980ea901e65b04bf2ed4b",
+          "pixelDimensions": [
+            350,
+            919
+          ],
+          "actuallyOpenedWith": "view_image",
+          "visualInspectionCompleted": true,
+          "viewportWidth": 390,
+          "theme": "dark",
+          "initialDecision": "pass-visual",
+          "finding": "手機操作換行後仍完整，clipboard-pen 未越框；主行事曆圖與文字的垂直對位成立。",
+          "themeObservation": "深底淺色線條的輪廓、內孔與次要色圖示仍可見。",
+          "issueIds": []
+        }
+      ]
+    },
+    {
+      "scenario": "devices",
+      "initialDecision": "retain",
+      "finalDecision": "pass-visual",
+      "sameRowWeightAndProportion": "laptop、tablet、keyboard、mouse、touchpad 線重相容；Bluetooth、USB、cast、cursor、wheelchair 在各列保留必要細節。",
+      "mobileAndTextAdjacency": "手機資料列右側操作與主要標籤不碰撞，次要色圖示與底部導覽可辨識。",
+      "evidence": [
+        {
+          "path": "docs/review/craft-03/scenarios-initial/devices-1280-light.png",
+          "sha256": "cb47dc38768fccfc083b07fd4c95098347fefef888a962118f0583856170a110",
+          "pixelDimensions": [
+            1184,
+            712
+          ],
+          "actuallyOpenedWith": "view_image",
+          "visualInspectionCompleted": true,
+          "viewportWidth": 1280,
+          "theme": "light",
+          "initialDecision": "pass-visual",
+          "finding": "laptop、tablet、keyboard、mouse、touchpad 線重相容；Bluetooth、USB、cast、cursor、wheelchair 在各列保留必要細節。",
+          "themeObservation": "白底深色線條的輪廓與內孔可見。",
+          "issueIds": []
+        },
+        {
+          "path": "docs/review/craft-03/scenarios-initial/devices-1280-dark.png",
+          "sha256": "1c9070f987a3c8754704901481965f54337b1ee59a45909d65db8daa80d17a98",
+          "pixelDimensions": [
+            1184,
+            712
+          ],
+          "actuallyOpenedWith": "view_image",
+          "visualInspectionCompleted": true,
+          "viewportWidth": 1280,
+          "theme": "dark",
+          "initialDecision": "pass-visual",
+          "finding": "laptop、tablet、keyboard、mouse、touchpad 線重相容；Bluetooth、USB、cast、cursor、wheelchair 在各列保留必要細節。",
+          "themeObservation": "深底淺色線條的輪廓、內孔與次要色圖示仍可見。",
+          "issueIds": []
+        },
+        {
+          "path": "docs/review/craft-03/scenarios-initial/devices-390-light.png",
+          "sha256": "3a1eafa0c399d99505155e286caa3eca74c8e5f9b10b7564c8b0dec3c34ec9c8",
+          "pixelDimensions": [
+            350,
+            1206
+          ],
+          "actuallyOpenedWith": "view_image",
+          "visualInspectionCompleted": true,
+          "viewportWidth": 390,
+          "theme": "light",
+          "initialDecision": "pass-visual",
+          "finding": "手機資料列右側操作與主要標籤不碰撞，次要色圖示與底部導覽可辨識。",
+          "themeObservation": "白底深色線條的輪廓與內孔可見。",
+          "issueIds": []
+        },
+        {
+          "path": "docs/review/craft-03/scenarios-initial/devices-390-dark.png",
+          "sha256": "4b7f3cccef8a850564fdf42d8ef87a5d2eb8c10435359fbd35c40f7be18a5cb2",
+          "pixelDimensions": [
+            350,
+            1206
+          ],
+          "actuallyOpenedWith": "view_image",
+          "visualInspectionCompleted": true,
+          "viewportWidth": 390,
+          "theme": "dark",
+          "initialDecision": "pass-visual",
+          "finding": "手機資料列右側操作與主要標籤不碰撞，次要色圖示與底部導覽可辨識。",
+          "themeObservation": "深底淺色線條的輪廓、內孔與次要色圖示仍可見。",
+          "issueIds": []
+        }
+      ]
+    },
+    {
+      "scenario": "integrations",
+      "initialDecision": "retain",
+      "finalDecision": "pass-visual",
+      "sameRowWeightAndProportion": "server、cpu、memory、hard-drive、network 與分支／合併／workflow 同列尺度穩定；CPU 的較高密度符合語意，未形成黑塊。braces 與 webhook 內部留白可見。",
+      "mobileAndTextAdjacency": "手機兩張卡垂直排列，測試回呼按鈕、伺服器勾號、每列左側圖示與底部導覽完整。",
+      "evidence": [
+        {
+          "path": "docs/review/craft-03/scenarios-initial/integrations-1280-light.png",
+          "sha256": "6bd93a28caf50b11aeaa105e5c58fb92a929c910a407ce297c7d67fd48a9b4fe",
+          "pixelDimensions": [
+            1184,
+            768
+          ],
+          "actuallyOpenedWith": "view_image",
+          "visualInspectionCompleted": true,
+          "viewportWidth": 1280,
+          "theme": "light",
+          "initialDecision": "pass-visual",
+          "finding": "server、cpu、memory、hard-drive、network 與分支／合併／workflow 同列尺度穩定；CPU 的較高密度符合語意，未形成黑塊。braces 與 webhook 內部留白可見。",
+          "themeObservation": "白底深色線條的輪廓與內孔可見。",
+          "issueIds": []
+        },
+        {
+          "path": "docs/review/craft-03/scenarios-initial/integrations-1280-dark.png",
+          "sha256": "6250527498805aecf25cf48d775da24c3d8d8545738bb531d45b8542010727a2",
+          "pixelDimensions": [
+            1184,
+            768
+          ],
+          "actuallyOpenedWith": "view_image",
+          "visualInspectionCompleted": true,
+          "viewportWidth": 1280,
+          "theme": "dark",
+          "initialDecision": "pass-visual",
+          "finding": "server、cpu、memory、hard-drive、network 與分支／合併／workflow 同列尺度穩定；CPU 的較高密度符合語意，未形成黑塊。braces 與 webhook 內部留白可見。",
+          "themeObservation": "深底淺色線條的輪廓、內孔與次要色圖示仍可見。",
+          "issueIds": []
+        },
+        {
+          "path": "docs/review/craft-03/scenarios-initial/integrations-390-light.png",
+          "sha256": "8b0ffcd46e0778d5257f2a65e4b0a4ae7a7bccf85e33f3014dc58ad16bfb7f2a",
+          "pixelDimensions": [
+            350,
+            1286
+          ],
+          "actuallyOpenedWith": "view_image",
+          "visualInspectionCompleted": true,
+          "viewportWidth": 390,
+          "theme": "light",
+          "initialDecision": "pass-visual",
+          "finding": "手機兩張卡垂直排列，測試回呼按鈕、伺服器勾號、每列左側圖示與底部導覽完整。",
+          "themeObservation": "白底深色線條的輪廓與內孔可見。",
+          "issueIds": []
+        },
+        {
+          "path": "docs/review/craft-03/scenarios-initial/integrations-390-dark.png",
+          "sha256": "6f53a8b62f1ca0fabfa78b1c7000e6b9c720108618dcd007d4e8904386175b2e",
+          "pixelDimensions": [
+            350,
+            1286
+          ],
+          "actuallyOpenedWith": "view_image",
+          "visualInspectionCompleted": true,
+          "viewportWidth": 390,
+          "theme": "dark",
+          "initialDecision": "pass-visual",
+          "finding": "手機兩張卡垂直排列，測試回呼按鈕、伺服器勾號、每列左側圖示與底部導覽完整。",
+          "themeObservation": "深底淺色線條的輪廓、內孔與次要色圖示仍可見。",
+          "issueIds": []
+        }
+      ]
+    },
+    {
+      "scenario": "workspace-tools",
+      "initialDecision": "retain",
+      "finalDecision": "pass-visual",
+      "sameRowWeightAndProportion": "languages、zap、command、backspace、keyboard-return 與回饋 smile／frown、thumbs、target、award、badge-check 無明顯重量失衡；工作區按鈕文字已清楚。",
+      "mobileAndTextAdjacency": "手機工具按鈕自然換行，兩對回饋按鈕保持並列；lightbulb、life-buoy、sparkles 的小型細節仍可辨識。",
+      "evidence": [
+        {
+          "path": "docs/review/craft-03/scenarios-initial/workspace-tools-1280-light.png",
+          "sha256": "f59210a2b8717eb212f2a973e3bf9f58dc5b2a10650f9a4fdabb9c0542320a01",
+          "pixelDimensions": [
+            1184,
+            817
+          ],
+          "actuallyOpenedWith": "view_image",
+          "visualInspectionCompleted": true,
+          "viewportWidth": 1280,
+          "theme": "light",
+          "initialDecision": "pass-visual",
+          "finding": "languages、zap、command、backspace、keyboard-return 與回饋 smile／frown、thumbs、target、award、badge-check 無明顯重量失衡；工作區按鈕文字已清楚。",
+          "themeObservation": "白底深色線條的輪廓與內孔可見。",
+          "issueIds": []
+        },
+        {
+          "path": "docs/review/craft-03/scenarios-initial/workspace-tools-1280-dark.png",
+          "sha256": "0b30996bf6c5552f28bb2859cfded6f57cefc6278b9161d0013c2d8db0b487a1",
+          "pixelDimensions": [
+            1184,
+            817
+          ],
+          "actuallyOpenedWith": "view_image",
+          "visualInspectionCompleted": true,
+          "viewportWidth": 1280,
+          "theme": "dark",
+          "initialDecision": "pass-visual",
+          "finding": "languages、zap、command、backspace、keyboard-return 與回饋 smile／frown、thumbs、target、award、badge-check 無明顯重量失衡；工作區按鈕文字已清楚。",
+          "themeObservation": "深底淺色線條的輪廓、內孔與次要色圖示仍可見。",
+          "issueIds": []
+        },
+        {
+          "path": "docs/review/craft-03/scenarios-initial/workspace-tools-390-light.png",
+          "sha256": "479dc104136afd26a7d9f2e462504ce94f834775bffd55ce84452834577cd706",
+          "pixelDimensions": [
+            350,
+            1392
+          ],
+          "actuallyOpenedWith": "view_image",
+          "visualInspectionCompleted": true,
+          "viewportWidth": 390,
+          "theme": "light",
+          "initialDecision": "pass-visual",
+          "finding": "手機工具按鈕自然換行，兩對回饋按鈕保持並列；lightbulb、life-buoy、sparkles 的小型細節仍可辨識。",
+          "themeObservation": "白底深色線條的輪廓與內孔可見。",
+          "issueIds": []
+        },
+        {
+          "path": "docs/review/craft-03/scenarios-initial/workspace-tools-390-dark.png",
+          "sha256": "d6492974f4dde067971b2fd2ab4fa2edbf23aec7ccdfb7e7adbb41a04ca7b0e4",
+          "pixelDimensions": [
+            350,
+            1392
+          ],
+          "actuallyOpenedWith": "view_image",
+          "visualInspectionCompleted": true,
+          "viewportWidth": 390,
+          "theme": "dark",
+          "initialDecision": "pass-visual",
+          "finding": "手機工具按鈕自然換行，兩對回饋按鈕保持並列；lightbulb、life-buoy、sparkles 的小型細節仍可辨識。",
+          "themeObservation": "深底淺色線條的輪廓、內孔與次要色圖示仍可見。",
+          "issueIds": []
+        }
+      ]
+    },
+    {
+      "scenario": "canvas",
+      "initialDecision": "retain",
+      "finalDecision": "pass-visual",
+      "sameRowWeightAndProportion": "hand、lasso、selection、scissors、ruler、magnet、pipette、paint-bucket 的線重相容；triangle／diamond／hexagon 與 contrast／blend／distribution 的方向線索清楚。",
+      "mobileAndTextAdjacency": "手機 8 個工具完整排成兩行，形狀與排列按鈕換行合理；frame 與 component 在畫布中央沒有重心失衡，底部導覽無裁切。",
+      "evidence": [
+        {
+          "path": "docs/review/craft-03/scenarios-initial/canvas-1280-light.png",
+          "sha256": "656af347323ce089f498411ed9d8f2cb9afd80955cb0492c367d1d82b0f5f3cb",
+          "pixelDimensions": [
+            1184,
+            647
+          ],
+          "actuallyOpenedWith": "view_image",
+          "visualInspectionCompleted": true,
+          "viewportWidth": 1280,
+          "theme": "light",
+          "initialDecision": "pass-visual",
+          "finding": "hand、lasso、selection、scissors、ruler、magnet、pipette、paint-bucket 的線重相容；triangle／diamond／hexagon 與 contrast／blend／distribution 的方向線索清楚。",
+          "themeObservation": "白底深色線條的輪廓與內孔可見。",
+          "issueIds": []
+        },
+        {
+          "path": "docs/review/craft-03/scenarios-initial/canvas-1280-dark.png",
+          "sha256": "2f651ef386d00e42403b27b5c0b5cf73c319ebdf11d278a38cf4568cd174ae63",
+          "pixelDimensions": [
+            1184,
+            647
+          ],
+          "actuallyOpenedWith": "view_image",
+          "visualInspectionCompleted": true,
+          "viewportWidth": 1280,
+          "theme": "dark",
+          "initialDecision": "pass-visual",
+          "finding": "hand、lasso、selection、scissors、ruler、magnet、pipette、paint-bucket 的線重相容；triangle／diamond／hexagon 與 contrast／blend／distribution 的方向線索清楚。",
+          "themeObservation": "深底淺色線條的輪廓、內孔與次要色圖示仍可見。",
+          "issueIds": []
+        },
+        {
+          "path": "docs/review/craft-03/scenarios-initial/canvas-390-light.png",
+          "sha256": "97dce97ebc92c7098665bebd519b0db449cd77f4b3167dfb4d2b3aa029362d4d",
+          "pixelDimensions": [
+            350,
+            1002
+          ],
+          "actuallyOpenedWith": "view_image",
+          "visualInspectionCompleted": true,
+          "viewportWidth": 390,
+          "theme": "light",
+          "initialDecision": "pass-visual",
+          "finding": "手機 8 個工具完整排成兩行，形狀與排列按鈕換行合理；frame 與 component 在畫布中央沒有重心失衡，底部導覽無裁切。",
+          "themeObservation": "白底深色線條的輪廓與內孔可見。",
+          "issueIds": []
+        },
+        {
+          "path": "docs/review/craft-03/scenarios-initial/canvas-390-dark.png",
+          "sha256": "17cc08c435fcbe59d45d581e0df8e83505fdc9e7d3032df67e6419f8c5ebce55",
+          "pixelDimensions": [
+            350,
+            1002
+          ],
+          "actuallyOpenedWith": "view_image",
+          "visualInspectionCompleted": true,
+          "viewportWidth": 390,
+          "theme": "dark",
+          "initialDecision": "pass-visual",
+          "finding": "手機 8 個工具完整排成兩行，形狀與排列按鈕換行合理；frame 與 component 在畫布中央沒有重心失衡，底部導覽無裁切。",
+          "themeObservation": "深底淺色線條的輪廓、內孔與次要色圖示仍可見。",
+          "issueIds": []
+        }
+      ]
+    },
+    {
+      "scenario": "data-studio",
+      "initialDecision": "retain",
+      "finalDecision": "pass-visual",
+      "sameRowWeightAndProportion": "列／欄增刪、儲存格合併／拆分、左右面板開關的方向與狀態可辨識；圖表四型以及 list-collapse／search／plus／minus 不混淆。",
+      "mobileAndTextAdjacency": "手機操作按鈕逐行排列而未縮圖，資料三欄可見；搜尋欄圖示與 placeholder 間距清楚，追蹤清單及導覽完整。",
+      "evidence": [
+        {
+          "path": "docs/review/craft-03/scenarios-initial/data-studio-1280-light.png",
+          "sha256": "d80cb9e74056bf8ebcbbacef350fd4dc486d678efc420b8e332e12cb3d85b663",
+          "pixelDimensions": [
+            1184,
+            879
+          ],
+          "actuallyOpenedWith": "view_image",
+          "visualInspectionCompleted": true,
+          "viewportWidth": 1280,
+          "theme": "light",
+          "initialDecision": "pass-visual",
+          "finding": "列／欄增刪、儲存格合併／拆分、左右面板開關的方向與狀態可辨識；圖表四型以及 list-collapse／search／plus／minus 不混淆。",
+          "themeObservation": "白底深色線條的輪廓與內孔可見。",
+          "issueIds": []
+        },
+        {
+          "path": "docs/review/craft-03/scenarios-initial/data-studio-1280-dark.png",
+          "sha256": "798ab0d0c6560bb8299d9eb3b19c59eaab4cf2bba9281b1947739f91ef09e4f8",
+          "pixelDimensions": [
+            1184,
+            879
+          ],
+          "actuallyOpenedWith": "view_image",
+          "visualInspectionCompleted": true,
+          "viewportWidth": 1280,
+          "theme": "dark",
+          "initialDecision": "pass-visual",
+          "finding": "列／欄增刪、儲存格合併／拆分、左右面板開關的方向與狀態可辨識；圖表四型以及 list-collapse／search／plus／minus 不混淆。",
+          "themeObservation": "深底淺色線條的輪廓、內孔與次要色圖示仍可見。",
+          "issueIds": []
+        },
+        {
+          "path": "docs/review/craft-03/scenarios-initial/data-studio-390-light.png",
+          "sha256": "fb29788336f4dcec7a320474eaa568d82aa5f48c6b9cf4caceb2949ae1d6dd9c",
+          "pixelDimensions": [
+            350,
+            1362
+          ],
+          "actuallyOpenedWith": "view_image",
+          "visualInspectionCompleted": true,
+          "viewportWidth": 390,
+          "theme": "light",
+          "initialDecision": "pass-visual",
+          "finding": "手機操作按鈕逐行排列而未縮圖，資料三欄可見；搜尋欄圖示與 placeholder 間距清楚，追蹤清單及導覽完整。",
+          "themeObservation": "白底深色線條的輪廓與內孔可見。",
+          "issueIds": []
+        },
+        {
+          "path": "docs/review/craft-03/scenarios-initial/data-studio-390-dark.png",
+          "sha256": "b6112e3a2f10dcfe55e9cb4a3ace7288d92bff3780c4b27c6c000216c74283d1",
+          "pixelDimensions": [
+            350,
+            1362
+          ],
+          "actuallyOpenedWith": "view_image",
+          "visualInspectionCompleted": true,
+          "viewportWidth": 390,
+          "theme": "dark",
+          "initialDecision": "pass-visual",
+          "finding": "手機操作按鈕逐行排列而未縮圖，資料三欄可見；搜尋欄圖示與 placeholder 間距清楚，追蹤清單及導覽完整。",
+          "themeObservation": "深底淺色線條的輪廓、內孔與次要色圖示仍可見。",
+          "issueIds": []
+        }
+      ]
+    },
+    {
+      "scenario": "developer",
+      "initialDecision": "retain",
+      "finalDecision": "pass-visual",
+      "sameRowWeightAndProportion": "git-commit 短水平輪廓仍符合語意；pull-request／compare／fork 有區別。folder-code、file-json、puzzle、cloud-check／off／sync、database-backup／search、server-cog 與磁碟上下傳在文字旁成立。",
+      "mobileAndTextAdjacency": "手機工具群組換行有序；file-json 中央大括號、server-cog 孔與 database-backup 環內留白可辨識，沒有狀態標記黏成黑塊。",
+      "evidence": [
+        {
+          "path": "docs/review/craft-03/scenarios-initial/developer-1280-light.png",
+          "sha256": "865fa45cf88f732341fa5edbc39e2c8b81a3c83e6b9c24bbaa958545c9b7cb77",
+          "pixelDimensions": [
+            1184,
+            752
+          ],
+          "actuallyOpenedWith": "view_image",
+          "visualInspectionCompleted": true,
+          "viewportWidth": 1280,
+          "theme": "light",
+          "initialDecision": "pass-visual",
+          "finding": "git-commit 短水平輪廓仍符合語意；pull-request／compare／fork 有區別。folder-code、file-json、puzzle、cloud-check／off／sync、database-backup／search、server-cog 與磁碟上下傳在文字旁成立。",
+          "themeObservation": "白底深色線條的輪廓與內孔可見。",
+          "issueIds": []
+        },
+        {
+          "path": "docs/review/craft-03/scenarios-initial/developer-1280-dark.png",
+          "sha256": "c8f82857065a0da0a36e7454c32d7090e9c33bcf95919166fb7270617868f4b9",
+          "pixelDimensions": [
+            1184,
+            752
+          ],
+          "actuallyOpenedWith": "view_image",
+          "visualInspectionCompleted": true,
+          "viewportWidth": 1280,
+          "theme": "dark",
+          "initialDecision": "pass-visual",
+          "finding": "git-commit 短水平輪廓仍符合語意；pull-request／compare／fork 有區別。folder-code、file-json、puzzle、cloud-check／off／sync、database-backup／search、server-cog 與磁碟上下傳在文字旁成立。",
+          "themeObservation": "深底淺色線條的輪廓、內孔與次要色圖示仍可見。",
+          "issueIds": []
+        },
+        {
+          "path": "docs/review/craft-03/scenarios-initial/developer-390-light.png",
+          "sha256": "21861faf29816eeb290105a7fa954f774c8183cc613fe93623167ffdd19bcc09",
+          "pixelDimensions": [
+            350,
+            1336
+          ],
+          "actuallyOpenedWith": "view_image",
+          "visualInspectionCompleted": true,
+          "viewportWidth": 390,
+          "theme": "light",
+          "initialDecision": "pass-visual",
+          "finding": "手機工具群組換行有序；file-json 中央大括號、server-cog 孔與 database-backup 環內留白可辨識，沒有狀態標記黏成黑塊。",
+          "themeObservation": "白底深色線條的輪廓與內孔可見。",
+          "issueIds": []
+        },
+        {
+          "path": "docs/review/craft-03/scenarios-initial/developer-390-dark.png",
+          "sha256": "9fd66b406e516f67cccb88517d5282b526aa72e89c1c47e0a46ddb65be4420b0",
+          "pixelDimensions": [
+            350,
+            1336
+          ],
+          "actuallyOpenedWith": "view_image",
+          "visualInspectionCompleted": true,
+          "viewportWidth": 390,
+          "theme": "dark",
+          "initialDecision": "pass-visual",
+          "finding": "手機工具群組換行有序；file-json 中央大括號、server-cog 孔與 database-backup 環內留白可辨識，沒有狀態標記黏成黑塊。",
+          "themeObservation": "深底淺色線條的輪廓、內孔與次要色圖示仍可見。",
+          "issueIds": []
+        }
+      ]
+    },
+    {
+      "scenario": "fulfillment",
+      "initialDecision": "retain",
+      "finalDecision": "pass-visual",
+      "sameRowWeightAndProportion": "barcode／QR／scan-barcode、calculator、landmark、cart-plus／check 與 package-open／check／return 有各自清楚輪廓。修後包裹結構線無可見凸耳；定位、route、compass、navigation、signpost 尺度相容。",
+      "mobileAndTextAdjacency": "手機訂單與包裹兩張卡完整，狀態按鈕並列；路線按鈕換成兩行保留全圖，QR 定位框與 cart 輪子仍可見。",
+      "evidence": [
+        {
+          "path": "docs/review/craft-03/scenarios-initial/fulfillment-1280-light.png",
+          "sha256": "fdd30aca3185247d0e34905299234c5bc8f2c2197135baf8dd39ca828e364fa2",
+          "pixelDimensions": [
+            1184,
+            719
+          ],
+          "actuallyOpenedWith": "view_image",
+          "visualInspectionCompleted": true,
+          "viewportWidth": 1280,
+          "theme": "light",
+          "initialDecision": "pass-visual",
+          "finding": "barcode／QR／scan-barcode、calculator、landmark、cart-plus／check 與 package-open／check／return 有各自清楚輪廓。修後包裹結構線無可見凸耳；定位、route、compass、navigation、signpost 尺度相容。",
+          "themeObservation": "白底深色線條的輪廓與內孔可見。",
+          "issueIds": []
+        },
+        {
+          "path": "docs/review/craft-03/scenarios-initial/fulfillment-1280-dark.png",
+          "sha256": "b230f7ab037d408b48179a92978be1b895762d624ed81125e0743871faceb8aa",
+          "pixelDimensions": [
+            1184,
+            719
+          ],
+          "actuallyOpenedWith": "view_image",
+          "visualInspectionCompleted": true,
+          "viewportWidth": 1280,
+          "theme": "dark",
+          "initialDecision": "pass-visual",
+          "finding": "barcode／QR／scan-barcode、calculator、landmark、cart-plus／check 與 package-open／check／return 有各自清楚輪廓。修後包裹結構線無可見凸耳；定位、route、compass、navigation、signpost 尺度相容。",
+          "themeObservation": "深底淺色線條的輪廓、內孔與次要色圖示仍可見。",
+          "issueIds": []
+        },
+        {
+          "path": "docs/review/craft-03/scenarios-initial/fulfillment-390-light.png",
+          "sha256": "644ff6fb54430c7222f9465a1ab036c544ba0ccfb35c936476cfecf92005b7df",
+          "pixelDimensions": [
+            350,
+            1245
+          ],
+          "actuallyOpenedWith": "view_image",
+          "visualInspectionCompleted": true,
+          "viewportWidth": 390,
+          "theme": "light",
+          "initialDecision": "pass-visual",
+          "finding": "手機訂單與包裹兩張卡完整，狀態按鈕並列；路線按鈕換成兩行保留全圖，QR 定位框與 cart 輪子仍可見。",
+          "themeObservation": "白底深色線條的輪廓與內孔可見。",
+          "issueIds": []
+        },
+        {
+          "path": "docs/review/craft-03/scenarios-initial/fulfillment-390-dark.png",
+          "sha256": "91775c5be679fb92eb24d44b697e62af5ff436cda0311dd3fcd42c9baedb0aff",
+          "pixelDimensions": [
+            350,
+            1245
+          ],
+          "actuallyOpenedWith": "view_image",
+          "visualInspectionCompleted": true,
+          "viewportWidth": 390,
+          "theme": "dark",
+          "initialDecision": "pass-visual",
+          "finding": "手機訂單與包裹兩張卡完整，狀態按鈕並列；路線按鈕換成兩行保留全圖，QR 定位框與 cart 輪子仍可見。",
+          "themeObservation": "深底淺色線條的輪廓、內孔與次要色圖示仍可見。",
+          "issueIds": []
+        }
+      ]
+    },
+    {
+      "scenario": "knowledge",
+      "initialDecision": "retain",
+      "finalDecision": "pass-visual",
+      "sameRowWeightAndProportion": "book、book-open、notebook、newspaper、sticky-note、file-question 與 bookmark 增減的必要訊號清楚；file-question 問號在情境尺寸仍可辨識。",
+      "mobileAndTextAdjacency": "手機收藏操作維持並列，兩卡及閱讀區堆疊沒有裁切圖示；四個底部導覽項目均顯示。",
+      "evidence": [
+        {
+          "path": "docs/review/craft-03/scenarios-initial/knowledge-1280-light.png",
+          "sha256": "6989907950a7f3f58e03378fa0fc31672d0c01e5370f404ca7f38d34c2781a3e",
+          "pixelDimensions": [
+            1184,
+            827
+          ],
+          "actuallyOpenedWith": "view_image",
+          "visualInspectionCompleted": true,
+          "viewportWidth": 1280,
+          "theme": "light",
+          "initialDecision": "pass-visual",
+          "finding": "book、book-open、notebook、newspaper、sticky-note、file-question 與 bookmark 增減的必要訊號清楚；file-question 問號在情境尺寸仍可辨識。",
+          "themeObservation": "白底深色線條的輪廓與內孔可見。",
+          "issueIds": []
+        },
+        {
+          "path": "docs/review/craft-03/scenarios-initial/knowledge-1280-dark.png",
+          "sha256": "48a5a304b5214cffc5ccb7ef291c86f7c41c22a64d4b6a5b2a918cbd6afc230f",
+          "pixelDimensions": [
+            1184,
+            827
+          ],
+          "actuallyOpenedWith": "view_image",
+          "visualInspectionCompleted": true,
+          "viewportWidth": 1280,
+          "theme": "dark",
+          "initialDecision": "pass-visual",
+          "finding": "book、book-open、notebook、newspaper、sticky-note、file-question 與 bookmark 增減的必要訊號清楚；file-question 問號在情境尺寸仍可辨識。",
+          "themeObservation": "深底淺色線條的輪廓、內孔與次要色圖示仍可見。",
+          "issueIds": []
+        },
+        {
+          "path": "docs/review/craft-03/scenarios-initial/knowledge-390-light.png",
+          "sha256": "b952ec6908640eb11b1a5a5a1e6dbdf05294583b4e55d65e832f1a6e672c524f",
+          "pixelDimensions": [
+            350,
+            1268
+          ],
+          "actuallyOpenedWith": "view_image",
+          "visualInspectionCompleted": true,
+          "viewportWidth": 390,
+          "theme": "light",
+          "initialDecision": "pass-visual",
+          "finding": "手機收藏操作維持並列，兩卡及閱讀區堆疊沒有裁切圖示；四個底部導覽項目均顯示。",
+          "themeObservation": "白底深色線條的輪廓與內孔可見。",
+          "issueIds": []
+        },
+        {
+          "path": "docs/review/craft-03/scenarios-initial/knowledge-390-dark.png",
+          "sha256": "cf07b0335f49189fff46ecf5da6a00b9ecd13a127e25286374769dd436f3f2c3",
+          "pixelDimensions": [
+            350,
+            1268
+          ],
+          "actuallyOpenedWith": "view_image",
+          "visualInspectionCompleted": true,
+          "viewportWidth": 390,
+          "theme": "dark",
+          "initialDecision": "pass-visual",
+          "finding": "手機收藏操作維持並列，兩卡及閱讀區堆疊沒有裁切圖示；四個底部導覽項目均顯示。",
+          "themeObservation": "深底淺色線條的輪廓、內孔與次要色圖示仍可見。",
+          "issueIds": []
+        }
+      ]
+    },
+    {
+      "scenario": "mailbox",
+      "initialDecision": "retain",
+      "finalDecision": "pass-visual",
+      "sameRowWeightAndProportion": "mail-plus／search、message-text／check、RSS 的比例一致；reply／reply-all／forward 的箭頭與回彎有清楚差別。",
+      "mobileAndTextAdjacency": "手機撰寫按鈕完整，搜尋圖示與文字有間隔；三個回覆操作同排、編輯區和底部導覽沒有覆蓋。",
+      "evidence": [
+        {
+          "path": "docs/review/craft-03/scenarios-initial/mailbox-1280-light.png",
+          "sha256": "8001a8028db3e0f0577b3598650d4f6ad03c172e3cb7e907945e21bf601bb34f",
+          "pixelDimensions": [
+            1184,
+            662
+          ],
+          "actuallyOpenedWith": "view_image",
+          "visualInspectionCompleted": true,
+          "viewportWidth": 1280,
+          "theme": "light",
+          "initialDecision": "pass-visual",
+          "finding": "mail-plus／search、message-text／check、RSS 的比例一致；reply／reply-all／forward 的箭頭與回彎有清楚差別。",
+          "themeObservation": "白底深色線條的輪廓與內孔可見。",
+          "issueIds": []
+        },
+        {
+          "path": "docs/review/craft-03/scenarios-initial/mailbox-1280-dark.png",
+          "sha256": "42baa406d2c0829928677c03af40dd2a375a425ddd1861088c2c07ab4665687b",
+          "pixelDimensions": [
+            1184,
+            662
+          ],
+          "actuallyOpenedWith": "view_image",
+          "visualInspectionCompleted": true,
+          "viewportWidth": 1280,
+          "theme": "dark",
+          "initialDecision": "pass-visual",
+          "finding": "mail-plus／search、message-text／check、RSS 的比例一致；reply／reply-all／forward 的箭頭與回彎有清楚差別。",
+          "themeObservation": "深底淺色線條的輪廓、內孔與次要色圖示仍可見。",
+          "issueIds": []
+        },
+        {
+          "path": "docs/review/craft-03/scenarios-initial/mailbox-390-light.png",
+          "sha256": "d1f5f030231bfe8367092a6faab4c7383b1dca7a6bf5358fa58abae18a318590",
+          "pixelDimensions": [
+            350,
+            1009
+          ],
+          "actuallyOpenedWith": "view_image",
+          "visualInspectionCompleted": true,
+          "viewportWidth": 390,
+          "theme": "light",
+          "initialDecision": "pass-visual",
+          "finding": "手機撰寫按鈕完整，搜尋圖示與文字有間隔；三個回覆操作同排、編輯區和底部導覽沒有覆蓋。",
+          "themeObservation": "白底深色線條的輪廓與內孔可見。",
+          "issueIds": []
+        },
+        {
+          "path": "docs/review/craft-03/scenarios-initial/mailbox-390-dark.png",
+          "sha256": "b703ca03f7cc32001b517495f0b2d2b4d5542fd40bd4811935631ab8ba338b29",
+          "pixelDimensions": [
+            350,
+            1009
+          ],
+          "actuallyOpenedWith": "view_image",
+          "visualInspectionCompleted": true,
+          "viewportWidth": 390,
+          "theme": "dark",
+          "initialDecision": "pass-visual",
+          "finding": "手機撰寫按鈕完整，搜尋圖示與文字有間隔；三個回覆操作同排、編輯區和底部導覽沒有覆蓋。",
+          "themeObservation": "深底淺色線條的輪廓、內孔與次要色圖示仍可見。",
+          "issueIds": []
+        }
+      ]
+    },
+    {
+      "scenario": "media",
+      "initialDecision": "retain",
+      "finalDecision": "pass-visual",
+      "sameRowWeightAndProportion": "music、waveform、rewind／fast-forward、shuffle、repeat-one、subtitles、video-off、screen-share 與 volume-low 可識別；修後 shuffle／share 箭頭未露出多餘端帽。",
+      "mobileAndTextAdjacency": "手機播放工具排兩行、會議工具排兩行，全部圖示完整；低音量符號與音量滑桿清楚，底部導覽完整。",
+      "evidence": [
+        {
+          "path": "docs/review/craft-03/scenarios-initial/media-1280-light.png",
+          "sha256": "2900d26b94aa9b19a323f148230e0eb187fb3d9eb482725fb6abdae0a8a16a61",
+          "pixelDimensions": [
+            1184,
+            584
+          ],
+          "actuallyOpenedWith": "view_image",
+          "visualInspectionCompleted": true,
+          "viewportWidth": 1280,
+          "theme": "light",
+          "initialDecision": "pass-visual",
+          "finding": "music、waveform、rewind／fast-forward、shuffle、repeat-one、subtitles、video-off、screen-share 與 volume-low 可識別；修後 shuffle／share 箭頭未露出多餘端帽。",
+          "themeObservation": "白底深色線條的輪廓與內孔可見。",
+          "issueIds": []
+        },
+        {
+          "path": "docs/review/craft-03/scenarios-initial/media-1280-dark.png",
+          "sha256": "2f29bf0c1e6215f05a1d521421c826dc3d7e4c4dcb3d5a19c4e976c93eb2f6b7",
+          "pixelDimensions": [
+            1184,
+            584
+          ],
+          "actuallyOpenedWith": "view_image",
+          "visualInspectionCompleted": true,
+          "viewportWidth": 1280,
+          "theme": "dark",
+          "initialDecision": "pass-visual",
+          "finding": "music、waveform、rewind／fast-forward、shuffle、repeat-one、subtitles、video-off、screen-share 與 volume-low 可識別；修後 shuffle／share 箭頭未露出多餘端帽。",
+          "themeObservation": "深底淺色線條的輪廓、內孔與次要色圖示仍可見。",
+          "issueIds": []
+        },
+        {
+          "path": "docs/review/craft-03/scenarios-initial/media-390-light.png",
+          "sha256": "3b4ea389eb53073a71349765c81ee1de27a2218bf391980922f9bb9e03ce87ff",
+          "pixelDimensions": [
+            350,
+            946
+          ],
+          "actuallyOpenedWith": "view_image",
+          "visualInspectionCompleted": true,
+          "viewportWidth": 390,
+          "theme": "light",
+          "initialDecision": "pass-visual",
+          "finding": "手機播放工具排兩行、會議工具排兩行，全部圖示完整；低音量符號與音量滑桿清楚，底部導覽完整。",
+          "themeObservation": "白底深色線條的輪廓與內孔可見。",
+          "issueIds": []
+        },
+        {
+          "path": "docs/review/craft-03/scenarios-initial/media-390-dark.png",
+          "sha256": "8bcbfd48fe8bbedfb5e516f4bb26bef7d0177a1580a35f18c5abba30d0f4194a",
+          "pixelDimensions": [
+            350,
+            946
+          ],
+          "actuallyOpenedWith": "view_image",
+          "visualInspectionCompleted": true,
+          "viewportWidth": 390,
+          "theme": "dark",
+          "initialDecision": "pass-visual",
+          "finding": "手機播放工具排兩行、會議工具排兩行，全部圖示完整；低音量符號與音量滑桿清楚，底部導覽完整。",
+          "themeObservation": "深底淺色線條的輪廓、內孔與次要色圖示仍可見。",
+          "issueIds": []
+        }
+      ]
+    }
+  ],
+  "issues": [
+    {
+      "id": "scenario-table-mobile-actions",
+      "type": "responsive-ui-clipping",
+      "severity": "visible-operation-hidden",
+      "initialFinding": "At 390px in both themes, all three row more buttons were horizontally outside the visible order-table container. Only a narrow left border was visible and the ellipsis icon disappeared. Desktop was complete.",
+      "initialEvidence": [
+        {
+          "path": "docs/review/craft-03/scenarios-initial/table-390-light.png",
+          "sha256": "5f1bd78ad895ae2d1340899a9f7ff544c9d6f0890a2d331e4edeefb5bf66c0b7",
+          "pixelDimensions": [
+            350,
+            737
+          ],
+          "actuallyOpenedWith": "view_image",
+          "visualInspectionCompleted": true,
+          "viewportWidth": 390,
+          "theme": "light",
+          "initialDecision": "issue",
+          "finding": "初始手機三筆資料的右側 more 按鈕只露出左邊框，ellipsis 不可見；此為容器水平溢出，非圖稿缺陷。修後顧客姓名置於訂單號下，狀態、金額、完整操作鈕並存。",
+          "themeObservation": "白底深色線條的輪廓與內孔可見。",
+          "issueIds": [
+            "scenario-table-mobile-actions"
+          ]
+        },
+        {
+          "path": "docs/review/craft-03/scenarios-initial/table-390-dark.png",
+          "sha256": "c5e394ee7822eff43c4199c83e0743cee69aed3263a1c41e7b27209cbbc257ad",
+          "pixelDimensions": [
+            350,
+            737
+          ],
+          "actuallyOpenedWith": "view_image",
+          "visualInspectionCompleted": true,
+          "viewportWidth": 390,
+          "theme": "dark",
+          "initialDecision": "issue",
+          "finding": "初始手機三筆資料的右側 more 按鈕只露出左邊框，ellipsis 不可見；此為容器水平溢出，非圖稿缺陷。修後顧客姓名置於訂單號下，狀態、金額、完整操作鈕並存。",
+          "themeObservation": "深底淺色線條的輪廓、內孔與次要色圖示仍可見。",
+          "issueIds": [
+            "scenario-table-mobile-actions"
+          ]
+        }
+      ],
+      "rootChange": "On mobile only, moved customer name below order number; retained payment state, amount and complete actions without shrinking icons.",
+      "resolution": "independently-rechecked-pass",
+      "resolutionEvidence": [
+        {
+          "path": "docs/review/craft-03/scenarios-table-after/table-1280-light.png",
+          "sha256": "66080263d83a9eb231f59d7290217b61199fe7ae85ac574c697fc0123e39ce59",
+          "pixelDimensions": [
+            1184,
+            669
+          ],
+          "actuallyOpenedWith": "view_image",
+          "visualInspectionCompleted": true,
+          "viewportWidth": 1280,
+          "theme": "light",
+          "decision": "pass-visual",
+          "finding": "桌面顧客獨立欄、三列付款狀態、more 操作、分頁與工具列仍完整，沒有回歸。"
+        },
+        {
+          "path": "docs/review/craft-03/scenarios-table-after/table-1280-dark.png",
+          "sha256": "4a6a1b913ac47c28dc63bb1e38ae10a5e31d757887895767ecdeb994a2d7ed9c",
+          "pixelDimensions": [
+            1184,
+            669
+          ],
+          "actuallyOpenedWith": "view_image",
+          "visualInspectionCompleted": true,
+          "viewportWidth": 1280,
+          "theme": "dark",
+          "decision": "pass-visual",
+          "finding": "桌面顧客獨立欄、三列付款狀態、more 操作、分頁與工具列仍完整，沒有回歸。"
+        },
+        {
+          "path": "docs/review/craft-03/scenarios-table-after/table-390-light.png",
+          "sha256": "5a690ccce71a06f333c3f4878c4eb19e201cb7bec9471e03eb51fbfaad24274c",
+          "pixelDimensions": [
+            350,
+            737
+          ],
+          "actuallyOpenedWith": "view_image",
+          "visualInspectionCompleted": true,
+          "viewportWidth": 390,
+          "theme": "light",
+          "decision": "pass-visual",
+          "finding": "三筆訂單的 more 按鈕邊框與三個點完整位於可見容器；顧客姓名移至訂單號下，勾選、付款狀態、金額保持可讀，沒有縮小圖示。"
+        },
+        {
+          "path": "docs/review/craft-03/scenarios-table-after/table-390-dark.png",
+          "sha256": "8d0850edb4d23e225d255e7bbf1cdf7f93e38570fd7faf8986117bbc1b400526",
+          "pixelDimensions": [
+            350,
+            737
+          ],
+          "actuallyOpenedWith": "view_image",
+          "visualInspectionCompleted": true,
+          "viewportWidth": 390,
+          "theme": "dark",
+          "decision": "pass-visual",
+          "finding": "三筆訂單的 more 按鈕邊框與三個點完整位於可見容器；顧客姓名移至訂單號下，勾選、付款狀態、金額保持可讀，沒有縮小圖示。"
+        }
+      ]
+    }
+  ],
+  "currentEvidence": [
+    {
+      "path": "docs/review/ui-v1/scenarios/dashboard-1280-light.png",
+      "sha256": "898d244edd0f6aad6d7b6d9913e03293f00e6682658184578210abd498c62c17",
+      "verifiedAgainstViewedEvidence": "docs/review/craft-03/scenarios-initial/dashboard-1280-light.png"
+    },
+    {
+      "path": "docs/review/ui-v1/scenarios/dashboard-1280-dark.png",
+      "sha256": "2d4e775edaf2cb2a9ab776684fa6bb40d0cfab15fe9d9461a44b855d6cb07f1a",
+      "verifiedAgainstViewedEvidence": "docs/review/craft-03/scenarios-initial/dashboard-1280-dark.png"
+    },
+    {
+      "path": "docs/review/ui-v1/scenarios/dashboard-390-light.png",
+      "sha256": "a415642f7bfcb0f8bd7e1f0c2705138784172b72ca6a9e70571aba58554103e7",
+      "verifiedAgainstViewedEvidence": "docs/review/craft-03/scenarios-initial/dashboard-390-light.png"
+    },
+    {
+      "path": "docs/review/ui-v1/scenarios/dashboard-390-dark.png",
+      "sha256": "05c0203da2f4359dd3bc805c61d82fea6c781e199c2e24712de47951c7261213",
+      "verifiedAgainstViewedEvidence": "docs/review/craft-03/scenarios-initial/dashboard-390-dark.png"
+    },
+    {
+      "path": "docs/review/ui-v1/scenarios/table-1280-light.png",
+      "sha256": "66080263d83a9eb231f59d7290217b61199fe7ae85ac574c697fc0123e39ce59",
+      "verifiedAgainstViewedEvidence": "docs/review/craft-03/scenarios-table-after/table-1280-light.png"
+    },
+    {
+      "path": "docs/review/ui-v1/scenarios/table-1280-dark.png",
+      "sha256": "4a6a1b913ac47c28dc63bb1e38ae10a5e31d757887895767ecdeb994a2d7ed9c",
+      "verifiedAgainstViewedEvidence": "docs/review/craft-03/scenarios-table-after/table-1280-dark.png"
+    },
+    {
+      "path": "docs/review/ui-v1/scenarios/table-390-light.png",
+      "sha256": "5a690ccce71a06f333c3f4878c4eb19e201cb7bec9471e03eb51fbfaad24274c",
+      "verifiedAgainstViewedEvidence": "docs/review/craft-03/scenarios-table-after/table-390-light.png"
+    },
+    {
+      "path": "docs/review/ui-v1/scenarios/table-390-dark.png",
+      "sha256": "8d0850edb4d23e225d255e7bbf1cdf7f93e38570fd7faf8986117bbc1b400526",
+      "verifiedAgainstViewedEvidence": "docs/review/craft-03/scenarios-table-after/table-390-dark.png"
+    },
+    {
+      "path": "docs/review/ui-v1/scenarios/settings-1280-light.png",
+      "sha256": "011c10eac7a8b693c76979df623f94869f3242145420503b6e218f607b39d272",
+      "verifiedAgainstViewedEvidence": "docs/review/craft-03/scenarios-initial/settings-1280-light.png"
+    },
+    {
+      "path": "docs/review/ui-v1/scenarios/settings-1280-dark.png",
+      "sha256": "815e628e71542535fd939e6383aafd89dc4644712ad4e0357dd46aa61c993241",
+      "verifiedAgainstViewedEvidence": "docs/review/craft-03/scenarios-initial/settings-1280-dark.png"
+    },
+    {
+      "path": "docs/review/ui-v1/scenarios/settings-390-light.png",
+      "sha256": "918c835647ad84a5a20477ec9284c558d6c4ffd49155828432519d2a36c3cf93",
+      "verifiedAgainstViewedEvidence": "docs/review/craft-03/scenarios-initial/settings-390-light.png"
+    },
+    {
+      "path": "docs/review/ui-v1/scenarios/settings-390-dark.png",
+      "sha256": "08794ad401e8eb44a270481bd54bbdae11652349db43bc426257229d3687edf8",
+      "verifiedAgainstViewedEvidence": "docs/review/craft-03/scenarios-initial/settings-390-dark.png"
+    },
+    {
+      "path": "docs/review/ui-v1/scenarios/files-1280-light.png",
+      "sha256": "72dbba15a5e58565bda7733293b2e60c08c43e7e0e6a724a59fbfa8654cd4972",
+      "verifiedAgainstViewedEvidence": "docs/review/craft-03/scenarios-initial/files-1280-light.png"
+    },
+    {
+      "path": "docs/review/ui-v1/scenarios/files-1280-dark.png",
+      "sha256": "892fe8b525787bf1713fcacf2eff33bf195ff23a4ec00f0436487cc580c67497",
+      "verifiedAgainstViewedEvidence": "docs/review/craft-03/scenarios-initial/files-1280-dark.png"
+    },
+    {
+      "path": "docs/review/ui-v1/scenarios/files-390-light.png",
+      "sha256": "1d85bc7450c30399633b4fce0be295f818660530b08600e3dcf98a0bb1c2c8f3",
+      "verifiedAgainstViewedEvidence": "docs/review/craft-03/scenarios-initial/files-390-light.png"
+    },
+    {
+      "path": "docs/review/ui-v1/scenarios/files-390-dark.png",
+      "sha256": "6b68df47a78e68786413aac90d6b31565201151625d0889b704dab59a7f7ef24",
+      "verifiedAgainstViewedEvidence": "docs/review/craft-03/scenarios-initial/files-390-dark.png"
+    },
+    {
+      "path": "docs/review/ui-v1/scenarios/editor-1280-light.png",
+      "sha256": "992180e544ed3cb2032d2bdda3df4b99f426c5e5d9096256ed107483beb28a3c",
+      "verifiedAgainstViewedEvidence": "docs/review/craft-03/scenarios-initial/editor-1280-light.png"
+    },
+    {
+      "path": "docs/review/ui-v1/scenarios/editor-1280-dark.png",
+      "sha256": "b48f6f05724c548afaf8347fecf18a9219c253c346e853edd0dd10ed23b6616b",
+      "verifiedAgainstViewedEvidence": "docs/review/craft-03/scenarios-initial/editor-1280-dark.png"
+    },
+    {
+      "path": "docs/review/ui-v1/scenarios/editor-390-light.png",
+      "sha256": "5d3ad1633f45bc59109f37775b0aeae078758e135286e12fd7b8a3a5e9acb4e9",
+      "verifiedAgainstViewedEvidence": "docs/review/craft-03/scenarios-initial/editor-390-light.png"
+    },
+    {
+      "path": "docs/review/ui-v1/scenarios/editor-390-dark.png",
+      "sha256": "5bc466a3b0442edea06637a88190b6516f7478b044ed176a54b85aa38d190748",
+      "verifiedAgainstViewedEvidence": "docs/review/craft-03/scenarios-initial/editor-390-dark.png"
+    },
+    {
+      "path": "docs/review/ui-v1/scenarios/messages-1280-light.png",
+      "sha256": "edfc1a55e4e42f8f827cb11dcfdfec5f25e1b4e9a18d9930d198c0f370ac51bb",
+      "verifiedAgainstViewedEvidence": "docs/review/craft-03/scenarios-initial/messages-1280-light.png"
+    },
+    {
+      "path": "docs/review/ui-v1/scenarios/messages-1280-dark.png",
+      "sha256": "dedceb429208fe1bf22717d6dc3e7d279ceae3c8490365221220efb13ec22038",
+      "verifiedAgainstViewedEvidence": "docs/review/craft-03/scenarios-initial/messages-1280-dark.png"
+    },
+    {
+      "path": "docs/review/ui-v1/scenarios/messages-390-light.png",
+      "sha256": "f82d118313558f5b144ff643490db149f8f1a53853cd1a14528b8f180407abab",
+      "verifiedAgainstViewedEvidence": "docs/review/craft-03/scenarios-initial/messages-390-light.png"
+    },
+    {
+      "path": "docs/review/ui-v1/scenarios/messages-390-dark.png",
+      "sha256": "e50f5a7b60266485e2615e008299a543829296a146595ea5507ea192ff003380",
+      "verifiedAgainstViewedEvidence": "docs/review/craft-03/scenarios-initial/messages-390-dark.png"
+    },
+    {
+      "path": "docs/review/ui-v1/scenarios/orders-1280-light.png",
+      "sha256": "086421e09af27475c5e558c1042dc170e21f7322b3e3168e1a6fcc0883246991",
+      "verifiedAgainstViewedEvidence": "docs/review/craft-03/scenarios-initial/orders-1280-light.png"
+    },
+    {
+      "path": "docs/review/ui-v1/scenarios/orders-1280-dark.png",
+      "sha256": "615b643a93fbf22a37678f7e7464d70029c8ab020e97b94d31b12adb547fd2ea",
+      "verifiedAgainstViewedEvidence": "docs/review/craft-03/scenarios-initial/orders-1280-dark.png"
+    },
+    {
+      "path": "docs/review/ui-v1/scenarios/orders-390-light.png",
+      "sha256": "e3e5891b47fa4b4c1dbdf9327a097a2e22f7105da7e2a65a81480a9f662b7be4",
+      "verifiedAgainstViewedEvidence": "docs/review/craft-03/scenarios-initial/orders-390-light.png"
+    },
+    {
+      "path": "docs/review/ui-v1/scenarios/orders-390-dark.png",
+      "sha256": "58cfa155be67286fe47c55c70db9c8d390d98b0acb49b23a550be85b5fa6999e",
+      "verifiedAgainstViewedEvidence": "docs/review/craft-03/scenarios-initial/orders-390-dark.png"
+    },
+    {
+      "path": "docs/review/ui-v1/scenarios/billing-1280-light.png",
+      "sha256": "2ef5dab59f1f33ace475dbf22e3bfcd6e8c340972bb0ff3146f4e93cf2601bd7",
+      "verifiedAgainstViewedEvidence": "docs/review/craft-03/scenarios-initial/billing-1280-light.png"
+    },
+    {
+      "path": "docs/review/ui-v1/scenarios/billing-1280-dark.png",
+      "sha256": "ce15638a53865ac9eb79e3ed09cbc1a8bffa77b5487adf40e50bf9bd8e1a6596",
+      "verifiedAgainstViewedEvidence": "docs/review/craft-03/scenarios-initial/billing-1280-dark.png"
+    },
+    {
+      "path": "docs/review/ui-v1/scenarios/billing-390-light.png",
+      "sha256": "ac519f3fa3bba54da84f35a43afd3f4fbab28f32eae682c1acdc23df7118179f",
+      "verifiedAgainstViewedEvidence": "docs/review/craft-03/scenarios-initial/billing-390-light.png"
+    },
+    {
+      "path": "docs/review/ui-v1/scenarios/billing-390-dark.png",
+      "sha256": "cda1a8a538a121518dfb86300727299cbdc62d48a79d16407c26d123fa152942",
+      "verifiedAgainstViewedEvidence": "docs/review/craft-03/scenarios-initial/billing-390-dark.png"
+    },
+    {
+      "path": "docs/review/ui-v1/scenarios/team-1280-light.png",
+      "sha256": "f17e293ecbf3af324f5f4d0777a310cb55c13b9d18901d2c4449687b8f3d5527",
+      "verifiedAgainstViewedEvidence": "docs/review/craft-03/scenarios-initial/team-1280-light.png"
+    },
+    {
+      "path": "docs/review/ui-v1/scenarios/team-1280-dark.png",
+      "sha256": "248845a0f07f8a0836e13d204d5f6371e2bba699d904fc0bd66d59906eca9e3a",
+      "verifiedAgainstViewedEvidence": "docs/review/craft-03/scenarios-initial/team-1280-dark.png"
+    },
+    {
+      "path": "docs/review/ui-v1/scenarios/team-390-light.png",
+      "sha256": "41014f35fe915999dd4f956cebcad912ed1589e68b9a43a05371bf7b5ab08ef1",
+      "verifiedAgainstViewedEvidence": "docs/review/craft-03/scenarios-initial/team-390-light.png"
+    },
+    {
+      "path": "docs/review/ui-v1/scenarios/team-390-dark.png",
+      "sha256": "bc6a1faa6b42797d332595afb429e47a1b49740be0e2c6fd305b0f4f60b550d8",
+      "verifiedAgainstViewedEvidence": "docs/review/craft-03/scenarios-initial/team-390-dark.png"
+    },
+    {
+      "path": "docs/review/ui-v1/scenarios/organization-1280-light.png",
+      "sha256": "9ba7888080409cee7f0a241826148a69bfeec5f302ba7dddf7b464e4d3c9980b",
+      "verifiedAgainstViewedEvidence": "docs/review/craft-03/scenarios-initial/organization-1280-light.png"
+    },
+    {
+      "path": "docs/review/ui-v1/scenarios/organization-1280-dark.png",
+      "sha256": "4684ca1b0ff82241e918981ff73f865dd5728baff37fbfe643246b583a88fd80",
+      "verifiedAgainstViewedEvidence": "docs/review/craft-03/scenarios-initial/organization-1280-dark.png"
+    },
+    {
+      "path": "docs/review/ui-v1/scenarios/organization-390-light.png",
+      "sha256": "f3fd0812534a7a3d74b687869ad9a4a52e854fabcc0683f14228415aee135027",
+      "verifiedAgainstViewedEvidence": "docs/review/craft-03/scenarios-initial/organization-390-light.png"
+    },
+    {
+      "path": "docs/review/ui-v1/scenarios/organization-390-dark.png",
+      "sha256": "c87199b0c4b8974826446c02a748e8c0fe038adc8c88052bceeadc7c7cba0280",
+      "verifiedAgainstViewedEvidence": "docs/review/craft-03/scenarios-initial/organization-390-dark.png"
+    },
+    {
+      "path": "docs/review/ui-v1/scenarios/schedule-1280-light.png",
+      "sha256": "3b8d3143432e5ff2ff6eec1e7a5333fa20a65e507d94b5d69aa673304201ac57",
+      "verifiedAgainstViewedEvidence": "docs/review/craft-03/scenarios-initial/schedule-1280-light.png"
+    },
+    {
+      "path": "docs/review/ui-v1/scenarios/schedule-1280-dark.png",
+      "sha256": "0d179f788a0e7a28cd439f91e35bea38cd24c506af3cd5a0b1521997c30632e6",
+      "verifiedAgainstViewedEvidence": "docs/review/craft-03/scenarios-initial/schedule-1280-dark.png"
+    },
+    {
+      "path": "docs/review/ui-v1/scenarios/schedule-390-light.png",
+      "sha256": "b91f1110b583d85a0d619a365138ea9c0520a0c20d9f76e6a10522277bdbb171",
+      "verifiedAgainstViewedEvidence": "docs/review/craft-03/scenarios-initial/schedule-390-light.png"
+    },
+    {
+      "path": "docs/review/ui-v1/scenarios/schedule-390-dark.png",
+      "sha256": "aebc7299c2cfbf7cf83c10c88c51226b41a4560587f980ea901e65b04bf2ed4b",
+      "verifiedAgainstViewedEvidence": "docs/review/craft-03/scenarios-initial/schedule-390-dark.png"
+    },
+    {
+      "path": "docs/review/ui-v1/scenarios/devices-1280-light.png",
+      "sha256": "cb47dc38768fccfc083b07fd4c95098347fefef888a962118f0583856170a110",
+      "verifiedAgainstViewedEvidence": "docs/review/craft-03/scenarios-initial/devices-1280-light.png"
+    },
+    {
+      "path": "docs/review/ui-v1/scenarios/devices-1280-dark.png",
+      "sha256": "1c9070f987a3c8754704901481965f54337b1ee59a45909d65db8daa80d17a98",
+      "verifiedAgainstViewedEvidence": "docs/review/craft-03/scenarios-initial/devices-1280-dark.png"
+    },
+    {
+      "path": "docs/review/ui-v1/scenarios/devices-390-light.png",
+      "sha256": "3a1eafa0c399d99505155e286caa3eca74c8e5f9b10b7564c8b0dec3c34ec9c8",
+      "verifiedAgainstViewedEvidence": "docs/review/craft-03/scenarios-initial/devices-390-light.png"
+    },
+    {
+      "path": "docs/review/ui-v1/scenarios/devices-390-dark.png",
+      "sha256": "4b7f3cccef8a850564fdf42d8ef87a5d2eb8c10435359fbd35c40f7be18a5cb2",
+      "verifiedAgainstViewedEvidence": "docs/review/craft-03/scenarios-initial/devices-390-dark.png"
+    },
+    {
+      "path": "docs/review/ui-v1/scenarios/integrations-1280-light.png",
+      "sha256": "6bd93a28caf50b11aeaa105e5c58fb92a929c910a407ce297c7d67fd48a9b4fe",
+      "verifiedAgainstViewedEvidence": "docs/review/craft-03/scenarios-initial/integrations-1280-light.png"
+    },
+    {
+      "path": "docs/review/ui-v1/scenarios/integrations-1280-dark.png",
+      "sha256": "6250527498805aecf25cf48d775da24c3d8d8545738bb531d45b8542010727a2",
+      "verifiedAgainstViewedEvidence": "docs/review/craft-03/scenarios-initial/integrations-1280-dark.png"
+    },
+    {
+      "path": "docs/review/ui-v1/scenarios/integrations-390-light.png",
+      "sha256": "8b0ffcd46e0778d5257f2a65e4b0a4ae7a7bccf85e33f3014dc58ad16bfb7f2a",
+      "verifiedAgainstViewedEvidence": "docs/review/craft-03/scenarios-initial/integrations-390-light.png"
+    },
+    {
+      "path": "docs/review/ui-v1/scenarios/integrations-390-dark.png",
+      "sha256": "6f53a8b62f1ca0fabfa78b1c7000e6b9c720108618dcd007d4e8904386175b2e",
+      "verifiedAgainstViewedEvidence": "docs/review/craft-03/scenarios-initial/integrations-390-dark.png"
+    },
+    {
+      "path": "docs/review/ui-v1/scenarios/workspace-tools-1280-light.png",
+      "sha256": "f59210a2b8717eb212f2a973e3bf9f58dc5b2a10650f9a4fdabb9c0542320a01",
+      "verifiedAgainstViewedEvidence": "docs/review/craft-03/scenarios-initial/workspace-tools-1280-light.png"
+    },
+    {
+      "path": "docs/review/ui-v1/scenarios/workspace-tools-1280-dark.png",
+      "sha256": "0b30996bf6c5552f28bb2859cfded6f57cefc6278b9161d0013c2d8db0b487a1",
+      "verifiedAgainstViewedEvidence": "docs/review/craft-03/scenarios-initial/workspace-tools-1280-dark.png"
+    },
+    {
+      "path": "docs/review/ui-v1/scenarios/workspace-tools-390-light.png",
+      "sha256": "479dc104136afd26a7d9f2e462504ce94f834775bffd55ce84452834577cd706",
+      "verifiedAgainstViewedEvidence": "docs/review/craft-03/scenarios-initial/workspace-tools-390-light.png"
+    },
+    {
+      "path": "docs/review/ui-v1/scenarios/workspace-tools-390-dark.png",
+      "sha256": "d6492974f4dde067971b2fd2ab4fa2edbf23aec7ccdfb7e7adbb41a04ca7b0e4",
+      "verifiedAgainstViewedEvidence": "docs/review/craft-03/scenarios-initial/workspace-tools-390-dark.png"
+    },
+    {
+      "path": "docs/review/ui-v1/scenarios/canvas-1280-light.png",
+      "sha256": "656af347323ce089f498411ed9d8f2cb9afd80955cb0492c367d1d82b0f5f3cb",
+      "verifiedAgainstViewedEvidence": "docs/review/craft-03/scenarios-initial/canvas-1280-light.png"
+    },
+    {
+      "path": "docs/review/ui-v1/scenarios/canvas-1280-dark.png",
+      "sha256": "2f651ef386d00e42403b27b5c0b5cf73c319ebdf11d278a38cf4568cd174ae63",
+      "verifiedAgainstViewedEvidence": "docs/review/craft-03/scenarios-initial/canvas-1280-dark.png"
+    },
+    {
+      "path": "docs/review/ui-v1/scenarios/canvas-390-light.png",
+      "sha256": "97dce97ebc92c7098665bebd519b0db449cd77f4b3167dfb4d2b3aa029362d4d",
+      "verifiedAgainstViewedEvidence": "docs/review/craft-03/scenarios-initial/canvas-390-light.png"
+    },
+    {
+      "path": "docs/review/ui-v1/scenarios/canvas-390-dark.png",
+      "sha256": "17cc08c435fcbe59d45d581e0df8e83505fdc9e7d3032df67e6419f8c5ebce55",
+      "verifiedAgainstViewedEvidence": "docs/review/craft-03/scenarios-initial/canvas-390-dark.png"
+    },
+    {
+      "path": "docs/review/ui-v1/scenarios/data-studio-1280-light.png",
+      "sha256": "d80cb9e74056bf8ebcbbacef350fd4dc486d678efc420b8e332e12cb3d85b663",
+      "verifiedAgainstViewedEvidence": "docs/review/craft-03/scenarios-initial/data-studio-1280-light.png"
+    },
+    {
+      "path": "docs/review/ui-v1/scenarios/data-studio-1280-dark.png",
+      "sha256": "798ab0d0c6560bb8299d9eb3b19c59eaab4cf2bba9281b1947739f91ef09e4f8",
+      "verifiedAgainstViewedEvidence": "docs/review/craft-03/scenarios-initial/data-studio-1280-dark.png"
+    },
+    {
+      "path": "docs/review/ui-v1/scenarios/data-studio-390-light.png",
+      "sha256": "fb29788336f4dcec7a320474eaa568d82aa5f48c6b9cf4caceb2949ae1d6dd9c",
+      "verifiedAgainstViewedEvidence": "docs/review/craft-03/scenarios-initial/data-studio-390-light.png"
+    },
+    {
+      "path": "docs/review/ui-v1/scenarios/data-studio-390-dark.png",
+      "sha256": "b6112e3a2f10dcfe55e9cb4a3ace7288d92bff3780c4b27c6c000216c74283d1",
+      "verifiedAgainstViewedEvidence": "docs/review/craft-03/scenarios-initial/data-studio-390-dark.png"
+    },
+    {
+      "path": "docs/review/ui-v1/scenarios/developer-1280-light.png",
+      "sha256": "865fa45cf88f732341fa5edbc39e2c8b81a3c83e6b9c24bbaa958545c9b7cb77",
+      "verifiedAgainstViewedEvidence": "docs/review/craft-03/scenarios-initial/developer-1280-light.png"
+    },
+    {
+      "path": "docs/review/ui-v1/scenarios/developer-1280-dark.png",
+      "sha256": "c8f82857065a0da0a36e7454c32d7090e9c33bcf95919166fb7270617868f4b9",
+      "verifiedAgainstViewedEvidence": "docs/review/craft-03/scenarios-initial/developer-1280-dark.png"
+    },
+    {
+      "path": "docs/review/ui-v1/scenarios/developer-390-light.png",
+      "sha256": "21861faf29816eeb290105a7fa954f774c8183cc613fe93623167ffdd19bcc09",
+      "verifiedAgainstViewedEvidence": "docs/review/craft-03/scenarios-initial/developer-390-light.png"
+    },
+    {
+      "path": "docs/review/ui-v1/scenarios/developer-390-dark.png",
+      "sha256": "9fd66b406e516f67cccb88517d5282b526aa72e89c1c47e0a46ddb65be4420b0",
+      "verifiedAgainstViewedEvidence": "docs/review/craft-03/scenarios-initial/developer-390-dark.png"
+    },
+    {
+      "path": "docs/review/ui-v1/scenarios/fulfillment-1280-light.png",
+      "sha256": "fdd30aca3185247d0e34905299234c5bc8f2c2197135baf8dd39ca828e364fa2",
+      "verifiedAgainstViewedEvidence": "docs/review/craft-03/scenarios-initial/fulfillment-1280-light.png"
+    },
+    {
+      "path": "docs/review/ui-v1/scenarios/fulfillment-1280-dark.png",
+      "sha256": "b230f7ab037d408b48179a92978be1b895762d624ed81125e0743871faceb8aa",
+      "verifiedAgainstViewedEvidence": "docs/review/craft-03/scenarios-initial/fulfillment-1280-dark.png"
+    },
+    {
+      "path": "docs/review/ui-v1/scenarios/fulfillment-390-light.png",
+      "sha256": "644ff6fb54430c7222f9465a1ab036c544ba0ccfb35c936476cfecf92005b7df",
+      "verifiedAgainstViewedEvidence": "docs/review/craft-03/scenarios-initial/fulfillment-390-light.png"
+    },
+    {
+      "path": "docs/review/ui-v1/scenarios/fulfillment-390-dark.png",
+      "sha256": "91775c5be679fb92eb24d44b697e62af5ff436cda0311dd3fcd42c9baedb0aff",
+      "verifiedAgainstViewedEvidence": "docs/review/craft-03/scenarios-initial/fulfillment-390-dark.png"
+    },
+    {
+      "path": "docs/review/ui-v1/scenarios/knowledge-1280-light.png",
+      "sha256": "6989907950a7f3f58e03378fa0fc31672d0c01e5370f404ca7f38d34c2781a3e",
+      "verifiedAgainstViewedEvidence": "docs/review/craft-03/scenarios-initial/knowledge-1280-light.png"
+    },
+    {
+      "path": "docs/review/ui-v1/scenarios/knowledge-1280-dark.png",
+      "sha256": "48a5a304b5214cffc5ccb7ef291c86f7c41c22a64d4b6a5b2a918cbd6afc230f",
+      "verifiedAgainstViewedEvidence": "docs/review/craft-03/scenarios-initial/knowledge-1280-dark.png"
+    },
+    {
+      "path": "docs/review/ui-v1/scenarios/knowledge-390-light.png",
+      "sha256": "b952ec6908640eb11b1a5a5a1e6dbdf05294583b4e55d65e832f1a6e672c524f",
+      "verifiedAgainstViewedEvidence": "docs/review/craft-03/scenarios-initial/knowledge-390-light.png"
+    },
+    {
+      "path": "docs/review/ui-v1/scenarios/knowledge-390-dark.png",
+      "sha256": "cf07b0335f49189fff46ecf5da6a00b9ecd13a127e25286374769dd436f3f2c3",
+      "verifiedAgainstViewedEvidence": "docs/review/craft-03/scenarios-initial/knowledge-390-dark.png"
+    },
+    {
+      "path": "docs/review/ui-v1/scenarios/mailbox-1280-light.png",
+      "sha256": "8001a8028db3e0f0577b3598650d4f6ad03c172e3cb7e907945e21bf601bb34f",
+      "verifiedAgainstViewedEvidence": "docs/review/craft-03/scenarios-initial/mailbox-1280-light.png"
+    },
+    {
+      "path": "docs/review/ui-v1/scenarios/mailbox-1280-dark.png",
+      "sha256": "42baa406d2c0829928677c03af40dd2a375a425ddd1861088c2c07ab4665687b",
+      "verifiedAgainstViewedEvidence": "docs/review/craft-03/scenarios-initial/mailbox-1280-dark.png"
+    },
+    {
+      "path": "docs/review/ui-v1/scenarios/mailbox-390-light.png",
+      "sha256": "d1f5f030231bfe8367092a6faab4c7383b1dca7a6bf5358fa58abae18a318590",
+      "verifiedAgainstViewedEvidence": "docs/review/craft-03/scenarios-initial/mailbox-390-light.png"
+    },
+    {
+      "path": "docs/review/ui-v1/scenarios/mailbox-390-dark.png",
+      "sha256": "b703ca03f7cc32001b517495f0b2d2b4d5542fd40bd4811935631ab8ba338b29",
+      "verifiedAgainstViewedEvidence": "docs/review/craft-03/scenarios-initial/mailbox-390-dark.png"
+    },
+    {
+      "path": "docs/review/ui-v1/scenarios/media-1280-light.png",
+      "sha256": "2900d26b94aa9b19a323f148230e0eb187fb3d9eb482725fb6abdae0a8a16a61",
+      "verifiedAgainstViewedEvidence": "docs/review/craft-03/scenarios-initial/media-1280-light.png"
+    },
+    {
+      "path": "docs/review/ui-v1/scenarios/media-1280-dark.png",
+      "sha256": "2f29bf0c1e6215f05a1d521421c826dc3d7e4c4dcb3d5a19c4e976c93eb2f6b7",
+      "verifiedAgainstViewedEvidence": "docs/review/craft-03/scenarios-initial/media-1280-dark.png"
+    },
+    {
+      "path": "docs/review/ui-v1/scenarios/media-390-light.png",
+      "sha256": "3b4ea389eb53073a71349765c81ee1de27a2218bf391980922f9bb9e03ce87ff",
+      "verifiedAgainstViewedEvidence": "docs/review/craft-03/scenarios-initial/media-390-light.png"
+    },
+    {
+      "path": "docs/review/ui-v1/scenarios/media-390-dark.png",
+      "sha256": "8bcbfd48fe8bbedfb5e516f4bb26bef7d0177a1580a35f18c5abba30d0f4194a",
+      "verifiedAgainstViewedEvidence": "docs/review/craft-03/scenarios-initial/media-390-dark.png"
+    }
+  ]
+}

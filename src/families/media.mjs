@@ -1,3 +1,4 @@
+import { knockout } from '../occlusion.mjs';
 import { figure } from "./shared.mjs";
 function speaker(g) {
   return [figure(g).contour([[3, 9], [7, 9], [12, 4.5], [12, 19.5], [7, 15], [3, 15]], true, Math.min(g.r, 0.6))];
@@ -31,7 +32,7 @@ const media = {
   },
   "microphone-off": (g) => {
     const f = figure(g);
-    return [f.path("M10 3.4A3.5 3.5 0 0 1 15.5 6.5V10"), ...g.s === 16 ? [] : [f.path("M8.5 10V10.5Q8.5 13 10.5 13.7")], f.path("M5.5 10.5V12.5C5.5 17 10 20 14.5 18.5M18.5 10.5V13.5"), f.line(12, 19, 12, 22), f.line(3, 3, 21, 21)];
+    return knockout(media.microphone(g),[f.line(3,3,21,21)],g);
   },
   headphones,
   image: (g) => {

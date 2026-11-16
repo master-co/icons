@@ -1,3 +1,4 @@
+import { knockout } from '../occlusion.mjs';
 import { coreDrawings } from "./core.mjs";
 import { figure } from "./shared.mjs";
 function alignment(g, kind) {
@@ -47,7 +48,7 @@ const editor = {
   },
   strikethrough: (g) => {
     const f = figure(g);
-    return [f.path("M17 5H11C7 5 5.5 7.5 7.5 9.5M16.5 14.5C19.5 17.5 16 20 12.5 20H6.5"), f.line(3.5, 12, 20.5, 12)];
+    return knockout([f.path("M17 5H11C7 5 5.5 7.5 7.5 9.5C9.5 11.5 14.5 12.5 16.5 14.5C19.5 17.5 16 20 12.5 20H6.5")], [f.line(3.5, 12, 20.5, 12)], g);
   },
   heading: (g) => {
     const f = figure(g);

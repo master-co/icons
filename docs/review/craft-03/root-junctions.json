@@ -1,0 +1,374 @@
+{
+  "date": "2026-11-16",
+  "records": [
+    {
+      "name": "package",
+      "concept": "package",
+      "purpose": "常見商務：包裹",
+      "recognitionCues": "16px 移除膠帶線，三個面仍清楚",
+      "confusableWith": [
+        "archive"
+      ],
+      "sourceObservation": "固定對照：Lucide/package（exact）、Tabler/package（exact）。兩稿均用等角箱體及封箱線 本輪依兩稿及 Master 並列重新檢查構造、輪廓密度與端點；立方體三條邊相交是包裝構造，16px減一細節仍明確。 Lucide與Tabler的箱體內線貼住外輪廓；Master的構造比例可保留，但接角外伸不是必要特徵，須修正。",
+      "references": [
+        {
+          "name": "package",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/package.svg",
+          "localPath": "references/ui-v1/lucide-package.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/package.svg",
+          "sha256": "69d6bc7650d26c4d24dd55eb22791607b982ce7637073944c256f1f61575509d",
+          "license": "ISC AND MIT",
+          "sourceName": "package",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "package",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/package.svg",
+          "localPath": "references/ui-v1/tabler-package.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/package.svg",
+          "sha256": "b489f941e44e8208631608bdcd0ec89d252455ada2f29cf0318fa14abfb86c69",
+          "license": "MIT",
+          "sourceName": "package",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "不採用；「包裹」由連續輪廓、節點或實際斷開關係表意，沒有需虛線表示的隱藏／未完成邊界。",
+          "review": "本輪確認不增加虛線，辨識所需的主輪廓與實際斷口已成立：立方體三條邊相交是包裝構造，16px減一細節仍明確。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "不採用；「包裹」的必要輪廓與狀態可以靠形狀、留白表達，淡化不提供額外語意。",
+          "review": "本輪確認不增加淡化，主體與狀態由形狀和真透明留白表達；未使用連續漸層、mask或白色覆蓋。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "本期僅允許逐筆透明度，未引入連續漸層或 mask。"
+        }
+      },
+      "change": {
+        "kind": "modified",
+        "reason": "修改後通過目視檢查：外框倒角已離開原始頂點，原內線端帽卻仍伸到頂點外；將內分界的實際墨跡限制在封閉箱體內部，保留原外輪廓，消除sharp與rounded的接角凸釘。這是結構相接，不是徽標淨空。",
+        "before": {
+          "path": "references/craft-03/master-before.json",
+          "variantsSha256": "602ef95173d2fc6371d6dd10a3b0c9143713a3fbdcf8e1bf127529e4a622c3dd"
+        }
+      },
+      "visualReview": {
+        "status": "modified-after-visual-review",
+        "reviewer": "root; independently confirmed by craft_v051_audit",
+        "date": "2026-11-16",
+        "batch": "expansion-junctions",
+        "variantsSha256": "b711c7f82538c1f37420550a7210ee9613cfc8caef166aa081982d5ce168e1ea",
+        "checks": [
+          "16/20/24",
+          "sharp/soft/rounded",
+          "light/dark",
+          "55-percent-foreground",
+          "adjacent-text",
+          "pinned-original-sources",
+          "before-current",
+          "chromium-dpr1-source-and-native",
+          "chromium-dpr2-native",
+          "foreground-offset-contour",
+          "structural-junction-versus-occlusion",
+          "repeated-silhouette-width"
+        ],
+        "evidence": [
+          {
+            "path": "docs/review/expansion-01/junctions/after/comparison.png",
+            "sha256": "40f282972a99a42c73c5ba1a26334e44fba3a6cd0810e5cc28e7071f81018bc5"
+          },
+          {
+            "path": "docs/review/expansion-01/junctions/after/comparison-dark.png",
+            "sha256": "8df0a2e8cee360e068dbf2df29a1ef32a3a31812ae478d4d6edc609f8e0e6c46"
+          },
+          {
+            "path": "docs/review/expansion-01/junctions/after/native.png",
+            "sha256": "6f4cc48044129389f0bd8ce571d0d3c14faab6fc4fc3cc5875daabd6281a643e"
+          },
+          {
+            "path": "docs/review/expansion-01/junctions/after/native-dark.png",
+            "sha256": "27e78d7620813d091a06414ad25b487ed1cdc1d54efcbcac3f02ea95e4a0dd90"
+          }
+        ]
+      },
+      "status": "visually-reviewed-candidate",
+      "userApproval": "pending",
+      "independentReview": {
+        "reviewer": "craft_v051_audit subagent",
+        "skillVersion": "0.5.1",
+        "date": "2026-11-16",
+        "observation": "立方體三條邊相交是包裝構造，16px減一細節仍明確。",
+        "sourceObservation": "固定對照：Lucide/package（exact）、Tabler/package（exact）。兩稿均用等角箱體及封箱線 本輪依兩稿及 Master 並列重新檢查構造、輪廓密度與端點；立方體三條邊相交是包裝構造，16px減一細節仍明確。",
+        "evidence": [
+          {
+            "path": "docs/review/craft-03/initial/batch-20-light.png",
+            "sha256": "7c2b982d8208fc5abc74b51d01c707996a79d4b4081eada94d081bbd9bc701fd"
+          },
+          {
+            "path": "docs/review/craft-03/initial/batch-20-dark.png",
+            "sha256": "f49e0ff6b3bebcdb0d4d7e75ca1256fd28e38d409ba7f94300186ed4817630f3"
+          },
+          {
+            "path": "docs/review/craft-03/final/batch-20-native-light.png",
+            "sha256": "0000e03d802b7751b776df7464d56826c64e1e7704aa6d6e8626a8dbd0b9bc5b"
+          },
+          {
+            "path": "docs/review/craft-03/final/batch-20-native-dark.png",
+            "sha256": "92c5fd770317a3a79442db173733ef4607724b8bede1f09fe73971ccd10d896d"
+          }
+        ]
+      },
+      "beforeHash": "602ef95173d2fc6371d6dd10a3b0c9143713a3fbdcf8e1bf127529e4a622c3dd",
+      "afterHash": "602ef95173d2fc6371d6dd10a3b0c9143713a3fbdcf8e1bf127529e4a622c3dd",
+      "reviewHistory": [
+        {
+          "stage": "independent-craft-03",
+          "change": {
+            "kind": "retained",
+            "reason": "保留原稿：立方體三條邊相交是包裝構造，16px減一細節仍明確。",
+            "before": {
+              "path": "references/craft-03/master-before.json",
+              "variantsSha256": "602ef95173d2fc6371d6dd10a3b0c9143713a3fbdcf8e1bf127529e4a622c3dd"
+            }
+          },
+          "visualReview": {
+            "status": "retained-after-visual-review",
+            "reviewer": "craft_v051_audit subagent",
+            "date": "2026-11-16",
+            "batch": "craft3-batch-20",
+            "variantsSha256": "602ef95173d2fc6371d6dd10a3b0c9143713a3fbdcf8e1bf127529e4a622c3dd",
+            "checks": [
+              "16/20/24",
+              "sharp/soft/rounded",
+              "light/dark",
+              "55-percent-foreground",
+              "adjacent-text",
+              "pinned-original-sources",
+              "before-current",
+              "chromium-dpr1-source-and-native",
+              "chromium-dpr2-native",
+              "foreground-offset-contour",
+              "structural-junction-versus-occlusion",
+              "repeated-silhouette-width"
+            ],
+            "evidence": [
+              {
+                "path": "docs/review/craft-03/initial/batch-20-light.png",
+                "sha256": "7c2b982d8208fc5abc74b51d01c707996a79d4b4081eada94d081bbd9bc701fd"
+              },
+              {
+                "path": "docs/review/craft-03/initial/batch-20-dark.png",
+                "sha256": "f49e0ff6b3bebcdb0d4d7e75ca1256fd28e38d409ba7f94300186ed4817630f3"
+              },
+              {
+                "path": "docs/review/craft-03/final/batch-20-native-light.png",
+                "sha256": "0000e03d802b7751b776df7464d56826c64e1e7704aa6d6e8626a8dbd0b9bc5b"
+              },
+              {
+                "path": "docs/review/craft-03/final/batch-20-native-dark.png",
+                "sha256": "92c5fd770317a3a79442db173733ef4607724b8bede1f09fe73971ccd10d896d"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "hard-drive",
+      "concept": "hard-drive",
+      "purpose": "本地儲存空間與磁碟。",
+      "recognitionCues": "上殼接面板，16px只留一點，20／24兩點；面板上緣無重複描邊。",
+      "confusableWith": [
+        "server"
+      ],
+      "sourceObservation": "固定對照：Lucide/hard-drive（exact）、Iconoir/hard-drive（exact）。Lucide與Iconoir採梯形上殼與前面板；面板指示點可簡化。 本輪依兩稿及 Master 並列重新檢查構造、輪廓密度與端點；硬碟頂面斜角與底面分割一致，16px減指示點。 Lucide與Iconoir均讓斜頂及前面板構成連續機殼；Master改成共同外殼，保留自己的斜率與尺寸。",
+      "references": [
+        {
+          "name": "hard-drive",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/hard-drive.svg",
+          "localPath": "references/productivity-01/lucide-hard-drive.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/hard-drive.svg",
+          "sha256": "324363c40f54e4ca843de0ad1d023b063b70a26a83bb2e0a9e9f4aad9af37378",
+          "license": "ISC AND MIT",
+          "sourceName": "hard-drive",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "hard-drive",
+          "library": "Iconoir",
+          "repository": "iconoir-icons/iconoir",
+          "commit": "39834e3f193bc0cca2c36bebb6a650471977433d",
+          "path": "icons/regular/hard-drive.svg",
+          "localPath": "references/productivity-01/iconoir-hard-drive.svg",
+          "url": "https://github.com/iconoir-icons/iconoir/blob/39834e3f193bc0cca2c36bebb6a650471977433d/icons/regular/hard-drive.svg",
+          "sha256": "8f36d3c06fb199bf62a898f040225005077cbe1ffa88da7f919ad75d4c1cac83",
+          "license": "MIT",
+          "sourceName": "hard-drive",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "不採用；「硬碟」由連續輪廓、節點或實際斷開關係表意，沒有需虛線表示的隱藏／未完成邊界。",
+          "review": "本輪確認不增加虛線，辨識所需的主輪廓與實際斷口已成立：硬碟頂面斜角與底面分割一致，16px減指示點。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "不採用；「硬碟」的必要輪廓與狀態可以靠形狀、留白表達，淡化不提供額外語意。",
+          "review": "本輪確認不增加淡化，主體與狀態由形狀和真透明留白表達；未使用連續漸層、mask或白色覆蓋。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "本批不需要連續漸層，亦不新增gradient、mask或公開效果參數。"
+        }
+      },
+      "change": {
+        "kind": "modified",
+        "reason": "修改後通過目視檢查：斜頂輪廓與獨立前面板框在接角產生凸耳，rounded尤其明顯；改用共同外殼，面板分界墨跡止於外殼內側。斜頂、前面板與指示燈仍保留，16px沿用一燈。",
+        "before": {
+          "path": "references/craft-03/master-before.json",
+          "variantsSha256": "218001e375e62d5770234f05ab010aa87bdd2ea8b210cc217991131449271967"
+        }
+      },
+      "visualReview": {
+        "status": "modified-after-visual-review",
+        "reviewer": "root; independently confirmed by craft_v051_audit",
+        "date": "2026-11-16",
+        "batch": "expansion-junctions",
+        "variantsSha256": "5a19b0c13d39ad441a9d4b8be8d72aba82f0f2664c0edeff7dc5c0e7f63fca20",
+        "checks": [
+          "16/20/24",
+          "sharp/soft/rounded",
+          "light/dark",
+          "55-percent-foreground",
+          "adjacent-text",
+          "pinned-original-sources",
+          "before-current",
+          "chromium-dpr1-source-and-native",
+          "chromium-dpr2-native",
+          "foreground-offset-contour",
+          "structural-junction-versus-occlusion",
+          "repeated-silhouette-width"
+        ],
+        "evidence": [
+          {
+            "path": "docs/review/expansion-01/junctions/after/comparison.png",
+            "sha256": "40f282972a99a42c73c5ba1a26334e44fba3a6cd0810e5cc28e7071f81018bc5"
+          },
+          {
+            "path": "docs/review/expansion-01/junctions/after/comparison-dark.png",
+            "sha256": "8df0a2e8cee360e068dbf2df29a1ef32a3a31812ae478d4d6edc609f8e0e6c46"
+          },
+          {
+            "path": "docs/review/expansion-01/junctions/after/native.png",
+            "sha256": "6f4cc48044129389f0bd8ce571d0d3c14faab6fc4fc3cc5875daabd6281a643e"
+          },
+          {
+            "path": "docs/review/expansion-01/junctions/after/native-dark.png",
+            "sha256": "27e78d7620813d091a06414ad25b487ed1cdc1d54efcbcac3f02ea95e4a0dd90"
+          }
+        ]
+      },
+      "status": "visually-reviewed-candidate",
+      "userApproval": "pending",
+      "independentReview": {
+        "reviewer": "craft_v051_audit subagent",
+        "skillVersion": "0.5.1",
+        "date": "2026-11-16",
+        "observation": "硬碟頂面斜角與底面分割一致，16px減指示點。",
+        "sourceObservation": "固定對照：Lucide/hard-drive（exact）、Iconoir/hard-drive（exact）。Lucide與Iconoir採梯形上殼與前面板；面板指示點可簡化。 本輪依兩稿及 Master 並列重新檢查構造、輪廓密度與端點；硬碟頂面斜角與底面分割一致，16px減指示點。",
+        "evidence": [
+          {
+            "path": "docs/review/craft-03/initial/batch-24-light.png",
+            "sha256": "dc66a33bcc0175bb9953d8b3ea43981ebbef5a3765879450e98056dc44d196fa"
+          },
+          {
+            "path": "docs/review/craft-03/initial/batch-24-dark.png",
+            "sha256": "70455dc440d3f01d5ce8397c86352af64e0980f31de286d5fc0f41e7e173edff"
+          },
+          {
+            "path": "docs/review/craft-03/final/batch-24-native-light.png",
+            "sha256": "2761f2b4c285f79fd5dadbb8e152f84265d1b4953dc7c19de9f03cee45c20082"
+          },
+          {
+            "path": "docs/review/craft-03/final/batch-24-native-dark.png",
+            "sha256": "d19b93a44a8c2162bea86c1566ca5599ae8ba993c29989ce2680f828b8dc587a"
+          }
+        ]
+      },
+      "beforeHash": "218001e375e62d5770234f05ab010aa87bdd2ea8b210cc217991131449271967",
+      "afterHash": "218001e375e62d5770234f05ab010aa87bdd2ea8b210cc217991131449271967",
+      "reviewHistory": [
+        {
+          "stage": "independent-craft-03",
+          "change": {
+            "kind": "retained",
+            "reason": "保留原稿：硬碟頂面斜角與底面分割一致，16px減指示點。",
+            "before": {
+              "path": "references/craft-03/master-before.json",
+              "variantsSha256": "218001e375e62d5770234f05ab010aa87bdd2ea8b210cc217991131449271967"
+            }
+          },
+          "visualReview": {
+            "status": "retained-after-visual-review",
+            "reviewer": "craft_v051_audit subagent",
+            "date": "2026-11-16",
+            "batch": "craft3-batch-24",
+            "variantsSha256": "218001e375e62d5770234f05ab010aa87bdd2ea8b210cc217991131449271967",
+            "checks": [
+              "16/20/24",
+              "sharp/soft/rounded",
+              "light/dark",
+              "55-percent-foreground",
+              "adjacent-text",
+              "pinned-original-sources",
+              "before-current",
+              "chromium-dpr1-source-and-native",
+              "chromium-dpr2-native",
+              "foreground-offset-contour",
+              "structural-junction-versus-occlusion",
+              "repeated-silhouette-width"
+            ],
+            "evidence": [
+              {
+                "path": "docs/review/craft-03/initial/batch-24-light.png",
+                "sha256": "dc66a33bcc0175bb9953d8b3ea43981ebbef5a3765879450e98056dc44d196fa"
+              },
+              {
+                "path": "docs/review/craft-03/initial/batch-24-dark.png",
+                "sha256": "70455dc440d3f01d5ce8397c86352af64e0980f31de286d5fc0f41e7e173edff"
+              },
+              {
+                "path": "docs/review/craft-03/final/batch-24-native-light.png",
+                "sha256": "2761f2b4c285f79fd5dadbb8e152f84265d1b4953dc7c19de9f03cee45c20082"
+              },
+              {
+                "path": "docs/review/craft-03/final/batch-24-native-dark.png",
+                "sha256": "d19b93a44a8c2162bea86c1566ca5599ae8ba993c29989ce2680f828b8dc587a"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "independentReport": "docs/review/expansion-01/independent-last-two.json"
+}

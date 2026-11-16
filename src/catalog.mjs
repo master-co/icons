@@ -1,7 +1,8 @@
 import uiScope from './ui-scope.json' with {type:'json'};
 import organizationScope from './organization-scope.json' with {type:'json'};
 import productivityScope from './productivity-scope.json' with {type:'json'};
-const scope=[...uiScope,...organizationScope,...productivityScope];
+import expansionScope from './expansion-scope.json' with {type:'json'};
+const scope=[...uiScope,...organizationScope,...productivityScope,...expansionScope];
 import {aliases} from './aliases.mjs';
 import {conceptOf} from './concepts.mjs';
 const groups = [

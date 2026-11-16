@@ -1,0 +1,760 @@
+[
+  {
+    "name": "reply",
+    "purpose": "回覆目前訊息或郵件",
+    "recognitionCues": "左向箭頭與向下回彎的短尾",
+    "confusableWith": [
+      "undo",
+      "arrow-left",
+      "reply-all"
+    ],
+    "sourceObservation": "Lucide reply使用短的下彎尾線，Iconoir reply使用近半圓返回弧。Master採短尾，區別既有undo較完整的返回弧。",
+    "references": [
+      {
+        "name": "reply",
+        "library": "Lucide",
+        "repository": "lucide-icons/lucide",
+        "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+        "path": "icons/reply.svg",
+        "localPath": "references/expansion-01/lucide-reply.svg",
+        "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/reply.svg",
+        "sha256": "f429acd0f5c77cdd3e5660f3dda62d28a14b6a95680255e8aa315fc65f7c045b",
+        "license": "ISC AND MIT",
+        "sourceName": "reply",
+        "match": "exact",
+        "role": "comparison-only"
+      },
+      {
+        "name": "reply",
+        "library": "Iconoir",
+        "repository": "iconoir-icons/iconoir",
+        "commit": "39834e3f193bc0cca2c36bebb6a650471977433d",
+        "path": "icons/regular/reply.svg",
+        "localPath": "references/expansion-01/iconoir-reply.svg",
+        "url": "https://github.com/iconoir-icons/iconoir/blob/39834e3f193bc0cca2c36bebb6a650471977433d/icons/regular/reply.svg",
+        "sha256": "dafddc6221875841c6543854a31c31c4c21521ca2ed93299290a8fa674f6a2a7",
+        "license": "MIT",
+        "sourceName": "reply",
+        "match": "exact",
+        "role": "comparison-only"
+      }
+    ],
+    "effects": {
+      "dashes": {
+        "used": false,
+        "reason": "不採用；回覆以連續實體輪廓表達，沒有未完成或隱藏邊界。"
+      },
+      "opacity": {
+        "used": false,
+        "reason": "不採用；回覆的主體及必要訊號以留白分離，淡化不增加語意。"
+      },
+      "gradients": {
+        "used": false,
+        "reason": "本期不新增連續漸層或mask，以原生輪廓及必要逐筆透明度處理。"
+      }
+    },
+    "change": {
+      "kind": "new",
+      "reason": "水平線轉入下彎時切線連續；sharp箭桿端帽按半描邊回縮到共同接點，沒有箭尖階梯。",
+      "before": null
+    },
+    "visualReview": {
+      "status": "new-after-visual-review",
+      "reviewer": "root",
+      "date": "2026-11-16",
+      "batch": "expansion-08",
+      "variantsSha256": "0b270989d975535626ade10c7f7612d05d07371bd57a6e741f38623202ccf2f9",
+      "checks": [
+        "two-pinned-source-comparisons",
+        "16/20/24",
+        "sharp/soft/rounded",
+        "light/dark",
+        "55-percent-foreground",
+        "adjacent-text"
+      ],
+      "evidence": [
+        {
+          "path": "docs/review/ui-v1/expansion-08/comparison.png",
+          "sha256": "3266eeacdc7bd70b6b9c84d3c282f798e76c39c630e36af9186693e02f1ab4f2"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-08/comparison-dark.png",
+          "sha256": "17b83cfe5163a990e35614c6b5749d2cbb8264c13e0d3718c0dc567453e32e00"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-08/native.png",
+          "sha256": "2d7e8f78a4d3e95556d04203fecdcf1e2877158b7309c2c8992d0a0c007bdfea"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-08/native-dark.png",
+          "sha256": "be8fea022d3ec4951be5d7eb421b705620ab5a31de17596b64492e3a7041870a"
+        }
+      ]
+    },
+    "status": "visually-reviewed-candidate",
+    "userApproval": "pending"
+  },
+  {
+    "name": "reply-all",
+    "purpose": "回覆所有收件者",
+    "recognitionCues": "雙左向箭頭與同一回覆尾線",
+    "confusableWith": [
+      "reply",
+      "chevrons-left"
+    ],
+    "sourceObservation": "Lucide reply-all與Tabler arrow-back-up-double都有第二個左箭頭，Tabler回弧更完整。Master保留reply短尾及雙箭頭訊號，避免與undo混淆。",
+    "references": [
+      {
+        "name": "reply-all",
+        "library": "Lucide",
+        "repository": "lucide-icons/lucide",
+        "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+        "path": "icons/reply-all.svg",
+        "localPath": "references/expansion-01/lucide-reply-all.svg",
+        "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/reply-all.svg",
+        "sha256": "ab29296c2d700563c8fe51f25865dfda4bcfb3e99fbd995851c2ba43f1d11a34",
+        "license": "ISC AND MIT",
+        "sourceName": "reply-all",
+        "match": "exact",
+        "role": "comparison-only"
+      },
+      {
+        "name": "reply-all",
+        "library": "Tabler",
+        "repository": "tabler/tabler-icons",
+        "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+        "path": "icons/outline/arrow-back-up-double.svg",
+        "localPath": "references/expansion-01/tabler-arrow-back-up-double.svg",
+        "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/arrow-back-up-double.svg",
+        "sha256": "db5962e78176056e8c5fbfd01d37ff83db80cd42e01ad06f36729965b8933d4e",
+        "license": "MIT",
+        "sourceName": "arrow-back-up-double",
+        "match": "exact",
+        "role": "comparison-only"
+      }
+    ],
+    "effects": {
+      "dashes": {
+        "used": false,
+        "reason": "不採用；回覆所有人以連續實體輪廓表達，沒有未完成或隱藏邊界。"
+      },
+      "opacity": {
+        "used": false,
+        "reason": "不採用；回覆所有人的主體及必要訊號以留白分離，淡化不增加語意。"
+      },
+      "gradients": {
+        "used": false,
+        "reason": "本期不新增連續漸層或mask，以原生輪廓及必要逐筆透明度處理。"
+      }
+    },
+    "change": {
+      "kind": "new",
+      "reason": "主箭頭稍右移、兩箭翼收為同大小，16px兩個chevron仍分開，沒有把第二箭頭壓到主箭桿。",
+      "before": null
+    },
+    "visualReview": {
+      "status": "new-after-visual-review",
+      "reviewer": "root",
+      "date": "2026-11-16",
+      "batch": "expansion-08",
+      "variantsSha256": "b6adf6e8f730c68e608cc9d274041b1315ec51c374e3f53b628a2de5e47bebed",
+      "checks": [
+        "two-pinned-source-comparisons",
+        "16/20/24",
+        "sharp/soft/rounded",
+        "light/dark",
+        "55-percent-foreground",
+        "adjacent-text"
+      ],
+      "evidence": [
+        {
+          "path": "docs/review/ui-v1/expansion-08/comparison.png",
+          "sha256": "3266eeacdc7bd70b6b9c84d3c282f798e76c39c630e36af9186693e02f1ab4f2"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-08/comparison-dark.png",
+          "sha256": "17b83cfe5163a990e35614c6b5749d2cbb8264c13e0d3718c0dc567453e32e00"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-08/native.png",
+          "sha256": "2d7e8f78a4d3e95556d04203fecdcf1e2877158b7309c2c8992d0a0c007bdfea"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-08/native-dark.png",
+          "sha256": "be8fea022d3ec4951be5d7eb421b705620ab5a31de17596b64492e3a7041870a"
+        }
+      ]
+    },
+    "status": "visually-reviewed-candidate",
+    "userApproval": "pending"
+  },
+  {
+    "name": "forward",
+    "purpose": "轉寄目前郵件或訊息",
+    "recognitionCues": "右向箭頭與向下回彎的短尾",
+    "confusableWith": [
+      "redo",
+      "fast-forward",
+      "reply"
+    ],
+    "sourceObservation": "Lucide forward為轉寄箭頭；Iconoir同名forward實為播放快轉，已更換為arrow-email-forward。正確兩稿均以返回弧尾及右箭頭表示轉寄。",
+    "references": [
+      {
+        "name": "forward",
+        "library": "Lucide",
+        "repository": "lucide-icons/lucide",
+        "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+        "path": "icons/forward.svg",
+        "localPath": "references/expansion-01/lucide-forward.svg",
+        "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/forward.svg",
+        "sha256": "6c85a58cfe9acb95ee706bd34b4f74ddff2141d0acc6b2c0ded28b62c6ef5e5a",
+        "license": "ISC AND MIT",
+        "sourceName": "forward",
+        "match": "exact",
+        "role": "comparison-only"
+      },
+      {
+        "name": "forward",
+        "library": "Iconoir",
+        "repository": "iconoir-icons/iconoir",
+        "commit": "39834e3f193bc0cca2c36bebb6a650471977433d",
+        "path": "icons/regular/arrow-email-forward.svg",
+        "localPath": "references/expansion-01/iconoir-arrow-email-forward.svg",
+        "url": "https://github.com/iconoir-icons/iconoir/blob/39834e3f193bc0cca2c36bebb6a650471977433d/icons/regular/arrow-email-forward.svg",
+        "sha256": "c226b2054cbafd9d9f4df26a0658944a3d339aa96e480a84290b87c61b1e3715",
+        "license": "MIT",
+        "sourceName": "arrow-email-forward",
+        "match": "exact",
+        "role": "comparison-only"
+      }
+    ],
+    "effects": {
+      "dashes": {
+        "used": false,
+        "reason": "不採用；轉寄以連續實體輪廓表達，沒有未完成或隱藏邊界。"
+      },
+      "opacity": {
+        "used": false,
+        "reason": "不採用；轉寄的主體及必要訊號以留白分離，淡化不增加語意。"
+      },
+      "gradients": {
+        "used": false,
+        "reason": "本期不新增連續漸層或mask，以原生輪廓及必要逐筆透明度處理。"
+      }
+    },
+    "change": {
+      "kind": "new",
+      "reason": "共享reply母型明確反射，與redo的長返回弧不同；方向是固定圖稿，不加入未授權的自動RTL鏡射。",
+      "before": null
+    },
+    "visualReview": {
+      "status": "new-after-visual-review",
+      "reviewer": "root",
+      "date": "2026-11-16",
+      "batch": "expansion-08",
+      "variantsSha256": "8f8af8f8a25890e0d5b55fef9158e4ae406f27b5c1097d012c8eaa60388a5f57",
+      "checks": [
+        "two-pinned-source-comparisons",
+        "16/20/24",
+        "sharp/soft/rounded",
+        "light/dark",
+        "55-percent-foreground",
+        "adjacent-text"
+      ],
+      "evidence": [
+        {
+          "path": "docs/review/ui-v1/expansion-08/comparison.png",
+          "sha256": "3266eeacdc7bd70b6b9c84d3c282f798e76c39c630e36af9186693e02f1ab4f2"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-08/comparison-dark.png",
+          "sha256": "17b83cfe5163a990e35614c6b5749d2cbb8264c13e0d3718c0dc567453e32e00"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-08/native.png",
+          "sha256": "2d7e8f78a4d3e95556d04203fecdcf1e2877158b7309c2c8992d0a0c007bdfea"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-08/native-dark.png",
+          "sha256": "be8fea022d3ec4951be5d7eb421b705620ab5a31de17596b64492e3a7041870a"
+        }
+      ]
+    },
+    "status": "visually-reviewed-candidate",
+    "userApproval": "pending"
+  },
+  {
+    "name": "rss",
+    "purpose": "RSS內容訂閱",
+    "recognitionCues": "左下訊號點與兩條同心四分之一圓弧",
+    "confusableWith": [
+      "wifi",
+      "radio"
+    ],
+    "sourceObservation": "Lucide與Tabler採相同慣用RSS訊號，Master保留兩弧而非簡化成wifi樣式。",
+    "references": [
+      {
+        "name": "rss",
+        "library": "Lucide",
+        "repository": "lucide-icons/lucide",
+        "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+        "path": "icons/rss.svg",
+        "localPath": "references/expansion-01/lucide-rss.svg",
+        "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/rss.svg",
+        "sha256": "68297d9ec163f3d07bb4efac82c54bc62679a5e3ba37cf2dabb27d4c8de8bfe4",
+        "license": "ISC AND MIT",
+        "sourceName": "rss",
+        "match": "exact",
+        "role": "comparison-only"
+      },
+      {
+        "name": "rss",
+        "library": "Tabler",
+        "repository": "tabler/tabler-icons",
+        "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+        "path": "icons/outline/rss.svg",
+        "localPath": "references/expansion-01/tabler-rss.svg",
+        "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/rss.svg",
+        "sha256": "ec2abf644e4e7ed6c69d0850ff5a5a1e2b2f4cded89aad1e6388b25fcf0941d2",
+        "license": "MIT",
+        "sourceName": "rss",
+        "match": "exact",
+        "role": "comparison-only"
+      }
+    ],
+    "effects": {
+      "dashes": {
+        "used": false,
+        "reason": "不採用；訂閱消息以連續實體輪廓表達，沒有未完成或隱藏邊界。"
+      },
+      "opacity": {
+        "used": false,
+        "reason": "不採用；訂閱消息的主體及必要訊號以留白分離，淡化不增加語意。"
+      },
+      "gradients": {
+        "used": false,
+        "reason": "本期不新增連續漸層或mask，以原生輪廓及必要逐筆透明度處理。"
+      }
+    },
+    "change": {
+      "kind": "new",
+      "reason": "雙弧共用左下圓心，徑向間距穩定；圓點採光學實心點徑，16px及低對比下仍有起點訊號。",
+      "before": null
+    },
+    "visualReview": {
+      "status": "new-after-visual-review",
+      "reviewer": "root",
+      "date": "2026-11-16",
+      "batch": "expansion-08",
+      "variantsSha256": "8f01a3c8e527f70742b112900334b40a26df16f192a31aad9b6454a437c55371",
+      "checks": [
+        "two-pinned-source-comparisons",
+        "16/20/24",
+        "sharp/soft/rounded",
+        "light/dark",
+        "55-percent-foreground",
+        "adjacent-text"
+      ],
+      "evidence": [
+        {
+          "path": "docs/review/ui-v1/expansion-08/comparison.png",
+          "sha256": "3266eeacdc7bd70b6b9c84d3c282f798e76c39c630e36af9186693e02f1ab4f2"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-08/comparison-dark.png",
+          "sha256": "17b83cfe5163a990e35614c6b5749d2cbb8264c13e0d3718c0dc567453e32e00"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-08/native.png",
+          "sha256": "2d7e8f78a4d3e95556d04203fecdcf1e2877158b7309c2c8992d0a0c007bdfea"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-08/native-dark.png",
+          "sha256": "be8fea022d3ec4951be5d7eb421b705620ab5a31de17596b64492e3a7041870a"
+        }
+      ]
+    },
+    "status": "visually-reviewed-candidate",
+    "userApproval": "pending"
+  },
+  {
+    "name": "mail-plus",
+    "purpose": "建立新郵件",
+    "recognitionCues": "既有信封與右下加號",
+    "confusableWith": [
+      "mail",
+      "mail-check",
+      "message-plus"
+    ],
+    "sourceObservation": "Lucide與Tabler都在右下附加加號；Master直接沿用mail母型與共用mark尺寸，保持與mail-x一致的位置。",
+    "references": [
+      {
+        "name": "mail-plus",
+        "library": "Lucide",
+        "repository": "lucide-icons/lucide",
+        "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+        "path": "icons/mail-plus.svg",
+        "localPath": "references/expansion-01/lucide-mail-plus.svg",
+        "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/mail-plus.svg",
+        "sha256": "afb0158398fa85773a65bff2eafd841e1fad238f1276a53be49c82387c580976",
+        "license": "ISC AND MIT",
+        "sourceName": "mail-plus",
+        "match": "exact",
+        "role": "comparison-only"
+      },
+      {
+        "name": "mail-plus",
+        "library": "Tabler",
+        "repository": "tabler/tabler-icons",
+        "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+        "path": "icons/outline/mail-plus.svg",
+        "localPath": "references/expansion-01/tabler-mail-plus.svg",
+        "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/mail-plus.svg",
+        "sha256": "600b029008408dcfddec52830e89061ae42a451badc8aa02f118470d8c04bb7c",
+        "license": "MIT",
+        "sourceName": "mail-plus",
+        "match": "exact",
+        "role": "comparison-only"
+      }
+    ],
+    "effects": {
+      "dashes": {
+        "used": false,
+        "reason": "不採用；撰寫郵件以連續實體輪廓表達，沒有未完成或隱藏邊界。"
+      },
+      "opacity": {
+        "used": false,
+        "reason": "不採用；撰寫郵件的主體及必要訊號以留白分離，淡化不增加語意。"
+      },
+      "gradients": {
+        "used": false,
+        "reason": "本期不新增連續漸層或mask，以原生輪廓及必要逐筆透明度處理。"
+      }
+    },
+    "change": {
+      "kind": "new",
+      "reason": "信封底邊按加號實際外緣避讓，未把整個右下角挖空；16px加號兩臂及信封封口均可辨。",
+      "before": null
+    },
+    "visualReview": {
+      "status": "new-after-visual-review",
+      "reviewer": "root",
+      "date": "2026-11-16",
+      "batch": "expansion-08",
+      "variantsSha256": "1fd9c4e904c6bb266e11f1369140e6e5b94ac9b5c6431362239d234ce84e3880",
+      "checks": [
+        "two-pinned-source-comparisons",
+        "16/20/24",
+        "sharp/soft/rounded",
+        "light/dark",
+        "55-percent-foreground",
+        "adjacent-text"
+      ],
+      "evidence": [
+        {
+          "path": "docs/review/ui-v1/expansion-08/comparison.png",
+          "sha256": "3266eeacdc7bd70b6b9c84d3c282f798e76c39c630e36af9186693e02f1ab4f2"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-08/comparison-dark.png",
+          "sha256": "17b83cfe5163a990e35614c6b5749d2cbb8264c13e0d3718c0dc567453e32e00"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-08/native.png",
+          "sha256": "2d7e8f78a4d3e95556d04203fecdcf1e2877158b7309c2c8992d0a0c007bdfea"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-08/native-dark.png",
+          "sha256": "be8fea022d3ec4951be5d7eb421b705620ab5a31de17596b64492e3a7041870a"
+        }
+      ]
+    },
+    "status": "visually-reviewed-candidate",
+    "userApproval": "pending"
+  },
+  {
+    "name": "mail-search",
+    "purpose": "搜尋郵件",
+    "recognitionCues": "信封與右下放大鏡",
+    "confusableWith": [
+      "mail",
+      "file-search",
+      "search"
+    ],
+    "sourceObservation": "Lucide與Tabler都以信封加放大鏡而不是信封內寫文字表達搜尋。Master採與file-search同尺寸鏡圈，略下移以保留封口。",
+    "references": [
+      {
+        "name": "mail-search",
+        "library": "Lucide",
+        "repository": "lucide-icons/lucide",
+        "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+        "path": "icons/mail-search.svg",
+        "localPath": "references/expansion-01/lucide-mail-search.svg",
+        "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/mail-search.svg",
+        "sha256": "c6bd799046d85927c46b749e388299b058dd697fc33ea8a7f927c061813ad0ba",
+        "license": "ISC AND MIT",
+        "sourceName": "mail-search",
+        "match": "exact",
+        "role": "comparison-only"
+      },
+      {
+        "name": "mail-search",
+        "library": "Tabler",
+        "repository": "tabler/tabler-icons",
+        "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+        "path": "icons/outline/mail-search.svg",
+        "localPath": "references/expansion-01/tabler-mail-search.svg",
+        "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/mail-search.svg",
+        "sha256": "669a3ff7b0d97b96203b5920fae9c7aa33d6a23f25a1b01acf4f41edd24d1874",
+        "license": "MIT",
+        "sourceName": "mail-search",
+        "match": "exact",
+        "role": "comparison-only"
+      }
+    ],
+    "effects": {
+      "dashes": {
+        "used": false,
+        "reason": "不採用；搜尋郵件以連續實體輪廓表達，沒有未完成或隱藏邊界。"
+      },
+      "opacity": {
+        "used": false,
+        "reason": "不採用；搜尋郵件的主體及必要訊號以留白分離，淡化不增加語意。"
+      },
+      "gradients": {
+        "used": false,
+        "reason": "本期不新增連續漸層或mask，以原生輪廓及必要逐筆透明度處理。"
+      }
+    },
+    "change": {
+      "kind": "new",
+      "reason": "鏡圈內部作完整遮擋剪影，封口與底邊不穿入孔；柄與鏡圈使用半徑求接點，三尺寸均保留鏡孔與信封身份。",
+      "before": null
+    },
+    "visualReview": {
+      "status": "new-after-visual-review",
+      "reviewer": "root",
+      "date": "2026-11-16",
+      "batch": "expansion-08",
+      "variantsSha256": "38a32fe1a1c1098fa602e3d271aa9d2d5477eb6306817d09792b93bde11ed213",
+      "checks": [
+        "two-pinned-source-comparisons",
+        "16/20/24",
+        "sharp/soft/rounded",
+        "light/dark",
+        "55-percent-foreground",
+        "adjacent-text"
+      ],
+      "evidence": [
+        {
+          "path": "docs/review/ui-v1/expansion-08/comparison.png",
+          "sha256": "3266eeacdc7bd70b6b9c84d3c282f798e76c39c630e36af9186693e02f1ab4f2"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-08/comparison-dark.png",
+          "sha256": "17b83cfe5163a990e35614c6b5749d2cbb8264c13e0d3718c0dc567453e32e00"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-08/native.png",
+          "sha256": "2d7e8f78a4d3e95556d04203fecdcf1e2877158b7309c2c8992d0a0c007bdfea"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-08/native-dark.png",
+          "sha256": "be8fea022d3ec4951be5d7eb421b705620ab5a31de17596b64492e3a7041870a"
+        }
+      ]
+    },
+    "status": "visually-reviewed-candidate",
+    "userApproval": "pending"
+  },
+  {
+    "name": "message-text",
+    "purpose": "文字訊息與評論內容",
+    "recognitionCues": "既有訊息框及兩行文字",
+    "confusableWith": [
+      "message",
+      "file-text",
+      "subtitles"
+    ],
+    "sourceObservation": "Lucide message-square-text有三行，Iconoir message-text有兩行；Master已有框內高度較淺，選兩行較合原生16px留白。",
+    "references": [
+      {
+        "name": "message-text",
+        "library": "Lucide",
+        "repository": "lucide-icons/lucide",
+        "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+        "path": "icons/message-square-text.svg",
+        "localPath": "references/expansion-01/lucide-message-square-text.svg",
+        "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/message-square-text.svg",
+        "sha256": "b2564066702194c600d91b6def8e897cdbf4c6205c80d39e459ff0a12e13950d",
+        "license": "ISC AND MIT",
+        "sourceName": "message-square-text",
+        "match": "exact",
+        "role": "comparison-only"
+      },
+      {
+        "name": "message-text",
+        "library": "Iconoir",
+        "repository": "iconoir-icons/iconoir",
+        "commit": "39834e3f193bc0cca2c36bebb6a650471977433d",
+        "path": "icons/regular/message-text.svg",
+        "localPath": "references/expansion-01/iconoir-message-text.svg",
+        "url": "https://github.com/iconoir-icons/iconoir/blob/39834e3f193bc0cca2c36bebb6a650471977433d/icons/regular/message-text.svg",
+        "sha256": "63f90c9ab27c96d6c4860d2fe216cc36507e3393204d7ec1470f7d1abda1405c",
+        "license": "MIT",
+        "sourceName": "message-text",
+        "match": "exact",
+        "role": "comparison-only"
+      }
+    ],
+    "effects": {
+      "dashes": {
+        "used": false,
+        "reason": "不採用；文字訊息以連續實體輪廓表達，沒有未完成或隱藏邊界。"
+      },
+      "opacity": {
+        "used": false,
+        "reason": "不採用；文字訊息的主體及必要訊號以留白分離，淡化不增加語意。"
+      },
+      "gradients": {
+        "used": false,
+        "reason": "本期不新增連續漸層或mask，以原生輪廓及必要逐筆透明度處理。"
+      }
+    },
+    "change": {
+      "kind": "new",
+      "reason": "共用message尾角及外框，只加入兩條錯長文字線；不為容納三行加大母型，也不把框體圓角帶入文字線。",
+      "before": null
+    },
+    "visualReview": {
+      "status": "new-after-visual-review",
+      "reviewer": "root",
+      "date": "2026-11-16",
+      "batch": "expansion-08",
+      "variantsSha256": "43900d9815a21b2569ef9382dc38b50139ee45d37a59d56d350effd2e88ba539",
+      "checks": [
+        "two-pinned-source-comparisons",
+        "16/20/24",
+        "sharp/soft/rounded",
+        "light/dark",
+        "55-percent-foreground",
+        "adjacent-text"
+      ],
+      "evidence": [
+        {
+          "path": "docs/review/ui-v1/expansion-08/comparison.png",
+          "sha256": "3266eeacdc7bd70b6b9c84d3c282f798e76c39c630e36af9186693e02f1ab4f2"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-08/comparison-dark.png",
+          "sha256": "17b83cfe5163a990e35614c6b5749d2cbb8264c13e0d3718c0dc567453e32e00"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-08/native.png",
+          "sha256": "2d7e8f78a4d3e95556d04203fecdcf1e2877158b7309c2c8992d0a0c007bdfea"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-08/native-dark.png",
+          "sha256": "be8fea022d3ec4951be5d7eb421b705620ab5a31de17596b64492e3a7041870a"
+        }
+      ]
+    },
+    "status": "visually-reviewed-candidate",
+    "userApproval": "pending"
+  },
+  {
+    "name": "message-check",
+    "purpose": "已確認或已處理的訊息",
+    "recognitionCues": "既有訊息框內置勾號",
+    "confusableWith": [
+      "message-plus",
+      "mail-check",
+      "check"
+    ],
+    "sourceObservation": "Lucide message-square-check將勾號放在框內，Tabler message-check將勾號放在外角並保留文字行。Master採內置勾，與message-plus共享單一訊號的家族語法。",
+    "references": [
+      {
+        "name": "message-check",
+        "library": "Lucide",
+        "repository": "lucide-icons/lucide",
+        "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+        "path": "icons/message-square-check.svg",
+        "localPath": "references/expansion-01/lucide-message-square-check.svg",
+        "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/message-square-check.svg",
+        "sha256": "535e7d0025107cf109a2f00e5be614f07c88b438199e3eb58eb4ffd81c591138",
+        "license": "ISC AND MIT",
+        "sourceName": "message-square-check",
+        "match": "exact",
+        "role": "comparison-only"
+      },
+      {
+        "name": "message-check",
+        "library": "Tabler",
+        "repository": "tabler/tabler-icons",
+        "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+        "path": "icons/outline/message-check.svg",
+        "localPath": "references/expansion-01/tabler-message-check.svg",
+        "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/message-check.svg",
+        "sha256": "d8761e11c69e4ebbdb660cb4cfceade07fc066f867e26edd7ab8703371351aeb",
+        "license": "MIT",
+        "sourceName": "message-check",
+        "match": "exact",
+        "role": "comparison-only"
+      }
+    ],
+    "effects": {
+      "dashes": {
+        "used": false,
+        "reason": "不採用；已處理訊息以連續實體輪廓表達，沒有未完成或隱藏邊界。"
+      },
+      "opacity": {
+        "used": false,
+        "reason": "不採用；已處理訊息的主體及必要訊號以留白分離，淡化不增加語意。"
+      },
+      "gradients": {
+        "used": false,
+        "reason": "本期不新增連續漸層或mask，以原生輪廓及必要逐筆透明度處理。"
+      }
+    },
+    "change": {
+      "kind": "new",
+      "reason": "內置勾號不與框相碰，沒有語意理由挖避讓缺口；16px勾號和尾角均保留，未增加多餘文字線。",
+      "before": null
+    },
+    "visualReview": {
+      "status": "new-after-visual-review",
+      "reviewer": "root",
+      "date": "2026-11-16",
+      "batch": "expansion-08",
+      "variantsSha256": "4b89bcaf3c82f08953c66b7f9bfdde32c4dcbe1e0e3a1869042550e72c6b398d",
+      "checks": [
+        "two-pinned-source-comparisons",
+        "16/20/24",
+        "sharp/soft/rounded",
+        "light/dark",
+        "55-percent-foreground",
+        "adjacent-text"
+      ],
+      "evidence": [
+        {
+          "path": "docs/review/ui-v1/expansion-08/comparison.png",
+          "sha256": "3266eeacdc7bd70b6b9c84d3c282f798e76c39c630e36af9186693e02f1ab4f2"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-08/comparison-dark.png",
+          "sha256": "17b83cfe5163a990e35614c6b5749d2cbb8264c13e0d3718c0dc567453e32e00"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-08/native.png",
+          "sha256": "2d7e8f78a4d3e95556d04203fecdcf1e2877158b7309c2c8992d0a0c007bdfea"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-08/native-dark.png",
+          "sha256": "be8fea022d3ec4951be5d7eb421b705620ab5a31de17596b64492e3a7041870a"
+        }
+      ]
+    },
+    "status": "visually-reviewed-candidate",
+    "userApproval": "pending"
+  }
+]

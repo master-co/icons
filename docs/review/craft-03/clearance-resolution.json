@@ -1,0 +1,809 @@
+{
+  "scope": 280,
+  "resolvedPendingClearance": 18,
+  "resolvedDepthAssessment": 7,
+  "items": [
+    {
+      "name": "copy",
+      "previousStatus": "pending-depth-assessment",
+      "status": "modified-and-visually-reviewed",
+      "reason": "後紙以完整矩形被前紙外緣裁切，取代懸空圓端。",
+      "beforeHash": "25d1ccb31e3e3384b4146664a5728b37ec154eae5248b1d21ebea62d3cc049a8",
+      "afterHash": "ef99f7f48003173cb104a39462e5687a805f25dc8086af35080fcc4c8864d7e2",
+      "evidence": [
+        {
+          "path": "docs/review/craft-03/initial/batch-03-light.png",
+          "sha256": "00be49d0bfec1984f1b673eeced9f7a3d8ba1de79056554eaf44bbef4142b4a6"
+        },
+        {
+          "path": "docs/review/craft-03/initial/batch-03-dark.png",
+          "sha256": "de8b64572b71cd33279314da5010af0938fa61e24f44dcfed2a2199800e6e7dc"
+        },
+        {
+          "path": "docs/review/craft-03/revised-a/bell-off-focus-light.png",
+          "sha256": "27b00e2347fdf04ce921877deafefb77ee4c07fdf55cdbf39b7abfb9c1a64396"
+        },
+        {
+          "path": "docs/review/craft-03/revised-a/bell-off-focus-dark.png",
+          "sha256": "a7dc68638b3ebcd73075eebb11ab2b4552e8864d4dc755db54ff871e604e5422"
+        },
+        {
+          "path": "docs/review/craft-03/final/batch-03-native-light.png",
+          "sha256": "838594c83ad5a110b0748e6f6d73c9bfee798d65af88f31799f274efa4854627"
+        },
+        {
+          "path": "docs/review/craft-03/final/batch-03-native-dark.png",
+          "sha256": "e081142645283999feec0fb49b978fb2f0f16593cddbbf069049989efe4a1d54"
+        }
+      ]
+    },
+    {
+      "name": "users",
+      "previousStatus": "pending-depth-assessment",
+      "status": "retained-after-individual-visual-review",
+      "reason": "後方半頭及肩弧屬省略線索，未穿入前景且保有間距。",
+      "beforeHash": "ee421579320a64ea9c17528170a1696ecb6bb095ac75975a2c30fac4be382e4a",
+      "afterHash": "ee421579320a64ea9c17528170a1696ecb6bb095ac75975a2c30fac4be382e4a",
+      "evidence": [
+        {
+          "path": "docs/review/craft-03/initial/batch-03-light.png",
+          "sha256": "00be49d0bfec1984f1b673eeced9f7a3d8ba1de79056554eaf44bbef4142b4a6"
+        },
+        {
+          "path": "docs/review/craft-03/initial/batch-03-dark.png",
+          "sha256": "de8b64572b71cd33279314da5010af0938fa61e24f44dcfed2a2199800e6e7dc"
+        },
+        {
+          "path": "docs/review/craft-03/final/batch-03-native-light.png",
+          "sha256": "838594c83ad5a110b0748e6f6d73c9bfee798d65af88f31799f274efa4854627"
+        },
+        {
+          "path": "docs/review/craft-03/final/batch-03-native-dark.png",
+          "sha256": "e081142645283999feec0fb49b978fb2f0f16593cddbbf069049989efe4a1d54"
+        }
+      ]
+    },
+    {
+      "name": "bell-off",
+      "previousStatus": "pending-clearance-review",
+      "status": "modified-and-visually-reviewed",
+      "reason": "完整bell母型按斜線外緣扣除，兩側切口不再是圓端短截。",
+      "beforeHash": "46192f4314296818939a049245c8115130a12deff74308efa4e4d8ab5bc1b91b",
+      "afterHash": "ab1129ec25975cbf464c186d72812253b56f66b3f636ca1418975ecbe5c8d9da",
+      "evidence": [
+        {
+          "path": "docs/review/craft-03/initial/batch-03-light.png",
+          "sha256": "00be49d0bfec1984f1b673eeced9f7a3d8ba1de79056554eaf44bbef4142b4a6"
+        },
+        {
+          "path": "docs/review/craft-03/initial/batch-03-dark.png",
+          "sha256": "de8b64572b71cd33279314da5010af0938fa61e24f44dcfed2a2199800e6e7dc"
+        },
+        {
+          "path": "docs/review/craft-03/revised-a/bell-off-focus-light.png",
+          "sha256": "27b00e2347fdf04ce921877deafefb77ee4c07fdf55cdbf39b7abfb9c1a64396"
+        },
+        {
+          "path": "docs/review/craft-03/revised-a/bell-off-focus-dark.png",
+          "sha256": "a7dc68638b3ebcd73075eebb11ab2b4552e8864d4dc755db54ff871e604e5422"
+        },
+        {
+          "path": "docs/review/craft-03/final/batch-03-native-light.png",
+          "sha256": "838594c83ad5a110b0748e6f6d73c9bfee798d65af88f31799f274efa4854627"
+        },
+        {
+          "path": "docs/review/craft-03/final/batch-03-native-dark.png",
+          "sha256": "e081142645283999feec0fb49b978fb2f0f16593cddbbf069049989efe4a1d54"
+        }
+      ]
+    },
+    {
+      "name": "external-link",
+      "previousStatus": "pending-clearance-review",
+      "status": "modified-and-visually-reviewed",
+      "reason": "外連箭頭從完整框體扣出等距切口，框右上不再任意缺一大塊。",
+      "beforeHash": "107cc10acd64acf703ee15878dba4195986dd36eb562fa167be77408317aef73",
+      "afterHash": "83875ae5e4622ac580c5dad3f360b82f591e59e1c97ae9bc09e63d57e849b6ed",
+      "evidence": [
+        {
+          "path": "docs/review/craft-03/initial/batch-06-light.png",
+          "sha256": "7fe3128b4a7ad783af0f16e174038dce13e37ea3435dadc6c9a9272382257d95"
+        },
+        {
+          "path": "docs/review/craft-03/initial/batch-06-dark.png",
+          "sha256": "24bca27f28459b970a3415d4d4e4a239be94a93ec9ffb1e2ff78d3aa2de99be4"
+        },
+        {
+          "path": "docs/review/craft-03/revised-a/bell-off-focus-light.png",
+          "sha256": "27b00e2347fdf04ce921877deafefb77ee4c07fdf55cdbf39b7abfb9c1a64396"
+        },
+        {
+          "path": "docs/review/craft-03/revised-a/bell-off-focus-dark.png",
+          "sha256": "a7dc68638b3ebcd73075eebb11ab2b4552e8864d4dc755db54ff871e604e5422"
+        },
+        {
+          "path": "docs/review/craft-03/final/batch-06-native-light.png",
+          "sha256": "7bed2f52f99710896dbb0eaed78575940d214620f39e72130d91b4b27f2759b4"
+        },
+        {
+          "path": "docs/review/craft-03/final/batch-06-native-dark.png",
+          "sha256": "523095f0a19e57bec044e5687845896362e0c8c94f0d96692dfed563d23664e9"
+        }
+      ]
+    },
+    {
+      "name": "eye-off",
+      "previousStatus": "pending-clearance-review",
+      "status": "modified-and-visually-reviewed",
+      "reason": "完整眼形與瞳孔按斜線輪廓扣除，16px瞳孔仍可辨。",
+      "beforeHash": "de4e91df81873ca50b79775e6f5696a4ec02fce7bcb360aebac51bf1fe25ff7c",
+      "afterHash": "b671f31a5756c3e547ed773958bf67c4942db6f4a8a3d7fadf5131f1825124d1",
+      "evidence": [
+        {
+          "path": "docs/review/craft-03/initial/batch-09-light.png",
+          "sha256": "a5a227e169023a45e06965e6c9565af0125be9274f122f5a56be8b333fe497f7"
+        },
+        {
+          "path": "docs/review/craft-03/initial/batch-09-dark.png",
+          "sha256": "b330748a96d76d3dcc787c022f1a825d67ebf0a6efd455c10bc35f05d5c8dd9d"
+        },
+        {
+          "path": "docs/review/craft-03/revised-a/bell-off-focus-light.png",
+          "sha256": "27b00e2347fdf04ce921877deafefb77ee4c07fdf55cdbf39b7abfb9c1a64396"
+        },
+        {
+          "path": "docs/review/craft-03/revised-a/bell-off-focus-dark.png",
+          "sha256": "a7dc68638b3ebcd73075eebb11ab2b4552e8864d4dc755db54ff871e604e5422"
+        },
+        {
+          "path": "docs/review/craft-03/final/batch-09-native-light.png",
+          "sha256": "27419d127225f41513c9327ae69057bc499477d2085cb094150ad2ecc6628c4b"
+        },
+        {
+          "path": "docs/review/craft-03/final/batch-09-native-dark.png",
+          "sha256": "4d3e526f593689ad0589c22a1dd7cf0f9e70d138e4eb2429314d064e7321343b"
+        }
+      ]
+    },
+    {
+      "name": "filter-clear",
+      "previousStatus": "pending-clearance-review",
+      "status": "retained-after-individual-visual-review",
+      "reason": "右下X原有與漏斗的距離已足夠，沒有實際交點需裁。",
+      "beforeHash": "b732aa10cde1f303d1776011d45c3c3024bfbf36bb16a9cceb2ce5285bccd509",
+      "afterHash": "b732aa10cde1f303d1776011d45c3c3024bfbf36bb16a9cceb2ce5285bccd509",
+      "evidence": [
+        {
+          "path": "docs/review/craft-03/initial/batch-10-light.png",
+          "sha256": "2260a9350c29879c15b85cd545324c536a3903ff3a3eb83367fb333f7e07ac71"
+        },
+        {
+          "path": "docs/review/craft-03/initial/batch-10-dark.png",
+          "sha256": "4fb937c26440fc01fcd2de8bd6495b246ad667081d00a9c1bcaeacee90de91db"
+        },
+        {
+          "path": "docs/review/craft-03/final/batch-10-native-light.png",
+          "sha256": "2bd4cd7ec80f84349d1f3f12b13501e583459f24d763447df13faf4662482872"
+        },
+        {
+          "path": "docs/review/craft-03/final/batch-10-native-dark.png",
+          "sha256": "03d9abaa175f7709536038e0a38431349ee64c424a33e72d3c562d7f572d901c"
+        }
+      ]
+    },
+    {
+      "name": "clipboard-paste",
+      "previousStatus": "pending-clearance-review",
+      "status": "modified-and-visually-reviewed",
+      "reason": "由完整夾板依右向箭頭扣出外擴空白，避免不相干的大框缺口。",
+      "beforeHash": "6052005989c4bd0d39feb007207b7c1ce117dd9a5ee85e4ec1df67ad03b0e493",
+      "afterHash": "72f3578187869cf47abad05a1640f414e5332d54bba006ef6b3b8f466b7ffad2",
+      "evidence": [
+        {
+          "path": "docs/review/craft-03/initial/batch-12-light.png",
+          "sha256": "fa4a7d3575d60f6efbc3360b749770cc7695e780f2988aefdbdbf2b1ea543f42"
+        },
+        {
+          "path": "docs/review/craft-03/initial/batch-12-dark.png",
+          "sha256": "41a698b72d197437d541d583efd019c468bd0ab5a126a6ce07d74bdb9e7eb2cb"
+        },
+        {
+          "path": "docs/review/craft-03/revised-d/calendar-clock-focus-light.png",
+          "sha256": "153c799938901e178213bbc804441aab271e41b586bbd1e85c8b6f42bd14b7eb"
+        },
+        {
+          "path": "docs/review/craft-03/revised-d/calendar-clock-focus-dark.png",
+          "sha256": "5835b4f77459215d25e31f12ca24887c689324e3009f6d825f9b8bd2f775ae9a"
+        },
+        {
+          "path": "docs/review/craft-03/final/batch-12-native-light.png",
+          "sha256": "0166fa36f94998a938416767ad9ef2b21475b06685e63cd18edba00c698aa0f9"
+        },
+        {
+          "path": "docs/review/craft-03/final/batch-12-native-dark.png",
+          "sha256": "10918000db9819f71f49e587c8f632b127c17dbd4066f6df83bda51b8ab24897"
+        }
+      ]
+    },
+    {
+      "name": "tags",
+      "previousStatus": "pending-depth-assessment",
+      "status": "retained-after-individual-visual-review",
+      "reason": "後標籤只露左側與底斜邊，與前標無實際交叉，保留省略構造。",
+      "beforeHash": "90b8aa5dc4e2375b972bdb048ae8ea95c0c7f8dcb54c29d81ccc96106c4423ca",
+      "afterHash": "90b8aa5dc4e2375b972bdb048ae8ea95c0c7f8dcb54c29d81ccc96106c4423ca",
+      "evidence": [
+        {
+          "path": "docs/review/craft-03/initial/batch-12-light.png",
+          "sha256": "fa4a7d3575d60f6efbc3360b749770cc7695e780f2988aefdbdbf2b1ea543f42"
+        },
+        {
+          "path": "docs/review/craft-03/initial/batch-12-dark.png",
+          "sha256": "41a698b72d197437d541d583efd019c468bd0ab5a126a6ce07d74bdb9e7eb2cb"
+        },
+        {
+          "path": "docs/review/craft-03/final/batch-12-native-light.png",
+          "sha256": "0166fa36f94998a938416767ad9ef2b21475b06685e63cd18edba00c698aa0f9"
+        },
+        {
+          "path": "docs/review/craft-03/final/batch-12-native-dark.png",
+          "sha256": "10918000db9819f71f49e587c8f632b127c17dbd4066f6df83bda51b8ab24897"
+        }
+      ]
+    },
+    {
+      "name": "images",
+      "previousStatus": "pending-depth-assessment",
+      "status": "retained-after-individual-visual-review",
+      "reason": "後圖露出的L形和前框為等大平移構造，非縮窄下層。",
+      "beforeHash": "453a49df9945ff3ebbc875172a532a273a40ce69dc0dcc3bbea1634a4fc53708",
+      "afterHash": "453a49df9945ff3ebbc875172a532a273a40ce69dc0dcc3bbea1634a4fc53708",
+      "evidence": [
+        {
+          "path": "docs/review/craft-03/initial/batch-15-light.png",
+          "sha256": "4fe9bfb2b1d8c714ade3b5c898595aea0cbc3940e1e307735187ae0da51b1056"
+        },
+        {
+          "path": "docs/review/craft-03/initial/batch-15-dark.png",
+          "sha256": "6dd104e1ba576c754c5084d2bdd10fe3561d96d45afdde341fb494bf425829dd"
+        },
+        {
+          "path": "docs/review/craft-03/final/batch-15-native-light.png",
+          "sha256": "6adc523114c1e3b0b0d9784fa3739c4ae5dab94227ab5a52894ad43f640c852e"
+        },
+        {
+          "path": "docs/review/craft-03/final/batch-15-native-dark.png",
+          "sha256": "b7e691d3586a01a48366c0931164628778448ebdf00e938d24e1a3c7be16e69a"
+        }
+      ]
+    },
+    {
+      "name": "microphone-off",
+      "previousStatus": "pending-clearance-review",
+      "status": "modified-and-visually-reviewed",
+      "reason": "完整麥克風頭及托架以斜線實際邊緣裁開，曲率得以延續。",
+      "beforeHash": "669a838bcb33815674c424b581408a45db1b172572ee3763534eb527946adfad",
+      "afterHash": "3958a7a304d7c70077f68c3cc51868e822b4e2eeef2a6aa5fe3d4cf725ff8c3b",
+      "evidence": [
+        {
+          "path": "docs/review/craft-03/initial/batch-16-light.png",
+          "sha256": "bdbe5367790fa84dffcd1358de6d1cd62796e2ec3a2b30cd29f4016969b00933"
+        },
+        {
+          "path": "docs/review/craft-03/initial/batch-16-dark.png",
+          "sha256": "a36cd25be65006392f657972dbe493f4da8118b1b6227177836a15374d6815bc"
+        },
+        {
+          "path": "docs/review/craft-03/revised-a/bell-off-focus-light.png",
+          "sha256": "27b00e2347fdf04ce921877deafefb77ee4c07fdf55cdbf39b7abfb9c1a64396"
+        },
+        {
+          "path": "docs/review/craft-03/revised-a/bell-off-focus-dark.png",
+          "sha256": "a7dc68638b3ebcd73075eebb11ab2b4552e8864d4dc755db54ff871e604e5422"
+        },
+        {
+          "path": "docs/review/craft-03/final/batch-16-native-light.png",
+          "sha256": "9d641a5216df3916c3eb7b2f3ac8d33ccac7ef3769d09e7699f59da39438894e"
+        },
+        {
+          "path": "docs/review/craft-03/final/batch-16-native-dark.png",
+          "sha256": "4ee30372e88ca96351ec6b3379ed86ca2c8c129b3105bc5dd74cf55e050f4d51"
+        }
+      ]
+    },
+    {
+      "name": "messages",
+      "previousStatus": "pending-depth-assessment",
+      "status": "retained-after-individual-visual-review",
+      "reason": "後氣泡只露右側及底尾，間距充足且可推回等寬母型，保留。",
+      "beforeHash": "3caf1621ec18af06d4ae8f4a6ff809e30e3c7f4d7682cd3cf3a57371bf60a2e1",
+      "afterHash": "3caf1621ec18af06d4ae8f4a6ff809e30e3c7f4d7682cd3cf3a57371bf60a2e1",
+      "evidence": [
+        {
+          "path": "docs/review/craft-03/initial/batch-17-light.png",
+          "sha256": "f0d66944908d8773f5c5fb4412a2460fadced572ac9b840f4bc58f76b73f0b50"
+        },
+        {
+          "path": "docs/review/craft-03/initial/batch-17-dark.png",
+          "sha256": "d1142a8c89f11c879201c237f9037d3f69c0613a1b00d5186f648330e3414c4a"
+        },
+        {
+          "path": "docs/review/craft-03/final/batch-17-native-light.png",
+          "sha256": "274149dd50fc8472433daf266b53574d3bce1ef46fb7a3fd7ad3d10aeafe77b5"
+        },
+        {
+          "path": "docs/review/craft-03/final/batch-17-native-dark.png",
+          "sha256": "0ba64ae40f7e584f8efa8f2e7945fed95c19fec9d04b82dbd1d23a342846b562"
+        }
+      ]
+    },
+    {
+      "name": "cloud-upload",
+      "previousStatus": "pending-clearance-review",
+      "status": "modified-and-visually-reviewed",
+      "reason": "完整雲底依上傳箭頭裁切，保留主體母型並統一外擴淨空。",
+      "beforeHash": "a9bc8cb9882bd046fe359be097cf3834df46f925c7cfcfa4eea5eec163527027",
+      "afterHash": "5173b83749c788fcd031b0dda400e0e14772f26bc76eb390ebf1cbba19775c58",
+      "evidence": [
+        {
+          "path": "docs/review/craft-03/initial/batch-19-light.png",
+          "sha256": "030238d4ed643287670c317c3004be5e1ae6d2ac0fbdedc07ebb26471d6df17e"
+        },
+        {
+          "path": "docs/review/craft-03/initial/batch-19-dark.png",
+          "sha256": "9d84ba1019cc13d1f84bcd2bd8ae9d720d9f6f60c278096d1654fac6caf0ad98"
+        },
+        {
+          "path": "docs/review/craft-03/revised-b/cloud-upload-focus-light.png",
+          "sha256": "95d079d3181c6a39e2fae34fbd6d146cd6cd1ef9b07d39ec380a7b105f18322a"
+        },
+        {
+          "path": "docs/review/craft-03/revised-b/cloud-upload-focus-dark.png",
+          "sha256": "566334344d30e4e8dfef8dab72b35d8f4200939ac3cce60901bd479becfefe34"
+        },
+        {
+          "path": "docs/review/craft-03/final/batch-19-native-light.png",
+          "sha256": "546d1406f541c5358fa56e02b67e479299194c07ad423c41505f8ee948de439f"
+        },
+        {
+          "path": "docs/review/craft-03/final/batch-19-native-dark.png",
+          "sha256": "ecdca43a3f5052a047874c3f998c42479788dd55af8f0ff86e6cec62135b0721"
+        }
+      ]
+    },
+    {
+      "name": "cloud-download",
+      "previousStatus": "pending-clearance-review",
+      "status": "modified-and-visually-reviewed",
+      "reason": "完整雲底依下載箭頭裁切，下箭翼左右留白一致。",
+      "beforeHash": "68cc1604666e19ea6202875a21087e29b111afded5f2580ebe333763c21e4a3f",
+      "afterHash": "818632787c1e2cebb58cc548c0b816f2a51896a5655fa5edb004cfa10a7b2e10",
+      "evidence": [
+        {
+          "path": "docs/review/craft-03/initial/batch-19-light.png",
+          "sha256": "030238d4ed643287670c317c3004be5e1ae6d2ac0fbdedc07ebb26471d6df17e"
+        },
+        {
+          "path": "docs/review/craft-03/initial/batch-19-dark.png",
+          "sha256": "9d84ba1019cc13d1f84bcd2bd8ae9d720d9f6f60c278096d1654fac6caf0ad98"
+        },
+        {
+          "path": "docs/review/craft-03/revised-b/cloud-upload-focus-light.png",
+          "sha256": "95d079d3181c6a39e2fae34fbd6d146cd6cd1ef9b07d39ec380a7b105f18322a"
+        },
+        {
+          "path": "docs/review/craft-03/revised-b/cloud-upload-focus-dark.png",
+          "sha256": "566334344d30e4e8dfef8dab72b35d8f4200939ac3cce60901bd479becfefe34"
+        },
+        {
+          "path": "docs/review/craft-03/final/batch-19-native-light.png",
+          "sha256": "546d1406f541c5358fa56e02b67e479299194c07ad423c41505f8ee948de439f"
+        },
+        {
+          "path": "docs/review/craft-03/final/batch-19-native-dark.png",
+          "sha256": "ecdca43a3f5052a047874c3f998c42479788dd55af8f0ff86e6cec62135b0721"
+        }
+      ]
+    },
+    {
+      "name": "wifi-off",
+      "previousStatus": "pending-clearance-review",
+      "status": "modified-and-visually-reviewed",
+      "reason": "三層完整波弧按斜線切開，取代任意刪掉上弧左段。",
+      "beforeHash": "e176f96f7e620d9c80d0a0fb2a5f02ecd7ea7128c0ed8f016e4aad86e00f9564",
+      "afterHash": "fa5c29d31554754b40661c7051cc9d59db055aa967b358f7776cd80db2b77fbd",
+      "evidence": [
+        {
+          "path": "docs/review/craft-03/initial/batch-19-light.png",
+          "sha256": "030238d4ed643287670c317c3004be5e1ae6d2ac0fbdedc07ebb26471d6df17e"
+        },
+        {
+          "path": "docs/review/craft-03/initial/batch-19-dark.png",
+          "sha256": "9d84ba1019cc13d1f84bcd2bd8ae9d720d9f6f60c278096d1654fac6caf0ad98"
+        },
+        {
+          "path": "docs/review/craft-03/revised-a/bell-off-focus-light.png",
+          "sha256": "27b00e2347fdf04ce921877deafefb77ee4c07fdf55cdbf39b7abfb9c1a64396"
+        },
+        {
+          "path": "docs/review/craft-03/revised-a/bell-off-focus-dark.png",
+          "sha256": "a7dc68638b3ebcd73075eebb11ab2b4552e8864d4dc755db54ff871e604e5422"
+        },
+        {
+          "path": "docs/review/craft-03/final/batch-19-native-light.png",
+          "sha256": "546d1406f541c5358fa56e02b67e479299194c07ad423c41505f8ee948de439f"
+        },
+        {
+          "path": "docs/review/craft-03/final/batch-19-native-dark.png",
+          "sha256": "ecdca43a3f5052a047874c3f998c42479788dd55af8f0ff86e6cec62135b0721"
+        }
+      ]
+    },
+    {
+      "name": "battery-charging",
+      "previousStatus": "pending-clearance-review",
+      "status": "modified-and-visually-reviewed",
+      "reason": "完整電池輪廓被閃電形外擴區裁切，切口斜率隨閃電邊緣。",
+      "beforeHash": "a47b90dc82cede92218e5f06432e9b3cd69bdaab11f2efbc842138d5003ba015",
+      "afterHash": "07025e902e89aa52ddc81e6c82ebb5389154adac3808472c6d7fa6ed6e24e85a",
+      "evidence": [
+        {
+          "path": "docs/review/craft-03/initial/batch-20-light.png",
+          "sha256": "7c2b982d8208fc5abc74b51d01c707996a79d4b4081eada94d081bbd9bc701fd"
+        },
+        {
+          "path": "docs/review/craft-03/initial/batch-20-dark.png",
+          "sha256": "f49e0ff6b3bebcdb0d4d7e75ca1256fd28e38d409ba7f94300186ed4817630f3"
+        },
+        {
+          "path": "docs/review/craft-03/revised-b/cloud-upload-focus-light.png",
+          "sha256": "95d079d3181c6a39e2fae34fbd6d146cd6cd1ef9b07d39ec380a7b105f18322a"
+        },
+        {
+          "path": "docs/review/craft-03/revised-b/cloud-upload-focus-dark.png",
+          "sha256": "566334344d30e4e8dfef8dab72b35d8f4200939ac3cce60901bd479becfefe34"
+        },
+        {
+          "path": "docs/review/craft-03/final/batch-20-native-light.png",
+          "sha256": "0000e03d802b7751b776df7464d56826c64e1e7704aa6d6e8626a8dbd0b9bc5b"
+        },
+        {
+          "path": "docs/review/craft-03/final/batch-20-native-dark.png",
+          "sha256": "92c5fd770317a3a79442db173733ef4607724b8bede1f09fe73971ccd10d896d"
+        }
+      ]
+    },
+    {
+      "name": "coins",
+      "previousStatus": "pending-depth-assessment",
+      "status": "modified-and-visually-reviewed",
+      "reason": "後硬幣由完整柱面依前硬幣實心剪影裁開，短端改成真正遮擋切口。",
+      "beforeHash": "55d24ea6487fef182eb6ea5ac9996df9b92d4c850fdaefeb121fede34839234e",
+      "afterHash": "2f84a99661429601066740e5d49b1f32b703a86a01ab98ea6d77b346f235380a",
+      "evidence": [
+        {
+          "path": "docs/review/craft-03/initial/batch-21-light.png",
+          "sha256": "0c051c27afa00d6992dda37bfe082641775d4f2c4bfc390301b81f351d8644b0"
+        },
+        {
+          "path": "docs/review/craft-03/initial/batch-21-dark.png",
+          "sha256": "3808da489c6a0f3f663851863c02889ec802c77a9367e09928d610794bbdddab"
+        },
+        {
+          "path": "docs/review/craft-03/revised-c/folder-search-focus-light.png",
+          "sha256": "836d1a6cad10633c76b5b7ece112f1cde2b66af8b879cc7e93475794b4447279"
+        },
+        {
+          "path": "docs/review/craft-03/revised-c/folder-search-focus-dark.png",
+          "sha256": "05b9a0397ec3874fd535fd51f8003619c575011f51590ba26a83c32e9f91c016"
+        },
+        {
+          "path": "docs/review/craft-03/final/batch-21-native-light.png",
+          "sha256": "70f3476eb10f3312d956965ba2ed811772676f21f323600e64ebad04fbf91ffd"
+        },
+        {
+          "path": "docs/review/craft-03/final/batch-21-native-dark.png",
+          "sha256": "af5db3e65f39c42f6b650e2e8a4bdff5232e54152e95f8bccb3b5f6e572a34db"
+        }
+      ]
+    },
+    {
+      "name": "layers",
+      "previousStatus": "pending-depth-assessment",
+      "status": "retained-after-individual-visual-review",
+      "reason": "保留新修版本：三層實際可見寬度一致，側向回弧表現紙張而非縮窄下層。",
+      "beforeHash": "6af06f1ffb967b62138c75a361a9aa2aa511e81420efdee4a4697cab246ed539",
+      "afterHash": "6af06f1ffb967b62138c75a361a9aa2aa511e81420efdee4a4697cab246ed539",
+      "evidence": [
+        {
+          "path": "docs/review/craft-03/initial/batch-22-light.png",
+          "sha256": "d745f7aa3c548a1955ce515cbe30014bb82f9a80c0a932de104dad59dbe223ac"
+        },
+        {
+          "path": "docs/review/craft-03/initial/batch-22-dark.png",
+          "sha256": "ff35366fcf1793b8cae9ffef71d9b08768044c46778d4c436db6d368d7e1f677"
+        },
+        {
+          "path": "docs/review/craft-03/final/batch-22-native-light.png",
+          "sha256": "413011c90ab9ed52f6c3085e6455aee6e8edb26428b4fc97b8a8247bb7011351"
+        },
+        {
+          "path": "docs/review/craft-03/final/batch-22-native-dark.png",
+          "sha256": "ac2b107313d2acc4384a28b5ec38c60471d9d4e0160c29f55639992c9c39f711"
+        }
+      ]
+    },
+    {
+      "name": "pin-off",
+      "previousStatus": "pending-clearance-review",
+      "status": "modified-and-visually-reviewed",
+      "reason": "完整圖釘按停用斜線外緣裁切，恢復可推回母型的斷口。",
+      "beforeHash": "ebef3f6101ddfdde5cd8ae00581db53840c79508c16cacd9d9c2f233b6cfcc6b",
+      "afterHash": "547b2296946d32d9d46bd88c7fbae87294dc326b0eac2ab9abe4d478632e5854",
+      "evidence": [
+        {
+          "path": "docs/review/craft-03/initial/batch-22-light.png",
+          "sha256": "d745f7aa3c548a1955ce515cbe30014bb82f9a80c0a932de104dad59dbe223ac"
+        },
+        {
+          "path": "docs/review/craft-03/initial/batch-22-dark.png",
+          "sha256": "ff35366fcf1793b8cae9ffef71d9b08768044c46778d4c436db6d368d7e1f677"
+        },
+        {
+          "path": "docs/review/craft-03/revised-a/bell-off-focus-light.png",
+          "sha256": "27b00e2347fdf04ce921877deafefb77ee4c07fdf55cdbf39b7abfb9c1a64396"
+        },
+        {
+          "path": "docs/review/craft-03/revised-a/bell-off-focus-dark.png",
+          "sha256": "a7dc68638b3ebcd73075eebb11ab2b4552e8864d4dc755db54ff871e604e5422"
+        },
+        {
+          "path": "docs/review/craft-03/final/batch-22-native-light.png",
+          "sha256": "413011c90ab9ed52f6c3085e6455aee6e8edb26428b4fc97b8a8247bb7011351"
+        },
+        {
+          "path": "docs/review/craft-03/final/batch-22-native-dark.png",
+          "sha256": "ac2b107313d2acc4384a28b5ec38c60471d9d4e0160c29f55639992c9c39f711"
+        }
+      ]
+    },
+    {
+      "name": "folder-search",
+      "previousStatus": "pending-clearance-review",
+      "status": "modified-and-visually-reviewed",
+      "reason": "資料夾完整外框按鏡圈與柄扣除，鏡圈內部不露背線。",
+      "beforeHash": "62c28d08302ecc928214b12fc416b078eb8cfc8928adb27ae81befe2dd6334a5",
+      "afterHash": "097d8c68aa2115ea6d452c72c2c0c3e2b674f17bdf81e02ad0c31ff7dd0001c9",
+      "evidence": [
+        {
+          "path": "docs/review/craft-03/initial/batch-22-light.png",
+          "sha256": "d745f7aa3c548a1955ce515cbe30014bb82f9a80c0a932de104dad59dbe223ac"
+        },
+        {
+          "path": "docs/review/craft-03/initial/batch-22-dark.png",
+          "sha256": "ff35366fcf1793b8cae9ffef71d9b08768044c46778d4c436db6d368d7e1f677"
+        },
+        {
+          "path": "docs/review/craft-03/revised-c/folder-search-focus-light.png",
+          "sha256": "836d1a6cad10633c76b5b7ece112f1cde2b66af8b879cc7e93475794b4447279"
+        },
+        {
+          "path": "docs/review/craft-03/revised-c/folder-search-focus-dark.png",
+          "sha256": "05b9a0397ec3874fd535fd51f8003619c575011f51590ba26a83c32e9f91c016"
+        },
+        {
+          "path": "docs/review/craft-03/final/batch-22-native-light.png",
+          "sha256": "413011c90ab9ed52f6c3085e6455aee6e8edb26428b4fc97b8a8247bb7011351"
+        },
+        {
+          "path": "docs/review/craft-03/final/batch-22-native-dark.png",
+          "sha256": "ac2b107313d2acc4384a28b5ec38c60471d9d4e0160c29f55639992c9c39f711"
+        }
+      ]
+    },
+    {
+      "name": "file-search",
+      "previousStatus": "pending-clearance-review",
+      "status": "modified-and-visually-reviewed",
+      "reason": "文件完整外框與折角按鏡圈扣除，底框收於外擴輪廓。",
+      "beforeHash": "f168457c73741b137a9fa4c0360d81ba9d0b8cac14953853944872cff23c79d3",
+      "afterHash": "e53ab60488fc03ca1be06514f2cc4e36284fa14777013f618f262d5e6ca765ac",
+      "evidence": [
+        {
+          "path": "docs/review/craft-03/initial/batch-22-light.png",
+          "sha256": "d745f7aa3c548a1955ce515cbe30014bb82f9a80c0a932de104dad59dbe223ac"
+        },
+        {
+          "path": "docs/review/craft-03/initial/batch-22-dark.png",
+          "sha256": "ff35366fcf1793b8cae9ffef71d9b08768044c46778d4c436db6d368d7e1f677"
+        },
+        {
+          "path": "docs/review/craft-03/revised-c/folder-search-focus-light.png",
+          "sha256": "836d1a6cad10633c76b5b7ece112f1cde2b66af8b879cc7e93475794b4447279"
+        },
+        {
+          "path": "docs/review/craft-03/revised-c/folder-search-focus-dark.png",
+          "sha256": "05b9a0397ec3874fd535fd51f8003619c575011f51590ba26a83c32e9f91c016"
+        },
+        {
+          "path": "docs/review/craft-03/final/batch-22-native-light.png",
+          "sha256": "413011c90ab9ed52f6c3085e6455aee6e8edb26428b4fc97b8a8247bb7011351"
+        },
+        {
+          "path": "docs/review/craft-03/final/batch-22-native-dark.png",
+          "sha256": "ac2b107313d2acc4384a28b5ec38c60471d9d4e0160c29f55639992c9c39f711"
+        }
+      ]
+    },
+    {
+      "name": "calendar-clock",
+      "previousStatus": "pending-clearance-review",
+      "status": "modified-and-visually-reviewed",
+      "reason": "以鐘面實心剪影和外描邊扣除完整日曆，時鐘內部不透背框。",
+      "beforeHash": "3a4379c2e13b1c01d3327d44eda3e727bcaa6e769bb3653002f84ee00f803bbe",
+      "afterHash": "b3d11a1057036c52020ded34b750900a847d83a961c636ac38ec4e4cbf7c98b3",
+      "evidence": [
+        {
+          "path": "docs/review/craft-03/initial/batch-27-light.png",
+          "sha256": "f3885b946f0147317c90c65a3be6a07ca877ac91ce99d9f93dca16ea45ba1502"
+        },
+        {
+          "path": "docs/review/craft-03/initial/batch-27-dark.png",
+          "sha256": "778ee93357376a6720a10153ca4fb87effda454577fb07bb8eba2e450f8c7645"
+        },
+        {
+          "path": "docs/review/craft-03/revised-d/calendar-clock-focus-light.png",
+          "sha256": "153c799938901e178213bbc804441aab271e41b586bbd1e85c8b6f42bd14b7eb"
+        },
+        {
+          "path": "docs/review/craft-03/revised-d/calendar-clock-focus-dark.png",
+          "sha256": "5835b4f77459215d25e31f12ca24887c689324e3009f6d825f9b8bd2f775ae9a"
+        },
+        {
+          "path": "docs/review/craft-03/final/batch-27-native-light.png",
+          "sha256": "fdeec3b608bfca044dc7fb4cf2d905b165b08b83b47d0d04cfc2b78cd8285622"
+        },
+        {
+          "path": "docs/review/craft-03/final/batch-27-native-dark.png",
+          "sha256": "73cf750326091b5d86648ab843b86bff49251d14b8c3933299cf569cc00fc491"
+        }
+      ]
+    },
+    {
+      "name": "clipboard-copy",
+      "previousStatus": "pending-clearance-review",
+      "status": "modified-and-visually-reviewed",
+      "reason": "向內箭頭按自身輪廓扣除完整夾板，框開口不再沿用paste任意缺口。",
+      "beforeHash": "7a6be1d4863a7c3bebdc4bc999e31a1abb05af73f13eee9f2b2e994c7b24cec6",
+      "afterHash": "ac72b597bd2bbb1cde15dde6fde815a43c375a01da3230a748aa9aeb9f691afe",
+      "evidence": [
+        {
+          "path": "docs/review/craft-03/initial/batch-27-light.png",
+          "sha256": "f3885b946f0147317c90c65a3be6a07ca877ac91ce99d9f93dca16ea45ba1502"
+        },
+        {
+          "path": "docs/review/craft-03/initial/batch-27-dark.png",
+          "sha256": "778ee93357376a6720a10153ca4fb87effda454577fb07bb8eba2e450f8c7645"
+        },
+        {
+          "path": "docs/review/craft-03/revised-d/calendar-clock-focus-light.png",
+          "sha256": "153c799938901e178213bbc804441aab271e41b586bbd1e85c8b6f42bd14b7eb"
+        },
+        {
+          "path": "docs/review/craft-03/revised-d/calendar-clock-focus-dark.png",
+          "sha256": "5835b4f77459215d25e31f12ca24887c689324e3009f6d825f9b8bd2f775ae9a"
+        },
+        {
+          "path": "docs/review/craft-03/final/batch-27-native-light.png",
+          "sha256": "fdeec3b608bfca044dc7fb4cf2d905b165b08b83b47d0d04cfc2b78cd8285622"
+        },
+        {
+          "path": "docs/review/craft-03/final/batch-27-native-dark.png",
+          "sha256": "73cf750326091b5d86648ab843b86bff49251d14b8c3933299cf569cc00fc491"
+        }
+      ]
+    },
+    {
+      "name": "clipboard-pen",
+      "previousStatus": "pending-clearance-review",
+      "status": "modified-and-visually-reviewed",
+      "reason": "筆徽標向右1.5下2個24-grid單位重排，完整母型扣除後不再留下右下孤片。",
+      "beforeHash": "e267135e5e27a5392def11d2f530e70f36aff42a6e06c19636e84446432cad87",
+      "afterHash": "b3edf46852cb68f2df68675ab5477fd63524d4805cd4abf901e37893e541b3e9",
+      "evidence": [
+        {
+          "path": "docs/review/craft-03/initial/batch-27-light.png",
+          "sha256": "f3885b946f0147317c90c65a3be6a07ca877ac91ce99d9f93dca16ea45ba1502"
+        },
+        {
+          "path": "docs/review/craft-03/initial/batch-27-dark.png",
+          "sha256": "778ee93357376a6720a10153ca4fb87effda454577fb07bb8eba2e450f8c7645"
+        },
+        {
+          "path": "docs/review/craft-03/revised-f/clipboard-pen-focus-light.png",
+          "sha256": "874358996e92cd88cfb487fca3785ef04a516d8b8fdc5b71d0c1e2d795836ff6"
+        },
+        {
+          "path": "docs/review/craft-03/revised-f/clipboard-pen-focus-dark.png",
+          "sha256": "c878eb7691649286849380f7dc0ac7806800ec8743fb060c7bad471c8911e0da"
+        },
+        {
+          "path": "docs/review/craft-03/final/batch-27-native-light.png",
+          "sha256": "fdeec3b608bfca044dc7fb4cf2d905b165b08b83b47d0d04cfc2b78cd8285622"
+        },
+        {
+          "path": "docs/review/craft-03/final/batch-27-native-dark.png",
+          "sha256": "73cf750326091b5d86648ab843b86bff49251d14b8c3933299cf569cc00fc491"
+        }
+      ]
+    },
+    {
+      "name": "mail-check",
+      "previousStatus": "pending-clearance-review",
+      "status": "modified-and-visually-reviewed",
+      "reason": "完整信封按勾號外擴輪廓裁切，勾右移0.75消除右下殘片。",
+      "beforeHash": "3a14384dc20efc10a42df4bea7ec568eca6cf747774ba26294076bcb16f066b7",
+      "afterHash": "41a6d16d07722719bd9796b4c4c1db54f4fa30328c4e457fd96ff12aa893b5e6",
+      "evidence": [
+        {
+          "path": "docs/review/craft-03/initial/batch-28-light.png",
+          "sha256": "ad5e478a62bf6b9eb7238c3c2fa766ecc985eb6f96f95bc64c97e68555bd1b6f"
+        },
+        {
+          "path": "docs/review/craft-03/initial/batch-28-dark.png",
+          "sha256": "8fa6014d41e83d9e0733f181593543cfb489139b6188ba22d76a114e87102f9a"
+        },
+        {
+          "path": "docs/review/craft-03/revised-e/clipboard-pen-focus-light.png",
+          "sha256": "bbfba557bc954bb9d379a359041b0d3578863fe589134bd33a54c1bd44ee2706"
+        },
+        {
+          "path": "docs/review/craft-03/revised-e/clipboard-pen-focus-dark.png",
+          "sha256": "4b7ead3848d1daee096efaa77aa7072811ecf12a6fd03e99055f22684b0b5c3f"
+        },
+        {
+          "path": "docs/review/craft-03/final/batch-28-native-light.png",
+          "sha256": "358323390831e53f205b5d7e2a2f1b65033a55a695cd71b6ab795a33a8284093"
+        },
+        {
+          "path": "docs/review/craft-03/final/batch-28-native-dark.png",
+          "sha256": "b779789854fdd5934dc57f4730083c1ea016b14e4996cc89167e9c9c2c100689"
+        }
+      ]
+    },
+    {
+      "name": "user-cog",
+      "previousStatus": "pending-clearance-review",
+      "status": "modified-and-visually-reviewed",
+      "reason": "完整人物肩線按齒輪封閉剪影扣除，孔洞不透肩線且切口跟隨齒形。",
+      "beforeHash": "bda93fa0dc3ac88ccaabf6edc205f9d1dddb786ec97bb630741e95d43fd38ff4",
+      "afterHash": "0bfa45f5ea2c6edae5ba20ef2983dfc5fa3cb59b66d04d5ca0b58ab5ef0d3cbe",
+      "evidence": [
+        {
+          "path": "docs/review/craft-03/initial/batch-28-light.png",
+          "sha256": "ad5e478a62bf6b9eb7238c3c2fa766ecc985eb6f96f95bc64c97e68555bd1b6f"
+        },
+        {
+          "path": "docs/review/craft-03/initial/batch-28-dark.png",
+          "sha256": "8fa6014d41e83d9e0733f181593543cfb489139b6188ba22d76a114e87102f9a"
+        },
+        {
+          "path": "docs/review/craft-03/revised-d/calendar-clock-focus-light.png",
+          "sha256": "153c799938901e178213bbc804441aab271e41b586bbd1e85c8b6f42bd14b7eb"
+        },
+        {
+          "path": "docs/review/craft-03/revised-d/calendar-clock-focus-dark.png",
+          "sha256": "5835b4f77459215d25e31f12ca24887c689324e3009f6d825f9b8bd2f775ae9a"
+        },
+        {
+          "path": "docs/review/craft-03/final/batch-28-native-light.png",
+          "sha256": "358323390831e53f205b5d7e2a2f1b65033a55a695cd71b6ab795a33a8284093"
+        },
+        {
+          "path": "docs/review/craft-03/final/batch-28-native-dark.png",
+          "sha256": "b779789854fdd5934dc57f4730083c1ea016b14e4996cc89167e9c9c2c100689"
+        }
+      ]
+    }
+  ]
+}

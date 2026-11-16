@@ -1,3 +1,4 @@
+import { knockout } from '../occlusion.mjs';
 import { figure } from "./shared.mjs";
 function checkbox(g) {
   return [figure(g).rect(4, 4, 16, 16)];
@@ -12,12 +13,7 @@ function toggle(g, on) {
 const forms = {
   "eye-off": (g) => {
     const f = figure(g);
-    return [
-      f.path("M9.5 5.8C10.3 5.6 11.1 5.5 12 5.5C16 5.5 19 7.5 21.5 12C20.8 13.3 20 14.4 19 15.4"),
-      f.path("M5.1 8.4C4.2 9.4 3.3 10.6 2.5 12C5 16.5 8 18.5 12 18.5C13.5 18.5 14.8 18.2 16 17.6"),
-      ...g.s === 16 ? [] : [f.path("M9 11.5A3 3 0 0 0 12.5 15")],
-      f.line(3.5, 3.5, 20.5, 20.5)
-    ];
+    return knockout(forms.eye(g),[f.line(3.5,3.5,20.5,20.5)],g);
   },
   "help-circle": (g) => {
     const f = figure(g);

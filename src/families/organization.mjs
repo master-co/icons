@@ -1,21 +1,7 @@
 import { knockout } from '../occlusion.mjs';
-import { contour } from '../geometry.mjs';
 import { file, folder } from './core.mjs';
 import { figure } from './shared.mjs';
 
-// Keep the file/folder's native outer dimensions. Open only the lower-right
-// region occupied by the foreground search/permission badge; no painted cover.
-function documentFrame(g, kind, locked) {
-  const {s,c,v,r}=g;
-  const cutX=v(6.5,8.5,10.5),cutY=locked?v(6,7.5,9):v(7,8.75,10.5);
-  if(kind==='file'){
-    const l=v(3.5,4.5,5.5),right=s-l,t=v(2,2.5,3),b=s-t,fold=v(3,3.5,4.5);
-    const endY=locked?t+fold+v(.25,.3,.35):cutY;
-    return [contour([[cutX,b],[l,b],[l,t],[right-fold,t],[right,t+fold],[right,endY]],r),file(g)[1]];
-  }
-  const l=v(2,2.5,3),right=s-l,t=v(3,4,4.5),b=v(13,16.5,20),step=v(1.5,2,2.5);
-  return [contour([[cutX,b],[l,b],[l,t],[c-v(1,1.5,2),t],[c+.5,t+step],[right,t+step],[right,cutY]],r)];
-}
 function searchBadge(g){
   const f=figure(g),r=3.1,x=16.5,y=16,t=r/Math.sqrt(2);
   return [f.circle(x,y,r),f.line(x+t,y+t,21.5,21)];
@@ -40,14 +26,7 @@ function pin(g,off=false){
     f.contour([[9,3.5],[9.5,9.5],[7,13.5],[7,15],[17,15],[17,13.5],[14.5,9.5],[15,3.5]],false,radius),
     f.line(12,15,12,21.5),
   ];
-  return [
-    f.line(8,3.5,16,3.5),
-    f.line(9,3.5,9.25,6.5),
-    f.contour([[15,3.5],[14.5,9.5],[16,12]],false,radius),
-    f.contour([[8,12],[7,13.5],[7,15],[10.5,15]],false,radius),
-    f.line(12,17,12,21.5),
-    f.line(3,3,21,21),
-  ];
+  return knockout(pin(g),[f.line(3,3,21,21)],g);
 }
 export const organization={
   kanban:g=>{
@@ -82,8 +61,8 @@ export const organization={
   },
   pin:g=>pin(g),
   'pin-off':g=>pin(g,true),
-  'folder-search':g=>[...documentFrame(g,'folder',false),...searchBadge(g)],
-  'file-search':g=>[...documentFrame(g,'file',false),...searchBadge(g)],
+  'folder-search':g=>{ const badge=searchBadge(g); return knockout(folder(g),badge,g,{silhouettes:[badge[0]]}); },
+  'file-search':g=>{ const badge=searchBadge(g); return knockout(file(g),badge,g,{silhouettes:[badge[0]]}); },
   'folder-lock':g=>lockedDocument(g,'folder'),
   'file-lock':g=>lockedDocument(g,'file'),
 };

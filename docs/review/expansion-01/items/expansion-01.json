@@ -1,0 +1,942 @@
+[
+  {
+    "name": "power",
+    "purpose": "開啟或停止裝置／服務。",
+    "recognitionCues": "開口圓環與垂直電源桿；兩側開口保留。",
+    "confusableWith": [
+      "zap",
+      "circle"
+    ],
+    "sourceObservation": "Lucide與Heroicons均以開口圓環接獨立直桿；Heroicons較細，Lucide開口較直接。Master使用本庫線寬，讓桿底與圓底不接觸，不加可混淆成時鐘的中心點。",
+    "references": [
+      {
+        "name": "power",
+        "library": "Lucide",
+        "repository": "lucide-icons/lucide",
+        "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+        "path": "icons/power.svg",
+        "localPath": "references/expansion-01/lucide-power.svg",
+        "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/power.svg",
+        "sha256": "1e6b84a659aa43f826cdd8df0a63d349720004e2ccb10c33e415a990a311aa05",
+        "license": "ISC AND MIT",
+        "sourceName": "power",
+        "match": "exact",
+        "role": "comparison-only"
+      },
+      {
+        "name": "power",
+        "library": "Heroicons",
+        "repository": "tailwindlabs/heroicons",
+        "commit": "616b7a4dbbf3d011760af8066262cd5c6b3868f3",
+        "path": "optimized/24/outline/power.svg",
+        "localPath": "references/expansion-01/heroicons-power.svg",
+        "url": "https://github.com/tailwindlabs/heroicons/blob/616b7a4dbbf3d011760af8066262cd5c6b3868f3/optimized/24/outline/power.svg",
+        "sha256": "cc4c7f04990dedb9fe2b174de5d1eb69cb16e282ef0797c2738240e0ec1be3da",
+        "license": "MIT",
+        "sourceName": "power",
+        "match": "exact",
+        "role": "comparison-only"
+      }
+    ],
+    "effects": {
+      "dashes": {
+        "used": false,
+        "reason": "不採用；電源以連續實體輪廓表達，沒有未完成或隱藏邊界。"
+      },
+      "opacity": {
+        "used": false,
+        "reason": "不採用；電源的主體及必要訊號以留白分離，淡化不增加語意。"
+      },
+      "gradients": {
+        "used": false,
+        "reason": "本期不新增連續漸層或mask，以原生輪廓及必要逐筆透明度處理。"
+      }
+    },
+    "change": {
+      "kind": "new",
+      "reason": "新繪後目視通過：對稱圓環與上方開口穩定，16px仍能分辨直桿和左右間隙；曲面本身不因sharp拉直。",
+      "before": null
+    },
+    "visualReview": {
+      "status": "new-after-visual-review",
+      "reviewer": "root",
+      "date": "2026-11-16",
+      "batch": "expansion-01",
+      "variantsSha256": "33f6cf3ab0b33c8a095ac818d087c2b388618bc22e9b6171f14ac1b2565646cf",
+      "checks": [
+        "two-pinned-source-comparisons",
+        "16/20/24",
+        "sharp/soft/rounded",
+        "light/dark",
+        "55-percent-foreground",
+        "adjacent-text"
+      ],
+      "evidence": [
+        {
+          "path": "docs/review/ui-v1/expansion-01/comparison.png",
+          "sha256": "619fb35eb7f32273f2562bcf58b660d7d53d713eff3687f522a03ed7e718b73c"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-01/comparison-dark.png",
+          "sha256": "dd2a3c6fd05c82f050be3520df797658ab36342867704522cf5057d44a377303"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-01/native.png",
+          "sha256": "42b545109bd493662833964af632fe3fdd1335d4007395e43049ff91fb7123bf"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-01/native-dark.png",
+          "sha256": "0518f505fc72a87ca0e648b4eca1fbd702e4c9ccb6a2f7177a710f8119dc1555"
+        }
+      ]
+    },
+    "status": "visually-reviewed-candidate",
+    "userApproval": "pending"
+  },
+  {
+    "name": "zap",
+    "purpose": "快速動作、效能或閃電功能。",
+    "recognitionCues": "傾斜閃電的兩個尖端與中央折返。",
+    "confusableWith": [
+      "power",
+      "sparkles"
+    ],
+    "sourceObservation": "Tabler用銳利折返，Lucide在雷電轉角留少量曲面。Master保留慣用閃電剪影，只以局部tip半徑處理角型，避免整體大半徑把尖端變鈍。",
+    "references": [
+      {
+        "name": "zap",
+        "library": "Lucide",
+        "repository": "lucide-icons/lucide",
+        "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+        "path": "icons/zap.svg",
+        "localPath": "references/expansion-01/lucide-zap.svg",
+        "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/zap.svg",
+        "sha256": "4c395891eab4d1e5627c5d414a16db037317cb2f12453de0f3a1130964c6d444",
+        "license": "ISC AND MIT",
+        "sourceName": "zap",
+        "match": "exact",
+        "role": "comparison-only"
+      },
+      {
+        "name": "zap",
+        "library": "Tabler",
+        "repository": "tabler/tabler-icons",
+        "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+        "path": "icons/outline/bolt.svg",
+        "localPath": "references/expansion-01/tabler-bolt.svg",
+        "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/bolt.svg",
+        "sha256": "5321162cf117d3a83aec6c8f67a3bb0398068edb487b524d280b8fb47d6b98ce",
+        "license": "MIT",
+        "sourceName": "bolt",
+        "match": "exact",
+        "role": "comparison-only"
+      }
+    ],
+    "effects": {
+      "dashes": {
+        "used": false,
+        "reason": "不採用；快速動作以連續實體輪廓表達，沒有未完成或隱藏邊界。"
+      },
+      "opacity": {
+        "used": false,
+        "reason": "不採用；快速動作的主體及必要訊號以留白分離，淡化不增加語意。"
+      },
+      "gradients": {
+        "used": false,
+        "reason": "本期不新增連續漸層或mask，以原生輪廓及必要逐筆透明度處理。"
+      }
+    },
+    "change": {
+      "kind": "new",
+      "reason": "新繪後目視通過：三角型都保留方向性尖端，中央折返未閉合；16px無額外內線。",
+      "before": null
+    },
+    "visualReview": {
+      "status": "new-after-visual-review",
+      "reviewer": "root",
+      "date": "2026-11-16",
+      "batch": "expansion-01",
+      "variantsSha256": "1f0ad529d00b9b98d53c583bc4d727dfc179de8397147deb90cd65a00fd20bca",
+      "checks": [
+        "two-pinned-source-comparisons",
+        "16/20/24",
+        "sharp/soft/rounded",
+        "light/dark",
+        "55-percent-foreground",
+        "adjacent-text"
+      ],
+      "evidence": [
+        {
+          "path": "docs/review/ui-v1/expansion-01/comparison.png",
+          "sha256": "619fb35eb7f32273f2562bcf58b660d7d53d713eff3687f522a03ed7e718b73c"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-01/comparison-dark.png",
+          "sha256": "dd2a3c6fd05c82f050be3520df797658ab36342867704522cf5057d44a377303"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-01/native.png",
+          "sha256": "42b545109bd493662833964af632fe3fdd1335d4007395e43049ff91fb7123bf"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-01/native-dark.png",
+          "sha256": "0518f505fc72a87ca0e648b4eca1fbd702e4c9ccb6a2f7177a710f8119dc1555"
+        }
+      ]
+    },
+    "status": "visually-reviewed-candidate",
+    "userApproval": "pending"
+  },
+  {
+    "name": "lightbulb",
+    "purpose": "顯示提示、建議或想法。",
+    "recognitionCues": "圓燈罩、收頸與下方兩段燈座。",
+    "confusableWith": [
+      "sun",
+      "help-circle"
+    ],
+    "sourceObservation": "Lucide保留分離燈座，Phosphor封閉底座且有內部反光線。Master以燈罩曲率與收頸表意，不加會擠壓16px的反光裝飾。",
+    "references": [
+      {
+        "name": "lightbulb",
+        "library": "Lucide",
+        "repository": "lucide-icons/lucide",
+        "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+        "path": "icons/lightbulb.svg",
+        "localPath": "references/expansion-01/lucide-lightbulb.svg",
+        "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/lightbulb.svg",
+        "sha256": "e33bbec15b1e64cca958e086850f951c0dc2201cd5778bb3695fda3cb6ea457d",
+        "license": "ISC AND MIT",
+        "sourceName": "lightbulb",
+        "match": "exact",
+        "role": "comparison-only"
+      },
+      {
+        "name": "lightbulb",
+        "library": "Phosphor",
+        "repository": "phosphor-icons/core",
+        "commit": "2b75f3ad12b420c9504ef05df8d2564a28f8500e",
+        "path": "assets/regular/lightbulb.svg",
+        "localPath": "references/expansion-01/phosphor-lightbulb.svg",
+        "url": "https://github.com/phosphor-icons/core/blob/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular/lightbulb.svg",
+        "sha256": "b61e4d9685a1d74e579a7dbbe0d5222bdf8dcdcaf5b67825a17ff45363e4fadd",
+        "license": "MIT",
+        "sourceName": "lightbulb",
+        "match": "exact",
+        "role": "comparison-only"
+      }
+    ],
+    "effects": {
+      "dashes": {
+        "used": false,
+        "reason": "不採用；提示與想法以連續實體輪廓表達，沒有未完成或隱藏邊界。"
+      },
+      "opacity": {
+        "used": false,
+        "reason": "不採用；提示與想法的主體及必要訊號以留白分離，淡化不增加語意。"
+      },
+      "gradients": {
+        "used": false,
+        "reason": "本期不新增連續漸層或mask，以原生輪廓及必要逐筆透明度處理。"
+      }
+    },
+    "change": {
+      "kind": "new",
+      "reason": "新繪後目視通過：收頸平順接入圓燈罩，兩段底座在16px仍分離；不靠多一筆高光表達精緻。",
+      "before": null
+    },
+    "visualReview": {
+      "status": "new-after-visual-review",
+      "reviewer": "root",
+      "date": "2026-11-16",
+      "batch": "expansion-01",
+      "variantsSha256": "b674295ab1d57768a09e0c7a97f349ebe30deab9f24ab4d99b1f9e986a05287c",
+      "checks": [
+        "two-pinned-source-comparisons",
+        "16/20/24",
+        "sharp/soft/rounded",
+        "light/dark",
+        "55-percent-foreground",
+        "adjacent-text"
+      ],
+      "evidence": [
+        {
+          "path": "docs/review/ui-v1/expansion-01/comparison.png",
+          "sha256": "619fb35eb7f32273f2562bcf58b660d7d53d713eff3687f522a03ed7e718b73c"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-01/comparison-dark.png",
+          "sha256": "dd2a3c6fd05c82f050be3520df797658ab36342867704522cf5057d44a377303"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-01/native.png",
+          "sha256": "42b545109bd493662833964af632fe3fdd1335d4007395e43049ff91fb7123bf"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-01/native-dark.png",
+          "sha256": "0518f505fc72a87ca0e648b4eca1fbd702e4c9ccb6a2f7177a710f8119dc1555"
+        }
+      ]
+    },
+    "status": "visually-reviewed-candidate",
+    "userApproval": "pending"
+  },
+  {
+    "name": "life-buoy",
+    "purpose": "進入說明與支援中心。",
+    "recognitionCues": "環形浮圈與四個對角帶分區。",
+    "confusableWith": [
+      "circle",
+      "target"
+    ],
+    "sourceObservation": "Lucide與Phosphor均使用內外同心圓及四條接帶；它們是同一物體的結構連接。Master依半徑求接點，避免圓端帽剛好蓋住微縫。",
+    "references": [
+      {
+        "name": "life-buoy",
+        "library": "Lucide",
+        "repository": "lucide-icons/lucide",
+        "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+        "path": "icons/life-buoy.svg",
+        "localPath": "references/expansion-01/lucide-life-buoy.svg",
+        "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/life-buoy.svg",
+        "sha256": "6f6280c32ee414ef191ce98b58213b56d1317b25000e17785ede1125b7a37701",
+        "license": "ISC AND MIT",
+        "sourceName": "life-buoy",
+        "match": "exact",
+        "role": "comparison-only"
+      },
+      {
+        "name": "life-buoy",
+        "library": "Phosphor",
+        "repository": "phosphor-icons/core",
+        "commit": "2b75f3ad12b420c9504ef05df8d2564a28f8500e",
+        "path": "assets/regular/lifebuoy.svg",
+        "localPath": "references/expansion-01/phosphor-lifebuoy.svg",
+        "url": "https://github.com/phosphor-icons/core/blob/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular/lifebuoy.svg",
+        "sha256": "450ce5b7ec604f37c2d3dfc0f2972d35557121a050e83854135429376c3b95f0",
+        "license": "MIT",
+        "sourceName": "lifebuoy",
+        "match": "exact",
+        "role": "comparison-only"
+      }
+    ],
+    "effects": {
+      "dashes": {
+        "used": false,
+        "reason": "不採用；支援中心以連續實體輪廓表達，沒有未完成或隱藏邊界。"
+      },
+      "opacity": {
+        "used": false,
+        "reason": "不採用；支援中心的主體及必要訊號以留白分離，淡化不增加語意。"
+      },
+      "gradients": {
+        "used": false,
+        "reason": "本期不新增連續漸層或mask，以原生輪廓及必要逐筆透明度處理。"
+      }
+    },
+    "change": {
+      "kind": "new",
+      "reason": "新繪後目視通過：中央孔在16px存活，四個帶區均勻且無浮線；不把必要接點套成knockout。",
+      "before": null
+    },
+    "visualReview": {
+      "status": "new-after-visual-review",
+      "reviewer": "root",
+      "date": "2026-11-16",
+      "batch": "expansion-01",
+      "variantsSha256": "122aede38d04cac4d7ac61c4e2c717445e6b8b85ab3cd0442c37f63948259d38",
+      "checks": [
+        "two-pinned-source-comparisons",
+        "16/20/24",
+        "sharp/soft/rounded",
+        "light/dark",
+        "55-percent-foreground",
+        "adjacent-text"
+      ],
+      "evidence": [
+        {
+          "path": "docs/review/ui-v1/expansion-01/comparison.png",
+          "sha256": "619fb35eb7f32273f2562bcf58b660d7d53d713eff3687f522a03ed7e718b73c"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-01/comparison-dark.png",
+          "sha256": "dd2a3c6fd05c82f050be3520df797658ab36342867704522cf5057d44a377303"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-01/native.png",
+          "sha256": "42b545109bd493662833964af632fe3fdd1335d4007395e43049ff91fb7123bf"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-01/native-dark.png",
+          "sha256": "0518f505fc72a87ca0e648b4eca1fbd702e4c9ccb6a2f7177a710f8119dc1555"
+        }
+      ]
+    },
+    "status": "visually-reviewed-candidate",
+    "userApproval": "pending"
+  },
+  {
+    "name": "languages",
+    "purpose": "切換介面語言或翻譯。",
+    "recognitionCues": "文字符號與拉丁A並列，與地球／區域設定區分。",
+    "confusableWith": [
+      "globe",
+      "text"
+    ],
+    "sourceObservation": "Lucide與Phosphor translate以兩種書寫系統並列；Phosphor的文形較寬。Master把左側交叉筆畫與右側A錯位配置，保留字形訊號而非套字型。",
+    "references": [
+      {
+        "name": "languages",
+        "library": "Lucide",
+        "repository": "lucide-icons/lucide",
+        "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+        "path": "icons/languages.svg",
+        "localPath": "references/expansion-01/lucide-languages.svg",
+        "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/languages.svg",
+        "sha256": "ae9048feb2c7b19855da9a8f5414f68125573039777a89b9c253cceed5dc5075",
+        "license": "ISC AND MIT",
+        "sourceName": "languages",
+        "match": "exact",
+        "role": "comparison-only"
+      },
+      {
+        "name": "languages",
+        "library": "Phosphor",
+        "repository": "phosphor-icons/core",
+        "commit": "2b75f3ad12b420c9504ef05df8d2564a28f8500e",
+        "path": "assets/regular/translate.svg",
+        "localPath": "references/expansion-01/phosphor-translate.svg",
+        "url": "https://github.com/phosphor-icons/core/blob/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular/translate.svg",
+        "sha256": "1e49dc31f3a172c9c7c67361511ee5314598b3f5b32788219325f589487f76c5",
+        "license": "MIT",
+        "sourceName": "translate",
+        "match": "exact",
+        "role": "comparison-only"
+      }
+    ],
+    "effects": {
+      "dashes": {
+        "used": false,
+        "reason": "不採用；語言切換以連續實體輪廓表達，沒有未完成或隱藏邊界。"
+      },
+      "opacity": {
+        "used": false,
+        "reason": "不採用；語言切換的主體及必要訊號以留白分離，淡化不增加語意。"
+      },
+      "gradients": {
+        "used": false,
+        "reason": "本期不新增連續漸層或mask，以原生輪廓及必要逐筆透明度處理。"
+      }
+    },
+    "change": {
+      "kind": "new",
+      "reason": "新繪後目視通過：兩組字符在16px保持分區，A橫線與上頂點有空隙；沒有多加文字框。",
+      "before": null
+    },
+    "visualReview": {
+      "status": "new-after-visual-review",
+      "reviewer": "root",
+      "date": "2026-11-16",
+      "batch": "expansion-01",
+      "variantsSha256": "93588694505548aa53cf121a8db783cb53cc204bfb1234001caaee84eda1b776",
+      "checks": [
+        "two-pinned-source-comparisons",
+        "16/20/24",
+        "sharp/soft/rounded",
+        "light/dark",
+        "55-percent-foreground",
+        "adjacent-text"
+      ],
+      "evidence": [
+        {
+          "path": "docs/review/ui-v1/expansion-01/comparison.png",
+          "sha256": "619fb35eb7f32273f2562bcf58b660d7d53d713eff3687f522a03ed7e718b73c"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-01/comparison-dark.png",
+          "sha256": "dd2a3c6fd05c82f050be3520df797658ab36342867704522cf5057d44a377303"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-01/native.png",
+          "sha256": "42b545109bd493662833964af632fe3fdd1335d4007395e43049ff91fb7123bf"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-01/native-dark.png",
+          "sha256": "0518f505fc72a87ca0e648b4eca1fbd702e4c9ccb6a2f7177a710f8119dc1555"
+        }
+      ]
+    },
+    "status": "visually-reviewed-candidate",
+    "userApproval": "pending"
+  },
+  {
+    "name": "wrench",
+    "purpose": "維護、修復或工具設定。",
+    "recognitionCues": "開口扳手頭、頸部與斜向握柄。",
+    "confusableWith": [
+      "settings",
+      "pencil"
+    ],
+    "sourceObservation": "Lucide與Iconoir都保留開口鉗口及頭部弧面；Iconoir頸部轉折較寬。Master重畫頭頸連接與圓底柄，避免孔洞及過密機械細節。",
+    "references": [
+      {
+        "name": "wrench",
+        "library": "Lucide",
+        "repository": "lucide-icons/lucide",
+        "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+        "path": "icons/wrench.svg",
+        "localPath": "references/expansion-01/lucide-wrench.svg",
+        "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/wrench.svg",
+        "sha256": "b5f3bf792743edb9e81b543dd1b13ccc26d3afe1d33500a1cd8dee2e052d6197",
+        "license": "ISC AND MIT",
+        "sourceName": "wrench",
+        "match": "exact",
+        "role": "comparison-only"
+      },
+      {
+        "name": "wrench",
+        "library": "Iconoir",
+        "repository": "iconoir-icons/iconoir",
+        "commit": "39834e3f193bc0cca2c36bebb6a650471977433d",
+        "path": "icons/regular/wrench.svg",
+        "localPath": "references/expansion-01/iconoir-wrench.svg",
+        "url": "https://github.com/iconoir-icons/iconoir/blob/39834e3f193bc0cca2c36bebb6a650471977433d/icons/regular/wrench.svg",
+        "sha256": "a34aef106cf4f9f7bb7aa5fc56238ba3ff452dfa69d3a42eb25c9e4f376cde01",
+        "license": "MIT",
+        "sourceName": "wrench",
+        "match": "exact",
+        "role": "comparison-only"
+      }
+    ],
+    "effects": {
+      "dashes": {
+        "used": false,
+        "reason": "不採用；維護工具以連續實體輪廓表達，沒有未完成或隱藏邊界。"
+      },
+      "opacity": {
+        "used": false,
+        "reason": "不採用；維護工具的主體及必要訊號以留白分離，淡化不增加語意。"
+      },
+      "gradients": {
+        "used": false,
+        "reason": "本期不新增連續漸層或mask，以原生輪廓及必要逐筆透明度處理。"
+      }
+    },
+    "change": {
+      "kind": "new",
+      "reason": "新繪後目視通過：鉗口能辨識、頭頸未成黑塊；圓柄收筆與曲面在sharp也成立，16px不畫柄端小孔。",
+      "before": null
+    },
+    "visualReview": {
+      "status": "new-after-visual-review",
+      "reviewer": "root",
+      "date": "2026-11-16",
+      "batch": "expansion-01",
+      "variantsSha256": "bcf36ac7eee99399d882219c2ea75c4291a3723dce5a24e319fb99b730049a1b",
+      "checks": [
+        "two-pinned-source-comparisons",
+        "16/20/24",
+        "sharp/soft/rounded",
+        "light/dark",
+        "55-percent-foreground",
+        "adjacent-text"
+      ],
+      "evidence": [
+        {
+          "path": "docs/review/ui-v1/expansion-01/comparison.png",
+          "sha256": "619fb35eb7f32273f2562bcf58b660d7d53d713eff3687f522a03ed7e718b73c"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-01/comparison-dark.png",
+          "sha256": "dd2a3c6fd05c82f050be3520df797658ab36342867704522cf5057d44a377303"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-01/native.png",
+          "sha256": "42b545109bd493662833964af632fe3fdd1335d4007395e43049ff91fb7123bf"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-01/native-dark.png",
+          "sha256": "0518f505fc72a87ca0e648b4eca1fbd702e4c9ccb6a2f7177a710f8119dc1555"
+        }
+      ]
+    },
+    "status": "visually-reviewed-candidate",
+    "userApproval": "pending"
+  },
+  {
+    "name": "command",
+    "purpose": "表示Command快捷鍵或指令選單。",
+    "recognitionCues": "四個封閉回環與中央方形通道。",
+    "confusableWith": [
+      "keyboard",
+      "component"
+    ],
+    "sourceObservation": "Tabler與Phosphor都以四個回環構成command符號，Phosphor回環較寬。Master共用同一半徑與切點，避免四角各畫導致孔徑不一。",
+    "references": [
+      {
+        "name": "command",
+        "library": "Tabler",
+        "repository": "tabler/tabler-icons",
+        "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+        "path": "icons/outline/command.svg",
+        "localPath": "references/expansion-01/tabler-command.svg",
+        "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/command.svg",
+        "sha256": "e2c48826702bf66925f59380f78e10404f23562b90563a95112cb004acb80e45",
+        "license": "MIT",
+        "sourceName": "command",
+        "match": "exact",
+        "role": "comparison-only"
+      },
+      {
+        "name": "command",
+        "library": "Phosphor",
+        "repository": "phosphor-icons/core",
+        "commit": "2b75f3ad12b420c9504ef05df8d2564a28f8500e",
+        "path": "assets/regular/command.svg",
+        "localPath": "references/expansion-01/phosphor-command.svg",
+        "url": "https://github.com/phosphor-icons/core/blob/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular/command.svg",
+        "sha256": "50d8e0a378d091226285385d8e9f692a8238487273b9cc64e2ef28e2b34f2495",
+        "license": "MIT",
+        "sourceName": "command",
+        "match": "exact",
+        "role": "comparison-only"
+      }
+    ],
+    "effects": {
+      "dashes": {
+        "used": false,
+        "reason": "不採用；指令鍵以連續實體輪廓表達，沒有未完成或隱藏邊界。"
+      },
+      "opacity": {
+        "used": false,
+        "reason": "不採用；指令鍵的主體及必要訊號以留白分離，淡化不增加語意。"
+      },
+      "gradients": {
+        "used": false,
+        "reason": "本期不新增連續漸層或mask，以原生輪廓及必要逐筆透明度處理。"
+      }
+    },
+    "change": {
+      "kind": "new",
+      "reason": "新繪後目視通過：四孔在16px仍可分辨，環與軸連續；圓形回環不隨角型變成方圈。",
+      "before": null
+    },
+    "visualReview": {
+      "status": "new-after-visual-review",
+      "reviewer": "root",
+      "date": "2026-11-16",
+      "batch": "expansion-01",
+      "variantsSha256": "733da3012954b0cefc11da0e3beb82e89a187271083b1bc226a5bff54abe29e1",
+      "checks": [
+        "two-pinned-source-comparisons",
+        "16/20/24",
+        "sharp/soft/rounded",
+        "light/dark",
+        "55-percent-foreground",
+        "adjacent-text"
+      ],
+      "evidence": [
+        {
+          "path": "docs/review/ui-v1/expansion-01/comparison.png",
+          "sha256": "619fb35eb7f32273f2562bcf58b660d7d53d713eff3687f522a03ed7e718b73c"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-01/comparison-dark.png",
+          "sha256": "dd2a3c6fd05c82f050be3520df797658ab36342867704522cf5057d44a377303"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-01/native.png",
+          "sha256": "42b545109bd493662833964af632fe3fdd1335d4007395e43049ff91fb7123bf"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-01/native-dark.png",
+          "sha256": "0518f505fc72a87ca0e648b4eca1fbd702e4c9ccb6a2f7177a710f8119dc1555"
+        }
+      ]
+    },
+    "status": "visually-reviewed-candidate",
+    "userApproval": "pending"
+  },
+  {
+    "name": "backspace",
+    "purpose": "刪除輸入游標前一個字元。",
+    "recognitionCues": "向左收尖的按鍵外框與內置叉號。",
+    "confusableWith": [
+      "trash",
+      "x"
+    ],
+    "sourceObservation": "Lucide delete與Heroicons backspace都用鍵帽加內置叉；Heroicons框較長。Master採較克制的鍵帽比例，叉號留在框內，不誤當覆蓋徽標裁切。",
+    "references": [
+      {
+        "name": "backspace",
+        "library": "Lucide",
+        "repository": "lucide-icons/lucide",
+        "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+        "path": "icons/delete.svg",
+        "localPath": "references/expansion-01/lucide-delete.svg",
+        "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/delete.svg",
+        "sha256": "a83d9f3d624827c94d41dceff4df530728e502989fceb415d72203bf934aa0df",
+        "license": "ISC AND MIT",
+        "sourceName": "delete",
+        "match": "exact",
+        "role": "comparison-only"
+      },
+      {
+        "name": "backspace",
+        "library": "Heroicons",
+        "repository": "tailwindlabs/heroicons",
+        "commit": "616b7a4dbbf3d011760af8066262cd5c6b3868f3",
+        "path": "optimized/24/outline/backspace.svg",
+        "localPath": "references/expansion-01/heroicons-backspace.svg",
+        "url": "https://github.com/tailwindlabs/heroicons/blob/616b7a4dbbf3d011760af8066262cd5c6b3868f3/optimized/24/outline/backspace.svg",
+        "sha256": "51812b3d28bca6c71885a9905bedb5b8222354d99c0d42a15990d7363248b443",
+        "license": "MIT",
+        "sourceName": "backspace",
+        "match": "exact",
+        "role": "comparison-only"
+      }
+    ],
+    "effects": {
+      "dashes": {
+        "used": false,
+        "reason": "不採用；退格以連續實體輪廓表達，沒有未完成或隱藏邊界。"
+      },
+      "opacity": {
+        "used": false,
+        "reason": "不採用；退格的主體及必要訊號以留白分離，淡化不增加語意。"
+      },
+      "gradients": {
+        "used": false,
+        "reason": "本期不新增連續漸層或mask，以原生輪廓及必要逐筆透明度處理。"
+      }
+    },
+    "change": {
+      "kind": "new",
+      "reason": "新繪後目視通過：叉號與外框完全分離，左尖端保留；三圓角只改框的轉折，不擴大內叉。",
+      "before": null
+    },
+    "visualReview": {
+      "status": "new-after-visual-review",
+      "reviewer": "root",
+      "date": "2026-11-16",
+      "batch": "expansion-01",
+      "variantsSha256": "787027a10cdefe27dc9bc9a2b88e24958246c316da2432115d881885459fad00",
+      "checks": [
+        "two-pinned-source-comparisons",
+        "16/20/24",
+        "sharp/soft/rounded",
+        "light/dark",
+        "55-percent-foreground",
+        "adjacent-text"
+      ],
+      "evidence": [
+        {
+          "path": "docs/review/ui-v1/expansion-01/comparison.png",
+          "sha256": "619fb35eb7f32273f2562bcf58b660d7d53d713eff3687f522a03ed7e718b73c"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-01/comparison-dark.png",
+          "sha256": "dd2a3c6fd05c82f050be3520df797658ab36342867704522cf5057d44a377303"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-01/native.png",
+          "sha256": "42b545109bd493662833964af632fe3fdd1335d4007395e43049ff91fb7123bf"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-01/native-dark.png",
+          "sha256": "0518f505fc72a87ca0e648b4eca1fbd702e4c9ccb6a2f7177a710f8119dc1555"
+        }
+      ]
+    },
+    "status": "visually-reviewed-candidate",
+    "userApproval": "pending"
+  },
+  {
+    "name": "keyboard-return",
+    "purpose": "表示Enter／Return確認輸入鍵。",
+    "recognitionCues": "鍵帽內向左折返箭頭。",
+    "confusableWith": [
+      "undo",
+      "log-in"
+    ],
+    "sourceObservation": "Phosphor key-return提供完整鍵帽同語意原稿；Lucide corner-down-left僅作折返箭頭結構參考。Master保留鍵帽避免與返回導覽混淆，標明第二份不是相同按鍵原稿。",
+    "references": [
+      {
+        "name": "keyboard-return",
+        "library": "Phosphor",
+        "repository": "phosphor-icons/core",
+        "commit": "2b75f3ad12b420c9504ef05df8d2564a28f8500e",
+        "path": "assets/regular/key-return.svg",
+        "localPath": "references/expansion-01/phosphor-key-return.svg",
+        "url": "https://github.com/phosphor-icons/core/blob/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular/key-return.svg",
+        "sha256": "fbdd2134fb315153f5e33c78f7f2677556d2ad4006d4a274de11f61b06daf558",
+        "license": "MIT",
+        "sourceName": "key-return",
+        "match": "exact",
+        "role": "comparison-only"
+      },
+      {
+        "name": "keyboard-return",
+        "library": "Lucide",
+        "repository": "lucide-icons/lucide",
+        "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+        "path": "icons/corner-down-left.svg",
+        "localPath": "references/expansion-01/lucide-corner-down-left.svg",
+        "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/corner-down-left.svg",
+        "sha256": "1e6eef07c5f63c794acbacd48067681e2ef81fc74a84cec619d6c567dd799679",
+        "license": "ISC AND MIT",
+        "sourceName": "corner-down-left",
+        "match": "structure-only",
+        "role": "comparison-only"
+      }
+    ],
+    "effects": {
+      "dashes": {
+        "used": false,
+        "reason": "不採用；確認輸入以連續實體輪廓表達，沒有未完成或隱藏邊界。"
+      },
+      "opacity": {
+        "used": false,
+        "reason": "不採用；確認輸入的主體及必要訊號以留白分離，淡化不增加語意。"
+      },
+      "gradients": {
+        "used": false,
+        "reason": "本期不新增連續漸層或mask，以原生輪廓及必要逐筆透明度處理。"
+      }
+    },
+    "change": {
+      "kind": "new",
+      "reason": "新繪後目視通過：16px箭頭與框各有空隙，折返彎曲和尖端獨立處理；按鍵圖形保持固定方向。",
+      "before": null
+    },
+    "visualReview": {
+      "status": "new-after-visual-review",
+      "reviewer": "root",
+      "date": "2026-11-16",
+      "batch": "expansion-01",
+      "variantsSha256": "29415f9c70b2b6e2fee5f5506c0d5f81f0c25bc6c22110191e483349d01da7c7",
+      "checks": [
+        "two-pinned-source-comparisons",
+        "16/20/24",
+        "sharp/soft/rounded",
+        "light/dark",
+        "55-percent-foreground",
+        "adjacent-text"
+      ],
+      "evidence": [
+        {
+          "path": "docs/review/ui-v1/expansion-01/comparison.png",
+          "sha256": "619fb35eb7f32273f2562bcf58b660d7d53d713eff3687f522a03ed7e718b73c"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-01/comparison-dark.png",
+          "sha256": "dd2a3c6fd05c82f050be3520df797658ab36342867704522cf5057d44a377303"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-01/native.png",
+          "sha256": "42b545109bd493662833964af632fe3fdd1335d4007395e43049ff91fb7123bf"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-01/native-dark.png",
+          "sha256": "0518f505fc72a87ca0e648b4eca1fbd702e4c9ccb6a2f7177a710f8119dc1555"
+        }
+      ]
+    },
+    "status": "visually-reviewed-candidate",
+    "userApproval": "pending"
+  },
+  {
+    "name": "locate",
+    "purpose": "定位目前位置或置中目標。",
+    "recognitionCues": "圓環與四個正交定位刻線。",
+    "confusableWith": [
+      "target",
+      "map-pin"
+    ],
+    "sourceObservation": "Lucide使用空心定位環，Tabler current-location另有中心環。Master保留四刻線和空心環，以較少內部墨量區別後續target的同心目標。",
+    "references": [
+      {
+        "name": "locate",
+        "library": "Lucide",
+        "repository": "lucide-icons/lucide",
+        "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+        "path": "icons/locate.svg",
+        "localPath": "references/expansion-01/lucide-locate.svg",
+        "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/locate.svg",
+        "sha256": "359deba220c6348df96b8b0853a50b6e5219ddb02676e96067056577c1b46515",
+        "license": "ISC AND MIT",
+        "sourceName": "locate",
+        "match": "exact",
+        "role": "comparison-only"
+      },
+      {
+        "name": "locate",
+        "library": "Tabler",
+        "repository": "tabler/tabler-icons",
+        "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+        "path": "icons/outline/current-location.svg",
+        "localPath": "references/expansion-01/tabler-current-location.svg",
+        "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/current-location.svg",
+        "sha256": "6544294fef2281f29bd1c2aafb3307018048fbcfd42755d33e0eba56e418ecf9",
+        "license": "MIT",
+        "sourceName": "current-location",
+        "match": "exact",
+        "role": "comparison-only"
+      }
+    ],
+    "effects": {
+      "dashes": {
+        "used": false,
+        "reason": "不採用；定位目前位置以連續實體輪廓表達，沒有未完成或隱藏邊界。"
+      },
+      "opacity": {
+        "used": false,
+        "reason": "不採用；定位目前位置的主體及必要訊號以留白分離，淡化不增加語意。"
+      },
+      "gradients": {
+        "used": false,
+        "reason": "本期不新增連續漸層或mask，以原生輪廓及必要逐筆透明度處理。"
+      }
+    },
+    "change": {
+      "kind": "new",
+      "reason": "新繪後目視通過：四刻線以實際圓邊作接點，16px仍有清楚中心孔；不靠中心點增加裝飾重量。",
+      "before": null
+    },
+    "visualReview": {
+      "status": "new-after-visual-review",
+      "reviewer": "root",
+      "date": "2026-11-16",
+      "batch": "expansion-01",
+      "variantsSha256": "6ee7ef7b4fc4dd70a85ed05d270fcc1d8877f257f38c4a99c802e0117241225c",
+      "checks": [
+        "two-pinned-source-comparisons",
+        "16/20/24",
+        "sharp/soft/rounded",
+        "light/dark",
+        "55-percent-foreground",
+        "adjacent-text"
+      ],
+      "evidence": [
+        {
+          "path": "docs/review/ui-v1/expansion-01/comparison.png",
+          "sha256": "619fb35eb7f32273f2562bcf58b660d7d53d713eff3687f522a03ed7e718b73c"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-01/comparison-dark.png",
+          "sha256": "dd2a3c6fd05c82f050be3520df797658ab36342867704522cf5057d44a377303"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-01/native.png",
+          "sha256": "42b545109bd493662833964af632fe3fdd1335d4007395e43049ff91fb7123bf"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-01/native-dark.png",
+          "sha256": "0518f505fc72a87ca0e648b4eca1fbd702e4c9ccb6a2f7177a710f8119dc1555"
+        }
+      ]
+    },
+    "status": "visually-reviewed-candidate",
+    "userApproval": "pending"
+  }
+]

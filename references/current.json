@@ -2,7 +2,8 @@
   "manifests": [
     "references/ui-v1/manifest.json",
     "references/organization-01/manifest.json",
-    "references/productivity-01/manifest.json"
+    "references/productivity-01/manifest.json",
+    "references/expansion-01/manifest.json"
   ],
-  "before": "references/layers-01/master-before.json"
+  "before": "references/craft-03/master-before.json"
 }

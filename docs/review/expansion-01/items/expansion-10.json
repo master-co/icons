@@ -1,0 +1,952 @@
+[
+  {
+    "name": "barcode",
+    "purpose": "商品條碼識別",
+    "recognitionCues": "多條平行直條",
+    "confusableWith": [
+      "scan-barcode",
+      "qr-code",
+      "grip-vertical"
+    ],
+    "sourceObservation": "Lucide以獨立直條呈現，Tabler將直條放進掃描角。Master將無框barcode與有角框scan-barcode分開，保留識別與掃描操作差異。",
+    "references": [
+      {
+        "name": "barcode",
+        "library": "Lucide",
+        "repository": "lucide-icons/lucide",
+        "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+        "path": "icons/barcode.svg",
+        "localPath": "references/expansion-01/lucide-barcode.svg",
+        "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/barcode.svg",
+        "sha256": "fac8780b6ab80f94e252aacbb293c56db82bdd24c46b1d2b410989910e930a73",
+        "license": "ISC AND MIT",
+        "sourceName": "barcode",
+        "match": "exact",
+        "role": "comparison-only"
+      },
+      {
+        "name": "barcode",
+        "library": "Tabler",
+        "repository": "tabler/tabler-icons",
+        "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+        "path": "icons/outline/barcode.svg",
+        "localPath": "references/expansion-01/tabler-barcode.svg",
+        "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/barcode.svg",
+        "sha256": "0e92a4b52c7897b6bb160294fcdf187e2c76a36ac495ad4813642ee46132bd74",
+        "license": "MIT",
+        "sourceName": "barcode",
+        "match": "exact",
+        "role": "comparison-only"
+      }
+    ],
+    "effects": {
+      "dashes": {
+        "used": false,
+        "reason": "不採用；條碼以連續實體輪廓表達，沒有未完成或隱藏邊界。"
+      },
+      "opacity": {
+        "used": false,
+        "reason": "不採用；條碼的主體及必要訊號以留白分離，淡化不增加語意。"
+      },
+      "gradients": {
+        "used": false,
+        "reason": "本期不新增連續漸層或mask，以原生輪廓及必要逐筆透明度處理。"
+      }
+    },
+    "change": {
+      "kind": "new",
+      "reason": "五條等距直線採平切端帽，保持機讀標記的俐落邊界；16px仍分開可數，不添加難以辨讀的數字。",
+      "before": null
+    },
+    "visualReview": {
+      "status": "new-after-visual-review",
+      "reviewer": "root",
+      "date": "2026-11-16",
+      "batch": "expansion-10",
+      "variantsSha256": "bf1e44c203c54041b34f6254c340600b60b2151f0b8d6e6e6aae02b8eff48c77",
+      "checks": [
+        "two-pinned-source-comparisons",
+        "16/20/24",
+        "sharp/soft/rounded",
+        "light/dark",
+        "55-percent-foreground",
+        "adjacent-text"
+      ],
+      "evidence": [
+        {
+          "path": "docs/review/ui-v1/expansion-10/comparison.png",
+          "sha256": "4fc64a0b0a006d4f3567e25ea4f9b681b0346ce7d17d89a434d35316829c1abb"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-10/comparison-dark.png",
+          "sha256": "7c84787b712cb1a0c3e10987a0a7d06313215e1e2eb2acefd00ce130982be664"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-10/native.png",
+          "sha256": "676349bdad97c43bb8a773c8d711a97efc12df771acacae930454f2b1b597b15"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-10/native-dark.png",
+          "sha256": "ed4c3f12965e168139e4fc9681ae508596c995038780e12ffc490268bf319f03"
+        }
+      ]
+    },
+    "status": "visually-reviewed-candidate",
+    "userApproval": "pending"
+  },
+  {
+    "name": "qr-code",
+    "purpose": "QR碼入口與識別",
+    "recognitionCues": "三個方形定位框與右下資料塊",
+    "confusableWith": [
+      "barcode",
+      "scan",
+      "component"
+    ],
+    "sourceObservation": "Lucide與Heroicons都保留三個定位框和不規則資料區；Master保留QR結構方角，避免將定位框圓成裝飾按鈕。",
+    "references": [
+      {
+        "name": "qr-code",
+        "library": "Lucide",
+        "repository": "lucide-icons/lucide",
+        "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+        "path": "icons/qr-code.svg",
+        "localPath": "references/expansion-01/lucide-qr-code.svg",
+        "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/qr-code.svg",
+        "sha256": "920cb79ab4b2fd23c36a16de3ca533c4896cb989adb823eb7dec97fd840d30f5",
+        "license": "ISC AND MIT",
+        "sourceName": "qr-code",
+        "match": "exact",
+        "role": "comparison-only"
+      },
+      {
+        "name": "qr-code",
+        "library": "Heroicons",
+        "repository": "tailwindlabs/heroicons",
+        "commit": "616b7a4dbbf3d011760af8066262cd5c6b3868f3",
+        "path": "optimized/24/outline/qr-code.svg",
+        "localPath": "references/expansion-01/heroicons-qr-code.svg",
+        "url": "https://github.com/tailwindlabs/heroicons/blob/616b7a4dbbf3d011760af8066262cd5c6b3868f3/optimized/24/outline/qr-code.svg",
+        "sha256": "52d238d55d34c68fc8ab02d5b052e0933a58d8496eddd98564f1759f3905990a",
+        "license": "MIT",
+        "sourceName": "qr-code",
+        "match": "exact",
+        "role": "comparison-only"
+      }
+    ],
+    "effects": {
+      "dashes": {
+        "used": false,
+        "reason": "不採用；QR碼以連續實體輪廓表達，沒有未完成或隱藏邊界。"
+      },
+      "opacity": {
+        "used": false,
+        "reason": "不採用；QR碼的主體及必要訊號以留白分離，淡化不增加語意。"
+      },
+      "gradients": {
+        "used": false,
+        "reason": "本期不新增連續漸層或mask，以原生輪廓及必要逐筆透明度處理。"
+      }
+    },
+    "change": {
+      "kind": "new",
+      "reason": "16px省略定位框內小點，留下清楚方孔；20/24px恢復內點，右下採少量不規則資料塊，三個主要框不因rounded預設失去方形構造。",
+      "before": null
+    },
+    "visualReview": {
+      "status": "new-after-visual-review",
+      "reviewer": "root",
+      "date": "2026-11-16",
+      "batch": "expansion-10",
+      "variantsSha256": "f1bbf8e12552e7417f781e4fb18afa65b49118a136a38230fa939cbfe2089901",
+      "checks": [
+        "two-pinned-source-comparisons",
+        "16/20/24",
+        "sharp/soft/rounded",
+        "light/dark",
+        "55-percent-foreground",
+        "adjacent-text"
+      ],
+      "evidence": [
+        {
+          "path": "docs/review/ui-v1/expansion-10/comparison.png",
+          "sha256": "4fc64a0b0a006d4f3567e25ea4f9b681b0346ce7d17d89a434d35316829c1abb"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-10/comparison-dark.png",
+          "sha256": "7c84787b712cb1a0c3e10987a0a7d06313215e1e2eb2acefd00ce130982be664"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-10/native.png",
+          "sha256": "676349bdad97c43bb8a773c8d711a97efc12df771acacae930454f2b1b597b15"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-10/native-dark.png",
+          "sha256": "ed4c3f12965e168139e4fc9681ae508596c995038780e12ffc490268bf319f03"
+        }
+      ]
+    },
+    "status": "visually-reviewed-candidate",
+    "userApproval": "pending"
+  },
+  {
+    "name": "scan-barcode",
+    "purpose": "啟動條碼掃描",
+    "recognitionCues": "四個開放定位角與中央直條",
+    "confusableWith": [
+      "barcode",
+      "scan",
+      "qr-code"
+    ],
+    "sourceObservation": "Lucide用四角包圍條碼，Iconoir加入橫向掃描線。Master採四角定位，不再加入會切斷細條的橫線。",
+    "references": [
+      {
+        "name": "scan-barcode",
+        "library": "Lucide",
+        "repository": "lucide-icons/lucide",
+        "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+        "path": "icons/scan-barcode.svg",
+        "localPath": "references/expansion-01/lucide-scan-barcode.svg",
+        "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/scan-barcode.svg",
+        "sha256": "1d9ed9ea0da73c30d1b02738c774262ec1123cd95274aae28c774b5e83de35e6",
+        "license": "ISC AND MIT",
+        "sourceName": "scan-barcode",
+        "match": "exact",
+        "role": "comparison-only"
+      },
+      {
+        "name": "scan-barcode",
+        "library": "Iconoir",
+        "repository": "iconoir-icons/iconoir",
+        "commit": "39834e3f193bc0cca2c36bebb6a650471977433d",
+        "path": "icons/regular/scan-barcode.svg",
+        "localPath": "references/expansion-01/iconoir-scan-barcode.svg",
+        "url": "https://github.com/iconoir-icons/iconoir/blob/39834e3f193bc0cca2c36bebb6a650471977433d/icons/regular/scan-barcode.svg",
+        "sha256": "0846e76548437afea1469e747087a91c32ab8aa4e4aa8279e6088705a17401a1",
+        "license": "MIT",
+        "sourceName": "scan-barcode",
+        "match": "exact",
+        "role": "comparison-only"
+      }
+    ],
+    "effects": {
+      "dashes": {
+        "used": false,
+        "reason": "不採用；掃描條碼以連續實體輪廓表達，沒有未完成或隱藏邊界。"
+      },
+      "opacity": {
+        "used": false,
+        "reason": "不採用；掃描條碼的主體及必要訊號以留白分離，淡化不增加語意。"
+      },
+      "gradients": {
+        "used": false,
+        "reason": "本期不新增連續漸層或mask，以原生輪廓及必要逐筆透明度處理。"
+      }
+    },
+    "change": {
+      "kind": "new",
+      "reason": "定位角使用局部圓角，中央條碼平切；四條內線與角框有留白，16px不相碰。",
+      "before": null
+    },
+    "visualReview": {
+      "status": "new-after-visual-review",
+      "reviewer": "root",
+      "date": "2026-11-16",
+      "batch": "expansion-10",
+      "variantsSha256": "188bcbc49638a5da7f43b34b196dc6962cac1fb73d5538105fd9e1e595ae41e7",
+      "checks": [
+        "two-pinned-source-comparisons",
+        "16/20/24",
+        "sharp/soft/rounded",
+        "light/dark",
+        "55-percent-foreground",
+        "adjacent-text"
+      ],
+      "evidence": [
+        {
+          "path": "docs/review/ui-v1/expansion-10/comparison.png",
+          "sha256": "4fc64a0b0a006d4f3567e25ea4f9b681b0346ce7d17d89a434d35316829c1abb"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-10/comparison-dark.png",
+          "sha256": "7c84787b712cb1a0c3e10987a0a7d06313215e1e2eb2acefd00ce130982be664"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-10/native.png",
+          "sha256": "676349bdad97c43bb8a773c8d711a97efc12df771acacae930454f2b1b597b15"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-10/native-dark.png",
+          "sha256": "ed4c3f12965e168139e4fc9681ae508596c995038780e12ffc490268bf319f03"
+        }
+      ]
+    },
+    "status": "visually-reviewed-candidate",
+    "userApproval": "pending"
+  },
+  {
+    "name": "calculator",
+    "purpose": "計算工具",
+    "recognitionCues": "直立機身、顯示區與按鍵陣列",
+    "confusableWith": [
+      "smartphone",
+      "keyboard",
+      "landmark"
+    ],
+    "sourceObservation": "Lucide與Tabler都用上方顯示區及下方點狀按鍵。Master保留六個實心鍵，16px將顯示框簡化為一條線。",
+    "references": [
+      {
+        "name": "calculator",
+        "library": "Lucide",
+        "repository": "lucide-icons/lucide",
+        "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+        "path": "icons/calculator.svg",
+        "localPath": "references/expansion-01/lucide-calculator.svg",
+        "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/calculator.svg",
+        "sha256": "a6b191250b1ffabdf9fc9536662309f1b0f65336aa681d75bae9f1708baaefd0",
+        "license": "ISC AND MIT",
+        "sourceName": "calculator",
+        "match": "exact",
+        "role": "comparison-only"
+      },
+      {
+        "name": "calculator",
+        "library": "Tabler",
+        "repository": "tabler/tabler-icons",
+        "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+        "path": "icons/outline/calculator.svg",
+        "localPath": "references/expansion-01/tabler-calculator.svg",
+        "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/calculator.svg",
+        "sha256": "44ec05c7a5e8ad6b9cb6d0e5f58049746c51d163a0eface1cbb7d780976800ed",
+        "license": "MIT",
+        "sourceName": "calculator",
+        "match": "exact",
+        "role": "comparison-only"
+      }
+    ],
+    "effects": {
+      "dashes": {
+        "used": false,
+        "reason": "不採用；計算機以連續實體輪廓表達，沒有未完成或隱藏邊界。"
+      },
+      "opacity": {
+        "used": false,
+        "reason": "不採用；計算機的主體及必要訊號以留白分離，淡化不增加語意。"
+      },
+      "gradients": {
+        "used": false,
+        "reason": "本期不新增連續漸層或mask，以原生輪廓及必要逐筆透明度處理。"
+      }
+    },
+    "change": {
+      "kind": "new",
+      "reason": "大尺寸有清楚顯示窗，小尺寸減少一個密集孔洞；按鍵點徑依尺寸補償，明暗背景均保持獨立。",
+      "before": null
+    },
+    "visualReview": {
+      "status": "new-after-visual-review",
+      "reviewer": "root",
+      "date": "2026-11-16",
+      "batch": "expansion-10",
+      "variantsSha256": "5e2a51add321ee1c4299e0cacc51485264c7104b8db5cc2ffccdd822416edd90",
+      "checks": [
+        "two-pinned-source-comparisons",
+        "16/20/24",
+        "sharp/soft/rounded",
+        "light/dark",
+        "55-percent-foreground",
+        "adjacent-text"
+      ],
+      "evidence": [
+        {
+          "path": "docs/review/ui-v1/expansion-10/comparison.png",
+          "sha256": "4fc64a0b0a006d4f3567e25ea4f9b681b0346ce7d17d89a434d35316829c1abb"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-10/comparison-dark.png",
+          "sha256": "7c84787b712cb1a0c3e10987a0a7d06313215e1e2eb2acefd00ce130982be664"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-10/native.png",
+          "sha256": "676349bdad97c43bb8a773c8d711a97efc12df771acacae930454f2b1b597b15"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-10/native-dark.png",
+          "sha256": "ed4c3f12965e168139e4fc9681ae508596c995038780e12ffc490268bf319f03"
+        }
+      ]
+    },
+    "status": "visually-reviewed-candidate",
+    "userApproval": "pending"
+  },
+  {
+    "name": "landmark",
+    "purpose": "通用機構與公共建築",
+    "recognitionCues": "三角山牆、立柱與基座",
+    "confusableWith": [
+      "building",
+      "store",
+      "banknote"
+    ],
+    "sourceObservation": "Lucide landmark與Heroicons building-library共用古典立柱建築語法。Master採三柱與簡單山牆，不添加貨幣或特定政府標誌。",
+    "references": [
+      {
+        "name": "landmark",
+        "library": "Lucide",
+        "repository": "lucide-icons/lucide",
+        "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+        "path": "icons/landmark.svg",
+        "localPath": "references/expansion-01/lucide-landmark.svg",
+        "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/landmark.svg",
+        "sha256": "28408ef995796bffc390e8f217cdaa61e383627789d66300d4ff839248a3f144",
+        "license": "ISC AND MIT",
+        "sourceName": "landmark",
+        "match": "exact",
+        "role": "comparison-only"
+      },
+      {
+        "name": "landmark",
+        "library": "Heroicons",
+        "repository": "tailwindlabs/heroicons",
+        "commit": "616b7a4dbbf3d011760af8066262cd5c6b3868f3",
+        "path": "optimized/24/outline/building-library.svg",
+        "localPath": "references/expansion-01/heroicons-building-library.svg",
+        "url": "https://github.com/tailwindlabs/heroicons/blob/616b7a4dbbf3d011760af8066262cd5c6b3868f3/optimized/24/outline/building-library.svg",
+        "sha256": "abb9133490052ce6a8e43311675141f3a1599d94f0be5a48f2acc110b97906ce",
+        "license": "MIT",
+        "sourceName": "building-library",
+        "match": "exact",
+        "role": "comparison-only"
+      }
+    ],
+    "effects": {
+      "dashes": {
+        "used": false,
+        "reason": "不採用；金融機構以連續實體輪廓表達，沒有未完成或隱藏邊界。"
+      },
+      "opacity": {
+        "used": false,
+        "reason": "不採用；金融機構的主體及必要訊號以留白分離，淡化不增加語意。"
+      },
+      "gradients": {
+        "used": false,
+        "reason": "本期不新增連續漸層或mask，以原生輪廓及必要逐筆透明度處理。"
+      }
+    },
+    "change": {
+      "kind": "new",
+      "reason": "柱頂與山牆留白分離，三柱在16px仍清楚；可用於機構入口，具體銀行或圖書館由文字說明。",
+      "before": null
+    },
+    "visualReview": {
+      "status": "new-after-visual-review",
+      "reviewer": "root",
+      "date": "2026-11-16",
+      "batch": "expansion-10",
+      "variantsSha256": "af1f96dd0c3f3f6c967ae6edba06e9b3adeee9e3f1f9a3da9f290b8c82151f53",
+      "checks": [
+        "two-pinned-source-comparisons",
+        "16/20/24",
+        "sharp/soft/rounded",
+        "light/dark",
+        "55-percent-foreground",
+        "adjacent-text"
+      ],
+      "evidence": [
+        {
+          "path": "docs/review/ui-v1/expansion-10/comparison.png",
+          "sha256": "4fc64a0b0a006d4f3567e25ea4f9b681b0346ce7d17d89a434d35316829c1abb"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-10/comparison-dark.png",
+          "sha256": "7c84787b712cb1a0c3e10987a0a7d06313215e1e2eb2acefd00ce130982be664"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-10/native.png",
+          "sha256": "676349bdad97c43bb8a773c8d711a97efc12df771acacae930454f2b1b597b15"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-10/native-dark.png",
+          "sha256": "ed4c3f12965e168139e4fc9681ae508596c995038780e12ffc490268bf319f03"
+        }
+      ]
+    },
+    "status": "visually-reviewed-candidate",
+    "userApproval": "pending"
+  },
+  {
+    "name": "package-open",
+    "purpose": "開箱與已開啟包裹",
+    "recognitionCues": "打開的兩片前蓋、後緣與立體箱身",
+    "confusableWith": [
+      "package",
+      "layers",
+      "box"
+    ],
+    "sourceObservation": "Lucide強調四向翻蓋，Hugeicons強調開口與箱身。Master用兩片前翻蓋及後緣建立開口，保留足夠箱身高度。",
+    "references": [
+      {
+        "name": "package-open",
+        "library": "Lucide",
+        "repository": "lucide-icons/lucide",
+        "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+        "path": "icons/package-open.svg",
+        "localPath": "references/expansion-01/lucide-package-open.svg",
+        "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/package-open.svg",
+        "sha256": "261a0676ee3db3e5c64a528ac7f81a4893ddb3dfebd0549562f4ef5033757920",
+        "license": "ISC AND MIT",
+        "sourceName": "package-open",
+        "match": "exact",
+        "role": "comparison-only"
+      },
+      {
+        "name": "package-open",
+        "library": "Hugeicons Free",
+        "repository": "hugeicons/hugeicons",
+        "commit": "834e28d965946c1ee60d080027fe9dae4adc58d0",
+        "path": "icons/package-open.svg",
+        "localPath": "references/expansion-01/hugeicons-free-package-open.svg",
+        "url": "https://github.com/hugeicons/hugeicons/blob/834e28d965946c1ee60d080027fe9dae4adc58d0/icons/package-open.svg",
+        "sha256": "d5a49ea26837c7c59d83f4afd14e3a280c80acb565d0e93ad084ed9ee6b52709",
+        "license": "MIT",
+        "sourceName": "package-open",
+        "match": "exact",
+        "role": "comparison-only"
+      }
+    ],
+    "effects": {
+      "dashes": {
+        "used": false,
+        "reason": "不採用；開箱以連續實體輪廓表達，沒有未完成或隱藏邊界。"
+      },
+      "opacity": {
+        "used": false,
+        "reason": "不採用；開箱的主體及必要訊號以留白分離，淡化不增加語意。"
+      },
+      "gradients": {
+        "used": false,
+        "reason": "本期不新增連續漸層或mask，以原生輪廓及必要逐筆透明度處理。"
+      }
+    },
+    "change": {
+      "kind": "new",
+      "reason": "初稿箱身過扁，已抬高開口及翻蓋；後方箱線依翻蓋實體剪影避讓，中央結構線平切接到折角，sharp不產生伸出折角的凸點。",
+      "before": null
+    },
+    "visualReview": {
+      "status": "new-after-visual-review",
+      "reviewer": "root",
+      "date": "2026-11-16",
+      "batch": "expansion-10",
+      "variantsSha256": "7783a09df76bbc60a8475b5c7d2c880f54d9ea18e367f0e1a60e02c8a08cd6ae",
+      "checks": [
+        "two-pinned-source-comparisons",
+        "16/20/24",
+        "sharp/soft/rounded",
+        "light/dark",
+        "55-percent-foreground",
+        "adjacent-text"
+      ],
+      "evidence": [
+        {
+          "path": "docs/review/ui-v1/expansion-10/comparison.png",
+          "sha256": "4fc64a0b0a006d4f3567e25ea4f9b681b0346ce7d17d89a434d35316829c1abb"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-10/comparison-dark.png",
+          "sha256": "7c84787b712cb1a0c3e10987a0a7d06313215e1e2eb2acefd00ce130982be664"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-10/native.png",
+          "sha256": "676349bdad97c43bb8a773c8d711a97efc12df771acacae930454f2b1b597b15"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-10/native-dark.png",
+          "sha256": "ed4c3f12965e168139e4fc9681ae508596c995038780e12ffc490268bf319f03"
+        }
+      ]
+    },
+    "status": "visually-reviewed-candidate",
+    "userApproval": "pending"
+  },
+  {
+    "name": "package-check",
+    "purpose": "包裹已確認或已完成",
+    "recognitionCues": "既有包裹立體輪廓與右下勾號",
+    "confusableWith": [
+      "package",
+      "package-return",
+      "shopping-cart-check"
+    ],
+    "sourceObservation": "Lucide採立方包裹與右下勾號，Hugeicons採正面包裹與勾號。Master保持既有package母型，讓完成狀態沿用家族辨識。",
+    "references": [
+      {
+        "name": "package-check",
+        "library": "Lucide",
+        "repository": "lucide-icons/lucide",
+        "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+        "path": "icons/package-check.svg",
+        "localPath": "references/expansion-01/lucide-package-check.svg",
+        "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/package-check.svg",
+        "sha256": "ce6b0e8a3102a9dc0a00b68f613dfd43ca6fa45182bc13786aafc338c1961fcf",
+        "license": "ISC AND MIT",
+        "sourceName": "package-check",
+        "match": "exact",
+        "role": "comparison-only"
+      },
+      {
+        "name": "package-check",
+        "library": "Hugeicons Free",
+        "repository": "hugeicons/hugeicons",
+        "commit": "834e28d965946c1ee60d080027fe9dae4adc58d0",
+        "path": "icons/package-delivered-01.svg",
+        "localPath": "references/expansion-01/hugeicons-free-package-delivered-01.svg",
+        "url": "https://github.com/hugeicons/hugeicons/blob/834e28d965946c1ee60d080027fe9dae4adc58d0/icons/package-delivered-01.svg",
+        "sha256": "48b4b04d81bbf9fba3cd61c4d0d2e44b682c2f4636ca0f5e72f1909b1f04687f",
+        "license": "MIT",
+        "sourceName": "package-delivered-01",
+        "match": "exact",
+        "role": "comparison-only"
+      }
+    ],
+    "effects": {
+      "dashes": {
+        "used": false,
+        "reason": "不採用；已確認包裹以連續實體輪廓表達，沒有未完成或隱藏邊界。"
+      },
+      "opacity": {
+        "used": false,
+        "reason": "不採用；已確認包裹的主體及必要訊號以留白分離，淡化不增加語意。"
+      },
+      "gradients": {
+        "used": false,
+        "reason": "本期不新增連續漸層或mask，以原生輪廓及必要逐筆透明度處理。"
+      }
+    },
+    "change": {
+      "kind": "new",
+      "reason": "按勾號實際外緣扣除箱身，留白等距且透明；箱頂封口線與主輪廓保留，16px可辨認箱體和勾號。 獨立複核後修正package母型：內分界墨線限制在實際封閉箱體內，消除sharp及rounded接角凸點；仍維持結構相接。",
+      "before": null
+    },
+    "visualReview": {
+      "status": "new-after-visual-review",
+      "reviewer": "root",
+      "date": "2026-11-16",
+      "batch": "expansion-10",
+      "variantsSha256": "564d4efa00b1e0513b37b0287ace8e02d2505760671c969241ec98853c807e35",
+      "checks": [
+        "two-pinned-source-comparisons",
+        "16/20/24",
+        "sharp/soft/rounded",
+        "light/dark",
+        "55-percent-foreground",
+        "adjacent-text"
+      ],
+      "evidence": [
+        {
+          "path": "docs/review/ui-v1/expansion-10/comparison.png",
+          "sha256": "4fc64a0b0a006d4f3567e25ea4f9b681b0346ce7d17d89a434d35316829c1abb"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-10/comparison-dark.png",
+          "sha256": "7c84787b712cb1a0c3e10987a0a7d06313215e1e2eb2acefd00ce130982be664"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-10/native.png",
+          "sha256": "676349bdad97c43bb8a773c8d711a97efc12df771acacae930454f2b1b597b15"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-10/native-dark.png",
+          "sha256": "ed4c3f12965e168139e4fc9681ae508596c995038780e12ffc490268bf319f03"
+        }
+      ]
+    },
+    "status": "visually-reviewed-candidate",
+    "userApproval": "pending"
+  },
+  {
+    "name": "package-return",
+    "purpose": "退貨與包裹返回",
+    "recognitionCues": "包裹與左向彎回箭頭",
+    "confusableWith": [
+      "package-check",
+      "undo",
+      "package"
+    ],
+    "sourceObservation": "Hugeicons delivery-return-01為同語意退貨原稿；Tabler package-import僅為包裹加箭頭構造參考，方向含義不同。Master使用彎回箭頭區別匯入。",
+    "references": [
+      {
+        "name": "package-return",
+        "library": "Hugeicons Free",
+        "repository": "hugeicons/hugeicons",
+        "commit": "834e28d965946c1ee60d080027fe9dae4adc58d0",
+        "path": "icons/delivery-return-01.svg",
+        "localPath": "references/expansion-01/hugeicons-free-delivery-return-01.svg",
+        "url": "https://github.com/hugeicons/hugeicons/blob/834e28d965946c1ee60d080027fe9dae4adc58d0/icons/delivery-return-01.svg",
+        "sha256": "99ba38bdf75cb445baecdb281cc6874ca71892ad88c005d91e85b1a5f919d375",
+        "license": "MIT",
+        "sourceName": "delivery-return-01",
+        "match": "exact",
+        "role": "comparison-only"
+      },
+      {
+        "name": "package-return",
+        "library": "Tabler",
+        "repository": "tabler/tabler-icons",
+        "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+        "path": "icons/outline/package-import.svg",
+        "localPath": "references/expansion-01/tabler-package-import.svg",
+        "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/package-import.svg",
+        "sha256": "de460ca83e06041a85b13bf9a1646f920d22fa740b1c560e295c6ea35722fd64",
+        "license": "MIT",
+        "sourceName": "package-import",
+        "match": "structure-only",
+        "role": "comparison-only"
+      }
+    ],
+    "effects": {
+      "dashes": {
+        "used": false,
+        "reason": "不採用；退貨以連續實體輪廓表達，沒有未完成或隱藏邊界。"
+      },
+      "opacity": {
+        "used": false,
+        "reason": "不採用；退貨的主體及必要訊號以留白分離，淡化不增加語意。"
+      },
+      "gradients": {
+        "used": false,
+        "reason": "本期不新增連續漸層或mask，以原生輪廓及必要逐筆透明度處理。"
+      }
+    },
+    "change": {
+      "kind": "new",
+      "reason": "沿用package母型並依彎回箭頭外緣避讓；sharp箭桿端點按端帽實際延伸回退，避免在箭頭接點出現小台階。 獨立複核後修正package母型：內分界墨線限制在實際封閉箱體內，消除sharp及rounded接角凸點；仍維持結構相接。",
+      "before": null
+    },
+    "visualReview": {
+      "status": "new-after-visual-review",
+      "reviewer": "root",
+      "date": "2026-11-16",
+      "batch": "expansion-10",
+      "variantsSha256": "4dfb4ffb90ea48ada2eec756fb211af774e4f54510c00e5fa48e8e35d8e78279",
+      "checks": [
+        "two-pinned-source-comparisons",
+        "16/20/24",
+        "sharp/soft/rounded",
+        "light/dark",
+        "55-percent-foreground",
+        "adjacent-text"
+      ],
+      "evidence": [
+        {
+          "path": "docs/review/ui-v1/expansion-10/comparison.png",
+          "sha256": "4fc64a0b0a006d4f3567e25ea4f9b681b0346ce7d17d89a434d35316829c1abb"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-10/comparison-dark.png",
+          "sha256": "7c84787b712cb1a0c3e10987a0a7d06313215e1e2eb2acefd00ce130982be664"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-10/native.png",
+          "sha256": "676349bdad97c43bb8a773c8d711a97efc12df771acacae930454f2b1b597b15"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-10/native-dark.png",
+          "sha256": "ed4c3f12965e168139e4fc9681ae508596c995038780e12ffc490268bf319f03"
+        }
+      ]
+    },
+    "status": "visually-reviewed-candidate",
+    "userApproval": "pending"
+  },
+  {
+    "name": "shopping-cart-plus",
+    "purpose": "加入購物車",
+    "recognitionCues": "購物車母型與右上加號",
+    "confusableWith": [
+      "shopping-cart-check",
+      "shopping-cart",
+      "shopping-bag"
+    ],
+    "sourceObservation": "Lucide將加號放在右上，Tabler放在右下。Master採右上狀態區，保留原購物車兩個輪子及底部結構。",
+    "references": [
+      {
+        "name": "shopping-cart-plus",
+        "library": "Lucide",
+        "repository": "lucide-icons/lucide",
+        "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+        "path": "icons/shopping-cart-plus.svg",
+        "localPath": "references/expansion-01/lucide-shopping-cart-plus.svg",
+        "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/shopping-cart-plus.svg",
+        "sha256": "f0d53586a981e2126e9402f2173213922f22d44ed42d5b4e770a2124a4bbd9e1",
+        "license": "ISC AND MIT",
+        "sourceName": "shopping-cart-plus",
+        "match": "exact",
+        "role": "comparison-only"
+      },
+      {
+        "name": "shopping-cart-plus",
+        "library": "Tabler",
+        "repository": "tabler/tabler-icons",
+        "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+        "path": "icons/outline/shopping-cart-plus.svg",
+        "localPath": "references/expansion-01/tabler-shopping-cart-plus.svg",
+        "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/shopping-cart-plus.svg",
+        "sha256": "1397c82c081bc9abce493f7231f37b8a224e72f4fb8e9e3414a3d66ede5ef38f",
+        "license": "MIT",
+        "sourceName": "shopping-cart-plus",
+        "match": "exact",
+        "role": "comparison-only"
+      }
+    ],
+    "effects": {
+      "dashes": {
+        "used": false,
+        "reason": "不採用；加入購物車以連續實體輪廓表達，沒有未完成或隱藏邊界。"
+      },
+      "opacity": {
+        "used": false,
+        "reason": "不採用；加入購物車的主體及必要訊號以留白分離，淡化不增加語意。"
+      },
+      "gradients": {
+        "used": false,
+        "reason": "本期不新增連續漸層或mask，以原生輪廓及必要逐筆透明度處理。"
+      }
+    },
+    "change": {
+      "kind": "new",
+      "reason": "車籃按加號外緣留出淨空，不移動輪子或任意裁短整個車體；與cart-check共用同一標記位置。",
+      "before": null
+    },
+    "visualReview": {
+      "status": "new-after-visual-review",
+      "reviewer": "root",
+      "date": "2026-11-16",
+      "batch": "expansion-10",
+      "variantsSha256": "b62ebf14f814b2ed580f874ce5c0f7ff6576635623e84e08e0d61871b8502215",
+      "checks": [
+        "two-pinned-source-comparisons",
+        "16/20/24",
+        "sharp/soft/rounded",
+        "light/dark",
+        "55-percent-foreground",
+        "adjacent-text"
+      ],
+      "evidence": [
+        {
+          "path": "docs/review/ui-v1/expansion-10/comparison.png",
+          "sha256": "4fc64a0b0a006d4f3567e25ea4f9b681b0346ce7d17d89a434d35316829c1abb"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-10/comparison-dark.png",
+          "sha256": "7c84787b712cb1a0c3e10987a0a7d06313215e1e2eb2acefd00ce130982be664"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-10/native.png",
+          "sha256": "676349bdad97c43bb8a773c8d711a97efc12df771acacae930454f2b1b597b15"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-10/native-dark.png",
+          "sha256": "ed4c3f12965e168139e4fc9681ae508596c995038780e12ffc490268bf319f03"
+        }
+      ]
+    },
+    "status": "visually-reviewed-candidate",
+    "userApproval": "pending"
+  },
+  {
+    "name": "shopping-cart-check",
+    "purpose": "購物車已確認",
+    "recognitionCues": "購物車母型與右上勾號",
+    "confusableWith": [
+      "shopping-cart-plus",
+      "shopping-cart",
+      "package-check"
+    ],
+    "sourceObservation": "Tabler shopping-cart-check與Hugeicons shopping-cart-check-01均是勾號確認狀態；排除語意不同的check-out箭頭原稿。Master採右上勾號保持輪子完整。",
+    "references": [
+      {
+        "name": "shopping-cart-check",
+        "library": "Tabler",
+        "repository": "tabler/tabler-icons",
+        "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+        "path": "icons/outline/shopping-cart-check.svg",
+        "localPath": "references/expansion-01/tabler-shopping-cart-check.svg",
+        "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/shopping-cart-check.svg",
+        "sha256": "1fb3f2aa6e562d599c7431177f2dbf576243c2ccd2f0fbfe5f38be3c777a01ac",
+        "license": "MIT",
+        "sourceName": "shopping-cart-check",
+        "match": "exact",
+        "role": "comparison-only"
+      },
+      {
+        "name": "shopping-cart-check",
+        "library": "Hugeicons Free",
+        "repository": "hugeicons/hugeicons",
+        "commit": "834e28d965946c1ee60d080027fe9dae4adc58d0",
+        "path": "icons/shopping-cart-check-01.svg",
+        "localPath": "references/expansion-01/hugeicons-free-shopping-cart-check-01.svg",
+        "url": "https://github.com/hugeicons/hugeicons/blob/834e28d965946c1ee60d080027fe9dae4adc58d0/icons/shopping-cart-check-01.svg",
+        "sha256": "f91303b0117a5d7e14a128c29bb9c186ef94036102d84dcb2277e018ad666ee8",
+        "license": "MIT",
+        "sourceName": "shopping-cart-check-01",
+        "match": "exact",
+        "role": "comparison-only"
+      }
+    ],
+    "effects": {
+      "dashes": {
+        "used": false,
+        "reason": "不採用；已確認購物車以連續實體輪廓表達，沒有未完成或隱藏邊界。"
+      },
+      "opacity": {
+        "used": false,
+        "reason": "不採用；已確認購物車的主體及必要訊號以留白分離，淡化不增加語意。"
+      },
+      "gradients": {
+        "used": false,
+        "reason": "本期不新增連續漸層或mask，以原生輪廓及必要逐筆透明度處理。"
+      }
+    },
+    "change": {
+      "kind": "new",
+      "reason": "與cart-plus共享車體及標記中心，僅避讓真實勾號輪廓；原生三尺寸均能看出兩輪及完成訊號。",
+      "before": null
+    },
+    "visualReview": {
+      "status": "new-after-visual-review",
+      "reviewer": "root",
+      "date": "2026-11-16",
+      "batch": "expansion-10",
+      "variantsSha256": "d8b2b4d7a68246ea0fa74b493dcee47fe046b6790f334fccbd6271c75db454e3",
+      "checks": [
+        "two-pinned-source-comparisons",
+        "16/20/24",
+        "sharp/soft/rounded",
+        "light/dark",
+        "55-percent-foreground",
+        "adjacent-text"
+      ],
+      "evidence": [
+        {
+          "path": "docs/review/ui-v1/expansion-10/comparison.png",
+          "sha256": "4fc64a0b0a006d4f3567e25ea4f9b681b0346ce7d17d89a434d35316829c1abb"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-10/comparison-dark.png",
+          "sha256": "7c84787b712cb1a0c3e10987a0a7d06313215e1e2eb2acefd00ce130982be664"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-10/native.png",
+          "sha256": "676349bdad97c43bb8a773c8d711a97efc12df771acacae930454f2b1b597b15"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-10/native-dark.png",
+          "sha256": "ed4c3f12965e168139e4fc9681ae508596c995038780e12ffc490268bf319f03"
+        }
+      ]
+    },
+    "status": "visually-reviewed-candidate",
+    "userApproval": "pending"
+  }
+]

@@ -1,19 +1,20 @@
+import { knockout } from '../occlusion.mjs';
 import { figure, mark, rotate } from "./shared.mjs";
 import { coreDrawings } from "./core.mjs";
 import { editor } from "./editor.mjs";
-function cloud(g, open = false) {
+function cloud(g) {
   const f = figure(g);
-  return [f.path(open ? "M5 18.2C1.5 16.8 2 12 4.5 11C4.5 7.4 7.4 4.5 11 4.5C14.3 4.5 16.3 6.5 17.1 9.5H17.5C23.2 9.5 23.5 16.5 19 18.25" : "M6.5 18.5H17.5C23.5 18.5 23.5 9.5 17.5 9.5H17.1C16.3 6.5 14.3 4.5 11 4.5C7.4 4.5 4.5 7.4 4.5 11C1.2 12.2 2.5 18.5 6.5 18.5Z")];
+  return [f.path("M6.5 18.5H17.5C23.5 18.5 23.5 9.5 17.5 9.5H17.1C16.3 6.5 14.3 4.5 11 4.5C7.4 4.5 4.5 7.4 4.5 11C1.2 12.2 2.5 18.5 6.5 18.5Z")];
 }
 const connectivity = {
   cloud: (g) => cloud(g),
   "cloud-upload": (g) => {
     const f = figure(g);
-    return [...cloud(g, true), f.line(12, 12, 12, 22), f.contour([[8.5, 15.5], [12, 12], [15.5, 15.5]])];
+    return knockout(cloud(g), [f.line(12, 12, 12, 22), f.contour([[8.5, 15.5], [12, 12], [15.5, 15.5]])], g);
   },
   "cloud-download": (g) => {
     const f = figure(g);
-    return [...cloud(g, true), f.line(12, 12, 12, 22), f.contour([[8.5, 18.5], [12, 22], [15.5, 18.5]])];
+    return knockout(cloud(g), [f.line(12, 12, 12, 22), f.contour([[8.5, 18.5], [12, 22], [15.5, 18.5]])], g);
   },
   wifi: (g) => {
     const f = figure(g);
@@ -21,7 +22,7 @@ const connectivity = {
   },
   "wifi-off": (g) => {
     const f = figure(g);
-    return [f.path("M9.5 4.7Q16 3.7 21.5 8.5M2.5 8.5L4 7.4"), f.path("M13.5 9.3Q16 9.8 18.5 12M5.5 12Q7 10.7 8.5 10"), f.path("M8.5 15.5Q10.5 13.8 12 14"), f.dot(12, 19, g.stroke / 2), f.line(3, 3, 21, 21)];
+    return knockout(connectivity.wifi(g),[f.line(3,3,21,21)],g);
   },
   plug: (g) => {
     const f = figure(g);
@@ -44,7 +45,7 @@ const connectivity = {
   },
   "battery-charging": (g) => {
     const f = figure(g);
-    return [f.contour([[7, 6.5], [2, 6.5], [2, 17.5], [6, 17.5]], false, g.r), f.contour([[15, 6.5], [19, 6.5], [19, 17.5], [14, 17.5]], false, g.r), f.line(22, 10, 22, 14), f.contour([[12, 4.5], [8, 12], [13, 12], [9, 19.5]])];
+    return knockout(connectivity.battery(g), [f.contour([[12, 4.5], [8, 12], [13, 12], [9, 19.5]])], g);
   },
   clock: (g) => {
     const f = figure(g);

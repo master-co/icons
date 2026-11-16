@@ -1,0 +1,123 @@
+{
+  "date": "2026-11-16",
+  "reviewer": "root",
+  "scope": "全部392個命名圖稿，原生16/20/24 soft；完整九組逐顆證據在中央ledger，不以此總覽取代。",
+  "definitionsSha256": "bf0af3b6336e4d2ebafdc7a8dc3538326712729c8bc720f614b80c937c4ed3d5",
+  "records": [
+    {
+      "page": 1,
+      "status": "visually-reviewed",
+      "observation": "導覽箭頭與字形按原生三尺寸並排，線條重量相稱；book、bookmark、calendar家族的主體尺度一致，內部狀態未擠壓外殼。calculator及building較密但孔洞仍分離。",
+      "evidence": [
+        {
+          "path": "docs/review/craft-03/overview/page-1-light.png",
+          "sha256": "5f75aa5689e7d62840133d4d13f083f1f1d80a95fac6d9001c1a327e5fc00e66"
+        },
+        {
+          "path": "docs/review/craft-03/overview/page-1-dark.png",
+          "sha256": "ca8fe90e87dffd2ec5b5b0363c6ec16a181564fdf1ff24deb54474d9cb55b1d4"
+        }
+      ]
+    },
+    {
+      "page": 2,
+      "status": "visually-reviewed",
+      "observation": "圖表長條、點、圓環有各自辨識訊號；chart-area保留有語意的淡填色。clipboard、cloud、database各狀態共享母型，徽標避讓後未見內孔碎屑；16px cloud-sync仍能辨識兩個反向箭頭。",
+      "evidence": [
+        {
+          "path": "docs/review/craft-03/overview/page-2-light.png",
+          "sha256": "00243d3bdf31222212da6a48d38b21f94289604a12ba6ae6a88d65909eed9679"
+        },
+        {
+          "path": "docs/review/craft-03/overview/page-2-dark.png",
+          "sha256": "b05027670854f540005204743db42cfb75b8bba6bae8811a7b95890b28361303"
+        }
+      ]
+    },
+    {
+      "page": 3,
+      "status": "visually-reviewed",
+      "observation": "文件／資料夾的內置內容與外置權限清楚區分，file-json的16px保留成對括號。Git節點尺寸一致；hard-drive斜面與前板接縫平順，箭頭沒有把主體擠扁。",
+      "evidence": [
+        {
+          "path": "docs/review/craft-03/overview/page-3-light.png",
+          "sha256": "c74e3525180ea846e7dfb03933b75b4a3aa7dd15124e7fd491ea499f71baef6f"
+        },
+        {
+          "path": "docs/review/craft-03/overview/page-3-dark.png",
+          "sha256": "458f1b390cda5a8eb673480c551f34687e8d9ff5e714ea26a24f3bddbf9fe46e"
+        }
+      ]
+    },
+    {
+      "page": 4,
+      "status": "visually-reviewed",
+      "observation": "layers的層寬與露邊仍保有前輪Lucide方向；indent增減呈現內容位移。list狀態、mail狀態與map/map-pinned並排沒有主體比例跳動，結構線與徽標的避讓區分正確。",
+      "evidence": [
+        {
+          "path": "docs/review/craft-03/overview/page-4-light.png",
+          "sha256": "d6541f4026f18fdfe70bfbe1d222b5895288af42a096825d2e383069c5dcb611"
+        },
+        {
+          "path": "docs/review/craft-03/overview/page-4-dark.png",
+          "sha256": "7e13cf13088ff191139401fb5a0861172535368a9de8905ad1db9022007fcc51"
+        }
+      ]
+    },
+    {
+      "page": 5,
+      "status": "visually-reviewed",
+      "observation": "message家族的尾巴與內部標記保有空白；package開箱需要較寬輪廓，非任意放大，三個封箱狀態共享母型。面板開關箭頭方向可讀，phone-off/pin-off在斜線兩側保留主體訊號。",
+      "evidence": [
+        {
+          "path": "docs/review/craft-03/overview/page-5-light.png",
+          "sha256": "69e97433307a0f55a831c11b3acd1e36804009aabacf797ea5e839417a75fc4b"
+        },
+        {
+          "path": "docs/review/craft-03/overview/page-5-dark.png",
+          "sha256": "45aab02b5acb56d742c36a59c58224fcf3278db92411b7c70fd1b08d0b6d97d7"
+        }
+      ]
+    },
+    {
+      "page": 6,
+      "status": "visually-reviewed",
+      "observation": "循環、回覆、旋轉類箭頭在方向與用途上保持區分；server-cog孔洞可見。購物車狀態保留把手與兩輪，selection分段不黏合。settings雖比單線符號密集，仍與其餘同排維持近似視覺尺寸。",
+      "evidence": [
+        {
+          "path": "docs/review/craft-03/overview/page-6-light.png",
+          "sha256": "696b8e11db1fa3c7c4ad8f32dff05c75568c4346654f1fb30801871ef3b91a3e"
+        },
+        {
+          "path": "docs/review/craft-03/overview/page-6-dark.png",
+          "sha256": "32e7b26df3d3c8e8c2f089c61fa595ef7147fb64d3066ac109085611b26b7e60"
+        }
+      ]
+    },
+    {
+      "page": 7,
+      "status": "visually-reviewed",
+      "observation": "表格增減以行列方向辨識；user各狀態共享頭肩，cog孔不透出背景線。ticket平切撕線保留；volume-low與通用volume在16px重合的已知語意限制維持如實記錄，不宣稱為高低音量完整配對。",
+      "evidence": [
+        {
+          "path": "docs/review/craft-03/overview/page-7-light.png",
+          "sha256": "462fca516098cf02e38b42f4120aaa25e164b981916d4048cd37544ee5b6723d"
+        },
+        {
+          "path": "docs/review/craft-03/overview/page-7-dark.png",
+          "sha256": "205a639f9963cdf870cae97813a2fe0d5fcf71d869f465fb3c96bc72d447162b"
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "status": "visually-reviewed",
+    "observation": "8個真實前後稿的診斷倍率與原生大小標記正確；package與hard-drive接角微凸在修後消除，clipboard-pen尖角收在畫布內。",
+    "evidence": {
+      "path": "docs/review/craft-03/summary.png",
+      "sha256": "78d796dfd695a08328a63413ca3177c694074b954c0bd95aef88645d52d068e3"
+    }
+  },
+  "unresolvedDefects": [],
+  "userFinalApproval": "pending"
+}

@@ -1,0 +1,674 @@
+[
+  {
+    "name": "power",
+    "label": "電源",
+    "category": "utilities",
+    "categoryLabel": "通用工具與快捷操作"
+  },
+  {
+    "name": "zap",
+    "label": "快速動作",
+    "category": "utilities",
+    "categoryLabel": "通用工具與快捷操作"
+  },
+  {
+    "name": "lightbulb",
+    "label": "提示與想法",
+    "category": "utilities",
+    "categoryLabel": "通用工具與快捷操作"
+  },
+  {
+    "name": "life-buoy",
+    "label": "支援中心",
+    "category": "utilities",
+    "categoryLabel": "通用工具與快捷操作"
+  },
+  {
+    "name": "languages",
+    "label": "語言切換",
+    "category": "utilities",
+    "categoryLabel": "通用工具與快捷操作"
+  },
+  {
+    "name": "wrench",
+    "label": "維護工具",
+    "category": "utilities",
+    "categoryLabel": "通用工具與快捷操作"
+  },
+  {
+    "name": "command",
+    "label": "指令鍵",
+    "category": "utilities",
+    "categoryLabel": "通用工具與快捷操作"
+  },
+  {
+    "name": "backspace",
+    "label": "退格",
+    "category": "utilities",
+    "categoryLabel": "通用工具與快捷操作"
+  },
+  {
+    "name": "keyboard-return",
+    "label": "確認輸入",
+    "category": "utilities",
+    "categoryLabel": "通用工具與快捷操作"
+  },
+  {
+    "name": "locate",
+    "label": "定位目前位置",
+    "category": "utilities",
+    "categoryLabel": "通用工具與快捷操作"
+  },
+  {
+    "name": "smile",
+    "label": "滿意",
+    "category": "feedback",
+    "categoryLabel": "回饋與成果"
+  },
+  {
+    "name": "frown",
+    "label": "不滿意",
+    "category": "feedback",
+    "categoryLabel": "回饋與成果"
+  },
+  {
+    "name": "thumbs-up",
+    "label": "贊同",
+    "category": "feedback",
+    "categoryLabel": "回饋與成果"
+  },
+  {
+    "name": "thumbs-down",
+    "label": "不贊同",
+    "category": "feedback",
+    "categoryLabel": "回饋與成果"
+  },
+  {
+    "name": "award",
+    "label": "成就",
+    "category": "feedback",
+    "categoryLabel": "回饋與成果"
+  },
+  {
+    "name": "target",
+    "label": "目標",
+    "category": "feedback",
+    "categoryLabel": "回饋與成果"
+  },
+  {
+    "name": "badge-check",
+    "label": "已驗證",
+    "category": "feedback",
+    "categoryLabel": "回饋與成果"
+  },
+  {
+    "name": "sparkles",
+    "label": "智慧增強",
+    "category": "feedback",
+    "categoryLabel": "回饋與成果"
+  },
+  {
+    "name": "book",
+    "label": "書籍",
+    "category": "knowledge",
+    "categoryLabel": "知識與閱讀"
+  },
+  {
+    "name": "book-open",
+    "label": "閱讀",
+    "category": "knowledge",
+    "categoryLabel": "知識與閱讀"
+  },
+  {
+    "name": "notebook",
+    "label": "筆記本",
+    "category": "knowledge",
+    "categoryLabel": "知識與閱讀"
+  },
+  {
+    "name": "sticky-note",
+    "label": "便箋",
+    "category": "knowledge",
+    "categoryLabel": "知識與閱讀"
+  },
+  {
+    "name": "newspaper",
+    "label": "新聞與公告",
+    "category": "knowledge",
+    "categoryLabel": "知識與閱讀"
+  },
+  {
+    "name": "bookmark-plus",
+    "label": "新增書籤",
+    "category": "knowledge",
+    "categoryLabel": "知識與閱讀"
+  },
+  {
+    "name": "bookmark-minus",
+    "label": "移除書籤",
+    "category": "knowledge",
+    "categoryLabel": "知識與閱讀"
+  },
+  {
+    "name": "file-question",
+    "label": "待釐清文件",
+    "category": "knowledge",
+    "categoryLabel": "知識與閱讀"
+  },
+  {
+    "name": "table-row-add",
+    "label": "新增列",
+    "category": "table-layout",
+    "categoryLabel": "表格結構與面板"
+  },
+  {
+    "name": "table-column-add",
+    "label": "新增欄",
+    "category": "table-layout",
+    "categoryLabel": "表格結構與面板"
+  },
+  {
+    "name": "table-row-delete",
+    "label": "刪除列",
+    "category": "table-layout",
+    "categoryLabel": "表格結構與面板"
+  },
+  {
+    "name": "table-column-delete",
+    "label": "刪除欄",
+    "category": "table-layout",
+    "categoryLabel": "表格結構與面板"
+  },
+  {
+    "name": "table-cells-merge",
+    "label": "合併儲存格",
+    "category": "table-layout",
+    "categoryLabel": "表格結構與面板"
+  },
+  {
+    "name": "table-cells-split",
+    "label": "拆分儲存格",
+    "category": "table-layout",
+    "categoryLabel": "表格結構與面板"
+  },
+  {
+    "name": "panel-left-close",
+    "label": "收合左面板",
+    "category": "table-layout",
+    "categoryLabel": "表格結構與面板"
+  },
+  {
+    "name": "panel-left-open",
+    "label": "展開左面板",
+    "category": "table-layout",
+    "categoryLabel": "表格結構與面板"
+  },
+  {
+    "name": "panel-right-close",
+    "label": "收合右面板",
+    "category": "table-layout",
+    "categoryLabel": "表格結構與面板"
+  },
+  {
+    "name": "panel-right-open",
+    "label": "展開右面板",
+    "category": "table-layout",
+    "categoryLabel": "表格結構與面板"
+  },
+  {
+    "name": "scissors",
+    "label": "剪下",
+    "category": "design-tools",
+    "categoryLabel": "畫布編輯工具"
+  },
+  {
+    "name": "hand",
+    "label": "平移畫布",
+    "category": "design-tools",
+    "categoryLabel": "畫布編輯工具"
+  },
+  {
+    "name": "lasso",
+    "label": "自由選取",
+    "category": "design-tools",
+    "categoryLabel": "畫布編輯工具"
+  },
+  {
+    "name": "selection",
+    "label": "矩形選取",
+    "category": "design-tools",
+    "categoryLabel": "畫布編輯工具"
+  },
+  {
+    "name": "ruler",
+    "label": "尺規",
+    "category": "design-tools",
+    "categoryLabel": "畫布編輯工具"
+  },
+  {
+    "name": "magnet",
+    "label": "吸附",
+    "category": "design-tools",
+    "categoryLabel": "畫布編輯工具"
+  },
+  {
+    "name": "component",
+    "label": "元件",
+    "category": "design-tools",
+    "categoryLabel": "畫布編輯工具"
+  },
+  {
+    "name": "frame",
+    "label": "畫框",
+    "category": "design-tools",
+    "categoryLabel": "畫布編輯工具"
+  },
+  {
+    "name": "pipette",
+    "label": "取色",
+    "category": "design-tools",
+    "categoryLabel": "畫布編輯工具"
+  },
+  {
+    "name": "paint-bucket",
+    "label": "填色",
+    "category": "design-tools",
+    "categoryLabel": "畫布編輯工具"
+  },
+  {
+    "name": "triangle",
+    "label": "三角形",
+    "category": "composition-location",
+    "categoryLabel": "構圖與位置"
+  },
+  {
+    "name": "diamond",
+    "label": "菱形",
+    "category": "composition-location",
+    "categoryLabel": "構圖與位置"
+  },
+  {
+    "name": "hexagon",
+    "label": "六角形",
+    "category": "composition-location",
+    "categoryLabel": "構圖與位置"
+  },
+  {
+    "name": "contrast",
+    "label": "對比",
+    "category": "composition-location",
+    "categoryLabel": "構圖與位置"
+  },
+  {
+    "name": "blend",
+    "label": "混合",
+    "category": "composition-location",
+    "categoryLabel": "構圖與位置"
+  },
+  {
+    "name": "distribute-horizontal",
+    "label": "水平等距分佈",
+    "category": "composition-location",
+    "categoryLabel": "構圖與位置"
+  },
+  {
+    "name": "distribute-vertical",
+    "label": "垂直等距分佈",
+    "category": "composition-location",
+    "categoryLabel": "構圖與位置"
+  },
+  {
+    "name": "compass",
+    "label": "指南針",
+    "category": "composition-location",
+    "categoryLabel": "構圖與位置"
+  },
+  {
+    "name": "navigation",
+    "label": "導航方向",
+    "category": "composition-location",
+    "categoryLabel": "構圖與位置"
+  },
+  {
+    "name": "route",
+    "label": "路徑",
+    "category": "composition-location",
+    "categoryLabel": "構圖與位置"
+  },
+  {
+    "name": "signpost",
+    "label": "路標",
+    "category": "composition-location",
+    "categoryLabel": "構圖與位置"
+  },
+  {
+    "name": "map-pinned",
+    "label": "地圖位置",
+    "category": "composition-location",
+    "categoryLabel": "構圖與位置"
+  },
+  {
+    "name": "music",
+    "label": "音樂",
+    "category": "playback",
+    "categoryLabel": "播放與會議"
+  },
+  {
+    "name": "audio-waveform",
+    "label": "音訊波形",
+    "category": "playback",
+    "categoryLabel": "播放與會議"
+  },
+  {
+    "name": "subtitles",
+    "label": "字幕",
+    "category": "playback",
+    "categoryLabel": "播放與會議"
+  },
+  {
+    "name": "fast-forward",
+    "label": "快進",
+    "category": "playback",
+    "categoryLabel": "播放與會議"
+  },
+  {
+    "name": "rewind",
+    "label": "快退",
+    "category": "playback",
+    "categoryLabel": "播放與會議"
+  },
+  {
+    "name": "shuffle",
+    "label": "隨機播放",
+    "category": "playback",
+    "categoryLabel": "播放與會議"
+  },
+  {
+    "name": "repeat-one",
+    "label": "單曲循環",
+    "category": "playback",
+    "categoryLabel": "播放與會議"
+  },
+  {
+    "name": "volume-low",
+    "label": "低音量",
+    "category": "playback",
+    "categoryLabel": "播放與會議"
+  },
+  {
+    "name": "video-off",
+    "label": "關閉攝影",
+    "category": "playback",
+    "categoryLabel": "播放與會議"
+  },
+  {
+    "name": "screen-share",
+    "label": "分享畫面",
+    "category": "playback",
+    "categoryLabel": "播放與會議"
+  },
+  {
+    "name": "reply",
+    "label": "回覆",
+    "category": "inbox-actions",
+    "categoryLabel": "郵件與回覆"
+  },
+  {
+    "name": "reply-all",
+    "label": "回覆所有人",
+    "category": "inbox-actions",
+    "categoryLabel": "郵件與回覆"
+  },
+  {
+    "name": "forward",
+    "label": "轉寄",
+    "category": "inbox-actions",
+    "categoryLabel": "郵件與回覆"
+  },
+  {
+    "name": "rss",
+    "label": "訂閱消息",
+    "category": "inbox-actions",
+    "categoryLabel": "郵件與回覆"
+  },
+  {
+    "name": "mail-plus",
+    "label": "撰寫郵件",
+    "category": "inbox-actions",
+    "categoryLabel": "郵件與回覆"
+  },
+  {
+    "name": "mail-search",
+    "label": "搜尋郵件",
+    "category": "inbox-actions",
+    "categoryLabel": "郵件與回覆"
+  },
+  {
+    "name": "message-text",
+    "label": "文字訊息",
+    "category": "inbox-actions",
+    "categoryLabel": "郵件與回覆"
+  },
+  {
+    "name": "message-check",
+    "label": "已處理訊息",
+    "category": "inbox-actions",
+    "categoryLabel": "郵件與回覆"
+  },
+  {
+    "name": "chart-bar-horizontal",
+    "label": "橫條圖",
+    "category": "data-tools",
+    "categoryLabel": "資料呈現與清單"
+  },
+  {
+    "name": "chart-bar-stacked",
+    "label": "堆疊長條圖",
+    "category": "data-tools",
+    "categoryLabel": "資料呈現與清單"
+  },
+  {
+    "name": "chart-scatter",
+    "label": "散佈圖",
+    "category": "data-tools",
+    "categoryLabel": "資料呈現與清單"
+  },
+  {
+    "name": "chart-gantt",
+    "label": "甘特圖",
+    "category": "data-tools",
+    "categoryLabel": "資料呈現與清單"
+  },
+  {
+    "name": "list-collapse",
+    "label": "收合清單",
+    "category": "data-tools",
+    "categoryLabel": "資料呈現與清單"
+  },
+  {
+    "name": "list-search",
+    "label": "搜尋清單",
+    "category": "data-tools",
+    "categoryLabel": "資料呈現與清單"
+  },
+  {
+    "name": "list-plus",
+    "label": "新增清單項",
+    "category": "data-tools",
+    "categoryLabel": "資料呈現與清單"
+  },
+  {
+    "name": "list-minus",
+    "label": "移除清單項",
+    "category": "data-tools",
+    "categoryLabel": "資料呈現與清單"
+  },
+  {
+    "name": "barcode",
+    "label": "條碼",
+    "category": "fulfillment",
+    "categoryLabel": "商品識別與履約"
+  },
+  {
+    "name": "qr-code",
+    "label": "QR碼",
+    "category": "fulfillment",
+    "categoryLabel": "商品識別與履約"
+  },
+  {
+    "name": "scan-barcode",
+    "label": "掃描條碼",
+    "category": "fulfillment",
+    "categoryLabel": "商品識別與履約"
+  },
+  {
+    "name": "calculator",
+    "label": "計算機",
+    "category": "fulfillment",
+    "categoryLabel": "商品識別與履約"
+  },
+  {
+    "name": "landmark",
+    "label": "金融機構",
+    "category": "fulfillment",
+    "categoryLabel": "商品識別與履約"
+  },
+  {
+    "name": "package-open",
+    "label": "開箱",
+    "category": "fulfillment",
+    "categoryLabel": "商品識別與履約"
+  },
+  {
+    "name": "package-check",
+    "label": "已確認包裹",
+    "category": "fulfillment",
+    "categoryLabel": "商品識別與履約"
+  },
+  {
+    "name": "package-return",
+    "label": "退貨",
+    "category": "fulfillment",
+    "categoryLabel": "商品識別與履約"
+  },
+  {
+    "name": "shopping-cart-plus",
+    "label": "加入購物車",
+    "category": "fulfillment",
+    "categoryLabel": "商品識別與履約"
+  },
+  {
+    "name": "shopping-cart-check",
+    "label": "已確認購物車",
+    "category": "fulfillment",
+    "categoryLabel": "商品識別與履約"
+  },
+  {
+    "name": "git-commit",
+    "label": "版本提交",
+    "category": "development",
+    "categoryLabel": "開發與整合"
+  },
+  {
+    "name": "git-pull-request",
+    "label": "合併請求",
+    "category": "development",
+    "categoryLabel": "開發與整合"
+  },
+  {
+    "name": "git-compare",
+    "label": "比較分支",
+    "category": "development",
+    "categoryLabel": "開發與整合"
+  },
+  {
+    "name": "git-fork",
+    "label": "分叉",
+    "category": "development",
+    "categoryLabel": "開發與整合"
+  },
+  {
+    "name": "brackets",
+    "label": "陣列",
+    "category": "development",
+    "categoryLabel": "開發與整合"
+  },
+  {
+    "name": "regex",
+    "label": "正規表示式",
+    "category": "development",
+    "categoryLabel": "開發與整合"
+  },
+  {
+    "name": "variable",
+    "label": "變數",
+    "category": "development",
+    "categoryLabel": "開發與整合"
+  },
+  {
+    "name": "file-json",
+    "label": "JSON文件",
+    "category": "development",
+    "categoryLabel": "開發與整合"
+  },
+  {
+    "name": "folder-code",
+    "label": "程式資料夾",
+    "category": "development",
+    "categoryLabel": "開發與整合"
+  },
+  {
+    "name": "puzzle",
+    "label": "擴充功能",
+    "category": "development",
+    "categoryLabel": "開發與整合"
+  },
+  {
+    "name": "cloud-check",
+    "label": "雲端已同步",
+    "category": "service-operations",
+    "categoryLabel": "服務與備份"
+  },
+  {
+    "name": "cloud-off",
+    "label": "雲端離線",
+    "category": "service-operations",
+    "categoryLabel": "服務與備份"
+  },
+  {
+    "name": "cloud-sync",
+    "label": "雲端同步中",
+    "category": "service-operations",
+    "categoryLabel": "服務與備份"
+  },
+  {
+    "name": "database-backup",
+    "label": "資料備份",
+    "category": "service-operations",
+    "categoryLabel": "服務與備份"
+  },
+  {
+    "name": "database-search",
+    "label": "資料庫查詢",
+    "category": "service-operations",
+    "categoryLabel": "服務與備份"
+  },
+  {
+    "name": "server-cog",
+    "label": "伺服器設定",
+    "category": "service-operations",
+    "categoryLabel": "服務與備份"
+  },
+  {
+    "name": "hard-drive-upload",
+    "label": "磁碟上傳",
+    "category": "service-operations",
+    "categoryLabel": "服務與備份"
+  },
+  {
+    "name": "hard-drive-download",
+    "label": "磁碟下載",
+    "category": "service-operations",
+    "categoryLabel": "服務與備份"
+  }
+]

@@ -12,7 +12,7 @@ Upstream repository: https://github.com/hugeicons/hugeicons
 
 Pinned commit: `834e28d965946c1ee60d080027fe9dae4adc58d0`.
 
-No Hugeicons Pro artwork is included. Of the remaining drawings, 265 are authored from Master geometry primitives and three are Lucide-informed adapted redraws described below. `dist/catalog.json` identifies the provenance of every subject; `references/manifest.json` preserves the historical 48 comparison files; `references/current.json` combines 420 UI comparisons, 20 organization comparisons and 120 productivity comparisons from their versioned manifests, including semantic versus structure-only matches.
+No Hugeicons Pro artwork is included. Of the remaining drawings, 377 are authored from Master geometry primitives and three are Lucide-informed adapted redraws described below. `dist/catalog.json` identifies the provenance of every subject; `references/manifest.json` preserves the historical 48 comparison files; `references/current.json` combines 420 UI comparisons, 20 organization comparisons and 120 productivity comparisons and 224 expansion comparisons from their versioned manifests, including semantic versus structure-only matches.
 
 ## Lucide — ISC; three adapted redraws
 
@@ -30,6 +30,10 @@ These unmodified originals are stored in `references/` for the local design stud
 
 | Project | Commit | License copy |
 | --- | --- | --- |
+| Heroicons | `616b7a4dbbf3d011760af8066262cd5c6b3868f3` | `licenses/heroicons.txt` (MIT) |
+| Phosphor | `2b75f3ad12b420c9504ef05df8d2564a28f8500e` | `licenses/phosphor.txt` (MIT) |
+| Radix | `112af91ad275a63c3a29b0da2588342af74ef9bf` | `licenses/radix.txt` (MIT) |
+| Feather | `3dc050d97405062eba78aa57115c0a15c63abdaa` | `licenses/feather.txt` (MIT) |
 | Tabler | `4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35` | `licenses/tabler.txt` (MIT) |
 | Iconoir | `39834e3f193bc0cca2c36bebb6a650471977433d` | `licenses/iconoir.txt` (MIT) |
 | Lucide | `55782beff3a0133df79c417eb68f96e8f19e2404` | `licenses/lucide.txt` (ISC and inherited Feather MIT notices) |

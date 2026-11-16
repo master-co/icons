@@ -1,8 +1,8 @@
 # Master Icons
 
-微圓、簡約、為介面原生尺寸設計的開源圖示。**0.1.0-alpha.0** 包含 **280 個命名圖示、182 個基本概念**；16 / 20 / 24 三尺寸與 sharp / soft / rounded 三圓角，共 **2,520 份 SVG**。
+微圓、簡約、為介面原生尺寸設計的開源圖示。**0.1.0-alpha.0** 包含 **392 個命名圖示、244 個基本概念**；16 / 20 / 24 三尺寸與 sharp / soft / rounded 三圓角，共 **3,528 份 SVG**。
 
-範圍由原始48個名稱、`src/ui-scope.json`的162顆、`src/organization-scope.json`的10顆及`src/productivity-scope.json`的60顆組成。前輪 Craft 01 精修14顆；Craft 02 由子代理再次獨立逐顆審查280顆，追加精修2顆、保留278顆。Clearance 01 先試作 phone-off、mail-x、file-lock、folder-lock 的外輪廓等距淨空；其餘276顆保留前輪圖稿，另有全庫構造盤點，尚未宣稱全部通過新契約。最新 Layers 01 依 Lucide 構造精修 layers，保留其餘279顆，並改善 skill 的輪廓與結構曲線判斷。沒有新增名稱。先前刪除的擴充圖稿未恢復。方向、開關與狀態另計命名圖稿，搜尋別名不增計圖示。套件維持 private alpha；工程檢查、設計目視與使用者定案分開記錄。
+範圍由原始48個名稱，以及 `ui-scope.json` 的162顆、`organization-scope.json` 的10顆、`productivity-scope.json` 的60顆、`expansion-scope.json` 的112顆組成。Craft 03 重新逐顆審查既有280顆：精修24顆、保留256顆；Expansion 01 的112個新增命名圖稿均完成來源並列、九母版明暗與獨立子代理複核。先前刪除的擴充圖稿未恢復。方向、開關與狀態不另算基本概念，搜尋別名不增加圖稿。套件維持 private alpha；工程檢查、設計目視與使用者定案分開記錄。本輪跨情境及瀏覽器驗收進度見 `docs/validation.md`。
 
 Layers 精修與審查教訓見 [Layers 01](docs/layers-01.md)。前輪試作、逐項待辦與固定線寬限制見 [遮擋輪廓避讓](docs/clearance-01.md)。
 
@@ -15,7 +15,7 @@ pnpm install --frozen-lockfile
 pnpm dev
 ```
 
-開啟 <http://127.0.0.1:4173>。預覽每頁 96 顆，尺寸比較每頁 24 顆；包含搜尋、分類、原生尺寸／圓角對照、十三個實際情境、全部 280 顆的兩份上游原稿與修改前／後對照、單個 SVG 與整組 ZIP 下載。
+開啟 <http://127.0.0.1:4173>。預覽每頁 96 顆，尺寸比較每頁 24 顆；包含搜尋、分類、原生尺寸／圓角對照、二十一個實際情境、全部 392 顆的兩份上游原稿與修改前／後對照、單個 SVG 與整組 ZIP 下載。
 
 ```sh
 pnpm build        # SVG、React、型別、目錄、9 組 ZIP、離線預覽
@@ -67,8 +67,8 @@ const svg = renderSvg(Search, { size: 20, corner: 'soft', label: '搜尋' });
 
 | 路徑 | 用途 |
 | --- | --- |
-| src/drawings.mjs / src/families/ | 圖稿入口、原始核心與可讀的家族繪製模組 |
-| src/core-names.json / src/ui-scope.json / src/organization-scope.json / src/productivity-scope.json / src/concepts.mjs | 原始 48、162+10+60名稱與概念分組 |
+| src/drawings.mjs / src/families/ / src/expansion/ | 圖稿入口、原始核心與可讀的家族繪製模組 |
+| src/core-names.json / src/ui-scope.json / src/organization-scope.json / src/productivity-scope.json / src/expansion-scope.json / src/concepts.mjs | 原始 48、162+10+60+112名稱與概念分組 |
 | src/geometry.mjs | 尺寸、線寬、幾何圓角工具 |
 | src/catalog.mjs | 名稱、中英搜尋詞、分類、方向規則 |
 | icons/ | 生成並納入版本控制的 SVG |
@@ -81,7 +81,7 @@ const svg = renderSvg(Search, { size: 20, corner: 'soft', label: '搜尋' });
 
 ## 授權
 
-Master 圖示為 MIT。12 個代表圖示以 Hugeicons Free 為參考重構研究，保守保留其 MIT 來源聲明；另外266個由本專案繪製；megaphone及handshake依Lucide構造重繪，保守保留其ISC來源及授權。完整來源與固定版本見 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。比較頁另含 Tabler、Iconoir、Lucide 的原始圖稿及各自授權，比較原稿不進入 Master SVG / React 套件；適用的來源notices與授權隨套件交付。
+Master 圖示為 MIT。12 個代表圖示以 Hugeicons Free 為參考重構研究，保守保留其 MIT 來源聲明；另外377個由本專案繪製；megaphone、handshake及layers依Lucide構造重繪，保守保留其ISC來源及授權。完整來源與固定版本見 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。比較頁另含 Lucide、Tabler、Heroicons、Phosphor、Radix、Feather、Iconoir、Hugeicons Free 的原始圖稿及各自授權，比較原稿不進入 Master SVG / React 套件；適用的來源notices與授權隨套件交付。
 
 ## 製作 skill
 

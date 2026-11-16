@@ -26,6 +26,8 @@ inset 不是每種圖形都必須滿足的可見邊界；間隙是審稿目標�
 
 round / square cap 在開放端點沿方向伸出半個描邊；butt 不延伸。miter 的尖角延伸視角度而變，並受 miterlimit 影響。bbox 要算可見描邊，不只算 path 控制點。SVG stroke 行為以 [W3C painting 規格](https://www.w3.org/TR/SVG2/painting.html) 為準。
 
+Craft 03 的 `clipboard-pen` 曾因筆尖 miter 超出畫布約 0.22–0.24px，而中心線仍在畫布內。移動角落徽標後，要核對九組實際描邊邊界並重看原生圖，不能只檢查控制點或 soft 預覽；保留真實修前稿，讓細微裁切也能追溯。
+
 在 DPR 1 和 2 都看原生尺寸；特別有分數線寬／佈局問題時再看 1.25 / 1.5。不要承諾所有 DPR 同時像整數黑白點陣；優先保持輪廓穩定與細節可讀。
 
 ## 圓角是依結構設計的三個預設

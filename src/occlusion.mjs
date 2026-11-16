@@ -28,6 +28,7 @@ function geometry([tag,a]) {
   if(a.transform||a['stroke-dasharray'])throw new Error('Knockout authoring requires untransformed solid geometry');
   let d=a.d;
   if(tag==='circle')d=`M${a.cx-a.r} ${a.cy}A${a.r} ${a.r} 0 1 0 ${a.cx+a.r} ${a.cy}A${a.r} ${a.r} 0 1 0 ${a.cx-a.r} ${a.cy}Z`;
+  if(tag==='ellipse')d=`M${a.cx-a.rx} ${a.cy}A${a.rx} ${a.ry} 0 1 0 ${a.cx+a.rx} ${a.cy}A${a.rx} ${a.ry} 0 1 0 ${a.cx-a.rx} ${a.cy}Z`;
   if(tag==='rect'){
     const{x,y,width:w,height:h}=a,r=Math.min(a.rx||0,w/2,h/2);
     d=r?`M${x+r} ${y}H${x+w-r}A${r} ${r} 0 0 1 ${x+w} ${y+r}V${y+h-r}A${r} ${r} 0 0 1 ${x+w-r} ${y+h}H${x+r}A${r} ${r} 0 0 1 ${x} ${y+h-r}V${y+r}A${r} ${r} 0 0 1 ${x+r} ${y}Z`:`M${x} ${y}h${w}v${h}h${-w}Z`;
@@ -59,6 +60,16 @@ export function offsetRegion(region,distance) {
     if(!strokeRegion(edge,{width:distance*2,cap:P.StrokeCap.ROUND,join:P.StrokeJoin.ROUND}))throw new Error('Clearance expansion failed');
     return edge.op(region,P.PathOp.UNION);
   }catch(error){edge.delete();throw error;}
+}
+// Structural seams meet their own shell; they do not receive badge clearance.
+// Clip expanded seam ink to the closed shell's interior, then retain the shell
+// stroke. This prevents endpoint caps from protruding beyond rounded corners.
+export function enclosedDetails(outline,details,g) {
+  const inside=geometry(outline),ink=paintedRegion(details,g);
+  try{
+    if(!ink.op(inside,P.PathOp.INTERSECT))throw new Error('Detail containment failed');
+    return [outline,['path',{d:regionPathData(ink),fill:'currentColor',stroke:'none','fill-rule':ink.getFillTypeString()}]];
+  }finally{inside.delete();ink.delete();}
 }
 export function knockout(background,foreground,g,{silhouettes=[]}={}) {
   const back=paintedRegion(background,g),front=paintedRegion(foreground,g);

@@ -1,0 +1,67 @@
+{
+  "date": "2026-11-16",
+  "manifestSha256": "b47c6c321af149bcd2556ec8a8f8916d6d2146e9ba7fbaf637fc4a5581232d7c",
+  "filesVerified": 11389,
+  "svgFilesVerified": 3528,
+  "svgZipFilesVerified": 3528,
+  "packageFilesVerified": 7873,
+  "browsers": [
+    {
+      "engine": "chromium",
+      "dpr": 1,
+      "offlineGallery": true,
+      "names": 392,
+      "sourceOriginals": true,
+      "nineVariants": true,
+      "svgDownload": true,
+      "mobileActions": true,
+      "reportLocalLinks": 276,
+      "networkRequests": 0,
+      "errors": []
+    },
+    {
+      "engine": "chromium",
+      "dpr": 2,
+      "offlineGallery": true,
+      "names": 392,
+      "sourceOriginals": true,
+      "nineVariants": true,
+      "svgDownload": true,
+      "mobileActions": true,
+      "reportLocalLinks": 276,
+      "networkRequests": 0,
+      "errors": []
+    },
+    {
+      "engine": "webkit",
+      "dpr": 1,
+      "offlineGallery": true,
+      "names": 392,
+      "sourceOriginals": true,
+      "nineVariants": true,
+      "svgDownload": true,
+      "mobileActions": true,
+      "reportLocalLinks": 276,
+      "networkRequests": 0,
+      "errors": []
+    },
+    {
+      "engine": "webkit",
+      "dpr": 2,
+      "offlineGallery": true,
+      "names": 392,
+      "sourceOriginals": true,
+      "nineVariants": true,
+      "svgDownload": true,
+      "mobileActions": true,
+      "reportLocalLinks": 276,
+      "networkRequests": 0,
+      "errors": []
+    }
+  ],
+  "status": "passed",
+  "limits": [
+    "Firefox remains unverified; see docs/validation.md.",
+    "This verifies artifact integrity and flows; visual decisions are separately documented."
+  ]
+}

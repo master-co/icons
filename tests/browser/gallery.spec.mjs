@@ -12,7 +12,8 @@ test('search, presets, accessible detail, downloads, keyboard and responsive lay
   await expect(page.locator('#pagination')).toBeVisible();
   await expect(page.locator('#concept-count')).toHaveText(String(conceptCount));
   await page.getByRole('searchbox').fill('通知');await expect(page.locator('.icon-card')).toHaveCount(3);
-  await page.getByRole('searchbox').fill('搜尋');await expect(page.locator('.icon-card')).toHaveCount(3);
+  await page.getByRole('searchbox').fill('搜尋');await expect(page.locator('.icon-card')).toHaveCount(6);
+  expect(await page.locator('.icon-card').evaluateAll(cards=>cards.map(c=>c.dataset.icon).sort())).toEqual(['database-search','file-search','folder-search','list-search','mail-search','search']);
   await page.locator('input[name="size"][value="16"]').check();
   await page.locator('input[name="corner"][value="rounded"]').check();
   await page.locator('.icon-card[data-icon="search"]').click();await expect(page.getByRole('dialog')).toBeVisible();

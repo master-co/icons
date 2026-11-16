@@ -1,0 +1,942 @@
+[
+  {
+    "name": "table-row-add",
+    "purpose": "在表格或試算表新增一列。",
+    "recognitionCues": "橫向儲存格及下方加號。",
+    "confusableWith": [
+      "table-column-add",
+      "table-row-delete"
+    ],
+    "sourceObservation": "Tabler row-insert-bottom以單列加號表意，Phosphor rows-plus-bottom用兩列。Master採單列並維持橫向長寬比，讓16px的加號和主體各有足夠空間。",
+    "references": [
+      {
+        "name": "table-row-add",
+        "library": "Tabler",
+        "repository": "tabler/tabler-icons",
+        "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+        "path": "icons/outline/row-insert-bottom.svg",
+        "localPath": "references/expansion-01/tabler-row-insert-bottom.svg",
+        "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/row-insert-bottom.svg",
+        "sha256": "a9f2a61256e4533ff65b62b8016564616f2c844e26d1d5e13ae68857dc3c4933",
+        "license": "MIT",
+        "sourceName": "row-insert-bottom",
+        "match": "exact",
+        "role": "comparison-only"
+      },
+      {
+        "name": "table-row-add",
+        "library": "Phosphor",
+        "repository": "phosphor-icons/core",
+        "commit": "2b75f3ad12b420c9504ef05df8d2564a28f8500e",
+        "path": "assets/regular/rows-plus-bottom.svg",
+        "localPath": "references/expansion-01/phosphor-rows-plus-bottom.svg",
+        "url": "https://github.com/phosphor-icons/core/blob/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular/rows-plus-bottom.svg",
+        "sha256": "1a869724591aa9c8a53f896da6b9b3361a724a5e1247ac89be362e357ea61a08",
+        "license": "MIT",
+        "sourceName": "rows-plus-bottom",
+        "match": "exact",
+        "role": "comparison-only"
+      }
+    ],
+    "effects": {
+      "dashes": {
+        "used": false,
+        "reason": "不採用；新增列以連續實體輪廓表達，沒有未完成或隱藏邊界。"
+      },
+      "opacity": {
+        "used": false,
+        "reason": "不採用；新增列的主體及必要訊號以留白分離，淡化不增加語意。"
+      },
+      "gradients": {
+        "used": false,
+        "reason": "本期不新增連續漸層或mask，以原生輪廓及必要逐筆透明度處理。"
+      }
+    },
+    "change": {
+      "kind": "new",
+      "reason": "新繪後目視通過：加號與列框分離，框內孔不閉合；新增方向由加號位於下方表達，不額外塞箭頭。",
+      "before": null
+    },
+    "visualReview": {
+      "status": "new-after-visual-review",
+      "reviewer": "root",
+      "date": "2026-11-16",
+      "batch": "expansion-04",
+      "variantsSha256": "57d1d1de92c220ad1555030fe3850ffc9cc2314bbef66bd30e2bde6c871993fc",
+      "checks": [
+        "two-pinned-source-comparisons",
+        "16/20/24",
+        "sharp/soft/rounded",
+        "light/dark",
+        "55-percent-foreground",
+        "adjacent-text"
+      ],
+      "evidence": [
+        {
+          "path": "docs/review/ui-v1/expansion-04/comparison.png",
+          "sha256": "5ebe783e3543522a1d57c25518a7ba7e8f5af8bf7d06b7e177fd7d4591fa40ec"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-04/comparison-dark.png",
+          "sha256": "83bd6ee166836c673444471187b153c3b35b11371ce3cc7f296e2920f8c21461"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-04/native.png",
+          "sha256": "1d37eea649d5e4f4caab31be31935d7b2775d91335cb1d3a34f15fa3e07932cf"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-04/native-dark.png",
+          "sha256": "3773498e5a176d67cb837d497d078a1cc8ca6b6241255499722096c199fc853f"
+        }
+      ]
+    },
+    "status": "visually-reviewed-candidate",
+    "userApproval": "pending"
+  },
+  {
+    "name": "table-column-add",
+    "purpose": "在表格或試算表新增一欄。",
+    "recognitionCues": "直向儲存格及右側加號。",
+    "confusableWith": [
+      "table-row-add",
+      "table-column-delete"
+    ],
+    "sourceObservation": "Tabler column-insert-right與Phosphor columns-plus-right都靠直欄及右側加號區別列操作。Master共用列母型旋轉為欄，維持相同可見框寬及符號間距。",
+    "references": [
+      {
+        "name": "table-column-add",
+        "library": "Tabler",
+        "repository": "tabler/tabler-icons",
+        "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+        "path": "icons/outline/column-insert-right.svg",
+        "localPath": "references/expansion-01/tabler-column-insert-right.svg",
+        "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/column-insert-right.svg",
+        "sha256": "abebcd24420a355d4ded65ddfc406a188c8cf306520d80363368c283d2ef77d8",
+        "license": "MIT",
+        "sourceName": "column-insert-right",
+        "match": "exact",
+        "role": "comparison-only"
+      },
+      {
+        "name": "table-column-add",
+        "library": "Phosphor",
+        "repository": "phosphor-icons/core",
+        "commit": "2b75f3ad12b420c9504ef05df8d2564a28f8500e",
+        "path": "assets/regular/columns-plus-right.svg",
+        "localPath": "references/expansion-01/phosphor-columns-plus-right.svg",
+        "url": "https://github.com/phosphor-icons/core/blob/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular/columns-plus-right.svg",
+        "sha256": "46b70c5021cea725b8b076872793b72a99c609a0affbb891fd0a74f296095eb5",
+        "license": "MIT",
+        "sourceName": "columns-plus-right",
+        "match": "exact",
+        "role": "comparison-only"
+      }
+    ],
+    "effects": {
+      "dashes": {
+        "used": false,
+        "reason": "不採用；新增欄以連續實體輪廓表達，沒有未完成或隱藏邊界。"
+      },
+      "opacity": {
+        "used": false,
+        "reason": "不採用；新增欄的主體及必要訊號以留白分離，淡化不增加語意。"
+      },
+      "gradients": {
+        "used": false,
+        "reason": "本期不新增連續漸層或mask，以原生輪廓及必要逐筆透明度處理。"
+      }
+    },
+    "change": {
+      "kind": "new",
+      "reason": "新繪後目視通過：16px直欄孔和加號分離，與列操作重量一致；不依RTL任意翻轉欄的示意方向。",
+      "before": null
+    },
+    "visualReview": {
+      "status": "new-after-visual-review",
+      "reviewer": "root",
+      "date": "2026-11-16",
+      "batch": "expansion-04",
+      "variantsSha256": "d78bca3684c7e79da4bdc0e5a22e0a39dfb95e6bbb76d9de7fc5d4629ec47719",
+      "checks": [
+        "two-pinned-source-comparisons",
+        "16/20/24",
+        "sharp/soft/rounded",
+        "light/dark",
+        "55-percent-foreground",
+        "adjacent-text"
+      ],
+      "evidence": [
+        {
+          "path": "docs/review/ui-v1/expansion-04/comparison.png",
+          "sha256": "5ebe783e3543522a1d57c25518a7ba7e8f5af8bf7d06b7e177fd7d4591fa40ec"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-04/comparison-dark.png",
+          "sha256": "83bd6ee166836c673444471187b153c3b35b11371ce3cc7f296e2920f8c21461"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-04/native.png",
+          "sha256": "1d37eea649d5e4f4caab31be31935d7b2775d91335cb1d3a34f15fa3e07932cf"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-04/native-dark.png",
+          "sha256": "3773498e5a176d67cb837d497d078a1cc8ca6b6241255499722096c199fc853f"
+        }
+      ]
+    },
+    "status": "visually-reviewed-candidate",
+    "userApproval": "pending"
+  },
+  {
+    "name": "table-row-delete",
+    "purpose": "移除目前表格列。",
+    "recognitionCues": "橫向列框下方放置叉號。",
+    "confusableWith": [
+      "table-row-add",
+      "table-column-delete"
+    ],
+    "sourceObservation": "Tabler row-remove用單列及外置叉，Hugeicons delete-row保留更多表格結構。Master以新增列的同一母型替換狀態，避免刪除時整張表突然變成另一種比例。",
+    "references": [
+      {
+        "name": "table-row-delete",
+        "library": "Tabler",
+        "repository": "tabler/tabler-icons",
+        "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+        "path": "icons/outline/row-remove.svg",
+        "localPath": "references/expansion-01/tabler-row-remove.svg",
+        "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/row-remove.svg",
+        "sha256": "a5d02fea83d1e8434836cb440489ca29c9416a4c1f557018c6ed044b45d0b8e9",
+        "license": "MIT",
+        "sourceName": "row-remove",
+        "match": "exact",
+        "role": "comparison-only"
+      },
+      {
+        "name": "table-row-delete",
+        "library": "Hugeicons Free",
+        "repository": "hugeicons/hugeicons",
+        "commit": "834e28d965946c1ee60d080027fe9dae4adc58d0",
+        "path": "icons/delete-row.svg",
+        "localPath": "references/expansion-01/hugeicons-free-delete-row.svg",
+        "url": "https://github.com/hugeicons/hugeicons/blob/834e28d965946c1ee60d080027fe9dae4adc58d0/icons/delete-row.svg",
+        "sha256": "720ed5f897636777913f50e71b72cb5f1b0e4f8c34452c5b3f47454da2e06d14",
+        "license": "MIT",
+        "sourceName": "delete-row",
+        "match": "exact",
+        "role": "comparison-only"
+      }
+    ],
+    "effects": {
+      "dashes": {
+        "used": false,
+        "reason": "不採用；刪除列以連續實體輪廓表達，沒有未完成或隱藏邊界。"
+      },
+      "opacity": {
+        "used": false,
+        "reason": "不採用；刪除列的主體及必要訊號以留白分離，淡化不增加語意。"
+      },
+      "gradients": {
+        "used": false,
+        "reason": "本期不新增連續漸層或mask，以原生輪廓及必要逐筆透明度處理。"
+      }
+    },
+    "change": {
+      "kind": "new",
+      "reason": "新繪後目視通過：叉號與列框沒有接觸，無須knockout；16px兩臂仍明確，不以縮小主體騰位置。",
+      "before": null
+    },
+    "visualReview": {
+      "status": "new-after-visual-review",
+      "reviewer": "root",
+      "date": "2026-11-16",
+      "batch": "expansion-04",
+      "variantsSha256": "23228f14a14eb2a9404a46835d55ecb9b71351ef4355bdf07b20271db4ed88a6",
+      "checks": [
+        "two-pinned-source-comparisons",
+        "16/20/24",
+        "sharp/soft/rounded",
+        "light/dark",
+        "55-percent-foreground",
+        "adjacent-text"
+      ],
+      "evidence": [
+        {
+          "path": "docs/review/ui-v1/expansion-04/comparison.png",
+          "sha256": "5ebe783e3543522a1d57c25518a7ba7e8f5af8bf7d06b7e177fd7d4591fa40ec"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-04/comparison-dark.png",
+          "sha256": "83bd6ee166836c673444471187b153c3b35b11371ce3cc7f296e2920f8c21461"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-04/native.png",
+          "sha256": "1d37eea649d5e4f4caab31be31935d7b2775d91335cb1d3a34f15fa3e07932cf"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-04/native-dark.png",
+          "sha256": "3773498e5a176d67cb837d497d078a1cc8ca6b6241255499722096c199fc853f"
+        }
+      ]
+    },
+    "status": "visually-reviewed-candidate",
+    "userApproval": "pending"
+  },
+  {
+    "name": "table-column-delete",
+    "purpose": "移除目前表格欄。",
+    "recognitionCues": "直欄與右側叉號。",
+    "confusableWith": [
+      "table-column-add",
+      "table-row-delete"
+    ],
+    "sourceObservation": "Tabler column-remove採單欄，Hugeicons delete-column是表格加外側叉。Master保持欄新增／刪除成對構造，不把沒有碰撞的符號套成挖角。",
+    "references": [
+      {
+        "name": "table-column-delete",
+        "library": "Tabler",
+        "repository": "tabler/tabler-icons",
+        "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+        "path": "icons/outline/column-remove.svg",
+        "localPath": "references/expansion-01/tabler-column-remove.svg",
+        "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/column-remove.svg",
+        "sha256": "560871c5d6fbb86df262b88407689c76e28e82323d15d0e6d70d953764e39bf3",
+        "license": "MIT",
+        "sourceName": "column-remove",
+        "match": "exact",
+        "role": "comparison-only"
+      },
+      {
+        "name": "table-column-delete",
+        "library": "Hugeicons Free",
+        "repository": "hugeicons/hugeicons",
+        "commit": "834e28d965946c1ee60d080027fe9dae4adc58d0",
+        "path": "icons/delete-column.svg",
+        "localPath": "references/expansion-01/hugeicons-free-delete-column.svg",
+        "url": "https://github.com/hugeicons/hugeicons/blob/834e28d965946c1ee60d080027fe9dae4adc58d0/icons/delete-column.svg",
+        "sha256": "99032076b09216a467f54b005c13597a1c28686a5580ac2b2d564fbc7442b901",
+        "license": "MIT",
+        "sourceName": "delete-column",
+        "match": "exact",
+        "role": "comparison-only"
+      }
+    ],
+    "effects": {
+      "dashes": {
+        "used": false,
+        "reason": "不採用；刪除欄以連續實體輪廓表達，沒有未完成或隱藏邊界。"
+      },
+      "opacity": {
+        "used": false,
+        "reason": "不採用；刪除欄的主體及必要訊號以留白分離，淡化不增加語意。"
+      },
+      "gradients": {
+        "used": false,
+        "reason": "本期不新增連續漸層或mask，以原生輪廓及必要逐筆透明度處理。"
+      }
+    },
+    "change": {
+      "kind": "new",
+      "reason": "新繪後目視通過：三尺寸均保留直欄內孔，叉號間距與新增欄一致；行列方向在原生尺寸清楚。",
+      "before": null
+    },
+    "visualReview": {
+      "status": "new-after-visual-review",
+      "reviewer": "root",
+      "date": "2026-11-16",
+      "batch": "expansion-04",
+      "variantsSha256": "05a1a722ae9d8859ee85752940b8d0cb7780569317df6c79ff754e56cdde9df5",
+      "checks": [
+        "two-pinned-source-comparisons",
+        "16/20/24",
+        "sharp/soft/rounded",
+        "light/dark",
+        "55-percent-foreground",
+        "adjacent-text"
+      ],
+      "evidence": [
+        {
+          "path": "docs/review/ui-v1/expansion-04/comparison.png",
+          "sha256": "5ebe783e3543522a1d57c25518a7ba7e8f5af8bf7d06b7e177fd7d4591fa40ec"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-04/comparison-dark.png",
+          "sha256": "83bd6ee166836c673444471187b153c3b35b11371ce3cc7f296e2920f8c21461"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-04/native.png",
+          "sha256": "1d37eea649d5e4f4caab31be31935d7b2775d91335cb1d3a34f15fa3e07932cf"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-04/native-dark.png",
+          "sha256": "3773498e5a176d67cb837d497d078a1cc8ca6b6241255499722096c199fc853f"
+        }
+      ]
+    },
+    "status": "visually-reviewed-candidate",
+    "userApproval": "pending"
+  },
+  {
+    "name": "table-cells-merge",
+    "purpose": "合併相鄰儲存格。",
+    "recognitionCues": "上下一般儲存格，中列取消內部分界。",
+    "confusableWith": [
+      "table-cells-split",
+      "table"
+    ],
+    "sourceObservation": "Lucide與Hugeicons以中列缺少分隔線表達合併，其他列提供對照。Master使用與table相近的框比例和清楚橫列，使操作語意由內容變化表達。",
+    "references": [
+      {
+        "name": "table-cells-merge",
+        "library": "Lucide",
+        "repository": "lucide-icons/lucide",
+        "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+        "path": "icons/table-cells-merge.svg",
+        "localPath": "references/expansion-01/lucide-table-cells-merge.svg",
+        "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/table-cells-merge.svg",
+        "sha256": "4553fe7236d34a70a0b8c4c2dac0adad2e32a0f8362d39e982c607503a222436",
+        "license": "ISC AND MIT",
+        "sourceName": "table-cells-merge",
+        "match": "exact",
+        "role": "comparison-only"
+      },
+      {
+        "name": "table-cells-merge",
+        "library": "Hugeicons Free",
+        "repository": "hugeicons/hugeicons",
+        "commit": "834e28d965946c1ee60d080027fe9dae4adc58d0",
+        "path": "icons/table-cells-merge.svg",
+        "localPath": "references/expansion-01/hugeicons-free-table-cells-merge.svg",
+        "url": "https://github.com/hugeicons/hugeicons/blob/834e28d965946c1ee60d080027fe9dae4adc58d0/icons/table-cells-merge.svg",
+        "sha256": "230f064b83e1e86df8d6cd98ce6241ed60a9dcbbf2fb318a15748de4e0008c7f",
+        "license": "MIT",
+        "sourceName": "table-cells-merge",
+        "match": "exact",
+        "role": "comparison-only"
+      }
+    ],
+    "effects": {
+      "dashes": {
+        "used": false,
+        "reason": "不採用；合併儲存格以連續實體輪廓表達，沒有未完成或隱藏邊界。"
+      },
+      "opacity": {
+        "used": false,
+        "reason": "不採用；合併儲存格的主體及必要訊號以留白分離，淡化不增加語意。"
+      },
+      "gradients": {
+        "used": false,
+        "reason": "本期不新增連續漸層或mask，以原生輪廓及必要逐筆透明度處理。"
+      }
+    },
+    "change": {
+      "kind": "new",
+      "reason": "新繪後目視通過：16px可見完整中列與上下分格差異，所有線段接在共同分界，不留幾乎相碰的小端點。",
+      "before": null
+    },
+    "visualReview": {
+      "status": "new-after-visual-review",
+      "reviewer": "root",
+      "date": "2026-11-16",
+      "batch": "expansion-04",
+      "variantsSha256": "994d42c6411a60015f01fb52ad480a57a3c930b8357b5eec3bea515b635c3943",
+      "checks": [
+        "two-pinned-source-comparisons",
+        "16/20/24",
+        "sharp/soft/rounded",
+        "light/dark",
+        "55-percent-foreground",
+        "adjacent-text"
+      ],
+      "evidence": [
+        {
+          "path": "docs/review/ui-v1/expansion-04/comparison.png",
+          "sha256": "5ebe783e3543522a1d57c25518a7ba7e8f5af8bf7d06b7e177fd7d4591fa40ec"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-04/comparison-dark.png",
+          "sha256": "83bd6ee166836c673444471187b153c3b35b11371ce3cc7f296e2920f8c21461"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-04/native.png",
+          "sha256": "1d37eea649d5e4f4caab31be31935d7b2775d91335cb1d3a34f15fa3e07932cf"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-04/native-dark.png",
+          "sha256": "3773498e5a176d67cb837d497d078a1cc8ca6b6241255499722096c199fc853f"
+        }
+      ]
+    },
+    "status": "visually-reviewed-candidate",
+    "userApproval": "pending"
+  },
+  {
+    "name": "table-cells-split",
+    "purpose": "拆分合併的儲存格。",
+    "recognitionCues": "中列有分隔線，上下列保持完整。",
+    "confusableWith": [
+      "table-cells-merge",
+      "table"
+    ],
+    "sourceObservation": "Lucide和Hugeicons table-cells-split把中列分隔作辨識焦點。Master與merge共用框和兩條橫列，只改內部必要結構，不疊加擁擠箭頭。",
+    "references": [
+      {
+        "name": "table-cells-split",
+        "library": "Lucide",
+        "repository": "lucide-icons/lucide",
+        "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+        "path": "icons/table-cells-split.svg",
+        "localPath": "references/expansion-01/lucide-table-cells-split.svg",
+        "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/table-cells-split.svg",
+        "sha256": "7b214eaa753351f5496d349c37928391be428a9093ebaf8a235ddbaaf4b019a3",
+        "license": "ISC AND MIT",
+        "sourceName": "table-cells-split",
+        "match": "exact",
+        "role": "comparison-only"
+      },
+      {
+        "name": "table-cells-split",
+        "library": "Hugeicons Free",
+        "repository": "hugeicons/hugeicons",
+        "commit": "834e28d965946c1ee60d080027fe9dae4adc58d0",
+        "path": "icons/table-cells-split.svg",
+        "localPath": "references/expansion-01/hugeicons-free-table-cells-split.svg",
+        "url": "https://github.com/hugeicons/hugeicons/blob/834e28d965946c1ee60d080027fe9dae4adc58d0/icons/table-cells-split.svg",
+        "sha256": "57dd365952c5de85c054413910d915ed2652f77fdaf68213e772b2939c50c955",
+        "license": "MIT",
+        "sourceName": "table-cells-split",
+        "match": "exact",
+        "role": "comparison-only"
+      }
+    ],
+    "effects": {
+      "dashes": {
+        "used": false,
+        "reason": "不採用；拆分儲存格以連續實體輪廓表達，沒有未完成或隱藏邊界。"
+      },
+      "opacity": {
+        "used": false,
+        "reason": "不採用；拆分儲存格的主體及必要訊號以留白分離，淡化不增加語意。"
+      },
+      "gradients": {
+        "used": false,
+        "reason": "本期不新增連續漸層或mask，以原生輪廓及必要逐筆透明度處理。"
+      }
+    },
+    "change": {
+      "kind": "new",
+      "reason": "新繪後目視通過：與merge並排可分辨中央結構的相反狀態；16px孔洞保留，外框圓角不碰內部分界。",
+      "before": null
+    },
+    "visualReview": {
+      "status": "new-after-visual-review",
+      "reviewer": "root",
+      "date": "2026-11-16",
+      "batch": "expansion-04",
+      "variantsSha256": "067a7b9c7d6b20ea1ed13eac4219a00dfb0705d05434f514772056ef4d5a551a",
+      "checks": [
+        "two-pinned-source-comparisons",
+        "16/20/24",
+        "sharp/soft/rounded",
+        "light/dark",
+        "55-percent-foreground",
+        "adjacent-text"
+      ],
+      "evidence": [
+        {
+          "path": "docs/review/ui-v1/expansion-04/comparison.png",
+          "sha256": "5ebe783e3543522a1d57c25518a7ba7e8f5af8bf7d06b7e177fd7d4591fa40ec"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-04/comparison-dark.png",
+          "sha256": "83bd6ee166836c673444471187b153c3b35b11371ce3cc7f296e2920f8c21461"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-04/native.png",
+          "sha256": "1d37eea649d5e4f4caab31be31935d7b2775d91335cb1d3a34f15fa3e07932cf"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-04/native-dark.png",
+          "sha256": "3773498e5a176d67cb837d497d078a1cc8ca6b6241255499722096c199fc853f"
+        }
+      ]
+    },
+    "status": "visually-reviewed-candidate",
+    "userApproval": "pending"
+  },
+  {
+    "name": "panel-left-close",
+    "purpose": "收合左側面板。",
+    "recognitionCues": "左側分區與指向左的內置chevron。",
+    "confusableWith": [
+      "panel-left-open",
+      "panel-left"
+    ],
+    "sourceObservation": "Lucide panel-left-close及Tabler layout-sidebar-left-collapse均保留左分區並向左收合。Master沿用既有panel-left母型，將箭頭置於主內容區以保持留白。",
+    "references": [
+      {
+        "name": "panel-left-close",
+        "library": "Lucide",
+        "repository": "lucide-icons/lucide",
+        "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+        "path": "icons/panel-left-close.svg",
+        "localPath": "references/expansion-01/lucide-panel-left-close.svg",
+        "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/panel-left-close.svg",
+        "sha256": "8f5b1fc9255e60f212379e8e315087a2f0a595a639ad2fb25c255dc3295c4e7d",
+        "license": "ISC AND MIT",
+        "sourceName": "panel-left-close",
+        "match": "exact",
+        "role": "comparison-only"
+      },
+      {
+        "name": "panel-left-close",
+        "library": "Tabler",
+        "repository": "tabler/tabler-icons",
+        "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+        "path": "icons/outline/layout-sidebar-left-collapse.svg",
+        "localPath": "references/expansion-01/tabler-layout-sidebar-left-collapse.svg",
+        "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/layout-sidebar-left-collapse.svg",
+        "sha256": "f8058a4540ca374e0c0ae15ab4a4ffc1b0e5e0369ae4eea3363bb8e53aec75da",
+        "license": "MIT",
+        "sourceName": "layout-sidebar-left-collapse",
+        "match": "exact",
+        "role": "comparison-only"
+      }
+    ],
+    "effects": {
+      "dashes": {
+        "used": false,
+        "reason": "不採用；收合左面板以連續實體輪廓表達，沒有未完成或隱藏邊界。"
+      },
+      "opacity": {
+        "used": false,
+        "reason": "不採用；收合左面板的主體及必要訊號以留白分離，淡化不增加語意。"
+      },
+      "gradients": {
+        "used": false,
+        "reason": "本期不新增連續漸層或mask，以原生輪廓及必要逐筆透明度處理。"
+      }
+    },
+    "change": {
+      "kind": "new",
+      "reason": "新繪後目視通過：16px箭翼不碰分區線或外框，尖端與框角分開處理；面板圖形保持固定方向。",
+      "before": null
+    },
+    "visualReview": {
+      "status": "new-after-visual-review",
+      "reviewer": "root",
+      "date": "2026-11-16",
+      "batch": "expansion-04",
+      "variantsSha256": "f27df4dea53e5d2e064d079892576e80a491830b0ef03c4a28a5158603f8b659",
+      "checks": [
+        "two-pinned-source-comparisons",
+        "16/20/24",
+        "sharp/soft/rounded",
+        "light/dark",
+        "55-percent-foreground",
+        "adjacent-text"
+      ],
+      "evidence": [
+        {
+          "path": "docs/review/ui-v1/expansion-04/comparison.png",
+          "sha256": "5ebe783e3543522a1d57c25518a7ba7e8f5af8bf7d06b7e177fd7d4591fa40ec"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-04/comparison-dark.png",
+          "sha256": "83bd6ee166836c673444471187b153c3b35b11371ce3cc7f296e2920f8c21461"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-04/native.png",
+          "sha256": "1d37eea649d5e4f4caab31be31935d7b2775d91335cb1d3a34f15fa3e07932cf"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-04/native-dark.png",
+          "sha256": "3773498e5a176d67cb837d497d078a1cc8ca6b6241255499722096c199fc853f"
+        }
+      ]
+    },
+    "status": "visually-reviewed-candidate",
+    "userApproval": "pending"
+  },
+  {
+    "name": "panel-left-open",
+    "purpose": "展開左側面板。",
+    "recognitionCues": "同一左分區與向右的chevron。",
+    "confusableWith": [
+      "panel-left-close",
+      "panel-left"
+    ],
+    "sourceObservation": "Lucide與Tabler的展開方向向主內容延伸。Master只改chevron朝向，保留面板分區比例、位置及可見外框。",
+    "references": [
+      {
+        "name": "panel-left-open",
+        "library": "Lucide",
+        "repository": "lucide-icons/lucide",
+        "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+        "path": "icons/panel-left-open.svg",
+        "localPath": "references/expansion-01/lucide-panel-left-open.svg",
+        "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/panel-left-open.svg",
+        "sha256": "4529f625891390e8c6f106b9603984bc9ec5b03e35a13af7e7a6d50df965183b",
+        "license": "ISC AND MIT",
+        "sourceName": "panel-left-open",
+        "match": "exact",
+        "role": "comparison-only"
+      },
+      {
+        "name": "panel-left-open",
+        "library": "Tabler",
+        "repository": "tabler/tabler-icons",
+        "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+        "path": "icons/outline/layout-sidebar-left-expand.svg",
+        "localPath": "references/expansion-01/tabler-layout-sidebar-left-expand.svg",
+        "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/layout-sidebar-left-expand.svg",
+        "sha256": "49deaa23030d08ed8ef60c53bef50b64f77a64a64bd07398c2845b25594c66ee",
+        "license": "MIT",
+        "sourceName": "layout-sidebar-left-expand",
+        "match": "exact",
+        "role": "comparison-only"
+      }
+    ],
+    "effects": {
+      "dashes": {
+        "used": false,
+        "reason": "不採用；展開左面板以連續實體輪廓表達，沒有未完成或隱藏邊界。"
+      },
+      "opacity": {
+        "used": false,
+        "reason": "不採用；展開左面板的主體及必要訊號以留白分離，淡化不增加語意。"
+      },
+      "gradients": {
+        "used": false,
+        "reason": "本期不新增連續漸層或mask，以原生輪廓及必要逐筆透明度處理。"
+      }
+    },
+    "change": {
+      "kind": "new",
+      "reason": "新繪後目視通過：展開／收合並排重量一致，16px仍能辨識箭頭朝向，沒有額外遮擋效果。",
+      "before": null
+    },
+    "visualReview": {
+      "status": "new-after-visual-review",
+      "reviewer": "root",
+      "date": "2026-11-16",
+      "batch": "expansion-04",
+      "variantsSha256": "7fb19ae44971d5a062e104997b6c5599c7a32ed1b6f6598ce3df398537cd4a94",
+      "checks": [
+        "two-pinned-source-comparisons",
+        "16/20/24",
+        "sharp/soft/rounded",
+        "light/dark",
+        "55-percent-foreground",
+        "adjacent-text"
+      ],
+      "evidence": [
+        {
+          "path": "docs/review/ui-v1/expansion-04/comparison.png",
+          "sha256": "5ebe783e3543522a1d57c25518a7ba7e8f5af8bf7d06b7e177fd7d4591fa40ec"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-04/comparison-dark.png",
+          "sha256": "83bd6ee166836c673444471187b153c3b35b11371ce3cc7f296e2920f8c21461"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-04/native.png",
+          "sha256": "1d37eea649d5e4f4caab31be31935d7b2775d91335cb1d3a34f15fa3e07932cf"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-04/native-dark.png",
+          "sha256": "3773498e5a176d67cb837d497d078a1cc8ca6b6241255499722096c199fc853f"
+        }
+      ]
+    },
+    "status": "visually-reviewed-candidate",
+    "userApproval": "pending"
+  },
+  {
+    "name": "panel-right-close",
+    "purpose": "收合右側面板。",
+    "recognitionCues": "右側分區與向右的chevron。",
+    "confusableWith": [
+      "panel-right-open",
+      "panel-right"
+    ],
+    "sourceObservation": "Lucide及Tabler right-collapse的右分區與箭頭方向一致。Master直接沿用panel-right，不將文字／內容的圖形混入或全局鏡射。",
+    "references": [
+      {
+        "name": "panel-right-close",
+        "library": "Lucide",
+        "repository": "lucide-icons/lucide",
+        "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+        "path": "icons/panel-right-close.svg",
+        "localPath": "references/expansion-01/lucide-panel-right-close.svg",
+        "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/panel-right-close.svg",
+        "sha256": "48b9f4f84d55f99d6e4b7dc9e31937f687bc6aca223c003d7f3bd8bab6526c0b",
+        "license": "ISC AND MIT",
+        "sourceName": "panel-right-close",
+        "match": "exact",
+        "role": "comparison-only"
+      },
+      {
+        "name": "panel-right-close",
+        "library": "Tabler",
+        "repository": "tabler/tabler-icons",
+        "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+        "path": "icons/outline/layout-sidebar-right-collapse.svg",
+        "localPath": "references/expansion-01/tabler-layout-sidebar-right-collapse.svg",
+        "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/layout-sidebar-right-collapse.svg",
+        "sha256": "a71cb7d525a76d3c5747be37dd23ee9e8bde28405b96f65f58d569632e277888",
+        "license": "MIT",
+        "sourceName": "layout-sidebar-right-collapse",
+        "match": "exact",
+        "role": "comparison-only"
+      }
+    ],
+    "effects": {
+      "dashes": {
+        "used": false,
+        "reason": "不採用；收合右面板以連續實體輪廓表達，沒有未完成或隱藏邊界。"
+      },
+      "opacity": {
+        "used": false,
+        "reason": "不採用；收合右面板的主體及必要訊號以留白分離，淡化不增加語意。"
+      },
+      "gradients": {
+        "used": false,
+        "reason": "本期不新增連續漸層或mask，以原生輪廓及必要逐筆透明度處理。"
+      }
+    },
+    "change": {
+      "kind": "new",
+      "reason": "新繪後目視通過：箭尖與右分區保持穩定留白；與左側家族的框、角型及箭頭高度一致。",
+      "before": null
+    },
+    "visualReview": {
+      "status": "new-after-visual-review",
+      "reviewer": "root",
+      "date": "2026-11-16",
+      "batch": "expansion-04",
+      "variantsSha256": "5c32c23f042662ea7e093c31b1c0be51e529e5b254eeef35d8c3cef9762df095",
+      "checks": [
+        "two-pinned-source-comparisons",
+        "16/20/24",
+        "sharp/soft/rounded",
+        "light/dark",
+        "55-percent-foreground",
+        "adjacent-text"
+      ],
+      "evidence": [
+        {
+          "path": "docs/review/ui-v1/expansion-04/comparison.png",
+          "sha256": "5ebe783e3543522a1d57c25518a7ba7e8f5af8bf7d06b7e177fd7d4591fa40ec"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-04/comparison-dark.png",
+          "sha256": "83bd6ee166836c673444471187b153c3b35b11371ce3cc7f296e2920f8c21461"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-04/native.png",
+          "sha256": "1d37eea649d5e4f4caab31be31935d7b2775d91335cb1d3a34f15fa3e07932cf"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-04/native-dark.png",
+          "sha256": "3773498e5a176d67cb837d497d078a1cc8ca6b6241255499722096c199fc853f"
+        }
+      ]
+    },
+    "status": "visually-reviewed-candidate",
+    "userApproval": "pending"
+  },
+  {
+    "name": "panel-right-open",
+    "purpose": "展開右側面板。",
+    "recognitionCues": "右側分區與向左的chevron。",
+    "confusableWith": [
+      "panel-right-close",
+      "panel-right"
+    ],
+    "sourceObservation": "Lucide和Tabler right-expand以向左的內置箭頭表示面板展開。Master保持共同母型與位置，只替換動作方向。",
+    "references": [
+      {
+        "name": "panel-right-open",
+        "library": "Lucide",
+        "repository": "lucide-icons/lucide",
+        "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+        "path": "icons/panel-right-open.svg",
+        "localPath": "references/expansion-01/lucide-panel-right-open.svg",
+        "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/panel-right-open.svg",
+        "sha256": "7cea098473914c767e3a17561626df816a886de878cc943da79ae95bf726c9f0",
+        "license": "ISC AND MIT",
+        "sourceName": "panel-right-open",
+        "match": "exact",
+        "role": "comparison-only"
+      },
+      {
+        "name": "panel-right-open",
+        "library": "Tabler",
+        "repository": "tabler/tabler-icons",
+        "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+        "path": "icons/outline/layout-sidebar-right-expand.svg",
+        "localPath": "references/expansion-01/tabler-layout-sidebar-right-expand.svg",
+        "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/layout-sidebar-right-expand.svg",
+        "sha256": "fdc98997feca23d794718d8be6dcb1f04e550de3fdf4e9929ad45d0a439c7bfc",
+        "license": "MIT",
+        "sourceName": "layout-sidebar-right-expand",
+        "match": "exact",
+        "role": "comparison-only"
+      }
+    ],
+    "effects": {
+      "dashes": {
+        "used": false,
+        "reason": "不採用；展開右面板以連續實體輪廓表達，沒有未完成或隱藏邊界。"
+      },
+      "opacity": {
+        "used": false,
+        "reason": "不採用；展開右面板的主體及必要訊號以留白分離，淡化不增加語意。"
+      },
+      "gradients": {
+        "used": false,
+        "reason": "本期不新增連續漸層或mask，以原生輪廓及必要逐筆透明度處理。"
+      }
+    },
+    "change": {
+      "kind": "new",
+      "reason": "新繪後目視通過：16px下箭頭未因圓角鈍化而像短線，三種框角都保留分區與箭頭間隙。",
+      "before": null
+    },
+    "visualReview": {
+      "status": "new-after-visual-review",
+      "reviewer": "root",
+      "date": "2026-11-16",
+      "batch": "expansion-04",
+      "variantsSha256": "60e98bf70b731103df77d30e75302b4636d27a44c2cb9725430d944ebc280a74",
+      "checks": [
+        "two-pinned-source-comparisons",
+        "16/20/24",
+        "sharp/soft/rounded",
+        "light/dark",
+        "55-percent-foreground",
+        "adjacent-text"
+      ],
+      "evidence": [
+        {
+          "path": "docs/review/ui-v1/expansion-04/comparison.png",
+          "sha256": "5ebe783e3543522a1d57c25518a7ba7e8f5af8bf7d06b7e177fd7d4591fa40ec"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-04/comparison-dark.png",
+          "sha256": "83bd6ee166836c673444471187b153c3b35b11371ce3cc7f296e2920f8c21461"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-04/native.png",
+          "sha256": "1d37eea649d5e4f4caab31be31935d7b2775d91335cb1d3a34f15fa3e07932cf"
+        },
+        {
+          "path": "docs/review/ui-v1/expansion-04/native-dark.png",
+          "sha256": "3773498e5a176d67cb837d497d078a1cc8ca6b6241255499722096c199fc853f"
+        }
+      ]
+    },
+    "status": "visually-reviewed-candidate",
+    "userApproval": "pending"
+  }
+]

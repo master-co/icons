@@ -1,3 +1,4 @@
+import {handleExpansionClick,handleExpansionInput} from './expansion-scenarios.js';
 import {handleProductivityClick} from './productivity-scenarios.js';
 import {scenarioMarkup,scenarios} from './scenarios.js';
 import { renderSvg, escapeXml } from '/dist/runtime.js';
@@ -159,3 +160,6 @@ document.addEventListener('click',event=>{
 });
 
 document.addEventListener('click',event=>handleProductivityClick(event,glyph));
+
+document.addEventListener('click',event=>handleExpansionClick(event,glyph));
+document.addEventListener('input',handleExpansionInput);

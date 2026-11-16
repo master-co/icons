@@ -1,7 +1,8 @@
 import { n } from './geometry.mjs';
+import { expansion } from './expansion/index.mjs';
 import { coreDrawings } from './families/core.mjs';
 import { additions } from './families/index.mjs';
-export const drawings={...coreDrawings,...additions};
+export const drawings={...coreDrawings,...additions,...expansion};
 
 export function draw(name,g){
   if(!drawings[name])throw new Error(`Missing drawing: ${name}`);

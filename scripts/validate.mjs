@@ -12,7 +12,9 @@ const manifest = await json('dist/catalog.json');
 const definitions = await json('dist/definitions.json');
 const coreNames=await json('src/core-names.json');
 assert.equal(coreNames.length,48);
-const scope=[...await json('src/ui-scope.json'),...await json('src/organization-scope.json'),...await json('src/productivity-scope.json')];
+const expansionScope=await json('src/expansion-scope.json');
+const expansionBaseline=await json('references/craft-03/master-before.json');
+const scope=[...await json('src/ui-scope.json'),...await json('src/organization-scope.json'),...await json('src/productivity-scope.json'),...expansionScope];
 assert.deepEqual(catalog.map(x=>x.name).sort(),[...coreNames,...scope.map(x=>x.name)].sort(),'Exact original + approved UI scope');
 assert.equal(manifest.conceptCount,conceptCount);
 const names=new Set(catalog.map(x=>x.name));
@@ -68,14 +70,20 @@ assert.deepEqual(ledger.icons.map(x=>x.name).sort(),[...names].sort(),'Every dra
 const verifiedEvidence=new Set();
 const reviewBaselines=new Map();
 for(const record of ledger.icons){
-  const path=record.change.before.path;
-  if(!reviewBaselines.has(path))reviewBaselines.set(path,await json(path));
-  const before=reviewBaselines.get(path);
   assert.equal(record.status,'visually-reviewed-candidate',record.name+': awaiting visual review');
   assert.equal(record.visualReview.variantsSha256,sha(JSON.stringify(definitions[record.name].variants)),record.name+': geometry changed since review');
-  assert.equal(record.change.before.variantsSha256,sha(JSON.stringify(before[record.name].variants)),record.name+': incorrect before master');
-  const changed=JSON.stringify(definitions[record.name].variants)!==JSON.stringify(before[record.name].variants);
-  assert.equal(record.change.kind,changed?'modified':'retained',record.name+': decision does not describe actual change');
+  if(record.change.kind==='new'){
+    assert.equal(record.change.before,null,record.name+': new drawings must not fabricate a previous master');
+    assert.ok(expansionScope.some(r=>r.name===record.name),record.name+': not in approved new scope');
+    assert.ok(!(record.name in expansionBaseline),record.name+': existing drawing misclassified as new');
+  }else{
+    const path=record.change.before.path;
+    if(!reviewBaselines.has(path))reviewBaselines.set(path,await json(path));
+    const before=reviewBaselines.get(path);
+    assert.equal(record.change.before.variantsSha256,sha(JSON.stringify(before[record.name].variants)),record.name+': incorrect before master');
+    const changed=JSON.stringify(definitions[record.name].variants)!==JSON.stringify(before[record.name].variants);
+    assert.equal(record.change.kind,changed?'modified':'retained',record.name+': decision does not describe actual change');
+  }
   assert.ok(record.change.reason.length>20,record.name+': missing individual decision');
   for(const key of ['purpose','recognitionCues','sourceObservation'])assert.ok(record[key]?.trim().length>0,record.name+': '+key);
   assert.ok(record.confusableWith.length>0 && record.confusableWith.every(n=>names.has(n)));

@@ -22,7 +22,7 @@ test('original 48 names and all unreviewed masters remain compatible',async()=>{
  const original=JSON.parse(await readFile('references/ui-v1/master-before.json'));
  const baseline=JSON.parse(await readFile('references/craft-01/master-before.json'));
  for(const [name,definition]of Object.entries(original))assert.deepEqual(baseline[name].variants,definition.variants,name);
- for(const name of Object.keys(original))if(name!=='chart-bar')assert.deepEqual(defs[name].variants,original[name].variants,name);
+ for(const name of Object.keys(original))if(!['chart-bar','copy','bell-off'].includes(name))assert.deepEqual(defs[name].variants,original[name].variants,name);
  for(const size of[20,24])assert.deepEqual(defs['chart-bar'].variants[size],original['chart-bar'].variants[size]);
 });
 test('real semantic paint effects survive SVG and React across all sizes',()=>{
@@ -54,7 +54,7 @@ test('only explicitly reviewed refinements differ from the complete baseline',as
   ['craft-01',firstPass,['chart-bar','contact','mouse-pointer','usb','accessibility','file-audio','file-archive','timer','user-cog','handshake','indent-increase','indent-decrease','megaphone','ticket']],
   ['craft-02',JSON.parse(await readFile('references/clearance-01/master-before.json')),['highlighter','phone-off']],
   ['clearance-01',JSON.parse(await readFile('references/layers-01/master-before.json')),['phone-off','mail-x','file-lock','folder-lock']],
-  ['layers-01',defs,['layers']],
+  ['layers-01',JSON.parse(await readFile('references/craft-03/master-before.json')),['layers']],
  ];
  for(const[cycle,after,names]of rounds){
   const before=JSON.parse(await readFile(`references/${cycle}/master-before.json`));
@@ -65,6 +65,22 @@ test('only explicitly reviewed refinements differ from the complete baseline',as
   assert.deepEqual(decisions.filter(x=>x.kind==='modified').map(x=>x.name).sort(),expected,cycle);
   for(const d of decisions)if(d.kind==='retained')assert.deepEqual(after[d.name],before[d.name],cycle+'/'+d.name);
  }
+});
+
+test('craft-03 refinements preserve an explicit independent and root review history',async()=>{
+ const baseline=JSON.parse(await readFile('references/craft-03/master-before.json'));
+ const independent=JSON.parse(await readFile('docs/review/craft-03/final/definitions.json'));
+ const root=JSON.parse(await readFile('docs/review/craft-03/root-final/definitions.json'));
+ const final=JSON.parse(await readFile('docs/review/craft-03/root-junctions-final/definitions.json'));
+ const decision=JSON.parse(await readFile('docs/review/craft-03/decisions.json'));
+ const changed=(a,b)=>Object.keys(a).filter(n=>JSON.stringify(a[n].variants)!==JSON.stringify(b[n].variants)).sort();
+ assert.equal(Object.keys(baseline).length,280);
+ assert.deepEqual(changed(baseline,independent),decision.expectedModifiedNames.toSorted());
+ assert.deepEqual(changed(independent,root),['clipboard-pen']);
+ assert.deepEqual(changed(root,final),['hard-drive','package']);
+ for(const name of Object.keys(baseline))assert.deepEqual(defs[name].variants,final[name].variants,name);
+ const originals=JSON.parse(await readFile('src/core-names.json'));
+ assert.deepEqual(changed(baseline,final).filter(n=>originals.includes(n)),['bell-off','copy']);
 });
 
 test('semantic perforations retain flat ends independently of frame corner styles',()=>{
@@ -80,6 +96,13 @@ test('every productivity drawing appears in a labelled product scenario',async()
  const scope=JSON.parse(await readFile('src/productivity-scope.json'));
  const {scenarios,scenarioMarkup}=await import('../preview/scenarios.js');
  const used=new Set();
+ for(const[id]of scenarios)scenarioMarkup(name=>{assert.ok(defs[name],name);used.add(name);return '<svg></svg>';},id);
+ for(const{name}of scope)assert.ok(used.has(name),'Missing real-context placement: '+name);
+});
+
+test('every expansion drawing is used in a labelled interface scenario',async()=>{
+ const scope=JSON.parse(await readFile('src/expansion-scope.json'));
+ const {scenarios,scenarioMarkup}=await import('../preview/scenarios.js');const used=new Set();
  for(const[id]of scenarios)scenarioMarkup(name=>{assert.ok(defs[name],name);used.add(name);return '<svg></svg>';},id);
  for(const{name}of scope)assert.ok(used.has(name),'Missing real-context placement: '+name);
 });

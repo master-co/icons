@@ -1,5 +1,21 @@
 // Direction and state variants remain named drawings, not extra base concepts.
 export const conceptOf = {
+  frown:'smile','thumbs-down':'thumbs-up','book-open':'book',notebook:'book',
+  'bookmark-plus':'bookmark','bookmark-minus':'bookmark','file-question':'file','file-json':'file',
+  'table-row-add':'table','table-column-add':'table','table-row-delete':'table','table-column-delete':'table',
+  'table-cells-merge':'table','table-cells-split':'table',
+  'panel-left-close':'panel-left','panel-left-open':'panel-left','panel-right-close':'panel-left','panel-right-open':'panel-left',
+  'distribute-vertical':'distribute-horizontal','map-pinned':'map',rewind:'fast-forward',
+  'repeat-one':'repeat','volume-low':'volume','video-off':'video','reply-all':'reply',
+  'mail-plus':'mail','mail-search':'mail','message-text':'message','message-check':'message',
+  'chart-bar-horizontal':'chart-bar','chart-bar-stacked':'chart-bar',
+  'list-collapse':'list','list-search':'list','list-plus':'list','list-minus':'list',
+  'scan-barcode':'barcode','package-open':'package','package-check':'package','package-return':'package',
+  'shopping-cart-plus':'shopping-cart','shopping-cart-check':'shopping-cart','folder-code':'folder',
+  'cloud-check':'cloud','cloud-off':'cloud','cloud-sync':'cloud',
+  'database-backup':'database','database-search':'database','server-cog':'server',
+  'hard-drive-upload':'hard-drive','hard-drive-download':'hard-drive',
+
   'indent-decrease':'indent-increase', 'superscript':'subscript',
   'file-code':'file','file-image':'file','file-video':'file','file-audio':'file','file-archive':'file',
   'folder-minus':'folder','folder-check':'folder','folder-x':'folder','folder-up':'folder','folder-down':'folder',

@@ -1,0 +1,92 @@
+{
+  "date": "2026-11-16",
+  "reviewer": "root",
+  "scope": {
+    "engines": [
+      "chromium",
+      "webkit"
+    ],
+    "dpr": [
+      1,
+      2
+    ],
+    "themes": [
+      "light",
+      "dark"
+    ],
+    "sizes": [
+      16,
+      20,
+      24
+    ],
+    "corners": [
+      "sharp",
+      "soft",
+      "rounded"
+    ],
+    "implementations": [
+      "SVG",
+      "React"
+    ],
+    "lowContrast": "16px 55% foreground"
+  },
+  "subjects": [
+    {
+      "name": "selection",
+      "observation": "平切分段的虛線在16px仍有間距，rounded只處理選取框轉角，不將直段變成圓點。"
+    },
+    {
+      "name": "ticket",
+      "observation": "平切撕線與左右票口在小尺寸、55%前景仍可辨識，SVG及React的端帽一致。"
+    },
+    {
+      "name": "file-archive",
+      "observation": "拉鏈的平切齒軌及下方拉環沒有黏成黑條；16px簡化仍保留壓縮檔案訊號。"
+    },
+    {
+      "name": "chart-area",
+      "observation": "次要面積填色在深淺底皆低於輪廓，55%前景下主折線仍可辨識，透明度沒有承擔修補幾何的用途。"
+    },
+    {
+      "name": "file-question",
+      "observation": "特別重查WebKit 1x的16px：問號頂弧和下點仍分離；55%前景辨識較弱但保留問號訊號，未發現孔洞消失或誤讀為其他標點。"
+    }
+  ],
+  "evidence": [
+    {
+      "path": "docs/review/craft-03/effects-chromium-1x-light.png",
+      "sha256": "d6b2349f9bb6a6941a3f6b4a4b81da88f36ade485280fb31579f171ff287f437"
+    },
+    {
+      "path": "docs/review/craft-03/effects-chromium-1x-dark.png",
+      "sha256": "94d17ca393f6133ffd44daa67ca2896a35a28dcaf1bae023ce5ec54625a77e8a"
+    },
+    {
+      "path": "docs/review/craft-03/effects-chromium-2x-light.png",
+      "sha256": "72b24f9365690e72bbcb320e11d26b100fb8b1a4cf75e650d4966597c7a058a0"
+    },
+    {
+      "path": "docs/review/craft-03/effects-chromium-2x-dark.png",
+      "sha256": "d9d85e11918c27bb74e0707ce2014b2fa7ce8b07fdb1f05b934029048a252bc5"
+    },
+    {
+      "path": "docs/review/craft-03/effects-webkit-1x-light.png",
+      "sha256": "c164ad31d38a9a8bdd51d7c07e71c90e17e919630919ba705ed8544d028c796c"
+    },
+    {
+      "path": "docs/review/craft-03/effects-webkit-1x-dark.png",
+      "sha256": "c70cc515b00551000c4074cff66abaf85eed2fe701379ce2b4b9aea4629f5e3e"
+    },
+    {
+      "path": "docs/review/craft-03/effects-webkit-2x-light.png",
+      "sha256": "b90041f144f7507eaea9057a35f6cb9b7a11b83af3c4ed4c672199067ab9b786"
+    },
+    {
+      "path": "docs/review/craft-03/effects-webkit-2x-dark.png",
+      "sha256": "8cfb7ebcd6b1ac5401704daa5dc6a4d7798b7ff96563e72a6a35be4d9a4993ff"
+    }
+  ],
+  "status": "visually-reviewed",
+  "unresolvedDefects": [],
+  "limits": "55%只是這組底色的低對比檢視，非任意色彩組合的可讀性或無障礙保證。"
+}

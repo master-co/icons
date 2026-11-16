@@ -1,3 +1,4 @@
+import { knockout } from '../occlusion.mjs';
 import { coreDrawings } from "./core.mjs";
 import { figure, rotate } from "./shared.mjs";
 const mirror = (nodes, g) => nodes.map(([tag, a]) => [tag, { ...a, transform: `translate(${g.s} 0) scale(-1 1)` }]);
@@ -20,11 +21,7 @@ const navigation = {
   redo: (g) => mirror(coreDrawings.undo(g), g),
   "external-link": (g) => {
     const f = figure(g);
-    return [
-      f.contour([[11, 5], [4, 5], [4, 20], [19, 20], [19, 13]], false, g.r),
-      f.line(10, 14, 20, 4),
-      f.contour([[14, 4], [20, 4], [20, 10]])
-    ];
+    return knockout([f.rect(4,5,15,15)], [f.line(10,14,20,4),f.contour([[14,4],[20,4],[20,10]])],g);
   },
   link: (g) => {
     const f = figure(g);

@@ -1,0 +1,2868 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "/root/craft_v051_audit",
+  "skillVersion": "master-icons 0.5.1",
+  "reviewedAt": "2026-11-16T11:40:54.182Z",
+  "scope": "Read-only independent review of expansion08/09/10; initial immutable evidence captured before root response",
+  "summary": {
+    "icons": 26,
+    "retain": 24,
+    "refine": 2,
+    "distinctIssues": 1,
+    "sourceScreenshotsViewed": 6,
+    "nativeScreenshotsViewed": 6,
+    "additionalDiagnosticScreenshotsViewed": 4,
+    "nativeVariants": 234,
+    "sourceChecksumsVerified": 52,
+    "resolvedIssues": 2,
+    "unresolvedIssues": 0,
+    "finalRetain": 24,
+    "finalRefinedAndRechecked": 2
+  },
+  "boundsInspection": {
+    "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/painted-bounds.json",
+    "method": "paintedRegion.getBounds for all untransformed variants; transformed forward/chart-bar-horizontal excluded",
+    "outOfBoundsFound": 0
+  },
+  "limits": [
+    "No drawing edits, build, or commit performed by this reviewer. Root refined the package mother; independent post-fix resolution is appended without overwriting the initial observations/evidence.",
+    "This is Chromium screenshot review; browser/DPR matrix remains root integration work.",
+    "Retain is not user final approval."
+  ],
+  "artifacts": {
+    "expansion-08": [
+      {
+        "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/expansion-08/comparison.png",
+        "original": "docs/review/ui-v1/expansion-08/comparison.png",
+        "sha256": "3266eeacdc7bd70b6b9c84d3c282f798e76c39c630e36af9186693e02f1ab4f2",
+        "viewed": true
+      },
+      {
+        "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/expansion-08/comparison-dark.png",
+        "original": "docs/review/ui-v1/expansion-08/comparison-dark.png",
+        "sha256": "17b83cfe5163a990e35614c6b5749d2cbb8264c13e0d3718c0dc567453e32e00",
+        "viewed": true
+      },
+      {
+        "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/expansion-08/native.png",
+        "original": "docs/review/ui-v1/expansion-08/native.png",
+        "sha256": "2d7e8f78a4d3e95556d04203fecdcf1e2877158b7309c2c8992d0a0c007bdfea",
+        "viewed": true
+      },
+      {
+        "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/expansion-08/native-dark.png",
+        "original": "docs/review/ui-v1/expansion-08/native-dark.png",
+        "sha256": "be8fea022d3ec4951be5d7eb421b705620ab5a31de17596b64492e3a7041870a",
+        "viewed": true
+      }
+    ],
+    "expansion-09": [
+      {
+        "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/expansion-09/comparison.png",
+        "original": "docs/review/ui-v1/expansion-09/comparison.png",
+        "sha256": "c5d8e424c9de4c9aff9a08315171babedaca3b5e1ae8a1103b0f77e3e20942d9",
+        "viewed": true
+      },
+      {
+        "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/expansion-09/comparison-dark.png",
+        "original": "docs/review/ui-v1/expansion-09/comparison-dark.png",
+        "sha256": "f13134976af623da17508bc65bc8905422021b84947a6a261233bbe0480e37f3",
+        "viewed": true
+      },
+      {
+        "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/expansion-09/native.png",
+        "original": "docs/review/ui-v1/expansion-09/native.png",
+        "sha256": "748e420b035494ef80a5425244621f3b9fb6d098113a69c36db3ace52704b2ef",
+        "viewed": true
+      },
+      {
+        "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/expansion-09/native-dark.png",
+        "original": "docs/review/ui-v1/expansion-09/native-dark.png",
+        "sha256": "34ac43ad09a3b74c6abe0c88139990e24fc752f44572b714a9d300464c0c1856",
+        "viewed": true
+      }
+    ],
+    "expansion-10": [
+      {
+        "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/expansion-10/comparison.png",
+        "original": "docs/review/ui-v1/expansion-10/comparison.png",
+        "sha256": "cf9b05e1148f349bcfc267afb3a45d9e260c5dda4d625368250a38baa09ee355",
+        "viewed": true
+      },
+      {
+        "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/expansion-10/comparison-dark.png",
+        "original": "docs/review/ui-v1/expansion-10/comparison-dark.png",
+        "sha256": "7e3bb041eb08d282d32a576f45e142c0abb1dfcfcc494b064e2572a3ae1f5af8",
+        "viewed": true
+      },
+      {
+        "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/expansion-10/native.png",
+        "original": "docs/review/ui-v1/expansion-10/native.png",
+        "sha256": "150357e0a7500c6cd64146bf0e05422eced0f068e67d5eb06003efff8bd1fa30",
+        "viewed": true
+      },
+      {
+        "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/expansion-10/native-dark.png",
+        "original": "docs/review/ui-v1/expansion-10/native-dark.png",
+        "sha256": "c16d34ec2ca3dc0d46761c247121d9d74889f2cb8e40d50ccd3f374aad44195a",
+        "viewed": true
+      }
+    ]
+  },
+  "diagnostics": {
+    "1": [
+      {
+        "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/diagnostic-1-light.png",
+        "sha256": "8a565d49fce8dff417c1a2f69c665d6099351c56623497b68012a95d45944e42",
+        "viewed": true,
+        "kind": "4x enlarged native16/20/24, sharp/soft/rounded"
+      },
+      {
+        "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/diagnostic-1-dark.png",
+        "sha256": "c0c92408a6f85918328c98846fe5004662452ec5eef7564ee224d313e15a6809",
+        "viewed": true,
+        "kind": "4x enlarged native16/20/24, sharp/soft/rounded"
+      }
+    ],
+    "2": [
+      {
+        "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/diagnostic-2-light.png",
+        "sha256": "5e3d3fd66ab77ca2c3bb1b26eabad3b7908e433d960974f0d231856132bdae9f",
+        "viewed": true,
+        "kind": "4x enlarged native16/20/24, sharp/soft/rounded"
+      },
+      {
+        "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/diagnostic-2-dark.png",
+        "sha256": "cf38680c9af35a3f115056becb032981b9476b41ebff124b6592097f3ba532c9",
+        "viewed": true,
+        "kind": "4x enlarged native16/20/24, sharp/soft/rounded"
+      }
+    ]
+  },
+  "records": [
+    {
+      "name": "reply",
+      "batch": "expansion-08",
+      "decision": "retain",
+      "status": "independent-visual-review-complete",
+      "observation": "箭桿曲線自然回折，尖端接點已作sharp端帽回縮；16px方向和尾端均清楚。",
+      "sourceObservation": "Lucide尾端向下直收；Iconoir尾端更接近U回環。Master採較短向下尾，保留回覆線索而不混成undo。",
+      "references": [
+        {
+          "name": "reply",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/reply.svg",
+          "localPath": "references/expansion-01/lucide-reply.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/reply.svg",
+          "sha256": "f429acd0f5c77cdd3e5660f3dda62d28a14b6a95680255e8aa315fc65f7c045b",
+          "license": "ISC AND MIT",
+          "sourceName": "reply",
+          "match": "exact",
+          "role": "comparison-only",
+          "actualSha256": "f429acd0f5c77cdd3e5660f3dda62d28a14b6a95680255e8aa315fc65f7c045b",
+          "checksumMatchesManifest": true
+        },
+        {
+          "name": "reply",
+          "library": "Iconoir",
+          "repository": "iconoir-icons/iconoir",
+          "commit": "39834e3f193bc0cca2c36bebb6a650471977433d",
+          "path": "icons/regular/reply.svg",
+          "localPath": "references/expansion-01/iconoir-reply.svg",
+          "url": "https://github.com/iconoir-icons/iconoir/blob/39834e3f193bc0cca2c36bebb6a650471977433d/icons/regular/reply.svg",
+          "sha256": "dafddc6221875841c6543854a31c31c4c21521ca2ed93299290a8fa674f6a2a7",
+          "license": "MIT",
+          "sourceName": "reply",
+          "match": "exact",
+          "role": "comparison-only",
+          "actualSha256": "dafddc6221875841c6543854a31c31c4c21521ca2ed93299290a8fa674f6a2a7",
+          "checksumMatchesManifest": true
+        }
+      ],
+      "effects": {
+        "dashes": "不採用：此圖沒有待定區域/隱藏邊語意，實線更易辨識。",
+        "opacity": "不採用內建漸淡；主體與狀態皆需辨識，另已檢視16px55%前景明暗文字情境。"
+      },
+      "issues": [],
+      "nativeChecks": {
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "backgrounds": [
+          "light",
+          "dark"
+        ],
+        "lowContrast": "55% at16px",
+        "textAdjacency": true
+      },
+      "drawingHash": "0b270989d975535626ade10c7f7612d05d07371bd57a6e741f38623202ccf2f9",
+      "module": {
+        "path": "src/expansion/inbox-actions.mjs",
+        "sha256": "0ee1d116b6acce03818b64ab8dc85f225bc8499fabdd14bd81070f2bce1d49ae"
+      },
+      "evidence": [
+        {
+          "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/expansion-08/comparison.png",
+          "original": "docs/review/ui-v1/expansion-08/comparison.png",
+          "sha256": "3266eeacdc7bd70b6b9c84d3c282f798e76c39c630e36af9186693e02f1ab4f2",
+          "viewed": true
+        },
+        {
+          "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/expansion-08/comparison-dark.png",
+          "original": "docs/review/ui-v1/expansion-08/comparison-dark.png",
+          "sha256": "17b83cfe5163a990e35614c6b5749d2cbb8264c13e0d3718c0dc567453e32e00",
+          "viewed": true
+        },
+        {
+          "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/expansion-08/native.png",
+          "original": "docs/review/ui-v1/expansion-08/native.png",
+          "sha256": "2d7e8f78a4d3e95556d04203fecdcf1e2877158b7309c2c8992d0a0c007bdfea",
+          "viewed": true
+        },
+        {
+          "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/expansion-08/native-dark.png",
+          "original": "docs/review/ui-v1/expansion-08/native-dark.png",
+          "sha256": "be8fea022d3ec4951be5d7eb421b705620ab5a31de17596b64492e3a7041870a",
+          "viewed": true
+        }
+      ]
+    },
+    {
+      "name": "reply-all",
+      "batch": "expansion-08",
+      "decision": "retain",
+      "status": "independent-visual-review-complete",
+      "observation": "兩個左向chevron有均等空間，回覆主箭頭與曲線相接；九組放大未見先前square端帽凸階。",
+      "sourceObservation": "Lucide雙箭較緊；Tabler尾部彎成更完整U形。Master使用雙箭和單次向下回折，與reply共享曲線。",
+      "references": [
+        {
+          "name": "reply-all",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/reply-all.svg",
+          "localPath": "references/expansion-01/lucide-reply-all.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/reply-all.svg",
+          "sha256": "ab29296c2d700563c8fe51f25865dfda4bcfb3e99fbd995851c2ba43f1d11a34",
+          "license": "ISC AND MIT",
+          "sourceName": "reply-all",
+          "match": "exact",
+          "role": "comparison-only",
+          "actualSha256": "ab29296c2d700563c8fe51f25865dfda4bcfb3e99fbd995851c2ba43f1d11a34",
+          "checksumMatchesManifest": true
+        },
+        {
+          "name": "reply-all",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/arrow-back-up-double.svg",
+          "localPath": "references/expansion-01/tabler-arrow-back-up-double.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/arrow-back-up-double.svg",
+          "sha256": "db5962e78176056e8c5fbfd01d37ff83db80cd42e01ad06f36729965b8933d4e",
+          "license": "MIT",
+          "sourceName": "arrow-back-up-double",
+          "match": "exact",
+          "role": "comparison-only",
+          "actualSha256": "db5962e78176056e8c5fbfd01d37ff83db80cd42e01ad06f36729965b8933d4e",
+          "checksumMatchesManifest": true
+        }
+      ],
+      "effects": {
+        "dashes": "不採用：此圖沒有待定區域/隱藏邊語意，實線更易辨識。",
+        "opacity": "不採用內建漸淡；主體與狀態皆需辨識，另已檢視16px55%前景明暗文字情境。"
+      },
+      "issues": [],
+      "nativeChecks": {
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "backgrounds": [
+          "light",
+          "dark"
+        ],
+        "lowContrast": "55% at16px",
+        "textAdjacency": true
+      },
+      "drawingHash": "b6adf6e8f730c68e608cc9d274041b1315ec51c374e3f53b628a2de5e47bebed",
+      "module": {
+        "path": "src/expansion/inbox-actions.mjs",
+        "sha256": "0ee1d116b6acce03818b64ab8dc85f225bc8499fabdd14bd81070f2bce1d49ae"
+      },
+      "evidence": [
+        {
+          "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/expansion-08/comparison.png",
+          "original": "docs/review/ui-v1/expansion-08/comparison.png",
+          "sha256": "3266eeacdc7bd70b6b9c84d3c282f798e76c39c630e36af9186693e02f1ab4f2",
+          "viewed": true
+        },
+        {
+          "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/expansion-08/comparison-dark.png",
+          "original": "docs/review/ui-v1/expansion-08/comparison-dark.png",
+          "sha256": "17b83cfe5163a990e35614c6b5749d2cbb8264c13e0d3718c0dc567453e32e00",
+          "viewed": true
+        },
+        {
+          "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/expansion-08/native.png",
+          "original": "docs/review/ui-v1/expansion-08/native.png",
+          "sha256": "2d7e8f78a4d3e95556d04203fecdcf1e2877158b7309c2c8992d0a0c007bdfea",
+          "viewed": true
+        },
+        {
+          "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/expansion-08/native-dark.png",
+          "original": "docs/review/ui-v1/expansion-08/native-dark.png",
+          "sha256": "be8fea022d3ec4951be5d7eb421b705620ab5a31de17596b64492e3a7041870a",
+          "viewed": true
+        },
+        {
+          "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/diagnostic-1-light.png",
+          "sha256": "8a565d49fce8dff417c1a2f69c665d6099351c56623497b68012a95d45944e42",
+          "viewed": true,
+          "kind": "4x enlarged native16/20/24, sharp/soft/rounded"
+        },
+        {
+          "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/diagnostic-1-dark.png",
+          "sha256": "c0c92408a6f85918328c98846fe5004662452ec5eef7564ee224d313e15a6809",
+          "viewed": true,
+          "kind": "4x enlarged native16/20/24, sharp/soft/rounded"
+        }
+      ]
+    },
+    {
+      "name": "forward",
+      "batch": "expansion-08",
+      "decision": "retain",
+      "status": "independent-visual-review-complete",
+      "observation": "reply母型水平反向，右箭頭、左側曲線尾端語意清楚；16px沒有雙向箭頭誤讀。",
+      "sourceObservation": "Lucide forward短向下尾；Iconoir arrow-email-forward尾部弧線較完整。此次來源正確為轉寄，不是一般直向forward三角。",
+      "references": [
+        {
+          "name": "forward",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/forward.svg",
+          "localPath": "references/expansion-01/lucide-forward.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/forward.svg",
+          "sha256": "6c85a58cfe9acb95ee706bd34b4f74ddff2141d0acc6b2c0ded28b62c6ef5e5a",
+          "license": "ISC AND MIT",
+          "sourceName": "forward",
+          "match": "exact",
+          "role": "comparison-only",
+          "actualSha256": "6c85a58cfe9acb95ee706bd34b4f74ddff2141d0acc6b2c0ded28b62c6ef5e5a",
+          "checksumMatchesManifest": true
+        },
+        {
+          "name": "forward",
+          "library": "Iconoir",
+          "repository": "iconoir-icons/iconoir",
+          "commit": "39834e3f193bc0cca2c36bebb6a650471977433d",
+          "path": "icons/regular/arrow-email-forward.svg",
+          "localPath": "references/expansion-01/iconoir-arrow-email-forward.svg",
+          "url": "https://github.com/iconoir-icons/iconoir/blob/39834e3f193bc0cca2c36bebb6a650471977433d/icons/regular/arrow-email-forward.svg",
+          "sha256": "c226b2054cbafd9d9f4df26a0658944a3d339aa96e480a84290b87c61b1e3715",
+          "license": "MIT",
+          "sourceName": "arrow-email-forward",
+          "match": "exact",
+          "role": "comparison-only",
+          "actualSha256": "c226b2054cbafd9d9f4df26a0658944a3d339aa96e480a84290b87c61b1e3715",
+          "checksumMatchesManifest": true
+        }
+      ],
+      "effects": {
+        "dashes": "不採用：此圖沒有待定區域/隱藏邊語意，實線更易辨識。",
+        "opacity": "不採用內建漸淡；主體與狀態皆需辨識，另已檢視16px55%前景明暗文字情境。"
+      },
+      "issues": [],
+      "nativeChecks": {
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "backgrounds": [
+          "light",
+          "dark"
+        ],
+        "lowContrast": "55% at16px",
+        "textAdjacency": true
+      },
+      "drawingHash": "8f8af8f8a25890e0d5b55fef9158e4ae406f27b5c1097d012c8eaa60388a5f57",
+      "module": {
+        "path": "src/expansion/inbox-actions.mjs",
+        "sha256": "0ee1d116b6acce03818b64ab8dc85f225bc8499fabdd14bd81070f2bce1d49ae"
+      },
+      "evidence": [
+        {
+          "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/expansion-08/comparison.png",
+          "original": "docs/review/ui-v1/expansion-08/comparison.png",
+          "sha256": "3266eeacdc7bd70b6b9c84d3c282f798e76c39c630e36af9186693e02f1ab4f2",
+          "viewed": true
+        },
+        {
+          "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/expansion-08/comparison-dark.png",
+          "original": "docs/review/ui-v1/expansion-08/comparison-dark.png",
+          "sha256": "17b83cfe5163a990e35614c6b5749d2cbb8264c13e0d3718c0dc567453e32e00",
+          "viewed": true
+        },
+        {
+          "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/expansion-08/native.png",
+          "original": "docs/review/ui-v1/expansion-08/native.png",
+          "sha256": "2d7e8f78a4d3e95556d04203fecdcf1e2877158b7309c2c8992d0a0c007bdfea",
+          "viewed": true
+        },
+        {
+          "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/expansion-08/native-dark.png",
+          "original": "docs/review/ui-v1/expansion-08/native-dark.png",
+          "sha256": "be8fea022d3ec4951be5d7eb421b705620ab5a31de17596b64492e3a7041870a",
+          "viewed": true
+        }
+      ]
+    },
+    {
+      "name": "rss",
+      "batch": "expansion-08",
+      "decision": "retain",
+      "status": "independent-visual-review-complete",
+      "observation": "圓點和兩個四分之一圓弧間隔穩定，16px未黏合；尖角設定僅改端帽，不破壞弧形。",
+      "sourceObservation": "Lucide與Tabler均為雙弧加左下圓點；Master維持共同約定，不添加第三層波。",
+      "references": [
+        {
+          "name": "rss",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/rss.svg",
+          "localPath": "references/expansion-01/lucide-rss.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/rss.svg",
+          "sha256": "68297d9ec163f3d07bb4efac82c54bc62679a5e3ba37cf2dabb27d4c8de8bfe4",
+          "license": "ISC AND MIT",
+          "sourceName": "rss",
+          "match": "exact",
+          "role": "comparison-only",
+          "actualSha256": "68297d9ec163f3d07bb4efac82c54bc62679a5e3ba37cf2dabb27d4c8de8bfe4",
+          "checksumMatchesManifest": true
+        },
+        {
+          "name": "rss",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/rss.svg",
+          "localPath": "references/expansion-01/tabler-rss.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/rss.svg",
+          "sha256": "ec2abf644e4e7ed6c69d0850ff5a5a1e2b2f4cded89aad1e6388b25fcf0941d2",
+          "license": "MIT",
+          "sourceName": "rss",
+          "match": "exact",
+          "role": "comparison-only",
+          "actualSha256": "ec2abf644e4e7ed6c69d0850ff5a5a1e2b2f4cded89aad1e6388b25fcf0941d2",
+          "checksumMatchesManifest": true
+        }
+      ],
+      "effects": {
+        "dashes": "不採用：此圖沒有待定區域/隱藏邊語意，實線更易辨識。",
+        "opacity": "不採用內建漸淡；主體與狀態皆需辨識，另已檢視16px55%前景明暗文字情境。"
+      },
+      "issues": [],
+      "nativeChecks": {
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "backgrounds": [
+          "light",
+          "dark"
+        ],
+        "lowContrast": "55% at16px",
+        "textAdjacency": true
+      },
+      "drawingHash": "8f01a3c8e527f70742b112900334b40a26df16f192a31aad9b6454a437c55371",
+      "module": {
+        "path": "src/expansion/inbox-actions.mjs",
+        "sha256": "0ee1d116b6acce03818b64ab8dc85f225bc8499fabdd14bd81070f2bce1d49ae"
+      },
+      "evidence": [
+        {
+          "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/expansion-08/comparison.png",
+          "original": "docs/review/ui-v1/expansion-08/comparison.png",
+          "sha256": "3266eeacdc7bd70b6b9c84d3c282f798e76c39c630e36af9186693e02f1ab4f2",
+          "viewed": true
+        },
+        {
+          "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/expansion-08/comparison-dark.png",
+          "original": "docs/review/ui-v1/expansion-08/comparison-dark.png",
+          "sha256": "17b83cfe5163a990e35614c6b5749d2cbb8264c13e0d3718c0dc567453e32e00",
+          "viewed": true
+        },
+        {
+          "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/expansion-08/native.png",
+          "original": "docs/review/ui-v1/expansion-08/native.png",
+          "sha256": "2d7e8f78a4d3e95556d04203fecdcf1e2877158b7309c2c8992d0a0c007bdfea",
+          "viewed": true
+        },
+        {
+          "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/expansion-08/native-dark.png",
+          "original": "docs/review/ui-v1/expansion-08/native-dark.png",
+          "sha256": "be8fea022d3ec4951be5d7eb421b705620ab5a31de17596b64492e3a7041870a",
+          "viewed": true
+        }
+      ]
+    },
+    {
+      "name": "mail-plus",
+      "batch": "expansion-08",
+      "decision": "retain",
+      "status": "independent-visual-review-complete",
+      "observation": "信封底右依加號輪廓等距挖空，保留主體和封口V；16px加號未黏信封。",
+      "sourceObservation": "Lucide與Tabler都把加號放外側右下並中斷信封；Master加號稍內收但保留清楚淨空。",
+      "references": [
+        {
+          "name": "mail-plus",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/mail-plus.svg",
+          "localPath": "references/expansion-01/lucide-mail-plus.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/mail-plus.svg",
+          "sha256": "afb0158398fa85773a65bff2eafd841e1fad238f1276a53be49c82387c580976",
+          "license": "ISC AND MIT",
+          "sourceName": "mail-plus",
+          "match": "exact",
+          "role": "comparison-only",
+          "actualSha256": "afb0158398fa85773a65bff2eafd841e1fad238f1276a53be49c82387c580976",
+          "checksumMatchesManifest": true
+        },
+        {
+          "name": "mail-plus",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/mail-plus.svg",
+          "localPath": "references/expansion-01/tabler-mail-plus.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/mail-plus.svg",
+          "sha256": "600b029008408dcfddec52830e89061ae42a451badc8aa02f118470d8c04bb7c",
+          "license": "MIT",
+          "sourceName": "mail-plus",
+          "match": "exact",
+          "role": "comparison-only",
+          "actualSha256": "600b029008408dcfddec52830e89061ae42a451badc8aa02f118470d8c04bb7c",
+          "checksumMatchesManifest": true
+        }
+      ],
+      "effects": {
+        "dashes": "不採用：此圖沒有待定區域/隱藏邊語意，實線更易辨識。",
+        "opacity": "不採用內建漸淡；主體與狀態皆需辨識，另已檢視16px55%前景明暗文字情境。"
+      },
+      "issues": [],
+      "nativeChecks": {
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "backgrounds": [
+          "light",
+          "dark"
+        ],
+        "lowContrast": "55% at16px",
+        "textAdjacency": true
+      },
+      "drawingHash": "11e8795c1c6787dcc83970594a3892bc85d6a38da47da5ab1cf5ea4f00ed640f",
+      "module": {
+        "path": "src/expansion/inbox-actions.mjs",
+        "sha256": "0ee1d116b6acce03818b64ab8dc85f225bc8499fabdd14bd81070f2bce1d49ae"
+      },
+      "evidence": [
+        {
+          "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/expansion-08/comparison.png",
+          "original": "docs/review/ui-v1/expansion-08/comparison.png",
+          "sha256": "3266eeacdc7bd70b6b9c84d3c282f798e76c39c630e36af9186693e02f1ab4f2",
+          "viewed": true
+        },
+        {
+          "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/expansion-08/comparison-dark.png",
+          "original": "docs/review/ui-v1/expansion-08/comparison-dark.png",
+          "sha256": "17b83cfe5163a990e35614c6b5749d2cbb8264c13e0d3718c0dc567453e32e00",
+          "viewed": true
+        },
+        {
+          "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/expansion-08/native.png",
+          "original": "docs/review/ui-v1/expansion-08/native.png",
+          "sha256": "2d7e8f78a4d3e95556d04203fecdcf1e2877158b7309c2c8992d0a0c007bdfea",
+          "viewed": true
+        },
+        {
+          "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/expansion-08/native-dark.png",
+          "original": "docs/review/ui-v1/expansion-08/native-dark.png",
+          "sha256": "be8fea022d3ec4951be5d7eb421b705620ab5a31de17596b64492e3a7041870a",
+          "viewed": true
+        },
+        {
+          "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/diagnostic-1-light.png",
+          "sha256": "8a565d49fce8dff417c1a2f69c665d6099351c56623497b68012a95d45944e42",
+          "viewed": true,
+          "kind": "4x enlarged native16/20/24, sharp/soft/rounded"
+        },
+        {
+          "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/diagnostic-1-dark.png",
+          "sha256": "c0c92408a6f85918328c98846fe5004662452ec5eef7564ee224d313e15a6809",
+          "viewed": true,
+          "kind": "4x enlarged native16/20/24, sharp/soft/rounded"
+        }
+      ]
+    },
+    {
+      "name": "mail-search",
+      "batch": "expansion-08",
+      "decision": "retain",
+      "status": "independent-visual-review-complete",
+      "observation": "放大鏡內沒有透出信封線，鏡框與鏡柄接續；16px放大鏡孔與信封封口均可讀，九組放大無孤立碎屑。",
+      "sourceObservation": "Lucide/Tabler均以右下鏡框搭配信封，Master使用閉合鏡框實體剪影遮擋而非僅裁線條。",
+      "references": [
+        {
+          "name": "mail-search",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/mail-search.svg",
+          "localPath": "references/expansion-01/lucide-mail-search.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/mail-search.svg",
+          "sha256": "c6bd799046d85927c46b749e388299b058dd697fc33ea8a7f927c061813ad0ba",
+          "license": "ISC AND MIT",
+          "sourceName": "mail-search",
+          "match": "exact",
+          "role": "comparison-only",
+          "actualSha256": "c6bd799046d85927c46b749e388299b058dd697fc33ea8a7f927c061813ad0ba",
+          "checksumMatchesManifest": true
+        },
+        {
+          "name": "mail-search",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/mail-search.svg",
+          "localPath": "references/expansion-01/tabler-mail-search.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/mail-search.svg",
+          "sha256": "669a3ff7b0d97b96203b5920fae9c7aa33d6a23f25a1b01acf4f41edd24d1874",
+          "license": "MIT",
+          "sourceName": "mail-search",
+          "match": "exact",
+          "role": "comparison-only",
+          "actualSha256": "669a3ff7b0d97b96203b5920fae9c7aa33d6a23f25a1b01acf4f41edd24d1874",
+          "checksumMatchesManifest": true
+        }
+      ],
+      "effects": {
+        "dashes": "不採用：此圖沒有待定區域/隱藏邊語意，實線更易辨識。",
+        "opacity": "不採用內建漸淡；主體與狀態皆需辨識，另已檢視16px55%前景明暗文字情境。"
+      },
+      "issues": [],
+      "nativeChecks": {
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "backgrounds": [
+          "light",
+          "dark"
+        ],
+        "lowContrast": "55% at16px",
+        "textAdjacency": true
+      },
+      "drawingHash": "3e8267cce8f719517d5e5699de2b7bed33cb9eb631ec48786139fc91ef5c9d61",
+      "module": {
+        "path": "src/expansion/inbox-actions.mjs",
+        "sha256": "0ee1d116b6acce03818b64ab8dc85f225bc8499fabdd14bd81070f2bce1d49ae"
+      },
+      "evidence": [
+        {
+          "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/expansion-08/comparison.png",
+          "original": "docs/review/ui-v1/expansion-08/comparison.png",
+          "sha256": "3266eeacdc7bd70b6b9c84d3c282f798e76c39c630e36af9186693e02f1ab4f2",
+          "viewed": true
+        },
+        {
+          "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/expansion-08/comparison-dark.png",
+          "original": "docs/review/ui-v1/expansion-08/comparison-dark.png",
+          "sha256": "17b83cfe5163a990e35614c6b5749d2cbb8264c13e0d3718c0dc567453e32e00",
+          "viewed": true
+        },
+        {
+          "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/expansion-08/native.png",
+          "original": "docs/review/ui-v1/expansion-08/native.png",
+          "sha256": "2d7e8f78a4d3e95556d04203fecdcf1e2877158b7309c2c8992d0a0c007bdfea",
+          "viewed": true
+        },
+        {
+          "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/expansion-08/native-dark.png",
+          "original": "docs/review/ui-v1/expansion-08/native-dark.png",
+          "sha256": "be8fea022d3ec4951be5d7eb421b705620ab5a31de17596b64492e3a7041870a",
+          "viewed": true
+        },
+        {
+          "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/diagnostic-1-light.png",
+          "sha256": "8a565d49fce8dff417c1a2f69c665d6099351c56623497b68012a95d45944e42",
+          "viewed": true,
+          "kind": "4x enlarged native16/20/24, sharp/soft/rounded"
+        },
+        {
+          "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/diagnostic-1-dark.png",
+          "sha256": "c0c92408a6f85918328c98846fe5004662452ec5eef7564ee224d313e15a6809",
+          "viewed": true,
+          "kind": "4x enlarged native16/20/24, sharp/soft/rounded"
+        }
+      ]
+    },
+    {
+      "name": "message-text",
+      "batch": "expansion-08",
+      "decision": "retain",
+      "status": "independent-visual-review-complete",
+      "observation": "兩筆長短訊息線置於框內，上下與尾巴都有留白；16px兩行仍能分開。",
+      "sourceObservation": "Lucide message-square-text有三筆文字線；Iconoir message-text保留兩筆。Master採兩筆，與既有方對話框母型一致。",
+      "references": [
+        {
+          "name": "message-text",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/message-square-text.svg",
+          "localPath": "references/expansion-01/lucide-message-square-text.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/message-square-text.svg",
+          "sha256": "b2564066702194c600d91b6def8e897cdbf4c6205c80d39e459ff0a12e13950d",
+          "license": "ISC AND MIT",
+          "sourceName": "message-square-text",
+          "match": "exact",
+          "role": "comparison-only",
+          "actualSha256": "b2564066702194c600d91b6def8e897cdbf4c6205c80d39e459ff0a12e13950d",
+          "checksumMatchesManifest": true
+        },
+        {
+          "name": "message-text",
+          "library": "Iconoir",
+          "repository": "iconoir-icons/iconoir",
+          "commit": "39834e3f193bc0cca2c36bebb6a650471977433d",
+          "path": "icons/regular/message-text.svg",
+          "localPath": "references/expansion-01/iconoir-message-text.svg",
+          "url": "https://github.com/iconoir-icons/iconoir/blob/39834e3f193bc0cca2c36bebb6a650471977433d/icons/regular/message-text.svg",
+          "sha256": "63f90c9ab27c96d6c4860d2fe216cc36507e3393204d7ec1470f7d1abda1405c",
+          "license": "MIT",
+          "sourceName": "message-text",
+          "match": "exact",
+          "role": "comparison-only",
+          "actualSha256": "63f90c9ab27c96d6c4860d2fe216cc36507e3393204d7ec1470f7d1abda1405c",
+          "checksumMatchesManifest": true
+        }
+      ],
+      "effects": {
+        "dashes": "不採用：此圖沒有待定區域/隱藏邊語意，實線更易辨識。",
+        "opacity": "不採用內建漸淡；主體與狀態皆需辨識，另已檢視16px55%前景明暗文字情境。"
+      },
+      "issues": [],
+      "nativeChecks": {
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "backgrounds": [
+          "light",
+          "dark"
+        ],
+        "lowContrast": "55% at16px",
+        "textAdjacency": true
+      },
+      "drawingHash": "43900d9815a21b2569ef9382dc38b50139ee45d37a59d56d350effd2e88ba539",
+      "module": {
+        "path": "src/expansion/inbox-actions.mjs",
+        "sha256": "0ee1d116b6acce03818b64ab8dc85f225bc8499fabdd14bd81070f2bce1d49ae"
+      },
+      "evidence": [
+        {
+          "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/expansion-08/comparison.png",
+          "original": "docs/review/ui-v1/expansion-08/comparison.png",
+          "sha256": "3266eeacdc7bd70b6b9c84d3c282f798e76c39c630e36af9186693e02f1ab4f2",
+          "viewed": true
+        },
+        {
+          "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/expansion-08/comparison-dark.png",
+          "original": "docs/review/ui-v1/expansion-08/comparison-dark.png",
+          "sha256": "17b83cfe5163a990e35614c6b5749d2cbb8264c13e0d3718c0dc567453e32e00",
+          "viewed": true
+        },
+        {
+          "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/expansion-08/native.png",
+          "original": "docs/review/ui-v1/expansion-08/native.png",
+          "sha256": "2d7e8f78a4d3e95556d04203fecdcf1e2877158b7309c2c8992d0a0c007bdfea",
+          "viewed": true
+        },
+        {
+          "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/expansion-08/native-dark.png",
+          "original": "docs/review/ui-v1/expansion-08/native-dark.png",
+          "sha256": "be8fea022d3ec4951be5d7eb421b705620ab5a31de17596b64492e3a7041870a",
+          "viewed": true
+        }
+      ]
+    },
+    {
+      "name": "message-check",
+      "batch": "expansion-08",
+      "decision": "retain",
+      "status": "independent-visual-review-complete",
+      "observation": "內置勾位於訊息框上半中區，與框邊分離；16px不與尾巴混淆。",
+      "sourceObservation": "Lucide message-square-check內置勾；Tabler message-check外置勾並加文字線。Master選內置，無需製造額外遮擋。",
+      "references": [
+        {
+          "name": "message-check",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/message-square-check.svg",
+          "localPath": "references/expansion-01/lucide-message-square-check.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/message-square-check.svg",
+          "sha256": "535e7d0025107cf109a2f00e5be614f07c88b438199e3eb58eb4ffd81c591138",
+          "license": "ISC AND MIT",
+          "sourceName": "message-square-check",
+          "match": "exact",
+          "role": "comparison-only",
+          "actualSha256": "535e7d0025107cf109a2f00e5be614f07c88b438199e3eb58eb4ffd81c591138",
+          "checksumMatchesManifest": true
+        },
+        {
+          "name": "message-check",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/message-check.svg",
+          "localPath": "references/expansion-01/tabler-message-check.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/message-check.svg",
+          "sha256": "d8761e11c69e4ebbdb660cb4cfceade07fc066f867e26edd7ab8703371351aeb",
+          "license": "MIT",
+          "sourceName": "message-check",
+          "match": "exact",
+          "role": "comparison-only",
+          "actualSha256": "d8761e11c69e4ebbdb660cb4cfceade07fc066f867e26edd7ab8703371351aeb",
+          "checksumMatchesManifest": true
+        }
+      ],
+      "effects": {
+        "dashes": "不採用：此圖沒有待定區域/隱藏邊語意，實線更易辨識。",
+        "opacity": "不採用內建漸淡；主體與狀態皆需辨識，另已檢視16px55%前景明暗文字情境。"
+      },
+      "issues": [],
+      "nativeChecks": {
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "backgrounds": [
+          "light",
+          "dark"
+        ],
+        "lowContrast": "55% at16px",
+        "textAdjacency": true
+      },
+      "drawingHash": "4b89bcaf3c82f08953c66b7f9bfdde32c4dcbe1e0e3a1869042550e72c6b398d",
+      "module": {
+        "path": "src/expansion/inbox-actions.mjs",
+        "sha256": "0ee1d116b6acce03818b64ab8dc85f225bc8499fabdd14bd81070f2bce1d49ae"
+      },
+      "evidence": [
+        {
+          "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/expansion-08/comparison.png",
+          "original": "docs/review/ui-v1/expansion-08/comparison.png",
+          "sha256": "3266eeacdc7bd70b6b9c84d3c282f798e76c39c630e36af9186693e02f1ab4f2",
+          "viewed": true
+        },
+        {
+          "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/expansion-08/comparison-dark.png",
+          "original": "docs/review/ui-v1/expansion-08/comparison-dark.png",
+          "sha256": "17b83cfe5163a990e35614c6b5749d2cbb8264c13e0d3718c0dc567453e32e00",
+          "viewed": true
+        },
+        {
+          "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/expansion-08/native.png",
+          "original": "docs/review/ui-v1/expansion-08/native.png",
+          "sha256": "2d7e8f78a4d3e95556d04203fecdcf1e2877158b7309c2c8992d0a0c007bdfea",
+          "viewed": true
+        },
+        {
+          "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/expansion-08/native-dark.png",
+          "original": "docs/review/ui-v1/expansion-08/native-dark.png",
+          "sha256": "be8fea022d3ec4951be5d7eb421b705620ab5a31de17596b64492e3a7041870a",
+          "viewed": true
+        }
+      ]
+    },
+    {
+      "name": "chart-bar-horizontal",
+      "batch": "expansion-09",
+      "decision": "retain",
+      "status": "independent-visual-review-complete",
+      "observation": "三根橫條共用左基線，長度分級可辨，16px條內孔未堵死。",
+      "sourceObservation": "Lucide使用軸線加單筆條；Phosphor使用有厚度橫條。Master沿用既有chart-bar空心柱母型，保持家族語言。",
+      "references": [
+        {
+          "name": "chart-bar-horizontal",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/chart-bar.svg",
+          "localPath": "references/expansion-01/lucide-chart-bar.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/chart-bar.svg",
+          "sha256": "9035a34f1713a781e02af86b5b0d086c44ccb10f985c51a8fa2796211e88597b",
+          "license": "ISC AND MIT",
+          "sourceName": "chart-bar",
+          "match": "exact",
+          "role": "comparison-only",
+          "actualSha256": "9035a34f1713a781e02af86b5b0d086c44ccb10f985c51a8fa2796211e88597b",
+          "checksumMatchesManifest": true
+        },
+        {
+          "name": "chart-bar-horizontal",
+          "library": "Phosphor",
+          "repository": "phosphor-icons/core",
+          "commit": "2b75f3ad12b420c9504ef05df8d2564a28f8500e",
+          "path": "assets/regular/chart-bar-horizontal.svg",
+          "localPath": "references/expansion-01/phosphor-chart-bar-horizontal.svg",
+          "url": "https://github.com/phosphor-icons/core/blob/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular/chart-bar-horizontal.svg",
+          "sha256": "ba41d4570a66342e60f049df0ff76eb415513625b1d3ae7e937544ec1130a84a",
+          "license": "MIT",
+          "sourceName": "chart-bar-horizontal",
+          "match": "exact",
+          "role": "comparison-only",
+          "actualSha256": "ba41d4570a66342e60f049df0ff76eb415513625b1d3ae7e937544ec1130a84a",
+          "checksumMatchesManifest": true
+        }
+      ],
+      "effects": {
+        "dashes": "不採用：此圖沒有待定區域/隱藏邊語意，實線更易辨識。",
+        "opacity": "不採用內建漸淡；主體與狀態皆需辨識，另已檢視16px55%前景明暗文字情境。"
+      },
+      "issues": [],
+      "nativeChecks": {
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "backgrounds": [
+          "light",
+          "dark"
+        ],
+        "lowContrast": "55% at16px",
+        "textAdjacency": true
+      },
+      "drawingHash": "e559d7a3f0e59d7394bfbb5856da9a7e4d1a75871433ff06a52d3dc1b89cbf0d",
+      "module": {
+        "path": "src/expansion/data-tools.mjs",
+        "sha256": "98d244c7882bdc074503718f9cb5de707056dea4fabe962862f53f0986dda3bc"
+      },
+      "evidence": [
+        {
+          "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/expansion-09/comparison.png",
+          "original": "docs/review/ui-v1/expansion-09/comparison.png",
+          "sha256": "c5d8e424c9de4c9aff9a08315171babedaca3b5e1ae8a1103b0f77e3e20942d9",
+          "viewed": true
+        },
+        {
+          "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/expansion-09/comparison-dark.png",
+          "original": "docs/review/ui-v1/expansion-09/comparison-dark.png",
+          "sha256": "f13134976af623da17508bc65bc8905422021b84947a6a261233bbe0480e37f3",
+          "viewed": true
+        },
+        {
+          "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/expansion-09/native.png",
+          "original": "docs/review/ui-v1/expansion-09/native.png",
+          "sha256": "748e420b035494ef80a5425244621f3b9fb6d098113a69c36db3ace52704b2ef",
+          "viewed": true
+        },
+        {
+          "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/expansion-09/native-dark.png",
+          "original": "docs/review/ui-v1/expansion-09/native-dark.png",
+          "sha256": "34ac43ad09a3b74c6abe0c88139990e24fc752f44572b714a9d300464c0c1856",
+          "viewed": true
+        }
+      ]
+    },
+    {
+      "name": "chart-bar-stacked",
+      "batch": "expansion-09",
+      "decision": "retain",
+      "status": "independent-visual-review-complete",
+      "observation": "三柱內分隔線用butt接框，九組放大未見凸耳；16px分段小孔仍在，最短柱仍可辨上下兩段。",
+      "sourceObservation": "Lucide和Hugeicons採水平堆疊條加座標軸；Master採垂直堆疊柱，保持同語意而延續既有柱形母型。",
+      "references": [
+        {
+          "name": "chart-bar-stacked",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/chart-bar-stacked.svg",
+          "localPath": "references/expansion-01/lucide-chart-bar-stacked.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/chart-bar-stacked.svg",
+          "sha256": "0a65af6c57ee9c8fd266fad133a554f7c8258b17ccdd75661a8552c7a8c5b156",
+          "license": "ISC AND MIT",
+          "sourceName": "chart-bar-stacked",
+          "match": "exact",
+          "role": "comparison-only",
+          "actualSha256": "0a65af6c57ee9c8fd266fad133a554f7c8258b17ccdd75661a8552c7a8c5b156",
+          "checksumMatchesManifest": true
+        },
+        {
+          "name": "chart-bar-stacked",
+          "library": "Hugeicons Free",
+          "repository": "hugeicons/hugeicons",
+          "commit": "834e28d965946c1ee60d080027fe9dae4adc58d0",
+          "path": "icons/chart-bar-stacked.svg",
+          "localPath": "references/expansion-01/hugeicons-free-chart-bar-stacked.svg",
+          "url": "https://github.com/hugeicons/hugeicons/blob/834e28d965946c1ee60d080027fe9dae4adc58d0/icons/chart-bar-stacked.svg",
+          "sha256": "35324a0b5dad794681bb1ebe9c9f2b706d88608f51e3616f0d6056daf2055f06",
+          "license": "MIT",
+          "sourceName": "chart-bar-stacked",
+          "match": "exact",
+          "role": "comparison-only",
+          "actualSha256": "35324a0b5dad794681bb1ebe9c9f2b706d88608f51e3616f0d6056daf2055f06",
+          "checksumMatchesManifest": true
+        }
+      ],
+      "effects": {
+        "dashes": "不採用：此圖沒有待定區域/隱藏邊語意，實線更易辨識。",
+        "opacity": "不採用內建漸淡；主體與狀態皆需辨識，另已檢視16px55%前景明暗文字情境。"
+      },
+      "issues": [],
+      "nativeChecks": {
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "backgrounds": [
+          "light",
+          "dark"
+        ],
+        "lowContrast": "55% at16px",
+        "textAdjacency": true
+      },
+      "drawingHash": "b45f8d27a609993aafeba7268a9d88ae65a9b3819a6994dc02e8911cc8492857",
+      "module": {
+        "path": "src/expansion/data-tools.mjs",
+        "sha256": "98d244c7882bdc074503718f9cb5de707056dea4fabe962862f53f0986dda3bc"
+      },
+      "evidence": [
+        {
+          "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/expansion-09/comparison.png",
+          "original": "docs/review/ui-v1/expansion-09/comparison.png",
+          "sha256": "c5d8e424c9de4c9aff9a08315171babedaca3b5e1ae8a1103b0f77e3e20942d9",
+          "viewed": true
+        },
+        {
+          "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/expansion-09/comparison-dark.png",
+          "original": "docs/review/ui-v1/expansion-09/comparison-dark.png",
+          "sha256": "f13134976af623da17508bc65bc8905422021b84947a6a261233bbe0480e37f3",
+          "viewed": true
+        },
+        {
+          "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/expansion-09/native.png",
+          "original": "docs/review/ui-v1/expansion-09/native.png",
+          "sha256": "748e420b035494ef80a5425244621f3b9fb6d098113a69c36db3ace52704b2ef",
+          "viewed": true
+        },
+        {
+          "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/expansion-09/native-dark.png",
+          "original": "docs/review/ui-v1/expansion-09/native-dark.png",
+          "sha256": "34ac43ad09a3b74c6abe0c88139990e24fc752f44572b714a9d300464c0c1856",
+          "viewed": true
+        },
+        {
+          "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/diagnostic-1-light.png",
+          "sha256": "8a565d49fce8dff417c1a2f69c665d6099351c56623497b68012a95d45944e42",
+          "viewed": true,
+          "kind": "4x enlarged native16/20/24, sharp/soft/rounded"
+        },
+        {
+          "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/diagnostic-1-dark.png",
+          "sha256": "c0c92408a6f85918328c98846fe5004662452ec5eef7564ee224d313e15a6809",
+          "viewed": true,
+          "kind": "4x enlarged native16/20/24, sharp/soft/rounded"
+        }
+      ]
+    },
+    {
+      "name": "chart-scatter",
+      "batch": "expansion-09",
+      "decision": "retain",
+      "status": "independent-visual-review-complete",
+      "observation": "五點位置互不重疊，點尺寸比外框細但仍可見；16px55%前景可辨資料點分佈。",
+      "sourceObservation": "Lucide點數多且較粗；Tabler五點較疏。Master取五點，避免圖形變成雜點紋理。",
+      "references": [
+        {
+          "name": "chart-scatter",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/chart-scatter.svg",
+          "localPath": "references/expansion-01/lucide-chart-scatter.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/chart-scatter.svg",
+          "sha256": "17dbdf3da5309c6090ce60037a8ad2125bdfecfbe853c0019034294c0a8f3ce1",
+          "license": "ISC AND MIT",
+          "sourceName": "chart-scatter",
+          "match": "exact",
+          "role": "comparison-only",
+          "actualSha256": "17dbdf3da5309c6090ce60037a8ad2125bdfecfbe853c0019034294c0a8f3ce1",
+          "checksumMatchesManifest": true
+        },
+        {
+          "name": "chart-scatter",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/chart-scatter.svg",
+          "localPath": "references/expansion-01/tabler-chart-scatter.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/chart-scatter.svg",
+          "sha256": "e3dea6b01d17ff832a8c55421fe73f9446613056cc814d4ae67b6d75289ecca7",
+          "license": "MIT",
+          "sourceName": "chart-scatter",
+          "match": "exact",
+          "role": "comparison-only",
+          "actualSha256": "e3dea6b01d17ff832a8c55421fe73f9446613056cc814d4ae67b6d75289ecca7",
+          "checksumMatchesManifest": true
+        }
+      ],
+      "effects": {
+        "dashes": "不採用：此圖沒有待定區域/隱藏邊語意，實線更易辨識。",
+        "opacity": "不採用內建漸淡；主體與狀態皆需辨識，另已檢視16px55%前景明暗文字情境。"
+      },
+      "issues": [],
+      "nativeChecks": {
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "backgrounds": [
+          "light",
+          "dark"
+        ],
+        "lowContrast": "55% at16px",
+        "textAdjacency": true
+      },
+      "drawingHash": "dd705229a0d07727f63e1e999f3728d16dc5de4f2f2075e0c434cac0628ec7e9",
+      "module": {
+        "path": "src/expansion/data-tools.mjs",
+        "sha256": "98d244c7882bdc074503718f9cb5de707056dea4fabe962862f53f0986dda3bc"
+      },
+      "evidence": [
+        {
+          "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/expansion-09/comparison.png",
+          "original": "docs/review/ui-v1/expansion-09/comparison.png",
+          "sha256": "c5d8e424c9de4c9aff9a08315171babedaca3b5e1ae8a1103b0f77e3e20942d9",
+          "viewed": true
+        },
+        {
+          "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/expansion-09/comparison-dark.png",
+          "original": "docs/review/ui-v1/expansion-09/comparison-dark.png",
+          "sha256": "f13134976af623da17508bc65bc8905422021b84947a6a261233bbe0480e37f3",
+          "viewed": true
+        },
+        {
+          "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/expansion-09/native.png",
+          "original": "docs/review/ui-v1/expansion-09/native.png",
+          "sha256": "748e420b035494ef80a5425244621f3b9fb6d098113a69c36db3ace52704b2ef",
+          "viewed": true
+        },
+        {
+          "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/expansion-09/native-dark.png",
+          "original": "docs/review/ui-v1/expansion-09/native-dark.png",
+          "sha256": "34ac43ad09a3b74c6abe0c88139990e24fc752f44572b714a9d300464c0c1856",
+          "viewed": true
+        }
+      ]
+    },
+    {
+      "name": "chart-gantt",
+      "batch": "expansion-09",
+      "decision": "retain",
+      "status": "independent-visual-review-complete",
+      "observation": "三根進度線由左上至右下階梯排列，與軸線分離；16px不讀成一般三橫線清單。",
+      "sourceObservation": "Lucide/Hugeicons皆以錯位短橫線和L軸表達甘特圖；Master保留三段不同起訖，沒有額外網格。",
+      "references": [
+        {
+          "name": "chart-gantt",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/chart-gantt.svg",
+          "localPath": "references/expansion-01/lucide-chart-gantt.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/chart-gantt.svg",
+          "sha256": "428e0d6aec4c083e3a21a37a4b07e185de07d6121e2d7255d77f4c9341b79e1c",
+          "license": "ISC AND MIT",
+          "sourceName": "chart-gantt",
+          "match": "exact",
+          "role": "comparison-only",
+          "actualSha256": "428e0d6aec4c083e3a21a37a4b07e185de07d6121e2d7255d77f4c9341b79e1c",
+          "checksumMatchesManifest": true
+        },
+        {
+          "name": "chart-gantt",
+          "library": "Hugeicons Free",
+          "repository": "hugeicons/hugeicons",
+          "commit": "834e28d965946c1ee60d080027fe9dae4adc58d0",
+          "path": "icons/chart-gantt.svg",
+          "localPath": "references/expansion-01/hugeicons-free-chart-gantt.svg",
+          "url": "https://github.com/hugeicons/hugeicons/blob/834e28d965946c1ee60d080027fe9dae4adc58d0/icons/chart-gantt.svg",
+          "sha256": "686a2720b7c30b1950271d252e96a6735237e5c4ea1f380ce873c20e2d80143e",
+          "license": "MIT",
+          "sourceName": "chart-gantt",
+          "match": "exact",
+          "role": "comparison-only",
+          "actualSha256": "686a2720b7c30b1950271d252e96a6735237e5c4ea1f380ce873c20e2d80143e",
+          "checksumMatchesManifest": true
+        }
+      ],
+      "effects": {
+        "dashes": "不採用：此圖沒有待定區域/隱藏邊語意，實線更易辨識。",
+        "opacity": "不採用內建漸淡；主體與狀態皆需辨識，另已檢視16px55%前景明暗文字情境。"
+      },
+      "issues": [],
+      "nativeChecks": {
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "backgrounds": [
+          "light",
+          "dark"
+        ],
+        "lowContrast": "55% at16px",
+        "textAdjacency": true
+      },
+      "drawingHash": "3ad994005dca8592a29f66e641784c5605bb09328f8f918652a0c94c42faeab0",
+      "module": {
+        "path": "src/expansion/data-tools.mjs",
+        "sha256": "98d244c7882bdc074503718f9cb5de707056dea4fabe962862f53f0986dda3bc"
+      },
+      "evidence": [
+        {
+          "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/expansion-09/comparison.png",
+          "original": "docs/review/ui-v1/expansion-09/comparison.png",
+          "sha256": "c5d8e424c9de4c9aff9a08315171babedaca3b5e1ae8a1103b0f77e3e20942d9",
+          "viewed": true
+        },
+        {
+          "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/expansion-09/comparison-dark.png",
+          "original": "docs/review/ui-v1/expansion-09/comparison-dark.png",
+          "sha256": "f13134976af623da17508bc65bc8905422021b84947a6a261233bbe0480e37f3",
+          "viewed": true
+        },
+        {
+          "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/expansion-09/native.png",
+          "original": "docs/review/ui-v1/expansion-09/native.png",
+          "sha256": "748e420b035494ef80a5425244621f3b9fb6d098113a69c36db3ace52704b2ef",
+          "viewed": true
+        },
+        {
+          "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/expansion-09/native-dark.png",
+          "original": "docs/review/ui-v1/expansion-09/native-dark.png",
+          "sha256": "34ac43ad09a3b74c6abe0c88139990e24fc752f44572b714a9d300464c0c1856",
+          "viewed": true
+        }
+      ]
+    },
+    {
+      "name": "list-collapse",
+      "batch": "expansion-09",
+      "decision": "retain",
+      "status": "independent-visual-review-complete",
+      "observation": "每列右向chevron與文字線間距一致，三列等距；16px箭尖仍可辨。",
+      "sourceObservation": "Lucide與Hugeicons皆用三個右向chevron表示收合的列；Master保留共同線索，圓角不抹除方向。",
+      "references": [
+        {
+          "name": "list-collapse",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/list-collapse.svg",
+          "localPath": "references/expansion-01/lucide-list-collapse.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/list-collapse.svg",
+          "sha256": "ca34def3d4130ebcc19bec579ad0af0a1982f3e940961f042bbd7ec8bb6ab735",
+          "license": "ISC AND MIT",
+          "sourceName": "list-collapse",
+          "match": "exact",
+          "role": "comparison-only",
+          "actualSha256": "ca34def3d4130ebcc19bec579ad0af0a1982f3e940961f042bbd7ec8bb6ab735",
+          "checksumMatchesManifest": true
+        },
+        {
+          "name": "list-collapse",
+          "library": "Hugeicons Free",
+          "repository": "hugeicons/hugeicons",
+          "commit": "834e28d965946c1ee60d080027fe9dae4adc58d0",
+          "path": "icons/list-collapse.svg",
+          "localPath": "references/expansion-01/hugeicons-free-list-collapse.svg",
+          "url": "https://github.com/hugeicons/hugeicons/blob/834e28d965946c1ee60d080027fe9dae4adc58d0/icons/list-collapse.svg",
+          "sha256": "e70918cc507c3ef38357852dcbbc208c0efbfa8ca52766b74f9e26fd799d9d4c",
+          "license": "MIT",
+          "sourceName": "list-collapse",
+          "match": "exact",
+          "role": "comparison-only",
+          "actualSha256": "e70918cc507c3ef38357852dcbbc208c0efbfa8ca52766b74f9e26fd799d9d4c",
+          "checksumMatchesManifest": true
+        }
+      ],
+      "effects": {
+        "dashes": "不採用：此圖沒有待定區域/隱藏邊語意，實線更易辨識。",
+        "opacity": "不採用內建漸淡；主體與狀態皆需辨識，另已檢視16px55%前景明暗文字情境。"
+      },
+      "issues": [],
+      "nativeChecks": {
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "backgrounds": [
+          "light",
+          "dark"
+        ],
+        "lowContrast": "55% at16px",
+        "textAdjacency": true
+      },
+      "drawingHash": "779c4a6b3f16c1c08da93f15667c45d0cd66e7d46742d9d0602670479e07b40b",
+      "module": {
+        "path": "src/expansion/data-tools.mjs",
+        "sha256": "98d244c7882bdc074503718f9cb5de707056dea4fabe962862f53f0986dda3bc"
+      },
+      "evidence": [
+        {
+          "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/expansion-09/comparison.png",
+          "original": "docs/review/ui-v1/expansion-09/comparison.png",
+          "sha256": "c5d8e424c9de4c9aff9a08315171babedaca3b5e1ae8a1103b0f77e3e20942d9",
+          "viewed": true
+        },
+        {
+          "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/expansion-09/comparison-dark.png",
+          "original": "docs/review/ui-v1/expansion-09/comparison-dark.png",
+          "sha256": "f13134976af623da17508bc65bc8905422021b84947a6a261233bbe0480e37f3",
+          "viewed": true
+        },
+        {
+          "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/expansion-09/native.png",
+          "original": "docs/review/ui-v1/expansion-09/native.png",
+          "sha256": "748e420b035494ef80a5425244621f3b9fb6d098113a69c36db3ace52704b2ef",
+          "viewed": true
+        },
+        {
+          "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/expansion-09/native-dark.png",
+          "original": "docs/review/ui-v1/expansion-09/native-dark.png",
+          "sha256": "34ac43ad09a3b74c6abe0c88139990e24fc752f44572b714a9d300464c0c1856",
+          "viewed": true
+        }
+      ]
+    },
+    {
+      "name": "list-search",
+      "batch": "expansion-09",
+      "decision": "retain",
+      "status": "independent-visual-review-complete",
+      "observation": "鏡框實體遮住清單尾端，三個清單點保留；放大未見殘屑，16px仍可辨搜尋。",
+      "sourceObservation": "Phosphor/Tabler偏無點的三橫線；Master沿用既有含點list母型，鏡框清楚露在右下。",
+      "references": [
+        {
+          "name": "list-search",
+          "library": "Phosphor",
+          "repository": "phosphor-icons/core",
+          "commit": "2b75f3ad12b420c9504ef05df8d2564a28f8500e",
+          "path": "assets/regular/list-magnifying-glass.svg",
+          "localPath": "references/expansion-01/phosphor-list-magnifying-glass.svg",
+          "url": "https://github.com/phosphor-icons/core/blob/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular/list-magnifying-glass.svg",
+          "sha256": "23ec82aec6df8301f959eb9ef9020e3ea793fdd01fc6a23628d950833c5a855a",
+          "license": "MIT",
+          "sourceName": "list-magnifying-glass",
+          "match": "exact",
+          "role": "comparison-only",
+          "actualSha256": "23ec82aec6df8301f959eb9ef9020e3ea793fdd01fc6a23628d950833c5a855a",
+          "checksumMatchesManifest": true
+        },
+        {
+          "name": "list-search",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/list-search.svg",
+          "localPath": "references/expansion-01/tabler-list-search.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/list-search.svg",
+          "sha256": "04eaa26ee7c1dc15d0108dd12c1f72f8b5edab900841cf99c7d2a98ae50883bd",
+          "license": "MIT",
+          "sourceName": "list-search",
+          "match": "exact",
+          "role": "comparison-only",
+          "actualSha256": "04eaa26ee7c1dc15d0108dd12c1f72f8b5edab900841cf99c7d2a98ae50883bd",
+          "checksumMatchesManifest": true
+        }
+      ],
+      "effects": {
+        "dashes": "不採用：此圖沒有待定區域/隱藏邊語意，實線更易辨識。",
+        "opacity": "不採用內建漸淡；主體與狀態皆需辨識，另已檢視16px55%前景明暗文字情境。"
+      },
+      "issues": [],
+      "nativeChecks": {
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "backgrounds": [
+          "light",
+          "dark"
+        ],
+        "lowContrast": "55% at16px",
+        "textAdjacency": true
+      },
+      "drawingHash": "50f48dd02a6edb61c6a20c581b9d42e25592babe563312527267835e3c0cd3ff",
+      "module": {
+        "path": "src/expansion/data-tools.mjs",
+        "sha256": "98d244c7882bdc074503718f9cb5de707056dea4fabe962862f53f0986dda3bc"
+      },
+      "evidence": [
+        {
+          "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/expansion-09/comparison.png",
+          "original": "docs/review/ui-v1/expansion-09/comparison.png",
+          "sha256": "c5d8e424c9de4c9aff9a08315171babedaca3b5e1ae8a1103b0f77e3e20942d9",
+          "viewed": true
+        },
+        {
+          "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/expansion-09/comparison-dark.png",
+          "original": "docs/review/ui-v1/expansion-09/comparison-dark.png",
+          "sha256": "f13134976af623da17508bc65bc8905422021b84947a6a261233bbe0480e37f3",
+          "viewed": true
+        },
+        {
+          "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/expansion-09/native.png",
+          "original": "docs/review/ui-v1/expansion-09/native.png",
+          "sha256": "748e420b035494ef80a5425244621f3b9fb6d098113a69c36db3ace52704b2ef",
+          "viewed": true
+        },
+        {
+          "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/expansion-09/native-dark.png",
+          "original": "docs/review/ui-v1/expansion-09/native-dark.png",
+          "sha256": "34ac43ad09a3b74c6abe0c88139990e24fc752f44572b714a9d300464c0c1856",
+          "viewed": true
+        },
+        {
+          "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/diagnostic-1-light.png",
+          "sha256": "8a565d49fce8dff417c1a2f69c665d6099351c56623497b68012a95d45944e42",
+          "viewed": true,
+          "kind": "4x enlarged native16/20/24, sharp/soft/rounded"
+        },
+        {
+          "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/diagnostic-1-dark.png",
+          "sha256": "c0c92408a6f85918328c98846fe5004662452ec5eef7564ee224d313e15a6809",
+          "viewed": true,
+          "kind": "4x enlarged native16/20/24, sharp/soft/rounded"
+        }
+      ]
+    },
+    {
+      "name": "list-plus",
+      "batch": "expansion-09",
+      "decision": "retain",
+      "status": "independent-visual-review-complete",
+      "observation": "清單第三線依加號實際外緣裁短，標記與列表點分離；16px加號仍可辨。",
+      "sourceObservation": "Lucide加號偏右中；Phosphor在右下。Master沿用右下狀態位置，主體前三點不移動。",
+      "references": [
+        {
+          "name": "list-plus",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/list-plus.svg",
+          "localPath": "references/expansion-01/lucide-list-plus.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/list-plus.svg",
+          "sha256": "416b579ca6f60752c31769fced8b30d6271940775dacf980ab85ec8c15268b0c",
+          "license": "ISC AND MIT",
+          "sourceName": "list-plus",
+          "match": "exact",
+          "role": "comparison-only",
+          "actualSha256": "416b579ca6f60752c31769fced8b30d6271940775dacf980ab85ec8c15268b0c",
+          "checksumMatchesManifest": true
+        },
+        {
+          "name": "list-plus",
+          "library": "Phosphor",
+          "repository": "phosphor-icons/core",
+          "commit": "2b75f3ad12b420c9504ef05df8d2564a28f8500e",
+          "path": "assets/regular/list-plus.svg",
+          "localPath": "references/expansion-01/phosphor-list-plus.svg",
+          "url": "https://github.com/phosphor-icons/core/blob/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular/list-plus.svg",
+          "sha256": "1ccf408d250463a883aa460887949041d2de8e8085ba19b607e8226cb7ddad12",
+          "license": "MIT",
+          "sourceName": "list-plus",
+          "match": "exact",
+          "role": "comparison-only",
+          "actualSha256": "1ccf408d250463a883aa460887949041d2de8e8085ba19b607e8226cb7ddad12",
+          "checksumMatchesManifest": true
+        }
+      ],
+      "effects": {
+        "dashes": "不採用：此圖沒有待定區域/隱藏邊語意，實線更易辨識。",
+        "opacity": "不採用內建漸淡；主體與狀態皆需辨識，另已檢視16px55%前景明暗文字情境。"
+      },
+      "issues": [],
+      "nativeChecks": {
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "backgrounds": [
+          "light",
+          "dark"
+        ],
+        "lowContrast": "55% at16px",
+        "textAdjacency": true
+      },
+      "drawingHash": "0e8e6322f5339da275ba77b605bbf4b56d91cce4ec13aec67e8cd9c660448cba",
+      "module": {
+        "path": "src/expansion/data-tools.mjs",
+        "sha256": "98d244c7882bdc074503718f9cb5de707056dea4fabe962862f53f0986dda3bc"
+      },
+      "evidence": [
+        {
+          "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/expansion-09/comparison.png",
+          "original": "docs/review/ui-v1/expansion-09/comparison.png",
+          "sha256": "c5d8e424c9de4c9aff9a08315171babedaca3b5e1ae8a1103b0f77e3e20942d9",
+          "viewed": true
+        },
+        {
+          "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/expansion-09/comparison-dark.png",
+          "original": "docs/review/ui-v1/expansion-09/comparison-dark.png",
+          "sha256": "f13134976af623da17508bc65bc8905422021b84947a6a261233bbe0480e37f3",
+          "viewed": true
+        },
+        {
+          "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/expansion-09/native.png",
+          "original": "docs/review/ui-v1/expansion-09/native.png",
+          "sha256": "748e420b035494ef80a5425244621f3b9fb6d098113a69c36db3ace52704b2ef",
+          "viewed": true
+        },
+        {
+          "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/expansion-09/native-dark.png",
+          "original": "docs/review/ui-v1/expansion-09/native-dark.png",
+          "sha256": "34ac43ad09a3b74c6abe0c88139990e24fc752f44572b714a9d300464c0c1856",
+          "viewed": true
+        }
+      ]
+    },
+    {
+      "name": "list-minus",
+      "batch": "expansion-09",
+      "decision": "retain",
+      "status": "independent-visual-review-complete",
+      "observation": "減號與第三列同基線，缺口保持可見；沒有挖出方形大洞，16px仍符合清單減項慣例。",
+      "sourceObservation": "Lucide list-minus減號位於一列尾端；Tabler playlist-x僅提供家族/構造參考，並非同語意原稿。Master把減號放右下，與list-plus共享位置。",
+      "references": [
+        {
+          "name": "list-minus",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/list-minus.svg",
+          "localPath": "references/expansion-01/lucide-list-minus.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/list-minus.svg",
+          "sha256": "7b0aa87e259495e54a1619d3ecb75b5e4873e13fc5ca760811762702e85b4606",
+          "license": "ISC AND MIT",
+          "sourceName": "list-minus",
+          "match": "exact",
+          "role": "comparison-only",
+          "actualSha256": "7b0aa87e259495e54a1619d3ecb75b5e4873e13fc5ca760811762702e85b4606",
+          "checksumMatchesManifest": true
+        },
+        {
+          "name": "list-minus",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/playlist-x.svg",
+          "localPath": "references/expansion-01/tabler-playlist-x.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/playlist-x.svg",
+          "sha256": "e3843f8d8aa4d80995872a209322d6875ba8ec9b4572e98338b5675a6e8af432",
+          "license": "MIT",
+          "sourceName": "playlist-x",
+          "match": "structure-only",
+          "role": "comparison-only",
+          "actualSha256": "e3843f8d8aa4d80995872a209322d6875ba8ec9b4572e98338b5675a6e8af432",
+          "checksumMatchesManifest": true
+        }
+      ],
+      "effects": {
+        "dashes": "不採用：此圖沒有待定區域/隱藏邊語意，實線更易辨識。",
+        "opacity": "不採用內建漸淡；主體與狀態皆需辨識，另已檢視16px55%前景明暗文字情境。"
+      },
+      "issues": [],
+      "nativeChecks": {
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "backgrounds": [
+          "light",
+          "dark"
+        ],
+        "lowContrast": "55% at16px",
+        "textAdjacency": true
+      },
+      "drawingHash": "1e5b673ea2435617e565db60eb4a257a777f5e1d90160b32df7e37109075d657",
+      "module": {
+        "path": "src/expansion/data-tools.mjs",
+        "sha256": "98d244c7882bdc074503718f9cb5de707056dea4fabe962862f53f0986dda3bc"
+      },
+      "evidence": [
+        {
+          "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/expansion-09/comparison.png",
+          "original": "docs/review/ui-v1/expansion-09/comparison.png",
+          "sha256": "c5d8e424c9de4c9aff9a08315171babedaca3b5e1ae8a1103b0f77e3e20942d9",
+          "viewed": true
+        },
+        {
+          "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/expansion-09/comparison-dark.png",
+          "original": "docs/review/ui-v1/expansion-09/comparison-dark.png",
+          "sha256": "f13134976af623da17508bc65bc8905422021b84947a6a261233bbe0480e37f3",
+          "viewed": true
+        },
+        {
+          "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/expansion-09/native.png",
+          "original": "docs/review/ui-v1/expansion-09/native.png",
+          "sha256": "748e420b035494ef80a5425244621f3b9fb6d098113a69c36db3ace52704b2ef",
+          "viewed": true
+        },
+        {
+          "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/expansion-09/native-dark.png",
+          "original": "docs/review/ui-v1/expansion-09/native-dark.png",
+          "sha256": "34ac43ad09a3b74c6abe0c88139990e24fc752f44572b714a9d300464c0c1856",
+          "viewed": true
+        },
+        {
+          "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/diagnostic-1-light.png",
+          "sha256": "8a565d49fce8dff417c1a2f69c665d6099351c56623497b68012a95d45944e42",
+          "viewed": true,
+          "kind": "4x enlarged native16/20/24, sharp/soft/rounded"
+        },
+        {
+          "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/diagnostic-1-dark.png",
+          "sha256": "c0c92408a6f85918328c98846fe5004662452ec5eef7564ee224d313e15a6809",
+          "viewed": true,
+          "kind": "4x enlarged native16/20/24, sharp/soft/rounded"
+        }
+      ]
+    },
+    {
+      "name": "barcode",
+      "batch": "expansion-10",
+      "decision": "retain",
+      "status": "independent-visual-review-complete",
+      "observation": "五條同高直線以butt收筆，明暗小尺寸間距均勻，不把條碼端頭圓成膠囊。",
+      "sourceObservation": "Lucide單純條碼；Tabler加掃描四角。Master以純條碼作基礎，和scan-barcode分開。",
+      "references": [
+        {
+          "name": "barcode",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/barcode.svg",
+          "localPath": "references/expansion-01/lucide-barcode.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/barcode.svg",
+          "sha256": "fac8780b6ab80f94e252aacbb293c56db82bdd24c46b1d2b410989910e930a73",
+          "license": "ISC AND MIT",
+          "sourceName": "barcode",
+          "match": "exact",
+          "role": "comparison-only",
+          "actualSha256": "fac8780b6ab80f94e252aacbb293c56db82bdd24c46b1d2b410989910e930a73",
+          "checksumMatchesManifest": true
+        },
+        {
+          "name": "barcode",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/barcode.svg",
+          "localPath": "references/expansion-01/tabler-barcode.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/barcode.svg",
+          "sha256": "0e92a4b52c7897b6bb160294fcdf187e2c76a36ac495ad4813642ee46132bd74",
+          "license": "MIT",
+          "sourceName": "barcode",
+          "match": "exact",
+          "role": "comparison-only",
+          "actualSha256": "0e92a4b52c7897b6bb160294fcdf187e2c76a36ac495ad4813642ee46132bd74",
+          "checksumMatchesManifest": true
+        }
+      ],
+      "effects": {
+        "dashes": "不採用：此圖沒有待定區域/隱藏邊語意，實線更易辨識。",
+        "opacity": "不採用內建漸淡；主體與狀態皆需辨識，另已檢視16px55%前景明暗文字情境。"
+      },
+      "issues": [],
+      "nativeChecks": {
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "backgrounds": [
+          "light",
+          "dark"
+        ],
+        "lowContrast": "55% at16px",
+        "textAdjacency": true
+      },
+      "drawingHash": "bf1e44c203c54041b34f6254c340600b60b2151f0b8d6e6e6aae02b8eff48c77",
+      "module": {
+        "path": "src/expansion/fulfillment.mjs",
+        "sha256": "33e0145605e2d378252ea644caab8bf9e354a770825fc9daa02bbe19c89f765f"
+      },
+      "evidence": [
+        {
+          "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/expansion-10/comparison.png",
+          "original": "docs/review/ui-v1/expansion-10/comparison.png",
+          "sha256": "cf9b05e1148f349bcfc267afb3a45d9e260c5dda4d625368250a38baa09ee355",
+          "viewed": true
+        },
+        {
+          "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/expansion-10/comparison-dark.png",
+          "original": "docs/review/ui-v1/expansion-10/comparison-dark.png",
+          "sha256": "7e3bb041eb08d282d32a576f45e142c0abb1dfcfcc494b064e2572a3ae1f5af8",
+          "viewed": true
+        },
+        {
+          "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/expansion-10/native.png",
+          "original": "docs/review/ui-v1/expansion-10/native.png",
+          "sha256": "150357e0a7500c6cd64146bf0e05422eced0f068e67d5eb06003efff8bd1fa30",
+          "viewed": true
+        },
+        {
+          "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/expansion-10/native-dark.png",
+          "original": "docs/review/ui-v1/expansion-10/native-dark.png",
+          "sha256": "c16d34ec2ca3dc0d46761c247121d9d74889f2cb8e40d50ccd3f374aad44195a",
+          "viewed": true
+        }
+      ]
+    },
+    {
+      "name": "qr-code",
+      "batch": "expansion-10",
+      "decision": "retain",
+      "status": "independent-visual-review-complete",
+      "observation": "三個定位框始終直角，右下資料片段同樣直角；16px省內點後三定位孔仍在，20/24點與框間可辨。",
+      "sourceObservation": "Lucide用較簡化定位框和零散點；Heroicons含框內點、格子較密。Master在16px刪內點，保留三定位框作核心訊號。",
+      "references": [
+        {
+          "name": "qr-code",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/qr-code.svg",
+          "localPath": "references/expansion-01/lucide-qr-code.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/qr-code.svg",
+          "sha256": "920cb79ab4b2fd23c36a16de3ca533c4896cb989adb823eb7dec97fd840d30f5",
+          "license": "ISC AND MIT",
+          "sourceName": "qr-code",
+          "match": "exact",
+          "role": "comparison-only",
+          "actualSha256": "920cb79ab4b2fd23c36a16de3ca533c4896cb989adb823eb7dec97fd840d30f5",
+          "checksumMatchesManifest": true
+        },
+        {
+          "name": "qr-code",
+          "library": "Heroicons",
+          "repository": "tailwindlabs/heroicons",
+          "commit": "616b7a4dbbf3d011760af8066262cd5c6b3868f3",
+          "path": "optimized/24/outline/qr-code.svg",
+          "localPath": "references/expansion-01/heroicons-qr-code.svg",
+          "url": "https://github.com/tailwindlabs/heroicons/blob/616b7a4dbbf3d011760af8066262cd5c6b3868f3/optimized/24/outline/qr-code.svg",
+          "sha256": "52d238d55d34c68fc8ab02d5b052e0933a58d8496eddd98564f1759f3905990a",
+          "license": "MIT",
+          "sourceName": "qr-code",
+          "match": "exact",
+          "role": "comparison-only",
+          "actualSha256": "52d238d55d34c68fc8ab02d5b052e0933a58d8496eddd98564f1759f3905990a",
+          "checksumMatchesManifest": true
+        }
+      ],
+      "effects": {
+        "dashes": "不採用：此圖沒有待定區域/隱藏邊語意，實線更易辨識。",
+        "opacity": "不採用內建漸淡；主體與狀態皆需辨識，另已檢視16px55%前景明暗文字情境。"
+      },
+      "issues": [],
+      "nativeChecks": {
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "backgrounds": [
+          "light",
+          "dark"
+        ],
+        "lowContrast": "55% at16px",
+        "textAdjacency": true
+      },
+      "drawingHash": "f1bbf8e12552e7417f781e4fb18afa65b49118a136a38230fa939cbfe2089901",
+      "module": {
+        "path": "src/expansion/fulfillment.mjs",
+        "sha256": "33e0145605e2d378252ea644caab8bf9e354a770825fc9daa02bbe19c89f765f"
+      },
+      "evidence": [
+        {
+          "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/expansion-10/comparison.png",
+          "original": "docs/review/ui-v1/expansion-10/comparison.png",
+          "sha256": "cf9b05e1148f349bcfc267afb3a45d9e260c5dda4d625368250a38baa09ee355",
+          "viewed": true
+        },
+        {
+          "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/expansion-10/comparison-dark.png",
+          "original": "docs/review/ui-v1/expansion-10/comparison-dark.png",
+          "sha256": "7e3bb041eb08d282d32a576f45e142c0abb1dfcfcc494b064e2572a3ae1f5af8",
+          "viewed": true
+        },
+        {
+          "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/expansion-10/native.png",
+          "original": "docs/review/ui-v1/expansion-10/native.png",
+          "sha256": "150357e0a7500c6cd64146bf0e05422eced0f068e67d5eb06003efff8bd1fa30",
+          "viewed": true
+        },
+        {
+          "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/expansion-10/native-dark.png",
+          "original": "docs/review/ui-v1/expansion-10/native-dark.png",
+          "sha256": "c16d34ec2ca3dc0d46761c247121d9d74889f2cb8e40d50ccd3f374aad44195a",
+          "viewed": true
+        },
+        {
+          "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/diagnostic-2-light.png",
+          "sha256": "5e3d3fd66ab77ca2c3bb1b26eabad3b7908e433d960974f0d231856132bdae9f",
+          "viewed": true,
+          "kind": "4x enlarged native16/20/24, sharp/soft/rounded"
+        },
+        {
+          "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/diagnostic-2-dark.png",
+          "sha256": "cf38680c9af35a3f115056becb032981b9476b41ebff124b6592097f3ba532c9",
+          "viewed": true,
+          "kind": "4x enlarged native16/20/24, sharp/soft/rounded"
+        }
+      ]
+    },
+    {
+      "name": "scan-barcode",
+      "batch": "expansion-10",
+      "decision": "retain",
+      "status": "independent-visual-review-complete",
+      "observation": "四角掃描邊界與中央四條butt條碼分離；16px線群未碰四角，框的微圓不影響條碼端帽。",
+      "sourceObservation": "Lucide使用四角和中央條碼；Iconoir多一條水平掃描線。Master不加掃描線，避免橫線穿過16px條碼。",
+      "references": [
+        {
+          "name": "scan-barcode",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/scan-barcode.svg",
+          "localPath": "references/expansion-01/lucide-scan-barcode.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/scan-barcode.svg",
+          "sha256": "1d9ed9ea0da73c30d1b02738c774262ec1123cd95274aae28c774b5e83de35e6",
+          "license": "ISC AND MIT",
+          "sourceName": "scan-barcode",
+          "match": "exact",
+          "role": "comparison-only",
+          "actualSha256": "1d9ed9ea0da73c30d1b02738c774262ec1123cd95274aae28c774b5e83de35e6",
+          "checksumMatchesManifest": true
+        },
+        {
+          "name": "scan-barcode",
+          "library": "Iconoir",
+          "repository": "iconoir-icons/iconoir",
+          "commit": "39834e3f193bc0cca2c36bebb6a650471977433d",
+          "path": "icons/regular/scan-barcode.svg",
+          "localPath": "references/expansion-01/iconoir-scan-barcode.svg",
+          "url": "https://github.com/iconoir-icons/iconoir/blob/39834e3f193bc0cca2c36bebb6a650471977433d/icons/regular/scan-barcode.svg",
+          "sha256": "0846e76548437afea1469e747087a91c32ab8aa4e4aa8279e6088705a17401a1",
+          "license": "MIT",
+          "sourceName": "scan-barcode",
+          "match": "exact",
+          "role": "comparison-only",
+          "actualSha256": "0846e76548437afea1469e747087a91c32ab8aa4e4aa8279e6088705a17401a1",
+          "checksumMatchesManifest": true
+        }
+      ],
+      "effects": {
+        "dashes": "不採用：此圖沒有待定區域/隱藏邊語意，實線更易辨識。",
+        "opacity": "不採用內建漸淡；主體與狀態皆需辨識，另已檢視16px55%前景明暗文字情境。"
+      },
+      "issues": [],
+      "nativeChecks": {
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "backgrounds": [
+          "light",
+          "dark"
+        ],
+        "lowContrast": "55% at16px",
+        "textAdjacency": true
+      },
+      "drawingHash": "188bcbc49638a5da7f43b34b196dc6962cac1fb73d5538105fd9e1e595ae41e7",
+      "module": {
+        "path": "src/expansion/fulfillment.mjs",
+        "sha256": "33e0145605e2d378252ea644caab8bf9e354a770825fc9daa02bbe19c89f765f"
+      },
+      "evidence": [
+        {
+          "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/expansion-10/comparison.png",
+          "original": "docs/review/ui-v1/expansion-10/comparison.png",
+          "sha256": "cf9b05e1148f349bcfc267afb3a45d9e260c5dda4d625368250a38baa09ee355",
+          "viewed": true
+        },
+        {
+          "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/expansion-10/comparison-dark.png",
+          "original": "docs/review/ui-v1/expansion-10/comparison-dark.png",
+          "sha256": "7e3bb041eb08d282d32a576f45e142c0abb1dfcfcc494b064e2572a3ae1f5af8",
+          "viewed": true
+        },
+        {
+          "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/expansion-10/native.png",
+          "original": "docs/review/ui-v1/expansion-10/native.png",
+          "sha256": "150357e0a7500c6cd64146bf0e05422eced0f068e67d5eb06003efff8bd1fa30",
+          "viewed": true
+        },
+        {
+          "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/expansion-10/native-dark.png",
+          "original": "docs/review/ui-v1/expansion-10/native-dark.png",
+          "sha256": "c16d34ec2ca3dc0d46761c247121d9d74889f2cb8e40d50ccd3f374aad44195a",
+          "viewed": true
+        }
+      ]
+    },
+    {
+      "name": "calculator",
+      "batch": "expansion-10",
+      "decision": "retain",
+      "status": "independent-visual-review-complete",
+      "observation": "螢幕與兩排六鍵層級清楚；16px螢幕簡為單線，按鍵不成密集孔洞。",
+      "sourceObservation": "Lucide按鍵較多且螢幕單線；Tabler較簡化且螢幕有框。Master尺寸分流，16px保留單線螢幕。",
+      "references": [
+        {
+          "name": "calculator",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/calculator.svg",
+          "localPath": "references/expansion-01/lucide-calculator.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/calculator.svg",
+          "sha256": "a6b191250b1ffabdf9fc9536662309f1b0f65336aa681d75bae9f1708baaefd0",
+          "license": "ISC AND MIT",
+          "sourceName": "calculator",
+          "match": "exact",
+          "role": "comparison-only",
+          "actualSha256": "a6b191250b1ffabdf9fc9536662309f1b0f65336aa681d75bae9f1708baaefd0",
+          "checksumMatchesManifest": true
+        },
+        {
+          "name": "calculator",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/calculator.svg",
+          "localPath": "references/expansion-01/tabler-calculator.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/calculator.svg",
+          "sha256": "44ec05c7a5e8ad6b9cb6d0e5f58049746c51d163a0eface1cbb7d780976800ed",
+          "license": "MIT",
+          "sourceName": "calculator",
+          "match": "exact",
+          "role": "comparison-only",
+          "actualSha256": "44ec05c7a5e8ad6b9cb6d0e5f58049746c51d163a0eface1cbb7d780976800ed",
+          "checksumMatchesManifest": true
+        }
+      ],
+      "effects": {
+        "dashes": "不採用：此圖沒有待定區域/隱藏邊語意，實線更易辨識。",
+        "opacity": "不採用內建漸淡；主體與狀態皆需辨識，另已檢視16px55%前景明暗文字情境。"
+      },
+      "issues": [],
+      "nativeChecks": {
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "backgrounds": [
+          "light",
+          "dark"
+        ],
+        "lowContrast": "55% at16px",
+        "textAdjacency": true
+      },
+      "drawingHash": "5e2a51add321ee1c4299e0cacc51485264c7104b8db5cc2ffccdd822416edd90",
+      "module": {
+        "path": "src/expansion/fulfillment.mjs",
+        "sha256": "33e0145605e2d378252ea644caab8bf9e354a770825fc9daa02bbe19c89f765f"
+      },
+      "evidence": [
+        {
+          "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/expansion-10/comparison.png",
+          "original": "docs/review/ui-v1/expansion-10/comparison.png",
+          "sha256": "cf9b05e1148f349bcfc267afb3a45d9e260c5dda4d625368250a38baa09ee355",
+          "viewed": true
+        },
+        {
+          "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/expansion-10/comparison-dark.png",
+          "original": "docs/review/ui-v1/expansion-10/comparison-dark.png",
+          "sha256": "7e3bb041eb08d282d32a576f45e142c0abb1dfcfcc494b064e2572a3ae1f5af8",
+          "viewed": true
+        },
+        {
+          "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/expansion-10/native.png",
+          "original": "docs/review/ui-v1/expansion-10/native.png",
+          "sha256": "150357e0a7500c6cd64146bf0e05422eced0f068e67d5eb06003efff8bd1fa30",
+          "viewed": true
+        },
+        {
+          "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/expansion-10/native-dark.png",
+          "original": "docs/review/ui-v1/expansion-10/native-dark.png",
+          "sha256": "c16d34ec2ca3dc0d46761c247121d9d74889f2cb8e40d50ccd3f374aad44195a",
+          "viewed": true
+        }
+      ]
+    },
+    {
+      "name": "landmark",
+      "batch": "expansion-10",
+      "decision": "retain",
+      "status": "independent-visual-review-complete",
+      "observation": "三柱等寬等距，上方山牆和下方基座各自完整；16px三柱仍分開。",
+      "sourceObservation": "Lucide四柱且山牆簡潔；Heroicons building-library含柱頭及內部山牆點。Master選三柱、空山牆，符合通用機構建築。",
+      "references": [
+        {
+          "name": "landmark",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/landmark.svg",
+          "localPath": "references/expansion-01/lucide-landmark.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/landmark.svg",
+          "sha256": "28408ef995796bffc390e8f217cdaa61e383627789d66300d4ff839248a3f144",
+          "license": "ISC AND MIT",
+          "sourceName": "landmark",
+          "match": "exact",
+          "role": "comparison-only",
+          "actualSha256": "28408ef995796bffc390e8f217cdaa61e383627789d66300d4ff839248a3f144",
+          "checksumMatchesManifest": true
+        },
+        {
+          "name": "landmark",
+          "library": "Heroicons",
+          "repository": "tailwindlabs/heroicons",
+          "commit": "616b7a4dbbf3d011760af8066262cd5c6b3868f3",
+          "path": "optimized/24/outline/building-library.svg",
+          "localPath": "references/expansion-01/heroicons-building-library.svg",
+          "url": "https://github.com/tailwindlabs/heroicons/blob/616b7a4dbbf3d011760af8066262cd5c6b3868f3/optimized/24/outline/building-library.svg",
+          "sha256": "abb9133490052ce6a8e43311675141f3a1599d94f0be5a48f2acc110b97906ce",
+          "license": "MIT",
+          "sourceName": "building-library",
+          "match": "exact",
+          "role": "comparison-only",
+          "actualSha256": "abb9133490052ce6a8e43311675141f3a1599d94f0be5a48f2acc110b97906ce",
+          "checksumMatchesManifest": true
+        }
+      ],
+      "effects": {
+        "dashes": "不採用：此圖沒有待定區域/隱藏邊語意，實線更易辨識。",
+        "opacity": "不採用內建漸淡；主體與狀態皆需辨識，另已檢視16px55%前景明暗文字情境。"
+      },
+      "issues": [],
+      "nativeChecks": {
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "backgrounds": [
+          "light",
+          "dark"
+        ],
+        "lowContrast": "55% at16px",
+        "textAdjacency": true
+      },
+      "drawingHash": "af1f96dd0c3f3f6c967ae6edba06e9b3adeee9e3f1f9a3da9f290b8c82151f53",
+      "module": {
+        "path": "src/expansion/fulfillment.mjs",
+        "sha256": "33e0145605e2d378252ea644caab8bf9e354a770825fc9daa02bbe19c89f765f"
+      },
+      "evidence": [
+        {
+          "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/expansion-10/comparison.png",
+          "original": "docs/review/ui-v1/expansion-10/comparison.png",
+          "sha256": "cf9b05e1148f349bcfc267afb3a45d9e260c5dda4d625368250a38baa09ee355",
+          "viewed": true
+        },
+        {
+          "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/expansion-10/comparison-dark.png",
+          "original": "docs/review/ui-v1/expansion-10/comparison-dark.png",
+          "sha256": "7e3bb041eb08d282d32a576f45e142c0abb1dfcfcc494b064e2572a3ae1f5af8",
+          "viewed": true
+        },
+        {
+          "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/expansion-10/native.png",
+          "original": "docs/review/ui-v1/expansion-10/native.png",
+          "sha256": "150357e0a7500c6cd64146bf0e05422eced0f068e67d5eb06003efff8bd1fa30",
+          "viewed": true
+        },
+        {
+          "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/expansion-10/native-dark.png",
+          "original": "docs/review/ui-v1/expansion-10/native-dark.png",
+          "sha256": "c16d34ec2ca3dc0d46761c247121d9d74889f2cb8e40d50ccd3f374aad44195a",
+          "viewed": true
+        }
+      ]
+    },
+    {
+      "name": "package-open",
+      "batch": "expansion-10",
+      "decision": "retain",
+      "status": "independent-visual-review-complete",
+      "observation": "加深後兩面箱身仍清楚，兩翼與箱身的遮擋保留透明間隙；中央線butt端帽止於頂點，九組放大未見小凸釘。",
+      "sourceObservation": "Lucide以外翻雙翼呈現開箱；Hugeicons以盒子上方短放射線表達開啟。Master採真實翻翼構造，沒有加裝飾放射線。",
+      "references": [
+        {
+          "name": "package-open",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/package-open.svg",
+          "localPath": "references/expansion-01/lucide-package-open.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/package-open.svg",
+          "sha256": "261a0676ee3db3e5c64a528ac7f81a4893ddb3dfebd0549562f4ef5033757920",
+          "license": "ISC AND MIT",
+          "sourceName": "package-open",
+          "match": "exact",
+          "role": "comparison-only",
+          "actualSha256": "261a0676ee3db3e5c64a528ac7f81a4893ddb3dfebd0549562f4ef5033757920",
+          "checksumMatchesManifest": true
+        },
+        {
+          "name": "package-open",
+          "library": "Hugeicons Free",
+          "repository": "hugeicons/hugeicons",
+          "commit": "834e28d965946c1ee60d080027fe9dae4adc58d0",
+          "path": "icons/package-open.svg",
+          "localPath": "references/expansion-01/hugeicons-free-package-open.svg",
+          "url": "https://github.com/hugeicons/hugeicons/blob/834e28d965946c1ee60d080027fe9dae4adc58d0/icons/package-open.svg",
+          "sha256": "d5a49ea26837c7c59d83f4afd14e3a280c80acb565d0e93ad084ed9ee6b52709",
+          "license": "MIT",
+          "sourceName": "package-open",
+          "match": "exact",
+          "role": "comparison-only",
+          "actualSha256": "d5a49ea26837c7c59d83f4afd14e3a280c80acb565d0e93ad084ed9ee6b52709",
+          "checksumMatchesManifest": true
+        }
+      ],
+      "effects": {
+        "dashes": "不採用：此圖沒有待定區域/隱藏邊語意，實線更易辨識。",
+        "opacity": "不採用內建漸淡；主體與狀態皆需辨識，另已檢視16px55%前景明暗文字情境。"
+      },
+      "issues": [],
+      "nativeChecks": {
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "backgrounds": [
+          "light",
+          "dark"
+        ],
+        "lowContrast": "55% at16px",
+        "textAdjacency": true
+      },
+      "drawingHash": "4d9b4b3758f5687be3bcee0297a5e2c8ad11f722752f4907b1764b5a5222020d",
+      "module": {
+        "path": "src/expansion/fulfillment.mjs",
+        "sha256": "33e0145605e2d378252ea644caab8bf9e354a770825fc9daa02bbe19c89f765f"
+      },
+      "evidence": [
+        {
+          "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/expansion-10/comparison.png",
+          "original": "docs/review/ui-v1/expansion-10/comparison.png",
+          "sha256": "cf9b05e1148f349bcfc267afb3a45d9e260c5dda4d625368250a38baa09ee355",
+          "viewed": true
+        },
+        {
+          "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/expansion-10/comparison-dark.png",
+          "original": "docs/review/ui-v1/expansion-10/comparison-dark.png",
+          "sha256": "7e3bb041eb08d282d32a576f45e142c0abb1dfcfcc494b064e2572a3ae1f5af8",
+          "viewed": true
+        },
+        {
+          "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/expansion-10/native.png",
+          "original": "docs/review/ui-v1/expansion-10/native.png",
+          "sha256": "150357e0a7500c6cd64146bf0e05422eced0f068e67d5eb06003efff8bd1fa30",
+          "viewed": true
+        },
+        {
+          "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/expansion-10/native-dark.png",
+          "original": "docs/review/ui-v1/expansion-10/native-dark.png",
+          "sha256": "c16d34ec2ca3dc0d46761c247121d9d74889f2cb8e40d50ccd3f374aad44195a",
+          "viewed": true
+        },
+        {
+          "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/diagnostic-2-light.png",
+          "sha256": "5e3d3fd66ab77ca2c3bb1b26eabad3b7908e433d960974f0d231856132bdae9f",
+          "viewed": true,
+          "kind": "4x enlarged native16/20/24, sharp/soft/rounded"
+        },
+        {
+          "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/diagnostic-2-dark.png",
+          "sha256": "cf38680c9af35a3f115056becb032981b9476b41ebff124b6592097f3ba532c9",
+          "viewed": true,
+          "kind": "4x enlarged native16/20/24, sharp/soft/rounded"
+        }
+      ]
+    },
+    {
+      "name": "package-check",
+      "batch": "expansion-10",
+      "decision": "refine",
+      "status": "independent-issue-found",
+      "observation": "勾與箱體淨空清楚，但繼承package母型內線端帽越過實際外框的微小凸釘，sharp最明顯，需修母型。",
+      "sourceObservation": "Lucide立體箱加右下勾；Hugeicons package-delivered-01為正面包裹加勾。Master維持立體箱母型與右下勾，問題在母型結構接點。",
+      "references": [
+        {
+          "name": "package-check",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/package-check.svg",
+          "localPath": "references/expansion-01/lucide-package-check.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/package-check.svg",
+          "sha256": "ce6b0e8a3102a9dc0a00b68f613dfd43ca6fa45182bc13786aafc338c1961fcf",
+          "license": "ISC AND MIT",
+          "sourceName": "package-check",
+          "match": "exact",
+          "role": "comparison-only",
+          "actualSha256": "ce6b0e8a3102a9dc0a00b68f613dfd43ca6fa45182bc13786aafc338c1961fcf",
+          "checksumMatchesManifest": true
+        },
+        {
+          "name": "package-check",
+          "library": "Hugeicons Free",
+          "repository": "hugeicons/hugeicons",
+          "commit": "834e28d965946c1ee60d080027fe9dae4adc58d0",
+          "path": "icons/package-delivered-01.svg",
+          "localPath": "references/expansion-01/hugeicons-free-package-delivered-01.svg",
+          "url": "https://github.com/hugeicons/hugeicons/blob/834e28d965946c1ee60d080027fe9dae4adc58d0/icons/package-delivered-01.svg",
+          "sha256": "48b4b04d81bbf9fba3cd61c4d0d2e44b682c2f4636ca0f5e72f1909b1f04687f",
+          "license": "MIT",
+          "sourceName": "package-delivered-01",
+          "match": "exact",
+          "role": "comparison-only",
+          "actualSha256": "48b4b04d81bbf9fba3cd61c4d0d2e44b682c2f4636ca0f5e72f1909b1f04687f",
+          "checksumMatchesManifest": true
+        }
+      ],
+      "effects": {
+        "dashes": "不採用：此圖沒有待定區域/隱藏邊語意，實線更易辨識。",
+        "opacity": "不採用內建漸淡；主體與狀態皆需辨識，另已檢視16px55%前景明暗文字情境。"
+      },
+      "issues": [
+        {
+          "id": "package-mother-interior-strokes-outside-contour",
+          "severity": "minor-craft-defect",
+          "location": "Inherited commerce.package interior V endpoints, center vertical bottom, 20/24 top tape endpoints",
+          "description": "Interior strokes end at original vertices and their caps protrude past the painted perimeter; sharp shows small nails at left/right top corners and bottom. Rounded perimeter no longer goes through the original vertex, so changing only cap style may not fully solve the bottom contact.",
+          "suggestion": "Refine package mother geometry. Intersect painted interior strokes with the actual closed box silhouette before combining with the perimeter, or shorten endpoints to the actual rounded tangent boundary. Preserve structural joins rather than inserting knockout gaps. Recheck base package and dependent package-check/return after the shared fix."
+        }
+      ],
+      "nativeChecks": {
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "backgrounds": [
+          "light",
+          "dark"
+        ],
+        "lowContrast": "55% at16px",
+        "textAdjacency": true
+      },
+      "drawingHash": "34213a94c34cba340c9e2d8c088ca3ded9cb58776f5444b37ed32d12cc7701a6",
+      "module": {
+        "path": "src/expansion/fulfillment.mjs",
+        "sha256": "33e0145605e2d378252ea644caab8bf9e354a770825fc9daa02bbe19c89f765f"
+      },
+      "evidence": [
+        {
+          "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/expansion-10/comparison.png",
+          "original": "docs/review/ui-v1/expansion-10/comparison.png",
+          "sha256": "cf9b05e1148f349bcfc267afb3a45d9e260c5dda4d625368250a38baa09ee355",
+          "viewed": true
+        },
+        {
+          "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/expansion-10/comparison-dark.png",
+          "original": "docs/review/ui-v1/expansion-10/comparison-dark.png",
+          "sha256": "7e3bb041eb08d282d32a576f45e142c0abb1dfcfcc494b064e2572a3ae1f5af8",
+          "viewed": true
+        },
+        {
+          "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/expansion-10/native.png",
+          "original": "docs/review/ui-v1/expansion-10/native.png",
+          "sha256": "150357e0a7500c6cd64146bf0e05422eced0f068e67d5eb06003efff8bd1fa30",
+          "viewed": true
+        },
+        {
+          "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/expansion-10/native-dark.png",
+          "original": "docs/review/ui-v1/expansion-10/native-dark.png",
+          "sha256": "c16d34ec2ca3dc0d46761c247121d9d74889f2cb8e40d50ccd3f374aad44195a",
+          "viewed": true
+        },
+        {
+          "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/diagnostic-2-light.png",
+          "sha256": "5e3d3fd66ab77ca2c3bb1b26eabad3b7908e433d960974f0d231856132bdae9f",
+          "viewed": true,
+          "kind": "4x enlarged native16/20/24, sharp/soft/rounded"
+        },
+        {
+          "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/diagnostic-2-dark.png",
+          "sha256": "cf38680c9af35a3f115056becb032981b9476b41ebff124b6592097f3ba532c9",
+          "viewed": true,
+          "kind": "4x enlarged native16/20/24, sharp/soft/rounded"
+        }
+      ],
+      "resolution": {
+        "status": "fixed-and-independently-rechecked",
+        "observation": "內線墨跡限制於箱體實際剪影後，sharp頂角與底角凸釘消失，rounded底部不再突出；內線與外框仍相接而非新增knockout縫。兩個狀態的前景淨空沒有新碎屑。",
+        "beforeHash": "7d790bf506cabecc2c13bbe3409879ef6082bbb8e42430f8221dbbf112cd204c",
+        "afterHash": "c10c64a4ace66986cd2aaeb06068b4b862e5fd0527f563b48984912d2ed5b6e8",
+        "beforeEvidence": "docs/review/expansion-01/independent-last-two/evidence/junctions-before.json",
+        "evidence": [
+          {
+            "path": "docs/review/expansion-01/independent-last-two/evidence/diagnostic-2-light.png",
+            "sha256": "faef2257a9d294f4c2eabe357ed4294920e05cc4d89024bf1ce93571448ec1f5",
+            "viewed": true,
+            "kind": "4x native16/20/24 sharp/soft/rounded"
+          },
+          {
+            "path": "docs/review/expansion-01/independent-last-two/evidence/diagnostic-2-dark.png",
+            "sha256": "c2096e8b5e096121cfb2e45d8820d16bae0f8e828e89552554a1e7286514e0d0",
+            "viewed": true,
+            "kind": "4x native16/20/24 sharp/soft/rounded"
+          },
+          {
+            "path": "docs/review/expansion-01/independent-last-two/evidence/junctions-native-light.png",
+            "sha256": "09b276a42907fc57277b75e0979081cb94d5dfed92d8e50f26052c3d758f43eb",
+            "viewed": true,
+            "kind": "9 native variants and16px55% foreground with adjacent text"
+          },
+          {
+            "path": "docs/review/expansion-01/independent-last-two/evidence/junctions-native-dark.png",
+            "sha256": "3e895d068c489ef88bc2bd829ba4f80601ff11eca47fa879de64d41ad30a211d",
+            "viewed": true,
+            "kind": "9 native variants and16px55% foreground with adjacent text"
+          }
+        ],
+        "reviewedAt": "2026-11-16T11:47:11.088Z"
+      }
+    },
+    {
+      "name": "package-return",
+      "batch": "expansion-10",
+      "decision": "refine",
+      "status": "independent-issue-found",
+      "observation": "回折箭頭方向清楚、外緣淨空一致，16px仍讀為退回；但箱體結構接點有同package-check的端帽微凸，需修母型。",
+      "sourceObservation": "Hugeicons delivery-return-01有回折退回箭頭；Tabler package-import僅為箱體加向內箭頭的家族參考。Master有真正回折弧線，不把匯入直接當退貨。",
+      "references": [
+        {
+          "name": "package-return",
+          "library": "Hugeicons Free",
+          "repository": "hugeicons/hugeicons",
+          "commit": "834e28d965946c1ee60d080027fe9dae4adc58d0",
+          "path": "icons/delivery-return-01.svg",
+          "localPath": "references/expansion-01/hugeicons-free-delivery-return-01.svg",
+          "url": "https://github.com/hugeicons/hugeicons/blob/834e28d965946c1ee60d080027fe9dae4adc58d0/icons/delivery-return-01.svg",
+          "sha256": "99ba38bdf75cb445baecdb281cc6874ca71892ad88c005d91e85b1a5f919d375",
+          "license": "MIT",
+          "sourceName": "delivery-return-01",
+          "match": "exact",
+          "role": "comparison-only",
+          "actualSha256": "99ba38bdf75cb445baecdb281cc6874ca71892ad88c005d91e85b1a5f919d375",
+          "checksumMatchesManifest": true
+        },
+        {
+          "name": "package-return",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/package-import.svg",
+          "localPath": "references/expansion-01/tabler-package-import.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/package-import.svg",
+          "sha256": "de460ca83e06041a85b13bf9a1646f920d22fa740b1c560e295c6ea35722fd64",
+          "license": "MIT",
+          "sourceName": "package-import",
+          "match": "structure-only",
+          "role": "comparison-only",
+          "actualSha256": "de460ca83e06041a85b13bf9a1646f920d22fa740b1c560e295c6ea35722fd64",
+          "checksumMatchesManifest": true
+        }
+      ],
+      "effects": {
+        "dashes": "不採用：此圖沒有待定區域/隱藏邊語意，實線更易辨識。",
+        "opacity": "不採用內建漸淡；主體與狀態皆需辨識，另已檢視16px55%前景明暗文字情境。"
+      },
+      "issues": [
+        {
+          "id": "package-mother-interior-strokes-outside-contour",
+          "severity": "minor-craft-defect",
+          "location": "Inherited commerce.package interior V endpoints, center vertical bottom, 20/24 top tape endpoints",
+          "description": "Interior strokes end at original vertices and their caps protrude past the painted perimeter; sharp shows small nails at left/right top corners and bottom. Rounded perimeter no longer goes through the original vertex, so changing only cap style may not fully solve the bottom contact.",
+          "suggestion": "Refine package mother geometry. Intersect painted interior strokes with the actual closed box silhouette before combining with the perimeter, or shorten endpoints to the actual rounded tangent boundary. Preserve structural joins rather than inserting knockout gaps. Recheck base package and dependent package-check/return after the shared fix."
+        }
+      ],
+      "nativeChecks": {
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "backgrounds": [
+          "light",
+          "dark"
+        ],
+        "lowContrast": "55% at16px",
+        "textAdjacency": true
+      },
+      "drawingHash": "e72726c53f74786c0ad7ce8b3f1b456a7a161f6c4e6d26de5d14c0f4c0fcb45b",
+      "module": {
+        "path": "src/expansion/fulfillment.mjs",
+        "sha256": "33e0145605e2d378252ea644caab8bf9e354a770825fc9daa02bbe19c89f765f"
+      },
+      "evidence": [
+        {
+          "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/expansion-10/comparison.png",
+          "original": "docs/review/ui-v1/expansion-10/comparison.png",
+          "sha256": "cf9b05e1148f349bcfc267afb3a45d9e260c5dda4d625368250a38baa09ee355",
+          "viewed": true
+        },
+        {
+          "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/expansion-10/comparison-dark.png",
+          "original": "docs/review/ui-v1/expansion-10/comparison-dark.png",
+          "sha256": "7e3bb041eb08d282d32a576f45e142c0abb1dfcfcc494b064e2572a3ae1f5af8",
+          "viewed": true
+        },
+        {
+          "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/expansion-10/native.png",
+          "original": "docs/review/ui-v1/expansion-10/native.png",
+          "sha256": "150357e0a7500c6cd64146bf0e05422eced0f068e67d5eb06003efff8bd1fa30",
+          "viewed": true
+        },
+        {
+          "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/expansion-10/native-dark.png",
+          "original": "docs/review/ui-v1/expansion-10/native-dark.png",
+          "sha256": "c16d34ec2ca3dc0d46761c247121d9d74889f2cb8e40d50ccd3f374aad44195a",
+          "viewed": true
+        },
+        {
+          "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/diagnostic-2-light.png",
+          "sha256": "5e3d3fd66ab77ca2c3bb1b26eabad3b7908e433d960974f0d231856132bdae9f",
+          "viewed": true,
+          "kind": "4x enlarged native16/20/24, sharp/soft/rounded"
+        },
+        {
+          "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/diagnostic-2-dark.png",
+          "sha256": "cf38680c9af35a3f115056becb032981b9476b41ebff124b6592097f3ba532c9",
+          "viewed": true,
+          "kind": "4x enlarged native16/20/24, sharp/soft/rounded"
+        }
+      ],
+      "resolution": {
+        "status": "fixed-and-independently-rechecked",
+        "observation": "內線墨跡限制於箱體實際剪影後，sharp頂角與底角凸釘消失，rounded底部不再突出；內線與外框仍相接而非新增knockout縫。兩個狀態的前景淨空沒有新碎屑。",
+        "beforeHash": "55e8543ca46bcc45c8261fc343ec2ced982858de2d6302e9dc15b5a50ff4b52d",
+        "afterHash": "e561d4da647387b127012f9b8d0a66e50d87e4712737ceb9116c663e39102dbd",
+        "beforeEvidence": "docs/review/expansion-01/independent-last-two/evidence/junctions-before.json",
+        "evidence": [
+          {
+            "path": "docs/review/expansion-01/independent-last-two/evidence/diagnostic-2-light.png",
+            "sha256": "faef2257a9d294f4c2eabe357ed4294920e05cc4d89024bf1ce93571448ec1f5",
+            "viewed": true,
+            "kind": "4x native16/20/24 sharp/soft/rounded"
+          },
+          {
+            "path": "docs/review/expansion-01/independent-last-two/evidence/diagnostic-2-dark.png",
+            "sha256": "c2096e8b5e096121cfb2e45d8820d16bae0f8e828e89552554a1e7286514e0d0",
+            "viewed": true,
+            "kind": "4x native16/20/24 sharp/soft/rounded"
+          },
+          {
+            "path": "docs/review/expansion-01/independent-last-two/evidence/junctions-native-light.png",
+            "sha256": "09b276a42907fc57277b75e0979081cb94d5dfed92d8e50f26052c3d758f43eb",
+            "viewed": true,
+            "kind": "9 native variants and16px55% foreground with adjacent text"
+          },
+          {
+            "path": "docs/review/expansion-01/independent-last-two/evidence/junctions-native-dark.png",
+            "sha256": "3e895d068c489ef88bc2bd829ba4f80601ff11eca47fa879de64d41ad30a211d",
+            "viewed": true,
+            "kind": "9 native variants and16px55% foreground with adjacent text"
+          }
+        ],
+        "reviewedAt": "2026-11-16T11:47:11.088Z"
+      }
+    },
+    {
+      "name": "shopping-cart-plus",
+      "batch": "expansion-10",
+      "decision": "retain",
+      "status": "independent-visual-review-complete",
+      "observation": "加號位於右上、車斗被等距裁切，兩輪完整；16px輪子採實心小點仍可辨，九組放大沒有孤立碎屑。",
+      "sourceObservation": "Lucide加號在右上；Tabler在右下並影響輪區。Master選右上，維持購物車雙輪辨識。",
+      "references": [
+        {
+          "name": "shopping-cart-plus",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/shopping-cart-plus.svg",
+          "localPath": "references/expansion-01/lucide-shopping-cart-plus.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/shopping-cart-plus.svg",
+          "sha256": "f0d53586a981e2126e9402f2173213922f22d44ed42d5b4e770a2124a4bbd9e1",
+          "license": "ISC AND MIT",
+          "sourceName": "shopping-cart-plus",
+          "match": "exact",
+          "role": "comparison-only",
+          "actualSha256": "f0d53586a981e2126e9402f2173213922f22d44ed42d5b4e770a2124a4bbd9e1",
+          "checksumMatchesManifest": true
+        },
+        {
+          "name": "shopping-cart-plus",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/shopping-cart-plus.svg",
+          "localPath": "references/expansion-01/tabler-shopping-cart-plus.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/shopping-cart-plus.svg",
+          "sha256": "1397c82c081bc9abce493f7231f37b8a224e72f4fb8e9e3414a3d66ede5ef38f",
+          "license": "MIT",
+          "sourceName": "shopping-cart-plus",
+          "match": "exact",
+          "role": "comparison-only",
+          "actualSha256": "1397c82c081bc9abce493f7231f37b8a224e72f4fb8e9e3414a3d66ede5ef38f",
+          "checksumMatchesManifest": true
+        }
+      ],
+      "effects": {
+        "dashes": "不採用：此圖沒有待定區域/隱藏邊語意，實線更易辨識。",
+        "opacity": "不採用內建漸淡；主體與狀態皆需辨識，另已檢視16px55%前景明暗文字情境。"
+      },
+      "issues": [],
+      "nativeChecks": {
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "backgrounds": [
+          "light",
+          "dark"
+        ],
+        "lowContrast": "55% at16px",
+        "textAdjacency": true
+      },
+      "drawingHash": "44e2f4660abc1556fb8fadcaba05e09be4fb33ed763da1797eb4fae6412b17a2",
+      "module": {
+        "path": "src/expansion/fulfillment.mjs",
+        "sha256": "33e0145605e2d378252ea644caab8bf9e354a770825fc9daa02bbe19c89f765f"
+      },
+      "evidence": [
+        {
+          "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/expansion-10/comparison.png",
+          "original": "docs/review/ui-v1/expansion-10/comparison.png",
+          "sha256": "cf9b05e1148f349bcfc267afb3a45d9e260c5dda4d625368250a38baa09ee355",
+          "viewed": true
+        },
+        {
+          "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/expansion-10/comparison-dark.png",
+          "original": "docs/review/ui-v1/expansion-10/comparison-dark.png",
+          "sha256": "7e3bb041eb08d282d32a576f45e142c0abb1dfcfcc494b064e2572a3ae1f5af8",
+          "viewed": true
+        },
+        {
+          "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/expansion-10/native.png",
+          "original": "docs/review/ui-v1/expansion-10/native.png",
+          "sha256": "150357e0a7500c6cd64146bf0e05422eced0f068e67d5eb06003efff8bd1fa30",
+          "viewed": true
+        },
+        {
+          "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/expansion-10/native-dark.png",
+          "original": "docs/review/ui-v1/expansion-10/native-dark.png",
+          "sha256": "c16d34ec2ca3dc0d46761c247121d9d74889f2cb8e40d50ccd3f374aad44195a",
+          "viewed": true
+        },
+        {
+          "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/diagnostic-2-light.png",
+          "sha256": "5e3d3fd66ab77ca2c3bb1b26eabad3b7908e433d960974f0d231856132bdae9f",
+          "viewed": true,
+          "kind": "4x enlarged native16/20/24, sharp/soft/rounded"
+        },
+        {
+          "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/diagnostic-2-dark.png",
+          "sha256": "cf38680c9af35a3f115056becb032981b9476b41ebff124b6592097f3ba532c9",
+          "viewed": true,
+          "kind": "4x enlarged native16/20/24, sharp/soft/rounded"
+        }
+      ]
+    },
+    {
+      "name": "shopping-cart-check",
+      "batch": "expansion-10",
+      "decision": "retain",
+      "status": "independent-visual-review-complete",
+      "observation": "勾置於右上與車斗保持透明間隙，車把、底架及雙輪保留；16px勾不是車斗上緣的一部分。",
+      "sourceObservation": "Tabler勾在右下；Hugeicons shopping-cart-check-01置於右上，和通用cart母型構造一致。Master用右上方案。",
+      "references": [
+        {
+          "name": "shopping-cart-check",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/shopping-cart-check.svg",
+          "localPath": "references/expansion-01/tabler-shopping-cart-check.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/shopping-cart-check.svg",
+          "sha256": "1fb3f2aa6e562d599c7431177f2dbf576243c2ccd2f0fbfe5f38be3c777a01ac",
+          "license": "MIT",
+          "sourceName": "shopping-cart-check",
+          "match": "exact",
+          "role": "comparison-only",
+          "actualSha256": "1fb3f2aa6e562d599c7431177f2dbf576243c2ccd2f0fbfe5f38be3c777a01ac",
+          "checksumMatchesManifest": true
+        },
+        {
+          "name": "shopping-cart-check",
+          "library": "Hugeicons Free",
+          "repository": "hugeicons/hugeicons",
+          "commit": "834e28d965946c1ee60d080027fe9dae4adc58d0",
+          "path": "icons/shopping-cart-check-01.svg",
+          "localPath": "references/expansion-01/hugeicons-free-shopping-cart-check-01.svg",
+          "url": "https://github.com/hugeicons/hugeicons/blob/834e28d965946c1ee60d080027fe9dae4adc58d0/icons/shopping-cart-check-01.svg",
+          "sha256": "f91303b0117a5d7e14a128c29bb9c186ef94036102d84dcb2277e018ad666ee8",
+          "license": "MIT",
+          "sourceName": "shopping-cart-check-01",
+          "match": "exact",
+          "role": "comparison-only",
+          "actualSha256": "f91303b0117a5d7e14a128c29bb9c186ef94036102d84dcb2277e018ad666ee8",
+          "checksumMatchesManifest": true
+        }
+      ],
+      "effects": {
+        "dashes": "不採用：此圖沒有待定區域/隱藏邊語意，實線更易辨識。",
+        "opacity": "不採用內建漸淡；主體與狀態皆需辨識，另已檢視16px55%前景明暗文字情境。"
+      },
+      "issues": [],
+      "nativeChecks": {
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "backgrounds": [
+          "light",
+          "dark"
+        ],
+        "lowContrast": "55% at16px",
+        "textAdjacency": true
+      },
+      "drawingHash": "e19742594b49fab494a1f50c59ab5d77231ddd16b7094fc407a8b42adb3ee2f3",
+      "module": {
+        "path": "src/expansion/fulfillment.mjs",
+        "sha256": "33e0145605e2d378252ea644caab8bf9e354a770825fc9daa02bbe19c89f765f"
+      },
+      "evidence": [
+        {
+          "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/expansion-10/comparison.png",
+          "original": "docs/review/ui-v1/expansion-10/comparison.png",
+          "sha256": "cf9b05e1148f349bcfc267afb3a45d9e260c5dda4d625368250a38baa09ee355",
+          "viewed": true
+        },
+        {
+          "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/expansion-10/comparison-dark.png",
+          "original": "docs/review/ui-v1/expansion-10/comparison-dark.png",
+          "sha256": "7e3bb041eb08d282d32a576f45e142c0abb1dfcfcc494b064e2572a3ae1f5af8",
+          "viewed": true
+        },
+        {
+          "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/expansion-10/native.png",
+          "original": "docs/review/ui-v1/expansion-10/native.png",
+          "sha256": "150357e0a7500c6cd64146bf0e05422eced0f068e67d5eb06003efff8bd1fa30",
+          "viewed": true
+        },
+        {
+          "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/expansion-10/native-dark.png",
+          "original": "docs/review/ui-v1/expansion-10/native-dark.png",
+          "sha256": "c16d34ec2ca3dc0d46761c247121d9d74889f2cb8e40d50ccd3f374aad44195a",
+          "viewed": true
+        },
+        {
+          "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/diagnostic-2-light.png",
+          "sha256": "5e3d3fd66ab77ca2c3bb1b26eabad3b7908e433d960974f0d231856132bdae9f",
+          "viewed": true,
+          "kind": "4x enlarged native16/20/24, sharp/soft/rounded"
+        },
+        {
+          "path": "docs/review/expansion-01/independent-eight-to-ten/evidence/diagnostic-2-dark.png",
+          "sha256": "cf38680c9af35a3f115056becb032981b9476b41ebff124b6592097f3ba532c9",
+          "viewed": true,
+          "kind": "4x enlarged native16/20/24, sharp/soft/rounded"
+        }
+      ]
+    }
+  ]
+}
