@@ -2,9 +2,9 @@
 
 微圓、簡約、為介面原生尺寸設計的開源圖示。**0.1.0-alpha.0** 包含 **280 個命名圖示、182 個基本概念**；16 / 20 / 24 三尺寸與 sharp / soft / rounded 三圓角，共 **2,520 份 SVG**。
 
-範圍由原始48個名稱、`src/ui-scope.json`的162顆、`src/organization-scope.json`的10顆及`src/productivity-scope.json`的60顆組成。前輪 Craft 01 精修14顆；Craft 02 由子代理再次獨立逐顆審查280顆，追加精修2顆、保留278顆。本輪 Clearance 01 先試作 phone-off、mail-x、file-lock、folder-lock 的外輪廓等距淨空；其餘276顆保留前輪圖稿，另有全庫構造盤點，尚未宣稱全部通過新契約。沒有新增名稱。先前刪除的擴充圖稿未恢復。方向、開關與狀態另計命名圖稿，搜尋別名不增計圖示。套件維持 private alpha；工程檢查、設計目視與使用者定案分開記錄。
+範圍由原始48個名稱、`src/ui-scope.json`的162顆、`src/organization-scope.json`的10顆及`src/productivity-scope.json`的60顆組成。前輪 Craft 01 精修14顆；Craft 02 由子代理再次獨立逐顆審查280顆，追加精修2顆、保留278顆。Clearance 01 先試作 phone-off、mail-x、file-lock、folder-lock 的外輪廓等距淨空；其餘276顆保留前輪圖稿，另有全庫構造盤點，尚未宣稱全部通過新契約。最新 Layers 01 依 Lucide 構造精修 layers，保留其餘279顆，並改善 skill 的輪廓與結構曲線判斷。沒有新增名稱。先前刪除的擴充圖稿未恢復。方向、開關與狀態另計命名圖稿，搜尋別名不增計圖示。套件維持 private alpha；工程檢查、設計目視與使用者定案分開記錄。
 
-本輪試作、逐項待辦與固定線寬限制見 [遮擋輪廓避讓](docs/clearance-01.md)。
+Layers 精修與審查教訓見 [Layers 01](docs/layers-01.md)。前輪試作、逐項待辦與固定線寬限制見 [遮擋輪廓避讓](docs/clearance-01.md)。
 
 ## 開始使用
 

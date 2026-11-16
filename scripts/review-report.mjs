@@ -7,9 +7,9 @@ import {renderSvg,escapeXml} from '../src/runtime.mjs';
 const json=async p=>JSON.parse(await readFile(p,'utf8'));
 const ledger=await json('docs/refinement-ledger.json'),defs=await json('dist/definitions.json'),before=await beforeDefinitions();
 const cycle=ledger.reviewCycle||'craft-01',modified=ledger.icons.filter(r=>r.change.kind==='modified').length,retained=ledger.icons.filter(r=>r.change.kind==='retained').length;
-const familySheet=cycle==='clearance-01'?'native-webkit-2x-dark.png':cycle==='craft-02'?'families-webkit-2x-dark.png':'families-dark.png';
+const familySheet=ledger.familySheet||(cycle==='clearance-01'?'native-webkit-2x-dark.png':cycle==='craft-02'?'families-webkit-2x-dark.png':'families-dark.png');
 const reviewBaselines=new Map();
-const scopeDescription=ledger.reviewedNames?`本輪僅試作${ledger.reviewedNames.length}顆遮擋淨空，其餘${catalog.length-ledger.reviewedNames.length}顆維持原稿與前輪目視紀錄；全庫新契約盤點與待辦另列。`:`本輪 ${escapeXml(cycle)} 重新逐項審查既有${catalog.length}顆：精修${modified}顆、保留${retained}顆，不新增名稱。`;
+const scopeDescription=ledger.reviewSummary?escapeXml(ledger.reviewSummary):ledger.reviewedNames?`本輪僅試作${ledger.reviewedNames.length}顆遮擋淨空，其餘${catalog.length-ledger.reviewedNames.length}顆維持原稿與前輪目視紀錄；全庫新契約盤點與待辦另列。`:`本輪 ${escapeXml(cycle)} 重新逐項審查既有${catalog.length}顆：精修${modified}顆、保留${retained}顆，不新增名稱。`;
 const esc=escapeXml,preview=(d)=>[16,20,24].map(size=>renderSvg(d,{size})).join('');
 let cards='';
 for(const r of ledger.icons){

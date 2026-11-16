@@ -12,15 +12,17 @@ Upstream repository: https://github.com/hugeicons/hugeicons
 
 Pinned commit: `834e28d965946c1ee60d080027fe9dae4adc58d0`.
 
-No Hugeicons Pro artwork is included. Of the remaining drawings, 266 are authored from Master geometry primitives and two are Lucide-informed adapted redraws described below. `dist/catalog.json` identifies the provenance of every subject; `references/manifest.json` preserves the historical 48 comparison files; `references/current.json` combines 420 UI comparisons, 20 organization comparisons and 120 productivity comparisons from their versioned manifests, including semantic versus structure-only matches.
+No Hugeicons Pro artwork is included. Of the remaining drawings, 265 are authored from Master geometry primitives and three are Lucide-informed adapted redraws described below. `dist/catalog.json` identifies the provenance of every subject; `references/manifest.json` preserves the historical 48 comparison files; `references/current.json` combines 420 UI comparisons, 20 organization comparisons and 120 productivity comparisons from their versioned manifests, including semantic versus structure-only matches.
 
-## Lucide — ISC; two adapted redraws
+## Lucide — ISC; three adapted redraws
 
 Copyright (c) 2026 Lucide Icons and Contributors. Full license and inherited Feather notices: `licenses/lucide.txt`.
 
 Craft 01 redraws **megaphone** and **handshake** after Lucide's curved horn/grip and interlocking-hand constructions, at the user's request. Master rewrites their curves, proportions, corner treatments and native-size details. Attribution is retained conservatively for this deliberate adaptation. Individual SVG downloads include the complete upstream license; React packages and SVG archives include the license file and these notices. The original assets remain in the comparison workspace.
 
-Pinned commit: `55782beff3a0133df79c417eb68f96e8f19e2404`. Original paths: `icons/megaphone.svg`, `icons/handshake.svg` in `lucide-icons/lucide`.
+Layers 01 reconstructs **layers** after Lucide’s curved sheet edges and equal-width stack, with Master proportions and local corner treatments.
+
+Pinned commit: `55782beff3a0133df79c417eb68f96e8f19e2404`. Original paths: `icons/megaphone.svg`, `icons/handshake.svg`, `icons/layers.svg` in `lucide-icons/lucide`.
 
 ## Comparison-only assets
 
@@ -32,7 +34,7 @@ These unmodified originals are stored in `references/` for the local design stud
 | Iconoir | `39834e3f193bc0cca2c36bebb6a650471977433d` | `licenses/iconoir.txt` (MIT) |
 | Lucide | `55782beff3a0133df79c417eb68f96e8f19e2404` | `licenses/lucide.txt` (ISC and inherited Feather MIT notices) |
 
-Original notices are preserved in full. Do not remove these license copies when distributing the comparison workspace. Except for the two adapted redraws explicitly listed above, references are comparison-only assets.
+Original notices are preserved in full. Do not remove these license copies when distributing the comparison workspace. Except for the three adapted redraws explicitly listed above, references are comparison-only assets.
 
 ## Research versus attribution
 

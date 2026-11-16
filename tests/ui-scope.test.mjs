@@ -53,7 +53,8 @@ test('only explicitly reviewed refinements differ from the complete baseline',as
  const rounds=[
   ['craft-01',firstPass,['chart-bar','contact','mouse-pointer','usb','accessibility','file-audio','file-archive','timer','user-cog','handshake','indent-increase','indent-decrease','megaphone','ticket']],
   ['craft-02',JSON.parse(await readFile('references/clearance-01/master-before.json')),['highlighter','phone-off']],
-  ['clearance-01',defs,['phone-off','mail-x','file-lock','folder-lock']],
+  ['clearance-01',JSON.parse(await readFile('references/layers-01/master-before.json')),['phone-off','mail-x','file-lock','folder-lock']],
+  ['layers-01',defs,['layers']],
  ];
  for(const[cycle,after,names]of rounds){
   const before=JSON.parse(await readFile(`references/${cycle}/master-before.json`));

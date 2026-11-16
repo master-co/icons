@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "date": "2026-11-16",
-  "scope": "Clearance 01: four pilot refinements; remaining 276 retain prior visual records; 280 construction screening only",
+  "scope": "Layers 01: one Lucide-informed refinement; remaining 279 drawings unchanged",
   "namedDrawings": 280,
   "baseConcepts": 182,
   "statusMeaning": "工程檢查與 Codex 目視紀錄獨立；visually-reviewed-candidate 不等於使用者最終定案。",
@@ -24349,11 +24349,11 @@
       "name": "layers",
       "concept": "layers",
       "purpose": "開啟設計圖層、物件堆疊或層級面板。",
-      "recognitionCues": "頂層封閉、下層只畫露出的V形邊；三層輪廓等距，保持中央留白；三圓角真正改變菱形轉折。",
+      "recognitionCues": "完整頂層與兩道露邊共享側邊寬度；下層短弧回彎呼應頂層，三層保持清楚間隙，局部頂點表達角型。",
       "confusableWith": [
         "images"
       ],
-      "sourceObservation": "Lucide 與 Hugeicons 均用完整頂層配下方兩道露邊；Hugeicons 轉折較圓，Lucide 層間空白較直接。",
+      "sourceObservation": "Lucide 以寬扁頂面、相近側緣及下層端部短弧交代同一薄片的重複堆疊；Hugeicons 的回彎較長，曲面較飽滿。Master 依使用者指定採 Lucide 的構造方向，重新繪製側邊曲線與局部頂點，保留本庫線寬和九組母版。原本只比三層與等距，漏查頂層退縮及下層直收筆。",
       "references": [
         {
           "name": "layers",
@@ -24387,11 +24387,11 @@
       "effects": {
         "dashes": {
           "used": false,
-          "reason": "不採用；「圖層」由連續輪廓、節點或實際斷開關係表意，沒有需虛線表示的隱藏／未完成邊界。"
+          "reason": "不採用；三層都表示可見實體薄片，沒有隱藏或未完成的輪廓語意。"
         },
         "opacity": {
           "used": false,
-          "reason": "不採用；「圖層」的必要輪廓與狀態可以靠形狀、留白表達，淡化不提供額外語意。"
+          "reason": "不採用；各層由實際露邊與間隙辨識，淡化不能修復頂層縮窄或收筆不一致。"
         },
         "gradients": {
           "used": false,
@@ -24399,19 +24399,19 @@
         }
       },
       "change": {
-        "kind": "retained",
-        "reason": "保留原稿：圖層：上層封閉菱形和後兩層開線分離，間距有節奏。",
+        "kind": "modified",
+        "reason": "修改後通過目視檢查：原稿以通用大圓角處理菱形銳角，使頂層側端退縮，而下層開放 V 保留原寬；重畫為 Lucide 式薄片側邊回彎，三層維持共同可見寬度與斜邊節奏。結構曲線不隨 sharp 消失，角型只改局部頂點，避免 rounded 再度收窄頂層。",
         "before": {
-          "path": "references/craft-02/master-before.json",
+          "path": "references/layers-01/master-before.json",
           "variantsSha256": "97a8f4c5e55620a9c95f3e8732c94745b27d19cad42264083b72cf0f02ee0bd0"
         }
       },
       "visualReview": {
-        "status": "retained-after-visual-review",
-        "reviewer": "craft_full_audit: 280 drawings; root: modified drawings and family comparison",
+        "status": "modified-after-visual-review",
+        "reviewer": "root: layers structure review",
         "date": "2026-11-16",
-        "batch": "craft2-organization-01",
-        "variantsSha256": "97a8f4c5e55620a9c95f3e8732c94745b27d19cad42264083b72cf0f02ee0bd0",
+        "batch": "layers-01",
+        "variantsSha256": "6af06f1ffb967b62138c75a361a9aa2aa511e81420efdee4a4697cab246ed539",
         "checks": [
           "16/20/24",
           "sharp/soft/rounded",
@@ -24419,45 +24419,95 @@
           "55-percent-foreground",
           "adjacent-text",
           "pinned-original-sources",
-          "before-current"
+          "before-current",
+          "Chromium/WebKit DPR 1/2",
+          "visible layer widths and curved returns"
         ],
         "evidence": [
           {
-            "path": "docs/review/ui-v1/craft2-organization-01/comparison.png",
-            "sha256": "77add4df85f8d7acb4faae7ada7f5bcd65c9e02be4cd9d65db1a356078a518fa"
+            "path": "docs/review/ui-v1/layers-01/comparison.png",
+            "sha256": "77d96094233191a1c4bf86df74336a7cf33dd20ef4a45844259c7a6789060439"
           },
           {
-            "path": "docs/review/ui-v1/craft2-organization-01/comparison-dark.png",
-            "sha256": "6a6d8c64869592c9d5de5e1e5f5ccbbb5d6715c964805b5d9953df8b101966dd"
+            "path": "docs/review/ui-v1/layers-01/comparison-dark.png",
+            "sha256": "f5c390c5af5fdf6ba70185b945cceb44ea6f2c61b3baf3aa86f07b5080b81fef"
           },
           {
-            "path": "docs/review/ui-v1/craft2-organization-01/native.png",
-            "sha256": "4a06ee36a31311b7907457917930dd2c31977160ba3a3f94915d6336b6d48946"
+            "path": "docs/review/ui-v1/layers-01/native.png",
+            "sha256": "2c1b354d82ed8644e28e5c9178abfcc82e28424584ce8394bb4008a44c3d0607"
           },
           {
-            "path": "docs/review/ui-v1/craft2-organization-01/native-dark.png",
-            "sha256": "e843116ebc8f23ec378c0f463ff5032c910df1ffa518da6107ce30a087ab9880"
+            "path": "docs/review/ui-v1/layers-01/native-dark.png",
+            "sha256": "1047df97d2c378fd9259e576af4a6e9a636ef1e66021a6efb528dc661adbecfb"
           },
           {
-            "path": "docs/review/craft-02/inspection/initial/organization-01.png",
-            "sha256": "cccdb9094b13cfa47fcddb4847935948619295fd4b2a3dea2b9a24b4fa214823"
+            "path": "docs/review/layers-01/native-chromium-1x-dark.png",
+            "sha256": "9c486ef262ff8e74155e0df568e3af5b8c3a6319d34cac4aa938757aba8e69f6"
+          },
+          {
+            "path": "docs/review/layers-01/native-chromium-1x-light.png",
+            "sha256": "48e2816e713ce645aa47705d5f76877d19f9dab687038a254f17f13241bafa70"
+          },
+          {
+            "path": "docs/review/layers-01/native-chromium-2x-dark.png",
+            "sha256": "be9dfce056d7d8fb35ccbbbef860b0ee3f09d174d494fddb05daf0ed64f27e22"
+          },
+          {
+            "path": "docs/review/layers-01/native-chromium-2x-light.png",
+            "sha256": "494284065843efbd26f22d31494d561d63ab68e325c0673304c35f7fc486a844"
+          },
+          {
+            "path": "docs/review/layers-01/native-webkit-1x-dark.png",
+            "sha256": "f2af6ac8c28bf21c9dd985290352b60da90ce1427cf91c534734e77f3bffe192"
+          },
+          {
+            "path": "docs/review/layers-01/native-webkit-1x-light.png",
+            "sha256": "32565f9a0ee754948a7ce8a72490fc58233221b2226b4db1ca6ce10a0b41b58e"
+          },
+          {
+            "path": "docs/review/layers-01/native-webkit-2x-dark.png",
+            "sha256": "144f839818adefc85349439f78f46afcc9f0bfbd779aed01a217a8f90243740f"
+          },
+          {
+            "path": "docs/review/layers-01/native-webkit-2x-light.png",
+            "sha256": "a0a33156ee8bd4bd4430ecbc89080a36cd249fb225c3da41eb4d0330f7405a83"
+          },
+          {
+            "path": "docs/review/layers-01/summary-chromium-1x-dark.png",
+            "sha256": "61afd8f8293f8c5f5b5d457d83bc1811846c962771d742183f8f542eabc0b24f"
+          },
+          {
+            "path": "docs/review/layers-01/summary-chromium-1x-light.png",
+            "sha256": "a057b8e94d98f55d0196f1a56792825216026240b90a33f11b3f4a8fdbb2bf3d"
+          },
+          {
+            "path": "docs/review/layers-01/summary-chromium-2x-dark.png",
+            "sha256": "2e3593ea6f93c041dc8f80c0018bb7ff4486e871de7ec51c5986330dba618654"
+          },
+          {
+            "path": "docs/review/layers-01/summary-chromium-2x-light.png",
+            "sha256": "798f6b2db3ae403ff43426dd0b44e52716f7d29ec4eeef24e8e56f2b0bd1147e"
+          },
+          {
+            "path": "docs/review/layers-01/summary-webkit-1x-dark.png",
+            "sha256": "2aa11635973bff42b22d6bd8dcecd260a2c3aa7b8a3d56ab4c907cb74e5ed8ed"
+          },
+          {
+            "path": "docs/review/layers-01/summary-webkit-1x-light.png",
+            "sha256": "dd68ae3baaf4bf9c94feca16cc79edbb979859181638c0c4a4975772238fb892"
+          },
+          {
+            "path": "docs/review/layers-01/summary-webkit-2x-dark.png",
+            "sha256": "29000ff324af2692a545944c8d654bb1f657749e52d7f13e562963072c8ef0ba"
+          },
+          {
+            "path": "docs/review/layers-01/summary-webkit-2x-light.png",
+            "sha256": "2bb98dd9eee82f7181e66d861ea658fec91e8483a3cbbf9eb32ec86faf2eec3a"
           }
         ]
       },
       "status": "visually-reviewed-candidate",
-      "userApproval": "pending",
-      "independentReview": {
-        "reviewer": "craft_full_audit subagent",
-        "date": "2026-11-16",
-        "observation": "圖層：上層封閉菱形和後兩層開線分離，間距有節奏。",
-        "sourceObservation": "逐顆並列 Lucide/layers（exact）、Hugeicons Free/layers-01（exact） 的固定原稿，檢查主體構造、端部、內部密度及16px縮減；本輪判斷：圖層：上層封閉菱形和後兩層開線分離，間距有節奏。",
-        "evidence": [
-          {
-            "path": "docs/review/craft-02/inspection/initial/organization-01.png",
-            "sha256": "cccdb9094b13cfa47fcddb4847935948619295fd4b2a3dea2b9a24b4fa214823"
-          }
-        ]
-      }
+      "userApproval": "pending"
     },
     {
       "name": "pin",
@@ -32165,12 +32215,11 @@
       }
     }
   ],
-  "reviewCycle": "clearance-01",
-  "baselineCommit": "025fb009",
+  "reviewCycle": "layers-01",
+  "baselineCommit": "c870e06d",
   "reviewedNames": [
-    "phone-off",
-    "mail-x",
-    "file-lock",
-    "folder-lock"
-  ]
+    "layers"
+  ],
+  "reviewSummary": "本輪精修 layers 的薄片構造；其餘279顆幾何與前輪目視紀錄不變。",
+  "familySheet": "native-webkit-2x-dark.png"
 }

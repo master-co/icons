@@ -1,0 +1,61 @@
+<!doctype html><meta charset="utf-8"><title>Master layers · 薄片構造精修</title><style>*{box-sizing:border-box}body{margin:0;padding:28px;font:14px/1.5 -apple-system,sans-serif;background:#fafafa;color:#27272a}h1{font-size:24px}h2{font-size:14px}p{color:#71717a}.row{display:flex;align-items:center;gap:28px;padding:18px 0;border-top:1px solid #d4d4d8}.row b{width:155px}.source svg{width:100%;height:100%}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.card{padding:20px;border:1px solid #aaa;border-radius:8px}.native{display:flex;gap:20px;align-items:center;margin:18px 0}.low{opacity:.55}.dark{background:#18181b;color:#f4f4f5}.dark p{color:#a1a1aa}</style><h1>layers · 保留曲線，修正堆疊構造</h1><p>16／20／24px 原生與 80px 診斷。上游保留自身描邊。</p><div class="row"><b>Lucide 原稿</b><span class="source" style="width:16px;height:16px"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z" />
+  <path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12" />
+  <path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17" />
+</svg>
+</span><span class="source" style="width:20px;height:20px"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z" />
+  <path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12" />
+  <path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17" />
+</svg>
+</span><span class="source" style="width:24px;height:24px"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z" />
+  <path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12" />
+  <path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17" />
+</svg>
+</span><span class="source" style="width:80px;height:80px"><svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z" />
+  <path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12" />
+  <path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17" />
+</svg>
+</span></div><div class="row"><b>Master 修改前</b><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" color="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="3" focusable="false" aria-hidden="true"><path d="M3.5735 4.4592L7.5144 2.2698A1 1 0 0 1 8.4856 2.2698L12.4265 4.4592A1 1 0 0 1 12.4265 6.2075L8.4857 8.3969A1 1 0 0 1 7.5143 8.3969L3.5735 6.2075A1 1 0 0 1 3.5735 4.4592Z"/><path d="M2 8L7.5144 11.0635A1 1 0 0 0 8.4856 11.0635L14 8"/><path d="M2 10.6667L7.5144 13.7302A1 1 0 0 0 8.4856 13.7302L14 10.6667"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" color="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="3" focusable="false" aria-hidden="true"><path d="M4.4669 5.574L9.3929 2.8373A1.25 1.25 0 0 1 10.6071 2.8373L15.5331 5.574A1.25 1.25 0 0 1 15.5331 7.7594L10.607 10.4961A1.25 1.25 0 0 1 9.393 10.4961L4.4669 7.7594A1.25 1.25 0 0 1 4.4669 5.574Z"/><path d="M2.5 10L9.3929 13.8294A1.25 1.25 0 0 0 10.6071 13.8294L17.5 10"/><path d="M2.5 13.3333L9.3929 17.1627A1.25 1.25 0 0 0 10.6071 17.1627L17.5 13.3333"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" color="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="3" focusable="false" aria-hidden="true"><path d="M5.3602 6.6888L11.2715 3.4047A1.5 1.5 0 0 1 12.7285 3.4047L18.6398 6.6888A1.5 1.5 0 0 1 18.6398 9.3112L12.7285 12.5953A1.5 1.5 0 0 1 11.2715 12.5953L5.3602 9.3112A1.5 1.5 0 0 1 5.3602 6.6888Z"/><path d="M3 12L11.2715 16.5953A1.5 1.5 0 0 0 12.7285 16.5953L21 12"/><path d="M3 16L11.2715 20.5953A1.5 1.5 0 0 0 12.7285 20.5953L21 16"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" color="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="3" focusable="false" aria-hidden="true"><path d="M5.3602 6.6888L11.2715 3.4047A1.5 1.5 0 0 1 12.7285 3.4047L18.6398 6.6888A1.5 1.5 0 0 1 18.6398 9.3112L12.7285 12.5953A1.5 1.5 0 0 1 11.2715 12.5953L5.3602 9.3112A1.5 1.5 0 0 1 5.3602 6.6888Z"/><path d="M3 12L11.2715 16.5953A1.5 1.5 0 0 0 12.7285 16.5953L21 12"/><path d="M3 16L11.2715 20.5953A1.5 1.5 0 0 0 12.7285 20.5953L21 16"/></svg></div><div class="row"><b>Master 修正</b><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" color="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="3" focusable="false" aria-hidden="true"><path d="M2 4.8333C2 4.6333 2.1333 4.4712 2.3667 4.3667L7.5333 2.0424Q8 1.8333 8.4667 2.0424L13.6333 4.3667C13.8667 4.4712 14 4.6333 14 4.8333C14 5.0333 13.8667 5.1955 13.6333 5.3L8.4667 7.6242Q8 7.8333 7.5333 7.6242L2.3667 5.3C2.1333 5.1955 2 5.0333 2 4.8333Z"/><path d="M2 8C2 8.2 2.1333 8.3621 2.3667 8.4667L7.5333 10.7909Q8 11 8.4667 10.7909L13.6333 8.4667C13.8667 8.3621 14 8.2 14 8"/><path d="M2 11.1667C2 11.3667 2.1333 11.5288 2.3667 11.6333L7.5333 13.9576Q8 14.1667 8.4667 13.9576L13.6333 11.6333C13.8667 11.5288 14 11.3667 14 11.1667"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" color="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="3" focusable="false" aria-hidden="true"><path d="M2.5 6.0417C2.5 5.7917 2.6667 5.589 2.9583 5.4583L9.4167 2.553Q10 2.2917 10.5833 2.553L17.0417 5.4583C17.3333 5.589 17.5 5.7917 17.5 6.0417C17.5 6.2917 17.3333 6.4943 17.0417 6.625L10.5833 9.5303Q10 9.7917 9.4167 9.5303L2.9583 6.625C2.6667 6.4943 2.5 6.2917 2.5 6.0417Z"/><path d="M2.5 10C2.5 10.25 2.6667 10.4527 2.9583 10.5833L9.4167 13.4886Q10 13.75 10.5833 13.4886L17.0417 10.5833C17.3333 10.4527 17.5 10.25 17.5 10"/><path d="M2.5 13.9583C2.5 14.2083 2.6667 14.411 2.9583 14.5417L9.4167 17.447Q10 17.7083 10.5833 17.447L17.0417 14.5417C17.3333 14.411 17.5 14.2083 17.5 13.9583"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" color="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="3" focusable="false" aria-hidden="true"><path d="M3 7.25C3 6.95 3.2 6.7068 3.55 6.55L11.3 3.0636Q12 2.75 12.7 3.0636L20.45 6.55C20.8 6.7068 21 6.95 21 7.25C21 7.55 20.8 7.7932 20.45 7.95L12.7 11.4364Q12 11.75 11.3 11.4364L3.55 7.95C3.2 7.7932 3 7.55 3 7.25Z"/><path d="M3 12C3 12.3 3.2 12.5432 3.55 12.7L11.3 16.1864Q12 16.5 12.7 16.1864L20.45 12.7C20.8 12.5432 21 12.3 21 12"/><path d="M3 16.75C3 17.05 3.2 17.2932 3.55 17.45L11.3 20.9364Q12 21.25 12.7 20.9364L20.45 17.45C20.8 17.2932 21 17.05 21 16.75"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" color="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="3" focusable="false" aria-hidden="true"><path d="M3 7.25C3 6.95 3.2 6.7068 3.55 6.55L11.3 3.0636Q12 2.75 12.7 3.0636L20.45 6.55C20.8 6.7068 21 6.95 21 7.25C21 7.55 20.8 7.7932 20.45 7.95L12.7 11.4364Q12 11.75 11.3 11.4364L3.55 7.95C3.2 7.7932 3 7.55 3 7.25Z"/><path d="M3 12C3 12.3 3.2 12.5432 3.55 12.7L11.3 16.1864Q12 16.5 12.7 16.1864L20.45 12.7C20.8 12.5432 21 12.3 21 12"/><path d="M3 16.75C3 17.05 3.2 17.2932 3.55 17.45L11.3 20.9364Q12 21.25 12.7 20.9364L20.45 17.45C20.8 17.2932 21 17.05 21 16.75"/></svg></div><p>三層維持共同側邊寬度；下層以短弧回收，與頂層呼應。局部角型不再讓頂層過度內縮。</p>

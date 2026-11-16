@@ -1,24 +1,16 @@
-# Clearance 01 · 四顆試作驗證
+# Layers 01 · 單顆精修驗證
 
-2026-11-16，0.1.0-alpha.0。本輪只精修 phone-off、mail-x、file-lock、folder-lock；其餘 276 顆幾何精確保留。280 個命名圖稿、182 個基本概念、2,520 份 SVG。前輪完整獨立複審見 [Craft 02](validation-craft-02.md)。
+2026-11-16，private alpha。依使用者指定的 Lucide 方向精修 layers，九組母版均更新；其餘279顆精確保留，包含 Clearance 01 的四顆試作。仍為280名稱／182基本概念／2,520份SVG。前輪紀錄見 [Clearance 01](validation-clearance-01.md)。
 
-| 檢查 | 結果 |
-| --- | --- |
-| build／validate | SVG 結構、2,520 份 checksum、名稱與匯出、重複幾何、560 當期＋48 歷史來源、逐項前後稿及證據 hash 通過 |
-| Node／React／tree shaking | 17 項通過；全庫九組 SVG／React 相同，原始48及未修改276項保持相容 |
-| 新契約幾何 | 四顆九組實際背景墨線不得侵入前景外擴禁入區；phone-off 四個切面與斜線外緣平行 |
-| TypeScript | 通過 |
-| Chromium／WebKit DPR 1／2 | 32 項通過，包括全庫 10,080 組 raster、來源／前稿、離線下載與情境流程 |
-| 消費端套件 | 5,633 個封裝檔案；資料、runtime、固定／動態 React、SVG subpath 及 notices 通過 |
-| 可重現建置 | UTC／Asia/Taipei 輸出逐位元一致；詳見本輪紀錄 |
-| Skill | master-icons v0.5.0 驗證通過；版本化與已安裝副本一致 |
+- build／validate：全庫SVG、名稱、匯出、重複幾何、來源checksum、前後稿及目視證據hash通過。
+- 17項Node測試、SVG／React全九組一致、tree shaking、歷史精修範圍及TypeScript通過。
+- Chromium／WebKit DPR 1／2 的32項流程測試通過；包括全庫10,080組raster、本地與離線來源及前稿載入、下載、桌面與手機情境。
+- layers 另檢視兩份固定來源、真實前稿、三尺寸三角型、明暗、55%前景與文字／同排圖示；[前後圖](review/layers-01/summary.png)、[原生深色](review/layers-01/native-webkit-2x-dark.png)。
+- 消費端套件與UTC／Asia/Taipei可重現建置通過，詳見本輪日誌。
+- Skill v0.5.1 驗證通過；專案與已安裝副本一致。新增判斷針對重複物體的可見輪廓及結構曲線，不將個案偏好推廣為全庫更尖或更圓。
 
-Firefox 沿用上輪啟動失敗的未驗證狀態，本輪未重試；[既有失敗紀錄](review/craft-02/firefox.json)。
+Firefox 沿用既有啟動失敗的未驗證狀態，本輪未重試。沒有新增效果或公開API；layers 由獨立原生曲線繪製，依有意借鑑的Lucide構造保留ISC notice。SVG／React套件、SVG單檔與ZIP均保留授權。
 
-四顆另有 Chromium／WebKit DPR 1／2 的前後、九組原生、明暗、55% 前景及棋盤透明背景畫面：[前後與淨空診斷](review/clearance-01/summary.png)、[九組深色](review/clearance-01/native-webkit-2x-dark.png)、[固定來源並列](review/ui-v1/clearance-01/comparison.png)。本輪不新增虛線或透明度效果；兩者的逐顆不採用理由已寫入紀錄。
+只有layers的中央目視紀錄更新；[前輪紀錄](review/layers-01/previous-review.json)保留。前次把「三層、分離、等距」當成足夠理由的不足，已記入[設計教訓](layers-01.md)。使用者最終設計定案仍待檢視。
 
-[全庫新契約盤點](review/clearance-01/scope-audit.json) 是構造篩查，列出18顆待複核及7顆層次待判斷，不等於全部通過新契約。中央審查表只更新四顆，其他項目保留實際前輪基準、來源及目視證據。使用者最終定案仍待檢視。
-
-背景裁切輸出為固定原生線寬的填色輪廓；任意 CSS／React strokeWidth 覆寫不能重新計算其背景淨空。尺寸、圓角、色彩及無障礙入口保持原有方式；詳見 [實作取捨](clearance-01.md)。製作端幾何工具不進入 SVG／React 消費端。
-
-[瀏覽器紀錄](review/clearance-01/browser-tests.log) · [套件紀錄](review/clearance-01/package.log) · [可重現性](review/clearance-01/reproducible.log)。維持 private alpha，沒有發布 npm 或推送遠端。
+[瀏覽器](review/layers-01/browser-tests.log) · [套件](review/layers-01/package.log) · [可重現性](review/layers-01/reproducible.log)。未發布npm或推送遠端。
