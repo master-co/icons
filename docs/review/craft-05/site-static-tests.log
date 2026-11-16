@@ -1,0 +1,35 @@
+[WebServer] (node:97108) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 20 tests using 2 workers
+
+(node:97109) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:97110) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 [chromium] › work/craft-05/site-tests/site.spec.ts:27:1 › category sidebar and mobile selector preserve filters and keyboard navigation (346ms)
+  ✓   2 [chromium] › work/craft-05/site-tests/site.spec.ts:2:1 › sidebar paging stays fixed at the page end and footer follows the icon column (392ms)
+  ✓   4 [chromium] › work/craft-05/site-tests/site.spec.ts:78:2 › en home and all guide editions (406ms)
+  ✓   3 [chromium] › work/craft-05/site-tests/site.spec.ts:52:2 › en collection filters, URL, details, copy fallback and downloads (867ms)
+  ✓   5 [chromium] › work/craft-05/site-tests/site.spec.ts:52:2 › /tw collection filters, URL, details, copy fallback and downloads (775ms)
+  ✓   6 [chromium] › work/craft-05/site-tests/site.spec.ts:78:2 › /tw home and all guide editions (395ms)
+  ✓   7 [chromium] › work/craft-05/site-tests/site.spec.ts:90:1 › invalid URL, pagination, mobile, optical comparison and failed details (367ms)
+  ✓   9 [chromium] › work/craft-05/site-tests/site.spec.ts:135:1 › static page retains icons and download links without JavaScript (92ms)
+  ✓   8 [chromium] › work/craft-05/site-tests/site.spec.ts:107:1 › larger display sizes use valid masters and export the selected dimensions (730ms)
+(node:97153) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  10 [chromium] › work/craft-05/site-tests/site.spec.ts:143:1 › shared language, theme and document search controls (583ms)
+(node:97163) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  11 [webkit] › work/craft-05/site-tests/site.spec.ts:2:1 › sidebar paging stays fixed at the page end and footer follows the icon column (649ms)
+  ✓  12 [webkit] › work/craft-05/site-tests/site.spec.ts:27:1 › category sidebar and mobile selector preserve filters and keyboard navigation (573ms)
+  ✓  13 [webkit] › work/craft-05/site-tests/site.spec.ts:52:2 › en collection filters, URL, details, copy fallback and downloads (800ms)
+  ✓  14 [webkit] › work/craft-05/site-tests/site.spec.ts:78:2 › en home and all guide editions (651ms)
+  ✓  16 [webkit] › work/craft-05/site-tests/site.spec.ts:78:2 › /tw home and all guide editions (678ms)
+  ✓  15 [webkit] › work/craft-05/site-tests/site.spec.ts:52:2 › /tw collection filters, URL, details, copy fallback and downloads (809ms)
+  ✓  17 [webkit] › work/craft-05/site-tests/site.spec.ts:90:1 › invalid URL, pagination, mobile, optical comparison and failed details (441ms)
+  ✓  19 [webkit] › work/craft-05/site-tests/site.spec.ts:135:1 › static page retains icons and download links without JavaScript (222ms)
+  ✓  18 [webkit] › work/craft-05/site-tests/site.spec.ts:107:1 › larger display sizes use valid masters and export the selected dimensions (846ms)
+  ✓  20 [webkit] › work/craft-05/site-tests/site.spec.ts:143:1 › shared language, theme and document search controls (843ms)
+
+  20 passed (6.8s)

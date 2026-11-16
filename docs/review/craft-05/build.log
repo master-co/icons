@@ -1,0 +1,42 @@
+$ bun run build:icons && bun run build:review && bun run build:site
+$ bun run --cwd packages/icons build
+$ node scripts/build.mjs
+Built 392 icons × 3 sizes × 3 corners = 3528 SVGs and React exports.
+$ node scripts/build-review.mjs
+$ bun run --cwd site build
+$ node ../scripts/check-site-node.mjs && bun run prepare-site && astro build
+$ node --import tsx scripts/prepare.ts
+Prepared 392 icons and bilingual guides
+23:19:34 [types] Generated 110ms
+23:19:34 [build] output: "static"
+23:19:34 [build] mode: "static"
+23:19:34 [build] directory: /Users/aron/master-icons/site/out/
+23:19:34 [build] Collecting build info...
+23:19:34 [build] ✓ Completed in 147ms.
+23:19:34 [build] Building static entrypoints...
+23:19:35 [vite] ✓ built in 1.07s
+23:19:36 [vite] ✓ built in 642ms
+23:19:36 [build] Rearranging server assets...
+
+ generating static routes 
+23:19:36   ├─ /guide/accessibility.html (+162ms) 
+23:19:36   ├─ /tw/guide/accessibility.html (+20ms) 
+23:19:36   ├─ /guide/getting-started.html (+37ms) 
+23:19:36   ├─ /tw/guide/getting-started.html (+18ms) 
+23:19:36   ├─ /guide/license.html (+16ms) 
+23:19:36   ├─ /tw/guide/license.html (+15ms) 
+23:19:36   ├─ /guide/optical-sizes.html (+17ms) 
+23:19:36   ├─ /tw/guide/optical-sizes.html (+16ms) 
+23:19:36   ├─ /guide/react.html (+21ms) 
+23:19:36   ├─ /tw/guide/react.html (+17ms) 
+23:19:36   ├─ /guide/svg.html (+37ms) 
+23:19:36   ├─ /tw/guide/svg.html (+21ms) 
+23:19:36   ├─ /icons.html (+17ms) 
+23:19:36   ├─ /tw/icons.html (+13ms) 
+23:19:36   ├─ /index.html (+12ms) 
+23:19:36   ├─ /tw.html (+11ms) 
+23:19:36 ✓ Completed in 471ms.
+
+23:19:36 [build] ✓ Completed in 2.24s.
+23:19:36 [build] 16 page(s) built in 2.67s
+23:19:36 [build] Complete!

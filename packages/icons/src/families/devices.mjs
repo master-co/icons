@@ -1,4 +1,5 @@
 import { figure } from './shared.mjs';
+import { exteriorDetails } from '../occlusion.mjs';
 
 // Input devices use sparse keys and controls, not miniature product drawings.
 export const devices = {
@@ -16,7 +17,8 @@ export const devices = {
   },
   'mouse-pointer'(g) {
     const f=figure(g);
-    return [f.contour([[4,3],[20.5,10],[13,12.5],[10,20.5]],true,g.tip),f.line(13,12.5,19.5,20)];
+    const shell=f.contour([[4,3],[20.5,10],[13,12.5],[10,20.5]],true,g.tip);
+    return exteriorDetails(shell,[f.line(13,12.5,19.5,20)],g);
   },
   touchpad(g) {
     const f=figure(g);
@@ -42,9 +44,16 @@ export const devices = {
     const terminal=(x,y)=>g.s===16?f.dot(x,y,1):f.circle(x,y,1.5);
     const square=f.rect(16.5,5,3,3,r);
     if(g.s===16)Object.assign(square[1],{fill:'currentColor',stroke:'none'});
+    const branch=points=>{
+      const node=f.contour(points,false,r);
+      // Both ends join another structure. Square caps must not grow spurs
+      // across the central stem or intrude into the terminal holes.
+      node[1]['stroke-linecap']='butt';
+      return node;
+    };
     return [terminal(12,20),...f.arrow([f.line(12,18.5,12,3)],[[9.5,5.5],[12,3],[14.5,5.5]]),
-      f.contour([[12,16],[6.5,12.5],[6.5,9.5]],false,r),terminal(6.5,8),
-      f.contour([[12,13],[18,10],[18,8]],false,r),square];
+      branch([[12,16],[6.5,12.5],[6.5,9.5]]),terminal(6.5,8),
+      branch([[12,13],[18,10],[18,8]]),square];
   },
   cast(g) {
     const f=figure(g);

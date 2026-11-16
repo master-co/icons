@@ -1,4 +1,5 @@
 import { figure } from './shared.mjs';
+import { exteriorDetails } from '../occlusion.mjs';
 
 function indent(g,increase) {
   const f=figure(g),tip=increase?7.5:3.5,tail=increase?3.5:7.5;
@@ -38,8 +39,9 @@ export const typography = {
   },
   paintbrush(g) {
     const f=figure(g);
-    return [f.path('M9.5 14.5L18.5 3.5Q20.5 1.5 21.5 3Q22.5 4.5 20.5 6.5L12.5 16.5'),
-      f.path('M9.5 14.5C7 13 5 15 5 17.5Q5 20 3 21C8 22 12 20.5 12.5 16.5Z')];
+    const handle=f.path('M9.5 14.5L18.5 3.5Q20.5 1.5 21.5 3Q22.5 4.5 20.5 6.5L12.5 16.5');
+    const bristles=f.path('M9.5 14.5C7 13 5 15 5 17.5Q5 20 3 21C8 22 12 20.5 12.5 16.5Z');
+    return exteriorDetails(bristles,[handle],g);
   },
   palette(g) {
     const f=figure(g);

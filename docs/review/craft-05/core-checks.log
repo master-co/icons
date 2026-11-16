@@ -1,0 +1,65 @@
+$ node scripts/validate.mjs
+Validated 244 base concepts / 392 named drawings, 3528 SVG hashes, geometry, notices, 48 historical + 784 current pinned references, and 9 licensed ZIPs.
+$ bun run --cwd packages/icons test
+$ cd ../.. && node --test packages/icons/tests/*.test.mjs
+✔ symmetric objects retain symmetric painted contours at their closing seams (91.766875ms)
+✔ structural details preserve their enclosing silhouette (56.747625ms)
+✔ radial chart partitions preserve both the outer ring and donut hole (17.985417ms)
+✔ exterior attachments connect to the shell without entering its cavity (56.225125ms)
+✔ folded map and front coin keep internal seams inside their own shell (22.3825ms)
+✔ compass needle leaves a visible gap from the ring in every corner preset (2.071458ms)
+✔ adjacent list-collapse arrows remain distinct instead of forming a zigzag (2.36225ms)
+✔ contour regressions reject the actual pre-Craft-05 defects (14.562ms)
+✔ structural seams do not paint outside the actual package and drive shells (27.951042ms)
+✔ database state drawings retain empty upper compartments after Boolean operations (43.769ms)
+✔ circular foreground badges leave no background fragments inside their loops (27.524625ms)
+✔ clipboard pen sharp miter and all new service badges stay within the native canvas (81.975417ms)
+✔ keyboard return trims only the tip and keeps its return route and connected shaft (39.008583ms)
+✔ languages crossbar and briefcase seam stay inside their structural shells (7.592291ms)
+✔ wrench jaw, shoulders and handle share a genuine reflection axis (17.272042ms)
+✔ occluded ink stays outside the foreground clearance, including solid badge interiors (62.584083ms)
+✔ all four phone cuts follow parallel offset boundaries, instead of rounded path endpoints (6.064625ms)
+✔ per-stroke dashes and opacity survive React serialization (2.736917ms)
+✔ optical selection has explicit boundaries and rejects invalid input (0.481209ms)
+✔ dense small masters remove detail and corner profiles alter actual geometry (0.082166ms)
+✔ SVG escaping, decorative defaults, and opt-in directional policy (0.269625ms)
+✔ React exports match SVG geometry, preserve a11y and consume design props (3.0115ms)
+✔ static React imports tree shake unrelated icons and unused optical masters (27.28475ms)
+✔ all named React exports match authored SVG for every optical and corner master (119.193917ms)
+✔ RTL changes only the approved navigation set, preserving geometry transforms (2.378209ms)
+✔ original 48 names and all unreviewed masters remain compatible (6.176417ms)
+✔ real semantic paint effects survive SVG and React across all sizes (0.315375ms)
+✔ the saved 280 baseline preserves the 210 drawings before organization (5.968625ms)
+✔ the saved 280 baseline preserves all 220 pre-productivity definitions (5.294542ms)
+✔ only explicitly reviewed refinements differ from the complete baseline (33.498667ms)
+✔ craft-03 refinements preserve an explicit independent and root review history (26.05375ms)
+✔ semantic perforations retain flat ends independently of frame corner styles (0.666417ms)
+✔ every productivity drawing appears in a labelled product scenario (8.3335ms)
+✔ every expansion drawing is used in a labelled interface scenario (0.586125ms)
+✔ craft-04 changes exactly its explicit reviewed set and retains all 392 names (10.936041ms)
+✔ craft-05 preserves its immutable baseline and has a current individual review for every drawing (25.700625ms)
+ℹ tests 36
+ℹ suites 0
+ℹ pass 36
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 416.133292
+$ bun run test:types && bun run --cwd site type-check
+$ bun run --cwd packages/icons test:types
+$ tsc -p tests/tsconfig.json
+$ node ../scripts/check-site-node.mjs && bun run prepare-site && astro sync && astro-check --tsconfig tsconfig.json && svelte-check --tsconfig tsconfig.json
+$ node --import tsx scripts/prepare.ts
+Prepared 392 icons and bilingual guides
+23:20:14 [types] Generated 115ms
+Getting diagnostics for Astro files in /Users/aron/master-icons/site...
+Result (23 files): 
+- 0 errors
+- 0 warnings
+- 0 hints
+
+Loading svelte-check in workspace: /Users/aron/master-icons/site
+Getting Svelte diagnostics...
+
+svelte-check found 0 errors and 0 warnings

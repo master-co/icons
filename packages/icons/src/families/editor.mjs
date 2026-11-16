@@ -26,14 +26,17 @@ const editor = {
   },
   quote: (g) => {
     const f = figure(g), k = g.corner === "sharp" ? 0 : g.corner === "soft" ? 0.65 : 1.2;
+    if(k===0)return [3.5,14].map(x=>f.path(`M${x} 5H${x+6.5}V13C${x+6.5} 17 ${x+3.5} 19 ${x} 19V16C${x+2.5} 16 ${x+3} 14.5 ${x+3} 12H${x}Z`));
     return [3.5, 14].map((x) => f.path(`M${x + k} 5H${x + 6.5 - k}Q${x + 6.5} 5 ${x + 6.5} ${5 + k}V13C${x + 6.5} 17 ${x + 3.5} 19 ${x} 19V16C${x + 2.5} 16 ${x + 3} 14.5 ${x + 3} 12H${x + k}Q${x} 12 ${x} ${12 - k}V${5 + k}Q${x} 5 ${x + k} 5Z`));
   },
   move: (g) => {
     const f = figure(g);
-    const vertical=f.arrow([f.line(12,3,12,21)],[[8.5,6.5],[12,3],[15.5,6.5]]);
-    const horizontal=f.arrow([f.line(3,12,21,12)],[[17.5,8.5],[21,12],[17.5,15.5]]);
-    return [...f.arrow([vertical[0]],[[8.5,17.5],[12,21],[15.5,17.5]]),vertical[1],
-      ...f.arrow([horizontal[0]],[[6.5,8.5],[3,12],[6.5,15.5]]),horizontal[1]];
+    // Leave air between neighboring arrow wings; near-touching caps otherwise
+    // close the perimeter into a diamond, especially at 16px sharp.
+    const vertical=f.arrow([f.line(12,3,12,21)],[[9,6],[12,3],[15,6]]);
+    const horizontal=f.arrow([f.line(3,12,21,12)],[[18,9],[21,12],[18,15]]);
+    return [...f.arrow([vertical[0]],[[9,18],[12,21],[15,18]]),vertical[1],
+      ...f.arrow([horizontal[0]],[[6,9],[3,12],[6,15]]),horizontal[1]];
   },
   "zoom-in": (g) => zoom(g, true),
   "zoom-out": (g) => zoom(g, false),

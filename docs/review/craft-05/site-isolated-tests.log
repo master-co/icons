@@ -1,0 +1,5 @@
+[WebServer] $ astro preview --host 127.0.0.1 --port 4321 --ignore-lock --port "4331"
+[WebServer] (node:96961) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+Error: Timed out waiting 60000ms from config.webServer.
+

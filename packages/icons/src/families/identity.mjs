@@ -3,6 +3,9 @@ import { figure, mark } from "./shared.mjs";
 import { person } from "./core.mjs";
 function shield(g) {
   const f = figure(g), k = g.corner === "sharp" ? 0 : g.corner === "soft" ? 0.4 : 0.8;
+  // Sharp joins use the neighboring nondegenerate tangents. A zero-length
+  // quadratic at the closing apex can produce an asymmetric miter spur.
+  if(k===0)return [f.path("M12 3C14.5 4.8 17.5 5.7 20 6V11C20 16 17 19.5 12 21C7 19.5 4 16 4 11V6C6.5 5.7 9.5 4.8 12 3Z")];
   return [f.path(`M${12 - k} ${3 + k * 0.5}Q12 3 ${12 + k} ${3 + k * 0.5}C14.5 4.8 17.5 5.7 ${20 - k} 6Q20 6 20 ${6 + k}V11C20 16 17 19.5 ${12 + k} ${21 - k * 0.3}Q12 21 ${12 - k} ${21 - k * 0.3}C7 19.5 4 16 4 11V${6 + k}Q4 6 ${4 + k} 6C6.5 5.7 9.5 4.8 ${12 - k} ${3 + k * 0.5}Z`)];
 }
 function userState(g, state) {

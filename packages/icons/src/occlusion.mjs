@@ -72,6 +72,16 @@ export function enclosedDetails(outline,details,g) {
     return [outline,['path',{d:regionPathData(ink),fill:'currentColor',stroke:'none','fill-rule':ink.getFillTypeString()}]];
   }finally{inside.delete();ink.delete();}
 }
+// An attached exterior stem must not invade the hollow object's interior.
+// Retain the shell stroke and the stem's exposed end cap; only remove ink
+// inside the closed shell. Unlike badge knockout this creates no clearance.
+export function exteriorDetails(outline,details,g) {
+  const inside=geometry(outline),ink=paintedRegion(details,g);
+  try{
+    if(!ink.op(inside,P.PathOp.DIFFERENCE))throw new Error('Exterior attachment clipping failed');
+    return [outline,['path',{d:regionPathData(ink),fill:'currentColor',stroke:'none','fill-rule':ink.getFillTypeString()}]];
+  }finally{inside.delete();ink.delete();}
+}
 // The shaft may enter a chevron, but its cap may not redefine the tip.
 // Keep the rear half-plane open, and constrain only the forward join to the
 // head's actual painted envelope plus its enclosed wedge. No knockout gap.

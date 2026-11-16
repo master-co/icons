@@ -1,4 +1,4 @@
-import { enclosedDetails } from '../occlusion.mjs';
+import { enclosedDetails, exteriorDetails } from '../occlusion.mjs';
 import { figure, rotate } from './shared.mjs';
 
 export const systems = {
@@ -29,8 +29,8 @@ export const systems = {
   },
   workflow(g) {
     const f=figure(g),r=Math.min(g.r,g.v(.65,.85,1.1));
-    return [f.rect(3,3,7,6,r),f.rect(14,15,7,6,r),
-      ...f.arrow([f.contour([[6.5,9],[6.5,18],[14,18]],false,g.r)],[[11.5,15.5],[14,18],[11.5,20.5]])];
+    const connector=f.arrow([f.contour([[6.5,9],[6.5,18],[14,18]],false,g.r)],[[11.5,15.5],[14,18],[11.5,20.5]]);
+    return [f.rect(3,3,7,6,r),...exteriorDetails(f.rect(14,15,7,6,r),connector,g)];
   },
   'git-branch'(g) {
     const f=figure(g);

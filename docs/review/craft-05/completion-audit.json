@@ -1,0 +1,39 @@
+{
+  "objective": "依更新後的 skill 逐一審查所有 icons，修正接點、比例、曲線及構造問題，並持續寫入專案 skill。",
+  "status": "achieved",
+  "namedDrawings": 392,
+  "reviewed": 392,
+  "modified": 59,
+  "retained": 333,
+  "evidence": {
+    "individual": "docs/refinement-ledger.json",
+    "baseline": "references/craft-05/master-before.json",
+    "decisions": "docs/review/craft-05/decisions.json",
+    "visualFollowup": "docs/review/craft-05/visual-followup.json",
+    "unitAndTypes": "docs/review/craft-05/core-checks.log",
+    "browser": "docs/review/craft-05/browser-tests.log",
+    "package": "docs/review/craft-05/package.log",
+    "reproducible": "docs/review/craft-05/reproducible.log",
+    "delivery": "docs/review/craft-05/delivery-check.json",
+    "skill": "skills/master-icons/SKILL.md"
+  },
+  "checks": {
+    "allNamesIndividuallyReviewed": true,
+    "allNineVariantsCurrent": true,
+    "trueBeforePreserved": true,
+    "twoPinnedSourcesPerName": true,
+    "effectsEvaluated": true,
+    "skillVersion": "0.5.4",
+    "skillInstalledCopyIdentical": true,
+    "nodeTests": 36,
+    "browserTests": 36,
+    "staticSiteTests": 20,
+    "deliveryFlows": 4,
+    "noPublishOrPush": true
+  },
+  "limits": [
+    "Firefox remains unverified due to profile launch failure.",
+    "Astro preview startup issue remains; the built static site passed the full browser suite on an isolated server.",
+    "Alpha candidate; final user design approval is separate from this completed review."
+  ]
+}

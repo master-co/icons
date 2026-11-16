@@ -1,11 +1,11 @@
-import { knockout } from '../occlusion.mjs';
+import { enclosedDetails, knockout } from '../occlusion.mjs';
 import { figure } from "./shared.mjs";
 function speaker(g) {
   return [figure(g).contour([[3, 9], [7, 9], [12, 4.5], [12, 19.5], [7, 15], [3, 15]], true, Math.min(g.r, 0.6))];
 }
-function headphones(g) {
+function headphones(g, {bottom=20}={}) {
   const f = figure(g);
-  return [f.path("M3.5 13V11A8.5 8.5 0 0 1 20.5 11V13"), f.rect(3.5, 13, 4.5, 7, Math.min(g.r, 1.5)), f.rect(16, 13, 4.5, 7, Math.min(g.r, 1.5))];
+  return [f.path("M3.5 13V11A8.5 8.5 0 0 1 20.5 11V13"), f.rect(3.5, 13, 4.5, bottom-13, Math.min(g.r, 1.5)), f.rect(16, 13, 4.5, bottom-13, Math.min(g.r, 1.5))];
 }
 const media = {
   pause: (g) => {
@@ -37,11 +37,16 @@ const media = {
   headphones,
   image: (g) => {
     const f = figure(g);
-    return [f.rect(3, 4, 18, 16), f.dot(7.5, 8.5, g.v(0.9, 1.1, 1.25)), f.contour([[7, 20], [15, 11], [21, 17]], false, g.tip)];
+    const frame=f.rect(3, 4, 18, 16);
+    const landscape=f.contour([[7, 20], [15, 11], [21, 17]], false, g.tip);
+    return [...enclosedDetails(frame,[landscape],g), f.dot(7.5, 8.5, g.v(0.9, 1.1, 1.25))];
   },
   images: (g) => {
     const f = figure(g);
-    return [f.contour([[3, 7], [3, 21], [17, 21]], false, g.r), f.rect(7, 3, 14, 14), f.dot(10.5, 6.5, g.v(0.75, 0.9, 1)), f.contour([[7, 14], [12.5, 9.5], [21, 14]], false, g.tip)];
+    const frame=f.rect(7, 3, 14, 14);
+    const landscape=f.contour([[7, 14], [12.5, 9.5], [21, 14]], false, g.tip);
+    return [f.contour([[3, 7], [3, 21], [17, 21]], false, g.r),
+      ...enclosedDetails(frame,[landscape],g), f.dot(10.5, 6.5, g.v(0.75, 0.9, 1))];
   },
   camera: (g) => {
     const f = figure(g);
@@ -49,7 +54,11 @@ const media = {
   },
   video: (g) => {
     const f = figure(g);
-    return [f.rect(3, 5.5, 12, 13), f.contour([[15, 10], [21, 6.5], [21, 17.5], [15, 14]], false, Math.min(g.r, 1))];
+    const lens=f.contour([[15, 10], [21, 6.5], [21, 17.5], [15, 14]], false, Math.min(g.r, 1));
+    // End the lens at the body wall: diagonal square caps create small
+    // inward spikes inside the camera, even though its outer bounds fit.
+    lens[1]["stroke-linecap"]="butt";
+    return [f.rect(3, 5.5, 12, 13), lens];
   },
   play: (g) => [figure(g).contour([[7, 4.5], [20, 12], [7, 19.5]], true, Math.min(g.r, 1.2))]
 };

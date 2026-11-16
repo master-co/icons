@@ -7,7 +7,9 @@ function roundMessage(g) {
   return [f.path(`M4.2058 16.5A9 9 0 1 1 8 20.0623L${3+k} ${21-k*.2}Q3 21 ${3+k*.25} ${21-k}Z`)];
 }
 function mailState(g,state) {
-  return knockout(coreDrawings.mail(g),mark(g,state,state==='check'?18.25:17.5,18),g);
+  // Center the check's rising arm over the painted envelope corner; otherwise
+  // the sharp outer miter survives as a detached speck beyond the clearance.
+  return knockout(coreDrawings.mail(g),mark(g,state,state==='check'?19:17.5,18),g);
 }
 export function accountGear(g) {
   const f=figure(g),cx=17,cy=17,points=[];

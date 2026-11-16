@@ -50,13 +50,13 @@ export const organization={
     // Lucide-informed sheet returns: all three layers keep the same visible
     // width. Side curvature describes the sheet, independent of corner style.
     const t=g.corner==='sharp'?0:g.corner==='soft'?.7:1.1;
-    const valley=y=>`L${12-t} ${y-t*m}Q12 ${y} ${12+t} ${y-t*m}`;
+    const valley=y=>t===0?`L12 ${y}`:`L${12-t} ${y-t*m}Q12 ${y} ${12+t} ${y-t*m}`;
     const edge=y=>f.path(`M3 ${y}C3 ${y+.3} 3.2 ${y+.7-.35*m} 3.55 ${y+.7}`+
       valley(y+4.5)+`L20.45 ${y+.7}C20.8 ${y+.7-.35*m} 21 ${y+.3} 21 ${y}`);
     return [f.path(`M3 7.25C3 6.95 3.2 ${6.55+.35*m} 3.55 6.55`+
-      `L${12-t} ${2.75+t*m}Q12 2.75 ${12+t} ${2.75+t*m}L20.45 6.55`+
+      (t===0?'L12 2.75':`L${12-t} ${2.75+t*m}Q12 2.75 ${12+t} ${2.75+t*m}`)+'L20.45 6.55'+
       `C20.8 ${6.55+.35*m} 21 6.95 21 7.25C21 7.55 20.8 ${7.95-.35*m} 20.45 7.95`+
-      `L${12+t} ${11.75-t*m}Q12 11.75 ${12-t} ${11.75-t*m}L3.55 7.95`+
+      (t===0?'L12 11.75':`L${12+t} ${11.75-t*m}Q12 11.75 ${12-t} ${11.75-t*m}`)+'L3.55 7.95'+
       `C3.2 ${7.95-.35*m} 3 7.55 3 7.25Z`),edge(12),edge(16.75)];
   },
   pin:g=>pin(g),

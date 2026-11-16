@@ -1,0 +1,103 @@
+{
+  "reviewer": "root",
+  "date": "2026-11-16",
+  "status": "visually-reviewed-candidate",
+  "evidence": [
+    {
+      "path": "docs/review/craft-05/overview/page-1-light.png",
+      "sha256": "b15505f18dccfc01e59a30322b0c301fc90d7e8a0cbae47b9e57e5ae15cca351"
+    },
+    {
+      "path": "docs/review/craft-05/overview/page-2-dark.png",
+      "sha256": "2e04a2ec52c93f11f0a39b18f089c53b4931c6548ef6b5b2d80a766813d9c8da"
+    },
+    {
+      "path": "docs/review/craft-05/overview/page-3-light.png",
+      "sha256": "fcc172b220b675fc809010b99ed03578c82e8367577187645658a34dfbb2173f"
+    },
+    {
+      "path": "docs/review/craft-05/overview/page-4-dark.png",
+      "sha256": "e7e4c3eda1c1bd43d06550843fff75de0fce48ee23ccc2c442d70d7036e909e1"
+    },
+    {
+      "path": "docs/review/craft-05/overview/page-5-light.png",
+      "sha256": "18692b2cbfd1b0d980dac16c07cbebda6055bf64ba5f008281bf45c8cb1d931a"
+    },
+    {
+      "path": "docs/review/craft-05/overview/page-6-dark.png",
+      "sha256": "935e27fe56ff6af183780470a985f769d66f7fe319046660beacf8318c72d47b"
+    },
+    {
+      "path": "docs/review/craft-05/overview/page-7-light.png",
+      "sha256": "604e907ab2a74494b00eb8c91840ea86b0ea14b774103fea71b48a2b83cc1300"
+    },
+    {
+      "path": "docs/review/craft-05/effects-chromium-1x-light.png",
+      "sha256": "eb33169e700eaa6badbdf72094ea5a957dd46d1b9b590883d345374a561761a2"
+    },
+    {
+      "path": "docs/review/craft-05/effects-webkit-2x-dark.png",
+      "sha256": "3df20c27e6fa755fae06fa1d55f6c6672b81b73e26fb782d4ec680786b814bf4"
+    },
+    {
+      "path": "docs/review/craft-05/scenarios/dashboard-1280-light.png",
+      "sha256": "d9ec8a81e767aeed5d1494209be008ae25bba5a03354787c60ee5f3f0a5f7aa3"
+    },
+    {
+      "path": "docs/review/craft-05/scenarios/table-390-dark.png",
+      "sha256": "962eb68a102947e0dca3a973fc0dad98f13d9c1443452841adfb6cbfec2f2215"
+    },
+    {
+      "path": "docs/review/craft-05/scenarios/settings-1280-dark.png",
+      "sha256": "f0e5f790c0b1a13369b1ba986ecd90687003cca7643785999cee8cabb0c60a42"
+    },
+    {
+      "path": "docs/review/craft-05/scenarios/files-390-light.png",
+      "sha256": "a84a3b579502031b1505a38989c2a3faaf9f127b568eb8cd169c9a5243ea1811"
+    },
+    {
+      "path": "docs/review/craft-05/scenarios/editor-1280-light.png",
+      "sha256": "6054936364f51be450927acc79247615410514079722b73fdf36ecff0af51ce0"
+    },
+    {
+      "path": "docs/review/craft-05/scenarios/messages-390-dark.png",
+      "sha256": "50c2c080069463f97ee8970cd034280ef38b7f0e68ea621fa4acfba2bfec1a61"
+    },
+    {
+      "path": "docs/review/craft-05/scenarios/orders-1280-dark.png",
+      "sha256": "615b643a93fbf22a37678f7e7464d70029c8ab020e97b94d31b12adb547fd2ea"
+    },
+    {
+      "path": "docs/review/craft-05/scenarios/billing-390-light.png",
+      "sha256": "e7edf5c58f10e0f663772e742518d6cf1c329bd417a6a5f2dec925917d90479f"
+    },
+    {
+      "path": "docs/review/craft-05/summary.png",
+      "sha256": "e520e3c8a8b465be12b2ecdb0129c46c2e0204cb9e33e82eeff24f1ea60211d6"
+    }
+  ],
+  "observations": [
+    "392 個命名圖稿按概念排列，16／20／24 的同排輪廓與視覺重量未見新的失衡。",
+    "八個核心情境各複核一張桌面或手機畫面；工具列、表格操作與手機導覽未見裁切或黏連。其餘 76 張情境截圖僅作流程證據，未宣稱全數重新目視。",
+    "效果頁實看 Chromium 1x 淺底與 WebKit 2x 深底，九母版 SVG／React 成對一致；平切虛線與純輪廓 chart-area 保持可讀。",
+    "精修摘要上排依缺陷選擇 sharp／rounded，避免以未受影響的 soft 圖稿展示 sharp 尖角問題；下排維持原生 soft 比較。"
+  ],
+  "effects": {
+    "dashes": [
+      "ticket",
+      "file-archive",
+      "selection"
+    ],
+    "opacity": [],
+    "mismatches": [],
+    "representation": {
+      "ticket": "stroke-dasharray",
+      "file-archive": "stroke-dasharray",
+      "selection": "explicit flat-ended corner and middle segments; intentionally no stroke-dasharray"
+    }
+  },
+  "limits": [
+    "全庫各自的明暗九母版在 49 批逐項審查；此處跨家族頁僅抽選每頁一種主題。",
+    "使用者最終定案待確認；55% 前景檢查不是任意配色的對比保證。"
+  ]
+}

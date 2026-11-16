@@ -22,7 +22,7 @@ test('original 48 names and all unreviewed masters remain compatible',async()=>{
  const original=JSON.parse(await readFile('references/ui-v1/master-before.json'));
  const baseline=JSON.parse(await readFile('references/craft-01/master-before.json'));
  for(const [name,definition]of Object.entries(original))assert.deepEqual(baseline[name].variants,definition.variants,name);
- const approved=(JSON.parse(await readFile('docs/review/craft-04/decisions.json'))).expectedModifiedNames;
+ const approved=[...(JSON.parse(await readFile('docs/review/craft-04/decisions.json'))).expectedModifiedNames,...(JSON.parse(await readFile('docs/review/craft-05/decisions.json'))).expectedModifiedNames];
  for(const name of Object.keys(original))if(!['chart-bar','copy','bell-off',...approved].includes(name))assert.deepEqual(defs[name].variants,original[name].variants,name);
  for(const size of[20,24])assert.deepEqual(defs['chart-bar'].variants[size],original['chart-bar'].variants[size]);
 });
@@ -113,8 +113,33 @@ test('every expansion drawing is used in a labelled interface scenario',async()=
 test('craft-04 changes exactly its explicit reviewed set and retains all 392 names',async()=>{
  const baseline=JSON.parse(await readFile('references/craft-04/master-before.json'));
  const review=JSON.parse(await readFile('docs/review/craft-04/decisions.json'));
+ const defs=JSON.parse(await readFile('references/craft-05/master-before.json'));
  assert.deepEqual(Object.keys(defs).sort(),Object.keys(baseline).sort());
  const changed=Object.keys(baseline).filter(n=>JSON.stringify(baseline[n].variants)!==JSON.stringify(defs[n].variants));
  assert.deepEqual(changed.sort(),review.expectedModifiedNames.toSorted());
  for(const r of review.retainedChecks)assert.deepEqual(defs[r.name].variants,baseline[r.name].variants,r.name);
+});
+
+
+test('craft-05 preserves its immutable baseline and has a current individual review for every drawing',async()=>{
+ const {createHash}=await import('node:crypto');
+ const sha=x=>createHash('sha256').update(x).digest('hex');
+ const raw=await readFile('references/craft-05/master-before.json'),baseline=JSON.parse(raw);
+ const review=JSON.parse(await readFile('docs/review/craft-05/decisions.json'));
+ const ledger=JSON.parse(await readFile('docs/refinement-ledger.json'));
+ assert.equal(sha(raw),review.baselineSha256);
+ assert.deepEqual(Object.keys(defs).sort(),Object.keys(baseline).sort());
+ assert.deepEqual(review.reviewedNames.toSorted(),Object.keys(defs).sort());
+ const changed=Object.keys(baseline).filter(n=>JSON.stringify(baseline[n].variants)!==JSON.stringify(defs[n].variants)).sort();
+ assert.deepEqual(changed,review.expectedModifiedNames.toSorted());
+ assert.equal(review.decisions.length,392);
+ for(const d of review.decisions){
+  assert.equal(d.beforeHash,sha(JSON.stringify(baseline[d.name].variants)),d.name+' baseline');
+  assert.equal(d.afterHash,sha(JSON.stringify(defs[d.name].variants)),d.name+' reviewed geometry');
+  const r=ledger.icons.find(r=>r.name===d.name);
+  assert.equal(r.change.kind,d.kind);assert.equal(r.change.reason,d.reason);
+  assert.equal(r.sourceObservation,d.source);assert.deepEqual(r.visualReview.evidence,d.evidence);
+  assert.equal(r.visualReview.reviewer,'root');assert.equal(r.visualReview.variantsSha256,d.afterHash);
+  if(d.kind==='retained')assert.deepEqual(defs[d.name].variants,baseline[d.name].variants,d.name);
+ }
 });

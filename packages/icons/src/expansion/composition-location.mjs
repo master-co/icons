@@ -26,7 +26,12 @@ export const compositionLocation={
   blend:g=>{const f=figure(g);return [f.circle(14.75,9.25,6.75),f.circle(9.25,14.75,6.75)];},
   'distribute-horizontal':distribute,
   'distribute-vertical':g=>rotate(distribute(g),90,g),
-  compass:g=>{const f=figure(g);return [f.circle(12,12,9),f.contour([[16.5,7.5],[14,14],[7.5,16.5],[10,10]],true,g.tip)];},
+  compass:g=>{
+    const f=figure(g),reach=g.corner==='sharp'?3.5:4.5;
+    // Sharp miters lengthen acute needle tips. Compensate the centerline so
+    // the painted needle keeps visible air from the dial, as the round tips do.
+    return [f.circle(12,12,9),f.contour([[12+reach,12-reach],[14,14],[12-reach,12+reach],[10,10]],true,g.tip)];
+  },
   navigation:g=>{const f=figure(g);return [f.contour([[21,3],[14,21],[11,13],[3,10]],true,g.tip)];},
   route:g=>{const f=figure(g);return [f.circle(5,5,2.5),f.circle(19,19,2.5),f.path('M 7.5 5 H 17.5 C 22.2 5 22.2 12 17.5 12 H 6.5 C 1.8 12 1.8 19 6.5 19 H 16.5')];},
   signpost:g=>{const f=figure(g),r=Math.min(g.r,g.v(.5,.65,.8));return [f.contour([[3,6],[17,6],[21,10],[17,14],[3,14]],true,[r,r,g.tip,r,r]),f.line(10,3,10,6),f.line(10,14,10,21)];},

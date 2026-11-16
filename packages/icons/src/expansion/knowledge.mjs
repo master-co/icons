@@ -1,4 +1,5 @@
 import {figure,mark} from '../families/shared.mjs';
+import {enclosedDetails} from '../occlusion.mjs';
 import {file} from '../families/core.mjs';
 import {files} from '../families/files.mjs';
 
@@ -11,10 +12,11 @@ export const knowledge={
   },
   'book-open':g=>{
     const f=figure(g),k=g.corner==='sharp'?0:g.corner==='soft'?.45:.9;
-    return [f.path(`M3 ${4.5+k}Q3 4.5 ${3+k} ${4.5-k*.25}`+
-      `C6 3.5 9.5 4 12 6C14.5 4 18 3.5 ${21-k} ${4.5-k*.25}Q21 4.5 21 ${4.5+k}`+
-      `V${19-k}Q21 19 ${21-k} ${19-k*.25}C18 18 14.5 18.5 12 20.5`+
-      `C9.5 18.5 6 18 ${3+k} ${19-k*.25}Q3 19 3 ${19-k}Z`),f.line(12,6,12,20.5)];
+    const shell=f.path(`M3 ${4.5+k}`+(k?`Q3 4.5 ${3+k} ${4.5-k*.25}`:'')+
+      `C6 3.5 9.5 4 12 6C14.5 4 18 3.5 ${21-k} ${4.5-k*.25}`+(k?`Q21 4.5 21 ${4.5+k}`:'')+
+      `V${19-k}`+(k?`Q21 19 ${21-k} ${19-k*.25}`:'')+`C18 18 14.5 18.5 12 20.5`+
+      `C9.5 18.5 6 18 ${3+k} ${19-k*.25}`+(k?`Q3 19 3 ${19-k}`:'')+'Z');
+    return enclosedDetails(shell,[f.line(12,6,12,20.5)],g);
   },
   notebook:g=>{
     const f=figure(g),rings=g.s===16?[6.5,12,17.5]:[6,10,14,18];

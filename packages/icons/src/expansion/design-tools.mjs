@@ -1,4 +1,5 @@
 import {figure,rotate} from '../families/shared.mjs';
+import {exteriorDetails} from '../occlusion.mjs';
 
 function scissors(g){
   const f=figure(g),r=3,d=r/Math.sqrt(2);
@@ -16,8 +17,9 @@ function hand(g){
 
 function lasso(g){
   const f=figure(g);
-  return [f.path('M 5.2 12.9 C 3.8 11.7 3 10.2 3 8.8 C 3 5.3 6.9 3 12 3 C 17.1 3 21 5.6 21 9.4 C 21 13.6 16.9 16.3 11.8 16.3 C 10.3 16.3 9 16.1 7.8 15.6'),
-    f.circle(6,14.5,1.9),f.path('M 6 16.4 C 6 18.6 7.1 20.1 9 21')];
+  return exteriorDetails(f.circle(6,14.5,1.9),[
+    f.path('M 5.2 12.9 C 3.8 11.7 3 10.2 3 8.8 C 3 5.3 6.9 3 12 3 C 17.1 3 21 5.6 21 9.4 C 21 13.6 16.9 16.3 11.8 16.3 C 10.3 16.3 9 16.1 7.8 15.6'),
+    f.path('M 6 16.4 C 6 18.6 7.1 20.1 9 21')],g);
 }
 
 function selection(g){
@@ -39,7 +41,9 @@ function ruler(g){
 
 function magnet(g){
   const f=figure(g),r=g.corner==='sharp'?0:g.corner==='soft'?.35:.7;
-  return [f.path(`M 5 ${3+r} Q 5 3 ${5+r} 3 H ${9-r} Q 9 3 9 ${3+r} V 14 C 9 18 15 18 15 14 V ${3+r} Q 15 3 ${15+r} 3 H ${19-r} Q 19 3 19 ${3+r} V 14 C 19 23.3 5 23.3 5 14 Z`),
+  const shell=r?`M 5 ${3+r} Q 5 3 ${5+r} 3 H ${9-r} Q 9 3 9 ${3+r} V 14 C 9 18 15 18 15 14 V ${3+r} Q 15 3 ${15+r} 3 H ${19-r} Q 19 3 19 ${3+r} V 14 C 19 23.3 5 23.3 5 14 Z`:
+    'M5 3H9V14C9 18 15 18 15 14V3H19V14C19 23.3 5 23.3 5 14Z';
+  return [f.path(shell),
     f.line(5,7,9,7),f.line(15,7,19,7)];
 }
 
@@ -51,7 +55,8 @@ function component(g){
 
 function pipette(g){
   const f=figure(g),r=g.corner==='sharp'?0:g.corner==='soft'?.3:.6;
-  const head=f.path(`M 9 8 V 5 C 9 1 15 1 15 5 V 8 H ${17-r} Q 17 8 17 ${8+r} V ${11-r} Q 17 11 ${17-r} 11 H ${7+r} Q 7 11 7 ${11-r} V ${8+r} Q 7 8 ${7+r} 8 Z`);
+  const head=f.path(r?`M 9 8 V 5 C 9 1 15 1 15 5 V 8 H ${17-r} Q 17 8 17 ${8+r} V ${11-r} Q 17 11 ${17-r} 11 H ${7+r} Q 7 11 7 ${11-r} V ${8+r} Q 7 8 ${7+r} 8 Z`:
+    'M9 8V5C9 1 15 1 15 5V8H17V11H7V8Z');
   const stem=f.contour([[10,11],[10,17.5],[12,21],[14,17.5],[14,11]],false,g.tip);
   return rotate([head,stem],45,g);
 }

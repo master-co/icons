@@ -22,11 +22,18 @@ const analytics = {
   },
   "chart-pie": (g) => {
     const f = figure(g);
-    return [f.circle(12, 12, 9), f.contour([[12, 3], [12, 12], [21, 12]])];
+    const seam = f.contour([[12, 3], [12, 12], [21, 12]]);
+    // Radial partitions terminate on the ring centerline. Flat caps stay
+    // inside its ink envelope, including the sharp preset.
+    seam[1]["stroke-linecap"] = "butt";
+    return [f.circle(12, 12, 9), seam];
   },
   "chart-donut": (g) => {
     const f = figure(g);
-    return [f.circle(12, 12, 9), f.circle(12, 12, 4.5), f.line(12, 3, 12, 7.5), f.line(16.5, 12, 21, 12), ...g.s === 16 ? [] : [f.line(8.82, 15.18, 5.636, 18.364)]];
+    const seams = [f.line(12, 3, 12, 7.5), f.line(16.5, 12, 21, 12),
+      ...g.s === 16 ? [] : [f.line(8.82, 15.18, 5.636, 18.364)]];
+    return [f.circle(12, 12, 9), f.circle(12, 12, 4.5),
+      ...seams.map(([tag, attrs]) => [tag, {...attrs, "stroke-linecap": "butt"}])];
   },
   "trending-up": (g) => {
     const f = figure(g);
@@ -42,7 +49,9 @@ const analytics = {
   },
   gauge: (g) => {
     const f = figure(g);
-    return [f.path("M4.2 18A9 9 0 1 1 19.8 18"), f.line(12, 13.5, 16.5, 8.5), ...g.s === 16 ? [] : [f.line(6, 12, 7, 12), f.line(12, 6, 12, 7)]];
+    // The dial center is (12, ~13.5), not the canvas center. Both ticks
+    // occupy the same radial interval and remain clear of the rim.
+    return [f.path("M4.2 18A9 9 0 1 1 19.8 18"), f.line(12, 13.5, 16.5, 8.5), ...g.s === 16 ? [] : [f.line(5.5, 13.5, 6.5, 13.5), f.line(12, 7, 12, 8)]];
   },
   table: (g) => {
     const f = figure(g);

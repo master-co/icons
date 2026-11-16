@@ -1,17 +1,20 @@
-import { knockout } from '../occlusion.mjs';
+import { enclosedDetails, knockout } from '../occlusion.mjs';
 import { figure, mark } from './shared.mjs';
 import { coreDrawings } from './core.mjs';
 
 const calendarFrame=g=>coreDrawings.calendar(g).slice(0,4);
 function calendarWithClock(g) {
   const f=figure(g),clock=f.circle(17,17,4.5);
-  return knockout(calendarFrame(g),[clock,f.contour([[17,14.5],[17,17],[19,18]],false,g.tip)],g,{silhouettes:[clock]});
+  // A badge needs shorter hands than a scaled full-size clock: retain visible
+  // air between both hand caps and the ring at 16px.
+  return knockout(calendarFrame(g),[clock,f.contour([[17,15],[17,17],[18.5,18]],false,g.tip)],g,{silhouettes:[clock]});
 }
-// Move the pen right .75/down 2 on the 24-unit grid. Its offset consumes the
-// bottom-right corner, while the sharp miter remains inside the viewBox.
+// The lower barrel edge covers the clipboard corner including its sharp
+// painted miter, so the knockout cannot leave an isolated corner fragment.
 function clipboardPen(g) {
-  const f=figure(g),pencil=f.contour([[12.75,19],[19.25,12.5],[22.25,15.5],[15.75,22],[12.25,22.5]],true,g.tip);
-  return knockout(coreDrawings.clipboard(g),[pencil,...(g.s===16?[]:[f.line(17.75,14,20.75,17)])],g,{silhouettes:[pencil]});
+  const f=figure(g),pencil=f.contour([[12.75,19],[19.25,12.5],[22.625,15.875],[16.125,22.375],[12.25,22.5]],true,g.tip);
+  const pen=g.s===16?[pencil]:enclosedDetails(pencil,[f.line(17.75,14,21.125,17.375)],g);
+  return knockout(coreDrawings.clipboard(g),pen,g,{silhouettes:[pencil]});
 }
 export const scheduling = {
   'calendar-plus':g=>[...calendarFrame(g),...mark(g,'plus',12,15)],

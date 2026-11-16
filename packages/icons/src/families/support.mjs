@@ -1,27 +1,34 @@
-import { knockout } from '../occlusion.mjs';
+import { enclosedDetails, knockout } from '../occlusion.mjs';
 import { figure } from "./shared.mjs";
 import { headphones } from "./media.mjs";
 const receiverCorner = g => g.corner === "sharp" ? 0 : g.corner === "soft" ? 0.6 : 1.1;
 const support = {
   bug: (g) => {
     const f = figure(g);
-    return [f.path("M7 8H17V15A5 5 0 0 1 7 15ZM9 8V6A3 3 0 0 1 15 6V8"), ...[10, 14, 18].flatMap((y, i) => [f.line(7, y, 3, y + (i - 1) * 2), f.line(17, y, 21, y + (i - 1) * 2)]), ...g.s === 16 ? [] : [f.line(12, 8, 12, 20)]];
+    const seam=f.line(12,8,12,20);
+    seam[1]['stroke-linecap']='butt';
+    return [f.path("M7 8H17V15A5 5 0 0 1 7 15ZM9 8V6A3 3 0 0 1 15 6V8"), ...[10, 14, 18].flatMap((y, i) => [f.line(7, y, 3, y + (i - 1) * 2), f.line(17, y, 21, y + (i - 1) * 2)]), ...g.s === 16 ? [] : [seam]];
   },
   flag: (g) => {
     const f = figure(g);
-    return [f.line(5, 4, 5, 21), f.path("M5 4C10 1 14 7 19 4V14C14 17 10 11 5 14")];
+    const fabric=f.path("M5 4C10 1 14 7 19 4V14C14 17 10 11 5 14");
+    fabric[1]['stroke-linecap']='butt';
+    return [f.line(5, 4, 5, 21), fabric];
   },
   "mail-open": (g) => {
     const f = figure(g);
-    return [f.contour([[3, 9], [12, 3], [21, 9], [21, 21], [3, 21]], true, g.r), f.contour([[3, 9], [12, 15], [21, 9]])];
+    const shell=f.contour([[3, 9], [12, 3], [21, 9], [21, 21], [3, 21]], true, g.r);
+    return enclosedDetails(shell,[f.contour([[3, 9], [12, 15], [21, 9]])],g);
   },
   inbox: (g) => {
     const f = figure(g);
-    return [f.contour([[3, 12], [6.5, 5], [17.5, 5], [21, 12], [21, 20], [3, 20]], true, g.r), f.contour([[3, 12], [8, 12], [9.5, 15], [14.5, 15], [16, 12], [21, 12]], false, Math.min(g.r, 1))];
+    const shell=f.contour([[3, 12], [6.5, 5], [17.5, 5], [21, 12], [21, 20], [3, 20]], true, g.r);
+    return enclosedDetails(shell,[f.contour([[3, 12], [8, 12], [9.5, 15], [14.5, 15], [16, 12], [21, 12]], false, Math.min(g.r, 1))],g);
   },
   send: (g) => {
     const f = figure(g);
-    return [f.contour([[3, 10], [21, 3], [14, 21], [10.5, 13.5]], true, g.tip), f.line(10.5, 13.5, 21, 3)];
+    const shell=f.contour([[3, 10], [21, 3], [14, 21], [10.5, 13.5]], true, g.tip);
+    return enclosedDetails(shell,[f.line(10.5, 13.5, 21, 3)],g);
   },
   messages: (g) => {
     const f = figure(g);
@@ -37,7 +44,7 @@ const support = {
   },
   headset: (g) => {
     const f = figure(g);
-    return [...headphones(g), f.path("M20.5 20Q20.5 22 18 22H12")];
+    return [...headphones(g,{bottom:19}), f.path("M20.5 17V19C20.5 21 19.5 22 17.5 22H12")];
   },
   "at-sign": (g) => {
     const f = figure(g);

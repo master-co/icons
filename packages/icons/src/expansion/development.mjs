@@ -10,6 +10,7 @@ function gitRequest(g,compare=false){
 function puzzle(g){
   const f=figure(g),r=g.r*24/g.s;
   // Knobs and sockets are structural curves in all three corner presets.
+  if(r===0)return [f.path('M4 6H10C9 2 15 2 14 6H20V10C24 9 24 15 20 14V20H14C15 16 9 16 10 20H4V14C8 15 8 9 4 10Z')];
   return [f.path(`M${4+r} 6H10C9 2 15 2 14 6H${20-r}Q20 6 20 ${6+r}`+
     `V10C24 9 24 15 20 14V${20-r}Q20 20 ${20-r} 20`+
     `H14C15 16 9 16 10 20H${4+r}Q4 20 4 ${20-r}`+

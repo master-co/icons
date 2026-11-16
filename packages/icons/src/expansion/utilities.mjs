@@ -18,8 +18,11 @@ export const utilities={
   },
   'life-buoy':g=>{
     const f=figure(g),inner=4/Math.sqrt(2),outer=9/Math.sqrt(2);
-    const ties=[[-1,-1],[1,-1],[1,1],[-1,1]].map(([x,y])=>
-      f.line(12+x*inner,12+y*inner,12+x*outer,12+y*outer));
+    const ties=[[-1,-1],[1,-1],[1,1],[-1,1]].map(([x,y])=>{
+      const tie=f.line(12+x*inner,12+y*inner,12+x*outer,12+y*outer);
+      // Both ends enter a ring: square caps would nick its curved perimeter.
+      tie[1]['stroke-linecap']='butt';return tie;
+    });
     return [f.circle(12,12,9),f.circle(12,12,4),...ties];
   },
   languages:g=>{

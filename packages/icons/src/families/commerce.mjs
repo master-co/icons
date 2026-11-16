@@ -1,16 +1,20 @@
 import { knockout, enclosedDetails } from '../occlusion.mjs';
 import { file } from "./core.mjs";
 import { figure } from "./shared.mjs";
+function coinStack(g, left, top, width, depth) {
+  const f=figure(g),right=left+width,r=width/2,bottom=top+depth;
+  const shell=f.path(`M${left} ${top}A${r} 2.5 0 0 1 ${right} ${top}V${bottom}A${r} 2.5 0 0 1 ${left} ${bottom}Z`);
+  const seam=f.path(`M${left} ${top}A${r} 2.5 0 0 0 ${right} ${top}`);
+  return {shell,nodes:enclosedDetails(shell,[seam],g)};
+}
 const commerce = {
   banknote: (g) => {
     const f = figure(g);
     return [f.rect(2.5, 5.5, 19, 13), f.circle(12, 12, 3), f.dot(6, 12, g.stroke / 2), f.dot(18, 12, g.stroke / 2)];
   },
   coins: (g) => {
-    const f = figure(g);
-    const front=f.path("M10 14A5.5 2.5 0 1 0 21 14A5.5 2.5 0 1 0 10 14ZM10 14V18A5.5 2.5 0 0 0 21 18V14");
-    const silhouette=f.path("M10 14A5.5 2.5 0 0 1 21 14V18A5.5 2.5 0 0 1 10 18Z");
-    return knockout([f.path("M3 7A5 2.5 0 1 0 13 7A5 2.5 0 1 0 3 7ZM3 7V12.5A5 2.5 0 0 0 13 12.5V7")],[front],g,{silhouettes:[silhouette]});
+    const front=coinStack(g,10,14,11,4),back=coinStack(g,3,7,10,5.5);
+    return knockout(back.nodes,front.nodes,g,{silhouettes:[front.shell]});
   },
   receipt: (g) => {
     const f = figure(g);
@@ -26,7 +30,8 @@ const commerce = {
   },
   ticket: (g) => {
     const f = figure(g), k = Math.min(g.r * 24 / g.s, 1.5);
-    return [f.path(`M${2.5 + k} 5H${21.5 - k}Q21.5 5 21.5 ${5 + k}V9A3 3 0 0 0 21.5 15V${19 - k}Q21.5 19 ${21.5 - k} 19H${2.5 + k}Q2.5 19 2.5 ${19 - k}V15A3 3 0 0 0 2.5 9V${5 + k}Q2.5 5 ${2.5 + k} 5Z`), ["path", { ...f.line(15, 7.5, 15, 16.5)[1], "stroke-linecap": "butt", "stroke-dasharray": g.s === 16 ? `${f.u(2.5)} ${f.u(4)}` : `${f.u(1.5)} ${f.u(2.25)}` }]];
+    const shell=k===0?'M2.5 5H21.5V9A3 3 0 0 0 21.5 15V19H2.5V15A3 3 0 0 0 2.5 9V5Z':`M${2.5 + k} 5H${21.5 - k}Q21.5 5 21.5 ${5 + k}V9A3 3 0 0 0 21.5 15V${19 - k}Q21.5 19 ${21.5 - k} 19H${2.5 + k}Q2.5 19 2.5 ${19 - k}V15A3 3 0 0 0 2.5 9V${5 + k}Q2.5 5 ${2.5 + k} 5Z`;
+    return [f.path(shell), ["path", { ...f.line(15, 7.5, 15, 16.5)[1], "stroke-linecap": "butt", "stroke-dasharray": g.s === 16 ? `${f.u(2.5)} ${f.u(4)}` : `${f.u(1.5)} ${f.u(2.25)}` }]];
   },
   gift: (g) => {
     const f = figure(g);
@@ -62,7 +67,8 @@ const commerce = {
   },
   map: (g) => {
     const f = figure(g);
-    return [f.contour([[3, 6], [9, 3], [15, 6], [21, 3], [21, 18], [15, 21], [9, 18], [3, 21]], true, Math.min(g.r, 0.7)), f.line(9, 3, 9, 18), f.line(15, 6, 15, 21)];
+    const shell=f.contour([[3, 6], [9, 3], [15, 6], [21, 3], [21, 18], [15, 21], [9, 18], [3, 21]], true, Math.min(g.r, 0.7));
+    return enclosedDetails(shell,[f.line(9, 3, 9, 18), f.line(15, 6, 15, 21)],g);
   },
   "credit-card": (g) => {
     const f = figure(g);

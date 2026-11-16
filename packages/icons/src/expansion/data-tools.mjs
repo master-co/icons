@@ -27,7 +27,7 @@ export const dataTools={
   'chart-gantt':g=>{const f=figure(g);return [analytics['chart-line'](g)[0],
     f.line(7,6,14,6),f.line(10,11,20,11),f.line(14,16,21,16)];},
   'list-collapse':g=>{const f=figure(g);return [6,12,18].flatMap(y=>[
-    f.contour([[3.5,y-2],[5.5,y],[3.5,y+2]],false,g.tip),f.line(10, y,21,y)]);},
+    f.contour([[3.5,y-1.4],[5.5,y],[3.5,y+1.4]],false,g.tip),f.line(10, y,21,y)]);},
   'list-search':listSearch,
   'list-plus':g=>knockout(coreDrawings.list(g),mark(g,'plus',20,18),g),
   'list-minus':g=>knockout(coreDrawings.list(g),mark(g,'minus',20,18),g),

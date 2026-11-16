@@ -1,4 +1,5 @@
 import {figure,rotate} from '../families/shared.mjs';
+import {exteriorDetails} from '../occlusion.mjs';
 
 function face(g,sad=false){
   const f=figure(g),dot=g.v(.7,.8,.9);
@@ -33,7 +34,7 @@ export const feedback={
   'thumbs-down':g=>rotate(thumb(g),180,g),
   award:g=>{
     const f=figure(g),joinY=8+Math.sqrt(5.5**2-3.5**2);
-    return [f.circle(12,8,5.5),f.contour([[8.5,joinY],[7,21],[12,18],[17,21],[15.5,joinY]],false,g.tip)];
+    return exteriorDetails(f.circle(12,8,5.5),[f.contour([[8.5,joinY],[7,21],[12,18],[17,21],[15.5,joinY]],false,g.tip)],g);
   },
   target:g=>{
     const f=figure(g);

@@ -1,4 +1,4 @@
-import { knockout, joinedArrow } from '../occlusion.mjs';
+import { knockout, joinedArrow, enclosedDetails } from '../occlusion.mjs';
 import { path, line, circle, rect, contour, n } from '../geometry.mjs';
 
 // Coordinates are selected in native 16/20/24 grids. Dense icons have explicit
@@ -12,7 +12,9 @@ const horizontal=g=>{
 const rotated=(nodes,angle,c)=>nodes.map(([tag,attrs])=>[tag,{...attrs,transform:`rotate(${angle} ${c} ${c})`}]);
 function file(g,text=false){
   const {s,v,r}=g, l=v(3.5,4.5,5.5), rr=s-l, t=v(2,2.5,3), b=s-t, f=v(3,3.5,4.5);
-  const result=[contour([[l,t],[rr-f,t],[rr,t+f],[rr,b],[l,b]],r,true),contour([[rr-f,t],[rr-f,t+f],[rr,t+f]],Math.min(r,0.6))];
+  const shell=contour([[l,t],[rr-f,t],[rr,t+f],[rr,b],[l,b]],r,true);
+  const fold=contour([[rr-f,t],[rr-f,t+f],[rr,t+f]],Math.min(r,0.6));
+  const result=enclosedDetails(shell,[fold],g);
   if(text) for(const y of (s===16?[10.5]:s===20?[11,14.5]:[12.5,17])) result.push(line(l+v(2.5,3,3.5),y,rr-v(2.5,3,3.5),y));
   return result;
 }
@@ -72,7 +74,7 @@ export const coreDrawings={
   'x':g=>{const a=g.v(4,5,6),b=g.s-a;return [line(a,a,b,b),line(a,b,b,a)];},
   'search':g=>{const {v}=g,c=v(7,8.75,10.5),r=v(4.5,5.75,7),q=c+r/Math.sqrt(2);return [circle(c,c,r),line(q,q,v(14,17.5,21),v(14,17.5,21))];},
   'filter':g=>{const {s,c,v,r}=g,l=v(2.5,3,3.5),t=v(3,4,4.5),neck=v(8.5,10.5,12.5),h=v(1.25,1.5,2);return [contour([[l,t],[s-l,t],[c+h,neck],[c+h,v(12,15,18)],[c-h,v(13,16.5,20)],[c-h,neck]],Math.min(r,1),true)];},
-  'more-horizontal':g=>[g.v(3.5,4.5,5.5),g.c,g.v(12.5,15.5,18.5)].map(x=>circle(x,g.c,g.v(0.85,1,1.1),{fill:'currentColor',stroke:'none'})),
+  'more-horizontal':g=>[g.v(3.5,4.5,5.5),g.c,g.v(12.5,15.5,18.5)].map(x=>circle(x,g.c,g.v(1.05,1.25,1.5),{fill:'currentColor',stroke:'none'})),
   'sliders':g=>{const {s,c,v}=g,l=v(2.5,3,3.5),r=s-l,ys=[v(4.5,5.5,6.5),v(11.5,14.5,17.5)],xs=[v(6,7,8),v(10,13,16)],radius=v(1.5,2,2.5);return ys.flatMap((y,i)=>[line(l,y,xs[i]-radius,y),circle(xs[i],y,radius),line(xs[i]+radius,y,r,y)]);},
   'file':g=>file(g),'file-text':g=>file(g,true),'folder':g=>folder(g),'folder-plus':g=>folder(g,true),
   'calendar':g=>{
@@ -92,7 +94,7 @@ export const coreDrawings={
   'circle':g=>[ring(g)],
   'square':g=>{const l=g.v(2.5,3,3.5);return [rect(l,l,g.s-2*l,g.s-2*l,g.r)];},
   'star':g=>{const {c,v,tip}=g,ro=v(5.75,7.25,8.75),ri=v(2.75,3.5,4.25);const points=Array.from({length:10},(_,i)=>{const a=-Math.PI/2+i*Math.PI/5,r=i%2?ri:ro;return [c+Math.cos(a)*r,c+0.4+Math.sin(a)*r];});return [contour(points,tip,true)];},
-  'heart':g=>{const {s,c,v,tip}=g,l=v(2,2.5,3),t=v(3.25,4,4.75),y=v(6.5,8,9.5),b=v(13.75,17,20.5),k=tip*0.65;return [path(`M${c+k} ${b-k}Q${c} ${b} ${c-k} ${b-k}C${c-v(2,3,3.5)} ${b-v(1.5,2,2.5)} ${l} ${v(9,11,13)} ${l} ${y}C${l} ${t-v(1,1.25,1.5)} ${c-v(2,2.5,3)} ${t-v(1,1.25,1.5)} ${c} ${t+v(1,1.5,2)}C${c+v(2,2.5,3)} ${t-v(1,1.25,1.5)} ${s-l} ${t-v(1,1.25,1.5)} ${s-l} ${y}C${s-l} ${v(9,11,13)} ${c+v(2,3,3.5)} ${b-v(1.5,2,2.5)} ${c+k} ${b-k}Z`)];},
+  'heart':g=>{const {s,c,v,tip}=g,l=v(2,2.5,3),t=v(3.25,4,4.75),y=v(6.5,8,9.5),b=v(13.75,17,20.5),k=tip*0.65;return [path(`${k?`M${c+k} ${b-k}Q${c} ${b} ${c-k} ${b-k}`:`M${c} ${b}`}C${c-v(2,3,3.5)} ${b-v(1.5,2,2.5)} ${l} ${v(9,11,13)} ${l} ${y}C${l} ${t-v(1,1.25,1.5)} ${c-v(2,2.5,3)} ${t-v(1,1.25,1.5)} ${c} ${t+v(1,1.5,2)}C${c+v(2,2.5,3)} ${t-v(1,1.25,1.5)} ${s-l} ${t-v(1,1.25,1.5)} ${s-l} ${y}C${s-l} ${v(9,11,13)} ${c+v(2,3,3.5)} ${b-v(1.5,2,2.5)} ${c+k} ${b-k}Z`)];},
   'info-circle':g=>[ring(g),dot(g.c,g.v(5,6,7),g),line(g.c,g.v(8,10,12),g.c,g.v(11,14,17))],
   'check-circle':g=>[ring(g),contour([[g.v(5,6,7.5),g.c],[g.v(7.25,9,11),g.v(10,12.5,15)],[g.v(11.25,14,17),g.v(6,7.5,9)]],g.tip)],
   'alert-triangle':g=>{const {s,c,v,r}=g;return [contour([[c,v(2.25,3,3.5)],[v(14.25,17.5,21),v(13.5,17,20.5)],[v(1.75,2.5,3),v(13.5,17,20.5)]],Math.min(r,1.1),true),line(c,v(6.5,8,9),c,v(9,11.5,14)),dot(c,v(11.5,14.5,17.5),g)];},
