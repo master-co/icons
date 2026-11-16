@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "date": "2026-11-16",
-  "scope": "Craft 02: independent re-review of all 280 drawings; 2 refined, 278 retained; no additions",
+  "scope": "Clearance 01: four pilot refinements; remaining 276 retain prior visual records; 280 construction screening only",
   "namedDrawings": 280,
   "baseConcepts": 182,
   "statusMeaning": "工程檢查與 Codex 目視紀錄獨立；visually-reviewed-candidate 不等於使用者最終定案。",
@@ -19509,7 +19509,7 @@
       "confusableWith": [
         "phone"
       ],
-      "sourceObservation": "Lucide的聽筒端部有曲角，Tabler用斜面端部並保留整體弧形；兩者都以真實切口避開斜線。Master延續自身phone的端部曲線及局部角型，維持既有切口與固定方向。",
+      "sourceObservation": "Lucide 的聽筒有曲面端部；Tabler 用端部斜面及整體弧線，兩者皆保留關閉斜線。Master 保留自身 phone 母型與方向，另外要求每個切面與斜線外緣等距，避免開放線段的圓端帽改變淨空。",
       "references": [
         {
           "name": "phone-off",
@@ -19543,11 +19543,11 @@
       "effects": {
         "dashes": {
           "used": false,
-          "reason": "不採用；「關閉通話」由連續輪廓、節點或實際斷開關係表意，沒有需虛線表示的隱藏／未完成邊界。"
+          "reason": "不採用；前景狀態與實體主輪廓不表示未完成或隱藏邊界，以連續線保持小尺寸辨識。"
         },
         "opacity": {
           "used": false,
-          "reason": "不採用；「關閉通話」的必要輪廓與狀態可以靠形狀、留白表達，淡化不提供額外語意。"
+          "reason": "不採用；遮擋層次由真透明的幾何淨空表達，不以淡化掩蓋切口或背景碰撞。"
         },
         "gradients": {
           "used": false,
@@ -19556,72 +19556,115 @@
       },
       "change": {
         "kind": "modified",
-        "reason": "修改後通過目視檢查：關閉通話：原稿的兩端仍是硬直折，與phone母型端部不一致；按phone相同局部k曲角精修兩端，保留斜線切口及中段曲率。",
+        "reason": "修改後通過目視檢查：從完整 phone 母型重新扣除斜線的外擴剪影，四個切面平行於斜線；取消切口圓端侵入淨空，保留聽筒兩端的曲角與中段曲率。",
         "before": {
-          "path": "references/craft-02/master-before.json",
-          "variantsSha256": "52b0ebdfa58318ab818e482737fe1de1915bdb8abd8696839680713533fa5b09"
+          "path": "references/clearance-01/master-before.json",
+          "variantsSha256": "07f11457203566c5633b916162df77b4db2a48909d6d5294e44a047b27f48c69"
         }
       },
       "visualReview": {
         "status": "modified-after-visual-review",
-        "reviewer": "craft_full_audit: 280 drawings; root: modified drawings and family comparison",
+        "reviewer": "root: four clearance pilots",
         "date": "2026-11-16",
-        "batch": "craft2-ui-13",
-        "variantsSha256": "07f11457203566c5633b916162df77b4db2a48909d6d5294e44a047b27f48c69",
+        "batch": "clearance-01",
+        "variantsSha256": "76d28dbe53967d056306f19ca846df390e755320480cebf81ce2c79ae3d47fd2",
         "checks": [
           "16/20/24",
           "sharp/soft/rounded",
           "light/dark",
           "55-percent-foreground",
+          "checkerboard-transparency",
           "adjacent-text",
           "pinned-original-sources",
-          "before-current"
+          "before-current",
+          "Chromium/WebKit DPR 1/2",
+          "offset-contour exclusion and parallel cut faces"
         ],
         "evidence": [
           {
-            "path": "docs/review/ui-v1/craft2-ui-13/comparison.png",
-            "sha256": "175be79623677af97ac4ef8792a6e6cee4acf0157a031e3c2bc709b0ffc02574"
+            "path": "docs/review/ui-v1/clearance-01/comparison.png",
+            "sha256": "8942f69bf2b6331b3c9c351a3f3ccfc87da740ffce4c64de42fe065998fe18d1"
           },
           {
-            "path": "docs/review/ui-v1/craft2-ui-13/comparison-dark.png",
-            "sha256": "b476e2c1e98a791e3e85796d465b33ced7554aa0d04a685ea4335c2c4503e5ee"
+            "path": "docs/review/ui-v1/clearance-01/comparison-dark.png",
+            "sha256": "f3a074b063132618b25296bdf965d60d0e2a9cff684c584fbf9fa00673728b36"
           },
           {
-            "path": "docs/review/ui-v1/craft2-ui-13/native.png",
-            "sha256": "06c975fcf1ee1c2db5184083d0b935a6ebd86dbc48bae64d743b8f39057c5833"
+            "path": "docs/review/ui-v1/clearance-01/native.png",
+            "sha256": "52c89f10f087660c640f2e1ac9b49f8a95f7690d161a06f83306724e968817c7"
           },
           {
-            "path": "docs/review/ui-v1/craft2-ui-13/native-dark.png",
-            "sha256": "0f88e58c356f195f970b0f8386a9ec94112c75f909d30467033ecec3c44ae54f"
+            "path": "docs/review/ui-v1/clearance-01/native-dark.png",
+            "sha256": "b79f65fb6e142c615a58bfe7c4cace47d8592f6ba2885355fd2716eacdf9e74f"
           },
           {
-            "path": "docs/review/craft-02/inspection/initial/ui-13.png",
-            "sha256": "2b2fa33a1fa216e17ed584351ab74f26e08e7a954ca864e6fdc4fd1d7c1ad134"
+            "path": "docs/review/clearance-01/native-chromium-1x-dark.png",
+            "sha256": "bca351bacedc72b9fac0bcc42c542ab6a39fa8f7e39d213cfccd6202152162c1"
           },
           {
-            "path": "docs/review/craft-02/inspection/revised/ui-13.png",
-            "sha256": "aa7de3d8f468974e7e93b83b6bab117d242c1a21b702e32cc449959533b93ecb"
+            "path": "docs/review/clearance-01/native-chromium-1x-light.png",
+            "sha256": "65636bd5adacdbb638152d76e1777edf380246331c0fbf756182004a3ded5642"
+          },
+          {
+            "path": "docs/review/clearance-01/native-chromium-2x-dark.png",
+            "sha256": "acb7d33270349ae72b3e5240d023485096cffbcef64a2d8db72e639de3136ead"
+          },
+          {
+            "path": "docs/review/clearance-01/native-chromium-2x-light.png",
+            "sha256": "7d87383e72bd6a87d49a127fbc54474252b8af10575c8c81f5c9d503a1a10c65"
+          },
+          {
+            "path": "docs/review/clearance-01/native-webkit-1x-dark.png",
+            "sha256": "a18ae95f082bf7b5129163f3dd4ac78bbfec746fdeacaaa6de6d521fe2de9d58"
+          },
+          {
+            "path": "docs/review/clearance-01/native-webkit-1x-light.png",
+            "sha256": "b3771f402126ada6fcff3e60a95ce6125dc0f2fcb072e6662e2f6624dcb19b79"
+          },
+          {
+            "path": "docs/review/clearance-01/native-webkit-2x-dark.png",
+            "sha256": "6466e9ae907fedb62c29071f4da0350b6101c4a1cc4823e7decc184cad9c70de"
+          },
+          {
+            "path": "docs/review/clearance-01/native-webkit-2x-light.png",
+            "sha256": "09879d4f7715a1193cc6e98bb0a00786bc2b7a977f2d2ca87253e096a4404b2a"
+          },
+          {
+            "path": "docs/review/clearance-01/summary-chromium-1x-dark.png",
+            "sha256": "76fdf26b41a4d906c525181e9c64dfd5ad959aef210c9191f97424814171231c"
+          },
+          {
+            "path": "docs/review/clearance-01/summary-chromium-1x-light.png",
+            "sha256": "9b4832b81c615516f2738462f55122f4001bd24596af20dd3f7298877756fe13"
+          },
+          {
+            "path": "docs/review/clearance-01/summary-chromium-2x-dark.png",
+            "sha256": "55bbcf7639183e1f90ed7e62dcfd3c693b851d996db4cae7c5ee96402d47439e"
+          },
+          {
+            "path": "docs/review/clearance-01/summary-chromium-2x-light.png",
+            "sha256": "1eb72b247d2ec0f3fa746952b50b1ec8a78cde65f3ccbe0c432d3d7d2efbe717"
+          },
+          {
+            "path": "docs/review/clearance-01/summary-webkit-1x-dark.png",
+            "sha256": "ddc64634495e0235b5a91966cb8634953663fd192a96067cfbd845a59fb8bfaf"
+          },
+          {
+            "path": "docs/review/clearance-01/summary-webkit-1x-light.png",
+            "sha256": "8202dd1eee99d4e0db1327037f972dd7e15001b3c7769e22fc0c154438160aad"
+          },
+          {
+            "path": "docs/review/clearance-01/summary-webkit-2x-dark.png",
+            "sha256": "7c72dc1c9e833746b0e16920c775a03daf86c958c95d51440e50bdac18f3694f"
+          },
+          {
+            "path": "docs/review/clearance-01/summary-webkit-2x-light.png",
+            "sha256": "fd77456ddf7d8dbe656c9ebd7c46c916a850a5b504a372c1a0a7f99577fe3285"
           }
         ]
       },
       "status": "visually-reviewed-candidate",
-      "userApproval": "pending",
-      "independentReview": {
-        "reviewer": "craft_full_audit subagent",
-        "date": "2026-11-16",
-        "observation": "關閉通話：原稿的兩端仍是硬直折，與phone母型端部不一致；按phone相同局部k曲角精修兩端，保留斜線切口及中段曲率。",
-        "sourceObservation": "逐顆並列 Lucide/phone-off（exact）、Tabler/phone-off（exact） 的固定原稿，檢查主體構造、端部、內部密度及16px縮減；本輪判斷：關閉通話：原稿的兩端仍是硬直折，與phone母型端部不一致；按phone相同局部k曲角精修兩端，保留斜線切口及中段曲率。",
-        "evidence": [
-          {
-            "path": "docs/review/craft-02/inspection/initial/ui-13.png",
-            "sha256": "2b2fa33a1fa216e17ed584351ab74f26e08e7a954ca864e6fdc4fd1d7c1ad134"
-          },
-          {
-            "path": "docs/review/craft-02/inspection/revised/ui-13.png",
-            "sha256": "aa7de3d8f468974e7e93b83b6bab117d242c1a21b702e32cc449959533b93ecb"
-          }
-        ]
-      }
+      "userApproval": "pending"
     },
     {
       "name": "headset",
@@ -24880,7 +24923,7 @@
       "confusableWith": [
         "folder-search"
       ],
-      "sourceObservation": "兩稿都在右下放置小鎖並打開資料夾框；Lucide 的鎖梁較高，Tabler 鎖體較緊湊。",
+      "sourceObservation": "Lucide 和 Tabler 都用資料夾肩部配右下鎖頭；對照可見主體右邊框須服務鎖的辨識。Master 沿鎖的實際外輪廓外擴扣除，與 file-lock 共用距離與鎖頭構造。",
       "references": [
         {
           "name": "folder-lock",
@@ -24914,11 +24957,11 @@
       "effects": {
         "dashes": {
           "used": false,
-          "reason": "不採用；「鎖定資料夾」由連續輪廓、節點或實際斷開關係表意，沒有需虛線表示的隱藏／未完成邊界。"
+          "reason": "不採用；前景狀態與實體主輪廓不表示未完成或隱藏邊界，以連續線保持小尺寸辨識。"
         },
         "opacity": {
           "used": false,
-          "reason": "不採用；「鎖定資料夾」的必要輪廓與狀態可以靠形狀、留白表達，淡化不提供額外語意。"
+          "reason": "不採用；遮擋層次由真透明的幾何淨空表達，不以淡化掩蓋切口或背景碰撞。"
         },
         "gradients": {
           "used": false,
@@ -24926,65 +24969,116 @@
         }
       },
       "change": {
-        "kind": "retained",
-        "reason": "保留原稿：鎖定資料夾：小鎖獨立置右下，鎖梁與框體可辨，不用微小鑰匙孔。",
+        "kind": "modified",
+        "reason": "修改後通過目視檢查：資料夾使用與 file-lock 相同鎖頭及原生淨空距離；恢復預挖角過早截斷的右邊框，再沿鎖梁與鎖體裁切，保留資料夾肩部比例。",
         "before": {
-          "path": "references/craft-02/master-before.json",
+          "path": "references/clearance-01/master-before.json",
           "variantsSha256": "b0b7f03014283b4d019ef674a1a083ac8cb66be26502f6dabff4669531c4b97b"
         }
       },
       "visualReview": {
-        "status": "retained-after-visual-review",
-        "reviewer": "craft_full_audit: 280 drawings; root: modified drawings and family comparison",
+        "status": "modified-after-visual-review",
+        "reviewer": "root: four clearance pilots",
         "date": "2026-11-16",
-        "batch": "craft2-organization-01",
-        "variantsSha256": "b0b7f03014283b4d019ef674a1a083ac8cb66be26502f6dabff4669531c4b97b",
+        "batch": "clearance-01",
+        "variantsSha256": "d8e18e9efc2e9261a9c73ed459974ef6e5f59a1cd217b27d2ee41483f327cc0d",
         "checks": [
           "16/20/24",
           "sharp/soft/rounded",
           "light/dark",
           "55-percent-foreground",
+          "checkerboard-transparency",
           "adjacent-text",
           "pinned-original-sources",
-          "before-current"
+          "before-current",
+          "Chromium/WebKit DPR 1/2",
+          "offset-contour exclusion and parallel cut faces"
         ],
         "evidence": [
           {
-            "path": "docs/review/ui-v1/craft2-organization-01/comparison.png",
-            "sha256": "77add4df85f8d7acb4faae7ada7f5bcd65c9e02be4cd9d65db1a356078a518fa"
+            "path": "docs/review/ui-v1/clearance-01/comparison.png",
+            "sha256": "8942f69bf2b6331b3c9c351a3f3ccfc87da740ffce4c64de42fe065998fe18d1"
           },
           {
-            "path": "docs/review/ui-v1/craft2-organization-01/comparison-dark.png",
-            "sha256": "6a6d8c64869592c9d5de5e1e5f5ccbbb5d6715c964805b5d9953df8b101966dd"
+            "path": "docs/review/ui-v1/clearance-01/comparison-dark.png",
+            "sha256": "f3a074b063132618b25296bdf965d60d0e2a9cff684c584fbf9fa00673728b36"
           },
           {
-            "path": "docs/review/ui-v1/craft2-organization-01/native.png",
-            "sha256": "4a06ee36a31311b7907457917930dd2c31977160ba3a3f94915d6336b6d48946"
+            "path": "docs/review/ui-v1/clearance-01/native.png",
+            "sha256": "52c89f10f087660c640f2e1ac9b49f8a95f7690d161a06f83306724e968817c7"
           },
           {
-            "path": "docs/review/ui-v1/craft2-organization-01/native-dark.png",
-            "sha256": "e843116ebc8f23ec378c0f463ff5032c910df1ffa518da6107ce30a087ab9880"
+            "path": "docs/review/ui-v1/clearance-01/native-dark.png",
+            "sha256": "b79f65fb6e142c615a58bfe7c4cace47d8592f6ba2885355fd2716eacdf9e74f"
           },
           {
-            "path": "docs/review/craft-02/inspection/initial/organization-01.png",
-            "sha256": "cccdb9094b13cfa47fcddb4847935948619295fd4b2a3dea2b9a24b4fa214823"
+            "path": "docs/review/clearance-01/native-chromium-1x-dark.png",
+            "sha256": "bca351bacedc72b9fac0bcc42c542ab6a39fa8f7e39d213cfccd6202152162c1"
+          },
+          {
+            "path": "docs/review/clearance-01/native-chromium-1x-light.png",
+            "sha256": "65636bd5adacdbb638152d76e1777edf380246331c0fbf756182004a3ded5642"
+          },
+          {
+            "path": "docs/review/clearance-01/native-chromium-2x-dark.png",
+            "sha256": "acb7d33270349ae72b3e5240d023485096cffbcef64a2d8db72e639de3136ead"
+          },
+          {
+            "path": "docs/review/clearance-01/native-chromium-2x-light.png",
+            "sha256": "7d87383e72bd6a87d49a127fbc54474252b8af10575c8c81f5c9d503a1a10c65"
+          },
+          {
+            "path": "docs/review/clearance-01/native-webkit-1x-dark.png",
+            "sha256": "a18ae95f082bf7b5129163f3dd4ac78bbfec746fdeacaaa6de6d521fe2de9d58"
+          },
+          {
+            "path": "docs/review/clearance-01/native-webkit-1x-light.png",
+            "sha256": "b3771f402126ada6fcff3e60a95ce6125dc0f2fcb072e6662e2f6624dcb19b79"
+          },
+          {
+            "path": "docs/review/clearance-01/native-webkit-2x-dark.png",
+            "sha256": "6466e9ae907fedb62c29071f4da0350b6101c4a1cc4823e7decc184cad9c70de"
+          },
+          {
+            "path": "docs/review/clearance-01/native-webkit-2x-light.png",
+            "sha256": "09879d4f7715a1193cc6e98bb0a00786bc2b7a977f2d2ca87253e096a4404b2a"
+          },
+          {
+            "path": "docs/review/clearance-01/summary-chromium-1x-dark.png",
+            "sha256": "76fdf26b41a4d906c525181e9c64dfd5ad959aef210c9191f97424814171231c"
+          },
+          {
+            "path": "docs/review/clearance-01/summary-chromium-1x-light.png",
+            "sha256": "9b4832b81c615516f2738462f55122f4001bd24596af20dd3f7298877756fe13"
+          },
+          {
+            "path": "docs/review/clearance-01/summary-chromium-2x-dark.png",
+            "sha256": "55bbcf7639183e1f90ed7e62dcfd3c693b851d996db4cae7c5ee96402d47439e"
+          },
+          {
+            "path": "docs/review/clearance-01/summary-chromium-2x-light.png",
+            "sha256": "1eb72b247d2ec0f3fa746952b50b1ec8a78cde65f3ccbe0c432d3d7d2efbe717"
+          },
+          {
+            "path": "docs/review/clearance-01/summary-webkit-1x-dark.png",
+            "sha256": "ddc64634495e0235b5a91966cb8634953663fd192a96067cfbd845a59fb8bfaf"
+          },
+          {
+            "path": "docs/review/clearance-01/summary-webkit-1x-light.png",
+            "sha256": "8202dd1eee99d4e0db1327037f972dd7e15001b3c7769e22fc0c154438160aad"
+          },
+          {
+            "path": "docs/review/clearance-01/summary-webkit-2x-dark.png",
+            "sha256": "7c72dc1c9e833746b0e16920c775a03daf86c958c95d51440e50bdac18f3694f"
+          },
+          {
+            "path": "docs/review/clearance-01/summary-webkit-2x-light.png",
+            "sha256": "fd77456ddf7d8dbe656c9ebd7c46c916a850a5b504a372c1a0a7f99577fe3285"
           }
         ]
       },
       "status": "visually-reviewed-candidate",
-      "userApproval": "pending",
-      "independentReview": {
-        "reviewer": "craft_full_audit subagent",
-        "date": "2026-11-16",
-        "observation": "鎖定資料夾：小鎖獨立置右下，鎖梁與框體可辨，不用微小鑰匙孔。",
-        "sourceObservation": "逐顆並列 Lucide/folder-lock（exact）、Tabler/folder-lock（exact） 的固定原稿，檢查主體構造、端部、內部密度及16px縮減；本輪判斷：鎖定資料夾：小鎖獨立置右下，鎖梁與框體可辨，不用微小鑰匙孔。",
-        "evidence": [
-          {
-            "path": "docs/review/craft-02/inspection/initial/organization-01.png",
-            "sha256": "cccdb9094b13cfa47fcddb4847935948619295fd4b2a3dea2b9a24b4fa214823"
-          }
-        ]
-      }
+      "userApproval": "pending"
     },
     {
       "name": "file-lock",
@@ -24994,7 +25088,7 @@
       "confusableWith": [
         "folder-lock"
       ],
-      "sourceObservation": "Lucide 在左下置鎖；Tabler 在右下置鎖。右下方案可與資料夾權限保持同一位置，但需留意鎖梁靠近折角。",
+      "sourceObservation": "Lucide 把鎖置於左下，Tabler 放右下；兩者均避開紙邊，避免鎖與文件混為一體。Master 沿右下鎖的封閉剪影裁切，鎖梁孔也屬遮擋範圍，不讓文件邊線穿出。",
       "references": [
         {
           "name": "file-lock",
@@ -25028,11 +25122,11 @@
       "effects": {
         "dashes": {
           "used": false,
-          "reason": "不採用；「鎖定檔案」由連續輪廓、節點或實際斷開關係表意，沒有需虛線表示的隱藏／未完成邊界。"
+          "reason": "不採用；前景狀態與實體主輪廓不表示未完成或隱藏邊界，以連續線保持小尺寸辨識。"
         },
         "opacity": {
           "used": false,
-          "reason": "不採用；「鎖定檔案」的必要輪廓與狀態可以靠形狀、留白表達，淡化不提供額外語意。"
+          "reason": "不採用；遮擋層次由真透明的幾何淨空表達，不以淡化掩蓋切口或背景碰撞。"
         },
         "gradients": {
           "used": false,
@@ -25040,65 +25134,116 @@
         }
       },
       "change": {
-        "kind": "retained",
-        "reason": "保留原稿：鎖定檔案：外文件在狀態區截斷，母型與小鎖各自清楚。",
+        "kind": "modified",
+        "reason": "修改後通過目視檢查：以完整紙張母型扣除鎖梁、鎖體與內部的外擴剪影，避免背景紙邊穿過鎖孔；底邊切口改為貼合鎖體外緣的淨空，保留折角。",
         "before": {
-          "path": "references/craft-02/master-before.json",
+          "path": "references/clearance-01/master-before.json",
           "variantsSha256": "0dc6431b9f1f87e0fc19171ad09a835b13bd3702cd3ae98ad3ab19f448d09d41"
         }
       },
       "visualReview": {
-        "status": "retained-after-visual-review",
-        "reviewer": "craft_full_audit: 280 drawings; root: modified drawings and family comparison",
+        "status": "modified-after-visual-review",
+        "reviewer": "root: four clearance pilots",
         "date": "2026-11-16",
-        "batch": "craft2-organization-01",
-        "variantsSha256": "0dc6431b9f1f87e0fc19171ad09a835b13bd3702cd3ae98ad3ab19f448d09d41",
+        "batch": "clearance-01",
+        "variantsSha256": "d98e776ed44979adbb5a2a60687b2972e4f0e96b351055e9b2377353423c2567",
         "checks": [
           "16/20/24",
           "sharp/soft/rounded",
           "light/dark",
           "55-percent-foreground",
+          "checkerboard-transparency",
           "adjacent-text",
           "pinned-original-sources",
-          "before-current"
+          "before-current",
+          "Chromium/WebKit DPR 1/2",
+          "offset-contour exclusion and parallel cut faces"
         ],
         "evidence": [
           {
-            "path": "docs/review/ui-v1/craft2-organization-01/comparison.png",
-            "sha256": "77add4df85f8d7acb4faae7ada7f5bcd65c9e02be4cd9d65db1a356078a518fa"
+            "path": "docs/review/ui-v1/clearance-01/comparison.png",
+            "sha256": "8942f69bf2b6331b3c9c351a3f3ccfc87da740ffce4c64de42fe065998fe18d1"
           },
           {
-            "path": "docs/review/ui-v1/craft2-organization-01/comparison-dark.png",
-            "sha256": "6a6d8c64869592c9d5de5e1e5f5ccbbb5d6715c964805b5d9953df8b101966dd"
+            "path": "docs/review/ui-v1/clearance-01/comparison-dark.png",
+            "sha256": "f3a074b063132618b25296bdf965d60d0e2a9cff684c584fbf9fa00673728b36"
           },
           {
-            "path": "docs/review/ui-v1/craft2-organization-01/native.png",
-            "sha256": "4a06ee36a31311b7907457917930dd2c31977160ba3a3f94915d6336b6d48946"
+            "path": "docs/review/ui-v1/clearance-01/native.png",
+            "sha256": "52c89f10f087660c640f2e1ac9b49f8a95f7690d161a06f83306724e968817c7"
           },
           {
-            "path": "docs/review/ui-v1/craft2-organization-01/native-dark.png",
-            "sha256": "e843116ebc8f23ec378c0f463ff5032c910df1ffa518da6107ce30a087ab9880"
+            "path": "docs/review/ui-v1/clearance-01/native-dark.png",
+            "sha256": "b79f65fb6e142c615a58bfe7c4cace47d8592f6ba2885355fd2716eacdf9e74f"
           },
           {
-            "path": "docs/review/craft-02/inspection/initial/organization-01.png",
-            "sha256": "cccdb9094b13cfa47fcddb4847935948619295fd4b2a3dea2b9a24b4fa214823"
+            "path": "docs/review/clearance-01/native-chromium-1x-dark.png",
+            "sha256": "bca351bacedc72b9fac0bcc42c542ab6a39fa8f7e39d213cfccd6202152162c1"
+          },
+          {
+            "path": "docs/review/clearance-01/native-chromium-1x-light.png",
+            "sha256": "65636bd5adacdbb638152d76e1777edf380246331c0fbf756182004a3ded5642"
+          },
+          {
+            "path": "docs/review/clearance-01/native-chromium-2x-dark.png",
+            "sha256": "acb7d33270349ae72b3e5240d023485096cffbcef64a2d8db72e639de3136ead"
+          },
+          {
+            "path": "docs/review/clearance-01/native-chromium-2x-light.png",
+            "sha256": "7d87383e72bd6a87d49a127fbc54474252b8af10575c8c81f5c9d503a1a10c65"
+          },
+          {
+            "path": "docs/review/clearance-01/native-webkit-1x-dark.png",
+            "sha256": "a18ae95f082bf7b5129163f3dd4ac78bbfec746fdeacaaa6de6d521fe2de9d58"
+          },
+          {
+            "path": "docs/review/clearance-01/native-webkit-1x-light.png",
+            "sha256": "b3771f402126ada6fcff3e60a95ce6125dc0f2fcb072e6662e2f6624dcb19b79"
+          },
+          {
+            "path": "docs/review/clearance-01/native-webkit-2x-dark.png",
+            "sha256": "6466e9ae907fedb62c29071f4da0350b6101c4a1cc4823e7decc184cad9c70de"
+          },
+          {
+            "path": "docs/review/clearance-01/native-webkit-2x-light.png",
+            "sha256": "09879d4f7715a1193cc6e98bb0a00786bc2b7a977f2d2ca87253e096a4404b2a"
+          },
+          {
+            "path": "docs/review/clearance-01/summary-chromium-1x-dark.png",
+            "sha256": "76fdf26b41a4d906c525181e9c64dfd5ad959aef210c9191f97424814171231c"
+          },
+          {
+            "path": "docs/review/clearance-01/summary-chromium-1x-light.png",
+            "sha256": "9b4832b81c615516f2738462f55122f4001bd24596af20dd3f7298877756fe13"
+          },
+          {
+            "path": "docs/review/clearance-01/summary-chromium-2x-dark.png",
+            "sha256": "55bbcf7639183e1f90ed7e62dcfd3c693b851d996db4cae7c5ee96402d47439e"
+          },
+          {
+            "path": "docs/review/clearance-01/summary-chromium-2x-light.png",
+            "sha256": "1eb72b247d2ec0f3fa746952b50b1ec8a78cde65f3ccbe0c432d3d7d2efbe717"
+          },
+          {
+            "path": "docs/review/clearance-01/summary-webkit-1x-dark.png",
+            "sha256": "ddc64634495e0235b5a91966cb8634953663fd192a96067cfbd845a59fb8bfaf"
+          },
+          {
+            "path": "docs/review/clearance-01/summary-webkit-1x-light.png",
+            "sha256": "8202dd1eee99d4e0db1327037f972dd7e15001b3c7769e22fc0c154438160aad"
+          },
+          {
+            "path": "docs/review/clearance-01/summary-webkit-2x-dark.png",
+            "sha256": "7c72dc1c9e833746b0e16920c775a03daf86c958c95d51440e50bdac18f3694f"
+          },
+          {
+            "path": "docs/review/clearance-01/summary-webkit-2x-light.png",
+            "sha256": "fd77456ddf7d8dbe656c9ebd7c46c916a850a5b504a372c1a0a7f99577fe3285"
           }
         ]
       },
       "status": "visually-reviewed-candidate",
-      "userApproval": "pending",
-      "independentReview": {
-        "reviewer": "craft_full_audit subagent",
-        "date": "2026-11-16",
-        "observation": "鎖定檔案：外文件在狀態區截斷，母型與小鎖各自清楚。",
-        "sourceObservation": "逐顆並列 Lucide/file-lock（exact）、Tabler/file-lock（exact） 的固定原稿，檢查主體構造、端部、內部密度及16px縮減；本輪判斷：鎖定檔案：外文件在狀態區截斷，母型與小鎖各自清楚。",
-        "evidence": [
-          {
-            "path": "docs/review/craft-02/inspection/initial/organization-01.png",
-            "sha256": "cccdb9094b13cfa47fcddb4847935948619295fd4b2a3dea2b9a24b4fa214823"
-          }
-        ]
-      }
+      "userApproval": "pending"
     },
     {
       "name": "keyboard",
@@ -31282,7 +31427,7 @@
       "confusableWith": [
         "mail-check"
       ],
-      "sourceObservation": "Lucide與Tabler採相同位置的外掛叉號，與勾號可共用信封開口。",
+      "sourceObservation": "Lucide、Tabler 均以右下 × 及開口信封保留辨識；其開口多以線段端點控制。Master 恢復完整母型，讓切口貼合 × 實際外擴輪廓，減少矩形缺角造成的主體縮損。",
       "references": [
         {
           "name": "mail-x",
@@ -31316,11 +31461,11 @@
       "effects": {
         "dashes": {
           "used": false,
-          "reason": "不採用；「失敗郵件」由連續輪廓、節點或實際斷開關係表意，沒有需虛線表示的隱藏／未完成邊界。"
+          "reason": "不採用；前景狀態與實體主輪廓不表示未完成或隱藏邊界，以連續線保持小尺寸辨識。"
         },
         "opacity": {
           "used": false,
-          "reason": "不採用；「失敗郵件」的必要輪廓與狀態可以靠形狀、留白表達，淡化不提供額外語意。"
+          "reason": "不採用；遮擋層次由真透明的幾何淨空表達，不以淡化掩蓋切口或背景碰撞。"
         },
         "gradients": {
           "used": false,
@@ -31328,65 +31473,116 @@
         }
       },
       "change": {
-        "kind": "retained",
-        "reason": "保留原稿：失敗郵件：右下X與信封母型不重疊，和mail-check共享開口。",
+        "kind": "modified",
+        "reason": "修改後通過目視檢查：從完整信封扣除 × 的兩臂外擴區域，恢復原本矩形挖角多刪的右側輪廓；切口沿斜臂及端部曲線，16px 仍可辨識信封與狀態。",
         "before": {
-          "path": "references/craft-02/master-before.json",
+          "path": "references/clearance-01/master-before.json",
           "variantsSha256": "671b001ff1de7d2d9a9c92387b4d2f765e0cf51dea98f2c394605743a1b2188d"
         }
       },
       "visualReview": {
-        "status": "retained-after-visual-review",
-        "reviewer": "craft_full_audit: 280 drawings; root: modified drawings and family comparison",
+        "status": "modified-after-visual-review",
+        "reviewer": "root: four clearance pilots",
         "date": "2026-11-16",
-        "batch": "craft2-productivity-06",
-        "variantsSha256": "671b001ff1de7d2d9a9c92387b4d2f765e0cf51dea98f2c394605743a1b2188d",
+        "batch": "clearance-01",
+        "variantsSha256": "29115dd5f2bba28f5944398cb78e877e5e00c0ae2d70621450708794d81b324b",
         "checks": [
           "16/20/24",
           "sharp/soft/rounded",
           "light/dark",
           "55-percent-foreground",
+          "checkerboard-transparency",
           "adjacent-text",
           "pinned-original-sources",
-          "before-current"
+          "before-current",
+          "Chromium/WebKit DPR 1/2",
+          "offset-contour exclusion and parallel cut faces"
         ],
         "evidence": [
           {
-            "path": "docs/review/ui-v1/craft2-productivity-06/comparison.png",
-            "sha256": "2fb92fb706469c06845881747f3fdffb9b5b6d66be9a6f8acbaecb9bcd11af58"
+            "path": "docs/review/ui-v1/clearance-01/comparison.png",
+            "sha256": "8942f69bf2b6331b3c9c351a3f3ccfc87da740ffce4c64de42fe065998fe18d1"
           },
           {
-            "path": "docs/review/ui-v1/craft2-productivity-06/comparison-dark.png",
-            "sha256": "b83adf6e4d8a8909d096425a6c6abcffef82fa8e82c6c63866fb7d9c0a8c2ac7"
+            "path": "docs/review/ui-v1/clearance-01/comparison-dark.png",
+            "sha256": "f3a074b063132618b25296bdf965d60d0e2a9cff684c584fbf9fa00673728b36"
           },
           {
-            "path": "docs/review/ui-v1/craft2-productivity-06/native.png",
-            "sha256": "33d838ea3903d5d38d05fd66b03383f68b8000a9d05be11bc1b412b2e1f75780"
+            "path": "docs/review/ui-v1/clearance-01/native.png",
+            "sha256": "52c89f10f087660c640f2e1ac9b49f8a95f7690d161a06f83306724e968817c7"
           },
           {
-            "path": "docs/review/ui-v1/craft2-productivity-06/native-dark.png",
-            "sha256": "70126817e1f8a0729773a817012d683f9a4feba8f00daf30aa4d9d0e024fec0b"
+            "path": "docs/review/ui-v1/clearance-01/native-dark.png",
+            "sha256": "b79f65fb6e142c615a58bfe7c4cace47d8592f6ba2885355fd2716eacdf9e74f"
           },
           {
-            "path": "docs/review/craft-02/inspection/initial/productivity-06.png",
-            "sha256": "1d081ab5e19f824b8787cd3f96c7ecb6c6c317024a80787cca4d29e5e245e0e0"
+            "path": "docs/review/clearance-01/native-chromium-1x-dark.png",
+            "sha256": "bca351bacedc72b9fac0bcc42c542ab6a39fa8f7e39d213cfccd6202152162c1"
+          },
+          {
+            "path": "docs/review/clearance-01/native-chromium-1x-light.png",
+            "sha256": "65636bd5adacdbb638152d76e1777edf380246331c0fbf756182004a3ded5642"
+          },
+          {
+            "path": "docs/review/clearance-01/native-chromium-2x-dark.png",
+            "sha256": "acb7d33270349ae72b3e5240d023485096cffbcef64a2d8db72e639de3136ead"
+          },
+          {
+            "path": "docs/review/clearance-01/native-chromium-2x-light.png",
+            "sha256": "7d87383e72bd6a87d49a127fbc54474252b8af10575c8c81f5c9d503a1a10c65"
+          },
+          {
+            "path": "docs/review/clearance-01/native-webkit-1x-dark.png",
+            "sha256": "a18ae95f082bf7b5129163f3dd4ac78bbfec746fdeacaaa6de6d521fe2de9d58"
+          },
+          {
+            "path": "docs/review/clearance-01/native-webkit-1x-light.png",
+            "sha256": "b3771f402126ada6fcff3e60a95ce6125dc0f2fcb072e6662e2f6624dcb19b79"
+          },
+          {
+            "path": "docs/review/clearance-01/native-webkit-2x-dark.png",
+            "sha256": "6466e9ae907fedb62c29071f4da0350b6101c4a1cc4823e7decc184cad9c70de"
+          },
+          {
+            "path": "docs/review/clearance-01/native-webkit-2x-light.png",
+            "sha256": "09879d4f7715a1193cc6e98bb0a00786bc2b7a977f2d2ca87253e096a4404b2a"
+          },
+          {
+            "path": "docs/review/clearance-01/summary-chromium-1x-dark.png",
+            "sha256": "76fdf26b41a4d906c525181e9c64dfd5ad959aef210c9191f97424814171231c"
+          },
+          {
+            "path": "docs/review/clearance-01/summary-chromium-1x-light.png",
+            "sha256": "9b4832b81c615516f2738462f55122f4001bd24596af20dd3f7298877756fe13"
+          },
+          {
+            "path": "docs/review/clearance-01/summary-chromium-2x-dark.png",
+            "sha256": "55bbcf7639183e1f90ed7e62dcfd3c693b851d996db4cae7c5ee96402d47439e"
+          },
+          {
+            "path": "docs/review/clearance-01/summary-chromium-2x-light.png",
+            "sha256": "1eb72b247d2ec0f3fa746952b50b1ec8a78cde65f3ccbe0c432d3d7d2efbe717"
+          },
+          {
+            "path": "docs/review/clearance-01/summary-webkit-1x-dark.png",
+            "sha256": "ddc64634495e0235b5a91966cb8634953663fd192a96067cfbd845a59fb8bfaf"
+          },
+          {
+            "path": "docs/review/clearance-01/summary-webkit-1x-light.png",
+            "sha256": "8202dd1eee99d4e0db1327037f972dd7e15001b3c7769e22fc0c154438160aad"
+          },
+          {
+            "path": "docs/review/clearance-01/summary-webkit-2x-dark.png",
+            "sha256": "7c72dc1c9e833746b0e16920c775a03daf86c958c95d51440e50bdac18f3694f"
+          },
+          {
+            "path": "docs/review/clearance-01/summary-webkit-2x-light.png",
+            "sha256": "fd77456ddf7d8dbe656c9ebd7c46c916a850a5b504a372c1a0a7f99577fe3285"
           }
         ]
       },
       "status": "visually-reviewed-candidate",
-      "userApproval": "pending",
-      "independentReview": {
-        "reviewer": "craft_full_audit subagent",
-        "date": "2026-11-16",
-        "observation": "失敗郵件：右下X與信封母型不重疊，和mail-check共享開口。",
-        "sourceObservation": "逐顆並列 Lucide/mail-x（exact）、Tabler/mail-x（exact） 的固定原稿，檢查主體構造、端部、內部密度及16px縮減；本輪判斷：失敗郵件：右下X與信封母型不重疊，和mail-check共享開口。",
-        "evidence": [
-          {
-            "path": "docs/review/craft-02/inspection/initial/productivity-06.png",
-            "sha256": "1d081ab5e19f824b8787cd3f96c7ecb6c6c317024a80787cca4d29e5e245e0e0"
-          }
-        ]
-      }
+      "userApproval": "pending"
     },
     {
       "name": "bell-ring",
@@ -31969,6 +32165,12 @@
       }
     }
   ],
-  "reviewCycle": "craft-02",
-  "baselineCommit": "54a2a44"
+  "reviewCycle": "clearance-01",
+  "baselineCommit": "025fb009",
+  "reviewedNames": [
+    "phone-off",
+    "mail-x",
+    "file-lock",
+    "folder-lock"
+  ]
 }

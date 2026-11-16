@@ -1,3 +1,4 @@
+import { knockout } from '../occlusion.mjs';
 import { contour } from '../geometry.mjs';
 import { figure, mark } from './shared.mjs';
 import { coreDrawings, person, bell } from './core.mjs';
@@ -7,6 +8,7 @@ function roundMessage(g) {
   return [f.path(`M4.2058 16.5A9 9 0 1 1 8 20.0623L${3+k} ${21-k*.2}Q3 21 ${3+k*.25} ${21-k}Z`)];
 }
 function mailState(g,state) {
+  if(state==='x')return knockout(coreDrawings.mail(g),mark(g,'x',17.5,18),g);
   const {s,c,v,r}=g,l=v(2,2.5,3),t=v(4,5,6),b=s-t;
   return [contour([[v(7,8.75,10.5),b],[l,b],[l,t],[s-l,t],[s-l,v(7,8.75,10.5)]],r),
     coreDrawings.mail(g)[1],...mark(g,state,17.5,18)];

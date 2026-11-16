@@ -1,5 +1,6 @@
+import { knockout } from '../occlusion.mjs';
 import { contour } from '../geometry.mjs';
-import { file } from './core.mjs';
+import { file, folder } from './core.mjs';
 import { figure } from './shared.mjs';
 
 // Keep the file/folder's native outer dimensions. Open only the lower-right
@@ -26,6 +27,11 @@ function lockBadge(g){
     f.rect(13.5,15,7.5,6.5,Math.min(g.r,g.v(.5,.65,.8))),
     ...(g.s===16?[]:[f.dot(17.25,18.25,g.stroke/2)]),
   ];
+}
+function lockedDocument(g,kind){
+  const f=figure(g),badge=lockBadge(g);
+  const shackle=f.path('M15 15V13.5A2.25 2.25 0 0 1 19.5 13.5V15Z');
+  return knockout(kind==='file'?file(g):folder(g),badge,g,{silhouettes:[badge[1],shackle]});
 }
 function pin(g,off=false){
   const f=figure(g),radius=Math.min(g.r,g.v(.5,.65,.8));
@@ -69,6 +75,6 @@ export const organization={
   'pin-off':g=>pin(g,true),
   'folder-search':g=>[...documentFrame(g,'folder',false),...searchBadge(g)],
   'file-search':g=>[...documentFrame(g,'file',false),...searchBadge(g)],
-  'folder-lock':g=>[...documentFrame(g,'folder',true),...lockBadge(g)],
-  'file-lock':g=>[...documentFrame(g,'file',true),...lockBadge(g)],
+  'folder-lock':g=>lockedDocument(g,'folder'),
+  'file-lock':g=>lockedDocument(g,'file'),
 };

@@ -1,0 +1,34 @@
+[
+  {
+    "name": "phone-off",
+    "batch": "clearance-01",
+    "kind": "modified",
+    "reason": "修改後通過目視檢查：從完整 phone 母型重新扣除斜線的外擴剪影，四個切面平行於斜線；取消切口圓端侵入淨空，保留聽筒兩端的曲角與中段曲率。",
+    "beforeSha256": "07f11457203566c5633b916162df77b4db2a48909d6d5294e44a047b27f48c69",
+    "afterSha256": "76d28dbe53967d056306f19ca846df390e755320480cebf81ce2c79ae3d47fd2"
+  },
+  {
+    "name": "folder-lock",
+    "batch": "clearance-01",
+    "kind": "modified",
+    "reason": "修改後通過目視檢查：資料夾使用與 file-lock 相同鎖頭及原生淨空距離；恢復預挖角過早截斷的右邊框，再沿鎖梁與鎖體裁切，保留資料夾肩部比例。",
+    "beforeSha256": "b0b7f03014283b4d019ef674a1a083ac8cb66be26502f6dabff4669531c4b97b",
+    "afterSha256": "d8e18e9efc2e9261a9c73ed459974ef6e5f59a1cd217b27d2ee41483f327cc0d"
+  },
+  {
+    "name": "file-lock",
+    "batch": "clearance-01",
+    "kind": "modified",
+    "reason": "修改後通過目視檢查：以完整紙張母型扣除鎖梁、鎖體與內部的外擴剪影，避免背景紙邊穿過鎖孔；底邊切口改為貼合鎖體外緣的淨空，保留折角。",
+    "beforeSha256": "0dc6431b9f1f87e0fc19171ad09a835b13bd3702cd3ae98ad3ab19f448d09d41",
+    "afterSha256": "d98e776ed44979adbb5a2a60687b2972e4f0e96b351055e9b2377353423c2567"
+  },
+  {
+    "name": "mail-x",
+    "batch": "clearance-01",
+    "kind": "modified",
+    "reason": "修改後通過目視檢查：從完整信封扣除 × 的兩臂外擴區域，恢復原本矩形挖角多刪的右側輪廓；切口沿斜臂及端部曲線，16px 仍可辨識信封與狀態。",
+    "beforeSha256": "671b001ff1de7d2d9a9c92387b4d2f765e0cf51dea98f2c394605743a1b2188d",
+    "afterSha256": "29115dd5f2bba28f5944398cb78e877e5e00c0ae2d70621450708794d81b324b"
+  }
+]

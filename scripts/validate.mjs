@@ -1,4 +1,4 @@
-import {comparisonReferences as loadComparisonReferences,beforeDefinitions} from './lib/review-data.mjs';
+import {comparisonReferences as loadComparisonReferences} from './lib/review-data.mjs';
 import assert from 'node:assert/strict';
 import { readFile, readdir } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
@@ -66,8 +66,11 @@ const ledger=await json('docs/refinement-ledger.json');
 assert.equal(ledger.schemaVersion,2);
 assert.deepEqual(ledger.icons.map(x=>x.name).sort(),[...names].sort(),'Every drawing needs an individual review');
 const verifiedEvidence=new Set();
-const before=await beforeDefinitions();
+const reviewBaselines=new Map();
 for(const record of ledger.icons){
+  const path=record.change.before.path;
+  if(!reviewBaselines.has(path))reviewBaselines.set(path,await json(path));
+  const before=reviewBaselines.get(path);
   assert.equal(record.status,'visually-reviewed-candidate',record.name+': awaiting visual review');
   assert.equal(record.visualReview.variantsSha256,sha(JSON.stringify(definitions[record.name].variants)),record.name+': geometry changed since review');
   assert.equal(record.change.before.variantsSha256,sha(JSON.stringify(before[record.name].variants)),record.name+': incorrect before master');
