@@ -1,25 +1,27 @@
 ## Use a local workspace \{#workspace\}
 
-Master Icons is a private alpha. It is not published to npm. In this monorepo, declare `"@master/icons": "workspace:*"` in your application's dependencies, then run:
+Master Icons is a private alpha. It is not published to npm. In this monorepo, declare your adapter such as `"@master/icons-svelte": "workspace:*"` in your application's dependencies (or `"@master/icons": "workspace:*"` for SVG/JavaScript), then run:
 
 ```sh
 bun install
 bun run build:icons
 ```
 
-For another project, create an archive from this repository and install that file:
+For another project, create archives from this repository and install the core plus your chosen adapter (Svelte shown here):
 
 ```sh
-cd packages/icons
-bun pm pack --filename ../../work/master-icons-alpha.tgz
+bun run pack:icons
 # In your application:
-bun add /absolute/path/to/master-icons/work/master-icons-alpha.tgz
+bun pm pkg set "overrides.@master/icons=file:/absolute/path/to/master-icons/work/master-icons-alpha.tgz"
+bun add /absolute/path/to/master-icons/work/master-icons-alpha.tgz /absolute/path/to/master-icons/work/master-icons-svelte-alpha.tgz
 ```
+
+Because the private alpha is not on npm, the local override also directs the adapter’s core dependency to your archive. Replace the absolute path with your checkout location.
 
 The package supports Node.js 22 and later. Developing this repository uses Node.js 24 and Bun 1.4.4.
 
 ## Choose an integration \{#integration\}
 
-Use [SVG or JavaScript](/guide/svg) in any framework, or [React components](/guide/react). Svelte applications can use inline SVG or the JavaScript renderer; there is no published Svelte component API.
+Use [SVG or JavaScript](/guide/svg) in any framework, or choose [React](/guide/react), [Vue](/guide/vue), [Svelte](/guide/svelte), [Preact](/guide/preact) or [Astro](/guide/astro) components. Each framework has its own `@master/icons-{framework}` package, depending on the shared `@master/icons` core. Install only your adapter and its framework; other adapters are not installed. Framework tooling may require a newer Node.js version.
 
 Start at 24px with soft corners. For a dense interface, choose the 16px or 20px optical drawing. See [sizes and corners](/guide/optical-sizes).

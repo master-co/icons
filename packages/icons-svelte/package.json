@@ -1,0 +1,104 @@
+{
+  "name": "@master/icons-svelte",
+  "version": "0.1.0-alpha.0",
+  "description": "Master Icons components for Svelte.",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "repository": "https://github.com/master-co/icons",
+  "sideEffects": false,
+  "engines": {
+    "node": ">=22"
+  },
+  "files": [
+    "dist",
+    "LICENSE",
+    "THIRD_PARTY_NOTICES.md",
+    "README.md"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "svelte": "./dist/index.ts",
+      "import": "./dist/index.ts",
+      "default": "./dist/index.ts"
+    },
+    "./package.json": "./package.json",
+    "./icons/*": {
+      "types": "./dist/icons/*.svelte.d.ts",
+      "svelte": "./dist/icons/*.svelte",
+      "import": "./dist/icons/*.svelte",
+      "default": "./dist/icons/*.svelte"
+    },
+    "./*": {
+      "types": "./dist/*/index.d.ts",
+      "svelte": "./dist/*/index.ts",
+      "import": "./dist/*/index.ts",
+      "default": "./dist/*/index.ts"
+    },
+    "./16/sharp/*": {
+      "types": "./dist/16/sharp/*.svelte.d.ts",
+      "svelte": "./dist/16/sharp/*.svelte",
+      "import": "./dist/16/sharp/*.svelte",
+      "default": "./dist/16/sharp/*.svelte"
+    },
+    "./16/soft/*": {
+      "types": "./dist/16/soft/*.svelte.d.ts",
+      "svelte": "./dist/16/soft/*.svelte",
+      "import": "./dist/16/soft/*.svelte",
+      "default": "./dist/16/soft/*.svelte"
+    },
+    "./16/rounded/*": {
+      "types": "./dist/16/rounded/*.svelte.d.ts",
+      "svelte": "./dist/16/rounded/*.svelte",
+      "import": "./dist/16/rounded/*.svelte",
+      "default": "./dist/16/rounded/*.svelte"
+    },
+    "./20/sharp/*": {
+      "types": "./dist/20/sharp/*.svelte.d.ts",
+      "svelte": "./dist/20/sharp/*.svelte",
+      "import": "./dist/20/sharp/*.svelte",
+      "default": "./dist/20/sharp/*.svelte"
+    },
+    "./20/soft/*": {
+      "types": "./dist/20/soft/*.svelte.d.ts",
+      "svelte": "./dist/20/soft/*.svelte",
+      "import": "./dist/20/soft/*.svelte",
+      "default": "./dist/20/soft/*.svelte"
+    },
+    "./20/rounded/*": {
+      "types": "./dist/20/rounded/*.svelte.d.ts",
+      "svelte": "./dist/20/rounded/*.svelte",
+      "import": "./dist/20/rounded/*.svelte",
+      "default": "./dist/20/rounded/*.svelte"
+    },
+    "./24/sharp/*": {
+      "types": "./dist/24/sharp/*.svelte.d.ts",
+      "svelte": "./dist/24/sharp/*.svelte",
+      "import": "./dist/24/sharp/*.svelte",
+      "default": "./dist/24/sharp/*.svelte"
+    },
+    "./24/soft/*": {
+      "types": "./dist/24/soft/*.svelte.d.ts",
+      "svelte": "./dist/24/soft/*.svelte",
+      "import": "./dist/24/soft/*.svelte",
+      "default": "./dist/24/soft/*.svelte"
+    },
+    "./24/rounded/*": {
+      "types": "./dist/24/rounded/*.svelte.d.ts",
+      "svelte": "./dist/24/rounded/*.svelte",
+      "import": "./dist/24/rounded/*.svelte",
+      "default": "./dist/24/rounded/*.svelte"
+    }
+  },
+  "dependencies": {
+    "@master/icons": "workspace:*"
+  },
+  "peerDependencies": {
+    "svelte": ">=5 <6"
+  },
+  "scripts": {
+    "build": "node ../../scripts/build-frameworks.mjs svelte",
+    "prepack": "bun run build"
+  }
+}

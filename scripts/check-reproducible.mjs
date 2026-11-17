@@ -4,7 +4,7 @@ import { createHash } from 'node:crypto';
 import assert from 'node:assert/strict';
 async function snapshot(){
   const files=[];
-  for(const root of ['dist','packages/icons/dist','packages/icons/icons'])for(const entry of await readdir(root,{recursive:true,withFileTypes:true}))if(entry.isFile())files.push(entry.parentPath+'/'+entry.name);
+  for(const root of ['dist','packages/icons/dist','packages/icons/icons',...['react','vue','svelte','preact','astro'].map(name=>`packages/icons-${name}/dist`)])for(const entry of await readdir(root,{recursive:true,withFileTypes:true}))if(entry.isFile())files.push(entry.parentPath+'/'+entry.name);
   return Object.fromEntries(await Promise.all(files.sort().map(async file=>[file,createHash('sha256').update(await readFile(file)).digest('hex')])));
 }
 execFileSync(process.execPath,['scripts/build.mjs'],{stdio:'inherit',env:{...process.env,TZ:'UTC'}});

@@ -29,7 +29,7 @@ Cursor 採目前的立方體標誌，Vite 採新版階梯閃電，Supabase 保�
 import {
   BrandOpenaiIcon, BrandChatgptIcon, BrandMicrosoftIcon, BrandLinkedinIcon,
   BrandSlackIcon, BrandCursorIcon, BrandSupabaseIcon, BrandViteIcon,
-} from '@master/icons/react';
+} from '@master/icons-react';
 
 <BrandOpenaiIcon size={16} label="OpenAI" />
 <BrandChatgptIcon size={20} label="ChatGPT" />

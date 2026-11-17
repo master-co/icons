@@ -17,7 +17,7 @@
 ## 使用
 
 ```tsx
-import { BrandMasterIcon, BrandGithubIcon, BrandFigmaIcon } from '@master/icons/react';
+import { BrandMasterIcon, BrandGithubIcon, BrandFigmaIcon } from '@master/icons-react';
 
 <BrandMasterIcon size={20} label="Master" />
 <BrandGithubIcon size={16} />

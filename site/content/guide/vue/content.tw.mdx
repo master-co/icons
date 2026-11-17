@@ -1,0 +1,42 @@
+---
+title: "Vue"
+description: "在 Vue 使用動態或固定光學圖稿。"
+---
+
+## 動態圖示 \{#dynamic\}
+
+Vue 是必要的 peer dependency。請在應用程式安裝 Vue 3.5 以上（Vue 3），並[加入本機套件](/guide/getting-started)。
+
+```vue
+<script setup lang="ts">
+import { SearchIcon } from '@master/icons-vue';
+</script>
+
+<template>
+  <SearchIcon :size="20" corner="rounded" label="Search" />
+</template>
+```
+
+動態入口會為每個匯入的圖示包含九份圖稿，與 React 和 SVG 共用相同幾何。`size` 會選擇最近的光學圖稿；`corner` 預設為 `soft`。
+
+## 固定圖示 \{#fixed\}
+
+```vue
+<script setup lang="ts">
+import { SearchIcon } from '@master/icons-vue/16/soft';
+</script>
+
+<template>
+  <button aria-label="Search"><SearchIcon /></button>
+</template>
+```
+
+固定入口只包含一種光學尺寸與圓角。可將 `16/soft` 換成 `16`、`20`、`24` 與 `sharp`、`soft`、`rounded` 的任意組合。固定元件不接受 `corner` 或 `opticalSize`；`size` 只會縮放所選圖稿。
+
+## 框架行為 \{#behavior\}
+
+在 template 中使用 `optical-size`，例如 `:optical-size="16"`。SVG 屬性與事件監聽器會傳給 SVG 根元素。圖示為函式元件，元件 ref 並不是 SVG 元素 ref。
+
+沒有標籤的圖示會視為裝飾。對有意義的圖示使用 `label`、`aria-label` 或 `aria-labelledby`，或替外層按鈕命名，詳見[無障礙](/guide/accessibility)。
+
+在圖庫選擇此框架並使用預設線寬時，程式碼選單會複製固定元件的匯入用法。若調整了自訂線寬，則會複製此框架可用的 inline SVG 標記，保留所選圖形的實際幾何。

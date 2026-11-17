@@ -162,7 +162,7 @@ test('larger display sizes use valid masters and export the selected dimensions'
  await expect(dialog.locator('.master-cell svg')).toHaveCount(9)
  await page.evaluate(()=>Object.defineProperty(navigator,'clipboard',{value:{writeText:()=>Promise.reject(new Error('denied'))},configurable:true}))
  await dialog.getByRole('button',{name:'Copy React',exact:true}).click()
- await expect(dialog.locator('textarea')).toHaveValue(/@master\/icons\/react\/24\/rounded/)
+ await expect(dialog.locator('textarea')).toHaveValue(/@master\/icons-react\/24\/rounded/)
  await expect(dialog.locator('textarea')).toHaveValue(/size=\{64\}/)
  const downloaded=page.waitForEvent('download')
  await dialog.getByRole('link',{name:'Download SVG',exact:true}).click()

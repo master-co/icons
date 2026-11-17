@@ -1,0 +1,37 @@
+## Dynamic icons \{#dynamic\}
+
+Vue is a required peer dependency. Install Vue 3.5 or later within Vue 3 in your application and [add the local package](/guide/getting-started).
+
+```vue
+<script setup lang="ts">
+import { SearchIcon } from '@master/icons-vue';
+</script>
+
+<template>
+  <SearchIcon :size="20" corner="rounded" label="Search" />
+</template>
+```
+
+The dynamic entry includes nine drawings for each imported icon. It shares the same geometry as React and SVG. `size` selects the nearest optical drawing; `corner` defaults to `soft`.
+
+## Fixed icons \{#fixed\}
+
+```vue
+<script setup lang="ts">
+import { SearchIcon } from '@master/icons-vue/16/soft';
+</script>
+
+<template>
+  <button aria-label="Search"><SearchIcon /></button>
+</template>
+```
+
+Fixed entries include only one optical size and corner style. Replace `16/soft` with any combination of `16`, `20`, `24` and `sharp`, `soft`, `rounded`. Fixed components do not accept `corner` or `opticalSize`; `size` only scales the selected drawing.
+
+## Framework behavior \{#behavior\}
+
+Use `optical-size` in templates, such as `:optical-size="16"`. SVG attributes and event listeners are forwarded to the SVG root. These are functional components; a component ref is not an SVG element ref.
+
+Unlabeled icons are decorative. Use `label`, `aria-label` or `aria-labelledby` for a meaningful icon, or label the enclosing button. See [accessibility](/guide/accessibility).
+
+When you select this framework in the explorer with the default stroke width, the code selector copies a fixed component import. With a custom stroke width, it copies inline SVG markup for this framework to preserve the exact selected geometry.

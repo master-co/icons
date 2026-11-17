@@ -1,7 +1,7 @@
 {
   "name": "@master/icons",
   "version": "0.1.0-alpha.0",
-  "description": "Optically sized, softly geometric icons for interfaces.",
+  "description": "Framework-neutral Master Icons geometry, SVG renderer and optically sized SVG assets.",
   "private": true,
   "type": "module",
   "license": "MIT",
@@ -12,23 +12,18 @@
   },
   "files": [
     "dist/data",
-    "dist/react",
     "dist/index.js",
     "dist/index.d.ts",
     "dist/runtime.js",
     "dist/runtime.d.ts",
-    "dist/react-runtime.js",
+    "dist/presentation.js",
+    "dist/presentation.d.ts",
     "dist/catalog.json",
     "icons",
     "LICENSE",
     "THIRD_PARTY_NOTICES.md",
-    "licenses/hugeicons-MIT.txt",
-    "licenses/lucide.txt",
-    "README.md",
-    "licenses/simple-icons-CC0.txt",
-    "licenses/simple-icons-DISCLAIMER.md",
-    "licenses/openai-brand.txt",
-    "licenses/brand-additions.txt"
+    "licenses",
+    "README.md"
   ],
   "exports": {
     ".": {
@@ -39,41 +34,24 @@
       "types": "./dist/runtime.d.ts",
       "import": "./dist/runtime.js"
     },
-    "./react": {
-      "types": "./dist/react/index.d.ts",
-      "import": "./dist/react/index.js"
-    },
-    "./react/*": {
-      "types": "./dist/react/*/index.d.ts",
-      "import": "./dist/react/*/index.js"
-    },
     "./catalog": "./dist/catalog.json",
     "./svg/*": "./icons/*",
-    "./package.json": "./package.json"
+    "./package.json": "./package.json",
+    "./presentation": {
+      "types": "./dist/presentation.d.ts",
+      "import": "./dist/presentation.js"
+    },
+    "./data/*": {
+      "types": "./dist/data/*.d.ts",
+      "import": "./dist/data/*.js"
+    }
   },
   "scripts": {
     "build": "node scripts/build.mjs",
     "test": "cd ../.. && node --test packages/icons/tests/*.test.mjs",
-    "test:types": "tsc -p tests/tsconfig.json",
-    "prepack": "bun run build"
-  },
-  "peerDependencies": {
-    "react": ">=18 <20"
-  },
-  "peerDependenciesMeta": {
-    "react": {
-      "optional": true
-    }
-  },
-  "devDependencies": {
-    "@playwright/test": "^1.65.1",
-    "@types/react": "^19.3.0",
-    "@types/react-dom": "^19.3.0",
-    "esbuild": "^0.28.2",
-    "fflate": "^0.8.3",
-    "pathkit-wasm": "1.0.0",
-    "react": "^19.3.1",
-    "react-dom": "^19.3.1",
-    "typescript": "6.0.3"
+    "test:types": "tsc -p tests/tsconfig.json && bun run test:types:native",
+    "prepack": "bun run build",
+    "test:types:native": "astro-check --root . --tsconfig tests/native/tsconfig.json && node scripts/check-svelte.mjs",
+    "test:browser": "node --test tests/framework-browser.mjs"
   }
 }

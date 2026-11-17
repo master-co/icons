@@ -4,7 +4,7 @@ import {readFile} from 'node:fs/promises';
 import {createElement} from 'react';
 import {renderToStaticMarkup} from 'react-dom/server';
 import {catalog} from '../src/catalog.mjs';
-import * as icons from '../dist/react/index.js';
+import * as icons from '@master/icons-react';
 import {renderSvg} from '../dist/runtime.js';
 const defs=JSON.parse(await readFile('packages/icons/dist/definitions.json'));
 const children=svg=>svg.slice(svg.indexOf('>')+1,svg.lastIndexOf('</svg>')).replace(/><\/(circle|line|path|rect|ellipse)>/g,'/>');

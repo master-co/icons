@@ -1,0 +1,39 @@
+---
+title: "Svelte"
+description: "在 Svelte 使用動態或固定光學圖稿。"
+---
+
+## 動態圖示 \{#dynamic\}
+
+Svelte 是必要的 peer dependency。請在應用程式安裝 Svelte 5，並[加入本機套件](/guide/getting-started)。
+
+```svelte
+<script lang="ts">
+  import { SearchIcon } from '@master/icons-svelte';
+  let element = $state<SVGSVGElement>();
+</script>
+
+<SearchIcon size={20} corner="rounded" label="Search" bind:ref={element} />
+```
+
+動態入口會為每個匯入的圖示包含九份圖稿，與 React 和 SVG 共用相同幾何。`size` 會選擇最近的光學圖稿；`corner` 預設為 `soft`。
+
+## 固定圖示 \{#fixed\}
+
+```svelte
+<script lang="ts">
+  import { SearchIcon } from '@master/icons-svelte/16/soft';
+</script>
+
+<button aria-label="Search"><SearchIcon /></button>
+```
+
+固定入口只包含一種光學尺寸與圓角。可將 `16/soft` 換成 `16`、`20`、`24` 與 `sharp`、`soft`、`rounded` 的任意組合。固定元件不接受 `corner` 或 `opticalSize`；`size` 只會縮放所選圖稿。
+
+## 框架行為 \{#behavior\}
+
+原生 `.svelte` 原始碼由應用程式編譯為伺服器與瀏覽器版本。事件使用 Svelte 5 的 `onclick` 等 props；`bind:ref` 可取得 SVG 元素。修改 `size` 或 `corner` 會更新圖稿。
+
+沒有標籤的圖示會視為裝飾。對有意義的圖示使用 `label`、`aria-label` 或 `aria-labelledby`，或替外層按鈕命名，詳見[無障礙](/guide/accessibility)。
+
+在圖庫選擇此框架並使用預設線寬時，程式碼選單會複製固定元件的匯入用法。若調整了自訂線寬，則會複製此框架可用的 inline SVG 標記，保留所選圖形的實際幾何。

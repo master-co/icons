@@ -1,7 +1,7 @@
 import { createRef } from 'react';
 import { Search, renderSvg } from '@master/icons';
-import { SearchIcon, TicketIcon, DashboardIcon, FolderSearchIcon, KanbanIcon, SelectionIcon, DatabaseBackupIcon, GitPullRequestIcon } from '@master/icons/react';
-import { SearchIcon as StaticSearch } from '@master/icons/react/16/soft';
+import { SearchIcon, TicketIcon, DashboardIcon, FolderSearchIcon, KanbanIcon, SelectionIcon, DatabaseBackupIcon, GitPullRequestIcon } from '@master/icons-react';
+import { SearchIcon as StaticSearch } from '@master/icons-react/16/soft';
 renderSvg(Search,{size:18,corner:'soft',opticalSize:'auto',label:'搜尋'});
 <SearchIcon size={20} corner="rounded" ref={createRef<SVGSVGElement>()} aria-label="搜尋" />;
 <StaticSearch size={16} className="icon" />;

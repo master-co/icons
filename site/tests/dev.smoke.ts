@@ -1,5 +1,14 @@
 import {test,expect} from '@playwright/test'
 
+test('Master favicons are served as static assets',async({request})=>{
+ for(const [path,type] of [['/favicon.svg','image/svg+xml'],['/favicon.ico','image/']]){
+  const response=await request.get(path)
+  expect(response.status()).toBe(200)
+  expect(response.headers()['content-type']).toContain(type)
+  expect((await response.body()).length).toBeGreaterThan(0)
+ }
+})
+
 test('development server resolves Master Site routes on first and repeated requests',async({request})=>{
  for(let pass=0;pass<2;pass++){
   for(const locale of ['','/tw']){

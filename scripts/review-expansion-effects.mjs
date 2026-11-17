@@ -3,7 +3,7 @@ import {readFile,writeFile,mkdir} from 'node:fs/promises';
 import {chromium,webkit} from '@playwright/test';
 import {createElement} from 'react';import{renderToStaticMarkup}from'react-dom/server';
 import {renderSvg} from '../packages/icons/src/runtime.mjs';import {catalog} from '../packages/icons/src/catalog.mjs';
-import * as react from '../dist/react/index.js';
+import * as react from '@master/icons-react';
 const defs=JSON.parse(await readFile('dist/definitions.json')),out=`docs/review/${process.argv[2]||'craft-03'}`;await mkdir(out,{recursive:true});
 const names=['selection','ticket','file-archive','chart-area','file-question'];
 const css='body{margin:0;padding:24px;font:13px system-ui;background:#fafafa;color:#27272a}h1{font-size:22px}article{display:grid;grid-template-columns:150px repeat(3,1fr);border-top:1px solid #888;padding:14px 0;gap:18px}section>div{display:flex;gap:16px;height:30px;align-items:center}.low{opacity:.55}small{width:72px}.dark{background:#18181b;color:#f4f4f5}svg{flex:none}';

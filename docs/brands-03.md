@@ -41,14 +41,14 @@ Dcard 官方下載端本輪回傳 HTTP 403。採用 [Wikimedia Commons 固定頁
 ## 使用與聲明
 
 ```tsx
-import { BrandVueJsIcon, BrandGithubCopilotIcon, BrandDcardIcon } from '@master/icons/react';
+import { BrandVueJsIcon, BrandGithubCopilotIcon, BrandDcardIcon } from '@master/icons-react';
 
 <BrandVueJsIcon size={16} label="Vue.js" />
 <BrandGithubCopilotIcon size={20} />
 <BrandDcardIcon size={24} label="Dcard" />
 ```
 
-正式品牌名稱、英文代稱與中文搜尋詞均接入既有分類；例如 `蝦皮` → Shopee、`狄卡` → Dcard、`amazon web services` → AWS。使用既有 JavaScript、React 與固定尺寸入口。
+正式品牌名稱、英文代稱與中文搜尋詞均接入既有分類；例如 `蝦皮` → Shopee、`狄卡` → Dcard、`amazon web services` → AWS。使用現有 JavaScript、React、Vue、Svelte、Preact、Astro 與固定尺寸入口。
 
 圖稿授權分開記載：Vue 保留 CC-BY-NC-SA-4.0 與額外許可；JavaScript 與 GitHub Copilot 保留上游 MIT 著作權；Teams／Outlook 保留 Microsoft Fabric 資產條款；Dcard 保留來源、轉描方式與品牌規範。完整文件在 `licenses/brand-additions.txt`，隨套件及每組 ZIP 交付；單檔 SVG 亦保留相關聲明。程式碼 MIT 或 Simple Icons CC0 不取代各品牌的圖稿條款與商標權。詳見 [第三方聲明](../THIRD_PARTY_NOTICES.md#brand-silhouettes--brands-03)。
 

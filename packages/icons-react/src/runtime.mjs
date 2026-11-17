@@ -1,5 +1,5 @@
 import { createElement } from 'react';
-import { resolveIcon, svgAttributes } from './runtime.js';
+import { resolveIcon, svgAttributes } from '@master/icons/runtime';
 
 const reactName = key => ({ 'stroke-width':'strokeWidth', 'stroke-linecap':'strokeLinecap', 'stroke-linejoin':'strokeLinejoin', 'stroke-miterlimit':'strokeMiterlimit', 'stroke-dasharray':'strokeDasharray', 'stroke-dashoffset':'strokeDashoffset', 'stroke-opacity':'strokeOpacity', 'fill-opacity':'fillOpacity', 'fill-rule':'fillRule', 'clip-rule':'clipRule' }[key] || key);
 const reactAttrs = attrs => Object.fromEntries(Object.entries(attrs).map(([key,value])=>[reactName(key),value]));

@@ -2,7 +2,7 @@
 
 Optically sized interface icons with 16, 20 and 24px drawings and sharp, soft and rounded corners. MIT licensed; applicable upstream notices are included.
 
-This package remains **private alpha** (`0.1.0-alpha.0`) and is not published to npm. In this repository, use `"@master/icons": "workspace:*"`. For another project, run `bun pm pack --filename ../../work/master-icons-alpha.tgz` from this directory and install the archive. Requires Node.js 22+; React 18 or 19 is an optional peer.
+This package remains **private alpha** (`0.1.0-alpha.0`) and is not published to npm. In this repository, use `"@master/icons": "workspace:*"`. For another project, run `bun pm pack --filename ../../work/master-icons-alpha.tgz` from this directory and install the archive. The core package requires Node.js 22+; framework tools may require a newer Node.js version.
 
 ```js
 import { Search, renderSvg } from '@master/icons';
@@ -10,18 +10,93 @@ const svg = renderSvg(Search, { size: 20, corner: 'soft', label: 'Search' });
 ```
 
 ```tsx
-import { SearchIcon } from '@master/icons/react';
+import { SearchIcon } from '@master/icons-react';
 <SearchIcon size={20} corner="rounded" label="Search" />
 
-import { SearchIcon as SmallSearch } from '@master/icons/react/16/soft';
+import { SearchIcon as SmallSearch } from '@master/icons-react/16/soft';
 <button aria-label="Search"><SmallSearch /></button>
 ```
 
 SVG files are available at `@master/icons/svg/{16|20|24}/{sharp|soft|rounded}/{name}.svg`. Inline SVG inherits `currentColor`; an external SVG in an `<img>` does not inherit text color.
 
-`size` defaults to 24, `corner` to `soft` and `direction` to `ltr`. Automatic optical selection chooses the nearest of 16, 20 and 24; ties choose the larger. Fixed React entries only scale when `size` changes. Unlabeled icons are decorative (`aria-hidden`); `label` adds `role="img"` and an accessible name. Standard SVG props, events and refs are supported by the React components.
+## Framework packages
 
-The package exports data, the renderer, React components, the catalog and SVG files. Svelte can consume SVG or the renderer; a public Svelte component API is not included. Research references and review tools are not distributed in this package.
+All frameworks use the same drawings and expose the same icon names. Install only the `@master/icons-{framework}` package you use. Each adapter depends on this shared core and has exactly one required framework peer; the core has no framework dependencies.
+
+| Framework | Entry | Supported peer | Validation version |
+| --- | --- | --- | --- |
+| React | `@master/icons-react` | 18 / 19 | 19.3.1 |
+| Vue | `@master/icons-vue` | 3.5+ within Vue 3 | 3.5.45 |
+| Svelte | `@master/icons-svelte` | 5 | 5.57.2 |
+| Preact | `@master/icons-preact` | 11 | 11.2.0 |
+| Astro | `@master/icons-astro` | 7 | 7.4.2 |
+
+Each framework package also has all nine fixed variants at `@master/icons-{framework}/{16|20|24}/{sharp|soft|rounded}`. A generic icon includes its nine drawings; a fixed icon includes only its selected drawing. Both forms tree-shake unused icons.
+
+### Vue
+
+```vue
+<script setup lang="ts">
+import { SearchIcon } from '@master/icons-vue';
+import { SearchIcon as SmallSearch } from '@master/icons-vue/16/soft';
+</script>
+
+<template>
+  <SearchIcon :size="20" corner="rounded" label="Search" />
+  <SmallSearch class="icon" />
+</template>
+```
+
+Vue accepts `opticalSize` in JavaScript and `optical-size` in templates. SVG attributes and event listeners are forwarded to the SVG root. Icons are functional components; a Vue component ref is not an SVG element ref.
+
+### Svelte
+
+```svelte
+<script lang="ts">
+  import { SearchIcon } from '@master/icons-svelte';
+  import { SearchIcon as SmallSearch } from '@master/icons-svelte/16/soft';
+  let element = $state<SVGSVGElement>();
+</script>
+
+<SearchIcon size={20} corner="rounded" label="Search" bind:ref={element} />
+<SmallSearch class="icon" />
+```
+
+Svelte entries ship native `.svelte` sources for your Svelte 5 tooling to compile for SSR and the browser. Use Svelte 5 event props such as `onclick`; `bind:ref` exposes the SVG element.
+
+### Preact
+
+```tsx
+import { SearchIcon } from '@master/icons-preact';
+import { SearchIcon as SmallSearch } from '@master/icons-preact/16/soft';
+
+<SearchIcon size={20} corner="rounded" label="Search" />;
+<SmallSearch class="icon" />;
+```
+
+Use your application's Preact JSX configuration. SVG props, events and SVG refs are supported without a React dependency.
+
+### Astro
+
+```astro
+---
+import { SearchIcon } from '@master/icons-astro';
+import { SearchIcon as SmallSearch } from '@master/icons-astro/16/soft';
+---
+
+<SearchIcon size={20} corner="rounded" label="Search" />
+<SmallSearch class:list={['icon', { active: true }]} />
+```
+
+Astro entries ship native `.astro` components. They render inline SVG without client-side icon JavaScript and accept Astro SVG attributes, `class:list` and a default slot. They do not require a framework integration or a `client:*` directive.
+
+## Shared behavior
+
+`size` defaults to 24, `corner` to `soft` and `direction` to `ltr`. Automatic optical selection chooses the nearest of 16, 20 and 24; ties choose the larger. Fixed entries do not accept `corner` or `opticalSize`; changing `size` only scales the selected drawing. CSS width/height do not change the optical drawing.
+
+Unlabeled icons are decorative (`aria-hidden`). `label` adds `role="img"` and an accessible name; `aria-label` and `aria-labelledby` are also supported by framework components. `direction="rtl"` mirrors only directional icons. Standard SVG attributes may override defaults, and design options are consumed rather than forwarded as DOM attributes.
+
+This core package exports data, the SVG renderer, the catalog and SVG files. Framework components live in separate `packages/icons-*` packages. Research references and review tools are not distributed in this package.
 
 ## Brand icons
 

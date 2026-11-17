@@ -1,0 +1,34 @@
+## Dynamic icons \{#dynamic\}
+
+Svelte is a required peer dependency. Install Svelte 5 in your application and [add the local package](/guide/getting-started).
+
+```svelte
+<script lang="ts">
+  import { SearchIcon } from '@master/icons-svelte';
+  let element = $state<SVGSVGElement>();
+</script>
+
+<SearchIcon size={20} corner="rounded" label="Search" bind:ref={element} />
+```
+
+The dynamic entry includes nine drawings for each imported icon. It shares the same geometry as React and SVG. `size` selects the nearest optical drawing; `corner` defaults to `soft`.
+
+## Fixed icons \{#fixed\}
+
+```svelte
+<script lang="ts">
+  import { SearchIcon } from '@master/icons-svelte/16/soft';
+</script>
+
+<button aria-label="Search"><SearchIcon /></button>
+```
+
+Fixed entries include only one optical size and corner style. Replace `16/soft` with any combination of `16`, `20`, `24` and `sharp`, `soft`, `rounded`. Fixed components do not accept `corner` or `opticalSize`; `size` only scales the selected drawing.
+
+## Framework behavior \{#behavior\}
+
+Native `.svelte` sources are compiled by your application for the server and browser. Use Svelte 5 event props such as `onclick`. `bind:ref` exposes the SVG element; changing `size` or `corner` updates the drawing.
+
+Unlabeled icons are decorative. Use `label`, `aria-label` or `aria-labelledby` for a meaningful icon, or label the enclosing button. See [accessibility](/guide/accessibility).
+
+When you select this framework in the explorer with the default stroke width, the code selector copies a fixed component import. With a custom stroke width, it copies inline SVG markup for this framework to preserve the exact selected geometry.

@@ -15,7 +15,7 @@
     "dev": "bun run --cwd site dev",
     "dev:review": "node scripts/dev.mjs",
     "build": "bun run build:icons && bun run build:review && bun run build:site",
-    "build:icons": "bun run --cwd packages/icons build",
+    "build:icons": "node scripts/build-icons.mjs",
     "build:review": "node scripts/build-review.mjs",
     "build:site": "bun run --cwd site build",
     "validate": "node scripts/validate.mjs",
@@ -27,7 +27,9 @@
     "check": "bun run build && bun run validate && bun run test && bun run type-check",
     "check:reproducible": "node scripts/check-reproducible.mjs",
     "check:package": "node scripts/check-package.mjs",
-    "test:site:dev": "playwright test -c site/playwright.dev.config.ts"
+    "test:site:dev": "playwright test -c site/playwright.dev.config.ts",
+    "test:frameworks:browser": "bun run --cwd packages/icons test:browser",
+    "pack:icons": "node scripts/pack-icons.mjs"
   },
   "devDependencies": {
     "@playwright/test": "^1.65.1",
@@ -41,6 +43,20 @@
     "typescript": "6.0.3",
     "@master/icons": "workspace:*",
     "tsx": "4.23.13",
-    "@types/node": "^24.12.2"
+    "@types/node": "^24.12.2",
+    "@astrojs/check": "0.9.12",
+    "@astrojs/compiler-rs": "0.5.3",
+    "@astrojs/svelte": "9.1.6",
+    "astro": "7.4.2",
+    "preact": "11.2.0",
+    "preact-render-to-string": "6.8.3",
+    "svelte": "5.57.2",
+    "svelte-check": "4.7.7",
+    "vue": "3.5.45",
+    "@master/icons-react": "workspace:*",
+    "@master/icons-vue": "workspace:*",
+    "@master/icons-svelte": "workspace:*",
+    "@master/icons-preact": "workspace:*",
+    "@master/icons-astro": "workspace:*"
   }
 }

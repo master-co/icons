@@ -92,7 +92,7 @@ $('#dialog-close').addEventListener('click',()=>$('#icon-dialog').close());
 $('#icon-dialog').addEventListener('close',()=>{state.selected=null;if(objectUrl){URL.revokeObjectURL(objectUrl);objectUrl=null;}});
 $('#icon-dialog').addEventListener('click',event=>{if(event.target===$('#icon-dialog')){const r=event.target.getBoundingClientRect();if(event.clientX<r.left||event.clientX>r.right||event.clientY<r.top||event.clientY>r.bottom)event.target.close();}});
 $('#copy-svg').addEventListener('click',()=>copy(svgWithLicense(state.selected)));
-$('#copy-react').addEventListener('click',()=>{const entry=meta(state.selected);copy(`import { ${entry.component} } from '@master/icons/react/${state.size}/${state.corner}';\n\n<${entry.component} />`);});
+$('#copy-react').addEventListener('click',()=>{const entry=meta(state.selected);copy(`import { ${entry.component} } from '@master/icons-react/${state.size}/${state.corner}';\n\n<${entry.component} />`);});
 let theme='light';try{theme=localStorage.getItem('master-icons-theme')||'light';}catch{}
 function setTheme(value){theme=value;document.documentElement.dataset.theme=theme;$('#theme-toggle').setAttribute('aria-label',theme==='light'?'切換至深色模式':'切換至淺色模式');try{localStorage.setItem('master-icons-theme',theme);}catch{}}
 setTheme(theme);$('#theme-toggle').addEventListener('click',()=>setTheme(theme==='light'?'dark':'light'));

@@ -1,0 +1,33 @@
+## Dynamic icons \{#dynamic\}
+
+Astro is a required peer dependency. Install Astro 7 in your application and [add the local package](/guide/getting-started).
+
+```astro
+---
+import { SearchIcon } from '@master/icons-astro';
+---
+
+<SearchIcon size={20} corner="rounded" label="Search" />
+```
+
+The dynamic entry includes nine drawings for each imported icon. It shares the same geometry as React and SVG. `size` selects the nearest optical drawing; `corner` defaults to `soft`.
+
+## Fixed icons \{#fixed\}
+
+```astro
+---
+import { SearchIcon } from '@master/icons-astro/16/soft';
+---
+
+<button aria-label="Search"><SearchIcon /></button>
+```
+
+Fixed entries include only one optical size and corner style. Replace `16/soft` with any combination of `16`, `20`, `24` and `sharp`, `soft`, `rounded`. Fixed components do not accept `corner` or `opticalSize`; `size` only scales the selected drawing.
+
+## Framework behavior \{#behavior\}
+
+Native `.astro` components render inline SVG without client-side icon JavaScript. No framework integration or `client:*` directive is needed. SVG attributes, `class:list` and a default slot are supported. Follow Astro’s Node.js requirements.
+
+Unlabeled icons are decorative. Use `label`, `aria-label` or `aria-labelledby` for a meaningful icon, or label the enclosing button. See [accessibility](/guide/accessibility).
+
+When you select this framework in the explorer with the default stroke width, the code selector copies a fixed component import. With a custom stroke width, it copies inline SVG markup for this framework to preserve the exact selected geometry.

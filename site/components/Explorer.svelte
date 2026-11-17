@@ -130,7 +130,7 @@
     <p class="detail-caption">{t('Nine optical masters')}</p>
     <div class="master-grid">{#each corners as c}<div class="master-row"><span>{cornerLabel(c)}</span>{#each sizes as s}<div class="master-cell">{@html renderSvg(definition,{size:s,opticalSize:s,corner:c})}<span>{s}</span></div>{/each}</div>{/each}</div>
     <label class="field">SVG<textarea bind:this={code} class="input" style="--font-family-sans:var(--font-family-mono)" value={svg} readonly rows="5" spellcheck="false"></textarea></label>
-    <div class="detail-actions"><button type="button" class="btn" onclick={()=>copyText(svg)}>{t('Copy SVG')}</button><button type="button" class="btn" onclick={()=>copyText(`import { ${selected!.component} } from '@master/icons/react/${opticalSize}/${corner}';\n\n<${selected!.component}${size>24?` size={${size}}`:''} />`)}>{t('Copy React')}</button><a class="btn" href={size>24?`data:image/svg+xml;charset=utf-8,${encodeURIComponent(svg)}`:source(selected.name)} download={`${selected.name}.svg`}>{t('Download SVG')}</a></div>
+    <div class="detail-actions"><button type="button" class="btn" onclick={()=>copyText(svg)}>{t('Copy SVG')}</button><button type="button" class="btn" onclick={()=>copyText(`import { ${selected!.component} } from '@master/icons-react/${opticalSize}/${corner}';\n\n<${selected!.component}${size>24?` size={${size}}`:''} />`)}>{t('Copy React')}</button><a class="btn" href={size>24?`data:image/svg+xml;charset=utf-8,${encodeURIComponent(svg)}`:source(selected.name)} download={`${selected.name}.svg`}>{t('Download SVG')}</a></div>
    {/if}
   {/if}
   <p class="copy-status" role="status">{notice}</p>

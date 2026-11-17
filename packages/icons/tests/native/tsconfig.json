@@ -1,0 +1,6 @@
+{
+  "extends": "astro/tsconfigs/strict",
+  "compilerOptions": { "types": ["astro/client", "svelte"] },
+  "include": ["./**/*", "../../../icons-svelte/dist/**/*.svelte", "../../../icons-astro/dist/**/*.astro"],
+  "exclude": []
+}

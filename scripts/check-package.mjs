@@ -1,20 +1,33 @@
 import { execFileSync } from 'node:child_process';
-import { mkdir, mkdtemp, writeFile, rename } from 'node:fs/promises';
+import { mkdir, mkdtemp, writeFile, readFile, readdir, rm, rename } from 'node:fs/promises';
+import { tmpdir } from 'node:os';
 import { resolve } from 'node:path';
 import assert from 'node:assert/strict';
 import { catalog } from '../packages/icons/src/catalog.mjs';
+import { checkPackedFrameworks } from '../packages/icons/tests/helpers/packed-frameworks.mjs';
+import { packIcons } from './pack-icons.mjs';
 
 await mkdir('work',{recursive:true});
-const archive=resolve('work/master-icons-alpha.tgz');
-execFileSync('bun',['pm','pack','--filename',archive],{cwd:resolve('packages/icons'),stdio:['ignore','ignore','pipe'],maxBuffer:8*1024*1024});
-const entries=execFileSync('tar',['-tzf',archive],{encoding:'utf8',maxBuffer:8*1024*1024}).trim().split('\n');
+const packages=await packIcons();
+const {entries}=packages[0];
 assert.equal(entries.filter(x=>x.endsWith('.svg')).length,catalog.length*9);
-for(const path of ['package/LICENSE','package/THIRD_PARTY_NOTICES.md','package/licenses/hugeicons-MIT.txt','package/licenses/lucide.txt','package/licenses/simple-icons-CC0.txt','package/licenses/simple-icons-DISCLAIMER.md','package/licenses/openai-brand.txt','package/licenses/brand-additions.txt','package/dist/runtime.d.ts'])assert.ok(entries.includes(path),path);
-assert.ok(!entries.some(x=>/\/(references|preview|tests|work|node_modules)\//.test(x)));
+for(const path of ['package/LICENSE','package/THIRD_PARTY_NOTICES.md','package/licenses/hugeicons-MIT.txt','package/licenses/lucide.txt','package/licenses/simple-icons-CC0.txt','package/licenses/simple-icons-DISCLAIMER.md','package/licenses/openai-brand.txt','package/licenses/brand-additions.txt','package/dist/runtime.d.ts','package/dist/presentation.js'])assert.ok(entries.includes(path),path);
+assert.ok(!entries.some(path=>/\/(react|vue|svelte|preact|astro)(\/|-runtime\.)/.test(path)),'Core must not ship framework components');
+assert.equal(packages[0].manifest.peerDependencies,undefined,'Core must not install any framework');
 const consumer=await mkdtemp(resolve('work/package-consumer-'));
-execFileSync('tar',['-xzf',archive,'-C',consumer]);
 await mkdir(consumer+'/node_modules/@master',{recursive:true});
-await rename(consumer+'/package',consumer+'/node_modules/@master/icons');
+for(const pkg of packages){
+ assert.ok(!pkg.entries.some(x=>/\/(src|references|preview|tests|work|node_modules)\//.test(x)));
+ if(pkg.name!=='@master/icons'){
+  const framework=pkg.name.replace('@master/icons-','');
+  assert.deepEqual(pkg.manifest.dependencies,{'@master/icons':packages[0].manifest.version},'Packed dependencies must use the matching version, not workspace paths');
+  assert.deepEqual(Object.keys(pkg.manifest.peerDependencies),[framework]);
+  assert.equal(pkg.entries.filter(path=>path.endsWith('.svg')).length,0,'Adapters share geometry from core');
+  for(const other of ['react','vue','svelte','preact','astro'].filter(name=>name!==framework))assert.ok(!pkg.entries.some(path=>path.endsWith('.'+other)),`Unexpected ${other} in ${pkg.name}`);
+ }
+ execFileSync('tar',['-xzf',pkg.archive,'-C',consumer]);
+ await rename(consumer+'/package',consumer+'/node_modules/'+pkg.name);
+}
 await writeFile(consumer+'/package.json','{"private":true,"type":"module"}');
 await writeFile(consumer+'/smoke.mjs',`
 import assert from 'node:assert/strict';
@@ -22,8 +35,8 @@ import { createElement } from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
 import { readFileSync } from 'node:fs';
 import { Search, User, Bell, Ticket, ChartArea, FolderSearch, FileArchive, Webhook, Selection, DatabaseBackup, GitPullRequest, renderSvg, escapeXml, opticalSizes } from '@master/icons';
-import { SearchIcon, TicketIcon, ChartAreaIcon, PinOffIcon, HandshakeIcon, FileArchiveIcon, DatabaseSearchIcon, PackageReturnIcon } from '@master/icons/react';
-import { SearchIcon as Fixed } from '@master/icons/react/16/soft';
+import { SearchIcon, TicketIcon, ChartAreaIcon, PinOffIcon, HandshakeIcon, FileArchiveIcon, DatabaseSearchIcon, PackageReturnIcon } from '@master/icons-react';
+import { SearchIcon as Fixed } from '@master/icons-react/16/soft';
 assert.equal(opticalSizes.length,3);
 assert.match(renderSvg(Selection,{size:16}), /stroke-linecap="butt"/);
 assert.match(renderSvg(DatabaseBackup,{size:24}), /fill-rule="evenodd"/);
@@ -50,4 +63,19 @@ assert.match(readFileSync(new URL(import.meta.resolve('@master/icons/svg/16/soft
 console.log('Packed consumer: data, runtime, dynamic/static React, SVG subpath and notices passed.');
 `);
 execFileSync(process.execPath,[consumer+'/smoke.mjs'],{stdio:'inherit'});
-console.log(`Package: ${entries.length} files; comparison sources and preview excluded. Consumer fixture: ${consumer}`);
+await checkPackedFrameworks(consumer);
+// Use an actual package-manager install outside this repository, so ancestor
+// workspace links cannot hide a missing dependency or pull in other adapters.
+const installed=await mkdtemp(resolve(tmpdir(),'master-icons-install-'));
+try{
+ const core='file:'+packages[0].archive;
+ const svelte=JSON.parse(await readFile(new URL(import.meta.resolve('svelte/package.json')),'utf8')).version;
+ await writeFile(resolve(installed,'package.json'),JSON.stringify({private:true,type:'module',
+  dependencies:{'@master/icons':core,'@master/icons-svelte':'file:'+packages.find(pkg=>pkg.name==='@master/icons-svelte').archive,svelte},
+  overrides:{'@master/icons':core}
+ }));
+ execFileSync('bun',['install','--offline','--ignore-scripts'],{cwd:installed,stdio:['ignore','pipe','pipe']});
+ assert.deepEqual((await readdir(resolve(installed,'node_modules/@master'))).sort(),['icons','icons-svelte']);
+ console.log('Isolated offline installation: only the core and requested Svelte adapter installed.');
+}finally{await rm(installed,{recursive:true,force:true});}
+console.log(`All ${packages.length} packages validated; framework dependency isolation and packed consumers passed. Fixture: ${consumer}`);

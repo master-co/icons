@@ -1,0 +1,29 @@
+## Dynamic icons \{#dynamic\}
+
+Preact is a required peer dependency. Install Preact 11 in your application and [add the local package](/guide/getting-started).
+
+```tsx
+import { SearchIcon } from '@master/icons-preact';
+
+<SearchIcon size={20} corner="rounded" label="Search" />
+```
+
+The dynamic entry includes nine drawings for each imported icon. It shares the same geometry as React and SVG. `size` selects the nearest optical drawing; `corner` defaults to `soft`.
+
+## Fixed icons \{#fixed\}
+
+```tsx
+import { SearchIcon } from '@master/icons-preact/16/soft';
+
+<button aria-label="Search"><SearchIcon /></button>
+```
+
+Fixed entries include only one optical size and corner style. Replace `16/soft` with any combination of `16`, `20`, `24` and `sharp`, `soft`, `rounded`. Fixed components do not accept `corner` or `opticalSize`; `size` only scales the selected drawing.
+
+## Framework behavior \{#behavior\}
+
+Use your application’s Preact JSX configuration. Components accept SVG props, event handlers and SVG refs. This entry uses Preact directly and does not require React.
+
+Unlabeled icons are decorative. Use `label`, `aria-label` or `aria-labelledby` for a meaningful icon, or label the enclosing button. See [accessibility](/guide/accessibility).
+
+When you select this framework in the explorer with the default stroke width, the code selector copies a fixed component import. With a custom stroke width, it copies inline SVG markup for this framework to preserve the exact selected geometry.
