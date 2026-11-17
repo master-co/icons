@@ -1,0 +1,1528 @@
+{
+  "schemaVersion": 2,
+  "reviewer": "Codex (AI)",
+  "userApproval": "pending",
+  "icons": [
+    {
+      "name": "vector-square",
+      "purpose": "方形向量路徑",
+      "recognitionCues": "方形路徑與四角控制節點",
+      "confusableWith": [
+        "square",
+        "vector-polygon"
+      ],
+      "sourceObservation": "Lucide以圓節點和微彎邊構成方形路徑，Tabler方節點加直邊更貼近編輯控制框。最新稿採Tabler構造；完稿回比16px四個節點孔仍清楚，連線止於節點外緣，不穿入方孔或變成四個黑塊。",
+      "references": [
+        {
+          "name": "vector-square",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/vector-square.svg",
+          "localPath": "references/atlas-01/lucide-vector-square.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/vector-square.svg",
+          "sha256": "0ef64f0bdd5457789c44671aa1fec6e789b8c091404a2f13dc89dab97303001a",
+          "license": "ISC AND MIT",
+          "sourceName": "vector-square",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "vector-square",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/vector.svg",
+          "localPath": "references/atlas-01/tabler-vector.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/vector.svg",
+          "sha256": "e833ba217b734468e9a0e83c0c38dfbdf7d9b253094e41a5a84ec4f6e2a40254",
+          "license": "MIT",
+          "sourceName": "vector",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "這批呈現可見路徑及形體表面，不額外描繪隱藏邊或選取虛線框。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "控制節點、連線與幾何面由空腔和輪廓辨識，不靠淡化曲線區分。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "單色邊界與必要稜線足以表達立體幾何，不用光照漸層補形體。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-26/master-before.json",
+          "variantsSha256": "c8025d3f8367aeb324191d1dffa0be7967a743365df8fe8ef6daef8dacd13b91"
+        },
+        "reason": "四個同尺寸控制方框沿共同矩形配置，相連邊的實際墨線裁在方框之外；節點角型使用小半徑，保留方形控制柄語意。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "c7564552c1355914006172e8cb060873369d030451e86eb135bfee4d26e50ffc",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/113-vector-bezier/review.html",
+            "sha256": "3364850c7e82fa04fa2c7a852d5c43e87bffb497bc9a0096894f93f450f649b3"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/113-vector-bezier/definitions.json",
+            "sha256": "7979e5f7ad8311fe173edb9d1e9436f3576e59beb1cb79c4cb38ef33b59dcf99"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/113-vector-bezier/light-1x.png",
+            "sha256": "50be48547623baa8b5598fc78ad9bef098f7c99800ddbb6f279b89c2efdc9887"
+          },
+          {
+            "path": "docs/review/atlas-craft-26/final/definitions.json",
+            "sha256": "c8d7491586407d748bd4cfa6e47246fd919883be8cc5b00b5aefe791d85b11c6"
+          },
+          {
+            "path": "docs/review/atlas-craft-26/final/28-geometry.html",
+            "sha256": "4036657151365fa76934b6169ec033aed795096567fb5a931c2701f6f07578f6"
+          },
+          {
+            "path": "docs/review/atlas-craft-26/final/28-geometry-light-1x.png",
+            "sha256": "d3dd615ae95add367c39b2f44ec103496b8bc68aa02cc1d226f3c40155478807"
+          },
+          {
+            "path": "docs/review/atlas-craft-26/final/28-geometry-light-2x.png",
+            "sha256": "f5d8b7b43850f2193f663962087c5b1aa1d5e2dbe9a7a225009b6dc7360abc74"
+          },
+          {
+            "path": "docs/review/atlas-craft-26/final/28-geometry-dark-1x.png",
+            "sha256": "f0cfe18550ee74e9bad3571532344af90a79cd913f9d37273cb1d148c5d16de9"
+          },
+          {
+            "path": "docs/review/atlas-craft-26/final/28-geometry-dark-2x.png",
+            "sha256": "49ca3a52b8fec0532337aeb0a553873bb13461e28b768a42107af477f69f5ef7"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-26/final/28-geometry-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-26/final/28-geometry-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-26/final/28-geometry-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-26/final/28-geometry-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Tabler",
+        "license": "MIT",
+        "licenseFile": "licenses/tabler.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "bezier-curve",
+      "purpose": "貝茲曲線",
+      "recognitionCues": "拱形曲線、三個節點與水平控制桿",
+      "confusableWith": [
+        "spline",
+        "vector-polygon"
+      ],
+      "sourceObservation": "Phosphor三個圓節點加一根控制桿比Tabler五個節點更疏朗。最新稿採Phosphor拱形構造；完稿回比16px頂部圓孔、兩個端孔與水平控制桿均成立，沒有加入控制桿端點小圈增加密度。",
+      "references": [
+        {
+          "name": "bezier-curve",
+          "library": "Phosphor",
+          "repository": "phosphor-icons/core",
+          "commit": "2b75f3ad12b420c9504ef05df8d2564a28f8500e",
+          "path": "assets/regular/bezier-curve.svg",
+          "localPath": "references/atlas-01/phosphor-bezier-curve.svg",
+          "url": "https://github.com/phosphor-icons/core/blob/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular/bezier-curve.svg",
+          "sha256": "5ffb4c2ea00f0a68d631173f17b9f353d2fe0f44ed213ac7c943d6b10e6dc364",
+          "license": "MIT",
+          "sourceName": "bezier-curve",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "bezier-curve",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/vector-bezier.svg",
+          "localPath": "references/atlas-01/tabler-vector-bezier.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/vector-bezier.svg",
+          "sha256": "631b0e54163bcf64ea012a3b15d93e47eb30f7142c6e20cedf1de80fdeea2aed",
+          "license": "MIT",
+          "sourceName": "vector-bezier",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "這批呈現可見路徑及形體表面，不額外描繪隱藏邊或選取虛線框。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "控制節點、連線與幾何面由空腔和輪廓辨識，不靠淡化曲線區分。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "單色邊界與必要稜線足以表達立體幾何，不用光照漸層補形體。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-26/master-before.json",
+          "variantsSha256": "a1933c8ada4d24a8c83a0589eb6673c25c7cea75139c7279a48f65547d35871f"
+        },
+        "reason": "對稱拱形曲線共用水平切線與中央控制點，三個節點半徑一致；連線與曲線均裁在節點孔外，保留相接但不填入內孔。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "b9411aaea067f2835d1b0117006d16892ac066f515746b0b9198805013e5f89f",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/113-vector-bezier/review.html",
+            "sha256": "3364850c7e82fa04fa2c7a852d5c43e87bffb497bc9a0096894f93f450f649b3"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/113-vector-bezier/definitions.json",
+            "sha256": "7979e5f7ad8311fe173edb9d1e9436f3576e59beb1cb79c4cb38ef33b59dcf99"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/113-vector-bezier/light-1x.png",
+            "sha256": "50be48547623baa8b5598fc78ad9bef098f7c99800ddbb6f279b89c2efdc9887"
+          },
+          {
+            "path": "docs/review/atlas-craft-26/final/definitions.json",
+            "sha256": "c8d7491586407d748bd4cfa6e47246fd919883be8cc5b00b5aefe791d85b11c6"
+          },
+          {
+            "path": "docs/review/atlas-craft-26/final/28-geometry.html",
+            "sha256": "4036657151365fa76934b6169ec033aed795096567fb5a931c2701f6f07578f6"
+          },
+          {
+            "path": "docs/review/atlas-craft-26/final/28-geometry-light-1x.png",
+            "sha256": "d3dd615ae95add367c39b2f44ec103496b8bc68aa02cc1d226f3c40155478807"
+          },
+          {
+            "path": "docs/review/atlas-craft-26/final/28-geometry-light-2x.png",
+            "sha256": "f5d8b7b43850f2193f663962087c5b1aa1d5e2dbe9a7a225009b6dc7360abc74"
+          },
+          {
+            "path": "docs/review/atlas-craft-26/final/28-geometry-dark-1x.png",
+            "sha256": "f0cfe18550ee74e9bad3571532344af90a79cd913f9d37273cb1d148c5d16de9"
+          },
+          {
+            "path": "docs/review/atlas-craft-26/final/28-geometry-dark-2x.png",
+            "sha256": "49ca3a52b8fec0532337aeb0a553873bb13461e28b768a42107af477f69f5ef7"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-26/final/28-geometry-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-26/final/28-geometry-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-26/final/28-geometry-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-26/final/28-geometry-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Phosphor",
+        "license": "MIT",
+        "licenseFile": "licenses/phosphor.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "spline",
+      "purpose": "曲線路徑",
+      "recognitionCues": "連續曲線及兩端控制節點",
+      "confusableWith": [
+        "bezier-curve",
+        "chart-spline"
+      ],
+      "sourceObservation": "Lucide圓端點與Tabler方端點都表達簡單可編輯曲線。最新稿採Lucide四分之一圓弧和兩端圓點；完稿回比16px端點內孔清楚、曲線自然承接，和帶控制桿的貝茲圖示有可辨別的結構差異。",
+      "references": [
+        {
+          "name": "spline",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/spline.svg",
+          "localPath": "references/atlas-01/lucide-spline.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/spline.svg",
+          "sha256": "995d3e71e8c4ebd6aa42ba70d4360e495d7c2ee192dbb6c4348e2cedc8f669ce",
+          "license": "ISC AND MIT",
+          "sourceName": "spline",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "spline",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/vector-spline.svg",
+          "localPath": "references/atlas-01/tabler-vector-spline.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/vector-spline.svg",
+          "sha256": "fd50c976d3c9eebfe69266ad14f575e1af2814e4fd1d6dfe569114b0ccae4558",
+          "license": "MIT",
+          "sourceName": "vector-spline",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "這批呈現可見路徑及形體表面，不額外描繪隱藏邊或選取虛線框。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "控制節點、連線與幾何面由空腔和輪廓辨識，不靠淡化曲線區分。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "單色邊界與必要稜線足以表達立體幾何，不用光照漸層補形體。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-26/master-before.json",
+          "variantsSha256": "c2153a7cf76aed1eb92687f9066889e08bcf12b858e6db1e2e18f571dd13f2d7"
+        },
+        "reason": "以同一圓弧連接水平與垂直短切線，端點圈稍擴大以保持小尺寸孔徑；曲線墨跡只到節點外緣，不讓端帽穿孔。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "942a13812ba600ec703d07fa1350fc2c68b3fe8de5e73a3384d655afad7d0e84",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/114-spline-polygon/review.html",
+            "sha256": "884669182de4973f647ba50f6e9dc85ee84e545decc0c4d8bc1986eab09c566b"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/114-spline-polygon/definitions.json",
+            "sha256": "6d949cd8914eccffad1f4c930fb8a9dc51f43e56db3fada44b596c0585579340"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/114-spline-polygon/light-1x.png",
+            "sha256": "a3971f60360e16010019718e10fed14a2264a00bc518145ffee455052480f573"
+          },
+          {
+            "path": "docs/review/atlas-craft-26/final/definitions.json",
+            "sha256": "c8d7491586407d748bd4cfa6e47246fd919883be8cc5b00b5aefe791d85b11c6"
+          },
+          {
+            "path": "docs/review/atlas-craft-26/final/28-geometry.html",
+            "sha256": "4036657151365fa76934b6169ec033aed795096567fb5a931c2701f6f07578f6"
+          },
+          {
+            "path": "docs/review/atlas-craft-26/final/28-geometry-light-1x.png",
+            "sha256": "d3dd615ae95add367c39b2f44ec103496b8bc68aa02cc1d226f3c40155478807"
+          },
+          {
+            "path": "docs/review/atlas-craft-26/final/28-geometry-light-2x.png",
+            "sha256": "f5d8b7b43850f2193f663962087c5b1aa1d5e2dbe9a7a225009b6dc7360abc74"
+          },
+          {
+            "path": "docs/review/atlas-craft-26/final/28-geometry-dark-1x.png",
+            "sha256": "f0cfe18550ee74e9bad3571532344af90a79cd913f9d37273cb1d148c5d16de9"
+          },
+          {
+            "path": "docs/review/atlas-craft-26/final/28-geometry-dark-2x.png",
+            "sha256": "49ca3a52b8fec0532337aeb0a553873bb13461e28b768a42107af477f69f5ef7"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-26/final/28-geometry-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-26/final/28-geometry-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-26/final/28-geometry-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-26/final/28-geometry-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Lucide",
+        "license": "ISC",
+        "licenseFile": "licenses/lucide.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "vector-polygon",
+      "purpose": "多邊形向量路徑",
+      "recognitionCues": "不規則閉合路徑與四個控制節點",
+      "confusableWith": [
+        "vector-square",
+        "pentagon"
+      ],
+      "sourceObservation": "Lucide四個節點形成不規則四邊形，Tabler也採不規則多邊形但重心較高。最新稿採Lucide斜向構造並略內收端點；完稿回比16px四個孔與中間空腔分開可讀，和沒有控制點的幾何五邊形明確區別。",
+      "references": [
+        {
+          "name": "vector-polygon",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/vector-polygon.svg",
+          "localPath": "references/atlas-01/lucide-vector-polygon.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/vector-polygon.svg",
+          "sha256": "a96e4f83ed228a8b100b3282132149a2063c4405130bcb669c9f763cd90b8bcd",
+          "license": "ISC AND MIT",
+          "sourceName": "vector-polygon",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "vector-polygon",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/polygon.svg",
+          "localPath": "references/atlas-01/tabler-polygon.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/polygon.svg",
+          "sha256": "d0790627396e26f1662c45f92140a27af23f6db550a67fbb470d105157ff816e",
+          "license": "MIT",
+          "sourceName": "polygon",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "這批呈現可見路徑及形體表面，不額外描繪隱藏邊或選取虛線框。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "控制節點、連線與幾何面由空腔和輪廓辨識，不靠淡化曲線區分。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "單色邊界與必要稜線足以表達立體幾何，不用光照漸層補形體。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-26/master-before.json",
+          "variantsSha256": "5d2a94f49cef0a06e3fee7c0f976c679c8f83acfcc22dc72de17228c734ec90f"
+        },
+        "reason": "四個節點使用一致圈徑，連線依相鄰節點中心建立並裁於各自外緣；保留不規則四邊形的編輯語意，沒有隨意添加更多節點。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "2ddcd710b79b4e65965de40f49e9500fc01488dda76a44b39bde3fc2333db8d5",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/114-spline-polygon/review.html",
+            "sha256": "884669182de4973f647ba50f6e9dc85ee84e545decc0c4d8bc1986eab09c566b"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/114-spline-polygon/definitions.json",
+            "sha256": "6d949cd8914eccffad1f4c930fb8a9dc51f43e56db3fada44b596c0585579340"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/114-spline-polygon/light-1x.png",
+            "sha256": "a3971f60360e16010019718e10fed14a2264a00bc518145ffee455052480f573"
+          },
+          {
+            "path": "docs/review/atlas-craft-26/final/definitions.json",
+            "sha256": "c8d7491586407d748bd4cfa6e47246fd919883be8cc5b00b5aefe791d85b11c6"
+          },
+          {
+            "path": "docs/review/atlas-craft-26/final/28-geometry.html",
+            "sha256": "4036657151365fa76934b6169ec033aed795096567fb5a931c2701f6f07578f6"
+          },
+          {
+            "path": "docs/review/atlas-craft-26/final/28-geometry-light-1x.png",
+            "sha256": "d3dd615ae95add367c39b2f44ec103496b8bc68aa02cc1d226f3c40155478807"
+          },
+          {
+            "path": "docs/review/atlas-craft-26/final/28-geometry-light-2x.png",
+            "sha256": "f5d8b7b43850f2193f663962087c5b1aa1d5e2dbe9a7a225009b6dc7360abc74"
+          },
+          {
+            "path": "docs/review/atlas-craft-26/final/28-geometry-dark-1x.png",
+            "sha256": "f0cfe18550ee74e9bad3571532344af90a79cd913f9d37273cb1d148c5d16de9"
+          },
+          {
+            "path": "docs/review/atlas-craft-26/final/28-geometry-dark-2x.png",
+            "sha256": "49ca3a52b8fec0532337aeb0a553873bb13461e28b768a42107af477f69f5ef7"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-26/final/28-geometry-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-26/final/28-geometry-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-26/final/28-geometry-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-26/final/28-geometry-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Lucide",
+        "license": "ISC",
+        "licenseFile": "licenses/lucide.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "pentagon",
+      "purpose": "五邊形",
+      "recognitionCues": "五條等長邊與上方頂點",
+      "confusableWith": [
+        "octagon",
+        "hexagon"
+      ],
+      "sourceObservation": "Lucide五邊形較圓且填滿畫布，Phosphor比較尖直。最新稿以等角極座標獨立建立正五邊形；完稿回比三角型仍保留五個明確邊段，16px上尖與平底有穩定比例，不因rounded變成盾形。",
+      "references": [
+        {
+          "name": "pentagon",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/pentagon.svg",
+          "localPath": "references/atlas-01/lucide-pentagon.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/pentagon.svg",
+          "sha256": "e27daa75dc936fbbd84d517393cc2c3cecd00a65b9ea8e4b95d5c3298408597a",
+          "license": "ISC AND MIT",
+          "sourceName": "pentagon",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "pentagon",
+          "library": "Phosphor",
+          "repository": "phosphor-icons/core",
+          "commit": "2b75f3ad12b420c9504ef05df8d2564a28f8500e",
+          "path": "assets/regular/pentagon.svg",
+          "localPath": "references/atlas-01/phosphor-pentagon.svg",
+          "url": "https://github.com/phosphor-icons/core/blob/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular/pentagon.svg",
+          "sha256": "dd7de9c8d4784ceee4622787140eab18ed217012391e086c71f95c553424e72e",
+          "license": "MIT",
+          "sourceName": "pentagon",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "這批呈現可見路徑及形體表面，不額外描繪隱藏邊或選取虛線框。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "控制節點、連線與幾何面由空腔和輪廓辨識，不靠淡化曲線區分。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "單色邊界與必要稜線足以表達立體幾何，不用光照漸層補形體。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-26/master-before.json",
+          "variantsSha256": "f892d581a1981e25a9834600a04d0c1981d5ad3e1ff3c2430c5d85380c2ff01a"
+        },
+        "reason": "以共同中心和半徑建立五個等距頂點，實際轉角半徑按預設改變；保留上下構造和左右對稱，不以不等長手繪邊冒充正五邊形。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "97b14b300476521363aa56daa570914ac6dbc24c2ddfedabab65487b95f363a1",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/115-flat-shapes/review.html",
+            "sha256": "956fe02108f3ce663583c09113015da0f1a2d7e32b5037c58bc9e8aac905f270"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/115-flat-shapes/definitions.json",
+            "sha256": "55cf6094b667408d6b0e51310a82356352247f202895640a880316d92c66180a"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/115-flat-shapes/light-1x.png",
+            "sha256": "93a3b75140d24851f332e49b2c39ceeb5aaa342a40a2e94fe7f0288c4b249e9d"
+          },
+          {
+            "path": "docs/review/atlas-craft-26/final/definitions.json",
+            "sha256": "c8d7491586407d748bd4cfa6e47246fd919883be8cc5b00b5aefe791d85b11c6"
+          },
+          {
+            "path": "docs/review/atlas-craft-26/final/28-geometry.html",
+            "sha256": "4036657151365fa76934b6169ec033aed795096567fb5a931c2701f6f07578f6"
+          },
+          {
+            "path": "docs/review/atlas-craft-26/final/28-geometry-light-1x.png",
+            "sha256": "d3dd615ae95add367c39b2f44ec103496b8bc68aa02cc1d226f3c40155478807"
+          },
+          {
+            "path": "docs/review/atlas-craft-26/final/28-geometry-light-2x.png",
+            "sha256": "f5d8b7b43850f2193f663962087c5b1aa1d5e2dbe9a7a225009b6dc7360abc74"
+          },
+          {
+            "path": "docs/review/atlas-craft-26/final/28-geometry-dark-1x.png",
+            "sha256": "f0cfe18550ee74e9bad3571532344af90a79cd913f9d37273cb1d148c5d16de9"
+          },
+          {
+            "path": "docs/review/atlas-craft-26/final/28-geometry-dark-2x.png",
+            "sha256": "49ca3a52b8fec0532337aeb0a553873bb13461e28b768a42107af477f69f5ef7"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-26/final/28-geometry-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-26/final/28-geometry-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-26/final/28-geometry-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-26/final/28-geometry-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "independent-construction"
+      },
+      "remaining": []
+    },
+    {
+      "name": "octagon",
+      "purpose": "八邊形",
+      "recognitionCues": "八條等長邊及對稱切角",
+      "confusableWith": [
+        "pentagon",
+        "circle"
+      ],
+      "sourceObservation": "Lucide八邊形轉角較圓，Phosphor保持明確斜切邊。最新稿以正八邊形幾何獨立構造；完稿回比16px斜邊與直邊仍有區別，三角型都有足夠直段而非幾乎圓形。",
+      "references": [
+        {
+          "name": "octagon",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/octagon.svg",
+          "localPath": "references/atlas-01/lucide-octagon.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/octagon.svg",
+          "sha256": "3b2722c3ea597beb3903be760f09165009bec78176317e1f78d47c39e7c1b006",
+          "license": "ISC AND MIT",
+          "sourceName": "octagon",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "octagon",
+          "library": "Phosphor",
+          "repository": "phosphor-icons/core",
+          "commit": "2b75f3ad12b420c9504ef05df8d2564a28f8500e",
+          "path": "assets/regular/octagon.svg",
+          "localPath": "references/atlas-01/phosphor-octagon.svg",
+          "url": "https://github.com/phosphor-icons/core/blob/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular/octagon.svg",
+          "sha256": "4a260d0a4335dc1bc0a527355b0720d6302c768250491c720f604f088dc53c84",
+          "license": "MIT",
+          "sourceName": "octagon",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "這批呈現可見路徑及形體表面，不額外描繪隱藏邊或選取虛線框。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "控制節點、連線與幾何面由空腔和輪廓辨識，不靠淡化曲線區分。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "單色邊界與必要稜線足以表達立體幾何，不用光照漸層補形體。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-26/master-before.json",
+          "variantsSha256": "1a4628a89ac6f12f2e15c7ec0f60130ea4d991d0ce9f1b9ac6c79deaf7905727"
+        },
+        "reason": "用正八邊形切角比例使八邊等長，左右上下共用對稱軸；實際圓角按預設調整，避免只改linejoin造成假角型。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "34a68d78c1b54a09993cd05e5db876c45f9497003ceb9d599ee97fcdee29a09b",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/115-flat-shapes/review.html",
+            "sha256": "956fe02108f3ce663583c09113015da0f1a2d7e32b5037c58bc9e8aac905f270"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/115-flat-shapes/definitions.json",
+            "sha256": "55cf6094b667408d6b0e51310a82356352247f202895640a880316d92c66180a"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/115-flat-shapes/light-1x.png",
+            "sha256": "93a3b75140d24851f332e49b2c39ceeb5aaa342a40a2e94fe7f0288c4b249e9d"
+          },
+          {
+            "path": "docs/review/atlas-craft-26/final/definitions.json",
+            "sha256": "c8d7491586407d748bd4cfa6e47246fd919883be8cc5b00b5aefe791d85b11c6"
+          },
+          {
+            "path": "docs/review/atlas-craft-26/final/28-geometry.html",
+            "sha256": "4036657151365fa76934b6169ec033aed795096567fb5a931c2701f6f07578f6"
+          },
+          {
+            "path": "docs/review/atlas-craft-26/final/28-geometry-light-1x.png",
+            "sha256": "d3dd615ae95add367c39b2f44ec103496b8bc68aa02cc1d226f3c40155478807"
+          },
+          {
+            "path": "docs/review/atlas-craft-26/final/28-geometry-light-2x.png",
+            "sha256": "f5d8b7b43850f2193f663962087c5b1aa1d5e2dbe9a7a225009b6dc7360abc74"
+          },
+          {
+            "path": "docs/review/atlas-craft-26/final/28-geometry-dark-1x.png",
+            "sha256": "f0cfe18550ee74e9bad3571532344af90a79cd913f9d37273cb1d148c5d16de9"
+          },
+          {
+            "path": "docs/review/atlas-craft-26/final/28-geometry-dark-2x.png",
+            "sha256": "49ca3a52b8fec0532337aeb0a553873bb13461e28b768a42107af477f69f5ef7"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-26/final/28-geometry-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-26/final/28-geometry-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-26/final/28-geometry-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-26/final/28-geometry-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "independent-construction"
+      },
+      "remaining": []
+    },
+    {
+      "name": "ellipse",
+      "purpose": "橢圓形",
+      "recognitionCues": "水平長軸與連續橢圓曲面",
+      "confusableWith": [
+        "circle",
+        "cylinder"
+      ],
+      "sourceObservation": "Lucide橢圓較扁、Hugeicons稍高。最新稿獨立採水平長軸與約5:3比例；完稿回比16px仍清楚區別圓形，四端曲率連續且沒有閉合接縫硬角，不為角型把橢圓變成膠囊。",
+      "references": [
+        {
+          "name": "ellipse",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/ellipse.svg",
+          "localPath": "references/atlas-01/lucide-ellipse.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/ellipse.svg",
+          "sha256": "c1bcdfff21181479813b131c076fee16d619392c0e1c883617e9c6fb6d5340c4",
+          "license": "ISC AND MIT",
+          "sourceName": "ellipse",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "ellipse",
+          "library": "Hugeicons Free",
+          "repository": "hugeicons/hugeicons",
+          "commit": "834e28d965946c1ee60d080027fe9dae4adc58d0",
+          "path": "icons/ellipse.svg",
+          "localPath": "references/atlas-01/hugeicons-ellipse.svg",
+          "url": "https://github.com/hugeicons/hugeicons/blob/834e28d965946c1ee60d080027fe9dae4adc58d0/icons/ellipse.svg",
+          "sha256": "0694d2ba0f1934405fa82392c18f3ce7f27c1f8ce24247d230aae31fd5294bcc",
+          "license": "MIT",
+          "sourceName": "ellipse",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "這批呈現可見路徑及形體表面，不額外描繪隱藏邊或選取虛線框。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "控制節點、連線與幾何面由空腔和輪廓辨識，不靠淡化曲線區分。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "單色邊界與必要稜線足以表達立體幾何，不用光照漸層補形體。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-26/master-before.json",
+          "variantsSha256": "13e4a970dd1485d94be7a6f516521282dd1bebeb869fbaf0125e0c7505d35785"
+        },
+        "reason": "以兩段解析橢圓弧閉合，長短軸共享同一中心；沒有幾何轉角，因此三個角型維持相同輪廓，靠原生描邊呈現尺寸重量。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "8e585663ec08c5d426b5f71158d16bed734d0fe80f5eb7448315c1dad6c650fb",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/115-flat-shapes/review.html",
+            "sha256": "956fe02108f3ce663583c09113015da0f1a2d7e32b5037c58bc9e8aac905f270"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/115-flat-shapes/definitions.json",
+            "sha256": "55cf6094b667408d6b0e51310a82356352247f202895640a880316d92c66180a"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/115-flat-shapes/light-1x.png",
+            "sha256": "93a3b75140d24851f332e49b2c39ceeb5aaa342a40a2e94fe7f0288c4b249e9d"
+          },
+          {
+            "path": "docs/review/atlas-craft-26/final/definitions.json",
+            "sha256": "c8d7491586407d748bd4cfa6e47246fd919883be8cc5b00b5aefe791d85b11c6"
+          },
+          {
+            "path": "docs/review/atlas-craft-26/final/28-geometry.html",
+            "sha256": "4036657151365fa76934b6169ec033aed795096567fb5a931c2701f6f07578f6"
+          },
+          {
+            "path": "docs/review/atlas-craft-26/final/28-geometry-light-1x.png",
+            "sha256": "d3dd615ae95add367c39b2f44ec103496b8bc68aa02cc1d226f3c40155478807"
+          },
+          {
+            "path": "docs/review/atlas-craft-26/final/28-geometry-light-2x.png",
+            "sha256": "f5d8b7b43850f2193f663962087c5b1aa1d5e2dbe9a7a225009b6dc7360abc74"
+          },
+          {
+            "path": "docs/review/atlas-craft-26/final/28-geometry-dark-1x.png",
+            "sha256": "f0cfe18550ee74e9bad3571532344af90a79cd913f9d37273cb1d148c5d16de9"
+          },
+          {
+            "path": "docs/review/atlas-craft-26/final/28-geometry-dark-2x.png",
+            "sha256": "49ca3a52b8fec0532337aeb0a553873bb13461e28b768a42107af477f69f5ef7"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-26/final/28-geometry-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-26/final/28-geometry-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-26/final/28-geometry-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-26/final/28-geometry-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "independent-construction"
+      },
+      "remaining": []
+    },
+    {
+      "name": "cone",
+      "purpose": "圓錐",
+      "recognitionCues": "單一頂點、相切側壁與橢圓底面",
+      "confusableWith": [
+        "traffic-cone",
+        "pyramid"
+      ],
+      "sourceObservation": "Lucide明示橢圓底面、Tabler僅保留弧底剪影。最新稿採Lucide底面語意，重算側壁對橢圓的切點；完稿回比16px底面內孔完整，兩側過渡沒有突角，尖頂依角型略作圓化，與有橫帶的交通錐清楚區別。",
+      "references": [
+        {
+          "name": "cone",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/cone.svg",
+          "localPath": "references/atlas-01/lucide-cone.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/cone.svg",
+          "sha256": "0436667220dedb9cf445dbacb0f0194d2b79dc10e7de5d931bdb30b4b88fbffe",
+          "license": "ISC AND MIT",
+          "sourceName": "cone",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "cone",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/cone.svg",
+          "localPath": "references/atlas-01/tabler-cone.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/cone.svg",
+          "sha256": "85faf726a12631458d2af49b2d2ee172220ade4c853bb76ff1b105e60e8b6ae8",
+          "license": "MIT",
+          "sourceName": "cone",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "這批呈現可見路徑及形體表面，不額外描繪隱藏邊或選取虛線框。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "控制節點、連線與幾何面由空腔和輪廓辨識，不靠淡化曲線區分。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "單色邊界與必要稜線足以表達立體幾何，不用光照漸層補形體。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-26/master-before.json",
+          "variantsSha256": "c5c94bed721a52000aa8c7fa2418e0c63515f8297b4f5738b347679f98fed9de"
+        },
+        "reason": "由頂點解出側壁與底面橢圓的切點，用側壁及下半底弧組成連續外殼；上方底面弧作內部結構並收在殼內，避免三角形直接貼橢圓。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "18ef8498007b1b06144a3b055f8c20021542ba07d759815b5bc27d11128e9a34",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/116-solid-shapes/review.html",
+            "sha256": "2ee01f2c766cf21dd2cec055ea9d9ba4b42d5ae7ff8d5f7c69072dff0b306bd5"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/116-solid-shapes/definitions.json",
+            "sha256": "84f1651958674ccb4e70e7e6f4555dd1024311d7ca081d54b6ed90ce4c9d6bed"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/116-solid-shapes/light-1x.png",
+            "sha256": "4153360f618df28a35a525d39bc69bd0714347c7ff278eef64bb59df07bc7cf3"
+          },
+          {
+            "path": "docs/review/atlas-craft-26/final/definitions.json",
+            "sha256": "c8d7491586407d748bd4cfa6e47246fd919883be8cc5b00b5aefe791d85b11c6"
+          },
+          {
+            "path": "docs/review/atlas-craft-26/final/28-geometry.html",
+            "sha256": "4036657151365fa76934b6169ec033aed795096567fb5a931c2701f6f07578f6"
+          },
+          {
+            "path": "docs/review/atlas-craft-26/final/28-geometry-light-1x.png",
+            "sha256": "d3dd615ae95add367c39b2f44ec103496b8bc68aa02cc1d226f3c40155478807"
+          },
+          {
+            "path": "docs/review/atlas-craft-26/final/28-geometry-light-2x.png",
+            "sha256": "f5d8b7b43850f2193f663962087c5b1aa1d5e2dbe9a7a225009b6dc7360abc74"
+          },
+          {
+            "path": "docs/review/atlas-craft-26/final/28-geometry-dark-1x.png",
+            "sha256": "f0cfe18550ee74e9bad3571532344af90a79cd913f9d37273cb1d148c5d16de9"
+          },
+          {
+            "path": "docs/review/atlas-craft-26/final/28-geometry-dark-2x.png",
+            "sha256": "49ca3a52b8fec0532337aeb0a553873bb13461e28b768a42107af477f69f5ef7"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-26/final/28-geometry-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-26/final/28-geometry-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-26/final/28-geometry-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-26/final/28-geometry-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Lucide",
+        "license": "ISC",
+        "licenseFile": "licenses/lucide.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "cylinder",
+      "purpose": "圓柱",
+      "recognitionCues": "橢圓頂面、平行側壁與下方弧底",
+      "confusableWith": [
+        "database",
+        "ellipse"
+      ],
+      "sourceObservation": "Lucide較寬圓柱與Tabler較窄圓柱皆有完整頂面。最新稿採Lucide比例，重建頂部上弧、兩壁與底弧為共同外殼；完稿回比16px頂面孔仍分離，sharp側壁與橢圓交接不產生方耳，三尺寸保留圓柱體量。",
+      "references": [
+        {
+          "name": "cylinder",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/cylinder.svg",
+          "localPath": "references/atlas-01/lucide-cylinder.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/cylinder.svg",
+          "sha256": "359557093f9cf2fb6a9cdbb61871492a9bd24cda03cd8b24ecae2bd8455e1529",
+          "license": "ISC AND MIT",
+          "sourceName": "cylinder",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "cylinder",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/cylinder.svg",
+          "localPath": "references/atlas-01/tabler-cylinder.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/cylinder.svg",
+          "sha256": "29905f321f405bcd513f6b252904e0478812bd3fe67f49ba01b6c395ade04a0d",
+          "license": "MIT",
+          "sourceName": "cylinder",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "這批呈現可見路徑及形體表面，不額外描繪隱藏邊或選取虛線框。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "控制節點、連線與幾何面由空腔和輪廓辨識，不靠淡化曲線區分。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "單色邊界與必要稜線足以表達立體幾何，不用光照漸層補形體。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-26/master-before.json",
+          "variantsSha256": "6d8254fad9045fb19a46a64c25da280e071efa628bafed701f9f5622c08967cb"
+        },
+        "reason": "外殼由上半橢圓、平行側壁與下半底弧連續構成，頂面的下半橢圓裁在內側；保留曲面而非以獨立矩形拼接兩個橢圓。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "ba3885ef3a6683f48e9ac0d0202610e74f84458e0cd18e387920c025579b4891",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/116-solid-shapes/review.html",
+            "sha256": "2ee01f2c766cf21dd2cec055ea9d9ba4b42d5ae7ff8d5f7c69072dff0b306bd5"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/116-solid-shapes/definitions.json",
+            "sha256": "84f1651958674ccb4e70e7e6f4555dd1024311d7ca081d54b6ed90ce4c9d6bed"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/116-solid-shapes/light-1x.png",
+            "sha256": "4153360f618df28a35a525d39bc69bd0714347c7ff278eef64bb59df07bc7cf3"
+          },
+          {
+            "path": "docs/review/atlas-craft-26/final/definitions.json",
+            "sha256": "c8d7491586407d748bd4cfa6e47246fd919883be8cc5b00b5aefe791d85b11c6"
+          },
+          {
+            "path": "docs/review/atlas-craft-26/final/28-geometry.html",
+            "sha256": "4036657151365fa76934b6169ec033aed795096567fb5a931c2701f6f07578f6"
+          },
+          {
+            "path": "docs/review/atlas-craft-26/final/28-geometry-light-1x.png",
+            "sha256": "d3dd615ae95add367c39b2f44ec103496b8bc68aa02cc1d226f3c40155478807"
+          },
+          {
+            "path": "docs/review/atlas-craft-26/final/28-geometry-light-2x.png",
+            "sha256": "f5d8b7b43850f2193f663962087c5b1aa1d5e2dbe9a7a225009b6dc7360abc74"
+          },
+          {
+            "path": "docs/review/atlas-craft-26/final/28-geometry-dark-1x.png",
+            "sha256": "f0cfe18550ee74e9bad3571532344af90a79cd913f9d37273cb1d148c5d16de9"
+          },
+          {
+            "path": "docs/review/atlas-craft-26/final/28-geometry-dark-2x.png",
+            "sha256": "49ca3a52b8fec0532337aeb0a553873bb13461e28b768a42107af477f69f5ef7"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-26/final/28-geometry-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-26/final/28-geometry-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-26/final/28-geometry-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-26/final/28-geometry-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Lucide",
+        "license": "ISC",
+        "licenseFile": "licenses/lucide.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "pyramid",
+      "purpose": "角錐",
+      "recognitionCues": "頂點、兩個三角面與中央稜線",
+      "confusableWith": [
+        "cone",
+        "triangle"
+      ],
+      "sourceObservation": "Lucide較寬雙面角錐與Tabler較瘦構圖相比更穩定。最新稿採Lucide雙面輪廓；完稿回比16px中央稜線收於外殼內，頂尖和底尖沒有多出端帽，兩個三角面仍清楚且左右平衡。",
+      "references": [
+        {
+          "name": "pyramid",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/pyramid.svg",
+          "localPath": "references/atlas-01/lucide-pyramid.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/pyramid.svg",
+          "sha256": "9f41f141d16f41cffbb0389cb604d460b42d575ce2b76dc2ec2c1231ce3a02c6",
+          "license": "ISC AND MIT",
+          "sourceName": "pyramid",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "pyramid",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/pyramid.svg",
+          "localPath": "references/atlas-01/tabler-pyramid.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/pyramid.svg",
+          "sha256": "147c3f0052d79095ffea20624ac83e25696ec8eab563d19a83f278d15366a460",
+          "license": "MIT",
+          "sourceName": "pyramid",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "這批呈現可見路徑及形體表面，不額外描繪隱藏邊或選取虛線框。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "控制節點、連線與幾何面由空腔和輪廓辨識，不靠淡化曲線區分。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "單色邊界與必要稜線足以表達立體幾何，不用光照漸層補形體。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-26/master-before.json",
+          "variantsSha256": "cc88f66b335d0ee37afef24ec568aade6c6f53a27b856efa76b32a5d3c947c60"
+        },
+        "reason": "左右輪廓沿共同垂直軸對稱配置，中央稜線依實際墨線裁在封閉殼體內；小轉角隨預設改變，保持頂點與底邊支承。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "6b2943994cfd29f959008f0bfb11ee4c0bac5ebb8d4f243cda842607d6931a79",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/116-solid-shapes/review.html",
+            "sha256": "2ee01f2c766cf21dd2cec055ea9d9ba4b42d5ae7ff8d5f7c69072dff0b306bd5"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/116-solid-shapes/definitions.json",
+            "sha256": "84f1651958674ccb4e70e7e6f4555dd1024311d7ca081d54b6ed90ce4c9d6bed"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/116-solid-shapes/light-1x.png",
+            "sha256": "4153360f618df28a35a525d39bc69bd0714347c7ff278eef64bb59df07bc7cf3"
+          },
+          {
+            "path": "docs/review/atlas-craft-26/final/definitions.json",
+            "sha256": "c8d7491586407d748bd4cfa6e47246fd919883be8cc5b00b5aefe791d85b11c6"
+          },
+          {
+            "path": "docs/review/atlas-craft-26/final/28-geometry.html",
+            "sha256": "4036657151365fa76934b6169ec033aed795096567fb5a931c2701f6f07578f6"
+          },
+          {
+            "path": "docs/review/atlas-craft-26/final/28-geometry-light-1x.png",
+            "sha256": "d3dd615ae95add367c39b2f44ec103496b8bc68aa02cc1d226f3c40155478807"
+          },
+          {
+            "path": "docs/review/atlas-craft-26/final/28-geometry-light-2x.png",
+            "sha256": "f5d8b7b43850f2193f663962087c5b1aa1d5e2dbe9a7a225009b6dc7360abc74"
+          },
+          {
+            "path": "docs/review/atlas-craft-26/final/28-geometry-dark-1x.png",
+            "sha256": "f0cfe18550ee74e9bad3571532344af90a79cd913f9d37273cb1d148c5d16de9"
+          },
+          {
+            "path": "docs/review/atlas-craft-26/final/28-geometry-dark-2x.png",
+            "sha256": "49ca3a52b8fec0532337aeb0a553873bb13461e28b768a42107af477f69f5ef7"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-26/final/28-geometry-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-26/final/28-geometry-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-26/final/28-geometry-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-26/final/28-geometry-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Lucide",
+        "license": "ISC",
+        "licenseFile": "licenses/lucide.txt"
+      },
+      "remaining": []
+    }
+  ]
+}

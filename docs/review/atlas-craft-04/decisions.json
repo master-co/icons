@@ -1,0 +1,152 @@
+{
+  "batch": "08-food",
+  "cycle": "atlas-craft-04",
+  "familyRoot": "docs/review/atlas-craft-04/families",
+  "baseline": "references/atlas-craft-04/master-before.json",
+  "reviewer": "Codex (AI)",
+  "visualInspectionComplete": true,
+  "inspectedCombinations": [
+    {
+      "theme": "light",
+      "dpr": 1
+    },
+    {
+      "theme": "light",
+      "dpr": 2
+    },
+    {
+      "theme": "dark",
+      "dpr": 1
+    },
+    {
+      "theme": "dark",
+      "dpr": 2
+    }
+  ],
+  "effects": {
+    "dashes": {
+      "used": false,
+      "reason": "餐點的實體輪廓沒有隱藏或未完成邊界。"
+    },
+    "opacity": {
+      "used": false,
+      "reason": "以部件留白區別食材和器皿，不以淡化處理擁擠。"
+    },
+    "gradients": {
+      "used": false,
+      "reason": "食物以單色平面線條表意，無連續漸層需求。"
+    }
+  },
+  "decisions": [
+    {
+      "name": "utensils",
+      "groupRoot": "docs/review/atlas-craft-01/28",
+      "confusableWith": [
+        "soup",
+        "cooking-pot"
+      ],
+      "sourceObservation": "Lucide採三齒長叉與弧刃餐刀，Tabler把叉齒及刀刃壓得較短。Master保留三齒、加寬刀腹，刀叉間使用開放空白；16px叉齒仍各自分離。",
+      "reason": "叉齒與直柄共享中軸，刀柄只從刀腹外側延伸，避免內部重複線和端帽突出。曲刀腹不因sharp角型改成直折線。",
+      "adaptedFrom": "Lucide"
+    },
+    {
+      "name": "soup",
+      "groupRoot": "docs/review/atlas-craft-01/28",
+      "confusableWith": [
+        "salad",
+        "cooking-pot"
+      ],
+      "sourceObservation": "Lucide以三筆蒸氣、湯匙及平底表意，Tabler以三筆蒸氣和折角碗表意。Master採兩筆相隔較寬的蒸氣與連續圓腹，省略湯匙和底座線。",
+      "reason": "湯碗共用一條口緣，碗內不加水面；蒸氣止於碗口上方，避免多條水平線把小尺寸碗孔切碎。",
+      "adaptedFrom": null
+    },
+    {
+      "name": "salad",
+      "groupRoot": "docs/review/atlas-craft-01/28",
+      "confusableWith": [
+        "soup",
+        "sprout"
+      ],
+      "sourceObservation": "Lucide的蔬菜以多瓣外輪廓和斜葉脈堆疊，Tabler用尖葉及矩形配料。Master把左側葉菜與右側半圓配料分成兩個清楚群組，16px刪去葉脈。",
+      "reason": "葉菜、配料與碗口按前後關係收邊，碗內留大空腔；20/24只加一筆葉脈，沒有增加小孔或重複碗緣。",
+      "adaptedFrom": "Lucide"
+    },
+    {
+      "name": "sandwich",
+      "groupRoot": "docs/review/atlas-craft-01/29c",
+      "confusableWith": [
+        "bread",
+        "pizza"
+      ],
+      "sourceObservation": "Lucide是三角上層與折角餡料，Hugeicons是斜上層與兩道波形。Master採正面三角上層；初稿下層偏高，第二稿尖形餡料又壓窄底部，最後縮短厚度並減少餡料下垂。",
+      "reason": "下層由22縮至20，上層分界移至11；餡料尖端由18移至16.5，解除16px底部幾乎黏合的狹縫。保留實際初稿及兩次修正的對照。",
+      "adaptedFrom": "Lucide"
+    },
+    {
+      "name": "pizza",
+      "groupRoot": "docs/review/atlas-craft-01/29",
+      "confusableWith": [
+        "sandwich",
+        "triangle"
+      ],
+      "sourceObservation": "Lucide採斜向切片與一段圓配料，Tabler採正向三角片和三點配料。Master沿用正向輪廓，弧形餅皮留寬，三點用不同小徑保持分組。",
+      "reason": "尖端與弧底共同建立切片輪廓；餅皮分界裁在外輪廓內，三點不靠邊，小尺寸不加空心配料圈。",
+      "adaptedFrom": "Tabler"
+    },
+    {
+      "name": "burger",
+      "groupRoot": "docs/review/atlas-craft-01/29",
+      "confusableWith": [
+        "sandwich",
+        "bread"
+      ],
+      "sourceObservation": "Lucide把麵包、起司及肉排連成輪廓，Tabler以分開的圓頂及下層表意。Master選分開的上下麵包，中央只留一條餡料線；16px取消芝麻。",
+      "reason": "上下麵包的寬孔與中間開放留白各自清楚；20/24兩顆芝麻不增加描邊圈，三層在原生明暗下仍可辨識。",
+      "adaptedFrom": "Tabler"
+    },
+    {
+      "name": "ice-cream",
+      "groupRoot": "docs/review/atlas-craft-01/30",
+      "confusableWith": [
+        "pizza",
+        "cookie"
+      ],
+      "sourceObservation": "Lucide採圓拱冰球與無紋甜筒，Phosphor在甜筒加兩條斜紋。Master保留寬冰球、左右圓肩和空白甜筒，避免斜紋在16px形成密集三角孔。",
+      "reason": "冰球底緣與甜筒共享接點；sharp尖端稍內收以避免斜接超出畫布，soft和rounded使用實際轉角，保留無紋甜筒孔。",
+      "adaptedFrom": "Lucide"
+    },
+    {
+      "name": "cake",
+      "groupRoot": "docs/review/atlas-craft-01/30",
+      "confusableWith": [
+        "bread",
+        "cooking-pot"
+      ],
+      "sourceObservation": "Lucide有三支蠟燭及底座，Tabler以單個火焰和糖霜表示蛋糕。Master採單支蠟燭、實心火焰及一條糖霜，讓上方不被多個細桿塞滿。",
+      "reason": "火焰和燭芯保持可見間隔；糖霜只有緩波，不加第二層蛋糕線。三種角型實際改變糕體角部，16px仍有上下兩個清楚空腔。",
+      "adaptedFrom": "Tabler"
+    },
+    {
+      "name": "cookie",
+      "groupRoot": "docs/review/atlas-craft-01/30",
+      "confusableWith": [
+        "citrus",
+        "circle"
+      ],
+      "sourceObservation": "Lucide的圓餅有兩個咬痕與多顆碎屑，Tabler用波浪餅緣和單個缺口。Master採圓外緣與兩個缺口，刪除外部碎屑，16px三粒、20/24四粒。",
+      "reason": "重建圓餅弧段與兩個連續凹口，讓缺口有明確深度；巧克力粒不圍出小孔，也不緊貼邊界，沒有額外裝飾碎線。",
+      "adaptedFrom": "Lucide"
+    },
+    {
+      "name": "bread",
+      "groupRoot": "docs/review/atlas-craft-01/31",
+      "confusableWith": [
+        "sandwich",
+        "cake"
+      ],
+      "sourceObservation": "Phosphor用雙片吐司及側面線表厚度，Tabler用單片吐司輪廓。Master選單片、加寬拱肩及直立腹部，省去側面重複描邊。",
+      "reason": "左右肩部保持連續曲面，底部按sharp/soft/rounded建立不同半徑；內部保持完整空腔，16px不套第二層麵包邊框。",
+      "adaptedFrom": "Tabler"
+    }
+  ]
+}

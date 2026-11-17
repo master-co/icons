@@ -1,0 +1,152 @@
+{
+  "batch": "27-charts",
+  "cycle": "atlas-craft-25",
+  "familyRoot": "docs/review/atlas-craft-25/final",
+  "baseline": "references/atlas-craft-25/master-before.json",
+  "reviewer": "Codex (AI)",
+  "visualInspectionComplete": true,
+  "inspectedCombinations": [
+    {
+      "theme": "light",
+      "dpr": 1
+    },
+    {
+      "theme": "light",
+      "dpr": 2
+    },
+    {
+      "theme": "dark",
+      "dpr": 1
+    },
+    {
+      "theme": "dark",
+      "dpr": 2
+    }
+  ],
+  "effects": {
+    "dashes": {
+      "used": false,
+      "reason": "圖示呈現確定的資料類型，不增加輔助虛線格網或推估連線壓縮原生留白。"
+    },
+    "opacity": {
+      "used": false,
+      "reason": "資料線和座標軸以位置及間距分離，無需淡化任一資料序列才能辨識。"
+    },
+    "gradients": {
+      "used": false,
+      "reason": "圖表類型以輪廓和線條編碼即可區別，不以連續漸層暗示未提供的數值。"
+    }
+  },
+  "decisions": [
+    {
+      "name": "chart-radar",
+      "groupRoot": "docs/review/atlas-craft-01/109-radar-candle",
+      "confusableWith": [
+        "star",
+        "chart-network"
+      ],
+      "sourceObservation": "Lucide只有資料輪廓與五條軸，Tabler另加外層網格而更密。最新稿採Lucide疏朗構造，資料點改按共同中心與五軸比例定位；完稿回比16px五個區域仍可讀，沒有增加第二層網格把中心擠成小孔群。",
+      "reason": "以同一中心建立五向軸，資料點落在各自軸上並保持不同數值比例；角型調整資料多邊形的實際小圓角，軸線保持連續相接。",
+      "adaptedFrom": "Lucide"
+    },
+    {
+      "name": "chart-candlestick",
+      "groupRoot": "docs/review/atlas-craft-01/109-radar-candle",
+      "confusableWith": [
+        "chart-bar",
+        "chart-waterfall"
+      ],
+      "sourceObservation": "Lucide兩根K線加座標軸，Tabler三根K線不帶軸。最新稿採Lucide兩根構造並共用Master座標軸；完稿回比16px燭身內孔、影線和兩柱間距均清楚，影線不穿進燭身空腔。",
+      "reason": "兩個不同高度燭身保留上下影線，將影線墨跡裁在燭身外側；燭身小角半徑隨預設改變，與開放座標軸保持通道。",
+      "adaptedFrom": "Lucide"
+    },
+    {
+      "name": "chart-waterfall",
+      "groupRoot": "docs/review/atlas-craft-01/110-waterfall-bubble-network",
+      "confusableWith": [
+        "chart-bar",
+        "chart-candlestick"
+      ],
+      "sourceObservation": "MDI用上升實心方柱，Hugeicons用下降與回升的懸空線柱。最新稿採Hugeicons四段增減節奏，換成本庫座標軸；完稿回比16px短段仍讀為獨立資料柱，與所有柱落地的普通長條圖有清楚差異。",
+      "reason": "四段資料柱沿水平進程分布，端點高度表達累加與扣減；保持柱間等距與柱底到橫軸留白，不補微小連接虛線。",
+      "adaptedFrom": "Hugeicons Free"
+    },
+    {
+      "name": "chart-bubble",
+      "groupRoot": "docs/review/atlas-craft-01/110-waterfall-bubble-network",
+      "confusableWith": [
+        "chart-scatter",
+        "circle"
+      ],
+      "sourceObservation": "Tabler無座標軸而三顆氣泡大小差異明確，Hugeicons軸內配置較密。最新稿採Tabler三個圈的比例與位置；完稿回比16px最小圈仍有內孔，三圈間各有通道，保留圓面積差異而不將小圈改成散點圖的實心點。",
+      "reason": "三個不同半徑的氣泡以大圈偏上、中圈左下、小圈右下平衡配置；不加格線與刻度，圓曲面不隨sharp預設改成多邊形。",
+      "adaptedFrom": "Tabler"
+    },
+    {
+      "name": "chart-network",
+      "groupRoot": "docs/review/atlas-craft-01/110b-network",
+      "confusableWith": [
+        "chart-scatter",
+        "network"
+      ],
+      "sourceObservation": "Lucide三個節點與一個外伸連結，比Hugeicons四個圈更適合小尺寸。最新稿採Lucide構造、略擴圈孔；完稿回比發現底節點離軸太近，已上移1u，16px底圈不再貼住橫軸，連線止於各圈外緣。",
+      "reason": "三個圈孔依相連資料配置，連線墨跡逐一裁在圈外而保留真實相接；下節點上移擴大與橫軸通道，共用本庫座標軸。",
+      "adaptedFrom": "Lucide"
+    },
+    {
+      "name": "chart-histogram",
+      "groupRoot": "docs/review/atlas-craft-01/111b-histogram",
+      "confusableWith": [
+        "chart-bar",
+        "chart-bell-curve"
+      ],
+      "sourceObservation": "Tabler四個分布柱與上方曲線，Hugeicons只有三個柱且曲線較平。最新稿採Tabler四柱語意並共用Master軸；完稿回比將曲線起點對準縱軸，去掉外突，柱底對齊橫軸並恢復soft圓收筆，16px柱與曲線之間仍有充足空間。",
+      "reason": "分布曲線由水平切線進入單峰再回水平，四柱表達對應分布趨勢；曲線起點和柱底依母型軸座標收口，不另畫不一致基線。",
+      "adaptedFrom": "Tabler"
+    },
+    {
+      "name": "chart-sankey",
+      "groupRoot": "docs/review/atlas-craft-01/111-histogram-sankey",
+      "confusableWith": [
+        "shuffle",
+        "chart-spline"
+      ],
+      "sourceObservation": "Tabler三道交織流向，MDI以座標框和分流曲線表達，構圖不同。最新稿採Tabler無箭頭的流向曲線；完稿回比16px兩個交會點分開可讀，兩端分流保持間隔，不再加節點或箭頭使其誤讀為shuffle。",
+      "reason": "三道水平切線進出的曲線表達流向交織，保留來源的抽象桑基圖語意；交會屬圖示資料線，不假裝實體物件遮擋而挖出碎斷線。",
+      "adaptedFrom": "Tabler"
+    },
+    {
+      "name": "chart-spline",
+      "groupRoot": "docs/review/atlas-craft-01/112-spline-bell-combo",
+      "confusableWith": [
+        "chart-line",
+        "chart-bell-curve"
+      ],
+      "sourceObservation": "Lucide曲線的峰谷變化較穩，Hugeicons右側上升更陡。最新稿採Lucide連續曲線配Master座標軸；完稿回比16px波峰與低谷仍清楚，曲線起收端與座標軸分離，這是chart-line的平滑變體而非額外基本概念。",
+      "reason": "連續曲線以相切控制柄接起上升、下降及再次上升，避免用圓角折線冒充曲線；保留既有軸角型與尺寸。",
+      "adaptedFrom": "Lucide"
+    },
+    {
+      "name": "chart-bell-curve",
+      "groupRoot": "docs/review/atlas-craft-01/112-spline-bell-combo",
+      "confusableWith": [
+        "chart-histogram",
+        "chart-spline"
+      ],
+      "sourceObservation": "Lucide鐘形曲線離開兩軸，MDI左側接軸且鐘形更寬。最新稿採Lucide單峰對稱構造；完稿回比16px左右尾端、峰頂與軸線分開可讀，保留峰頂圓滑和兩側自然收束，沒有添加刻度切碎空間。",
+      "reason": "曲線以共同中心鏡像構成單峰，兩側水平尾端平衡收束；座標軸共用母型，sharp仍保留分布曲線的物理平滑性。",
+      "adaptedFrom": "Lucide"
+    },
+    {
+      "name": "chart-combo",
+      "groupRoot": "docs/review/atlas-craft-01/112-spline-bell-combo",
+      "confusableWith": [
+        "chart-line",
+        "chart-bar"
+      ],
+      "sourceObservation": "Lucide折線配五柱，Hugeicons折線有三個節點圈和基線。最新稿採Lucide較簡潔的線柱分層，減為四柱；完稿回比16px折線與柱頂各有間距，四柱高度仍有節奏，不以額外點圈或基線增加密度。",
+      "reason": "折線沿上方形成高低轉折，四個直柱配置於下方且共享底線高度；柱數減少後保持資料組合語意，折點按角型改實際曲率。",
+      "adaptedFrom": "Lucide"
+    }
+  ]
+}

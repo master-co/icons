@@ -1,0 +1,240 @@
+{
+  "reviewer": "Codex (AI)",
+  "userApproval": "pending",
+  "records": [
+    {
+      "name": "car",
+      "status": "revised-awaiting-family-review",
+      "reviewer": "Codex (AI)",
+      "reason": "改為清楚的側視車身，設計車頂轉入擋風玻璃及車頭的曲線，窗框收在車殼內。",
+      "before": {
+        "path": "references/atlas-craft-01/master-before.json"
+      },
+      "variantsSha256": "52b21ba803ee202946031391dcfa19143f2494d9766b99f698b1e06d0985fafb",
+      "evidence": [
+        {
+          "path": "docs/review/atlas-craft-01/01/review.html",
+          "sha256": "317cbf132578037708c91db4d00f8a73f1e18249fd77833fd5788fb39769b876"
+        },
+        {
+          "path": "docs/review/atlas-craft-01/01/definitions.json",
+          "sha256": "2709348267256fbcc7668e99a1e08ca748983eac3347a0a16de8fe5c05ccac80"
+        },
+        {
+          "path": "docs/review/atlas-craft-01/01/light-1x.png",
+          "sha256": "1e015aabfc0014f893bf5f207b40472d3d870b99dd37f1d0685e05b2d642e7ce"
+        },
+        {
+          "path": "docs/review/atlas-craft-01/01/dark-1x.png",
+          "sha256": "0e4d07ee454fdf859497ff944d0d7fe980513e93505e84e8f9eb0fdc4be6b551"
+        },
+        {
+          "path": "docs/review/atlas-craft-01/01/light-2x.png",
+          "sha256": "57ab26b63937ac6b5815fb32bbea760d5ca50f941c9dcf6a359cf32ec3533116"
+        },
+        {
+          "path": "docs/review/atlas-craft-01/01/dark-2x.png",
+          "sha256": "b7ef83dc5dcd0f9d86abadb3ef8231b59d728cbdeafbed2fcfe475a25ba2ae68"
+        }
+      ],
+      "limitations": [
+        "審稿頁尚待改用最新同尺寸來源與整數像素排版重拍；不列為最終證據。"
+      ]
+    },
+    {
+      "name": "bus",
+      "status": "revised-awaiting-family-review",
+      "reviewer": "Codex (AI)",
+      "reason": "放大輪孔，清除貼近車輪的門線，重建前側曲面並收好窗帶接點。",
+      "before": {
+        "path": "references/atlas-craft-01/master-before.json"
+      },
+      "variantsSha256": "92327c31e47fdabe3285e3abee38fb91f0fb69f23ca8e07011a2f31a9c96d6aa",
+      "evidence": [
+        {
+          "path": "docs/review/atlas-craft-01/01/review.html",
+          "sha256": "317cbf132578037708c91db4d00f8a73f1e18249fd77833fd5788fb39769b876"
+        },
+        {
+          "path": "docs/review/atlas-craft-01/01/definitions.json",
+          "sha256": "2709348267256fbcc7668e99a1e08ca748983eac3347a0a16de8fe5c05ccac80"
+        },
+        {
+          "path": "docs/review/atlas-craft-01/01/light-1x.png",
+          "sha256": "1e015aabfc0014f893bf5f207b40472d3d870b99dd37f1d0685e05b2d642e7ce"
+        },
+        {
+          "path": "docs/review/atlas-craft-01/01/dark-1x.png",
+          "sha256": "0e4d07ee454fdf859497ff944d0d7fe980513e93505e84e8f9eb0fdc4be6b551"
+        },
+        {
+          "path": "docs/review/atlas-craft-01/01/light-2x.png",
+          "sha256": "57ab26b63937ac6b5815fb32bbea760d5ca50f941c9dcf6a359cf32ec3533116"
+        },
+        {
+          "path": "docs/review/atlas-craft-01/01/dark-2x.png",
+          "sha256": "b7ef83dc5dcd0f9d86abadb3ef8231b59d728cbdeafbed2fcfe475a25ba2ae68"
+        }
+      ],
+      "limitations": [
+        "審稿頁尚待改用最新同尺寸來源與整數像素排版重拍；不列為最終證據。"
+      ]
+    },
+    {
+      "name": "rabbit",
+      "status": "revised-awaiting-family-review",
+      "reviewer": "Codex (AI)",
+      "reason": "重建對稱長耳、耳根凹口與臉頰，分配眼鼻留白，移除任意大曲線造成的長臉。",
+      "before": {
+        "path": "references/atlas-craft-01/master-before.json"
+      },
+      "variantsSha256": "39cec8a5646f92dda7018b047599d063b73318e884cc1adac4f4cb776a0ee407",
+      "evidence": [
+        {
+          "path": "docs/review/atlas-craft-01/01/review.html",
+          "sha256": "317cbf132578037708c91db4d00f8a73f1e18249fd77833fd5788fb39769b876"
+        },
+        {
+          "path": "docs/review/atlas-craft-01/01/definitions.json",
+          "sha256": "2709348267256fbcc7668e99a1e08ca748983eac3347a0a16de8fe5c05ccac80"
+        },
+        {
+          "path": "docs/review/atlas-craft-01/01/light-1x.png",
+          "sha256": "1e015aabfc0014f893bf5f207b40472d3d870b99dd37f1d0685e05b2d642e7ce"
+        },
+        {
+          "path": "docs/review/atlas-craft-01/01/dark-1x.png",
+          "sha256": "0e4d07ee454fdf859497ff944d0d7fe980513e93505e84e8f9eb0fdc4be6b551"
+        },
+        {
+          "path": "docs/review/atlas-craft-01/01/light-2x.png",
+          "sha256": "57ab26b63937ac6b5815fb32bbea760d5ca50f941c9dcf6a359cf32ec3533116"
+        },
+        {
+          "path": "docs/review/atlas-craft-01/01/dark-2x.png",
+          "sha256": "b7ef83dc5dcd0f9d86abadb3ef8231b59d728cbdeafbed2fcfe475a25ba2ae68"
+        }
+      ],
+      "limitations": [
+        "審稿頁尚待改用最新同尺寸來源與整數像素排版重拍；不列為最終證據。"
+      ]
+    },
+    {
+      "name": "fuel",
+      "status": "revised-awaiting-family-review",
+      "reviewer": "Codex (AI)",
+      "reason": "泵身與油管重新分配寬度；側邊平行段中心距離由2增至5／24，顯示區改用共同分界取代內嵌小框。",
+      "before": {
+        "path": "references/atlas-craft-01/master-before.json"
+      },
+      "variantsSha256": "7f6a48493304535e758a46e1584dadeb569fcc8a3c326d51037239d0222c8b93",
+      "evidence": [
+        {
+          "path": "docs/review/atlas-craft-01/02/review.html",
+          "sha256": "d4c02b1968a777b6bd9e4bbaab739bf0e70bcd7381e37728b57b978440f10f7d"
+        },
+        {
+          "path": "docs/review/atlas-craft-01/02/definitions.json",
+          "sha256": "e631c30d718b9d748fe90fa117c1b674ec7bac4995ec48daa17b891b0dc8a0ac"
+        },
+        {
+          "path": "docs/review/atlas-craft-01/02/light-1x.png",
+          "sha256": "823cfdfee2907f20fd51a6b4ad9781503e7257f07c4df63b1c01fc80d2e475dd"
+        },
+        {
+          "path": "docs/review/atlas-craft-01/02/dark-1x.png",
+          "sha256": "4dcfc038ec81d2e8e608536b33f398c46d1d14a5517501e25f68fed67a7973d9"
+        },
+        {
+          "path": "docs/review/atlas-craft-01/02/light-2x.png",
+          "sha256": "bf5ba5d7b5de34340bdd22c0d863facefd0e168530a9ddf4c9657a34b07e8437"
+        },
+        {
+          "path": "docs/review/atlas-craft-01/02/dark-2x.png",
+          "sha256": "c97d62393b2fd0cc8d41a20aff7c8d952de1536797cb4e1530579b2ebc8bbb5e"
+        }
+      ],
+      "limitations": [
+        "已修正原生排版並重看淺底1x；排版修正後的深底及2x仍須重新檢視。"
+      ]
+    },
+    {
+      "name": "backpack",
+      "status": "revised-awaiting-family-review",
+      "reviewer": "Codex (AI)",
+      "reason": "主袋加寬，前袋與主袋共享底邊；側通道加寬，補上具有可見內孔的提把。",
+      "before": {
+        "path": "references/atlas-craft-01/master-before.json"
+      },
+      "variantsSha256": "444228e7b82bc1d2b28a11b9e3eade39c3d81853f672dcdad5dbeec7f1d2c69b",
+      "evidence": [
+        {
+          "path": "docs/review/atlas-craft-01/02/review.html",
+          "sha256": "d4c02b1968a777b6bd9e4bbaab739bf0e70bcd7381e37728b57b978440f10f7d"
+        },
+        {
+          "path": "docs/review/atlas-craft-01/02/definitions.json",
+          "sha256": "e631c30d718b9d748fe90fa117c1b674ec7bac4995ec48daa17b891b0dc8a0ac"
+        },
+        {
+          "path": "docs/review/atlas-craft-01/02/light-1x.png",
+          "sha256": "823cfdfee2907f20fd51a6b4ad9781503e7257f07c4df63b1c01fc80d2e475dd"
+        },
+        {
+          "path": "docs/review/atlas-craft-01/02/dark-1x.png",
+          "sha256": "4dcfc038ec81d2e8e608536b33f398c46d1d14a5517501e25f68fed67a7973d9"
+        },
+        {
+          "path": "docs/review/atlas-craft-01/02/light-2x.png",
+          "sha256": "bf5ba5d7b5de34340bdd22c0d863facefd0e168530a9ddf4c9657a34b07e8437"
+        },
+        {
+          "path": "docs/review/atlas-craft-01/02/dark-2x.png",
+          "sha256": "c97d62393b2fd0cc8d41a20aff7c8d952de1536797cb4e1530579b2ebc8bbb5e"
+        }
+      ],
+      "limitations": [
+        "已修正原生排版並重看淺底1x；排版修正後的深底及2x仍須重新檢視。"
+      ]
+    },
+    {
+      "name": "traffic-cone",
+      "status": "revised-awaiting-family-review",
+      "reviewer": "Codex (AI)",
+      "reason": "獨立雙底線改為共同底板，放寬上方空腔，警示帶依側邊收口。",
+      "before": {
+        "path": "references/atlas-craft-01/master-before.json"
+      },
+      "variantsSha256": "77566609623f9a5d80dcadc4ec614bebf88d9a4ca16277de5e8843db5f6e67c8",
+      "evidence": [
+        {
+          "path": "docs/review/atlas-craft-01/02/review.html",
+          "sha256": "d4c02b1968a777b6bd9e4bbaab739bf0e70bcd7381e37728b57b978440f10f7d"
+        },
+        {
+          "path": "docs/review/atlas-craft-01/02/definitions.json",
+          "sha256": "e631c30d718b9d748fe90fa117c1b674ec7bac4995ec48daa17b891b0dc8a0ac"
+        },
+        {
+          "path": "docs/review/atlas-craft-01/02/light-1x.png",
+          "sha256": "823cfdfee2907f20fd51a6b4ad9781503e7257f07c4df63b1c01fc80d2e475dd"
+        },
+        {
+          "path": "docs/review/atlas-craft-01/02/dark-1x.png",
+          "sha256": "4dcfc038ec81d2e8e608536b33f398c46d1d14a5517501e25f68fed67a7973d9"
+        },
+        {
+          "path": "docs/review/atlas-craft-01/02/light-2x.png",
+          "sha256": "bf5ba5d7b5de34340bdd22c0d863facefd0e168530a9ddf4c9657a34b07e8437"
+        },
+        {
+          "path": "docs/review/atlas-craft-01/02/dark-2x.png",
+          "sha256": "c97d62393b2fd0cc8d41a20aff7c8d952de1536797cb4e1530579b2ebc8bbb5e"
+        }
+      ],
+      "limitations": [
+        "已修正原生排版並重看淺底1x；排版修正後的深底及2x仍須重新檢視。"
+      ]
+    }
+  ]
+}

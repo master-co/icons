@@ -1,0 +1,1531 @@
+{
+  "schemaVersion": 2,
+  "reviewer": "Codex (AI)",
+  "userApproval": "pending",
+  "icons": [
+    {
+      "name": "coffee",
+      "purpose": "咖啡",
+      "recognitionCues": "圓底杯身、外接把手與上升蒸氣",
+      "confusableWith": [
+        "beer",
+        "cup-soda"
+      ],
+      "sourceObservation": "Lucide以直立蒸氣、方底杯及側把手表意；Tabler用曲蒸氣、較扁杯和水面。Master保留寬杯孔並用圓底收束，16px蒸氣減為一筆，20/24兩筆，避免頂部三條短線過密。",
+      "references": [
+        {
+          "name": "coffee",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/coffee.svg",
+          "localPath": "references/atlas-01/lucide-coffee.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/coffee.svg",
+          "sha256": "970595bdafac0df42c00b847d53fd00c2283ecc3b83881274de2aa7dbce2bbc8",
+          "license": "ISC AND MIT",
+          "sourceName": "coffee",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "coffee",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/coffee.svg",
+          "localPath": "references/atlas-01/tabler-coffee.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/coffee.svg",
+          "sha256": "755728c2ee5189f2f06d295edf1d64c816e4065becf657e36eee8b7811226fce",
+          "license": "MIT",
+          "sourceName": "coffee",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "杯具及壺具的完整輪廓已能表意，沒有隱藏邊或暫態線需求。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "水面採單道結構線，部件以實際空白分開，無淡化需求。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "單色平面器具不需要連續漸層或反光效果。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-03/master-before.json",
+          "variantsSha256": "11f469d46435d3496a9e72d8339709ca13f5e065a9b82b7dd9127cc59c8f8587"
+        },
+        "reason": "保留寬杯身、外接把手及圓腹；把手內線不侵入杯孔，蒸氣與杯緣留白在原生明暗下清楚。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "ddfc0ae23ad7f6709ee3c88e3c3f4ee3ab77746340a0f88b2d04679fcedd3201",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/23/review.html",
+            "sha256": "6b99442756184b90620bc037e7786f8736139dd2dcfb51ac3a5d8cc19b44f02b"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/23/definitions.json",
+            "sha256": "a979a1dc118dd1edc47e916fe1b4219e381eeba472151ba7e531d5cd803e925a"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/23/light-1x.png",
+            "sha256": "216ed8abc0eb3e6f2954b45c890fe82b3ae03956b767a69f7e54ab14a38d900b"
+          },
+          {
+            "path": "docs/review/atlas-craft-03/final/definitions.json",
+            "sha256": "6b32ecbcbb08dc7e6b1f3f6ab97a980508503b2992b8ad41bb5788e8e4f01d3c"
+          },
+          {
+            "path": "docs/review/atlas-craft-03/final/07-drinks.html",
+            "sha256": "57c6ba12fc1324aef15e2c584b60ef29166b534c38761861d69d36403c23af9e"
+          },
+          {
+            "path": "docs/review/atlas-craft-03/final/07-drinks-light-1x.png",
+            "sha256": "5e1ae507443d132afe7ea97b289054ad3c3f7f14e4a2217140a38e44036864ac"
+          },
+          {
+            "path": "docs/review/atlas-craft-03/final/07-drinks-light-2x.png",
+            "sha256": "d7dd48c9c74e7b8f079c4ae7840dbccecea42a77c8584b1072f81ba04bfc3af8"
+          },
+          {
+            "path": "docs/review/atlas-craft-03/final/07-drinks-dark-1x.png",
+            "sha256": "f757653a76a0a4929cbc0077ea6c0da06228b8fedbf0983f8f40c39440d195ec"
+          },
+          {
+            "path": "docs/review/atlas-craft-03/final/07-drinks-dark-2x.png",
+            "sha256": "a5e40a029d992d4367a001493902747da998c2bd3000825586959a514e8a8d2b"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-03/final/07-drinks-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-03/final/07-drinks-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-03/final/07-drinks-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-03/final/07-drinks-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Lucide",
+        "license": "ISC",
+        "licenseFile": "licenses/lucide.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "cup-soda",
+      "purpose": "外帶飲料",
+      "recognitionCues": "上寬下窄杯身、杯緣與彎吸管",
+      "confusableWith": [
+        "glass-water",
+        "coffee"
+      ],
+      "sourceObservation": "Lucide是帶彎吸管和水面的外帶杯；Tabler是有蓋的外帶杯。Master採較少橫線的杯緣，保留吸管、水面及收窄底部，避免把杯蓋三條平行邊全部塞進16px。",
+      "references": [
+        {
+          "name": "cup-soda",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/cup-soda.svg",
+          "localPath": "references/atlas-01/lucide-cup-soda.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/cup-soda.svg",
+          "sha256": "30a13d8d625d19458457b207759f1145256c96ebfe609ce5e01026b893d51b43",
+          "license": "ISC AND MIT",
+          "sourceName": "cup-soda",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "cup-soda",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/cup.svg",
+          "localPath": "references/atlas-01/tabler-cup.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/cup.svg",
+          "sha256": "3ae20810d0be8e296fbda99acee7a29f14ff94b3d39760f932d8fb967c82248c",
+          "license": "MIT",
+          "sourceName": "cup",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "杯具及壺具的完整輪廓已能表意，沒有隱藏邊或暫態線需求。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "水面採單道結構線，部件以實際空白分開，無淡化需求。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "單色平面器具不需要連續漸層或反光效果。"
+        }
+      },
+      "change": {
+        "kind": "modified",
+        "before": {
+          "path": "references/atlas-craft-03/master-before.json",
+          "variantsSha256": "a9e9d52fd8b5ff1731ad5f05109cac6117a668d0877b34043727da075f7b45bd"
+        },
+        "reason": "吸管末端按杯身實際輪廓裁去伸入杯內的墨線，維持相接；底部三種角型各自成形，水面保留寬間隔而不加重複杯蓋線。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "f491737cbb99c9ac509743429c0b029e1fc185a4ba6cc47f58401e4b29cb6e28",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/27/review.html",
+            "sha256": "4a4854a75157646f8c24c89b066e7a8fd5c3854fb1fb75beb5664391fe8a8265"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/27/definitions.json",
+            "sha256": "5ff55c227bd50fce349117a636a0915820e1976a7f878b726da86b5881369da5"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/27/light-1x.png",
+            "sha256": "36e29ae7eb439fe8ea87a67587ed206814680a4b8901687eb1dfbfc71557a58b"
+          },
+          {
+            "path": "docs/review/atlas-craft-03/final/definitions.json",
+            "sha256": "6b32ecbcbb08dc7e6b1f3f6ab97a980508503b2992b8ad41bb5788e8e4f01d3c"
+          },
+          {
+            "path": "docs/review/atlas-craft-03/final/07-drinks.html",
+            "sha256": "57c6ba12fc1324aef15e2c584b60ef29166b534c38761861d69d36403c23af9e"
+          },
+          {
+            "path": "docs/review/atlas-craft-03/final/07-drinks-light-1x.png",
+            "sha256": "5e1ae507443d132afe7ea97b289054ad3c3f7f14e4a2217140a38e44036864ac"
+          },
+          {
+            "path": "docs/review/atlas-craft-03/final/07-drinks-light-2x.png",
+            "sha256": "d7dd48c9c74e7b8f079c4ae7840dbccecea42a77c8584b1072f81ba04bfc3af8"
+          },
+          {
+            "path": "docs/review/atlas-craft-03/final/07-drinks-dark-1x.png",
+            "sha256": "f757653a76a0a4929cbc0077ea6c0da06228b8fedbf0983f8f40c39440d195ec"
+          },
+          {
+            "path": "docs/review/atlas-craft-03/final/07-drinks-dark-2x.png",
+            "sha256": "a5e40a029d992d4367a001493902747da998c2bd3000825586959a514e8a8d2b"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-03/final/07-drinks-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-03/final/07-drinks-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-03/final/07-drinks-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-03/final/07-drinks-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Lucide",
+        "license": "ISC",
+        "licenseFile": "licenses/lucide.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "wine",
+      "purpose": "葡萄酒",
+      "recognitionCues": "收口酒杯、酒面與細長杯腳",
+      "confusableWith": [
+        "glass-water",
+        "bottle"
+      ],
+      "sourceObservation": "Lucide較窄、酒面水平；Phosphor較寬、酒面起伏。Master採較寬酒腹與克制的單道波形，細長杯腳和底座有足夠縱向間隔，16px酒腹仍有兩個清楚空腔。",
+      "references": [
+        {
+          "name": "wine",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/wine.svg",
+          "localPath": "references/atlas-01/lucide-wine.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/wine.svg",
+          "sha256": "3adb2e9107cd4781fbce74a2aaf8704f7a1dbe8f24a024c207d4151491464d9e",
+          "license": "ISC AND MIT",
+          "sourceName": "wine",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "wine",
+          "library": "Phosphor",
+          "repository": "phosphor-icons/core",
+          "commit": "2b75f3ad12b420c9504ef05df8d2564a28f8500e",
+          "path": "assets/regular/wine.svg",
+          "localPath": "references/atlas-01/phosphor-wine.svg",
+          "url": "https://github.com/phosphor-icons/core/blob/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular/wine.svg",
+          "sha256": "b0978c00f0a02cbf6ea02cf7f12e6c5a6fa6621c1bcd6e20e8f72d83bc183ce1",
+          "license": "MIT",
+          "sourceName": "wine",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "杯具及壺具的完整輪廓已能表意，沒有隱藏邊或暫態線需求。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "水面採單道結構線，部件以實際空白分開，無淡化需求。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "單色平面器具不需要連續漸層或反光效果。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-03/master-before.json",
+          "variantsSha256": "f01d7ceaee59ae842489d4a2b189499b6f0c773d230abcaab0b73e29b462deb8"
+        },
+        "reason": "保留寬腹、收口與細腳，酒面裁在杯身內、杯腳裁在杯身外，交接不多出凸耳；水面不採透明度填色。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "444a1c90251f8e3769151542c186a977d7c90bc4a9a721c8737648ba0e3acb69",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/23/review.html",
+            "sha256": "6b99442756184b90620bc037e7786f8736139dd2dcfb51ac3a5d8cc19b44f02b"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/23/definitions.json",
+            "sha256": "a979a1dc118dd1edc47e916fe1b4219e381eeba472151ba7e531d5cd803e925a"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/23/light-1x.png",
+            "sha256": "216ed8abc0eb3e6f2954b45c890fe82b3ae03956b767a69f7e54ab14a38d900b"
+          },
+          {
+            "path": "docs/review/atlas-craft-03/final/definitions.json",
+            "sha256": "6b32ecbcbb08dc7e6b1f3f6ab97a980508503b2992b8ad41bb5788e8e4f01d3c"
+          },
+          {
+            "path": "docs/review/atlas-craft-03/final/07-drinks.html",
+            "sha256": "57c6ba12fc1324aef15e2c584b60ef29166b534c38761861d69d36403c23af9e"
+          },
+          {
+            "path": "docs/review/atlas-craft-03/final/07-drinks-light-1x.png",
+            "sha256": "5e1ae507443d132afe7ea97b289054ad3c3f7f14e4a2217140a38e44036864ac"
+          },
+          {
+            "path": "docs/review/atlas-craft-03/final/07-drinks-light-2x.png",
+            "sha256": "d7dd48c9c74e7b8f079c4ae7840dbccecea42a77c8584b1072f81ba04bfc3af8"
+          },
+          {
+            "path": "docs/review/atlas-craft-03/final/07-drinks-dark-1x.png",
+            "sha256": "f757653a76a0a4929cbc0077ea6c0da06228b8fedbf0983f8f40c39440d195ec"
+          },
+          {
+            "path": "docs/review/atlas-craft-03/final/07-drinks-dark-2x.png",
+            "sha256": "a5e40a029d992d4367a001493902747da998c2bd3000825586959a514e8a8d2b"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-03/final/07-drinks-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-03/final/07-drinks-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-03/final/07-drinks-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-03/final/07-drinks-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Phosphor",
+        "license": "MIT",
+        "licenseFile": "licenses/phosphor.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "beer",
+      "purpose": "啤酒",
+      "recognitionCues": "泡沫頂、直立杯身與側把手",
+      "confusableWith": [
+        "coffee",
+        "glass-water"
+      ],
+      "sourceObservation": "Lucide以多瓣泡沫與兩條杯紋表意；Phosphor以不對稱泡沫、方把手表意。Master保留一片連續泡沫和圓把手，16px只留一條杯紋，20/24兩條。",
+      "references": [
+        {
+          "name": "beer",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/beer.svg",
+          "localPath": "references/atlas-01/lucide-beer.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/beer.svg",
+          "sha256": "d85275d687ef56da0377db3132cfd4260dd8ac15a8d9cd71732a2bcbdc5c885f",
+          "license": "ISC AND MIT",
+          "sourceName": "beer",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "beer",
+          "library": "Phosphor",
+          "repository": "phosphor-icons/core",
+          "commit": "2b75f3ad12b420c9504ef05df8d2564a28f8500e",
+          "path": "assets/regular/beer-stein.svg",
+          "localPath": "references/atlas-01/phosphor-beer-stein.svg",
+          "url": "https://github.com/phosphor-icons/core/blob/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular/beer-stein.svg",
+          "sha256": "917abd5aa9922fe46b776086cc7073e475c4747a9bf06af33bd34a15e4feb415",
+          "license": "MIT",
+          "sourceName": "beer-stein",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "杯具及壺具的完整輪廓已能表意，沒有隱藏邊或暫態線需求。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "水面採單道結構線，部件以實際空白分開，無淡化需求。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "單色平面器具不需要連續漸層或反光效果。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-03/master-before.json",
+          "variantsSha256": "3fb3e0063037dfc418f86ecb51c6ece69288544340fd6cd435943d7512f8b1e8"
+        },
+        "reason": "保留連續泡沫頂及寬杯孔；杯壁止於泡沫外側，把手與杯壁相接；縮小時減杯紋數而不擠窄每條空隙。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "2c4099873656f37d4181f77dd1afe5e4784e9ea8b88d1ac41f19791532e37e42",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/24/review.html",
+            "sha256": "3e5c1e7b1e6f88729767a28e011852088e3664ac656ba049a289a54cfaa40159"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/24/definitions.json",
+            "sha256": "3619f951de477d3a5904b61128300105d49105045b8fe24df83103026e8757a5"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/24/light-1x.png",
+            "sha256": "bb5212c017d96e9ed428ddef4dfd5f26cfbd24188369a2d8f1c38f3373a0b157"
+          },
+          {
+            "path": "docs/review/atlas-craft-03/final/definitions.json",
+            "sha256": "6b32ecbcbb08dc7e6b1f3f6ab97a980508503b2992b8ad41bb5788e8e4f01d3c"
+          },
+          {
+            "path": "docs/review/atlas-craft-03/final/07-drinks.html",
+            "sha256": "57c6ba12fc1324aef15e2c584b60ef29166b534c38761861d69d36403c23af9e"
+          },
+          {
+            "path": "docs/review/atlas-craft-03/final/07-drinks-light-1x.png",
+            "sha256": "5e1ae507443d132afe7ea97b289054ad3c3f7f14e4a2217140a38e44036864ac"
+          },
+          {
+            "path": "docs/review/atlas-craft-03/final/07-drinks-light-2x.png",
+            "sha256": "d7dd48c9c74e7b8f079c4ae7840dbccecea42a77c8584b1072f81ba04bfc3af8"
+          },
+          {
+            "path": "docs/review/atlas-craft-03/final/07-drinks-dark-1x.png",
+            "sha256": "f757653a76a0a4929cbc0077ea6c0da06228b8fedbf0983f8f40c39440d195ec"
+          },
+          {
+            "path": "docs/review/atlas-craft-03/final/07-drinks-dark-2x.png",
+            "sha256": "a5e40a029d992d4367a001493902747da998c2bd3000825586959a514e8a8d2b"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-03/final/07-drinks-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-03/final/07-drinks-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-03/final/07-drinks-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-03/final/07-drinks-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Lucide",
+        "license": "ISC",
+        "licenseFile": "licenses/lucide.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "milk",
+      "purpose": "牛奶",
+      "recognitionCues": "紙盒斜頂、側折面與寬主面",
+      "confusableWith": [
+        "bottle",
+        "package"
+      ],
+      "sourceObservation": "Lucide採奶瓶，Hugeicons採有側折面及液面訊號的紙盒。Master選紙盒以區分通用飲料瓶，屋脊、側面和主面分配清楚；16px取消主面水波，保留紙盒辨識。",
+      "references": [
+        {
+          "name": "milk",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/milk.svg",
+          "localPath": "references/atlas-01/lucide-milk.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/milk.svg",
+          "sha256": "74a354f46950559fe50504a5684fe853955587a50970afa49ec7f91168f5ae59",
+          "license": "ISC AND MIT",
+          "sourceName": "milk",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "milk",
+          "library": "Hugeicons Free",
+          "repository": "hugeicons/hugeicons",
+          "commit": "834e28d965946c1ee60d080027fe9dae4adc58d0",
+          "path": "icons/milk-carton.svg",
+          "localPath": "references/atlas-01/hugeicons-milk-carton.svg",
+          "url": "https://github.com/hugeicons/hugeicons/blob/834e28d965946c1ee60d080027fe9dae4adc58d0/icons/milk-carton.svg",
+          "sha256": "82954bf0f0e5d4cb4845632950cbe68a1363e07c5919d4878402768179ac8940",
+          "license": "MIT",
+          "sourceName": "milk-carton",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "杯具及壺具的完整輪廓已能表意，沒有隱藏邊或暫態線需求。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "水面採單道結構線，部件以實際空白分開，無淡化需求。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "單色平面器具不需要連續漸層或反光效果。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-03/master-before.json",
+          "variantsSha256": "e90292cd2068167f2438b372cff4944ca695f6f7267769eb1e033a492f8ed45f"
+        },
+        "reason": "保留紙盒斜頂與寬側面，所有分界收在外殼；20/24主面波形止於側折線，16px不增加這道內線。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "7642cf04cc63460df8c24c6fbef6c00cb61f44909e4f3ef1d0ef1454a9bd7eea",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/24/review.html",
+            "sha256": "3e5c1e7b1e6f88729767a28e011852088e3664ac656ba049a289a54cfaa40159"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/24/definitions.json",
+            "sha256": "3619f951de477d3a5904b61128300105d49105045b8fe24df83103026e8757a5"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/24/light-1x.png",
+            "sha256": "bb5212c017d96e9ed428ddef4dfd5f26cfbd24188369a2d8f1c38f3373a0b157"
+          },
+          {
+            "path": "docs/review/atlas-craft-03/final/definitions.json",
+            "sha256": "6b32ecbcbb08dc7e6b1f3f6ab97a980508503b2992b8ad41bb5788e8e4f01d3c"
+          },
+          {
+            "path": "docs/review/atlas-craft-03/final/07-drinks.html",
+            "sha256": "57c6ba12fc1324aef15e2c584b60ef29166b534c38761861d69d36403c23af9e"
+          },
+          {
+            "path": "docs/review/atlas-craft-03/final/07-drinks-light-1x.png",
+            "sha256": "5e1ae507443d132afe7ea97b289054ad3c3f7f14e4a2217140a38e44036864ac"
+          },
+          {
+            "path": "docs/review/atlas-craft-03/final/07-drinks-light-2x.png",
+            "sha256": "d7dd48c9c74e7b8f079c4ae7840dbccecea42a77c8584b1072f81ba04bfc3af8"
+          },
+          {
+            "path": "docs/review/atlas-craft-03/final/07-drinks-dark-1x.png",
+            "sha256": "f757653a76a0a4929cbc0077ea6c0da06228b8fedbf0983f8f40c39440d195ec"
+          },
+          {
+            "path": "docs/review/atlas-craft-03/final/07-drinks-dark-2x.png",
+            "sha256": "a5e40a029d992d4367a001493902747da998c2bd3000825586959a514e8a8d2b"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-03/final/07-drinks-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-03/final/07-drinks-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-03/final/07-drinks-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-03/final/07-drinks-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Hugeicons Free",
+        "license": "MIT",
+        "licenseFile": "licenses/hugeicons-MIT.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "bottle",
+      "purpose": "飲料瓶",
+      "recognitionCues": "窄瓶頸、寬瓶腹與瓶口分界",
+      "confusableWith": [
+        "milk",
+        "wine"
+      ],
+      "sourceObservation": "Lucide bottle-wine採細頸、方標籤；Tabler bottle採較寬瓶腹及波形。此概念是通用飲料瓶，兩份來源均用作瓶體比較，不宣稱酒瓶和所有飲品完全相同。Master取消小標籤框，讓瓶口和瓶腹保持大空腔。",
+      "references": [
+        {
+          "name": "bottle",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/bottle-wine.svg",
+          "localPath": "references/atlas-01/lucide-bottle-wine.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/bottle-wine.svg",
+          "sha256": "02780d7de75838543d6ae8c35b48bc0cdc93b7ce90139bf53f9a1b02ffe32ddf",
+          "license": "ISC AND MIT",
+          "sourceName": "bottle-wine",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "bottle",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/bottle.svg",
+          "localPath": "references/atlas-01/tabler-bottle.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/bottle.svg",
+          "sha256": "839ed1a7cf6a84d1e3ddb906122e275c861afe0f4f8456a8490a979ef5aaff75",
+          "license": "MIT",
+          "sourceName": "bottle",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "杯具及壺具的完整輪廓已能表意，沒有隱藏邊或暫態線需求。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "水面採單道結構線，部件以實際空白分開，無淡化需求。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "單色平面器具不需要連續漸層或反光效果。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-03/master-before.json",
+          "variantsSha256": "2020cc3318103d761e1f1b3afb6a70ae1a4a946a04a601be6b7c25b6e701d6d5"
+        },
+        "reason": "保留圓肩、寬腹與瓶口分界，瓶頸寬度不壓成細縫；單道波形收在瓶內，避免額外套入標籤小矩形。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "f0ecfa4c3c7a85357bdc01f59f23795509d8ca5a54f095398f7b50caf9a0cc67",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/24/review.html",
+            "sha256": "3e5c1e7b1e6f88729767a28e011852088e3664ac656ba049a289a54cfaa40159"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/24/definitions.json",
+            "sha256": "3619f951de477d3a5904b61128300105d49105045b8fe24df83103026e8757a5"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/24/light-1x.png",
+            "sha256": "bb5212c017d96e9ed428ddef4dfd5f26cfbd24188369a2d8f1c38f3373a0b157"
+          },
+          {
+            "path": "docs/review/atlas-craft-03/final/definitions.json",
+            "sha256": "6b32ecbcbb08dc7e6b1f3f6ab97a980508503b2992b8ad41bb5788e8e4f01d3c"
+          },
+          {
+            "path": "docs/review/atlas-craft-03/final/07-drinks.html",
+            "sha256": "57c6ba12fc1324aef15e2c584b60ef29166b534c38761861d69d36403c23af9e"
+          },
+          {
+            "path": "docs/review/atlas-craft-03/final/07-drinks-light-1x.png",
+            "sha256": "5e1ae507443d132afe7ea97b289054ad3c3f7f14e4a2217140a38e44036864ac"
+          },
+          {
+            "path": "docs/review/atlas-craft-03/final/07-drinks-light-2x.png",
+            "sha256": "d7dd48c9c74e7b8f079c4ae7840dbccecea42a77c8584b1072f81ba04bfc3af8"
+          },
+          {
+            "path": "docs/review/atlas-craft-03/final/07-drinks-dark-1x.png",
+            "sha256": "f757653a76a0a4929cbc0077ea6c0da06228b8fedbf0983f8f40c39440d195ec"
+          },
+          {
+            "path": "docs/review/atlas-craft-03/final/07-drinks-dark-2x.png",
+            "sha256": "a5e40a029d992d4367a001493902747da998c2bd3000825586959a514e8a8d2b"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-03/final/07-drinks-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-03/final/07-drinks-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-03/final/07-drinks-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-03/final/07-drinks-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Tabler",
+        "license": "MIT",
+        "licenseFile": "licenses/tabler.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "teapot",
+      "purpose": "茶壺",
+      "recognitionCues": "圓壺腹、上揚壺嘴與側把手",
+      "confusableWith": [
+        "kettle",
+        "coffee"
+      ],
+      "sourceObservation": "OpenMoji是圓腹、壺嘴與側把手的傳統茶壺；Tabler是較直立壺身。Master獨立構造圓壺腹與短上揚嘴，取消細小雙層蓋，使用實心蓋鈕，避免16px蓋孔成黑線。",
+      "references": [
+        {
+          "name": "teapot",
+          "library": "OpenMoji",
+          "repository": "hfg-gmuend/openmoji",
+          "commit": "3e01de523ddefe9c5e46a7765b15efef04bf9002",
+          "path": "black/svg/1FAD6.svg",
+          "localPath": "references/atlas-01/openmoji-1FAD6.svg",
+          "url": "https://github.com/hfg-gmuend/openmoji/blob/3e01de523ddefe9c5e46a7765b15efef04bf9002/black/svg/1FAD6.svg",
+          "sha256": "a5691e9f397d31ba195c9eb6206b0777e30a5493215991cd9ec0efbfe2d810c9",
+          "license": "CC-BY-SA-4.0",
+          "sourceName": "1FAD6",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "teapot",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/teapot.svg",
+          "localPath": "references/atlas-01/tabler-teapot.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/teapot.svg",
+          "sha256": "4494ccd6f301cf96aad756b2e234907611a2e520012e36970a6f11f9dd2fa9b2",
+          "license": "MIT",
+          "sourceName": "teapot",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "杯具及壺具的完整輪廓已能表意，沒有隱藏邊或暫態線需求。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "水面採單道結構線，部件以實際空白分開，無淡化需求。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "單色平面器具不需要連續漸層或反光效果。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-03/master-before.json",
+          "variantsSha256": "d73a20a9b89d6beb7be7075586d7c725152ac2c964d412e5b76eff7413b2c28b"
+        },
+        "reason": "保留獨立設計的圓腹和連續壺嘴外輪廓；側把手寬孔、蓋鈕與壺身相接，沒有內部裝飾線，三尺寸維持茶壺輪廓。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "3f44fdc067b97ef2e24ce173d79f68507e3dcdda44c5ee2e26856a49a5419877",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/25/review.html",
+            "sha256": "77d562eb03756b6fc976ab4b0bdda4d6adfcc4743e88606c63a9d7ff8527ee5c"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/25/definitions.json",
+            "sha256": "c6756cfad13d672bf3f22c7f3dfcbd3de30335569de45ffcb3bb4bf6061ab869"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/25/light-1x.png",
+            "sha256": "6c179dc8274c92d8041323f445b5a9dbe6deb0af3cdb3997e110504e6e29c89f"
+          },
+          {
+            "path": "docs/review/atlas-craft-03/final/definitions.json",
+            "sha256": "6b32ecbcbb08dc7e6b1f3f6ab97a980508503b2992b8ad41bb5788e8e4f01d3c"
+          },
+          {
+            "path": "docs/review/atlas-craft-03/final/07-drinks.html",
+            "sha256": "57c6ba12fc1324aef15e2c584b60ef29166b534c38761861d69d36403c23af9e"
+          },
+          {
+            "path": "docs/review/atlas-craft-03/final/07-drinks-light-1x.png",
+            "sha256": "5e1ae507443d132afe7ea97b289054ad3c3f7f14e4a2217140a38e44036864ac"
+          },
+          {
+            "path": "docs/review/atlas-craft-03/final/07-drinks-light-2x.png",
+            "sha256": "d7dd48c9c74e7b8f079c4ae7840dbccecea42a77c8584b1072f81ba04bfc3af8"
+          },
+          {
+            "path": "docs/review/atlas-craft-03/final/07-drinks-dark-1x.png",
+            "sha256": "f757653a76a0a4929cbc0077ea6c0da06228b8fedbf0983f8f40c39440d195ec"
+          },
+          {
+            "path": "docs/review/atlas-craft-03/final/07-drinks-dark-2x.png",
+            "sha256": "a5e40a029d992d4367a001493902747da998c2bd3000825586959a514e8a8d2b"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-03/final/07-drinks-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-03/final/07-drinks-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-03/final/07-drinks-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-03/final/07-drinks-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "independent-construction"
+      },
+      "remaining": []
+    },
+    {
+      "name": "kettle",
+      "purpose": "煮水壺",
+      "recognitionCues": "上提弓形把手、寬壺腹與短壺嘴",
+      "confusableWith": [
+        "teapot",
+        "lock"
+      ],
+      "sourceObservation": "Hugeicons為側把手電熱壺並帶指示線，MDI為上提把手煮水壺。Master選上提式把手區分茶壺，獨立建立寬底、短嘴及上方把手，省略電量或水位內線；壺嘴是與鎖頭區分的重要訊號。",
+      "references": [
+        {
+          "name": "kettle",
+          "library": "Hugeicons Free",
+          "repository": "hugeicons/hugeicons",
+          "commit": "834e28d965946c1ee60d080027fe9dae4adc58d0",
+          "path": "icons/kettle-01.svg",
+          "localPath": "references/atlas-01/hugeicons-kettle-01.svg",
+          "url": "https://github.com/hugeicons/hugeicons/blob/834e28d965946c1ee60d080027fe9dae4adc58d0/icons/kettle-01.svg",
+          "sha256": "5fb97fb0dec55e8e1c4914686f2a1a0d0ef0c26524ecdc820877112f438aca41",
+          "license": "MIT",
+          "sourceName": "kettle-01",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "kettle",
+          "library": "Material Design Icons",
+          "repository": "Templarian/MaterialDesign",
+          "commit": "2424e748e0cc63ab7b9c095a099b9fe239b737c0",
+          "path": "svg/kettle-outline.svg",
+          "localPath": "references/atlas-01/mdi-kettle-outline.svg",
+          "url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/kettle-outline.svg",
+          "sha256": "09da26293f8ad08852e5e8a2833ce009cf44a1fe3b6caf0dd13d2e883f2c5143",
+          "license": "Apache-2.0",
+          "sourceName": "kettle-outline",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "杯具及壺具的完整輪廓已能表意，沒有隱藏邊或暫態線需求。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "水面採單道結構線，部件以實際空白分開，無淡化需求。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "單色平面器具不需要連續漸層或反光效果。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-03/master-before.json",
+          "variantsSha256": "9d490c24fbf861b3bdab32f76596a361601733833ccdf92c964fe2e18533397b"
+        },
+        "reason": "保留獨立構造的寬底與上提弧把，壺嘴直接接入外輪廓；把手洞沒有第二條裝飾弧，避免縮小後閉合。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "db97424c048be38f1a2f09b591e4bebe93ddecd461be2a8c64f48f9ce119e2a9",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/25/review.html",
+            "sha256": "77d562eb03756b6fc976ab4b0bdda4d6adfcc4743e88606c63a9d7ff8527ee5c"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/25/definitions.json",
+            "sha256": "c6756cfad13d672bf3f22c7f3dfcbd3de30335569de45ffcb3bb4bf6061ab869"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/25/light-1x.png",
+            "sha256": "6c179dc8274c92d8041323f445b5a9dbe6deb0af3cdb3997e110504e6e29c89f"
+          },
+          {
+            "path": "docs/review/atlas-craft-03/final/definitions.json",
+            "sha256": "6b32ecbcbb08dc7e6b1f3f6ab97a980508503b2992b8ad41bb5788e8e4f01d3c"
+          },
+          {
+            "path": "docs/review/atlas-craft-03/final/07-drinks.html",
+            "sha256": "57c6ba12fc1324aef15e2c584b60ef29166b534c38761861d69d36403c23af9e"
+          },
+          {
+            "path": "docs/review/atlas-craft-03/final/07-drinks-light-1x.png",
+            "sha256": "5e1ae507443d132afe7ea97b289054ad3c3f7f14e4a2217140a38e44036864ac"
+          },
+          {
+            "path": "docs/review/atlas-craft-03/final/07-drinks-light-2x.png",
+            "sha256": "d7dd48c9c74e7b8f079c4ae7840dbccecea42a77c8584b1072f81ba04bfc3af8"
+          },
+          {
+            "path": "docs/review/atlas-craft-03/final/07-drinks-dark-1x.png",
+            "sha256": "f757653a76a0a4929cbc0077ea6c0da06228b8fedbf0983f8f40c39440d195ec"
+          },
+          {
+            "path": "docs/review/atlas-craft-03/final/07-drinks-dark-2x.png",
+            "sha256": "a5e40a029d992d4367a001493902747da998c2bd3000825586959a514e8a8d2b"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-03/final/07-drinks-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-03/final/07-drinks-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-03/final/07-drinks-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-03/final/07-drinks-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "independent-construction"
+      },
+      "remaining": []
+    },
+    {
+      "name": "glass-water",
+      "purpose": "水杯",
+      "recognitionCues": "橢圓杯口、收窄杯底與水面",
+      "confusableWith": [
+        "cup-soda",
+        "wine"
+      ],
+      "sourceObservation": "Lucide以平杯口及波形水面表意，Iconoir以橢圓杯口和液面呈現體積。Master採橢圓杯口，水面仍用一條緩波，省略第三層橢圓，保留杯口與水面之間的通道。",
+      "references": [
+        {
+          "name": "glass-water",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/glass-water.svg",
+          "localPath": "references/atlas-01/lucide-glass-water.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/glass-water.svg",
+          "sha256": "5cdb0b488c058e83ae4b619d6e94bb736f8dbfbb8171c8663f9fc37915ccdfc8",
+          "license": "ISC AND MIT",
+          "sourceName": "glass-water",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "glass-water",
+          "library": "Iconoir",
+          "repository": "iconoir-icons/iconoir",
+          "commit": "39834e3f193bc0cca2c36bebb6a650471977433d",
+          "path": "icons/regular/glass-half.svg",
+          "localPath": "references/atlas-01/iconoir-glass-half.svg",
+          "url": "https://github.com/iconoir-icons/iconoir/blob/39834e3f193bc0cca2c36bebb6a650471977433d/icons/regular/glass-half.svg",
+          "sha256": "40be60377c4ea9fe2e95709dd79a159ebf14b8b458c48305667d6a5e7e709216",
+          "license": "MIT",
+          "sourceName": "glass-half",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "杯具及壺具的完整輪廓已能表意，沒有隱藏邊或暫態線需求。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "水面採單道結構線，部件以實際空白分開，無淡化需求。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "單色平面器具不需要連續漸層或反光效果。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-03/master-before.json",
+          "variantsSha256": "8efa7f828eeb320988e2e6bb22d14704b14ca85fb8db9eeb73a8fcb3204a7234"
+        },
+        "reason": "保留完整杯口孔、上寬下窄杯身及單道水面；前杯口與水面都收在殼內，16px可分辨杯口和水面，不加雙線杯底。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "9217ef90ba3078e406fde2d16a97781133b1c74ab609017728501a09948033a6",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/25/review.html",
+            "sha256": "77d562eb03756b6fc976ab4b0bdda4d6adfcc4743e88606c63a9d7ff8527ee5c"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/25/definitions.json",
+            "sha256": "c6756cfad13d672bf3f22c7f3dfcbd3de30335569de45ffcb3bb4bf6061ab869"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/25/light-1x.png",
+            "sha256": "6c179dc8274c92d8041323f445b5a9dbe6deb0af3cdb3997e110504e6e29c89f"
+          },
+          {
+            "path": "docs/review/atlas-craft-03/final/definitions.json",
+            "sha256": "6b32ecbcbb08dc7e6b1f3f6ab97a980508503b2992b8ad41bb5788e8e4f01d3c"
+          },
+          {
+            "path": "docs/review/atlas-craft-03/final/07-drinks.html",
+            "sha256": "57c6ba12fc1324aef15e2c584b60ef29166b534c38761861d69d36403c23af9e"
+          },
+          {
+            "path": "docs/review/atlas-craft-03/final/07-drinks-light-1x.png",
+            "sha256": "5e1ae507443d132afe7ea97b289054ad3c3f7f14e4a2217140a38e44036864ac"
+          },
+          {
+            "path": "docs/review/atlas-craft-03/final/07-drinks-light-2x.png",
+            "sha256": "d7dd48c9c74e7b8f079c4ae7840dbccecea42a77c8584b1072f81ba04bfc3af8"
+          },
+          {
+            "path": "docs/review/atlas-craft-03/final/07-drinks-dark-1x.png",
+            "sha256": "f757653a76a0a4929cbc0077ea6c0da06228b8fedbf0983f8f40c39440d195ec"
+          },
+          {
+            "path": "docs/review/atlas-craft-03/final/07-drinks-dark-2x.png",
+            "sha256": "a5e40a029d992d4367a001493902747da998c2bd3000825586959a514e8a8d2b"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-03/final/07-drinks-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-03/final/07-drinks-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-03/final/07-drinks-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-03/final/07-drinks-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Iconoir",
+        "license": "MIT",
+        "licenseFile": "licenses/iconoir.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "cooking-pot",
+      "purpose": "烹飪鍋",
+      "recognitionCues": "寬鍋身、鍋蓋提把及外展雙耳",
+      "confusableWith": [
+        "kettle",
+        "coffee"
+      ],
+      "sourceObservation": "Lucide以提起鍋蓋與小把手表意；Phosphor是蒸氣與開放雙耳。Master採放下的鍋蓋、寬提把孔與開放鍋耳。初稿的外伸鍋緣與鍋耳太近，16px形成假孔，已回修。",
+      "references": [
+        {
+          "name": "cooking-pot",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/cooking-pot.svg",
+          "localPath": "references/atlas-01/lucide-cooking-pot.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/cooking-pot.svg",
+          "sha256": "f44a2639fb86ad9e3b0284a87b6083f6656491fd9e09f6c5e173b81f98b8c090",
+          "license": "ISC AND MIT",
+          "sourceName": "cooking-pot",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "cooking-pot",
+          "library": "Phosphor",
+          "repository": "phosphor-icons/core",
+          "commit": "2b75f3ad12b420c9504ef05df8d2564a28f8500e",
+          "path": "assets/regular/cooking-pot.svg",
+          "localPath": "references/atlas-01/phosphor-cooking-pot.svg",
+          "url": "https://github.com/phosphor-icons/core/blob/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular/cooking-pot.svg",
+          "sha256": "d0677b6188273ea4c70a549b3e233c2356bcf1329c505bed496ac2eeea4fa7f6",
+          "license": "MIT",
+          "sourceName": "cooking-pot",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "杯具及壺具的完整輪廓已能表意，沒有隱藏邊或暫態線需求。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "水面採單道結構線，部件以實際空白分開，無淡化需求。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "單色平面器具不需要連續漸層或反光效果。"
+        }
+      },
+      "change": {
+        "kind": "modified",
+        "before": {
+          "path": "references/atlas-craft-03/master-before.json",
+          "variantsSha256": "d2e45709050dd6460a09614ad4ca692cfb84084769901cb3cce244de7dfb92d3"
+        },
+        "reason": "鍋耳下移並改為開放曲線，鍋緣縮回鍋身寬度，解除兩側狹小假孔；提把保持足夠寬度，三角型的鍋身底部各自倒角。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "9d143d378dcb718870e2009319a3f41901350fc7b7d2a8f621eeced48736709e",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/27/review.html",
+            "sha256": "4a4854a75157646f8c24c89b066e7a8fd5c3854fb1fb75beb5664391fe8a8265"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/27/definitions.json",
+            "sha256": "5ff55c227bd50fce349117a636a0915820e1976a7f878b726da86b5881369da5"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/27/light-1x.png",
+            "sha256": "36e29ae7eb439fe8ea87a67587ed206814680a4b8901687eb1dfbfc71557a58b"
+          },
+          {
+            "path": "docs/review/atlas-craft-03/final/definitions.json",
+            "sha256": "6b32ecbcbb08dc7e6b1f3f6ab97a980508503b2992b8ad41bb5788e8e4f01d3c"
+          },
+          {
+            "path": "docs/review/atlas-craft-03/final/07-drinks.html",
+            "sha256": "57c6ba12fc1324aef15e2c584b60ef29166b534c38761861d69d36403c23af9e"
+          },
+          {
+            "path": "docs/review/atlas-craft-03/final/07-drinks-light-1x.png",
+            "sha256": "5e1ae507443d132afe7ea97b289054ad3c3f7f14e4a2217140a38e44036864ac"
+          },
+          {
+            "path": "docs/review/atlas-craft-03/final/07-drinks-light-2x.png",
+            "sha256": "d7dd48c9c74e7b8f079c4ae7840dbccecea42a77c8584b1072f81ba04bfc3af8"
+          },
+          {
+            "path": "docs/review/atlas-craft-03/final/07-drinks-dark-1x.png",
+            "sha256": "f757653a76a0a4929cbc0077ea6c0da06228b8fedbf0983f8f40c39440d195ec"
+          },
+          {
+            "path": "docs/review/atlas-craft-03/final/07-drinks-dark-2x.png",
+            "sha256": "a5e40a029d992d4367a001493902747da998c2bd3000825586959a514e8a8d2b"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-03/final/07-drinks-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-03/final/07-drinks-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-03/final/07-drinks-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-03/final/07-drinks-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Lucide",
+        "license": "ISC",
+        "licenseFile": "licenses/lucide.txt"
+      },
+      "remaining": []
+    }
+  ]
+}

@@ -1,0 +1,152 @@
+{
+  "batch": "21-tools",
+  "cycle": "atlas-craft-19",
+  "familyRoot": "docs/review/atlas-craft-19/final-v2",
+  "baseline": "references/atlas-craft-19/master-before.json",
+  "reviewer": "Codex (AI)",
+  "visualInspectionComplete": true,
+  "inspectedCombinations": [
+    {
+      "theme": "light",
+      "dpr": 1
+    },
+    {
+      "theme": "light",
+      "dpr": 2
+    },
+    {
+      "theme": "dark",
+      "dpr": 1
+    },
+    {
+      "theme": "dark",
+      "dpr": 2
+    }
+  ],
+  "effects": {
+    "dashes": {
+      "used": false,
+      "reason": "工具輪廓與連接完整呈現，不需虛線表示隱藏面。"
+    },
+    "opacity": {
+      "used": false,
+      "reason": "以結構接縫及空白區分部件，不用透明度淡化密集線條。"
+    },
+    "gradients": {
+      "used": false,
+      "reason": "工具採單色圖示，無需加入金屬或塑膠材質漸層。"
+    }
+  },
+  "decisions": [
+    {
+      "name": "hammer",
+      "groupRoot": "docs/review/atlas-craft-01/84-hammer-driver-drill",
+      "confusableWith": [
+        "axe",
+        "pickaxe"
+      ],
+      "sourceObservation": "Lucide的彎曲鎚頭與敲擊面形成鮮明的側面，Phosphor握柄分段較多。最新稿採Lucide的頭部曲線與較寬的一體握柄；完稿回比16/20/24，鎚頭和長柄的重量平衡，沒有再加入握柄分段擠壓內孔。",
+      "reason": "鎚頭外弧、頸部和敲擊面形成連續輪廓，斜向握柄沿受力軸接入鎚頭並裁去內部重線；敲擊端以短直線交代硬質平面。",
+      "adaptedFrom": "Lucide"
+    },
+    {
+      "name": "screwdriver",
+      "groupRoot": "docs/review/atlas-craft-01/84-hammer-driver-drill",
+      "confusableWith": [
+        "pencil",
+        "drill"
+      ],
+      "sourceObservation": "Phosphor用圓頂握柄、領口與握槽表達起子，MDI是更簡單的直握柄與寬刀尖。最新稿採Phosphor握柄語意；完稿回比，握槽與左右輪廓在16px仍可分辨，領口和細桿共同形成連續工具姿態。",
+      "reason": "握柄圓頂用弧線接兩側斜壁，領口保留防滑肩部，細桿沿同一斜軸接入；握槽只留一筆，不增加狹窄雙線刀桿。",
+      "adaptedFrom": "Phosphor"
+    },
+    {
+      "name": "drill",
+      "groupRoot": "docs/review/atlas-craft-01/84b-drill-saw",
+      "confusableWith": [
+        "screwdriver",
+        "hair-dryer"
+      ],
+      "sourceObservation": "Lucide電鑽的握柄與封閉扳機區較密，Hugeicons用開放扳機保持輕巧。最新稿採較寬握柄與開放扳機；完稿回比後16px省去扳機短彎線，20/24保留，機頭、夾頭、電池座仍保持明確的整體構造。",
+      "reason": "機頭、斜握柄與底座按共同邊界承接，夾頭內不重畫穿入線；16px移除次要扳機彎線，將空間留給握柄孔和電池座。",
+      "adaptedFrom": "Hugeicons Free"
+    },
+    {
+      "name": "saw",
+      "groupRoot": "docs/review/atlas-craft-01/85c-saw",
+      "confusableWith": [
+        "pocket-knife",
+        "ruler"
+      ],
+      "sourceObservation": "MDI手鋸以斜刃、粗齒和下折握柄表達，OpenMoji鋸片更細長且齒更多。最新稿提煉MDI粗齒比例重畫outline；回比後加大握柄轉折，避免讀成刀。另將握柄與鋸片外殼整合，消除sharp交接處的小凸角，16px齒與握孔仍可讀。",
+      "reason": "三個粗齒保留於鋸片下緣，握柄以不同於鋸片的方向下折；整顆共用一個封閉外輪廓，柄與刃之間的分界裁在殼內，避免兩個多邊形斜接互相突出。",
+      "adaptedFrom": "Material Design Icons"
+    },
+    {
+      "name": "tape-measure",
+      "groupRoot": "docs/review/atlas-craft-01/85-saw-tape",
+      "confusableWith": [
+        "ruler",
+        "film-reel"
+      ],
+      "sourceObservation": "Hugeicons描繪盤起軟尺，MDI是硬殼鋼捲尺，因此第二份只作捲起和拉出尺帶的構造比較。最新稿選盤起軟尺，保留橢圓捲面與下方刻度；完稿回比16px，內捲線未擠成多層小圈，三筆刻度與上緣分離。",
+      "reason": "捲面向外拉出的尺帶共用連續殼線，內部只留一段捲入曲線；三筆刻度從下緣進入，以裁線限制在尺帶內，不加入完整同心圓。",
+      "adaptedFrom": "Hugeicons Free"
+    },
+    {
+      "name": "toolbox",
+      "groupRoot": "docs/review/atlas-craft-01/86b-box-roller-knife",
+      "confusableWith": [
+        "briefcase",
+        "luggage"
+      ],
+      "sourceObservation": "Lucide斜肩箱蓋有工具箱特徵，Phosphor更接近平頂矩形提箱。最新稿保留斜肩、上把手與雙扣；完稿回比後下方角半徑改為家族實際幾何，16px把手孔、上蓋與扣鎖仍有各自空間。",
+      "reason": "斜肩和下箱連成完整外殼，底角按sharp/soft/rounded調整，肩部保留較小轉角；提把接在箱頂，扣鎖跨在共用開箱分界上。",
+      "adaptedFrom": "Lucide"
+    },
+    {
+      "name": "hard-hat",
+      "groupRoot": "docs/review/atlas-craft-01/86-toolbox-hardhat",
+      "confusableWith": [
+        "graduation-cap",
+        "umbrella"
+      ],
+      "sourceObservation": "Lucide加強脊只延伸到帽頂中段，Phosphor一路延到帽緣而分割更多空間。最新稿保留Lucide較開放的穹頂；完稿回比，原生16px帽緣孔與中央脊均清楚，左右圓頂曲線共同承接帽緣而非獨立半圓拼湊。",
+      "reason": "帽頂曲線從中央加強脊向兩側下落並接到帽緣，脊下端提前收筆保留帽內空白；外伸帽緣採較高孔徑，不把它壓成雙底線。",
+      "adaptedFrom": "Lucide"
+    },
+    {
+      "name": "paint-roller",
+      "groupRoot": "docs/review/atlas-craft-01/86b-box-roller-knife",
+      "confusableWith": [
+        "paintbrush",
+        "paint-bucket"
+      ],
+      "sourceObservation": "Lucide保留獨立握柄，Phosphor用一筆折桿到底。最新稿採滾筒、支架和握柄的完整結構；首稿支架下橫過近，回比後向下移開，16px滾筒與支架之間不再形成細長狹縫。",
+      "reason": "滾筒與折桿在側邊承接，支架下橫向下調整保留可見空白，握柄隨之調整高度；各相接端點裁在實體外側，避免穿入孔洞。",
+      "adaptedFrom": "Lucide"
+    },
+    {
+      "name": "pocket-knife",
+      "groupRoot": "docs/review/atlas-craft-01/86b-box-roller-knife",
+      "confusableWith": [
+        "saw",
+        "utensils"
+      ],
+      "sourceObservation": "Lucide以斜向刀柄展開多工具，Hugeicons水平刀柄較容易分組。最新稿採水平刀柄與上展刀刃；回比後把密集螺旋減為兩圈，16px仍可讀出開瓶器而不成一團波紋，刀柄兩端鉚點保持輕量。",
+      "reason": "刀刃以直背和弧形刃口接到膠囊柄，開瓶器採較疏的連續螺旋；刀刃與開瓶器底端裁在柄外，保留鉚點但不加內部裝飾。",
+      "adaptedFrom": "Hugeicons Free"
+    },
+    {
+      "name": "nut",
+      "groupRoot": "docs/review/atlas-craft-01/87-roller-knife-nut",
+      "confusableWith": [
+        "hexagon",
+        "settings"
+      ],
+      "sourceObservation": "初選Lucide nut其實是堅果，已改成Phosphor與Tabler的六角螺帽。Phosphor輪廓更規整，Tabler角部更柔和；最新稿採規整六角輪廓並使用本家族微圓角，完稿回比16px中央孔和六邊間的留白均衡。",
+      "reason": "六角形以中央垂直軸對稱配置，中央圓孔保持同心；只在真實六個角改變小半徑，不增加螺紋細線或雙重內孔。",
+      "adaptedFrom": "Phosphor"
+    }
+  ]
+}

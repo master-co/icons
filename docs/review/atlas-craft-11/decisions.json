@@ -1,0 +1,166 @@
+{
+  "batch": "14-sports",
+  "cycle": "atlas-craft-11",
+  "familyRoot": "docs/review/atlas-craft-11/final-v2",
+  "baseline": "references/atlas-craft-11/master-before.json",
+  "reviewer": "Codex (AI)",
+  "visualInspectionComplete": true,
+  "inspectedCombinations": [
+    {
+      "theme": "light",
+      "dpr": 1
+    },
+    {
+      "theme": "light",
+      "dpr": 2
+    },
+    {
+      "theme": "dark",
+      "dpr": 1
+    },
+    {
+      "theme": "dark",
+      "dpr": 2
+    }
+  ],
+  "effects": {
+    "dashes": {
+      "used": false,
+      "reason": "以必要構造及實體輪廓表達器材與動作，不增加裝飾虛線。"
+    },
+    "opacity": {
+      "used": false,
+      "reason": "球面與人物動作以曲線和比例表達，不需要透明度分層。"
+    },
+    "gradients": {
+      "used": false,
+      "reason": "單色運動圖示不需皮革光澤或連續材質漸層。"
+    }
+  },
+  "decisions": [
+    {
+      "name": "dumbbell",
+      "groupRoot": "docs/review/atlas-craft-01/53-dumbbell-kettlebell-basketball",
+      "confusableWith": [
+        "kettlebell",
+        "bone"
+      ],
+      "sourceObservation": "Lucide採多片配重及單握桿，Hugeicons dumbbell-01採較單純的雙端配重。Tabler同名圖實際是壺鈴，因此不拿來當啞鈴對照。Master保留雙端配重、中央握桿和短軸端，減少重複層板。",
+      "reason": "配重內孔與握桿長度分開安排，兩端共軸且對稱；軸線在配重外側收口，不穿進配重孔。以固定式啞鈴的構造保持清楚的持握區。",
+      "adaptedFrom": "Hugeicons Free"
+    },
+    {
+      "name": "kettlebell",
+      "groupRoot": "docs/review/atlas-craft-01/53-dumbbell-kettlebell-basketball",
+      "confusableWith": [
+        "dumbbell",
+        "kettle"
+      ],
+      "sourceObservation": "Hugeicons有飽滿鈴腹、上握把與重量標牌，MDI以實心輪廓保留握把孔與平底。Master採Hugeicons輪廓構造，移除裝飾標牌，讓握把和鈴腹比例先成立。",
+      "reason": "上方握孔有足夠高度，鈴腹曲線平順收進底部平台；平底與腹部相切，沒有硬加一條底座線。三種角型保留物件本身的連續曲面。",
+      "adaptedFrom": "Hugeicons Free"
+    },
+    {
+      "name": "basketball",
+      "groupRoot": "docs/review/atlas-craft-01/53-dumbbell-kettlebell-basketball",
+      "confusableWith": [
+        "football",
+        "baseball"
+      ],
+      "sourceObservation": "Phosphor採垂直與水平分線，加上兩側對稱弧；Tabler將十字分線斜轉。Master選正向分線，讓中央通道與側弧的寬度可直接控制。",
+      "reason": "兩側弧線等曲率、中心對稱，分線墨跡限制在完整球殼內；16px仍可分辨中央與兩側分片，沒有用額外細紋表達皮革。",
+      "adaptedFrom": "Phosphor"
+    },
+    {
+      "name": "football",
+      "groupRoot": "docs/review/atlas-craft-01/54-football-tennis-volleyball",
+      "confusableWith": [
+        "basketball",
+        "volleyball"
+      ],
+      "sourceObservation": "Phosphor soccer-ball有更多邊緣拼片，Tabler ball-football以中央五角形與五條外接線簡化。Master選Tabler的拼片結構，維持五向對稱並保留中央較大的空腔。",
+      "reason": "五角片按角型作實際微倒角，接線依片緣重新裁切後連到球殼，不留圓角後的微縫；沒有把美式足球混作同語意來源。",
+      "adaptedFrom": "Tabler"
+    },
+    {
+      "name": "tennis-racket",
+      "groupRoot": "docs/review/atlas-craft-01/54c-tennis",
+      "confusableWith": [
+        "search",
+        "dumbbell"
+      ],
+      "sourceObservation": "Hugeicons有橢圓拍框、三角拍喉和點狀網面，MDI tennis是球拍與球的組合，僅其球拍部分作構造比較。Master保留狹長拍框和握柄；初稿九格網面與小拍喉過密，已減筆並調整比例。",
+      "reason": "拍框改為較狹長橢圓以維持球拍姿態；16px採四格網面和單桿拍喉，20/24採六格與開放拍喉。網線裁在框內，去除原稿邊角細碎空隙，握柄孔仍可見。",
+      "adaptedFrom": "Hugeicons Free"
+    },
+    {
+      "name": "volleyball",
+      "groupRoot": "docs/review/atlas-craft-01/54-football-tennis-volleyball",
+      "confusableWith": [
+        "basketball",
+        "football"
+      ],
+      "sourceObservation": "Lucide以三向旋轉曲線形成球面分帶，Phosphor採三條較直的主分線搭配弧帶。Master沿用Lucide的曲面分帶，保留各帶的方向與連續弧度。",
+      "reason": "三組分帶由中央向球緣展開，接縫墨跡收在球殼內；原生16px各帶仍有白色通道，物件曲面不因sharp角型而被折成直線。",
+      "adaptedFrom": "Lucide"
+    },
+    {
+      "name": "baseball",
+      "groupRoot": "docs/review/atlas-craft-01/56b-baseball-running",
+      "confusableWith": [
+        "basketball",
+        "football"
+      ],
+      "sourceObservation": "Phosphor以分段縫線表達棒球，Tabler採連續弧加短針腳。Master採分段縫線；初稿三段的中段偏長，最後改為每側四段，使用平切端部保持間隔。",
+      "reason": "兩側縫線沿相同的鏡射曲線安排，短線間留白在16px可見；平切是縫線的部件語言，不套用全圖圓端帽。沒有增加交叉細針腳造成黑結。",
+      "adaptedFrom": "Phosphor",
+      "effects": {
+        "dashes": {
+          "used": true,
+          "reason": "以分段短弧表達球皮縫線；每側四段，平切端部保留原生尺寸間隔。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "球面與人物動作以曲線和比例表達，不需要透明度分層。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "單色運動圖示不需皮革光澤或連續材質漸層。"
+        }
+      }
+    },
+    {
+      "name": "golf-hole",
+      "groupRoot": "docs/review/atlas-craft-01/55-baseball-golf",
+      "confusableWith": [
+        "flag",
+        "map-pin"
+      ],
+      "sourceObservation": "原先Phosphor golf是球與球座，與Tabler的球洞旗不同，因此改用Hugeicons golf-hole與Tabler golf。Master採三角旗、直桿和寬橢圓球洞，明確命名golf-hole。",
+      "reason": "旗桿末端與球洞底弧保留留白，旗面與旗桿相接，底部橢圓開口容納桿身；沒有把球座和球洞當成同一構造。",
+      "adaptedFrom": "Tabler"
+    },
+    {
+      "name": "swimming",
+      "groupRoot": "docs/review/atlas-craft-01/56-swimming-running",
+      "confusableWith": [
+        "waves",
+        "running"
+      ],
+      "sourceObservation": "Phosphor以長划臂和兩層水波表現游泳，Tabler以屈臂和一層水線精簡。Master採屈臂與前方圓頭，保留兩層低幅水波來穩定水面情境。",
+      "reason": "手臂、軀幹與水面接點清楚，頭肩間有可見空白；兩層水波共用節奏、間距足夠，水線不靠透明度避開人體。",
+      "adaptedFrom": "Tabler"
+    },
+    {
+      "name": "running",
+      "groupRoot": "docs/review/atlas-craft-01/56b-baseball-running",
+      "confusableWith": [
+        "person-walking",
+        "person-standing"
+      ],
+      "sourceObservation": "Phosphor用連續弧線表達跨步，Tabler以屈肘、抬後腿和前腿折角表現跑步。Master採Tabler動作結構，將後腳抬起，與既有步行姿態區分。",
+      "reason": "頭部前移、軀幹前傾，後腿離地且手臂屈曲；sharp軀幹起點改平切，解除肩部端帽小凸點。髖部保持共接，不加入速度線取代身體姿態。",
+      "adaptedFrom": "Tabler"
+    }
+  ]
+}

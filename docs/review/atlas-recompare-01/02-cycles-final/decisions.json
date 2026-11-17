@@ -1,0 +1,48 @@
+{
+  "reviewer": "Codex (AI)",
+  "batch": "02-cycles-final",
+  "baseline": "references/atlas-recompare-01/master-before.json",
+  "date": "2026-11-17",
+  "viewedSuffixes": ["light-1x", "dark-1x", "native-light-2x", "native-dark-2x"],
+  "decisions": [
+    {
+      "name": "tram",
+      "decision": "retained",
+      "purpose": "以集電桿與正面車廂表示電車，和一般列車及公車區分。",
+      "recognitionCues": "車頂上方的T形集電桿、全寬前窗、方形車廂、雙燈與軌腳。",
+      "confusableWith": ["train", "bus"],
+      "defect": "本輪沒有發現需要回修的比例或承接缺陷；檢查重點為集電桿與車頂空白、前窗及燈點分區。",
+      "sourceObservation": "Lucide的雙窗前臉較有傳統車廂感，Phosphor的全寬前窗與獨立T形集電桿則更簡潔，兩者不是僅靠相同名稱充數。Master已有Phosphor改作關係，前窗採同一寬度的水平分界，車頂到集電橫桿仍有清楚空白，兩個燈點不擠下框。與本輪較平頂的train並排，tram的集電桿、較方車廂及平底仍有清楚差異，無須為模仿Lucide額外加入一根窗柱。",
+      "reason": "保留全寬前窗、車頂集電桿及方車廂的整體構造。三尺寸的上方桿件、窗帶、燈點、下方軌腳有分層節奏；rounded收角後窗孔仍完整，sharp接點沒有向框外多出細刺。",
+      "postComparison": "重新與Lucide、Phosphor在16／20／24並列後，現稿與Phosphor同樣以簡潔前窗和集電桿成立；沒有看到來源略勝而需要新增內線的部位。Lucide雙窗是合理器型差異，維持既有全寬窗選擇。明暗DPR1全圖與DPR2原生區均已查看。",
+      "effects": {"dashes":{"used":false,"reason":"集電桿、窗框及軌腳皆為可見構造，沒有需要虛線表示的隱藏區。"},"opacity":{"used":false,"reason":"車廂與集電桿以真實空白區分，不需用透明度分離部件。"},"gradients":{"used":false,"reason":"正面單色交通符號以輪廓成立，不需要漸層。"}},
+      "remaining": []
+    },
+    {
+      "name": "bicycle",
+      "decision": "refined",
+      "purpose": "以雙輪、開放車架、座墊與車把表示自行車，與有油箱的機車及低踏板滑板車區分。",
+      "recognitionCues": "較大的雙輪、開放斜車架、清楚座墊、彎管車把與斜前叉。",
+      "confusableWith": ["motorcycle", "scooter"],
+      "defect": "原稿輪徑相對車架偏小，前叉與座管顯得過高；sharp車把以急折連接，像硬尖折桿，缺少彎管形態。",
+      "sourceObservation": "Phosphor較大的輪徑與開放車架讓整車穩定，彎管車把也比原稿急折自然；Iconoir的大輪與較低車架同樣有良好支承感，但額外曲柄在原生16px增加密度。本輪沿既有Phosphor改作方向，先加大輪徑、微收輪距並上移輪心，再將車把改為有連續承接和短下彎的管形。最新稿回比保留輪孔及開放車架，沒有補回密集的後三角底邊或曲柄；三尺寸的車身不再像高架在小輪之上。",
+      "reason": "輪徑按原生尺寸取3.8／3.9／4構造單位，輪心移至5.3與18.7、共同高度16；橫管接點由前叉軸線求交。車把的彎管是物件曲面，在sharp也保留，避免以miter尖角代替管件轉彎。",
+      "postComparison": "第一候選只修輪徑仍留下尖折車把，最新稿再吸收Phosphor的彎管優勢。16／20／24與兩來源重新並列後，輪子支承感和車把形態更完整，輪孔仍開放；不增加Iconoir的曲柄以維持原生16px的清楚空白。明暗DPR1全圖、DPR2原生區與55%文字已查看。",
+      "effects": {"dashes":{"used":false,"reason":"車架與輪胎皆需呈現連續實體，虛線無法增加自行車語意。"},"opacity":{"used":false,"reason":"輪孔和開放車架由幾何留白保持，不以淡化弱化前叉或輪胎。"},"gradients":{"used":false,"reason":"彎管與輪胎以單色曲線成立，不需要漸層。"}},
+      "remaining": []
+    },
+    {
+      "name": "motorcycle",
+      "decision": "refined",
+      "purpose": "以油箱、座墊、底盤、斜前叉及雙輪表示機車，和自行車的細車架區分。",
+      "recognitionCues": "連續的座墊油箱曲線、上收底盤、斜前叉與較穩定的雙輪。",
+      "confusableWith": ["bicycle", "scooter"],
+      "defect": "原稿兩輪相對油箱和高前叉偏小，整體顯得細長且支承不足；Phosphor的輪身比例更穩定。",
+      "sourceObservation": "Phosphor以較大的輪孔支承流動的座墊油箱與底盤曲線，整體有完整機車體量；Tabler用短直線和斜三角把機械構造收得更緊，但小尺寸中央交叉較重。Master既有Phosphor改作的上、下曲線已自然，本輪只放大雙輪並略收輪距，將底盤及油箱接前叉的點重新從同一軸線求出。回比後車輪與車身的比例接近來源的穩定感，保留曲線車身，不必另加Tabler式內交叉。",
+      "reason": "輪半徑由3增為3.5，輪心由4.5／19.5收至5／19；油箱、底盤和前叉仍接在同一結構點，位置以幾何求交代替近似常數。維持座墊到油箱及底盤上收曲線，只修正輪身比例。",
+      "postComparison": "最新稿與Phosphor／Tabler在三個原生尺寸回比，雙輪不再顯得偏小，車身曲線有較穩的支承；前輪的斜叉與輪孔仍可分辨。沒有為採取Tabler較緊的造型而增加中央黑結，保留已成立的Phosphor式流線主體。明暗DPR1全圖、DPR2原生區及低對比文字皆已查看。",
+      "effects": {"dashes":{"used":false,"reason":"輪胎、座墊及車架是連續可見構造，不需要虛線。"},"opacity":{"used":false,"reason":"車身體量由輪徑及曲線比例修正，不使用淡化掩飾輪孔或接點。"},"gradients":{"used":false,"reason":"機車以單色平面輪廓傳意，沒有漸層需求。"}},
+      "remaining": []
+    }
+  ]
+}

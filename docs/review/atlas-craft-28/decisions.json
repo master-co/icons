@@ -1,0 +1,152 @@
+{
+  "batch": "30-time",
+  "cycle": "atlas-craft-28",
+  "familyRoot": "docs/review/atlas-craft-28/final",
+  "baseline": "references/atlas-craft-28/master-before.json",
+  "reviewer": "Codex (AI)",
+  "visualInspectionComplete": true,
+  "inspectedCombinations": [
+    {
+      "theme": "light",
+      "dpr": 1
+    },
+    {
+      "theme": "light",
+      "dpr": 2
+    },
+    {
+      "theme": "dark",
+      "dpr": 1
+    },
+    {
+      "theme": "dark",
+      "dpr": 2
+    }
+  ],
+  "effects": {
+    "dashes": {
+      "used": false,
+      "reason": "這批表達可見容器、日曆和明確狀態，不涉及未定時段或隱藏邊界。"
+    },
+    "opacity": {
+      "used": false,
+      "reason": "徽標層次由真透明避讓建立，不以淡化主體補救線條交疊。"
+    },
+    "gradients": {
+      "used": false,
+      "reason": "時間工具與狀態符號維持單色輪廓，毋需光照漸層或材質裝飾。"
+    }
+  },
+  "decisions": [
+    {
+      "name": "hourglass",
+      "groupRoot": "docs/review/atlas-craft-01/121-hourglass-timer",
+      "confusableWith": [
+        "timer",
+        "history"
+      ],
+      "sourceObservation": "Lucide的細腰斜壁比Tabler含沙面橫帶的輪廓更疏朗。最新稿採Lucide上下連通結構；完稿回比16px兩個空腔清楚，收腰不堆疊額外沙粒，sharp與rounded仍保留完整容器姿態。",
+      "reason": "上下支承板沿同一中軸對稱，兩側壁在中央細腰連通；轉折使用實際小半徑，不加入會擠壓空腔的水平沙面。",
+      "adaptedFrom": "Lucide"
+    },
+    {
+      "name": "calendar-heart",
+      "groupRoot": "docs/review/atlas-craft-01/122c-calendar-heart",
+      "confusableWith": [
+        "calendar-check",
+        "message-heart"
+      ],
+      "sourceObservation": "Lucide與Tabler的外置心形比在日曆內塞心形更清楚。最新稿保留Master日曆母型和自繪心形；初稿sharp右下殘角經徽標右移半格、下移一格消除，完稿再比16px心孔和日曆空腔都清楚。",
+      "reason": "心形以連續貝茲曲線形成兩肩與收尖，按實際輪廓避讓日曆；調整位置消除後方殘角，沒有以背景色遮蓋碎片。",
+      "adaptedFrom": null
+    },
+    {
+      "name": "calendar-lock",
+      "groupRoot": "docs/review/atlas-craft-01/122b-calendar-badges",
+      "confusableWith": [
+        "calendar-heart",
+        "message-lock"
+      ],
+      "sourceObservation": "MDI實心鎖頭與Hugeicons空心鎖頭皆表達鎖定日曆。最新稿共用Master日曆與已精修鎖徽標；完稿回比16px省去鎖孔後內腔仍明亮，鎖梁與日曆頂欄可分辨。",
+      "reason": "鎖梁收於鎖體外緣，封閉徽標含內部作透明避讓；16省略鑰匙點，20與24保留，不縮小整顆鎖來硬塞細節。",
+      "adaptedFrom": null
+    },
+    {
+      "name": "calendar-recurring",
+      "groupRoot": "docs/review/atlas-craft-01/123b-calendar-actions",
+      "confusableWith": [
+        "calendar-clock",
+        "refresh"
+      ],
+      "sourceObservation": "Lucide雙箭頭較密，Tabler單一回轉箭頭更適合原生小尺寸。最新稿採Tabler單循環構造；初稿直角箭翼改成明確向右箭翼，完稿回比16px回轉弧、箭尖與日曆右上邊界分開可讀。",
+      "reason": "日曆保持既有母型，右下循環弧與箭翼依實際墨線接合；封閉圓域替後方避讓以保留迴圈內空白，不靠淡化製造層次。",
+      "adaptedFrom": "Tabler"
+    },
+    {
+      "name": "alarm-plus",
+      "groupRoot": "docs/review/atlas-craft-01/124-alarm-states",
+      "confusableWith": [
+        "alarm-clock",
+        "alarm-minus"
+      ],
+      "sourceObservation": "Lucide保留兩腳而Tabler省略腳部；最新稿沿用Master既有鬧鐘完整支承與中央加號。完稿回比16px鐘鈴、圈內符號與支腳皆可分辨，加號未擠到內壁。",
+      "reason": "鬧鐘外殼直接共用既有母型，移除指針後配置通用加號；保持左右鐘鈴對稱與圈內均勻留白。",
+      "adaptedFrom": null
+    },
+    {
+      "name": "alarm-minus",
+      "groupRoot": "docs/review/atlas-craft-01/124-alarm-states",
+      "confusableWith": [
+        "alarm-clock",
+        "alarm-plus"
+      ],
+      "sourceObservation": "Lucide與Tabler以圈內短橫代替指針表達減少鬧鐘。最新稿沿用Master母型；完稿回比16px減號不貼兩側內壁，外殼和新增狀態的尺度一致。",
+      "reason": "與新增鬧鐘共享外殼、鐘鈴、支腳和中央符號基準，減號長度按原生尺寸維持留白而不擴成整條直徑。",
+      "adaptedFrom": null
+    },
+    {
+      "name": "alarm-check",
+      "groupRoot": "docs/review/atlas-craft-01/124-alarm-states",
+      "confusableWith": [
+        "alarm-clock",
+        "check-circle"
+      ],
+      "sourceObservation": "Lucide與Hugeicons的圈內勾號清楚表達已設定。最新稿沿用Master鬧鐘和通用勾號；完稿回比16px勾尖與圈壁留白足夠，沒有重用仍帶指針的母型造成線條重疊。",
+      "reason": "移除鬧鐘指針再加入狀態勾號，勾的高低端以圈內空白配置；三角型使用實際小轉角，外圈保持物理圓形。",
+      "adaptedFrom": null
+    },
+    {
+      "name": "timer-reset",
+      "groupRoot": "docs/review/atlas-craft-01/121-hourglass-timer",
+      "confusableWith": [
+        "timer",
+        "history"
+      ],
+      "sourceObservation": "Lucide開口圓弧加回轉箭頭比另加小徽標簡潔，Hugeicons保留斜指針。最新稿採Lucide回轉輪廓並維持Master旋鈕與斜指針；完稿回比16px箭翼、開口及指針分離，輪廓仍是一顆計時器。",
+      "reason": "共同圓弧形成計時器體與回轉動作，箭頭在左下直接接入；頂部旋鈕與指針沿用既有計時器比例，避免額外疊圈。",
+      "adaptedFrom": "Lucide"
+    },
+    {
+      "name": "calendar-search",
+      "groupRoot": "docs/review/atlas-craft-01/122b-calendar-badges",
+      "confusableWith": [
+        "calendar-heart",
+        "message-search"
+      ],
+      "sourceObservation": "Lucide與Tabler都以右下獨立放大鏡表達搜尋日期。最新稿沿用Master日曆與搜尋徽標；初稿下框過於貼鏡圈，將鏡圈下移一格後，完稿回比16px底邊不再沿鏡圈黏合，鏡內孔完整。",
+      "reason": "放大鏡圈的完整內域遮擋後方日曆，鏡柄由圓周沿斜軸伸出；下移徽標擴大下框附近留白並消除多餘底邊尾段。",
+      "adaptedFrom": null
+    },
+    {
+      "name": "calendar-off",
+      "groupRoot": "docs/review/atlas-craft-01/123b-calendar-actions",
+      "confusableWith": [
+        "calendar-x",
+        "calendar"
+      ],
+      "sourceObservation": "Lucide與Tabler均採斜刪線表達停用日曆。最新稿沿用Master日曆加通用斜線；完稿回比16px兩側透明切口清楚，掛環和頁首仍足以辨識日曆，沒有將斜線簡單疊在框上。",
+      "reason": "按斜線實際描邊外擴切除後方邊界，保持真透明負空間；各角型保留日曆外殼與掛環的共同母型。",
+      "adaptedFrom": null
+    }
+  ]
+}

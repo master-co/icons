@@ -1,0 +1,1537 @@
+{
+  "schemaVersion": 2,
+  "reviewer": "Codex (AI)",
+  "userApproval": "pending",
+  "icons": [
+    {
+      "name": "graduation-cap",
+      "purpose": "學士帽",
+      "recognitionCues": "菱形帽冠、弧形帽身與側邊流蘇",
+      "confusableWith": [
+        "school",
+        "diamond"
+      ],
+      "sourceObservation": "Lucide的側邊流蘇較安靜，Phosphor從帽冠中央拉出的繩線讓中央更密。最新稿保留Lucide側邊流蘇與弧形帽身；完稿回比後，sharp另收窄帽冠中心線以補償斜接尖端，原生16/20/24保持完整且未裁切。",
+      "references": [
+        {
+          "name": "graduation-cap",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/graduation-cap.svg",
+          "localPath": "references/atlas-01/lucide-graduation-cap.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/graduation-cap.svg",
+          "sha256": "326b4a1c18429509a697cbc0c49fdfcf9316da34bcf581569c2fc73cc772b86f",
+          "license": "ISC AND MIT",
+          "sourceName": "graduation-cap",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "graduation-cap",
+          "library": "Phosphor",
+          "repository": "phosphor-icons/core",
+          "commit": "2b75f3ad12b420c9504ef05df8d2564a28f8500e",
+          "path": "assets/regular/graduation-cap.svg",
+          "localPath": "references/atlas-01/phosphor-graduation-cap.svg",
+          "url": "https://github.com/phosphor-icons/core/blob/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular/graduation-cap.svg",
+          "sha256": "855b9f61c75900768c0265f671456554215e37b5bf15af9afa7acef36ec31c48",
+          "license": "MIT",
+          "sourceName": "graduation-cap",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "教育器具的實體邊緣完整呈現，不用虛線打斷構造。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以輪廓和實際空隙區分部件，不以淡化掩飾擁擠。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "教具保持單色線性圖示，不加入材質漸層。"
+        }
+      },
+      "change": {
+        "kind": "modified",
+        "before": {
+          "path": "references/atlas-craft-16/master-before.json",
+          "variantsSha256": "48e3467d7cb9d61daeba3dea069fc64f109cec1d5dd503653c0c78a407a0f0bb"
+        },
+        "reason": "以菱形帽冠遮住帽身上端，弧形下緣連成完整帽身；sharp依實際墨線回收兩側尖角，避免沿用soft中心線造成超界。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "156348286cb8ade24b448467de4227a9489ddf1da21921f65312b09ff9377a41",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/72b-cap-diploma/review.html",
+            "sha256": "7bff460329949f30b7b15e8395ad90ccc8089099028367276fe7a5ce04665507"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/72b-cap-diploma/definitions.json",
+            "sha256": "07d4211100e0c5cca45a7c9013b86beaca0ef11b30dec82d9ae2dd53a0fa7c8c"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/72b-cap-diploma/light-1x.png",
+            "sha256": "00b37de43cab7f6d94d22c8cceb55fd47f68eeb3effe65f1f0a2fa2d5c02dee3"
+          },
+          {
+            "path": "docs/review/atlas-craft-16/final/definitions.json",
+            "sha256": "5d54c8ddc5f90299e6b4db11bcc77c5560d6490811ab47f57acc474d4bb90f95"
+          },
+          {
+            "path": "docs/review/atlas-craft-16/final/18-education.html",
+            "sha256": "3002753422b39fb70f0ff2e9a68461fafe28cf1d98993b9856463a4db0b9b8b8"
+          },
+          {
+            "path": "docs/review/atlas-craft-16/final/18-education-light-1x.png",
+            "sha256": "a573051701fb76c11c5cee379737c048dd16d90ee6fc16fec2e807dd51f4c105"
+          },
+          {
+            "path": "docs/review/atlas-craft-16/final/18-education-light-2x.png",
+            "sha256": "24c70d7181dd36f65f75cc845d9f291c112af024ea8340a55f74793eb3cc95f9"
+          },
+          {
+            "path": "docs/review/atlas-craft-16/final/18-education-dark-1x.png",
+            "sha256": "215b4bdb6f7f6714c48ecd6eaf76171055f122b99e4516a8bed77b181f5e97a5"
+          },
+          {
+            "path": "docs/review/atlas-craft-16/final/18-education-dark-2x.png",
+            "sha256": "952a85d638e4753fbbcdb81699913b06addcf0693f17e1eb37092cfc82766716"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-16/final/18-education-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-16/final/18-education-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-16/final/18-education-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-16/final/18-education-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Lucide",
+        "license": "ISC",
+        "licenseFile": "licenses/lucide.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "school",
+      "purpose": "學校",
+      "recognitionCues": "山牆、中央圓窗與拱門的校舍",
+      "confusableWith": [
+        "building",
+        "home"
+      ],
+      "sourceObservation": "Lucide與Hugeicons都保留山牆、圓窗和拱門；前者屋簷外伸，後者側翼較柔和。最新稿將山牆與兩翼納入連續外輪廓；完稿回比，16px仍能分辨圓窗與拱門，上下空隙沒有被描邊吃掉。",
+      "references": [
+        {
+          "name": "school",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/school.svg",
+          "localPath": "references/atlas-01/lucide-school.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/school.svg",
+          "sha256": "30ffb7f18e62bf6c0d592556f8cd45c936265af578f7dbf5cb7b85a867e1dbe5",
+          "license": "ISC AND MIT",
+          "sourceName": "school",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "school",
+          "library": "Hugeicons Free",
+          "repository": "hugeicons/hugeicons",
+          "commit": "834e28d965946c1ee60d080027fe9dae4adc58d0",
+          "path": "icons/school-01.svg",
+          "localPath": "references/atlas-01/hugeicons-school-01.svg",
+          "url": "https://github.com/hugeicons/hugeicons/blob/834e28d965946c1ee60d080027fe9dae4adc58d0/icons/school-01.svg",
+          "sha256": "32e49cd80382d4d8cc2231e0ab9f110b83bc9b51bff8e73cd8599ca484540027",
+          "license": "MIT",
+          "sourceName": "school-01",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "教育器具的實體邊緣完整呈現，不用虛線打斷構造。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以輪廓和實際空隙區分部件，不以淡化掩飾擁擠。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "教具保持單色線性圖示，不加入材質漸層。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-16/master-before.json",
+          "variantsSha256": "08c6b9f3db028dd5e0c395a4c8740981b2929fe6506cce68cd6ea2e96afb2005"
+        },
+        "reason": "校舍以一個完整外殼承接兩側翼，內部直壁與拱門裁到殼內，避免地面多重線條；保留圓窗作為上部辨識線索。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "af23c2d755851a4d51cb94ed092cb0dd23001ead20bf4c5509ee5615a13a4ab4",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/72-cap-school-presentation/review.html",
+            "sha256": "a9a01c68e5b5c99ca936e43fa934205524f660271e6f3f65b558d180eb2ad67f"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/72-cap-school-presentation/definitions.json",
+            "sha256": "cbec9ae062ebe81abcab83a7b260b83b947be5570b5e230d314f9d0a25391de3"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/72-cap-school-presentation/light-1x.png",
+            "sha256": "7ad4f0da768bc27d783a392127cea61b05c21c93060cea856c24ea6298e9b2f8"
+          },
+          {
+            "path": "docs/review/atlas-craft-16/final/definitions.json",
+            "sha256": "5d54c8ddc5f90299e6b4db11bcc77c5560d6490811ab47f57acc474d4bb90f95"
+          },
+          {
+            "path": "docs/review/atlas-craft-16/final/18-education.html",
+            "sha256": "3002753422b39fb70f0ff2e9a68461fafe28cf1d98993b9856463a4db0b9b8b8"
+          },
+          {
+            "path": "docs/review/atlas-craft-16/final/18-education-light-1x.png",
+            "sha256": "a573051701fb76c11c5cee379737c048dd16d90ee6fc16fec2e807dd51f4c105"
+          },
+          {
+            "path": "docs/review/atlas-craft-16/final/18-education-light-2x.png",
+            "sha256": "24c70d7181dd36f65f75cc845d9f291c112af024ea8340a55f74793eb3cc95f9"
+          },
+          {
+            "path": "docs/review/atlas-craft-16/final/18-education-dark-1x.png",
+            "sha256": "215b4bdb6f7f6714c48ecd6eaf76171055f122b99e4516a8bed77b181f5e97a5"
+          },
+          {
+            "path": "docs/review/atlas-craft-16/final/18-education-dark-2x.png",
+            "sha256": "952a85d638e4753fbbcdb81699913b06addcf0693f17e1eb37092cfc82766716"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-16/final/18-education-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-16/final/18-education-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-16/final/18-education-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-16/final/18-education-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Lucide",
+        "license": "ISC",
+        "licenseFile": "licenses/lucide.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "presentation",
+      "purpose": "簡報螢幕",
+      "recognitionCues": "寬螢幕與向外分開的支架",
+      "confusableWith": [
+        "chalkboard",
+        "monitor"
+      ],
+      "sourceObservation": "Lucide的頂部橫桿與向外分開的腳架，較Phosphor頂部小掛鉤更像獨立投影幕。最新稿採前者構造；完稿回比，幕面留白完整，腳架在三個原生尺寸清楚分開，沒有為簡報語意增加無用圖表。",
+      "references": [
+        {
+          "name": "presentation",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/presentation.svg",
+          "localPath": "references/atlas-01/lucide-presentation.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/presentation.svg",
+          "sha256": "5d15abfdfca21e40abe3b8daead5e8f6a7d38e623fb1a4dd8890448c79e75342",
+          "license": "ISC AND MIT",
+          "sourceName": "presentation",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "presentation",
+          "library": "Phosphor",
+          "repository": "phosphor-icons/core",
+          "commit": "2b75f3ad12b420c9504ef05df8d2564a28f8500e",
+          "path": "assets/regular/presentation.svg",
+          "localPath": "references/atlas-01/phosphor-presentation.svg",
+          "url": "https://github.com/phosphor-icons/core/blob/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular/presentation.svg",
+          "sha256": "d8e2d45be2a13b2beb23d034db61413e3458c2552d96c826b2d2db1f3e287fd2",
+          "license": "MIT",
+          "sourceName": "presentation",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "教育器具的實體邊緣完整呈現，不用虛線打斷構造。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以輪廓和實際空隙區分部件，不以淡化掩飾擁擠。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "教具保持單色線性圖示，不加入材質漸層。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-16/master-before.json",
+          "variantsSha256": "a2912aa01b29f3bd860835d94943d33ba5699a20d26ee4a4e48c7732ce049597"
+        },
+        "reason": "幕面下角使用家族圓角，頂角與橫桿相接保持平直；腳架從幕底中央分出，上端裁到外殼外避免侵入幕面。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "e20237c68717b08cf0a902aeeaa052a96ed1ae759eb930e5a7f4b432115b8646",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/72-cap-school-presentation/review.html",
+            "sha256": "a9a01c68e5b5c99ca936e43fa934205524f660271e6f3f65b558d180eb2ad67f"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/72-cap-school-presentation/definitions.json",
+            "sha256": "cbec9ae062ebe81abcab83a7b260b83b947be5570b5e230d314f9d0a25391de3"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/72-cap-school-presentation/light-1x.png",
+            "sha256": "7ad4f0da768bc27d783a392127cea61b05c21c93060cea856c24ea6298e9b2f8"
+          },
+          {
+            "path": "docs/review/atlas-craft-16/final/definitions.json",
+            "sha256": "5d54c8ddc5f90299e6b4db11bcc77c5560d6490811ab47f57acc474d4bb90f95"
+          },
+          {
+            "path": "docs/review/atlas-craft-16/final/18-education.html",
+            "sha256": "3002753422b39fb70f0ff2e9a68461fafe28cf1d98993b9856463a4db0b9b8b8"
+          },
+          {
+            "path": "docs/review/atlas-craft-16/final/18-education-light-1x.png",
+            "sha256": "a573051701fb76c11c5cee379737c048dd16d90ee6fc16fec2e807dd51f4c105"
+          },
+          {
+            "path": "docs/review/atlas-craft-16/final/18-education-light-2x.png",
+            "sha256": "24c70d7181dd36f65f75cc845d9f291c112af024ea8340a55f74793eb3cc95f9"
+          },
+          {
+            "path": "docs/review/atlas-craft-16/final/18-education-dark-1x.png",
+            "sha256": "215b4bdb6f7f6714c48ecd6eaf76171055f122b99e4516a8bed77b181f5e97a5"
+          },
+          {
+            "path": "docs/review/atlas-craft-16/final/18-education-dark-2x.png",
+            "sha256": "952a85d638e4753fbbcdb81699913b06addcf0693f17e1eb37092cfc82766716"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-16/final/18-education-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-16/final/18-education-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-16/final/18-education-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-16/final/18-education-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Lucide",
+        "license": "ISC",
+        "licenseFile": "licenses/lucide.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "chalkboard",
+      "purpose": "黑板",
+      "recognitionCues": "直立板面、底托與板擦",
+      "confusableWith": [
+        "presentation",
+        "square"
+      ],
+      "sourceObservation": "Phosphor以開放右下邊與底托容納板擦，Tabler把板擦塞在閉合框內。最新稿採開放結構；完稿回比，16px板擦孔和上方斷開處皆清楚，底托為共同邊界，沒有雙底線擁擠。",
+      "references": [
+        {
+          "name": "chalkboard",
+          "library": "Phosphor",
+          "repository": "phosphor-icons/core",
+          "commit": "2b75f3ad12b420c9504ef05df8d2564a28f8500e",
+          "path": "assets/regular/chalkboard-simple.svg",
+          "localPath": "references/atlas-01/phosphor-chalkboard-simple.svg",
+          "url": "https://github.com/phosphor-icons/core/blob/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular/chalkboard-simple.svg",
+          "sha256": "9e53c7c7096f9c089129570bba029b9d327d6d81447e8cca2a11b5b5392e4344",
+          "license": "MIT",
+          "sourceName": "chalkboard-simple",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "chalkboard",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/chalkboard.svg",
+          "localPath": "references/atlas-01/tabler-chalkboard.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/chalkboard.svg",
+          "sha256": "028e0277a11690197cd4e132a8c15f34a2c844d2f8e19da076e811d676364e1a",
+          "license": "MIT",
+          "sourceName": "chalkboard",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "教育器具的實體邊緣完整呈現，不用虛線打斷構造。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以輪廓和實際空隙區分部件，不以淡化掩飾擁擠。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "教具保持單色線性圖示，不加入材質漸層。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-16/master-before.json",
+          "variantsSha256": "0986bf026476f542dd5bca3a4a0eea2e9969a5b2b9823f694e1878037683acff"
+        },
+        "reason": "保留完整大板面與外伸底托，板擦與底托共享底邊；右側上段提前收筆，給板擦上緣可見空隙。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "5cf34fdd751471b5ff30484bae084dd485e695e7f2cb6a72a84ddc4ccf3e286c",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/73-board-abacus-book/review.html",
+            "sha256": "c72028286768819cd7f22cd36a7b82a81dbe404321f0bcac6361316355ebdc6b"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/73-board-abacus-book/definitions.json",
+            "sha256": "a7dbab7c872ef6301421235d70dcce00e91c3a9c328c52b6064988b21c58b693"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/73-board-abacus-book/light-1x.png",
+            "sha256": "fc4600c3e1aede26ca19f192bfe44bb938210aa90b4cef0a20d3840de874c76a"
+          },
+          {
+            "path": "docs/review/atlas-craft-16/final/definitions.json",
+            "sha256": "5d54c8ddc5f90299e6b4db11bcc77c5560d6490811ab47f57acc474d4bb90f95"
+          },
+          {
+            "path": "docs/review/atlas-craft-16/final/18-education.html",
+            "sha256": "3002753422b39fb70f0ff2e9a68461fafe28cf1d98993b9856463a4db0b9b8b8"
+          },
+          {
+            "path": "docs/review/atlas-craft-16/final/18-education-light-1x.png",
+            "sha256": "a573051701fb76c11c5cee379737c048dd16d90ee6fc16fec2e807dd51f4c105"
+          },
+          {
+            "path": "docs/review/atlas-craft-16/final/18-education-light-2x.png",
+            "sha256": "24c70d7181dd36f65f75cc845d9f291c112af024ea8340a55f74793eb3cc95f9"
+          },
+          {
+            "path": "docs/review/atlas-craft-16/final/18-education-dark-1x.png",
+            "sha256": "215b4bdb6f7f6714c48ecd6eaf76171055f122b99e4516a8bed77b181f5e97a5"
+          },
+          {
+            "path": "docs/review/atlas-craft-16/final/18-education-dark-2x.png",
+            "sha256": "952a85d638e4753fbbcdb81699913b06addcf0693f17e1eb37092cfc82766716"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-16/final/18-education-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-16/final/18-education-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-16/final/18-education-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-16/final/18-education-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Phosphor",
+        "license": "MIT",
+        "licenseFile": "licenses/phosphor.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "abacus",
+      "purpose": "算盤",
+      "recognitionCues": "支架內兩排橫桿與錯開算珠",
+      "confusableWith": [
+        "calculator",
+        "sliders"
+      ],
+      "sourceObservation": "Hugeicons用抽象小短線包在方框內，Tabler以實體支架和兩排算珠表現器具。最新稿採實體支架並減為錯開四珠；完稿回比，橫桿與珠子在16px仍能讀成兩排，不保留來源較密的六珠數量。",
+      "references": [
+        {
+          "name": "abacus",
+          "library": "Hugeicons Free",
+          "repository": "hugeicons/hugeicons",
+          "commit": "834e28d965946c1ee60d080027fe9dae4adc58d0",
+          "path": "icons/abacus.svg",
+          "localPath": "references/atlas-01/hugeicons-abacus.svg",
+          "url": "https://github.com/hugeicons/hugeicons/blob/834e28d965946c1ee60d080027fe9dae4adc58d0/icons/abacus.svg",
+          "sha256": "b5e3081f0e2bc5cac6bc9ebac3b35744ff202a27d99918e78a53da2803d32593",
+          "license": "MIT",
+          "sourceName": "abacus",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "abacus",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/abacus.svg",
+          "localPath": "references/atlas-01/tabler-abacus.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/abacus.svg",
+          "sha256": "6653f71124eb28546638449982a32bff4a4ed1464e66403db9513c5564a2c37e",
+          "license": "MIT",
+          "sourceName": "abacus",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "教育器具的實體邊緣完整呈現，不用虛線打斷構造。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以輪廓和實際空隙區分部件，不以淡化掩飾擁擠。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "教具保持單色線性圖示，不加入材質漸層。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-16/master-before.json",
+          "variantsSha256": "0f78d56f7c3a251b39b8e0b4a528f6bf8702dbf729216fef074d5883988d7e51"
+        },
+        "reason": "兩支架與共用底座承接兩根橫桿，算珠用短直筆表現並錯開排列；以減少珠數取得實際留白，不縮細主描邊。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "a61c10bababed734009d6a0296fa456abbed26dcbd6664b34da707b3ae571b66",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/73-board-abacus-book/review.html",
+            "sha256": "c72028286768819cd7f22cd36a7b82a81dbe404321f0bcac6361316355ebdc6b"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/73-board-abacus-book/definitions.json",
+            "sha256": "a7dbab7c872ef6301421235d70dcce00e91c3a9c328c52b6064988b21c58b693"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/73-board-abacus-book/light-1x.png",
+            "sha256": "fc4600c3e1aede26ca19f192bfe44bb938210aa90b4cef0a20d3840de874c76a"
+          },
+          {
+            "path": "docs/review/atlas-craft-16/final/definitions.json",
+            "sha256": "5d54c8ddc5f90299e6b4db11bcc77c5560d6490811ab47f57acc474d4bb90f95"
+          },
+          {
+            "path": "docs/review/atlas-craft-16/final/18-education.html",
+            "sha256": "3002753422b39fb70f0ff2e9a68461fafe28cf1d98993b9856463a4db0b9b8b8"
+          },
+          {
+            "path": "docs/review/atlas-craft-16/final/18-education-light-1x.png",
+            "sha256": "a573051701fb76c11c5cee379737c048dd16d90ee6fc16fec2e807dd51f4c105"
+          },
+          {
+            "path": "docs/review/atlas-craft-16/final/18-education-light-2x.png",
+            "sha256": "24c70d7181dd36f65f75cc845d9f291c112af024ea8340a55f74793eb3cc95f9"
+          },
+          {
+            "path": "docs/review/atlas-craft-16/final/18-education-dark-1x.png",
+            "sha256": "215b4bdb6f7f6714c48ecd6eaf76171055f122b99e4516a8bed77b181f5e97a5"
+          },
+          {
+            "path": "docs/review/atlas-craft-16/final/18-education-dark-2x.png",
+            "sha256": "952a85d638e4753fbbcdb81699913b06addcf0693f17e1eb37092cfc82766716"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-16/final/18-education-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-16/final/18-education-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-16/final/18-education-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-16/final/18-education-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Tabler",
+        "license": "MIT",
+        "licenseFile": "licenses/tabler.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "book-marked",
+      "purpose": "書籤書本",
+      "recognitionCues": "連續書脊、下緣頁邊與垂下書籤",
+      "confusableWith": [
+        "book",
+        "bookmark"
+      ],
+      "sourceObservation": "Hugeicons將書籤放在右上且打斷書面，Phosphor在完整書面內垂下書籤。最新稿採完整書面與連續書脊；完稿回比，書籤尖凹與下方頁邊都有空白，16px仍呈現書冊厚度而不是文件加徽標。",
+      "references": [
+        {
+          "name": "book-marked",
+          "library": "Hugeicons Free",
+          "repository": "hugeicons/hugeicons",
+          "commit": "834e28d965946c1ee60d080027fe9dae4adc58d0",
+          "path": "icons/book-marked.svg",
+          "localPath": "references/atlas-01/hugeicons-book-marked.svg",
+          "url": "https://github.com/hugeicons/hugeicons/blob/834e28d965946c1ee60d080027fe9dae4adc58d0/icons/book-marked.svg",
+          "sha256": "f1e6f426b51c65c6ca50e0a0d8bf6dd5932420a3162ae60e05cea651330be80f",
+          "license": "MIT",
+          "sourceName": "book-marked",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "book-marked",
+          "library": "Phosphor",
+          "repository": "phosphor-icons/core",
+          "commit": "2b75f3ad12b420c9504ef05df8d2564a28f8500e",
+          "path": "assets/regular/book-bookmark.svg",
+          "localPath": "references/atlas-01/phosphor-book-bookmark.svg",
+          "url": "https://github.com/phosphor-icons/core/blob/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular/book-bookmark.svg",
+          "sha256": "ca4cd8a5383e6863699fcb5c30d6568f9b4a5948a43c94afb6c9a9142c966f16",
+          "license": "MIT",
+          "sourceName": "book-bookmark",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "教育器具的實體邊緣完整呈現，不用虛線打斷構造。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以輪廓和實際空隙區分部件，不以淡化掩飾擁擠。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "教具保持單色線性圖示，不加入材質漸層。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-16/master-before.json",
+          "variantsSha256": "3676ba854d6674cfc326a80478bb86580e3952993071bd9af10e6ecd17bc57b7"
+        },
+        "reason": "書脊用上下連續弧線承接封面及頁緣，書籤掛在上緣並裁住相接筆畫；底部只有一條頁緣，不增加擁擠的多層頁線。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "3f838bff71ff9b82acdfe67d2a525f5892e8b3d23e5a8e561979bb9572d28478",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/73-board-abacus-book/review.html",
+            "sha256": "c72028286768819cd7f22cd36a7b82a81dbe404321f0bcac6361316355ebdc6b"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/73-board-abacus-book/definitions.json",
+            "sha256": "a7dbab7c872ef6301421235d70dcce00e91c3a9c328c52b6064988b21c58b693"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/73-board-abacus-book/light-1x.png",
+            "sha256": "fc4600c3e1aede26ca19f192bfe44bb938210aa90b4cef0a20d3840de874c76a"
+          },
+          {
+            "path": "docs/review/atlas-craft-16/final/definitions.json",
+            "sha256": "5d54c8ddc5f90299e6b4db11bcc77c5560d6490811ab47f57acc474d4bb90f95"
+          },
+          {
+            "path": "docs/review/atlas-craft-16/final/18-education.html",
+            "sha256": "3002753422b39fb70f0ff2e9a68461fafe28cf1d98993b9856463a4db0b9b8b8"
+          },
+          {
+            "path": "docs/review/atlas-craft-16/final/18-education-light-1x.png",
+            "sha256": "a573051701fb76c11c5cee379737c048dd16d90ee6fc16fec2e807dd51f4c105"
+          },
+          {
+            "path": "docs/review/atlas-craft-16/final/18-education-light-2x.png",
+            "sha256": "24c70d7181dd36f65f75cc845d9f291c112af024ea8340a55f74793eb3cc95f9"
+          },
+          {
+            "path": "docs/review/atlas-craft-16/final/18-education-dark-1x.png",
+            "sha256": "215b4bdb6f7f6714c48ecd6eaf76171055f122b99e4516a8bed77b181f5e97a5"
+          },
+          {
+            "path": "docs/review/atlas-craft-16/final/18-education-dark-2x.png",
+            "sha256": "952a85d638e4753fbbcdb81699913b06addcf0693f17e1eb37092cfc82766716"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-16/final/18-education-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-16/final/18-education-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-16/final/18-education-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-16/final/18-education-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Phosphor",
+        "license": "MIT",
+        "licenseFile": "licenses/phosphor.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "library",
+      "purpose": "圖書館",
+      "recognitionCues": "直立書脊與末端傾斜的一冊書",
+      "confusableWith": [
+        "book-marked",
+        "chart-bar"
+      ],
+      "sourceObservation": "Lucide以直立書脊與一冊斜書概括書架，Hugeicons用兩個完整厚書框。最新稿保留Lucide較輕的書脊語言；完稿回比，末端斜書與前三冊的姿態區別在16px明確，避免套框讓小尺寸變成多條黏合直線。",
+      "references": [
+        {
+          "name": "library",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/library.svg",
+          "localPath": "references/atlas-01/lucide-library.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/library.svg",
+          "sha256": "892ba1bd1ee2e5bba320eea1c30c83ed83055ded5a0a0c0e7e4ee5fb06c307a5",
+          "license": "ISC AND MIT",
+          "sourceName": "library",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "library",
+          "library": "Hugeicons Free",
+          "repository": "hugeicons/hugeicons",
+          "commit": "834e28d965946c1ee60d080027fe9dae4adc58d0",
+          "path": "icons/library.svg",
+          "localPath": "references/atlas-01/hugeicons-library.svg",
+          "url": "https://github.com/hugeicons/hugeicons/blob/834e28d965946c1ee60d080027fe9dae4adc58d0/icons/library.svg",
+          "sha256": "72099b63c01fb60fac25aaee1d1b56eb25273b993011f4a0abd959bd841f4969",
+          "license": "MIT",
+          "sourceName": "library",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "教育器具的實體邊緣完整呈現，不用虛線打斷構造。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以輪廓和實際空隙區分部件，不以淡化掩飾擁擠。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "教具保持單色線性圖示，不加入材質漸層。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-16/master-before.json",
+          "variantsSha256": "ea75e4a95bb9fdbc0b367913d3b1c431997fffbd749d426837674cc9b9eb7c5f"
+        },
+        "reason": "三條直立書脊有輕微高度差，末端書冊以斜率表達倚靠；控制間距與下緣視覺高度，保留簡潔的圖書集合符號。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "4d9388bc74bca79cd31052ddd3555a8e0223cff74a88eccadc79654adfabf8f6",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/74-library-diploma/review.html",
+            "sha256": "6cdfec5363eea4a3c905f220cbd341bc8d9c914431c68b48997fb18f61a03f75"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/74-library-diploma/definitions.json",
+            "sha256": "ecee26dba2c99b7b64367a6a16c9fc757aa47c44851af9c843c3e128d13bc2cd"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/74-library-diploma/light-1x.png",
+            "sha256": "0ee575cd0365ab80badf46e343e1fe5258370541b9068da34e209dd35e43ecc4"
+          },
+          {
+            "path": "docs/review/atlas-craft-16/final/definitions.json",
+            "sha256": "5d54c8ddc5f90299e6b4db11bcc77c5560d6490811ab47f57acc474d4bb90f95"
+          },
+          {
+            "path": "docs/review/atlas-craft-16/final/18-education.html",
+            "sha256": "3002753422b39fb70f0ff2e9a68461fafe28cf1d98993b9856463a4db0b9b8b8"
+          },
+          {
+            "path": "docs/review/atlas-craft-16/final/18-education-light-1x.png",
+            "sha256": "a573051701fb76c11c5cee379737c048dd16d90ee6fc16fec2e807dd51f4c105"
+          },
+          {
+            "path": "docs/review/atlas-craft-16/final/18-education-light-2x.png",
+            "sha256": "24c70d7181dd36f65f75cc845d9f291c112af024ea8340a55f74793eb3cc95f9"
+          },
+          {
+            "path": "docs/review/atlas-craft-16/final/18-education-dark-1x.png",
+            "sha256": "215b4bdb6f7f6714c48ecd6eaf76171055f122b99e4516a8bed77b181f5e97a5"
+          },
+          {
+            "path": "docs/review/atlas-craft-16/final/18-education-dark-2x.png",
+            "sha256": "952a85d638e4753fbbcdb81699913b06addcf0693f17e1eb37092cfc82766716"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-16/final/18-education-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-16/final/18-education-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-16/final/18-education-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-16/final/18-education-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Lucide",
+        "license": "ISC",
+        "licenseFile": "licenses/lucide.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "diploma",
+      "purpose": "畢業證書",
+      "recognitionCues": "橫式證書與帶垂帶的圓形印章",
+      "confusableWith": [
+        "award",
+        "file-text"
+      ],
+      "sourceObservation": "Hugeicons的中央印章帶曲線垂帶，Phosphor將印章放在證書右側。最新稿採右側印章，首稿框邊殘留一小段細尾，回比後將印章移至外側消除殘線；最新16/20/24印章、垂帶及文字各自清楚。",
+      "references": [
+        {
+          "name": "diploma",
+          "library": "Hugeicons Free",
+          "repository": "hugeicons/hugeicons",
+          "commit": "834e28d965946c1ee60d080027fe9dae4adc58d0",
+          "path": "icons/diploma.svg",
+          "localPath": "references/atlas-01/hugeicons-diploma.svg",
+          "url": "https://github.com/hugeicons/hugeicons/blob/834e28d965946c1ee60d080027fe9dae4adc58d0/icons/diploma.svg",
+          "sha256": "72169b0ea19ea7ccb507a1d6df2c1d4dc44e10cec68ec9cd920a1fa1a787f97a",
+          "license": "MIT",
+          "sourceName": "diploma",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "diploma",
+          "library": "Phosphor",
+          "repository": "phosphor-icons/core",
+          "commit": "2b75f3ad12b420c9504ef05df8d2564a28f8500e",
+          "path": "assets/regular/certificate.svg",
+          "localPath": "references/atlas-01/phosphor-certificate.svg",
+          "url": "https://github.com/phosphor-icons/core/blob/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular/certificate.svg",
+          "sha256": "a38d489cbad88ce595fbf5236651b7f9430ec9b007996edfba9a2fbcd2d2f5d6",
+          "license": "MIT",
+          "sourceName": "certificate",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "教育器具的實體邊緣完整呈現，不用虛線打斷構造。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以輪廓和實際空隙區分部件，不以淡化掩飾擁擠。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "教具保持單色線性圖示，不加入材質漸層。"
+        }
+      },
+      "change": {
+        "kind": "modified",
+        "before": {
+          "path": "references/atlas-craft-16/master-before.json",
+          "variantsSha256": "4bed9a14ff21aacc3958565816131338b65d56da789c58ffe24de6013c15c54c"
+        },
+        "reason": "橫式證書保留兩筆文字訊號，圓印章與垂帶結構相接；印章遮住紙張時按實際墨線留出透明淨空，調整位置消除右框殘片。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "615857a8a8d282e78898f5c3067837d5cd99112e997b1ef670845e6cf09716cc",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/72b-cap-diploma/review.html",
+            "sha256": "7bff460329949f30b7b15e8395ad90ccc8089099028367276fe7a5ce04665507"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/72b-cap-diploma/definitions.json",
+            "sha256": "07d4211100e0c5cca45a7c9013b86beaca0ef11b30dec82d9ae2dd53a0fa7c8c"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/72b-cap-diploma/light-1x.png",
+            "sha256": "00b37de43cab7f6d94d22c8cceb55fd47f68eeb3effe65f1f0a2fa2d5c02dee3"
+          },
+          {
+            "path": "docs/review/atlas-craft-16/final/definitions.json",
+            "sha256": "5d54c8ddc5f90299e6b4db11bcc77c5560d6490811ab47f57acc474d4bb90f95"
+          },
+          {
+            "path": "docs/review/atlas-craft-16/final/18-education.html",
+            "sha256": "3002753422b39fb70f0ff2e9a68461fafe28cf1d98993b9856463a4db0b9b8b8"
+          },
+          {
+            "path": "docs/review/atlas-craft-16/final/18-education-light-1x.png",
+            "sha256": "a573051701fb76c11c5cee379737c048dd16d90ee6fc16fec2e807dd51f4c105"
+          },
+          {
+            "path": "docs/review/atlas-craft-16/final/18-education-light-2x.png",
+            "sha256": "24c70d7181dd36f65f75cc845d9f291c112af024ea8340a55f74793eb3cc95f9"
+          },
+          {
+            "path": "docs/review/atlas-craft-16/final/18-education-dark-1x.png",
+            "sha256": "215b4bdb6f7f6714c48ecd6eaf76171055f122b99e4516a8bed77b181f5e97a5"
+          },
+          {
+            "path": "docs/review/atlas-craft-16/final/18-education-dark-2x.png",
+            "sha256": "952a85d638e4753fbbcdb81699913b06addcf0693f17e1eb37092cfc82766716"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-16/final/18-education-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-16/final/18-education-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-16/final/18-education-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-16/final/18-education-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Phosphor",
+        "license": "MIT",
+        "licenseFile": "licenses/phosphor.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "globe-stand",
+      "purpose": "地球儀",
+      "recognitionCues": "球體、傾斜半圓支架與底座",
+      "confusableWith": [
+        "globe",
+        "orbit"
+      ],
+      "sourceObservation": "Phosphor的大球體與半圓支架比例較完整，Tabler球體較小且支架反向。最新稿採較大的球體與左側弧形架；完稿回比，16px兩圈間仍有通道，底座與支架連續，不加入會擠壓內孔的經緯線。",
+      "references": [
+        {
+          "name": "globe-stand",
+          "library": "Phosphor",
+          "repository": "phosphor-icons/core",
+          "commit": "2b75f3ad12b420c9504ef05df8d2564a28f8500e",
+          "path": "assets/regular/globe-stand.svg",
+          "localPath": "references/atlas-01/phosphor-globe-stand.svg",
+          "url": "https://github.com/phosphor-icons/core/blob/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular/globe-stand.svg",
+          "sha256": "3d7ccb767859961f833b11d2f30134790aaaca70e41a677f7e63cc7c686e0126",
+          "license": "MIT",
+          "sourceName": "globe-stand",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "globe-stand",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/globe.svg",
+          "localPath": "references/atlas-01/tabler-globe.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/globe.svg",
+          "sha256": "fa29a2387c8396d965226314b345df1c980566425be512742e1d76fc4367f66a",
+          "license": "MIT",
+          "sourceName": "globe",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "教育器具的實體邊緣完整呈現，不用虛線打斷構造。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以輪廓和實際空隙區分部件，不以淡化掩飾擁擠。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "教具保持單色線性圖示，不加入材質漸層。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-16/master-before.json",
+          "variantsSha256": "5406bc8e198946af03ddafd2d2bd30fc214cc7be8f14d6713c3e7a91571af963"
+        },
+        "reason": "球體與同心外架保持一致圓心，半圓斜向開口交代地軸姿態；垂直支柱接外架最低點，再接水平底座，整體共同受力。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "4ecaeeb08240e0b24276231c0e9a8091f3c730fdf9bc2c5528d98e76fcef731c",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/75-globe-pencil/review.html",
+            "sha256": "74173bde7698ffa07a9a3802bbb05b3721d5ee8b288e13728b7cce989463a776"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/75-globe-pencil/definitions.json",
+            "sha256": "736383f2301d6032d6c408a7b676ac9fa41124b241f4fa75899eb164f4532617"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/75-globe-pencil/light-1x.png",
+            "sha256": "e55c71bad9f661c25e7efe7d1067e5e73f570b711807957277462ac2fb7ebb1b"
+          },
+          {
+            "path": "docs/review/atlas-craft-16/final/definitions.json",
+            "sha256": "5d54c8ddc5f90299e6b4db11bcc77c5560d6490811ab47f57acc474d4bb90f95"
+          },
+          {
+            "path": "docs/review/atlas-craft-16/final/18-education.html",
+            "sha256": "3002753422b39fb70f0ff2e9a68461fafe28cf1d98993b9856463a4db0b9b8b8"
+          },
+          {
+            "path": "docs/review/atlas-craft-16/final/18-education-light-1x.png",
+            "sha256": "a573051701fb76c11c5cee379737c048dd16d90ee6fc16fec2e807dd51f4c105"
+          },
+          {
+            "path": "docs/review/atlas-craft-16/final/18-education-light-2x.png",
+            "sha256": "24c70d7181dd36f65f75cc845d9f291c112af024ea8340a55f74793eb3cc95f9"
+          },
+          {
+            "path": "docs/review/atlas-craft-16/final/18-education-dark-1x.png",
+            "sha256": "215b4bdb6f7f6714c48ecd6eaf76171055f122b99e4516a8bed77b181f5e97a5"
+          },
+          {
+            "path": "docs/review/atlas-craft-16/final/18-education-dark-2x.png",
+            "sha256": "952a85d638e4753fbbcdb81699913b06addcf0693f17e1eb37092cfc82766716"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-16/final/18-education-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-16/final/18-education-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-16/final/18-education-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-16/final/18-education-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Phosphor",
+        "license": "MIT",
+        "licenseFile": "licenses/phosphor.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "pencil-ruler",
+      "purpose": "鉛筆尺規",
+      "recognitionCues": "交叉鉛筆與有刻度的直尺",
+      "confusableWith": [
+        "pencil",
+        "ruler"
+      ],
+      "sourceObservation": "Lucide的筆尖收束清楚，Tabler的交叉尺規較方整。最新稿採Lucide的長筆尖與前後交叉；完稿回比，只保留兩個尺規刻度與一條筆尾分界，16px交會區沒有多餘重線，鉛筆本體仍完整。",
+      "references": [
+        {
+          "name": "pencil-ruler",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/pencil-ruler.svg",
+          "localPath": "references/atlas-01/lucide-pencil-ruler.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/pencil-ruler.svg",
+          "sha256": "5768abf6372740f2e7d9002d9aaa4312ad0e46df6370a9fc833ab40254e7e600",
+          "license": "ISC AND MIT",
+          "sourceName": "pencil-ruler",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "pencil-ruler",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/pencil-ruler.svg",
+          "localPath": "references/atlas-01/tabler-pencil-ruler.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/pencil-ruler.svg",
+          "sha256": "797e6dafa867206a27186539749d0a79e8a86b10c99c2e0337714df8c5f2fe9b",
+          "license": "MIT",
+          "sourceName": "pencil-ruler",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "教育器具的實體邊緣完整呈現，不用虛線打斷構造。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以輪廓和實際空隙區分部件，不以淡化掩飾擁擠。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "教具保持單色線性圖示，不加入材質漸層。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-16/master-before.json",
+          "variantsSha256": "3fdebf51477ec898cc8f64b12764aa1c7b607dccc6cebc171f4352fdaa16a4ef"
+        },
+        "reason": "鉛筆以前景封閉輪廓裁去直尺內部遮住部分，保留相接邊界；筆尖以斜向收束連到筆身，尺刻度限制在尺內避免端帽外溢。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "5391bc2b157a04e652510514deb8d8480e13dc825a933a826e254708b5bb603e",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/75-globe-pencil/review.html",
+            "sha256": "74173bde7698ffa07a9a3802bbb05b3721d5ee8b288e13728b7cce989463a776"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/75-globe-pencil/definitions.json",
+            "sha256": "736383f2301d6032d6c408a7b676ac9fa41124b241f4fa75899eb164f4532617"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/75-globe-pencil/light-1x.png",
+            "sha256": "e55c71bad9f661c25e7efe7d1067e5e73f570b711807957277462ac2fb7ebb1b"
+          },
+          {
+            "path": "docs/review/atlas-craft-16/final/definitions.json",
+            "sha256": "5d54c8ddc5f90299e6b4db11bcc77c5560d6490811ab47f57acc474d4bb90f95"
+          },
+          {
+            "path": "docs/review/atlas-craft-16/final/18-education.html",
+            "sha256": "3002753422b39fb70f0ff2e9a68461fafe28cf1d98993b9856463a4db0b9b8b8"
+          },
+          {
+            "path": "docs/review/atlas-craft-16/final/18-education-light-1x.png",
+            "sha256": "a573051701fb76c11c5cee379737c048dd16d90ee6fc16fec2e807dd51f4c105"
+          },
+          {
+            "path": "docs/review/atlas-craft-16/final/18-education-light-2x.png",
+            "sha256": "24c70d7181dd36f65f75cc845d9f291c112af024ea8340a55f74793eb3cc95f9"
+          },
+          {
+            "path": "docs/review/atlas-craft-16/final/18-education-dark-1x.png",
+            "sha256": "215b4bdb6f7f6714c48ecd6eaf76171055f122b99e4516a8bed77b181f5e97a5"
+          },
+          {
+            "path": "docs/review/atlas-craft-16/final/18-education-dark-2x.png",
+            "sha256": "952a85d638e4753fbbcdb81699913b06addcf0693f17e1eb37092cfc82766716"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-16/final/18-education-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-16/final/18-education-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-16/final/18-education-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-16/final/18-education-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Lucide",
+        "license": "ISC",
+        "licenseFile": "licenses/lucide.txt"
+      },
+      "remaining": []
+    }
+  ]
+}

@@ -1,0 +1,1537 @@
+{
+  "schemaVersion": 2,
+  "reviewer": "Codex (AI)",
+  "userApproval": "pending",
+  "icons": [
+    {
+      "name": "refrigerator",
+      "purpose": "冰箱",
+      "recognitionCues": "高直雙門、分界與上下把手",
+      "confusableWith": [
+        "washing-machine",
+        "oven"
+      ],
+      "sourceObservation": "Lucide採圓拱上門及跨門把手，Tabler採上下雙門與分開把手。Master選上下門，短上把手改成實心點，下門保留直把手；門縫不與把手交叉。",
+      "references": [
+        {
+          "name": "refrigerator",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/refrigerator.svg",
+          "localPath": "references/atlas-01/lucide-refrigerator.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/refrigerator.svg",
+          "sha256": "7ae781a1b82c3a101c9b85b88cd42084e0fba25d845216db1cb2f1d53422c9cb",
+          "license": "ISC AND MIT",
+          "sourceName": "refrigerator",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "refrigerator",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/fridge.svg",
+          "localPath": "references/atlas-01/tabler-fridge.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/fridge.svg",
+          "sha256": "9b4d9459ee8aebbb5c8da639af49ec2907398dce2729eb5aed7e1f5f34f847e5",
+          "license": "MIT",
+          "sourceName": "fridge",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "家電外殼與控制元件均為實體構造，沒有隱藏邊界。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "用空間分配與共同邊界分離元件，不靠淡化減少擁擠。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "單色平面器具與空氣流向不需要連續漸層。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-07/master-before.json",
+          "variantsSha256": "4b0f60c7a7268c4a9ae871fd24a4db0ddb1d78bad0273e513c972ee5c9e108c1"
+        },
+        "reason": "雙門比例、直立機身與各自把手保留冰箱構造；上門不塞長桿，門縫收在外殼內，三種角型均保留寬內孔。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "c17d712472cbaf7f826c3c7ed73e7b5765778f255497741266d9efb5c80f9b5f",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/37/review.html",
+            "sha256": "5ac844fb674653f09bed5858c8983fa6a185e08d8f0c9511e5386e5d6ecd03dd"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/37/definitions.json",
+            "sha256": "afbd468063b800def8c7d23e3de300a2605efacba73ee61be9b8d746d51851a4"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/37/light-1x.png",
+            "sha256": "34f47eceaaeb550b8f54ee31950be84da29d4b75a963c9eb8957006702eb1091"
+          },
+          {
+            "path": "docs/review/atlas-craft-07/final/definitions.json",
+            "sha256": "f35bef2ea7c72a46aefe4148f0ead369e0326a0108f7cd2a924fec0827bb9a74"
+          },
+          {
+            "path": "docs/review/atlas-craft-07/final/10-appliances.html",
+            "sha256": "a1932eff758b8a27385749bf943a32762654080e58939d6b8f3feac9a9fd0425"
+          },
+          {
+            "path": "docs/review/atlas-craft-07/final/10-appliances-light-1x.png",
+            "sha256": "e23bc64b6bfbee5c55a318fa8257c615381f9a2e127ab23b64b3aee51200dc8b"
+          },
+          {
+            "path": "docs/review/atlas-craft-07/final/10-appliances-light-2x.png",
+            "sha256": "35b9cc0aa36f664fced0342fd4fd34773cfc4bc794bde42b911efc72643fa1f2"
+          },
+          {
+            "path": "docs/review/atlas-craft-07/final/10-appliances-dark-1x.png",
+            "sha256": "96c7ec9f0d683b986db8b5a69b2c25b7da6f362c85b6f63620c978f23b7f9a8b"
+          },
+          {
+            "path": "docs/review/atlas-craft-07/final/10-appliances-dark-2x.png",
+            "sha256": "424ee80b161647bd3e247058b7bbd0c5c09ec498831f187ec61ff526338d6701"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-07/final/10-appliances-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-07/final/10-appliances-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-07/final/10-appliances-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-07/final/10-appliances-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Tabler",
+        "license": "MIT",
+        "licenseFile": "licenses/tabler.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "washing-machine",
+      "purpose": "洗衣機",
+      "recognitionCues": "方形機身、控制點與圓形洗衣槽",
+      "confusableWith": [
+        "oven",
+        "refrigerator"
+      ],
+      "sourceObservation": "Lucide以圓槽及曲水面表意，Phosphor以雙斜線表示玻璃反光。Master保留一圈洗衣槽和一道緩波，槽與機殼留足側面及底部空間，取消第二圈門環。",
+      "references": [
+        {
+          "name": "washing-machine",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/washing-machine.svg",
+          "localPath": "references/atlas-01/lucide-washing-machine.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/washing-machine.svg",
+          "sha256": "47de24566c8f95282ffd4a80a10100295ef35a0c4163254a3d477e7a80945ed4",
+          "license": "ISC AND MIT",
+          "sourceName": "washing-machine",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "washing-machine",
+          "library": "Phosphor",
+          "repository": "phosphor-icons/core",
+          "commit": "2b75f3ad12b420c9504ef05df8d2564a28f8500e",
+          "path": "assets/regular/washing-machine.svg",
+          "localPath": "references/atlas-01/phosphor-washing-machine.svg",
+          "url": "https://github.com/phosphor-icons/core/blob/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular/washing-machine.svg",
+          "sha256": "c98966e69122656274fda9a02998952f47d2aa2bf22ff2170183816ac210a8d3",
+          "license": "MIT",
+          "sourceName": "washing-machine",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "家電外殼與控制元件均為實體構造，沒有隱藏邊界。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "用空間分配與共同邊界分離元件，不靠淡化減少擁擠。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "單色平面器具與空氣流向不需要連續漸層。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-07/master-before.json",
+          "variantsSha256": "e083e0b209f9a0fff723742195b43046fb4a098f674a427c0058806981ccc58a"
+        },
+        "reason": "洗衣槽下移與控制點分組，圓槽內水面收在槽壁；圓槽和外殼的可見通道在16px仍清楚，沒有多層圓環或密集控制排。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "9500965686016b685fce451c58ec83b63fd47f471e70f56c02ab1d8f62e849d8",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/37/review.html",
+            "sha256": "5ac844fb674653f09bed5858c8983fa6a185e08d8f0c9511e5386e5d6ecd03dd"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/37/definitions.json",
+            "sha256": "afbd468063b800def8c7d23e3de300a2605efacba73ee61be9b8d746d51851a4"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/37/light-1x.png",
+            "sha256": "34f47eceaaeb550b8f54ee31950be84da29d4b75a963c9eb8957006702eb1091"
+          },
+          {
+            "path": "docs/review/atlas-craft-07/final/definitions.json",
+            "sha256": "f35bef2ea7c72a46aefe4148f0ead369e0326a0108f7cd2a924fec0827bb9a74"
+          },
+          {
+            "path": "docs/review/atlas-craft-07/final/10-appliances.html",
+            "sha256": "a1932eff758b8a27385749bf943a32762654080e58939d6b8f3feac9a9fd0425"
+          },
+          {
+            "path": "docs/review/atlas-craft-07/final/10-appliances-light-1x.png",
+            "sha256": "e23bc64b6bfbee5c55a318fa8257c615381f9a2e127ab23b64b3aee51200dc8b"
+          },
+          {
+            "path": "docs/review/atlas-craft-07/final/10-appliances-light-2x.png",
+            "sha256": "35b9cc0aa36f664fced0342fd4fd34773cfc4bc794bde42b911efc72643fa1f2"
+          },
+          {
+            "path": "docs/review/atlas-craft-07/final/10-appliances-dark-1x.png",
+            "sha256": "96c7ec9f0d683b986db8b5a69b2c25b7da6f362c85b6f63620c978f23b7f9a8b"
+          },
+          {
+            "path": "docs/review/atlas-craft-07/final/10-appliances-dark-2x.png",
+            "sha256": "424ee80b161647bd3e247058b7bbd0c5c09ec498831f187ec61ff526338d6701"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-07/final/10-appliances-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-07/final/10-appliances-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-07/final/10-appliances-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-07/final/10-appliances-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Lucide",
+        "license": "ISC",
+        "licenseFile": "licenses/lucide.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "microwave",
+      "purpose": "微波爐",
+      "recognitionCues": "橫向機身、觀察窗、側控鈕與短腳",
+      "confusableWith": [
+        "oven",
+        "washing-machine"
+      ],
+      "sourceObservation": "Lucide用觀察窗、側邊直柄和短腳，Tabler以波形及多顆側鈕表意。Master選寬觀察窗和兩個側鈕，減少側面直分界，保留橫向比例。",
+      "references": [
+        {
+          "name": "microwave",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/microwave.svg",
+          "localPath": "references/atlas-01/lucide-microwave.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/microwave.svg",
+          "sha256": "8253606d0164b68b37286e1e1bb98a3f7f80d8baa5864c08a185ce8994b7ebf7",
+          "license": "ISC AND MIT",
+          "sourceName": "microwave",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "microwave",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/microwave.svg",
+          "localPath": "references/atlas-01/tabler-microwave.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/microwave.svg",
+          "sha256": "9290a48057deb6c2b3d52c529225431019c5fe078c8fa0e2fa08097ca852956e",
+          "license": "MIT",
+          "sourceName": "microwave",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "家電外殼與控制元件均為實體構造，沒有隱藏邊界。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "用空間分配與共同邊界分離元件，不靠淡化減少擁擠。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "單色平面器具與空氣流向不需要連續漸層。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-07/master-before.json",
+          "variantsSha256": "add8f9b1f03e675a92fe1c4a3a3e2a3bf949c4ac1868dd53f7f7ee807a1cfd31"
+        },
+        "reason": "觀察窗、外殼及側鈕先分配空間；窗孔不縮成小縫，短腳交代支承，三尺寸保持微波爐橫向機身。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "2447ee166e0ac28897b6f105f3b8064fe4e78f7c52546efbf5b6fbdb388e51a2",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/37/review.html",
+            "sha256": "5ac844fb674653f09bed5858c8983fa6a185e08d8f0c9511e5386e5d6ecd03dd"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/37/definitions.json",
+            "sha256": "afbd468063b800def8c7d23e3de300a2605efacba73ee61be9b8d746d51851a4"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/37/light-1x.png",
+            "sha256": "34f47eceaaeb550b8f54ee31950be84da29d4b75a963c9eb8957006702eb1091"
+          },
+          {
+            "path": "docs/review/atlas-craft-07/final/definitions.json",
+            "sha256": "f35bef2ea7c72a46aefe4148f0ead369e0326a0108f7cd2a924fec0827bb9a74"
+          },
+          {
+            "path": "docs/review/atlas-craft-07/final/10-appliances.html",
+            "sha256": "a1932eff758b8a27385749bf943a32762654080e58939d6b8f3feac9a9fd0425"
+          },
+          {
+            "path": "docs/review/atlas-craft-07/final/10-appliances-light-1x.png",
+            "sha256": "e23bc64b6bfbee5c55a318fa8257c615381f9a2e127ab23b64b3aee51200dc8b"
+          },
+          {
+            "path": "docs/review/atlas-craft-07/final/10-appliances-light-2x.png",
+            "sha256": "35b9cc0aa36f664fced0342fd4fd34773cfc4bc794bde42b911efc72643fa1f2"
+          },
+          {
+            "path": "docs/review/atlas-craft-07/final/10-appliances-dark-1x.png",
+            "sha256": "96c7ec9f0d683b986db8b5a69b2c25b7da6f362c85b6f63620c978f23b7f9a8b"
+          },
+          {
+            "path": "docs/review/atlas-craft-07/final/10-appliances-dark-2x.png",
+            "sha256": "424ee80b161647bd3e247058b7bbd0c5c09ec498831f187ec61ff526338d6701"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-07/final/10-appliances-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-07/final/10-appliances-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-07/final/10-appliances-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-07/final/10-appliances-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Lucide",
+        "license": "ISC",
+        "licenseFile": "licenses/lucide.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "oven",
+      "purpose": "烤箱",
+      "recognitionCues": "直立機身、三顆控制鈕、方窗與雙腳",
+      "confusableWith": [
+        "microwave",
+        "washing-machine"
+      ],
+      "sourceObservation": "Phosphor是三顆上控鈕及方窗，Hugeicons加入門把和較圓機殼。Master採三鈕及寬方窗，省去窗內把手，使用短腳與直立比例區別微波爐。",
+      "references": [
+        {
+          "name": "oven",
+          "library": "Phosphor",
+          "repository": "phosphor-icons/core",
+          "commit": "2b75f3ad12b420c9504ef05df8d2564a28f8500e",
+          "path": "assets/regular/oven.svg",
+          "localPath": "references/atlas-01/phosphor-oven.svg",
+          "url": "https://github.com/phosphor-icons/core/blob/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular/oven.svg",
+          "sha256": "1b09d431795dc75cbb0746be8e5aebc3987f3d03c15b9c533efdaef1909b8e34",
+          "license": "MIT",
+          "sourceName": "oven",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "oven",
+          "library": "Hugeicons Free",
+          "repository": "hugeicons/hugeicons",
+          "commit": "834e28d965946c1ee60d080027fe9dae4adc58d0",
+          "path": "icons/oven.svg",
+          "localPath": "references/atlas-01/hugeicons-oven.svg",
+          "url": "https://github.com/hugeicons/hugeicons/blob/834e28d965946c1ee60d080027fe9dae4adc58d0/icons/oven.svg",
+          "sha256": "4abceafa298124614e29ba0c65e70397d42ee4c77e30990567d903ab26926170",
+          "license": "MIT",
+          "sourceName": "oven",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "家電外殼與控制元件均為實體構造，沒有隱藏邊界。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "用空間分配與共同邊界分離元件，不靠淡化減少擁擠。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "單色平面器具與空氣流向不需要連續漸層。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-07/master-before.json",
+          "variantsSha256": "568109a8bf551e07b54d557bec196186c2a7c356f8a0bd0069caa8bec6aa57f2"
+        },
+        "reason": "控制列與下方視窗分組，三鈕保持點距；方窗上下留白均勻，短腳延續實體家電構造，圓角不擠掉窗邊通道。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "b8bedd95ce4c1970fbf53ee12a7d5e6bab12974be2cf6efe00ec9067314bc10e",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/38/review.html",
+            "sha256": "895dd16845279305a9181964236fb16491849c32f949c087aa43ba6180fc6543"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/38/definitions.json",
+            "sha256": "f721606501691bb9033459963fc22760450ca2eec52fdcef7f6fb5496dd53ff5"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/38/light-1x.png",
+            "sha256": "80e8f1345c8b6599a050b74b5849a29eb1870955a43acd6019d410000853b1cb"
+          },
+          {
+            "path": "docs/review/atlas-craft-07/final/definitions.json",
+            "sha256": "f35bef2ea7c72a46aefe4148f0ead369e0326a0108f7cd2a924fec0827bb9a74"
+          },
+          {
+            "path": "docs/review/atlas-craft-07/final/10-appliances.html",
+            "sha256": "a1932eff758b8a27385749bf943a32762654080e58939d6b8f3feac9a9fd0425"
+          },
+          {
+            "path": "docs/review/atlas-craft-07/final/10-appliances-light-1x.png",
+            "sha256": "e23bc64b6bfbee5c55a318fa8257c615381f9a2e127ab23b64b3aee51200dc8b"
+          },
+          {
+            "path": "docs/review/atlas-craft-07/final/10-appliances-light-2x.png",
+            "sha256": "35b9cc0aa36f664fced0342fd4fd34773cfc4bc794bde42b911efc72643fa1f2"
+          },
+          {
+            "path": "docs/review/atlas-craft-07/final/10-appliances-dark-1x.png",
+            "sha256": "96c7ec9f0d683b986db8b5a69b2c25b7da6f362c85b6f63620c978f23b7f9a8b"
+          },
+          {
+            "path": "docs/review/atlas-craft-07/final/10-appliances-dark-2x.png",
+            "sha256": "424ee80b161647bd3e247058b7bbd0c5c09ec498831f187ec61ff526338d6701"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-07/final/10-appliances-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-07/final/10-appliances-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-07/final/10-appliances-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-07/final/10-appliances-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Phosphor",
+        "license": "MIT",
+        "licenseFile": "licenses/phosphor.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "air-conditioner",
+      "purpose": "冷氣機",
+      "recognitionCues": "橫向室內機、出風口與向下氣流",
+      "confusableWith": [
+        "heater",
+        "fan"
+      ],
+      "sourceObservation": "Iconoir用機殼分界與向下分散氣流，Tabler在機身內套出風小框。Master採單道橫分界，不再套小框；三股氣流在機身下方分開。",
+      "references": [
+        {
+          "name": "air-conditioner",
+          "library": "Iconoir",
+          "repository": "iconoir-icons/iconoir",
+          "commit": "39834e3f193bc0cca2c36bebb6a650471977433d",
+          "path": "icons/regular/air-conditioner.svg",
+          "localPath": "references/atlas-01/iconoir-air-conditioner.svg",
+          "url": "https://github.com/iconoir-icons/iconoir/blob/39834e3f193bc0cca2c36bebb6a650471977433d/icons/regular/air-conditioner.svg",
+          "sha256": "7c7909f909d29f633d899e58d18e2389a9ff182c7ba6b9925cabd437878a55f0",
+          "license": "MIT",
+          "sourceName": "air-conditioner",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "air-conditioner",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/air-conditioning.svg",
+          "localPath": "references/atlas-01/tabler-air-conditioning.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/air-conditioning.svg",
+          "sha256": "da4df3c4ecada1b971ef0bd835025a4080466bc80758c1ed4602421382001d90",
+          "license": "MIT",
+          "sourceName": "air-conditioning",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "家電外殼與控制元件均為實體構造，沒有隱藏邊界。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "用空間分配與共同邊界分離元件，不靠淡化減少擁擠。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "單色平面器具與空氣流向不需要連續漸層。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-07/master-before.json",
+          "variantsSha256": "fd9098eec9ce61477d2f0898d68d73650646e0497eb1c02f527009e7b340fb9d"
+        },
+        "reason": "出風口以共享邊界表達，長窄通道保留可見高度；氣流與機殼分離，兩側曲線向外展開，沒有用淡色掩蓋近接。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "541c46912d559f579c327fbb9530746019d2ac00d50e7561c2616a2c76ae9ea3",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/38/review.html",
+            "sha256": "895dd16845279305a9181964236fb16491849c32f949c087aa43ba6180fc6543"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/38/definitions.json",
+            "sha256": "f721606501691bb9033459963fc22760450ca2eec52fdcef7f6fb5496dd53ff5"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/38/light-1x.png",
+            "sha256": "80e8f1345c8b6599a050b74b5849a29eb1870955a43acd6019d410000853b1cb"
+          },
+          {
+            "path": "docs/review/atlas-craft-07/final/definitions.json",
+            "sha256": "f35bef2ea7c72a46aefe4148f0ead369e0326a0108f7cd2a924fec0827bb9a74"
+          },
+          {
+            "path": "docs/review/atlas-craft-07/final/10-appliances.html",
+            "sha256": "a1932eff758b8a27385749bf943a32762654080e58939d6b8f3feac9a9fd0425"
+          },
+          {
+            "path": "docs/review/atlas-craft-07/final/10-appliances-light-1x.png",
+            "sha256": "e23bc64b6bfbee5c55a318fa8257c615381f9a2e127ab23b64b3aee51200dc8b"
+          },
+          {
+            "path": "docs/review/atlas-craft-07/final/10-appliances-light-2x.png",
+            "sha256": "35b9cc0aa36f664fced0342fd4fd34773cfc4bc794bde42b911efc72643fa1f2"
+          },
+          {
+            "path": "docs/review/atlas-craft-07/final/10-appliances-dark-1x.png",
+            "sha256": "96c7ec9f0d683b986db8b5a69b2c25b7da6f362c85b6f63620c978f23b7f9a8b"
+          },
+          {
+            "path": "docs/review/atlas-craft-07/final/10-appliances-dark-2x.png",
+            "sha256": "424ee80b161647bd3e247058b7bbd0c5c09ec498831f187ec61ff526338d6701"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-07/final/10-appliances-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-07/final/10-appliances-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-07/final/10-appliances-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-07/final/10-appliances-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Iconoir",
+        "license": "MIT",
+        "licenseFile": "licenses/iconoir.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "fan",
+      "purpose": "風扇",
+      "recognitionCues": "三片同向弧形葉片與中央輪轂",
+      "confusableWith": [
+        "wind",
+        "flower"
+      ],
+      "sourceObservation": "Lucide採四片連成一圈的彎葉，Phosphor採三片弧葉和中央輪轂。Master選三葉，一片母型旋轉120度形成全組，保留同向曲面與中央孔。",
+      "references": [
+        {
+          "name": "fan",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/fan.svg",
+          "localPath": "references/atlas-01/lucide-fan.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/fan.svg",
+          "sha256": "6ed585fa7a183086480baf6aaeb531cbe65e977222c6462dcb1e4662a6744b54",
+          "license": "ISC AND MIT",
+          "sourceName": "fan",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "fan",
+          "library": "Phosphor",
+          "repository": "phosphor-icons/core",
+          "commit": "2b75f3ad12b420c9504ef05df8d2564a28f8500e",
+          "path": "assets/regular/fan.svg",
+          "localPath": "references/atlas-01/phosphor-fan.svg",
+          "url": "https://github.com/phosphor-icons/core/blob/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular/fan.svg",
+          "sha256": "21c69c625c627d2363d213bdb9d2f714b1175658a14647f212ff6f3b1b10c8c2",
+          "license": "MIT",
+          "sourceName": "fan",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "家電外殼與控制元件均為實體構造，沒有隱藏邊界。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "用空間分配與共同邊界分離元件，不靠淡化減少擁擠。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "單色平面器具與空氣流向不需要連續漸層。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-07/master-before.json",
+          "variantsSha256": "f72ca2500689e33355f0cded11fb299eb8ef00d0ca14e0462531b9b98245634b"
+        },
+        "reason": "三片葉的寬度、弧腹和收束完全同構；葉根收在輪轂外側相接，中央孔不被葉線穿過，小尺寸仍有三個獨立葉孔。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "e62ecb36966ec28bd6dcb45dd715bd1d527452943fc8a831fe641c4f7f4b9e35",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/38/review.html",
+            "sha256": "895dd16845279305a9181964236fb16491849c32f949c087aa43ba6180fc6543"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/38/definitions.json",
+            "sha256": "f721606501691bb9033459963fc22760450ca2eec52fdcef7f6fb5496dd53ff5"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/38/light-1x.png",
+            "sha256": "80e8f1345c8b6599a050b74b5849a29eb1870955a43acd6019d410000853b1cb"
+          },
+          {
+            "path": "docs/review/atlas-craft-07/final/definitions.json",
+            "sha256": "f35bef2ea7c72a46aefe4148f0ead369e0326a0108f7cd2a924fec0827bb9a74"
+          },
+          {
+            "path": "docs/review/atlas-craft-07/final/10-appliances.html",
+            "sha256": "a1932eff758b8a27385749bf943a32762654080e58939d6b8f3feac9a9fd0425"
+          },
+          {
+            "path": "docs/review/atlas-craft-07/final/10-appliances-light-1x.png",
+            "sha256": "e23bc64b6bfbee5c55a318fa8257c615381f9a2e127ab23b64b3aee51200dc8b"
+          },
+          {
+            "path": "docs/review/atlas-craft-07/final/10-appliances-light-2x.png",
+            "sha256": "35b9cc0aa36f664fced0342fd4fd34773cfc4bc794bde42b911efc72643fa1f2"
+          },
+          {
+            "path": "docs/review/atlas-craft-07/final/10-appliances-dark-1x.png",
+            "sha256": "96c7ec9f0d683b986db8b5a69b2c25b7da6f362c85b6f63620c978f23b7f9a8b"
+          },
+          {
+            "path": "docs/review/atlas-craft-07/final/10-appliances-dark-2x.png",
+            "sha256": "424ee80b161647bd3e247058b7bbd0c5c09ec498831f187ec61ff526338d6701"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-07/final/10-appliances-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-07/final/10-appliances-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-07/final/10-appliances-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-07/final/10-appliances-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Phosphor",
+        "license": "MIT",
+        "licenseFile": "licenses/phosphor.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "vacuum-cleaner",
+      "purpose": "吸塵器",
+      "recognitionCues": "帶輪機身、彎管與接地吸頭",
+      "confusableWith": [
+        "washing-machine",
+        "iron"
+      ],
+      "sourceObservation": "Hugeicons用軟管彎弧、帶輪筒身和長吸管；MDI vacuum-outline也是帶輪筒身與吸頭。Tabler同名圖實為掃地機器人，已改選同構造來源，沒有用圓盤湊對照。",
+      "references": [
+        {
+          "name": "vacuum-cleaner",
+          "library": "Hugeicons Free",
+          "repository": "hugeicons/hugeicons",
+          "commit": "834e28d965946c1ee60d080027fe9dae4adc58d0",
+          "path": "icons/vacuum-cleaner.svg",
+          "localPath": "references/atlas-01/hugeicons-vacuum-cleaner.svg",
+          "url": "https://github.com/hugeicons/hugeicons/blob/834e28d965946c1ee60d080027fe9dae4adc58d0/icons/vacuum-cleaner.svg",
+          "sha256": "6cbba1f1e341537182f35e33c2acd0db88c14b27e70dcf3813621dd90028ee33",
+          "license": "MIT",
+          "sourceName": "vacuum-cleaner",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "vacuum-cleaner",
+          "library": "Material Design Icons",
+          "repository": "Templarian/MaterialDesign",
+          "commit": "2424e748e0cc63ab7b9c095a099b9fe239b737c0",
+          "path": "svg/vacuum-outline.svg",
+          "localPath": "references/atlas-01/mdi-vacuum-outline.svg",
+          "url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/vacuum-outline.svg",
+          "sha256": "d2052ba449b87ab7129a4dd8ceca3d61949d048cfb9a53f381d7e5ebccc5a2ec",
+          "license": "Apache-2.0",
+          "sourceName": "vacuum-outline",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "家電外殼與控制元件均為實體構造，沒有隱藏邊界。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "用空間分配與共同邊界分離元件，不靠淡化減少擁擠。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "單色平面器具與空氣流向不需要連續漸層。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-07/master-before.json",
+          "variantsSha256": "cbcfeb01ff8bace53af9eedefe4dd8f9e7df606808dda1110813412c133cb007"
+        },
+        "reason": "保留機輪、圓腹筒身與長軟管，吸頭有明確接地橫段；輪子在前、筒身在後，接點按外殼收口，筒身和長管之間維持開放空白。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "5d1c52e34d81b392427055f2e636b314661b6f0ebef8b4831ca81c8c65261284",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/39/review.html",
+            "sha256": "0f387953c58bc81bbe5e4ce2508641ff1aa98c2e7df2540615935accd5eb6a81"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/39/definitions.json",
+            "sha256": "75d66fba029ec5820678a9a3b2fb4c59f2366221904522e3cabb97b493e4170e"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/39/light-1x.png",
+            "sha256": "270f66c0dcc87a69804180bb28ddc92b0e86439cfdcb30b6aee16e15a4301799"
+          },
+          {
+            "path": "docs/review/atlas-craft-07/final/definitions.json",
+            "sha256": "f35bef2ea7c72a46aefe4148f0ead369e0326a0108f7cd2a924fec0827bb9a74"
+          },
+          {
+            "path": "docs/review/atlas-craft-07/final/10-appliances.html",
+            "sha256": "a1932eff758b8a27385749bf943a32762654080e58939d6b8f3feac9a9fd0425"
+          },
+          {
+            "path": "docs/review/atlas-craft-07/final/10-appliances-light-1x.png",
+            "sha256": "e23bc64b6bfbee5c55a318fa8257c615381f9a2e127ab23b64b3aee51200dc8b"
+          },
+          {
+            "path": "docs/review/atlas-craft-07/final/10-appliances-light-2x.png",
+            "sha256": "35b9cc0aa36f664fced0342fd4fd34773cfc4bc794bde42b911efc72643fa1f2"
+          },
+          {
+            "path": "docs/review/atlas-craft-07/final/10-appliances-dark-1x.png",
+            "sha256": "96c7ec9f0d683b986db8b5a69b2c25b7da6f362c85b6f63620c978f23b7f9a8b"
+          },
+          {
+            "path": "docs/review/atlas-craft-07/final/10-appliances-dark-2x.png",
+            "sha256": "424ee80b161647bd3e247058b7bbd0c5c09ec498831f187ec61ff526338d6701"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-07/final/10-appliances-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-07/final/10-appliances-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-07/final/10-appliances-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-07/final/10-appliances-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Hugeicons Free",
+        "license": "MIT",
+        "licenseFile": "licenses/hugeicons-MIT.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "hair-dryer",
+      "purpose": "吹風機",
+      "recognitionCues": "圓機腹與進氣口、收窄風嘴、曲柄與電線",
+      "confusableWith": [
+        "megaphone",
+        "fan"
+      ],
+      "sourceObservation": "Phosphor以圓形進氣口和手柄表意，Hugeicons強調圓機腹、收窄風嘴與曲柄。初稿省去進氣口後太接近擴音器，最後加寬機腹並補回圓形進氣孔。",
+      "references": [
+        {
+          "name": "hair-dryer",
+          "library": "Phosphor",
+          "repository": "phosphor-icons/core",
+          "commit": "2b75f3ad12b420c9504ef05df8d2564a28f8500e",
+          "path": "assets/regular/hair-dryer.svg",
+          "localPath": "references/atlas-01/phosphor-hair-dryer.svg",
+          "url": "https://github.com/phosphor-icons/core/blob/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular/hair-dryer.svg",
+          "sha256": "26a09ca37692730814fa1270d76b9ed27b81b88563c5e85226e4d0a3dcad388b",
+          "license": "MIT",
+          "sourceName": "hair-dryer",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "hair-dryer",
+          "library": "Hugeicons Free",
+          "repository": "hugeicons/hugeicons",
+          "commit": "834e28d965946c1ee60d080027fe9dae4adc58d0",
+          "path": "icons/hair-dryer.svg",
+          "localPath": "references/atlas-01/hugeicons-hair-dryer.svg",
+          "url": "https://github.com/hugeicons/hugeicons/blob/834e28d965946c1ee60d080027fe9dae4adc58d0/icons/hair-dryer.svg",
+          "sha256": "c1c0e033122778c10f76705f7b5b7f1aac1d2d4afbfeeba2999838826d522242",
+          "license": "MIT",
+          "sourceName": "hair-dryer",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "家電外殼與控制元件均為實體構造，沒有隱藏邊界。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "用空間分配與共同邊界分離元件，不靠淡化減少擁擠。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "單色平面器具與空氣流向不需要連續漸層。"
+        }
+      },
+      "change": {
+        "kind": "modified",
+        "before": {
+          "path": "references/atlas-craft-07/master-before.json",
+          "variantsSha256": "9da126c4cf14e059e3bbcc81c0a3be5bde15d53221b94bb706561fa7e5481a7d"
+        },
+        "reason": "重建較寬後腹讓進氣孔有空間，保留收窄風嘴、曲柄和短電線；進氣孔具有區分用途的作用，沒有當成裝飾刪掉，16px內孔及外側留白都可見。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "79f49ca7c526a544c4fc1ec93f4fe8f8b44a85010ec90c426111623043a59d68",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/39b/review.html",
+            "sha256": "45af270efcecfdace567c40259cc3f5b4d621f6a18d784d8bf1694e7a3100bf4"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/39b/definitions.json",
+            "sha256": "f71297a186cd464898e17f2b57d08b44771f2910f3b2c03f61319fba7905fea0"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/39b/light-1x.png",
+            "sha256": "f14635449043490a30af86ce6d991b1618085c706b344aebc6627225d555f43f"
+          },
+          {
+            "path": "docs/review/atlas-craft-07/final/definitions.json",
+            "sha256": "f35bef2ea7c72a46aefe4148f0ead369e0326a0108f7cd2a924fec0827bb9a74"
+          },
+          {
+            "path": "docs/review/atlas-craft-07/final/10-appliances.html",
+            "sha256": "a1932eff758b8a27385749bf943a32762654080e58939d6b8f3feac9a9fd0425"
+          },
+          {
+            "path": "docs/review/atlas-craft-07/final/10-appliances-light-1x.png",
+            "sha256": "e23bc64b6bfbee5c55a318fa8257c615381f9a2e127ab23b64b3aee51200dc8b"
+          },
+          {
+            "path": "docs/review/atlas-craft-07/final/10-appliances-light-2x.png",
+            "sha256": "35b9cc0aa36f664fced0342fd4fd34773cfc4bc794bde42b911efc72643fa1f2"
+          },
+          {
+            "path": "docs/review/atlas-craft-07/final/10-appliances-dark-1x.png",
+            "sha256": "96c7ec9f0d683b986db8b5a69b2c25b7da6f362c85b6f63620c978f23b7f9a8b"
+          },
+          {
+            "path": "docs/review/atlas-craft-07/final/10-appliances-dark-2x.png",
+            "sha256": "424ee80b161647bd3e247058b7bbd0c5c09ec498831f187ec61ff526338d6701"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-07/final/10-appliances-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-07/final/10-appliances-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-07/final/10-appliances-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-07/final/10-appliances-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Hugeicons Free",
+        "license": "MIT",
+        "licenseFile": "licenses/hugeicons-MIT.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "iron",
+      "purpose": "熨斗",
+      "recognitionCues": "弧形前端、平底與上方開放把手",
+      "confusableWith": [
+        "vacuum-cleaner",
+        "heater"
+      ],
+      "sourceObservation": "Tabler ironing以平底、弧形前端和開放把手表示熨斗；MDI iron-outline加上後方電線。Master保留相同主要構造，省去電線與底板雙線，平底維持接觸熨燙的姿態。",
+      "references": [
+        {
+          "name": "iron",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/ironing.svg",
+          "localPath": "references/atlas-01/tabler-ironing.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/ironing.svg",
+          "sha256": "53560c084387f7a4190025c3960edab585b355e383f9ad3bac90dd4f81780265",
+          "license": "MIT",
+          "sourceName": "ironing",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "iron",
+          "library": "Material Design Icons",
+          "repository": "Templarian/MaterialDesign",
+          "commit": "2424e748e0cc63ab7b9c095a099b9fe239b737c0",
+          "path": "svg/iron-outline.svg",
+          "localPath": "references/atlas-01/mdi-iron-outline.svg",
+          "url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/iron-outline.svg",
+          "sha256": "66edd0b8136ebc879ceffaa8f1454b9c90a354966eca39114d6511a8ecf9bdb1",
+          "license": "Apache-2.0",
+          "sourceName": "iron-outline",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "家電外殼與控制元件均為實體構造，沒有隱藏邊界。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "用空間分配與共同邊界分離元件，不靠淡化減少擁擠。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "單色平面器具與空氣流向不需要連續漸層。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-07/master-before.json",
+          "variantsSha256": "f2e19e5357bd6866a3ac386fc81a83ad2c632b40bd395afa5b3587cdaee17ddc"
+        },
+        "reason": "把手與機腹間有完整開口，前端弧線向平底收束；不以通用矩形替代熨斗輪廓，也不在底部加近乎黏合的第二道線。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "0104a575487783d5649457b8e289b44fbc66736b6ed7ffefb590b6ad22580443",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/39/review.html",
+            "sha256": "0f387953c58bc81bbe5e4ce2508641ff1aa98c2e7df2540615935accd5eb6a81"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/39/definitions.json",
+            "sha256": "75d66fba029ec5820678a9a3b2fb4c59f2366221904522e3cabb97b493e4170e"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/39/light-1x.png",
+            "sha256": "270f66c0dcc87a69804180bb28ddc92b0e86439cfdcb30b6aee16e15a4301799"
+          },
+          {
+            "path": "docs/review/atlas-craft-07/final/definitions.json",
+            "sha256": "f35bef2ea7c72a46aefe4148f0ead369e0326a0108f7cd2a924fec0827bb9a74"
+          },
+          {
+            "path": "docs/review/atlas-craft-07/final/10-appliances.html",
+            "sha256": "a1932eff758b8a27385749bf943a32762654080e58939d6b8f3feac9a9fd0425"
+          },
+          {
+            "path": "docs/review/atlas-craft-07/final/10-appliances-light-1x.png",
+            "sha256": "e23bc64b6bfbee5c55a318fa8257c615381f9a2e127ab23b64b3aee51200dc8b"
+          },
+          {
+            "path": "docs/review/atlas-craft-07/final/10-appliances-light-2x.png",
+            "sha256": "35b9cc0aa36f664fced0342fd4fd34773cfc4bc794bde42b911efc72643fa1f2"
+          },
+          {
+            "path": "docs/review/atlas-craft-07/final/10-appliances-dark-1x.png",
+            "sha256": "96c7ec9f0d683b986db8b5a69b2c25b7da6f362c85b6f63620c978f23b7f9a8b"
+          },
+          {
+            "path": "docs/review/atlas-craft-07/final/10-appliances-dark-2x.png",
+            "sha256": "424ee80b161647bd3e247058b7bbd0c5c09ec498831f187ec61ff526338d6701"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-07/final/10-appliances-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-07/final/10-appliances-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-07/final/10-appliances-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-07/final/10-appliances-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Tabler",
+        "license": "MIT",
+        "licenseFile": "licenses/tabler.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "heater",
+      "purpose": "暖氣機",
+      "recognitionCues": "矮機身、三條格柵、雙腳與上升熱氣",
+      "confusableWith": [
+        "air-conditioner",
+        "oven"
+      ],
+      "sourceObservation": "Lucide有三條格柵、側控點和兩筆熱氣，Hugeicons省去側控點並讓熱氣穿過開放上緣。Master將兩筆熱氣移到完整機身上方，保留三條疏落格柵及雙腳。",
+      "references": [
+        {
+          "name": "heater",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/heater.svg",
+          "localPath": "references/atlas-01/lucide-heater.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/heater.svg",
+          "sha256": "2806ae9c318f7c1bbdabe6c57cdfae58e185c8bf707245fa99c1198db6291323",
+          "license": "ISC AND MIT",
+          "sourceName": "heater",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "heater",
+          "library": "Hugeicons Free",
+          "repository": "hugeicons/hugeicons",
+          "commit": "834e28d965946c1ee60d080027fe9dae4adc58d0",
+          "path": "icons/heater.svg",
+          "localPath": "references/atlas-01/hugeicons-heater.svg",
+          "url": "https://github.com/hugeicons/hugeicons/blob/834e28d965946c1ee60d080027fe9dae4adc58d0/icons/heater.svg",
+          "sha256": "098da9b1f541a8f2bdb73305c04c2b205fa8600e0341fa5f27b97f20c8067527",
+          "license": "MIT",
+          "sourceName": "heater",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "家電外殼與控制元件均為實體構造，沒有隱藏邊界。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "用空間分配與共同邊界分離元件，不靠淡化減少擁擠。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "單色平面器具與空氣流向不需要連續漸層。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-07/master-before.json",
+          "variantsSha256": "9ca96ffaf102c8854f7a162dc2ee6978cee01fd0843c6be001b35aab8fa81fe6"
+        },
+        "reason": "熱氣、機身及格柵分成清楚層次，格柵上下留白充足；腳與機身相接，完整外殼表達暖氣機實體，不依賴淡色或內部套框。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "9c77477ffb060a14494993b185ca8b841da4c6e23e742101174dec2bcba68d8f",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/40/review.html",
+            "sha256": "affb7c3a87f6364f72004f9f62d0e5f55d0b1b47ddb7ac15807184b6a0015f55"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/40/definitions.json",
+            "sha256": "d7e979712f7da42f49109d37e6e625f7077ff8d350fad41b1ac00fd1abc0c629"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/40/light-1x.png",
+            "sha256": "1c1494df9e91ecc56bd79953335b65159c77b86a62a9d9ee6f0286e860ee4bd4"
+          },
+          {
+            "path": "docs/review/atlas-craft-07/final/definitions.json",
+            "sha256": "f35bef2ea7c72a46aefe4148f0ead369e0326a0108f7cd2a924fec0827bb9a74"
+          },
+          {
+            "path": "docs/review/atlas-craft-07/final/10-appliances.html",
+            "sha256": "a1932eff758b8a27385749bf943a32762654080e58939d6b8f3feac9a9fd0425"
+          },
+          {
+            "path": "docs/review/atlas-craft-07/final/10-appliances-light-1x.png",
+            "sha256": "e23bc64b6bfbee5c55a318fa8257c615381f9a2e127ab23b64b3aee51200dc8b"
+          },
+          {
+            "path": "docs/review/atlas-craft-07/final/10-appliances-light-2x.png",
+            "sha256": "35b9cc0aa36f664fced0342fd4fd34773cfc4bc794bde42b911efc72643fa1f2"
+          },
+          {
+            "path": "docs/review/atlas-craft-07/final/10-appliances-dark-1x.png",
+            "sha256": "96c7ec9f0d683b986db8b5a69b2c25b7da6f362c85b6f63620c978f23b7f9a8b"
+          },
+          {
+            "path": "docs/review/atlas-craft-07/final/10-appliances-dark-2x.png",
+            "sha256": "424ee80b161647bd3e247058b7bbd0c5c09ec498831f187ec61ff526338d6701"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-07/final/10-appliances-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-07/final/10-appliances-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-07/final/10-appliances-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-07/final/10-appliances-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Lucide",
+        "license": "ISC",
+        "licenseFile": "licenses/lucide.txt"
+      },
+      "remaining": []
+    }
+  ]
+}

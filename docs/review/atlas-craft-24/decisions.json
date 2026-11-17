@@ -1,0 +1,152 @@
+{
+  "batch": "26-communications",
+  "cycle": "atlas-craft-24",
+  "familyRoot": "docs/review/atlas-craft-24/final",
+  "baseline": "references/atlas-craft-24/master-before.json",
+  "reviewer": "Codex (AI)",
+  "visualInspectionComplete": true,
+  "inspectedCombinations": [
+    {
+      "theme": "light",
+      "dpr": 1
+    },
+    {
+      "theme": "light",
+      "dpr": 2
+    },
+    {
+      "theme": "dark",
+      "dpr": 1
+    },
+    {
+      "theme": "dark",
+      "dpr": 2
+    }
+  ],
+  "effects": {
+    "dashes": {
+      "used": false,
+      "reason": "電話與訊息為確定狀態，以方向、聲波和符號區分，不需虛線邊界。"
+    },
+    "opacity": {
+      "used": false,
+      "reason": "主體與徽標以實際留白及透明避讓分層，不以降低透明度掩蓋碰撞。"
+    },
+    "gradients": {
+      "used": false,
+      "reason": "完整單色輪廓即可表達通訊物件與訊息狀態，不使用材質漸層。"
+    }
+  },
+  "decisions": [
+    {
+      "name": "mailbox",
+      "groupRoot": "docs/review/atlas-craft-01/104b-mailbox",
+      "confusableWith": [
+        "mail",
+        "inbox"
+      ],
+      "sourceObservation": "Lucide箱門與箱身共用拱頂，Phosphor另有立柱與升旗。最新稿採Lucide較凝練的箱體；完稿回比保留前門弧和側旗，16px內部左右空腔清楚。sharp底角移除零長度Q，外觀未作誇大改進描述。",
+      "reason": "採用連續拱頂外殼與單條前門分界，內線裁在殼內；實際底角隨角型改變，保留原物件曲面，不把sharp拱頂拉直。",
+      "adaptedFrom": "Lucide"
+    },
+    {
+      "name": "phone-incoming",
+      "groupRoot": "docs/review/atlas-craft-01/105-phone-directions",
+      "confusableWith": [
+        "phone",
+        "phone-outgoing"
+      ],
+      "sourceObservation": "Lucide來電箭頭指向左下，Tabler同樣指回聽筒但更短。最新稿用既有Master聽筒與共用箭頭構造；完稿回比16px，箭尖和聽筒保持明確間隙，來電方向不需要靠文字才能與撥出狀態區分。",
+      "reason": "既有電話母型完全共用，箭頭在右上留白區沿斜軸指向左下；箭桿與翼按實際墨線收口，sharp端帽不突出箭尖。",
+      "adaptedFrom": null
+    },
+    {
+      "name": "phone-outgoing",
+      "groupRoot": "docs/review/atlas-craft-01/105-phone-directions",
+      "confusableWith": [
+        "phone",
+        "phone-incoming"
+      ],
+      "sourceObservation": "Lucide撥出箭頭朝右上，Tabler朝正右。最新稿採右上方向與來電形成反向對照，但使用Master既有電話和箭頭；完稿回比16px，翼長與聽筒重量相稱，箭尾不接觸聽筒內轉角。",
+      "reason": "保留母型聽筒，在右上同一區域反轉箭頭方向；與來電共用箭翼長度和斜軸，使狀態切換只有方向改變。",
+      "adaptedFrom": null
+    },
+    {
+      "name": "phone-missed",
+      "groupRoot": "docs/review/atlas-craft-01/106-phone-states",
+      "confusableWith": [
+        "phone-off",
+        "phone-call"
+      ],
+      "sourceObservation": "Lucide與Hugeicons皆用右上叉號表達未接。最新稿沿用Master電話及獨立叉號；完稿回比，叉號與聽筒在16px分開可讀，並與跨越主體的phone-off斜線有明確差異。",
+      "reason": "右上叉號由對稱斜線形成，和電話主體保持間隙，不切穿聽筒；使用相同母型與全尺寸一致的狀態位置。",
+      "adaptedFrom": null
+    },
+    {
+      "name": "phone-call",
+      "groupRoot": "docs/review/atlas-craft-01/106-phone-states",
+      "confusableWith": [
+        "phone",
+        "phone-missed"
+      ],
+      "sourceObservation": "Lucide雙波清楚交代通話，Phosphor波形較短並沿斜姿態排列。最新稿用Master電話加兩道同心四分之一圓弧；完稿回比16px，兩波、聽筒上端和下端皆有可見通道，沒有增加第三道波壓縮空間。",
+      "reason": "同心聲波位於右上留白，內外弧使用一致圓心；聽筒不因狀態改比例，兩道弧的端點與手機握持曲線保持分離。",
+      "adaptedFrom": null
+    },
+    {
+      "name": "satellite-dish",
+      "groupRoot": "docs/review/atlas-craft-01/104-mailbox-dish",
+      "confusableWith": [
+        "satellite",
+        "antenna"
+      ],
+      "sourceObservation": "Lucide碟面具有更完整的圓腹，Hugeicons碟口偏寬且收筆更厚。最新稿採Lucide碟面與兩道接收波；完稿回比16px，饋源桿接到碟口而不穿入空腔，碟面沿同一斜軸展開，沒有後加零散底座。",
+      "reason": "連續圓腹接斜向碟口，端部小曲面屬物體構造；饋源桿在碟面外側收口，兩道同心波與桿端保持獨立留白。",
+      "adaptedFrom": "Lucide"
+    },
+    {
+      "name": "message-heart",
+      "groupRoot": "docs/review/atlas-craft-01/107b-message-heart",
+      "confusableWith": [
+        "message",
+        "heart"
+      ],
+      "sourceObservation": "Tabler使用外置心形和文字線，Hugeicons內置心形更凝練。最新稿以Master訊息框和獨立心形曲線構造；完稿回比發現初稿下尖太靠近框底，已縮短下腹並略收左右，使16/20/24的底部留白恢復，保留雙弧心形而非加密細節。",
+      "reason": "訊息母型維持原比例，內置心形以連續雙弧和收腹曲線繪製；下尖上收1.25u，讓心形四周皆有空白，不依賴縮細描邊。",
+      "adaptedFrom": null
+    },
+    {
+      "name": "message-dots",
+      "groupRoot": "docs/review/atlas-craft-01/107-message-heart-dots",
+      "confusableWith": [
+        "message",
+        "message-text"
+      ],
+      "sourceObservation": "Tabler與Phosphor皆為框內三點，前者尾巴偏短、後者框體更方。最新稿沿用Master訊息母型；完稿回比，三點在16px與低對比仍可讀，點間距和框邊間距一致，沒有把整顆省略號的較大點徑直接塞入小框。",
+      "reason": "三個實心點按固定水平節奏置於訊息框中心區，逐尺寸調整點徑；與既有文字訊息的兩條內容線保持清楚區別。",
+      "adaptedFrom": null
+    },
+    {
+      "name": "message-lock",
+      "groupRoot": "docs/review/atlas-craft-01/108-message-lock-search",
+      "confusableWith": [
+        "message",
+        "lock"
+      ],
+      "sourceObservation": "MDI把實心鎖置於右上，Hugeicons把輪廓鎖置於圓框內。最新稿沿用Master訊息母型與本庫文件鎖徽標構造，改在右下；完稿回比16px鎖孔省略但鎖身和鎖梁空腔清楚，框尾保留且沒有孤立碎角。",
+      "reason": "鎖梁實際墨線在鎖身外側收口，鎖身與鎖梁剪影共同遮擋後方訊息框；16px省略非必要鑰匙孔，20/24保留實心小點。",
+      "adaptedFrom": null
+    },
+    {
+      "name": "message-search",
+      "groupRoot": "docs/review/atlas-craft-01/108-message-lock-search",
+      "confusableWith": [
+        "message",
+        "mail-search"
+      ],
+      "sourceObservation": "Tabler採外置放大鏡且框內兩條線，Hugeicons採圓框內置放大鏡。最新稿沿用Master訊息框與文件搜尋徽標構造；完稿回比去掉文字線仍清楚表達搜尋，16px鏡圈內孔及框尾保留，右下接縫沒有碎線。",
+      "reason": "共用本庫搜尋徽標的圓圈、斜柄比例與透明避讓方式，圈內也扣除後方框線；維持訊息母型與文字旁的可辨識尾角。",
+      "adaptedFrom": null
+    }
+  ]
+}

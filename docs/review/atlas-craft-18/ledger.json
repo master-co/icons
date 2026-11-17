@@ -1,0 +1,1537 @@
+{
+  "schemaVersion": 2,
+  "reviewer": "Codex (AI)",
+  "userApproval": "pending",
+  "icons": [
+    {
+      "name": "radio-receiver",
+      "purpose": "收音機",
+      "recognitionCues": "長天線、矩形機身與調諧旋鈕",
+      "confusableWith": [
+        "radio",
+        "speaker"
+      ],
+      "sourceObservation": "初選Lucide radio-receiver是音響接收器，已改用Phosphor radio與Hugeicons的便攜收音機同語意對照。Phosphor長天線與寬面板辨識較強；最新稿採長天線，面板簡化成兩條短線與一個圓旋鈕，完稿回比16px內孔和框邊仍有清楚留白。",
+      "references": [
+        {
+          "name": "radio-receiver",
+          "library": "Phosphor",
+          "repository": "phosphor-icons/core",
+          "commit": "2b75f3ad12b420c9504ef05df8d2564a28f8500e",
+          "path": "assets/regular/radio.svg",
+          "localPath": "references/atlas-01/phosphor-radio.svg",
+          "url": "https://github.com/phosphor-icons/core/blob/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular/radio.svg",
+          "sha256": "07218be27079d4dd3ff8fc105594e15e95532c5260beadb8565173a47d03c80c",
+          "license": "MIT",
+          "sourceName": "radio",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "radio-receiver",
+          "library": "Hugeicons Free",
+          "repository": "hugeicons/hugeicons",
+          "commit": "834e28d965946c1ee60d080027fe9dae4adc58d0",
+          "path": "icons/radio-receiver.svg",
+          "localPath": "references/atlas-01/hugeicons-radio-receiver.svg",
+          "url": "https://github.com/hugeicons/hugeicons/blob/834e28d965946c1ee60d080027fe9dae4adc58d0/icons/radio-receiver.svg",
+          "sha256": "a07af22b2c554c3fb035d8f7b1352258ffa1604c68e763953a5044915571fe48",
+          "license": "MIT",
+          "sourceName": "radio-receiver",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "媒體設備的輪廓與構造邊緣完整呈現，沒有需虛線表示的隱藏段。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以空白和結構接縫區分部件，不以透明度掩飾擁擠。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "設備維持單色線性圖示，無需材質漸層。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-18/master-before.json",
+          "variantsSha256": "0a5052643f8d3352bc3d5900e36b562f23dabf20216959075f433711d578a0da"
+        },
+        "reason": "保留寬面板和斜長天線，旋鈕與左側短線分組配置；天線與外殼相接處裁去內部筆畫，不讓天線穿進機身。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "bf94870290cbce6a15fe8d3b3b9acc956d7a1f089ed6ffb9b9862ae002a5bbcb",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/80-radio-tv-projector/review.html",
+            "sha256": "51808ba8259b6f7c2e7dc51d97b1b05694a50a31b44041260af7679e0e7273fb"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/80-radio-tv-projector/definitions.json",
+            "sha256": "21c77bd99de2555eac44eef411a5630a3f36a501955ae640fbaee5885e52597b"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/80-radio-tv-projector/light-1x.png",
+            "sha256": "15b388be6b33ffbfc4409c40251c6c5dc699d4a5a26f7d3612a55f0819259dcf"
+          },
+          {
+            "path": "docs/review/atlas-craft-18/final/definitions.json",
+            "sha256": "8f4b5b1f3f218567ea77467f94300b2423dd028caa51d86f8c356898e6454984"
+          },
+          {
+            "path": "docs/review/atlas-craft-18/final/20-media.html",
+            "sha256": "59f492affd761693e96fce58919bd5cd2e2c1a829e4a3515857f1d92cf769152"
+          },
+          {
+            "path": "docs/review/atlas-craft-18/final/20-media-light-1x.png",
+            "sha256": "872a95c04fc02d7e39a5b5efac6d7cc7324017f970c54cc7e5b89c5a0a8ea6f3"
+          },
+          {
+            "path": "docs/review/atlas-craft-18/final/20-media-light-2x.png",
+            "sha256": "e31ab655048c28e77b21666069f071d7aef8adf4c0693864b6046ff5ab53029c"
+          },
+          {
+            "path": "docs/review/atlas-craft-18/final/20-media-dark-1x.png",
+            "sha256": "c49bb8b0897c2f4d5ef4f9259eb4f2b0375f314ec3e537585093e0bc02ed89b4"
+          },
+          {
+            "path": "docs/review/atlas-craft-18/final/20-media-dark-2x.png",
+            "sha256": "07378eae5dab0b58bdec656e652952e46293effdfc20eab91317ca2e2894ca60"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-18/final/20-media-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-18/final/20-media-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-18/final/20-media-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-18/final/20-media-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Phosphor",
+        "license": "MIT",
+        "licenseFile": "licenses/phosphor.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "tv",
+      "purpose": "電視",
+      "recognitionCues": "寬螢幕與頂端雙天線",
+      "confusableWith": [
+        "monitor",
+        "presentation"
+      ],
+      "sourceObservation": "Lucide使用規整矩形螢幕，Hugeicons以略鼓的曲線表現機殼。最新稿採較中性的矩形輪廓與雙天線；完稿回比，16/20/24螢幕保持完整留白，與底部有支架的monitor區別，不增加無用按鍵或第二層框。",
+      "references": [
+        {
+          "name": "tv",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/tv.svg",
+          "localPath": "references/atlas-01/lucide-tv.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/tv.svg",
+          "sha256": "0ef7db17794919d11c241d7f12e23c4cfd3f9e536c0d59fc282657666ed0b39f",
+          "license": "ISC AND MIT",
+          "sourceName": "tv",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "tv",
+          "library": "Hugeicons Free",
+          "repository": "hugeicons/hugeicons",
+          "commit": "834e28d965946c1ee60d080027fe9dae4adc58d0",
+          "path": "icons/tv-01.svg",
+          "localPath": "references/atlas-01/hugeicons-tv-01.svg",
+          "url": "https://github.com/hugeicons/hugeicons/blob/834e28d965946c1ee60d080027fe9dae4adc58d0/icons/tv-01.svg",
+          "sha256": "07d99c57cbb87bda0da4c527edea1be0de45c8fcfdae4c2eee969daca1549f75",
+          "license": "MIT",
+          "sourceName": "tv-01",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "媒體設備的輪廓與構造邊緣完整呈現，沒有需虛線表示的隱藏段。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以空白和結構接縫區分部件，不以透明度掩飾擁擠。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "設備維持單色線性圖示，無需材質漸層。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-18/master-before.json",
+          "variantsSha256": "b2dbf4e1e2bcb961b18a0fdc7fc6eb7cfd690aac1f115bb29dad445c8725c0ca"
+        },
+        "reason": "螢幕按家族半徑建立角型，頂部雙天線對稱接到同一支點；接點限制在殼外，避免尖角落入螢幕。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "adeae541e84260acddd6fe29b73deae1334820a73d2d7d55b43df1ccd9cffc14",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/80-radio-tv-projector/review.html",
+            "sha256": "51808ba8259b6f7c2e7dc51d97b1b05694a50a31b44041260af7679e0e7273fb"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/80-radio-tv-projector/definitions.json",
+            "sha256": "21c77bd99de2555eac44eef411a5630a3f36a501955ae640fbaee5885e52597b"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/80-radio-tv-projector/light-1x.png",
+            "sha256": "15b388be6b33ffbfc4409c40251c6c5dc699d4a5a26f7d3612a55f0819259dcf"
+          },
+          {
+            "path": "docs/review/atlas-craft-18/final/definitions.json",
+            "sha256": "8f4b5b1f3f218567ea77467f94300b2423dd028caa51d86f8c356898e6454984"
+          },
+          {
+            "path": "docs/review/atlas-craft-18/final/20-media.html",
+            "sha256": "59f492affd761693e96fce58919bd5cd2e2c1a829e4a3515857f1d92cf769152"
+          },
+          {
+            "path": "docs/review/atlas-craft-18/final/20-media-light-1x.png",
+            "sha256": "872a95c04fc02d7e39a5b5efac6d7cc7324017f970c54cc7e5b89c5a0a8ea6f3"
+          },
+          {
+            "path": "docs/review/atlas-craft-18/final/20-media-light-2x.png",
+            "sha256": "e31ab655048c28e77b21666069f071d7aef8adf4c0693864b6046ff5ab53029c"
+          },
+          {
+            "path": "docs/review/atlas-craft-18/final/20-media-dark-1x.png",
+            "sha256": "c49bb8b0897c2f4d5ef4f9259eb4f2b0375f314ec3e537585093e0bc02ed89b4"
+          },
+          {
+            "path": "docs/review/atlas-craft-18/final/20-media-dark-2x.png",
+            "sha256": "07378eae5dab0b58bdec656e652952e46293effdfc20eab91317ca2e2894ca60"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-18/final/20-media-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-18/final/20-media-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-18/final/20-media-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-18/final/20-media-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Lucide",
+        "license": "ISC",
+        "licenseFile": "licenses/lucide.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "projector",
+      "purpose": "投影機",
+      "recognitionCues": "低矮機身、凸起鏡頭與投射光線",
+      "confusableWith": [
+        "camera",
+        "presentation"
+      ],
+      "sourceObservation": "Lucide低矮機身和左側鏡頭較緊湊，Hugeicons加入雙腳並把鏡頭放右上。最新稿採低矮機身和凸起鏡頭；完稿回比，三條投射線、鏡頭孔及機身下緣均能分離，鏡頭不再被完整機身上邊穿過。",
+      "references": [
+        {
+          "name": "projector",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/projector.svg",
+          "localPath": "references/atlas-01/lucide-projector.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/projector.svg",
+          "sha256": "656b7ea37c25a5b5b4181dd81e95cc04eb4074963e503f4246c5b312d0fc98a0",
+          "license": "ISC AND MIT",
+          "sourceName": "projector",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "projector",
+          "library": "Hugeicons Free",
+          "repository": "hugeicons/hugeicons",
+          "commit": "834e28d965946c1ee60d080027fe9dae4adc58d0",
+          "path": "icons/projector-01.svg",
+          "localPath": "references/atlas-01/hugeicons-projector-01.svg",
+          "url": "https://github.com/hugeicons/hugeicons/blob/834e28d965946c1ee60d080027fe9dae4adc58d0/icons/projector-01.svg",
+          "sha256": "dedda28b4e08f168b2d6b56170e7de86aabc197635c3c7f45322f7a228165ebe",
+          "license": "MIT",
+          "sourceName": "projector-01",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "媒體設備的輪廓與構造邊緣完整呈現，沒有需虛線表示的隱藏段。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以空白和結構接縫區分部件，不以透明度掩飾擁擠。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "設備維持單色線性圖示，無需材質漸層。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-18/master-before.json",
+          "variantsSha256": "e868617b2059c2b76816b796d1fca2f9320aa4d27114a3cc230c8e4a82d4cc55"
+        },
+        "reason": "凸起鏡頭作為封閉前景裁去穿入內孔的機身邊線，結構仍直接相接；右側只留一筆通風訊號，把空間留給鏡頭。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "710b525030f9bad151baae2c2caf8e4bcf8d21742e526072136a01b535ebf7f2",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/80-radio-tv-projector/review.html",
+            "sha256": "51808ba8259b6f7c2e7dc51d97b1b05694a50a31b44041260af7679e0e7273fb"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/80-radio-tv-projector/definitions.json",
+            "sha256": "21c77bd99de2555eac44eef411a5630a3f36a501955ae640fbaee5885e52597b"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/80-radio-tv-projector/light-1x.png",
+            "sha256": "15b388be6b33ffbfc4409c40251c6c5dc699d4a5a26f7d3612a55f0819259dcf"
+          },
+          {
+            "path": "docs/review/atlas-craft-18/final/definitions.json",
+            "sha256": "8f4b5b1f3f218567ea77467f94300b2423dd028caa51d86f8c356898e6454984"
+          },
+          {
+            "path": "docs/review/atlas-craft-18/final/20-media.html",
+            "sha256": "59f492affd761693e96fce58919bd5cd2e2c1a829e4a3515857f1d92cf769152"
+          },
+          {
+            "path": "docs/review/atlas-craft-18/final/20-media-light-1x.png",
+            "sha256": "872a95c04fc02d7e39a5b5efac6d7cc7324017f970c54cc7e5b89c5a0a8ea6f3"
+          },
+          {
+            "path": "docs/review/atlas-craft-18/final/20-media-light-2x.png",
+            "sha256": "e31ab655048c28e77b21666069f071d7aef8adf4c0693864b6046ff5ab53029c"
+          },
+          {
+            "path": "docs/review/atlas-craft-18/final/20-media-dark-1x.png",
+            "sha256": "c49bb8b0897c2f4d5ef4f9259eb4f2b0375f314ec3e537585093e0bc02ed89b4"
+          },
+          {
+            "path": "docs/review/atlas-craft-18/final/20-media-dark-2x.png",
+            "sha256": "07378eae5dab0b58bdec656e652952e46293effdfc20eab91317ca2e2894ca60"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-18/final/20-media-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-18/final/20-media-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-18/final/20-media-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-18/final/20-media-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Lucide",
+        "license": "ISC",
+        "licenseFile": "licenses/lucide.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "speaker",
+      "purpose": "喇叭",
+      "recognitionCues": "直立音箱、高音單體與圓形低音單體",
+      "confusableWith": [
+        "volume",
+        "radio-receiver"
+      ],
+      "sourceObservation": "Lucide低音單體內另有一點，Phosphor只保留完整圓孔與上方高音點。最新稿採Phosphor較簡單的單體處理；完稿回比，原生16px主圓孔清楚，上方高音點不擁擠，兩側框邊仍有通道。",
+      "references": [
+        {
+          "name": "speaker",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/speaker.svg",
+          "localPath": "references/atlas-01/lucide-speaker.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/speaker.svg",
+          "sha256": "89b12199bd24d0a1eac77bfcefc300625262016060ecdfc0092324cbf7eda7ce",
+          "license": "ISC AND MIT",
+          "sourceName": "speaker",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "speaker",
+          "library": "Phosphor",
+          "repository": "phosphor-icons/core",
+          "commit": "2b75f3ad12b420c9504ef05df8d2564a28f8500e",
+          "path": "assets/regular/speaker-hifi.svg",
+          "localPath": "references/atlas-01/phosphor-speaker-hifi.svg",
+          "url": "https://github.com/phosphor-icons/core/blob/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular/speaker-hifi.svg",
+          "sha256": "582ba467cd79b96d3c4baae867223ae906c64c46f71e2f5268f89a62bf934427",
+          "license": "MIT",
+          "sourceName": "speaker-hifi",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "媒體設備的輪廓與構造邊緣完整呈現，沒有需虛線表示的隱藏段。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以空白和結構接縫區分部件，不以透明度掩飾擁擠。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "設備維持單色線性圖示，無需材質漸層。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-18/master-before.json",
+          "variantsSha256": "7a13ab16ad329b491e7ba2b873d09628050fe50df6e86df77159a47199d88b07"
+        },
+        "reason": "直立外殼、下方大單體與上方小單體共享垂直軸；不在主單體內再放小點或小圈，保留層級和孔內留白。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "85bd2d773e94551c383e3f8b42170df3634c001f8ca3b37eb5cc589a46efb52e",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/81-speaker-reel-cassette/review.html",
+            "sha256": "c100f7e9763835e2a0e5886636f28a596d91a8255c650db832eaafe9ebefd9b0"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/81-speaker-reel-cassette/definitions.json",
+            "sha256": "bb540fd4a4090a6a36594fb57b58834940e3542574bc1bf1991f8ecca4c8de49"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/81-speaker-reel-cassette/light-1x.png",
+            "sha256": "eeecf388f8d896611fe7cb20080a804c93746686acb8f9098e9468638d7bfaf3"
+          },
+          {
+            "path": "docs/review/atlas-craft-18/final/definitions.json",
+            "sha256": "8f4b5b1f3f218567ea77467f94300b2423dd028caa51d86f8c356898e6454984"
+          },
+          {
+            "path": "docs/review/atlas-craft-18/final/20-media.html",
+            "sha256": "59f492affd761693e96fce58919bd5cd2e2c1a829e4a3515857f1d92cf769152"
+          },
+          {
+            "path": "docs/review/atlas-craft-18/final/20-media-light-1x.png",
+            "sha256": "872a95c04fc02d7e39a5b5efac6d7cc7324017f970c54cc7e5b89c5a0a8ea6f3"
+          },
+          {
+            "path": "docs/review/atlas-craft-18/final/20-media-light-2x.png",
+            "sha256": "e31ab655048c28e77b21666069f071d7aef8adf4c0693864b6046ff5ab53029c"
+          },
+          {
+            "path": "docs/review/atlas-craft-18/final/20-media-dark-1x.png",
+            "sha256": "c49bb8b0897c2f4d5ef4f9259eb4f2b0375f314ec3e537585093e0bc02ed89b4"
+          },
+          {
+            "path": "docs/review/atlas-craft-18/final/20-media-dark-2x.png",
+            "sha256": "07378eae5dab0b58bdec656e652952e46293effdfc20eab91317ca2e2894ca60"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-18/final/20-media-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-18/final/20-media-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-18/final/20-media-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-18/final/20-media-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Phosphor",
+        "license": "MIT",
+        "licenseFile": "licenses/phosphor.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "film-reel",
+      "purpose": "底片捲盤",
+      "recognitionCues": "有四孔的圓形捲盤與向外延伸底片",
+      "confusableWith": [
+        "vinyl-record",
+        "film"
+      ],
+      "sourceObservation": "初選Hugeicons film-roll-01是底片罐，已改用02圓形捲盤。Phosphor用四個圓環孔，Hugeicons用更輕的短標記；首稿四環在16px只剩細小亮孔，完稿回比後提煉較簡潔的內部訊號，改四個實心孔點，捲盤和尾端仍清楚。",
+      "references": [
+        {
+          "name": "film-reel",
+          "library": "Phosphor",
+          "repository": "phosphor-icons/core",
+          "commit": "2b75f3ad12b420c9504ef05df8d2564a28f8500e",
+          "path": "assets/regular/film-reel.svg",
+          "localPath": "references/atlas-01/phosphor-film-reel.svg",
+          "url": "https://github.com/phosphor-icons/core/blob/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular/film-reel.svg",
+          "sha256": "c3d0fcd26670354a34f23c4322d8a424bddd8e4072d2b762e6efe6e4a251d254",
+          "license": "MIT",
+          "sourceName": "film-reel",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "film-reel",
+          "library": "Hugeicons Free",
+          "repository": "hugeicons/hugeicons",
+          "commit": "834e28d965946c1ee60d080027fe9dae4adc58d0",
+          "path": "icons/film-roll-02.svg",
+          "localPath": "references/atlas-01/hugeicons-film-roll-02.svg",
+          "url": "https://github.com/hugeicons/hugeicons/blob/834e28d965946c1ee60d080027fe9dae4adc58d0/icons/film-roll-02.svg",
+          "sha256": "0263427f1f4c250428e048320c38ad161fbca69c4842af41e1db264774acb490",
+          "license": "MIT",
+          "sourceName": "film-roll-02",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "媒體設備的輪廓與構造邊緣完整呈現，沒有需虛線表示的隱藏段。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以空白和結構接縫區分部件，不以透明度掩飾擁擠。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "設備維持單色線性圖示，無需材質漸層。"
+        }
+      },
+      "change": {
+        "kind": "modified",
+        "before": {
+          "path": "references/atlas-craft-18/master-before.json",
+          "variantsSha256": "0d818276d94418af0c2de086307cfad41a005398bddcfed93625ee642592cf88"
+        },
+        "reason": "圓盤以四個對稱孔點交代捲盤結構，依原生尺寸調點徑；底片從圓盤底緣切向延伸，保留一體的外輪廓，不增加多圈捲線。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "e395efb3f0afce05a6624e3b608165ed027625a460f4a3281affa8126f208125",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/81b-reel-clapper/review.html",
+            "sha256": "ac2cd77488547aa7a12142f19cb2102c4a51ea00f68a707af31ece1fdfe21193"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/81b-reel-clapper/definitions.json",
+            "sha256": "8e1055daf9157011afed91e368b90b464a3979dcf746c28eba8a5ab9023c15cb"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/81b-reel-clapper/light-1x.png",
+            "sha256": "b9b1401de4c30cf4e299737efead1069e2f89e9a257440c9d8a1759c3f9a6777"
+          },
+          {
+            "path": "docs/review/atlas-craft-18/final/definitions.json",
+            "sha256": "8f4b5b1f3f218567ea77467f94300b2423dd028caa51d86f8c356898e6454984"
+          },
+          {
+            "path": "docs/review/atlas-craft-18/final/20-media.html",
+            "sha256": "59f492affd761693e96fce58919bd5cd2e2c1a829e4a3515857f1d92cf769152"
+          },
+          {
+            "path": "docs/review/atlas-craft-18/final/20-media-light-1x.png",
+            "sha256": "872a95c04fc02d7e39a5b5efac6d7cc7324017f970c54cc7e5b89c5a0a8ea6f3"
+          },
+          {
+            "path": "docs/review/atlas-craft-18/final/20-media-light-2x.png",
+            "sha256": "e31ab655048c28e77b21666069f071d7aef8adf4c0693864b6046ff5ab53029c"
+          },
+          {
+            "path": "docs/review/atlas-craft-18/final/20-media-dark-1x.png",
+            "sha256": "c49bb8b0897c2f4d5ef4f9259eb4f2b0375f314ec3e537585093e0bc02ed89b4"
+          },
+          {
+            "path": "docs/review/atlas-craft-18/final/20-media-dark-2x.png",
+            "sha256": "07378eae5dab0b58bdec656e652952e46293effdfc20eab91317ca2e2894ca60"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-18/final/20-media-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-18/final/20-media-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-18/final/20-media-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-18/final/20-media-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Phosphor",
+        "license": "MIT",
+        "licenseFile": "licenses/phosphor.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "cassette",
+      "purpose": "卡帶",
+      "recognitionCues": "雙捲軸、磁帶與梯形下緣",
+      "confusableWith": [
+        "film-reel",
+        "radio-receiver"
+      ],
+      "sourceObservation": "Lucide用雙捲軸和一條下方磁帶線，Phosphor在捲軸上下都加線。最新稿採較開放的單帶線，並提高下方梯形孔的空間；完稿回比，16px兩個捲軸和下方磁頭區各自分離，不把內部塞成三層框。",
+      "references": [
+        {
+          "name": "cassette",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/cassette-tape.svg",
+          "localPath": "references/atlas-01/lucide-cassette-tape.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/cassette-tape.svg",
+          "sha256": "e455c58f99f70644ee15558a11c4eaaf56b780ab99b1a9738a2569aa6bb10926",
+          "license": "ISC AND MIT",
+          "sourceName": "cassette-tape",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "cassette",
+          "library": "Phosphor",
+          "repository": "phosphor-icons/core",
+          "commit": "2b75f3ad12b420c9504ef05df8d2564a28f8500e",
+          "path": "assets/regular/cassette-tape.svg",
+          "localPath": "references/atlas-01/phosphor-cassette-tape.svg",
+          "url": "https://github.com/phosphor-icons/core/blob/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular/cassette-tape.svg",
+          "sha256": "d2d522f1e3ad56b56f1a21da599d656cd10b590bb585ccef0f86972e3174c55e",
+          "license": "MIT",
+          "sourceName": "cassette-tape",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "媒體設備的輪廓與構造邊緣完整呈現，沒有需虛線表示的隱藏段。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以空白和結構接縫區分部件，不以透明度掩飾擁擠。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "設備維持單色線性圖示，無需材質漸層。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-18/master-before.json",
+          "variantsSha256": "9d78ce5ac813b9e35103a0f8e16e7e81b765172608c064a8c65c8fb20326bd5a"
+        },
+        "reason": "外殼保留較高的面板，雙捲軸在上部等距配置，底部梯形與外殼共享底邊；相接的帶線和梯形端點裁到外殼內部。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "124eabad71459f833a5060af4da2adfa760053e2d37b994fdfe6b83507e12063",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/81-speaker-reel-cassette/review.html",
+            "sha256": "c100f7e9763835e2a0e5886636f28a596d91a8255c650db832eaafe9ebefd9b0"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/81-speaker-reel-cassette/definitions.json",
+            "sha256": "bb540fd4a4090a6a36594fb57b58834940e3542574bc1bf1991f8ecca4c8de49"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/81-speaker-reel-cassette/light-1x.png",
+            "sha256": "eeecf388f8d896611fe7cb20080a804c93746686acb8f9098e9468638d7bfaf3"
+          },
+          {
+            "path": "docs/review/atlas-craft-18/final/definitions.json",
+            "sha256": "8f4b5b1f3f218567ea77467f94300b2423dd028caa51d86f8c356898e6454984"
+          },
+          {
+            "path": "docs/review/atlas-craft-18/final/20-media.html",
+            "sha256": "59f492affd761693e96fce58919bd5cd2e2c1a829e4a3515857f1d92cf769152"
+          },
+          {
+            "path": "docs/review/atlas-craft-18/final/20-media-light-1x.png",
+            "sha256": "872a95c04fc02d7e39a5b5efac6d7cc7324017f970c54cc7e5b89c5a0a8ea6f3"
+          },
+          {
+            "path": "docs/review/atlas-craft-18/final/20-media-light-2x.png",
+            "sha256": "e31ab655048c28e77b21666069f071d7aef8adf4c0693864b6046ff5ab53029c"
+          },
+          {
+            "path": "docs/review/atlas-craft-18/final/20-media-dark-1x.png",
+            "sha256": "c49bb8b0897c2f4d5ef4f9259eb4f2b0375f314ec3e537585093e0bc02ed89b4"
+          },
+          {
+            "path": "docs/review/atlas-craft-18/final/20-media-dark-2x.png",
+            "sha256": "07378eae5dab0b58bdec656e652952e46293effdfc20eab91317ca2e2894ca60"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-18/final/20-media-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-18/final/20-media-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-18/final/20-media-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-18/final/20-media-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Lucide",
+        "license": "ISC",
+        "licenseFile": "licenses/lucide.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "film",
+      "purpose": "底片",
+      "recognitionCues": "兩側齒孔與分格影像",
+      "confusableWith": [
+        "film-reel",
+        "grid"
+      ],
+      "sourceObservation": "Lucide是直向兩格底片，Phosphor是橫向底片；兩者齒孔走向不同但都保留清楚的影像區。最新稿採直向兩格，放寬左右齒孔欄；完稿回比16px時齒孔仍有空白，中央畫格不被分割線擠窄。",
+      "references": [
+        {
+          "name": "film",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/film.svg",
+          "localPath": "references/atlas-01/lucide-film.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/film.svg",
+          "sha256": "85cfa80821b34f512bd401a1249957c9f2f612497602ecc31dff39517823ee52",
+          "license": "ISC AND MIT",
+          "sourceName": "film",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "film",
+          "library": "Phosphor",
+          "repository": "phosphor-icons/core",
+          "commit": "2b75f3ad12b420c9504ef05df8d2564a28f8500e",
+          "path": "assets/regular/film-strip.svg",
+          "localPath": "references/atlas-01/phosphor-film-strip.svg",
+          "url": "https://github.com/phosphor-icons/core/blob/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular/film-strip.svg",
+          "sha256": "6d079e87432258b9fe9eff9d10ababcfbca7a400537277a215360a436581987f",
+          "license": "MIT",
+          "sourceName": "film-strip",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "媒體設備的輪廓與構造邊緣完整呈現，沒有需虛線表示的隱藏段。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以空白和結構接縫區分部件，不以透明度掩飾擁擠。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "設備維持單色線性圖示，無需材質漸層。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-18/master-before.json",
+          "variantsSha256": "d76a0da706a8256b6978de356163faf5442b0c88ad4630b2a8dee9e547fad4b9"
+        },
+        "reason": "兩側齒孔以共享直壁與三條橫分界構成，中央只分兩格；各橫線裁在外殼邊界，避免圓角附近端帽外溢。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "1e9ee0c64f86c24f2b3f21c44768c0eb7460db7c0aedc5be520629452936ca00",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/82-film-clapper/review.html",
+            "sha256": "dd5ecf5028cd4a9328ec7f8f1ff6699154d45391d34de1b0c93dbbeb9eed9b44"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/82-film-clapper/definitions.json",
+            "sha256": "6b91ba350c5f94d5b71951c9ae86f565020deea57dfa60fdbde09709db550304"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/82-film-clapper/light-1x.png",
+            "sha256": "f5b061037b44876df652db061ec8df1b2579fb14db8386903fd9b705d2c2b9bc"
+          },
+          {
+            "path": "docs/review/atlas-craft-18/final/definitions.json",
+            "sha256": "8f4b5b1f3f218567ea77467f94300b2423dd028caa51d86f8c356898e6454984"
+          },
+          {
+            "path": "docs/review/atlas-craft-18/final/20-media.html",
+            "sha256": "59f492affd761693e96fce58919bd5cd2e2c1a829e4a3515857f1d92cf769152"
+          },
+          {
+            "path": "docs/review/atlas-craft-18/final/20-media-light-1x.png",
+            "sha256": "872a95c04fc02d7e39a5b5efac6d7cc7324017f970c54cc7e5b89c5a0a8ea6f3"
+          },
+          {
+            "path": "docs/review/atlas-craft-18/final/20-media-light-2x.png",
+            "sha256": "e31ab655048c28e77b21666069f071d7aef8adf4c0693864b6046ff5ab53029c"
+          },
+          {
+            "path": "docs/review/atlas-craft-18/final/20-media-dark-1x.png",
+            "sha256": "c49bb8b0897c2f4d5ef4f9259eb4f2b0375f314ec3e537585093e0bc02ed89b4"
+          },
+          {
+            "path": "docs/review/atlas-craft-18/final/20-media-dark-2x.png",
+            "sha256": "07378eae5dab0b58bdec656e652952e46293effdfc20eab91317ca2e2894ca60"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-18/final/20-media-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-18/final/20-media-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-18/final/20-media-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-18/final/20-media-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Lucide",
+        "license": "ISC",
+        "licenseFile": "licenses/lucide.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "clapperboard",
+      "purpose": "場記板",
+      "recognitionCues": "上掀的斜紋拍板與下方紀錄板",
+      "confusableWith": [
+        "film",
+        "clipboard"
+      ],
+      "sourceObservation": "Lucide的拍板上掀角度與兩段斜紋較鮮明，Phosphor的板面更方正。最新稿採上掀拍板，回比後讓拍板與下板共用精確鉸鏈點；斜紋裁到拍板內，原生16px上掀空隙與下板空白保持清楚。",
+      "references": [
+        {
+          "name": "clapperboard",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/clapperboard.svg",
+          "localPath": "references/atlas-01/lucide-clapperboard.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/clapperboard.svg",
+          "sha256": "e4d78946cda7812f13c431c68b6d4d0077a92217c7f468667a203f237e247d7e",
+          "license": "ISC AND MIT",
+          "sourceName": "clapperboard",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "clapperboard",
+          "library": "Phosphor",
+          "repository": "phosphor-icons/core",
+          "commit": "2b75f3ad12b420c9504ef05df8d2564a28f8500e",
+          "path": "assets/regular/film-slate.svg",
+          "localPath": "references/atlas-01/phosphor-film-slate.svg",
+          "url": "https://github.com/phosphor-icons/core/blob/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular/film-slate.svg",
+          "sha256": "58b84e6c5a2950cfa0d8cae68c04e65dc32407dde463c3a2c79d265464726e0c",
+          "license": "MIT",
+          "sourceName": "film-slate",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "媒體設備的輪廓與構造邊緣完整呈現，沒有需虛線表示的隱藏段。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以空白和結構接縫區分部件，不以透明度掩飾擁擠。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "設備維持單色線性圖示，無需材質漸層。"
+        }
+      },
+      "change": {
+        "kind": "modified",
+        "before": {
+          "path": "references/atlas-craft-18/master-before.json",
+          "variantsSha256": "42be4bce4bf944acb91863db3b133cd5f122fd699def01299f1843ee379b2df0"
+        },
+        "reason": "拍板以等寬平行邊構造並連到下板左上鉸鏈，修正首稿略錯位的接點；斜紋墨線裁在封閉拍板內，角型與下板分別按結構處理。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "414cbeb19b675321f68314edcb179c9cb6624cb53682a922f614d49eff213484",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/81b-reel-clapper/review.html",
+            "sha256": "ac2cd77488547aa7a12142f19cb2102c4a51ea00f68a707af31ece1fdfe21193"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/81b-reel-clapper/definitions.json",
+            "sha256": "8e1055daf9157011afed91e368b90b464a3979dcf746c28eba8a5ab9023c15cb"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/81b-reel-clapper/light-1x.png",
+            "sha256": "b9b1401de4c30cf4e299737efead1069e2f89e9a257440c9d8a1759c3f9a6777"
+          },
+          {
+            "path": "docs/review/atlas-craft-18/final/definitions.json",
+            "sha256": "8f4b5b1f3f218567ea77467f94300b2423dd028caa51d86f8c356898e6454984"
+          },
+          {
+            "path": "docs/review/atlas-craft-18/final/20-media.html",
+            "sha256": "59f492affd761693e96fce58919bd5cd2e2c1a829e4a3515857f1d92cf769152"
+          },
+          {
+            "path": "docs/review/atlas-craft-18/final/20-media-light-1x.png",
+            "sha256": "872a95c04fc02d7e39a5b5efac6d7cc7324017f970c54cc7e5b89c5a0a8ea6f3"
+          },
+          {
+            "path": "docs/review/atlas-craft-18/final/20-media-light-2x.png",
+            "sha256": "e31ab655048c28e77b21666069f071d7aef8adf4c0693864b6046ff5ab53029c"
+          },
+          {
+            "path": "docs/review/atlas-craft-18/final/20-media-dark-1x.png",
+            "sha256": "c49bb8b0897c2f4d5ef4f9259eb4f2b0375f314ec3e537585093e0bc02ed89b4"
+          },
+          {
+            "path": "docs/review/atlas-craft-18/final/20-media-dark-2x.png",
+            "sha256": "07378eae5dab0b58bdec656e652952e46293effdfc20eab91317ca2e2894ca60"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-18/final/20-media-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-18/final/20-media-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-18/final/20-media-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-18/final/20-media-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Lucide",
+        "license": "ISC",
+        "licenseFile": "licenses/lucide.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "podcast",
+      "purpose": "播客",
+      "recognitionCues": "麥克風、支架與向外傳播的圓弧",
+      "confusableWith": [
+        "microphone",
+        "radio"
+      ],
+      "sourceObservation": "Iconoir使用人物與兩圈訊號，Hugeicons用麥克風和單圈傳播弧。最新稿採麥克風構造，底座改為簡單橫腳；完稿回比，16px麥克風孔、外弧和下方支架都有空隙，保持中立播客符號而不挪用品牌圖標。",
+      "references": [
+        {
+          "name": "podcast",
+          "library": "Iconoir",
+          "repository": "iconoir-icons/iconoir",
+          "commit": "39834e3f193bc0cca2c36bebb6a650471977433d",
+          "path": "icons/regular/podcast.svg",
+          "localPath": "references/atlas-01/iconoir-podcast.svg",
+          "url": "https://github.com/iconoir-icons/iconoir/blob/39834e3f193bc0cca2c36bebb6a650471977433d/icons/regular/podcast.svg",
+          "sha256": "b13cdc34b4f1b6abf3869151263144a0393a4a377b7b964f27bb60a9d3968be7",
+          "license": "MIT",
+          "sourceName": "podcast",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "podcast",
+          "library": "Hugeicons Free",
+          "repository": "hugeicons/hugeicons",
+          "commit": "834e28d965946c1ee60d080027fe9dae4adc58d0",
+          "path": "icons/podcast.svg",
+          "localPath": "references/atlas-01/hugeicons-podcast.svg",
+          "url": "https://github.com/hugeicons/hugeicons/blob/834e28d965946c1ee60d080027fe9dae4adc58d0/icons/podcast.svg",
+          "sha256": "f1e4614b1b44502accb8caad223f21d94482832e6411afae1c4d251cb749a144",
+          "license": "MIT",
+          "sourceName": "podcast",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "媒體設備的輪廓與構造邊緣完整呈現，沒有需虛線表示的隱藏段。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以空白和結構接縫區分部件，不以透明度掩飾擁擠。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "設備維持單色線性圖示，無需材質漸層。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-18/master-before.json",
+          "variantsSha256": "ab345887764bf4b73142decf97d0c8a34b64cd3b1bf65a983e7ad9f764534e75"
+        },
+        "reason": "膠囊麥克風與支柱結構相接，外圍單弧向下開放；底腳以水平筆畫穩定重心，不增加內圈訊號或人形細節。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "b369e3b747ec63df8ac1df2600a044de88d9490f52f8d11ad7323e0e6b414f7e",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/83-podcast-antenna/review.html",
+            "sha256": "2c7e8800a4cb13479de79f573752851a53cd2e0d7fe62d0696912f60780d5e96"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/83-podcast-antenna/definitions.json",
+            "sha256": "1c29e26991f4e1e53f59aa18b6b8a7dc85e0a35fe8b710637e9cfb1a057c30fb"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/83-podcast-antenna/light-1x.png",
+            "sha256": "a4cca6e65d6f685d691511d5ec7666bb7b6018e0cae05950ed797031baccd54e"
+          },
+          {
+            "path": "docs/review/atlas-craft-18/final/definitions.json",
+            "sha256": "8f4b5b1f3f218567ea77467f94300b2423dd028caa51d86f8c356898e6454984"
+          },
+          {
+            "path": "docs/review/atlas-craft-18/final/20-media.html",
+            "sha256": "59f492affd761693e96fce58919bd5cd2e2c1a829e4a3515857f1d92cf769152"
+          },
+          {
+            "path": "docs/review/atlas-craft-18/final/20-media-light-1x.png",
+            "sha256": "872a95c04fc02d7e39a5b5efac6d7cc7324017f970c54cc7e5b89c5a0a8ea6f3"
+          },
+          {
+            "path": "docs/review/atlas-craft-18/final/20-media-light-2x.png",
+            "sha256": "e31ab655048c28e77b21666069f071d7aef8adf4c0693864b6046ff5ab53029c"
+          },
+          {
+            "path": "docs/review/atlas-craft-18/final/20-media-dark-1x.png",
+            "sha256": "c49bb8b0897c2f4d5ef4f9259eb4f2b0375f314ec3e537585093e0bc02ed89b4"
+          },
+          {
+            "path": "docs/review/atlas-craft-18/final/20-media-dark-2x.png",
+            "sha256": "07378eae5dab0b58bdec656e652952e46293effdfc20eab91317ca2e2894ca60"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-18/final/20-media-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-18/final/20-media-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-18/final/20-media-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-18/final/20-media-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Hugeicons Free",
+        "license": "MIT",
+        "licenseFile": "licenses/hugeicons-MIT.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "antenna",
+      "purpose": "天線",
+      "recognitionCues": "橫向支桿、漸長的振子與垂直底桿",
+      "confusableWith": [
+        "wifi",
+        "radio-receiver"
+      ],
+      "sourceObservation": "Lucide斜向振子與底桿分離，Tabler以水平支桿將漸長振子和底桿接為整體。最新稿採Tabler連續構造並拉開橫向間距；完稿回比16px，各振子長短可讀，沒有形成密集柵欄或零件分離感。",
+      "references": [
+        {
+          "name": "antenna",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/antenna.svg",
+          "localPath": "references/atlas-01/lucide-antenna.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/antenna.svg",
+          "sha256": "fbdef0e0e80b7dbe1524697da30926ffbe31f4583f4ed5181fe961af5abb7039",
+          "license": "ISC AND MIT",
+          "sourceName": "antenna",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "antenna",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/antenna.svg",
+          "localPath": "references/atlas-01/tabler-antenna.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/antenna.svg",
+          "sha256": "119565717b2cc6593951117b12e3a681ae36e1f0d37b68787c289bdfd4034873",
+          "license": "MIT",
+          "sourceName": "antenna",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "媒體設備的輪廓與構造邊緣完整呈現，沒有需虛線表示的隱藏段。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以空白和結構接縫區分部件，不以透明度掩飾擁擠。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "設備維持單色線性圖示，無需材質漸層。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-18/master-before.json",
+          "variantsSha256": "fc9883aadfb85651a24d20fc670958c1d8f80455dd3f05689a87c967996a47b5"
+        },
+        "reason": "五個振子沿橫桿等距排列且逐漸加長，中央支桿延伸到底部；共用交點直接相連，不為製造留白切斷承接。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "b81cafa0ae52e1b49a2f7997ece78478426b6684207299efa0eaeffb33eee7bd",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/83-podcast-antenna/review.html",
+            "sha256": "2c7e8800a4cb13479de79f573752851a53cd2e0d7fe62d0696912f60780d5e96"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/83-podcast-antenna/definitions.json",
+            "sha256": "1c29e26991f4e1e53f59aa18b6b8a7dc85e0a35fe8b710637e9cfb1a057c30fb"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/83-podcast-antenna/light-1x.png",
+            "sha256": "a4cca6e65d6f685d691511d5ec7666bb7b6018e0cae05950ed797031baccd54e"
+          },
+          {
+            "path": "docs/review/atlas-craft-18/final/definitions.json",
+            "sha256": "8f4b5b1f3f218567ea77467f94300b2423dd028caa51d86f8c356898e6454984"
+          },
+          {
+            "path": "docs/review/atlas-craft-18/final/20-media.html",
+            "sha256": "59f492affd761693e96fce58919bd5cd2e2c1a829e4a3515857f1d92cf769152"
+          },
+          {
+            "path": "docs/review/atlas-craft-18/final/20-media-light-1x.png",
+            "sha256": "872a95c04fc02d7e39a5b5efac6d7cc7324017f970c54cc7e5b89c5a0a8ea6f3"
+          },
+          {
+            "path": "docs/review/atlas-craft-18/final/20-media-light-2x.png",
+            "sha256": "e31ab655048c28e77b21666069f071d7aef8adf4c0693864b6046ff5ab53029c"
+          },
+          {
+            "path": "docs/review/atlas-craft-18/final/20-media-dark-1x.png",
+            "sha256": "c49bb8b0897c2f4d5ef4f9259eb4f2b0375f314ec3e537585093e0bc02ed89b4"
+          },
+          {
+            "path": "docs/review/atlas-craft-18/final/20-media-dark-2x.png",
+            "sha256": "07378eae5dab0b58bdec656e652952e46293effdfc20eab91317ca2e2894ca60"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-18/final/20-media-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-18/final/20-media-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-18/final/20-media-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-18/final/20-media-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Tabler",
+        "license": "MIT",
+        "licenseFile": "licenses/tabler.txt"
+      },
+      "remaining": []
+    }
+  ]
+}

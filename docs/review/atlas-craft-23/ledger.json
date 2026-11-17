@@ -1,0 +1,1559 @@
+{
+  "schemaVersion": 2,
+  "reviewer": "Codex (AI)",
+  "userApproval": "pending",
+  "icons": [
+    {
+      "name": "scale",
+      "purpose": "天秤",
+      "recognitionCues": "中央支柱、平衡橫樑與左右秤盤",
+      "confusableWith": [
+        "sigma",
+        "gavel"
+      ],
+      "sourceObservation": "Lucide平衡樑的微弧比Phosphor傾斜樑更適合中立天秤。最新稿沿用Lucide結構；完稿回比保留左右對稱秤盤和微曲腹底，16px秤盤內孔仍清楚，沒有加入鏈條細節。",
+      "references": [
+        {
+          "name": "scale",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/scale.svg",
+          "localPath": "references/atlas-01/lucide-scale.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/scale.svg",
+          "sha256": "a7faa238b153311b18aaffb14ade8989128eaac35a92482edb7a7ee04c7333de",
+          "license": "ISC AND MIT",
+          "sourceName": "scale",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "scale",
+          "library": "Phosphor",
+          "repository": "phosphor-icons/core",
+          "commit": "2b75f3ad12b420c9504ef05df8d2564a28f8500e",
+          "path": "assets/regular/scales.svg",
+          "localPath": "references/atlas-01/phosphor-scales.svg",
+          "url": "https://github.com/phosphor-icons/core/blob/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular/scales.svg",
+          "sha256": "0352fc7a9115929af431f42b12ffb3fbc5e23420a712bf4ec922ec1f591f870f",
+          "license": "MIT",
+          "sourceName": "scales",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "完整交易物件與確定狀態不需要虛線表達未完成邊界。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以真透明避讓和輪廓空白分開狀態，不用淡化掩蓋相接線條。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "單色外輪廓與必要內線足以表達商務物件，不需材質漸層。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-23/master-before.json",
+          "variantsSha256": "4309c0c5f24a9722fa1206c5dd5ad085dcca901f3b4f86cc20177ef86818bd59"
+        },
+        "reason": "平衡橫樑以兩側連續曲線承接中央支柱，左右秤盤使用同樣曲腹與斜邊，底座保持水平穩定。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "9e92f23a73fc74f906d565567e756f82a1aa4f1e7cd03692d2d91d9157023fe9",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/100-scale-gavel-stamp/review.html",
+            "sha256": "e6f414059fdc980892424efcef0b877356b257d325dd0f3be10dd2c41823e98b"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/100-scale-gavel-stamp/definitions.json",
+            "sha256": "40ca4a4bbb0ca5321147721bd5318561d3db1224dbb9a3c25815b6a651b55d65"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/100-scale-gavel-stamp/light-1x.png",
+            "sha256": "b296208b5a16f27d8b9203fae897d94648d44d01cb7069cdb4b4d6669d3e66ee"
+          },
+          {
+            "path": "docs/review/atlas-craft-23/final/definitions.json",
+            "sha256": "9fdc83700ffa128cefaa1ca2b1739c75a36f0fc7e71977bc06e5883b38e27c68"
+          },
+          {
+            "path": "docs/review/atlas-craft-23/final/25-commerce.html",
+            "sha256": "271a4f3d3738ecf440148cc63d339eddfc949c3773df71e0d509be58e991c137"
+          },
+          {
+            "path": "docs/review/atlas-craft-23/final/25-commerce-light-1x.png",
+            "sha256": "c0c8efb03f304e3f393da26868f590cba2eac4e6d1c7bb67874ba8ccd0cd0651"
+          },
+          {
+            "path": "docs/review/atlas-craft-23/final/25-commerce-light-2x.png",
+            "sha256": "bd185aec7abdda2a4793d1e1687657dab651045d802621a72d14a5cfb5cbdee4"
+          },
+          {
+            "path": "docs/review/atlas-craft-23/final/25-commerce-dark-1x.png",
+            "sha256": "29eed7a4acdbf21ab67078d23d2f8174d3104807a8d148dd4424afb49a72a108"
+          },
+          {
+            "path": "docs/review/atlas-craft-23/final/25-commerce-dark-2x.png",
+            "sha256": "c31d468d6cf188ac525fca8cfd460ebbbe4e01c2a895c60d4b8c9b62bc2a2e07"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-23/final/25-commerce-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-23/final/25-commerce-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-23/final/25-commerce-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-23/final/25-commerce-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Lucide",
+        "license": "ISC",
+        "licenseFile": "licenses/lucide.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "gavel",
+      "purpose": "法槌",
+      "recognitionCues": "寬槌身、兩端槌面與斜向長柄",
+      "confusableWith": [
+        "hammer",
+        "stamp"
+      ],
+      "sourceObservation": "Lucide簡潔槌面比Phosphor雙框端部更疏朗。最新稿採Lucide單線槌面；完稿回比16px仍讀得到槌頭、兩端面與柄的斜向關係，柄線在槌頭外緣收口，不穿進槌身。",
+      "references": [
+        {
+          "name": "gavel",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/gavel.svg",
+          "localPath": "references/atlas-01/lucide-gavel.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/gavel.svg",
+          "sha256": "f07c978e058e85b62347593b0532a6de63f3f86d205ba456f7fdf67129ae9ace",
+          "license": "ISC AND MIT",
+          "sourceName": "gavel",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "gavel",
+          "library": "Phosphor",
+          "repository": "phosphor-icons/core",
+          "commit": "2b75f3ad12b420c9504ef05df8d2564a28f8500e",
+          "path": "assets/regular/gavel.svg",
+          "localPath": "references/atlas-01/phosphor-gavel.svg",
+          "url": "https://github.com/phosphor-icons/core/blob/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular/gavel.svg",
+          "sha256": "71c56cbf809f14a0609f0d9369b2d43ad353f276c65a12fe3f8862e83f47ce48",
+          "license": "MIT",
+          "sourceName": "gavel",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "完整交易物件與確定狀態不需要虛線表達未完成邊界。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以真透明避讓和輪廓空白分開狀態，不用淡化掩蓋相接線條。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "單色外輪廓與必要內線足以表達商務物件，不需材質漸層。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-23/master-before.json",
+          "variantsSha256": "2653de219ebba14259dd17a3faf6a1deda7a792cbbdbcf34089f9f7ba53e454b"
+        },
+        "reason": "頭部與長柄共用斜向構造軸，兩端面保留法槌特有的寬緣；柄根裁在主體外側，曲線握柄與直槌身有明確用途差異。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "03fc1a10a15af572e8805a3eae5556f560b3a8316bde2b166d5d3fae68eed1e7",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/100-scale-gavel-stamp/review.html",
+            "sha256": "e6f414059fdc980892424efcef0b877356b257d325dd0f3be10dd2c41823e98b"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/100-scale-gavel-stamp/definitions.json",
+            "sha256": "40ca4a4bbb0ca5321147721bd5318561d3db1224dbb9a3c25815b6a651b55d65"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/100-scale-gavel-stamp/light-1x.png",
+            "sha256": "b296208b5a16f27d8b9203fae897d94648d44d01cb7069cdb4b4d6669d3e66ee"
+          },
+          {
+            "path": "docs/review/atlas-craft-23/final/definitions.json",
+            "sha256": "9fdc83700ffa128cefaa1ca2b1739c75a36f0fc7e71977bc06e5883b38e27c68"
+          },
+          {
+            "path": "docs/review/atlas-craft-23/final/25-commerce.html",
+            "sha256": "271a4f3d3738ecf440148cc63d339eddfc949c3773df71e0d509be58e991c137"
+          },
+          {
+            "path": "docs/review/atlas-craft-23/final/25-commerce-light-1x.png",
+            "sha256": "c0c8efb03f304e3f393da26868f590cba2eac4e6d1c7bb67874ba8ccd0cd0651"
+          },
+          {
+            "path": "docs/review/atlas-craft-23/final/25-commerce-light-2x.png",
+            "sha256": "bd185aec7abdda2a4793d1e1687657dab651045d802621a72d14a5cfb5cbdee4"
+          },
+          {
+            "path": "docs/review/atlas-craft-23/final/25-commerce-dark-1x.png",
+            "sha256": "29eed7a4acdbf21ab67078d23d2f8174d3104807a8d148dd4424afb49a72a108"
+          },
+          {
+            "path": "docs/review/atlas-craft-23/final/25-commerce-dark-2x.png",
+            "sha256": "c31d468d6cf188ac525fca8cfd460ebbbe4e01c2a895c60d4b8c9b62bc2a2e07"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-23/final/25-commerce-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-23/final/25-commerce-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-23/final/25-commerce-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-23/final/25-commerce-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Lucide",
+        "license": "ISC",
+        "licenseFile": "licenses/lucide.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "stamp",
+      "purpose": "印章",
+      "recognitionCues": "收腰握柄、印面底座與下方印痕",
+      "confusableWith": [
+        "gavel",
+        "paint-roller"
+      ],
+      "sourceObservation": "Lucide的圓頂收腰握柄較Phosphor直斜邊更具印章手感。最新稿採Lucide曲線；完稿回比保留柄頸與印面底座內孔，16px下方印痕仍與底座分離，沒有以額外分割線增加密度。",
+      "references": [
+        {
+          "name": "stamp",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/stamp.svg",
+          "localPath": "references/atlas-01/lucide-stamp.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/stamp.svg",
+          "sha256": "35a73f33fb942f17fa36669fda5a60b9dad59dacfa1d9207ffbc003f1bf4ba33",
+          "license": "ISC AND MIT",
+          "sourceName": "stamp",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "stamp",
+          "library": "Phosphor",
+          "repository": "phosphor-icons/core",
+          "commit": "2b75f3ad12b420c9504ef05df8d2564a28f8500e",
+          "path": "assets/regular/stamp.svg",
+          "localPath": "references/atlas-01/phosphor-stamp.svg",
+          "url": "https://github.com/phosphor-icons/core/blob/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular/stamp.svg",
+          "sha256": "bba0b142cf8c51953b73a40350f5c6b1e055f9550a4b3925408609b3456386c2",
+          "license": "MIT",
+          "sourceName": "stamp",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "完整交易物件與確定狀態不需要虛線表達未完成邊界。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以真透明避讓和輪廓空白分開狀態，不用淡化掩蓋相接線條。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "單色外輪廓與必要內線足以表達商務物件，不需材質漸層。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-23/master-before.json",
+          "variantsSha256": "ed0fef519f930735122810f278c0052cf55aeb32b0b9f32e6e6827432d6a0b32"
+        },
+        "reason": "圓頂握柄逐步收腰並落入印面底座，接點按底座外側收口；底座依角型變更實際半徑，下方單線表達壓印結果。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "fd1da90930a3da04ca9438ec609fee70bcf93ae96bc8c627ec94422401f8d4e8",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/100-scale-gavel-stamp/review.html",
+            "sha256": "e6f414059fdc980892424efcef0b877356b257d325dd0f3be10dd2c41823e98b"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/100-scale-gavel-stamp/definitions.json",
+            "sha256": "40ca4a4bbb0ca5321147721bd5318561d3db1224dbb9a3c25815b6a651b55d65"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/100-scale-gavel-stamp/light-1x.png",
+            "sha256": "b296208b5a16f27d8b9203fae897d94648d44d01cb7069cdb4b4d6669d3e66ee"
+          },
+          {
+            "path": "docs/review/atlas-craft-23/final/definitions.json",
+            "sha256": "9fdc83700ffa128cefaa1ca2b1739c75a36f0fc7e71977bc06e5883b38e27c68"
+          },
+          {
+            "path": "docs/review/atlas-craft-23/final/25-commerce.html",
+            "sha256": "271a4f3d3738ecf440148cc63d339eddfc949c3773df71e0d509be58e991c137"
+          },
+          {
+            "path": "docs/review/atlas-craft-23/final/25-commerce-light-1x.png",
+            "sha256": "c0c8efb03f304e3f393da26868f590cba2eac4e6d1c7bb67874ba8ccd0cd0651"
+          },
+          {
+            "path": "docs/review/atlas-craft-23/final/25-commerce-light-2x.png",
+            "sha256": "bd185aec7abdda2a4793d1e1687657dab651045d802621a72d14a5cfb5cbdee4"
+          },
+          {
+            "path": "docs/review/atlas-craft-23/final/25-commerce-dark-1x.png",
+            "sha256": "29eed7a4acdbf21ab67078d23d2f8174d3104807a8d148dd4424afb49a72a108"
+          },
+          {
+            "path": "docs/review/atlas-craft-23/final/25-commerce-dark-2x.png",
+            "sha256": "c31d468d6cf188ac525fca8cfd460ebbbe4e01c2a895c60d4b8c9b62bc2a2e07"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-23/final/25-commerce-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-23/final/25-commerce-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-23/final/25-commerce-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-23/final/25-commerce-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Lucide",
+        "license": "ISC",
+        "licenseFile": "licenses/lucide.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "shopping-basket",
+      "purpose": "購物籃",
+      "recognitionCues": "雙斜提把、寬籃口與收窄籃身",
+      "confusableWith": [
+        "shopping-bag",
+        "shopping-cart"
+      ],
+      "sourceObservation": "Lucide雙斜提把表達可折疊購物籃，Phosphor較少籃條提供更好留白。最新稿採Lucide母型並只留兩條籃條；完稿回比再修正sharp提把下端侵入籃口的凸角，16px籃口與內部留白比初稿乾淨。",
+      "references": [
+        {
+          "name": "shopping-basket",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/shopping-basket.svg",
+          "localPath": "references/atlas-01/lucide-shopping-basket.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/shopping-basket.svg",
+          "sha256": "eb844af87b5858eef48effb43548e2bcce3b87cc5c18c12329c1cb3da338d6dd",
+          "license": "ISC AND MIT",
+          "sourceName": "shopping-basket",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "shopping-basket",
+          "library": "Phosphor",
+          "repository": "phosphor-icons/core",
+          "commit": "2b75f3ad12b420c9504ef05df8d2564a28f8500e",
+          "path": "assets/regular/basket.svg",
+          "localPath": "references/atlas-01/phosphor-basket.svg",
+          "url": "https://github.com/phosphor-icons/core/blob/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular/basket.svg",
+          "sha256": "4f528e76cfdb32ac5fa660505ac161fef775f52c3e4832554f1d0557d67ddd4a",
+          "license": "MIT",
+          "sourceName": "basket",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "完整交易物件與確定狀態不需要虛線表達未完成邊界。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以真透明避讓和輪廓空白分開狀態，不用淡化掩蓋相接線條。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "單色外輪廓與必要內線足以表達商務物件，不需材質漸層。"
+        }
+      },
+      "change": {
+        "kind": "modified",
+        "before": {
+          "path": "references/atlas-craft-23/master-before.json",
+          "variantsSha256": "09968d83e9af17cedac194e4a5cad9543696f52536dba65a2a203c5858087127"
+        },
+        "reason": "籃口與收窄籃身形成穩定母型，提把依實際外輪廓裁線，避免端帽穿入內孔；兩條短籃條交代通風構造，不堆滿格網。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "20226601d7e595176f8cad3aced99da2d577f62379121c17d43874abc483a380",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/101b-basket-family/review.html",
+            "sha256": "30d290ff2ef19a14b4adaa0f534a9a61ddc2700216bfa468f66b31960b32d650"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/101b-basket-family/definitions.json",
+            "sha256": "0d5a737bdc3008c821c557d72558841b181796a968f12a50fd33e30715811f5f"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/101b-basket-family/light-1x.png",
+            "sha256": "6b36ac894ffa803b3ff7266a21e40416043897ce985443737fad304f976bfeba"
+          },
+          {
+            "path": "docs/review/atlas-craft-23/final/definitions.json",
+            "sha256": "9fdc83700ffa128cefaa1ca2b1739c75a36f0fc7e71977bc06e5883b38e27c68"
+          },
+          {
+            "path": "docs/review/atlas-craft-23/final/25-commerce.html",
+            "sha256": "271a4f3d3738ecf440148cc63d339eddfc949c3773df71e0d509be58e991c137"
+          },
+          {
+            "path": "docs/review/atlas-craft-23/final/25-commerce-light-1x.png",
+            "sha256": "c0c8efb03f304e3f393da26868f590cba2eac4e6d1c7bb67874ba8ccd0cd0651"
+          },
+          {
+            "path": "docs/review/atlas-craft-23/final/25-commerce-light-2x.png",
+            "sha256": "bd185aec7abdda2a4793d1e1687657dab651045d802621a72d14a5cfb5cbdee4"
+          },
+          {
+            "path": "docs/review/atlas-craft-23/final/25-commerce-dark-1x.png",
+            "sha256": "29eed7a4acdbf21ab67078d23d2f8174d3104807a8d148dd4424afb49a72a108"
+          },
+          {
+            "path": "docs/review/atlas-craft-23/final/25-commerce-dark-2x.png",
+            "sha256": "c31d468d6cf188ac525fca8cfd460ebbbe4e01c2a895c60d4b8c9b62bc2a2e07"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-23/final/25-commerce-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-23/final/25-commerce-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-23/final/25-commerce-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-23/final/25-commerce-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Lucide",
+        "license": "ISC",
+        "licenseFile": "licenses/lucide.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "basket-check",
+      "purpose": "購物籃完成",
+      "recognitionCues": "購物籃母型與右下勾號",
+      "confusableWith": [
+        "shopping-basket",
+        "bag-check"
+      ],
+      "sourceObservation": "Tabler用圓形籃心而Hugeicons03採兩條籃條及右下勾號，後者更接近本家母型。最新稿承接Lucide購物籃構造，回比Hugeicons的疏密，右下勾號採既有mark並以真實墨線避讓；16px籃身和勾號清楚分離。",
+      "references": [
+        {
+          "name": "basket-check",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/basket-check.svg",
+          "localPath": "references/atlas-01/tabler-basket-check.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/basket-check.svg",
+          "sha256": "3d601fc0ab4a92f91987b5dab76bdc8104ef348fc2d74bff02e53187a1a40835",
+          "license": "MIT",
+          "sourceName": "basket-check",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "basket-check",
+          "library": "Hugeicons Free",
+          "repository": "hugeicons/hugeicons",
+          "commit": "834e28d965946c1ee60d080027fe9dae4adc58d0",
+          "path": "icons/shopping-basket-done-03.svg",
+          "localPath": "references/atlas-01/hugeicons-shopping-basket-done-03.svg",
+          "url": "https://github.com/hugeicons/hugeicons/blob/834e28d965946c1ee60d080027fe9dae4adc58d0/icons/shopping-basket-done-03.svg",
+          "sha256": "6c26aae1cbb0625e69ad338343c78cb68c14dc28aeec0f984b6b000d4004b9c5",
+          "license": "MIT",
+          "sourceName": "shopping-basket-done-03",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "basket-check",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/shopping-basket.svg",
+          "localPath": "references/atlas-01/lucide-shopping-basket.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/shopping-basket.svg",
+          "sha256": "eb844af87b5858eef48effb43548e2bcce3b87cc5c18c12329c1cb3da338d6dd",
+          "license": "ISC AND MIT",
+          "sourceName": "shopping-basket",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "完整交易物件與確定狀態不需要虛線表達未完成邊界。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以真透明避讓和輪廓空白分開狀態，不用淡化掩蓋相接線條。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "單色外輪廓與必要內線足以表達商務物件，不需材質漸層。"
+        }
+      },
+      "change": {
+        "kind": "modified",
+        "before": {
+          "path": "references/atlas-craft-23/master-before.json",
+          "variantsSha256": "79f984d732d16f01ebfa0294c3acfe9c5410fee41a3b8378a5876fadf658e637"
+        },
+        "reason": "沿用本批Lucide改作購物籃的全部母型修正，包括提把外側收口；勾號以共同狀態記號加在右下角，保留透明避讓區及可辨識籃底。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "b0a472536d6c123cb4ce510075de8a76d228fe400f439fbb633ae7f24aafe370",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/101b-basket-family/review.html",
+            "sha256": "30d290ff2ef19a14b4adaa0f534a9a61ddc2700216bfa468f66b31960b32d650"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/101b-basket-family/definitions.json",
+            "sha256": "0d5a737bdc3008c821c557d72558841b181796a968f12a50fd33e30715811f5f"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/101b-basket-family/light-1x.png",
+            "sha256": "6b36ac894ffa803b3ff7266a21e40416043897ce985443737fad304f976bfeba"
+          },
+          {
+            "path": "docs/review/atlas-craft-23/final/definitions.json",
+            "sha256": "9fdc83700ffa128cefaa1ca2b1739c75a36f0fc7e71977bc06e5883b38e27c68"
+          },
+          {
+            "path": "docs/review/atlas-craft-23/final/25-commerce.html",
+            "sha256": "271a4f3d3738ecf440148cc63d339eddfc949c3773df71e0d509be58e991c137"
+          },
+          {
+            "path": "docs/review/atlas-craft-23/final/25-commerce-light-1x.png",
+            "sha256": "c0c8efb03f304e3f393da26868f590cba2eac4e6d1c7bb67874ba8ccd0cd0651"
+          },
+          {
+            "path": "docs/review/atlas-craft-23/final/25-commerce-light-2x.png",
+            "sha256": "bd185aec7abdda2a4793d1e1687657dab651045d802621a72d14a5cfb5cbdee4"
+          },
+          {
+            "path": "docs/review/atlas-craft-23/final/25-commerce-dark-1x.png",
+            "sha256": "29eed7a4acdbf21ab67078d23d2f8174d3104807a8d148dd4424afb49a72a108"
+          },
+          {
+            "path": "docs/review/atlas-craft-23/final/25-commerce-dark-2x.png",
+            "sha256": "c31d468d6cf188ac525fca8cfd460ebbbe4e01c2a895c60d4b8c9b62bc2a2e07"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-23/final/25-commerce-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-23/final/25-commerce-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-23/final/25-commerce-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-23/final/25-commerce-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Lucide",
+        "license": "ISC",
+        "licenseFile": "licenses/lucide.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "basket-plus",
+      "purpose": "新增購物籃",
+      "recognitionCues": "購物籃母型與右下加號",
+      "confusableWith": [
+        "shopping-basket",
+        "bag-plus"
+      ],
+      "sourceObservation": "Tabler圓形籃心與Hugeicons03的直條構造不同，後者留白更適合新增狀態。最新稿承接Lucide購物籃母型；完稿回比Hugeicons後保持兩條籃條與右下加號，16px加號周邊不殘留碎片或幾乎相碰的線端。",
+      "references": [
+        {
+          "name": "basket-plus",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/basket-plus.svg",
+          "localPath": "references/atlas-01/tabler-basket-plus.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/basket-plus.svg",
+          "sha256": "88c2344552f559d74aba690f56686415913f747878e6dfc5a9a45e6f13b80af7",
+          "license": "MIT",
+          "sourceName": "basket-plus",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "basket-plus",
+          "library": "Hugeicons Free",
+          "repository": "hugeicons/hugeicons",
+          "commit": "834e28d965946c1ee60d080027fe9dae4adc58d0",
+          "path": "icons/shopping-basket-add-03.svg",
+          "localPath": "references/atlas-01/hugeicons-shopping-basket-add-03.svg",
+          "url": "https://github.com/hugeicons/hugeicons/blob/834e28d965946c1ee60d080027fe9dae4adc58d0/icons/shopping-basket-add-03.svg",
+          "sha256": "1d771b080e3745694e726d227f6cd54f138bf35ad26c0d0070e3d65a458065f7",
+          "license": "MIT",
+          "sourceName": "shopping-basket-add-03",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "basket-plus",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/shopping-basket.svg",
+          "localPath": "references/atlas-01/lucide-shopping-basket.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/shopping-basket.svg",
+          "sha256": "eb844af87b5858eef48effb43548e2bcce3b87cc5c18c12329c1cb3da338d6dd",
+          "license": "ISC AND MIT",
+          "sourceName": "shopping-basket",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "完整交易物件與確定狀態不需要虛線表達未完成邊界。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以真透明避讓和輪廓空白分開狀態，不用淡化掩蓋相接線條。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "單色外輪廓與必要內線足以表達商務物件，不需材質漸層。"
+        }
+      },
+      "change": {
+        "kind": "modified",
+        "before": {
+          "path": "references/atlas-craft-23/master-before.json",
+          "variantsSha256": "270a0b92c06be581ec9b4c4c5debf45d2c60892cc0e3b73492eff5d72f684338"
+        },
+        "reason": "沿用Lucide改作母型與最新提把裁線，右下加號使用既有狀態幾何；對前景實際墨線作透明避讓，三種角型同步檢查切口。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "13c60701a2ecf6c0ae785402cf0988e2595bd4b38676477e82f687b72ef06ba9",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/101b-basket-family/review.html",
+            "sha256": "30d290ff2ef19a14b4adaa0f534a9a61ddc2700216bfa468f66b31960b32d650"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/101b-basket-family/definitions.json",
+            "sha256": "0d5a737bdc3008c821c557d72558841b181796a968f12a50fd33e30715811f5f"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/101b-basket-family/light-1x.png",
+            "sha256": "6b36ac894ffa803b3ff7266a21e40416043897ce985443737fad304f976bfeba"
+          },
+          {
+            "path": "docs/review/atlas-craft-23/final/definitions.json",
+            "sha256": "9fdc83700ffa128cefaa1ca2b1739c75a36f0fc7e71977bc06e5883b38e27c68"
+          },
+          {
+            "path": "docs/review/atlas-craft-23/final/25-commerce.html",
+            "sha256": "271a4f3d3738ecf440148cc63d339eddfc949c3773df71e0d509be58e991c137"
+          },
+          {
+            "path": "docs/review/atlas-craft-23/final/25-commerce-light-1x.png",
+            "sha256": "c0c8efb03f304e3f393da26868f590cba2eac4e6d1c7bb67874ba8ccd0cd0651"
+          },
+          {
+            "path": "docs/review/atlas-craft-23/final/25-commerce-light-2x.png",
+            "sha256": "bd185aec7abdda2a4793d1e1687657dab651045d802621a72d14a5cfb5cbdee4"
+          },
+          {
+            "path": "docs/review/atlas-craft-23/final/25-commerce-dark-1x.png",
+            "sha256": "29eed7a4acdbf21ab67078d23d2f8174d3104807a8d148dd4424afb49a72a108"
+          },
+          {
+            "path": "docs/review/atlas-craft-23/final/25-commerce-dark-2x.png",
+            "sha256": "c31d468d6cf188ac525fca8cfd460ebbbe4e01c2a895c60d4b8c9b62bc2a2e07"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-23/final/25-commerce-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-23/final/25-commerce-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-23/final/25-commerce-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-23/final/25-commerce-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Lucide",
+        "license": "ISC",
+        "licenseFile": "licenses/lucide.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "bag-check",
+      "purpose": "購物袋完成",
+      "recognitionCues": "既有購物袋母型與完成勾號",
+      "confusableWith": [
+        "shopping-bag",
+        "basket-check"
+      ],
+      "sourceObservation": "Tabler與Hugeicons都以購物袋加勾號表達完成。最新稿沿用既有Master購物袋和mark而未重畫來源輪廓；完稿回比，提把與袋身保留原本比例，右下勾號有獨立留白，袋內不加細線。",
+      "references": [
+        {
+          "name": "bag-check",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/shopping-bag-check.svg",
+          "localPath": "references/atlas-01/tabler-shopping-bag-check.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/shopping-bag-check.svg",
+          "sha256": "a5b4cf0d4b38f7cf627e9459985f7998c911952fab5aa40acf04857f0c2f6a34",
+          "license": "MIT",
+          "sourceName": "shopping-bag-check",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "bag-check",
+          "library": "Hugeicons Free",
+          "repository": "hugeicons/hugeicons",
+          "commit": "834e28d965946c1ee60d080027fe9dae4adc58d0",
+          "path": "icons/shopping-bag-check.svg",
+          "localPath": "references/atlas-01/hugeicons-shopping-bag-check.svg",
+          "url": "https://github.com/hugeicons/hugeicons/blob/834e28d965946c1ee60d080027fe9dae4adc58d0/icons/shopping-bag-check.svg",
+          "sha256": "71c335808fdf2409e3d208ca8b0d52afce2701764b0dab0585dc70e93df41f34",
+          "license": "MIT",
+          "sourceName": "shopping-bag-check",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "完整交易物件與確定狀態不需要虛線表達未完成邊界。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以真透明避讓和輪廓空白分開狀態，不用淡化掩蓋相接線條。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "單色外輪廓與必要內線足以表達商務物件，不需材質漸層。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-23/master-before.json",
+          "variantsSha256": "2ba64c8f9d253afa0f2d541ac6b8a6c0830c21edc84670c32ab243c9addfaa3e"
+        },
+        "reason": "既有購物袋母型與共同勾號組合，依墨線外緣避讓後方袋身；保留袋口和提把構造，維持與本庫購物袋一致的尺度。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "8eed30b85266d878d5bf93fcfcb53b17c8dc1cdb13d90629f4d45584f03dbbd4",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/102-bag-family/review.html",
+            "sha256": "31ad55d96d5600e5aaab007cfad4d46cfe49d03d4ae3a2a0cf50e829e7b26045"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/102-bag-family/definitions.json",
+            "sha256": "007df0b1c48f9635b3f91381d85c682ab559644f4dbc66598c50d78495c16fef"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/102-bag-family/light-1x.png",
+            "sha256": "e02b78073bc60c609977f53cfd56dad5a271081a2fea85a84de98d55c57ede31"
+          },
+          {
+            "path": "docs/review/atlas-craft-23/final/definitions.json",
+            "sha256": "9fdc83700ffa128cefaa1ca2b1739c75a36f0fc7e71977bc06e5883b38e27c68"
+          },
+          {
+            "path": "docs/review/atlas-craft-23/final/25-commerce.html",
+            "sha256": "271a4f3d3738ecf440148cc63d339eddfc949c3773df71e0d509be58e991c137"
+          },
+          {
+            "path": "docs/review/atlas-craft-23/final/25-commerce-light-1x.png",
+            "sha256": "c0c8efb03f304e3f393da26868f590cba2eac4e6d1c7bb67874ba8ccd0cd0651"
+          },
+          {
+            "path": "docs/review/atlas-craft-23/final/25-commerce-light-2x.png",
+            "sha256": "bd185aec7abdda2a4793d1e1687657dab651045d802621a72d14a5cfb5cbdee4"
+          },
+          {
+            "path": "docs/review/atlas-craft-23/final/25-commerce-dark-1x.png",
+            "sha256": "29eed7a4acdbf21ab67078d23d2f8174d3104807a8d148dd4424afb49a72a108"
+          },
+          {
+            "path": "docs/review/atlas-craft-23/final/25-commerce-dark-2x.png",
+            "sha256": "c31d468d6cf188ac525fca8cfd460ebbbe4e01c2a895c60d4b8c9b62bc2a2e07"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-23/final/25-commerce-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-23/final/25-commerce-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-23/final/25-commerce-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-23/final/25-commerce-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "independent-construction"
+      },
+      "remaining": []
+    },
+    {
+      "name": "bag-plus",
+      "purpose": "新增購物袋",
+      "recognitionCues": "既有購物袋母型與新增符號",
+      "confusableWith": [
+        "shopping-bag",
+        "basket-plus"
+      ],
+      "sourceObservation": "初選MDI shopping-outline只有購物袋，已改用同語意Tabler與Hugeicons新增購物袋。最新稿採既有Master母型與加號；完稿回比16px，加號仍清楚獨立，袋內留白和弧形提把不受狀態標記擠壓。",
+      "references": [
+        {
+          "name": "bag-plus",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/shopping-bag-plus.svg",
+          "localPath": "references/atlas-01/tabler-shopping-bag-plus.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/shopping-bag-plus.svg",
+          "sha256": "0b65e96ff42e093310f0c1fec46a0ff4a4f32248aa97caf99b70cfa9e414b53d",
+          "license": "MIT",
+          "sourceName": "shopping-bag-plus",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "bag-plus",
+          "library": "Hugeicons Free",
+          "repository": "hugeicons/hugeicons",
+          "commit": "834e28d965946c1ee60d080027fe9dae4adc58d0",
+          "path": "icons/shopping-bag-add.svg",
+          "localPath": "references/atlas-01/hugeicons-shopping-bag-add.svg",
+          "url": "https://github.com/hugeicons/hugeicons/blob/834e28d965946c1ee60d080027fe9dae4adc58d0/icons/shopping-bag-add.svg",
+          "sha256": "1fa40d634cafb4ce7f15ca515df3754f47cbc95d6c0f065fc8f91cf401be83c7",
+          "license": "MIT",
+          "sourceName": "shopping-bag-add",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "完整交易物件與確定狀態不需要虛線表達未完成邊界。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以真透明避讓和輪廓空白分開狀態，不用淡化掩蓋相接線條。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "單色外輪廓與必要內線足以表達商務物件，不需材質漸層。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-23/master-before.json",
+          "variantsSha256": "d08cdb549b32f353d49e083e7eaa6ac52ad9fbdef80dd662b99ad8e9d0035618"
+        },
+        "reason": "沿用既有購物袋及共同加號，以透明避讓裁開右下袋身；不為狀態另造不同袋形，保留母型提把寬度和袋底比例。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "4bdfa16622939d7102c202cc6e9070b9861da23f7446713e539a24e9376bdec3",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/102-bag-family/review.html",
+            "sha256": "31ad55d96d5600e5aaab007cfad4d46cfe49d03d4ae3a2a0cf50e829e7b26045"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/102-bag-family/definitions.json",
+            "sha256": "007df0b1c48f9635b3f91381d85c682ab559644f4dbc66598c50d78495c16fef"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/102-bag-family/light-1x.png",
+            "sha256": "e02b78073bc60c609977f53cfd56dad5a271081a2fea85a84de98d55c57ede31"
+          },
+          {
+            "path": "docs/review/atlas-craft-23/final/definitions.json",
+            "sha256": "9fdc83700ffa128cefaa1ca2b1739c75a36f0fc7e71977bc06e5883b38e27c68"
+          },
+          {
+            "path": "docs/review/atlas-craft-23/final/25-commerce.html",
+            "sha256": "271a4f3d3738ecf440148cc63d339eddfc949c3773df71e0d509be58e991c137"
+          },
+          {
+            "path": "docs/review/atlas-craft-23/final/25-commerce-light-1x.png",
+            "sha256": "c0c8efb03f304e3f393da26868f590cba2eac4e6d1c7bb67874ba8ccd0cd0651"
+          },
+          {
+            "path": "docs/review/atlas-craft-23/final/25-commerce-light-2x.png",
+            "sha256": "bd185aec7abdda2a4793d1e1687657dab651045d802621a72d14a5cfb5cbdee4"
+          },
+          {
+            "path": "docs/review/atlas-craft-23/final/25-commerce-dark-1x.png",
+            "sha256": "29eed7a4acdbf21ab67078d23d2f8174d3104807a8d148dd4424afb49a72a108"
+          },
+          {
+            "path": "docs/review/atlas-craft-23/final/25-commerce-dark-2x.png",
+            "sha256": "c31d468d6cf188ac525fca8cfd460ebbbe4e01c2a895c60d4b8c9b62bc2a2e07"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-23/final/25-commerce-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-23/final/25-commerce-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-23/final/25-commerce-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-23/final/25-commerce-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "independent-construction"
+      },
+      "remaining": []
+    },
+    {
+      "name": "cash-register",
+      "purpose": "收銀機",
+      "recognitionCues": "傾斜鍵盤、頂部顯示器與底層錢櫃",
+      "confusableWith": [
+        "calculator",
+        "keyboard"
+      ],
+      "sourceObservation": "Tabler附加紙卷和貨幣細節較密，Phosphor的斜鍵盤與錢櫃層次更俐落。最新稿採Phosphor構造；完稿回比16px六顆鍵點和錢櫃內孔仍分開可讀，顯示器接縫止於機殼外緣。",
+      "references": [
+        {
+          "name": "cash-register",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/cash-register.svg",
+          "localPath": "references/atlas-01/tabler-cash-register.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/cash-register.svg",
+          "sha256": "db840becb12f2b9f891d1f76276d7bd037a0bb8fe3b4d9bd1940da6744c21ead",
+          "license": "MIT",
+          "sourceName": "cash-register",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "cash-register",
+          "library": "Phosphor",
+          "repository": "phosphor-icons/core",
+          "commit": "2b75f3ad12b420c9504ef05df8d2564a28f8500e",
+          "path": "assets/regular/cash-register.svg",
+          "localPath": "references/atlas-01/phosphor-cash-register.svg",
+          "url": "https://github.com/phosphor-icons/core/blob/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular/cash-register.svg",
+          "sha256": "864a2c6aa0963179e612aba4be13b334136cf593abd4181bd61984478eab4699",
+          "license": "MIT",
+          "sourceName": "cash-register",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "完整交易物件與確定狀態不需要虛線表達未完成邊界。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以真透明避讓和輪廓空白分開狀態，不用淡化掩蓋相接線條。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "單色外輪廓與必要內線足以表達商務物件，不需材質漸層。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-23/master-before.json",
+          "variantsSha256": "645972145de89cd321ae954179aeb88c6eea56f4c0bebe43120d1b743fbd288d"
+        },
+        "reason": "斜向鍵盤平台與底部錢櫃共用外殼，頂部顯示器直接承接上緣；六個實心鍵點避免小圈內孔，底層橫線在殼內收口。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "2ccb1e0bfe0fc8a0c73e988a01ce72f3eaaf69c5011b312d23e563feaa56ae58",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/103-register-receipt/review.html",
+            "sha256": "b25329dcc39dea1754afd4effdcadde5888467f7f37e2b90a5cbcb6a27c565d3"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/103-register-receipt/definitions.json",
+            "sha256": "424dac7306c26012e8d614128c94294b1333c7915a1f31a10d49133d02daf65f"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/103-register-receipt/light-1x.png",
+            "sha256": "a2d06a4fcd68f4129af19af49bf78bcf4eb2b2463246a5a0b7d980e4d7df47b9"
+          },
+          {
+            "path": "docs/review/atlas-craft-23/final/definitions.json",
+            "sha256": "9fdc83700ffa128cefaa1ca2b1739c75a36f0fc7e71977bc06e5883b38e27c68"
+          },
+          {
+            "path": "docs/review/atlas-craft-23/final/25-commerce.html",
+            "sha256": "271a4f3d3738ecf440148cc63d339eddfc949c3773df71e0d509be58e991c137"
+          },
+          {
+            "path": "docs/review/atlas-craft-23/final/25-commerce-light-1x.png",
+            "sha256": "c0c8efb03f304e3f393da26868f590cba2eac4e6d1c7bb67874ba8ccd0cd0651"
+          },
+          {
+            "path": "docs/review/atlas-craft-23/final/25-commerce-light-2x.png",
+            "sha256": "bd185aec7abdda2a4793d1e1687657dab651045d802621a72d14a5cfb5cbdee4"
+          },
+          {
+            "path": "docs/review/atlas-craft-23/final/25-commerce-dark-1x.png",
+            "sha256": "29eed7a4acdbf21ab67078d23d2f8174d3104807a8d148dd4424afb49a72a108"
+          },
+          {
+            "path": "docs/review/atlas-craft-23/final/25-commerce-dark-2x.png",
+            "sha256": "c31d468d6cf188ac525fca8cfd460ebbbe4e01c2a895c60d4b8c9b62bc2a2e07"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-23/final/25-commerce-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-23/final/25-commerce-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-23/final/25-commerce-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-23/final/25-commerce-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Phosphor",
+        "license": "MIT",
+        "licenseFile": "licenses/phosphor.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "receipt-dollar",
+      "purpose": "金額收據",
+      "recognitionCues": "鋸齒收據母型與貨幣金額符號",
+      "confusableWith": [
+        "receipt",
+        "file-text"
+      ],
+      "sourceObservation": "Tabler的貨幣直桿穿過曲線，Hugeicons上下短桿讓字形中間更疏朗。最新稿保留Master收據母型並採Hugeicons短桿字形構造；完稿回比16px曲線仍讀為貨幣符號，底部鋸齒不額外增密。",
+      "references": [
+        {
+          "name": "receipt-dollar",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/receipt-dollar.svg",
+          "localPath": "references/atlas-01/tabler-receipt-dollar.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/receipt-dollar.svg",
+          "sha256": "9560d57b74a0b21fa8f3600ba75816e52cf54ce5ca7bff0cca07f4e481665ac3",
+          "license": "MIT",
+          "sourceName": "receipt-dollar",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "receipt-dollar",
+          "library": "Hugeicons Free",
+          "repository": "hugeicons/hugeicons",
+          "commit": "834e28d965946c1ee60d080027fe9dae4adc58d0",
+          "path": "icons/receipt-dollar.svg",
+          "localPath": "references/atlas-01/hugeicons-receipt-dollar.svg",
+          "url": "https://github.com/hugeicons/hugeicons/blob/834e28d965946c1ee60d080027fe9dae4adc58d0/icons/receipt-dollar.svg",
+          "sha256": "723cb98946302ec25d2702622f0fdcc5cbb48075dc737bfa46a145bc68a468eb",
+          "license": "MIT",
+          "sourceName": "receipt-dollar",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "完整交易物件與確定狀態不需要虛線表達未完成邊界。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以真透明避讓和輪廓空白分開狀態，不用淡化掩蓋相接線條。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "單色外輪廓與必要內線足以表達商務物件，不需材質漸層。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-23/master-before.json",
+          "variantsSha256": "9b0eedaccf947399b3fe26b0759ba354c9015d2d6c62596d855f18a21c3b3b63"
+        },
+        "reason": "沿用既有收據鋸齒輪廓，貨幣字形以連續S形曲線及上下短桿構成，保留字形與紙邊間距，避免一根長直桿把中間留白切碎。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "8c4d8beb04edd0b34966b9255cbb3e476d09588589ee3497f40bf9c9759efe06",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/103-register-receipt/review.html",
+            "sha256": "b25329dcc39dea1754afd4effdcadde5888467f7f37e2b90a5cbcb6a27c565d3"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/103-register-receipt/definitions.json",
+            "sha256": "424dac7306c26012e8d614128c94294b1333c7915a1f31a10d49133d02daf65f"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/103-register-receipt/light-1x.png",
+            "sha256": "a2d06a4fcd68f4129af19af49bf78bcf4eb2b2463246a5a0b7d980e4d7df47b9"
+          },
+          {
+            "path": "docs/review/atlas-craft-23/final/definitions.json",
+            "sha256": "9fdc83700ffa128cefaa1ca2b1739c75a36f0fc7e71977bc06e5883b38e27c68"
+          },
+          {
+            "path": "docs/review/atlas-craft-23/final/25-commerce.html",
+            "sha256": "271a4f3d3738ecf440148cc63d339eddfc949c3773df71e0d509be58e991c137"
+          },
+          {
+            "path": "docs/review/atlas-craft-23/final/25-commerce-light-1x.png",
+            "sha256": "c0c8efb03f304e3f393da26868f590cba2eac4e6d1c7bb67874ba8ccd0cd0651"
+          },
+          {
+            "path": "docs/review/atlas-craft-23/final/25-commerce-light-2x.png",
+            "sha256": "bd185aec7abdda2a4793d1e1687657dab651045d802621a72d14a5cfb5cbdee4"
+          },
+          {
+            "path": "docs/review/atlas-craft-23/final/25-commerce-dark-1x.png",
+            "sha256": "29eed7a4acdbf21ab67078d23d2f8174d3104807a8d148dd4424afb49a72a108"
+          },
+          {
+            "path": "docs/review/atlas-craft-23/final/25-commerce-dark-2x.png",
+            "sha256": "c31d468d6cf188ac525fca8cfd460ebbbe4e01c2a895c60d4b8c9b62bc2a2e07"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-23/final/25-commerce-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-23/final/25-commerce-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-23/final/25-commerce-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-23/final/25-commerce-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Hugeicons Free",
+        "license": "MIT",
+        "licenseFile": "licenses/hugeicons-MIT.txt"
+      },
+      "remaining": []
+    }
+  ]
+}

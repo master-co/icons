@@ -1,0 +1,1510 @@
+{
+  "schemaVersion": 2,
+  "reviewer": "Codex (AI)",
+  "userApproval": "pending",
+  "icons": [
+    {
+      "name": "apple-fruit",
+      "purpose": "蘋果",
+      "recognitionCues": "雙肩果實、底部微凹與短果梗",
+      "confusableWith": [
+        "cherry",
+        "heart"
+      ],
+      "sourceObservation": "Lucide用兩肩與底凹表現完整蘋果；Tabler加左肩短內線。Master保留雙肩與短梗，取消裝飾內線，底部凹口較淺，16px保持完整果身，沒有品牌咬口或獨立葉形。",
+      "references": [
+        {
+          "name": "apple-fruit",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/apple.svg",
+          "localPath": "references/atlas-01/lucide-apple.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/apple.svg",
+          "sha256": "55ae3426d521764c769c295a02a5bf11323068e6abf46c89a4b418b75e7e0f54",
+          "license": "ISC AND MIT",
+          "sourceName": "apple",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "apple-fruit",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/apple.svg",
+          "localPath": "references/atlas-01/tabler-apple.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/apple.svg",
+          "sha256": "50db86a52b9566ed3ce80a0a29382b0d976f8ed3dc56261f1a898cbd7ca2dc08",
+          "license": "MIT",
+          "sourceName": "apple",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "食材以完整物體輪廓表意，沒有隱藏邊界或未完成狀態。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以空白和部件數量控制密度，沒有前後淡化需求。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "單色食材輪廓不需要連續漸層。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-02/master-before.json",
+          "variantsSha256": "0f51f2935044ddaf82f362f1b1c980ac70707db1037a4defbc54861933ccc867"
+        },
+        "reason": "保留已建立的雙肩、側腹收束與底部微凹；果梗外接並裁去伸入果身的筆畫，三尺寸沒有微孔或額外分割。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "fe3aa2c6bebd8a2d333ef59d93735cc36568602a77ae1106720a349fed2ca3fa",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/19b/review.html",
+            "sha256": "d1edfedaf81f79826dbfe164d48f92bb95a503c94e06b00025263d3354a00bf4"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/19b/definitions.json",
+            "sha256": "84d2b6076cc961505fffd025065bad7eecff4553aff1993b3185b65109b857f6"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/19b/light-1x.png",
+            "sha256": "5a52a57405132a5402b45db687d133d110d35073be7457e5c7db7efc4e76a076"
+          },
+          {
+            "path": "docs/review/atlas-craft-02/families/definitions.json",
+            "sha256": "e7f1e989e85a5a6e80cb5eadbca0ec0e2ded4f82b7191b85d07cddac86e532de"
+          },
+          {
+            "path": "docs/review/atlas-craft-02/families/06-produce.html",
+            "sha256": "9a660f22a80ab6bb0799b018aa6a85fedefe757b2457cc0f83e15d1affa37cd2"
+          },
+          {
+            "path": "docs/review/atlas-craft-02/families/06-produce-light-1x.png",
+            "sha256": "379386c0a36655ebb81bce285884a8e7e5b388ff50340c663d85f28179d8429e"
+          },
+          {
+            "path": "docs/review/atlas-craft-02/families/06-produce-light-2x.png",
+            "sha256": "9f720d5916aef75f62205a4c65fd188f3b7409a6266dae5f9deca59062fd0e33"
+          },
+          {
+            "path": "docs/review/atlas-craft-02/families/06-produce-dark-1x.png",
+            "sha256": "a761c0d3a22fff327c65a90c82fd473a42cd9b7c48a48b3e740c256d91fa4ad3"
+          },
+          {
+            "path": "docs/review/atlas-craft-02/families/06-produce-dark-2x.png",
+            "sha256": "c466b097fefc20073c2b633383165b999e5e1e7d3b0f2511e7679a7eee331fbf"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-02/families/06-produce-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-02/families/06-produce-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-02/families/06-produce-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-02/families/06-produce-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Lucide",
+        "license": "ISC",
+        "licenseFile": "licenses/lucide.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "cherry",
+      "purpose": "櫻桃",
+      "recognitionCues": "成對圓果與上端相連的彎梗",
+      "confusableWith": [
+        "grape",
+        "scissors"
+      ],
+      "sourceObservation": "Lucide的兩果相靠且有葉，Tabler的兩果大小不同、以開放枝梗相連。Master等大雙果保留可見中縫，兩條梗從同一上端舒展，省略小葉，避免16px頂部積墨。",
+      "references": [
+        {
+          "name": "cherry",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/cherry.svg",
+          "localPath": "references/atlas-01/lucide-cherry.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/cherry.svg",
+          "sha256": "dc7c7fa892d7afc65cb4b6b2e1de976a9189a98590027ac797459c44cc05b6c4",
+          "license": "ISC AND MIT",
+          "sourceName": "cherry",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "cherry",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/cherry.svg",
+          "localPath": "references/atlas-01/tabler-cherry.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/cherry.svg",
+          "sha256": "de8cc8a7bbd3f627486c730bc532b7d535c60bdecb90a5bc5d87428c541d5b66",
+          "license": "MIT",
+          "sourceName": "cherry",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "食材以完整物體輪廓表意，沒有隱藏邊界或未完成狀態。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以空白和部件數量控制密度，沒有前後淡化需求。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "單色食材輪廓不需要連續漸層。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-02/master-before.json",
+          "variantsSha256": "e0d778c7b1bf4b484a81e1df84ec0d5718adbc04e8d5ff50b0d95249622e8998"
+        },
+        "reason": "保留成對圓果及共同梗頂，梗的墨線收在果實外接處；圓果孔與兩果間隙在明暗原生尺寸均可分辨。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "c6d622068843ab36bb79ad18d751d30344314d7592eb005c135078be9dbeb331",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/19b/review.html",
+            "sha256": "d1edfedaf81f79826dbfe164d48f92bb95a503c94e06b00025263d3354a00bf4"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/19b/definitions.json",
+            "sha256": "84d2b6076cc961505fffd025065bad7eecff4553aff1993b3185b65109b857f6"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/19b/light-1x.png",
+            "sha256": "5a52a57405132a5402b45db687d133d110d35073be7457e5c7db7efc4e76a076"
+          },
+          {
+            "path": "docs/review/atlas-craft-02/families/definitions.json",
+            "sha256": "e7f1e989e85a5a6e80cb5eadbca0ec0e2ded4f82b7191b85d07cddac86e532de"
+          },
+          {
+            "path": "docs/review/atlas-craft-02/families/06-produce.html",
+            "sha256": "9a660f22a80ab6bb0799b018aa6a85fedefe757b2457cc0f83e15d1affa37cd2"
+          },
+          {
+            "path": "docs/review/atlas-craft-02/families/06-produce-light-1x.png",
+            "sha256": "379386c0a36655ebb81bce285884a8e7e5b388ff50340c663d85f28179d8429e"
+          },
+          {
+            "path": "docs/review/atlas-craft-02/families/06-produce-light-2x.png",
+            "sha256": "9f720d5916aef75f62205a4c65fd188f3b7409a6266dae5f9deca59062fd0e33"
+          },
+          {
+            "path": "docs/review/atlas-craft-02/families/06-produce-dark-1x.png",
+            "sha256": "a761c0d3a22fff327c65a90c82fd473a42cd9b7c48a48b3e740c256d91fa4ad3"
+          },
+          {
+            "path": "docs/review/atlas-craft-02/families/06-produce-dark-2x.png",
+            "sha256": "c466b097fefc20073c2b633383165b999e5e1e7d3b0f2511e7679a7eee331fbf"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-02/families/06-produce-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-02/families/06-produce-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-02/families/06-produce-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-02/families/06-produce-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Tabler",
+        "license": "MIT",
+        "licenseFile": "licenses/tabler.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "grape",
+      "purpose": "葡萄",
+      "recognitionCues": "逐層收窄的葡萄串及彎果梗",
+      "confusableWith": [
+        "cherry",
+        "network"
+      ],
+      "sourceObservation": "Lucide採斜向緊密多果串，Tabler採三二一排列及小葉。Master借鑑直立收窄分組，但讓六枚果實有實際留白，移除頂部小葉。初稿16/20只有三果，和櫻桃太近且下果孤立，已撤回。",
+      "references": [
+        {
+          "name": "grape",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/grape.svg",
+          "localPath": "references/atlas-01/lucide-grape.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/grape.svg",
+          "sha256": "cc04dfcd1648981d4fbe1309f8169f62c84f231faf73ade3d68a7e06e4e2209f",
+          "license": "ISC AND MIT",
+          "sourceName": "grape",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "grape",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/grape.svg",
+          "localPath": "references/atlas-01/tabler-grape.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/grape.svg",
+          "sha256": "4fd6ef0910284c2e201dc645e1ae838cc73bee97b9746c56fdad53e45060b93b",
+          "license": "MIT",
+          "sourceName": "grape",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "食材以完整物體輪廓表意，沒有隱藏邊界或未完成狀態。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以空白和部件數量控制密度，沒有前後淡化需求。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "單色食材輪廓不需要連續漸層。"
+        }
+      },
+      "change": {
+        "kind": "modified",
+        "before": {
+          "path": "references/atlas-craft-02/master-before.json",
+          "variantsSha256": "356ac1407a3f2fc0b6ea864ff220ca3f62a40b4f5e8b70f64734b17e0ca3c590"
+        },
+        "reason": "16/20恢復六果成串，三二一排列維持語意；末果上移0.5u，解除16px描邊超出畫布的0.026px裁切，並重看原生間隙。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "36432a93e597b9c654fc4535f187b1955e168356edefd501d4ec8ee9a45a8cab",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/19c/review.html",
+            "sha256": "553dd02cdab68ba1c5b4bc6295a07ef72929d72489ad1c922282a1b7ceaf67ca"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/19c/definitions.json",
+            "sha256": "6f9b47fe5f100b8a8b7b1578c14ff3a39ab1d5bc8808bd66b38692f5a1c4bc99"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/19c/light-1x.png",
+            "sha256": "eeace0e8250c3ca963e8346811fc5a955f31c835b91ece0d0949327db0ada115"
+          },
+          {
+            "path": "docs/review/atlas-craft-02/families/definitions.json",
+            "sha256": "e7f1e989e85a5a6e80cb5eadbca0ec0e2ded4f82b7191b85d07cddac86e532de"
+          },
+          {
+            "path": "docs/review/atlas-craft-02/families/06-produce.html",
+            "sha256": "9a660f22a80ab6bb0799b018aa6a85fedefe757b2457cc0f83e15d1affa37cd2"
+          },
+          {
+            "path": "docs/review/atlas-craft-02/families/06-produce-light-1x.png",
+            "sha256": "379386c0a36655ebb81bce285884a8e7e5b388ff50340c663d85f28179d8429e"
+          },
+          {
+            "path": "docs/review/atlas-craft-02/families/06-produce-light-2x.png",
+            "sha256": "9f720d5916aef75f62205a4c65fd188f3b7409a6266dae5f9deca59062fd0e33"
+          },
+          {
+            "path": "docs/review/atlas-craft-02/families/06-produce-dark-1x.png",
+            "sha256": "a761c0d3a22fff327c65a90c82fd473a42cd9b7c48a48b3e740c256d91fa4ad3"
+          },
+          {
+            "path": "docs/review/atlas-craft-02/families/06-produce-dark-2x.png",
+            "sha256": "c466b097fefc20073c2b633383165b999e5e1e7d3b0f2511e7679a7eee331fbf"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-02/families/06-produce-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-02/families/06-produce-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-02/families/06-produce-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-02/families/06-produce-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Tabler",
+        "license": "MIT",
+        "licenseFile": "licenses/tabler.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "citrus",
+      "purpose": "柑橘切片",
+      "recognitionCues": "半圓果皮及放射果瓣",
+      "confusableWith": [
+        "chart-pie",
+        "moon"
+      ],
+      "sourceObservation": "Lucide用斜切半圓與雙層皮線，Phosphor用水平半圓及放射分瓣。Master採水平排列，較大的果瓣內孔；16px取消第二條皮弧，20/24才保留雙層皮線。",
+      "references": [
+        {
+          "name": "citrus",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/citrus.svg",
+          "localPath": "references/atlas-01/lucide-citrus.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/citrus.svg",
+          "sha256": "f13e67c9f43b54d02fa52ef1104c14984178df311f08392cdb9ea697ec23d58b",
+          "license": "ISC AND MIT",
+          "sourceName": "citrus",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "citrus",
+          "library": "Phosphor",
+          "repository": "phosphor-icons/core",
+          "commit": "2b75f3ad12b420c9504ef05df8d2564a28f8500e",
+          "path": "assets/regular/orange-slice.svg",
+          "localPath": "references/atlas-01/phosphor-orange-slice.svg",
+          "url": "https://github.com/phosphor-icons/core/blob/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular/orange-slice.svg",
+          "sha256": "565b919b405a903c22f791bf7ef69a33f29b8f3379998d46162267efaa6ebea5",
+          "license": "MIT",
+          "sourceName": "orange-slice",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "食材以完整物體輪廓表意，沒有隱藏邊界或未完成狀態。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以空白和部件數量控制密度，沒有前後淡化需求。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "單色食材輪廓不需要連續漸層。"
+        }
+      },
+      "change": {
+        "kind": "new",
+        "before": null,
+        "reason": "新作以連續半圓構成果皮，分瓣墨線收在所屬內殼；共用直徑只畫一次，16px簡化皮線而保留放射果瓣。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "1b5b26a2c4a4d9a5587936fe10be0f8a4aab1b4a34b19e2bf129b1f255c5277e",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/20/review.html",
+            "sha256": "1ad9b3e3fbf461cbac9baf04ec234cb120d7b74967a8c7e5f2be855235dfcfc6"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/20/definitions.json",
+            "sha256": "1517259c5e346a9ab79d8863af168dd9a1ef6d4fffd8b06be199e51e3fdd6924"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/20/light-1x.png",
+            "sha256": "db24199980be1ad410bd3e2e60f608cbc8663ded8e73dc690678d7e800938564"
+          },
+          {
+            "path": "docs/review/atlas-craft-02/families/definitions.json",
+            "sha256": "e7f1e989e85a5a6e80cb5eadbca0ec0e2ded4f82b7191b85d07cddac86e532de"
+          },
+          {
+            "path": "docs/review/atlas-craft-02/families/06-produce.html",
+            "sha256": "9a660f22a80ab6bb0799b018aa6a85fedefe757b2457cc0f83e15d1affa37cd2"
+          },
+          {
+            "path": "docs/review/atlas-craft-02/families/06-produce-light-1x.png",
+            "sha256": "379386c0a36655ebb81bce285884a8e7e5b388ff50340c663d85f28179d8429e"
+          },
+          {
+            "path": "docs/review/atlas-craft-02/families/06-produce-light-2x.png",
+            "sha256": "9f720d5916aef75f62205a4c65fd188f3b7409a6266dae5f9deca59062fd0e33"
+          },
+          {
+            "path": "docs/review/atlas-craft-02/families/06-produce-dark-1x.png",
+            "sha256": "a761c0d3a22fff327c65a90c82fd473a42cd9b7c48a48b3e740c256d91fa4ad3"
+          },
+          {
+            "path": "docs/review/atlas-craft-02/families/06-produce-dark-2x.png",
+            "sha256": "c466b097fefc20073c2b633383165b999e5e1e7d3b0f2511e7679a7eee331fbf"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-02/families/06-produce-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-02/families/06-produce-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-02/families/06-produce-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-02/families/06-produce-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Phosphor",
+        "license": "MIT",
+        "licenseFile": "licenses/phosphor.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "banana",
+      "purpose": "香蕉",
+      "recognitionCues": "上揚果梗與飽滿月牙形果身",
+      "confusableWith": [
+        "moon",
+        "phone"
+      ],
+      "sourceObservation": "Lucide表示剝皮香蕉，多條交叉皮瓣在16px較密；Tabler是未剝皮月牙。Master選未剝皮語意，讓下腹更飽滿、果梗直立收束，不混用剝皮的零件。",
+      "references": [
+        {
+          "name": "banana",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/banana.svg",
+          "localPath": "references/atlas-01/lucide-banana.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/banana.svg",
+          "sha256": "10cac7a65ff3eefedca4724e4ef1db777da7297d08c2e355d1f67414c5cb960c",
+          "license": "ISC AND MIT",
+          "sourceName": "banana",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "banana",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/banana.svg",
+          "localPath": "references/atlas-01/tabler-banana.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/banana.svg",
+          "sha256": "081862ef99cf7c16073183eab8def762476c49dd052b0e0144fc13e2e5d0e632",
+          "license": "MIT",
+          "sourceName": "banana",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "食材以完整物體輪廓表意，沒有隱藏邊界或未完成狀態。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以空白和部件數量控制密度，沒有前後淡化需求。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "單色食材輪廓不需要連續漸層。"
+        }
+      },
+      "change": {
+        "kind": "new",
+        "before": null,
+        "reason": "新作以單一閉合曲線連接寬下腹與細果梗；內側弧與外側弧保持連續，沒有為裝飾增加果皮中線。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "6aa0cc27b9f00883fd3659edb6e793ee29fdd75c8f01630e6d72920b72a30417",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/20/review.html",
+            "sha256": "1ad9b3e3fbf461cbac9baf04ec234cb120d7b74967a8c7e5f2be855235dfcfc6"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/20/definitions.json",
+            "sha256": "1517259c5e346a9ab79d8863af168dd9a1ef6d4fffd8b06be199e51e3fdd6924"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/20/light-1x.png",
+            "sha256": "db24199980be1ad410bd3e2e60f608cbc8663ded8e73dc690678d7e800938564"
+          },
+          {
+            "path": "docs/review/atlas-craft-02/families/definitions.json",
+            "sha256": "e7f1e989e85a5a6e80cb5eadbca0ec0e2ded4f82b7191b85d07cddac86e532de"
+          },
+          {
+            "path": "docs/review/atlas-craft-02/families/06-produce.html",
+            "sha256": "9a660f22a80ab6bb0799b018aa6a85fedefe757b2457cc0f83e15d1affa37cd2"
+          },
+          {
+            "path": "docs/review/atlas-craft-02/families/06-produce-light-1x.png",
+            "sha256": "379386c0a36655ebb81bce285884a8e7e5b388ff50340c663d85f28179d8429e"
+          },
+          {
+            "path": "docs/review/atlas-craft-02/families/06-produce-light-2x.png",
+            "sha256": "9f720d5916aef75f62205a4c65fd188f3b7409a6266dae5f9deca59062fd0e33"
+          },
+          {
+            "path": "docs/review/atlas-craft-02/families/06-produce-dark-1x.png",
+            "sha256": "a761c0d3a22fff327c65a90c82fd473a42cd9b7c48a48b3e740c256d91fa4ad3"
+          },
+          {
+            "path": "docs/review/atlas-craft-02/families/06-produce-dark-2x.png",
+            "sha256": "c466b097fefc20073c2b633383165b999e5e1e7d3b0f2511e7679a7eee331fbf"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-02/families/06-produce-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-02/families/06-produce-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-02/families/06-produce-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-02/families/06-produce-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Tabler",
+        "license": "MIT",
+        "licenseFile": "licenses/tabler.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "carrot",
+      "purpose": "胡蘿蔔",
+      "recognitionCues": "漸尖根部、短根紋與舒展葉柄",
+      "confusableWith": [
+        "corn",
+        "pencil"
+      ],
+      "sourceObservation": "兩份來源均用斜向尖根與短根紋；Lucide的雙空心葉及Tabler的葉環在小尺寸較密。Master用三條舒展葉柄，保留尖根輪廓；16px只留一筆根紋，20/24兩筆。",
+      "references": [
+        {
+          "name": "carrot",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/carrot.svg",
+          "localPath": "references/atlas-01/lucide-carrot.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/carrot.svg",
+          "sha256": "dd9d026ad2b192a28d72086ca6c1fa3047f313058ff7547f5b9c1c4d50b9b857",
+          "license": "ISC AND MIT",
+          "sourceName": "carrot",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "carrot",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/carrot.svg",
+          "localPath": "references/atlas-01/tabler-carrot.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/carrot.svg",
+          "sha256": "ac5f7f612a7d0d508509a46395d34778f3688a7375d877336de45938962985bd",
+          "license": "MIT",
+          "sourceName": "carrot",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "食材以完整物體輪廓表意，沒有隱藏邊界或未完成狀態。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以空白和部件數量控制密度，沒有前後淡化需求。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "單色食材輪廓不需要連續漸層。"
+        }
+      },
+      "change": {
+        "kind": "new",
+        "before": null,
+        "reason": "新作重畫根部漸尖曲面，根紋裁在殼內、葉柄裁在殼外，相連而不侵入空腔；16px刪除第二道根紋。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "ef434ef72c06d296164d51bb8b7c4207623b92fdd2186420f2531fdc3c4ad5f8",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/20/review.html",
+            "sha256": "1ad9b3e3fbf461cbac9baf04ec234cb120d7b74967a8c7e5f2be855235dfcfc6"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/20/definitions.json",
+            "sha256": "1517259c5e346a9ab79d8863af168dd9a1ef6d4fffd8b06be199e51e3fdd6924"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/20/light-1x.png",
+            "sha256": "db24199980be1ad410bd3e2e60f608cbc8663ded8e73dc690678d7e800938564"
+          },
+          {
+            "path": "docs/review/atlas-craft-02/families/definitions.json",
+            "sha256": "e7f1e989e85a5a6e80cb5eadbca0ec0e2ded4f82b7191b85d07cddac86e532de"
+          },
+          {
+            "path": "docs/review/atlas-craft-02/families/06-produce.html",
+            "sha256": "9a660f22a80ab6bb0799b018aa6a85fedefe757b2457cc0f83e15d1affa37cd2"
+          },
+          {
+            "path": "docs/review/atlas-craft-02/families/06-produce-light-1x.png",
+            "sha256": "379386c0a36655ebb81bce285884a8e7e5b388ff50340c663d85f28179d8429e"
+          },
+          {
+            "path": "docs/review/atlas-craft-02/families/06-produce-light-2x.png",
+            "sha256": "9f720d5916aef75f62205a4c65fd188f3b7409a6266dae5f9deca59062fd0e33"
+          },
+          {
+            "path": "docs/review/atlas-craft-02/families/06-produce-dark-1x.png",
+            "sha256": "a761c0d3a22fff327c65a90c82fd473a42cd9b7c48a48b3e740c256d91fa4ad3"
+          },
+          {
+            "path": "docs/review/atlas-craft-02/families/06-produce-dark-2x.png",
+            "sha256": "c466b097fefc20073c2b633383165b999e5e1e7d3b0f2511e7679a7eee331fbf"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-02/families/06-produce-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-02/families/06-produce-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-02/families/06-produce-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-02/families/06-produce-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Lucide",
+        "license": "ISC",
+        "licenseFile": "licenses/lucide.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "corn",
+      "purpose": "玉米",
+      "recognitionCues": "長穗、分列籽粒與兩側苞葉",
+      "confusableWith": [
+        "wheat",
+        "sprout"
+      ],
+      "sourceObservation": "Hugeicons採斜向完整穗與包葉，沒有小籽粒線；MDI用直立穗格和實心苞葉。Master獨立構造對稱的穗與兩片空心包葉，兼顧完整輪廓和較寬葉內空白，16px減少穗格。",
+      "references": [
+        {
+          "name": "corn",
+          "library": "Hugeicons Free",
+          "repository": "hugeicons/hugeicons",
+          "commit": "834e28d965946c1ee60d080027fe9dae4adc58d0",
+          "path": "icons/corn.svg",
+          "localPath": "references/atlas-01/hugeicons-corn.svg",
+          "url": "https://github.com/hugeicons/hugeicons/blob/834e28d965946c1ee60d080027fe9dae4adc58d0/icons/corn.svg",
+          "sha256": "0c473f953071348768348547c4469792a88a3a053a3286866eb40d0746c2698a",
+          "license": "MIT",
+          "sourceName": "corn",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "corn",
+          "library": "Material Design Icons",
+          "repository": "Templarian/MaterialDesign",
+          "commit": "2424e748e0cc63ab7b9c095a099b9fe239b737c0",
+          "path": "svg/corn.svg",
+          "localPath": "references/atlas-01/mdi-corn.svg",
+          "url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/corn.svg",
+          "sha256": "cba9e8f11a50cccfc8cc27f51e3cfdd5b7d45f0af9c0d50f95273120801aa0ed",
+          "license": "Apache-2.0",
+          "sourceName": "corn",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "食材以完整物體輪廓表意，沒有隱藏邊界或未完成狀態。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以空白和部件數量控制密度，沒有前後淡化需求。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "單色食材輪廓不需要連續漸層。"
+        }
+      },
+      "change": {
+        "kind": "new",
+        "before": null,
+        "reason": "新作把穗與苞葉連成共同外輪廓，避免重疊三個封閉小框；16px省略中央縱線，兩道橫列仍交代籽粒。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "8239fb333a65186be25c7c657d1270f13add24cce8f5831383d5e3e3d12742d4",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/21/review.html",
+            "sha256": "e30cf24e4edd2a237e1561bd7f308a76c1b91193977603c0f06a94f8462c1460"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/21/definitions.json",
+            "sha256": "a40fa971fbc842cd27e8210d5bd9b3bf7c2e0a01c1ede8ca074cdf896910fb0c"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/21/light-1x.png",
+            "sha256": "03988e447f6c51bb1df220e4f123c303ee0384b389bd440a67df8385c98bf949"
+          },
+          {
+            "path": "docs/review/atlas-craft-02/families/definitions.json",
+            "sha256": "e7f1e989e85a5a6e80cb5eadbca0ec0e2ded4f82b7191b85d07cddac86e532de"
+          },
+          {
+            "path": "docs/review/atlas-craft-02/families/06-produce.html",
+            "sha256": "9a660f22a80ab6bb0799b018aa6a85fedefe757b2457cc0f83e15d1affa37cd2"
+          },
+          {
+            "path": "docs/review/atlas-craft-02/families/06-produce-light-1x.png",
+            "sha256": "379386c0a36655ebb81bce285884a8e7e5b388ff50340c663d85f28179d8429e"
+          },
+          {
+            "path": "docs/review/atlas-craft-02/families/06-produce-light-2x.png",
+            "sha256": "9f720d5916aef75f62205a4c65fd188f3b7409a6266dae5f9deca59062fd0e33"
+          },
+          {
+            "path": "docs/review/atlas-craft-02/families/06-produce-dark-1x.png",
+            "sha256": "a761c0d3a22fff327c65a90c82fd473a42cd9b7c48a48b3e740c256d91fa4ad3"
+          },
+          {
+            "path": "docs/review/atlas-craft-02/families/06-produce-dark-2x.png",
+            "sha256": "c466b097fefc20073c2b633383165b999e5e1e7d3b0f2511e7679a7eee331fbf"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-02/families/06-produce-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-02/families/06-produce-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-02/families/06-produce-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-02/families/06-produce-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "independent-construction"
+      },
+      "remaining": []
+    },
+    {
+      "name": "mushroom",
+      "purpose": "蘑菇",
+      "recognitionCues": "寬圓菌蓋與短粗菌柄",
+      "confusableWith": [
+        "tree-deciduous",
+        "tree-pine"
+      ],
+      "sourceObservation": "Hugeicons菌蓋帶斑點、菌柄向外張；Tabler只用半圓蓋與短圓柄。Master採後者的清楚兩部構造，加寬菌柄孔、把菌蓋側腹做成連續曲線，不添加小斑點。",
+      "references": [
+        {
+          "name": "mushroom",
+          "library": "Hugeicons Free",
+          "repository": "hugeicons/hugeicons",
+          "commit": "834e28d965946c1ee60d080027fe9dae4adc58d0",
+          "path": "icons/mushroom-01.svg",
+          "localPath": "references/atlas-01/hugeicons-mushroom-01.svg",
+          "url": "https://github.com/hugeicons/hugeicons/blob/834e28d965946c1ee60d080027fe9dae4adc58d0/icons/mushroom-01.svg",
+          "sha256": "bc58f50fdff7f9fc03424052518c41c9935642cf46fb44f58c10353182021314",
+          "license": "MIT",
+          "sourceName": "mushroom-01",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "mushroom",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/mushroom.svg",
+          "localPath": "references/atlas-01/tabler-mushroom.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/mushroom.svg",
+          "sha256": "eb9fd68b2d48424af74ce9af3b54e9973c31c6f616cdae52e72f858c406960e0",
+          "license": "MIT",
+          "sourceName": "mushroom",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "食材以完整物體輪廓表意，沒有隱藏邊界或未完成狀態。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以空白和部件數量控制密度，沒有前後淡化需求。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "單色食材輪廓不需要連續漸層。"
+        }
+      },
+      "change": {
+        "kind": "new",
+        "before": null,
+        "reason": "新作保留寬蓋、平底及圓收菌柄；菌柄在蓋下相接，沒有伸進菌蓋的雙直線，16px仍有明確柄內留白。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "9402cce78146261cecb0d755fb68e3bc3a87171352ae1703041b6610e0b428cc",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/21/review.html",
+            "sha256": "e30cf24e4edd2a237e1561bd7f308a76c1b91193977603c0f06a94f8462c1460"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/21/definitions.json",
+            "sha256": "a40fa971fbc842cd27e8210d5bd9b3bf7c2e0a01c1ede8ca074cdf896910fb0c"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/21/light-1x.png",
+            "sha256": "03988e447f6c51bb1df220e4f123c303ee0384b389bd440a67df8385c98bf949"
+          },
+          {
+            "path": "docs/review/atlas-craft-02/families/definitions.json",
+            "sha256": "e7f1e989e85a5a6e80cb5eadbca0ec0e2ded4f82b7191b85d07cddac86e532de"
+          },
+          {
+            "path": "docs/review/atlas-craft-02/families/06-produce.html",
+            "sha256": "9a660f22a80ab6bb0799b018aa6a85fedefe757b2457cc0f83e15d1affa37cd2"
+          },
+          {
+            "path": "docs/review/atlas-craft-02/families/06-produce-light-1x.png",
+            "sha256": "379386c0a36655ebb81bce285884a8e7e5b388ff50340c663d85f28179d8429e"
+          },
+          {
+            "path": "docs/review/atlas-craft-02/families/06-produce-light-2x.png",
+            "sha256": "9f720d5916aef75f62205a4c65fd188f3b7409a6266dae5f9deca59062fd0e33"
+          },
+          {
+            "path": "docs/review/atlas-craft-02/families/06-produce-dark-1x.png",
+            "sha256": "a761c0d3a22fff327c65a90c82fd473a42cd9b7c48a48b3e740c256d91fa4ad3"
+          },
+          {
+            "path": "docs/review/atlas-craft-02/families/06-produce-dark-2x.png",
+            "sha256": "c466b097fefc20073c2b633383165b999e5e1e7d3b0f2511e7679a7eee331fbf"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-02/families/06-produce-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-02/families/06-produce-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-02/families/06-produce-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-02/families/06-produce-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Tabler",
+        "license": "MIT",
+        "licenseFile": "licenses/tabler.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "egg",
+      "purpose": "雞蛋",
+      "recognitionCues": "上窄下寬且連續的卵形輪廓",
+      "confusableWith": [
+        "droplet",
+        "circle"
+      ],
+      "sourceObservation": "兩份來源都是上端較窄的卵形，Lucide較飽滿、Tabler較細長。Master用四段對稱曲線建立較寬下腹及較緩底部，與圓形和尖頂水滴區分。",
+      "references": [
+        {
+          "name": "egg",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/egg.svg",
+          "localPath": "references/atlas-01/lucide-egg.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/egg.svg",
+          "sha256": "dcb5af7408bb9d49fd2286d705e0d3099faf2b0a7169c2dbba77cd702d47ab49",
+          "license": "ISC AND MIT",
+          "sourceName": "egg",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "egg",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/egg.svg",
+          "localPath": "references/atlas-01/tabler-egg.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/egg.svg",
+          "sha256": "5702f7eabaaf6ec4afc3dd6bcf3b7f48ce44cd7415b60e4bf6538c04d7dbd011",
+          "license": "MIT",
+          "sourceName": "egg",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "食材以完整物體輪廓表意，沒有隱藏邊界或未完成狀態。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以空白和部件數量控制密度，沒有前後淡化需求。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "單色食材輪廓不需要連續漸層。"
+        }
+      },
+      "change": {
+        "kind": "new",
+        "before": null,
+        "reason": "新作以單一連續卵形表意；肩部與腹部切線相接，底部左右平滑，不為角型差異破壞蛋的自然曲面。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "67a5221e79cb11a2d701621b3d3e8de1495a1b59f43603028b18eaf3b59fac08",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/22/review.html",
+            "sha256": "c089dfd68f7717d9fe8dfbcd60aa7a736adc8e3672c0e691363b291d42d3bbb3"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/22/definitions.json",
+            "sha256": "ec4e01a67d06175d49988eb7e0f18040abe9ab881ebfaa4c4e52524ae55be590"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/22/light-1x.png",
+            "sha256": "a73055568a645615ff36fb3fb803925ff51b730fa52a194db2fd290a1e8e5be2"
+          },
+          {
+            "path": "docs/review/atlas-craft-02/families/definitions.json",
+            "sha256": "e7f1e989e85a5a6e80cb5eadbca0ec0e2ded4f82b7191b85d07cddac86e532de"
+          },
+          {
+            "path": "docs/review/atlas-craft-02/families/06-produce.html",
+            "sha256": "9a660f22a80ab6bb0799b018aa6a85fedefe757b2457cc0f83e15d1affa37cd2"
+          },
+          {
+            "path": "docs/review/atlas-craft-02/families/06-produce-light-1x.png",
+            "sha256": "379386c0a36655ebb81bce285884a8e7e5b388ff50340c663d85f28179d8429e"
+          },
+          {
+            "path": "docs/review/atlas-craft-02/families/06-produce-light-2x.png",
+            "sha256": "9f720d5916aef75f62205a4c65fd188f3b7409a6266dae5f9deca59062fd0e33"
+          },
+          {
+            "path": "docs/review/atlas-craft-02/families/06-produce-dark-1x.png",
+            "sha256": "a761c0d3a22fff327c65a90c82fd473a42cd9b7c48a48b3e740c256d91fa4ad3"
+          },
+          {
+            "path": "docs/review/atlas-craft-02/families/06-produce-dark-2x.png",
+            "sha256": "c466b097fefc20073c2b633383165b999e5e1e7d3b0f2511e7679a7eee331fbf"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-02/families/06-produce-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-02/families/06-produce-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-02/families/06-produce-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-02/families/06-produce-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "independent-construction"
+      },
+      "remaining": []
+    },
+    {
+      "name": "wheat",
+      "purpose": "小麥",
+      "recognitionCues": "頂端穀粒、成對側穀粒與直莖",
+      "confusableWith": [
+        "sprout",
+        "corn"
+      ],
+      "sourceObservation": "Lucide以斜向多對穀粒表意，Tabler用頂粒與一對側粒。Master採三粒簡化構造，頂粒保持尖收、側粒展開、莖在共同軸線上，避免多對穀粒互相擠壓。",
+      "references": [
+        {
+          "name": "wheat",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/wheat.svg",
+          "localPath": "references/atlas-01/lucide-wheat.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/wheat.svg",
+          "sha256": "d18be93cdd1ea09f28e66c69c04927c5f919c09a3bc6d7553ebb1fc85a5b828d",
+          "license": "ISC AND MIT",
+          "sourceName": "wheat",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "wheat",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/wheat.svg",
+          "localPath": "references/atlas-01/tabler-wheat.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/wheat.svg",
+          "sha256": "7d6941ba175882fd2b50c37f68a481b9e99f9a13ec3436aa957db9a3a4363cdd",
+          "license": "MIT",
+          "sourceName": "wheat",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "食材以完整物體輪廓表意，沒有隱藏邊界或未完成狀態。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以空白和部件數量控制密度，沒有前後淡化需求。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "單色食材輪廓不需要連續漸層。"
+        }
+      },
+      "change": {
+        "kind": "new",
+        "before": null,
+        "reason": "新作重畫三枚穀粒及直莖，保持頂粒和側粒的孔，收口與莖相連；同時以頂粒區分只有兩葉的幼苗。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "9fae8f602a98362d618675e1bb663b563d93173606dffe4b3c315e707159c228",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/21/review.html",
+            "sha256": "e30cf24e4edd2a237e1561bd7f308a76c1b91193977603c0f06a94f8462c1460"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/21/definitions.json",
+            "sha256": "a40fa971fbc842cd27e8210d5bd9b3bf7c2e0a01c1ede8ca074cdf896910fb0c"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/21/light-1x.png",
+            "sha256": "03988e447f6c51bb1df220e4f123c303ee0384b389bd440a67df8385c98bf949"
+          },
+          {
+            "path": "docs/review/atlas-craft-02/families/definitions.json",
+            "sha256": "e7f1e989e85a5a6e80cb5eadbca0ec0e2ded4f82b7191b85d07cddac86e532de"
+          },
+          {
+            "path": "docs/review/atlas-craft-02/families/06-produce.html",
+            "sha256": "9a660f22a80ab6bb0799b018aa6a85fedefe757b2457cc0f83e15d1affa37cd2"
+          },
+          {
+            "path": "docs/review/atlas-craft-02/families/06-produce-light-1x.png",
+            "sha256": "379386c0a36655ebb81bce285884a8e7e5b388ff50340c663d85f28179d8429e"
+          },
+          {
+            "path": "docs/review/atlas-craft-02/families/06-produce-light-2x.png",
+            "sha256": "9f720d5916aef75f62205a4c65fd188f3b7409a6266dae5f9deca59062fd0e33"
+          },
+          {
+            "path": "docs/review/atlas-craft-02/families/06-produce-dark-1x.png",
+            "sha256": "a761c0d3a22fff327c65a90c82fd473a42cd9b7c48a48b3e740c256d91fa4ad3"
+          },
+          {
+            "path": "docs/review/atlas-craft-02/families/06-produce-dark-2x.png",
+            "sha256": "c466b097fefc20073c2b633383165b999e5e1e7d3b0f2511e7679a7eee331fbf"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-02/families/06-produce-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-02/families/06-produce-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-02/families/06-produce-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-02/families/06-produce-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Tabler",
+        "license": "MIT",
+        "licenseFile": "licenses/tabler.txt"
+      },
+      "remaining": []
+    }
+  ]
+}

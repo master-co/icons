@@ -1,0 +1,1537 @@
+{
+  "schemaVersion": 2,
+  "reviewer": "Codex (AI)",
+  "userApproval": "pending",
+  "icons": [
+    {
+      "name": "atom",
+      "purpose": "原子",
+      "recognitionCues": "交叉橢圓軌道與中央原子核",
+      "confusableWith": [
+        "orbit",
+        "dna"
+      ],
+      "sourceObservation": "Lucide與Phosphor都用兩組交叉長橢圓，避免多軌道塞滿中央。最新稿按共用長短軸重畫兩軌道，核以小實心點表示；原生回比中，四瓣與中央空腔各自成立，圓點沒有變成另一個環或搶過軌道。",
+      "references": [
+        {
+          "name": "atom",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/atom.svg",
+          "localPath": "references/atlas-01/lucide-atom.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/atom.svg",
+          "sha256": "9ac2f48402368cb4e4db5c59371698a86f35598c8b8076411bfdfdd63550ffd8",
+          "license": "ISC AND MIT",
+          "sourceName": "atom",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "atom",
+          "library": "Phosphor",
+          "repository": "phosphor-icons/core",
+          "commit": "2b75f3ad12b420c9504ef05df8d2564a28f8500e",
+          "path": "assets/regular/atom.svg",
+          "localPath": "references/atlas-01/phosphor-atom.svg",
+          "url": "https://github.com/phosphor-icons/core/blob/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular/atom.svg",
+          "sha256": "fcaf798c130924dd93a3de5c66ee492143ba2a2c72cd3f606a3087c597d59961",
+          "license": "MIT",
+          "sourceName": "atom",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "器材輪廓與模型連結已表達語意，不添加裝飾虛線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "瓶壁與液面、軌道與天體用輪廓區分，不需透明度層級。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "科學符號及器具採平面單色，不模擬玻璃漸層材質。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-14/master-before.json",
+          "variantsSha256": "89039b9d8caccde0905630c33e8cd7e51a30f07e5e0a84a736a028b812987ddc"
+        },
+        "reason": "兩條橢圓以相同參數及相反角度建構，對稱交會並保留中央空間；原子核依16/20/24分別控制點徑，不以增加第三軌道充實畫面。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "bc66255f3e4afda2f0e3e0d44dc08fad7e580434643c2fe3c71cc22c38e5ae45",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/64-atom-flasks/review.html",
+            "sha256": "eb2d37829e7793be861918279d122204cfcfa8143b809a7c9916943349f1e017"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/64-atom-flasks/definitions.json",
+            "sha256": "f908204f86ee84ba25e9260ff0164c4095df9654fa82675952a8f2376ea17642"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/64-atom-flasks/light-1x.png",
+            "sha256": "fe03ab9014d5006e43c0ddd0df2454d4ed667abe6ec74502aada5a5e63a6cc17"
+          },
+          {
+            "path": "docs/review/atlas-craft-14/final-v2/definitions.json",
+            "sha256": "47c55d7f4e4a7ac69a59fe8322cb6e71a15c524ab552b6cb4f8f6464e5961441"
+          },
+          {
+            "path": "docs/review/atlas-craft-14/final-v2/16-science.html",
+            "sha256": "a74bc368c0c11eb315786cb8fa2af0b006f86b7e8de06cb6a8f799c36a60fda3"
+          },
+          {
+            "path": "docs/review/atlas-craft-14/final-v2/16-science-light-1x.png",
+            "sha256": "d53aca9836fd56b3d554bd99411ffbddc56f1c2c32b5ab24a4c97a2246e32072"
+          },
+          {
+            "path": "docs/review/atlas-craft-14/final-v2/16-science-light-2x.png",
+            "sha256": "99823584baf436efbe443489fafb83571b3004cf18d5a11540c2d135f89f06ba"
+          },
+          {
+            "path": "docs/review/atlas-craft-14/final-v2/16-science-dark-1x.png",
+            "sha256": "60e770401c62ca5a7c37aa6853ca84300381e50840987a788acfc72ed9a34fe7"
+          },
+          {
+            "path": "docs/review/atlas-craft-14/final-v2/16-science-dark-2x.png",
+            "sha256": "613d7aee615fffe557fa9a667379878c9bbffe4c688dcc1402f67e416003fdf6"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-14/final-v2/16-science-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-14/final-v2/16-science-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-14/final-v2/16-science-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-14/final-v2/16-science-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Lucide",
+        "license": "ISC",
+        "licenseFile": "licenses/lucide.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "flask-conical",
+      "purpose": "錐形瓶",
+      "recognitionCues": "長瓶頸、錐形瓶腹、平底與液面",
+      "confusableWith": [
+        "flask-round",
+        "test-tube"
+      ],
+      "sourceObservation": "Lucide以液面分界和略圓底角表達錐形瓶，Tabler更接近直斜邊的空瓶。最新稿採寬底與一筆液面，回比後瓶頸孔與下方液體區域保持足夠留白，底座提供穩定支承；沒有加入刻度或氣泡。",
+      "references": [
+        {
+          "name": "flask-conical",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/flask-conical.svg",
+          "localPath": "references/atlas-01/lucide-flask-conical.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/flask-conical.svg",
+          "sha256": "a2ce857c159bef4c128a6d9f0b6dcbd6504ecf1a2a670ee220efd14fd032b561",
+          "license": "ISC AND MIT",
+          "sourceName": "flask-conical",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "flask-conical",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/flask.svg",
+          "localPath": "references/atlas-01/tabler-flask.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/flask.svg",
+          "sha256": "28459e1fcdf7e9d8b0664aa3fe350995c4df3dda6ee9823351df3ea0f5714d17",
+          "license": "MIT",
+          "sourceName": "flask",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "器材輪廓與模型連結已表達語意，不添加裝飾虛線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "瓶壁與液面、軌道與天體用輪廓區分，不需透明度層級。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "科學符號及器具採平面單色，不模擬玻璃漸層材質。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-14/master-before.json",
+          "variantsSha256": "b7a82dd0756ae1075aa33e3028e445a2f9f525897cec71681f8eb3a48c4642e9"
+        },
+        "reason": "瓶口、直頸、斜腹和平底構成連續封閉外輪廓，底角做真正的角型半徑；液面描邊裁在瓶壁內，頸部不與液面擠成狹縫。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "a863c406a4983b4c1aefc169c50c07da0b77bc98b09df1abf492f9a3d16728b8",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/64-atom-flasks/review.html",
+            "sha256": "eb2d37829e7793be861918279d122204cfcfa8143b809a7c9916943349f1e017"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/64-atom-flasks/definitions.json",
+            "sha256": "f908204f86ee84ba25e9260ff0164c4095df9654fa82675952a8f2376ea17642"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/64-atom-flasks/light-1x.png",
+            "sha256": "fe03ab9014d5006e43c0ddd0df2454d4ed667abe6ec74502aada5a5e63a6cc17"
+          },
+          {
+            "path": "docs/review/atlas-craft-14/final-v2/definitions.json",
+            "sha256": "47c55d7f4e4a7ac69a59fe8322cb6e71a15c524ab552b6cb4f8f6464e5961441"
+          },
+          {
+            "path": "docs/review/atlas-craft-14/final-v2/16-science.html",
+            "sha256": "a74bc368c0c11eb315786cb8fa2af0b006f86b7e8de06cb6a8f799c36a60fda3"
+          },
+          {
+            "path": "docs/review/atlas-craft-14/final-v2/16-science-light-1x.png",
+            "sha256": "d53aca9836fd56b3d554bd99411ffbddc56f1c2c32b5ab24a4c97a2246e32072"
+          },
+          {
+            "path": "docs/review/atlas-craft-14/final-v2/16-science-light-2x.png",
+            "sha256": "99823584baf436efbe443489fafb83571b3004cf18d5a11540c2d135f89f06ba"
+          },
+          {
+            "path": "docs/review/atlas-craft-14/final-v2/16-science-dark-1x.png",
+            "sha256": "60e770401c62ca5a7c37aa6853ca84300381e50840987a788acfc72ed9a34fe7"
+          },
+          {
+            "path": "docs/review/atlas-craft-14/final-v2/16-science-dark-2x.png",
+            "sha256": "613d7aee615fffe557fa9a667379878c9bbffe4c688dcc1402f67e416003fdf6"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-14/final-v2/16-science-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-14/final-v2/16-science-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-14/final-v2/16-science-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-14/final-v2/16-science-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Lucide",
+        "license": "ISC",
+        "licenseFile": "licenses/lucide.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "flask-round",
+      "purpose": "圓底燒瓶",
+      "recognitionCues": "瓶頸、連續收肩、圓形瓶腹與液面",
+      "confusableWith": [
+        "flask-conical",
+        "test-tube"
+      ],
+      "sourceObservation": "原先Tabler flask-2偏平底，最後改用真正圓底的Hugeicons與Lucide。Hugeicons瓶頸至肩部有自然收束，比前稿直接將頸接圓弧成熟；最新稿依此重建連續收肩、略放寬圓腹，保留水平液面。完稿16/20/24回比，器皿神韻由輪廓承接表達，沒有再加內線。",
+      "references": [
+        {
+          "name": "flask-round",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/flask-round.svg",
+          "localPath": "references/atlas-01/lucide-flask-round.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/flask-round.svg",
+          "sha256": "e1cb2dd0797e277663c1b1c22a22fe5b5adc6fc3872bbd70115910b2ef997ff0",
+          "license": "ISC AND MIT",
+          "sourceName": "flask-round",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "flask-round",
+          "library": "Hugeicons Free",
+          "repository": "hugeicons/hugeicons",
+          "commit": "834e28d965946c1ee60d080027fe9dae4adc58d0",
+          "path": "icons/flask-round.svg",
+          "localPath": "references/atlas-01/hugeicons-flask-round.svg",
+          "url": "https://github.com/hugeicons/hugeicons/blob/834e28d965946c1ee60d080027fe9dae4adc58d0/icons/flask-round.svg",
+          "sha256": "49bf2546facb88bd05d185db78924c9bcb385da11910b93df14bc4c1e56fbecb",
+          "license": "MIT",
+          "sourceName": "flask-round",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "器材輪廓與模型連結已表達語意，不添加裝飾虛線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "瓶壁與液面、軌道與天體用輪廓區分，不需透明度層級。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "科學符號及器具採平面單色，不模擬玻璃漸層材質。"
+        }
+      },
+      "change": {
+        "kind": "modified",
+        "before": {
+          "path": "references/atlas-craft-14/master-before.json",
+          "variantsSha256": "1ce496c403e360c564a2ee5eeefacb1d3500d9d02798527023d82d862634dd88"
+        },
+        "reason": "瓶腹半徑由7改為7.5，瓶頸先以曲線收肩，再按圓弧切線接入完整圓腹；液面仍為水平，不照搬來源晃動水紋。保存原稿以顯示肩部的實際修整。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "e610f3c4a3c21a5e093133335fe2a34fe4fd149a31298f884f7b0a3e44276c7a",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/64b-flask-round/review.html",
+            "sha256": "3243d31a54c71396a26ac8b71530c8e85dd611788b073f6aaf6f43b7fcd3c0b9"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/64b-flask-round/definitions.json",
+            "sha256": "3e12410401a626628358a9f3a6e819a2b45d9e0d4828daecfd308b8c7b7604d1"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/64b-flask-round/light-1x.png",
+            "sha256": "b591c1a28ce94bc1ecd5974326422915a700bce28570feb9433d49fba82c4f2e"
+          },
+          {
+            "path": "docs/review/atlas-craft-14/final-v2/definitions.json",
+            "sha256": "47c55d7f4e4a7ac69a59fe8322cb6e71a15c524ab552b6cb4f8f6464e5961441"
+          },
+          {
+            "path": "docs/review/atlas-craft-14/final-v2/16-science.html",
+            "sha256": "a74bc368c0c11eb315786cb8fa2af0b006f86b7e8de06cb6a8f799c36a60fda3"
+          },
+          {
+            "path": "docs/review/atlas-craft-14/final-v2/16-science-light-1x.png",
+            "sha256": "d53aca9836fd56b3d554bd99411ffbddc56f1c2c32b5ab24a4c97a2246e32072"
+          },
+          {
+            "path": "docs/review/atlas-craft-14/final-v2/16-science-light-2x.png",
+            "sha256": "99823584baf436efbe443489fafb83571b3004cf18d5a11540c2d135f89f06ba"
+          },
+          {
+            "path": "docs/review/atlas-craft-14/final-v2/16-science-dark-1x.png",
+            "sha256": "60e770401c62ca5a7c37aa6853ca84300381e50840987a788acfc72ed9a34fe7"
+          },
+          {
+            "path": "docs/review/atlas-craft-14/final-v2/16-science-dark-2x.png",
+            "sha256": "613d7aee615fffe557fa9a667379878c9bbffe4c688dcc1402f67e416003fdf6"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-14/final-v2/16-science-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-14/final-v2/16-science-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-14/final-v2/16-science-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-14/final-v2/16-science-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Hugeicons Free",
+        "license": "MIT",
+        "licenseFile": "licenses/hugeicons-MIT.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "test-tube",
+      "purpose": "試管",
+      "recognitionCues": "管口、細長管身、半圓底與液面",
+      "confusableWith": [
+        "flask-conical",
+        "thermometer"
+      ],
+      "sourceObservation": "Lucide直立試管的細長身形清楚，Phosphor斜置試管用曲線液面增加動勢。最新稿採直立姿態並略放寬管徑，與同批瓶口共用外伸唇邊；原生回比仍是試管，不需試管架或刻度補辨識。",
+      "references": [
+        {
+          "name": "test-tube",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/test-tube.svg",
+          "localPath": "references/atlas-01/lucide-test-tube.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/test-tube.svg",
+          "sha256": "081d442a1c7652a6dbc6abc0301edc39d7b6b97abb787fe389f60ae2d2865ad6",
+          "license": "ISC AND MIT",
+          "sourceName": "test-tube",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "test-tube",
+          "library": "Phosphor",
+          "repository": "phosphor-icons/core",
+          "commit": "2b75f3ad12b420c9504ef05df8d2564a28f8500e",
+          "path": "assets/regular/test-tube.svg",
+          "localPath": "references/atlas-01/phosphor-test-tube.svg",
+          "url": "https://github.com/phosphor-icons/core/blob/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular/test-tube.svg",
+          "sha256": "1abc795b2c617d3a829024765aae29055bf783357c5471a0feea806e1d4662ce",
+          "license": "MIT",
+          "sourceName": "test-tube",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "器材輪廓與模型連結已表達語意，不添加裝飾虛線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "瓶壁與液面、軌道與天體用輪廓區分，不需透明度層級。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "科學符號及器具採平面單色，不模擬玻璃漸層材質。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-14/master-before.json",
+          "variantsSha256": "b320fa5523f0f1c1411f35f6e98e01a22ace509b2f7f55f98c6b946150866114"
+        },
+        "reason": "直管連續接入半圓底，液面設於下段而保留長空管；口沿和兩側壁同軸，液面墨跡在外殼內收口。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "8f64c0080268d6ae6626cfe114ab4cabf1b7fd2fe3a4dc9434740ed0ec7baf1d",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/65-tube-microscope-telescope/review.html",
+            "sha256": "3017ddb61124369fc119479834c4a8c82832a5cbc56b90d57c661592b49399cb"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/65-tube-microscope-telescope/definitions.json",
+            "sha256": "6864d8662fe920e54e157891e0860a57a389d1160e14b56c18b41dd017d40e73"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/65-tube-microscope-telescope/light-1x.png",
+            "sha256": "7624087e3cfebf0af0e7d63adf0188f0539805b959a90d336147b53f26f043ec"
+          },
+          {
+            "path": "docs/review/atlas-craft-14/final-v2/definitions.json",
+            "sha256": "47c55d7f4e4a7ac69a59fe8322cb6e71a15c524ab552b6cb4f8f6464e5961441"
+          },
+          {
+            "path": "docs/review/atlas-craft-14/final-v2/16-science.html",
+            "sha256": "a74bc368c0c11eb315786cb8fa2af0b006f86b7e8de06cb6a8f799c36a60fda3"
+          },
+          {
+            "path": "docs/review/atlas-craft-14/final-v2/16-science-light-1x.png",
+            "sha256": "d53aca9836fd56b3d554bd99411ffbddc56f1c2c32b5ab24a4c97a2246e32072"
+          },
+          {
+            "path": "docs/review/atlas-craft-14/final-v2/16-science-light-2x.png",
+            "sha256": "99823584baf436efbe443489fafb83571b3004cf18d5a11540c2d135f89f06ba"
+          },
+          {
+            "path": "docs/review/atlas-craft-14/final-v2/16-science-dark-1x.png",
+            "sha256": "60e770401c62ca5a7c37aa6853ca84300381e50840987a788acfc72ed9a34fe7"
+          },
+          {
+            "path": "docs/review/atlas-craft-14/final-v2/16-science-dark-2x.png",
+            "sha256": "613d7aee615fffe557fa9a667379878c9bbffe4c688dcc1402f67e416003fdf6"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-14/final-v2/16-science-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-14/final-v2/16-science-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-14/final-v2/16-science-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-14/final-v2/16-science-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Lucide",
+        "license": "ISC",
+        "licenseFile": "licenses/lucide.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "microscope",
+      "purpose": "顯微鏡",
+      "recognitionCues": "垂直鏡筒、弧形鏡臂、載物台與底座",
+      "confusableWith": [
+        "telescope",
+        "camera"
+      ],
+      "sourceObservation": "Lucide細分目鏡、鏡筒和物鏡，Phosphor以單一長鏡筒與弧形鏡臂表達整體。最新稿選Phosphor較清楚的部件主次，回比16/20/24時鏡筒、載物台與底座三層都有空間，沒有縮小各部件硬塞更多鏡頭環。",
+      "references": [
+        {
+          "name": "microscope",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/microscope.svg",
+          "localPath": "references/atlas-01/lucide-microscope.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/microscope.svg",
+          "sha256": "72fab65c4fdd0a7d784485dc7aaa8bf8c4fba9a4dc9ae38a6538e58bdd8b5f42",
+          "license": "ISC AND MIT",
+          "sourceName": "microscope",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "microscope",
+          "library": "Phosphor",
+          "repository": "phosphor-icons/core",
+          "commit": "2b75f3ad12b420c9504ef05df8d2564a28f8500e",
+          "path": "assets/regular/microscope.svg",
+          "localPath": "references/atlas-01/phosphor-microscope.svg",
+          "url": "https://github.com/phosphor-icons/core/blob/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular/microscope.svg",
+          "sha256": "ad7b288180cb7ee0a914acb48d7fbecd1230cf677a5d554cc1c8a9c29d8e1729",
+          "license": "MIT",
+          "sourceName": "microscope",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "器材輪廓與模型連結已表達語意，不添加裝飾虛線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "瓶壁與液面、軌道與天體用輪廓區分，不需透明度層級。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "科學符號及器具採平面單色，不模擬玻璃漸層材質。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-14/master-before.json",
+          "variantsSha256": "4aecb22220bb101ad74e52e971feff4904f69ac14fc36764ba71c329c45de2d8"
+        },
+        "reason": "以完整鏡筒接弧形鏡臂，鏡臂從外側承接且不穿入鏡筒孔；載物台與底座各有明確層距，弧臂的曲面保留於所有角型。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "0dcde9826811fb0ef276853ebc7702a9a0cf3759d5fba0bdad88b8e9138facc6",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/65-tube-microscope-telescope/review.html",
+            "sha256": "3017ddb61124369fc119479834c4a8c82832a5cbc56b90d57c661592b49399cb"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/65-tube-microscope-telescope/definitions.json",
+            "sha256": "6864d8662fe920e54e157891e0860a57a389d1160e14b56c18b41dd017d40e73"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/65-tube-microscope-telescope/light-1x.png",
+            "sha256": "7624087e3cfebf0af0e7d63adf0188f0539805b959a90d336147b53f26f043ec"
+          },
+          {
+            "path": "docs/review/atlas-craft-14/final-v2/definitions.json",
+            "sha256": "47c55d7f4e4a7ac69a59fe8322cb6e71a15c524ab552b6cb4f8f6464e5961441"
+          },
+          {
+            "path": "docs/review/atlas-craft-14/final-v2/16-science.html",
+            "sha256": "a74bc368c0c11eb315786cb8fa2af0b006f86b7e8de06cb6a8f799c36a60fda3"
+          },
+          {
+            "path": "docs/review/atlas-craft-14/final-v2/16-science-light-1x.png",
+            "sha256": "d53aca9836fd56b3d554bd99411ffbddc56f1c2c32b5ab24a4c97a2246e32072"
+          },
+          {
+            "path": "docs/review/atlas-craft-14/final-v2/16-science-light-2x.png",
+            "sha256": "99823584baf436efbe443489fafb83571b3004cf18d5a11540c2d135f89f06ba"
+          },
+          {
+            "path": "docs/review/atlas-craft-14/final-v2/16-science-dark-1x.png",
+            "sha256": "60e770401c62ca5a7c37aa6853ca84300381e50840987a788acfc72ed9a34fe7"
+          },
+          {
+            "path": "docs/review/atlas-craft-14/final-v2/16-science-dark-2x.png",
+            "sha256": "613d7aee615fffe557fa9a667379878c9bbffe4c688dcc1402f67e416003fdf6"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-14/final-v2/16-science-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-14/final-v2/16-science-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-14/final-v2/16-science-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-14/final-v2/16-science-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Phosphor",
+        "license": "MIT",
+        "licenseFile": "licenses/phosphor.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "telescope",
+      "purpose": "天文望遠鏡",
+      "recognitionCues": "斜向漸寬鏡筒、物鏡環與三腳架",
+      "confusableWith": [
+        "binoculars",
+        "microscope"
+      ],
+      "sourceObservation": "Lucide有獨立物鏡環、目鏡段和轉軸，Tabler以連續漸寬筒身連到三腳架。最新稿採Tabler的整體輪廓，保留一筆物鏡環分界；完稿回比後鏡筒有共同方向與收放，三腳架從筒下承接，不像幾個套框拼接。",
+      "references": [
+        {
+          "name": "telescope",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/telescope.svg",
+          "localPath": "references/atlas-01/lucide-telescope.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/telescope.svg",
+          "sha256": "ef9c953964649dd84764478de5396aaab3c924927e522a74f4ccfdeef381b023",
+          "license": "ISC AND MIT",
+          "sourceName": "telescope",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "telescope",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/telescope.svg",
+          "localPath": "references/atlas-01/tabler-telescope.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/telescope.svg",
+          "sha256": "d2ab005c08cc123e0c67de981c6a4986766e93ddf6118de5dc58daaaf130d5b4",
+          "license": "MIT",
+          "sourceName": "telescope",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "器材輪廓與模型連結已表達語意，不添加裝飾虛線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "瓶壁與液面、軌道與天體用輪廓區分，不需透明度層級。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "科學符號及器具採平面單色，不模擬玻璃漸層材質。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-14/master-before.json",
+          "variantsSha256": "a0529af74ee0a75528455d9817dc19a3f6f293cb21d701de64222239b4d8ef14"
+        },
+        "reason": "漸寬鏡筒以閉合輪廓完成，內部分界裁於筒內；立桿從外側連接鏡筒，三腳架共用中央支點，依角型調整實際邊角。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "33a90f5058ac5dcf726114d249c4245846c8d0975e04688d8de818d20def1eab",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/65-tube-microscope-telescope/review.html",
+            "sha256": "3017ddb61124369fc119479834c4a8c82832a5cbc56b90d57c661592b49399cb"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/65-tube-microscope-telescope/definitions.json",
+            "sha256": "6864d8662fe920e54e157891e0860a57a389d1160e14b56c18b41dd017d40e73"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/65-tube-microscope-telescope/light-1x.png",
+            "sha256": "7624087e3cfebf0af0e7d63adf0188f0539805b959a90d336147b53f26f043ec"
+          },
+          {
+            "path": "docs/review/atlas-craft-14/final-v2/definitions.json",
+            "sha256": "47c55d7f4e4a7ac69a59fe8322cb6e71a15c524ab552b6cb4f8f6464e5961441"
+          },
+          {
+            "path": "docs/review/atlas-craft-14/final-v2/16-science.html",
+            "sha256": "a74bc368c0c11eb315786cb8fa2af0b006f86b7e8de06cb6a8f799c36a60fda3"
+          },
+          {
+            "path": "docs/review/atlas-craft-14/final-v2/16-science-light-1x.png",
+            "sha256": "d53aca9836fd56b3d554bd99411ffbddc56f1c2c32b5ab24a4c97a2246e32072"
+          },
+          {
+            "path": "docs/review/atlas-craft-14/final-v2/16-science-light-2x.png",
+            "sha256": "99823584baf436efbe443489fafb83571b3004cf18d5a11540c2d135f89f06ba"
+          },
+          {
+            "path": "docs/review/atlas-craft-14/final-v2/16-science-dark-1x.png",
+            "sha256": "60e770401c62ca5a7c37aa6853ca84300381e50840987a788acfc72ed9a34fe7"
+          },
+          {
+            "path": "docs/review/atlas-craft-14/final-v2/16-science-dark-2x.png",
+            "sha256": "613d7aee615fffe557fa9a667379878c9bbffe4c688dcc1402f67e416003fdf6"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-14/final-v2/16-science-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-14/final-v2/16-science-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-14/final-v2/16-science-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-14/final-v2/16-science-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Tabler",
+        "license": "MIT",
+        "licenseFile": "licenses/tabler.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "dna",
+      "purpose": "DNA",
+      "recognitionCues": "交錯雙螺旋骨架與四組橫向連結",
+      "confusableWith": [
+        "link",
+        "waves"
+      ],
+      "sourceObservation": "Lucide採斜向雙螺旋與短接枝，Tabler dna-2的直立骨架和四組連結更容易維持小尺寸節奏。最新稿選直立構造，重畫對稱的連續曲線；回比16/20/24時兩側收放與中央交錯清楚，沒有把它誤做成只有扭曲線而無橫向連結的Tabler dna。",
+      "references": [
+        {
+          "name": "dna",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/dna.svg",
+          "localPath": "references/atlas-01/lucide-dna.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/dna.svg",
+          "sha256": "fb1e39ad72394a4090aaaeb620fc8057d72e3df9497cbbbd26247ba57e747431",
+          "license": "ISC AND MIT",
+          "sourceName": "dna",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "dna",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/dna-2.svg",
+          "localPath": "references/atlas-01/tabler-dna-2.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/dna-2.svg",
+          "sha256": "a139ce24cefb9684cec278e00afcd295904ececeb4604ec47cb326bc624b0961",
+          "license": "MIT",
+          "sourceName": "dna-2",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "器材輪廓與模型連結已表達語意，不添加裝飾虛線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "瓶壁與液面、軌道與天體用輪廓區分，不需透明度層級。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "科學符號及器具採平面單色，不模擬玻璃漸層材質。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-14/master-before.json",
+          "variantsSha256": "6a5af35f7d1ea9c59801bbf387d02c595419be0d4ac41f5233be820fdc019c63"
+        },
+        "reason": "兩條骨架以相對曲線穿越中央，四條連結限定在上下螺旋區域內；端帽不超出骨架外緣，中央不再加入細碎橫線。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "4871c47aacda5c41d11a968ef9e2c5c0416f92de37c869f5fbdca2b55d137f69",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/66-dna-orbit/review.html",
+            "sha256": "5d4393588170ad8bdb4fbc561c42fa3f5279705c38d40e59164f7ffc9d1fb88f"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/66-dna-orbit/definitions.json",
+            "sha256": "709dd3071107314edae2c50fd39fbd48a415faf6001a2fcfd07f635fe7864224"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/66-dna-orbit/light-1x.png",
+            "sha256": "e76c09ab2fccd6053a2f53364d2beb27d837822aa30e6f06aa871bb5a6cbf438"
+          },
+          {
+            "path": "docs/review/atlas-craft-14/final-v2/definitions.json",
+            "sha256": "47c55d7f4e4a7ac69a59fe8322cb6e71a15c524ab552b6cb4f8f6464e5961441"
+          },
+          {
+            "path": "docs/review/atlas-craft-14/final-v2/16-science.html",
+            "sha256": "a74bc368c0c11eb315786cb8fa2af0b006f86b7e8de06cb6a8f799c36a60fda3"
+          },
+          {
+            "path": "docs/review/atlas-craft-14/final-v2/16-science-light-1x.png",
+            "sha256": "d53aca9836fd56b3d554bd99411ffbddc56f1c2c32b5ab24a4c97a2246e32072"
+          },
+          {
+            "path": "docs/review/atlas-craft-14/final-v2/16-science-light-2x.png",
+            "sha256": "99823584baf436efbe443489fafb83571b3004cf18d5a11540c2d135f89f06ba"
+          },
+          {
+            "path": "docs/review/atlas-craft-14/final-v2/16-science-dark-1x.png",
+            "sha256": "60e770401c62ca5a7c37aa6853ca84300381e50840987a788acfc72ed9a34fe7"
+          },
+          {
+            "path": "docs/review/atlas-craft-14/final-v2/16-science-dark-2x.png",
+            "sha256": "613d7aee615fffe557fa9a667379878c9bbffe4c688dcc1402f67e416003fdf6"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-14/final-v2/16-science-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-14/final-v2/16-science-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-14/final-v2/16-science-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-14/final-v2/16-science-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Tabler",
+        "license": "MIT",
+        "licenseFile": "licenses/tabler.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "orbit",
+      "purpose": "軌道",
+      "recognitionCues": "中心天體、環繞弧線與外側衛星",
+      "confusableWith": [
+        "atom",
+        "satellite"
+      ],
+      "sourceObservation": "Lucide用雙衛星與分段軌道，Hugeicons orbit-01以單衛星環繞中心天體更單純。Tabler orbits較偏原子模型，未作最終來源。最新稿選單衛星構造，縮小中心天體至半徑4；完稿回比，內外圈之間留白穩定，軌道末端與衛星有可見間隙。",
+      "references": [
+        {
+          "name": "orbit",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/orbit.svg",
+          "localPath": "references/atlas-01/lucide-orbit.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/orbit.svg",
+          "sha256": "e2b8b7d7f82044181860cbc2dab9b7e8d3c4778fbbce9a62f5c4038175f4faf4",
+          "license": "ISC AND MIT",
+          "sourceName": "orbit",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "orbit",
+          "library": "Hugeicons Free",
+          "repository": "hugeicons/hugeicons",
+          "commit": "834e28d965946c1ee60d080027fe9dae4adc58d0",
+          "path": "icons/orbit-01.svg",
+          "localPath": "references/atlas-01/hugeicons-orbit-01.svg",
+          "url": "https://github.com/hugeicons/hugeicons/blob/834e28d965946c1ee60d080027fe9dae4adc58d0/icons/orbit-01.svg",
+          "sha256": "2170e57ede93c57a6b2397921b2d21603d34487d85f66a32d7a4fda0f02a313c",
+          "license": "MIT",
+          "sourceName": "orbit-01",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "器材輪廓與模型連結已表達語意，不添加裝飾虛線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "瓶壁與液面、軌道與天體用輪廓區分，不需透明度層級。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "科學符號及器具採平面單色，不模擬玻璃漸層材質。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-14/master-before.json",
+          "variantsSha256": "2114cd9038e81a6bbbd0ee9c147adaf2d1ccaf7a9597744b96fe2442731df9a2"
+        },
+        "reason": "軌道弧以半徑10建構，衛星中心落在軌道上；弧線在衛星外緣收口，避免穿進小圓孔，另一端保留開口而不湊成閉合雙環。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "ae4ffea4675f182d040ed3c3d8c97c7a0cc0e4faf567ff63f8f27b56bd7123b5",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/66-dna-orbit/review.html",
+            "sha256": "5d4393588170ad8bdb4fbc561c42fa3f5279705c38d40e59164f7ffc9d1fb88f"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/66-dna-orbit/definitions.json",
+            "sha256": "709dd3071107314edae2c50fd39fbd48a415faf6001a2fcfd07f635fe7864224"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/66-dna-orbit/light-1x.png",
+            "sha256": "e76c09ab2fccd6053a2f53364d2beb27d837822aa30e6f06aa871bb5a6cbf438"
+          },
+          {
+            "path": "docs/review/atlas-craft-14/final-v2/definitions.json",
+            "sha256": "47c55d7f4e4a7ac69a59fe8322cb6e71a15c524ab552b6cb4f8f6464e5961441"
+          },
+          {
+            "path": "docs/review/atlas-craft-14/final-v2/16-science.html",
+            "sha256": "a74bc368c0c11eb315786cb8fa2af0b006f86b7e8de06cb6a8f799c36a60fda3"
+          },
+          {
+            "path": "docs/review/atlas-craft-14/final-v2/16-science-light-1x.png",
+            "sha256": "d53aca9836fd56b3d554bd99411ffbddc56f1c2c32b5ab24a4c97a2246e32072"
+          },
+          {
+            "path": "docs/review/atlas-craft-14/final-v2/16-science-light-2x.png",
+            "sha256": "99823584baf436efbe443489fafb83571b3004cf18d5a11540c2d135f89f06ba"
+          },
+          {
+            "path": "docs/review/atlas-craft-14/final-v2/16-science-dark-1x.png",
+            "sha256": "60e770401c62ca5a7c37aa6853ca84300381e50840987a788acfc72ed9a34fe7"
+          },
+          {
+            "path": "docs/review/atlas-craft-14/final-v2/16-science-dark-2x.png",
+            "sha256": "613d7aee615fffe557fa9a667379878c9bbffe4c688dcc1402f67e416003fdf6"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-14/final-v2/16-science-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-14/final-v2/16-science-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-14/final-v2/16-science-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-14/final-v2/16-science-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Hugeicons Free",
+        "license": "MIT",
+        "licenseFile": "licenses/hugeicons-MIT.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "rocket",
+      "purpose": "火箭",
+      "recognitionCues": "收尖箭體、圓窗、側翼與尾焰",
+      "confusableWith": [
+        "plane",
+        "satellite"
+      ],
+      "sourceObservation": "Lucide用斜向箭體與獨立火焰，Phosphor直立箭體、側翼和小圓點更簡潔。前稿圓環舷窗過重，最新稿向Phosphor小圓點靠齊；回比後箭體輪廓重新成為主角，16px不再出現小孔擁擠，仍保留側翼及尾部推進訊號。",
+      "references": [
+        {
+          "name": "rocket",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/rocket.svg",
+          "localPath": "references/atlas-01/lucide-rocket.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/rocket.svg",
+          "sha256": "2b7887d9a5623f2e5e4a5d32716f93829d61b458e03b6eae33a6df648b9eb855",
+          "license": "ISC AND MIT",
+          "sourceName": "rocket",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "rocket",
+          "library": "Phosphor",
+          "repository": "phosphor-icons/core",
+          "commit": "2b75f3ad12b420c9504ef05df8d2564a28f8500e",
+          "path": "assets/regular/rocket.svg",
+          "localPath": "references/atlas-01/phosphor-rocket.svg",
+          "url": "https://github.com/phosphor-icons/core/blob/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular/rocket.svg",
+          "sha256": "c7f97a562b9da6b8c05e6e6ca7f0af5c63a3bbb93b56d468a58955b70efa651d",
+          "license": "MIT",
+          "sourceName": "rocket",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "器材輪廓與模型連結已表達語意，不添加裝飾虛線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "瓶壁與液面、軌道與天體用輪廓區分，不需透明度層級。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "科學符號及器具採平面單色，不模擬玻璃漸層材質。"
+        }
+      },
+      "change": {
+        "kind": "modified",
+        "before": {
+          "path": "references/atlas-craft-14/master-before.json",
+          "variantsSha256": "a757a29c4f316311ba8ed1d6cfcbfeb1baabb2c208cd6b5010933d7386416c4c"
+        },
+        "reason": "移除舷窗圓環改為按尺寸控制的小實心點，兩側翼以箭體邊緣裁切承接；箭首與箭腹用連續曲線塑形，尾端短線與機身保持留白。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "95c8098720a620598e15c6a08fc8b9c5e86ed422530757027bb14e91370d3acb",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/67b-rocket/review.html",
+            "sha256": "f5acc6c358ff950bca6e31e4d2c91a6920bac5ae1dca6160b1835f64426f0e5d"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/67b-rocket/definitions.json",
+            "sha256": "d9adecf2843160d4b3142c839d1dfeef6128bbbd9716e193904672ae8f6cde63"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/67b-rocket/light-1x.png",
+            "sha256": "4b207f15111183163f0c4c2e0c1fd6b35c189935c331e56d72600bc648dd8827"
+          },
+          {
+            "path": "docs/review/atlas-craft-14/final-v2/definitions.json",
+            "sha256": "47c55d7f4e4a7ac69a59fe8322cb6e71a15c524ab552b6cb4f8f6464e5961441"
+          },
+          {
+            "path": "docs/review/atlas-craft-14/final-v2/16-science.html",
+            "sha256": "a74bc368c0c11eb315786cb8fa2af0b006f86b7e8de06cb6a8f799c36a60fda3"
+          },
+          {
+            "path": "docs/review/atlas-craft-14/final-v2/16-science-light-1x.png",
+            "sha256": "d53aca9836fd56b3d554bd99411ffbddc56f1c2c32b5ab24a4c97a2246e32072"
+          },
+          {
+            "path": "docs/review/atlas-craft-14/final-v2/16-science-light-2x.png",
+            "sha256": "99823584baf436efbe443489fafb83571b3004cf18d5a11540c2d135f89f06ba"
+          },
+          {
+            "path": "docs/review/atlas-craft-14/final-v2/16-science-dark-1x.png",
+            "sha256": "60e770401c62ca5a7c37aa6853ca84300381e50840987a788acfc72ed9a34fe7"
+          },
+          {
+            "path": "docs/review/atlas-craft-14/final-v2/16-science-dark-2x.png",
+            "sha256": "613d7aee615fffe557fa9a667379878c9bbffe4c688dcc1402f67e416003fdf6"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-14/final-v2/16-science-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-14/final-v2/16-science-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-14/final-v2/16-science-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-14/final-v2/16-science-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Phosphor",
+        "license": "MIT",
+        "licenseFile": "licenses/phosphor.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "satellite",
+      "purpose": "衛星",
+      "recognitionCues": "中央機體、兩側太陽能板、天線與訊號弧",
+      "confusableWith": [
+        "rocket",
+        "telescope"
+      ],
+      "sourceObservation": "Lucide以短機身、兩側大太陽能板和單訊號弧表達衛星，Tabler用較長主體和雙弧。最新稿沿用Lucide較少分線的構造，重建共軸面板；完稿回比，三塊面積有清楚主次，訊號弧不黏機體，原生16px不需面板網格。",
+      "references": [
+        {
+          "name": "satellite",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/satellite.svg",
+          "localPath": "references/atlas-01/lucide-satellite.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/satellite.svg",
+          "sha256": "542eb41b2ea31f42b4bd7992cecdff22a8a4f1c21275036bc3537c64efee8481",
+          "license": "ISC AND MIT",
+          "sourceName": "satellite",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "satellite",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/satellite.svg",
+          "localPath": "references/atlas-01/tabler-satellite.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/satellite.svg",
+          "sha256": "dbdfbd34536720a2a1b0b42425481aa80b87aa928bd7a092668567d570b29bc3",
+          "license": "MIT",
+          "sourceName": "satellite",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "器材輪廓與模型連結已表達語意，不添加裝飾虛線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "瓶壁與液面、軌道與天體用輪廓區分，不需透明度層級。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "科學符號及器具採平面單色，不模擬玻璃漸層材質。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-14/master-before.json",
+          "variantsSha256": "b687ff2f3b6b146bde95009c2a4c8fa85b9a6d4900ce06eff84f07ac3da0fc8c"
+        },
+        "reason": "太陽能板按中央機身邊界接合，板面保留大塊空腔；天線從機身端部外接而不刺入孔洞，訊號只保留一條弧以維持留白。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "99e857a8e2a836596db508ffed1d6d7205997edbbd29854745701e9090106d35",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/67-rocket-satellite/review.html",
+            "sha256": "aeafb7b7e0686d50721f7c5d0d8b209af2b8872dba0e0acb8d04f606b2c253ab"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/67-rocket-satellite/definitions.json",
+            "sha256": "05d709e8cd2ea3b487be3bf2b8430548795735dc06ec44cc29f098c75210cf05"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/67-rocket-satellite/light-1x.png",
+            "sha256": "e6b0f81a2786302bec1cd70a1a06fabba5edb57f130f9b1685920d151b8d8729"
+          },
+          {
+            "path": "docs/review/atlas-craft-14/final-v2/definitions.json",
+            "sha256": "47c55d7f4e4a7ac69a59fe8322cb6e71a15c524ab552b6cb4f8f6464e5961441"
+          },
+          {
+            "path": "docs/review/atlas-craft-14/final-v2/16-science.html",
+            "sha256": "a74bc368c0c11eb315786cb8fa2af0b006f86b7e8de06cb6a8f799c36a60fda3"
+          },
+          {
+            "path": "docs/review/atlas-craft-14/final-v2/16-science-light-1x.png",
+            "sha256": "d53aca9836fd56b3d554bd99411ffbddc56f1c2c32b5ab24a4c97a2246e32072"
+          },
+          {
+            "path": "docs/review/atlas-craft-14/final-v2/16-science-light-2x.png",
+            "sha256": "99823584baf436efbe443489fafb83571b3004cf18d5a11540c2d135f89f06ba"
+          },
+          {
+            "path": "docs/review/atlas-craft-14/final-v2/16-science-dark-1x.png",
+            "sha256": "60e770401c62ca5a7c37aa6853ca84300381e50840987a788acfc72ed9a34fe7"
+          },
+          {
+            "path": "docs/review/atlas-craft-14/final-v2/16-science-dark-2x.png",
+            "sha256": "613d7aee615fffe557fa9a667379878c9bbffe4c688dcc1402f67e416003fdf6"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-14/final-v2/16-science-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-14/final-v2/16-science-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-14/final-v2/16-science-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-14/final-v2/16-science-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Lucide",
+        "license": "ISC",
+        "licenseFile": "licenses/lucide.txt"
+      },
+      "remaining": []
+    }
+  ]
+}

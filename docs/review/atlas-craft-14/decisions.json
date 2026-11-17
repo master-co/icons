@@ -1,0 +1,152 @@
+{
+  "batch": "16-science",
+  "cycle": "atlas-craft-14",
+  "familyRoot": "docs/review/atlas-craft-14/final-v2",
+  "baseline": "references/atlas-craft-14/master-before.json",
+  "reviewer": "Codex (AI)",
+  "visualInspectionComplete": true,
+  "inspectedCombinations": [
+    {
+      "theme": "light",
+      "dpr": 1
+    },
+    {
+      "theme": "light",
+      "dpr": 2
+    },
+    {
+      "theme": "dark",
+      "dpr": 1
+    },
+    {
+      "theme": "dark",
+      "dpr": 2
+    }
+  ],
+  "effects": {
+    "dashes": {
+      "used": false,
+      "reason": "器材輪廓與模型連結已表達語意，不添加裝飾虛線。"
+    },
+    "opacity": {
+      "used": false,
+      "reason": "瓶壁與液面、軌道與天體用輪廓區分，不需透明度層級。"
+    },
+    "gradients": {
+      "used": false,
+      "reason": "科學符號及器具採平面單色，不模擬玻璃漸層材質。"
+    }
+  },
+  "decisions": [
+    {
+      "name": "atom",
+      "groupRoot": "docs/review/atlas-craft-01/64-atom-flasks",
+      "confusableWith": [
+        "orbit",
+        "dna"
+      ],
+      "sourceObservation": "Lucide與Phosphor都用兩組交叉長橢圓，避免多軌道塞滿中央。最新稿按共用長短軸重畫兩軌道，核以小實心點表示；原生回比中，四瓣與中央空腔各自成立，圓點沒有變成另一個環或搶過軌道。",
+      "reason": "兩條橢圓以相同參數及相反角度建構，對稱交會並保留中央空間；原子核依16/20/24分別控制點徑，不以增加第三軌道充實畫面。",
+      "adaptedFrom": "Lucide"
+    },
+    {
+      "name": "flask-conical",
+      "groupRoot": "docs/review/atlas-craft-01/64-atom-flasks",
+      "confusableWith": [
+        "flask-round",
+        "test-tube"
+      ],
+      "sourceObservation": "Lucide以液面分界和略圓底角表達錐形瓶，Tabler更接近直斜邊的空瓶。最新稿採寬底與一筆液面，回比後瓶頸孔與下方液體區域保持足夠留白，底座提供穩定支承；沒有加入刻度或氣泡。",
+      "reason": "瓶口、直頸、斜腹和平底構成連續封閉外輪廓，底角做真正的角型半徑；液面描邊裁在瓶壁內，頸部不與液面擠成狹縫。",
+      "adaptedFrom": "Lucide"
+    },
+    {
+      "name": "flask-round",
+      "groupRoot": "docs/review/atlas-craft-01/64b-flask-round",
+      "confusableWith": [
+        "flask-conical",
+        "test-tube"
+      ],
+      "sourceObservation": "原先Tabler flask-2偏平底，最後改用真正圓底的Hugeicons與Lucide。Hugeicons瓶頸至肩部有自然收束，比前稿直接將頸接圓弧成熟；最新稿依此重建連續收肩、略放寬圓腹，保留水平液面。完稿16/20/24回比，器皿神韻由輪廓承接表達，沒有再加內線。",
+      "reason": "瓶腹半徑由7改為7.5，瓶頸先以曲線收肩，再按圓弧切線接入完整圓腹；液面仍為水平，不照搬來源晃動水紋。保存原稿以顯示肩部的實際修整。",
+      "adaptedFrom": "Hugeicons Free"
+    },
+    {
+      "name": "test-tube",
+      "groupRoot": "docs/review/atlas-craft-01/65-tube-microscope-telescope",
+      "confusableWith": [
+        "flask-conical",
+        "thermometer"
+      ],
+      "sourceObservation": "Lucide直立試管的細長身形清楚，Phosphor斜置試管用曲線液面增加動勢。最新稿採直立姿態並略放寬管徑，與同批瓶口共用外伸唇邊；原生回比仍是試管，不需試管架或刻度補辨識。",
+      "reason": "直管連續接入半圓底，液面設於下段而保留長空管；口沿和兩側壁同軸，液面墨跡在外殼內收口。",
+      "adaptedFrom": "Lucide"
+    },
+    {
+      "name": "microscope",
+      "groupRoot": "docs/review/atlas-craft-01/65-tube-microscope-telescope",
+      "confusableWith": [
+        "telescope",
+        "camera"
+      ],
+      "sourceObservation": "Lucide細分目鏡、鏡筒和物鏡，Phosphor以單一長鏡筒與弧形鏡臂表達整體。最新稿選Phosphor較清楚的部件主次，回比16/20/24時鏡筒、載物台與底座三層都有空間，沒有縮小各部件硬塞更多鏡頭環。",
+      "reason": "以完整鏡筒接弧形鏡臂，鏡臂從外側承接且不穿入鏡筒孔；載物台與底座各有明確層距，弧臂的曲面保留於所有角型。",
+      "adaptedFrom": "Phosphor"
+    },
+    {
+      "name": "telescope",
+      "groupRoot": "docs/review/atlas-craft-01/65-tube-microscope-telescope",
+      "confusableWith": [
+        "binoculars",
+        "microscope"
+      ],
+      "sourceObservation": "Lucide有獨立物鏡環、目鏡段和轉軸，Tabler以連續漸寬筒身連到三腳架。最新稿採Tabler的整體輪廓，保留一筆物鏡環分界；完稿回比後鏡筒有共同方向與收放，三腳架從筒下承接，不像幾個套框拼接。",
+      "reason": "漸寬鏡筒以閉合輪廓完成，內部分界裁於筒內；立桿從外側連接鏡筒，三腳架共用中央支點，依角型調整實際邊角。",
+      "adaptedFrom": "Tabler"
+    },
+    {
+      "name": "dna",
+      "groupRoot": "docs/review/atlas-craft-01/66-dna-orbit",
+      "confusableWith": [
+        "link",
+        "waves"
+      ],
+      "sourceObservation": "Lucide採斜向雙螺旋與短接枝，Tabler dna-2的直立骨架和四組連結更容易維持小尺寸節奏。最新稿選直立構造，重畫對稱的連續曲線；回比16/20/24時兩側收放與中央交錯清楚，沒有把它誤做成只有扭曲線而無橫向連結的Tabler dna。",
+      "reason": "兩條骨架以相對曲線穿越中央，四條連結限定在上下螺旋區域內；端帽不超出骨架外緣，中央不再加入細碎橫線。",
+      "adaptedFrom": "Tabler"
+    },
+    {
+      "name": "orbit",
+      "groupRoot": "docs/review/atlas-craft-01/66-dna-orbit",
+      "confusableWith": [
+        "atom",
+        "satellite"
+      ],
+      "sourceObservation": "Lucide用雙衛星與分段軌道，Hugeicons orbit-01以單衛星環繞中心天體更單純。Tabler orbits較偏原子模型，未作最終來源。最新稿選單衛星構造，縮小中心天體至半徑4；完稿回比，內外圈之間留白穩定，軌道末端與衛星有可見間隙。",
+      "reason": "軌道弧以半徑10建構，衛星中心落在軌道上；弧線在衛星外緣收口，避免穿進小圓孔，另一端保留開口而不湊成閉合雙環。",
+      "adaptedFrom": "Hugeicons Free"
+    },
+    {
+      "name": "rocket",
+      "groupRoot": "docs/review/atlas-craft-01/67b-rocket",
+      "confusableWith": [
+        "plane",
+        "satellite"
+      ],
+      "sourceObservation": "Lucide用斜向箭體與獨立火焰，Phosphor直立箭體、側翼和小圓點更簡潔。前稿圓環舷窗過重，最新稿向Phosphor小圓點靠齊；回比後箭體輪廓重新成為主角，16px不再出現小孔擁擠，仍保留側翼及尾部推進訊號。",
+      "reason": "移除舷窗圓環改為按尺寸控制的小實心點，兩側翼以箭體邊緣裁切承接；箭首與箭腹用連續曲線塑形，尾端短線與機身保持留白。",
+      "adaptedFrom": "Phosphor"
+    },
+    {
+      "name": "satellite",
+      "groupRoot": "docs/review/atlas-craft-01/67-rocket-satellite",
+      "confusableWith": [
+        "rocket",
+        "telescope"
+      ],
+      "sourceObservation": "Lucide以短機身、兩側大太陽能板和單訊號弧表達衛星，Tabler用較長主體和雙弧。最新稿沿用Lucide較少分線的構造，重建共軸面板；完稿回比，三塊面積有清楚主次，訊號弧不黏機體，原生16px不需面板網格。",
+      "reason": "太陽能板按中央機身邊界接合，板面保留大塊空腔；天線從機身端部外接而不刺入孔洞，訊號只保留一條弧以維持留白。",
+      "adaptedFrom": "Lucide"
+    }
+  ]
+}

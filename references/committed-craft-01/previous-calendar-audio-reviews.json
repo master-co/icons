@@ -1,0 +1,208 @@
+[
+  {
+    "name": "volume",
+    "concept": "volume",
+    "purpose": "圖片與媒體：音量",
+    "recognitionCues": "16px 用一道聲波，較大尺寸保留兩道",
+    "confusableWith": [
+      "volume-off"
+    ],
+    "sourceObservation": "Lucide兩波、Tabler原稿一波；Master按尺寸簡化聲波數而保留通用音量語意，狀態級別需另用明確命名圖示。",
+    "references": [
+      {
+        "name": "volume",
+        "library": "Lucide",
+        "repository": "lucide-icons/lucide",
+        "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+        "path": "icons/volume-2.svg",
+        "localPath": "references/ui-v1/lucide-volume-2.svg",
+        "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/volume-2.svg",
+        "sha256": "fb404f9c128a0579de67b399177631e5edb3502fdc247ceb30e8b15754b46071",
+        "license": "ISC AND MIT",
+        "sourceName": "volume-2",
+        "match": "exact",
+        "role": "comparison-only"
+      },
+      {
+        "name": "volume",
+        "library": "Tabler",
+        "repository": "tabler/tabler-icons",
+        "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+        "path": "icons/outline/volume-2.svg",
+        "localPath": "references/ui-v1/tabler-volume-2.svg",
+        "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/volume-2.svg",
+        "sha256": "ebd7a0c84ed8775d7bc5ecda2301182be63ddc19edd33a1fb8d56fc853038f0c",
+        "license": "MIT",
+        "sourceName": "volume-2",
+        "match": "exact",
+        "role": "comparison-only"
+      }
+    ],
+    "effects": {
+      "dashes": {
+        "used": false,
+        "reason": "不採用；連續聲波弧已是足夠訊號。"
+      },
+      "opacity": {
+        "used": false,
+        "reason": "不採用；小尺寸聲波已精簡，淡化會使音量與喇叭母型難區分。"
+      },
+      "gradients": {
+        "used": false,
+        "reason": "本期僅允許必要的逐筆透明度；未引入連續漸層或 mask。"
+      }
+    },
+    "change": {
+      "kind": "retained",
+      "reason": "保留：喇叭腔體與短頸輪廓清楚，聲波與主體分離；16px只留一條波、20／24兩波，不將通用volume誤稱固定高音量狀態。",
+      "before": {
+        "path": "references/craft-05/master-before.json",
+        "variantsSha256": "52b2da08839882907145539452c499df19cb1b8cf1b610f0c67cbea3fd99e9e7"
+      }
+    },
+    "visualReview": {
+      "status": "retained-after-visual-review",
+      "reviewer": "root",
+      "date": "2026-11-16",
+      "skillVersion": "0.5.4",
+      "batch": "craft-05-19",
+      "variantsSha256": "52b2da08839882907145539452c499df19cb1b8cf1b610f0c67cbea3fd99e9e7",
+      "checks": [
+        "16/20/24",
+        "sharp/soft/rounded",
+        "light/dark",
+        "55-percent-foreground",
+        "adjacent-text",
+        "two-pinned-source-comparisons",
+        "true-before-after",
+        "painted-contour-and-cavity",
+        "semantic-effect-decision"
+      ],
+      "evidence": [
+        {
+          "path": "docs/review/craft-05/batch-19/comparison.png",
+          "sha256": "ea43db9019d8e8fb7c59bec0a74628e06ac32d01d7795e9f495fb10862c0e7d9"
+        },
+        {
+          "path": "docs/review/craft-05/batch-19/native.png",
+          "sha256": "5fe502aef966ddbbb0bc137efaaf0fb8ca7cffa0bfe9f0ac85a27a063e31b4e5"
+        },
+        {
+          "path": "docs/review/craft-05/batch-19/native-dark.png",
+          "sha256": "3ee3df25bd6fd906669d0310403f65b7dca35fd53855e021b4bc3e9f829e6953"
+        },
+        {
+          "path": "docs/review/craft-05/batch-19/diagnostic.png",
+          "sha256": "4c0a17e0f9001efd4643dc8e069456bb104ca067bba31dbd8def2db1b38b39b3"
+        }
+      ]
+    },
+    "status": "visually-reviewed-candidate",
+    "userApproval": "pending",
+    "beforeHash": "52b2da08839882907145539452c499df19cb1b8cf1b610f0c67cbea3fd99e9e7",
+    "afterHash": "52b2da08839882907145539452c499df19cb1b8cf1b610f0c67cbea3fd99e9e7"
+  },
+  {
+    "name": "calendar-plus",
+    "concept": "calendar",
+    "purpose": "建立新的行事曆事件。",
+    "recognitionCues": "共享原生日曆框、表頭和綁定，加號內置15高度，避免另開缺口改變比例。",
+    "confusableWith": [
+      "calendar-check"
+    ],
+    "sourceObservation": "Lucide與Tabler均偏外置加號；Master依簡單日曆狀態家族內置，保持完整外框與單一訊號。",
+    "references": [
+      {
+        "name": "calendar-plus",
+        "library": "Lucide",
+        "repository": "lucide-icons/lucide",
+        "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+        "path": "icons/calendar-plus.svg",
+        "localPath": "references/productivity-01/lucide-calendar-plus.svg",
+        "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/calendar-plus.svg",
+        "sha256": "17fbed80fa9da0085530ca5a1dcb415b27bdb7fb26f8a1a4662aab7ea71d6448",
+        "license": "ISC AND MIT",
+        "sourceName": "calendar-plus",
+        "match": "exact",
+        "role": "comparison-only"
+      },
+      {
+        "name": "calendar-plus",
+        "library": "Tabler",
+        "repository": "tabler/tabler-icons",
+        "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+        "path": "icons/outline/calendar-plus.svg",
+        "localPath": "references/productivity-01/tabler-calendar-plus.svg",
+        "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/calendar-plus.svg",
+        "sha256": "1d61fc3a7c27da01e5a39ac41a8c6bdb62137e29e5651b019679202f4b1be3f9",
+        "license": "MIT",
+        "sourceName": "calendar-plus",
+        "match": "exact",
+        "role": "comparison-only"
+      }
+    ],
+    "effects": {
+      "dashes": {
+        "used": false,
+        "reason": "不採用；「新增日期」由連續輪廓、節點或實際斷開關係表意，沒有需虛線表示的隱藏／未完成邊界。"
+      },
+      "opacity": {
+        "used": false,
+        "reason": "不採用；「新增日期」的必要輪廓與狀態可以靠形狀、留白表達，淡化不提供額外語意。"
+      },
+      "gradients": {
+        "used": false,
+        "reason": "本期僅允許必要的逐筆透明度；未引入連續漸層或 mask。"
+      }
+    },
+    "change": {
+      "kind": "retained",
+      "reason": "保留：加號位於日曆內容區中間，豎筆不碰標題線與底框，裝訂柱仍獨立可辨；16px不因加號占位縮小主體。",
+      "before": {
+        "path": "references/craft-05/master-before.json",
+        "variantsSha256": "9a0334c1eada5b378ee9b4b43cb0c9d0a19f79f8ae5f04423906cb72378e10fc"
+      }
+    },
+    "visualReview": {
+      "status": "retained-after-visual-review",
+      "reviewer": "root",
+      "date": "2026-11-16",
+      "skillVersion": "0.5.4",
+      "batch": "craft-05-33",
+      "variantsSha256": "9a0334c1eada5b378ee9b4b43cb0c9d0a19f79f8ae5f04423906cb72378e10fc",
+      "checks": [
+        "16/20/24",
+        "sharp/soft/rounded",
+        "light/dark",
+        "55-percent-foreground",
+        "adjacent-text",
+        "two-pinned-source-comparisons",
+        "true-before-after",
+        "painted-contour-and-cavity",
+        "semantic-effect-decision"
+      ],
+      "evidence": [
+        {
+          "path": "docs/review/craft-05/batch-33/comparison.png",
+          "sha256": "90468900b9479d19b2bafb3c94a308412e2295b8cc5c626242b425d3d878c82e"
+        },
+        {
+          "path": "docs/review/craft-05/batch-33/native.png",
+          "sha256": "dab1dbf7e5fa2b7d620bf4ace790d51279ae9a2fcec93768022a343ec63eb0c6"
+        },
+        {
+          "path": "docs/review/craft-05/batch-33/native-dark.png",
+          "sha256": "7c00b75112a975c8ef82926ff84fd8675b924d6bcf830853156bfb1d58dd0217"
+        },
+        {
+          "path": "docs/review/craft-05/batch-33/diagnostic.png",
+          "sha256": "9199f0a1c82ab6557dff0f370c642081b849fbbe7b3d303ee1015e12d25e3977"
+        }
+      ]
+    },
+    "status": "visually-reviewed-candidate",
+    "userApproval": "pending",
+    "beforeHash": "9a0334c1eada5b378ee9b4b43cb0c9d0a19f79f8ae5f04423906cb72378e10fc",
+    "afterHash": "9a0334c1eada5b378ee9b4b43cb0c9d0a19f79f8ae5f04423906cb72378e10fc"
+  }
+]

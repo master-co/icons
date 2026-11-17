@@ -1,0 +1,236 @@
+$ bun run build && bun run validate && bun run test && bun run type-check
+$ bun run build:icons && bun run build:review && bun run build:site
+$ bun run --cwd packages/icons build
+$ node scripts/build.mjs
+Built 790 icons × 3 sizes × 3 corners = 7110 SVGs and React exports.
+$ node scripts/build-review.mjs
+$ bun run --cwd site build
+$ node ../scripts/check-site-node.mjs && bun run prepare-site && astro build
+$ node --import tsx scripts/prepare.ts
+Prepared 790 icons and bilingual guides
+21:13:52 [types] Generated 323ms
+21:13:52 [build] output: "static"
+21:13:52 [build] mode: "static"
+21:13:52 [build] directory: /Users/aron/master-icons/work/atlas-01/commit/checkout/site/out/
+21:13:52 [build] Collecting build info...
+21:13:52 [build] ✓ Completed in 359ms.
+21:13:53 [build] Building static entrypoints...
+21:13:57 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] site.css:4347:395 'target-current' is not recognized as a valid pseudo-class. Did you mean '::target-current' (pseudo-element) or is this a typo?
+21:13:57 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] site.css:4347:497 'target-current' is not recognized as a valid pseudo-class. Did you mean '::target-current' (pseudo-element) or is this a typo?
+21:13:57 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] site.css:4347:796 'target-current' is not recognized as a valid pseudo-class. Did you mean '::target-current' (pseudo-element) or is this a typo?
+21:13:57 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] site.css:4347:1120 'target-current' is not recognized as a valid pseudo-class. Did you mean '::target-current' (pseudo-element) or is this a typo?
+21:13:57 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] site.css:4347:1238 'target-current' is not recognized as a valid pseudo-class. Did you mean '::target-current' (pseudo-element) or is this a typo?
+21:13:57 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] site.css:4353:27 'target-current' is not recognized as a valid pseudo-class. Did you mean '::target-current' (pseudo-element) or is this a typo?
+21:13:57 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] site.css:4381:29 'target-current' is not recognized as a valid pseudo-class. Did you mean '::target-current' (pseudo-element) or is this a typo?
+21:13:57 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] site.css:4387:19 'target-current' is not recognized as a valid pseudo-class. Did you mean '::target-current' (pseudo-element) or is this a typo?
+21:13:57 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] site.css:4391:19 'target-current' is not recognized as a valid pseudo-class. Did you mean '::target-current' (pseudo-element) or is this a typo?
+21:13:57 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] site.css:9455:45 'view-transition-group-children' is not recognized as a valid pseudo-element. Did you mean ':view-transition-group-children' (pseudo-class) or is this a typo?
+21:13:57 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] site.css:11908:1724 'scroll-marker-group' is not recognized as a valid pseudo-element. Did you mean ':scroll-marker-group' (pseudo-class) or is this a typo?
+21:13:57 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] site.css:11908:1968 'scroll-marker-group' is not recognized as a valid pseudo-element. Did you mean ':scroll-marker-group' (pseudo-class) or is this a typo?
+21:13:57 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] site.css:11908:2088 'scroll-button' is not recognized as a valid pseudo-element. Did you mean ':scroll-button' (pseudo-class) or is this a typo?
+21:13:57 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] site.css:11908:2127 'scroll-button' is not recognized as a valid pseudo-element. Did you mean ':scroll-button' (pseudo-class) or is this a typo?
+21:13:57 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] site.css:11908:2785 'scroll-button' is not recognized as a valid pseudo-element. Did you mean ':scroll-button' (pseudo-class) or is this a typo?
+21:13:57 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] site.css:11908:2966 'scroll-button' is not recognized as a valid pseudo-element. Did you mean ':scroll-button' (pseudo-class) or is this a typo?
+21:13:57 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] site.css:11908:3137 'scroll-button' is not recognized as a valid pseudo-element. Did you mean ':scroll-button' (pseudo-class) or is this a typo?
+21:13:57 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] site.css:11908:3277 'scroll-button' is not recognized as a valid pseudo-element. Did you mean ':scroll-button' (pseudo-class) or is this a typo?
+21:13:57 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] site.css:11908:3426 'scroll-button' is not recognized as a valid pseudo-element. Did you mean ':scroll-button' (pseudo-class) or is this a typo?
+21:13:57 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] site.css:11908:3471 'scroll-button' is not recognized as a valid pseudo-element. Did you mean ':scroll-button' (pseudo-class) or is this a typo?
+21:13:57 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] site.css:11908:3590 'scroll-button' is not recognized as a valid pseudo-element. Did you mean ':scroll-button' (pseudo-class) or is this a typo?
+21:13:57 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] site.css:11908:3651 'scroll-button' is not recognized as a valid pseudo-element. Did you mean ':scroll-button' (pseudo-class) or is this a typo?
+21:13:57 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] site.css:11908:3870 'scroll-button' is not recognized as a valid pseudo-element. Did you mean ':scroll-button' (pseudo-class) or is this a typo?
+21:13:57 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] site.css:11908:3923 'scroll-button' is not recognized as a valid pseudo-element. Did you mean ':scroll-button' (pseudo-class) or is this a typo?
+21:13:57 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] site.css:11908:4180 'scroll-marker-group' is not recognized as a valid pseudo-element. Did you mean ':scroll-marker-group' (pseudo-class) or is this a typo?
+21:13:57 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] site.css:11908:4405 'scroll-marker-group' is not recognized as a valid pseudo-element. Did you mean ':scroll-marker-group' (pseudo-class) or is this a typo?
+21:13:57 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] site.css:11908:4561 'scroll-marker-group' is not recognized as a valid pseudo-element. Did you mean ':scroll-marker-group' (pseudo-class) or is this a typo?
+21:13:57 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] site.css:11908:4717 'scroll-marker-group' is not recognized as a valid pseudo-element. Did you mean ':scroll-marker-group' (pseudo-class) or is this a typo?
+21:13:57 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] site.css:11908:4865 'scroll-button' is not recognized as a valid pseudo-element. Did you mean ':scroll-button' (pseudo-class) or is this a typo?
+21:13:57 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] site.css:11908:4921 'scroll-button' is not recognized as a valid pseudo-element. Did you mean ':scroll-button' (pseudo-class) or is this a typo?
+21:13:57 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] site.css:11908:5578 'scroll-button' is not recognized as a valid pseudo-element. Did you mean ':scroll-button' (pseudo-class) or is this a typo?
+21:13:57 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] site.css:11908:5777 'scroll-button' is not recognized as a valid pseudo-element. Did you mean ':scroll-button' (pseudo-class) or is this a typo?
+21:13:57 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] site.css:11908:6015 'scroll-button' is not recognized as a valid pseudo-element. Did you mean ':scroll-button' (pseudo-class) or is this a typo?
+21:13:57 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] site.css:11908:6077 'scroll-button' is not recognized as a valid pseudo-element. Did you mean ':scroll-button' (pseudo-class) or is this a typo?
+21:13:57 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] site.css:11908:6213 'scroll-button' is not recognized as a valid pseudo-element. Did you mean ':scroll-button' (pseudo-class) or is this a typo?
+21:13:57 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] site.css:11908:6291 'scroll-button' is not recognized as a valid pseudo-element. Did you mean ':scroll-button' (pseudo-class) or is this a typo?
+21:13:57 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] site.css:11908:6527 'scroll-button' is not recognized as a valid pseudo-element. Did you mean ':scroll-button' (pseudo-class) or is this a typo?
+21:13:57 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] site.css:11908:6597 'scroll-button' is not recognized as a valid pseudo-element. Did you mean ':scroll-button' (pseudo-class) or is this a typo?
+21:13:57 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] site.css:11908:6758 'scroll-button' is not recognized as a valid pseudo-element. Did you mean ':scroll-button' (pseudo-class) or is this a typo?
+21:13:57 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] site.css:11908:6823 'scroll-button' is not recognized as a valid pseudo-element. Did you mean ':scroll-button' (pseudo-class) or is this a typo?
+21:13:57 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] site.css:11908:6886 'scroll-button' is not recognized as a valid pseudo-element. Did you mean ':scroll-button' (pseudo-class) or is this a typo?
+21:13:57 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] site.css:11908:6943 'scroll-button' is not recognized as a valid pseudo-element. Did you mean ':scroll-button' (pseudo-class) or is this a typo?
+21:13:57 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] site.css:11908:7171 'scroll-button' is not recognized as a valid pseudo-element. Did you mean ':scroll-button' (pseudo-class) or is this a typo?
+21:13:57 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] site.css:11908:7249 'scroll-button' is not recognized as a valid pseudo-element. Did you mean ':scroll-button' (pseudo-class) or is this a typo?
+21:13:57 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] site.css:11908:7297 'scroll-button' is not recognized as a valid pseudo-element. Did you mean ':scroll-button' (pseudo-class) or is this a typo?
+21:13:57 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] site.css:11908:7417 'scroll-button' is not recognized as a valid pseudo-element. Did you mean ':scroll-button' (pseudo-class) or is this a typo?
+21:13:57 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] site.css:11908:7456 'scroll-button' is not recognized as a valid pseudo-element. Did you mean ':scroll-button' (pseudo-class) or is this a typo?
+21:13:57 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] site.css:11908:7493 'scroll-button' is not recognized as a valid pseudo-element. Did you mean ':scroll-button' (pseudo-class) or is this a typo?
+21:13:57 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] site.css:11908:7531 'scroll-button' is not recognized as a valid pseudo-element. Did you mean ':scroll-button' (pseudo-class) or is this a typo?
+21:13:57 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] site.css:12064:9 'scroll-marker' is not recognized as a valid pseudo-element. Did you mean ':scroll-marker' (pseudo-class) or is this a typo?
+21:13:57 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] site.css:12087:11 'scroll-marker' is not recognized as a valid pseudo-element. Did you mean ':scroll-marker' (pseudo-class) or is this a typo?
+21:13:57 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] site.css:12092:9 'scroll-marker' is not recognized as a valid pseudo-element. Did you mean ':scroll-marker' (pseudo-class) or is this a typo?
+21:13:57 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] site.css:12092:24 'target-current' is not recognized as a valid pseudo-class. Did you mean '::target-current' (pseudo-element) or is this a typo?
+21:13:57 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] site.css:12098:28 'scroll-marker' is not recognized as a valid pseudo-element. Did you mean ':scroll-marker' (pseudo-class) or is this a typo?
+21:13:57 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] site.css:12098:43 'target-current' is not recognized as a valid pseudo-class. Did you mean '::target-current' (pseudo-element) or is this a typo?
+21:13:57 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] site.css:12103:9 'scroll-marker' is not recognized as a valid pseudo-element. Did you mean ':scroll-marker' (pseudo-class) or is this a typo?
+21:13:57 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] site.css:12109:11 'scroll-marker' is not recognized as a valid pseudo-element. Did you mean ':scroll-marker' (pseudo-class) or is this a typo?
+21:13:57 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] site.css:12115:13 'scroll-marker' is not recognized as a valid pseudo-element. Did you mean ':scroll-marker' (pseudo-class) or is this a typo?
+21:13:57 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] site.css:12120:11 'scroll-marker' is not recognized as a valid pseudo-element. Did you mean ':scroll-marker' (pseudo-class) or is this a typo?
+21:13:57 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] site.css:12120:26 'target-current' is not recognized as a valid pseudo-class. Did you mean '::target-current' (pseudo-element) or is this a typo?
+21:13:57 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] site.css:12124:11 'scroll-marker' is not recognized as a valid pseudo-element. Did you mean ':scroll-marker' (pseudo-class) or is this a typo?
+21:13:57 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] _astro/site.8gJWwlNj.css:4347:395 'target-current' is not recognized as a valid pseudo-class. Did you mean '::target-current' (pseudo-element) or is this a typo?
+21:13:57 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] _astro/site.8gJWwlNj.css:4347:497 'target-current' is not recognized as a valid pseudo-class. Did you mean '::target-current' (pseudo-element) or is this a typo?
+21:13:57 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] _astro/site.8gJWwlNj.css:4347:796 'target-current' is not recognized as a valid pseudo-class. Did you mean '::target-current' (pseudo-element) or is this a typo?
+21:13:57 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] _astro/site.8gJWwlNj.css:4347:1120 'target-current' is not recognized as a valid pseudo-class. Did you mean '::target-current' (pseudo-element) or is this a typo?
+21:13:57 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] _astro/site.8gJWwlNj.css:4347:1238 'target-current' is not recognized as a valid pseudo-class. Did you mean '::target-current' (pseudo-element) or is this a typo?
+21:13:57 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] _astro/site.8gJWwlNj.css:4353:27 'target-current' is not recognized as a valid pseudo-class. Did you mean '::target-current' (pseudo-element) or is this a typo?
+21:13:57 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] _astro/site.8gJWwlNj.css:4381:29 'target-current' is not recognized as a valid pseudo-class. Did you mean '::target-current' (pseudo-element) or is this a typo?
+21:13:57 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] _astro/site.8gJWwlNj.css:4387:19 'target-current' is not recognized as a valid pseudo-class. Did you mean '::target-current' (pseudo-element) or is this a typo?
+21:13:57 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] _astro/site.8gJWwlNj.css:4391:19 'target-current' is not recognized as a valid pseudo-class. Did you mean '::target-current' (pseudo-element) or is this a typo?
+21:13:57 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] _astro/site.8gJWwlNj.css:9455:45 'view-transition-group-children' is not recognized as a valid pseudo-element. Did you mean ':view-transition-group-children' (pseudo-class) or is this a typo?
+21:13:57 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] _astro/site.8gJWwlNj.css:11908:1724 'scroll-marker-group' is not recognized as a valid pseudo-element. Did you mean ':scroll-marker-group' (pseudo-class) or is this a typo?
+21:13:57 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] _astro/site.8gJWwlNj.css:11908:1968 'scroll-marker-group' is not recognized as a valid pseudo-element. Did you mean ':scroll-marker-group' (pseudo-class) or is this a typo?
+21:13:57 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] _astro/site.8gJWwlNj.css:11908:2088 'scroll-button' is not recognized as a valid pseudo-element. Did you mean ':scroll-button' (pseudo-class) or is this a typo?
+21:13:57 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] _astro/site.8gJWwlNj.css:11908:2127 'scroll-button' is not recognized as a valid pseudo-element. Did you mean ':scroll-button' (pseudo-class) or is this a typo?
+21:13:57 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] _astro/site.8gJWwlNj.css:11908:2785 'scroll-button' is not recognized as a valid pseudo-element. Did you mean ':scroll-button' (pseudo-class) or is this a typo?
+21:13:57 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] _astro/site.8gJWwlNj.css:11908:2966 'scroll-button' is not recognized as a valid pseudo-element. Did you mean ':scroll-button' (pseudo-class) or is this a typo?
+21:13:57 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] _astro/site.8gJWwlNj.css:11908:3137 'scroll-button' is not recognized as a valid pseudo-element. Did you mean ':scroll-button' (pseudo-class) or is this a typo?
+21:13:57 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] _astro/site.8gJWwlNj.css:11908:3277 'scroll-button' is not recognized as a valid pseudo-element. Did you mean ':scroll-button' (pseudo-class) or is this a typo?
+21:13:57 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] _astro/site.8gJWwlNj.css:11908:3426 'scroll-button' is not recognized as a valid pseudo-element. Did you mean ':scroll-button' (pseudo-class) or is this a typo?
+21:13:57 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] _astro/site.8gJWwlNj.css:11908:3471 'scroll-button' is not recognized as a valid pseudo-element. Did you mean ':scroll-button' (pseudo-class) or is this a typo?
+21:13:57 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] _astro/site.8gJWwlNj.css:11908:3590 'scroll-button' is not recognized as a valid pseudo-element. Did you mean ':scroll-button' (pseudo-class) or is this a typo?
+21:13:57 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] _astro/site.8gJWwlNj.css:11908:3651 'scroll-button' is not recognized as a valid pseudo-element. Did you mean ':scroll-button' (pseudo-class) or is this a typo?
+21:13:57 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] _astro/site.8gJWwlNj.css:11908:3870 'scroll-button' is not recognized as a valid pseudo-element. Did you mean ':scroll-button' (pseudo-class) or is this a typo?
+21:13:57 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] _astro/site.8gJWwlNj.css:11908:3923 'scroll-button' is not recognized as a valid pseudo-element. Did you mean ':scroll-button' (pseudo-class) or is this a typo?
+21:13:57 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] _astro/site.8gJWwlNj.css:11908:4180 'scroll-marker-group' is not recognized as a valid pseudo-element. Did you mean ':scroll-marker-group' (pseudo-class) or is this a typo?
+21:13:57 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] _astro/site.8gJWwlNj.css:11908:4405 'scroll-marker-group' is not recognized as a valid pseudo-element. Did you mean ':scroll-marker-group' (pseudo-class) or is this a typo?
+21:13:57 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] _astro/site.8gJWwlNj.css:11908:4561 'scroll-marker-group' is not recognized as a valid pseudo-element. Did you mean ':scroll-marker-group' (pseudo-class) or is this a typo?
+21:13:57 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] _astro/site.8gJWwlNj.css:11908:4717 'scroll-marker-group' is not recognized as a valid pseudo-element. Did you mean ':scroll-marker-group' (pseudo-class) or is this a typo?
+21:13:57 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] _astro/site.8gJWwlNj.css:11908:4865 'scroll-button' is not recognized as a valid pseudo-element. Did you mean ':scroll-button' (pseudo-class) or is this a typo?
+21:13:57 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] _astro/site.8gJWwlNj.css:11908:4921 'scroll-button' is not recognized as a valid pseudo-element. Did you mean ':scroll-button' (pseudo-class) or is this a typo?
+21:13:57 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] _astro/site.8gJWwlNj.css:11908:5578 'scroll-button' is not recognized as a valid pseudo-element. Did you mean ':scroll-button' (pseudo-class) or is this a typo?
+21:13:57 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] _astro/site.8gJWwlNj.css:11908:5777 'scroll-button' is not recognized as a valid pseudo-element. Did you mean ':scroll-button' (pseudo-class) or is this a typo?
+21:13:57 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] _astro/site.8gJWwlNj.css:11908:6015 'scroll-button' is not recognized as a valid pseudo-element. Did you mean ':scroll-button' (pseudo-class) or is this a typo?
+21:13:57 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] _astro/site.8gJWwlNj.css:11908:6077 'scroll-button' is not recognized as a valid pseudo-element. Did you mean ':scroll-button' (pseudo-class) or is this a typo?
+21:13:57 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] _astro/site.8gJWwlNj.css:11908:6213 'scroll-button' is not recognized as a valid pseudo-element. Did you mean ':scroll-button' (pseudo-class) or is this a typo?
+21:13:57 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] _astro/site.8gJWwlNj.css:11908:6291 'scroll-button' is not recognized as a valid pseudo-element. Did you mean ':scroll-button' (pseudo-class) or is this a typo?
+21:13:57 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] _astro/site.8gJWwlNj.css:11908:6527 'scroll-button' is not recognized as a valid pseudo-element. Did you mean ':scroll-button' (pseudo-class) or is this a typo?
+21:13:57 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] _astro/site.8gJWwlNj.css:11908:6597 'scroll-button' is not recognized as a valid pseudo-element. Did you mean ':scroll-button' (pseudo-class) or is this a typo?
+21:13:57 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] _astro/site.8gJWwlNj.css:11908:6758 'scroll-button' is not recognized as a valid pseudo-element. Did you mean ':scroll-button' (pseudo-class) or is this a typo?
+21:13:57 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] _astro/site.8gJWwlNj.css:11908:6823 'scroll-button' is not recognized as a valid pseudo-element. Did you mean ':scroll-button' (pseudo-class) or is this a typo?
+21:13:57 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] _astro/site.8gJWwlNj.css:11908:6886 'scroll-button' is not recognized as a valid pseudo-element. Did you mean ':scroll-button' (pseudo-class) or is this a typo?
+21:13:57 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] _astro/site.8gJWwlNj.css:11908:6943 'scroll-button' is not recognized as a valid pseudo-element. Did you mean ':scroll-button' (pseudo-class) or is this a typo?
+21:13:57 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] _astro/site.8gJWwlNj.css:11908:7171 'scroll-button' is not recognized as a valid pseudo-element. Did you mean ':scroll-button' (pseudo-class) or is this a typo?
+21:13:57 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] _astro/site.8gJWwlNj.css:11908:7249 'scroll-button' is not recognized as a valid pseudo-element. Did you mean ':scroll-button' (pseudo-class) or is this a typo?
+21:13:57 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] _astro/site.8gJWwlNj.css:11908:7297 'scroll-button' is not recognized as a valid pseudo-element. Did you mean ':scroll-button' (pseudo-class) or is this a typo?
+21:13:57 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] _astro/site.8gJWwlNj.css:11908:7417 'scroll-button' is not recognized as a valid pseudo-element. Did you mean ':scroll-button' (pseudo-class) or is this a typo?
+21:13:57 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] _astro/site.8gJWwlNj.css:11908:7456 'scroll-button' is not recognized as a valid pseudo-element. Did you mean ':scroll-button' (pseudo-class) or is this a typo?
+21:13:57 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] _astro/site.8gJWwlNj.css:11908:7493 'scroll-button' is not recognized as a valid pseudo-element. Did you mean ':scroll-button' (pseudo-class) or is this a typo?
+21:13:57 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] _astro/site.8gJWwlNj.css:11908:7531 'scroll-button' is not recognized as a valid pseudo-element. Did you mean ':scroll-button' (pseudo-class) or is this a typo?
+21:13:57 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] _astro/site.8gJWwlNj.css:12064:9 'scroll-marker' is not recognized as a valid pseudo-element. Did you mean ':scroll-marker' (pseudo-class) or is this a typo?
+21:13:57 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] _astro/site.8gJWwlNj.css:12087:11 'scroll-marker' is not recognized as a valid pseudo-element. Did you mean ':scroll-marker' (pseudo-class) or is this a typo?
+21:13:57 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] _astro/site.8gJWwlNj.css:12092:9 'scroll-marker' is not recognized as a valid pseudo-element. Did you mean ':scroll-marker' (pseudo-class) or is this a typo?
+21:13:57 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] _astro/site.8gJWwlNj.css:12092:24 'target-current' is not recognized as a valid pseudo-class. Did you mean '::target-current' (pseudo-element) or is this a typo?
+21:13:57 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] _astro/site.8gJWwlNj.css:12098:28 'scroll-marker' is not recognized as a valid pseudo-element. Did you mean ':scroll-marker' (pseudo-class) or is this a typo?
+21:13:57 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] _astro/site.8gJWwlNj.css:12098:43 'target-current' is not recognized as a valid pseudo-class. Did you mean '::target-current' (pseudo-element) or is this a typo?
+21:13:57 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] _astro/site.8gJWwlNj.css:12103:9 'scroll-marker' is not recognized as a valid pseudo-element. Did you mean ':scroll-marker' (pseudo-class) or is this a typo?
+21:13:57 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] _astro/site.8gJWwlNj.css:12109:11 'scroll-marker' is not recognized as a valid pseudo-element. Did you mean ':scroll-marker' (pseudo-class) or is this a typo?
+21:13:57 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] _astro/site.8gJWwlNj.css:12115:13 'scroll-marker' is not recognized as a valid pseudo-element. Did you mean ':scroll-marker' (pseudo-class) or is this a typo?
+21:13:57 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] _astro/site.8gJWwlNj.css:12120:11 'scroll-marker' is not recognized as a valid pseudo-element. Did you mean ':scroll-marker' (pseudo-class) or is this a typo?
+21:13:57 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] _astro/site.8gJWwlNj.css:12120:26 'target-current' is not recognized as a valid pseudo-class. Did you mean '::target-current' (pseudo-element) or is this a typo?
+21:13:57 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] _astro/site.8gJWwlNj.css:12124:11 'scroll-marker' is not recognized as a valid pseudo-element. Did you mean ':scroll-marker' (pseudo-class) or is this a typo?
+21:13:57 [vite] ✓ built in 4.24s
+21:13:58 [vite] ✓ built in 1.24s
+21:13:58 [build] Rearranging server assets...
+
+ generating static routes 
+21:13:58   ├─ /guide/accessibility.html (+195ms) 
+21:13:58   ├─ /tw/guide/accessibility.html (+61ms) 
+21:13:58   ├─ /guide/getting-started.html (+81ms) 
+21:13:58   ├─ /tw/guide/getting-started.html (+58ms) 
+21:13:59   ├─ /guide/license.html (+57ms) 
+21:13:59   ├─ /tw/guide/license.html (+60ms) 
+21:13:59   ├─ /guide/optical-sizes.html (+57ms) 
+21:13:59   ├─ /tw/guide/optical-sizes.html (+57ms) 
+21:13:59   ├─ /guide/react.html (+62ms) 
+21:13:59   ├─ /tw/guide/react.html (+63ms) 
+21:13:59   ├─ /guide/svg.html (+83ms) 
+21:13:59   ├─ /tw/guide/svg.html (+63ms) 
+21:13:59   ├─ /icons.html (+51ms) 
+21:13:59   ├─ /tw/icons.html (+43ms) 
+21:13:59   ├─ /index.html (+41ms) 
+21:13:59   ├─ /tw.html (+37ms) 
+21:13:59 ✓ Completed in 1.09s.
+
+21:13:59 [build] ✓ Completed in 6.64s.
+21:13:59 [build] 16 page(s) built in 7.34s
+21:13:59 [build] Complete!
+$ node scripts/validate.mjs
+Validated 610 base concepts / 790 named drawings, 7110 SVG hashes, geometry, notices, 48 historical + 1407 current pinned references, and 9 licensed ZIPs.
+$ bun run --cwd packages/icons test
+$ cd ../.. && node --test packages/icons/tests/*.test.mjs
+✔ requested additions are exported and only the explicit ChatGPT identity alias shares geometry (1.832834ms)
+✔ 88 named brands retain their pinned source contours and discoverable metadata (18.838125ms)
+✔ brand silhouettes preserve identity under corner, stroke and RTL controls (9.281ms)
+✔ single SVGs, catalog and all nine downloadable archives preserve brand provenance (212.70625ms)
+✔ new brand artwork terms and trace provenance survive single-file exports (0.517542ms)
+✔ symmetric objects retain symmetric painted contours at their closing seams (96.905417ms)
+✔ structural details preserve their enclosing silhouette (58.93975ms)
+✔ radial chart partitions preserve both the outer ring and donut hole (19.936833ms)
+✔ exterior attachments connect to the shell without entering its cavity (51.664417ms)
+✔ folded map and front coin keep internal seams inside their own shell (21.612958ms)
+✔ compass needle leaves a visible gap from the ring in every corner preset (1.902833ms)
+✔ adjacent list-collapse arrows remain distinct instead of forming a zigzag (2.550958ms)
+✔ contour regressions reject the actual pre-Craft-05 defects (11.359542ms)
+✔ structural seams do not paint outside the actual package and drive shells (27.2785ms)
+✔ database state drawings retain empty upper compartments after Boolean operations (46.9715ms)
+✔ circular foreground badges leave no background fragments inside their loops (28.394333ms)
+✔ clipboard pen sharp miter and all new service badges stay within the native canvas (86.261459ms)
+✔ keyboard return trims only the tip and keeps its return route and connected shaft (43.643084ms)
+✔ languages crossbar and briefcase seam stay inside their structural shells (8.15275ms)
+✔ wrench jaw, shoulders and handle share a genuine reflection axis (17.767583ms)
+✔ occluded ink stays outside the foreground clearance, including solid badge interiors (131.361667ms)
+✔ all four phone cuts follow parallel offset boundaries, instead of rounded path endpoints (7.266416ms)
+✔ per-stroke dashes and opacity survive React serialization (3.227958ms)
+✔ optical selection has explicit boundaries and rejects invalid input (0.506417ms)
+✔ dense small masters remove detail and corner profiles alter actual geometry (0.086667ms)
+✔ SVG escaping, decorative defaults, and opt-in directional policy (0.472875ms)
+✔ React exports match SVG geometry, preserve a11y and consume design props (3.192167ms)
+✔ static React imports tree shake unrelated icons and unused optical masters (34.704333ms)
+✔ all named React exports match authored SVG for every optical and corner master (158.309333ms)
+✔ RTL changes only the approved navigation set, preserving geometry transforms (4.3565ms)
+✔ original 48 names and all unreviewed masters remain compatible (6.419041ms)
+✔ real semantic paint effects survive SVG and React across all sizes (0.251916ms)
+✔ the saved 280 baseline preserves the 210 drawings before organization (4.96925ms)
+✔ the saved 280 baseline preserves all 220 pre-productivity definitions (4.899292ms)
+✔ only explicitly reviewed refinements differ from the complete baseline (30.70275ms)
+✔ craft-03 refinements preserve an explicit independent and root review history (26.367458ms)
+✔ semantic perforations retain flat ends independently of frame corner styles (0.606833ms)
+✔ every productivity drawing appears in a labelled product scenario (8.343125ms)
+✔ every expansion drawing is used in a labelled interface scenario (0.627208ms)
+✔ craft-04 changes exactly its explicit reviewed set and retains all 392 names (12.132625ms)
+✔ craft-05 preserves its immutable baseline, final masters and individual review history (35.465166ms)
+✔ committed-craft-01 changes exactly its reviewed scope and matches current masters and evidence (53.201542ms)
+ℹ tests 42
+ℹ suites 0
+ℹ pass 42
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 648.72225
+$ bun run test:types && bun run --cwd site type-check
+$ bun run --cwd packages/icons test:types
+$ tsc -p tests/tsconfig.json
+$ node ../scripts/check-site-node.mjs && bun run prepare-site && astro sync && astro-check --tsconfig tsconfig.json && svelte-check --tsconfig tsconfig.json
+$ node --import tsx scripts/prepare.ts
+Prepared 790 icons and bilingual guides
+21:14:04 [types] Generated 326ms
+Getting diagnostics for Astro files in /Users/aron/master-icons/work/atlas-01/commit/checkout/site...
+Result (24 files): 
+- 0 errors
+- 0 warnings
+- 0 hints
+
+Loading svelte-check in workspace: /Users/aron/master-icons/work/atlas-01/commit/checkout/site
+Getting Svelte diagnostics...
+
+svelte-check found 0 errors and 0 warnings

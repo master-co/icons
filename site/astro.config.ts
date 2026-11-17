@@ -1,4 +1,5 @@
 import { defineConfig } from 'astro/config'
+import {fileURLToPath} from 'node:url'
 import masterSite from '@master/internal-site/astro'
 import site from './site.config'
 import iconsPackage from '@master/icons/package.json' with {type:'json'}
@@ -9,6 +10,8 @@ export default defineConfig({
  devToolbar: {enabled:false},
  integrations: [masterSite(site)],
  vite: {
+  // Keep SVG components in Vite so import.meta.env is transformed in dev.
+  resolve:{alias:{'astro/assets/runtime':fileURLToPath(import.meta.resolve('astro/assets/runtime'))}},
   cacheDir: process.env.MASTER_ICONS_VITE_CACHE_DIR,
   // Cold server dependency optimization can invalidate Astro's registered
   // development environment mid-request. Keep Svelte's server imports as ESM;

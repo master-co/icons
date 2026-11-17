@@ -1,0 +1,208 @@
+[
+  {
+    "name": "link",
+    "concept": "link",
+    "purpose": "導覽與操作：連結",
+    "recognitionCues": "採兩個相扣圓弧，內側接點清楚",
+    "confusableWith": [
+      "paperclip"
+    ],
+    "sourceObservation": "Lucide較偏有短連接弧的鏈節，Tabler使用中心斜線；Master保留兩個彎環而不再添加第三條連線，原生尺寸仍可辨識。",
+    "references": [
+      {
+        "name": "link",
+        "library": "Lucide",
+        "repository": "lucide-icons/lucide",
+        "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+        "path": "icons/link.svg",
+        "localPath": "references/ui-v1/lucide-link.svg",
+        "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/link.svg",
+        "sha256": "4f3237183dcaabfac92f4e94c776a9a9e45c3c5e77a921061a6b34b61eb5413f",
+        "license": "ISC AND MIT",
+        "sourceName": "link",
+        "match": "exact",
+        "role": "comparison-only"
+      },
+      {
+        "name": "link",
+        "library": "Tabler",
+        "repository": "tabler/tabler-icons",
+        "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+        "path": "icons/outline/link.svg",
+        "localPath": "references/ui-v1/tabler-link.svg",
+        "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/link.svg",
+        "sha256": "27e34930284da308ed31c4ddc9c14fc333db08be5b6c42bcbf99f77ec5bad626",
+        "license": "MIT",
+        "sourceName": "link",
+        "match": "exact",
+        "role": "comparison-only"
+      }
+    ],
+    "effects": {
+      "dashes": {
+        "used": false,
+        "reason": "不採用；「連結」由連續輪廓、節點或實際斷開關係表意，沒有需虛線表示的隱藏／未完成邊界。"
+      },
+      "opacity": {
+        "used": false,
+        "reason": "不採用；「連結」的必要輪廓與狀態可以靠形狀、留白表達，淡化不提供額外語意。"
+      },
+      "gradients": {
+        "used": false,
+        "reason": "本期僅允許必要的逐筆透明度；未引入連續漸層或 mask。"
+      }
+    },
+    "change": {
+      "kind": "retained",
+      "reason": "保留：兩個鏈環的開口與內側短弧形成交扣訊號，三尺寸中間未變成黑結，兩端曲率呼應。",
+      "before": {
+        "path": "references/craft-05/master-before.json",
+        "variantsSha256": "c933b6d55efdd4ad9a9f4d10ef9fba74bbf66ce7a48e46d0d91b3f773e075178"
+      }
+    },
+    "visualReview": {
+      "status": "retained-after-visual-review",
+      "reviewer": "root",
+      "date": "2026-11-16",
+      "skillVersion": "0.5.4",
+      "batch": "craft-05-08",
+      "variantsSha256": "c933b6d55efdd4ad9a9f4d10ef9fba74bbf66ce7a48e46d0d91b3f773e075178",
+      "checks": [
+        "16/20/24",
+        "sharp/soft/rounded",
+        "light/dark",
+        "55-percent-foreground",
+        "adjacent-text",
+        "two-pinned-source-comparisons",
+        "true-before-after",
+        "painted-contour-and-cavity",
+        "semantic-effect-decision"
+      ],
+      "evidence": [
+        {
+          "path": "docs/review/craft-05/batch-08/comparison.png",
+          "sha256": "a195ba73db007d07855a7e91e3b81a09f9d3746c7fb4a01bc783f8372bde75e3"
+        },
+        {
+          "path": "docs/review/craft-05/batch-08/native.png",
+          "sha256": "711ea0e7c3dd38c7209e3a92cb03f8682cac7ed152869dcb0f266a3a3a5de67c"
+        },
+        {
+          "path": "docs/review/craft-05/batch-08/native-dark.png",
+          "sha256": "c08e759fd597c6d062c028f88c034611452e7bff1188ac08758b128306565b1d"
+        },
+        {
+          "path": "docs/review/craft-05/batch-08/diagnostic.png",
+          "sha256": "245839da67f65827628c780d8b6629274cc654a7078c3dd10f8aeccf434a70e0"
+        }
+      ]
+    },
+    "status": "visually-reviewed-candidate",
+    "userApproval": "pending",
+    "beforeHash": "c933b6d55efdd4ad9a9f4d10ef9fba74bbf66ce7a48e46d0d91b3f773e075178",
+    "afterHash": "c933b6d55efdd4ad9a9f4d10ef9fba74bbf66ce7a48e46d0d91b3f773e075178"
+  },
+  {
+    "name": "unlink",
+    "concept": "unlink",
+    "purpose": "導覽與操作：取消連結",
+    "recognitionCues": "16px 減少兩筆斷裂提示，保留雙半環",
+    "confusableWith": [
+      "link"
+    ],
+    "sourceObservation": "Lucide／Tabler皆以鏈環斷裂及短提示線表達解除；Master將16px輔助訊號簡化，避免源稿縮小後過密。",
+    "references": [
+      {
+        "name": "unlink",
+        "library": "Lucide",
+        "repository": "lucide-icons/lucide",
+        "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+        "path": "icons/unlink.svg",
+        "localPath": "references/ui-v1/lucide-unlink.svg",
+        "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/unlink.svg",
+        "sha256": "1cdf08c7f396b292a2e8ad037a22a3a5098ab6a6ce38eaec4164f17e023c0884",
+        "license": "ISC AND MIT",
+        "sourceName": "unlink",
+        "match": "exact",
+        "role": "comparison-only"
+      },
+      {
+        "name": "unlink",
+        "library": "Tabler",
+        "repository": "tabler/tabler-icons",
+        "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+        "path": "icons/outline/unlink.svg",
+        "localPath": "references/ui-v1/tabler-unlink.svg",
+        "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/unlink.svg",
+        "sha256": "f53fc177bb40baf7d31074f28d3a86572e96c66b298242bfed5f85baefb6c4e6",
+        "license": "MIT",
+        "sourceName": "unlink",
+        "match": "exact",
+        "role": "comparison-only"
+      }
+    ],
+    "effects": {
+      "dashes": {
+        "used": false,
+        "reason": "不採用連續虛線；斷裂提示是獨立短筆，不代表隱藏邊界。"
+      },
+      "opacity": {
+        "used": false,
+        "reason": "不採用；鏈環與斷裂訊號都需要在小尺寸清楚。"
+      },
+      "gradients": {
+        "used": false,
+        "reason": "本期僅允許必要的逐筆透明度；未引入連續漸層或 mask。"
+      }
+    },
+    "change": {
+      "kind": "retained",
+      "reason": "保留：分離鏈環與斷開提示短線有可見間距；16px減少提示線但保留分離輪廓，24px四短線未相碰。",
+      "before": {
+        "path": "references/craft-05/master-before.json",
+        "variantsSha256": "c8a9b1e4de2f289ecd653929ac9ff69085fbf005b11344c67c009bca9e53dd38"
+      }
+    },
+    "visualReview": {
+      "status": "retained-after-visual-review",
+      "reviewer": "root",
+      "date": "2026-11-16",
+      "skillVersion": "0.5.4",
+      "batch": "craft-05-08",
+      "variantsSha256": "c8a9b1e4de2f289ecd653929ac9ff69085fbf005b11344c67c009bca9e53dd38",
+      "checks": [
+        "16/20/24",
+        "sharp/soft/rounded",
+        "light/dark",
+        "55-percent-foreground",
+        "adjacent-text",
+        "two-pinned-source-comparisons",
+        "true-before-after",
+        "painted-contour-and-cavity",
+        "semantic-effect-decision"
+      ],
+      "evidence": [
+        {
+          "path": "docs/review/craft-05/batch-08/comparison.png",
+          "sha256": "a195ba73db007d07855a7e91e3b81a09f9d3746c7fb4a01bc783f8372bde75e3"
+        },
+        {
+          "path": "docs/review/craft-05/batch-08/native.png",
+          "sha256": "711ea0e7c3dd38c7209e3a92cb03f8682cac7ed152869dcb0f266a3a3a5de67c"
+        },
+        {
+          "path": "docs/review/craft-05/batch-08/native-dark.png",
+          "sha256": "c08e759fd597c6d062c028f88c034611452e7bff1188ac08758b128306565b1d"
+        },
+        {
+          "path": "docs/review/craft-05/batch-08/diagnostic.png",
+          "sha256": "245839da67f65827628c780d8b6629274cc654a7078c3dd10f8aeccf434a70e0"
+        }
+      ]
+    },
+    "status": "visually-reviewed-candidate",
+    "userApproval": "pending",
+    "beforeHash": "c8a9b1e4de2f289ecd653929ac9ff69085fbf005b11344c67c009bca9e53dd38",
+    "afterHash": "c8a9b1e4de2f289ecd653929ac9ff69085fbf005b11344c67c009bca9e53dd38"
+  }
+]

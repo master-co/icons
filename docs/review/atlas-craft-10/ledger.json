@@ -1,0 +1,1537 @@
+{
+  "schemaVersion": 2,
+  "reviewer": "Codex (AI)",
+  "userApproval": "pending",
+  "icons": [
+    {
+      "name": "bone",
+      "purpose": "骨頭",
+      "recognitionCues": "細長骨幹與兩端膨大的骨端",
+      "confusableWith": [
+        "pill",
+        "utensils"
+      ],
+      "sourceObservation": "Lucide以細骨幹、雙瓣骨端及柔和收頸構成，Tabler骨端更大且轉折較圓。Master沿用Lucide的清楚骨幹比例，保留骨端膨大與頸部回收，不添加內部裝飾。",
+      "references": [
+        {
+          "name": "bone",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/bone.svg",
+          "localPath": "references/atlas-01/lucide-bone.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/bone.svg",
+          "sha256": "2b764aae2e7b53409dbe9c4cd784f37f236a573258bb98e7903b1aa195b323f5",
+          "license": "ISC AND MIT",
+          "sourceName": "bone",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "bone",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/bone.svg",
+          "localPath": "references/atlas-01/tabler-bone.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/bone.svg",
+          "sha256": "b6bc892cbb5fb86e92dabc2f6df671d36807788a9424e9a83fbf577d963f1bf3",
+          "license": "MIT",
+          "sourceName": "bone",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "身體輪廓與助行工具均為實體構造，不需要隱藏邊界或未完成訊號。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "生物曲面和手勢以線形表達，不靠透明度掩蓋重疊或密度。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "中立單色器官與動作圖示不需要連續材質漸層。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-10/master-before.json",
+          "variantsSha256": "958f515693dc47f0e508e3e14c3340db72ea9aedd022437c96df03d2365f2256"
+        },
+        "reason": "骨幹與兩端之間靠連續曲線銜接，原生16px的細長空腔仍開放；生物形態保留自然曲面，三種角型不為差異而把骨端變成方形。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "449aa97ba66fd29c2881fdde145a29771fc388ef6de594d83f250fd348673be0",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/49-bone-tooth-brain/review.html",
+            "sha256": "aa4a433bd4038d6c1d54c456ea044a3fb3710d7424c54864a0b1a4c13724194f"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/49-bone-tooth-brain/definitions.json",
+            "sha256": "92880ef1181fc3830537a4690177467781bc2e40bd464a32eabe23471a1e1a14"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/49-bone-tooth-brain/light-1x.png",
+            "sha256": "0987414d654bcb2ef0d459b3877458cef0be0f3d62e9a855061783ff48915aaf"
+          },
+          {
+            "path": "docs/review/atlas-craft-10/final/definitions.json",
+            "sha256": "cead04e7bfa54a7e8c05a7ecfb9eb28c551967e405ce604c40ddc30802bb5e46"
+          },
+          {
+            "path": "docs/review/atlas-craft-10/final/13-body.html",
+            "sha256": "6715161980ca19c0bc1f2dd5a661fa16322ec4aab9700c015a26cb91ddbade9e"
+          },
+          {
+            "path": "docs/review/atlas-craft-10/final/13-body-light-1x.png",
+            "sha256": "4ab221f8bcc6b8bc29e9cf5e6e0a25f832af323b9c3c55b7c9a24e0cba7f213f"
+          },
+          {
+            "path": "docs/review/atlas-craft-10/final/13-body-light-2x.png",
+            "sha256": "8a4124b21dca29e8662a28f163cb795ee977e46d7ad25705e3bb1675aa234775"
+          },
+          {
+            "path": "docs/review/atlas-craft-10/final/13-body-dark-1x.png",
+            "sha256": "7baed759d40ea0ef4dbca696b7e9c288a9606e2e1373d423febed3d727a11b15"
+          },
+          {
+            "path": "docs/review/atlas-craft-10/final/13-body-dark-2x.png",
+            "sha256": "628ca9fb3a05ac9df96eb5e26bc1da1b34e6df2740aca67ebdccf6d66f0e0225"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-10/final/13-body-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-10/final/13-body-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-10/final/13-body-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-10/final/13-body-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Lucide",
+        "license": "ISC",
+        "licenseFile": "licenses/lucide.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "tooth",
+      "purpose": "牙齒",
+      "recognitionCues": "微凹牙冠、飽滿齒身與分開牙根",
+      "confusableWith": [
+        "bone",
+        "pill"
+      ],
+      "sourceObservation": "Phosphor採較方的牙冠並以交叉線提示咬合面，Tabler採微凹牙冠和一條短折線。Master選Tabler的冠部語彙，拉出較明確的雙牙根與中間收束。",
+      "references": [
+        {
+          "name": "tooth",
+          "library": "Phosphor",
+          "repository": "phosphor-icons/core",
+          "commit": "2b75f3ad12b420c9504ef05df8d2564a28f8500e",
+          "path": "assets/regular/tooth.svg",
+          "localPath": "references/atlas-01/phosphor-tooth.svg",
+          "url": "https://github.com/phosphor-icons/core/blob/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular/tooth.svg",
+          "sha256": "05db68011468b841e8dcc6c44de8f46811dd6c49aeca51613f5b2a4ea796dced",
+          "license": "MIT",
+          "sourceName": "tooth",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "tooth",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/dental.svg",
+          "localPath": "references/atlas-01/tabler-dental.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/dental.svg",
+          "sha256": "245e0590f6f8e152e83739d6e6f040d8a2db6564ef090031cf688f62fb59391b",
+          "license": "MIT",
+          "sourceName": "dental",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "身體輪廓與助行工具均為實體構造，不需要隱藏邊界或未完成訊號。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "生物曲面和手勢以線形表達，不靠透明度掩蓋重疊或密度。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "中立單色器官與動作圖示不需要連續材質漸層。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-10/master-before.json",
+          "variantsSha256": "6ccc69144676196982f7a8cadbb361cc45221844860358dcd9b048ed17e464cd"
+        },
+        "reason": "牙冠、齒身和分開牙根都在主輪廓表達；根尖保持圓滑，中央根隙可見。短冠線收在齒身內，不使用容易看成損壞標記的交叉線。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "7489fad83d2df40bc09d8a9f8c8fedbc3b8e7b6f19d85ded2e857570f4e6ee10",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/49-bone-tooth-brain/review.html",
+            "sha256": "aa4a433bd4038d6c1d54c456ea044a3fb3710d7424c54864a0b1a4c13724194f"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/49-bone-tooth-brain/definitions.json",
+            "sha256": "92880ef1181fc3830537a4690177467781bc2e40bd464a32eabe23471a1e1a14"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/49-bone-tooth-brain/light-1x.png",
+            "sha256": "0987414d654bcb2ef0d459b3877458cef0be0f3d62e9a855061783ff48915aaf"
+          },
+          {
+            "path": "docs/review/atlas-craft-10/final/definitions.json",
+            "sha256": "cead04e7bfa54a7e8c05a7ecfb9eb28c551967e405ce604c40ddc30802bb5e46"
+          },
+          {
+            "path": "docs/review/atlas-craft-10/final/13-body.html",
+            "sha256": "6715161980ca19c0bc1f2dd5a661fa16322ec4aab9700c015a26cb91ddbade9e"
+          },
+          {
+            "path": "docs/review/atlas-craft-10/final/13-body-light-1x.png",
+            "sha256": "4ab221f8bcc6b8bc29e9cf5e6e0a25f832af323b9c3c55b7c9a24e0cba7f213f"
+          },
+          {
+            "path": "docs/review/atlas-craft-10/final/13-body-light-2x.png",
+            "sha256": "8a4124b21dca29e8662a28f163cb795ee977e46d7ad25705e3bb1675aa234775"
+          },
+          {
+            "path": "docs/review/atlas-craft-10/final/13-body-dark-1x.png",
+            "sha256": "7baed759d40ea0ef4dbca696b7e9c288a9606e2e1373d423febed3d727a11b15"
+          },
+          {
+            "path": "docs/review/atlas-craft-10/final/13-body-dark-2x.png",
+            "sha256": "628ca9fb3a05ac9df96eb5e26bc1da1b34e6df2740aca67ebdccf6d66f0e0225"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-10/final/13-body-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-10/final/13-body-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-10/final/13-body-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-10/final/13-body-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Tabler",
+        "license": "MIT",
+        "licenseFile": "licenses/tabler.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "brain",
+      "purpose": "大腦",
+      "recognitionCues": "左右腦葉、中央縱裂與少量腦迴",
+      "confusableWith": [
+        "flower",
+        "cloud"
+      ],
+      "sourceObservation": "Lucide外輪廓有較多短腦迴，Tabler以較少圓葉和中央分叉表達。Master採簡化的左右腦葉與中央縱裂，20/24px增加上方內折，16px保留主要葉形及下方分支。",
+      "references": [
+        {
+          "name": "brain",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/brain.svg",
+          "localPath": "references/atlas-01/lucide-brain.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/brain.svg",
+          "sha256": "91830115f859daa12e7f2f63fc072311329e363bb8b0b4707f510bcb60c2ab18",
+          "license": "ISC AND MIT",
+          "sourceName": "brain",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "brain",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/brain.svg",
+          "localPath": "references/atlas-01/tabler-brain.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/brain.svg",
+          "sha256": "0075dfb728a3b28fddf35c0e0129733874d8eee9e4d745b2079a9adbef2797f5",
+          "license": "MIT",
+          "sourceName": "brain",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "身體輪廓與助行工具均為實體構造，不需要隱藏邊界或未完成訊號。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "生物曲面和手勢以線形表達，不靠透明度掩蓋重疊或密度。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "中立單色器官與動作圖示不需要連續材質漸層。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-10/master-before.json",
+          "variantsSha256": "d0ad9f473a2b7ad345d9b59efe98ea02d5aabbaa8c677f0abfe57601d8a7c794"
+        },
+        "reason": "左右輪廓共軸，中央線連接上下，不靠四個分離的圓框拼接；小尺寸刪去兩段上腦迴後，主輪廓仍有腦葉起伏，內部沒有密集平行狹縫。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "846775e8bdc5bdcaa9c0519f198c5375df39528d3a2686cff464503b94c5de12",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/49-bone-tooth-brain/review.html",
+            "sha256": "aa4a433bd4038d6c1d54c456ea044a3fb3710d7424c54864a0b1a4c13724194f"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/49-bone-tooth-brain/definitions.json",
+            "sha256": "92880ef1181fc3830537a4690177467781bc2e40bd464a32eabe23471a1e1a14"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/49-bone-tooth-brain/light-1x.png",
+            "sha256": "0987414d654bcb2ef0d459b3877458cef0be0f3d62e9a855061783ff48915aaf"
+          },
+          {
+            "path": "docs/review/atlas-craft-10/final/definitions.json",
+            "sha256": "cead04e7bfa54a7e8c05a7ecfb9eb28c551967e405ce604c40ddc30802bb5e46"
+          },
+          {
+            "path": "docs/review/atlas-craft-10/final/13-body.html",
+            "sha256": "6715161980ca19c0bc1f2dd5a661fa16322ec4aab9700c015a26cb91ddbade9e"
+          },
+          {
+            "path": "docs/review/atlas-craft-10/final/13-body-light-1x.png",
+            "sha256": "4ab221f8bcc6b8bc29e9cf5e6e0a25f832af323b9c3c55b7c9a24e0cba7f213f"
+          },
+          {
+            "path": "docs/review/atlas-craft-10/final/13-body-light-2x.png",
+            "sha256": "8a4124b21dca29e8662a28f163cb795ee977e46d7ad25705e3bb1675aa234775"
+          },
+          {
+            "path": "docs/review/atlas-craft-10/final/13-body-dark-1x.png",
+            "sha256": "7baed759d40ea0ef4dbca696b7e9c288a9606e2e1373d423febed3d727a11b15"
+          },
+          {
+            "path": "docs/review/atlas-craft-10/final/13-body-dark-2x.png",
+            "sha256": "628ca9fb3a05ac9df96eb5e26bc1da1b34e6df2740aca67ebdccf6d66f0e0225"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-10/final/13-body-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-10/final/13-body-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-10/final/13-body-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-10/final/13-body-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Tabler",
+        "license": "MIT",
+        "licenseFile": "licenses/tabler.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "lungs",
+      "purpose": "肺",
+      "recognitionCues": "左右肺葉與中央分岔氣道",
+      "confusableWith": [
+        "stethoscope",
+        "leaf"
+      ],
+      "sourceObservation": "Hugeicons以較飽滿的肺葉和內部分支表現呼吸器官，Tabler用較直的肺內側與中央分岔。Master採Tabler的基本構造，加寬中央通道並保留由上向下展開的肺葉曲面。",
+      "references": [
+        {
+          "name": "lungs",
+          "library": "Hugeicons Free",
+          "repository": "hugeicons/hugeicons",
+          "commit": "834e28d965946c1ee60d080027fe9dae4adc58d0",
+          "path": "icons/lungs.svg",
+          "localPath": "references/atlas-01/hugeicons-lungs.svg",
+          "url": "https://github.com/hugeicons/hugeicons/blob/834e28d965946c1ee60d080027fe9dae4adc58d0/icons/lungs.svg",
+          "sha256": "5d1ba5acd1867e768329102a2595b8cd479062daab56d736139dce4e59472901",
+          "license": "MIT",
+          "sourceName": "lungs",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "lungs",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/lungs.svg",
+          "localPath": "references/atlas-01/tabler-lungs.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/lungs.svg",
+          "sha256": "d6068cb230c57d4fdb6dc7fa19c5e90304d0480af80622656ca4ba0c00bb23c9",
+          "license": "MIT",
+          "sourceName": "lungs",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "身體輪廓與助行工具均為實體構造，不需要隱藏邊界或未完成訊號。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "生物曲面和手勢以線形表達，不靠透明度掩蓋重疊或密度。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "中立單色器官與動作圖示不需要連續材質漸層。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-10/master-before.json",
+          "variantsSha256": "51ad024529e01702aede6aa2ae47271ef85a198edda20d2dfaeedbc93d25af06"
+        },
+        "reason": "肺葉頂部窄、下部飽滿，氣道與肺葉內緣之間有可見留白；分岔在接入肺葉時收於外殼，不在小肺葉內增畫細支氣管。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "8ba28eaa80fa363b824ba20c2bf3e34e5395e60280615619e7de9d61b9dac32d",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/50-lungs-ear-hand/review.html",
+            "sha256": "32aa6b6cecaa4953f5f935cbba1b694ea2587b3c58c8cc36cb760d8221096d08"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/50-lungs-ear-hand/definitions.json",
+            "sha256": "31db21f0a8081aa974c5378f131026997750c92fd29fd62912afe087166a0b28"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/50-lungs-ear-hand/light-1x.png",
+            "sha256": "f6ee63e0833177c335bd292365b890941b20b0b713f806cdd8bffaa4277c1e72"
+          },
+          {
+            "path": "docs/review/atlas-craft-10/final/definitions.json",
+            "sha256": "cead04e7bfa54a7e8c05a7ecfb9eb28c551967e405ce604c40ddc30802bb5e46"
+          },
+          {
+            "path": "docs/review/atlas-craft-10/final/13-body.html",
+            "sha256": "6715161980ca19c0bc1f2dd5a661fa16322ec4aab9700c015a26cb91ddbade9e"
+          },
+          {
+            "path": "docs/review/atlas-craft-10/final/13-body-light-1x.png",
+            "sha256": "4ab221f8bcc6b8bc29e9cf5e6e0a25f832af323b9c3c55b7c9a24e0cba7f213f"
+          },
+          {
+            "path": "docs/review/atlas-craft-10/final/13-body-light-2x.png",
+            "sha256": "8a4124b21dca29e8662a28f163cb795ee977e46d7ad25705e3bb1675aa234775"
+          },
+          {
+            "path": "docs/review/atlas-craft-10/final/13-body-dark-1x.png",
+            "sha256": "7baed759d40ea0ef4dbca696b7e9c288a9606e2e1373d423febed3d727a11b15"
+          },
+          {
+            "path": "docs/review/atlas-craft-10/final/13-body-dark-2x.png",
+            "sha256": "628ca9fb3a05ac9df96eb5e26bc1da1b34e6df2740aca67ebdccf6d66f0e0225"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-10/final/13-body-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-10/final/13-body-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-10/final/13-body-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-10/final/13-body-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Tabler",
+        "license": "MIT",
+        "licenseFile": "licenses/tabler.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "ear",
+      "purpose": "耳朵",
+      "recognitionCues": "外耳輪、內耳折線與耳垂",
+      "confusableWith": [
+        "stethoscope",
+        "brain"
+      ],
+      "sourceObservation": "Lucide保留較完整的耳輪、耳垂和內耳彎折，Tabler內部只留一段短弧。Master採Lucide的完整耳垂構造，讓外輪廓由上方飽滿弧逐步收進下方耳垂。",
+      "references": [
+        {
+          "name": "ear",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/ear.svg",
+          "localPath": "references/atlas-01/lucide-ear.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/ear.svg",
+          "sha256": "e21daec5f858b1825a8d8a3cc5558562fd9852ede4f09c5787a6950fbf026145",
+          "license": "ISC AND MIT",
+          "sourceName": "ear",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "ear",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/ear.svg",
+          "localPath": "references/atlas-01/tabler-ear.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/ear.svg",
+          "sha256": "1f2839e1a6ff3c4c4b09f070252368cd8aa91915b8015490ae07bf4f5f01810a",
+          "license": "MIT",
+          "sourceName": "ear",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "身體輪廓與助行工具均為實體構造，不需要隱藏邊界或未完成訊號。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "生物曲面和手勢以線形表達，不靠透明度掩蓋重疊或密度。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "中立單色器官與動作圖示不需要連續材質漸層。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-10/master-before.json",
+          "variantsSha256": "bad18347e9d2216fca8f4d0ba6f9c65ea34d1e72df7d75a4018ae00966e6ddd5"
+        },
+        "reason": "內耳折線與外耳輪保持分離，開口與耳垂均可讀；沒有再加一圈平行外框。原生16px仍能讀到外耳與內部折曲，sharp保留曲面而只改端部語言。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "f5c728a23f46a0a16bea7bf55cbd4fc754e80135892747f3f812c52d8d579055",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/50-lungs-ear-hand/review.html",
+            "sha256": "32aa6b6cecaa4953f5f935cbba1b694ea2587b3c58c8cc36cb760d8221096d08"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/50-lungs-ear-hand/definitions.json",
+            "sha256": "31db21f0a8081aa974c5378f131026997750c92fd29fd62912afe087166a0b28"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/50-lungs-ear-hand/light-1x.png",
+            "sha256": "f6ee63e0833177c335bd292365b890941b20b0b713f806cdd8bffaa4277c1e72"
+          },
+          {
+            "path": "docs/review/atlas-craft-10/final/definitions.json",
+            "sha256": "cead04e7bfa54a7e8c05a7ecfb9eb28c551967e405ce604c40ddc30802bb5e46"
+          },
+          {
+            "path": "docs/review/atlas-craft-10/final/13-body.html",
+            "sha256": "6715161980ca19c0bc1f2dd5a661fa16322ec4aab9700c015a26cb91ddbade9e"
+          },
+          {
+            "path": "docs/review/atlas-craft-10/final/13-body-light-1x.png",
+            "sha256": "4ab221f8bcc6b8bc29e9cf5e6e0a25f832af323b9c3c55b7c9a24e0cba7f213f"
+          },
+          {
+            "path": "docs/review/atlas-craft-10/final/13-body-light-2x.png",
+            "sha256": "8a4124b21dca29e8662a28f163cb795ee977e46d7ad25705e3bb1675aa234775"
+          },
+          {
+            "path": "docs/review/atlas-craft-10/final/13-body-dark-1x.png",
+            "sha256": "7baed759d40ea0ef4dbca696b7e9c288a9606e2e1373d423febed3d727a11b15"
+          },
+          {
+            "path": "docs/review/atlas-craft-10/final/13-body-dark-2x.png",
+            "sha256": "628ca9fb3a05ac9df96eb5e26bc1da1b34e6df2740aca67ebdccf6d66f0e0225"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-10/final/13-body-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-10/final/13-body-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-10/final/13-body-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-10/final/13-body-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Lucide",
+        "license": "ISC",
+        "licenseFile": "licenses/lucide.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "hand-heart",
+      "purpose": "關懷",
+      "recognitionCues": "托住心形的手掌與袖口",
+      "confusableWith": [
+        "hand",
+        "heart"
+      ],
+      "sourceObservation": "Lucide以斜向手腕托心，Phosphor以水平手掌與袖口承接較大的心形。Master選後者的手勢，保留拇指、指尖伸展和袖口，心形位於手掌後方。",
+      "references": [
+        {
+          "name": "hand-heart",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/hand-heart.svg",
+          "localPath": "references/atlas-01/lucide-hand-heart.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/hand-heart.svg",
+          "sha256": "3b771b097487bf83f5f6d5a07845eb7e4fd3bad8e5dc0bfbfee08c6cd045868a",
+          "license": "ISC AND MIT",
+          "sourceName": "hand-heart",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "hand-heart",
+          "library": "Phosphor",
+          "repository": "phosphor-icons/core",
+          "commit": "2b75f3ad12b420c9504ef05df8d2564a28f8500e",
+          "path": "assets/regular/hand-heart.svg",
+          "localPath": "references/atlas-01/phosphor-hand-heart.svg",
+          "url": "https://github.com/phosphor-icons/core/blob/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular/hand-heart.svg",
+          "sha256": "8797f9ca2bc8620c56c9dead90c047724176a611d52e613c6412aa16745bf93e",
+          "license": "MIT",
+          "sourceName": "hand-heart",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "身體輪廓與助行工具均為實體構造，不需要隱藏邊界或未完成訊號。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "生物曲面和手勢以線形表達，不靠透明度掩蓋重疊或密度。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "中立單色器官與動作圖示不需要連續材質漸層。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-10/master-before.json",
+          "variantsSha256": "09e8a60f22635e7326c61fd9047c35f0425eefd4f6cf66c4a0c08080e92b85b4"
+        },
+        "reason": "心形下緣按手掌實際遮擋，沒有穿過拇指；指縫只留一條必要線，掌心與袖口各有空白。持握接點按結構相連，不為了假性分離而挖出不合理空隙。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "fed5f13ec48c61b2ea3e289ea5f1274d745c3eb838b3683da3133b5102752501",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/50-lungs-ear-hand/review.html",
+            "sha256": "32aa6b6cecaa4953f5f935cbba1b694ea2587b3c58c8cc36cb760d8221096d08"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/50-lungs-ear-hand/definitions.json",
+            "sha256": "31db21f0a8081aa974c5378f131026997750c92fd29fd62912afe087166a0b28"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/50-lungs-ear-hand/light-1x.png",
+            "sha256": "f6ee63e0833177c335bd292365b890941b20b0b713f806cdd8bffaa4277c1e72"
+          },
+          {
+            "path": "docs/review/atlas-craft-10/final/definitions.json",
+            "sha256": "cead04e7bfa54a7e8c05a7ecfb9eb28c551967e405ce604c40ddc30802bb5e46"
+          },
+          {
+            "path": "docs/review/atlas-craft-10/final/13-body.html",
+            "sha256": "6715161980ca19c0bc1f2dd5a661fa16322ec4aab9700c015a26cb91ddbade9e"
+          },
+          {
+            "path": "docs/review/atlas-craft-10/final/13-body-light-1x.png",
+            "sha256": "4ab221f8bcc6b8bc29e9cf5e6e0a25f832af323b9c3c55b7c9a24e0cba7f213f"
+          },
+          {
+            "path": "docs/review/atlas-craft-10/final/13-body-light-2x.png",
+            "sha256": "8a4124b21dca29e8662a28f163cb795ee977e46d7ad25705e3bb1675aa234775"
+          },
+          {
+            "path": "docs/review/atlas-craft-10/final/13-body-dark-1x.png",
+            "sha256": "7baed759d40ea0ef4dbca696b7e9c288a9606e2e1373d423febed3d727a11b15"
+          },
+          {
+            "path": "docs/review/atlas-craft-10/final/13-body-dark-2x.png",
+            "sha256": "628ca9fb3a05ac9df96eb5e26bc1da1b34e6df2740aca67ebdccf6d66f0e0225"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-10/final/13-body-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-10/final/13-body-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-10/final/13-body-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-10/final/13-body-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Phosphor",
+        "license": "MIT",
+        "licenseFile": "licenses/phosphor.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "person-standing",
+      "purpose": "站立",
+      "recognitionCues": "伸展雙臂、直立軀幹與分開雙腿",
+      "confusableWith": [
+        "person-walking",
+        "user"
+      ],
+      "sourceObservation": "Lucide以抬起雙臂和分開雙腿表現站立，Phosphor雙臂較平並使用空心頭部。Master採Lucide的直立軀幹及輕抬雙臂，調整頭肩間距並使用較清楚的圓頭孔。",
+      "references": [
+        {
+          "name": "person-standing",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/person-standing.svg",
+          "localPath": "references/atlas-01/lucide-person-standing.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/person-standing.svg",
+          "sha256": "02960f63be14df8543ec5dabf5250a47509c35f177eb90ef9c864aa7acc1161a",
+          "license": "ISC AND MIT",
+          "sourceName": "person-standing",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "person-standing",
+          "library": "Phosphor",
+          "repository": "phosphor-icons/core",
+          "commit": "2b75f3ad12b420c9504ef05df8d2564a28f8500e",
+          "path": "assets/regular/person-simple.svg",
+          "localPath": "references/atlas-01/phosphor-person-simple.svg",
+          "url": "https://github.com/phosphor-icons/core/blob/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular/person-simple.svg",
+          "sha256": "54b92bc529116803220b4da82e7c715ed93683b509820821375702868561e13e",
+          "license": "MIT",
+          "sourceName": "person-simple",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "身體輪廓與助行工具均為實體構造，不需要隱藏邊界或未完成訊號。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "生物曲面和手勢以線形表達，不靠透明度掩蓋重疊或密度。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "中立單色器官與動作圖示不需要連續材質漸層。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-10/master-before.json",
+          "variantsSha256": "22ce485c37e669471ba8aeab6ba753b37ef87ba46480c16c3f171f5aa3fbef26"
+        },
+        "reason": "雙臂共軸，軀幹直立，雙腿由同一髖點展開；頭部與肩線保持可見間距，沒有額外外框。與既有輪椅乘坐者accessibility符號屬不同概念。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "fc7b74066b7976c71477a31688e569763d448b5236509a39da8bdb64af790284",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/51-standing-walking/review.html",
+            "sha256": "67640698da91cfa713e8bb72bcf05aa41d43df23c2fea733644536762e5f921d"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/51-standing-walking/definitions.json",
+            "sha256": "12e62d6ed9f1ed67fa87b89cc836201a28f8e2f54b68761109c66575f06c6d4e"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/51-standing-walking/light-1x.png",
+            "sha256": "ab38d03151c3e8752f9c44a21e41dca193a3ba1dedce4b8c1c3be1fb03274b74"
+          },
+          {
+            "path": "docs/review/atlas-craft-10/final/definitions.json",
+            "sha256": "cead04e7bfa54a7e8c05a7ecfb9eb28c551967e405ce604c40ddc30802bb5e46"
+          },
+          {
+            "path": "docs/review/atlas-craft-10/final/13-body.html",
+            "sha256": "6715161980ca19c0bc1f2dd5a661fa16322ec4aab9700c015a26cb91ddbade9e"
+          },
+          {
+            "path": "docs/review/atlas-craft-10/final/13-body-light-1x.png",
+            "sha256": "4ab221f8bcc6b8bc29e9cf5e6e0a25f832af323b9c3c55b7c9a24e0cba7f213f"
+          },
+          {
+            "path": "docs/review/atlas-craft-10/final/13-body-light-2x.png",
+            "sha256": "8a4124b21dca29e8662a28f163cb795ee977e46d7ad25705e3bb1675aa234775"
+          },
+          {
+            "path": "docs/review/atlas-craft-10/final/13-body-dark-1x.png",
+            "sha256": "7baed759d40ea0ef4dbca696b7e9c288a9606e2e1373d423febed3d727a11b15"
+          },
+          {
+            "path": "docs/review/atlas-craft-10/final/13-body-dark-2x.png",
+            "sha256": "628ca9fb3a05ac9df96eb5e26bc1da1b34e6df2740aca67ebdccf6d66f0e0225"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-10/final/13-body-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-10/final/13-body-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-10/final/13-body-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-10/final/13-body-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Lucide",
+        "license": "ISC",
+        "licenseFile": "licenses/lucide.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "person-walking",
+      "purpose": "步行",
+      "recognitionCues": "前傾軀幹、擺臂與前後錯開的雙腿",
+      "confusableWith": [
+        "person-standing",
+        "accessibility"
+      ],
+      "sourceObservation": "Phosphor用連續弧線表達擺臂與前傾，Tabler採較明確的肘膝折角。Master採Phosphor的流動擺臂，一腿伸展、一腿屈膝，頭部前移表達行進。",
+      "references": [
+        {
+          "name": "person-walking",
+          "library": "Phosphor",
+          "repository": "phosphor-icons/core",
+          "commit": "2b75f3ad12b420c9504ef05df8d2564a28f8500e",
+          "path": "assets/regular/person-simple-walk.svg",
+          "localPath": "references/atlas-01/phosphor-person-simple-walk.svg",
+          "url": "https://github.com/phosphor-icons/core/blob/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular/person-simple-walk.svg",
+          "sha256": "c64cd5214dd7c4821582d24e2bc21d18e8d0058b77ee0eb3f3f17c0043c635e5",
+          "license": "MIT",
+          "sourceName": "person-simple-walk",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "person-walking",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/walk.svg",
+          "localPath": "references/atlas-01/tabler-walk.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/walk.svg",
+          "sha256": "ade1c723b19596b31cd2976db72e05bee86b2fe8a3afcda5df05fb57f90fe036",
+          "license": "MIT",
+          "sourceName": "walk",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "身體輪廓與助行工具均為實體構造，不需要隱藏邊界或未完成訊號。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "生物曲面和手勢以線形表達，不靠透明度掩蓋重疊或密度。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "中立單色器官與動作圖示不需要連續材質漸層。"
+        }
+      },
+      "change": {
+        "kind": "modified",
+        "before": {
+          "path": "references/atlas-craft-10/master-before.json",
+          "variantsSha256": "db80063361d90ad3b3eb7be0c9171b8ce7e2afca20b29b79e6f323dbf460c834"
+        },
+        "reason": "肩線和頭部先分配留白，髖部精確接在斜軀幹上，膝部依角型作實際倒角；雙腿的前後姿態清楚，沒有用速度線取代身體動作。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "f596fa60e566ec40ba74c62a3dbfaed481bc047e19e9ef00f210745fcf47deef",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/51b-walking/review.html",
+            "sha256": "9960e0eb588623bc09c5db0ce47822753558b7f013068c23c4ee2e0dae6caef1"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/51b-walking/definitions.json",
+            "sha256": "39a6b8bc5239275ac3843a4d38995bce4ffd4c74b10fe8650f8b663165ecf8dd"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/51b-walking/light-1x.png",
+            "sha256": "b5ba120f81ce2d80354e7702e5fd709cf0f15c088514dd4189dddc8926d753f1"
+          },
+          {
+            "path": "docs/review/atlas-craft-10/final/definitions.json",
+            "sha256": "cead04e7bfa54a7e8c05a7ecfb9eb28c551967e405ce604c40ddc30802bb5e46"
+          },
+          {
+            "path": "docs/review/atlas-craft-10/final/13-body.html",
+            "sha256": "6715161980ca19c0bc1f2dd5a661fa16322ec4aab9700c015a26cb91ddbade9e"
+          },
+          {
+            "path": "docs/review/atlas-craft-10/final/13-body-light-1x.png",
+            "sha256": "4ab221f8bcc6b8bc29e9cf5e6e0a25f832af323b9c3c55b7c9a24e0cba7f213f"
+          },
+          {
+            "path": "docs/review/atlas-craft-10/final/13-body-light-2x.png",
+            "sha256": "8a4124b21dca29e8662a28f163cb795ee977e46d7ad25705e3bb1675aa234775"
+          },
+          {
+            "path": "docs/review/atlas-craft-10/final/13-body-dark-1x.png",
+            "sha256": "7baed759d40ea0ef4dbca696b7e9c288a9606e2e1373d423febed3d727a11b15"
+          },
+          {
+            "path": "docs/review/atlas-craft-10/final/13-body-dark-2x.png",
+            "sha256": "628ca9fb3a05ac9df96eb5e26bc1da1b34e6df2740aca67ebdccf6d66f0e0225"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-10/final/13-body-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-10/final/13-body-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-10/final/13-body-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-10/final/13-body-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Phosphor",
+        "license": "MIT",
+        "licenseFile": "licenses/phosphor.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "wheelchair",
+      "purpose": "輪椅",
+      "recognitionCues": "推把、座椅、後方大輪與前方小輪",
+      "confusableWith": [
+        "accessibility",
+        "armchair"
+      ],
+      "sourceObservation": "初查Phosphor wheelchair是乘坐者無障礙符號，因此換成Hugeicons與Tabler的空輪椅原稿。Hugeicons保留推把、扶手與大小車輪，Tabler構造相近而座面較緊。Master採Hugeicons的舒展輪廓。",
+      "references": [
+        {
+          "name": "wheelchair",
+          "library": "Hugeicons Free",
+          "repository": "hugeicons/hugeicons",
+          "commit": "834e28d965946c1ee60d080027fe9dae4adc58d0",
+          "path": "icons/wheelchair.svg",
+          "localPath": "references/atlas-01/hugeicons-wheelchair.svg",
+          "url": "https://github.com/hugeicons/hugeicons/blob/834e28d965946c1ee60d080027fe9dae4adc58d0/icons/wheelchair.svg",
+          "sha256": "9cf4d22cfa4b76a04f54b966706cb2d27ddd22f26b78910935f07d681918cebb",
+          "license": "MIT",
+          "sourceName": "wheelchair",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "wheelchair",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/wheelchair.svg",
+          "localPath": "references/atlas-01/tabler-wheelchair.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/wheelchair.svg",
+          "sha256": "80510f350cfdf472cb00e3e891568a55065220b02a0cd51081696c74754d3fdc",
+          "license": "MIT",
+          "sourceName": "wheelchair",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "身體輪廓與助行工具均為實體構造，不需要隱藏邊界或未完成訊號。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "生物曲面和手勢以線形表達，不靠透明度掩蓋重疊或密度。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "中立單色器官與動作圖示不需要連續材質漸層。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-10/master-before.json",
+          "variantsSha256": "d29ec287f89b32d33bb8bf64f61261d09f2a90ce3bb353d50748dde263050007"
+        },
+        "reason": "後方大輪與前方導輪各自保持孔洞，車架在輪廓外收口；推把、扶手及座面形成可讀的椅子構造，不加入乘坐者，避免與既有accessibility符號重複。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "362cf363f967673ba3659fa26c1079fc17351df5fbf5214ea2d6ce12e5fd59ae",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/52-wheelchair-crutch/review.html",
+            "sha256": "42e85d526731d53cab8c1402934d262fab5875eaef1356117fdeedd17596ae5a"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/52-wheelchair-crutch/definitions.json",
+            "sha256": "93a591b3e58615ae5cbe19dc5bb94b7749df8619646835474f736091475d32ed"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/52-wheelchair-crutch/light-1x.png",
+            "sha256": "c8049fe2dead6d8465e4a10809dd656014910f0f741fb55b3b40dac4df5fb1ac"
+          },
+          {
+            "path": "docs/review/atlas-craft-10/final/definitions.json",
+            "sha256": "cead04e7bfa54a7e8c05a7ecfb9eb28c551967e405ce604c40ddc30802bb5e46"
+          },
+          {
+            "path": "docs/review/atlas-craft-10/final/13-body.html",
+            "sha256": "6715161980ca19c0bc1f2dd5a661fa16322ec4aab9700c015a26cb91ddbade9e"
+          },
+          {
+            "path": "docs/review/atlas-craft-10/final/13-body-light-1x.png",
+            "sha256": "4ab221f8bcc6b8bc29e9cf5e6e0a25f832af323b9c3c55b7c9a24e0cba7f213f"
+          },
+          {
+            "path": "docs/review/atlas-craft-10/final/13-body-light-2x.png",
+            "sha256": "8a4124b21dca29e8662a28f163cb795ee977e46d7ad25705e3bb1675aa234775"
+          },
+          {
+            "path": "docs/review/atlas-craft-10/final/13-body-dark-1x.png",
+            "sha256": "7baed759d40ea0ef4dbca696b7e9c288a9606e2e1373d423febed3d727a11b15"
+          },
+          {
+            "path": "docs/review/atlas-craft-10/final/13-body-dark-2x.png",
+            "sha256": "628ca9fb3a05ac9df96eb5e26bc1da1b34e6df2740aca67ebdccf6d66f0e0225"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-10/final/13-body-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-10/final/13-body-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-10/final/13-body-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-10/final/13-body-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Hugeicons Free",
+        "license": "MIT",
+        "licenseFile": "licenses/hugeicons-MIT.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "crutch",
+      "purpose": "拐杖",
+      "recognitionCues": "腋托、手握橫桿與收束的支撐桿",
+      "confusableWith": [
+        "umbrella",
+        "person-walking"
+      ],
+      "sourceObservation": "Tabler crutches是腋下拐杖，OpenMoji 1FA7C是前臂拐杖，兩者同為助行拐杖但受力部位不同。Master選腋下式，明確保留腋托、手握橫桿與向下收束的支架；沒有混合兩種支撐方式。",
+      "references": [
+        {
+          "name": "crutch",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/crutches.svg",
+          "localPath": "references/atlas-01/tabler-crutches.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/crutches.svg",
+          "sha256": "7b883adbc9b2b5dbed378b1861c76f97b90b5855f660d7ffb62ad6e94396b4b0",
+          "license": "MIT",
+          "sourceName": "crutches",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "crutch",
+          "library": "OpenMoji",
+          "repository": "hfg-gmuend/openmoji",
+          "commit": "3e01de523ddefe9c5e46a7765b15efef04bf9002",
+          "path": "black/svg/1FA7C.svg",
+          "localPath": "references/atlas-01/openmoji-1FA7C.svg",
+          "url": "https://github.com/hfg-gmuend/openmoji/blob/3e01de523ddefe9c5e46a7765b15efef04bf9002/black/svg/1FA7C.svg",
+          "sha256": "88b530d4ac973cc647415e4e4db24263152eb4d35b5cf5b86bfc5ff0b2001fc5",
+          "license": "CC-BY-SA-4.0",
+          "sourceName": "1FA7C",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "身體輪廓與助行工具均為實體構造，不需要隱藏邊界或未完成訊號。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "生物曲面和手勢以線形表達，不靠透明度掩蓋重疊或密度。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "中立單色器官與動作圖示不需要連續材質漸層。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-10/master-before.json",
+          "variantsSha256": "1e75996afaa31d16da1d075568eaa5a6f1193f74e0dbf34f715195d399822f68"
+        },
+        "reason": "腋托內孔、握把下方空間和下支撐桿分段可見；收束點屬受力結構連接，腳墊保持短橫落點。OpenMoji僅用於類型比較，產品造型沿用Tabler構造。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "1c6365e37ac37f6ce13c7b80775b2cac1c3eb6f48a1bb6084e87800d49e484cb",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/52-wheelchair-crutch/review.html",
+            "sha256": "42e85d526731d53cab8c1402934d262fab5875eaef1356117fdeedd17596ae5a"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/52-wheelchair-crutch/definitions.json",
+            "sha256": "93a591b3e58615ae5cbe19dc5bb94b7749df8619646835474f736091475d32ed"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/52-wheelchair-crutch/light-1x.png",
+            "sha256": "c8049fe2dead6d8465e4a10809dd656014910f0f741fb55b3b40dac4df5fb1ac"
+          },
+          {
+            "path": "docs/review/atlas-craft-10/final/definitions.json",
+            "sha256": "cead04e7bfa54a7e8c05a7ecfb9eb28c551967e405ce604c40ddc30802bb5e46"
+          },
+          {
+            "path": "docs/review/atlas-craft-10/final/13-body.html",
+            "sha256": "6715161980ca19c0bc1f2dd5a661fa16322ec4aab9700c015a26cb91ddbade9e"
+          },
+          {
+            "path": "docs/review/atlas-craft-10/final/13-body-light-1x.png",
+            "sha256": "4ab221f8bcc6b8bc29e9cf5e6e0a25f832af323b9c3c55b7c9a24e0cba7f213f"
+          },
+          {
+            "path": "docs/review/atlas-craft-10/final/13-body-light-2x.png",
+            "sha256": "8a4124b21dca29e8662a28f163cb795ee977e46d7ad25705e3bb1675aa234775"
+          },
+          {
+            "path": "docs/review/atlas-craft-10/final/13-body-dark-1x.png",
+            "sha256": "7baed759d40ea0ef4dbca696b7e9c288a9606e2e1373d423febed3d727a11b15"
+          },
+          {
+            "path": "docs/review/atlas-craft-10/final/13-body-dark-2x.png",
+            "sha256": "628ca9fb3a05ac9df96eb5e26bc1da1b34e6df2740aca67ebdccf6d66f0e0225"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-10/final/13-body-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-10/final/13-body-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-10/final/13-body-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-10/final/13-body-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Tabler",
+        "license": "MIT",
+        "licenseFile": "licenses/tabler.txt"
+      },
+      "remaining": []
+    }
+  ]
+}

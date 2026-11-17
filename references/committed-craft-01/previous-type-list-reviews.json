@@ -1,0 +1,418 @@
+[
+  {
+    "name": "subscript",
+    "concept": "subscript",
+    "purpose": "文字下標。",
+    "recognitionCues": "x保持主字高度，小2用開放曲線及短平底，右側留白；16px仍能區分上下位置。",
+    "confusableWith": [
+      "superscript"
+    ],
+    "sourceObservation": "Lucide與Tabler均採X加右下2；Master維持成熟的格式操作語意，主字略高窄以保留數字呼吸空間。",
+    "references": [
+      {
+        "name": "subscript",
+        "library": "Lucide",
+        "repository": "lucide-icons/lucide",
+        "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+        "path": "icons/subscript.svg",
+        "localPath": "references/productivity-01/lucide-subscript.svg",
+        "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/subscript.svg",
+        "sha256": "d502e0e0a2d6efb8893cf01cbe85ccb03fa479b73bea723473da6a212d061f83",
+        "license": "ISC AND MIT",
+        "sourceName": "subscript",
+        "match": "exact",
+        "role": "comparison-only"
+      },
+      {
+        "name": "subscript",
+        "library": "Tabler",
+        "repository": "tabler/tabler-icons",
+        "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+        "path": "icons/outline/subscript.svg",
+        "localPath": "references/productivity-01/tabler-subscript.svg",
+        "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/subscript.svg",
+        "sha256": "faaf196332cb0d623b19f03710e0805dfc0a7b5e404975f06ce9b76bdef6882c",
+        "license": "MIT",
+        "sourceName": "subscript",
+        "match": "exact",
+        "role": "comparison-only"
+      }
+    ],
+    "effects": {
+      "dashes": {
+        "used": false,
+        "reason": "不採用；「下標」由連續輪廓、節點或實際斷開關係表意，沒有需虛線表示的隱藏／未完成邊界。"
+      },
+      "opacity": {
+        "used": false,
+        "reason": "不採用；「下標」的必要輪廓與狀態可以靠形狀、留白表達，淡化不提供額外語意。"
+      },
+      "gradients": {
+        "used": false,
+        "reason": "本期僅允許必要的逐筆透明度；未引入連續漸層或 mask。"
+      }
+    },
+    "change": {
+      "kind": "retained",
+      "reason": "保留：主字X與右下數字2的基線落差清楚，數字弧頂、斜腰與平底可辨，16px兩字不相碰；此處是文字格式範例，不替代variable的書寫體x。",
+      "before": {
+        "path": "references/craft-05/master-before.json",
+        "variantsSha256": "30a1188b5395675f26c1dd4292883f9fc8f6341eba18a231f483f5eb93cea3e6"
+      }
+    },
+    "visualReview": {
+      "status": "retained-after-visual-review",
+      "reviewer": "root",
+      "date": "2026-11-16",
+      "skillVersion": "0.5.4",
+      "batch": "craft-05-32",
+      "variantsSha256": "30a1188b5395675f26c1dd4292883f9fc8f6341eba18a231f483f5eb93cea3e6",
+      "checks": [
+        "16/20/24",
+        "sharp/soft/rounded",
+        "light/dark",
+        "55-percent-foreground",
+        "adjacent-text",
+        "two-pinned-source-comparisons",
+        "true-before-after",
+        "painted-contour-and-cavity",
+        "semantic-effect-decision"
+      ],
+      "evidence": [
+        {
+          "path": "docs/review/craft-05/batch-32/comparison.png",
+          "sha256": "272e027633e575c8e48693d15c6c904edef338ead4bcea10720e672a14e54c37"
+        },
+        {
+          "path": "docs/review/craft-05/batch-32/native.png",
+          "sha256": "1b0364c8eabd94ae37ac59c0dc7b84719a6dd9ef7126839ded183e92f3778664"
+        },
+        {
+          "path": "docs/review/craft-05/batch-32/native-dark.png",
+          "sha256": "03d707f40922b1aa7e1de326cb49f23c91e44810ead30794b1d69cedd6419d86"
+        },
+        {
+          "path": "docs/review/craft-05/batch-32/diagnostic.png",
+          "sha256": "e01329dd8b0e95141ab456e3a0e008036960ffbfab4c97fcf47c6efbba978e7d"
+        }
+      ]
+    },
+    "status": "visually-reviewed-candidate",
+    "userApproval": "pending",
+    "beforeHash": "30a1188b5395675f26c1dd4292883f9fc8f6341eba18a231f483f5eb93cea3e6",
+    "afterHash": "30a1188b5395675f26c1dd4292883f9fc8f6341eba18a231f483f5eb93cea3e6"
+  },
+  {
+    "name": "superscript",
+    "concept": "subscript",
+    "purpose": "文字上標。",
+    "recognitionCues": "完全共用下標字形，2抬高10單位；主字與上標不相碰。",
+    "confusableWith": [
+      "subscript"
+    ],
+    "sourceObservation": "Lucide與Tabler同採X右上2；Master保留同家族字形與筆重，避免上下標各畫一種數字。",
+    "references": [
+      {
+        "name": "superscript",
+        "library": "Lucide",
+        "repository": "lucide-icons/lucide",
+        "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+        "path": "icons/superscript.svg",
+        "localPath": "references/productivity-01/lucide-superscript.svg",
+        "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/superscript.svg",
+        "sha256": "12f49f9a5e23d008d6fb5ce4d8103e611b696820a192b310b34617836a3fa2f6",
+        "license": "ISC AND MIT",
+        "sourceName": "superscript",
+        "match": "exact",
+        "role": "comparison-only"
+      },
+      {
+        "name": "superscript",
+        "library": "Tabler",
+        "repository": "tabler/tabler-icons",
+        "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+        "path": "icons/outline/superscript.svg",
+        "localPath": "references/productivity-01/tabler-superscript.svg",
+        "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/superscript.svg",
+        "sha256": "c99cb0ec471f6f6b0c5867a10443cc158d81cea3df9b5d0e5342e5cacab9559f",
+        "license": "MIT",
+        "sourceName": "superscript",
+        "match": "exact",
+        "role": "comparison-only"
+      }
+    ],
+    "effects": {
+      "dashes": {
+        "used": false,
+        "reason": "不採用；「上標」由連續輪廓、節點或實際斷開關係表意，沒有需虛線表示的隱藏／未完成邊界。"
+      },
+      "opacity": {
+        "used": false,
+        "reason": "不採用；「上標」的必要輪廓與狀態可以靠形狀、留白表達，淡化不提供額外語意。"
+      },
+      "gradients": {
+        "used": false,
+        "reason": "本期僅允許必要的逐筆透明度；未引入連續漸層或 mask。"
+      }
+    },
+    "change": {
+      "kind": "retained",
+      "reason": "保留：右上2與subscript共用字形、只改位置，16px數字不黏到X右上端，數字頂部仍在畫布內，明暗低對比都能辨認上下關係。",
+      "before": {
+        "path": "references/craft-05/master-before.json",
+        "variantsSha256": "e01c32a5ef29d4e3320518582ae625c04ce49af983dee6810a3eb586a323b4dd"
+      }
+    },
+    "visualReview": {
+      "status": "retained-after-visual-review",
+      "reviewer": "root",
+      "date": "2026-11-16",
+      "skillVersion": "0.5.4",
+      "batch": "craft-05-32",
+      "variantsSha256": "e01c32a5ef29d4e3320518582ae625c04ce49af983dee6810a3eb586a323b4dd",
+      "checks": [
+        "16/20/24",
+        "sharp/soft/rounded",
+        "light/dark",
+        "55-percent-foreground",
+        "adjacent-text",
+        "two-pinned-source-comparisons",
+        "true-before-after",
+        "painted-contour-and-cavity",
+        "semantic-effect-decision"
+      ],
+      "evidence": [
+        {
+          "path": "docs/review/craft-05/batch-32/comparison.png",
+          "sha256": "272e027633e575c8e48693d15c6c904edef338ead4bcea10720e672a14e54c37"
+        },
+        {
+          "path": "docs/review/craft-05/batch-32/native.png",
+          "sha256": "1b0364c8eabd94ae37ac59c0dc7b84719a6dd9ef7126839ded183e92f3778664"
+        },
+        {
+          "path": "docs/review/craft-05/batch-32/native-dark.png",
+          "sha256": "03d707f40922b1aa7e1de326cb49f23c91e44810ead30794b1d69cedd6419d86"
+        },
+        {
+          "path": "docs/review/craft-05/batch-32/diagnostic.png",
+          "sha256": "e01329dd8b0e95141ab456e3a0e008036960ffbfab4c97fcf47c6efbba978e7d"
+        }
+      ]
+    },
+    "status": "visually-reviewed-candidate",
+    "userApproval": "pending",
+    "beforeHash": "e01c32a5ef29d4e3320518582ae625c04ce49af983dee6810a3eb586a323b4dd",
+    "afterHash": "e01c32a5ef29d4e3320518582ae625c04ce49af983dee6810a3eb586a323b4dd"
+  },
+  {
+    "name": "list-plus",
+    "concept": "list",
+    "purpose": "新增清單項目",
+    "recognitionCues": "點列清單與右下加號",
+    "confusableWith": [
+      "list-minus",
+      "list",
+      "message-plus"
+    ],
+    "sourceObservation": "Lucide中段加號與Phosphor下方加號對照；Master採右下新增，保留列表母型。",
+    "references": [
+      {
+        "name": "list-plus",
+        "library": "Lucide",
+        "repository": "lucide-icons/lucide",
+        "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+        "path": "icons/list-plus.svg",
+        "localPath": "references/expansion-01/lucide-list-plus.svg",
+        "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/list-plus.svg",
+        "sha256": "416b579ca6f60752c31769fced8b30d6271940775dacf980ab85ec8c15268b0c",
+        "license": "ISC AND MIT",
+        "sourceName": "list-plus",
+        "match": "exact",
+        "role": "comparison-only"
+      },
+      {
+        "name": "list-plus",
+        "library": "Phosphor",
+        "repository": "phosphor-icons/core",
+        "commit": "2b75f3ad12b420c9504ef05df8d2564a28f8500e",
+        "path": "assets/regular/list-plus.svg",
+        "localPath": "references/expansion-01/phosphor-list-plus.svg",
+        "url": "https://github.com/phosphor-icons/core/blob/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular/list-plus.svg",
+        "sha256": "1ccf408d250463a883aa460887949041d2de8e8085ba19b607e8226cb7ddad12",
+        "license": "MIT",
+        "sourceName": "list-plus",
+        "match": "exact",
+        "role": "comparison-only"
+      }
+    ],
+    "effects": {
+      "dashes": {
+        "used": false,
+        "reason": "不採用；新增清單項以連續實體輪廓表達，沒有未完成或隱藏邊界。"
+      },
+      "opacity": {
+        "used": false,
+        "reason": "不採用；新增清單項的主體及必要訊號以留白分離，淡化不增加語意。"
+      },
+      "gradients": {
+        "used": false,
+        "reason": "本期僅允許必要的逐筆透明度；未引入連續漸層或 mask。"
+      }
+    },
+    "change": {
+      "kind": "retained",
+      "reason": "保留：加號與第三行切口分離，前兩行及三項目點完整，16px不和相鄰橫線黏合；加號大小與其他列表狀態相稱。",
+      "before": {
+        "path": "references/craft-05/master-before.json",
+        "variantsSha256": "05db2043dc0e0e6f0e69581e09fd29f45816135bae847a3e5182b8d932ca513a"
+      }
+    },
+    "visualReview": {
+      "status": "retained-after-visual-review",
+      "reviewer": "root",
+      "date": "2026-11-16",
+      "skillVersion": "0.5.4",
+      "batch": "craft-05-46",
+      "variantsSha256": "05db2043dc0e0e6f0e69581e09fd29f45816135bae847a3e5182b8d932ca513a",
+      "checks": [
+        "16/20/24",
+        "sharp/soft/rounded",
+        "light/dark",
+        "55-percent-foreground",
+        "adjacent-text",
+        "two-pinned-source-comparisons",
+        "true-before-after",
+        "painted-contour-and-cavity",
+        "semantic-effect-decision"
+      ],
+      "evidence": [
+        {
+          "path": "docs/review/craft-05/batch-46/comparison.png",
+          "sha256": "391c67ac56937159fd300b3ae3abab3506e9cdcf31a116b1433fcf06b6abaf31"
+        },
+        {
+          "path": "docs/review/craft-05/batch-46/native.png",
+          "sha256": "a352bb075409c7798a59065bec585ccec63c80fbf6b93a95afacffdf5ac7c744"
+        },
+        {
+          "path": "docs/review/craft-05/batch-46/native-dark.png",
+          "sha256": "14d3528309a61985d0da42cd3d29ce139fa49fef23b4ab5e621545fca053be3a"
+        },
+        {
+          "path": "docs/review/craft-05/batch-46/diagnostic.png",
+          "sha256": "dd2e450cf6fb1315ada23c7ed29fb2c3854477685e00d33d335ba336d0d0feb6"
+        }
+      ]
+    },
+    "status": "visually-reviewed-candidate",
+    "userApproval": "pending",
+    "beforeHash": "05db2043dc0e0e6f0e69581e09fd29f45816135bae847a3e5182b8d932ca513a",
+    "afterHash": "05db2043dc0e0e6f0e69581e09fd29f45816135bae847a3e5182b8d932ca513a"
+  },
+  {
+    "name": "list-minus",
+    "concept": "list",
+    "purpose": "移除清單項目",
+    "recognitionCues": "點列清單與獨立減號",
+    "confusableWith": [
+      "list-plus",
+      "list",
+      "minus"
+    ],
+    "sourceObservation": "Lucide list-minus直接對照，Tabler playlist-x僅列表刪除構造參考；Master保留減號而不改成X。",
+    "references": [
+      {
+        "name": "list-minus",
+        "library": "Lucide",
+        "repository": "lucide-icons/lucide",
+        "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+        "path": "icons/list-minus.svg",
+        "localPath": "references/expansion-01/lucide-list-minus.svg",
+        "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/list-minus.svg",
+        "sha256": "7b0aa87e259495e54a1619d3ecb75b5e4873e13fc5ca760811762702e85b4606",
+        "license": "ISC AND MIT",
+        "sourceName": "list-minus",
+        "match": "exact",
+        "role": "comparison-only"
+      },
+      {
+        "name": "list-minus",
+        "library": "Tabler",
+        "repository": "tabler/tabler-icons",
+        "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+        "path": "icons/outline/playlist-x.svg",
+        "localPath": "references/expansion-01/tabler-playlist-x.svg",
+        "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/playlist-x.svg",
+        "sha256": "e3843f8d8aa4d80995872a209322d6875ba8ec9b4572e98338b5675a6e8af432",
+        "license": "MIT",
+        "sourceName": "playlist-x",
+        "match": "structure-only",
+        "role": "comparison-only"
+      }
+    ],
+    "effects": {
+      "dashes": {
+        "used": false,
+        "reason": "不採用；移除清單項以連續實體輪廓表達，沒有未完成或隱藏邊界。"
+      },
+      "opacity": {
+        "used": false,
+        "reason": "不採用；移除清單項的主體及必要訊號以留白分離，淡化不增加語意。"
+      },
+      "gradients": {
+        "used": false,
+        "reason": "本期僅允許必要的逐筆透明度；未引入連續漸層或 mask。"
+      }
+    },
+    "change": {
+      "kind": "retained",
+      "reason": "保留：右下減號前的透明空隙足以分開符號和第三行，16px仍保留三個項目點；三角型下減號端點完整。",
+      "before": {
+        "path": "references/craft-05/master-before.json",
+        "variantsSha256": "63c3d063cf4794a2fa514ab01dcf1fd7e0094ad2db1c1aedf5f9e5cddf48ace8"
+      }
+    },
+    "visualReview": {
+      "status": "retained-after-visual-review",
+      "reviewer": "root",
+      "date": "2026-11-16",
+      "skillVersion": "0.5.4",
+      "batch": "craft-05-46",
+      "variantsSha256": "63c3d063cf4794a2fa514ab01dcf1fd7e0094ad2db1c1aedf5f9e5cddf48ace8",
+      "checks": [
+        "16/20/24",
+        "sharp/soft/rounded",
+        "light/dark",
+        "55-percent-foreground",
+        "adjacent-text",
+        "two-pinned-source-comparisons",
+        "true-before-after",
+        "painted-contour-and-cavity",
+        "semantic-effect-decision"
+      ],
+      "evidence": [
+        {
+          "path": "docs/review/craft-05/batch-46/comparison.png",
+          "sha256": "391c67ac56937159fd300b3ae3abab3506e9cdcf31a116b1433fcf06b6abaf31"
+        },
+        {
+          "path": "docs/review/craft-05/batch-46/native.png",
+          "sha256": "a352bb075409c7798a59065bec585ccec63c80fbf6b93a95afacffdf5ac7c744"
+        },
+        {
+          "path": "docs/review/craft-05/batch-46/native-dark.png",
+          "sha256": "14d3528309a61985d0da42cd3d29ce139fa49fef23b4ab5e621545fca053be3a"
+        },
+        {
+          "path": "docs/review/craft-05/batch-46/diagnostic.png",
+          "sha256": "dd2e450cf6fb1315ada23c7ed29fb2c3854477685e00d33d335ba336d0d0feb6"
+        }
+      ]
+    },
+    "status": "visually-reviewed-candidate",
+    "userApproval": "pending",
+    "beforeHash": "63c3d063cf4794a2fa514ab01dcf1fd7e0094ad2db1c1aedf5f9e5cddf48ace8",
+    "afterHash": "63c3d063cf4794a2fa514ab01dcf1fd7e0094ad2db1c1aedf5f9e5cddf48ace8"
+  }
+]

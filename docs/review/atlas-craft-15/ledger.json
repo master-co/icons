@@ -1,0 +1,1528 @@
+{
+  "schemaVersion": 2,
+  "reviewer": "Codex (AI)",
+  "userApproval": "pending",
+  "icons": [
+    {
+      "name": "pi",
+      "purpose": "圓周率",
+      "recognitionCues": "弧形頂橫、雙直腳與右腳收筆",
+      "confusableWith": [
+        "sigma",
+        "function-square"
+      ],
+      "sourceObservation": "Lucide以左側弧形起筆和右腳向外收筆形成π字形，Phosphor右腳另有回鉤。最新稿採較安靜的向外收筆，稍放寬頂橫；完稿回比16/20/24時兩腳與起筆的主次清楚，不把π退化成三條直線的門框。",
+      "references": [
+        {
+          "name": "pi",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/pi.svg",
+          "localPath": "references/atlas-01/lucide-pi.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/pi.svg",
+          "sha256": "352354b3b36eb93e83483f7fda7c088e9027db16ebcfc57e79e73086578f9cc9",
+          "license": "ISC AND MIT",
+          "sourceName": "pi",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "pi",
+          "library": "Phosphor",
+          "repository": "phosphor-icons/core",
+          "commit": "2b75f3ad12b420c9504ef05df8d2564a28f8500e",
+          "path": "assets/regular/pi.svg",
+          "localPath": "references/atlas-01/phosphor-pi.svg",
+          "url": "https://github.com/phosphor-icons/core/blob/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular/pi.svg",
+          "sha256": "9ac8a40c2d39b9c13521700742e5d42957f83def2c19744d2bb14c1944ff751f",
+          "license": "MIT",
+          "sourceName": "pi",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "數學符號的筆畫需完整連續，不使用虛線改變字形。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "符號各筆畫同屬主體，以留白區分而不做漸淡。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "數學字形採單色筆畫，不使用材質漸層。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-15/master-before.json",
+          "variantsSha256": "62a567fabf01b08dab513357f0b2417313cfa01707a1eb506c07618a0b051df2"
+        },
+        "reason": "頂橫以連續曲線起筆，右腳向下後自然彎出；雙腳按同一頂線相接，曲線保留於sharp而只改端帽語氣。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "1100876da109efa5b566d1d0bded3e58af036e2033e15cf06724a92b06048b1d",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/68-pi-sigma-infinity/review.html",
+            "sha256": "973877da4ef7717942fbc649d65e886d07533bd0c80ecaaae7da274f13cb62bf"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/68-pi-sigma-infinity/definitions.json",
+            "sha256": "8233455edf27da4e8b3270684c2c201e00cee63e8bca15b8aa72d84e2c7235fc"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/68-pi-sigma-infinity/light-1x.png",
+            "sha256": "83e1d590bd121a74b9ecc29a0f282bef9d1d30eb406e7b04386edc576f83590c"
+          },
+          {
+            "path": "docs/review/atlas-craft-15/final/definitions.json",
+            "sha256": "9de882cfdc3214c05e228cea3ad66cd355b7a0f003df241bd6f2f1bc6dffe082"
+          },
+          {
+            "path": "docs/review/atlas-craft-15/final/17-math.html",
+            "sha256": "581184b267f5a9469e7f019866123aee436b6796c5ad8646ef36b9946570b17d"
+          },
+          {
+            "path": "docs/review/atlas-craft-15/final/17-math-light-1x.png",
+            "sha256": "365cce2f6cc0dbf5a41fd46d3d2ac8c7a01c366137f0a71ccd435034678c9fb8"
+          },
+          {
+            "path": "docs/review/atlas-craft-15/final/17-math-light-2x.png",
+            "sha256": "ebe503993ecc31d91dbf239718d48eacad081c716c632596ea27f8c94051a8b7"
+          },
+          {
+            "path": "docs/review/atlas-craft-15/final/17-math-dark-1x.png",
+            "sha256": "08f12361bf4037c243183159f3edef494f624962af4f5629fab9816fa2c7517f"
+          },
+          {
+            "path": "docs/review/atlas-craft-15/final/17-math-dark-2x.png",
+            "sha256": "8882e53200ca4ac89885dfd85951fc133f2a068d7866436ae2a19481f29a4bf1"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-15/final/17-math-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-15/final/17-math-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-15/final/17-math-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-15/final/17-math-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Lucide",
+        "license": "ISC",
+        "licenseFile": "licenses/lucide.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "sigma",
+      "purpose": "總和",
+      "recognitionCues": "大寫Σ的上下橫與中央折入",
+      "confusableWith": [
+        "pi",
+        "chevron-right"
+      ],
+      "sourceObservation": "Lucide將中央折入微圓化，Tabler sum保留較直接的大寫Σ字形和短端部。最新稿選清楚的中央折入與上下等長橫線，回比後上下開口保持一致，16px不把端部加長成閉合框。",
+      "references": [
+        {
+          "name": "sigma",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/sigma.svg",
+          "localPath": "references/atlas-01/lucide-sigma.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/sigma.svg",
+          "sha256": "4479d09dc10cbfcefc7f112ce6fd825da57779aa60d6d83f62882aa78421da18",
+          "license": "ISC AND MIT",
+          "sourceName": "sigma",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "sigma",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/sum.svg",
+          "localPath": "references/atlas-01/tabler-sum.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/sum.svg",
+          "sha256": "64fea1172e2412702ef1acd06721afa03cbb8d2d06ff5986da02acb1b7842b8e",
+          "license": "MIT",
+          "sourceName": "sum",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "數學符號的筆畫需完整連續，不使用虛線改變字形。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "符號各筆畫同屬主體，以留白區分而不做漸淡。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "數學字形採單色筆畫，不使用材質漸層。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-15/master-before.json",
+          "variantsSha256": "cc179a6e507104a3b1144a7379ed6fe201caf97f5625c0702e8db41e20d33916"
+        },
+        "reason": "依字形比例安排上下橫、短端部與中央折入；小端角用tip，中央內折可用較大的局部半徑，避免整個字形被統一圓角吃掉。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "d9868ce3d0cfb52030b4028013d84c320067918b9605557bdddd31e1c895fff4",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/68-pi-sigma-infinity/review.html",
+            "sha256": "973877da4ef7717942fbc649d65e886d07533bd0c80ecaaae7da274f13cb62bf"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/68-pi-sigma-infinity/definitions.json",
+            "sha256": "8233455edf27da4e8b3270684c2c201e00cee63e8bca15b8aa72d84e2c7235fc"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/68-pi-sigma-infinity/light-1x.png",
+            "sha256": "83e1d590bd121a74b9ecc29a0f282bef9d1d30eb406e7b04386edc576f83590c"
+          },
+          {
+            "path": "docs/review/atlas-craft-15/final/definitions.json",
+            "sha256": "9de882cfdc3214c05e228cea3ad66cd355b7a0f003df241bd6f2f1bc6dffe082"
+          },
+          {
+            "path": "docs/review/atlas-craft-15/final/17-math.html",
+            "sha256": "581184b267f5a9469e7f019866123aee436b6796c5ad8646ef36b9946570b17d"
+          },
+          {
+            "path": "docs/review/atlas-craft-15/final/17-math-light-1x.png",
+            "sha256": "365cce2f6cc0dbf5a41fd46d3d2ac8c7a01c366137f0a71ccd435034678c9fb8"
+          },
+          {
+            "path": "docs/review/atlas-craft-15/final/17-math-light-2x.png",
+            "sha256": "ebe503993ecc31d91dbf239718d48eacad081c716c632596ea27f8c94051a8b7"
+          },
+          {
+            "path": "docs/review/atlas-craft-15/final/17-math-dark-1x.png",
+            "sha256": "08f12361bf4037c243183159f3edef494f624962af4f5629fab9816fa2c7517f"
+          },
+          {
+            "path": "docs/review/atlas-craft-15/final/17-math-dark-2x.png",
+            "sha256": "8882e53200ca4ac89885dfd85951fc133f2a068d7866436ae2a19481f29a4bf1"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-15/final/17-math-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-15/final/17-math-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-15/final/17-math-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-15/final/17-math-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Tabler",
+        "license": "MIT",
+        "licenseFile": "licenses/tabler.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "infinity",
+      "purpose": "無限",
+      "recognitionCues": "連續交錯的雙圓腹",
+      "confusableWith": [
+        "link",
+        "atom"
+      ],
+      "sourceObservation": "Lucide是完整連續的雙環，Phosphor在交錯位置留出開口。最新稿保留Lucide連續筆勢；完稿回比，兩側圓腹對稱、中央收束自然，原生16px兩個孔洞都保持清楚，不需以透明度表達前後。",
+      "references": [
+        {
+          "name": "infinity",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/infinity.svg",
+          "localPath": "references/atlas-01/lucide-infinity.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/infinity.svg",
+          "sha256": "9edffa9e55cfd711311bf7fd8d89fb1618ba9dffa647e7d03697bd4d541c48d8",
+          "license": "ISC AND MIT",
+          "sourceName": "infinity",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "infinity",
+          "library": "Phosphor",
+          "repository": "phosphor-icons/core",
+          "commit": "2b75f3ad12b420c9504ef05df8d2564a28f8500e",
+          "path": "assets/regular/infinity.svg",
+          "localPath": "references/atlas-01/phosphor-infinity.svg",
+          "url": "https://github.com/phosphor-icons/core/blob/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular/infinity.svg",
+          "sha256": "af5543db75068d1d87c00fa51aa29edeeed3f667587b21911d8a26f79fc79345",
+          "license": "MIT",
+          "sourceName": "infinity",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "數學符號的筆畫需完整連續，不使用虛線改變字形。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "符號各筆畫同屬主體，以留白區分而不做漸淡。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "數學字形採單色筆畫，不使用材質漸層。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-15/master-before.json",
+          "variantsSha256": "0c198a7af9ed82bbccd952b8b28e186066594537c2b49ef4633b3a5e74f36d24"
+        },
+        "reason": "兩側圓弧與中間曲線按水平切線接合，閉合接縫延續同一方向；維持單一連續輪廓，sharp不將圓腹折成多邊形。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "af779fe72ca73ea4f522efbb41ac89cda68a002170121d4bf7d3a8d576e786ca",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/68-pi-sigma-infinity/review.html",
+            "sha256": "973877da4ef7717942fbc649d65e886d07533bd0c80ecaaae7da274f13cb62bf"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/68-pi-sigma-infinity/definitions.json",
+            "sha256": "8233455edf27da4e8b3270684c2c201e00cee63e8bca15b8aa72d84e2c7235fc"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/68-pi-sigma-infinity/light-1x.png",
+            "sha256": "83e1d590bd121a74b9ecc29a0f282bef9d1d30eb406e7b04386edc576f83590c"
+          },
+          {
+            "path": "docs/review/atlas-craft-15/final/definitions.json",
+            "sha256": "9de882cfdc3214c05e228cea3ad66cd355b7a0f003df241bd6f2f1bc6dffe082"
+          },
+          {
+            "path": "docs/review/atlas-craft-15/final/17-math.html",
+            "sha256": "581184b267f5a9469e7f019866123aee436b6796c5ad8646ef36b9946570b17d"
+          },
+          {
+            "path": "docs/review/atlas-craft-15/final/17-math-light-1x.png",
+            "sha256": "365cce2f6cc0dbf5a41fd46d3d2ac8c7a01c366137f0a71ccd435034678c9fb8"
+          },
+          {
+            "path": "docs/review/atlas-craft-15/final/17-math-light-2x.png",
+            "sha256": "ebe503993ecc31d91dbf239718d48eacad081c716c632596ea27f8c94051a8b7"
+          },
+          {
+            "path": "docs/review/atlas-craft-15/final/17-math-dark-1x.png",
+            "sha256": "08f12361bf4037c243183159f3edef494f624962af4f5629fab9816fa2c7517f"
+          },
+          {
+            "path": "docs/review/atlas-craft-15/final/17-math-dark-2x.png",
+            "sha256": "8882e53200ca4ac89885dfd85951fc133f2a068d7866436ae2a19481f29a4bf1"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-15/final/17-math-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-15/final/17-math-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-15/final/17-math-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-15/final/17-math-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Lucide",
+        "license": "ISC",
+        "licenseFile": "licenses/lucide.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "radical",
+      "purpose": "根號",
+      "recognitionCues": "低鉤、上升斜線與頂橫",
+      "confusableWith": [
+        "check",
+        "sigma"
+      ],
+      "sourceObservation": "Lucide根號的低鉤比Tabler更深，頂橫較短。最新稿採清楚的低鉤與上升長線；首稿sharp底角被miterlimit截平，回比後調整折點使尖端成立，實際墨線高度接近soft。原生16/20/24仍保持根號比例而沒有落到畫布之外。",
+      "references": [
+        {
+          "name": "radical",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/radical.svg",
+          "localPath": "references/atlas-01/lucide-radical.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/radical.svg",
+          "sha256": "dd09e391c5ce7aebce02f95b807416500406d232566eb0ce10f10560038d6a1a",
+          "license": "ISC AND MIT",
+          "sourceName": "radical",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "radical",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/square-root.svg",
+          "localPath": "references/atlas-01/tabler-square-root.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/square-root.svg",
+          "sha256": "92b9c76045b8e5ea0240f402c4e47bc64666c438d5c63bc7fa8f1e19a3cb6a1c",
+          "license": "MIT",
+          "sourceName": "square-root",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "數學符號的筆畫需完整連續，不使用虛線改變字形。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "符號各筆畫同屬主體，以留白區分而不做漸淡。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "數學字形採單色筆畫，不使用材質漸層。"
+        }
+      },
+      "change": {
+        "kind": "modified",
+        "before": {
+          "path": "references/atlas-craft-15/master-before.json",
+          "variantsSha256": "3bb8644122aa647787f6d2de5a83a8cfe0c95e92dfa49e519a2a66b9890efde1"
+        },
+        "reason": "sharp低鉤中心點回收至19，讓夾角留在既有斜接限制內並保留真正尖端；soft/rounded保留原深鉤與微圓轉折，不改全庫miterlimit。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "83b26a13be1eb8dc43ac7ba1aa7775c9118c2f8b0b17d53627809d1afcf2a9ec",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/69b-radical/review.html",
+            "sha256": "ba67e1d8e67ba57c4773eaef73e23fbdd7e2dfa2ef428c8147b825d9b61b2f38"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/69b-radical/definitions.json",
+            "sha256": "9e650ccd0144e0024600088279d663d73f4f3f76b016289178e2cc92c8c8f6a7"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/69b-radical/light-1x.png",
+            "sha256": "f73de43e53bbf802184d3331c7f9181118b842fcff53cf78ea377b0d9eb47acf"
+          },
+          {
+            "path": "docs/review/atlas-craft-15/final/definitions.json",
+            "sha256": "9de882cfdc3214c05e228cea3ad66cd355b7a0f003df241bd6f2f1bc6dffe082"
+          },
+          {
+            "path": "docs/review/atlas-craft-15/final/17-math.html",
+            "sha256": "581184b267f5a9469e7f019866123aee436b6796c5ad8646ef36b9946570b17d"
+          },
+          {
+            "path": "docs/review/atlas-craft-15/final/17-math-light-1x.png",
+            "sha256": "365cce2f6cc0dbf5a41fd46d3d2ac8c7a01c366137f0a71ccd435034678c9fb8"
+          },
+          {
+            "path": "docs/review/atlas-craft-15/final/17-math-light-2x.png",
+            "sha256": "ebe503993ecc31d91dbf239718d48eacad081c716c632596ea27f8c94051a8b7"
+          },
+          {
+            "path": "docs/review/atlas-craft-15/final/17-math-dark-1x.png",
+            "sha256": "08f12361bf4037c243183159f3edef494f624962af4f5629fab9816fa2c7517f"
+          },
+          {
+            "path": "docs/review/atlas-craft-15/final/17-math-dark-2x.png",
+            "sha256": "8882e53200ca4ac89885dfd85951fc133f2a068d7866436ae2a19481f29a4bf1"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-15/final/17-math-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-15/final/17-math-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-15/final/17-math-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-15/final/17-math-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Lucide",
+        "license": "ISC",
+        "licenseFile": "licenses/lucide.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "equal",
+      "purpose": "等於",
+      "recognitionCues": "等長等距的雙橫線",
+      "confusableWith": [
+        "minus",
+        "not-equal"
+      ],
+      "sourceObservation": "Lucide雙橫線之間留白較寬，Tabler的兩線較靠近。最新稿用本家族14u線長和6u行距建構等號；完稿回比，小尺寸仍是兩條獨立等長線，與減號區分清楚，沒有額外框或裝飾。",
+      "references": [
+        {
+          "name": "equal",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/equal.svg",
+          "localPath": "references/atlas-01/lucide-equal.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/equal.svg",
+          "sha256": "4880b6c8a80f4a36478ca5f9f2c162ff7a0a1e29360efadf2fce66ded52e14a0",
+          "license": "ISC AND MIT",
+          "sourceName": "equal",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "equal",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/equal.svg",
+          "localPath": "references/atlas-01/tabler-equal.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/equal.svg",
+          "sha256": "65a328dc44b17e047551c1e018688ad5eeeffab52dbcdb9373abd882c6516d8f",
+          "license": "MIT",
+          "sourceName": "equal",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "數學符號的筆畫需完整連續，不使用虛線改變字形。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "符號各筆畫同屬主體，以留白區分而不做漸淡。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "數學字形採單色筆畫，不使用材質漸層。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-15/master-before.json",
+          "variantsSha256": "4a1bc7d256bad185b43cbfb6165e9610a220e99dcd7912edaed07f8e20b9f26b"
+        },
+        "reason": "兩條橫線相對畫布中心上下對稱，共用長度與端帽；作為不等號的共用母型，避免兩個符號的等號部分比例漂移。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "43763c309ec7356c082ff683b87923148234e9672feb55cc26e809ff717db411",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/69-radical-equality/review.html",
+            "sha256": "833442b4d55a5ed2ecd168d5416220fcf3aba3e1664dad6867df6f1804ab713c"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/69-radical-equality/definitions.json",
+            "sha256": "11c2bc0fef3540f5ba512802726967bf3dd52e51bdb992fa6e7c59020ceeee2d"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/69-radical-equality/light-1x.png",
+            "sha256": "93a71a494753dc36c6ac273023eb7951833e5f7f0f898f4a79f2a61092b4e24a"
+          },
+          {
+            "path": "docs/review/atlas-craft-15/final/definitions.json",
+            "sha256": "9de882cfdc3214c05e228cea3ad66cd355b7a0f003df241bd6f2f1bc6dffe082"
+          },
+          {
+            "path": "docs/review/atlas-craft-15/final/17-math.html",
+            "sha256": "581184b267f5a9469e7f019866123aee436b6796c5ad8646ef36b9946570b17d"
+          },
+          {
+            "path": "docs/review/atlas-craft-15/final/17-math-light-1x.png",
+            "sha256": "365cce2f6cc0dbf5a41fd46d3d2ac8c7a01c366137f0a71ccd435034678c9fb8"
+          },
+          {
+            "path": "docs/review/atlas-craft-15/final/17-math-light-2x.png",
+            "sha256": "ebe503993ecc31d91dbf239718d48eacad081c716c632596ea27f8c94051a8b7"
+          },
+          {
+            "path": "docs/review/atlas-craft-15/final/17-math-dark-1x.png",
+            "sha256": "08f12361bf4037c243183159f3edef494f624962af4f5629fab9816fa2c7517f"
+          },
+          {
+            "path": "docs/review/atlas-craft-15/final/17-math-dark-2x.png",
+            "sha256": "8882e53200ca4ac89885dfd85951fc133f2a068d7866436ae2a19481f29a4bf1"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-15/final/17-math-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-15/final/17-math-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-15/final/17-math-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-15/final/17-math-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "independent-construction"
+      },
+      "remaining": []
+    },
+    {
+      "name": "not-equal",
+      "purpose": "不等於",
+      "recognitionCues": "雙橫線與貫穿斜線",
+      "confusableWith": [
+        "equal",
+        "divide"
+      ],
+      "sourceObservation": "Lucide與Phosphor都以完整斜線穿過等號；Phosphor的斜線更陡。最新稿與equal共用雙橫母型，採陡斜線留出上下端；完稿回比16/20/24，交會成立且四段橫線仍可讀，不做不必要的遮擋挖空。",
+      "references": [
+        {
+          "name": "not-equal",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/equal-not.svg",
+          "localPath": "references/atlas-01/lucide-equal-not.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/equal-not.svg",
+          "sha256": "cf2746ee3f7115ffa84740f0edfb6754853b8f64535e92fdea3b0a8721ad885f",
+          "license": "ISC AND MIT",
+          "sourceName": "equal-not",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "not-equal",
+          "library": "Phosphor",
+          "repository": "phosphor-icons/core",
+          "commit": "2b75f3ad12b420c9504ef05df8d2564a28f8500e",
+          "path": "assets/regular/not-equals.svg",
+          "localPath": "references/atlas-01/phosphor-not-equals.svg",
+          "url": "https://github.com/phosphor-icons/core/blob/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular/not-equals.svg",
+          "sha256": "87d026a546fea864d237de597e995b5d1d7bc5a47a03cf53fcd71482449ad690",
+          "license": "MIT",
+          "sourceName": "not-equals",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "數學符號的筆畫需完整連續，不使用虛線改變字形。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "符號各筆畫同屬主體，以留白區分而不做漸淡。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "數學字形採單色筆畫，不使用材質漸層。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-15/master-before.json",
+          "variantsSha256": "0a62ebf2a5a3ac27985a3d82e9faf9c4febef4cedaaafbf2b0066ab6f139cf36"
+        },
+        "reason": "沿用equal函式，加入相對中心對稱的斜線；三條筆畫是同一數學符號的相交關係，保留直接交會。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "6e655bc306f55a315d823e8e457336703c814ccda4408f842ec968246db75e08",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/69-radical-equality/review.html",
+            "sha256": "833442b4d55a5ed2ecd168d5416220fcf3aba3e1664dad6867df6f1804ab713c"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/69-radical-equality/definitions.json",
+            "sha256": "11c2bc0fef3540f5ba512802726967bf3dd52e51bdb992fa6e7c59020ceeee2d"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/69-radical-equality/light-1x.png",
+            "sha256": "93a71a494753dc36c6ac273023eb7951833e5f7f0f898f4a79f2a61092b4e24a"
+          },
+          {
+            "path": "docs/review/atlas-craft-15/final/definitions.json",
+            "sha256": "9de882cfdc3214c05e228cea3ad66cd355b7a0f003df241bd6f2f1bc6dffe082"
+          },
+          {
+            "path": "docs/review/atlas-craft-15/final/17-math.html",
+            "sha256": "581184b267f5a9469e7f019866123aee436b6796c5ad8646ef36b9946570b17d"
+          },
+          {
+            "path": "docs/review/atlas-craft-15/final/17-math-light-1x.png",
+            "sha256": "365cce2f6cc0dbf5a41fd46d3d2ac8c7a01c366137f0a71ccd435034678c9fb8"
+          },
+          {
+            "path": "docs/review/atlas-craft-15/final/17-math-light-2x.png",
+            "sha256": "ebe503993ecc31d91dbf239718d48eacad081c716c632596ea27f8c94051a8b7"
+          },
+          {
+            "path": "docs/review/atlas-craft-15/final/17-math-dark-1x.png",
+            "sha256": "08f12361bf4037c243183159f3edef494f624962af4f5629fab9816fa2c7517f"
+          },
+          {
+            "path": "docs/review/atlas-craft-15/final/17-math-dark-2x.png",
+            "sha256": "8882e53200ca4ac89885dfd85951fc133f2a068d7866436ae2a19481f29a4bf1"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-15/final/17-math-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-15/final/17-math-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-15/final/17-math-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-15/final/17-math-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "independent-construction"
+      },
+      "remaining": []
+    },
+    {
+      "name": "divide",
+      "purpose": "除以",
+      "recognitionCues": "橫線上下對稱的兩點",
+      "confusableWith": [
+        "minus",
+        "fraction"
+      ],
+      "sourceObservation": "Lucide的上下點偏重，Phosphor較小。最新稿在兩者之間控制點徑，與等號、正負號共用橫線長度；完稿回比，原生16px圓點仍可見，沒有大到搶過橫線，也沒有退化成低對比噪點。",
+      "references": [
+        {
+          "name": "divide",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/divide.svg",
+          "localPath": "references/atlas-01/lucide-divide.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/divide.svg",
+          "sha256": "d29bf2d0ba9a8ab9956d2633c9c89f0eecafce7a6ad94ccf6e7173afa9ecb7a3",
+          "license": "ISC AND MIT",
+          "sourceName": "divide",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "divide",
+          "library": "Phosphor",
+          "repository": "phosphor-icons/core",
+          "commit": "2b75f3ad12b420c9504ef05df8d2564a28f8500e",
+          "path": "assets/regular/divide.svg",
+          "localPath": "references/atlas-01/phosphor-divide.svg",
+          "url": "https://github.com/phosphor-icons/core/blob/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular/divide.svg",
+          "sha256": "e6e594e25de6df250471f905a0297aec46d4badf5fba1014d2a0fa0a358f7991",
+          "license": "MIT",
+          "sourceName": "divide",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "數學符號的筆畫需完整連續，不使用虛線改變字形。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "符號各筆畫同屬主體，以留白區分而不做漸淡。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "數學字形採單色筆畫，不使用材質漸層。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-15/master-before.json",
+          "variantsSha256": "61606d85242c385e3468ef9cfed89cf1bef99906d1abeb7c2690090fd93faf18"
+        },
+        "reason": "上下點依原生尺寸使用1/1.2/1.4半徑，沿同一垂直軸對稱配置；橫線維持家族寬度，點徑不機械等同描邊寬。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "2a52a6268337fafc47f3794c4289f2b6ae95c350c3688f46dd8cf3361849b887",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/70-divide-plus-minus/review.html",
+            "sha256": "d5b421069d0517f0e842374507412c991c2206483c8068a678f5755fd0ef9516"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/70-divide-plus-minus/definitions.json",
+            "sha256": "00aa1b8e40931a4d43c2977975fe4d84a7bed8abe67ded77e1cd91d5b0e12518"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/70-divide-plus-minus/light-1x.png",
+            "sha256": "077160c16615b7d95d7e13014b09f0ce8cfe4a9b476928ca0868e4688853ec9d"
+          },
+          {
+            "path": "docs/review/atlas-craft-15/final/definitions.json",
+            "sha256": "9de882cfdc3214c05e228cea3ad66cd355b7a0f003df241bd6f2f1bc6dffe082"
+          },
+          {
+            "path": "docs/review/atlas-craft-15/final/17-math.html",
+            "sha256": "581184b267f5a9469e7f019866123aee436b6796c5ad8646ef36b9946570b17d"
+          },
+          {
+            "path": "docs/review/atlas-craft-15/final/17-math-light-1x.png",
+            "sha256": "365cce2f6cc0dbf5a41fd46d3d2ac8c7a01c366137f0a71ccd435034678c9fb8"
+          },
+          {
+            "path": "docs/review/atlas-craft-15/final/17-math-light-2x.png",
+            "sha256": "ebe503993ecc31d91dbf239718d48eacad081c716c632596ea27f8c94051a8b7"
+          },
+          {
+            "path": "docs/review/atlas-craft-15/final/17-math-dark-1x.png",
+            "sha256": "08f12361bf4037c243183159f3edef494f624962af4f5629fab9816fa2c7517f"
+          },
+          {
+            "path": "docs/review/atlas-craft-15/final/17-math-dark-2x.png",
+            "sha256": "8882e53200ca4ac89885dfd85951fc133f2a068d7866436ae2a19481f29a4bf1"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-15/final/17-math-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-15/final/17-math-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-15/final/17-math-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-15/final/17-math-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "independent-construction"
+      },
+      "remaining": []
+    },
+    {
+      "name": "plus-minus",
+      "purpose": "正負號",
+      "recognitionCues": "上方加號與下方減號",
+      "confusableWith": [
+        "plus",
+        "minus"
+      ],
+      "sourceObservation": "最初Phosphor/Tabler的plus-minus是斜線分隔的加減操作，最終改用Hugeicons plus-minus-01與MDI plus-minus的上下±。最新稿將上方加號略縮短，與下方減號分離；完稿回比，數學正負號語意明確，沒有沿用斜線組合混淆。",
+      "references": [
+        {
+          "name": "plus-minus",
+          "library": "Hugeicons Free",
+          "repository": "hugeicons/hugeicons",
+          "commit": "834e28d965946c1ee60d080027fe9dae4adc58d0",
+          "path": "icons/plus-minus-01.svg",
+          "localPath": "references/atlas-01/hugeicons-plus-minus-01.svg",
+          "url": "https://github.com/hugeicons/hugeicons/blob/834e28d965946c1ee60d080027fe9dae4adc58d0/icons/plus-minus-01.svg",
+          "sha256": "08aac46cf97d1349d065d544a429462428881bdcf5fd78755ed7dbfcbcc906bd",
+          "license": "MIT",
+          "sourceName": "plus-minus-01",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "plus-minus",
+          "library": "Material Design Icons",
+          "repository": "Templarian/MaterialDesign",
+          "commit": "2424e748e0cc63ab7b9c095a099b9fe239b737c0",
+          "path": "svg/plus-minus.svg",
+          "localPath": "references/atlas-01/mdi-plus-minus.svg",
+          "url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/plus-minus.svg",
+          "sha256": "8fdf1fd8a6cf281b61322fdb01c552786c7955b523d58150ddc12cf8c6b0dc21",
+          "license": "Apache-2.0",
+          "sourceName": "plus-minus",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "數學符號的筆畫需完整連續，不使用虛線改變字形。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "符號各筆畫同屬主體，以留白區分而不做漸淡。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "數學字形採單色筆畫，不使用材質漸層。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-15/master-before.json",
+          "variantsSha256": "921a00a92768dc78755fc5458c17de7f2092117d01c0e68f84a1cbcee788efea"
+        },
+        "reason": "保留上加下減的標準構造，兩橫等長同軸；加號豎筆下端與減號之間保留清楚空隙，不將它接成十字加底線。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "a5de050a781d64e9b5edd7b38780d776eb36b37b5e86e7c08705f18d5c5b7df4",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/70-divide-plus-minus/review.html",
+            "sha256": "d5b421069d0517f0e842374507412c991c2206483c8068a678f5755fd0ef9516"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/70-divide-plus-minus/definitions.json",
+            "sha256": "00aa1b8e40931a4d43c2977975fe4d84a7bed8abe67ded77e1cd91d5b0e12518"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/70-divide-plus-minus/light-1x.png",
+            "sha256": "077160c16615b7d95d7e13014b09f0ce8cfe4a9b476928ca0868e4688853ec9d"
+          },
+          {
+            "path": "docs/review/atlas-craft-15/final/definitions.json",
+            "sha256": "9de882cfdc3214c05e228cea3ad66cd355b7a0f003df241bd6f2f1bc6dffe082"
+          },
+          {
+            "path": "docs/review/atlas-craft-15/final/17-math.html",
+            "sha256": "581184b267f5a9469e7f019866123aee436b6796c5ad8646ef36b9946570b17d"
+          },
+          {
+            "path": "docs/review/atlas-craft-15/final/17-math-light-1x.png",
+            "sha256": "365cce2f6cc0dbf5a41fd46d3d2ac8c7a01c366137f0a71ccd435034678c9fb8"
+          },
+          {
+            "path": "docs/review/atlas-craft-15/final/17-math-light-2x.png",
+            "sha256": "ebe503993ecc31d91dbf239718d48eacad081c716c632596ea27f8c94051a8b7"
+          },
+          {
+            "path": "docs/review/atlas-craft-15/final/17-math-dark-1x.png",
+            "sha256": "08f12361bf4037c243183159f3edef494f624962af4f5629fab9816fa2c7517f"
+          },
+          {
+            "path": "docs/review/atlas-craft-15/final/17-math-dark-2x.png",
+            "sha256": "8882e53200ca4ac89885dfd85951fc133f2a068d7866436ae2a19481f29a4bf1"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-15/final/17-math-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-15/final/17-math-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-15/final/17-math-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-15/final/17-math-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Hugeicons Free",
+        "license": "MIT",
+        "licenseFile": "licenses/hugeicons-MIT.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "fraction",
+      "purpose": "分數",
+      "recognitionCues": "分子1、水平分數線與分母2",
+      "confusableWith": [
+        "divide",
+        "not-equal"
+      ],
+      "sourceObservation": "Tabler以水平分數線分隔1與2，MDI以斜線並排同一數值。最新稿採上下排列，將Tabler較方折的2改為完整曲線字形；完稿回比16/20/24，分子、分數線與分母分層清楚，2保留頭弧、斜腹和平底而不是方框拼湊。",
+      "references": [
+        {
+          "name": "fraction",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/math-1-divide-2.svg",
+          "localPath": "references/atlas-01/tabler-math-1-divide-2.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/math-1-divide-2.svg",
+          "sha256": "03d0f05bfdb719d1e0b6980068a55812adde887208eeeb2d84db4f73bc6d89bb",
+          "license": "MIT",
+          "sourceName": "math-1-divide-2",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "fraction",
+          "library": "Material Design Icons",
+          "repository": "Templarian/MaterialDesign",
+          "commit": "2424e748e0cc63ab7b9c095a099b9fe239b737c0",
+          "path": "svg/fraction-one-half.svg",
+          "localPath": "references/atlas-01/mdi-fraction-one-half.svg",
+          "url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/fraction-one-half.svg",
+          "sha256": "f274c41338a671cf573923907fa61feb5c74da8f706df563ea0e31539145cef4",
+          "license": "Apache-2.0",
+          "sourceName": "fraction-one-half",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "數學符號的筆畫需完整連續，不使用虛線改變字形。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "符號各筆畫同屬主體，以留白區分而不做漸淡。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "數學字形採單色筆畫，不使用材質漸層。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-15/master-before.json",
+          "variantsSha256": "a800fb11d29c683b942f0f9cd525bc609201d7bfa67615595c9d8f7bd20fc78b"
+        },
+        "reason": "1用短斜引筆接直幹，2使用連續頭弧與斜向收筆；上下字形保持與分數線的距離，符號必要數字不作裝飾刪除。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "f3d6620be19aaef7a5fa8ad0d48f0c27901f6b3ddd2c7c3133ad1c8097a04963",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/71-fraction-function/review.html",
+            "sha256": "5920fed83db9d2c601309fe6d74ebfb7d7383efaad52329282fd4f97fe378d29"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/71-fraction-function/definitions.json",
+            "sha256": "462fec7a7c2b9a1189eb613c0346e9c0c2b5e71f8b57bafbb38bdb59df777319"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/71-fraction-function/light-1x.png",
+            "sha256": "2ca8524c4517f15efa66ed7e0dc85abebbc5876203524530174dceb74daa92fd"
+          },
+          {
+            "path": "docs/review/atlas-craft-15/final/definitions.json",
+            "sha256": "9de882cfdc3214c05e228cea3ad66cd355b7a0f003df241bd6f2f1bc6dffe082"
+          },
+          {
+            "path": "docs/review/atlas-craft-15/final/17-math.html",
+            "sha256": "581184b267f5a9469e7f019866123aee436b6796c5ad8646ef36b9946570b17d"
+          },
+          {
+            "path": "docs/review/atlas-craft-15/final/17-math-light-1x.png",
+            "sha256": "365cce2f6cc0dbf5a41fd46d3d2ac8c7a01c366137f0a71ccd435034678c9fb8"
+          },
+          {
+            "path": "docs/review/atlas-craft-15/final/17-math-light-2x.png",
+            "sha256": "ebe503993ecc31d91dbf239718d48eacad081c716c632596ea27f8c94051a8b7"
+          },
+          {
+            "path": "docs/review/atlas-craft-15/final/17-math-dark-1x.png",
+            "sha256": "08f12361bf4037c243183159f3edef494f624962af4f5629fab9816fa2c7517f"
+          },
+          {
+            "path": "docs/review/atlas-craft-15/final/17-math-dark-2x.png",
+            "sha256": "8882e53200ca4ac89885dfd85951fc133f2a068d7866436ae2a19481f29a4bf1"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-15/final/17-math-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-15/final/17-math-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-15/final/17-math-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-15/final/17-math-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Tabler",
+        "license": "MIT",
+        "licenseFile": "licenses/tabler.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "function-square",
+      "purpose": "函數",
+      "recognitionCues": "方框內的曲線ƒ字形",
+      "confusableWith": [
+        "sigma",
+        "square"
+      ],
+      "sourceObservation": "Lucide的ƒ筆勢自然且框內留白較寬，Tabler以更短回鉤與傾斜主幹構字。最新稿將主幹輕微傾斜並以連續上下鉤收筆；完稿回比，內字和框各自成立，16px不把鉤端黏到外框。",
+      "references": [
+        {
+          "name": "function-square",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/square-function.svg",
+          "localPath": "references/atlas-01/lucide-square-function.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/square-function.svg",
+          "sha256": "7ffab62bcc16fd9b5a67d5777d03c3ed3736ccb36a57e100ec8834cfd7b18384",
+          "license": "ISC AND MIT",
+          "sourceName": "square-function",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "function-square",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/function.svg",
+          "localPath": "references/atlas-01/tabler-function.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/function.svg",
+          "sha256": "2e1191f53a44f3c83c03e7381c73e4f887749a430c331dd0f6c7bd621b0b439a",
+          "license": "MIT",
+          "sourceName": "function",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "數學符號的筆畫需完整連續，不使用虛線改變字形。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "符號各筆畫同屬主體，以留白區分而不做漸淡。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "數學字形採單色筆畫，不使用材質漸層。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-15/master-before.json",
+          "variantsSha256": "45d594fb58d2e84dc75c593124ba2cf6263b6a1387a3677ed20a552146f37db9"
+        },
+        "reason": "外框共用家族半徑，ƒ以曲線和短斜主幹完成而非直線字母f；橫筆跟隨字形中腰，四邊留白兼顧上下收筆。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "897b3f7ec24b743ff6254234299b6acd592bb881e749d3612ee2489d77ae86a7",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/71-fraction-function/review.html",
+            "sha256": "5920fed83db9d2c601309fe6d74ebfb7d7383efaad52329282fd4f97fe378d29"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/71-fraction-function/definitions.json",
+            "sha256": "462fec7a7c2b9a1189eb613c0346e9c0c2b5e71f8b57bafbb38bdb59df777319"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/71-fraction-function/light-1x.png",
+            "sha256": "2ca8524c4517f15efa66ed7e0dc85abebbc5876203524530174dceb74daa92fd"
+          },
+          {
+            "path": "docs/review/atlas-craft-15/final/definitions.json",
+            "sha256": "9de882cfdc3214c05e228cea3ad66cd355b7a0f003df241bd6f2f1bc6dffe082"
+          },
+          {
+            "path": "docs/review/atlas-craft-15/final/17-math.html",
+            "sha256": "581184b267f5a9469e7f019866123aee436b6796c5ad8646ef36b9946570b17d"
+          },
+          {
+            "path": "docs/review/atlas-craft-15/final/17-math-light-1x.png",
+            "sha256": "365cce2f6cc0dbf5a41fd46d3d2ac8c7a01c366137f0a71ccd435034678c9fb8"
+          },
+          {
+            "path": "docs/review/atlas-craft-15/final/17-math-light-2x.png",
+            "sha256": "ebe503993ecc31d91dbf239718d48eacad081c716c632596ea27f8c94051a8b7"
+          },
+          {
+            "path": "docs/review/atlas-craft-15/final/17-math-dark-1x.png",
+            "sha256": "08f12361bf4037c243183159f3edef494f624962af4f5629fab9816fa2c7517f"
+          },
+          {
+            "path": "docs/review/atlas-craft-15/final/17-math-dark-2x.png",
+            "sha256": "8882e53200ca4ac89885dfd85951fc133f2a068d7866436ae2a19481f29a4bf1"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-15/final/17-math-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-15/final/17-math-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-15/final/17-math-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-15/final/17-math-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Lucide",
+        "license": "ISC",
+        "licenseFile": "licenses/lucide.txt"
+      },
+      "remaining": []
+    }
+  ]
+}

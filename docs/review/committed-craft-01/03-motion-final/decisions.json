@@ -1,0 +1,24 @@
+{
+  "reviewer": "Codex (AI)",
+  "notes": {
+    "move": "保留：四個箭翼與十字主幹構成共同軸線，16px相鄰翼端仍有開放通道。Lucide輪廓較舒展，Tabler刻意斷開主幹；現稿採連續主幹，使移動中心清楚，無需增添斷線。",
+    "maximize": "保留：四個外角對稱分離，原生16px的中央空白不被圓角吞掉；兩份來源同樣以角框表達放大，現稿稍薄的筆重保持工具列安靜。",
+    "minimize": "保留：向內四角與maximize的向外四角可直接區分，中心四向通道清楚；Lucide曲面更圓，現稿soft的較小半徑適合微圓系統，rounded仍保留短直段。",
+    "rotate-left": "保留：圓弧上肩順接斜向箭桿，開口與上左箭頭互相平衡；Lucide同方向構造較直接，Tabler把箭尖放於右下，現稿選上左作逆時針訊號，不因來源位置不同重排。",
+    "rotate-right": "保留：鏡向rotate-left，圓環視覺重量及開口一致；Lucide同樣把順時針箭頭放右上，Tabler左下構造可用但沒有原生尺寸優勢，保留家族共用母型。",
+    "reply": "保留：淺回彎與短垂直尾段區別undo的完整U形，箭翼到桿身的收口連續；Lucide同樣簡潔，Iconoir底部回彎較長，保留現稿讓回覆／撤銷不混淆。",
+    "reply-all": "保留：雙箭翼相同角度、同一水平尖端高度；16px兩翼間仍分開，Lucide雙翼較靠近、Tabler有U形尾巴，現稿較疏朗且與reply共用淺弧。",
+    "forward": "保留：reply鏡向讓回覆與轉寄配對；末端垂直段承接曲線自然，較Iconoir的長回彎更清楚區別redo，三尺寸尖端沒有凸耳。",
+    "keyboard-return": "精修：舊稿16px箭翼下端距鍵框偏近，圖案重心偏低；箭桿上移0.5個24格單位，右端起點同步上移，翼長16px用2.5、20/24用2.75。Phosphor鍵框內留白更均衡，吸收此優點後保留較明確的折返豎段；Lucide僅作折返箭頭結構參考。新版三尺寸下方空隙增加，16px方向仍清楚。"
+  },
+  "modified": [
+    "keyboard-return"
+  ],
+  "effects": "全部不用虛線、透明度或漸層：完整方向與鍵帽輪廓就是語意；額外淡化或斷線沒有功能收益。",
+  "viewed": [
+    "../03-motion-before/1-dpr1.png",
+    "2-dpr1.png",
+    "2-dpr2.png"
+  ],
+  "scope": "16/20/24 × sharp/soft/rounded; light/dark; 55% alongside text"
+}

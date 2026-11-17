@@ -15,7 +15,7 @@ Master Icons 研究成熟圖庫的語意與構造，並在自己的幾何系統�
 
 ## 保留既有聲明
 
-`packages/icons/src/provenance.mjs`、`THIRD_PARTY_NOTICES.md` 與 `licenses/` 是現有來源及授權紀錄。當前包含 12 顆 Hugeicons Free 研究重繪的保留聲明，以及 `megaphone`、`handshake`、`layers` 的 Lucide 改作紀錄。精修後仍保留相關歷史；不能因外觀變動或新增 skill 就宣稱從未沿用素材。
+`packages/icons/src/provenance.mjs`、`THIRD_PARTY_NOTICES.md` 與 `licenses/` 是現有來源及授權紀錄。當前包含 12 顆 Hugeicons Free 研究重繪的保留聲明，以及 `megaphone`、`handshake`、`layers` 的 Lucide 改作紀錄。品牌資產另見 `packages/icons/src/brands.json` 與 notices 的品牌章節，不以本 skill 的介面圖示規則重設標誌或改列來源。精修後仍保留相關歷史；不能因外觀變動或新增 skill 就宣稱從未沿用素材。
 
 若實際製作方式與分類不符，逐項核對圖稿、歷史及適用授權後修正 metadata；不要批次刪除 notices 或 licenses。來源角色由比較轉為實際採用／改作時，同步來源紀錄及單檔 SVG、ZIP、框架套件的適用聲明。
 

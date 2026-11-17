@@ -1,0 +1,1537 @@
+{
+  "schemaVersion": 2,
+  "reviewer": "Codex (AI)",
+  "userApproval": "pending",
+  "icons": [
+    {
+      "name": "cctv",
+      "purpose": "監視器",
+      "recognitionCues": "俯視鏡身、前鏡口與牆面支架",
+      "confusableWith": [
+        "camera",
+        "video"
+      ],
+      "sourceObservation": "Lucide與Hugeicons/cctv-camera均為斜向筒式監視器，Tabler初選其實是半球機型，已改正。最新稿採Lucide主體與支架；完稿回比後將前鏡口改為與鏡身同軸的四邊形，去掉初稿偏三角的孔，16px前端和機身更有一體感。",
+      "references": [
+        {
+          "name": "cctv",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/cctv.svg",
+          "localPath": "references/atlas-01/lucide-cctv.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/cctv.svg",
+          "sha256": "eca31d564c3874ded01cc78f2c7eccdc9c3de43a5c9ed609d4c2a1483e9a3d20",
+          "license": "ISC AND MIT",
+          "sourceName": "cctv",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "cctv",
+          "library": "Hugeicons Free",
+          "repository": "hugeicons/hugeicons",
+          "commit": "834e28d965946c1ee60d080027fe9dae4adc58d0",
+          "path": "icons/cctv-camera.svg",
+          "localPath": "references/atlas-01/hugeicons-cctv-camera.svg",
+          "url": "https://github.com/hugeicons/hugeicons/blob/834e28d965946c1ee60d080027fe9dae4adc58d0/icons/cctv-camera.svg",
+          "sha256": "0488e3be02ab83caa48f27f04ef648df6d1c3f682df6dc1fc03d62a6090e2a0a",
+          "license": "MIT",
+          "sourceName": "cctv-camera",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "安全設備主體完整呈現，掃描框以開放角線而非虛線表示。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以留白及真實遮擋區分前後，不用淡化降低設備細節的可辨識性。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "單色輪廓即可表達警示燈與消防器材，不以材質或光色漸層補語意。"
+        }
+      },
+      "change": {
+        "kind": "modified",
+        "before": {
+          "path": "references/atlas-craft-22/master-before.json",
+          "variantsSha256": "d0857c9dab5c0fb13ad8b3104791d16937acd781ff7d74e879181b0f9cacedf8"
+        },
+        "reason": "俯視鏡身以弧形後蓋接長直壁，鏡口沿相同方向伸出；支架以彎曲過渡承接牆板，鏡口與支架按主殼外側裁線，保留單顆狀態點。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "64da9049a9550c58d7c18506e271a5b95472a67a833d2f3df966618828529956",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/96b-cctv/review.html",
+            "sha256": "584747fb7eb065a981d5425685140ebf3f665a1985054470f8d78a9a2c4dc205"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/96b-cctv/definitions.json",
+            "sha256": "2d5cca6d072c66bfddc5af4aa62b5b1db332fa977bbb2136bb8f404dd892e1b4"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/96b-cctv/light-1x.png",
+            "sha256": "d0f1aa22ecef8c17a0c3d7c969f321ea8c31b7cfad2c5e9c33c1422d3def2637"
+          },
+          {
+            "path": "docs/review/atlas-craft-22/final-v2/definitions.json",
+            "sha256": "4b3403db467a47ab1461038f9dc0bd5d20fde4e21bfefe6ed6e6c45e2f47cba7"
+          },
+          {
+            "path": "docs/review/atlas-craft-22/final-v2/24-safety.html",
+            "sha256": "ff9c3280747404067cd59df1ba707a3d6bc3887005544329cd7f111c8b4bf704"
+          },
+          {
+            "path": "docs/review/atlas-craft-22/final-v2/24-safety-light-1x.png",
+            "sha256": "7289948643b1baa307ea9f58029f99aae6ec5fc990adcb971ab92404b6ad93bb"
+          },
+          {
+            "path": "docs/review/atlas-craft-22/final-v2/24-safety-light-2x.png",
+            "sha256": "e0d61cfd5bfc6f39205b76d02fa6d7c1439051f801f7283972c81b5b829b669f"
+          },
+          {
+            "path": "docs/review/atlas-craft-22/final-v2/24-safety-dark-1x.png",
+            "sha256": "e05ceb8779e772433da512f1170832e7bb4d4be875e92122f6af52a7c65e881a"
+          },
+          {
+            "path": "docs/review/atlas-craft-22/final-v2/24-safety-dark-2x.png",
+            "sha256": "ac0f00db8a55d936a518718bf45f506a5e7ee11dcc972b1c2712e930929adc11"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-22/final-v2/24-safety-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-22/final-v2/24-safety-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-22/final-v2/24-safety-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-22/final-v2/24-safety-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Lucide",
+        "license": "ISC",
+        "licenseFile": "licenses/lucide.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "siren",
+      "purpose": "警示燈",
+      "recognitionCues": "圓頂燈罩、底座與放射警示光",
+      "confusableWith": [
+        "bell",
+        "alarm-smoke"
+      ],
+      "sourceObservation": "Lucide在燈罩內放一條長直線，Phosphor短弧更能表達圓罩。最新稿採Phosphor罩形和短弧，保留三段警示光；完稿回比16px，罩內與底座孔均清楚，弧形反光與外罩之間不形成狹長雙線。",
+      "references": [
+        {
+          "name": "siren",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/siren.svg",
+          "localPath": "references/atlas-01/lucide-siren.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/siren.svg",
+          "sha256": "27281c5d58ac4d60bc2ffbbc30374dee1171bb3cec3a9c78d5c010b5efd6ac16",
+          "license": "ISC AND MIT",
+          "sourceName": "siren",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "siren",
+          "library": "Phosphor",
+          "repository": "phosphor-icons/core",
+          "commit": "2b75f3ad12b420c9504ef05df8d2564a28f8500e",
+          "path": "assets/regular/siren.svg",
+          "localPath": "references/atlas-01/phosphor-siren.svg",
+          "url": "https://github.com/phosphor-icons/core/blob/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular/siren.svg",
+          "sha256": "2296e671635ab7fe8c3b0e13d5e2c41bb01f7b2bbaf9abfd68717725afbd6714",
+          "license": "MIT",
+          "sourceName": "siren",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "安全設備主體完整呈現，掃描框以開放角線而非虛線表示。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以留白及真實遮擋區分前後，不用淡化降低設備細節的可辨識性。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "單色輪廓即可表達警示燈與消防器材，不以材質或光色漸層補語意。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-22/master-before.json",
+          "variantsSha256": "15d29196830a4ab4455e46901b228d384596c688436b53c7a8af7e07139e2b6f"
+        },
+        "reason": "圓頂燈罩沿垂直壁落入外伸底座，內弧只交代曲面而不分割整個燈罩；底座保持可見高度，三段放射光按共同中心分布。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "88029bb387ea98718ff14956fb8b383b42ae4c415a8966fadc5ebb2966d0ec2e",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/96-cctv-siren-smoke/review.html",
+            "sha256": "871c135efbefabe2763754b2c4176272dcd5f96651d48a60e15faad9ccbc3b42"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/96-cctv-siren-smoke/definitions.json",
+            "sha256": "5024c3ff5f87fe166aedfa2d6ea49ebfa76ec9c8d8be6df05d524687fcd5c09f"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/96-cctv-siren-smoke/light-1x.png",
+            "sha256": "b7d9dcd7263527e82d6c8a770c8c04a1ae63a218fa5609d495086944df10777e"
+          },
+          {
+            "path": "docs/review/atlas-craft-22/final-v2/definitions.json",
+            "sha256": "4b3403db467a47ab1461038f9dc0bd5d20fde4e21bfefe6ed6e6c45e2f47cba7"
+          },
+          {
+            "path": "docs/review/atlas-craft-22/final-v2/24-safety.html",
+            "sha256": "ff9c3280747404067cd59df1ba707a3d6bc3887005544329cd7f111c8b4bf704"
+          },
+          {
+            "path": "docs/review/atlas-craft-22/final-v2/24-safety-light-1x.png",
+            "sha256": "7289948643b1baa307ea9f58029f99aae6ec5fc990adcb971ab92404b6ad93bb"
+          },
+          {
+            "path": "docs/review/atlas-craft-22/final-v2/24-safety-light-2x.png",
+            "sha256": "e0d61cfd5bfc6f39205b76d02fa6d7c1439051f801f7283972c81b5b829b669f"
+          },
+          {
+            "path": "docs/review/atlas-craft-22/final-v2/24-safety-dark-1x.png",
+            "sha256": "e05ceb8779e772433da512f1170832e7bb4d4be875e92122f6af52a7c65e881a"
+          },
+          {
+            "path": "docs/review/atlas-craft-22/final-v2/24-safety-dark-2x.png",
+            "sha256": "ac0f00db8a55d936a518718bf45f506a5e7ee11dcc972b1c2712e930929adc11"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-22/final-v2/24-safety-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-22/final-v2/24-safety-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-22/final-v2/24-safety-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-22/final-v2/24-safety-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Phosphor",
+        "license": "MIT",
+        "licenseFile": "licenses/phosphor.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "alarm-smoke",
+      "purpose": "煙霧警報器",
+      "recognitionCues": "扁平偵測器、下方感測殼與上升煙流",
+      "confusableWith": [
+        "siren",
+        "air-conditioner"
+      ],
+      "sourceObservation": "Lucide用平緩上升煙流，Tabler採較彎的波形。最新稿採Lucide扁殼與三道平緩煙線；完稿回比16/20/24，上下兩層殼體共用邊界，煙流與偵測口之間有明確空白，沒有添小燈點或更多通風格。",
+      "references": [
+        {
+          "name": "alarm-smoke",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/alarm-smoke.svg",
+          "localPath": "references/atlas-01/lucide-alarm-smoke.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/alarm-smoke.svg",
+          "sha256": "511bac0e133913cc85cae1314ec4eb03893b548312d325d5cb0bf1f8c629763a",
+          "license": "ISC AND MIT",
+          "sourceName": "alarm-smoke",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "alarm-smoke",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/alarm-smoke.svg",
+          "localPath": "references/atlas-01/tabler-alarm-smoke.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/alarm-smoke.svg",
+          "sha256": "c257bcb6157c045f7c25f3c11ee4d446c123221abc210aec33eb92cbe6643832",
+          "license": "MIT",
+          "sourceName": "alarm-smoke",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "安全設備主體完整呈現，掃描框以開放角線而非虛線表示。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以留白及真實遮擋區分前後，不用淡化降低設備細節的可辨識性。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "單色輪廓即可表達警示燈與消防器材，不以材質或光色漸層補語意。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-22/master-before.json",
+          "variantsSha256": "799a0288fc13bf91068f710b3c03138d0ea6acfef02b2424faa4a6c3eaff4bda"
+        },
+        "reason": "上層扁蓋與下方收窄感測殼連接，兩層之間不重畫平行邊；三道煙流用同一條連續曲線平移，保持節奏和同樣收筆高度。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "e4bb2ed23a9aaa24b512ffa31a6e9e8362aa62a0742eef9dcbacc95a74b7e365",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/96-cctv-siren-smoke/review.html",
+            "sha256": "871c135efbefabe2763754b2c4176272dcd5f96651d48a60e15faad9ccbc3b42"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/96-cctv-siren-smoke/definitions.json",
+            "sha256": "5024c3ff5f87fe166aedfa2d6ea49ebfa76ec9c8d8be6df05d524687fcd5c09f"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/96-cctv-siren-smoke/light-1x.png",
+            "sha256": "b7d9dcd7263527e82d6c8a770c8c04a1ae63a218fa5609d495086944df10777e"
+          },
+          {
+            "path": "docs/review/atlas-craft-22/final-v2/definitions.json",
+            "sha256": "4b3403db467a47ab1461038f9dc0bd5d20fde4e21bfefe6ed6e6c45e2f47cba7"
+          },
+          {
+            "path": "docs/review/atlas-craft-22/final-v2/24-safety.html",
+            "sha256": "ff9c3280747404067cd59df1ba707a3d6bc3887005544329cd7f111c8b4bf704"
+          },
+          {
+            "path": "docs/review/atlas-craft-22/final-v2/24-safety-light-1x.png",
+            "sha256": "7289948643b1baa307ea9f58029f99aae6ec5fc990adcb971ab92404b6ad93bb"
+          },
+          {
+            "path": "docs/review/atlas-craft-22/final-v2/24-safety-light-2x.png",
+            "sha256": "e0d61cfd5bfc6f39205b76d02fa6d7c1439051f801f7283972c81b5b829b669f"
+          },
+          {
+            "path": "docs/review/atlas-craft-22/final-v2/24-safety-dark-1x.png",
+            "sha256": "e05ceb8779e772433da512f1170832e7bb4d4be875e92122f6af52a7c65e881a"
+          },
+          {
+            "path": "docs/review/atlas-craft-22/final-v2/24-safety-dark-2x.png",
+            "sha256": "ac0f00db8a55d936a518718bf45f506a5e7ee11dcc972b1c2712e930929adc11"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-22/final-v2/24-safety-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-22/final-v2/24-safety-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-22/final-v2/24-safety-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-22/final-v2/24-safety-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Lucide",
+        "license": "ISC",
+        "licenseFile": "licenses/lucide.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "fire-extinguisher",
+      "purpose": "滅火器",
+      "recognitionCues": "壓力瓶、頂閥、外側軟管與瓶身分界",
+      "confusableWith": [
+        "bottle",
+        "fire-hydrant"
+      ],
+      "sourceObservation": "Lucide有清楚閥頸和瓶身下分界，Phosphor以扳柄帶出壓力設備。最新稿採Lucide瓶身構造並拉寬軟管通道；完稿回比後瓶肩下移1u，讓閥頸內孔在16px不只剩小亮點，瓶肩與軟管外弧仍自然承接頂部。",
+      "references": [
+        {
+          "name": "fire-extinguisher",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/fire-extinguisher.svg",
+          "localPath": "references/atlas-01/lucide-fire-extinguisher.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/fire-extinguisher.svg",
+          "sha256": "20edf808642ee001988b1f7640aeb3959203946550e69898cd9e7421fa692f84",
+          "license": "ISC AND MIT",
+          "sourceName": "fire-extinguisher",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "fire-extinguisher",
+          "library": "Phosphor",
+          "repository": "phosphor-icons/core",
+          "commit": "2b75f3ad12b420c9504ef05df8d2564a28f8500e",
+          "path": "assets/regular/fire-extinguisher.svg",
+          "localPath": "references/atlas-01/phosphor-fire-extinguisher.svg",
+          "url": "https://github.com/phosphor-icons/core/blob/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular/fire-extinguisher.svg",
+          "sha256": "2bae25824907497378fe8a804843e8b57f513d96eec4436da73c9cc817d95770",
+          "license": "MIT",
+          "sourceName": "fire-extinguisher",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "安全設備主體完整呈現，掃描框以開放角線而非虛線表示。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以留白及真實遮擋區分前後，不用淡化降低設備細節的可辨識性。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "單色輪廓即可表達警示燈與消防器材，不以材質或光色漸層補語意。"
+        }
+      },
+      "change": {
+        "kind": "modified",
+        "before": {
+          "path": "references/atlas-craft-22/master-before.json",
+          "variantsSha256": "2fc2f612e013d538eb31a04063f20ed0db9c2d1ab5bcd06f3a5cdfa611688bda"
+        },
+        "reason": "瓶肩連續圓弧進入直壁，下部收成穩定圓底；閥頸留足高度，軟管與瓶體保持較寬通道，夾持短橫線和瓶身分界各有構造用途。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "732124599fb3da604f9073c7c49b670eb593457c0e7327aa8b6ff9580be617b5",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/97b-extinguisher-vault/review.html",
+            "sha256": "90d030cceb5c16d6a61c084807c7693228b9b6d6e85452b72b5a3540731c5f9a"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/97b-extinguisher-vault/definitions.json",
+            "sha256": "4c920ad79ba6fb0fb65bed83c536b93a1ad5415d51bd1df61da3b29e258c39ef"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/97b-extinguisher-vault/light-1x.png",
+            "sha256": "682e7e166d5fa53a99453c958deeeb0c18a82b6754234ee1b2b6331d8b4a40d6"
+          },
+          {
+            "path": "docs/review/atlas-craft-22/final-v2/definitions.json",
+            "sha256": "4b3403db467a47ab1461038f9dc0bd5d20fde4e21bfefe6ed6e6c45e2f47cba7"
+          },
+          {
+            "path": "docs/review/atlas-craft-22/final-v2/24-safety.html",
+            "sha256": "ff9c3280747404067cd59df1ba707a3d6bc3887005544329cd7f111c8b4bf704"
+          },
+          {
+            "path": "docs/review/atlas-craft-22/final-v2/24-safety-light-1x.png",
+            "sha256": "7289948643b1baa307ea9f58029f99aae6ec5fc990adcb971ab92404b6ad93bb"
+          },
+          {
+            "path": "docs/review/atlas-craft-22/final-v2/24-safety-light-2x.png",
+            "sha256": "e0d61cfd5bfc6f39205b76d02fa6d7c1439051f801f7283972c81b5b829b669f"
+          },
+          {
+            "path": "docs/review/atlas-craft-22/final-v2/24-safety-dark-1x.png",
+            "sha256": "e05ceb8779e772433da512f1170832e7bb4d4be875e92122f6af52a7c65e881a"
+          },
+          {
+            "path": "docs/review/atlas-craft-22/final-v2/24-safety-dark-2x.png",
+            "sha256": "ac0f00db8a55d936a518718bf45f506a5e7ee11dcc972b1c2712e930929adc11"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-22/final-v2/24-safety-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-22/final-v2/24-safety-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-22/final-v2/24-safety-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-22/final-v2/24-safety-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Lucide",
+        "license": "ISC",
+        "licenseFile": "licenses/lucide.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "fire-hydrant",
+      "purpose": "消防栓",
+      "recognitionCues": "圓帽立柱、側接頭與中央出水口",
+      "confusableWith": [
+        "fire-extinguisher",
+        "bottle"
+      ],
+      "sourceObservation": "Tabler圓帽與側接頭連成完整立柱，MDI實心輪廓更簡化。最新稿採Tabler構造、略擴接頭與中央孔；完稿回比16px，帽部、兩側接頭及出水孔分開可讀，未加螺栓小點與輪廓內套框。",
+      "references": [
+        {
+          "name": "fire-hydrant",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/fire-hydrant.svg",
+          "localPath": "references/atlas-01/tabler-fire-hydrant.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/fire-hydrant.svg",
+          "sha256": "81fcf8e79ad53ecda073e180a1a9c2176d6f32b41c7562d48ec39c5242bef40f",
+          "license": "MIT",
+          "sourceName": "fire-hydrant",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "fire-hydrant",
+          "library": "Material Design Icons",
+          "repository": "Templarian/MaterialDesign",
+          "commit": "2424e748e0cc63ab7b9c095a099b9fe239b737c0",
+          "path": "svg/fire-hydrant.svg",
+          "localPath": "references/atlas-01/mdi-fire-hydrant.svg",
+          "url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/fire-hydrant.svg",
+          "sha256": "1481b4a644358ff2011e29562f2d2e9245a8a858e41d5810229fa8a3bfe4e014",
+          "license": "Apache-2.0",
+          "sourceName": "fire-hydrant",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "安全設備主體完整呈現，掃描框以開放角線而非虛線表示。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以留白及真實遮擋區分前後，不用淡化降低設備細節的可辨識性。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "單色輪廓即可表達警示燈與消防器材，不以材質或光色漸層補語意。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-22/master-before.json",
+          "variantsSha256": "9a32c735b6e7dd25cc720360cd814eac26e2a570ebc76877b89eb190d6a4e6c7"
+        },
+        "reason": "圓帽、柱身與兩側接頭共用完整外殼，中央出水孔保持較大內徑；帽下橫線裁在殼內，底座提供平穩落點。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "66fb5aa51d10e1a6f6204d6e5792ee33a868c115089b5ee1c8d3ba76b1f2379b",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/97-fire-vault/review.html",
+            "sha256": "8aa385e42afa192f7a709b2635b2b9beb3c1cde6f0e0191fa6820e285c7d131c"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/97-fire-vault/definitions.json",
+            "sha256": "61475d77c4f2cdda5237e3ef831d9ad4c37883cd9557220d7017925efce17fc1"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/97-fire-vault/light-1x.png",
+            "sha256": "dd15b7731ec263e3099afa5c1bfa3ad2d82dc0f307b147c9f4bde880eb1025f7"
+          },
+          {
+            "path": "docs/review/atlas-craft-22/final-v2/definitions.json",
+            "sha256": "4b3403db467a47ab1461038f9dc0bd5d20fde4e21bfefe6ed6e6c45e2f47cba7"
+          },
+          {
+            "path": "docs/review/atlas-craft-22/final-v2/24-safety.html",
+            "sha256": "ff9c3280747404067cd59df1ba707a3d6bc3887005544329cd7f111c8b4bf704"
+          },
+          {
+            "path": "docs/review/atlas-craft-22/final-v2/24-safety-light-1x.png",
+            "sha256": "7289948643b1baa307ea9f58029f99aae6ec5fc990adcb971ab92404b6ad93bb"
+          },
+          {
+            "path": "docs/review/atlas-craft-22/final-v2/24-safety-light-2x.png",
+            "sha256": "e0d61cfd5bfc6f39205b76d02fa6d7c1439051f801f7283972c81b5b829b669f"
+          },
+          {
+            "path": "docs/review/atlas-craft-22/final-v2/24-safety-dark-1x.png",
+            "sha256": "e05ceb8779e772433da512f1170832e7bb4d4be875e92122f6af52a7c65e881a"
+          },
+          {
+            "path": "docs/review/atlas-craft-22/final-v2/24-safety-dark-2x.png",
+            "sha256": "ac0f00db8a55d936a518718bf45f506a5e7ee11dcc972b1c2712e930929adc11"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-22/final-v2/24-safety-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-22/final-v2/24-safety-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-22/final-v2/24-safety-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-22/final-v2/24-safety-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Tabler",
+        "license": "MIT",
+        "licenseFile": "licenses/tabler.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "vault",
+      "purpose": "保險庫",
+      "recognitionCues": "厚門框與中央四向鎖栓輪",
+      "confusableWith": [
+        "lock",
+        "shield"
+      ],
+      "sourceObservation": "Lucide四向輪栓更接近保險庫門，Phosphor是單轉盤的箱式保險箱，機型不同但同屬安全儲存。最新稿採Lucide鎖輪；完稿回比發現首稿無末端旋鈕較像普通X，補回輕量實心端點，16px仍保有中心孔和框內空白。",
+      "references": [
+        {
+          "name": "vault",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/vault.svg",
+          "localPath": "references/atlas-01/lucide-vault.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/vault.svg",
+          "sha256": "8cd0b1faa0251b6f2db020976254ef263432e4bbd468d0d051745edbcf327e91",
+          "license": "ISC AND MIT",
+          "sourceName": "vault",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "vault",
+          "library": "Phosphor",
+          "repository": "phosphor-icons/core",
+          "commit": "2b75f3ad12b420c9504ef05df8d2564a28f8500e",
+          "path": "assets/regular/vault.svg",
+          "localPath": "references/atlas-01/phosphor-vault.svg",
+          "url": "https://github.com/phosphor-icons/core/blob/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular/vault.svg",
+          "sha256": "f4cedeb0419725587ff38c725cd2e0f05e888aa4b3d526d652bc61123d98e136",
+          "license": "MIT",
+          "sourceName": "vault",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "安全設備主體完整呈現，掃描框以開放角線而非虛線表示。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以留白及真實遮擋區分前後，不用淡化降低設備細節的可辨識性。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "單色輪廓即可表達警示燈與消防器材，不以材質或光色漸層補語意。"
+        }
+      },
+      "change": {
+        "kind": "modified",
+        "before": {
+          "path": "references/atlas-craft-22/master-before.json",
+          "variantsSha256": "273ab06e13c69798bfffc6baa7b387158a1dfc539785c100193166c4a07e751b"
+        },
+        "reason": "四向鎖桿以共同中心放射，連接中央輪孔時裁在圈外，末端小旋鈕保留物件特性；框角按sharp/soft/rounded實際改變，不添加第二層厚門框。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "8166cc12a2e168040ef2454979e5a69a28a57f91384617a7f3ef81b90c6de780",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/97b-extinguisher-vault/review.html",
+            "sha256": "90d030cceb5c16d6a61c084807c7693228b9b6d6e85452b72b5a3540731c5f9a"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/97b-extinguisher-vault/definitions.json",
+            "sha256": "4c920ad79ba6fb0fb65bed83c536b93a1ad5415d51bd1df61da3b29e258c39ef"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/97b-extinguisher-vault/light-1x.png",
+            "sha256": "682e7e166d5fa53a99453c958deeeb0c18a82b6754234ee1b2b6331d8b4a40d6"
+          },
+          {
+            "path": "docs/review/atlas-craft-22/final-v2/definitions.json",
+            "sha256": "4b3403db467a47ab1461038f9dc0bd5d20fde4e21bfefe6ed6e6c45e2f47cba7"
+          },
+          {
+            "path": "docs/review/atlas-craft-22/final-v2/24-safety.html",
+            "sha256": "ff9c3280747404067cd59df1ba707a3d6bc3887005544329cd7f111c8b4bf704"
+          },
+          {
+            "path": "docs/review/atlas-craft-22/final-v2/24-safety-light-1x.png",
+            "sha256": "7289948643b1baa307ea9f58029f99aae6ec5fc990adcb971ab92404b6ad93bb"
+          },
+          {
+            "path": "docs/review/atlas-craft-22/final-v2/24-safety-light-2x.png",
+            "sha256": "e0d61cfd5bfc6f39205b76d02fa6d7c1439051f801f7283972c81b5b829b669f"
+          },
+          {
+            "path": "docs/review/atlas-craft-22/final-v2/24-safety-dark-1x.png",
+            "sha256": "e05ceb8779e772433da512f1170832e7bb4d4be875e92122f6af52a7c65e881a"
+          },
+          {
+            "path": "docs/review/atlas-craft-22/final-v2/24-safety-dark-2x.png",
+            "sha256": "ac0f00db8a55d936a518718bf45f506a5e7ee11dcc972b1c2712e930929adc11"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-22/final-v2/24-safety-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-22/final-v2/24-safety-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-22/final-v2/24-safety-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-22/final-v2/24-safety-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Lucide",
+        "license": "ISC",
+        "licenseFile": "licenses/lucide.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "key-square",
+      "purpose": "方頭鑰匙",
+      "recognitionCues": "方形握頭、孔槽與階梯鎖齒",
+      "confusableWith": [
+        "key",
+        "lock"
+      ],
+      "sourceObservation": "Lucide與Hugeicons皆用方形握頭及階梯鎖齒。最新稿採Lucide構造，握頭略放寬並共用斜軸；完稿回比16px，長孔槽與外框仍分離，鎖齒讀為連續鋸階而非零散短線。這是key的造型變體，不額外計基礎概念。",
+      "references": [
+        {
+          "name": "key-square",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/key-square.svg",
+          "localPath": "references/atlas-01/lucide-key-square.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/key-square.svg",
+          "sha256": "6338e0e2b44881af238dc43955525626cc678101cdfbfa886083e1a3cb06d219",
+          "license": "ISC AND MIT",
+          "sourceName": "key-square",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "key-square",
+          "library": "Hugeicons Free",
+          "repository": "hugeicons/hugeicons",
+          "commit": "834e28d965946c1ee60d080027fe9dae4adc58d0",
+          "path": "icons/key-square.svg",
+          "localPath": "references/atlas-01/hugeicons-key-square.svg",
+          "url": "https://github.com/hugeicons/hugeicons/blob/834e28d965946c1ee60d080027fe9dae4adc58d0/icons/key-square.svg",
+          "sha256": "f44490714b9168ccd64bdc6173c3a334e3dbc2560f73cf240719a65b04182ce2",
+          "license": "MIT",
+          "sourceName": "key-square",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "安全設備主體完整呈現，掃描框以開放角線而非虛線表示。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以留白及真實遮擋區分前後，不用淡化降低設備細節的可辨識性。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "單色輪廓即可表達警示燈與消防器材，不以材質或光色漸層補語意。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-22/master-before.json",
+          "variantsSha256": "2b400ac789d320b06821460c760e27b65ac43fc3f27608beb5e9476954ca567e"
+        },
+        "reason": "握頭和針桿共用斜向主軸，桿身墨線止於頭部外緣；方頭角型依預設改實際半徑，鎖齒保留較小轉角，區別既有圓頭key。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "a28463cb9bfc79d702823d6424b2716eb70921e47d0f2553280ab3e8dbe80960",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/98-key-face/review.html",
+            "sha256": "ac6df5d86d35dc06d29795674aa2b271c697cd26243b4b5aee7a6a5a4c4227bf"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/98-key-face/definitions.json",
+            "sha256": "bd9fa8c04b87b829394d839062a62be1c246306c82f623b0971c761b20f41e1f"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/98-key-face/light-1x.png",
+            "sha256": "b8acc381ddb65efb6d8a4fabc43df4eefd160b2dd93b3fba261d983c141d7181"
+          },
+          {
+            "path": "docs/review/atlas-craft-22/final-v2/definitions.json",
+            "sha256": "4b3403db467a47ab1461038f9dc0bd5d20fde4e21bfefe6ed6e6c45e2f47cba7"
+          },
+          {
+            "path": "docs/review/atlas-craft-22/final-v2/24-safety.html",
+            "sha256": "ff9c3280747404067cd59df1ba707a3d6bc3887005544329cd7f111c8b4bf704"
+          },
+          {
+            "path": "docs/review/atlas-craft-22/final-v2/24-safety-light-1x.png",
+            "sha256": "7289948643b1baa307ea9f58029f99aae6ec5fc990adcb971ab92404b6ad93bb"
+          },
+          {
+            "path": "docs/review/atlas-craft-22/final-v2/24-safety-light-2x.png",
+            "sha256": "e0d61cfd5bfc6f39205b76d02fa6d7c1439051f801f7283972c81b5b829b669f"
+          },
+          {
+            "path": "docs/review/atlas-craft-22/final-v2/24-safety-dark-1x.png",
+            "sha256": "e05ceb8779e772433da512f1170832e7bb4d4be875e92122f6af52a7c65e881a"
+          },
+          {
+            "path": "docs/review/atlas-craft-22/final-v2/24-safety-dark-2x.png",
+            "sha256": "ac0f00db8a55d936a518718bf45f506a5e7ee11dcc972b1c2712e930929adc11"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-22/final-v2/24-safety-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-22/final-v2/24-safety-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-22/final-v2/24-safety-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-22/final-v2/24-safety-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Lucide",
+        "license": "ISC",
+        "licenseFile": "licenses/lucide.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "scan-face",
+      "purpose": "臉部辨識",
+      "recognitionCues": "四角掃描框與中央臉部線索",
+      "confusableWith": [
+        "scan",
+        "fingerprint"
+      ],
+      "sourceObservation": "Lucide與Tabler都以四角框包住五官。最新稿採Lucide較開放的嘴弧和圓點眼睛；完稿回比，16px五官不接觸框角，20/24放大後嘴弧仍連續，沒有再補臉部外圈壓縮空間。",
+      "references": [
+        {
+          "name": "scan-face",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/scan-face.svg",
+          "localPath": "references/atlas-01/lucide-scan-face.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/scan-face.svg",
+          "sha256": "048cfc02382d4e19d20558f432da555bdcd0f738bcd8e56c261b4b4ec25cc491",
+          "license": "ISC AND MIT",
+          "sourceName": "scan-face",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "scan-face",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/face-id.svg",
+          "localPath": "references/atlas-01/tabler-face-id.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/face-id.svg",
+          "sha256": "3147886f4f66c0f044256e627c0b0674f1b6d355aa9bae402240c74a68882b5e",
+          "license": "MIT",
+          "sourceName": "face-id",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "安全設備主體完整呈現，掃描框以開放角線而非虛線表示。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以留白及真實遮擋區分前後，不用淡化降低設備細節的可辨識性。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "單色輪廓即可表達警示燈與消防器材，不以材質或光色漸層補語意。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-22/master-before.json",
+          "variantsSha256": "dfddd710632c91ce0b7b4e1bbfa78ef6ba2dea4b1f8327b8a0b6ab477f754af2"
+        },
+        "reason": "四個框角按相同半徑與邊長配置，臉部以兩點及一條對稱曲線表示；中間保留大面留白，不將整張人像塞進掃描框。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "a3a83f72bbb349d8f59dc074479bab2d63b0eab39880146fb2b28199403f5c5c",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/98-key-face/review.html",
+            "sha256": "ac6df5d86d35dc06d29795674aa2b271c697cd26243b4b5aee7a6a5a4c4227bf"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/98-key-face/definitions.json",
+            "sha256": "bd9fa8c04b87b829394d839062a62be1c246306c82f623b0971c761b20f41e1f"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/98-key-face/light-1x.png",
+            "sha256": "b8acc381ddb65efb6d8a4fabc43df4eefd160b2dd93b3fba261d983c141d7181"
+          },
+          {
+            "path": "docs/review/atlas-craft-22/final-v2/definitions.json",
+            "sha256": "4b3403db467a47ab1461038f9dc0bd5d20fde4e21bfefe6ed6e6c45e2f47cba7"
+          },
+          {
+            "path": "docs/review/atlas-craft-22/final-v2/24-safety.html",
+            "sha256": "ff9c3280747404067cd59df1ba707a3d6bc3887005544329cd7f111c8b4bf704"
+          },
+          {
+            "path": "docs/review/atlas-craft-22/final-v2/24-safety-light-1x.png",
+            "sha256": "7289948643b1baa307ea9f58029f99aae6ec5fc990adcb971ab92404b6ad93bb"
+          },
+          {
+            "path": "docs/review/atlas-craft-22/final-v2/24-safety-light-2x.png",
+            "sha256": "e0d61cfd5bfc6f39205b76d02fa6d7c1439051f801f7283972c81b5b829b669f"
+          },
+          {
+            "path": "docs/review/atlas-craft-22/final-v2/24-safety-dark-1x.png",
+            "sha256": "e05ceb8779e772433da512f1170832e7bb4d4be875e92122f6af52a7c65e881a"
+          },
+          {
+            "path": "docs/review/atlas-craft-22/final-v2/24-safety-dark-2x.png",
+            "sha256": "ac0f00db8a55d936a518718bf45f506a5e7ee11dcc972b1c2712e930929adc11"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-22/final-v2/24-safety-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-22/final-v2/24-safety-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-22/final-v2/24-safety-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-22/final-v2/24-safety-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Lucide",
+        "license": "ISC",
+        "licenseFile": "licenses/lucide.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "seat-belt",
+      "purpose": "安全帶",
+      "recognitionCues": "乘員頭肩、跨胸斜帶與腰帶",
+      "confusableWith": [
+        "person-standing",
+        "scan-face"
+      ],
+      "sourceObservation": "Phosphor用頭肩加斜帶，MDI保留更多軀幹與腰帶。最新稿採Phosphor簡潔語意；完稿回比，斜帶以真透明避讓穿過肩部，16px不黏成交叉塊。sharp斜帶改平端，去除腰帶交點的外突端帽。",
+      "references": [
+        {
+          "name": "seat-belt",
+          "library": "Phosphor",
+          "repository": "phosphor-icons/core",
+          "commit": "2b75f3ad12b420c9504ef05df8d2564a28f8500e",
+          "path": "assets/regular/seatbelt.svg",
+          "localPath": "references/atlas-01/phosphor-seatbelt.svg",
+          "url": "https://github.com/phosphor-icons/core/blob/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular/seatbelt.svg",
+          "sha256": "621ea9c524b8c70ab478cc3a7e4fcf3b39fc27296b486249aa27d97a597d8dd0",
+          "license": "MIT",
+          "sourceName": "seatbelt",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "seat-belt",
+          "library": "Material Design Icons",
+          "repository": "Templarian/MaterialDesign",
+          "commit": "2424e748e0cc63ab7b9c095a099b9fe239b737c0",
+          "path": "svg/seatbelt.svg",
+          "localPath": "references/atlas-01/mdi-seatbelt.svg",
+          "url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/seatbelt.svg",
+          "sha256": "bb2cca2cf6b0728dd3d458781e97e4d5536952443758d3ffe724cce59ef85fbf",
+          "license": "Apache-2.0",
+          "sourceName": "seatbelt",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "安全設備主體完整呈現，掃描框以開放角線而非虛線表示。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以留白及真實遮擋區分前後，不用淡化降低設備細節的可辨識性。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "單色輪廓即可表達警示燈與消防器材，不以材質或光色漸層補語意。"
+        }
+      },
+      "change": {
+        "kind": "modified",
+        "before": {
+          "path": "references/atlas-craft-22/master-before.json",
+          "variantsSha256": "afa0cc6e23edf9539cb607c9b49e1d9ae1a5b560a7afc8a68c73d7f496801c09"
+        },
+        "reason": "頭與肩之間保持空白，斜帶由右肩方向跨至左下腰帶；依實際墨線外緣裁開後方肩線，腰帶與斜帶在同一結點承接，sharp交點收口不凸出。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "bba116194bb31e7714860f9b5f2333243bb88ea368042a8e10676f5179cd0b2d",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/99c-seat-belt/review.html",
+            "sha256": "bcb820b0ed5cbdd6e170649ed8347c53a066bd7fe779c5858b68860b1e6979c3"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/99c-seat-belt/definitions.json",
+            "sha256": "6b5acd6000660d25e3897dc4ca56f0c8caabe05af0ee64c65fd952889f7e9a7d"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/99c-seat-belt/light-1x.png",
+            "sha256": "c1c46fe67d74fecd06de137c763b11e22e52ab285f9ff887e78af1e75adb6ad4"
+          },
+          {
+            "path": "docs/review/atlas-craft-22/final-v2/definitions.json",
+            "sha256": "4b3403db467a47ab1461038f9dc0bd5d20fde4e21bfefe6ed6e6c45e2f47cba7"
+          },
+          {
+            "path": "docs/review/atlas-craft-22/final-v2/24-safety.html",
+            "sha256": "ff9c3280747404067cd59df1ba707a3d6bc3887005544329cd7f111c8b4bf704"
+          },
+          {
+            "path": "docs/review/atlas-craft-22/final-v2/24-safety-light-1x.png",
+            "sha256": "7289948643b1baa307ea9f58029f99aae6ec5fc990adcb971ab92404b6ad93bb"
+          },
+          {
+            "path": "docs/review/atlas-craft-22/final-v2/24-safety-light-2x.png",
+            "sha256": "e0d61cfd5bfc6f39205b76d02fa6d7c1439051f801f7283972c81b5b829b669f"
+          },
+          {
+            "path": "docs/review/atlas-craft-22/final-v2/24-safety-dark-1x.png",
+            "sha256": "e05ceb8779e772433da512f1170832e7bb4d4be875e92122f6af52a7c65e881a"
+          },
+          {
+            "path": "docs/review/atlas-craft-22/final-v2/24-safety-dark-2x.png",
+            "sha256": "ac0f00db8a55d936a518718bf45f506a5e7ee11dcc972b1c2712e930929adc11"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-22/final-v2/24-safety-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-22/final-v2/24-safety-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-22/final-v2/24-safety-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-22/final-v2/24-safety-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Phosphor",
+        "license": "MIT",
+        "licenseFile": "licenses/phosphor.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "safety-pin",
+      "purpose": "安全別針",
+      "recognitionCues": "彈簧圈、平行針身與彎曲保護扣",
+      "confusableWith": [
+        "paperclip",
+        "pin"
+      ],
+      "sourceObservation": "Hugeicons保護扣以多段小弧形成，Lucide Lab以更連續的捲入曲線表達。最新稿採Lucide Lab保護扣和彈簧圈構造；完稿回比16px，針身兩邊仍有完整長孔，扣口不用多個微孔表達，彈簧圈與桿身以同一方向承接。",
+      "references": [
+        {
+          "name": "safety-pin",
+          "library": "Hugeicons Free",
+          "repository": "hugeicons/hugeicons",
+          "commit": "834e28d965946c1ee60d080027fe9dae4adc58d0",
+          "path": "icons/safety-pin-01.svg",
+          "localPath": "references/atlas-01/hugeicons-safety-pin-01.svg",
+          "url": "https://github.com/hugeicons/hugeicons/blob/834e28d965946c1ee60d080027fe9dae4adc58d0/icons/safety-pin-01.svg",
+          "sha256": "2e18c040c709638a1a11cb16e28960dbe67a376784d09f4717e95d19bc8563ae",
+          "license": "MIT",
+          "sourceName": "safety-pin-01",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "safety-pin",
+          "library": "Lucide Lab",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "lab/pin-safety.svg",
+          "localPath": "references/atlas-01/lucide-lab-pin-safety.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/lab/pin-safety.svg",
+          "sha256": "7a65199c82d3185fc63af15a82a4807d24ed66be2152e1e11d64dcaa55acc901",
+          "license": "ISC AND MIT",
+          "sourceName": "pin-safety",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "安全設備主體完整呈現，掃描框以開放角線而非虛線表示。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以留白及真實遮擋區分前後，不用淡化降低設備細節的可辨識性。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "單色輪廓即可表達警示燈與消防器材，不以材質或光色漸層補語意。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-22/master-before.json",
+          "variantsSha256": "906a2deb7acc361e391ce349504015dd2996e15951c2bdbbf0fa17e76550e845"
+        },
+        "reason": "彈簧圈接兩條平行針身，保護扣外弧與內捲曲線共同形成閉合扣頭；相接桿線裁在彈簧圈與扣頭之外，避免穿入必要孔洞。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "50b55e7b9866908165567cb98a8b07f0746c77857c44212125ae4c4ffae6ae88",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/99-lifebuoy-pin/review.html",
+            "sha256": "e5e57f4df88614586807150939886e6828e02beeafd26bb96d19089b0763d0a7"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/99-lifebuoy-pin/definitions.json",
+            "sha256": "5d17c76c525d7c3ba79acdf30bac976b6f194a262bf2034999fe15cf6b64a0cd"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/99-lifebuoy-pin/light-1x.png",
+            "sha256": "4e09731364b86bf69b91750532c3a9d6b16f81c9fcdde90aa77e01d036068fa1"
+          },
+          {
+            "path": "docs/review/atlas-craft-22/final-v2/definitions.json",
+            "sha256": "4b3403db467a47ab1461038f9dc0bd5d20fde4e21bfefe6ed6e6c45e2f47cba7"
+          },
+          {
+            "path": "docs/review/atlas-craft-22/final-v2/24-safety.html",
+            "sha256": "ff9c3280747404067cd59df1ba707a3d6bc3887005544329cd7f111c8b4bf704"
+          },
+          {
+            "path": "docs/review/atlas-craft-22/final-v2/24-safety-light-1x.png",
+            "sha256": "7289948643b1baa307ea9f58029f99aae6ec5fc990adcb971ab92404b6ad93bb"
+          },
+          {
+            "path": "docs/review/atlas-craft-22/final-v2/24-safety-light-2x.png",
+            "sha256": "e0d61cfd5bfc6f39205b76d02fa6d7c1439051f801f7283972c81b5b829b669f"
+          },
+          {
+            "path": "docs/review/atlas-craft-22/final-v2/24-safety-dark-1x.png",
+            "sha256": "e05ceb8779e772433da512f1170832e7bb4d4be875e92122f6af52a7c65e881a"
+          },
+          {
+            "path": "docs/review/atlas-craft-22/final-v2/24-safety-dark-2x.png",
+            "sha256": "ac0f00db8a55d936a518718bf45f506a5e7ee11dcc972b1c2712e930929adc11"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-22/final-v2/24-safety-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-22/final-v2/24-safety-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-22/final-v2/24-safety-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-22/final-v2/24-safety-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Lucide Lab",
+        "license": "ISC",
+        "licenseFile": "licenses/lucide.txt"
+      },
+      "remaining": []
+    }
+  ]
+}

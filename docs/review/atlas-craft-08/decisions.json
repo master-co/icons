@@ -1,0 +1,152 @@
+{
+  "batch": "11-clothing",
+  "cycle": "atlas-craft-08",
+  "familyRoot": "docs/review/atlas-craft-08/final",
+  "baseline": "references/atlas-craft-08/master-before.json",
+  "reviewer": "Codex (AI)",
+  "visualInspectionComplete": true,
+  "inspectedCombinations": [
+    {
+      "theme": "light",
+      "dpr": 1
+    },
+    {
+      "theme": "light",
+      "dpr": 2
+    },
+    {
+      "theme": "dark",
+      "dpr": 1
+    },
+    {
+      "theme": "dark",
+      "dpr": 2
+    }
+  ],
+  "effects": {
+    "dashes": {
+      "used": false,
+      "reason": "衣物縫線與配件均以必要實體輪廓表達，不添加裝飾虛線。"
+    },
+    "opacity": {
+      "used": false,
+      "reason": "鏡片訊號以一筆斜線表示，衣料以輪廓表達，沒有淡化分層需求。"
+    },
+    "gradients": {
+      "used": false,
+      "reason": "單色服飾圖示不需要材質反光或連續漸層。"
+    }
+  },
+  "decisions": [
+    {
+      "name": "shirt",
+      "groupRoot": "docs/review/atlas-craft-01/41",
+      "confusableWith": [
+        "coat",
+        "dress"
+      ],
+      "sourceObservation": "Lucide採圓領與斜袖口，Tabler採較方的袖身。Master保留圓領、下斜肩線與短袖口，以單一輪廓表達上衣，不額外增加領圈或袖口內線。",
+      "reason": "肩線和圓領有明確轉折，袖口與身片比例保持舒展；下襬實際微倒角，sharp省略零長度曲線，沒有裝飾性套邊。",
+      "adaptedFrom": "Lucide"
+    },
+    {
+      "name": "trousers",
+      "groupRoot": "docs/review/atlas-craft-01/41",
+      "confusableWith": [
+        "sock",
+        "shirt"
+      ],
+      "sourceObservation": "Phosphor用腰頭、口袋及分開褲管，Iconoir採更簡單的直筒輪廓。Master保留腰頭和褲襠，刪除口袋曲線，讓兩條褲管各自保持寬孔。",
+      "reason": "腰頭有足夠高度，褲襠與褲管形成連續輪廓，尖窄處是實際構造收束而非獨立線條近接；不加容易擠窄腰部的鈕扣與門襟線。",
+      "adaptedFrom": "Phosphor"
+    },
+    {
+      "name": "dress",
+      "groupRoot": "docs/review/atlas-craft-01/41",
+      "confusableWith": [
+        "shirt",
+        "coat"
+      ],
+      "sourceObservation": "Phosphor採肩帶及合身上身，Hugeicons dress-01採短袖和圓弧裙襬。Master選肩帶、收腰與微弧裙襬，保留衣料向外展開的姿態。",
+      "reason": "肩帶接到領口，腰線收在外殼內；裙襬以寬弧輕微下垂，16px不加摺痕，讓腰身與裙片空腔各自成立。",
+      "adaptedFrom": "Phosphor"
+    },
+    {
+      "name": "coat",
+      "groupRoot": "docs/review/atlas-craft-01/42",
+      "confusableWith": [
+        "shirt",
+        "dress"
+      ],
+      "sourceObservation": "Tabler jacket是短厚外套構造，OpenMoji coat是較長的有領外套，兩者屬外套但版型不同。Master獨立建立長袖直身外套，以V領和中央開襟表達穿著方式，沒有照搬任一來源版型。",
+      "reason": "長袖、身片和中央開襟各自清楚；袖身共用外邊界，中央線平切接入V領，避免端帽突出領口；省去口袋小框與密集鈕扣。",
+      "adaptedFrom": null
+    },
+    {
+      "name": "sock",
+      "groupRoot": "docs/review/atlas-craft-01/42",
+      "confusableWith": [
+        "shoe",
+        "trousers"
+      ],
+      "sourceObservation": "Phosphor保留襪口與圓弧腳跟分界，Tabler採較短襪筒及一塊腳跟訊號。Master用較長直筒接圓趾足部，16px省去腳跟內線，20/24保留一段弧。",
+      "reason": "襪口、襪筒轉折和圓趾外形保留物件姿態；小尺寸取消腳跟分界仍保留足部形態，弧線在較大尺寸裁在襪體內，不突出輪廓。",
+      "adaptedFrom": "Phosphor"
+    },
+    {
+      "name": "shoe",
+      "groupRoot": "docs/review/atlas-craft-01/42",
+      "confusableWith": [
+        "sock",
+        "iron"
+      ],
+      "sourceObservation": "Phosphor sneaker有上揚鞋口、鞋帶及鞋底，Tabler shoe有圓鞋頭和鞋帶。Master保留弧形鞋面、平底和鞋口，16px一筆鞋帶，20/24兩筆。",
+      "reason": "鞋面由鞋口向鞋頭緩降，鞋底保持可見厚度；鞋帶收在外殼內，減筆後仍有鞋子的結構和接地姿態，沒有另外疊加雙層底線。",
+      "adaptedFrom": "Tabler"
+    },
+    {
+      "name": "glasses",
+      "groupRoot": "docs/review/atlas-craft-01/43",
+      "confusableWith": [
+        "sunglasses",
+        "eye"
+      ],
+      "sourceObservation": "Lucide用圓鏡框、曲鼻橋與外張鏡腳，Iconoir採直鏡腳與水平鼻橋。Master選曲鼻橋及稍外張鏡腳，兩個鏡孔各自保持寬度。",
+      "reason": "鏡腳與鼻橋都按鏡框外殼收口，鼻橋不刺進圓孔；左右共軸、孔徑一致，不因微圓語言改變物體的圓鏡片。",
+      "adaptedFrom": "Lucide"
+    },
+    {
+      "name": "sunglasses",
+      "groupRoot": "docs/review/atlas-craft-01/43b",
+      "confusableWith": [
+        "glasses",
+        "eye"
+      ],
+      "sourceObservation": "Phosphor與Tabler都以平頂鏡片和斜向訊號區分太陽眼鏡；Tabler鏡腳較斜。Master保留平頂、兩筆斜線和外張鏡腳，初稿sharp端帽在鏡框接點突出，已修整。",
+      "reason": "sharp鏡腳使用平切端帽接入框體，解除外側小凸點；斜線墨跡限制在鏡片內，16px仍可分辨鏡片兩側空白，沒有用實心黑塊取代整片鏡孔。",
+      "adaptedFrom": "Tabler"
+    },
+    {
+      "name": "watch",
+      "groupRoot": "docs/review/atlas-craft-01/44",
+      "confusableWith": [
+        "clock",
+        "timer"
+      ],
+      "sourceObservation": "Lucide採收窄錶帶和圓錶殼，Phosphor採較平直錶帶及直角指針。Master保留上下帶孔與圓錶殼，16px縮短分針，避免針尖靠近錶圈。",
+      "reason": "錶帶從錶殼外側接出，上下各有可見孔；指針依錶殼圓心建立，原生16/20/24均保留針尖留白，沒有密集刻度。",
+      "adaptedFrom": "Phosphor"
+    },
+    {
+      "name": "umbrella",
+      "groupRoot": "docs/review/atlas-craft-01/44",
+      "confusableWith": [
+        "mushroom",
+        "cloud-rain"
+      ],
+      "sourceObservation": "Lucide以單片傘面和彎柄表意，Phosphor加入兩道張開的傘骨。Master保留兩道曲骨，讓傘面有張力和分片構造，彎柄表達持握。",
+      "reason": "傘骨收在完整傘面內，交會處不越出頂部弧；兩側空腔保持開放，直桿接出傘面並連成彎鉤，沒有靠額外雨點補語意。",
+      "adaptedFrom": "Phosphor"
+    }
+  ]
+}

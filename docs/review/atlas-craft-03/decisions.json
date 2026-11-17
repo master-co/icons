@@ -1,0 +1,152 @@
+{
+  "batch": "07-drinks",
+  "cycle": "atlas-craft-03",
+  "familyRoot": "docs/review/atlas-craft-03/final",
+  "baseline": "references/atlas-craft-03/master-before.json",
+  "reviewer": "Codex (AI)",
+  "visualInspectionComplete": true,
+  "inspectedCombinations": [
+    {
+      "theme": "light",
+      "dpr": 1
+    },
+    {
+      "theme": "light",
+      "dpr": 2
+    },
+    {
+      "theme": "dark",
+      "dpr": 1
+    },
+    {
+      "theme": "dark",
+      "dpr": 2
+    }
+  ],
+  "effects": {
+    "dashes": {
+      "used": false,
+      "reason": "杯具及壺具的完整輪廓已能表意，沒有隱藏邊或暫態線需求。"
+    },
+    "opacity": {
+      "used": false,
+      "reason": "水面採單道結構線，部件以實際空白分開，無淡化需求。"
+    },
+    "gradients": {
+      "used": false,
+      "reason": "單色平面器具不需要連續漸層或反光效果。"
+    }
+  },
+  "decisions": [
+    {
+      "name": "coffee",
+      "groupRoot": "docs/review/atlas-craft-01/23",
+      "confusableWith": [
+        "beer",
+        "cup-soda"
+      ],
+      "sourceObservation": "Lucide以直立蒸氣、方底杯及側把手表意；Tabler用曲蒸氣、較扁杯和水面。Master保留寬杯孔並用圓底收束，16px蒸氣減為一筆，20/24兩筆，避免頂部三條短線過密。",
+      "reason": "保留寬杯身、外接把手及圓腹；把手內線不侵入杯孔，蒸氣與杯緣留白在原生明暗下清楚。",
+      "adaptedFrom": "Lucide"
+    },
+    {
+      "name": "cup-soda",
+      "groupRoot": "docs/review/atlas-craft-01/27",
+      "confusableWith": [
+        "glass-water",
+        "coffee"
+      ],
+      "sourceObservation": "Lucide是帶彎吸管和水面的外帶杯；Tabler是有蓋的外帶杯。Master採較少橫線的杯緣，保留吸管、水面及收窄底部，避免把杯蓋三條平行邊全部塞進16px。",
+      "reason": "吸管末端按杯身實際輪廓裁去伸入杯內的墨線，維持相接；底部三種角型各自成形，水面保留寬間隔而不加重複杯蓋線。",
+      "adaptedFrom": "Lucide"
+    },
+    {
+      "name": "wine",
+      "groupRoot": "docs/review/atlas-craft-01/23",
+      "confusableWith": [
+        "glass-water",
+        "bottle"
+      ],
+      "sourceObservation": "Lucide較窄、酒面水平；Phosphor較寬、酒面起伏。Master採較寬酒腹與克制的單道波形，細長杯腳和底座有足夠縱向間隔，16px酒腹仍有兩個清楚空腔。",
+      "reason": "保留寬腹、收口與細腳，酒面裁在杯身內、杯腳裁在杯身外，交接不多出凸耳；水面不採透明度填色。",
+      "adaptedFrom": "Phosphor"
+    },
+    {
+      "name": "beer",
+      "groupRoot": "docs/review/atlas-craft-01/24",
+      "confusableWith": [
+        "coffee",
+        "glass-water"
+      ],
+      "sourceObservation": "Lucide以多瓣泡沫與兩條杯紋表意；Phosphor以不對稱泡沫、方把手表意。Master保留一片連續泡沫和圓把手，16px只留一條杯紋，20/24兩條。",
+      "reason": "保留連續泡沫頂及寬杯孔；杯壁止於泡沫外側，把手與杯壁相接；縮小時減杯紋數而不擠窄每條空隙。",
+      "adaptedFrom": "Lucide"
+    },
+    {
+      "name": "milk",
+      "groupRoot": "docs/review/atlas-craft-01/24",
+      "confusableWith": [
+        "bottle",
+        "package"
+      ],
+      "sourceObservation": "Lucide採奶瓶，Hugeicons採有側折面及液面訊號的紙盒。Master選紙盒以區分通用飲料瓶，屋脊、側面和主面分配清楚；16px取消主面水波，保留紙盒辨識。",
+      "reason": "保留紙盒斜頂與寬側面，所有分界收在外殼；20/24主面波形止於側折線，16px不增加這道內線。",
+      "adaptedFrom": "Hugeicons Free"
+    },
+    {
+      "name": "bottle",
+      "groupRoot": "docs/review/atlas-craft-01/24",
+      "confusableWith": [
+        "milk",
+        "wine"
+      ],
+      "sourceObservation": "Lucide bottle-wine採細頸、方標籤；Tabler bottle採較寬瓶腹及波形。此概念是通用飲料瓶，兩份來源均用作瓶體比較，不宣稱酒瓶和所有飲品完全相同。Master取消小標籤框，讓瓶口和瓶腹保持大空腔。",
+      "reason": "保留圓肩、寬腹與瓶口分界，瓶頸寬度不壓成細縫；單道波形收在瓶內，避免額外套入標籤小矩形。",
+      "adaptedFrom": "Tabler"
+    },
+    {
+      "name": "teapot",
+      "groupRoot": "docs/review/atlas-craft-01/25",
+      "confusableWith": [
+        "kettle",
+        "coffee"
+      ],
+      "sourceObservation": "OpenMoji是圓腹、壺嘴與側把手的傳統茶壺；Tabler是較直立壺身。Master獨立構造圓壺腹與短上揚嘴，取消細小雙層蓋，使用實心蓋鈕，避免16px蓋孔成黑線。",
+      "reason": "保留獨立設計的圓腹和連續壺嘴外輪廓；側把手寬孔、蓋鈕與壺身相接，沒有內部裝飾線，三尺寸維持茶壺輪廓。",
+      "adaptedFrom": null
+    },
+    {
+      "name": "kettle",
+      "groupRoot": "docs/review/atlas-craft-01/25",
+      "confusableWith": [
+        "teapot",
+        "lock"
+      ],
+      "sourceObservation": "Hugeicons為側把手電熱壺並帶指示線，MDI為上提把手煮水壺。Master選上提式把手區分茶壺，獨立建立寬底、短嘴及上方把手，省略電量或水位內線；壺嘴是與鎖頭區分的重要訊號。",
+      "reason": "保留獨立構造的寬底與上提弧把，壺嘴直接接入外輪廓；把手洞沒有第二條裝飾弧，避免縮小後閉合。",
+      "adaptedFrom": null
+    },
+    {
+      "name": "glass-water",
+      "groupRoot": "docs/review/atlas-craft-01/25",
+      "confusableWith": [
+        "cup-soda",
+        "wine"
+      ],
+      "sourceObservation": "Lucide以平杯口及波形水面表意，Iconoir以橢圓杯口和液面呈現體積。Master採橢圓杯口，水面仍用一條緩波，省略第三層橢圓，保留杯口與水面之間的通道。",
+      "reason": "保留完整杯口孔、上寬下窄杯身及單道水面；前杯口與水面都收在殼內，16px可分辨杯口和水面，不加雙線杯底。",
+      "adaptedFrom": "Iconoir"
+    },
+    {
+      "name": "cooking-pot",
+      "groupRoot": "docs/review/atlas-craft-01/27",
+      "confusableWith": [
+        "kettle",
+        "coffee"
+      ],
+      "sourceObservation": "Lucide以提起鍋蓋與小把手表意；Phosphor是蒸氣與開放雙耳。Master採放下的鍋蓋、寬提把孔與開放鍋耳。初稿的外伸鍋緣與鍋耳太近，16px形成假孔，已回修。",
+      "reason": "鍋耳下移並改為開放曲線，鍋緣縮回鍋身寬度，解除兩側狹小假孔；提把保持足夠寬度，三角型的鍋身底部各自倒角。",
+      "adaptedFrom": "Lucide"
+    }
+  ]
+}

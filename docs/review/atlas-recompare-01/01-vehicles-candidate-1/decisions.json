@@ -1,0 +1,45 @@
+{
+  "reviewer": "Codex (AI)",
+  "batch": "01-vehicles-candidate-1",
+  "baseline": "references/atlas-recompare-01/master-before.json",
+  "date": "2026-11-17",
+  "viewedSuffixes": ["light-1x", "dark-1x", "light-2x", "dark-2x"],
+  "decisions": [
+    {
+      "name": "car",
+      "purpose": "以側視乘用車表示一般汽車交通，與長車廂的公車及露營車區分。",
+      "recognitionCues": "低車頂、前傾擋風玻璃、向前收束的引擎蓋、相連底盤與雙輪。",
+      "confusableWith": ["bus", "caravan"],
+      "defect": "原稿擋風玻璃斜邊直接折入引擎蓋，在sharp及放大診斷中有較硬的肩點；Lucide的車頭過渡較自然。",
+      "sourceObservation": "Lucide的優勢是斜車頂到短引擎蓋的完整輪廓，轉折不搶眼；Tabler的窗帶與前後窗比例則更具實際車廂訊號。原稿已有Tabler改作關係，本輪保留窗帶及輪距，只把玻璃到引擎蓋的硬折改成短曲線過渡。最新稿重新與兩份來源並列，16／20／24的車頂仍清楚，肩部在sharp也不再形成突兀折點，沒有為仿Lucide而刪去已成立的窗帶。",
+      "reason": "精修擋風玻璃與引擎蓋的局部切線過渡，維持車身、輪距、窗孔和既有微圓家族比例。原生改善是輕微的輪廓放鬆，不宣稱為整顆重設；三尺寸輪孔及55%文字情境沒有因修肩而變密。",
+      "postComparison": "採納Lucide較自然的車頭過渡原則，保留Tabler式窗帶辨識。最新稿在三原生尺寸及明暗DPR1／2回比後，沒有觀察到需再靠齊來源的明顯比例差距。",
+      "effects": {"dashes":{"used":false,"reason":"車身與車窗是完整可見構造，沒有隱藏邊界需要虛線。"},"opacity":{"used":false,"reason":"輪胎、車身及窗孔以實際輪廓和空白區分，不需要淡化。"},"gradients":{"used":false,"reason":"交通符號採單色平面輪廓，不需要漸層表現車身曲面。"}},
+      "remaining": []
+    },
+    {
+      "name": "bus",
+      "purpose": "以長車廂、窗帶及雙輪表示公車交通，與低車頂乘用車區分。",
+      "recognitionCues": "高而連續的車頂、全長窗帶、圓肩車頭與雙輪；16px兩窗，20／24px三窗。",
+      "confusableWith": ["car", "caravan"],
+      "defect": "16px仍保留三個窄窗孔，整條窗帶較像細格柵；來源的窗格分組與主體輪廓比單純增加窗數更成熟。",
+      "sourceObservation": "Lucide以開放的窗帶和較少分割保持小尺寸清楚，Tabler多窗及車門提供更完整車體，但16px的細節也較密。最新稿只在16px改成兩個較寬窗孔，保留長頂、前側圓肩和同一底盤；20／24px的三窗本來有足夠空腔。重新並列後，16px不再有三個緊密亮點，窗帶仍比汽車高且長；兩個較大尺寸維持公車特有的重複窗節奏。",
+      "reason": "16px取消一根窗柱並把留下的窗柱置於中央，讓兩窗孔有穩定寬度；沒有縮細描邊或放大整顆。三尺寸都保留車頭、車輪與高窗帶的構造，保留已有Lucide改作聲明。",
+      "postComparison": "吸收來源以窗格分組形成長車廂的優點，依16px空間改成兩窗；與Lucide及Tabler原稿同CSS尺寸回比，減量後仍是公車而非單純方框或乘用車。明暗DPR1／2及低對比均已查看。",
+      "effects": {"dashes":{"used":false,"reason":"車窗和車身都是連續實體，不以虛線表示正常公車。"},"opacity":{"used":false,"reason":"小窗密度以減少窗柱解決，不用透明度掩飾窄窗孔。"},"gradients":{"used":false,"reason":"平面公車符號由輪廓與窗帶成立，不需要漸層。"}},
+      "remaining": []
+    },
+    {
+      "name": "train",
+      "purpose": "以正面車廂和兩條軌腳表示列車；與有集電桿的電車及側視公車區分。",
+      "recognitionCues": "較平的車頂、圓肩、全寬前窗、下收的車頭、雙車燈與外展軌腳。",
+      "confusableWith": ["tram", "bus"],
+      "defect": "原稿的均勻半圓頂使上半部偏向通用膠囊，車廂頂面不明確；Phosphor寬而平的頂冠在物件形態上較成熟。",
+      "sourceObservation": "Lucide強調流線型高速列車，窄U形前窗與圓鼻形成完整器型；Phosphor的平頂、圓肩和窗帶則明確呈現一般車廂。原稿介於兩者卻只保留通用半圓頂，本輪採較寬的頂冠與圓肩關係，以自家曲線重排上半輪廓，保留既有下收車頭及全寬前窗。最新稿在16／20／24已較像完整車廂，沒有加入來源的額外窗框與車頂分隔，避免削弱原有簡潔度。",
+      "reason": "重塑上半部為平頂圓肩，保持下半車鼻、頭燈位置與軌腳不動，讓物體的上寬下收更明確。這是一般車廂構造與比例的研究提煉，未移植來源路徑；原生三尺寸皆保有單一前窗與雙燈的清楚層級。",
+      "postComparison": "採Phosphor較明確的頂冠關係，保留自家弧形下鼻，不追隨Lucide高速列車的窄U窗器型。最新稿與兩來源同尺寸回比後，寬頂與下收車頭相互承接，較原稿膠囊形有車廂特徵；三角型、明暗DPR1／2及55%文字均已查看。",
+      "effects": {"dashes":{"used":false,"reason":"車廂輪廓及軌腳都是可見構造，沒有虛擬路徑的表意需求。"},"opacity":{"used":false,"reason":"前窗、燈點和車鼻以空間分組區分，不使用漸淡處理層級。"},"gradients":{"used":false,"reason":"以輪廓曲線表現車鼻收束，單色圖示不需要漸層。"}},
+      "remaining": []
+    }
+  ]
+}

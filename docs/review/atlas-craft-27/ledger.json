@@ -1,0 +1,1528 @@
+{
+  "schemaVersion": 2,
+  "reviewer": "Codex (AI)",
+  "userApproval": "pending",
+  "icons": [
+    {
+      "name": "layout-list",
+      "purpose": "縮圖清單",
+      "recognitionCues": "兩列縮圖與成組文字短線",
+      "confusableWith": [
+        "list",
+        "layout-template"
+      ],
+      "sourceObservation": "Lucide方縮圖配兩條文字線較Hugeicons短長線整齊。最新稿採Lucide兩列構造；完稿回比16px兩個方孔及文字線上下間距仍清楚，縮圖與文字間不擠成一團，rounded也保留方縮圖而非圓點。",
+      "references": [
+        {
+          "name": "layout-list",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/layout-list.svg",
+          "localPath": "references/atlas-01/lucide-layout-list.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/layout-list.svg",
+          "sha256": "062ced0bfe4c3fb61b42471ab3d16b3fc26e6b764cb043890caf31e64df58534",
+          "license": "ISC AND MIT",
+          "sourceName": "layout-list",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "layout-list",
+          "library": "Hugeicons Free",
+          "repository": "hugeicons/hugeicons",
+          "commit": "834e28d965946c1ee60d080027fe9dae4adc58d0",
+          "path": "icons/layout-list.svg",
+          "localPath": "references/atlas-01/hugeicons-layout-list.svg",
+          "url": "https://github.com/hugeicons/hugeicons/blob/834e28d965946c1ee60d080027fe9dae4adc58d0/icons/layout-list.svg",
+          "sha256": "8a3a3c1fc5fae795dccbc597821b9631d0350f12fbe6ebe4333a122197df4887",
+          "license": "MIT",
+          "sourceName": "layout-list",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "可見版面邊界和視窗操作以實線表達，不涉及隱藏區域或待選取範圍。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "區塊層級由完整輪廓與透明避讓表達，不淡化邊界掩飾相接問題。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "平面視窗和方向符號不需要光照變化，維持單色清楚輪廓。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-27/master-before.json",
+          "variantsSha256": "72577a40d997c41f897e163a01038c9036b82dc2e75d7c156afdff5e2187e0b1"
+        },
+        "reason": "兩列共用方框尺寸和文字起點，四條文字線等長；小半徑保留縮圖的矩形形態並讓兩列空隙一致。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "288a9c3cdfe227bca7a267fec2cd3fa7c3c33cc3b0e7f68fb7a2c1774a72ff5c",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/117-layout-blocks/review.html",
+            "sha256": "f9304c19b33ee71fb5243e8652c22ea5e5ae2708508e27c8378b01554badafda"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/117-layout-blocks/definitions.json",
+            "sha256": "4d49807a0c40ff543ebe7fd3353244361ac138d706a76a81d7341ab80ae8d30d"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/117-layout-blocks/light-1x.png",
+            "sha256": "a93838083396c71130167f771b8d4418814f723fc4812441a349a88b96b3befb"
+          },
+          {
+            "path": "docs/review/atlas-craft-27/final/definitions.json",
+            "sha256": "b93fc3f8587a5c8f8f861b8cde0e5eed0314d2357f92933fc9662e67662081ee"
+          },
+          {
+            "path": "docs/review/atlas-craft-27/final/29-layout.html",
+            "sha256": "ee221e1ce8efc13aa94ce90a157a1a7a2af062f72e487ce33cbc392e97cd4e48"
+          },
+          {
+            "path": "docs/review/atlas-craft-27/final/29-layout-light-1x.png",
+            "sha256": "706e034542d7072213bfa9e164b4521ebb9a05277ca4e93f909656536d002e6e"
+          },
+          {
+            "path": "docs/review/atlas-craft-27/final/29-layout-light-2x.png",
+            "sha256": "b163f91a48a3959daacae3efafdd5cd62e1de89c31674cedea712a8b0e8fe64e"
+          },
+          {
+            "path": "docs/review/atlas-craft-27/final/29-layout-dark-1x.png",
+            "sha256": "cc73de5235c8e9f119fe5aafd1345d1f2554090ad6e592c29e3f6fb595f776ff"
+          },
+          {
+            "path": "docs/review/atlas-craft-27/final/29-layout-dark-2x.png",
+            "sha256": "396f604cc3b7c8f42352f2680bb51b96b4c79ae93498d791166a35ed3ec65eb2"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-27/final/29-layout-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-27/final/29-layout-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-27/final/29-layout-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-27/final/29-layout-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Lucide",
+        "license": "ISC",
+        "licenseFile": "licenses/lucide.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "layout-template",
+      "purpose": "版面範本",
+      "recognitionCues": "橫幅與下方兩個不同寬度區塊",
+      "confusableWith": [
+        "layout-panel-left",
+        "dashboard"
+      ],
+      "sourceObservation": "Lucide的上橫幅與下方不等寬區塊比Hugeicons對調寬度更貼近既有版面方向。最新稿採Lucide構圖；完稿回比16px下方窄框內孔仍開放，上下和左右走廊均清楚，三個區域沒有黏合。",
+      "references": [
+        {
+          "name": "layout-template",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/layout-template.svg",
+          "localPath": "references/atlas-01/lucide-layout-template.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/layout-template.svg",
+          "sha256": "342fd6f32f72244e2986bbb09ef19efd8bc4a9e52f030a7a294fe619da55b723",
+          "license": "ISC AND MIT",
+          "sourceName": "layout-template",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "layout-template",
+          "library": "Hugeicons Free",
+          "repository": "hugeicons/hugeicons",
+          "commit": "834e28d965946c1ee60d080027fe9dae4adc58d0",
+          "path": "icons/layout-template.svg",
+          "localPath": "references/atlas-01/hugeicons-layout-template.svg",
+          "url": "https://github.com/hugeicons/hugeicons/blob/834e28d965946c1ee60d080027fe9dae4adc58d0/icons/layout-template.svg",
+          "sha256": "6100cb712d1e92a12c910ebc279978a44afa6de3783199aa92c2f8a8549bb975",
+          "license": "MIT",
+          "sourceName": "layout-template",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "可見版面邊界和視窗操作以實線表達，不涉及隱藏區域或待選取範圍。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "區塊層級由完整輪廓與透明避讓表達，不淡化邊界掩飾相接問題。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "平面視窗和方向符號不需要光照變化，維持單色清楚輪廓。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-27/master-before.json",
+          "variantsSha256": "cbf206dbdf2e5598821b3bc6e8a6fcd00af65270d38334e643c1e1757dd43752"
+        },
+        "reason": "橫幅、寬內容區與窄側欄各有完整邊界；用共同小半徑控制內孔，不讓rounded壓縮窄側欄。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "7c3288357bed98133d1292b4df269bb0e80e564667e838c89a8adcbacd34c7da",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/117-layout-blocks/review.html",
+            "sha256": "f9304c19b33ee71fb5243e8652c22ea5e5ae2708508e27c8378b01554badafda"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/117-layout-blocks/definitions.json",
+            "sha256": "4d49807a0c40ff543ebe7fd3353244361ac138d706a76a81d7341ab80ae8d30d"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/117-layout-blocks/light-1x.png",
+            "sha256": "a93838083396c71130167f771b8d4418814f723fc4812441a349a88b96b3befb"
+          },
+          {
+            "path": "docs/review/atlas-craft-27/final/definitions.json",
+            "sha256": "b93fc3f8587a5c8f8f861b8cde0e5eed0314d2357f92933fc9662e67662081ee"
+          },
+          {
+            "path": "docs/review/atlas-craft-27/final/29-layout.html",
+            "sha256": "ee221e1ce8efc13aa94ce90a157a1a7a2af062f72e487ce33cbc392e97cd4e48"
+          },
+          {
+            "path": "docs/review/atlas-craft-27/final/29-layout-light-1x.png",
+            "sha256": "706e034542d7072213bfa9e164b4521ebb9a05277ca4e93f909656536d002e6e"
+          },
+          {
+            "path": "docs/review/atlas-craft-27/final/29-layout-light-2x.png",
+            "sha256": "b163f91a48a3959daacae3efafdd5cd62e1de89c31674cedea712a8b0e8fe64e"
+          },
+          {
+            "path": "docs/review/atlas-craft-27/final/29-layout-dark-1x.png",
+            "sha256": "cc73de5235c8e9f119fe5aafd1345d1f2554090ad6e592c29e3f6fb595f776ff"
+          },
+          {
+            "path": "docs/review/atlas-craft-27/final/29-layout-dark-2x.png",
+            "sha256": "396f604cc3b7c8f42352f2680bb51b96b4c79ae93498d791166a35ed3ec65eb2"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-27/final/29-layout-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-27/final/29-layout-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-27/final/29-layout-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-27/final/29-layout-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Lucide",
+        "license": "ISC",
+        "licenseFile": "licenses/lucide.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "layout-panel-left",
+      "purpose": "左側分欄版面",
+      "recognitionCues": "左側長欄與右側兩個獨立區塊",
+      "confusableWith": [
+        "panel-left",
+        "layout-template"
+      ],
+      "sourceObservation": "Lucide較方的長欄與Hugeicons較圓的卡片都能表達分區。最新稿採Lucide結構；完稿回比16px長欄和兩張右卡片的空白通道清晰，與共用外殼的panel-left有明確差別。",
+      "references": [
+        {
+          "name": "layout-panel-left",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/layout-panel-left.svg",
+          "localPath": "references/atlas-01/lucide-layout-panel-left.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/layout-panel-left.svg",
+          "sha256": "eda53b05282c3c15855dc8f9bd8dfcbdd4efd4a7d0fddf9cea8cf5c678519a1b",
+          "license": "ISC AND MIT",
+          "sourceName": "layout-panel-left",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "layout-panel-left",
+          "library": "Hugeicons Free",
+          "repository": "hugeicons/hugeicons",
+          "commit": "834e28d965946c1ee60d080027fe9dae4adc58d0",
+          "path": "icons/layout-panel-left.svg",
+          "localPath": "references/atlas-01/hugeicons-layout-panel-left.svg",
+          "url": "https://github.com/hugeicons/hugeicons/blob/834e28d965946c1ee60d080027fe9dae4adc58d0/icons/layout-panel-left.svg",
+          "sha256": "c4111d5efdb7236d699252a9e8e8df2228e526ee98de51ceb880d4233f4ba980",
+          "license": "MIT",
+          "sourceName": "layout-panel-left",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "可見版面邊界和視窗操作以實線表達，不涉及隱藏區域或待選取範圍。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "區塊層級由完整輪廓與透明避讓表達，不淡化邊界掩飾相接問題。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "平面視窗和方向符號不需要光照變化，維持單色清楚輪廓。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-27/master-before.json",
+          "variantsSha256": "938118d16e99dbe039ac75f4c882a36cd1caf4843118fb6a53729589df89f334"
+        },
+        "reason": "左長欄與右側上下卡片保持相同寬度及共同外邊界；獨立區塊之間保留走廊，避免用共同外框改變分欄語意。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "45120c1c4ea5bf3da829147577edc1359d98b9975b04ea68be6fd8ac4c83f751",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/117-layout-blocks/review.html",
+            "sha256": "f9304c19b33ee71fb5243e8652c22ea5e5ae2708508e27c8378b01554badafda"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/117-layout-blocks/definitions.json",
+            "sha256": "4d49807a0c40ff543ebe7fd3353244361ac138d706a76a81d7341ab80ae8d30d"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/117-layout-blocks/light-1x.png",
+            "sha256": "a93838083396c71130167f771b8d4418814f723fc4812441a349a88b96b3befb"
+          },
+          {
+            "path": "docs/review/atlas-craft-27/final/definitions.json",
+            "sha256": "b93fc3f8587a5c8f8f861b8cde0e5eed0314d2357f92933fc9662e67662081ee"
+          },
+          {
+            "path": "docs/review/atlas-craft-27/final/29-layout.html",
+            "sha256": "ee221e1ce8efc13aa94ce90a157a1a7a2af062f72e487ce33cbc392e97cd4e48"
+          },
+          {
+            "path": "docs/review/atlas-craft-27/final/29-layout-light-1x.png",
+            "sha256": "706e034542d7072213bfa9e164b4521ebb9a05277ca4e93f909656536d002e6e"
+          },
+          {
+            "path": "docs/review/atlas-craft-27/final/29-layout-light-2x.png",
+            "sha256": "b163f91a48a3959daacae3efafdd5cd62e1de89c31674cedea712a8b0e8fe64e"
+          },
+          {
+            "path": "docs/review/atlas-craft-27/final/29-layout-dark-1x.png",
+            "sha256": "cc73de5235c8e9f119fe5aafd1345d1f2554090ad6e592c29e3f6fb595f776ff"
+          },
+          {
+            "path": "docs/review/atlas-craft-27/final/29-layout-dark-2x.png",
+            "sha256": "396f604cc3b7c8f42352f2680bb51b96b4c79ae93498d791166a35ed3ec65eb2"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-27/final/29-layout-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-27/final/29-layout-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-27/final/29-layout-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-27/final/29-layout-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Lucide",
+        "license": "ISC",
+        "licenseFile": "licenses/lucide.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "split-horizontal",
+      "purpose": "水平拆分",
+      "recognitionCues": "兩條垂直分界與左右向外箭頭",
+      "confusableWith": [
+        "split-vertical",
+        "layout-columns"
+      ],
+      "sourceObservation": "Phosphor的兩條分界與向外箭頭比MDI實心箭翼輕盈。最新稿採Phosphor構造；完稿回比16px中央縫隙清晰、箭頭方向可讀，sharp箭桿接於箭翼而無尖端多出的帽。",
+      "references": [
+        {
+          "name": "split-horizontal",
+          "library": "Phosphor",
+          "repository": "phosphor-icons/core",
+          "commit": "2b75f3ad12b420c9504ef05df8d2564a28f8500e",
+          "path": "assets/regular/split-horizontal.svg",
+          "localPath": "references/atlas-01/phosphor-split-horizontal.svg",
+          "url": "https://github.com/phosphor-icons/core/blob/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular/split-horizontal.svg",
+          "sha256": "6ec54287c5893ee60e8bd22f654544f06c9cb879a5eaf47fbd92a159049b9682",
+          "license": "MIT",
+          "sourceName": "split-horizontal",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "split-horizontal",
+          "library": "Material Design Icons",
+          "repository": "Templarian/MaterialDesign",
+          "commit": "2424e748e0cc63ab7b9c095a099b9fe239b737c0",
+          "path": "svg/arrow-split-vertical.svg",
+          "localPath": "references/atlas-01/mdi-arrow-split-vertical.svg",
+          "url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/arrow-split-vertical.svg",
+          "sha256": "352d486a75e6cc13c7e7866dbeb315c03cd4f202c222e22ef8a5372d7959fa14",
+          "license": "Apache-2.0",
+          "sourceName": "arrow-split-vertical",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "可見版面邊界和視窗操作以實線表達，不涉及隱藏區域或待選取範圍。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "區塊層級由完整輪廓與透明避讓表達，不淡化邊界掩飾相接問題。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "平面視窗和方向符號不需要光照變化，維持單色清楚輪廓。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-27/master-before.json",
+          "variantsSha256": "65b5a0617704306370db8cd963da1bbe5c648edfebc29dcf5d7405eb8588c2e7"
+        },
+        "reason": "兩條平行界線共用長度，左右箭頭沿同一軸向外；箭翼與箭桿用實際墨線收口，保留分界和向外拆分的動作。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "74a3e55d4c20ba2eff8531078af68018261817c75f78470990f715e5b798eed3",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/118-split-directions/review.html",
+            "sha256": "817ccd173aff484176d696451c18004a7a7168f4433ebc288bb356bd95a22afd"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/118-split-directions/definitions.json",
+            "sha256": "8b2c905de92f2b866211267161b8789f25460de4e5d9658fc9867f27caf95b6d"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/118-split-directions/light-1x.png",
+            "sha256": "6e44d5e705879241cfa295dd3922db0a6d1827afc35f4ecc6acad320cd61aba2"
+          },
+          {
+            "path": "docs/review/atlas-craft-27/final/definitions.json",
+            "sha256": "b93fc3f8587a5c8f8f861b8cde0e5eed0314d2357f92933fc9662e67662081ee"
+          },
+          {
+            "path": "docs/review/atlas-craft-27/final/29-layout.html",
+            "sha256": "ee221e1ce8efc13aa94ce90a157a1a7a2af062f72e487ce33cbc392e97cd4e48"
+          },
+          {
+            "path": "docs/review/atlas-craft-27/final/29-layout-light-1x.png",
+            "sha256": "706e034542d7072213bfa9e164b4521ebb9a05277ca4e93f909656536d002e6e"
+          },
+          {
+            "path": "docs/review/atlas-craft-27/final/29-layout-light-2x.png",
+            "sha256": "b163f91a48a3959daacae3efafdd5cd62e1de89c31674cedea712a8b0e8fe64e"
+          },
+          {
+            "path": "docs/review/atlas-craft-27/final/29-layout-dark-1x.png",
+            "sha256": "cc73de5235c8e9f119fe5aafd1345d1f2554090ad6e592c29e3f6fb595f776ff"
+          },
+          {
+            "path": "docs/review/atlas-craft-27/final/29-layout-dark-2x.png",
+            "sha256": "396f604cc3b7c8f42352f2680bb51b96b4c79ae93498d791166a35ed3ec65eb2"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-27/final/29-layout-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-27/final/29-layout-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-27/final/29-layout-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-27/final/29-layout-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Phosphor",
+        "license": "MIT",
+        "licenseFile": "licenses/phosphor.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "split-vertical",
+      "purpose": "垂直拆分",
+      "recognitionCues": "兩條水平分界與上下向外箭頭",
+      "confusableWith": [
+        "split-horizontal",
+        "layout-rows"
+      ],
+      "sourceObservation": "Phosphor上下拆分比MDI厚重箭頭有較好的原生留白。最新稿沿用同一家族旋轉構造；完稿回比16px兩橫線和上下箭頭之間仍有方向節奏，沒有變成一團十字。",
+      "references": [
+        {
+          "name": "split-vertical",
+          "library": "Phosphor",
+          "repository": "phosphor-icons/core",
+          "commit": "2b75f3ad12b420c9504ef05df8d2564a28f8500e",
+          "path": "assets/regular/split-vertical.svg",
+          "localPath": "references/atlas-01/phosphor-split-vertical.svg",
+          "url": "https://github.com/phosphor-icons/core/blob/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular/split-vertical.svg",
+          "sha256": "46936a4e4dfd8aa9db5776a57c4f46d5caaa660dcc3d66769b2cb3b3aad6538d",
+          "license": "MIT",
+          "sourceName": "split-vertical",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "split-vertical",
+          "library": "Material Design Icons",
+          "repository": "Templarian/MaterialDesign",
+          "commit": "2424e748e0cc63ab7b9c095a099b9fe239b737c0",
+          "path": "svg/arrow-split-horizontal.svg",
+          "localPath": "references/atlas-01/mdi-arrow-split-horizontal.svg",
+          "url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/arrow-split-horizontal.svg",
+          "sha256": "998ab1d4895b050ce8bc2f3d7706d859469ec6f7c2b32ea52054801fbf7d18d5",
+          "license": "Apache-2.0",
+          "sourceName": "arrow-split-horizontal",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "可見版面邊界和視窗操作以實線表達，不涉及隱藏區域或待選取範圍。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "區塊層級由完整輪廓與透明避讓表達，不淡化邊界掩飾相接問題。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "平面視窗和方向符號不需要光照變化，維持單色清楚輪廓。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-27/master-before.json",
+          "variantsSha256": "5beb0d0b5e4a2d4215153e28e0fd39f8f0d1e15cd066a10e79743e5c3739b0bf"
+        },
+        "reason": "與水平拆分共用分界長度、間距和箭翼尺度，座標明確旋轉成上下構造；保留相接的動作箭桿，不加不必要斷口。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "9568cebae6310ef8890e222eb4bec018eaba94c24cb956afaa05867c40e4df33",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/118-split-directions/review.html",
+            "sha256": "817ccd173aff484176d696451c18004a7a7168f4433ebc288bb356bd95a22afd"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/118-split-directions/definitions.json",
+            "sha256": "8b2c905de92f2b866211267161b8789f25460de4e5d9658fc9867f27caf95b6d"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/118-split-directions/light-1x.png",
+            "sha256": "6e44d5e705879241cfa295dd3922db0a6d1827afc35f4ecc6acad320cd61aba2"
+          },
+          {
+            "path": "docs/review/atlas-craft-27/final/definitions.json",
+            "sha256": "b93fc3f8587a5c8f8f861b8cde0e5eed0314d2357f92933fc9662e67662081ee"
+          },
+          {
+            "path": "docs/review/atlas-craft-27/final/29-layout.html",
+            "sha256": "ee221e1ce8efc13aa94ce90a157a1a7a2af062f72e487ce33cbc392e97cd4e48"
+          },
+          {
+            "path": "docs/review/atlas-craft-27/final/29-layout-light-1x.png",
+            "sha256": "706e034542d7072213bfa9e164b4521ebb9a05277ca4e93f909656536d002e6e"
+          },
+          {
+            "path": "docs/review/atlas-craft-27/final/29-layout-light-2x.png",
+            "sha256": "b163f91a48a3959daacae3efafdd5cd62e1de89c31674cedea712a8b0e8fe64e"
+          },
+          {
+            "path": "docs/review/atlas-craft-27/final/29-layout-dark-1x.png",
+            "sha256": "cc73de5235c8e9f119fe5aafd1345d1f2554090ad6e592c29e3f6fb595f776ff"
+          },
+          {
+            "path": "docs/review/atlas-craft-27/final/29-layout-dark-2x.png",
+            "sha256": "396f604cc3b7c8f42352f2680bb51b96b4c79ae93498d791166a35ed3ec65eb2"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-27/final/29-layout-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-27/final/29-layout-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-27/final/29-layout-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-27/final/29-layout-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Phosphor",
+        "license": "MIT",
+        "licenseFile": "licenses/phosphor.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "picture-in-picture",
+      "purpose": "子母畫面",
+      "recognitionCues": "主視窗與右下獨立小視窗",
+      "confusableWith": [
+        "panels-top-left",
+        "copy"
+      ],
+      "sourceObservation": "Lucide小視窗與主視窗分離比Phosphor相接的分區更能表達浮動前景。最新稿採Lucide構造；完稿回比16px前景完整方孔清晰，主視窗切口留白連續，sharp與rounded皆無多餘碎角。",
+      "references": [
+        {
+          "name": "picture-in-picture",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/picture-in-picture-2.svg",
+          "localPath": "references/atlas-01/lucide-picture-in-picture-2.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/picture-in-picture-2.svg",
+          "sha256": "eccce9ef362520bbb8904fbc1fc89f5d02fb0fbb7c6704cdd3b761dd4fc102b0",
+          "license": "ISC AND MIT",
+          "sourceName": "picture-in-picture-2",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "picture-in-picture",
+          "library": "Phosphor",
+          "repository": "phosphor-icons/core",
+          "commit": "2b75f3ad12b420c9504ef05df8d2564a28f8500e",
+          "path": "assets/regular/picture-in-picture.svg",
+          "localPath": "references/atlas-01/phosphor-picture-in-picture.svg",
+          "url": "https://github.com/phosphor-icons/core/blob/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular/picture-in-picture.svg",
+          "sha256": "1aff42c9099aca255dd052d661c4bc3aa66ffe176679a096ef92776e82b89396",
+          "license": "MIT",
+          "sourceName": "picture-in-picture",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "可見版面邊界和視窗操作以實線表達，不涉及隱藏區域或待選取範圍。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "區塊層級由完整輪廓與透明避讓表達，不淡化邊界掩飾相接問題。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "平面視窗和方向符號不需要光照變化，維持單色清楚輪廓。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-27/master-before.json",
+          "variantsSha256": "54b9e4d9917128269efa68ccfdd7e993ce3a19ab5d7877751d95c108e1d7931f"
+        },
+        "reason": "前景小視窗使用完整封閉輪廓，後方主視窗按其實際描邊外擴避讓；透明切口保留前後關係並避免線條黏合。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "3d5249c0c464d2af187e11b3f2c11abc8f1b1570874ba7e7bfe625f494bcc526",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/119-pip-panels/review.html",
+            "sha256": "34df43914c115acbc054a5a2a12ee923dfee13c0b5356ee282a70fdb20023a49"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/119-pip-panels/definitions.json",
+            "sha256": "7ee7891f92c9e7025d087902ab3ce6b42e2f59c93ff0f2a49a76bc064d9345ff"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/119-pip-panels/light-1x.png",
+            "sha256": "1bb47b1c997cf05696115db39146ccdaeebd3e69d218bc2af3905f9bad5f5640"
+          },
+          {
+            "path": "docs/review/atlas-craft-27/final/definitions.json",
+            "sha256": "b93fc3f8587a5c8f8f861b8cde0e5eed0314d2357f92933fc9662e67662081ee"
+          },
+          {
+            "path": "docs/review/atlas-craft-27/final/29-layout.html",
+            "sha256": "ee221e1ce8efc13aa94ce90a157a1a7a2af062f72e487ce33cbc392e97cd4e48"
+          },
+          {
+            "path": "docs/review/atlas-craft-27/final/29-layout-light-1x.png",
+            "sha256": "706e034542d7072213bfa9e164b4521ebb9a05277ca4e93f909656536d002e6e"
+          },
+          {
+            "path": "docs/review/atlas-craft-27/final/29-layout-light-2x.png",
+            "sha256": "b163f91a48a3959daacae3efafdd5cd62e1de89c31674cedea712a8b0e8fe64e"
+          },
+          {
+            "path": "docs/review/atlas-craft-27/final/29-layout-dark-1x.png",
+            "sha256": "cc73de5235c8e9f119fe5aafd1345d1f2554090ad6e592c29e3f6fb595f776ff"
+          },
+          {
+            "path": "docs/review/atlas-craft-27/final/29-layout-dark-2x.png",
+            "sha256": "396f604cc3b7c8f42352f2680bb51b96b4c79ae93498d791166a35ed3ec65eb2"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-27/final/29-layout-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-27/final/29-layout-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-27/final/29-layout-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-27/final/29-layout-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Lucide",
+        "license": "ISC",
+        "licenseFile": "licenses/lucide.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "panels-top-left",
+      "purpose": "上方與左側面板",
+      "recognitionCues": "共同視窗內的上欄、左欄與主區域",
+      "confusableWith": [
+        "panel-left",
+        "panel-top"
+      ],
+      "sourceObservation": "Lucide較方外殼比Hugeicons大圓角更符合現有面板母型。最新稿在Master既有外殼加入上欄與左欄分界，構圖採Lucide；完稿回比16px三個區域都有可辨空腔，內線不穿出框角。",
+      "references": [
+        {
+          "name": "panels-top-left",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/panels-top-left.svg",
+          "localPath": "references/atlas-01/lucide-panels-top-left.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/panels-top-left.svg",
+          "sha256": "321a2a5500f2b814a2e62eb73c4b01dc65c7334fe2e6f7d77517239383e26bb1",
+          "license": "ISC AND MIT",
+          "sourceName": "panels-top-left",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "panels-top-left",
+          "library": "Hugeicons Free",
+          "repository": "hugeicons/hugeicons",
+          "commit": "834e28d965946c1ee60d080027fe9dae4adc58d0",
+          "path": "icons/panels-top-left.svg",
+          "localPath": "references/atlas-01/hugeicons-panels-top-left.svg",
+          "url": "https://github.com/hugeicons/hugeicons/blob/834e28d965946c1ee60d080027fe9dae4adc58d0/icons/panels-top-left.svg",
+          "sha256": "db8e96485cd76da9c1302b6c7ebca3c6fec222916164fa4bdf97fd26210233eb",
+          "license": "MIT",
+          "sourceName": "panels-top-left",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "可見版面邊界和視窗操作以實線表達，不涉及隱藏區域或待選取範圍。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "區塊層級由完整輪廓與透明避讓表達，不淡化邊界掩飾相接問題。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "平面視窗和方向符號不需要光照變化，維持單色清楚輪廓。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-27/master-before.json",
+          "variantsSha256": "2c7ed9de42adce2793a64da0b6c3be60b39aa56c045ccd51bf0949173d301c53"
+        },
+        "reason": "沿用既有面板外殼，內分界在實際殼體墨線內收口；上橫欄與左側欄共用交點，不疊畫兩個獨立矩形。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "abb048cba8a0a93ccd1d1960b69d82cd4f3dd08f6b4e8e6fb500d85dd27392c0",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/119-pip-panels/review.html",
+            "sha256": "34df43914c115acbc054a5a2a12ee923dfee13c0b5356ee282a70fdb20023a49"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/119-pip-panels/definitions.json",
+            "sha256": "7ee7891f92c9e7025d087902ab3ce6b42e2f59c93ff0f2a49a76bc064d9345ff"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/119-pip-panels/light-1x.png",
+            "sha256": "1bb47b1c997cf05696115db39146ccdaeebd3e69d218bc2af3905f9bad5f5640"
+          },
+          {
+            "path": "docs/review/atlas-craft-27/final/definitions.json",
+            "sha256": "b93fc3f8587a5c8f8f861b8cde0e5eed0314d2357f92933fc9662e67662081ee"
+          },
+          {
+            "path": "docs/review/atlas-craft-27/final/29-layout.html",
+            "sha256": "ee221e1ce8efc13aa94ce90a157a1a7a2af062f72e487ce33cbc392e97cd4e48"
+          },
+          {
+            "path": "docs/review/atlas-craft-27/final/29-layout-light-1x.png",
+            "sha256": "706e034542d7072213bfa9e164b4521ebb9a05277ca4e93f909656536d002e6e"
+          },
+          {
+            "path": "docs/review/atlas-craft-27/final/29-layout-light-2x.png",
+            "sha256": "b163f91a48a3959daacae3efafdd5cd62e1de89c31674cedea712a8b0e8fe64e"
+          },
+          {
+            "path": "docs/review/atlas-craft-27/final/29-layout-dark-1x.png",
+            "sha256": "cc73de5235c8e9f119fe5aafd1345d1f2554090ad6e592c29e3f6fb595f776ff"
+          },
+          {
+            "path": "docs/review/atlas-craft-27/final/29-layout-dark-2x.png",
+            "sha256": "396f604cc3b7c8f42352f2680bb51b96b4c79ae93498d791166a35ed3ec65eb2"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-27/final/29-layout-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-27/final/29-layout-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-27/final/29-layout-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-27/final/29-layout-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Lucide",
+        "license": "ISC",
+        "licenseFile": "licenses/lucide.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "panel-bottom-open",
+      "purpose": "展開底部面板",
+      "recognitionCues": "底部面板母型與向上展開箭翼",
+      "confusableWith": [
+        "panel-bottom",
+        "panel-top-open"
+      ],
+      "sourceObservation": "Lucide與Tabler均以向上箭翼表示底面板展開。最新稿沿用Master底面板母型加通用箭翼；完稿回比16px箭翼與頂框及分界都有可見間距，框體比例與既有面板一致。",
+      "references": [
+        {
+          "name": "panel-bottom-open",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/panel-bottom-open.svg",
+          "localPath": "references/atlas-01/lucide-panel-bottom-open.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/panel-bottom-open.svg",
+          "sha256": "6c9f6d948c35b13f4bbb15eb4ad9716d9b89804f10a284ba096ae6f94d9ca604",
+          "license": "ISC AND MIT",
+          "sourceName": "panel-bottom-open",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "panel-bottom-open",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/layout-bottombar-expand.svg",
+          "localPath": "references/atlas-01/tabler-layout-bottombar-expand.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/layout-bottombar-expand.svg",
+          "sha256": "471801d3d628386e0f947245e73b67faf89251105b499380cb605867a95530c5",
+          "license": "MIT",
+          "sourceName": "layout-bottombar-expand",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "可見版面邊界和視窗操作以實線表達，不涉及隱藏區域或待選取範圍。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "區塊層級由完整輪廓與透明避讓表達，不淡化邊界掩飾相接問題。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "平面視窗和方向符號不需要光照變化，維持單色清楚輪廓。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-27/master-before.json",
+          "variantsSha256": "27543fdf161c24200ad7a92e14e0ca1dce9d70fcc3fac841ab3eaea6643b2224"
+        },
+        "reason": "保留現有底面板的外框和分界位置，在主空腔中央放向上箭翼；以原生留白限制箭翼高度，不另畫一套近似母型。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "244fe72f80e4daebf3c71a41e14057297a8d2e45145b739c6135c55d10faabc9",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/120-panel-focus/review.html",
+            "sha256": "e7df184b653fc962cd0bc9bffed93b63e375f019f5a206efcbcdeed80dd46fc2"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/120-panel-focus/definitions.json",
+            "sha256": "542c7e50665ffdbf8f4930ea420a19ce387d77314ce165d3c64c11830bdef6a2"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/120-panel-focus/light-1x.png",
+            "sha256": "8cd388b1a658a3b1913bb3f4a2c74efd89bdf744e7effbd0a92ac46cfce22d91"
+          },
+          {
+            "path": "docs/review/atlas-craft-27/final/definitions.json",
+            "sha256": "b93fc3f8587a5c8f8f861b8cde0e5eed0314d2357f92933fc9662e67662081ee"
+          },
+          {
+            "path": "docs/review/atlas-craft-27/final/29-layout.html",
+            "sha256": "ee221e1ce8efc13aa94ce90a157a1a7a2af062f72e487ce33cbc392e97cd4e48"
+          },
+          {
+            "path": "docs/review/atlas-craft-27/final/29-layout-light-1x.png",
+            "sha256": "706e034542d7072213bfa9e164b4521ebb9a05277ca4e93f909656536d002e6e"
+          },
+          {
+            "path": "docs/review/atlas-craft-27/final/29-layout-light-2x.png",
+            "sha256": "b163f91a48a3959daacae3efafdd5cd62e1de89c31674cedea712a8b0e8fe64e"
+          },
+          {
+            "path": "docs/review/atlas-craft-27/final/29-layout-dark-1x.png",
+            "sha256": "cc73de5235c8e9f119fe5aafd1345d1f2554090ad6e592c29e3f6fb595f776ff"
+          },
+          {
+            "path": "docs/review/atlas-craft-27/final/29-layout-dark-2x.png",
+            "sha256": "396f604cc3b7c8f42352f2680bb51b96b4c79ae93498d791166a35ed3ec65eb2"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-27/final/29-layout-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-27/final/29-layout-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-27/final/29-layout-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-27/final/29-layout-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "independent-construction"
+      },
+      "remaining": []
+    },
+    {
+      "name": "panel-top-open",
+      "purpose": "展開頂部面板",
+      "recognitionCues": "頂部面板母型與向下展開箭翼",
+      "confusableWith": [
+        "panel-top",
+        "panel-bottom-open"
+      ],
+      "sourceObservation": "Lucide與Tabler都在上欄下方加入向下箭翼。最新稿沿用Master頂面板母型；完稿回比16px箭尖與底框分開，箭翼與上分界不黏合，上下兩個展開狀態有一致密度。",
+      "references": [
+        {
+          "name": "panel-top-open",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/panel-top-open.svg",
+          "localPath": "references/atlas-01/lucide-panel-top-open.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/panel-top-open.svg",
+          "sha256": "034e903884bfb94acecbc0c2873db20c8ba055b36b1dd458f736b6fa8e5cff07",
+          "license": "ISC AND MIT",
+          "sourceName": "panel-top-open",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "panel-top-open",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/layout-navbar-expand.svg",
+          "localPath": "references/atlas-01/tabler-layout-navbar-expand.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/layout-navbar-expand.svg",
+          "sha256": "484fcbae250d75aff5cba2f6258776d4ac5d74ddeae2bc4f1c96283bddfccd92",
+          "license": "MIT",
+          "sourceName": "layout-navbar-expand",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "可見版面邊界和視窗操作以實線表達，不涉及隱藏區域或待選取範圍。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "區塊層級由完整輪廓與透明避讓表達，不淡化邊界掩飾相接問題。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "平面視窗和方向符號不需要光照變化，維持單色清楚輪廓。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-27/master-before.json",
+          "variantsSha256": "d14dce7d479bb611c59d5957f708865a4ac77e64f9468fc900e31b4a601a3923"
+        },
+        "reason": "與底部展開狀態共用箭翼尺度，沿既有頂面板空腔配置向下動作；外殼和結構內線保持同一家族。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "0805bb9361ba55b9fc5ac3954273a85f05ef43c406aeb076b4c173584e42ddaa",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/120-panel-focus/review.html",
+            "sha256": "e7df184b653fc962cd0bc9bffed93b63e375f019f5a206efcbcdeed80dd46fc2"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/120-panel-focus/definitions.json",
+            "sha256": "542c7e50665ffdbf8f4930ea420a19ce387d77314ce165d3c64c11830bdef6a2"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/120-panel-focus/light-1x.png",
+            "sha256": "8cd388b1a658a3b1913bb3f4a2c74efd89bdf744e7effbd0a92ac46cfce22d91"
+          },
+          {
+            "path": "docs/review/atlas-craft-27/final/definitions.json",
+            "sha256": "b93fc3f8587a5c8f8f861b8cde0e5eed0314d2357f92933fc9662e67662081ee"
+          },
+          {
+            "path": "docs/review/atlas-craft-27/final/29-layout.html",
+            "sha256": "ee221e1ce8efc13aa94ce90a157a1a7a2af062f72e487ce33cbc392e97cd4e48"
+          },
+          {
+            "path": "docs/review/atlas-craft-27/final/29-layout-light-1x.png",
+            "sha256": "706e034542d7072213bfa9e164b4521ebb9a05277ca4e93f909656536d002e6e"
+          },
+          {
+            "path": "docs/review/atlas-craft-27/final/29-layout-light-2x.png",
+            "sha256": "b163f91a48a3959daacae3efafdd5cd62e1de89c31674cedea712a8b0e8fe64e"
+          },
+          {
+            "path": "docs/review/atlas-craft-27/final/29-layout-dark-1x.png",
+            "sha256": "cc73de5235c8e9f119fe5aafd1345d1f2554090ad6e592c29e3f6fb595f776ff"
+          },
+          {
+            "path": "docs/review/atlas-craft-27/final/29-layout-dark-2x.png",
+            "sha256": "396f604cc3b7c8f42352f2680bb51b96b4c79ae93498d791166a35ed3ec65eb2"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-27/final/29-layout-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-27/final/29-layout-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-27/final/29-layout-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-27/final/29-layout-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "independent-construction"
+      },
+      "remaining": []
+    },
+    {
+      "name": "focus",
+      "purpose": "對焦",
+      "recognitionCues": "四個開放框角與中央對焦圈",
+      "confusableWith": [
+        "scan",
+        "scan-face"
+      ],
+      "sourceObservation": "Lucide中央空圈與Tabler實心點皆表達對焦。最新稿沿用Master掃描框角並置入通用空圈；完稿回比16px中央圈孔清楚且四周留白均勻，與帶橫線的scan有清楚差異。",
+      "references": [
+        {
+          "name": "focus",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/focus.svg",
+          "localPath": "references/atlas-01/lucide-focus.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/focus.svg",
+          "sha256": "d52fde05ccbd7bf629e05daeb8eadf824c85333aeca78e674db01493bc8b1f10",
+          "license": "ISC AND MIT",
+          "sourceName": "focus",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "focus",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/focus-centered.svg",
+          "localPath": "references/atlas-01/tabler-focus-centered.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/focus-centered.svg",
+          "sha256": "239da0403966b1af65d2650cae3b1c3ee450ca309b479cb9235a9a94f387c2a1",
+          "license": "MIT",
+          "sourceName": "focus-centered",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "可見版面邊界和視窗操作以實線表達，不涉及隱藏區域或待選取範圍。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "區塊層級由完整輪廓與透明避讓表達，不淡化邊界掩飾相接問題。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "平面視窗和方向符號不需要光照變化，維持單色清楚輪廓。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-27/master-before.json",
+          "variantsSha256": "eccf5b3a545b5fadc97c7584d4ee17365ecfe570f0daa9edb16ea0d4ded61908"
+        },
+        "reason": "四個框角沿用既有scan母型，以單一中央空圈代替掃描線；保留對焦區域，不添加鏡頭同心圈或十字造成密度。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "3ba0e4e96129a8d47bd0caffcafd2678ac690937ad9f03c6335ee69fdd241d99",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/120-panel-focus/review.html",
+            "sha256": "e7df184b653fc962cd0bc9bffed93b63e375f019f5a206efcbcdeed80dd46fc2"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/120-panel-focus/definitions.json",
+            "sha256": "542c7e50665ffdbf8f4930ea420a19ce387d77314ce165d3c64c11830bdef6a2"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/120-panel-focus/light-1x.png",
+            "sha256": "8cd388b1a658a3b1913bb3f4a2c74efd89bdf744e7effbd0a92ac46cfce22d91"
+          },
+          {
+            "path": "docs/review/atlas-craft-27/final/definitions.json",
+            "sha256": "b93fc3f8587a5c8f8f861b8cde0e5eed0314d2357f92933fc9662e67662081ee"
+          },
+          {
+            "path": "docs/review/atlas-craft-27/final/29-layout.html",
+            "sha256": "ee221e1ce8efc13aa94ce90a157a1a7a2af062f72e487ce33cbc392e97cd4e48"
+          },
+          {
+            "path": "docs/review/atlas-craft-27/final/29-layout-light-1x.png",
+            "sha256": "706e034542d7072213bfa9e164b4521ebb9a05277ca4e93f909656536d002e6e"
+          },
+          {
+            "path": "docs/review/atlas-craft-27/final/29-layout-light-2x.png",
+            "sha256": "b163f91a48a3959daacae3efafdd5cd62e1de89c31674cedea712a8b0e8fe64e"
+          },
+          {
+            "path": "docs/review/atlas-craft-27/final/29-layout-dark-1x.png",
+            "sha256": "cc73de5235c8e9f119fe5aafd1345d1f2554090ad6e592c29e3f6fb595f776ff"
+          },
+          {
+            "path": "docs/review/atlas-craft-27/final/29-layout-dark-2x.png",
+            "sha256": "396f604cc3b7c8f42352f2680bb51b96b4c79ae93498d791166a35ed3ec65eb2"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-27/final/29-layout-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-27/final/29-layout-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-27/final/29-layout-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-27/final/29-layout-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "independent-construction"
+      },
+      "remaining": []
+    }
+  ]
+}

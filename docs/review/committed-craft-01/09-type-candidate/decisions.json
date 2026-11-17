@@ -1,0 +1,26 @@
+{
+  "reviewer": "Codex (AI)",
+  "notes": {
+    "bold": "保留：B上下腹部不同寬度，右側曲線平滑接入中腰，內孔在16px分成兩個清楚空間。Tabler較寬厚、Iconoir較細窄，現稿與文字工具筆重一致且下腹稍大，字形穩定。",
+    "italic": "保留：斜幹按平端收在上下襯線內，不突出邊緣；兩份來源同類I字形，現稿傾斜度與上下橫筆長度均衡，16px有清楚斜體動勢。",
+    "underline": "保留：U形底部有連續曲率，底線與字腹分離且略寬於U；Lucide較寬、Tabler較窄，現稿中等寬度不顯僵直，16px底線未黏合。",
+    "strikethrough": "保留：S字的上下回彎圍繞穿越橫線，透明避讓保持刪除線清楚。Lucide更像幾何分段、Tabler保留完整S，現稿保留字形曲面但不讓交叉區成黑結。",
+    "heading": "保留：H兩根等長立柱與中央橫槓相接，沒有多餘襯線。Tabler有襯線、Hugeicons無襯線；保留較中性的無襯線結構，16px仍清楚區別text的T。",
+    "text-cursor": "保留：上下兩端的微彎向中央主幹承接，形成插入游標的I-beam；Lucide同樣有弧形端帽、Tabler多中間橫點，現稿不增加小尺寸噪點，尖端與主幹連接完整。",
+    "subscript": "精修：舊x是兩條直線交叉，與關閉×相同；改為有腰部、水平起收筆的兩條曲線，保留原外接尺寸與右下2的位置。Lucide／Tabler直交x更簡單，但新稿和variable的字形語言一致，16px仍讀作x₂，數字與字母間通道清楚。",
+    "superscript": "精修：與subscript共用有筆勢的x，僅數字保持上標位置。兩份來源同樣以右上2表意，新稿保留這個成熟位置關係，改善字母本身而不加入其他細節；三尺寸仍明確區分上下標。",
+    "languages": "保留：左上文字訊號與右下A形成互補構圖，A橫槓按字形收在斜邊內。Lucide較粗、Phosphor字形更纖細，現稿中央交界沒有黏成一團，16px兩種字形仍能分辨。",
+    "variable": "保留：括號曲面向中心收攏，內部x有腰部與起收筆，不是關閉符號。Lucide直交叉較抽象、Tabler有字形筆勢；現稿接近後者的語意清晰度，原生16px括號與字母仍分離。"
+  },
+  "modified": [
+    "subscript",
+    "superscript"
+  ],
+  "effects": "不採虛線、透明度或漸層：字形及相對位置就是語意；刪除線保持真透明避讓，不靠淡化原字掩飾交叉。",
+  "viewed": [
+    "../09-type-before/1-dpr1.png",
+    "2-dpr1.png",
+    "2-dpr2.png"
+  ],
+  "scope": "16/20/24 × sharp/soft/rounded; light/dark; 55% alongside text"
+}

@@ -1,0 +1,77 @@
+{
+  "schemaVersion": 1,
+  "verifiedAt": "2026-11-17T13:18:12.166381+00:00",
+  "status": "passed",
+  "baselineCommit": "01aeafb8445f5ae9e8dd999b0c2a7e02e671c047",
+  "scope": "Atlas 310 additions, strengthened master-icons skill, provenance, immutable visual evidence and review-validation fixes. Concurrent framework exports, variable-width controls and website redesign are excluded.",
+  "verification": {
+    "frozenLockfileInstall": "passed",
+    "buildValidateTestsTypes": "passed: 42/42 unit tests",
+    "reproducible": "passed: 26540 outputs byte-identical across UTC and Asia/Taipei",
+    "packedConsumer": "passed",
+    "previewBrowser": "54/54 passed",
+    "websiteBrowser": "48/48 passed",
+    "coldDevelopmentServer": "2/2 passed",
+    "filesVerifiedAgainstStagedTree": 14805,
+    "svgFiles": 7110,
+    "allBytesMatch": true,
+    "existingRefinementsUnchanged": [
+      "calendar-plus",
+      "check-circle",
+      "file-code",
+      "file-json",
+      "file-question",
+      "folder-down",
+      "folder-up",
+      "keyboard-return",
+      "link",
+      "list-minus",
+      "list-plus",
+      "subscript",
+      "superscript",
+      "unlink",
+      "volume"
+    ],
+    "sourceTree": "f0944baeccf476103bd8a96b3731b5693b4f4e05"
+  },
+  "evidence": [
+    {
+      "path": "docs/review/atlas-commit-verification/install.log",
+      "sha256": "056b590d6607ec09ad1f8aa446bb5476ff4745e97148874c9d91941e5ce4cb34"
+    },
+    {
+      "path": "docs/review/atlas-commit-verification/check.log",
+      "sha256": "1d2ef8048aeee642c55b678c2001fd09e13c4537a86da1e4a6a5d50f97fa4756"
+    },
+    {
+      "path": "docs/review/atlas-commit-verification/reproducible.log",
+      "sha256": "e5edbbc049d88c344501f15a760a3f91c48ee48af955706823d1ec316764f8f2"
+    },
+    {
+      "path": "docs/review/atlas-commit-verification/package.log",
+      "sha256": "6da08f91a6cbc5727a3b2e3ca5d1659e44b481e8a1af6eef918b3613d166aec5"
+    },
+    {
+      "path": "docs/review/atlas-commit-verification/browser.log",
+      "sha256": "c3a1a9fb9af59b9cb1b2161d940097d1cc557dcfadba8073f90f1214e2d26a32"
+    },
+    {
+      "path": "docs/review/atlas-commit-verification/site.log",
+      "sha256": "f7ab2c72fa187e2e106f3b4c6c7ce8334a75d691f6870e961389e6a8775dc41f"
+    },
+    {
+      "path": "docs/review/atlas-commit-verification/site-dev.log",
+      "sha256": "0637a9c4119db234a6494cd49b8127f1c373d2b7b45aedee5262e5433c01ca28"
+    },
+    {
+      "path": "docs/review/atlas-commit-verification/svg-verification.json",
+      "sha256": "a1d065e740b7b5ae118b2c7d9ab15588e862bcda7d351757f98161195ea40d6c"
+    }
+  ],
+  "notes": [
+    "The staged source tree was exported and checked independently of all uncommitted feature work.",
+    "The 46-test / 75-website-test results in validation-reconciliation.json describe the earlier combined workspace snapshot; this report describes the narrower commit.",
+    "Pinned upstream SVG and historical review HTML retain their original bytes, including whitespace, so their recorded checksums remain valid.",
+    "Framework-specific validation wiring remains with the separate framework work."
+  ]
+}

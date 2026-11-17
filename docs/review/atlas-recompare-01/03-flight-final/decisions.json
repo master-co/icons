@@ -1,0 +1,100 @@
+{
+  "reviewer": "Codex (AI)",
+  "batch": "03-flight-final",
+  "baseline": "references/atlas-recompare-01/master-before.json",
+  "date": "2026-11-17",
+  "viewedSuffixes": [
+    "light-1x",
+    "dark-1x",
+    "native-light-2x",
+    "native-dark-2x"
+  ],
+  "decisions": [
+    {
+      "name": "scooter",
+      "decision": "retained",
+      "purpose": "以低踏板和前傾立管表示站立式滑板車，與有座墊及油箱的機車區分。",
+      "recognitionCues": "低水平踏板、斜支架、長立管及兩個小輪，沒有座墊。",
+      "confusableWith": [
+        "bicycle",
+        "motorcycle"
+      ],
+      "defect": "本輪未見需要回修的比例缺陷；重點檢查踏板與後輪接點、前輪內孔及立管支架交點。",
+      "sourceObservation": "Phosphor以長斜立管與連續踏板形成安靜的三段節奏，Tabler以直立管、短踏板及厚小輪形成更緊湊的電動滑板車器型。Master既有Phosphor改作保留寬輪距和較清楚的輪孔，踏板與輪緣實接，沒有在後輪中心另畫一段線。原生16px中前輪斜管雖穿過輪孔，兩側仍可讀；Tabler小輪較實心，並沒有更好的負空間需要借用。",
+      "reason": "維持現有踏板和輪身比例，不將已清楚的開放三角改成Tabler短踏板構造。sharp斜桿折點表現直管接合，soft與rounded有實際小圓角，無需一律改成自行車彎把。",
+      "postComparison": "最新未改稿與Phosphor／Tabler在16、20、24及三角型重新並列，長立管和低踏板的姿態自然，輪孔及中央開放區均成立；來源屬器型差異，未見需要回修的優勢。已查看明暗DPR1全圖、明暗DPR2原生區與55%文字情境。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "踏板、立管與輪胎是連續可見構造，不使用虛線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "前輪與支架依實際空白區分，不用透明度掩飾交點。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "單色滑板車輪廓不需要連續漸層。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "plane",
+      "decision": "refined",
+      "purpose": "以對稱俯視機身、主翼與尾翼表示一般飛機及航空交通，不增加起降方向符號。",
+      "recognitionCues": "圓弧機鼻、窄長機身、後掠主翼與短尾翼，左右保持鏡像。",
+      "confusableWith": [
+        "rocket",
+        "helicopter"
+      ],
+      "defect": "原稿機身及翼尖略厚，與來源較俐落的後掠輪廓相比顯得笨重，尤其主翼端部有厚矩形感。",
+      "sourceObservation": "Lucide斜向輪廓有動態張力，機身與後掠翼的收束較俐落；Tabler橫向俯視以完整長機鼻和薄翼尖形成清楚比例。Master選擇向上的對稱俯視，不需要照搬斜向姿態，但可以吸收來源較薄的翼尖及窄機身。機身寬度由4縮至3.6構造單位，翼尖厚度由2.5縮至2，保留機身內孔與圓鼻。這是通用航空比例的微調，沒有複製來源路徑或移植其特定輪廓。",
+      "reason": "對稱縮窄機身，主翼前緣端點下降0.5形成更薄翼尖，保留原有翼展與尾翼；圓機鼻維持垂直切線，不把sharp鼻端做成尖頭。",
+      "postComparison": "最新稿與Lucide／Tabler以三個原生尺寸回比，主翼端部較輕，機身在16px仍有連續內孔，20與24的後掠比例更俐落。維持向上對稱符號的穩定性；Lucide斜向姿態較活潑是用途取捨，不靠增加內線改善。明暗DPR1、DPR2與55%文字均已查看。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "主翼及機身皆為可見外輪廓，無隱藏構造需要虛線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "左右機翼和機身同等重要，以比例分配墨量，不採透明度。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "飛機以單色外形傳意，不需要連續漸層。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "helicopter",
+      "decision": "refined",
+      "purpose": "用主旋翼、圓座艙、尾桿與滑橇表示直升機，與固定翼飛機區分。",
+      "recognitionCues": "水平主旋翼、圓弧機鼻及窗分界、短尾桿、雙支柱滑橇。",
+      "confusableWith": [
+        "plane"
+      ],
+      "defect": "原稿座艙前腹偏圓厚，上下支架拉得較高，整體近乎方形；直角窗線也比Lucide的轉彎生硬。",
+      "sourceObservation": "Lucide窗線隨座艙轉彎，比原稿硬折自然；Tabler較低的旋翼和滑橇使機身橫向姿態更完整，但單支柱不是必須照搬的構造。Master延續既有Lucide改作，略拉長前艙並收腹，縮短旋翼及滑橇的上下外伸，窗分界用短曲線承接。保留雙支柱、獨立尾桿與前窗孔，不改成密集拼裝或另加座艙內線。",
+      "reason": "重整前肩到機鼻和下腹的連續曲線，機鼻外伸0.5、底部上收0.5；旋翼由y3到4、滑橇由y21到20。窗分界以一段曲線轉向，在sharp中仍作為真實機艙曲面保留。",
+      "postComparison": "回修後在16、20、24與Lucide／Tabler並列，座艙更有向前延伸的形態，上下支架不再壓過主體。Lucide窗線的流動性已吸收，前窗與下方空腔仍清楚；保留比Tabler略完整的雙支柱器型，沒有增加其短尾上翹線。明暗DPR1全圖與DPR2原生區、低對比文字皆已查看。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "旋翼、尾桿和滑橇為實體構造，虛線會削弱直升機辨識。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "窗孔、滑橇空腔以實際空白呈現，不以透明度降低密度。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "直升機以單色平面輪廓成立，不需要連續漸層。"
+        }
+      },
+      "remaining": []
+    }
+  ]
+}

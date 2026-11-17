@@ -1,0 +1,22 @@
+{
+  "reviewer": "Codex (AI)",
+  "notes": {
+    "calendar": "保留：雙裝訂柱與橫向頁首形成日曆輪廓，日期點按尺寸減量，16px的三點仍逐點分離；Lucide與Tabler空白內頁較疏，現稿網格有助區別一般容器，無需刪去日期語意。",
+    "calendar-days": "保留：一個空心選取日、實心日期與底部橫列形成日期內容；Lucide與Tabler採均勻網格，現稿以選取格區別基礎calendar。16px選取格仍有內孔，底線不黏外框。",
+    "calendar-check": "保留：完整頁框內置勾號，長右翼有向上動勢且不碰頁首；Lucide同為內置，Tabler外掛。現稿與內置plus/minus/x家族一致，保留完整日期容器。",
+    "calendar-plus": "精修：原加號上端偏近頁首，16/20/24px改用半徑1.25/1.75/2.25px的十字，中心不變。現稿上方留白更清楚，16px仍可讀出四臂；兩份來源外掛加號僅作語意策略比較，維持本套內置狀態。",
+    "calendar-minus": "保留：減號位於內頁中段，兩端和頁框間距均衡；兩份來源採外掛狀態，現稿維持與加號同一中心。橫桿有足夠長度而不誤讀為頁首分隔線。",
+    "calendar-x": "保留：斜交叉相較直十字有較小視覺體積，保留既有尺度；上端和頁首分離，下端不壓底框。Lucide內置及Tabler外掛均可辨，現稿家族連續性較佳。",
+    "calendar-clock": "保留：右下時鐘遮擋頁框，圈外留白連續，縮短的指針在16px與外環仍分離；Lucide與Tabler同樣採角標，現稿不用雙重容器邊界造成擁塞。",
+    "calendar-range": "保留：上下兩列反向的圓點與橫條表達跨日期範圍，空白節奏清楚；Lucide與Hugeicons同語意，現稿保持日期列而非單純裝飾線，16px仍可分辨起訖點。"
+  },
+  "modified": [
+    "calendar-plus"
+  ],
+  "effects": "不使用虛線、透明度或漸層。以結構輪廓、明確斷口和獨立狀態符號表意。",
+  "viewed": [
+    "1-dpr1.png",
+    "2-dpr1.png"
+  ],
+  "scope": "16/20/24 × sharp/soft/rounded; light/dark; 55% alongside text"
+}

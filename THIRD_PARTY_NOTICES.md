@@ -136,6 +136,123 @@ Microsoft, LinkedIn and Slack retain the source silhouettes from Simple Icons v1
 
 Source SVGs are preserved in `references/brands-02/`. Paths retain their source geometry, with individual 16 / 20 / 24 placement and occupied size. The OpenAI archive includes oversized canvas padding and enclosing clip rectangles: placement uses its unchanged ink bounds, and redundant clips are omitted.
 
+
+## Atlas 01–05: non-brand icon additions
+
+The 50 drawings retain explicit per-icon research and refinement records in `docs/review/atlas-craft-01/ledger.json`. Adapted constructions are independently redrawn for Master optical sizes and corner profiles; rewriting coordinates does not remove upstream attribution.
+
+| Source | Adapted drawings | License |
+| --- | --- | --- |
+| Lucide | `bus`, `helicopter`, `sailboat`, `ship`, `backpack`, `tent`, `fuel`, `cloud-rain`, `cloud-snow`, `cloud-lightning`, `cloud-fog`, `cloud-sun`, `cloud-moon`, `sunrise`, `sunset`, `wind`, `leaf`, `sprout`, `tree-pine`, `mountain`, `mountain-snow`, `cat`, `dog`, `bird`, `turtle` | ISC; licenses/lucide.txt |
+| Tabler | `car`, `anchor`, `caravan`, `traffic-cone`, `road`, `cactus`, `fish`, `snail`, `paw-print` | MIT; licenses/tabler.txt |
+| Phosphor | `tram`, `bicycle`, `motorcycle`, `scooter`, `traffic-light`, `rabbit`, `butterfly` | MIT; licenses/phosphor.txt |
+
+Other Atlas drawings use independent construction. Pinned originals, roles and checksums for all comparisons are in `references/atlas-01/manifest.json`. Iconoir and Hugeicons are comparison references only; their existing license files remain included.
+
+The bee comparison additionally includes unmodified OpenMoji `1F41D.svg` by OpenMoji contributors, CC BY-SA 4.0, from https://github.com/hfg-gmuend/openmoji/blob/3e01de523ddefe9c5e46a7765b15efef04bf9002/black/svg/1F41D.svg (license: `licenses/openmoji-CC-BY-SA-4.0.txt`), and Material Design Icons `bee.svg` by the Pictogrammers contributors from https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/bee.svg (Apache 2.0; `licenses/mdi-notice.txt` and `licenses/Apache-2.0.txt`). They are reproduced for comparison, not distributed as Master geometry. The review renderer recolors monochrome sources to the current foreground for dark backgrounds without changing saved originals. Lucide Lab bee remains an explicitly experimental supplementary reference.
+
+
+## Atlas 06: produce
+
+Individual source observations and native-size decisions are in `docs/review/atlas-craft-02/ledger.json`. Adapted redraws retain the following notices in each SVG and ZIP:
+
+- Lucide: `apple-fruit`, `carrot`. ISC, licenses/lucide.txt.
+- Tabler: `cherry`, `grape`, `banana`, `mushroom`, `wheat`. MIT, licenses/tabler.txt.
+- Phosphor: `citrus`. MIT, licenses/phosphor.txt.
+
+`corn` and `egg` use independent construction. Corn compares Hugeicons and MDI; the existing Hugeicons MIT and MDI Apache-2.0 notices apply to the saved originals only. All 20 pinned comparison records are in `references/atlas-craft-02/manifest.json`.
+
+
+## Atlas 07-drinks
+
+Individual comparisons and changes: `docs/review/atlas-craft-03/ledger.json`. Pinned source originals and checksums: `references/atlas-craft-03/manifest.json`.
+
+- Adapted Lucide constructions: `coffee`, `cup-soda`, `beer`, `cooking-pot`. ISC; licenses/lucide.txt.
+- Adapted Phosphor constructions: `wine`. MIT; licenses/phosphor.txt.
+- Adapted Hugeicons Free constructions: `milk`. MIT; licenses/hugeicons-MIT.txt.
+- Adapted Tabler constructions: `bottle`. MIT; licenses/tabler.txt.
+- Adapted Iconoir constructions: `glass-water`. MIT; licenses/iconoir.txt.
+- Independent construction: `teapot`, `kettle`.
+
+Comparison only: unmodified OpenMoji 1FAD6 by OpenMoji contributors, CC BY-SA 4.0; https://github.com/hfg-gmuend/openmoji/blob/3e01de523ddefe9c5e46a7765b15efef04bf9002/black/svg/1FAD6.svg. Full terms: licenses/openmoji-CC-BY-SA-4.0.txt. This original is not Master product geometry.
+
+
+## Atlas 08-food
+
+Individual comparisons and changes: `docs/review/atlas-craft-04/ledger.json`. Pinned source originals and checksums: `references/atlas-craft-04/manifest.json`.
+
+- Adapted Lucide constructions: `utensils`, `salad`, `sandwich`, `ice-cream`, `cookie`. ISC; licenses/lucide.txt.
+- Adapted Tabler constructions: `pizza`, `burger`, `cake`, `bread`. MIT; licenses/tabler.txt.
+- Initial independent construction of `soup` was superseded by the Tabler adaptation recorded below.
+
+
+## Atlas soup form refinement
+
+`soup` now adapts the continuous bowl-and-foot construction from Tabler (MIT; licenses/tabler.txt). Individual source comparison, preserved earlier decision and current evidence: `docs/review/atlas-craft-06/ledger.json`.
+
+
+## Atlas 09-home
+
+Individual comparisons and changes: `docs/review/atlas-craft-05/ledger.json`. Pinned source originals and checksums: `references/atlas-craft-05/manifest.json`.
+
+- Adapted Lucide constructions: `bed`, `sofa`, `armchair`, `door-open`, `door-closed`, `shower-head`. ISC; licenses/lucide.txt.
+- Adapted Phosphor constructions: `lamp`, `desk`, `bathtub`. MIT; licenses/phosphor.txt.
+- Adapted Tabler constructions: `fence`. MIT; licenses/tabler.txt.
+
+
+## Atlas 10-appliances
+
+Individual comparisons and changes: `docs/review/atlas-craft-07/ledger.json`. Pinned source originals and checksums: `references/atlas-craft-07/manifest.json`.
+
+- Adapted Tabler constructions: `refrigerator`, `iron`. MIT; licenses/tabler.txt.
+- Adapted Lucide constructions: `washing-machine`, `microwave`, `heater`. ISC; licenses/lucide.txt.
+- Adapted Phosphor constructions: `oven`, `fan`. MIT; licenses/phosphor.txt.
+- Adapted Iconoir constructions: `air-conditioner`. MIT; licenses/iconoir.txt.
+- Adapted Hugeicons Free constructions: `vacuum-cleaner`, `hair-dryer`. MIT; licenses/hugeicons-MIT.txt.
+
+
+## Atlas 11-clothing
+
+Individual comparisons and changes: `docs/review/atlas-craft-08/ledger.json`. Pinned source originals and checksums: `references/atlas-craft-08/manifest.json`.
+
+- Adapted Lucide constructions: `shirt`, `glasses`. ISC; licenses/lucide.txt.
+- Adapted Phosphor constructions: `trousers`, `dress`, `sock`, `watch`, `umbrella`. MIT; licenses/phosphor.txt.
+- Adapted Tabler constructions: `shoe`, `sunglasses`. MIT; licenses/tabler.txt.
+- Independent construction: `coat`.
+
+Comparison only: unmodified OpenMoji 1F9E5 by OpenMoji contributors, CC BY-SA 4.0; https://github.com/hfg-gmuend/openmoji/blob/3e01de523ddefe9c5e46a7765b15efef04bf9002/black/svg/1F9E5.svg. Full terms: licenses/openmoji-CC-BY-SA-4.0.txt. This original is not Master product geometry.
+
+
+## Atlas 12-medical
+
+Individual comparisons and changes: `docs/review/atlas-craft-09/ledger.json`. Pinned source originals and checksums: `references/atlas-craft-09/manifest.json`.
+
+- Adapted Lucide constructions: `stethoscope`, `pill`, `bandage`, `heart-pulse`. ISC; licenses/lucide.txt.
+- Adapted Phosphor constructions: `syringe`, `medical-mask`, `thermometer`, `hospital`. MIT; licenses/phosphor.txt.
+- Adapted Tabler constructions: `ambulance`, `first-aid-kit`. MIT; licenses/tabler.txt.
+
+
+## Atlas 13-body
+
+Individual comparisons and changes: `docs/review/atlas-craft-10/ledger.json`. Pinned source originals and checksums: `references/atlas-craft-10/manifest.json`.
+
+- Adapted Lucide constructions: `bone`, `ear`, `person-standing`. ISC; licenses/lucide.txt.
+- Adapted Tabler constructions: `tooth`, `brain`, `lungs`, `crutch`. MIT; licenses/tabler.txt.
+- Adapted Phosphor constructions: `hand-heart`, `person-walking`. MIT; licenses/phosphor.txt.
+- Adapted Hugeicons Free constructions: `wheelchair`. MIT; licenses/hugeicons-MIT.txt.
+
+Comparison only: unmodified OpenMoji 1FA7C by OpenMoji contributors, CC BY-SA 4.0; https://github.com/hfg-gmuend/openmoji/blob/3e01de523ddefe9c5e46a7765b15efef04bf9002/black/svg/1FA7C.svg. Full terms: licenses/openmoji-CC-BY-SA-4.0.txt. This original is not Master product geometry.
+
+
+## Atlas 14-sports
+
+Individual comparisons and changes: `docs/review/atlas-craft-11/ledger.json`. Pinned source originals and checksums: `references/atlas-craft-11/manifest.json`.
+
+- Adapted Hugeicons Free constructions: `dumbbell`, `kettlebell`, `tennis-racket`. MIT; licenses/hugeicons-MIT.txt.
+- Adapted Phosphor constructions: `basketball`, `baseball`. MIT; licenses/phosphor.txt.
+- Adapted Tabler constructions: `football`, `golf-hole`, `swimming`, `running`. MIT; licenses/tabler.txt.
+- Adapted Lucide constructions: `volleyball`. ISC; licenses/lucide.txt.
+
 ## Brand silhouettes · brands-03
 
 Adds 16 names with original source hashes and individual optical envelopes. Simple Icons references use pinned commits `17cd4ee07612198a1d8777a060d4100423762a8b` or historical v12.4.0 `32b07a5b798b84b97f2cbbb5b69ec7cb80472f73`. Historical AWS, Canva, Teams and Outlook silhouettes are recorded as such, not asserted to be current redesigns.
@@ -177,3 +294,165 @@ Individual comparisons and changes: `docs/review/atlas-craft-13/ledger.json`. Pi
 - Adapted Lucide constructions: `flashlight`, `axe`, `shovel`, `pickaxe`, `footprints`, `kayak`. ISC; licenses/lucide.txt.
 - Adapted Hugeicons Free constructions: `fishing-hook`. MIT; licenses/hugeicons-MIT.txt.
 - Adapted Tabler constructions: `campfire`. MIT; licenses/tabler.txt.
+
+
+## Atlas 16-science
+
+Individual comparisons and changes: `docs/review/atlas-craft-14/ledger.json`. Pinned source originals and checksums: `references/atlas-craft-14/manifest.json`.
+
+- Adapted Lucide constructions: `atom`, `flask-conical`, `test-tube`, `satellite`. ISC; licenses/lucide.txt.
+- Adapted Hugeicons Free constructions: `flask-round`, `orbit`. MIT; licenses/hugeicons-MIT.txt.
+- Adapted Phosphor constructions: `microscope`, `rocket`. MIT; licenses/phosphor.txt.
+- Adapted Tabler constructions: `telescope`, `dna`. MIT; licenses/tabler.txt.
+
+
+## Atlas 17-math
+
+Individual comparisons and changes: `docs/review/atlas-craft-15/ledger.json`. Pinned source originals and checksums: `references/atlas-craft-15/manifest.json`.
+
+- Adapted Lucide constructions: `pi`, `infinity`, `radical`, `function-square`. ISC; licenses/lucide.txt.
+- Adapted Tabler constructions: `sigma`, `fraction`. MIT; licenses/tabler.txt.
+- Adapted Hugeicons Free constructions: `plus-minus`. MIT; licenses/hugeicons-MIT.txt.
+- Independent construction: `equal`, `not-equal`, `divide`.
+
+
+## Atlas 18-education
+
+Individual comparisons and changes: `docs/review/atlas-craft-16/ledger.json`. Pinned source originals and checksums: `references/atlas-craft-16/manifest.json`.
+
+- Adapted Lucide constructions: `graduation-cap`, `school`, `presentation`, `library`, `pencil-ruler`. ISC; licenses/lucide.txt.
+- Adapted Phosphor constructions: `chalkboard`, `book-marked`, `diploma`, `globe-stand`. MIT; licenses/phosphor.txt.
+- Adapted Tabler constructions: `abacus`. MIT; licenses/tabler.txt.
+
+
+## Atlas 19-music
+
+Individual comparisons and changes: `docs/review/atlas-craft-17/ledger.json`. Pinned source originals and checksums: `references/atlas-craft-17/manifest.json`.
+
+- Adapted Lucide constructions: `guitar`, `piano`, `guitar-electric`, `vinyl-record`, `music-keyboard`. ISC; licenses/lucide.txt.
+- Adapted Hugeicons Free constructions: `drum`. MIT; licenses/hugeicons-MIT.txt.
+- Adapted Material Design Icons constructions: `violin`, `trumpet`, `saxophone`. Apache-2.0; licenses/mdi-music-adaptations.txt.
+- Adapted Phosphor constructions: `metronome`. MIT; licenses/phosphor.txt.
+
+Comparison only: unmodified OpenMoji 1F3BB by OpenMoji contributors, CC BY-SA 4.0; https://github.com/hfg-gmuend/openmoji/blob/3e01de523ddefe9c5e46a7765b15efef04bf9002/black/svg/1F3BB.svg. Full terms: licenses/openmoji-CC-BY-SA-4.0.txt. This original is not Master product geometry.
+
+Comparison only: unmodified OpenMoji 1F3BA by OpenMoji contributors, CC BY-SA 4.0; https://github.com/hfg-gmuend/openmoji/blob/3e01de523ddefe9c5e46a7765b15efef04bf9002/black/svg/1F3BA.svg. Full terms: licenses/openmoji-CC-BY-SA-4.0.txt. This original is not Master product geometry.
+
+Comparison only: unmodified OpenMoji 1F3B7 by OpenMoji contributors, CC BY-SA 4.0; https://github.com/hfg-gmuend/openmoji/blob/3e01de523ddefe9c5e46a7765b15efef04bf9002/black/svg/1F3B7.svg. Full terms: licenses/openmoji-CC-BY-SA-4.0.txt. This original is not Master product geometry.
+
+
+## Atlas 20-media
+
+Individual comparisons and changes: `docs/review/atlas-craft-18/ledger.json`. Pinned source originals and checksums: `references/atlas-craft-18/manifest.json`.
+
+- Adapted Phosphor constructions: `radio-receiver`, `speaker`, `film-reel`. MIT; licenses/phosphor.txt.
+- Adapted Lucide constructions: `tv`, `projector`, `cassette`, `film`, `clapperboard`. ISC; licenses/lucide.txt.
+- Adapted Hugeicons Free constructions: `podcast`. MIT; licenses/hugeicons-MIT.txt.
+- Adapted Tabler constructions: `antenna`. MIT; licenses/tabler.txt.
+
+
+## Atlas 21-tools
+
+Individual comparisons and changes: `docs/review/atlas-craft-19/ledger.json`. Pinned source originals and checksums: `references/atlas-craft-19/manifest.json`.
+
+- Adapted Lucide constructions: `hammer`, `toolbox`, `hard-hat`, `paint-roller`. ISC; licenses/lucide.txt.
+- Adapted Phosphor constructions: `screwdriver`, `nut`. MIT; licenses/phosphor.txt.
+- Adapted Hugeicons Free constructions: `drill`, `tape-measure`, `pocket-knife`. MIT; licenses/hugeicons-MIT.txt.
+- Adapted Material Design Icons constructions: `saw`. Apache-2.0; licenses/mdi-tool-adaptations.txt.
+
+Comparison only: unmodified OpenMoji 1FA9A by OpenMoji contributors, CC BY-SA 4.0; https://github.com/hfg-gmuend/openmoji/blob/3e01de523ddefe9c5e46a7765b15efef04bf9002/black/svg/1FA9A.svg. Full terms: licenses/openmoji-CC-BY-SA-4.0.txt. This original is not Master product geometry.
+
+
+## Atlas 22-industry
+
+Individual comparisons and changes: `docs/review/atlas-craft-20/ledger.json`. Pinned source originals and checksums: `references/atlas-craft-20/manifest.json`.
+
+- Adapted Lucide constructions: `factory`, `forklift`, `warehouse`, `container`, `robot-arm`, `construction-barrier`. ISC; licenses/lucide.txt.
+- Adapted Phosphor constructions: `crane-tower`, `wall`. MIT; licenses/phosphor.txt.
+- Adapted Hugeicons Free constructions: `crane-truck`. MIT; licenses/hugeicons-MIT.txt.
+- Adapted Tabler constructions: `excavator`. MIT; licenses/tabler.txt.
+
+
+## Atlas 23-energy
+
+Individual comparisons and changes: `docs/review/atlas-craft-21/ledger.json`. Pinned source originals and checksums: `references/atlas-craft-21/manifest.json`.
+
+- Adapted Phosphor constructions: `solar-panel`, `battery-warning`. MIT; licenses/phosphor.txt.
+- Adapted Tabler constructions: `wind-turbine`, `power-socket`. MIT; licenses/tabler.txt.
+- Adapted Lucide constructions: `battery-full`, `battery-low`, `battery-medium`, `car-battery`, `charging-station`. ISC; licenses/lucide.txt.
+- Adapted Hugeicons Free constructions: `transmission-tower`. MIT; licenses/hugeicons-MIT.txt.
+
+
+## Atlas 24-safety
+
+Individual comparisons and changes: `docs/review/atlas-craft-22/ledger.json`. Pinned source originals and checksums: `references/atlas-craft-22/manifest.json`.
+
+- Adapted Lucide constructions: `cctv`, `alarm-smoke`, `fire-extinguisher`, `vault`, `key-square`, `scan-face`. ISC; licenses/lucide.txt.
+- Adapted Phosphor constructions: `siren`, `seat-belt`. MIT; licenses/phosphor.txt.
+- Adapted Tabler constructions: `fire-hydrant`. MIT; licenses/tabler.txt.
+- Adapted Lucide Lab constructions: `safety-pin`. ISC; licenses/lucide.txt.
+
+
+## Atlas 25-commerce
+
+Individual comparisons and changes: `docs/review/atlas-craft-23/ledger.json`. Pinned source originals and checksums: `references/atlas-craft-23/manifest.json`.
+
+- Adapted Lucide constructions: `scale`, `gavel`, `stamp`, `shopping-basket`, `basket-check`, `basket-plus`. ISC; licenses/lucide.txt.
+- Adapted Phosphor constructions: `cash-register`. MIT; licenses/phosphor.txt.
+- Adapted Hugeicons Free constructions: `receipt-dollar`. MIT; licenses/hugeicons-MIT.txt.
+- Independent construction: `bag-check`, `bag-plus`.
+
+
+## Atlas 26-communications
+
+Individual comparisons and changes: `docs/review/atlas-craft-24/ledger.json`. Pinned source originals and checksums: `references/atlas-craft-24/manifest.json`.
+
+- Adapted Lucide constructions: `mailbox`, `satellite-dish`. ISC; licenses/lucide.txt.
+- Independent construction: `phone-incoming`, `phone-outgoing`, `phone-missed`, `phone-call`, `message-heart`, `message-dots`, `message-lock`, `message-search`.
+
+
+## Atlas 27-charts
+
+Individual comparisons and changes: `docs/review/atlas-craft-25/ledger.json`. Pinned source originals and checksums: `references/atlas-craft-25/manifest.json`.
+
+- Adapted Lucide constructions: `chart-radar`, `chart-candlestick`, `chart-network`, `chart-spline`, `chart-bell-curve`, `chart-combo`. ISC; licenses/lucide.txt.
+- Adapted Hugeicons Free constructions: `chart-waterfall`. MIT; licenses/hugeicons-MIT.txt.
+- Adapted Tabler constructions: `chart-bubble`, `chart-histogram`, `chart-sankey`. MIT; licenses/tabler.txt.
+
+
+## Atlas 28-geometry
+
+Individual comparisons and changes: `docs/review/atlas-craft-26/ledger.json`. Pinned source originals and checksums: `references/atlas-craft-26/manifest.json`.
+
+- Adapted Tabler constructions: `vector-square`. MIT; licenses/tabler.txt.
+- Adapted Phosphor constructions: `bezier-curve`. MIT; licenses/phosphor.txt.
+- Adapted Lucide constructions: `spline`, `vector-polygon`, `cone`, `cylinder`, `pyramid`. ISC; licenses/lucide.txt.
+- Independent construction: `pentagon`, `octagon`, `ellipse`.
+
+
+## Atlas 29-layout
+
+Individual comparisons and changes: `docs/review/atlas-craft-27/ledger.json`. Pinned source originals and checksums: `references/atlas-craft-27/manifest.json`.
+
+- Adapted Lucide constructions: `layout-list`, `layout-template`, `layout-panel-left`, `picture-in-picture`, `panels-top-left`. ISC; licenses/lucide.txt.
+- Adapted Phosphor constructions: `split-horizontal`, `split-vertical`. MIT; licenses/phosphor.txt.
+- Independent construction: `panel-bottom-open`, `panel-top-open`, `focus`.
+
+
+## Atlas 30-time
+
+Individual comparisons and changes: `docs/review/atlas-craft-28/ledger.json`. Pinned source originals and checksums: `references/atlas-craft-28/manifest.json`.
+
+- Adapted Lucide constructions: `hourglass`, `timer-reset`. ISC; licenses/lucide.txt.
+- Adapted Tabler constructions: `calendar-recurring`. MIT; licenses/tabler.txt.
+- Independent construction: `calendar-heart`, `calendar-lock`, `alarm-plus`, `alarm-minus`, `alarm-check`, `calendar-search`, `calendar-off`.
+
+
+## Atlas 31-celebration
+
+Individual comparisons and changes: `docs/review/atlas-craft-29/ledger.json`. Pinned source originals and checksums: `references/atlas-craft-29/manifest.json`.
+
+- Adapted Lucide constructions: `diamond-gem`, `balloon`, `gamepad`, `joystick`. ISC; licenses/lucide.txt.
+- Adapted Phosphor constructions: `crown`, `medal`. MIT; licenses/phosphor.txt.
+- Adapted Tabler constructions: `trophy`, `ribbon`, `party-popper`. MIT; licenses/tabler.txt.
+- Independent construction: `dice`.

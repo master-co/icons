@@ -1,0 +1,152 @@
+{
+  "batch": "09-home",
+  "cycle": "atlas-craft-05",
+  "familyRoot": "docs/review/atlas-craft-05/families",
+  "baseline": "references/atlas-craft-05/master-before.json",
+  "reviewer": "Codex (AI)",
+  "visualInspectionComplete": true,
+  "inspectedCombinations": [
+    {
+      "theme": "light",
+      "dpr": 1
+    },
+    {
+      "theme": "light",
+      "dpr": 2
+    },
+    {
+      "theme": "dark",
+      "dpr": 1
+    },
+    {
+      "theme": "dark",
+      "dpr": 2
+    }
+  ],
+  "effects": {
+    "dashes": {
+      "used": false,
+      "reason": "實體家具使用完整輪廓，沒有隱藏邊或未完成狀態。"
+    },
+    "opacity": {
+      "used": false,
+      "reason": "前後部件透過構造與留白分離，不靠淡化處理相接。"
+    },
+    "gradients": {
+      "used": false,
+      "reason": "居家器具以單色形態表意，不需要反光漸層。"
+    }
+  },
+  "decisions": [
+    {
+      "name": "bed",
+      "groupRoot": "docs/review/atlas-craft-01/32b",
+      "confusableWith": [
+        "sofa",
+        "desk"
+      ],
+      "sourceObservation": "Lucide採無人物側視床、以直線分出枕部；Tabler加上圓頭人物及較短床墊。Master選空床，保持床頭、枕部與床腳；初稿床墊下角與床腳產生小凹口，已移除下角彎折。",
+      "reason": "床墊只有上緣轉角，下緣直接與支柱相接；枕部保持寬孔，不在窄區再套一個枕頭框。保留床腳以表達支承，九種母版無裁切。",
+      "adaptedFrom": "Lucide"
+    },
+    {
+      "name": "sofa",
+      "groupRoot": "docs/review/atlas-craft-01/32",
+      "confusableWith": [
+        "armchair",
+        "bed"
+      ],
+      "sourceObservation": "Lucide有寬背、扶手與短腳，Tabler用相似正面構造但不突出腳。Master保留短腳和寬靠背，以連續座面包住兩個扶手，中央只有一道背墊分界。",
+      "reason": "扶手與座面形成共同外輪廓，靠背線裁在前景外側而不穿入座面；下層座面孔有足夠高度，短腳清楚交代支承。",
+      "adaptedFrom": "Lucide"
+    },
+    {
+      "name": "armchair",
+      "groupRoot": "docs/review/atlas-craft-01/32",
+      "confusableWith": [
+        "sofa",
+        "bed"
+      ],
+      "sourceObservation": "Lucide的扶手併入下方框，Phosphor用外凸扶手球面。Master採與沙發共用的座面結構，縮窄單座並省去中間背墊分界，保持扶手曲面。",
+      "reason": "單座靠背、連續扶手及短腳共同建立椅子姿態，16px保留寬座孔；底部圓角按預設實際改變，扶手本身保持曲面。",
+      "adaptedFrom": "Lucide"
+    },
+    {
+      "name": "lamp",
+      "groupRoot": "docs/review/atlas-craft-01/33",
+      "confusableWith": [
+        "desk",
+        "lightbulb"
+      ],
+      "sourceObservation": "Lucide採梯形罩、窄立桿和小矩形底座，Phosphor採梯形罩、短橫底座及拉繩。Master採短橫底座，省略拉繩與底座內孔，保留罩、桿、承接點的比例。",
+      "reason": "燈罩以實際小轉角形成梯形，寬底與直桿保持穩定重心；桿從罩外緣接出，不刺入罩內。簡化底座仍保留明確支承。",
+      "adaptedFrom": "Phosphor"
+    },
+    {
+      "name": "desk",
+      "groupRoot": "docs/review/atlas-craft-01/33",
+      "confusableWith": [
+        "bed",
+        "sofa"
+      ],
+      "sourceObservation": "Phosphor以雙抽屜、短把手及兩腳表意；Tabler使用右側抽屜櫃。Master選雙抽屜桌，讓桌面保持寬度；16px刪去把手，20/24保留兩筆短把手。",
+      "reason": "桌面、抽屜分界和直腳交代書桌構造；16px不將短把手塞進兩個小孔，20/24把手與框線仍有可見留白。",
+      "adaptedFrom": "Phosphor"
+    },
+    {
+      "name": "door-open",
+      "groupRoot": "docs/review/atlas-craft-01/34",
+      "confusableWith": [
+        "door-closed",
+        "lock"
+      ],
+      "sourceObservation": "Lucide用斜門板與外框表示開門，Phosphor以正面門板加窄側縫表示。Master採向外打開的斜板，讓門板和外框間形成較寬通道，使用單點把手。",
+      "reason": "門板在前、門框和門檻在後，按實際外殼裁去遮住部分；鉸鏈端保持連接，外露門框通道不縮成16px細縫。",
+      "adaptedFrom": "Lucide"
+    },
+    {
+      "name": "door-closed",
+      "groupRoot": "docs/review/atlas-craft-01/34",
+      "confusableWith": [
+        "door-open",
+        "lock"
+      ],
+      "sourceObservation": "Lucide與Tabler均採門框和單點把手，方向不同。Master使用與開門一致的右側把手和底部門檻，省去不影響關門語意的第二層門框。",
+      "reason": "閉門輪廓與把手完整，頂角隨預設實際改變；門檻與兩側立柱相接，不因增加留白切斷構造，也不堆雙層框線。",
+      "adaptedFrom": "Lucide"
+    },
+    {
+      "name": "fence",
+      "groupRoot": "docs/review/atlas-craft-01/35",
+      "confusableWith": [
+        "door-closed",
+        "desk"
+      ],
+      "sourceObservation": "Lucide有三片窄直柵與兩道橫桿，Tabler用兩片寬柵和單道前橫板。Master採兩片寬柵，保留尖頂與一塊橫板，讓各段孔洞在16px不被多重交叉吃掉。",
+      "reason": "兩片直柵共同被前橫板遮住，橫板內不殘留直線；尖頂和下方腳段保留，角型調整不抹掉木柵輪廓。",
+      "adaptedFrom": "Tabler"
+    },
+    {
+      "name": "bathtub",
+      "groupRoot": "docs/review/atlas-craft-01/35",
+      "confusableWith": [
+        "soup",
+        "cooking-pot"
+      ],
+      "sourceObservation": "Lucide採短龍頭和矩形浴缸，Phosphor採圓腹並加掛巾。Master保留長曲龍頭、圓腹與雙腳，取消掛巾的小框，用寬口和低腹表現浴缸。",
+      "reason": "浴缸壁向下收束並以寬弧托住腹部，兩腳清楚接到缸底；龍頭弧與缸口保持分離，沒有額外套框或平行缸緣。",
+      "adaptedFrom": "Phosphor"
+    },
+    {
+      "name": "shower-head",
+      "groupRoot": "docs/review/atlas-craft-01/35",
+      "confusableWith": [
+        "cloud-rain",
+        "bathtub"
+      ],
+      "sourceObservation": "Lucide用弧形罩和分散水點，Phosphor用三角罩及短水點群。Master保留弧罩與斜向出水，16px改為四個疏落水點，20/24八點。",
+      "reason": "弧罩縮回安全畫布並與連接管收口，水點從出水面斜向展開；小尺寸減少數量及重排位置，避免照比例縮小整片點陣。",
+      "adaptedFrom": "Lucide"
+    }
+  ]
+}

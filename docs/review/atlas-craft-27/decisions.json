@@ -1,0 +1,152 @@
+{
+  "batch": "29-layout",
+  "cycle": "atlas-craft-27",
+  "familyRoot": "docs/review/atlas-craft-27/final",
+  "baseline": "references/atlas-craft-27/master-before.json",
+  "reviewer": "Codex (AI)",
+  "visualInspectionComplete": true,
+  "inspectedCombinations": [
+    {
+      "theme": "light",
+      "dpr": 1
+    },
+    {
+      "theme": "light",
+      "dpr": 2
+    },
+    {
+      "theme": "dark",
+      "dpr": 1
+    },
+    {
+      "theme": "dark",
+      "dpr": 2
+    }
+  ],
+  "effects": {
+    "dashes": {
+      "used": false,
+      "reason": "可見版面邊界和視窗操作以實線表達，不涉及隱藏區域或待選取範圍。"
+    },
+    "opacity": {
+      "used": false,
+      "reason": "區塊層級由完整輪廓與透明避讓表達，不淡化邊界掩飾相接問題。"
+    },
+    "gradients": {
+      "used": false,
+      "reason": "平面視窗和方向符號不需要光照變化，維持單色清楚輪廓。"
+    }
+  },
+  "decisions": [
+    {
+      "name": "layout-list",
+      "groupRoot": "docs/review/atlas-craft-01/117-layout-blocks",
+      "confusableWith": [
+        "list",
+        "layout-template"
+      ],
+      "sourceObservation": "Lucide方縮圖配兩條文字線較Hugeicons短長線整齊。最新稿採Lucide兩列構造；完稿回比16px兩個方孔及文字線上下間距仍清楚，縮圖與文字間不擠成一團，rounded也保留方縮圖而非圓點。",
+      "reason": "兩列共用方框尺寸和文字起點，四條文字線等長；小半徑保留縮圖的矩形形態並讓兩列空隙一致。",
+      "adaptedFrom": "Lucide"
+    },
+    {
+      "name": "layout-template",
+      "groupRoot": "docs/review/atlas-craft-01/117-layout-blocks",
+      "confusableWith": [
+        "layout-panel-left",
+        "dashboard"
+      ],
+      "sourceObservation": "Lucide的上橫幅與下方不等寬區塊比Hugeicons對調寬度更貼近既有版面方向。最新稿採Lucide構圖；完稿回比16px下方窄框內孔仍開放，上下和左右走廊均清楚，三個區域沒有黏合。",
+      "reason": "橫幅、寬內容區與窄側欄各有完整邊界；用共同小半徑控制內孔，不讓rounded壓縮窄側欄。",
+      "adaptedFrom": "Lucide"
+    },
+    {
+      "name": "layout-panel-left",
+      "groupRoot": "docs/review/atlas-craft-01/117-layout-blocks",
+      "confusableWith": [
+        "panel-left",
+        "layout-template"
+      ],
+      "sourceObservation": "Lucide較方的長欄與Hugeicons較圓的卡片都能表達分區。最新稿採Lucide結構；完稿回比16px長欄和兩張右卡片的空白通道清晰，與共用外殼的panel-left有明確差別。",
+      "reason": "左長欄與右側上下卡片保持相同寬度及共同外邊界；獨立區塊之間保留走廊，避免用共同外框改變分欄語意。",
+      "adaptedFrom": "Lucide"
+    },
+    {
+      "name": "split-horizontal",
+      "groupRoot": "docs/review/atlas-craft-01/118-split-directions",
+      "confusableWith": [
+        "split-vertical",
+        "layout-columns"
+      ],
+      "sourceObservation": "Phosphor的兩條分界與向外箭頭比MDI實心箭翼輕盈。最新稿採Phosphor構造；完稿回比16px中央縫隙清晰、箭頭方向可讀，sharp箭桿接於箭翼而無尖端多出的帽。",
+      "reason": "兩條平行界線共用長度，左右箭頭沿同一軸向外；箭翼與箭桿用實際墨線收口，保留分界和向外拆分的動作。",
+      "adaptedFrom": "Phosphor"
+    },
+    {
+      "name": "split-vertical",
+      "groupRoot": "docs/review/atlas-craft-01/118-split-directions",
+      "confusableWith": [
+        "split-horizontal",
+        "layout-rows"
+      ],
+      "sourceObservation": "Phosphor上下拆分比MDI厚重箭頭有較好的原生留白。最新稿沿用同一家族旋轉構造；完稿回比16px兩橫線和上下箭頭之間仍有方向節奏，沒有變成一團十字。",
+      "reason": "與水平拆分共用分界長度、間距和箭翼尺度，座標明確旋轉成上下構造；保留相接的動作箭桿，不加不必要斷口。",
+      "adaptedFrom": "Phosphor"
+    },
+    {
+      "name": "picture-in-picture",
+      "groupRoot": "docs/review/atlas-craft-01/119-pip-panels",
+      "confusableWith": [
+        "panels-top-left",
+        "copy"
+      ],
+      "sourceObservation": "Lucide小視窗與主視窗分離比Phosphor相接的分區更能表達浮動前景。最新稿採Lucide構造；完稿回比16px前景完整方孔清晰，主視窗切口留白連續，sharp與rounded皆無多餘碎角。",
+      "reason": "前景小視窗使用完整封閉輪廓，後方主視窗按其實際描邊外擴避讓；透明切口保留前後關係並避免線條黏合。",
+      "adaptedFrom": "Lucide"
+    },
+    {
+      "name": "panels-top-left",
+      "groupRoot": "docs/review/atlas-craft-01/119-pip-panels",
+      "confusableWith": [
+        "panel-left",
+        "panel-top"
+      ],
+      "sourceObservation": "Lucide較方外殼比Hugeicons大圓角更符合現有面板母型。最新稿在Master既有外殼加入上欄與左欄分界，構圖採Lucide；完稿回比16px三個區域都有可辨空腔，內線不穿出框角。",
+      "reason": "沿用既有面板外殼，內分界在實際殼體墨線內收口；上橫欄與左側欄共用交點，不疊畫兩個獨立矩形。",
+      "adaptedFrom": "Lucide"
+    },
+    {
+      "name": "panel-bottom-open",
+      "groupRoot": "docs/review/atlas-craft-01/120-panel-focus",
+      "confusableWith": [
+        "panel-bottom",
+        "panel-top-open"
+      ],
+      "sourceObservation": "Lucide與Tabler均以向上箭翼表示底面板展開。最新稿沿用Master底面板母型加通用箭翼；完稿回比16px箭翼與頂框及分界都有可見間距，框體比例與既有面板一致。",
+      "reason": "保留現有底面板的外框和分界位置，在主空腔中央放向上箭翼；以原生留白限制箭翼高度，不另畫一套近似母型。",
+      "adaptedFrom": null
+    },
+    {
+      "name": "panel-top-open",
+      "groupRoot": "docs/review/atlas-craft-01/120-panel-focus",
+      "confusableWith": [
+        "panel-top",
+        "panel-bottom-open"
+      ],
+      "sourceObservation": "Lucide與Tabler都在上欄下方加入向下箭翼。最新稿沿用Master頂面板母型；完稿回比16px箭尖與底框分開，箭翼與上分界不黏合，上下兩個展開狀態有一致密度。",
+      "reason": "與底部展開狀態共用箭翼尺度，沿既有頂面板空腔配置向下動作；外殼和結構內線保持同一家族。",
+      "adaptedFrom": null
+    },
+    {
+      "name": "focus",
+      "groupRoot": "docs/review/atlas-craft-01/120-panel-focus",
+      "confusableWith": [
+        "scan",
+        "scan-face"
+      ],
+      "sourceObservation": "Lucide中央空圈與Tabler實心點皆表達對焦。最新稿沿用Master掃描框角並置入通用空圈；完稿回比16px中央圈孔清楚且四周留白均勻，與帶橫線的scan有清楚差異。",
+      "reason": "四個框角沿用既有scan母型，以單一中央空圈代替掃描線；保留對焦區域，不添加鏡頭同心圈或十字造成密度。",
+      "adaptedFrom": null
+    }
+  ]
+}

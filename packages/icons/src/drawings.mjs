@@ -3,7 +3,8 @@ import { expansion } from './expansion/index.mjs';
 import { coreDrawings } from './families/core.mjs';
 import { additions } from './families/index.mjs';
 import {brandDrawings} from './brands.mjs';
-export const drawings={...coreDrawings,...additions,...expansion,...brandDrawings};
+import {atlas} from './atlas/index.mjs';
+export const drawings={...coreDrawings,...additions,...expansion,...atlas,...brandDrawings};
 
 export function draw(name,g){
   if(!drawings[name])throw new Error(`Missing drawing: ${name}`);

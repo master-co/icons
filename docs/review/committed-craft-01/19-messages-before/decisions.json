@@ -1,0 +1,20 @@
+{
+  "reviewer": "Codex (AI)",
+  "notes": {
+    "message": "保留：矩形對話框和左下尾巴保持清楚的一體輪廓，尾巴與底邊的凹接點沒有重疊墨塊；兩份來源採圓泡泡，只用於對話語意及尾巴比較，現稿矩形策略與message-text一致。",
+    "message-text": "保留：兩條左齊文字線長短有節奏，16px仍與左右邊界分開；Lucide三行較密、Iconoir三行長度不同，現稿兩行足以表達文字，保留底部尾巴周圍空白。",
+    "messages": "保留：前方完整框與後方右邊／底部構成兩人對談，前景下沿和後景上沿間有足夠留白；Lucide同前後順序、Tabler相反，現稿兩個尾巴方向相反且不相撞。",
+    "message-check": "保留：內置勾號重心位於矩形空腔中央而非含尾巴的整體中心，長翼不碰上框；Lucide內置、Tabler外掛較密，現稿低對比下仍保留勾與對話框兩個訊號。",
+    "message-plus": "保留：十字與message-check共用空腔中心，四周留白均衡，16px十字與上框不合併；Lucide同內置策略，Tabler外掛提供另一種構圖，無需改動本套一致家族。",
+    "message-circle-question": "保留：圓形對話框內的問號上弧、彎曲尾及下點彼此分明，尾巴在左下避免與下點疊置；Lucide內置、Tabler外掛，現稿16px問號仍可讀，外框弧線接尾順暢。",
+    "message-circle-warning": "保留：驚嘆號直桿和下點置於圓泡泡內，底點與尾部空間分離；兩份來源的內外置策略可對照，現稿內置與question同母型，低對比仍清楚。",
+    "quote": "保留：成對的空心引號上部方塊與下部回勾形成閉合字形，兩字間距穩定；Lucide也用封閉輪廓、Tabler用方框加尾線。現稿16px內部空白仍可見，sharp及rounded的尾勾各自自然。"
+  },
+  "modified": [],
+  "effects": "無虛線、透明度或漸層；重疊訊息以實際缺口表達前後，文字行數按原生尺寸保持清楚。",
+  "viewed": [
+    "1-dpr1.png",
+    "2-dpr1.png"
+  ],
+  "scope": "16/20/24 × sharp/soft/rounded; light/dark; 55% alongside text"
+}

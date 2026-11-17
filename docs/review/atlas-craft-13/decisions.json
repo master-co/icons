@@ -1,0 +1,152 @@
+{
+  "batch": "15-outdoor",
+  "cycle": "atlas-craft-13",
+  "familyRoot": "docs/review/atlas-craft-13/final",
+  "baseline": "references/atlas-craft-13/master-before.json",
+  "reviewer": "Codex (AI)",
+  "visualInspectionComplete": true,
+  "inspectedCombinations": [
+    {
+      "theme": "light",
+      "dpr": 1
+    },
+    {
+      "theme": "light",
+      "dpr": 2
+    },
+    {
+      "theme": "dark",
+      "dpr": 1
+    },
+    {
+      "theme": "dark",
+      "dpr": 2
+    }
+  ],
+  "effects": {
+    "dashes": {
+      "used": false,
+      "reason": "器具及步態以完整輪廓辨識，不需裝飾虛線。"
+    },
+    "opacity": {
+      "used": false,
+      "reason": "單色輪廓與留白已區分各部件，不需漸淡分層。"
+    },
+    "gradients": {
+      "used": false,
+      "reason": "平面物件圖示不以連續漸層模擬材質。"
+    }
+  },
+  "decisions": [
+    {
+      "name": "binoculars",
+      "groupRoot": "docs/review/atlas-craft-01/62-binoculars-flashlight-axe",
+      "confusableWith": [
+        "glasses",
+        "camera"
+      ],
+      "sourceObservation": "Lucide用共同筒身與前鏡頭表達雙筒，Phosphor的外擴鏡筒有更自然的整體收放。前稿像直筒貼圓圈，已依使用者回饋重建輪廓；最新稿回比後，筒身斜邊自然接入圓形物鏡，兩側共用尺度和中央橋樑，原生16/20/24仍讀成完整物件。",
+      "reason": "以連續筒身輪廓取代原稿直筒與圓的拼接，斜邊按圓的切點承接物鏡；鏡面內界裁在筒身內，橋樑保留清楚的中央空隙。",
+      "adaptedFrom": "Phosphor"
+    },
+    {
+      "name": "flashlight",
+      "groupRoot": "docs/review/atlas-craft-01/62-binoculars-flashlight-axe",
+      "confusableWith": [
+        "lamp",
+        "bottle"
+      ],
+      "sourceObservation": "Lucide有弧形收肩與寬燈頭，Phosphor採直接的斜肩。最新稿選弧肩以表現握持筒身，完稿與兩份來源回比，燈頭、肩部與長筒的比例連續，開關與燈框之間有獨立留白，沒有加入反光或防滑紋。",
+      "reason": "保留寬燈頭、曲線收肩和單筆開關；燈框內線收在外殼內，底角按角型做實際微圓，曲肩不因sharp變成折線。",
+      "adaptedFrom": "Lucide"
+    },
+    {
+      "name": "axe",
+      "groupRoot": "docs/review/atlas-craft-01/62-binoculars-flashlight-axe",
+      "confusableWith": [
+        "pickaxe",
+        "shovel"
+      ],
+      "sourceObservation": "Lucide的寬弧刃與斧背收束比Tabler的窄刃更有重量和工具特徵。最新稿保留該連續頭部，握柄與十字鎬共用方向；回比16/20/24時刃面保持寬闊，柄頭相接而不穿入刃面孔洞。",
+      "reason": "弧刃、頸部與斧背維持連續輪廓，握柄依頭部外緣裁切，避免方端帽侵入刃面；柄端以各角型的半徑收口。",
+      "adaptedFrom": "Lucide"
+    },
+    {
+      "name": "shovel",
+      "groupRoot": "docs/review/atlas-craft-01/63-shovel-pickaxe-hook",
+      "confusableWith": [
+        "axe",
+        "pickaxe"
+      ],
+      "sourceObservation": "Lucide保留封閉握孔與鏟面，Tabler用T握把及圓腹鏟面。最新稿採D形握把、長直柄與收尖鏟腹；完稿回比後，握孔和鏟面大小清楚分級，較前稿無需再加內線，尖腹保留鏟土用途。",
+      "reason": "在共同軸線上安排D握把、桿與曲面鏟頭，再旋轉整個構造；桿線止於握把及鏟頭外側，孔內不留多餘短桿。",
+      "adaptedFrom": "Lucide"
+    },
+    {
+      "name": "pickaxe",
+      "groupRoot": "docs/review/atlas-craft-01/63-shovel-pickaxe-hook",
+      "confusableWith": [
+        "axe",
+        "shovel"
+      ],
+      "sourceObservation": "Lucide的彎尖鎬臂有明確受力曲線，Hugeicons接座較緊湊。前稿中央矩形偏重，最新稿略收窄接座，保留兩側彎尖；回比後接座不再搶走鎬臂的輪廓，原生16px的柄孔和兩側空腔仍各自可讀。",
+      "reason": "縮窄中央接座，曲臂在接座邊界收口；柄與斧頭共用握持寬度、方向與端部語言。不是只加大圓角掩蓋粗重中心。",
+      "adaptedFrom": "Lucide"
+    },
+    {
+      "name": "fishing-hook",
+      "groupRoot": "docs/review/atlas-craft-01/63-shovel-pickaxe-hook",
+      "confusableWith": [
+        "anchor",
+        "umbrella"
+      ],
+      "sourceObservation": "Lucide將鉤身斜置，Hugeicons採直立J形，穿線眼與鉤尖更直接。最新稿選直立構造並放寬鉤腹；完稿回比後上端小孔、長柄與寬回彎有清楚主次，鉤尖保留尖角而不額外增加倒鉤小線。",
+      "reason": "穿線眼獨立保留孔徑，線頭與鉤柄按孔外緣收口；J形腹部使用連續曲線，左右切線接回直柄，鉤尖保持必要方向。",
+      "adaptedFrom": "Hugeicons Free"
+    },
+    {
+      "name": "campfire",
+      "groupRoot": "docs/review/atlas-craft-01/60-campfire-footprints",
+      "confusableWith": [
+        "droplet",
+        "tent"
+      ],
+      "sourceObservation": "Phosphor以雙層對稱火焰表達燃燒，Tabler以偏斜單火舌配交叉木柴。最新稿選單火舌，略放寬火腹並連續收向尖端；回比後在16px仍有燃燒姿態，無需加一層內焰壓縮空間。",
+      "reason": "火舌的偏斜與收束直接放在外輪廓；木柴交叉位於火腹下方，火焰與柴頂保留空隙，兩筆柴線共用斜率。",
+      "adaptedFrom": "Tabler"
+    },
+    {
+      "name": "footprints",
+      "groupRoot": "docs/review/atlas-craft-01/60-campfire-footprints",
+      "confusableWith": [
+        "shoe",
+        "person-walking"
+      ],
+      "sourceObservation": "Lucide連續鞋底包含腳掌收腰和鞋跟，Phosphor將鞋跟分離。最新稿選Lucide連續鞋底；完稿回比，左右前後錯落和足弓內收形成步行節奏，鞋跟分界仍可辨，不需要再加鞋底紋。",
+      "reason": "保留兩側不同朝向的足弓曲線與錯落高度；鞋跟分界裁在鞋底外輪廓內，避免小尺寸端帽突出外緣。",
+      "adaptedFrom": "Lucide"
+    },
+    {
+      "name": "hiking",
+      "groupRoot": "docs/review/atlas-craft-01/61-hiking-kayak",
+      "confusableWith": [
+        "person-walking",
+        "running"
+      ],
+      "sourceObservation": "Phosphor的外置背包與長杖有清楚留白，Tabler將背包和雙臂緊密相接。最新稿採Phosphor的分組方式，保留前傾軀幹、跨步和登山杖；完稿回比16/20/24，背包不黏肩部，杖與前腿分開，與一般步行圖示有明確差別。",
+      "reason": "背包依身體傾角放置，肩臂以連續曲線接入杖頂；髖部兩腿共接，sharp肩部使用平切以避免端帽凸點，不加入速度線或山峰補語意。",
+      "adaptedFrom": "Phosphor"
+    },
+    {
+      "name": "kayak",
+      "groupRoot": "docs/review/atlas-craft-01/61-hiking-kayak",
+      "confusableWith": [
+        "sailboat",
+        "ship"
+      ],
+      "sourceObservation": "Lucide以雙尖船身和雙葉槳保留大面積留白，Tabler增加座艙橫線。最新稿沿用Lucide的簡約構造，重畫兩條相對船腹曲線；完稿回比後，修長雙尖與橫向槳已足以表達獨木舟，無需填入密集座艙分隔。",
+      "reason": "以相對的兩條曲線塑造雙尖船體，雙槳葉共用尺寸與圓腹，桿線收在槳葉外側；保留船身內部空白，控制交叉筆畫數量。",
+      "adaptedFrom": "Lucide"
+    }
+  ]
+}

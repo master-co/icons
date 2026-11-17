@@ -1,0 +1,152 @@
+{
+  "batch": "22-industry",
+  "cycle": "atlas-craft-20",
+  "familyRoot": "docs/review/atlas-craft-20/final",
+  "baseline": "references/atlas-craft-20/master-before.json",
+  "reviewer": "Codex (AI)",
+  "visualInspectionComplete": true,
+  "inspectedCombinations": [
+    {
+      "theme": "light",
+      "dpr": 1
+    },
+    {
+      "theme": "light",
+      "dpr": 2
+    },
+    {
+      "theme": "dark",
+      "dpr": 1
+    },
+    {
+      "theme": "dark",
+      "dpr": 2
+    }
+  ],
+  "effects": {
+    "dashes": {
+      "used": false,
+      "reason": "機械與建物均呈現可見外形，不需虛線暗示隱藏部件。"
+    },
+    "opacity": {
+      "used": false,
+      "reason": "透過完整留白和接縫區分部件，無須以淡化掩蓋擁擠。"
+    },
+    "gradients": {
+      "used": false,
+      "reason": "以單色輪廓傳達工業設備，不需金屬或磚面材質漸層。"
+    }
+  },
+  "decisions": [
+    {
+      "name": "factory",
+      "groupRoot": "docs/review/atlas-craft-01/88-factory-tower-truck",
+      "confusableWith": [
+        "warehouse",
+        "building"
+      ],
+      "sourceObservation": "Lucide以煙囪與鋸齒屋頂形成連續輪廓，Phosphor將煙囪放右側、窗改短線。最新稿採Lucide構造，擴開下方窗點間距；完稿回比16/20/24，三個窗點和屋頂分離，煙囪與廠房共用外殼，無需補煙霧。",
+      "reason": "煙囪、鋸齒屋頂與底部一體成形；煙囪頂角和底角依角型改實際半徑，屋頂折點保持較小圓角，三點窗不再套細框。",
+      "adaptedFrom": "Lucide"
+    },
+    {
+      "name": "crane-tower",
+      "groupRoot": "docs/review/atlas-craft-01/88-factory-tower-truck",
+      "confusableWith": [
+        "crane-truck",
+        "construction-barrier"
+      ],
+      "sourceObservation": "Phosphor塔身有兩個大格，Hugeicons窄塔身配漸收吊臂。最新稿採Phosphor寬塔身與開放水平臂，吊鉤用連續圓弧；完稿回比，16px塔格沒有被額外斜撐填滿，垂吊鉤與塔身保持大空白。",
+      "reason": "塔身與兩個橫向構件按共同位置接合，上部保留斜向帽架；吊線連入鉤底圓弧，避免額外的小圈與雙線吊臂。",
+      "adaptedFrom": "Phosphor"
+    },
+    {
+      "name": "crane-truck",
+      "groupRoot": "docs/review/atlas-craft-01/88b-truck",
+      "confusableWith": [
+        "crane-tower",
+        "excavator"
+      ],
+      "sourceObservation": "Tabler是輪式卡車，Hugeicons是履帶移動吊車，兩者都具移動吊裝語意。最新稿採Hugeicons駕駛艙與抬升吊臂的構造，底盤改成雙輪；完稿回比，較Tabler少了密集車頭分格，保留車輪孔與清楚吊鉤，並修掉sharp吊臂侵入駕駛艙的小刺。",
+      "reason": "駕駛艙上弧自然接側壁，斜吊臂從機身上緣伸出；接點按艙體外側裁線，底盤線止於兩個輪胎外緣，輪式底盤與履帶挖土機分開。",
+      "adaptedFrom": "Hugeicons Free"
+    },
+    {
+      "name": "forklift",
+      "groupRoot": "docs/review/atlas-craft-01/89-forklift-warehouse-excavator",
+      "confusableWith": [
+        "crane-truck",
+        "excavator"
+      ],
+      "sourceObservation": "Lucide的門架、斜向駕駛架與前伸貨叉構造簡潔，Tabler另有方形頂棚。最新稿採Lucide的開放側面；完稿回比，16px駕駛空間沒有再放內框，貨叉和門架相連，輪孔與車身的空白足以分組。",
+      "reason": "駕駛架由上弧接斜支撐，前方高門架直接下折為貨叉；車身線在車輪外緣收口，保留兩輪和空腔，不加入貨物遮住主要辨識構造。",
+      "adaptedFrom": "Lucide"
+    },
+    {
+      "name": "warehouse",
+      "groupRoot": "docs/review/atlas-craft-01/89-forklift-warehouse-excavator",
+      "confusableWith": [
+        "factory",
+        "home"
+      ],
+      "sourceObservation": "Lucide山形屋頂與大捲門明確，Phosphor用單斜屋頂和較矮捲門。最新稿採Lucide寬山形輪廓，但只留一條門內橫線；完稿回比16px，捲門孔較開闊，頂面、門楣與兩側牆仍可辨，不堆疊狹窄橫槽。",
+      "reason": "屋頂、側牆與底部連成完整建築，捲門共用底邊並保留單道捲片分界；底角按家族角型改實際半徑，門上方維持足夠空白。",
+      "adaptedFrom": "Lucide"
+    },
+    {
+      "name": "excavator",
+      "groupRoot": "docs/review/atlas-craft-01/89b-excavator",
+      "confusableWith": [
+        "crane-truck",
+        "forklift"
+      ],
+      "sourceObservation": "Tabler抬高折臂與弧形鏟斗讓動作清楚，Hugeicons鏟斗較直立而吊臂短。最新稿採Tabler姿態，把履帶內輪簡為兩點；完稿回比16px，折臂和鏟斗空腔仍分明，修掉駕駛艙和吊臂交接內角的凸刺。",
+      "reason": "履帶以連續膠囊外殼支承機身，內部兩點表示輪軸；駕駛艙頂弧接入折臂，鏟斗有斜切開口及圓腹，接點以實際墨線裁在艙與斗外側。",
+      "adaptedFrom": "Tabler"
+    },
+    {
+      "name": "container",
+      "groupRoot": "docs/review/atlas-craft-01/90b-container-robot",
+      "confusableWith": [
+        "package",
+        "warehouse"
+      ],
+      "sourceObservation": "Lucide的立體箱角與垂直壓紋比Phosphor門扣視角更適合呈現貨櫃。最新稿採Lucide構造，16px壓紋減成一筆，20/24保留兩筆；完稿回比，側面小格更開放，另將壓紋收在側面內，消除sharp頂面上的小凸刺。",
+      "reason": "三個可見平面共用轉角和分界，側面壓紋按各尺寸分配；壓紋墨線裁在側面多邊形內，不穿過斜頂邊進入上表面。",
+      "adaptedFrom": "Lucide"
+    },
+    {
+      "name": "robot-arm",
+      "groupRoot": "docs/review/atlas-craft-01/90b-container-robot",
+      "confusableWith": [
+        "crane-tower",
+        "person-standing"
+      ],
+      "sourceObservation": "Lucide用圓鉸點與開放夾爪表現機械臂，MDI有更粗的平行支柱及三線夾爪。最新稿採Lucide較輕的輪廓，稍放大關節與夾口；完稿回比，16px仍見關節孔，連桿共用同一軸線，sharp底座接點已消除端帽凸角。",
+      "reason": "支柱、鉸點與水平臂按共同關節位置構造，兩片夾爪由同一頂點展開；支柱接底座使用平端收口，圈內不露出連桿線，不添第二圈鉸鏈。",
+      "adaptedFrom": "Lucide"
+    },
+    {
+      "name": "construction-barrier",
+      "groupRoot": "docs/review/atlas-craft-01/91-barrier-wall",
+      "confusableWith": [
+        "wall",
+        "fence"
+      ],
+      "sourceObservation": "Lucide斜紋板與長直腳簡潔，Tabler另加水平腳掌。最新稿保留Lucide構造並將斜紋減為兩筆；完稿回比16px，斜向白帶完整而不過密，警示板與支柱相接，未加入狹窄反光小格。",
+      "reason": "長橫板與兩根支柱形成明確施工圍欄，兩筆斜紋裁在板內，支柱只露出板外；主板按角型微調真實角半徑，不以虛線或材質裝飾補語意。",
+      "adaptedFrom": "Lucide"
+    },
+    {
+      "name": "wall",
+      "groupRoot": "docs/review/atlas-craft-01/91-barrier-wall",
+      "confusableWith": [
+        "construction-barrier",
+        "layout-columns"
+      ],
+      "sourceObservation": "Lucide是較高的方形磚面，Phosphor用較寬的三層錯縫磚。最新稿採Phosphor橫向比例；完稿回比16/20/24，三層高度與中排兩側小磚空間均衡，錯縫可辨，沒有再加第四層讓縫線黏合。",
+      "reason": "牆面用三層錯縫分割，上下層中線對齊，中層左右各一條短縫；所有內線收在外框內，維持橫向建材的比例和均勻磚層。",
+      "adaptedFrom": "Phosphor"
+    }
+  ]
+}

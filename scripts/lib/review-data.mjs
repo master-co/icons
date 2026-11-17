@@ -6,5 +6,6 @@ export async function comparisonReferences(){
   return {references:manifests.flatMap(x=>x.references)};
 }
 export async function beforeDefinitions(){
-  return json((await json('references/current.json')).before);
+  const config=await json('references/current.json');
+  return Object.assign({},...await Promise.all([config.before,...(config.additionalBefore||[])].map(json)));
 }

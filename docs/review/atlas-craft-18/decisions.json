@@ -1,0 +1,152 @@
+{
+  "batch": "20-media",
+  "cycle": "atlas-craft-18",
+  "familyRoot": "docs/review/atlas-craft-18/final",
+  "baseline": "references/atlas-craft-18/master-before.json",
+  "reviewer": "Codex (AI)",
+  "visualInspectionComplete": true,
+  "inspectedCombinations": [
+    {
+      "theme": "light",
+      "dpr": 1
+    },
+    {
+      "theme": "light",
+      "dpr": 2
+    },
+    {
+      "theme": "dark",
+      "dpr": 1
+    },
+    {
+      "theme": "dark",
+      "dpr": 2
+    }
+  ],
+  "effects": {
+    "dashes": {
+      "used": false,
+      "reason": "媒體設備的輪廓與構造邊緣完整呈現，沒有需虛線表示的隱藏段。"
+    },
+    "opacity": {
+      "used": false,
+      "reason": "以空白和結構接縫區分部件，不以透明度掩飾擁擠。"
+    },
+    "gradients": {
+      "used": false,
+      "reason": "設備維持單色線性圖示，無需材質漸層。"
+    }
+  },
+  "decisions": [
+    {
+      "name": "radio-receiver",
+      "groupRoot": "docs/review/atlas-craft-01/80-radio-tv-projector",
+      "confusableWith": [
+        "radio",
+        "speaker"
+      ],
+      "sourceObservation": "初選Lucide radio-receiver是音響接收器，已改用Phosphor radio與Hugeicons的便攜收音機同語意對照。Phosphor長天線與寬面板辨識較強；最新稿採長天線，面板簡化成兩條短線與一個圓旋鈕，完稿回比16px內孔和框邊仍有清楚留白。",
+      "reason": "保留寬面板和斜長天線，旋鈕與左側短線分組配置；天線與外殼相接處裁去內部筆畫，不讓天線穿進機身。",
+      "adaptedFrom": "Phosphor"
+    },
+    {
+      "name": "tv",
+      "groupRoot": "docs/review/atlas-craft-01/80-radio-tv-projector",
+      "confusableWith": [
+        "monitor",
+        "presentation"
+      ],
+      "sourceObservation": "Lucide使用規整矩形螢幕，Hugeicons以略鼓的曲線表現機殼。最新稿採較中性的矩形輪廓與雙天線；完稿回比，16/20/24螢幕保持完整留白，與底部有支架的monitor區別，不增加無用按鍵或第二層框。",
+      "reason": "螢幕按家族半徑建立角型，頂部雙天線對稱接到同一支點；接點限制在殼外，避免尖角落入螢幕。",
+      "adaptedFrom": "Lucide"
+    },
+    {
+      "name": "projector",
+      "groupRoot": "docs/review/atlas-craft-01/80-radio-tv-projector",
+      "confusableWith": [
+        "camera",
+        "presentation"
+      ],
+      "sourceObservation": "Lucide低矮機身和左側鏡頭較緊湊，Hugeicons加入雙腳並把鏡頭放右上。最新稿採低矮機身和凸起鏡頭；完稿回比，三條投射線、鏡頭孔及機身下緣均能分離，鏡頭不再被完整機身上邊穿過。",
+      "reason": "凸起鏡頭作為封閉前景裁去穿入內孔的機身邊線，結構仍直接相接；右側只留一筆通風訊號，把空間留給鏡頭。",
+      "adaptedFrom": "Lucide"
+    },
+    {
+      "name": "speaker",
+      "groupRoot": "docs/review/atlas-craft-01/81-speaker-reel-cassette",
+      "confusableWith": [
+        "volume",
+        "radio-receiver"
+      ],
+      "sourceObservation": "Lucide低音單體內另有一點，Phosphor只保留完整圓孔與上方高音點。最新稿採Phosphor較簡單的單體處理；完稿回比，原生16px主圓孔清楚，上方高音點不擁擠，兩側框邊仍有通道。",
+      "reason": "直立外殼、下方大單體與上方小單體共享垂直軸；不在主單體內再放小點或小圈，保留層級和孔內留白。",
+      "adaptedFrom": "Phosphor"
+    },
+    {
+      "name": "film-reel",
+      "groupRoot": "docs/review/atlas-craft-01/81b-reel-clapper",
+      "confusableWith": [
+        "vinyl-record",
+        "film"
+      ],
+      "sourceObservation": "初選Hugeicons film-roll-01是底片罐，已改用02圓形捲盤。Phosphor用四個圓環孔，Hugeicons用更輕的短標記；首稿四環在16px只剩細小亮孔，完稿回比後提煉較簡潔的內部訊號，改四個實心孔點，捲盤和尾端仍清楚。",
+      "reason": "圓盤以四個對稱孔點交代捲盤結構，依原生尺寸調點徑；底片從圓盤底緣切向延伸，保留一體的外輪廓，不增加多圈捲線。",
+      "adaptedFrom": "Phosphor"
+    },
+    {
+      "name": "cassette",
+      "groupRoot": "docs/review/atlas-craft-01/81-speaker-reel-cassette",
+      "confusableWith": [
+        "film-reel",
+        "radio-receiver"
+      ],
+      "sourceObservation": "Lucide用雙捲軸和一條下方磁帶線，Phosphor在捲軸上下都加線。最新稿採較開放的單帶線，並提高下方梯形孔的空間；完稿回比，16px兩個捲軸和下方磁頭區各自分離，不把內部塞成三層框。",
+      "reason": "外殼保留較高的面板，雙捲軸在上部等距配置，底部梯形與外殼共享底邊；相接的帶線和梯形端點裁到外殼內部。",
+      "adaptedFrom": "Lucide"
+    },
+    {
+      "name": "film",
+      "groupRoot": "docs/review/atlas-craft-01/82-film-clapper",
+      "confusableWith": [
+        "film-reel",
+        "grid"
+      ],
+      "sourceObservation": "Lucide是直向兩格底片，Phosphor是橫向底片；兩者齒孔走向不同但都保留清楚的影像區。最新稿採直向兩格，放寬左右齒孔欄；完稿回比16px時齒孔仍有空白，中央畫格不被分割線擠窄。",
+      "reason": "兩側齒孔以共享直壁與三條橫分界構成，中央只分兩格；各橫線裁在外殼邊界，避免圓角附近端帽外溢。",
+      "adaptedFrom": "Lucide"
+    },
+    {
+      "name": "clapperboard",
+      "groupRoot": "docs/review/atlas-craft-01/81b-reel-clapper",
+      "confusableWith": [
+        "film",
+        "clipboard"
+      ],
+      "sourceObservation": "Lucide的拍板上掀角度與兩段斜紋較鮮明，Phosphor的板面更方正。最新稿採上掀拍板，回比後讓拍板與下板共用精確鉸鏈點；斜紋裁到拍板內，原生16px上掀空隙與下板空白保持清楚。",
+      "reason": "拍板以等寬平行邊構造並連到下板左上鉸鏈，修正首稿略錯位的接點；斜紋墨線裁在封閉拍板內，角型與下板分別按結構處理。",
+      "adaptedFrom": "Lucide"
+    },
+    {
+      "name": "podcast",
+      "groupRoot": "docs/review/atlas-craft-01/83-podcast-antenna",
+      "confusableWith": [
+        "microphone",
+        "radio"
+      ],
+      "sourceObservation": "Iconoir使用人物與兩圈訊號，Hugeicons用麥克風和單圈傳播弧。最新稿採麥克風構造，底座改為簡單橫腳；完稿回比，16px麥克風孔、外弧和下方支架都有空隙，保持中立播客符號而不挪用品牌圖標。",
+      "reason": "膠囊麥克風與支柱結構相接，外圍單弧向下開放；底腳以水平筆畫穩定重心，不增加內圈訊號或人形細節。",
+      "adaptedFrom": "Hugeicons Free"
+    },
+    {
+      "name": "antenna",
+      "groupRoot": "docs/review/atlas-craft-01/83-podcast-antenna",
+      "confusableWith": [
+        "wifi",
+        "radio-receiver"
+      ],
+      "sourceObservation": "Lucide斜向振子與底桿分離，Tabler以水平支桿將漸長振子和底桿接為整體。最新稿採Tabler連續構造並拉開橫向間距；完稿回比16px，各振子長短可讀，沒有形成密集柵欄或零件分離感。",
+      "reason": "五個振子沿橫桿等距排列且逐漸加長，中央支桿延伸到底部；共用交點直接相連，不為製造留白切斷承接。",
+      "adaptedFrom": "Tabler"
+    }
+  ]
+}

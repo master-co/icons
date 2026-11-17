@@ -1,0 +1,1516 @@
+{
+  "schemaVersion": 2,
+  "reviewer": "Codex (AI)",
+  "userApproval": "pending",
+  "icons": [
+    {
+      "name": "bed",
+      "purpose": "床鋪",
+      "recognitionCues": "床頭立柱、枕部、床墊與雙腳",
+      "confusableWith": [
+        "sofa",
+        "desk"
+      ],
+      "sourceObservation": "Lucide採無人物側視床、以直線分出枕部；Tabler加上圓頭人物及較短床墊。Master選空床，保持床頭、枕部與床腳；初稿床墊下角與床腳產生小凹口，已移除下角彎折。",
+      "references": [
+        {
+          "name": "bed",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/bed.svg",
+          "localPath": "references/atlas-01/lucide-bed.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/bed.svg",
+          "sha256": "5be6d421e2ab4d7c6ecb953754a9f7cf35ced313dcfd0216087aa892125366ee",
+          "license": "ISC AND MIT",
+          "sourceName": "bed",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "bed",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/bed.svg",
+          "localPath": "references/atlas-01/tabler-bed.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/bed.svg",
+          "sha256": "4b7c012fe69f47adb081c97dfdfae715228ac7af4f97e80b326d8c3f39f2e1c5",
+          "license": "MIT",
+          "sourceName": "bed",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "實體家具使用完整輪廓，沒有隱藏邊或未完成狀態。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "前後部件透過構造與留白分離，不靠淡化處理相接。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "居家器具以單色形態表意，不需要反光漸層。"
+        }
+      },
+      "change": {
+        "kind": "modified",
+        "before": {
+          "path": "references/atlas-craft-05/master-before.json",
+          "variantsSha256": "b7a57e1da172a6c1fc305bdf77ee3660d103a68940e968a5683d8a5b21cda49a"
+        },
+        "reason": "床墊只有上緣轉角，下緣直接與支柱相接；枕部保持寬孔，不在窄區再套一個枕頭框。保留床腳以表達支承，九種母版無裁切。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "c04940c4171f50850bc2e71f83602d8a188d3f7e586310e3a4919c4940a6c2a2",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/32b/review.html",
+            "sha256": "0b51376728fee3a992e4b17a60f87fcac0a1b48413cb3e57a982396caa19b022"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/32b/definitions.json",
+            "sha256": "3189dbf4e30df4b78fdf157942bdec8a269329dac2f8303c4295e733dd731335"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/32b/light-1x.png",
+            "sha256": "81dcfb13294bf8f6184555f1ddf4abfd461f8987022d64c28e78bdc5b76593c2"
+          },
+          {
+            "path": "docs/review/atlas-craft-05/families/definitions.json",
+            "sha256": "b3e51437a7894774f7f8b41bb9fba280a2e5748401dfce60c7222b3c36dc9ec1"
+          },
+          {
+            "path": "docs/review/atlas-craft-05/families/09-home.html",
+            "sha256": "741eba6e26cb0b05135751ea5af75e1af658c28423f02726c6cbc45d654adea7"
+          },
+          {
+            "path": "docs/review/atlas-craft-05/families/09-home-light-1x.png",
+            "sha256": "0242a9a73fe8f382be605b4c0cd00485d2456b0cd300e38616885af3b81bbb0e"
+          },
+          {
+            "path": "docs/review/atlas-craft-05/families/09-home-light-2x.png",
+            "sha256": "30f0e18274bbd668ed0d0a429f0f684f54cea46493e8d5bac99949390d6b1fef"
+          },
+          {
+            "path": "docs/review/atlas-craft-05/families/09-home-dark-1x.png",
+            "sha256": "ca48daa773423cffe37c3033dab0c92461b47ecf9414254ecbb433b8c972b567"
+          },
+          {
+            "path": "docs/review/atlas-craft-05/families/09-home-dark-2x.png",
+            "sha256": "f92cfdb9cb546d4e8aae658ae26313d4be28138dc8ce5e3944dfe48b30abeab5"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-05/families/09-home-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-05/families/09-home-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-05/families/09-home-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-05/families/09-home-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Lucide",
+        "license": "ISC",
+        "licenseFile": "licenses/lucide.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "sofa",
+      "purpose": "沙發",
+      "recognitionCues": "寬靠背、雙扶手與連續座面",
+      "confusableWith": [
+        "armchair",
+        "bed"
+      ],
+      "sourceObservation": "Lucide有寬背、扶手與短腳，Tabler用相似正面構造但不突出腳。Master保留短腳和寬靠背，以連續座面包住兩個扶手，中央只有一道背墊分界。",
+      "references": [
+        {
+          "name": "sofa",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/sofa.svg",
+          "localPath": "references/atlas-01/lucide-sofa.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/sofa.svg",
+          "sha256": "f55280bc2720c537adbb3d9758ed9adbbf683cf0bd45239b329e9ccf1c1bf7d6",
+          "license": "ISC AND MIT",
+          "sourceName": "sofa",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "sofa",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/sofa.svg",
+          "localPath": "references/atlas-01/tabler-sofa.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/sofa.svg",
+          "sha256": "bff7310a0d44997e3114e142ddee4b155ec72d247ea214db395c01080a1e6593",
+          "license": "MIT",
+          "sourceName": "sofa",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "實體家具使用完整輪廓，沒有隱藏邊或未完成狀態。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "前後部件透過構造與留白分離，不靠淡化處理相接。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "居家器具以單色形態表意，不需要反光漸層。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-05/master-before.json",
+          "variantsSha256": "e6cb7f1b28611533b48bbd77712eb03ae66ee6d7ceff00bd7323d70a4163ba68"
+        },
+        "reason": "扶手與座面形成共同外輪廓，靠背線裁在前景外側而不穿入座面；下層座面孔有足夠高度，短腳清楚交代支承。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "a91d089b308a4fd35b9d41348298429d275f854c4d1ae55114d71ee6db61db02",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/32/review.html",
+            "sha256": "571575615e9f46917ec3635b9d3fc45ed6c88cc2bbe0277c817ae18bdccdedd9"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/32/definitions.json",
+            "sha256": "750d9047ea9806982e682c4cceb381dc623803a661238a5946910f79fa762ae3"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/32/light-1x.png",
+            "sha256": "ec21cde7a24ff32402bb4bc60a7c55bc31149c5bd440472f3ea517d5a5d7662b"
+          },
+          {
+            "path": "docs/review/atlas-craft-05/families/definitions.json",
+            "sha256": "b3e51437a7894774f7f8b41bb9fba280a2e5748401dfce60c7222b3c36dc9ec1"
+          },
+          {
+            "path": "docs/review/atlas-craft-05/families/09-home.html",
+            "sha256": "741eba6e26cb0b05135751ea5af75e1af658c28423f02726c6cbc45d654adea7"
+          },
+          {
+            "path": "docs/review/atlas-craft-05/families/09-home-light-1x.png",
+            "sha256": "0242a9a73fe8f382be605b4c0cd00485d2456b0cd300e38616885af3b81bbb0e"
+          },
+          {
+            "path": "docs/review/atlas-craft-05/families/09-home-light-2x.png",
+            "sha256": "30f0e18274bbd668ed0d0a429f0f684f54cea46493e8d5bac99949390d6b1fef"
+          },
+          {
+            "path": "docs/review/atlas-craft-05/families/09-home-dark-1x.png",
+            "sha256": "ca48daa773423cffe37c3033dab0c92461b47ecf9414254ecbb433b8c972b567"
+          },
+          {
+            "path": "docs/review/atlas-craft-05/families/09-home-dark-2x.png",
+            "sha256": "f92cfdb9cb546d4e8aae658ae26313d4be28138dc8ce5e3944dfe48b30abeab5"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-05/families/09-home-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-05/families/09-home-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-05/families/09-home-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-05/families/09-home-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Lucide",
+        "license": "ISC",
+        "licenseFile": "licenses/lucide.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "armchair",
+      "purpose": "扶手椅",
+      "recognitionCues": "單座靠背、雙扶手與短腳",
+      "confusableWith": [
+        "sofa",
+        "bed"
+      ],
+      "sourceObservation": "Lucide的扶手併入下方框，Phosphor用外凸扶手球面。Master採與沙發共用的座面結構，縮窄單座並省去中間背墊分界，保持扶手曲面。",
+      "references": [
+        {
+          "name": "armchair",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/armchair.svg",
+          "localPath": "references/atlas-01/lucide-armchair.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/armchair.svg",
+          "sha256": "94040a227db83a21e42834b8839426754b4e1f36530eb90a440abaa3f3ee13eb",
+          "license": "ISC AND MIT",
+          "sourceName": "armchair",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "armchair",
+          "library": "Phosphor",
+          "repository": "phosphor-icons/core",
+          "commit": "2b75f3ad12b420c9504ef05df8d2564a28f8500e",
+          "path": "assets/regular/armchair.svg",
+          "localPath": "references/atlas-01/phosphor-armchair.svg",
+          "url": "https://github.com/phosphor-icons/core/blob/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular/armchair.svg",
+          "sha256": "84e679a3db03ab592a154bcf20b7e9eb02e22bf956051c9d839c540dd94e61bf",
+          "license": "MIT",
+          "sourceName": "armchair",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "實體家具使用完整輪廓，沒有隱藏邊或未完成狀態。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "前後部件透過構造與留白分離，不靠淡化處理相接。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "居家器具以單色形態表意，不需要反光漸層。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-05/master-before.json",
+          "variantsSha256": "e89668b183ee5ad570e9dea1fbb7bfd0c3db1fa2755e004724141c490e28909d"
+        },
+        "reason": "單座靠背、連續扶手及短腳共同建立椅子姿態，16px保留寬座孔；底部圓角按預設實際改變，扶手本身保持曲面。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "440cf3505c1cb4af8d4b8259effc6b786d35fc5b6261425c252512d7e5bd11fa",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/32/review.html",
+            "sha256": "571575615e9f46917ec3635b9d3fc45ed6c88cc2bbe0277c817ae18bdccdedd9"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/32/definitions.json",
+            "sha256": "750d9047ea9806982e682c4cceb381dc623803a661238a5946910f79fa762ae3"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/32/light-1x.png",
+            "sha256": "ec21cde7a24ff32402bb4bc60a7c55bc31149c5bd440472f3ea517d5a5d7662b"
+          },
+          {
+            "path": "docs/review/atlas-craft-05/families/definitions.json",
+            "sha256": "b3e51437a7894774f7f8b41bb9fba280a2e5748401dfce60c7222b3c36dc9ec1"
+          },
+          {
+            "path": "docs/review/atlas-craft-05/families/09-home.html",
+            "sha256": "741eba6e26cb0b05135751ea5af75e1af658c28423f02726c6cbc45d654adea7"
+          },
+          {
+            "path": "docs/review/atlas-craft-05/families/09-home-light-1x.png",
+            "sha256": "0242a9a73fe8f382be605b4c0cd00485d2456b0cd300e38616885af3b81bbb0e"
+          },
+          {
+            "path": "docs/review/atlas-craft-05/families/09-home-light-2x.png",
+            "sha256": "30f0e18274bbd668ed0d0a429f0f684f54cea46493e8d5bac99949390d6b1fef"
+          },
+          {
+            "path": "docs/review/atlas-craft-05/families/09-home-dark-1x.png",
+            "sha256": "ca48daa773423cffe37c3033dab0c92461b47ecf9414254ecbb433b8c972b567"
+          },
+          {
+            "path": "docs/review/atlas-craft-05/families/09-home-dark-2x.png",
+            "sha256": "f92cfdb9cb546d4e8aae658ae26313d4be28138dc8ce5e3944dfe48b30abeab5"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-05/families/09-home-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-05/families/09-home-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-05/families/09-home-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-05/families/09-home-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Lucide",
+        "license": "ISC",
+        "licenseFile": "licenses/lucide.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "lamp",
+      "purpose": "檯燈",
+      "recognitionCues": "梯形燈罩、直立燈桿與底座",
+      "confusableWith": [
+        "desk",
+        "lightbulb"
+      ],
+      "sourceObservation": "Lucide採梯形罩、窄立桿和小矩形底座，Phosphor採梯形罩、短橫底座及拉繩。Master採短橫底座，省略拉繩與底座內孔，保留罩、桿、承接點的比例。",
+      "references": [
+        {
+          "name": "lamp",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/lamp.svg",
+          "localPath": "references/atlas-01/lucide-lamp.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/lamp.svg",
+          "sha256": "a677c0a6e1c98857e62ed896367918907e1bdda3bd5306d55211d45f6cf1be6b",
+          "license": "ISC AND MIT",
+          "sourceName": "lamp",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "lamp",
+          "library": "Phosphor",
+          "repository": "phosphor-icons/core",
+          "commit": "2b75f3ad12b420c9504ef05df8d2564a28f8500e",
+          "path": "assets/regular/lamp.svg",
+          "localPath": "references/atlas-01/phosphor-lamp.svg",
+          "url": "https://github.com/phosphor-icons/core/blob/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular/lamp.svg",
+          "sha256": "4fdfab2f47ae7c8041b7e949032d8abe780515ec518ac0be41ed58124e5e8846",
+          "license": "MIT",
+          "sourceName": "lamp",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "實體家具使用完整輪廓，沒有隱藏邊或未完成狀態。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "前後部件透過構造與留白分離，不靠淡化處理相接。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "居家器具以單色形態表意，不需要反光漸層。"
+        }
+      },
+      "change": {
+        "kind": "new",
+        "before": null,
+        "reason": "燈罩以實際小轉角形成梯形，寬底與直桿保持穩定重心；桿從罩外緣接出，不刺入罩內。簡化底座仍保留明確支承。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "9452cacf1a8e29dd1a104c8aebc537b220754fe3452e7a60c93d97bb3147cd14",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/33/review.html",
+            "sha256": "0902c0e9ebc47a4f42b48990401b2381b35d14c65e567e63ccc8100c526cb678"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/33/definitions.json",
+            "sha256": "69f3e53c4294acab38f1af6c84120785c521e5902de972cd2c90e426c9547464"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/33/light-1x.png",
+            "sha256": "504578579ef471e448290d0e68ef4a5ee535ab6f84522098fc8078338cce612d"
+          },
+          {
+            "path": "docs/review/atlas-craft-05/families/definitions.json",
+            "sha256": "b3e51437a7894774f7f8b41bb9fba280a2e5748401dfce60c7222b3c36dc9ec1"
+          },
+          {
+            "path": "docs/review/atlas-craft-05/families/09-home.html",
+            "sha256": "741eba6e26cb0b05135751ea5af75e1af658c28423f02726c6cbc45d654adea7"
+          },
+          {
+            "path": "docs/review/atlas-craft-05/families/09-home-light-1x.png",
+            "sha256": "0242a9a73fe8f382be605b4c0cd00485d2456b0cd300e38616885af3b81bbb0e"
+          },
+          {
+            "path": "docs/review/atlas-craft-05/families/09-home-light-2x.png",
+            "sha256": "30f0e18274bbd668ed0d0a429f0f684f54cea46493e8d5bac99949390d6b1fef"
+          },
+          {
+            "path": "docs/review/atlas-craft-05/families/09-home-dark-1x.png",
+            "sha256": "ca48daa773423cffe37c3033dab0c92461b47ecf9414254ecbb433b8c972b567"
+          },
+          {
+            "path": "docs/review/atlas-craft-05/families/09-home-dark-2x.png",
+            "sha256": "f92cfdb9cb546d4e8aae658ae26313d4be28138dc8ce5e3944dfe48b30abeab5"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-05/families/09-home-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-05/families/09-home-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-05/families/09-home-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-05/families/09-home-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Phosphor",
+        "license": "MIT",
+        "licenseFile": "licenses/phosphor.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "desk",
+      "purpose": "書桌",
+      "recognitionCues": "寬桌面、兩格抽屜與直腳",
+      "confusableWith": [
+        "bed",
+        "sofa"
+      ],
+      "sourceObservation": "Phosphor以雙抽屜、短把手及兩腳表意；Tabler使用右側抽屜櫃。Master選雙抽屜桌，讓桌面保持寬度；16px刪去把手，20/24保留兩筆短把手。",
+      "references": [
+        {
+          "name": "desk",
+          "library": "Phosphor",
+          "repository": "phosphor-icons/core",
+          "commit": "2b75f3ad12b420c9504ef05df8d2564a28f8500e",
+          "path": "assets/regular/desk.svg",
+          "localPath": "references/atlas-01/phosphor-desk.svg",
+          "url": "https://github.com/phosphor-icons/core/blob/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular/desk.svg",
+          "sha256": "f136e0bda124045f09487f1c1ada36342edfc6405ebd519b102d806716f6d1d7",
+          "license": "MIT",
+          "sourceName": "desk",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "desk",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/desk.svg",
+          "localPath": "references/atlas-01/tabler-desk.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/desk.svg",
+          "sha256": "80d03eb6ce47431ef5de28f2f91fe31f116bd382e56017db9359de5af5f647af",
+          "license": "MIT",
+          "sourceName": "desk",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "實體家具使用完整輪廓，沒有隱藏邊或未完成狀態。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "前後部件透過構造與留白分離，不靠淡化處理相接。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "居家器具以單色形態表意，不需要反光漸層。"
+        }
+      },
+      "change": {
+        "kind": "new",
+        "before": null,
+        "reason": "桌面、抽屜分界和直腳交代書桌構造；16px不將短把手塞進兩個小孔，20/24把手與框線仍有可見留白。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "36216e71263cb7de074dc32c6924f45a29e92c7180168e2e6eac77027eaf12a4",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/33/review.html",
+            "sha256": "0902c0e9ebc47a4f42b48990401b2381b35d14c65e567e63ccc8100c526cb678"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/33/definitions.json",
+            "sha256": "69f3e53c4294acab38f1af6c84120785c521e5902de972cd2c90e426c9547464"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/33/light-1x.png",
+            "sha256": "504578579ef471e448290d0e68ef4a5ee535ab6f84522098fc8078338cce612d"
+          },
+          {
+            "path": "docs/review/atlas-craft-05/families/definitions.json",
+            "sha256": "b3e51437a7894774f7f8b41bb9fba280a2e5748401dfce60c7222b3c36dc9ec1"
+          },
+          {
+            "path": "docs/review/atlas-craft-05/families/09-home.html",
+            "sha256": "741eba6e26cb0b05135751ea5af75e1af658c28423f02726c6cbc45d654adea7"
+          },
+          {
+            "path": "docs/review/atlas-craft-05/families/09-home-light-1x.png",
+            "sha256": "0242a9a73fe8f382be605b4c0cd00485d2456b0cd300e38616885af3b81bbb0e"
+          },
+          {
+            "path": "docs/review/atlas-craft-05/families/09-home-light-2x.png",
+            "sha256": "30f0e18274bbd668ed0d0a429f0f684f54cea46493e8d5bac99949390d6b1fef"
+          },
+          {
+            "path": "docs/review/atlas-craft-05/families/09-home-dark-1x.png",
+            "sha256": "ca48daa773423cffe37c3033dab0c92461b47ecf9414254ecbb433b8c972b567"
+          },
+          {
+            "path": "docs/review/atlas-craft-05/families/09-home-dark-2x.png",
+            "sha256": "f92cfdb9cb546d4e8aae658ae26313d4be28138dc8ce5e3944dfe48b30abeab5"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-05/families/09-home-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-05/families/09-home-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-05/families/09-home-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-05/families/09-home-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Phosphor",
+        "license": "MIT",
+        "licenseFile": "licenses/phosphor.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "door-open",
+      "purpose": "開門",
+      "recognitionCues": "斜向門板、外門框與把手",
+      "confusableWith": [
+        "door-closed",
+        "lock"
+      ],
+      "sourceObservation": "Lucide用斜門板與外框表示開門，Phosphor以正面門板加窄側縫表示。Master採向外打開的斜板，讓門板和外框間形成較寬通道，使用單點把手。",
+      "references": [
+        {
+          "name": "door-open",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/door-open.svg",
+          "localPath": "references/atlas-01/lucide-door-open.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/door-open.svg",
+          "sha256": "1bddb273d0893f65778e2a58aa1af66c8129d8d7634a3552d95be66191ea7526",
+          "license": "ISC AND MIT",
+          "sourceName": "door-open",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "door-open",
+          "library": "Phosphor",
+          "repository": "phosphor-icons/core",
+          "commit": "2b75f3ad12b420c9504ef05df8d2564a28f8500e",
+          "path": "assets/regular/door-open.svg",
+          "localPath": "references/atlas-01/phosphor-door-open.svg",
+          "url": "https://github.com/phosphor-icons/core/blob/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular/door-open.svg",
+          "sha256": "d5868e10dbf1c1ae216c4ccbf489cdc98fb91a7886da470e3e7126c1c9a7d6b5",
+          "license": "MIT",
+          "sourceName": "door-open",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "實體家具使用完整輪廓，沒有隱藏邊或未完成狀態。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "前後部件透過構造與留白分離，不靠淡化處理相接。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "居家器具以單色形態表意，不需要反光漸層。"
+        }
+      },
+      "change": {
+        "kind": "new",
+        "before": null,
+        "reason": "門板在前、門框和門檻在後，按實際外殼裁去遮住部分；鉸鏈端保持連接，外露門框通道不縮成16px細縫。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "366e06bb9aad5ce8a1582b328241fb260e51d3540b24ec7d1a912fde675a1c61",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/34/review.html",
+            "sha256": "7f1fd2dfb21e04fd1948e097842a43d3059c785115824415a4dcaab5c47a0c74"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/34/definitions.json",
+            "sha256": "0c529442b71b682fe0d9e08499dae4bf875b9309210bdad10691502565925cee"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/34/light-1x.png",
+            "sha256": "8e999f7ed2538627401bca913a366be2dc696a4f469138ab2d62cf5c8170218d"
+          },
+          {
+            "path": "docs/review/atlas-craft-05/families/definitions.json",
+            "sha256": "b3e51437a7894774f7f8b41bb9fba280a2e5748401dfce60c7222b3c36dc9ec1"
+          },
+          {
+            "path": "docs/review/atlas-craft-05/families/09-home.html",
+            "sha256": "741eba6e26cb0b05135751ea5af75e1af658c28423f02726c6cbc45d654adea7"
+          },
+          {
+            "path": "docs/review/atlas-craft-05/families/09-home-light-1x.png",
+            "sha256": "0242a9a73fe8f382be605b4c0cd00485d2456b0cd300e38616885af3b81bbb0e"
+          },
+          {
+            "path": "docs/review/atlas-craft-05/families/09-home-light-2x.png",
+            "sha256": "30f0e18274bbd668ed0d0a429f0f684f54cea46493e8d5bac99949390d6b1fef"
+          },
+          {
+            "path": "docs/review/atlas-craft-05/families/09-home-dark-1x.png",
+            "sha256": "ca48daa773423cffe37c3033dab0c92461b47ecf9414254ecbb433b8c972b567"
+          },
+          {
+            "path": "docs/review/atlas-craft-05/families/09-home-dark-2x.png",
+            "sha256": "f92cfdb9cb546d4e8aae658ae26313d4be28138dc8ce5e3944dfe48b30abeab5"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-05/families/09-home-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-05/families/09-home-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-05/families/09-home-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-05/families/09-home-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Lucide",
+        "license": "ISC",
+        "licenseFile": "licenses/lucide.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "door-closed",
+      "purpose": "關門",
+      "recognitionCues": "直立門框、把手與門檻",
+      "confusableWith": [
+        "door-open",
+        "lock"
+      ],
+      "sourceObservation": "Lucide與Tabler均採門框和單點把手，方向不同。Master使用與開門一致的右側把手和底部門檻，省去不影響關門語意的第二層門框。",
+      "references": [
+        {
+          "name": "door-closed",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/door-closed.svg",
+          "localPath": "references/atlas-01/lucide-door-closed.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/door-closed.svg",
+          "sha256": "19d3f8698ccd8dff208ce78e880cdb5e2a4794cb551210a2170178d526bc9941",
+          "license": "ISC AND MIT",
+          "sourceName": "door-closed",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "door-closed",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/door.svg",
+          "localPath": "references/atlas-01/tabler-door.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/door.svg",
+          "sha256": "858faa8b1cf768c96d0f6cb7c3f168de0b28be21de1bf50e992b799932f6a3f5",
+          "license": "MIT",
+          "sourceName": "door",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "實體家具使用完整輪廓，沒有隱藏邊或未完成狀態。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "前後部件透過構造與留白分離，不靠淡化處理相接。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "居家器具以單色形態表意，不需要反光漸層。"
+        }
+      },
+      "change": {
+        "kind": "new",
+        "before": null,
+        "reason": "閉門輪廓與把手完整，頂角隨預設實際改變；門檻與兩側立柱相接，不因增加留白切斷構造，也不堆雙層框線。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "1bbcb43871e6f52da01ce5a7a0bfc9a85f3f8231757d847722a25f097bc7bb86",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/34/review.html",
+            "sha256": "7f1fd2dfb21e04fd1948e097842a43d3059c785115824415a4dcaab5c47a0c74"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/34/definitions.json",
+            "sha256": "0c529442b71b682fe0d9e08499dae4bf875b9309210bdad10691502565925cee"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/34/light-1x.png",
+            "sha256": "8e999f7ed2538627401bca913a366be2dc696a4f469138ab2d62cf5c8170218d"
+          },
+          {
+            "path": "docs/review/atlas-craft-05/families/definitions.json",
+            "sha256": "b3e51437a7894774f7f8b41bb9fba280a2e5748401dfce60c7222b3c36dc9ec1"
+          },
+          {
+            "path": "docs/review/atlas-craft-05/families/09-home.html",
+            "sha256": "741eba6e26cb0b05135751ea5af75e1af658c28423f02726c6cbc45d654adea7"
+          },
+          {
+            "path": "docs/review/atlas-craft-05/families/09-home-light-1x.png",
+            "sha256": "0242a9a73fe8f382be605b4c0cd00485d2456b0cd300e38616885af3b81bbb0e"
+          },
+          {
+            "path": "docs/review/atlas-craft-05/families/09-home-light-2x.png",
+            "sha256": "30f0e18274bbd668ed0d0a429f0f684f54cea46493e8d5bac99949390d6b1fef"
+          },
+          {
+            "path": "docs/review/atlas-craft-05/families/09-home-dark-1x.png",
+            "sha256": "ca48daa773423cffe37c3033dab0c92461b47ecf9414254ecbb433b8c972b567"
+          },
+          {
+            "path": "docs/review/atlas-craft-05/families/09-home-dark-2x.png",
+            "sha256": "f92cfdb9cb546d4e8aae658ae26313d4be28138dc8ce5e3944dfe48b30abeab5"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-05/families/09-home-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-05/families/09-home-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-05/families/09-home-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-05/families/09-home-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Lucide",
+        "license": "ISC",
+        "licenseFile": "licenses/lucide.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "fence",
+      "purpose": "柵欄",
+      "recognitionCues": "兩片尖頂直柵與橫向連接板",
+      "confusableWith": [
+        "door-closed",
+        "desk"
+      ],
+      "sourceObservation": "Lucide有三片窄直柵與兩道橫桿，Tabler用兩片寬柵和單道前橫板。Master採兩片寬柵，保留尖頂與一塊橫板，讓各段孔洞在16px不被多重交叉吃掉。",
+      "references": [
+        {
+          "name": "fence",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/fence.svg",
+          "localPath": "references/atlas-01/lucide-fence.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/fence.svg",
+          "sha256": "05c0bafa899af230f7bd1db3d6fb01ced801281d1bdea72d82ac2847f530bdd2",
+          "license": "ISC AND MIT",
+          "sourceName": "fence",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "fence",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/fence.svg",
+          "localPath": "references/atlas-01/tabler-fence.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/fence.svg",
+          "sha256": "910fb0f242c6c0b6dc86e294c1d6de359e75d62f058354564bebccf51cd3872e",
+          "license": "MIT",
+          "sourceName": "fence",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "實體家具使用完整輪廓，沒有隱藏邊或未完成狀態。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "前後部件透過構造與留白分離，不靠淡化處理相接。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "居家器具以單色形態表意，不需要反光漸層。"
+        }
+      },
+      "change": {
+        "kind": "new",
+        "before": null,
+        "reason": "兩片直柵共同被前橫板遮住，橫板內不殘留直線；尖頂和下方腳段保留，角型調整不抹掉木柵輪廓。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "d7e1cbbc452a0b171e35ad9c1bb38220f9a6e7fc121928452808e45de1713267",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/35/review.html",
+            "sha256": "357731637c154369a6a7530a8f9013d0b9faacec846cce33184d02f55c107e0d"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/35/definitions.json",
+            "sha256": "213d9da7134a68f83db655fa8f7dcf9411acf88aaee3e12d26d346ec41532c18"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/35/light-1x.png",
+            "sha256": "9de772126c8b380646d10e8caf3c4e8da97d573c8e04639878d959d253882d82"
+          },
+          {
+            "path": "docs/review/atlas-craft-05/families/definitions.json",
+            "sha256": "b3e51437a7894774f7f8b41bb9fba280a2e5748401dfce60c7222b3c36dc9ec1"
+          },
+          {
+            "path": "docs/review/atlas-craft-05/families/09-home.html",
+            "sha256": "741eba6e26cb0b05135751ea5af75e1af658c28423f02726c6cbc45d654adea7"
+          },
+          {
+            "path": "docs/review/atlas-craft-05/families/09-home-light-1x.png",
+            "sha256": "0242a9a73fe8f382be605b4c0cd00485d2456b0cd300e38616885af3b81bbb0e"
+          },
+          {
+            "path": "docs/review/atlas-craft-05/families/09-home-light-2x.png",
+            "sha256": "30f0e18274bbd668ed0d0a429f0f684f54cea46493e8d5bac99949390d6b1fef"
+          },
+          {
+            "path": "docs/review/atlas-craft-05/families/09-home-dark-1x.png",
+            "sha256": "ca48daa773423cffe37c3033dab0c92461b47ecf9414254ecbb433b8c972b567"
+          },
+          {
+            "path": "docs/review/atlas-craft-05/families/09-home-dark-2x.png",
+            "sha256": "f92cfdb9cb546d4e8aae658ae26313d4be28138dc8ce5e3944dfe48b30abeab5"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-05/families/09-home-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-05/families/09-home-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-05/families/09-home-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-05/families/09-home-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Tabler",
+        "license": "MIT",
+        "licenseFile": "licenses/tabler.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "bathtub",
+      "purpose": "浴缸",
+      "recognitionCues": "圓腹浴缸、上升水龍頭與雙腳",
+      "confusableWith": [
+        "soup",
+        "cooking-pot"
+      ],
+      "sourceObservation": "Lucide採短龍頭和矩形浴缸，Phosphor採圓腹並加掛巾。Master保留長曲龍頭、圓腹與雙腳，取消掛巾的小框，用寬口和低腹表現浴缸。",
+      "references": [
+        {
+          "name": "bathtub",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/bath.svg",
+          "localPath": "references/atlas-01/lucide-bath.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/bath.svg",
+          "sha256": "095c5a94cde4aad141ec17cc9d808570236fcbf56dd870a87ddbec7c7ed3b5b1",
+          "license": "ISC AND MIT",
+          "sourceName": "bath",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "bathtub",
+          "library": "Phosphor",
+          "repository": "phosphor-icons/core",
+          "commit": "2b75f3ad12b420c9504ef05df8d2564a28f8500e",
+          "path": "assets/regular/bathtub.svg",
+          "localPath": "references/atlas-01/phosphor-bathtub.svg",
+          "url": "https://github.com/phosphor-icons/core/blob/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular/bathtub.svg",
+          "sha256": "975fa64887e80c5ca85e2a127e63ec6560c69297d628adf3bfc0d9ce3628065a",
+          "license": "MIT",
+          "sourceName": "bathtub",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "實體家具使用完整輪廓，沒有隱藏邊或未完成狀態。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "前後部件透過構造與留白分離，不靠淡化處理相接。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "居家器具以單色形態表意，不需要反光漸層。"
+        }
+      },
+      "change": {
+        "kind": "new",
+        "before": null,
+        "reason": "浴缸壁向下收束並以寬弧托住腹部，兩腳清楚接到缸底；龍頭弧與缸口保持分離，沒有額外套框或平行缸緣。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "868f87eb076067ead27479ed3e4dda35c493c834799f39d3dc4b8b2013ad679b",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/35/review.html",
+            "sha256": "357731637c154369a6a7530a8f9013d0b9faacec846cce33184d02f55c107e0d"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/35/definitions.json",
+            "sha256": "213d9da7134a68f83db655fa8f7dcf9411acf88aaee3e12d26d346ec41532c18"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/35/light-1x.png",
+            "sha256": "9de772126c8b380646d10e8caf3c4e8da97d573c8e04639878d959d253882d82"
+          },
+          {
+            "path": "docs/review/atlas-craft-05/families/definitions.json",
+            "sha256": "b3e51437a7894774f7f8b41bb9fba280a2e5748401dfce60c7222b3c36dc9ec1"
+          },
+          {
+            "path": "docs/review/atlas-craft-05/families/09-home.html",
+            "sha256": "741eba6e26cb0b05135751ea5af75e1af658c28423f02726c6cbc45d654adea7"
+          },
+          {
+            "path": "docs/review/atlas-craft-05/families/09-home-light-1x.png",
+            "sha256": "0242a9a73fe8f382be605b4c0cd00485d2456b0cd300e38616885af3b81bbb0e"
+          },
+          {
+            "path": "docs/review/atlas-craft-05/families/09-home-light-2x.png",
+            "sha256": "30f0e18274bbd668ed0d0a429f0f684f54cea46493e8d5bac99949390d6b1fef"
+          },
+          {
+            "path": "docs/review/atlas-craft-05/families/09-home-dark-1x.png",
+            "sha256": "ca48daa773423cffe37c3033dab0c92461b47ecf9414254ecbb433b8c972b567"
+          },
+          {
+            "path": "docs/review/atlas-craft-05/families/09-home-dark-2x.png",
+            "sha256": "f92cfdb9cb546d4e8aae658ae26313d4be28138dc8ce5e3944dfe48b30abeab5"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-05/families/09-home-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-05/families/09-home-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-05/families/09-home-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-05/families/09-home-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Phosphor",
+        "license": "MIT",
+        "licenseFile": "licenses/phosphor.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "shower-head",
+      "purpose": "蓮蓬頭",
+      "recognitionCues": "斜向弧罩、連接管與分散水滴",
+      "confusableWith": [
+        "cloud-rain",
+        "bathtub"
+      ],
+      "sourceObservation": "Lucide用弧形罩和分散水點，Phosphor用三角罩及短水點群。Master保留弧罩與斜向出水，16px改為四個疏落水點，20/24八點。",
+      "references": [
+        {
+          "name": "shower-head",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/shower-head.svg",
+          "localPath": "references/atlas-01/lucide-shower-head.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/shower-head.svg",
+          "sha256": "caae956f3356861b4cb714691e0b14d458240e7f1be5956f49a0b1dba66249d8",
+          "license": "ISC AND MIT",
+          "sourceName": "shower-head",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "shower-head",
+          "library": "Phosphor",
+          "repository": "phosphor-icons/core",
+          "commit": "2b75f3ad12b420c9504ef05df8d2564a28f8500e",
+          "path": "assets/regular/shower.svg",
+          "localPath": "references/atlas-01/phosphor-shower.svg",
+          "url": "https://github.com/phosphor-icons/core/blob/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular/shower.svg",
+          "sha256": "945761a6736dc6b8014bebc460f98ce83ac73318d15e57619e807cc369768f14",
+          "license": "MIT",
+          "sourceName": "shower",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "實體家具使用完整輪廓，沒有隱藏邊或未完成狀態。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "前後部件透過構造與留白分離，不靠淡化處理相接。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "居家器具以單色形態表意，不需要反光漸層。"
+        }
+      },
+      "change": {
+        "kind": "new",
+        "before": null,
+        "reason": "弧罩縮回安全畫布並與連接管收口，水點從出水面斜向展開；小尺寸減少數量及重排位置，避免照比例縮小整片點陣。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "6ee7b3f251e0605ce542553c32206573cc5e68a9c9c2e7756b22ed23881b0630",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/35/review.html",
+            "sha256": "357731637c154369a6a7530a8f9013d0b9faacec846cce33184d02f55c107e0d"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/35/definitions.json",
+            "sha256": "213d9da7134a68f83db655fa8f7dcf9411acf88aaee3e12d26d346ec41532c18"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/35/light-1x.png",
+            "sha256": "9de772126c8b380646d10e8caf3c4e8da97d573c8e04639878d959d253882d82"
+          },
+          {
+            "path": "docs/review/atlas-craft-05/families/definitions.json",
+            "sha256": "b3e51437a7894774f7f8b41bb9fba280a2e5748401dfce60c7222b3c36dc9ec1"
+          },
+          {
+            "path": "docs/review/atlas-craft-05/families/09-home.html",
+            "sha256": "741eba6e26cb0b05135751ea5af75e1af658c28423f02726c6cbc45d654adea7"
+          },
+          {
+            "path": "docs/review/atlas-craft-05/families/09-home-light-1x.png",
+            "sha256": "0242a9a73fe8f382be605b4c0cd00485d2456b0cd300e38616885af3b81bbb0e"
+          },
+          {
+            "path": "docs/review/atlas-craft-05/families/09-home-light-2x.png",
+            "sha256": "30f0e18274bbd668ed0d0a429f0f684f54cea46493e8d5bac99949390d6b1fef"
+          },
+          {
+            "path": "docs/review/atlas-craft-05/families/09-home-dark-1x.png",
+            "sha256": "ca48daa773423cffe37c3033dab0c92461b47ecf9414254ecbb433b8c972b567"
+          },
+          {
+            "path": "docs/review/atlas-craft-05/families/09-home-dark-2x.png",
+            "sha256": "f92cfdb9cb546d4e8aae658ae26313d4be28138dc8ce5e3944dfe48b30abeab5"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-05/families/09-home-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-05/families/09-home-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-05/families/09-home-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-05/families/09-home-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Lucide",
+        "license": "ISC",
+        "licenseFile": "licenses/lucide.txt"
+      },
+      "remaining": []
+    }
+  ]
+}

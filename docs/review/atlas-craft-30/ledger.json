@@ -1,0 +1,148 @@
+{
+  "schemaVersion": 2,
+  "reviewer": "Codex (AI)",
+  "userApproval": "pending",
+  "icons": [
+    {
+      "name": "trumpet",
+      "purpose": "小號",
+      "recognitionCues": "水平管身、向外擴張喇叭口與迴轉管",
+      "confusableWith": [
+        "saxophone",
+        "megaphone"
+      ],
+      "sourceObservation": "MDI的小號以實心水平管與喇叭口概括，OpenMoji保留多個按鍵和迴轉管。最新稿提煉MDI輪廓並重畫線性版本；首稿雙線細管幾乎黏合，回比後改為單筆主管。最新16px喇叭口與下方迴轉管的孔洞均完整。 本輪完稿再與MDI、OpenMoji同尺寸回比：保留水平管身、擴張喇叭口與開放迴轉管的整體輪廓，只在16px sharp將口沿內收0.3333px，避免尖角斜接觸及畫布；明暗1x/2x下孔洞與按鍵間距維持清楚。",
+      "references": [
+        {
+          "name": "trumpet",
+          "library": "Material Design Icons",
+          "repository": "Templarian/MaterialDesign",
+          "commit": "2424e748e0cc63ab7b9c095a099b9fe239b737c0",
+          "path": "svg/trumpet.svg",
+          "localPath": "references/atlas-01/mdi-trumpet.svg",
+          "url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/trumpet.svg",
+          "sha256": "60e7ce6966ccbb60113565a627788caa959dacc256c2a1b8dbe57702b9e030aa",
+          "license": "Apache-2.0",
+          "sourceName": "trumpet",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "trumpet",
+          "library": "OpenMoji",
+          "repository": "hfg-gmuend/openmoji",
+          "commit": "3e01de523ddefe9c5e46a7765b15efef04bf9002",
+          "path": "black/svg/1F3BA.svg",
+          "localPath": "references/atlas-01/openmoji-1F3BA.svg",
+          "url": "https://github.com/hfg-gmuend/openmoji/blob/3e01de523ddefe9c5e46a7765b15efef04bf9002/black/svg/1F3BA.svg",
+          "sha256": "7e9f5b18704ed7f315ddfaf7b019ae5033e5352fc0ff865dfb44d05be0c90284",
+          "license": "CC-BY-SA-4.0",
+          "sourceName": "1F3BA",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "樂器輪廓與管路連續呈現，無需以虛線暗示隱藏構造。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以空白和前後遮擋區分部件，不用淡化處理擁擠。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "樂器採單色輪廓，沒有材質漸層。"
+        }
+      },
+      "change": {
+        "kind": "modified",
+        "before": {
+          "path": "references/atlas-craft-30/master-before.json",
+          "variantsSha256": "cf3a819b044cb88d2a7c3b7e98053d778bccad4a56f1b61914f48ce3f1a7d7c3"
+        },
+        "reason": "WebKit DPR2邊界檢查發現16px sharp喇叭口斜接超出畫布一個像素；僅此光學版本口沿內收0.3333px，其餘八個版本與管路均保留。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "7f09272008048d262d2be36902bd7a16abed983f9352cd887f0b66f9eed35a77",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/130-trumpet-boundary/review.html",
+            "sha256": "31a1a69042c026dedfda4e671623e0ce4be6c2c076219cf95a0b0a9bb9713aa6"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/130-trumpet-boundary/definitions.json",
+            "sha256": "b7fad8e17b61051a9176fdbe5b82fdb88f396730b4b470cb9d0e0e159611440b"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/130-trumpet-boundary/light-1x.png",
+            "sha256": "be3b377834ef81b2e960d63a1898edf61ad9dc780ab2550840dffd77addfb67c"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/130-trumpet-boundary/native-dark-1x.png",
+            "sha256": "29efadcf2f44294a58c11e7c88d0da55573db550ab879eb38ca816baa0827c30"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/130-trumpet-boundary/native-light-2x.png",
+            "sha256": "3b909eda18406f1ad4fe38646587113cc56574e39903c654b9b6700cb46f6a97"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/130-trumpet-boundary/native-dark-2x.png",
+            "sha256": "bd0bcd526cae0790523d89257acda46db0bb6502f2d9aeb45ebaaaa027d616a9"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-01/130-trumpet-boundary/light-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-01/130-trumpet-boundary/native-dark-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-01/130-trumpet-boundary/native-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-01/130-trumpet-boundary/native-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Material Design Icons",
+        "license": "Apache-2.0",
+        "licenseFile": "licenses/mdi-music-adaptations.txt"
+      },
+      "remaining": []
+    }
+  ]
+}

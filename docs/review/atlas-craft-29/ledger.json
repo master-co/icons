@@ -1,0 +1,1534 @@
+{
+  "schemaVersion": 2,
+  "reviewer": "Codex (AI)",
+  "userApproval": "pending",
+  "icons": [
+    {
+      "name": "diamond-gem",
+      "purpose": "寶石",
+      "recognitionCues": "切面上緣與向下收尖",
+      "confusableWith": [
+        "diamond",
+        "triangle"
+      ],
+      "sourceObservation": "Lucide切面比Tabler僅有閃光記號更能表現寶石結構。最新稿採Lucide切面；回比後16px移除上方兩條短斜線，保留主橫切面和下部收尖，完稿再比上部空腔更疏朗且仍是切割寶石。",
+      "references": [
+        {
+          "name": "diamond-gem",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/gem.svg",
+          "localPath": "references/atlas-01/lucide-gem.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/gem.svg",
+          "sha256": "377618223555b2847b553a81f6974c76b7ce14d1207bcc0e98baa27a6a36d40e",
+          "license": "ISC AND MIT",
+          "sourceName": "gem",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "diamond-gem",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/diamond.svg",
+          "localPath": "references/atlas-01/tabler-diamond.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/diamond.svg",
+          "sha256": "cf7f0cd02e130a6958ad69f43320c018c6e7ede81253ecfbfebd1bfa0f28a116",
+          "license": "MIT",
+          "sourceName": "diamond",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "物件主體與噴發短線均為可見形態，不表達隱藏邊或選取狀態。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "物件輪廓、杯耳及按鈕用留白區隔，無需淡化來掩飾密度。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "獎章、球體與手把用輪廓和必要內線傳達體量，不使用材質漸層。"
+        }
+      },
+      "change": {
+        "kind": "modified",
+        "before": {
+          "path": "references/atlas-craft-29/master-before.json",
+          "variantsSha256": "9e548c091784de226140bbdbc47e380f97a00e132c4f6104493ccb67bf6e70e9"
+        },
+        "reason": "外殼和下方切面共享底尖，內線裁在外殼墨線內；16單獨簡化細切面，20和24保留完整切面，不機械縮放所有細線。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "0a6d420a098698c75dca4d56e7fc072feb5fcc6bfbc77532aa71e4b1ea3946ee",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/125b-gem/review.html",
+            "sha256": "b668ec938f2500f26dd746fd20de663fdb05f27c3b068cdc1de2991407675ade"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/125b-gem/definitions.json",
+            "sha256": "f7e2c24c5e5328aea9e644a269c248da744d7028b28a0d4b1fb37312af99b2d3"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/125b-gem/light-1x.png",
+            "sha256": "8f1e93f55bf94ddf019f45fb15b209867fa02d706e635fffd2121cc86f0081c4"
+          },
+          {
+            "path": "docs/review/atlas-craft-29/final/definitions.json",
+            "sha256": "f9a0ee7c04bda36425cd14aa74408b25e97e63312b46acecb57f9d97b40532d0"
+          },
+          {
+            "path": "docs/review/atlas-craft-29/final/31-celebration.html",
+            "sha256": "dba8050b4a4e27c8bc27cf30f622ce2a79683aab395a0e62c4a8d65ae8950467"
+          },
+          {
+            "path": "docs/review/atlas-craft-29/final/31-celebration-light-1x.png",
+            "sha256": "9dc4c77c3adc84e3242e5862adf43bc4cdbada3f73008b118f65436f054c52cb"
+          },
+          {
+            "path": "docs/review/atlas-craft-29/final/31-celebration-light-2x.png",
+            "sha256": "a7e822d99b377e06db4057658750bd25f0e1f3a41073b9c7ecfba7bad4d6c9f2"
+          },
+          {
+            "path": "docs/review/atlas-craft-29/final/31-celebration-dark-1x.png",
+            "sha256": "0a4a219e9238deab3b3b0ea93dd01a60961168284928519f6c7d2132340e5fb9"
+          },
+          {
+            "path": "docs/review/atlas-craft-29/final/31-celebration-dark-2x.png",
+            "sha256": "375c423b47df13cbc6c09354c6d68128282580aa75058655021bd473260f0c5d"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-29/final/31-celebration-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-29/final/31-celebration-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-29/final/31-celebration-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-29/final/31-celebration-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Lucide",
+        "license": "ISC",
+        "licenseFile": "licenses/lucide.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "crown",
+      "purpose": "王冠",
+      "recognitionCues": "三尖冠身與寬底部",
+      "confusableWith": [
+        "trophy",
+        "award"
+      ],
+      "sourceObservation": "Phosphor單一冠身比Lucide另加底部短橫更簡練。最新稿採Phosphor三尖冠形；完稿回比16px三個尖峰和兩個凹口清楚，底部穩定而不加珠點擠壓輪廓。",
+      "references": [
+        {
+          "name": "crown",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/crown.svg",
+          "localPath": "references/atlas-01/lucide-crown.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/crown.svg",
+          "sha256": "544c1b6181749ae4b4c98861a5a6ed1242940239cda97cc13c74e84a03fd68c0",
+          "license": "ISC AND MIT",
+          "sourceName": "crown",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "crown",
+          "library": "Phosphor",
+          "repository": "phosphor-icons/core",
+          "commit": "2b75f3ad12b420c9504ef05df8d2564a28f8500e",
+          "path": "assets/regular/crown-simple.svg",
+          "localPath": "references/atlas-01/phosphor-crown-simple.svg",
+          "url": "https://github.com/phosphor-icons/core/blob/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular/crown-simple.svg",
+          "sha256": "92c321e08723d78bd3ea45e37cfc587dbe386f00c7f08bd4fb691166c6bf36c8",
+          "license": "MIT",
+          "sourceName": "crown-simple",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "物件主體與噴發短線均為可見形態，不表達隱藏邊或選取狀態。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "物件輪廓、杯耳及按鈕用留白區隔，無需淡化來掩飾密度。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "獎章、球體與手把用輪廓和必要內線傳達體量，不使用材質漸層。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-29/master-before.json",
+          "variantsSha256": "a5cae9c964a75b993886745db2dcb24114ea40f6ada3075ed8b4cb8589566337"
+        },
+        "reason": "三尖冠身沿共同中軸對稱，傾斜側壁與底邊形成完整閉合輪廓；以小轉角控制尖峰，不把王冠做成通用圓角矩形。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "20e1ae6095fe1a05d80bdb97ce917a2359d7c1a05dae59a27f57fc94de782f2a",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/125-gem-crown/review.html",
+            "sha256": "af5b40607a1a87bc771e81289256eefacffcd4f121d3ad58b3b6594b3fde583d"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/125-gem-crown/definitions.json",
+            "sha256": "5ebef9e69e269efb357ae397fb02879e63ca7f1298928c52339e6253cffbbe85"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/125-gem-crown/light-1x.png",
+            "sha256": "80c2bf6e9816ca2407b4c69c5dd4dce88b08b80a82d78e2f85f7ccb95c0d1109"
+          },
+          {
+            "path": "docs/review/atlas-craft-29/final/definitions.json",
+            "sha256": "f9a0ee7c04bda36425cd14aa74408b25e97e63312b46acecb57f9d97b40532d0"
+          },
+          {
+            "path": "docs/review/atlas-craft-29/final/31-celebration.html",
+            "sha256": "dba8050b4a4e27c8bc27cf30f622ce2a79683aab395a0e62c4a8d65ae8950467"
+          },
+          {
+            "path": "docs/review/atlas-craft-29/final/31-celebration-light-1x.png",
+            "sha256": "9dc4c77c3adc84e3242e5862adf43bc4cdbada3f73008b118f65436f054c52cb"
+          },
+          {
+            "path": "docs/review/atlas-craft-29/final/31-celebration-light-2x.png",
+            "sha256": "a7e822d99b377e06db4057658750bd25f0e1f3a41073b9c7ecfba7bad4d6c9f2"
+          },
+          {
+            "path": "docs/review/atlas-craft-29/final/31-celebration-dark-1x.png",
+            "sha256": "0a4a219e9238deab3b3b0ea93dd01a60961168284928519f6c7d2132340e5fb9"
+          },
+          {
+            "path": "docs/review/atlas-craft-29/final/31-celebration-dark-2x.png",
+            "sha256": "375c423b47df13cbc6c09354c6d68128282580aa75058655021bd473260f0c5d"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-29/final/31-celebration-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-29/final/31-celebration-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-29/final/31-celebration-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-29/final/31-celebration-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Phosphor",
+        "license": "MIT",
+        "licenseFile": "licenses/phosphor.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "trophy",
+      "purpose": "獎盃",
+      "recognitionCues": "雙耳杯身與支承底座",
+      "confusableWith": [
+        "medal",
+        "wine"
+      ],
+      "sourceObservation": "Tabler的單柱底座比Lucide階梯底座更疏朗。最新稿採Tabler杯身、圓耳與簡單底座，放大杯耳空腔；完稿回比16px杯耳孔清楚，杯口實際圓角和圓底連續，支柱不穿入杯內。",
+      "references": [
+        {
+          "name": "trophy",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/trophy.svg",
+          "localPath": "references/atlas-01/lucide-trophy.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/trophy.svg",
+          "sha256": "c641553befdb899b2eb01075c0962c73b4b0e0d1835d9d407f5d5d4d70f77d03",
+          "license": "ISC AND MIT",
+          "sourceName": "trophy",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "trophy",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/trophy.svg",
+          "localPath": "references/atlas-01/tabler-trophy.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/trophy.svg",
+          "sha256": "1c1168d9b0656d1c19797a199e19bd5f2bda185f818b46d67ce6f66db0ece666",
+          "license": "MIT",
+          "sourceName": "trophy",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "物件主體與噴發短線均為可見形態，不表達隱藏邊或選取狀態。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "物件輪廓、杯耳及按鈕用留白區隔，無需淡化來掩飾密度。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "獎章、球體與手把用輪廓和必要內線傳達體量，不使用材質漸層。"
+        }
+      },
+      "change": {
+        "kind": "modified",
+        "before": {
+          "path": "references/atlas-craft-29/master-before.json",
+          "variantsSha256": "ef2ff215e1c96528c9def3bf4cd76f1973b3138db476cf510e86a0f780f4b48a"
+        },
+        "reason": "雙耳及支柱裁於杯身外緣，主杯從垂直壁連續進入半圓底；修正杯口為實際幾何圓角，三種角型不只更換linejoin。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "0fc79105eb2db4f06b767d05fbe7e57524fb63d9f0d5683e36df0fe24f2b685c",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/126b-trophy/review.html",
+            "sha256": "95fcd6f55431b5e8d111b01f746a67bf4a55debd22e87074d3fae826901187b5"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/126b-trophy/definitions.json",
+            "sha256": "4e8e01f78fe3bc8eaeef391b586cef8319136677e7e097ddb86113fba46929ef"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/126b-trophy/light-1x.png",
+            "sha256": "0d0ec9b4369236130e807a154bc5cd651c7ef2d4acd66742229413188866c8e3"
+          },
+          {
+            "path": "docs/review/atlas-craft-29/final/definitions.json",
+            "sha256": "f9a0ee7c04bda36425cd14aa74408b25e97e63312b46acecb57f9d97b40532d0"
+          },
+          {
+            "path": "docs/review/atlas-craft-29/final/31-celebration.html",
+            "sha256": "dba8050b4a4e27c8bc27cf30f622ce2a79683aab395a0e62c4a8d65ae8950467"
+          },
+          {
+            "path": "docs/review/atlas-craft-29/final/31-celebration-light-1x.png",
+            "sha256": "9dc4c77c3adc84e3242e5862adf43bc4cdbada3f73008b118f65436f054c52cb"
+          },
+          {
+            "path": "docs/review/atlas-craft-29/final/31-celebration-light-2x.png",
+            "sha256": "a7e822d99b377e06db4057658750bd25f0e1f3a41073b9c7ecfba7bad4d6c9f2"
+          },
+          {
+            "path": "docs/review/atlas-craft-29/final/31-celebration-dark-1x.png",
+            "sha256": "0a4a219e9238deab3b3b0ea93dd01a60961168284928519f6c7d2132340e5fb9"
+          },
+          {
+            "path": "docs/review/atlas-craft-29/final/31-celebration-dark-2x.png",
+            "sha256": "375c423b47df13cbc6c09354c6d68128282580aa75058655021bd473260f0c5d"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-29/final/31-celebration-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-29/final/31-celebration-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-29/final/31-celebration-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-29/final/31-celebration-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Tabler",
+        "license": "MIT",
+        "licenseFile": "licenses/tabler.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "medal",
+      "purpose": "獎章",
+      "recognitionCues": "懸帶與下方圓形章體",
+      "confusableWith": [
+        "award",
+        "trophy"
+      ],
+      "sourceObservation": "Phosphor軍功章的直懸帶和空白章體比Lucide交叉帶及數字更清楚。最新稿採Phosphor構造；完稿回比16px懸帶三區與圓章孔可辨，沒有加星或數字使章體變成黑點。",
+      "references": [
+        {
+          "name": "medal",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/medal.svg",
+          "localPath": "references/atlas-01/lucide-medal.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/medal.svg",
+          "sha256": "19a93f0d070d0a04283e2bee11799d3fd73de214936224c5d4141ebe3e119756",
+          "license": "ISC AND MIT",
+          "sourceName": "medal",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "medal",
+          "library": "Phosphor",
+          "repository": "phosphor-icons/core",
+          "commit": "2b75f3ad12b420c9504ef05df8d2564a28f8500e",
+          "path": "assets/regular/medal-military.svg",
+          "localPath": "references/atlas-01/phosphor-medal-military.svg",
+          "url": "https://github.com/phosphor-icons/core/blob/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular/medal-military.svg",
+          "sha256": "f093480525d217ecc918d930ab11c24c479555115c3c71d84f242e5cd8551f88",
+          "license": "MIT",
+          "sourceName": "medal-military",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "物件主體與噴發短線均為可見形態，不表達隱藏邊或選取狀態。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "物件輪廓、杯耳及按鈕用留白區隔，無需淡化來掩飾密度。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "獎章、球體與手把用輪廓和必要內線傳達體量，不使用材質漸層。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-29/master-before.json",
+          "variantsSha256": "c86ddf234ec7737d328d08f40418c95a7b80c19e96bbea38a80e1e36f5a7bce9"
+        },
+        "reason": "章體保持圓形，懸帶內分界裁在帶內且帶尖收於章體外緣；兩者為相接結構，沒有不必要透明斷口。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "eb753b779211d91df97738c367cd5dd328bba30f74d30bc192e931665bb21328",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/126-awards-ribbon/review.html",
+            "sha256": "7ddd72b2be0476e746864cc7de65ca546c54cc7f06a12849a4f5907dd48397a5"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/126-awards-ribbon/definitions.json",
+            "sha256": "850bdcbffd6cd1fe36a13144100480cfe260ed93cb2f184c0050ce38a2023c42"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/126-awards-ribbon/light-1x.png",
+            "sha256": "ce05910e9c7d87142b6723ff8a55b41d99b1e592789360ac4a42187607238025"
+          },
+          {
+            "path": "docs/review/atlas-craft-29/final/definitions.json",
+            "sha256": "f9a0ee7c04bda36425cd14aa74408b25e97e63312b46acecb57f9d97b40532d0"
+          },
+          {
+            "path": "docs/review/atlas-craft-29/final/31-celebration.html",
+            "sha256": "dba8050b4a4e27c8bc27cf30f622ce2a79683aab395a0e62c4a8d65ae8950467"
+          },
+          {
+            "path": "docs/review/atlas-craft-29/final/31-celebration-light-1x.png",
+            "sha256": "9dc4c77c3adc84e3242e5862adf43bc4cdbada3f73008b118f65436f054c52cb"
+          },
+          {
+            "path": "docs/review/atlas-craft-29/final/31-celebration-light-2x.png",
+            "sha256": "a7e822d99b377e06db4057658750bd25f0e1f3a41073b9c7ecfba7bad4d6c9f2"
+          },
+          {
+            "path": "docs/review/atlas-craft-29/final/31-celebration-dark-1x.png",
+            "sha256": "0a4a219e9238deab3b3b0ea93dd01a60961168284928519f6c7d2132340e5fb9"
+          },
+          {
+            "path": "docs/review/atlas-craft-29/final/31-celebration-dark-2x.png",
+            "sha256": "375c423b47df13cbc6c09354c6d68128282580aa75058655021bd473260f0c5d"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-29/final/31-celebration-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-29/final/31-celebration-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-29/final/31-celebration-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-29/final/31-celebration-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Phosphor",
+        "license": "MIT",
+        "licenseFile": "licenses/phosphor.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "ribbon",
+      "purpose": "關懷緞帶",
+      "recognitionCues": "連續迴圈與交叉垂帶",
+      "confusableWith": [
+        "medal",
+        "infinity"
+      ],
+      "sourceObservation": "Hugeicons雙邊帶含多條內線，Tabler連續單線能以較少墨量保留關懷緞帶姿態。最新稿採Tabler迴圈交繞；完稿回比16px頂部空腔與兩條垂帶清楚，曲線順暢而非幾何圓環拼兩條斜線。",
+      "references": [
+        {
+          "name": "ribbon",
+          "library": "Hugeicons Free",
+          "repository": "hugeicons/hugeicons",
+          "commit": "834e28d965946c1ee60d080027fe9dae4adc58d0",
+          "path": "icons/ribbon.svg",
+          "localPath": "references/atlas-01/hugeicons-ribbon.svg",
+          "url": "https://github.com/hugeicons/hugeicons/blob/834e28d965946c1ee60d080027fe9dae4adc58d0/icons/ribbon.svg",
+          "sha256": "25e3bb09ba7290ab20ce33446db1f94f14ca3e2f17f145fdad1222484aa8b231",
+          "license": "MIT",
+          "sourceName": "ribbon",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "ribbon",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/ribbon-health.svg",
+          "localPath": "references/atlas-01/tabler-ribbon-health.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/ribbon-health.svg",
+          "sha256": "ae8e68e12798dcfadbea2bdf33d046d8e2b84f1f3fae1620fdd0bcb75257504a",
+          "license": "MIT",
+          "sourceName": "ribbon-health",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "物件主體與噴發短線均為可見形態，不表達隱藏邊或選取狀態。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "物件輪廓、杯耳及按鈕用留白區隔，無需淡化來掩飾密度。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "獎章、球體與手把用輪廓和必要內線傳達體量，不使用材質漸層。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-29/master-before.json",
+          "variantsSha256": "4591831e585168031d93c667d5d6d9bb5d4c7ea9a037d0533653019b2cae5225"
+        },
+        "reason": "用一條連續曲線形成頂部迴圈、交叉和兩側收筆；交叉是緞帶語意所需，保持實線相交，不另加會壓縮空間的帶寬邊線。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "aa2f8c37732e9e948766d025158c2775cbac68b0f12c5a9a154c12460502a75f",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/126-awards-ribbon/review.html",
+            "sha256": "7ddd72b2be0476e746864cc7de65ca546c54cc7f06a12849a4f5907dd48397a5"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/126-awards-ribbon/definitions.json",
+            "sha256": "850bdcbffd6cd1fe36a13144100480cfe260ed93cb2f184c0050ce38a2023c42"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/126-awards-ribbon/light-1x.png",
+            "sha256": "ce05910e9c7d87142b6723ff8a55b41d99b1e592789360ac4a42187607238025"
+          },
+          {
+            "path": "docs/review/atlas-craft-29/final/definitions.json",
+            "sha256": "f9a0ee7c04bda36425cd14aa74408b25e97e63312b46acecb57f9d97b40532d0"
+          },
+          {
+            "path": "docs/review/atlas-craft-29/final/31-celebration.html",
+            "sha256": "dba8050b4a4e27c8bc27cf30f622ce2a79683aab395a0e62c4a8d65ae8950467"
+          },
+          {
+            "path": "docs/review/atlas-craft-29/final/31-celebration-light-1x.png",
+            "sha256": "9dc4c77c3adc84e3242e5862adf43bc4cdbada3f73008b118f65436f054c52cb"
+          },
+          {
+            "path": "docs/review/atlas-craft-29/final/31-celebration-light-2x.png",
+            "sha256": "a7e822d99b377e06db4057658750bd25f0e1f3a41073b9c7ecfba7bad4d6c9f2"
+          },
+          {
+            "path": "docs/review/atlas-craft-29/final/31-celebration-dark-1x.png",
+            "sha256": "0a4a219e9238deab3b3b0ea93dd01a60961168284928519f6c7d2132340e5fb9"
+          },
+          {
+            "path": "docs/review/atlas-craft-29/final/31-celebration-dark-2x.png",
+            "sha256": "375c423b47df13cbc6c09354c6d68128282580aa75058655021bd473260f0c5d"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-29/final/31-celebration-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-29/final/31-celebration-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-29/final/31-celebration-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-29/final/31-celebration-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Tabler",
+        "license": "MIT",
+        "licenseFile": "licenses/tabler.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "party-popper",
+      "purpose": "派對拉炮",
+      "recognitionCues": "斜向錐筒與向外噴發符號",
+      "confusableWith": [
+        "cone",
+        "sparkles"
+      ],
+      "sourceObservation": "Lucide多條捲紙和開口橢圓在小尺寸較密，Tabler簡單錐筒更清楚。最新稿採Tabler簡化構圖，減少星點；完稿回比16px筒內孔開放，三條噴發短線與一點都有獨立留白。",
+      "references": [
+        {
+          "name": "party-popper",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/party-popper.svg",
+          "localPath": "references/atlas-01/lucide-party-popper.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/party-popper.svg",
+          "sha256": "b5335d39d785b14bad5fcd3b3ce3c176a131a357825223b4b7e1ed4b478b02be",
+          "license": "ISC AND MIT",
+          "sourceName": "party-popper",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "party-popper",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/confetti.svg",
+          "localPath": "references/atlas-01/tabler-confetti.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/confetti.svg",
+          "sha256": "a721d09917d5161b513291b121e93b4f793a6c37112bf45714f44484a15452a0",
+          "license": "MIT",
+          "sourceName": "confetti",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "物件主體與噴發短線均為可見形態，不表達隱藏邊或選取狀態。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "物件輪廓、杯耳及按鈕用留白區隔，無需淡化來掩飾密度。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "獎章、球體與手把用輪廓和必要內線傳達體量，不使用材質漸層。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-29/master-before.json",
+          "variantsSha256": "e80f1674079e26519d22a8908c1c726e86b855d21e73b4d9291ace2f49be275f"
+        },
+        "reason": "沿斜向主軸安排錐筒與向外短線，保留噴發方向而不堆疊碎紙；尖端隨角型調整實際小半徑，主要輪廓保持清楚。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "1de31a6e50d54af43a4c52509e9a8a1738c0b86826362c70270e035b787c966d",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/127-party-balloon/review.html",
+            "sha256": "c7f19c0ff196bdc3947c78facade3342430c4d295a04a801c1911fe74533aaad"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/127-party-balloon/definitions.json",
+            "sha256": "1fdba20760a1e5788076b0c74243304efe8cb42f697a4e555f5b627ef396ab3d"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/127-party-balloon/light-1x.png",
+            "sha256": "86cfae2f65cc3e1d5e8a223bd059064f34ea4d6d30207ae38567a808e637443c"
+          },
+          {
+            "path": "docs/review/atlas-craft-29/final/definitions.json",
+            "sha256": "f9a0ee7c04bda36425cd14aa74408b25e97e63312b46acecb57f9d97b40532d0"
+          },
+          {
+            "path": "docs/review/atlas-craft-29/final/31-celebration.html",
+            "sha256": "dba8050b4a4e27c8bc27cf30f622ce2a79683aab395a0e62c4a8d65ae8950467"
+          },
+          {
+            "path": "docs/review/atlas-craft-29/final/31-celebration-light-1x.png",
+            "sha256": "9dc4c77c3adc84e3242e5862adf43bc4cdbada3f73008b118f65436f054c52cb"
+          },
+          {
+            "path": "docs/review/atlas-craft-29/final/31-celebration-light-2x.png",
+            "sha256": "a7e822d99b377e06db4057658750bd25f0e1f3a41073b9c7ecfba7bad4d6c9f2"
+          },
+          {
+            "path": "docs/review/atlas-craft-29/final/31-celebration-dark-1x.png",
+            "sha256": "0a4a219e9238deab3b3b0ea93dd01a60961168284928519f6c7d2132340e5fb9"
+          },
+          {
+            "path": "docs/review/atlas-craft-29/final/31-celebration-dark-2x.png",
+            "sha256": "375c423b47df13cbc6c09354c6d68128282580aa75058655021bd473260f0c5d"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-29/final/31-celebration-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-29/final/31-celebration-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-29/final/31-celebration-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-29/final/31-celebration-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Tabler",
+        "license": "MIT",
+        "licenseFile": "licenses/tabler.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "balloon",
+      "purpose": "氣球",
+      "recognitionCues": "鼓起球腹、收束尾部與繩線",
+      "confusableWith": [
+        "droplet",
+        "party-popper"
+      ],
+      "sourceObservation": "Lucide繩線比Phosphor獨立氣嘴更能表現氣球浮起姿態。最新稿採Lucide連續球腹和繩線；完稿回比16px省略內部高光後更清爽，20與24保留短弧，收束處沒有繩線端帽穿入球腹。",
+      "references": [
+        {
+          "name": "balloon",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/balloon.svg",
+          "localPath": "references/atlas-01/lucide-balloon.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/balloon.svg",
+          "sha256": "b16e67e64a92024cda638c25e9538fbaced0041bfc644b6cd25496069562686b",
+          "license": "ISC AND MIT",
+          "sourceName": "balloon",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "balloon",
+          "library": "Phosphor",
+          "repository": "phosphor-icons/core",
+          "commit": "2b75f3ad12b420c9504ef05df8d2564a28f8500e",
+          "path": "assets/regular/balloon.svg",
+          "localPath": "references/atlas-01/phosphor-balloon.svg",
+          "url": "https://github.com/phosphor-icons/core/blob/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular/balloon.svg",
+          "sha256": "c2a1c9e31247d759d467d2035b90d9ddc951f2dc6c429aa2c5e5f8e576b0b9b2",
+          "license": "MIT",
+          "sourceName": "balloon",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "物件主體與噴發短線均為可見形態，不表達隱藏邊或選取狀態。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "物件輪廓、杯耳及按鈕用留白區隔，無需淡化來掩飾密度。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "獎章、球體與手把用輪廓和必要內線傳達體量，不使用材質漸層。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-29/master-before.json",
+          "variantsSha256": "353fcbb39ada65913897635e995fa2183be0cbeb2f70989866774ed2c9d34f60"
+        },
+        "reason": "球腹由圓肩連續收向下部，繩線沿下端承接並裁在球體外；16刪除裝飾弧而保留核心收束與繩線。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "e54a9649d910df64b7e24e91d37bb6e4d1a9d654463d67d2fbe770a432a2dece",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/127-party-balloon/review.html",
+            "sha256": "c7f19c0ff196bdc3947c78facade3342430c4d295a04a801c1911fe74533aaad"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/127-party-balloon/definitions.json",
+            "sha256": "1fdba20760a1e5788076b0c74243304efe8cb42f697a4e555f5b627ef396ab3d"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/127-party-balloon/light-1x.png",
+            "sha256": "86cfae2f65cc3e1d5e8a223bd059064f34ea4d6d30207ae38567a808e637443c"
+          },
+          {
+            "path": "docs/review/atlas-craft-29/final/definitions.json",
+            "sha256": "f9a0ee7c04bda36425cd14aa74408b25e97e63312b46acecb57f9d97b40532d0"
+          },
+          {
+            "path": "docs/review/atlas-craft-29/final/31-celebration.html",
+            "sha256": "dba8050b4a4e27c8bc27cf30f622ce2a79683aab395a0e62c4a8d65ae8950467"
+          },
+          {
+            "path": "docs/review/atlas-craft-29/final/31-celebration-light-1x.png",
+            "sha256": "9dc4c77c3adc84e3242e5862adf43bc4cdbada3f73008b118f65436f054c52cb"
+          },
+          {
+            "path": "docs/review/atlas-craft-29/final/31-celebration-light-2x.png",
+            "sha256": "a7e822d99b377e06db4057658750bd25f0e1f3a41073b9c7ecfba7bad4d6c9f2"
+          },
+          {
+            "path": "docs/review/atlas-craft-29/final/31-celebration-dark-1x.png",
+            "sha256": "0a4a219e9238deab3b3b0ea93dd01a60961168284928519f6c7d2132340e5fb9"
+          },
+          {
+            "path": "docs/review/atlas-craft-29/final/31-celebration-dark-2x.png",
+            "sha256": "375c423b47df13cbc6c09354c6d68128282580aa75058655021bd473260f0c5d"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-29/final/31-celebration-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-29/final/31-celebration-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-29/final/31-celebration-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-29/final/31-celebration-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Lucide",
+        "license": "ISC",
+        "licenseFile": "licenses/lucide.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "dice",
+      "purpose": "骰子",
+      "recognitionCues": "方體內五個對稱點",
+      "confusableWith": [
+        "grid",
+        "square"
+      ],
+      "sourceObservation": "Lucide五點與Tabler四點都能清楚表示骰子。最新稿獨立建立常見五點配置；完稿回比16px中央點與四角點的間距均勻，點不貼邊，rounded保留方體而非圓形。",
+      "references": [
+        {
+          "name": "dice",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/dice-5.svg",
+          "localPath": "references/atlas-01/lucide-dice-5.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/dice-5.svg",
+          "sha256": "0a06cfd9beaf4aaab9623283c840e6b396bbc5fd24077be80c9a4ad7520ca244",
+          "license": "ISC AND MIT",
+          "sourceName": "dice-5",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "dice",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/dice.svg",
+          "localPath": "references/atlas-01/tabler-dice.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/dice.svg",
+          "sha256": "8c57e9890ea82d1abc2eb12d595a2cce0c4ed5382935eefa54d5cfa7ea1d5739",
+          "license": "MIT",
+          "sourceName": "dice",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "物件主體與噴發短線均為可見形態，不表達隱藏邊或選取狀態。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "物件輪廓、杯耳及按鈕用留白區隔，無需淡化來掩飾密度。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "獎章、球體與手把用輪廓和必要內線傳達體量，不使用材質漸層。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-29/master-before.json",
+          "variantsSha256": "cec75b5197b34127d60b219ed607a98e9b1e5272f62d75f49e1e8b370307773f"
+        },
+        "reason": "五點沿共同中心對稱配置，點徑按原生尺寸調整；外框實際圓角隨預設變化，不以路徑數充當簡約判斷。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "73ed89451729f3cb26eddb9abe7daaaaedfa54654f503b228990ed11be7b6011",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/128-game-controls/review.html",
+            "sha256": "babef1910541ce815f8f0c875a1439c0c387787a427db55a71a60e3763a9d49b"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/128-game-controls/definitions.json",
+            "sha256": "6b2e7820348200a5597f6097f56f19c58722e0bcf000e1d4398b3e19d7350d9b"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/128-game-controls/light-1x.png",
+            "sha256": "ab123551158e5be8d0f16a97ccc0828ba5a8118857304eb85f82ad9ae431c041"
+          },
+          {
+            "path": "docs/review/atlas-craft-29/final/definitions.json",
+            "sha256": "f9a0ee7c04bda36425cd14aa74408b25e97e63312b46acecb57f9d97b40532d0"
+          },
+          {
+            "path": "docs/review/atlas-craft-29/final/31-celebration.html",
+            "sha256": "dba8050b4a4e27c8bc27cf30f622ce2a79683aab395a0e62c4a8d65ae8950467"
+          },
+          {
+            "path": "docs/review/atlas-craft-29/final/31-celebration-light-1x.png",
+            "sha256": "9dc4c77c3adc84e3242e5862adf43bc4cdbada3f73008b118f65436f054c52cb"
+          },
+          {
+            "path": "docs/review/atlas-craft-29/final/31-celebration-light-2x.png",
+            "sha256": "a7e822d99b377e06db4057658750bd25f0e1f3a41073b9c7ecfba7bad4d6c9f2"
+          },
+          {
+            "path": "docs/review/atlas-craft-29/final/31-celebration-dark-1x.png",
+            "sha256": "0a4a219e9238deab3b3b0ea93dd01a60961168284928519f6c7d2132340e5fb9"
+          },
+          {
+            "path": "docs/review/atlas-craft-29/final/31-celebration-dark-2x.png",
+            "sha256": "375c423b47df13cbc6c09354c6d68128282580aa75058655021bd473260f0c5d"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-29/final/31-celebration-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-29/final/31-celebration-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-29/final/31-celebration-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-29/final/31-celebration-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "independent-construction"
+      },
+      "remaining": []
+    },
+    {
+      "name": "gamepad",
+      "purpose": "遊戲手把",
+      "recognitionCues": "雙握柄連續外殼與操作按鈕",
+      "confusableWith": [
+        "joystick",
+        "keyboard"
+      ],
+      "sourceObservation": "Lucide連續雙握柄比Tabler另加中央斜線更有一體感。最新稿採Lucide主構造；回比後把下緣兩個折點改成連續過渡，完稿再比16px方向鍵和兩個按鈕清楚，握柄與主殼不似零件拼湊。",
+      "references": [
+        {
+          "name": "gamepad",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/gamepad-2.svg",
+          "localPath": "references/atlas-01/lucide-gamepad-2.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/gamepad-2.svg",
+          "sha256": "b0671de7afbebdafc4d655d867d9851947170b906fb187e749410039df867509",
+          "license": "ISC AND MIT",
+          "sourceName": "gamepad-2",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "gamepad",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/device-gamepad-2.svg",
+          "localPath": "references/atlas-01/tabler-device-gamepad-2.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/device-gamepad-2.svg",
+          "sha256": "16b925ed58791c114e354e90f5d67a8c2bb348ee596d8ade64ce9d1f4b90026b",
+          "license": "MIT",
+          "sourceName": "device-gamepad-2",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "物件主體與噴發短線均為可見形態，不表達隱藏邊或選取狀態。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "物件輪廓、杯耳及按鈕用留白區隔，無需淡化來掩飾密度。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "獎章、球體與手把用輪廓和必要內線傳達體量，不使用材質漸層。"
+        }
+      },
+      "change": {
+        "kind": "modified",
+        "before": {
+          "path": "references/atlas-craft-29/master-before.json",
+          "variantsSha256": "0b6439bbad097bb2100c1f84b15ef90fa730ace2349defffd758d29c26384c7d"
+        },
+        "reason": "以對稱連續外殼形成雙握柄，肩部和下凹口有明確切線過渡；按鈕以少量點與十字配置，不加入不必要的搖桿圈。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "985fffc10395285df5087963e98ba4b2c0378dd1ae58cec54f649199af3cbad0",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/128b-gamepad/review.html",
+            "sha256": "8528842a975f2ffd339e17a8beb7843f9eb699ad7209ee5eb787769ad4ae6a75"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/128b-gamepad/definitions.json",
+            "sha256": "92c8f1887fcd230857efd2885b0dc4b11891a0a8f87f798512f34aff2ebed174"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/128b-gamepad/light-1x.png",
+            "sha256": "d1f2b4815e7b808e71a46d739a1184b3f340c36abd1b2aa812130d35b020f650"
+          },
+          {
+            "path": "docs/review/atlas-craft-29/final/definitions.json",
+            "sha256": "f9a0ee7c04bda36425cd14aa74408b25e97e63312b46acecb57f9d97b40532d0"
+          },
+          {
+            "path": "docs/review/atlas-craft-29/final/31-celebration.html",
+            "sha256": "dba8050b4a4e27c8bc27cf30f622ce2a79683aab395a0e62c4a8d65ae8950467"
+          },
+          {
+            "path": "docs/review/atlas-craft-29/final/31-celebration-light-1x.png",
+            "sha256": "9dc4c77c3adc84e3242e5862adf43bc4cdbada3f73008b118f65436f054c52cb"
+          },
+          {
+            "path": "docs/review/atlas-craft-29/final/31-celebration-light-2x.png",
+            "sha256": "a7e822d99b377e06db4057658750bd25f0e1f3a41073b9c7ecfba7bad4d6c9f2"
+          },
+          {
+            "path": "docs/review/atlas-craft-29/final/31-celebration-dark-1x.png",
+            "sha256": "0a4a219e9238deab3b3b0ea93dd01a60961168284928519f6c7d2132340e5fb9"
+          },
+          {
+            "path": "docs/review/atlas-craft-29/final/31-celebration-dark-2x.png",
+            "sha256": "375c423b47df13cbc6c09354c6d68128282580aa75058655021bd473260f0c5d"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-29/final/31-celebration-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-29/final/31-celebration-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-29/final/31-celebration-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-29/final/31-celebration-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Lucide",
+        "license": "ISC",
+        "licenseFile": "licenses/lucide.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "joystick",
+      "purpose": "搖桿",
+      "recognitionCues": "球頭、直桿與共同底座",
+      "confusableWith": [
+        "gamepad",
+        "toggle-off"
+      ],
+      "sourceObservation": "Lucide接於底座的小按鈕比Phosphor浮離短橫更符合實體搖桿。最新稿採Lucide構造；完稿回比16px球頭空孔和底座空腔均清楚，桿身不穿入球內，rounded底座與方形版本維持共同尺度。",
+      "references": [
+        {
+          "name": "joystick",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/joystick.svg",
+          "localPath": "references/atlas-01/lucide-joystick.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/joystick.svg",
+          "sha256": "73e5481260335dc44f627ceacd0c5b954fc41bfd2ccd8b8e6b80d3f638174090",
+          "license": "ISC AND MIT",
+          "sourceName": "joystick",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "joystick",
+          "library": "Phosphor",
+          "repository": "phosphor-icons/core",
+          "commit": "2b75f3ad12b420c9504ef05df8d2564a28f8500e",
+          "path": "assets/regular/joystick.svg",
+          "localPath": "references/atlas-01/phosphor-joystick.svg",
+          "url": "https://github.com/phosphor-icons/core/blob/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular/joystick.svg",
+          "sha256": "7e516e27846aff48c00e85b73f1523f0f732eb35b1d7028a498c9186604868b9",
+          "license": "MIT",
+          "sourceName": "joystick",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "物件主體與噴發短線均為可見形態，不表達隱藏邊或選取狀態。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "物件輪廓、杯耳及按鈕用留白區隔，無需淡化來掩飾密度。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "獎章、球體與手把用輪廓和必要內線傳達體量，不使用材質漸層。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-29/master-before.json",
+          "variantsSha256": "a0fa641635a23b349eaed24fc433324ddca8c8187bb4f70c0cd404fc08cd75be"
+        },
+        "reason": "球頭、桿身和底座沿共同垂直軸承接，桿身和按鈕按實際輪廓收口；底座角型變化不影響物理球頭。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "142e0fc67b13fc3282e5875613b9cf4a9d0f3947590cb495e13685b380cb4066",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/128-game-controls/review.html",
+            "sha256": "babef1910541ce815f8f0c875a1439c0c387787a427db55a71a60e3763a9d49b"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/128-game-controls/definitions.json",
+            "sha256": "6b2e7820348200a5597f6097f56f19c58722e0bcf000e1d4398b3e19d7350d9b"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/128-game-controls/light-1x.png",
+            "sha256": "ab123551158e5be8d0f16a97ccc0828ba5a8118857304eb85f82ad9ae431c041"
+          },
+          {
+            "path": "docs/review/atlas-craft-29/final/definitions.json",
+            "sha256": "f9a0ee7c04bda36425cd14aa74408b25e97e63312b46acecb57f9d97b40532d0"
+          },
+          {
+            "path": "docs/review/atlas-craft-29/final/31-celebration.html",
+            "sha256": "dba8050b4a4e27c8bc27cf30f622ce2a79683aab395a0e62c4a8d65ae8950467"
+          },
+          {
+            "path": "docs/review/atlas-craft-29/final/31-celebration-light-1x.png",
+            "sha256": "9dc4c77c3adc84e3242e5862adf43bc4cdbada3f73008b118f65436f054c52cb"
+          },
+          {
+            "path": "docs/review/atlas-craft-29/final/31-celebration-light-2x.png",
+            "sha256": "a7e822d99b377e06db4057658750bd25f0e1f3a41073b9c7ecfba7bad4d6c9f2"
+          },
+          {
+            "path": "docs/review/atlas-craft-29/final/31-celebration-dark-1x.png",
+            "sha256": "0a4a219e9238deab3b3b0ea93dd01a60961168284928519f6c7d2132340e5fb9"
+          },
+          {
+            "path": "docs/review/atlas-craft-29/final/31-celebration-dark-2x.png",
+            "sha256": "375c423b47df13cbc6c09354c6d68128282580aa75058655021bd473260f0c5d"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-29/final/31-celebration-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-29/final/31-celebration-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-29/final/31-celebration-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-29/final/31-celebration-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Lucide",
+        "license": "ISC",
+        "licenseFile": "licenses/lucide.txt"
+      },
+      "remaining": []
+    }
+  ]
+}

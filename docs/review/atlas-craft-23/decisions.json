@@ -1,0 +1,158 @@
+{
+  "batch": "25-commerce",
+  "cycle": "atlas-craft-23",
+  "familyRoot": "docs/review/atlas-craft-23/final",
+  "baseline": "references/atlas-craft-23/master-before.json",
+  "reviewer": "Codex (AI)",
+  "visualInspectionComplete": true,
+  "inspectedCombinations": [
+    {
+      "theme": "light",
+      "dpr": 1
+    },
+    {
+      "theme": "light",
+      "dpr": 2
+    },
+    {
+      "theme": "dark",
+      "dpr": 1
+    },
+    {
+      "theme": "dark",
+      "dpr": 2
+    }
+  ],
+  "effects": {
+    "dashes": {
+      "used": false,
+      "reason": "完整交易物件與確定狀態不需要虛線表達未完成邊界。"
+    },
+    "opacity": {
+      "used": false,
+      "reason": "以真透明避讓和輪廓空白分開狀態，不用淡化掩蓋相接線條。"
+    },
+    "gradients": {
+      "used": false,
+      "reason": "單色外輪廓與必要內線足以表達商務物件，不需材質漸層。"
+    }
+  },
+  "decisions": [
+    {
+      "name": "scale",
+      "groupRoot": "docs/review/atlas-craft-01/100-scale-gavel-stamp",
+      "confusableWith": [
+        "sigma",
+        "gavel"
+      ],
+      "sourceObservation": "Lucide平衡樑的微弧比Phosphor傾斜樑更適合中立天秤。最新稿沿用Lucide結構；完稿回比保留左右對稱秤盤和微曲腹底，16px秤盤內孔仍清楚，沒有加入鏈條細節。",
+      "reason": "平衡橫樑以兩側連續曲線承接中央支柱，左右秤盤使用同樣曲腹與斜邊，底座保持水平穩定。",
+      "adaptedFrom": "Lucide"
+    },
+    {
+      "name": "gavel",
+      "groupRoot": "docs/review/atlas-craft-01/100-scale-gavel-stamp",
+      "confusableWith": [
+        "hammer",
+        "stamp"
+      ],
+      "sourceObservation": "Lucide簡潔槌面比Phosphor雙框端部更疏朗。最新稿採Lucide單線槌面；完稿回比16px仍讀得到槌頭、兩端面與柄的斜向關係，柄線在槌頭外緣收口，不穿進槌身。",
+      "reason": "頭部與長柄共用斜向構造軸，兩端面保留法槌特有的寬緣；柄根裁在主體外側，曲線握柄與直槌身有明確用途差異。",
+      "adaptedFrom": "Lucide"
+    },
+    {
+      "name": "stamp",
+      "groupRoot": "docs/review/atlas-craft-01/100-scale-gavel-stamp",
+      "confusableWith": [
+        "gavel",
+        "paint-roller"
+      ],
+      "sourceObservation": "Lucide的圓頂收腰握柄較Phosphor直斜邊更具印章手感。最新稿採Lucide曲線；完稿回比保留柄頸與印面底座內孔，16px下方印痕仍與底座分離，沒有以額外分割線增加密度。",
+      "reason": "圓頂握柄逐步收腰並落入印面底座，接點按底座外側收口；底座依角型變更實際半徑，下方單線表達壓印結果。",
+      "adaptedFrom": "Lucide"
+    },
+    {
+      "name": "shopping-basket",
+      "groupRoot": "docs/review/atlas-craft-01/101b-basket-family",
+      "confusableWith": [
+        "shopping-bag",
+        "shopping-cart"
+      ],
+      "sourceObservation": "Lucide雙斜提把表達可折疊購物籃，Phosphor較少籃條提供更好留白。最新稿採Lucide母型並只留兩條籃條；完稿回比再修正sharp提把下端侵入籃口的凸角，16px籃口與內部留白比初稿乾淨。",
+      "reason": "籃口與收窄籃身形成穩定母型，提把依實際外輪廓裁線，避免端帽穿入內孔；兩條短籃條交代通風構造，不堆滿格網。",
+      "adaptedFrom": "Lucide"
+    },
+    {
+      "name": "basket-check",
+      "groupRoot": "docs/review/atlas-craft-01/101b-basket-family",
+      "confusableWith": [
+        "shopping-basket",
+        "bag-check"
+      ],
+      "sourceObservation": "Tabler用圓形籃心而Hugeicons03採兩條籃條及右下勾號，後者更接近本家母型。最新稿承接Lucide購物籃構造，回比Hugeicons的疏密，右下勾號採既有mark並以真實墨線避讓；16px籃身和勾號清楚分離。",
+      "reason": "沿用本批Lucide改作購物籃的全部母型修正，包括提把外側收口；勾號以共同狀態記號加在右下角，保留透明避讓區及可辨識籃底。",
+      "adaptedFrom": "Lucide",
+      "additionalReferences": [
+        "lucide/shopping-basket"
+      ]
+    },
+    {
+      "name": "basket-plus",
+      "groupRoot": "docs/review/atlas-craft-01/101b-basket-family",
+      "confusableWith": [
+        "shopping-basket",
+        "bag-plus"
+      ],
+      "sourceObservation": "Tabler圓形籃心與Hugeicons03的直條構造不同，後者留白更適合新增狀態。最新稿承接Lucide購物籃母型；完稿回比Hugeicons後保持兩條籃條與右下加號，16px加號周邊不殘留碎片或幾乎相碰的線端。",
+      "reason": "沿用Lucide改作母型與最新提把裁線，右下加號使用既有狀態幾何；對前景實際墨線作透明避讓，三種角型同步檢查切口。",
+      "adaptedFrom": "Lucide",
+      "additionalReferences": [
+        "lucide/shopping-basket"
+      ]
+    },
+    {
+      "name": "bag-check",
+      "groupRoot": "docs/review/atlas-craft-01/102-bag-family",
+      "confusableWith": [
+        "shopping-bag",
+        "basket-check"
+      ],
+      "sourceObservation": "Tabler與Hugeicons都以購物袋加勾號表達完成。最新稿沿用既有Master購物袋和mark而未重畫來源輪廓；完稿回比，提把與袋身保留原本比例，右下勾號有獨立留白，袋內不加細線。",
+      "reason": "既有購物袋母型與共同勾號組合，依墨線外緣避讓後方袋身；保留袋口和提把構造，維持與本庫購物袋一致的尺度。",
+      "adaptedFrom": null
+    },
+    {
+      "name": "bag-plus",
+      "groupRoot": "docs/review/atlas-craft-01/102-bag-family",
+      "confusableWith": [
+        "shopping-bag",
+        "basket-plus"
+      ],
+      "sourceObservation": "初選MDI shopping-outline只有購物袋，已改用同語意Tabler與Hugeicons新增購物袋。最新稿採既有Master母型與加號；完稿回比16px，加號仍清楚獨立，袋內留白和弧形提把不受狀態標記擠壓。",
+      "reason": "沿用既有購物袋及共同加號，以透明避讓裁開右下袋身；不為狀態另造不同袋形，保留母型提把寬度和袋底比例。",
+      "adaptedFrom": null
+    },
+    {
+      "name": "cash-register",
+      "groupRoot": "docs/review/atlas-craft-01/103-register-receipt",
+      "confusableWith": [
+        "calculator",
+        "keyboard"
+      ],
+      "sourceObservation": "Tabler附加紙卷和貨幣細節較密，Phosphor的斜鍵盤與錢櫃層次更俐落。最新稿採Phosphor構造；完稿回比16px六顆鍵點和錢櫃內孔仍分開可讀，顯示器接縫止於機殼外緣。",
+      "reason": "斜向鍵盤平台與底部錢櫃共用外殼，頂部顯示器直接承接上緣；六個實心鍵點避免小圈內孔，底層橫線在殼內收口。",
+      "adaptedFrom": "Phosphor"
+    },
+    {
+      "name": "receipt-dollar",
+      "groupRoot": "docs/review/atlas-craft-01/103-register-receipt",
+      "confusableWith": [
+        "receipt",
+        "file-text"
+      ],
+      "sourceObservation": "Tabler的貨幣直桿穿過曲線，Hugeicons上下短桿讓字形中間更疏朗。最新稿保留Master收據母型並採Hugeicons短桿字形構造；完稿回比16px曲線仍讀為貨幣符號，底部鋸齒不額外增密。",
+      "reason": "沿用既有收據鋸齒輪廓，貨幣字形以連續S形曲線及上下短桿構成，保留字形與紙邊間距，避免一根長直桿把中間留白切碎。",
+      "adaptedFrom": "Hugeicons Free"
+    }
+  ]
+}

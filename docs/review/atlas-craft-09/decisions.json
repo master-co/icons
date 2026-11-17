@@ -1,0 +1,152 @@
+{
+  "batch": "12-medical",
+  "cycle": "atlas-craft-09",
+  "familyRoot": "docs/review/atlas-craft-09/final",
+  "baseline": "references/atlas-craft-09/master-before.json",
+  "reviewer": "Codex (AI)",
+  "visualInspectionComplete": true,
+  "inspectedCombinations": [
+    {
+      "theme": "light",
+      "dpr": 1
+    },
+    {
+      "theme": "light",
+      "dpr": 2
+    },
+    {
+      "theme": "dark",
+      "dpr": 1
+    },
+    {
+      "theme": "dark",
+      "dpr": 2
+    }
+  ],
+  "effects": {
+    "dashes": {
+      "used": false,
+      "reason": "醫療物件以實體輪廓與必要構造表示，不需要未完成或隱藏邊界訊號。"
+    },
+    "opacity": {
+      "used": false,
+      "reason": "液柱、孔點與醫療標記均保持實色，不用淡化掩蓋密度問題。"
+    },
+    "gradients": {
+      "used": false,
+      "reason": "單色醫療圖示不需要材質漸層或光澤。"
+    }
+  },
+  "decisions": [
+    {
+      "name": "stethoscope",
+      "groupRoot": "docs/review/atlas-craft-01/45-stethoscope-syringe-pill",
+      "confusableWith": [
+        "watch",
+        "thermometer"
+      ],
+      "sourceObservation": "Lucide與Tabler都用U形耳管接柔性管線和圓聽頭。Master保留這三段構造，耳端以短折線表達，導管在耳管底部相接，不另外疊一條近距離內弧。",
+      "reason": "兩耳端之間保持開口，U形底部與軟管共接而不穿出；聽頭保留圓孔，導管弧度舒展，原生16px仍可分辨耳管、軟管和聽頭。",
+      "adaptedFrom": "Lucide"
+    },
+    {
+      "name": "syringe",
+      "groupRoot": "docs/review/atlas-craft-01/45-stethoscope-syringe-pill",
+      "confusableWith": [
+        "pill",
+        "bandage"
+      ],
+      "sourceObservation": "Lucide用較圓的筒底及一段分界，Phosphor用方形筒身和短刻度。Master採後者的刻度語彙，保留推桿、指托及針尖，16px從兩刻度減為一條。",
+      "reason": "筒內短刻度不伸到對側；推桿與針尖按筒身外殼收口。角型作用在實際筒身折角，斜置之後仍保留兩側空白和可見的推桿間距。",
+      "adaptedFrom": "Phosphor"
+    },
+    {
+      "name": "pill",
+      "groupRoot": "docs/review/atlas-craft-01/45-stethoscope-syringe-pill",
+      "confusableWith": [
+        "bandage",
+        "syringe"
+      ],
+      "sourceObservation": "Lucide與Tabler都採斜向膠囊、半圓端部和中央接縫。Master沿用Lucide的膠囊比例，以固定半徑圓弧銜接平行側線，再將接縫墨線限制在外殼內。",
+      "reason": "兩端保持物件本身的圓曲面，sharp也不拉成多邊形；中央分界不突出側壁。沒有把相同膠囊另命名為第二個新概念湊數。",
+      "adaptedFrom": "Lucide"
+    },
+    {
+      "name": "medical-mask",
+      "groupRoot": "docs/review/atlas-craft-01/48b-heart-mask",
+      "confusableWith": [
+        "shield",
+        "bandage"
+      ],
+      "sourceObservation": "Phosphor有鼻樑折線與下巴收束，Tabler較接近矩形折疊口罩。Master採前者的包覆形態，保留外耳帶；16px一條摺線，20/24px兩條。",
+      "reason": "鼻樑和上方肩點按角型作實際曲線倒角，下巴保持連續弧；耳帶從本體外側接出，沒有重疊內框。小尺寸減去一條摺線後仍保留口罩的包覆姿態。",
+      "adaptedFrom": "Phosphor"
+    },
+    {
+      "name": "bandage",
+      "groupRoot": "docs/review/atlas-craft-01/46-mask-bandage-thermometer",
+      "confusableWith": [
+        "pill",
+        "medical-mask"
+      ],
+      "sourceObservation": "Lucide採水平敷料及四個透氣點，Tabler採斜向圓端貼布。Master保留Lucide的中央敷墊與兩側黏貼區，側邊圓角隨預設變化，孔點依尺寸調整。",
+      "reason": "兩條內分界收在外框內，敷墊四個孔點互相分開。16px DPR1的孔點較淡，辨識主要由中央敷墊和兩側黏貼區承擔；DPR2仍可清楚分辨四點，沒有把孔點當主要輪廓。",
+      "adaptedFrom": "Lucide"
+    },
+    {
+      "name": "thermometer",
+      "groupRoot": "docs/review/atlas-craft-01/46-mask-bandage-thermometer",
+      "confusableWith": [
+        "droplet",
+        "stethoscope"
+      ],
+      "sourceObservation": "Lucide採空心玻璃體溫計，Phosphor thermometer-simple另含中央液柱與感溫球。Tabler同名是電子體溫計，因此改以同型的Phosphor作第二份來源。Master保留液柱但將球心簡化為實心點。",
+      "reason": "管身寬度先為液柱兩側分配留白，再接較寬的感溫球；頂端圓弧與直管相切。沒有在球體裡再套細圓環，16px仍保留玻璃管和球部的構造差異。",
+      "adaptedFrom": "Phosphor"
+    },
+    {
+      "name": "hospital",
+      "groupRoot": "docs/review/atlas-craft-01/47-hospital-ambulance",
+      "confusableWith": [
+        "first-aid-kit",
+        "ambulance"
+      ],
+      "sourceObservation": "Lucide用中央主樓及雙側翼，Phosphor用主樓與單側翼。Master採單側院區，讓醫療標記與入口分占上下空間；省略窗格以免入口退化成密集小框。",
+      "reason": "主樓、側翼和入口比例各自成立，入口和醫療十字間留有明確空白；側翼共用主樓邊界，底部共線，沒有重複框線或端帽外凸。",
+      "adaptedFrom": "Phosphor"
+    },
+    {
+      "name": "ambulance",
+      "groupRoot": "docs/review/atlas-craft-01/47-hospital-ambulance",
+      "confusableWith": [
+        "car",
+        "bus"
+      ],
+      "sourceObservation": "Lucide採獨立的前方短引擎蓋，Tabler用較直立的廂型救護車及梯形駕駛窗。Master採Tabler構造，擴大車輪孔與車廂醫療標記周圍空間。",
+      "reason": "醫療車廂與前座共用結構邊，車輪遮住下緣而不穿透輪孔；駕駛窗和輪拱保持分離，16px省略門把與細小燈具，仍有清楚的救護車廂形。",
+      "adaptedFrom": "Tabler"
+    },
+    {
+      "name": "heart-pulse",
+      "groupRoot": "docs/review/atlas-craft-01/48b-heart-mask",
+      "confusableWith": [
+        "heart",
+        "first-aid-kit"
+      ],
+      "sourceObservation": "Lucide把脈波放在完整心形內，Tabler讓脈波從心形缺口伸入。Master沿用既有heart母型並採完整輪廓內的脈波；初稿多一個折峰，造成sharp小尺寸內部偏密，已減少轉折。",
+      "reason": "保留心形的雙肩、凹口與底尖，脈波改為一次上升和一次下降，降低谷點幅度以增大底部負空間；波形收在外殼內，不因端帽突出心形邊界。",
+      "adaptedFrom": "Lucide"
+    },
+    {
+      "name": "first-aid-kit",
+      "groupRoot": "docs/review/atlas-craft-01/48-heart-firstaid",
+      "confusableWith": [
+        "hospital",
+        "luggage"
+      ],
+      "sourceObservation": "Lucide醫療手提箱有兩條縱向結構帶，Tabler用提把和單純箱體。Master採Tabler的簡潔箱型，將醫療標記置中，保留足夠高的外提把。",
+      "reason": "提把孔與箱內標記分開分配空間，箱體圓角以真實幾何改變；沒有加入會壓縮十字周圍留白的縱向帶，提把和容器輪廓仍保留可攜急救箱的語意。",
+      "adaptedFrom": "Tabler"
+    }
+  ]
+}

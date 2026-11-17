@@ -1,0 +1,152 @@
+{
+  "batch": "13-body",
+  "cycle": "atlas-craft-10",
+  "familyRoot": "docs/review/atlas-craft-10/final",
+  "baseline": "references/atlas-craft-10/master-before.json",
+  "reviewer": "Codex (AI)",
+  "visualInspectionComplete": true,
+  "inspectedCombinations": [
+    {
+      "theme": "light",
+      "dpr": 1
+    },
+    {
+      "theme": "light",
+      "dpr": 2
+    },
+    {
+      "theme": "dark",
+      "dpr": 1
+    },
+    {
+      "theme": "dark",
+      "dpr": 2
+    }
+  ],
+  "effects": {
+    "dashes": {
+      "used": false,
+      "reason": "身體輪廓與助行工具均為實體構造，不需要隱藏邊界或未完成訊號。"
+    },
+    "opacity": {
+      "used": false,
+      "reason": "生物曲面和手勢以線形表達，不靠透明度掩蓋重疊或密度。"
+    },
+    "gradients": {
+      "used": false,
+      "reason": "中立單色器官與動作圖示不需要連續材質漸層。"
+    }
+  },
+  "decisions": [
+    {
+      "name": "bone",
+      "groupRoot": "docs/review/atlas-craft-01/49-bone-tooth-brain",
+      "confusableWith": [
+        "pill",
+        "utensils"
+      ],
+      "sourceObservation": "Lucide以細骨幹、雙瓣骨端及柔和收頸構成，Tabler骨端更大且轉折較圓。Master沿用Lucide的清楚骨幹比例，保留骨端膨大與頸部回收，不添加內部裝飾。",
+      "reason": "骨幹與兩端之間靠連續曲線銜接，原生16px的細長空腔仍開放；生物形態保留自然曲面，三種角型不為差異而把骨端變成方形。",
+      "adaptedFrom": "Lucide"
+    },
+    {
+      "name": "tooth",
+      "groupRoot": "docs/review/atlas-craft-01/49-bone-tooth-brain",
+      "confusableWith": [
+        "bone",
+        "pill"
+      ],
+      "sourceObservation": "Phosphor採較方的牙冠並以交叉線提示咬合面，Tabler採微凹牙冠和一條短折線。Master選Tabler的冠部語彙，拉出較明確的雙牙根與中間收束。",
+      "reason": "牙冠、齒身和分開牙根都在主輪廓表達；根尖保持圓滑，中央根隙可見。短冠線收在齒身內，不使用容易看成損壞標記的交叉線。",
+      "adaptedFrom": "Tabler"
+    },
+    {
+      "name": "brain",
+      "groupRoot": "docs/review/atlas-craft-01/49-bone-tooth-brain",
+      "confusableWith": [
+        "flower",
+        "cloud"
+      ],
+      "sourceObservation": "Lucide外輪廓有較多短腦迴，Tabler以較少圓葉和中央分叉表達。Master採簡化的左右腦葉與中央縱裂，20/24px增加上方內折，16px保留主要葉形及下方分支。",
+      "reason": "左右輪廓共軸，中央線連接上下，不靠四個分離的圓框拼接；小尺寸刪去兩段上腦迴後，主輪廓仍有腦葉起伏，內部沒有密集平行狹縫。",
+      "adaptedFrom": "Tabler"
+    },
+    {
+      "name": "lungs",
+      "groupRoot": "docs/review/atlas-craft-01/50-lungs-ear-hand",
+      "confusableWith": [
+        "stethoscope",
+        "leaf"
+      ],
+      "sourceObservation": "Hugeicons以較飽滿的肺葉和內部分支表現呼吸器官，Tabler用較直的肺內側與中央分岔。Master採Tabler的基本構造，加寬中央通道並保留由上向下展開的肺葉曲面。",
+      "reason": "肺葉頂部窄、下部飽滿，氣道與肺葉內緣之間有可見留白；分岔在接入肺葉時收於外殼，不在小肺葉內增畫細支氣管。",
+      "adaptedFrom": "Tabler"
+    },
+    {
+      "name": "ear",
+      "groupRoot": "docs/review/atlas-craft-01/50-lungs-ear-hand",
+      "confusableWith": [
+        "stethoscope",
+        "brain"
+      ],
+      "sourceObservation": "Lucide保留較完整的耳輪、耳垂和內耳彎折，Tabler內部只留一段短弧。Master採Lucide的完整耳垂構造，讓外輪廓由上方飽滿弧逐步收進下方耳垂。",
+      "reason": "內耳折線與外耳輪保持分離，開口與耳垂均可讀；沒有再加一圈平行外框。原生16px仍能讀到外耳與內部折曲，sharp保留曲面而只改端部語言。",
+      "adaptedFrom": "Lucide"
+    },
+    {
+      "name": "hand-heart",
+      "groupRoot": "docs/review/atlas-craft-01/50-lungs-ear-hand",
+      "confusableWith": [
+        "hand",
+        "heart"
+      ],
+      "sourceObservation": "Lucide以斜向手腕托心，Phosphor以水平手掌與袖口承接較大的心形。Master選後者的手勢，保留拇指、指尖伸展和袖口，心形位於手掌後方。",
+      "reason": "心形下緣按手掌實際遮擋，沒有穿過拇指；指縫只留一條必要線，掌心與袖口各有空白。持握接點按結構相連，不為了假性分離而挖出不合理空隙。",
+      "adaptedFrom": "Phosphor"
+    },
+    {
+      "name": "person-standing",
+      "groupRoot": "docs/review/atlas-craft-01/51-standing-walking",
+      "confusableWith": [
+        "person-walking",
+        "user"
+      ],
+      "sourceObservation": "Lucide以抬起雙臂和分開雙腿表現站立，Phosphor雙臂較平並使用空心頭部。Master採Lucide的直立軀幹及輕抬雙臂，調整頭肩間距並使用較清楚的圓頭孔。",
+      "reason": "雙臂共軸，軀幹直立，雙腿由同一髖點展開；頭部與肩線保持可見間距，沒有額外外框。與既有輪椅乘坐者accessibility符號屬不同概念。",
+      "adaptedFrom": "Lucide"
+    },
+    {
+      "name": "person-walking",
+      "groupRoot": "docs/review/atlas-craft-01/51b-walking",
+      "confusableWith": [
+        "person-standing",
+        "accessibility"
+      ],
+      "sourceObservation": "Phosphor用連續弧線表達擺臂與前傾，Tabler採較明確的肘膝折角。Master採Phosphor的流動擺臂，一腿伸展、一腿屈膝，頭部前移表達行進。",
+      "reason": "肩線和頭部先分配留白，髖部精確接在斜軀幹上，膝部依角型作實際倒角；雙腿的前後姿態清楚，沒有用速度線取代身體動作。",
+      "adaptedFrom": "Phosphor"
+    },
+    {
+      "name": "wheelchair",
+      "groupRoot": "docs/review/atlas-craft-01/52-wheelchair-crutch",
+      "confusableWith": [
+        "accessibility",
+        "armchair"
+      ],
+      "sourceObservation": "初查Phosphor wheelchair是乘坐者無障礙符號，因此換成Hugeicons與Tabler的空輪椅原稿。Hugeicons保留推把、扶手與大小車輪，Tabler構造相近而座面較緊。Master採Hugeicons的舒展輪廓。",
+      "reason": "後方大輪與前方導輪各自保持孔洞，車架在輪廓外收口；推把、扶手及座面形成可讀的椅子構造，不加入乘坐者，避免與既有accessibility符號重複。",
+      "adaptedFrom": "Hugeicons Free"
+    },
+    {
+      "name": "crutch",
+      "groupRoot": "docs/review/atlas-craft-01/52-wheelchair-crutch",
+      "confusableWith": [
+        "umbrella",
+        "person-walking"
+      ],
+      "sourceObservation": "Tabler crutches是腋下拐杖，OpenMoji 1FA7C是前臂拐杖，兩者同為助行拐杖但受力部位不同。Master選腋下式，明確保留腋托、手握橫桿與向下收束的支架；沒有混合兩種支撐方式。",
+      "reason": "腋托內孔、握把下方空間和下支撐桿分段可見；收束點屬受力結構連接，腳墊保持短橫落點。OpenMoji僅用於類型比較，產品造型沿用Tabler構造。",
+      "adaptedFrom": "Tabler"
+    }
+  ]
+}

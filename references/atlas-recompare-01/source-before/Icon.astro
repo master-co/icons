@@ -1,0 +1,16 @@
+---
+import type { IconDefinition, ResolvedIcon } from '../runtime.js';
+import type { IconProps } from './types.js';
+import { iconPresentation } from '../presentation.js';
+
+type Props = IconProps & { master: ResolvedIcon; directionPolicy: IconDefinition['direction'] };
+const { master, directionPolicy, ...props } = Astro.props;
+const { attributes, transform } = iconPresentation(master, directionPolicy, props);
+---
+
+<svg {...attributes}>
+  {transform
+    ? <g transform={transform}>{master.nodes.map(([Tag, attrs]) => <Tag {...attrs} />)}</g>
+    : master.nodes.map(([Tag, attrs]) => <Tag {...attrs} />)}
+  <slot />
+</svg>

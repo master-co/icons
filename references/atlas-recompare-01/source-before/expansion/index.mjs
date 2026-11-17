@@ -1,0 +1,13 @@
+import {tableLayout} from './table-layout.mjs';
+import {knowledge} from './knowledge.mjs';
+import {feedback} from './feedback.mjs';
+import {utilities} from './utilities.mjs';
+import {designTools} from './design-tools.mjs';
+import {compositionLocation} from './composition-location.mjs';
+import {playback} from './playback.mjs';
+import {inboxActions} from './inbox-actions.mjs';
+import {dataTools} from './data-tools.mjs';
+import {fulfillment} from './fulfillment.mjs';
+import {development} from './development.mjs';
+import {serviceOperations} from './service-operations.mjs';
+export const expansion={...utilities,...feedback,...knowledge,...tableLayout,...designTools,...compositionLocation,...playback,...inboxActions,...dataTools,...fulfillment,...development,...serviceOperations};

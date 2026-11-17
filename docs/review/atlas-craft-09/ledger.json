@@ -1,0 +1,1537 @@
+{
+  "schemaVersion": 2,
+  "reviewer": "Codex (AI)",
+  "userApproval": "pending",
+  "icons": [
+    {
+      "name": "stethoscope",
+      "purpose": "聽診器",
+      "recognitionCues": "雙耳管、柔性U形導管與圓形聽頭",
+      "confusableWith": [
+        "watch",
+        "thermometer"
+      ],
+      "sourceObservation": "Lucide與Tabler都用U形耳管接柔性管線和圓聽頭。Master保留這三段構造，耳端以短折線表達，導管在耳管底部相接，不另外疊一條近距離內弧。",
+      "references": [
+        {
+          "name": "stethoscope",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/stethoscope.svg",
+          "localPath": "references/atlas-01/lucide-stethoscope.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/stethoscope.svg",
+          "sha256": "a5621a048bcb911d4d51a6b8e6b5821dc68b0e7554dc001389ee9bc5f251c3ad",
+          "license": "ISC AND MIT",
+          "sourceName": "stethoscope",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "stethoscope",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/stethoscope.svg",
+          "localPath": "references/atlas-01/tabler-stethoscope.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/stethoscope.svg",
+          "sha256": "56338f40a275333f74f1b59f84e5dbe77818aabd7b243584c8b6f54681be7982",
+          "license": "MIT",
+          "sourceName": "stethoscope",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "醫療物件以實體輪廓與必要構造表示，不需要未完成或隱藏邊界訊號。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "液柱、孔點與醫療標記均保持實色，不用淡化掩蓋密度問題。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "單色醫療圖示不需要材質漸層或光澤。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-09/master-before.json",
+          "variantsSha256": "72b155c790d5d573c9d7be5fe743399f4e240f743f5ecaa983e802108e754628"
+        },
+        "reason": "兩耳端之間保持開口，U形底部與軟管共接而不穿出；聽頭保留圓孔，導管弧度舒展，原生16px仍可分辨耳管、軟管和聽頭。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "da5a4cdfaaa420d4b3bdd5b13c06763ce18d4064c3cc858b3421bef6cb751d12",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/45-stethoscope-syringe-pill/review.html",
+            "sha256": "c253bd5cf9115405e4d31f116d444492f88d3af6776526b8f643f3ec46ebcd65"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/45-stethoscope-syringe-pill/definitions.json",
+            "sha256": "5ed8769aad9446f844b97bb9db621d87c0cf87a1e24369dd73df7eca65315d78"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/45-stethoscope-syringe-pill/light-1x.png",
+            "sha256": "faddc34acc2f9a965c90436f7d36f0847d19eee2f9d4f4af9d874a164bdf6f24"
+          },
+          {
+            "path": "docs/review/atlas-craft-09/final/definitions.json",
+            "sha256": "8bccf2f5a3c4446dcdf7cecdfc6313e5d24db0501eed3079c5131b2ef53f135b"
+          },
+          {
+            "path": "docs/review/atlas-craft-09/final/12-medical.html",
+            "sha256": "d9b5b512f8b423826fde07dac4db93a92b393a35c4d180573ae19872f8a6fbfc"
+          },
+          {
+            "path": "docs/review/atlas-craft-09/final/12-medical-light-1x.png",
+            "sha256": "d945c448cae52c5feaca45a8251db90cc337656955499d90449e411d17c0ebb2"
+          },
+          {
+            "path": "docs/review/atlas-craft-09/final/12-medical-light-2x.png",
+            "sha256": "df72457588de0e13fad5455bc340c48ce8fc5f16d8d813d46b2d5c2346c7ef34"
+          },
+          {
+            "path": "docs/review/atlas-craft-09/final/12-medical-dark-1x.png",
+            "sha256": "e09dddb06dd6f1713fe281653e8472502fa106aa33cee6d2642dfc793164feea"
+          },
+          {
+            "path": "docs/review/atlas-craft-09/final/12-medical-dark-2x.png",
+            "sha256": "d8fccfbe83a22ee961f29425d8e9687f715a3a262244f325ebca301542bf8f56"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-09/final/12-medical-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-09/final/12-medical-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-09/final/12-medical-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-09/final/12-medical-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Lucide",
+        "license": "ISC",
+        "licenseFile": "licenses/lucide.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "syringe",
+      "purpose": "針筒",
+      "recognitionCues": "推桿、指托、刻度筒身與針尖",
+      "confusableWith": [
+        "pill",
+        "bandage"
+      ],
+      "sourceObservation": "Lucide用較圓的筒底及一段分界，Phosphor用方形筒身和短刻度。Master採後者的刻度語彙，保留推桿、指托及針尖，16px從兩刻度減為一條。",
+      "references": [
+        {
+          "name": "syringe",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/syringe.svg",
+          "localPath": "references/atlas-01/lucide-syringe.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/syringe.svg",
+          "sha256": "507a4c14377cba6b80a41a7f82021d5b3833418b50cdb9632348877bb7ef7787",
+          "license": "ISC AND MIT",
+          "sourceName": "syringe",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "syringe",
+          "library": "Phosphor",
+          "repository": "phosphor-icons/core",
+          "commit": "2b75f3ad12b420c9504ef05df8d2564a28f8500e",
+          "path": "assets/regular/syringe.svg",
+          "localPath": "references/atlas-01/phosphor-syringe.svg",
+          "url": "https://github.com/phosphor-icons/core/blob/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular/syringe.svg",
+          "sha256": "b249d7be5c84b89bae2d06e330702591313c2e1a8b99f413e46a1414d4ae5b64",
+          "license": "MIT",
+          "sourceName": "syringe",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "醫療物件以實體輪廓與必要構造表示，不需要未完成或隱藏邊界訊號。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "液柱、孔點與醫療標記均保持實色，不用淡化掩蓋密度問題。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "單色醫療圖示不需要材質漸層或光澤。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-09/master-before.json",
+          "variantsSha256": "88a398a9c0c994729e69fb679ab86884a4fb2fb711551fe6824ae2a2755b1a21"
+        },
+        "reason": "筒內短刻度不伸到對側；推桿與針尖按筒身外殼收口。角型作用在實際筒身折角，斜置之後仍保留兩側空白和可見的推桿間距。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "9383c50509d7b46ac22446965224a5d2b2b39c493113ba6cd2872fa1a1ef40d4",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/45-stethoscope-syringe-pill/review.html",
+            "sha256": "c253bd5cf9115405e4d31f116d444492f88d3af6776526b8f643f3ec46ebcd65"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/45-stethoscope-syringe-pill/definitions.json",
+            "sha256": "5ed8769aad9446f844b97bb9db621d87c0cf87a1e24369dd73df7eca65315d78"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/45-stethoscope-syringe-pill/light-1x.png",
+            "sha256": "faddc34acc2f9a965c90436f7d36f0847d19eee2f9d4f4af9d874a164bdf6f24"
+          },
+          {
+            "path": "docs/review/atlas-craft-09/final/definitions.json",
+            "sha256": "8bccf2f5a3c4446dcdf7cecdfc6313e5d24db0501eed3079c5131b2ef53f135b"
+          },
+          {
+            "path": "docs/review/atlas-craft-09/final/12-medical.html",
+            "sha256": "d9b5b512f8b423826fde07dac4db93a92b393a35c4d180573ae19872f8a6fbfc"
+          },
+          {
+            "path": "docs/review/atlas-craft-09/final/12-medical-light-1x.png",
+            "sha256": "d945c448cae52c5feaca45a8251db90cc337656955499d90449e411d17c0ebb2"
+          },
+          {
+            "path": "docs/review/atlas-craft-09/final/12-medical-light-2x.png",
+            "sha256": "df72457588de0e13fad5455bc340c48ce8fc5f16d8d813d46b2d5c2346c7ef34"
+          },
+          {
+            "path": "docs/review/atlas-craft-09/final/12-medical-dark-1x.png",
+            "sha256": "e09dddb06dd6f1713fe281653e8472502fa106aa33cee6d2642dfc793164feea"
+          },
+          {
+            "path": "docs/review/atlas-craft-09/final/12-medical-dark-2x.png",
+            "sha256": "d8fccfbe83a22ee961f29425d8e9687f715a3a262244f325ebca301542bf8f56"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-09/final/12-medical-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-09/final/12-medical-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-09/final/12-medical-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-09/final/12-medical-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Phosphor",
+        "license": "MIT",
+        "licenseFile": "licenses/phosphor.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "pill",
+      "purpose": "藥丸",
+      "recognitionCues": "膠囊的半圓兩端與中央接合分界",
+      "confusableWith": [
+        "bandage",
+        "syringe"
+      ],
+      "sourceObservation": "Lucide與Tabler都採斜向膠囊、半圓端部和中央接縫。Master沿用Lucide的膠囊比例，以固定半徑圓弧銜接平行側線，再將接縫墨線限制在外殼內。",
+      "references": [
+        {
+          "name": "pill",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/pill.svg",
+          "localPath": "references/atlas-01/lucide-pill.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/pill.svg",
+          "sha256": "cf28e85117f308eb1d33b8ccd07f5dca5d6796bd1d76ab531d010b2dfc514949",
+          "license": "ISC AND MIT",
+          "sourceName": "pill",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "pill",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/pill.svg",
+          "localPath": "references/atlas-01/tabler-pill.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/pill.svg",
+          "sha256": "8302b4138e4075b171593027e1b796216d69a99f10f417e3386fbb316d4c9c58",
+          "license": "MIT",
+          "sourceName": "pill",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "醫療物件以實體輪廓與必要構造表示，不需要未完成或隱藏邊界訊號。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "液柱、孔點與醫療標記均保持實色，不用淡化掩蓋密度問題。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "單色醫療圖示不需要材質漸層或光澤。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-09/master-before.json",
+          "variantsSha256": "455d52b587cfd66d6a741d61a5e1ae98f94c6e077c7d46fd42ed2c491a3fc8f2"
+        },
+        "reason": "兩端保持物件本身的圓曲面，sharp也不拉成多邊形；中央分界不突出側壁。沒有把相同膠囊另命名為第二個新概念湊數。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "768c5cdca594ecda4bf88e4b0fa0f959d9f413dbcb8173fa600eb940c403897c",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/45-stethoscope-syringe-pill/review.html",
+            "sha256": "c253bd5cf9115405e4d31f116d444492f88d3af6776526b8f643f3ec46ebcd65"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/45-stethoscope-syringe-pill/definitions.json",
+            "sha256": "5ed8769aad9446f844b97bb9db621d87c0cf87a1e24369dd73df7eca65315d78"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/45-stethoscope-syringe-pill/light-1x.png",
+            "sha256": "faddc34acc2f9a965c90436f7d36f0847d19eee2f9d4f4af9d874a164bdf6f24"
+          },
+          {
+            "path": "docs/review/atlas-craft-09/final/definitions.json",
+            "sha256": "8bccf2f5a3c4446dcdf7cecdfc6313e5d24db0501eed3079c5131b2ef53f135b"
+          },
+          {
+            "path": "docs/review/atlas-craft-09/final/12-medical.html",
+            "sha256": "d9b5b512f8b423826fde07dac4db93a92b393a35c4d180573ae19872f8a6fbfc"
+          },
+          {
+            "path": "docs/review/atlas-craft-09/final/12-medical-light-1x.png",
+            "sha256": "d945c448cae52c5feaca45a8251db90cc337656955499d90449e411d17c0ebb2"
+          },
+          {
+            "path": "docs/review/atlas-craft-09/final/12-medical-light-2x.png",
+            "sha256": "df72457588de0e13fad5455bc340c48ce8fc5f16d8d813d46b2d5c2346c7ef34"
+          },
+          {
+            "path": "docs/review/atlas-craft-09/final/12-medical-dark-1x.png",
+            "sha256": "e09dddb06dd6f1713fe281653e8472502fa106aa33cee6d2642dfc793164feea"
+          },
+          {
+            "path": "docs/review/atlas-craft-09/final/12-medical-dark-2x.png",
+            "sha256": "d8fccfbe83a22ee961f29425d8e9687f715a3a262244f325ebca301542bf8f56"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-09/final/12-medical-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-09/final/12-medical-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-09/final/12-medical-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-09/final/12-medical-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Lucide",
+        "license": "ISC",
+        "licenseFile": "licenses/lucide.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "medical-mask",
+      "purpose": "醫療口罩",
+      "recognitionCues": "鼻樑折線、下巴包覆與兩側耳帶",
+      "confusableWith": [
+        "shield",
+        "bandage"
+      ],
+      "sourceObservation": "Phosphor有鼻樑折線與下巴收束，Tabler較接近矩形折疊口罩。Master採前者的包覆形態，保留外耳帶；16px一條摺線，20/24px兩條。",
+      "references": [
+        {
+          "name": "medical-mask",
+          "library": "Phosphor",
+          "repository": "phosphor-icons/core",
+          "commit": "2b75f3ad12b420c9504ef05df8d2564a28f8500e",
+          "path": "assets/regular/face-mask.svg",
+          "localPath": "references/atlas-01/phosphor-face-mask.svg",
+          "url": "https://github.com/phosphor-icons/core/blob/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular/face-mask.svg",
+          "sha256": "7814cc5bddf4e8b35148ab1284641a96d8e389cf8010ed299803e10bd17183d2",
+          "license": "MIT",
+          "sourceName": "face-mask",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "medical-mask",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/face-mask.svg",
+          "localPath": "references/atlas-01/tabler-face-mask.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/face-mask.svg",
+          "sha256": "e2cb316857b0795e886ee73e516e28b232f1c6f8c67fb67a751533b03ea8b0a2",
+          "license": "MIT",
+          "sourceName": "face-mask",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "醫療物件以實體輪廓與必要構造表示，不需要未完成或隱藏邊界訊號。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "液柱、孔點與醫療標記均保持實色，不用淡化掩蓋密度問題。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "單色醫療圖示不需要材質漸層或光澤。"
+        }
+      },
+      "change": {
+        "kind": "modified",
+        "before": {
+          "path": "references/atlas-craft-09/master-before.json",
+          "variantsSha256": "ea166937873da440c5baa680f3dfcfb41c692f6252c3057ca3b2683e836b236b"
+        },
+        "reason": "鼻樑和上方肩點按角型作實際曲線倒角，下巴保持連續弧；耳帶從本體外側接出，沒有重疊內框。小尺寸減去一條摺線後仍保留口罩的包覆姿態。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "a2c44b5f6725857cd77bb3c899f4083fe73a4f0452b83c8669a36141fbdbfed5",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/48b-heart-mask/review.html",
+            "sha256": "3a9c5a603e112aed27d7da0fb915c377abbe200ece005bef25bbc48a86516957"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/48b-heart-mask/definitions.json",
+            "sha256": "fb04c487a49ce594b96b32856f68b972f6a29bd82c9a38b2f053ac488ca377a0"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/48b-heart-mask/light-1x.png",
+            "sha256": "269eb60e7a27679f603979a365824f68544b11af3e2f16ba5a50933de72e10e3"
+          },
+          {
+            "path": "docs/review/atlas-craft-09/final/definitions.json",
+            "sha256": "8bccf2f5a3c4446dcdf7cecdfc6313e5d24db0501eed3079c5131b2ef53f135b"
+          },
+          {
+            "path": "docs/review/atlas-craft-09/final/12-medical.html",
+            "sha256": "d9b5b512f8b423826fde07dac4db93a92b393a35c4d180573ae19872f8a6fbfc"
+          },
+          {
+            "path": "docs/review/atlas-craft-09/final/12-medical-light-1x.png",
+            "sha256": "d945c448cae52c5feaca45a8251db90cc337656955499d90449e411d17c0ebb2"
+          },
+          {
+            "path": "docs/review/atlas-craft-09/final/12-medical-light-2x.png",
+            "sha256": "df72457588de0e13fad5455bc340c48ce8fc5f16d8d813d46b2d5c2346c7ef34"
+          },
+          {
+            "path": "docs/review/atlas-craft-09/final/12-medical-dark-1x.png",
+            "sha256": "e09dddb06dd6f1713fe281653e8472502fa106aa33cee6d2642dfc793164feea"
+          },
+          {
+            "path": "docs/review/atlas-craft-09/final/12-medical-dark-2x.png",
+            "sha256": "d8fccfbe83a22ee961f29425d8e9687f715a3a262244f325ebca301542bf8f56"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-09/final/12-medical-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-09/final/12-medical-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-09/final/12-medical-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-09/final/12-medical-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Phosphor",
+        "license": "MIT",
+        "licenseFile": "licenses/phosphor.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "bandage",
+      "purpose": "OK繃",
+      "recognitionCues": "中央敷墊、透氣孔與兩側黏貼帶",
+      "confusableWith": [
+        "pill",
+        "medical-mask"
+      ],
+      "sourceObservation": "Lucide採水平敷料及四個透氣點，Tabler採斜向圓端貼布。Master保留Lucide的中央敷墊與兩側黏貼區，側邊圓角隨預設變化，孔點依尺寸調整。",
+      "references": [
+        {
+          "name": "bandage",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/bandage.svg",
+          "localPath": "references/atlas-01/lucide-bandage.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/bandage.svg",
+          "sha256": "a0e56764e3701ea180950c79975ac3aa14d90924c9fc9b427f7c476ec01eb609",
+          "license": "ISC AND MIT",
+          "sourceName": "bandage",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "bandage",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/bandage.svg",
+          "localPath": "references/atlas-01/tabler-bandage.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/bandage.svg",
+          "sha256": "dc9cda84c40ba9366e2115f04ae088d5b744e2edb62c3165ee3b2ede3e2fc5db",
+          "license": "MIT",
+          "sourceName": "bandage",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "醫療物件以實體輪廓與必要構造表示，不需要未完成或隱藏邊界訊號。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "液柱、孔點與醫療標記均保持實色，不用淡化掩蓋密度問題。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "單色醫療圖示不需要材質漸層或光澤。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-09/master-before.json",
+          "variantsSha256": "a28ca0a47e848e7cb21488c3d7e591543c1550259dd0974a6ec6b143ee101db6"
+        },
+        "reason": "兩條內分界收在外框內，敷墊四個孔點互相分開。16px DPR1的孔點較淡，辨識主要由中央敷墊和兩側黏貼區承擔；DPR2仍可清楚分辨四點，沒有把孔點當主要輪廓。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "f3f60676440b1096be3143ca3a8395ae1c2da89c2b8b719923885c0a8bd7480c",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/46-mask-bandage-thermometer/review.html",
+            "sha256": "e480ca6de07ac76a4a51d7d9ed8eb10fffd4804a64fbe87279820913a7aca604"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/46-mask-bandage-thermometer/definitions.json",
+            "sha256": "46a67d5d739df341e6cc1be4dfacba854c7cf77ca90b3eda09c0d16b46194c8f"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/46-mask-bandage-thermometer/light-1x.png",
+            "sha256": "03fdcff10bcf3d857a48a36c7a87f0f33ccd28e03e89cdfc0f2d337d17be3260"
+          },
+          {
+            "path": "docs/review/atlas-craft-09/final/definitions.json",
+            "sha256": "8bccf2f5a3c4446dcdf7cecdfc6313e5d24db0501eed3079c5131b2ef53f135b"
+          },
+          {
+            "path": "docs/review/atlas-craft-09/final/12-medical.html",
+            "sha256": "d9b5b512f8b423826fde07dac4db93a92b393a35c4d180573ae19872f8a6fbfc"
+          },
+          {
+            "path": "docs/review/atlas-craft-09/final/12-medical-light-1x.png",
+            "sha256": "d945c448cae52c5feaca45a8251db90cc337656955499d90449e411d17c0ebb2"
+          },
+          {
+            "path": "docs/review/atlas-craft-09/final/12-medical-light-2x.png",
+            "sha256": "df72457588de0e13fad5455bc340c48ce8fc5f16d8d813d46b2d5c2346c7ef34"
+          },
+          {
+            "path": "docs/review/atlas-craft-09/final/12-medical-dark-1x.png",
+            "sha256": "e09dddb06dd6f1713fe281653e8472502fa106aa33cee6d2642dfc793164feea"
+          },
+          {
+            "path": "docs/review/atlas-craft-09/final/12-medical-dark-2x.png",
+            "sha256": "d8fccfbe83a22ee961f29425d8e9687f715a3a262244f325ebca301542bf8f56"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-09/final/12-medical-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-09/final/12-medical-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-09/final/12-medical-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-09/final/12-medical-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Lucide",
+        "license": "ISC",
+        "licenseFile": "licenses/lucide.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "thermometer",
+      "purpose": "體溫計",
+      "recognitionCues": "玻璃管、感溫球與中央液柱",
+      "confusableWith": [
+        "droplet",
+        "stethoscope"
+      ],
+      "sourceObservation": "Lucide採空心玻璃體溫計，Phosphor thermometer-simple另含中央液柱與感溫球。Tabler同名是電子體溫計，因此改以同型的Phosphor作第二份來源。Master保留液柱但將球心簡化為實心點。",
+      "references": [
+        {
+          "name": "thermometer",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/thermometer.svg",
+          "localPath": "references/atlas-01/lucide-thermometer.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/thermometer.svg",
+          "sha256": "a56c95062445d52d95c51a77c4959d5a022539a0194205cc2ce2e9ce8f35847b",
+          "license": "ISC AND MIT",
+          "sourceName": "thermometer",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "thermometer",
+          "library": "Phosphor",
+          "repository": "phosphor-icons/core",
+          "commit": "2b75f3ad12b420c9504ef05df8d2564a28f8500e",
+          "path": "assets/regular/thermometer-simple.svg",
+          "localPath": "references/atlas-01/phosphor-thermometer-simple.svg",
+          "url": "https://github.com/phosphor-icons/core/blob/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular/thermometer-simple.svg",
+          "sha256": "74e3e52fe86518f880c95fc419219225eb888c12bec3a6f08e0dfe4b25eb0d0d",
+          "license": "MIT",
+          "sourceName": "thermometer-simple",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "醫療物件以實體輪廓與必要構造表示，不需要未完成或隱藏邊界訊號。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "液柱、孔點與醫療標記均保持實色，不用淡化掩蓋密度問題。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "單色醫療圖示不需要材質漸層或光澤。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-09/master-before.json",
+          "variantsSha256": "0ae791fef2b076df0ae34cdb6bf80e766d3b0e7d628bd6ef562a560bf5ad1055"
+        },
+        "reason": "管身寬度先為液柱兩側分配留白，再接較寬的感溫球；頂端圓弧與直管相切。沒有在球體裡再套細圓環，16px仍保留玻璃管和球部的構造差異。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "35c38a64e3512e912224751688d64b2c0f87724c6a8371ff3ef7b664f0b8ce5f",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/46-mask-bandage-thermometer/review.html",
+            "sha256": "e480ca6de07ac76a4a51d7d9ed8eb10fffd4804a64fbe87279820913a7aca604"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/46-mask-bandage-thermometer/definitions.json",
+            "sha256": "46a67d5d739df341e6cc1be4dfacba854c7cf77ca90b3eda09c0d16b46194c8f"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/46-mask-bandage-thermometer/light-1x.png",
+            "sha256": "03fdcff10bcf3d857a48a36c7a87f0f33ccd28e03e89cdfc0f2d337d17be3260"
+          },
+          {
+            "path": "docs/review/atlas-craft-09/final/definitions.json",
+            "sha256": "8bccf2f5a3c4446dcdf7cecdfc6313e5d24db0501eed3079c5131b2ef53f135b"
+          },
+          {
+            "path": "docs/review/atlas-craft-09/final/12-medical.html",
+            "sha256": "d9b5b512f8b423826fde07dac4db93a92b393a35c4d180573ae19872f8a6fbfc"
+          },
+          {
+            "path": "docs/review/atlas-craft-09/final/12-medical-light-1x.png",
+            "sha256": "d945c448cae52c5feaca45a8251db90cc337656955499d90449e411d17c0ebb2"
+          },
+          {
+            "path": "docs/review/atlas-craft-09/final/12-medical-light-2x.png",
+            "sha256": "df72457588de0e13fad5455bc340c48ce8fc5f16d8d813d46b2d5c2346c7ef34"
+          },
+          {
+            "path": "docs/review/atlas-craft-09/final/12-medical-dark-1x.png",
+            "sha256": "e09dddb06dd6f1713fe281653e8472502fa106aa33cee6d2642dfc793164feea"
+          },
+          {
+            "path": "docs/review/atlas-craft-09/final/12-medical-dark-2x.png",
+            "sha256": "d8fccfbe83a22ee961f29425d8e9687f715a3a262244f325ebca301542bf8f56"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-09/final/12-medical-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-09/final/12-medical-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-09/final/12-medical-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-09/final/12-medical-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Phosphor",
+        "license": "MIT",
+        "licenseFile": "licenses/phosphor.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "hospital",
+      "purpose": "醫院",
+      "recognitionCues": "醫療標記、入口與相接院區",
+      "confusableWith": [
+        "first-aid-kit",
+        "ambulance"
+      ],
+      "sourceObservation": "Lucide用中央主樓及雙側翼，Phosphor用主樓與單側翼。Master採單側院區，讓醫療標記與入口分占上下空間；省略窗格以免入口退化成密集小框。",
+      "references": [
+        {
+          "name": "hospital",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/hospital.svg",
+          "localPath": "references/atlas-01/lucide-hospital.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/hospital.svg",
+          "sha256": "d13d08f229cb151593c5e5a55a0c287b223f353acab6b2c805b5ca2a73958601",
+          "license": "ISC AND MIT",
+          "sourceName": "hospital",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "hospital",
+          "library": "Phosphor",
+          "repository": "phosphor-icons/core",
+          "commit": "2b75f3ad12b420c9504ef05df8d2564a28f8500e",
+          "path": "assets/regular/hospital.svg",
+          "localPath": "references/atlas-01/phosphor-hospital.svg",
+          "url": "https://github.com/phosphor-icons/core/blob/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular/hospital.svg",
+          "sha256": "f8fabc7326525fefc0dec50b2c2a425ba3ed63e4a6056aff8964e67ca3f3de54",
+          "license": "MIT",
+          "sourceName": "hospital",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "醫療物件以實體輪廓與必要構造表示，不需要未完成或隱藏邊界訊號。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "液柱、孔點與醫療標記均保持實色，不用淡化掩蓋密度問題。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "單色醫療圖示不需要材質漸層或光澤。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-09/master-before.json",
+          "variantsSha256": "8b7ad46fdf27796458aa47e28a24bda92860f8901b40b7d3aeb373ec05460f85"
+        },
+        "reason": "主樓、側翼和入口比例各自成立，入口和醫療十字間留有明確空白；側翼共用主樓邊界，底部共線，沒有重複框線或端帽外凸。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "33b452a46112a7cf8985d7b4eff5d7457d0c0cff06fc726764e30b13a7d4d109",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/47-hospital-ambulance/review.html",
+            "sha256": "2b590b5c3b567acbd5a83eb252e1149992854d6e6be5a0c267bca116d9ea9f0b"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/47-hospital-ambulance/definitions.json",
+            "sha256": "610aa1e9f4575c36858f6be1642af377bdd7146d755f21581c2f024e7dd59417"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/47-hospital-ambulance/light-1x.png",
+            "sha256": "9b7ab189e54dd4de625296cf1b7d03ba49bfcc16d3cd00e9e66150452b672a47"
+          },
+          {
+            "path": "docs/review/atlas-craft-09/final/definitions.json",
+            "sha256": "8bccf2f5a3c4446dcdf7cecdfc6313e5d24db0501eed3079c5131b2ef53f135b"
+          },
+          {
+            "path": "docs/review/atlas-craft-09/final/12-medical.html",
+            "sha256": "d9b5b512f8b423826fde07dac4db93a92b393a35c4d180573ae19872f8a6fbfc"
+          },
+          {
+            "path": "docs/review/atlas-craft-09/final/12-medical-light-1x.png",
+            "sha256": "d945c448cae52c5feaca45a8251db90cc337656955499d90449e411d17c0ebb2"
+          },
+          {
+            "path": "docs/review/atlas-craft-09/final/12-medical-light-2x.png",
+            "sha256": "df72457588de0e13fad5455bc340c48ce8fc5f16d8d813d46b2d5c2346c7ef34"
+          },
+          {
+            "path": "docs/review/atlas-craft-09/final/12-medical-dark-1x.png",
+            "sha256": "e09dddb06dd6f1713fe281653e8472502fa106aa33cee6d2642dfc793164feea"
+          },
+          {
+            "path": "docs/review/atlas-craft-09/final/12-medical-dark-2x.png",
+            "sha256": "d8fccfbe83a22ee961f29425d8e9687f715a3a262244f325ebca301542bf8f56"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-09/final/12-medical-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-09/final/12-medical-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-09/final/12-medical-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-09/final/12-medical-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Phosphor",
+        "license": "MIT",
+        "licenseFile": "licenses/phosphor.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "ambulance",
+      "purpose": "救護車",
+      "recognitionCues": "醫療車廂、駕駛艙與車輪",
+      "confusableWith": [
+        "car",
+        "bus"
+      ],
+      "sourceObservation": "Lucide採獨立的前方短引擎蓋，Tabler用較直立的廂型救護車及梯形駕駛窗。Master採Tabler構造，擴大車輪孔與車廂醫療標記周圍空間。",
+      "references": [
+        {
+          "name": "ambulance",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/ambulance.svg",
+          "localPath": "references/atlas-01/lucide-ambulance.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/ambulance.svg",
+          "sha256": "d7147fa84d4f5006071acef37a0c9b5aa46830974960a0bf3224d2ba7e80e69e",
+          "license": "ISC AND MIT",
+          "sourceName": "ambulance",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "ambulance",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/ambulance.svg",
+          "localPath": "references/atlas-01/tabler-ambulance.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/ambulance.svg",
+          "sha256": "3434a3d4426de1d87e3f3cd7d75834422f95111b22f0b7870bfa14a9947b8ec9",
+          "license": "MIT",
+          "sourceName": "ambulance",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "醫療物件以實體輪廓與必要構造表示，不需要未完成或隱藏邊界訊號。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "液柱、孔點與醫療標記均保持實色，不用淡化掩蓋密度問題。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "單色醫療圖示不需要材質漸層或光澤。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-09/master-before.json",
+          "variantsSha256": "eeaf0f7e187edf970f97f05d5f1cf32af7973c5da199fdfa898ab10cd02c6511"
+        },
+        "reason": "醫療車廂與前座共用結構邊，車輪遮住下緣而不穿透輪孔；駕駛窗和輪拱保持分離，16px省略門把與細小燈具，仍有清楚的救護車廂形。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "6bdd3e55fa66e77728b142796151139ea181b6f784e179a3efaa1444c1a22f4e",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/47-hospital-ambulance/review.html",
+            "sha256": "2b590b5c3b567acbd5a83eb252e1149992854d6e6be5a0c267bca116d9ea9f0b"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/47-hospital-ambulance/definitions.json",
+            "sha256": "610aa1e9f4575c36858f6be1642af377bdd7146d755f21581c2f024e7dd59417"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/47-hospital-ambulance/light-1x.png",
+            "sha256": "9b7ab189e54dd4de625296cf1b7d03ba49bfcc16d3cd00e9e66150452b672a47"
+          },
+          {
+            "path": "docs/review/atlas-craft-09/final/definitions.json",
+            "sha256": "8bccf2f5a3c4446dcdf7cecdfc6313e5d24db0501eed3079c5131b2ef53f135b"
+          },
+          {
+            "path": "docs/review/atlas-craft-09/final/12-medical.html",
+            "sha256": "d9b5b512f8b423826fde07dac4db93a92b393a35c4d180573ae19872f8a6fbfc"
+          },
+          {
+            "path": "docs/review/atlas-craft-09/final/12-medical-light-1x.png",
+            "sha256": "d945c448cae52c5feaca45a8251db90cc337656955499d90449e411d17c0ebb2"
+          },
+          {
+            "path": "docs/review/atlas-craft-09/final/12-medical-light-2x.png",
+            "sha256": "df72457588de0e13fad5455bc340c48ce8fc5f16d8d813d46b2d5c2346c7ef34"
+          },
+          {
+            "path": "docs/review/atlas-craft-09/final/12-medical-dark-1x.png",
+            "sha256": "e09dddb06dd6f1713fe281653e8472502fa106aa33cee6d2642dfc793164feea"
+          },
+          {
+            "path": "docs/review/atlas-craft-09/final/12-medical-dark-2x.png",
+            "sha256": "d8fccfbe83a22ee961f29425d8e9687f715a3a262244f325ebca301542bf8f56"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-09/final/12-medical-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-09/final/12-medical-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-09/final/12-medical-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-09/final/12-medical-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Tabler",
+        "license": "MIT",
+        "licenseFile": "licenses/tabler.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "heart-pulse",
+      "purpose": "心跳",
+      "recognitionCues": "心形輪廓內的起伏脈波",
+      "confusableWith": [
+        "heart",
+        "first-aid-kit"
+      ],
+      "sourceObservation": "Lucide把脈波放在完整心形內，Tabler讓脈波從心形缺口伸入。Master沿用既有heart母型並採完整輪廓內的脈波；初稿多一個折峰，造成sharp小尺寸內部偏密，已減少轉折。",
+      "references": [
+        {
+          "name": "heart-pulse",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/heart-pulse.svg",
+          "localPath": "references/atlas-01/lucide-heart-pulse.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/heart-pulse.svg",
+          "sha256": "103d6b99ac9ab53c5861317673880ae5d6e2491efa7a40e8b89ecac449842df2",
+          "license": "ISC AND MIT",
+          "sourceName": "heart-pulse",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "heart-pulse",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/heartbeat.svg",
+          "localPath": "references/atlas-01/tabler-heartbeat.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/heartbeat.svg",
+          "sha256": "972d5c0d0db24614275521fe93b3c98e375ececec25b087d139d83cb9221e8e7",
+          "license": "MIT",
+          "sourceName": "heartbeat",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "醫療物件以實體輪廓與必要構造表示，不需要未完成或隱藏邊界訊號。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "液柱、孔點與醫療標記均保持實色，不用淡化掩蓋密度問題。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "單色醫療圖示不需要材質漸層或光澤。"
+        }
+      },
+      "change": {
+        "kind": "modified",
+        "before": {
+          "path": "references/atlas-craft-09/master-before.json",
+          "variantsSha256": "a528aad2d16a3ccb5f9001a8fcee06386b9b78fe2d084b7185d5dd7f520b806e"
+        },
+        "reason": "保留心形的雙肩、凹口與底尖，脈波改為一次上升和一次下降，降低谷點幅度以增大底部負空間；波形收在外殼內，不因端帽突出心形邊界。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "2b5022d7e3f5ba33609839e8b29fe4967a57377186e2e432a7c73de3710d8c7d",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/48b-heart-mask/review.html",
+            "sha256": "3a9c5a603e112aed27d7da0fb915c377abbe200ece005bef25bbc48a86516957"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/48b-heart-mask/definitions.json",
+            "sha256": "fb04c487a49ce594b96b32856f68b972f6a29bd82c9a38b2f053ac488ca377a0"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/48b-heart-mask/light-1x.png",
+            "sha256": "269eb60e7a27679f603979a365824f68544b11af3e2f16ba5a50933de72e10e3"
+          },
+          {
+            "path": "docs/review/atlas-craft-09/final/definitions.json",
+            "sha256": "8bccf2f5a3c4446dcdf7cecdfc6313e5d24db0501eed3079c5131b2ef53f135b"
+          },
+          {
+            "path": "docs/review/atlas-craft-09/final/12-medical.html",
+            "sha256": "d9b5b512f8b423826fde07dac4db93a92b393a35c4d180573ae19872f8a6fbfc"
+          },
+          {
+            "path": "docs/review/atlas-craft-09/final/12-medical-light-1x.png",
+            "sha256": "d945c448cae52c5feaca45a8251db90cc337656955499d90449e411d17c0ebb2"
+          },
+          {
+            "path": "docs/review/atlas-craft-09/final/12-medical-light-2x.png",
+            "sha256": "df72457588de0e13fad5455bc340c48ce8fc5f16d8d813d46b2d5c2346c7ef34"
+          },
+          {
+            "path": "docs/review/atlas-craft-09/final/12-medical-dark-1x.png",
+            "sha256": "e09dddb06dd6f1713fe281653e8472502fa106aa33cee6d2642dfc793164feea"
+          },
+          {
+            "path": "docs/review/atlas-craft-09/final/12-medical-dark-2x.png",
+            "sha256": "d8fccfbe83a22ee961f29425d8e9687f715a3a262244f325ebca301542bf8f56"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-09/final/12-medical-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-09/final/12-medical-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-09/final/12-medical-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-09/final/12-medical-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Lucide",
+        "license": "ISC",
+        "licenseFile": "licenses/lucide.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "first-aid-kit",
+      "purpose": "急救箱",
+      "recognitionCues": "提把、箱體與中央醫療標記",
+      "confusableWith": [
+        "hospital",
+        "luggage"
+      ],
+      "sourceObservation": "Lucide醫療手提箱有兩條縱向結構帶，Tabler用提把和單純箱體。Master採Tabler的簡潔箱型，將醫療標記置中，保留足夠高的外提把。",
+      "references": [
+        {
+          "name": "first-aid-kit",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/briefcase-medical.svg",
+          "localPath": "references/atlas-01/lucide-briefcase-medical.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/briefcase-medical.svg",
+          "sha256": "a6d87609350413eefe569fab00fb4d180d4bb833d79800fdfec88d524bfcb75f",
+          "license": "ISC AND MIT",
+          "sourceName": "briefcase-medical",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "first-aid-kit",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/first-aid-kit.svg",
+          "localPath": "references/atlas-01/tabler-first-aid-kit.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/first-aid-kit.svg",
+          "sha256": "14da412031012ce0002983c62dbeea4ba6f16112eed4b31b2b1e8baeee346e18",
+          "license": "MIT",
+          "sourceName": "first-aid-kit",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "醫療物件以實體輪廓與必要構造表示，不需要未完成或隱藏邊界訊號。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "液柱、孔點與醫療標記均保持實色，不用淡化掩蓋密度問題。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "單色醫療圖示不需要材質漸層或光澤。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-09/master-before.json",
+          "variantsSha256": "16cc24ac21622299750755375964588f7f898cd228dfbc853ce6ceb8477cc877"
+        },
+        "reason": "提把孔與箱內標記分開分配空間，箱體圓角以真實幾何改變；沒有加入會壓縮十字周圍留白的縱向帶，提把和容器輪廓仍保留可攜急救箱的語意。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "20fd3903edfcff622e86b7085095c7c5ad2234cfa404237343a2999fcc663665",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/48-heart-firstaid/review.html",
+            "sha256": "2f39d1713d369f657a0a0b979328390e3c45a651e2652fc150c79d68fd1aa049"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/48-heart-firstaid/definitions.json",
+            "sha256": "e8be49a639c61eabe8ccf3fdee4e08d242d84fce7d803bc01b592d126f5cbb10"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/48-heart-firstaid/light-1x.png",
+            "sha256": "26e02cacc86d976cd542786ac1521bb818118c55024e734ae28282107099037e"
+          },
+          {
+            "path": "docs/review/atlas-craft-09/final/definitions.json",
+            "sha256": "8bccf2f5a3c4446dcdf7cecdfc6313e5d24db0501eed3079c5131b2ef53f135b"
+          },
+          {
+            "path": "docs/review/atlas-craft-09/final/12-medical.html",
+            "sha256": "d9b5b512f8b423826fde07dac4db93a92b393a35c4d180573ae19872f8a6fbfc"
+          },
+          {
+            "path": "docs/review/atlas-craft-09/final/12-medical-light-1x.png",
+            "sha256": "d945c448cae52c5feaca45a8251db90cc337656955499d90449e411d17c0ebb2"
+          },
+          {
+            "path": "docs/review/atlas-craft-09/final/12-medical-light-2x.png",
+            "sha256": "df72457588de0e13fad5455bc340c48ce8fc5f16d8d813d46b2d5c2346c7ef34"
+          },
+          {
+            "path": "docs/review/atlas-craft-09/final/12-medical-dark-1x.png",
+            "sha256": "e09dddb06dd6f1713fe281653e8472502fa106aa33cee6d2642dfc793164feea"
+          },
+          {
+            "path": "docs/review/atlas-craft-09/final/12-medical-dark-2x.png",
+            "sha256": "d8fccfbe83a22ee961f29425d8e9687f715a3a262244f325ebca301542bf8f56"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-09/final/12-medical-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-09/final/12-medical-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-09/final/12-medical-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-09/final/12-medical-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Tabler",
+        "license": "MIT",
+        "licenseFile": "licenses/tabler.txt"
+      },
+      "remaining": []
+    }
+  ]
+}

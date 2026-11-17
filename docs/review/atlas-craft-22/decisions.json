@@ -1,0 +1,152 @@
+{
+  "batch": "24-safety",
+  "cycle": "atlas-craft-22",
+  "familyRoot": "docs/review/atlas-craft-22/final-v2",
+  "baseline": "references/atlas-craft-22/master-before.json",
+  "reviewer": "Codex (AI)",
+  "visualInspectionComplete": true,
+  "inspectedCombinations": [
+    {
+      "theme": "light",
+      "dpr": 1
+    },
+    {
+      "theme": "light",
+      "dpr": 2
+    },
+    {
+      "theme": "dark",
+      "dpr": 1
+    },
+    {
+      "theme": "dark",
+      "dpr": 2
+    }
+  ],
+  "effects": {
+    "dashes": {
+      "used": false,
+      "reason": "安全設備主體完整呈現，掃描框以開放角線而非虛線表示。"
+    },
+    "opacity": {
+      "used": false,
+      "reason": "以留白及真實遮擋區分前後，不用淡化降低設備細節的可辨識性。"
+    },
+    "gradients": {
+      "used": false,
+      "reason": "單色輪廓即可表達警示燈與消防器材，不以材質或光色漸層補語意。"
+    }
+  },
+  "decisions": [
+    {
+      "name": "cctv",
+      "groupRoot": "docs/review/atlas-craft-01/96b-cctv",
+      "confusableWith": [
+        "camera",
+        "video"
+      ],
+      "sourceObservation": "Lucide與Hugeicons/cctv-camera均為斜向筒式監視器，Tabler初選其實是半球機型，已改正。最新稿採Lucide主體與支架；完稿回比後將前鏡口改為與鏡身同軸的四邊形，去掉初稿偏三角的孔，16px前端和機身更有一體感。",
+      "reason": "俯視鏡身以弧形後蓋接長直壁，鏡口沿相同方向伸出；支架以彎曲過渡承接牆板，鏡口與支架按主殼外側裁線，保留單顆狀態點。",
+      "adaptedFrom": "Lucide"
+    },
+    {
+      "name": "siren",
+      "groupRoot": "docs/review/atlas-craft-01/96-cctv-siren-smoke",
+      "confusableWith": [
+        "bell",
+        "alarm-smoke"
+      ],
+      "sourceObservation": "Lucide在燈罩內放一條長直線，Phosphor短弧更能表達圓罩。最新稿採Phosphor罩形和短弧，保留三段警示光；完稿回比16px，罩內與底座孔均清楚，弧形反光與外罩之間不形成狹長雙線。",
+      "reason": "圓頂燈罩沿垂直壁落入外伸底座，內弧只交代曲面而不分割整個燈罩；底座保持可見高度，三段放射光按共同中心分布。",
+      "adaptedFrom": "Phosphor"
+    },
+    {
+      "name": "alarm-smoke",
+      "groupRoot": "docs/review/atlas-craft-01/96-cctv-siren-smoke",
+      "confusableWith": [
+        "siren",
+        "air-conditioner"
+      ],
+      "sourceObservation": "Lucide用平緩上升煙流，Tabler採較彎的波形。最新稿採Lucide扁殼與三道平緩煙線；完稿回比16/20/24，上下兩層殼體共用邊界，煙流與偵測口之間有明確空白，沒有添小燈點或更多通風格。",
+      "reason": "上層扁蓋與下方收窄感測殼連接，兩層之間不重畫平行邊；三道煙流用同一條連續曲線平移，保持節奏和同樣收筆高度。",
+      "adaptedFrom": "Lucide"
+    },
+    {
+      "name": "fire-extinguisher",
+      "groupRoot": "docs/review/atlas-craft-01/97b-extinguisher-vault",
+      "confusableWith": [
+        "bottle",
+        "fire-hydrant"
+      ],
+      "sourceObservation": "Lucide有清楚閥頸和瓶身下分界，Phosphor以扳柄帶出壓力設備。最新稿採Lucide瓶身構造並拉寬軟管通道；完稿回比後瓶肩下移1u，讓閥頸內孔在16px不只剩小亮點，瓶肩與軟管外弧仍自然承接頂部。",
+      "reason": "瓶肩連續圓弧進入直壁，下部收成穩定圓底；閥頸留足高度，軟管與瓶體保持較寬通道，夾持短橫線和瓶身分界各有構造用途。",
+      "adaptedFrom": "Lucide"
+    },
+    {
+      "name": "fire-hydrant",
+      "groupRoot": "docs/review/atlas-craft-01/97-fire-vault",
+      "confusableWith": [
+        "fire-extinguisher",
+        "bottle"
+      ],
+      "sourceObservation": "Tabler圓帽與側接頭連成完整立柱，MDI實心輪廓更簡化。最新稿採Tabler構造、略擴接頭與中央孔；完稿回比16px，帽部、兩側接頭及出水孔分開可讀，未加螺栓小點與輪廓內套框。",
+      "reason": "圓帽、柱身與兩側接頭共用完整外殼，中央出水孔保持較大內徑；帽下橫線裁在殼內，底座提供平穩落點。",
+      "adaptedFrom": "Tabler"
+    },
+    {
+      "name": "vault",
+      "groupRoot": "docs/review/atlas-craft-01/97b-extinguisher-vault",
+      "confusableWith": [
+        "lock",
+        "shield"
+      ],
+      "sourceObservation": "Lucide四向輪栓更接近保險庫門，Phosphor是單轉盤的箱式保險箱，機型不同但同屬安全儲存。最新稿採Lucide鎖輪；完稿回比發現首稿無末端旋鈕較像普通X，補回輕量實心端點，16px仍保有中心孔和框內空白。",
+      "reason": "四向鎖桿以共同中心放射，連接中央輪孔時裁在圈外，末端小旋鈕保留物件特性；框角按sharp/soft/rounded實際改變，不添加第二層厚門框。",
+      "adaptedFrom": "Lucide"
+    },
+    {
+      "name": "key-square",
+      "groupRoot": "docs/review/atlas-craft-01/98-key-face",
+      "confusableWith": [
+        "key",
+        "lock"
+      ],
+      "sourceObservation": "Lucide與Hugeicons皆用方形握頭及階梯鎖齒。最新稿採Lucide構造，握頭略放寬並共用斜軸；完稿回比16px，長孔槽與外框仍分離，鎖齒讀為連續鋸階而非零散短線。這是key的造型變體，不額外計基礎概念。",
+      "reason": "握頭和針桿共用斜向主軸，桿身墨線止於頭部外緣；方頭角型依預設改實際半徑，鎖齒保留較小轉角，區別既有圓頭key。",
+      "adaptedFrom": "Lucide"
+    },
+    {
+      "name": "scan-face",
+      "groupRoot": "docs/review/atlas-craft-01/98-key-face",
+      "confusableWith": [
+        "scan",
+        "fingerprint"
+      ],
+      "sourceObservation": "Lucide與Tabler都以四角框包住五官。最新稿採Lucide較開放的嘴弧和圓點眼睛；完稿回比，16px五官不接觸框角，20/24放大後嘴弧仍連續，沒有再補臉部外圈壓縮空間。",
+      "reason": "四個框角按相同半徑與邊長配置，臉部以兩點及一條對稱曲線表示；中間保留大面留白，不將整張人像塞進掃描框。",
+      "adaptedFrom": "Lucide"
+    },
+    {
+      "name": "seat-belt",
+      "groupRoot": "docs/review/atlas-craft-01/99c-seat-belt",
+      "confusableWith": [
+        "person-standing",
+        "scan-face"
+      ],
+      "sourceObservation": "Phosphor用頭肩加斜帶，MDI保留更多軀幹與腰帶。最新稿採Phosphor簡潔語意；完稿回比，斜帶以真透明避讓穿過肩部，16px不黏成交叉塊。sharp斜帶改平端，去除腰帶交點的外突端帽。",
+      "reason": "頭與肩之間保持空白，斜帶由右肩方向跨至左下腰帶；依實際墨線外緣裁開後方肩線，腰帶與斜帶在同一結點承接，sharp交點收口不凸出。",
+      "adaptedFrom": "Phosphor"
+    },
+    {
+      "name": "safety-pin",
+      "groupRoot": "docs/review/atlas-craft-01/99-lifebuoy-pin",
+      "confusableWith": [
+        "paperclip",
+        "pin"
+      ],
+      "sourceObservation": "Hugeicons保護扣以多段小弧形成，Lucide Lab以更連續的捲入曲線表達。最新稿採Lucide Lab保護扣和彈簧圈構造；完稿回比16px，針身兩邊仍有完整長孔，扣口不用多個微孔表達，彈簧圈與桿身以同一方向承接。",
+      "reason": "彈簧圈接兩條平行針身，保護扣外弧與內捲曲線共同形成閉合扣頭；相接桿線裁在彈簧圈與扣頭之外，避免穿入必要孔洞。",
+      "adaptedFrom": "Lucide Lab"
+    }
+  ]
+}

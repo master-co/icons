@@ -1,0 +1,85 @@
+{
+  "task": "Atlas 310 non-brand additions",
+  "status": "requested-additions-complete",
+  "namedAdditions": 310,
+  "newBaseConcepts": 279,
+  "directionOrStateVariants": 31,
+  "sizes": [
+    16,
+    20,
+    24
+  ],
+  "corners": [
+    "sharp",
+    "soft",
+    "rounded"
+  ],
+  "svgFiles": 2790,
+  "existingBrandNamesExcluded": 88,
+  "brandNameOverlap": 0,
+  "visualReview": {
+    "reviewer": "Codex (AI)",
+    "status": "visually-reviewed-candidate",
+    "maintainerApproval": "pending",
+    "minimumSourceLibrariesPerIcon": 2,
+    "pinnedOriginalSourceFiles": 620,
+    "evidenceFilesVerified": 735,
+    "themes": [
+      "light",
+      "dark"
+    ],
+    "devicePixelRatios": [
+      1,
+      2
+    ],
+    "renderingAloneIsNotVisualApproval": true
+  },
+  "skill": {
+    "version": "0.5.11",
+    "personalAndRepositoryCopiesMatch": true,
+    "validation": "passed",
+    "requirements": [
+      "object semantics and characteristic form",
+      "whole-object coherence",
+      "curve continuity and contour quality",
+      "painted-stroke negative space",
+      "native optical sizes",
+      "post-drawing aesthetic source comparison",
+      "truthful attribution and licensing"
+    ]
+  },
+  "football": "Retained simplified original with small refinements: one central pentagon and five seams; no added peripheral panels.",
+  "checks": {
+    "iconBuild": "passed",
+    "reviewBuild": "passed",
+    "siteBuild": "passed",
+    "translationAudit": "passed",
+    "atlasScopeGeometrySourcesEvidenceSVGAndNineNativeZips": "passed",
+    "packageConsumers": "passed: data/runtime/React/Vue/Preact/Svelte/Astro/SVG/notices",
+    "websiteKeyboardDownloadAnd390pxThemes": "passed",
+    "standaloneOverview310EntriesSearchAndMobile": "passed",
+    "atlasOnlyZipRoundTrip": "passed",
+    "globalTests": "passed: 46/46, current workspace",
+    "globalValidation": "passed: current workspace; 790 names, 7110 SVG hashes and 9 licensed ZIPs",
+    "frameworkTypes": "passed: every generated Astro and Svelte component, public API and website",
+    "previewBrowser": "passed: 54/54 across Chromium, Firefox and WebKit at DPR 1 and 2",
+    "websiteBrowser": "passed: 75/75 on the verified integration snapshot; later concurrent modal work excluded",
+    "coldDevelopmentServer": "passed: 2/2 on the verified integration snapshot",
+    "reproducible": "passed: 151572 outputs identical"
+  },
+  "artifacts": {
+    "overview": "docs/atlas-310.html",
+    "zip": "dist/atlas/master-icons-atlas-310.zip",
+    "last30Preview": "docs/review/atlas-craft-29/progress-310.png",
+    "scope": "packages/icons/src/atlas-scope.json",
+    "provenance": "packages/icons/src/atlas-provenance.json",
+    "audit": "work/atlas-01/atlas-validation-310.json",
+    "reconciliation": "docs/validation-reconciliation.json"
+  },
+  "scopeNotes": [
+    "No commit or push performed.",
+    "Concurrent existing-icon, framework and brand changes retained.",
+    "AI visual review is separate from maintainer approval and global test status."
+  ],
+  "commitVerification": "docs/atlas-commit-verification.json"
+}

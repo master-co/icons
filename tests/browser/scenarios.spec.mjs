@@ -4,8 +4,9 @@ import {pathToFileURL} from 'node:url';
 import {resolve} from 'node:path';
 import {scenarios} from '../../preview/scenarios.js';
 import {catalog} from '../../packages/icons/src/catalog.mjs';
-import {beforeDefinitions} from '../../scripts/lib/review-data.mjs';
+import {beforeDefinitions,comparisonReferences} from '../../scripts/lib/review-data.mjs';
 const ids=scenarios.map(x=>x[0]),before=await beforeDefinitions();
+const references=(await comparisonReferences()).references;
 test('all contexts render in light/dark and desktop/mobile; controls and navigation work',async({page},info)=>{
  test.setTimeout(120000);const errors=[];page.on('pageerror',e=>errors.push(e.message));
  await page.goto('/?view=context');
@@ -38,6 +39,7 @@ test('all contexts render in light/dark and desktop/mobile; controls and navigat
  expect(errors).toEqual([]);
 });
 test('reference pagination covers new drawings, before masters and offline source originals',async({page})=>{
+ const errors=[];page.on('pageerror',error=>errors.push(error.message));
  for(const url of ['/?view=reference',pathToFileURL(resolve('dist/preview.html')).href+'?view=reference']){
   await page.goto(url);
   let compared=0;
@@ -46,12 +48,13 @@ test('reference pagination covers new drawings, before masters and offline sourc
    const entries=catalog.slice(index*12,(index+1)*12),rows=entries.length;
    await expect(page.locator('.reference-table tbody tr')).toHaveCount(rows);
    // Only actual saved masters are shown in the before column.
-   await expect(page.locator('.reference-table tbody svg')).toHaveCount(entries.reduce((count,e)=>count+(before[e.name]?4:3),0));
+   await expect(page.locator('.reference-table tbody svg')).toHaveCount(entries.reduce((count,e)=>count+(e.category==='brands'?1:references.filter(r=>r.name===e.name).length)+(before[e.name]?2:1),0));
    await expect(page.locator('#page-info')).toContainText(`第 ${index+1} / ${pages}`);
    compared+=rows;
    if(index<pages-1)await page.locator('#page-next').click();
   }
   expect(compared).toBe(catalog.length);
+  expect(errors).toEqual([]);
  }
  await page.getByRole('searchbox').fill('file-archive');await expect(page.locator('.reference-table tbody tr')).toHaveCount(1);await expect(page.locator('.reference-table tbody svg')).toHaveCount(4);await expect(page.locator('.reference-table')).not.toContainText('無舊稿');
 });

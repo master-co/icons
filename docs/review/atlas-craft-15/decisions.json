@@ -1,0 +1,149 @@
+{
+  "batch": "17-math",
+  "cycle": "atlas-craft-15",
+  "familyRoot": "docs/review/atlas-craft-15/final",
+  "baseline": "references/atlas-craft-15/master-before.json",
+  "reviewer": "Codex (AI)",
+  "visualInspectionComplete": true,
+  "inspectedCombinations": [
+    {
+      "theme": "light",
+      "dpr": 1
+    },
+    {
+      "theme": "light",
+      "dpr": 2
+    },
+    {
+      "theme": "dark",
+      "dpr": 1
+    },
+    {
+      "theme": "dark",
+      "dpr": 2
+    }
+  ],
+  "effects": {
+    "dashes": {
+      "used": false,
+      "reason": "數學符號的筆畫需完整連續，不使用虛線改變字形。"
+    },
+    "opacity": {
+      "used": false,
+      "reason": "符號各筆畫同屬主體，以留白區分而不做漸淡。"
+    },
+    "gradients": {
+      "used": false,
+      "reason": "數學字形採單色筆畫，不使用材質漸層。"
+    }
+  },
+  "decisions": [
+    {
+      "name": "pi",
+      "groupRoot": "docs/review/atlas-craft-01/68-pi-sigma-infinity",
+      "confusableWith": [
+        "sigma",
+        "function-square"
+      ],
+      "sourceObservation": "Lucide以左側弧形起筆和右腳向外收筆形成π字形，Phosphor右腳另有回鉤。最新稿採較安靜的向外收筆，稍放寬頂橫；完稿回比16/20/24時兩腳與起筆的主次清楚，不把π退化成三條直線的門框。",
+      "reason": "頂橫以連續曲線起筆，右腳向下後自然彎出；雙腳按同一頂線相接，曲線保留於sharp而只改端帽語氣。",
+      "adaptedFrom": "Lucide"
+    },
+    {
+      "name": "sigma",
+      "groupRoot": "docs/review/atlas-craft-01/68-pi-sigma-infinity",
+      "confusableWith": [
+        "pi",
+        "chevron-right"
+      ],
+      "sourceObservation": "Lucide將中央折入微圓化，Tabler sum保留較直接的大寫Σ字形和短端部。最新稿選清楚的中央折入與上下等長橫線，回比後上下開口保持一致，16px不把端部加長成閉合框。",
+      "reason": "依字形比例安排上下橫、短端部與中央折入；小端角用tip，中央內折可用較大的局部半徑，避免整個字形被統一圓角吃掉。",
+      "adaptedFrom": "Tabler"
+    },
+    {
+      "name": "infinity",
+      "groupRoot": "docs/review/atlas-craft-01/68-pi-sigma-infinity",
+      "confusableWith": [
+        "link",
+        "atom"
+      ],
+      "sourceObservation": "Lucide是完整連續的雙環，Phosphor在交錯位置留出開口。最新稿保留Lucide連續筆勢；完稿回比，兩側圓腹對稱、中央收束自然，原生16px兩個孔洞都保持清楚，不需以透明度表達前後。",
+      "reason": "兩側圓弧與中間曲線按水平切線接合，閉合接縫延續同一方向；維持單一連續輪廓，sharp不將圓腹折成多邊形。",
+      "adaptedFrom": "Lucide"
+    },
+    {
+      "name": "radical",
+      "groupRoot": "docs/review/atlas-craft-01/69b-radical",
+      "confusableWith": [
+        "check",
+        "sigma"
+      ],
+      "sourceObservation": "Lucide根號的低鉤比Tabler更深，頂橫較短。最新稿採清楚的低鉤與上升長線；首稿sharp底角被miterlimit截平，回比後調整折點使尖端成立，實際墨線高度接近soft。原生16/20/24仍保持根號比例而沒有落到畫布之外。",
+      "reason": "sharp低鉤中心點回收至19，讓夾角留在既有斜接限制內並保留真正尖端；soft/rounded保留原深鉤與微圓轉折，不改全庫miterlimit。",
+      "adaptedFrom": "Lucide"
+    },
+    {
+      "name": "equal",
+      "groupRoot": "docs/review/atlas-craft-01/69-radical-equality",
+      "confusableWith": [
+        "minus",
+        "not-equal"
+      ],
+      "sourceObservation": "Lucide雙橫線之間留白較寬，Tabler的兩線較靠近。最新稿用本家族14u線長和6u行距建構等號；完稿回比，小尺寸仍是兩條獨立等長線，與減號區分清楚，沒有額外框或裝飾。",
+      "reason": "兩條橫線相對畫布中心上下對稱，共用長度與端帽；作為不等號的共用母型，避免兩個符號的等號部分比例漂移。"
+    },
+    {
+      "name": "not-equal",
+      "groupRoot": "docs/review/atlas-craft-01/69-radical-equality",
+      "confusableWith": [
+        "equal",
+        "divide"
+      ],
+      "sourceObservation": "Lucide與Phosphor都以完整斜線穿過等號；Phosphor的斜線更陡。最新稿與equal共用雙橫母型，採陡斜線留出上下端；完稿回比16/20/24，交會成立且四段橫線仍可讀，不做不必要的遮擋挖空。",
+      "reason": "沿用equal函式，加入相對中心對稱的斜線；三條筆畫是同一數學符號的相交關係，保留直接交會。"
+    },
+    {
+      "name": "divide",
+      "groupRoot": "docs/review/atlas-craft-01/70-divide-plus-minus",
+      "confusableWith": [
+        "minus",
+        "fraction"
+      ],
+      "sourceObservation": "Lucide的上下點偏重，Phosphor較小。最新稿在兩者之間控制點徑，與等號、正負號共用橫線長度；完稿回比，原生16px圓點仍可見，沒有大到搶過橫線，也沒有退化成低對比噪點。",
+      "reason": "上下點依原生尺寸使用1/1.2/1.4半徑，沿同一垂直軸對稱配置；橫線維持家族寬度，點徑不機械等同描邊寬。"
+    },
+    {
+      "name": "plus-minus",
+      "groupRoot": "docs/review/atlas-craft-01/70-divide-plus-minus",
+      "confusableWith": [
+        "plus",
+        "minus"
+      ],
+      "sourceObservation": "最初Phosphor/Tabler的plus-minus是斜線分隔的加減操作，最終改用Hugeicons plus-minus-01與MDI plus-minus的上下±。最新稿將上方加號略縮短，與下方減號分離；完稿回比，數學正負號語意明確，沒有沿用斜線組合混淆。",
+      "reason": "保留上加下減的標準構造，兩橫等長同軸；加號豎筆下端與減號之間保留清楚空隙，不將它接成十字加底線。",
+      "adaptedFrom": "Hugeicons Free"
+    },
+    {
+      "name": "fraction",
+      "groupRoot": "docs/review/atlas-craft-01/71-fraction-function",
+      "confusableWith": [
+        "divide",
+        "not-equal"
+      ],
+      "sourceObservation": "Tabler以水平分數線分隔1與2，MDI以斜線並排同一數值。最新稿採上下排列，將Tabler較方折的2改為完整曲線字形；完稿回比16/20/24，分子、分數線與分母分層清楚，2保留頭弧、斜腹和平底而不是方框拼湊。",
+      "reason": "1用短斜引筆接直幹，2使用連續頭弧與斜向收筆；上下字形保持與分數線的距離，符號必要數字不作裝飾刪除。",
+      "adaptedFrom": "Tabler"
+    },
+    {
+      "name": "function-square",
+      "groupRoot": "docs/review/atlas-craft-01/71-fraction-function",
+      "confusableWith": [
+        "sigma",
+        "square"
+      ],
+      "sourceObservation": "Lucide的ƒ筆勢自然且框內留白較寬，Tabler以更短回鉤與傾斜主幹構字。最新稿將主幹輕微傾斜並以連續上下鉤收筆；完稿回比，內字和框各自成立，16px不把鉤端黏到外框。",
+      "reason": "外框共用家族半徑，ƒ以曲線和短斜主幹完成而非直線字母f；橫筆跟隨字形中腰，四邊留白兼顧上下收筆。",
+      "adaptedFrom": "Lucide"
+    }
+  ]
+}

@@ -1,0 +1,152 @@
+{
+  "batch": "19-music",
+  "cycle": "atlas-craft-17",
+  "familyRoot": "docs/review/atlas-craft-17/final",
+  "baseline": "references/atlas-craft-17/master-before.json",
+  "reviewer": "Codex (AI)",
+  "visualInspectionComplete": true,
+  "inspectedCombinations": [
+    {
+      "theme": "light",
+      "dpr": 1
+    },
+    {
+      "theme": "light",
+      "dpr": 2
+    },
+    {
+      "theme": "dark",
+      "dpr": 1
+    },
+    {
+      "theme": "dark",
+      "dpr": 2
+    }
+  ],
+  "effects": {
+    "dashes": {
+      "used": false,
+      "reason": "樂器輪廓與管路連續呈現，無需以虛線暗示隱藏構造。"
+    },
+    "opacity": {
+      "used": false,
+      "reason": "以空白和前後遮擋區分部件，不用淡化處理擁擠。"
+    },
+    "gradients": {
+      "used": false,
+      "reason": "樂器採單色輪廓，沒有材質漸層。"
+    }
+  },
+  "decisions": [
+    {
+      "name": "guitar",
+      "groupRoot": "docs/review/atlas-craft-01/76-guitars-piano",
+      "confusableWith": [
+        "guitar-electric",
+        "violin"
+      ],
+      "sourceObservation": "Lucide的琴身收腰和下腹用連續曲線表達，Phosphor以音孔及雙線琴頸增加實物細節。最新稿採Lucide的簡潔琴身與單線琴頸；完稿回比，原生16px保留腰部轉折和琴橋，不為增加音孔再擠壓琴腹空間。",
+      "reason": "琴身以連續肩部、腰部和下腹曲線成形，琴頸按同一斜軸接到琴頭；內部僅保留短琴橋與弦方向，不填滿狹小琴身。",
+      "adaptedFrom": "Lucide"
+    },
+    {
+      "name": "piano",
+      "groupRoot": "docs/review/atlas-craft-01/76b-electric-piano",
+      "confusableWith": [
+        "music-keyboard",
+        "keyboard"
+      ],
+      "sourceObservation": "Lucide以翼狀琴身區別鋼琴，Tabler piano只畫琴鍵，故第二份只作琴鍵構造比較，並非完整琴身對照。最新稿保留連續翼形與前緣鍵盤；完稿回比，四鍵與下邊空白穩定，sharp底角已改為真正直角而保留琴身曲面。",
+      "reason": "琴身從圓腹收向右肩再接鍵盤，四條鍵線連在共用橫線；底部角半徑隨預設變化，物體本身的弧形琴身保持連續。",
+      "adaptedFrom": "Lucide"
+    },
+    {
+      "name": "drum",
+      "groupRoot": "docs/review/atlas-craft-01/77b-drum-violin",
+      "confusableWith": [
+        "cup-soda",
+        "music-keyboard"
+      ],
+      "sourceObservation": "Lucide雙鼓棒與三條鼓身線較密，Hugeicons單鼓棒和兩條鼓身線更清楚。最新稿採後者；首稿直線冒入鼓面，回比後改以前方桶身輪廓裁線。最新16/20/24橢圓鼓面完整、鼓棒分離清楚，沒有接點小凸刺。",
+      "reason": "前方桶身自帶連續鼓面前弧與下緣，直線只裁入前方桶身；後半鼓面另接成同一橢圓，鼓棒遮擋依墨線留出透明空隙。",
+      "adaptedFrom": "Hugeicons Free"
+    },
+    {
+      "name": "violin",
+      "groupRoot": "docs/review/atlas-craft-01/77c-violin",
+      "confusableWith": [
+        "guitar",
+        "guitar-electric"
+      ],
+      "sourceObservation": "MDI以直立雙腹和深腰表現小提琴，OpenMoji斜放並加入弦孔等細節。最新稿採MDI直立輪廓，重畫成有留白的outline；回比後用實心琴頸承接肩部並延伸弦線，避免首稿部件分離和中間稿的瓶頸感。原生尺寸保留上下雙腹與琴橋。",
+      "reason": "上下琴腹以兩側內凹腰線連為一體，實心琴頸直接承接肩部再以單筆弦線向下延伸；保留琴橋而略去小尺寸難讀的弦孔。",
+      "adaptedFrom": "Material Design Icons"
+    },
+    {
+      "name": "trumpet",
+      "groupRoot": "docs/review/atlas-craft-01/78b-brass",
+      "confusableWith": [
+        "saxophone",
+        "megaphone"
+      ],
+      "sourceObservation": "MDI的小號以實心水平管與喇叭口概括，OpenMoji保留多個按鍵和迴轉管。最新稿提煉MDI輪廓並重畫線性版本；首稿雙線細管幾乎黏合，回比後改為單筆主管。最新16px喇叭口與下方迴轉管的孔洞均完整。",
+      "reason": "將極細水平主管概括為單筆，向外擴張的喇叭口保留曲線；迴轉管與兩個按鍵結構相接，不以細小管壁內孔追求不適合小尺寸的寫實。",
+      "adaptedFrom": "Material Design Icons"
+    },
+    {
+      "name": "saxophone",
+      "groupRoot": "docs/review/atlas-craft-01/78b-brass",
+      "confusableWith": [
+        "trumpet",
+        "stethoscope"
+      ],
+      "sourceObservation": "MDI的寬U形下腹與上翻喇叭口明確，OpenMoji較細長且用較多斜管線。最新稿選寬管輪廓並重畫內外連續曲線；完稿回比後加寬直管內部空白，收合吹嘴，原生16px管路沒有變成兩條貼近的黑邊。",
+      "reason": "直管、下腹和上翻喇叭口放在同一封閉輪廓，左側曲線向吹嘴漸收；兩個外側短按鍵只作語意訊號，不在管內再加密點。",
+      "adaptedFrom": "Material Design Icons"
+    },
+    {
+      "name": "metronome",
+      "groupRoot": "docs/review/atlas-craft-01/79b-metronome",
+      "confusableWith": [
+        "timer",
+        "traffic-cone"
+      ],
+      "sourceObservation": "Lucide使用開放機殼與圓形擺錘，Phosphor以完整梯形和一條斜擺桿表達。最新稿採較簡潔的Phosphor構造；回比後sharp擺桿起點改為平切以消除橫線下凸刺，原生16px底座與擺桿仍清楚。",
+      "reason": "梯形側壁和底座共用外殼，內橫線裁住外壁接點；擺桿保留穿出側壁的姿態，sharp起點不以方端帽越過支點橫線。",
+      "adaptedFrom": "Phosphor"
+    },
+    {
+      "name": "guitar-electric",
+      "groupRoot": "docs/review/atlas-craft-01/76b-electric-piano",
+      "confusableWith": [
+        "guitar",
+        "violin"
+      ],
+      "sourceObservation": "Lucide用肩部切角區別電吉他，MDI採尖角V形琴身。最新稿沿用與木吉他一致的圓腹家族，增加可讀的肩部切角；完稿回比後琴頭改為較輕的實心形，取消小尺寸只有亮點的孔洞，琴頸與肩部依然自然銜接。",
+      "reason": "與木吉他共用下腹與腰部曲線，上肩改為連續內凹切角；琴頭使用實心輪廓減去狹小內孔，保留斜軸與琴橋方向一致。",
+      "adaptedFrom": "Lucide"
+    },
+    {
+      "name": "vinyl-record",
+      "groupRoot": "docs/review/atlas-craft-01/79-metronome-record-keyboard",
+      "confusableWith": [
+        "circle",
+        "orbit"
+      ],
+      "sourceObservation": "初選Tabler vinyl其實包含唱針，最終改成Lucide disc-3與Phosphor vinyl-record的裸唱片比較。Phosphor音軌弧較長，Lucide較短；最新稿取較短的兩段對向弧線，回比後中心孔、音軌及外圈在16px仍各自分離。",
+      "reason": "外圈和中心孔共用圓心，兩段音軌等半徑且旋轉對稱；保留清楚的環形留白，不加入多層密集唱片紋路。",
+      "adaptedFrom": "Lucide"
+    },
+    {
+      "name": "music-keyboard",
+      "groupRoot": "docs/review/atlas-craft-01/79-metronome-record-keyboard",
+      "confusableWith": [
+        "piano",
+        "keyboard"
+      ],
+      "sourceObservation": "Lucide keyboard-music包含控制區與琴鍵，Phosphor piano-keys只有鍵組，因此第二份是琴鍵構造比較。最新稿採Lucide的完整機身，將上方兩個控制點簡為一點；完稿回比，原生16px控制區與下方鍵盤分層清楚，也與翼形鋼琴區分。",
+      "reason": "矩形機身採家族圓角，橫線分隔控制區與四鍵；上方一條顯示短線加一個控制點，維持必要訊號而不在控制面板堆疊小孔。",
+      "adaptedFrom": "Lucide"
+    }
+  ]
+}

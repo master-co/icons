@@ -1,0 +1,152 @@
+{
+  "batch": "18-education",
+  "cycle": "atlas-craft-16",
+  "familyRoot": "docs/review/atlas-craft-16/final",
+  "baseline": "references/atlas-craft-16/master-before.json",
+  "reviewer": "Codex (AI)",
+  "visualInspectionComplete": true,
+  "inspectedCombinations": [
+    {
+      "theme": "light",
+      "dpr": 1
+    },
+    {
+      "theme": "light",
+      "dpr": 2
+    },
+    {
+      "theme": "dark",
+      "dpr": 1
+    },
+    {
+      "theme": "dark",
+      "dpr": 2
+    }
+  ],
+  "effects": {
+    "dashes": {
+      "used": false,
+      "reason": "教育器具的實體邊緣完整呈現，不用虛線打斷構造。"
+    },
+    "opacity": {
+      "used": false,
+      "reason": "以輪廓和實際空隙區分部件，不以淡化掩飾擁擠。"
+    },
+    "gradients": {
+      "used": false,
+      "reason": "教具保持單色線性圖示，不加入材質漸層。"
+    }
+  },
+  "decisions": [
+    {
+      "name": "graduation-cap",
+      "groupRoot": "docs/review/atlas-craft-01/72b-cap-diploma",
+      "confusableWith": [
+        "school",
+        "diamond"
+      ],
+      "sourceObservation": "Lucide的側邊流蘇較安靜，Phosphor從帽冠中央拉出的繩線讓中央更密。最新稿保留Lucide側邊流蘇與弧形帽身；完稿回比後，sharp另收窄帽冠中心線以補償斜接尖端，原生16/20/24保持完整且未裁切。",
+      "reason": "以菱形帽冠遮住帽身上端，弧形下緣連成完整帽身；sharp依實際墨線回收兩側尖角，避免沿用soft中心線造成超界。",
+      "adaptedFrom": "Lucide"
+    },
+    {
+      "name": "school",
+      "groupRoot": "docs/review/atlas-craft-01/72-cap-school-presentation",
+      "confusableWith": [
+        "building",
+        "home"
+      ],
+      "sourceObservation": "Lucide與Hugeicons都保留山牆、圓窗和拱門；前者屋簷外伸，後者側翼較柔和。最新稿將山牆與兩翼納入連續外輪廓；完稿回比，16px仍能分辨圓窗與拱門，上下空隙沒有被描邊吃掉。",
+      "reason": "校舍以一個完整外殼承接兩側翼，內部直壁與拱門裁到殼內，避免地面多重線條；保留圓窗作為上部辨識線索。",
+      "adaptedFrom": "Lucide"
+    },
+    {
+      "name": "presentation",
+      "groupRoot": "docs/review/atlas-craft-01/72-cap-school-presentation",
+      "confusableWith": [
+        "chalkboard",
+        "monitor"
+      ],
+      "sourceObservation": "Lucide的頂部橫桿與向外分開的腳架，較Phosphor頂部小掛鉤更像獨立投影幕。最新稿採前者構造；完稿回比，幕面留白完整，腳架在三個原生尺寸清楚分開，沒有為簡報語意增加無用圖表。",
+      "reason": "幕面下角使用家族圓角，頂角與橫桿相接保持平直；腳架從幕底中央分出，上端裁到外殼外避免侵入幕面。",
+      "adaptedFrom": "Lucide"
+    },
+    {
+      "name": "chalkboard",
+      "groupRoot": "docs/review/atlas-craft-01/73-board-abacus-book",
+      "confusableWith": [
+        "presentation",
+        "square"
+      ],
+      "sourceObservation": "Phosphor以開放右下邊與底托容納板擦，Tabler把板擦塞在閉合框內。最新稿採開放結構；完稿回比，16px板擦孔和上方斷開處皆清楚，底托為共同邊界，沒有雙底線擁擠。",
+      "reason": "保留完整大板面與外伸底托，板擦與底托共享底邊；右側上段提前收筆，給板擦上緣可見空隙。",
+      "adaptedFrom": "Phosphor"
+    },
+    {
+      "name": "abacus",
+      "groupRoot": "docs/review/atlas-craft-01/73-board-abacus-book",
+      "confusableWith": [
+        "calculator",
+        "sliders"
+      ],
+      "sourceObservation": "Hugeicons用抽象小短線包在方框內，Tabler以實體支架和兩排算珠表現器具。最新稿採實體支架並減為錯開四珠；完稿回比，橫桿與珠子在16px仍能讀成兩排，不保留來源較密的六珠數量。",
+      "reason": "兩支架與共用底座承接兩根橫桿，算珠用短直筆表現並錯開排列；以減少珠數取得實際留白，不縮細主描邊。",
+      "adaptedFrom": "Tabler"
+    },
+    {
+      "name": "book-marked",
+      "groupRoot": "docs/review/atlas-craft-01/73-board-abacus-book",
+      "confusableWith": [
+        "book",
+        "bookmark"
+      ],
+      "sourceObservation": "Hugeicons將書籤放在右上且打斷書面，Phosphor在完整書面內垂下書籤。最新稿採完整書面與連續書脊；完稿回比，書籤尖凹與下方頁邊都有空白，16px仍呈現書冊厚度而不是文件加徽標。",
+      "reason": "書脊用上下連續弧線承接封面及頁緣，書籤掛在上緣並裁住相接筆畫；底部只有一條頁緣，不增加擁擠的多層頁線。",
+      "adaptedFrom": "Phosphor"
+    },
+    {
+      "name": "library",
+      "groupRoot": "docs/review/atlas-craft-01/74-library-diploma",
+      "confusableWith": [
+        "book-marked",
+        "chart-bar"
+      ],
+      "sourceObservation": "Lucide以直立書脊與一冊斜書概括書架，Hugeicons用兩個完整厚書框。最新稿保留Lucide較輕的書脊語言；完稿回比，末端斜書與前三冊的姿態區別在16px明確，避免套框讓小尺寸變成多條黏合直線。",
+      "reason": "三條直立書脊有輕微高度差，末端書冊以斜率表達倚靠；控制間距與下緣視覺高度，保留簡潔的圖書集合符號。",
+      "adaptedFrom": "Lucide"
+    },
+    {
+      "name": "diploma",
+      "groupRoot": "docs/review/atlas-craft-01/72b-cap-diploma",
+      "confusableWith": [
+        "award",
+        "file-text"
+      ],
+      "sourceObservation": "Hugeicons的中央印章帶曲線垂帶，Phosphor將印章放在證書右側。最新稿採右側印章，首稿框邊殘留一小段細尾，回比後將印章移至外側消除殘線；最新16/20/24印章、垂帶及文字各自清楚。",
+      "reason": "橫式證書保留兩筆文字訊號，圓印章與垂帶結構相接；印章遮住紙張時按實際墨線留出透明淨空，調整位置消除右框殘片。",
+      "adaptedFrom": "Phosphor"
+    },
+    {
+      "name": "globe-stand",
+      "groupRoot": "docs/review/atlas-craft-01/75-globe-pencil",
+      "confusableWith": [
+        "globe",
+        "orbit"
+      ],
+      "sourceObservation": "Phosphor的大球體與半圓支架比例較完整，Tabler球體較小且支架反向。最新稿採較大的球體與左側弧形架；完稿回比，16px兩圈間仍有通道，底座與支架連續，不加入會擠壓內孔的經緯線。",
+      "reason": "球體與同心外架保持一致圓心，半圓斜向開口交代地軸姿態；垂直支柱接外架最低點，再接水平底座，整體共同受力。",
+      "adaptedFrom": "Phosphor"
+    },
+    {
+      "name": "pencil-ruler",
+      "groupRoot": "docs/review/atlas-craft-01/75-globe-pencil",
+      "confusableWith": [
+        "pencil",
+        "ruler"
+      ],
+      "sourceObservation": "Lucide的筆尖收束清楚，Tabler的交叉尺規較方整。最新稿採Lucide的長筆尖與前後交叉；完稿回比，只保留兩個尺規刻度與一條筆尾分界，16px交會區沒有多餘重線，鉛筆本體仍完整。",
+      "reason": "鉛筆以前景封閉輪廓裁去直尺內部遮住部分，保留相接邊界；筆尖以斜向收束連到筆身，尺刻度限制在尺內避免端帽外溢。",
+      "adaptedFrom": "Lucide"
+    }
+  ]
+}

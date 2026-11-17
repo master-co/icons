@@ -1,0 +1,1537 @@
+{
+  "schemaVersion": 2,
+  "reviewer": "Codex (AI)",
+  "userApproval": "pending",
+  "icons": [
+    {
+      "name": "binoculars",
+      "purpose": "雙筒望遠鏡",
+      "recognitionCues": "連續擴張的雙鏡筒、相切鏡面與中央連橋",
+      "confusableWith": [
+        "glasses",
+        "camera"
+      ],
+      "sourceObservation": "Lucide用共同筒身與前鏡頭表達雙筒，Phosphor的外擴鏡筒有更自然的整體收放。前稿像直筒貼圓圈，已依使用者回饋重建輪廓；最新稿回比後，筒身斜邊自然接入圓形物鏡，兩側共用尺度和中央橋樑，原生16/20/24仍讀成完整物件。",
+      "references": [
+        {
+          "name": "binoculars",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/binoculars.svg",
+          "localPath": "references/atlas-01/lucide-binoculars.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/binoculars.svg",
+          "sha256": "f438d79e735a710d494cb9098548096e954e38b8f4d6c07fe8061f159f993525",
+          "license": "ISC AND MIT",
+          "sourceName": "binoculars",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "binoculars",
+          "library": "Phosphor",
+          "repository": "phosphor-icons/core",
+          "commit": "2b75f3ad12b420c9504ef05df8d2564a28f8500e",
+          "path": "assets/regular/binoculars.svg",
+          "localPath": "references/atlas-01/phosphor-binoculars.svg",
+          "url": "https://github.com/phosphor-icons/core/blob/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular/binoculars.svg",
+          "sha256": "5e3c90ef73b1f6da803031cac04024f717a5b15f410dc843a38e8d2c58968be5",
+          "license": "MIT",
+          "sourceName": "binoculars",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "器具及步態以完整輪廓辨識，不需裝飾虛線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "單色輪廓與留白已區分各部件，不需漸淡分層。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "平面物件圖示不以連續漸層模擬材質。"
+        }
+      },
+      "change": {
+        "kind": "modified",
+        "before": {
+          "path": "references/atlas-craft-13/master-before.json",
+          "variantsSha256": "9a8d14618e8bf27d86e57a48b590968ce6cbe173a4ad5bd5afdb8f9414debe27"
+        },
+        "reason": "以連續筒身輪廓取代原稿直筒與圓的拼接，斜邊按圓的切點承接物鏡；鏡面內界裁在筒身內，橋樑保留清楚的中央空隙。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "10bd84a872369711edc9918e814c3eefeaca8b4011c06be511b13cf45b49c0cf",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/62-binoculars-flashlight-axe/review.html",
+            "sha256": "3e5e6d2922ff18027071cadfd61f01fc4a959a7c0cd3b01243c101653936a025"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/62-binoculars-flashlight-axe/definitions.json",
+            "sha256": "3d374af750e06a0de83325aec1ddb6db8904673db03f6886299f0cceefa204b5"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/62-binoculars-flashlight-axe/light-1x.png",
+            "sha256": "e32114de0b2dda4440bbf634b12499dc58cde851ec17b2cdbf16da4026ac14c9"
+          },
+          {
+            "path": "docs/review/atlas-craft-13/final/definitions.json",
+            "sha256": "f855671fcc6605633c9a1e9f779cd0b9f53d043f7f8723357cc240e9786b068b"
+          },
+          {
+            "path": "docs/review/atlas-craft-13/final/15-outdoor.html",
+            "sha256": "b7c8b30f4b74961b8abe2d6257834aa4f688f7af527d1daaba4d950729459e45"
+          },
+          {
+            "path": "docs/review/atlas-craft-13/final/15-outdoor-light-1x.png",
+            "sha256": "1ad6af97297779724161682511650fa460ab040337fa8f83750e3f030532ecb5"
+          },
+          {
+            "path": "docs/review/atlas-craft-13/final/15-outdoor-light-2x.png",
+            "sha256": "0222a1b2ebe61374fc8b1416a50facd0a2a361e7ea407be39511ed9ad099ee9f"
+          },
+          {
+            "path": "docs/review/atlas-craft-13/final/15-outdoor-dark-1x.png",
+            "sha256": "5d0eb97c40ac56ffb8ddbbb46ac04a82e64e8e8ea973a058c7b352af92d8e6df"
+          },
+          {
+            "path": "docs/review/atlas-craft-13/final/15-outdoor-dark-2x.png",
+            "sha256": "1b4700e80f8b9fc06cc02e8e4753dc044dbd31ce716164c8dbb640d9364f400f"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-13/final/15-outdoor-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-13/final/15-outdoor-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-13/final/15-outdoor-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-13/final/15-outdoor-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Phosphor",
+        "license": "MIT",
+        "licenseFile": "licenses/phosphor.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "flashlight",
+      "purpose": "手電筒",
+      "recognitionCues": "寬燈頭、收肩筒身與開關",
+      "confusableWith": [
+        "lamp",
+        "bottle"
+      ],
+      "sourceObservation": "Lucide有弧形收肩與寬燈頭，Phosphor採直接的斜肩。最新稿選弧肩以表現握持筒身，完稿與兩份來源回比，燈頭、肩部與長筒的比例連續，開關與燈框之間有獨立留白，沒有加入反光或防滑紋。",
+      "references": [
+        {
+          "name": "flashlight",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/flashlight.svg",
+          "localPath": "references/atlas-01/lucide-flashlight.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/flashlight.svg",
+          "sha256": "f8cf74e5bb8457223e2f1aaa48b2baa02525b2b4e478ae761d62a0d9160a854c",
+          "license": "ISC AND MIT",
+          "sourceName": "flashlight",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "flashlight",
+          "library": "Phosphor",
+          "repository": "phosphor-icons/core",
+          "commit": "2b75f3ad12b420c9504ef05df8d2564a28f8500e",
+          "path": "assets/regular/flashlight.svg",
+          "localPath": "references/atlas-01/phosphor-flashlight.svg",
+          "url": "https://github.com/phosphor-icons/core/blob/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular/flashlight.svg",
+          "sha256": "57b4b07fc11f5df19951ee3ccad268f9067f31932586f773c685c739e66273c6",
+          "license": "MIT",
+          "sourceName": "flashlight",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "器具及步態以完整輪廓辨識，不需裝飾虛線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "單色輪廓與留白已區分各部件，不需漸淡分層。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "平面物件圖示不以連續漸層模擬材質。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-13/master-before.json",
+          "variantsSha256": "7c88cac3ce859188d976b4a6f5c1436ddaec8d69e81542c5bd9eb7bd1ada10c1"
+        },
+        "reason": "保留寬燈頭、曲線收肩和單筆開關；燈框內線收在外殼內，底角按角型做實際微圓，曲肩不因sharp變成折線。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "20abbfe2404c97688867ba0b8aa0a8f6f8e7b887e1e7fcf1d858c9c1fa966cfe",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/62-binoculars-flashlight-axe/review.html",
+            "sha256": "3e5e6d2922ff18027071cadfd61f01fc4a959a7c0cd3b01243c101653936a025"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/62-binoculars-flashlight-axe/definitions.json",
+            "sha256": "3d374af750e06a0de83325aec1ddb6db8904673db03f6886299f0cceefa204b5"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/62-binoculars-flashlight-axe/light-1x.png",
+            "sha256": "e32114de0b2dda4440bbf634b12499dc58cde851ec17b2cdbf16da4026ac14c9"
+          },
+          {
+            "path": "docs/review/atlas-craft-13/final/definitions.json",
+            "sha256": "f855671fcc6605633c9a1e9f779cd0b9f53d043f7f8723357cc240e9786b068b"
+          },
+          {
+            "path": "docs/review/atlas-craft-13/final/15-outdoor.html",
+            "sha256": "b7c8b30f4b74961b8abe2d6257834aa4f688f7af527d1daaba4d950729459e45"
+          },
+          {
+            "path": "docs/review/atlas-craft-13/final/15-outdoor-light-1x.png",
+            "sha256": "1ad6af97297779724161682511650fa460ab040337fa8f83750e3f030532ecb5"
+          },
+          {
+            "path": "docs/review/atlas-craft-13/final/15-outdoor-light-2x.png",
+            "sha256": "0222a1b2ebe61374fc8b1416a50facd0a2a361e7ea407be39511ed9ad099ee9f"
+          },
+          {
+            "path": "docs/review/atlas-craft-13/final/15-outdoor-dark-1x.png",
+            "sha256": "5d0eb97c40ac56ffb8ddbbb46ac04a82e64e8e8ea973a058c7b352af92d8e6df"
+          },
+          {
+            "path": "docs/review/atlas-craft-13/final/15-outdoor-dark-2x.png",
+            "sha256": "1b4700e80f8b9fc06cc02e8e4753dc044dbd31ce716164c8dbb640d9364f400f"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-13/final/15-outdoor-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-13/final/15-outdoor-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-13/final/15-outdoor-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-13/final/15-outdoor-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Lucide",
+        "license": "ISC",
+        "licenseFile": "licenses/lucide.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "axe",
+      "purpose": "斧頭",
+      "recognitionCues": "寬弧刃、斧頭背部與長握柄",
+      "confusableWith": [
+        "pickaxe",
+        "shovel"
+      ],
+      "sourceObservation": "Lucide的寬弧刃與斧背收束比Tabler的窄刃更有重量和工具特徵。最新稿保留該連續頭部，握柄與十字鎬共用方向；回比16/20/24時刃面保持寬闊，柄頭相接而不穿入刃面孔洞。",
+      "references": [
+        {
+          "name": "axe",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/axe.svg",
+          "localPath": "references/atlas-01/lucide-axe.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/axe.svg",
+          "sha256": "8be1cd7066c1ebe19da4a8ee9b370a729dcdc26e856c2a2ea99f2735ac8ee1cc",
+          "license": "ISC AND MIT",
+          "sourceName": "axe",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "axe",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/axe.svg",
+          "localPath": "references/atlas-01/tabler-axe.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/axe.svg",
+          "sha256": "406cdde96713060f781f21a7b0af30b2909ab8f33cc5f9d9c1b4239166ac31eb",
+          "license": "MIT",
+          "sourceName": "axe",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "器具及步態以完整輪廓辨識，不需裝飾虛線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "單色輪廓與留白已區分各部件，不需漸淡分層。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "平面物件圖示不以連續漸層模擬材質。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-13/master-before.json",
+          "variantsSha256": "48a4b1fbc170beac4bf18c77004edfdbf1fa405cf460654e2a3cfe2b9c561490"
+        },
+        "reason": "弧刃、頸部與斧背維持連續輪廓，握柄依頭部外緣裁切，避免方端帽侵入刃面；柄端以各角型的半徑收口。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "cfa0e4c3db08e93c906479cc1c91403d755b9868ea657b43aeb4d6967d483faa",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/62-binoculars-flashlight-axe/review.html",
+            "sha256": "3e5e6d2922ff18027071cadfd61f01fc4a959a7c0cd3b01243c101653936a025"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/62-binoculars-flashlight-axe/definitions.json",
+            "sha256": "3d374af750e06a0de83325aec1ddb6db8904673db03f6886299f0cceefa204b5"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/62-binoculars-flashlight-axe/light-1x.png",
+            "sha256": "e32114de0b2dda4440bbf634b12499dc58cde851ec17b2cdbf16da4026ac14c9"
+          },
+          {
+            "path": "docs/review/atlas-craft-13/final/definitions.json",
+            "sha256": "f855671fcc6605633c9a1e9f779cd0b9f53d043f7f8723357cc240e9786b068b"
+          },
+          {
+            "path": "docs/review/atlas-craft-13/final/15-outdoor.html",
+            "sha256": "b7c8b30f4b74961b8abe2d6257834aa4f688f7af527d1daaba4d950729459e45"
+          },
+          {
+            "path": "docs/review/atlas-craft-13/final/15-outdoor-light-1x.png",
+            "sha256": "1ad6af97297779724161682511650fa460ab040337fa8f83750e3f030532ecb5"
+          },
+          {
+            "path": "docs/review/atlas-craft-13/final/15-outdoor-light-2x.png",
+            "sha256": "0222a1b2ebe61374fc8b1416a50facd0a2a361e7ea407be39511ed9ad099ee9f"
+          },
+          {
+            "path": "docs/review/atlas-craft-13/final/15-outdoor-dark-1x.png",
+            "sha256": "5d0eb97c40ac56ffb8ddbbb46ac04a82e64e8e8ea973a058c7b352af92d8e6df"
+          },
+          {
+            "path": "docs/review/atlas-craft-13/final/15-outdoor-dark-2x.png",
+            "sha256": "1b4700e80f8b9fc06cc02e8e4753dc044dbd31ce716164c8dbb640d9364f400f"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-13/final/15-outdoor-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-13/final/15-outdoor-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-13/final/15-outdoor-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-13/final/15-outdoor-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Lucide",
+        "license": "ISC",
+        "licenseFile": "licenses/lucide.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "shovel",
+      "purpose": "鏟子",
+      "recognitionCues": "D形握把、長柄與收尖鏟面",
+      "confusableWith": [
+        "axe",
+        "pickaxe"
+      ],
+      "sourceObservation": "Lucide保留封閉握孔與鏟面，Tabler用T握把及圓腹鏟面。最新稿採D形握把、長直柄與收尖鏟腹；完稿回比後，握孔和鏟面大小清楚分級，較前稿無需再加內線，尖腹保留鏟土用途。",
+      "references": [
+        {
+          "name": "shovel",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/shovel.svg",
+          "localPath": "references/atlas-01/lucide-shovel.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/shovel.svg",
+          "sha256": "5a2407e1f1610c1fcb5feaaf49bd3869544e452326a79367927568dba655a6e1",
+          "license": "ISC AND MIT",
+          "sourceName": "shovel",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "shovel",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/shovel.svg",
+          "localPath": "references/atlas-01/tabler-shovel.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/shovel.svg",
+          "sha256": "0b4e79cd526cb275d0e8f1f52aa32097b72eac3fbdc303b4449b79e33883af1c",
+          "license": "MIT",
+          "sourceName": "shovel",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "器具及步態以完整輪廓辨識，不需裝飾虛線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "單色輪廓與留白已區分各部件，不需漸淡分層。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "平面物件圖示不以連續漸層模擬材質。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-13/master-before.json",
+          "variantsSha256": "b7c6af5183e6333520ea63aa5b023e019a6741f8ba053a3b26c244177caa4a79"
+        },
+        "reason": "在共同軸線上安排D握把、桿與曲面鏟頭，再旋轉整個構造；桿線止於握把及鏟頭外側，孔內不留多餘短桿。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "2e71b44774a8a3fba146b14aa44ea4f9db935ce28d38b04a35544ad8d85242ab",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/63-shovel-pickaxe-hook/review.html",
+            "sha256": "1456dc31b15f502eb3c167974c4e7d3916b15a42c01aac24acec687fb4070c43"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/63-shovel-pickaxe-hook/definitions.json",
+            "sha256": "6a5416e37ee8da10602a5463598a1cc1b839f027b7253e8f7a6a62f6caea34db"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/63-shovel-pickaxe-hook/light-1x.png",
+            "sha256": "b0de9a33c25cf5b279fe5e2186d71c9c3b61fd9bb6724a530eb35d4684964192"
+          },
+          {
+            "path": "docs/review/atlas-craft-13/final/definitions.json",
+            "sha256": "f855671fcc6605633c9a1e9f779cd0b9f53d043f7f8723357cc240e9786b068b"
+          },
+          {
+            "path": "docs/review/atlas-craft-13/final/15-outdoor.html",
+            "sha256": "b7c8b30f4b74961b8abe2d6257834aa4f688f7af527d1daaba4d950729459e45"
+          },
+          {
+            "path": "docs/review/atlas-craft-13/final/15-outdoor-light-1x.png",
+            "sha256": "1ad6af97297779724161682511650fa460ab040337fa8f83750e3f030532ecb5"
+          },
+          {
+            "path": "docs/review/atlas-craft-13/final/15-outdoor-light-2x.png",
+            "sha256": "0222a1b2ebe61374fc8b1416a50facd0a2a361e7ea407be39511ed9ad099ee9f"
+          },
+          {
+            "path": "docs/review/atlas-craft-13/final/15-outdoor-dark-1x.png",
+            "sha256": "5d0eb97c40ac56ffb8ddbbb46ac04a82e64e8e8ea973a058c7b352af92d8e6df"
+          },
+          {
+            "path": "docs/review/atlas-craft-13/final/15-outdoor-dark-2x.png",
+            "sha256": "1b4700e80f8b9fc06cc02e8e4753dc044dbd31ce716164c8dbb640d9364f400f"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-13/final/15-outdoor-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-13/final/15-outdoor-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-13/final/15-outdoor-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-13/final/15-outdoor-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Lucide",
+        "license": "ISC",
+        "licenseFile": "licenses/lucide.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "pickaxe",
+      "purpose": "十字鎬",
+      "recognitionCues": "雙側彎尖鎬頭、中央接座與長柄",
+      "confusableWith": [
+        "axe",
+        "shovel"
+      ],
+      "sourceObservation": "Lucide的彎尖鎬臂有明確受力曲線，Hugeicons接座較緊湊。前稿中央矩形偏重，最新稿略收窄接座，保留兩側彎尖；回比後接座不再搶走鎬臂的輪廓，原生16px的柄孔和兩側空腔仍各自可讀。",
+      "references": [
+        {
+          "name": "pickaxe",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/pickaxe.svg",
+          "localPath": "references/atlas-01/lucide-pickaxe.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/pickaxe.svg",
+          "sha256": "b8a9ff74ad1cb09dcaa4b11d2155744a7b61e23d85e01bb4a930ea44aa0dcacc",
+          "license": "ISC AND MIT",
+          "sourceName": "pickaxe",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "pickaxe",
+          "library": "Hugeicons Free",
+          "repository": "hugeicons/hugeicons",
+          "commit": "834e28d965946c1ee60d080027fe9dae4adc58d0",
+          "path": "icons/pickaxe.svg",
+          "localPath": "references/atlas-01/hugeicons-pickaxe.svg",
+          "url": "https://github.com/hugeicons/hugeicons/blob/834e28d965946c1ee60d080027fe9dae4adc58d0/icons/pickaxe.svg",
+          "sha256": "c59a86ed5465d75c5e82d05de68360409b005917cc857b9d672486a13265939e",
+          "license": "MIT",
+          "sourceName": "pickaxe",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "器具及步態以完整輪廓辨識，不需裝飾虛線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "單色輪廓與留白已區分各部件，不需漸淡分層。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "平面物件圖示不以連續漸層模擬材質。"
+        }
+      },
+      "change": {
+        "kind": "modified",
+        "before": {
+          "path": "references/atlas-craft-13/master-before.json",
+          "variantsSha256": "fdf3d497f88c7a4575820f8b1f62bf5b922be029c09ebaeded5f8844db1824a2"
+        },
+        "reason": "縮窄中央接座，曲臂在接座邊界收口；柄與斧頭共用握持寬度、方向與端部語言。不是只加大圓角掩蓋粗重中心。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "ad812fdfacae8f4077da8a3ce4af9b1db57dcce3b908f5ab3370a0162ac4f3c1",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/63-shovel-pickaxe-hook/review.html",
+            "sha256": "1456dc31b15f502eb3c167974c4e7d3916b15a42c01aac24acec687fb4070c43"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/63-shovel-pickaxe-hook/definitions.json",
+            "sha256": "6a5416e37ee8da10602a5463598a1cc1b839f027b7253e8f7a6a62f6caea34db"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/63-shovel-pickaxe-hook/light-1x.png",
+            "sha256": "b0de9a33c25cf5b279fe5e2186d71c9c3b61fd9bb6724a530eb35d4684964192"
+          },
+          {
+            "path": "docs/review/atlas-craft-13/final/definitions.json",
+            "sha256": "f855671fcc6605633c9a1e9f779cd0b9f53d043f7f8723357cc240e9786b068b"
+          },
+          {
+            "path": "docs/review/atlas-craft-13/final/15-outdoor.html",
+            "sha256": "b7c8b30f4b74961b8abe2d6257834aa4f688f7af527d1daaba4d950729459e45"
+          },
+          {
+            "path": "docs/review/atlas-craft-13/final/15-outdoor-light-1x.png",
+            "sha256": "1ad6af97297779724161682511650fa460ab040337fa8f83750e3f030532ecb5"
+          },
+          {
+            "path": "docs/review/atlas-craft-13/final/15-outdoor-light-2x.png",
+            "sha256": "0222a1b2ebe61374fc8b1416a50facd0a2a361e7ea407be39511ed9ad099ee9f"
+          },
+          {
+            "path": "docs/review/atlas-craft-13/final/15-outdoor-dark-1x.png",
+            "sha256": "5d0eb97c40ac56ffb8ddbbb46ac04a82e64e8e8ea973a058c7b352af92d8e6df"
+          },
+          {
+            "path": "docs/review/atlas-craft-13/final/15-outdoor-dark-2x.png",
+            "sha256": "1b4700e80f8b9fc06cc02e8e4753dc044dbd31ce716164c8dbb640d9364f400f"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-13/final/15-outdoor-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-13/final/15-outdoor-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-13/final/15-outdoor-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-13/final/15-outdoor-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Lucide",
+        "license": "ISC",
+        "licenseFile": "licenses/lucide.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "fishing-hook",
+      "purpose": "魚鉤",
+      "recognitionCues": "穿線眼、直鉤柄與回彎鉤尖",
+      "confusableWith": [
+        "anchor",
+        "umbrella"
+      ],
+      "sourceObservation": "Lucide將鉤身斜置，Hugeicons採直立J形，穿線眼與鉤尖更直接。最新稿選直立構造並放寬鉤腹；完稿回比後上端小孔、長柄與寬回彎有清楚主次，鉤尖保留尖角而不額外增加倒鉤小線。",
+      "references": [
+        {
+          "name": "fishing-hook",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/fishing-hook.svg",
+          "localPath": "references/atlas-01/lucide-fishing-hook.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/fishing-hook.svg",
+          "sha256": "c0a8426c74e456bd65854715a9b280a8bf2146168ee5a742cb293d3d0ea7e5a5",
+          "license": "ISC AND MIT",
+          "sourceName": "fishing-hook",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "fishing-hook",
+          "library": "Hugeicons Free",
+          "repository": "hugeicons/hugeicons",
+          "commit": "834e28d965946c1ee60d080027fe9dae4adc58d0",
+          "path": "icons/fishing-hook.svg",
+          "localPath": "references/atlas-01/hugeicons-fishing-hook.svg",
+          "url": "https://github.com/hugeicons/hugeicons/blob/834e28d965946c1ee60d080027fe9dae4adc58d0/icons/fishing-hook.svg",
+          "sha256": "cbea167a00735a163b979daddef657123330ff0984c20759c071a34e74912d48",
+          "license": "MIT",
+          "sourceName": "fishing-hook",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "器具及步態以完整輪廓辨識，不需裝飾虛線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "單色輪廓與留白已區分各部件，不需漸淡分層。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "平面物件圖示不以連續漸層模擬材質。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-13/master-before.json",
+          "variantsSha256": "b7a3a0062c4a6b22d6a57be025c4f5ff3e4ba3504c987458c0aefc577486a48b"
+        },
+        "reason": "穿線眼獨立保留孔徑，線頭與鉤柄按孔外緣收口；J形腹部使用連續曲線，左右切線接回直柄，鉤尖保持必要方向。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "7d0485f23048325fe749449999704d094b753cb5f09730175428edd134c9b1b5",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/63-shovel-pickaxe-hook/review.html",
+            "sha256": "1456dc31b15f502eb3c167974c4e7d3916b15a42c01aac24acec687fb4070c43"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/63-shovel-pickaxe-hook/definitions.json",
+            "sha256": "6a5416e37ee8da10602a5463598a1cc1b839f027b7253e8f7a6a62f6caea34db"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/63-shovel-pickaxe-hook/light-1x.png",
+            "sha256": "b0de9a33c25cf5b279fe5e2186d71c9c3b61fd9bb6724a530eb35d4684964192"
+          },
+          {
+            "path": "docs/review/atlas-craft-13/final/definitions.json",
+            "sha256": "f855671fcc6605633c9a1e9f779cd0b9f53d043f7f8723357cc240e9786b068b"
+          },
+          {
+            "path": "docs/review/atlas-craft-13/final/15-outdoor.html",
+            "sha256": "b7c8b30f4b74961b8abe2d6257834aa4f688f7af527d1daaba4d950729459e45"
+          },
+          {
+            "path": "docs/review/atlas-craft-13/final/15-outdoor-light-1x.png",
+            "sha256": "1ad6af97297779724161682511650fa460ab040337fa8f83750e3f030532ecb5"
+          },
+          {
+            "path": "docs/review/atlas-craft-13/final/15-outdoor-light-2x.png",
+            "sha256": "0222a1b2ebe61374fc8b1416a50facd0a2a361e7ea407be39511ed9ad099ee9f"
+          },
+          {
+            "path": "docs/review/atlas-craft-13/final/15-outdoor-dark-1x.png",
+            "sha256": "5d0eb97c40ac56ffb8ddbbb46ac04a82e64e8e8ea973a058c7b352af92d8e6df"
+          },
+          {
+            "path": "docs/review/atlas-craft-13/final/15-outdoor-dark-2x.png",
+            "sha256": "1b4700e80f8b9fc06cc02e8e4753dc044dbd31ce716164c8dbb640d9364f400f"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-13/final/15-outdoor-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-13/final/15-outdoor-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-13/final/15-outdoor-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-13/final/15-outdoor-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Hugeicons Free",
+        "license": "MIT",
+        "licenseFile": "licenses/hugeicons-MIT.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "campfire",
+      "purpose": "營火",
+      "recognitionCues": "偏斜火舌、飽滿火腹與交叉木柴",
+      "confusableWith": [
+        "droplet",
+        "tent"
+      ],
+      "sourceObservation": "Phosphor以雙層對稱火焰表達燃燒，Tabler以偏斜單火舌配交叉木柴。最新稿選單火舌，略放寬火腹並連續收向尖端；回比後在16px仍有燃燒姿態，無需加一層內焰壓縮空間。",
+      "references": [
+        {
+          "name": "campfire",
+          "library": "Phosphor",
+          "repository": "phosphor-icons/core",
+          "commit": "2b75f3ad12b420c9504ef05df8d2564a28f8500e",
+          "path": "assets/regular/campfire.svg",
+          "localPath": "references/atlas-01/phosphor-campfire.svg",
+          "url": "https://github.com/phosphor-icons/core/blob/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular/campfire.svg",
+          "sha256": "08245aeb5b078c91b77167dc82e74456cb5e9af4c56e7c69abb29174f815eac5",
+          "license": "MIT",
+          "sourceName": "campfire",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "campfire",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/campfire.svg",
+          "localPath": "references/atlas-01/tabler-campfire.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/campfire.svg",
+          "sha256": "d2e17da0889288e855836ae7c1ef30f54f02a630a84254d1d74b699bda971b97",
+          "license": "MIT",
+          "sourceName": "campfire",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "器具及步態以完整輪廓辨識，不需裝飾虛線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "單色輪廓與留白已區分各部件，不需漸淡分層。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "平面物件圖示不以連續漸層模擬材質。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-13/master-before.json",
+          "variantsSha256": "876d44bd29df748014afb36ffb70dbf99925ecf4808277ac43abbd4aeaaac065"
+        },
+        "reason": "火舌的偏斜與收束直接放在外輪廓；木柴交叉位於火腹下方，火焰與柴頂保留空隙，兩筆柴線共用斜率。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "d337078ac684189c63dc43190711f939386a727f200c3be93d34dcb71f2ea908",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/60-campfire-footprints/review.html",
+            "sha256": "6aef4b166a46d7d35c22970a0bb798ff0a1321cb6dffa663bfae3ce005693996"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/60-campfire-footprints/definitions.json",
+            "sha256": "46d737e6d61b75ca1db8e9b1753abffdb3c434e6472115cb9e80026b52ee3b73"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/60-campfire-footprints/light-1x.png",
+            "sha256": "ca232d415ec4859da0c761276f085dcb86725ed27f33297e1c689cd4cc2a0f06"
+          },
+          {
+            "path": "docs/review/atlas-craft-13/final/definitions.json",
+            "sha256": "f855671fcc6605633c9a1e9f779cd0b9f53d043f7f8723357cc240e9786b068b"
+          },
+          {
+            "path": "docs/review/atlas-craft-13/final/15-outdoor.html",
+            "sha256": "b7c8b30f4b74961b8abe2d6257834aa4f688f7af527d1daaba4d950729459e45"
+          },
+          {
+            "path": "docs/review/atlas-craft-13/final/15-outdoor-light-1x.png",
+            "sha256": "1ad6af97297779724161682511650fa460ab040337fa8f83750e3f030532ecb5"
+          },
+          {
+            "path": "docs/review/atlas-craft-13/final/15-outdoor-light-2x.png",
+            "sha256": "0222a1b2ebe61374fc8b1416a50facd0a2a361e7ea407be39511ed9ad099ee9f"
+          },
+          {
+            "path": "docs/review/atlas-craft-13/final/15-outdoor-dark-1x.png",
+            "sha256": "5d0eb97c40ac56ffb8ddbbb46ac04a82e64e8e8ea973a058c7b352af92d8e6df"
+          },
+          {
+            "path": "docs/review/atlas-craft-13/final/15-outdoor-dark-2x.png",
+            "sha256": "1b4700e80f8b9fc06cc02e8e4753dc044dbd31ce716164c8dbb640d9364f400f"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-13/final/15-outdoor-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-13/final/15-outdoor-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-13/final/15-outdoor-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-13/final/15-outdoor-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Tabler",
+        "license": "MIT",
+        "licenseFile": "licenses/tabler.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "footprints",
+      "purpose": "足跡",
+      "recognitionCues": "前後錯落的雙鞋底、腳掌與鞋跟",
+      "confusableWith": [
+        "shoe",
+        "person-walking"
+      ],
+      "sourceObservation": "Lucide連續鞋底包含腳掌收腰和鞋跟，Phosphor將鞋跟分離。最新稿選Lucide連續鞋底；完稿回比，左右前後錯落和足弓內收形成步行節奏，鞋跟分界仍可辨，不需要再加鞋底紋。",
+      "references": [
+        {
+          "name": "footprints",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/footprints.svg",
+          "localPath": "references/atlas-01/lucide-footprints.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/footprints.svg",
+          "sha256": "09ddd9fd4ac7cebfdc91e1096f7b75db019a42fffc493c4adb128a49e1dba04f",
+          "license": "ISC AND MIT",
+          "sourceName": "footprints",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "footprints",
+          "library": "Phosphor",
+          "repository": "phosphor-icons/core",
+          "commit": "2b75f3ad12b420c9504ef05df8d2564a28f8500e",
+          "path": "assets/regular/footprints.svg",
+          "localPath": "references/atlas-01/phosphor-footprints.svg",
+          "url": "https://github.com/phosphor-icons/core/blob/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular/footprints.svg",
+          "sha256": "eed51ca4f2ddfc6dbf6a9adb6325424861ac8cf762dafebd5db5cc8153028893",
+          "license": "MIT",
+          "sourceName": "footprints",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "器具及步態以完整輪廓辨識，不需裝飾虛線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "單色輪廓與留白已區分各部件，不需漸淡分層。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "平面物件圖示不以連續漸層模擬材質。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-13/master-before.json",
+          "variantsSha256": "58ef4388c7c4feeb7a4c3aa3b818ea0293af5d6c8a28cf8f529be5b7d078c627"
+        },
+        "reason": "保留兩側不同朝向的足弓曲線與錯落高度；鞋跟分界裁在鞋底外輪廓內，避免小尺寸端帽突出外緣。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "cea06ff8ac327baf075ba6687bd35cb18b5efedaedbf5e0bf252e616675b9177",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/60-campfire-footprints/review.html",
+            "sha256": "6aef4b166a46d7d35c22970a0bb798ff0a1321cb6dffa663bfae3ce005693996"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/60-campfire-footprints/definitions.json",
+            "sha256": "46d737e6d61b75ca1db8e9b1753abffdb3c434e6472115cb9e80026b52ee3b73"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/60-campfire-footprints/light-1x.png",
+            "sha256": "ca232d415ec4859da0c761276f085dcb86725ed27f33297e1c689cd4cc2a0f06"
+          },
+          {
+            "path": "docs/review/atlas-craft-13/final/definitions.json",
+            "sha256": "f855671fcc6605633c9a1e9f779cd0b9f53d043f7f8723357cc240e9786b068b"
+          },
+          {
+            "path": "docs/review/atlas-craft-13/final/15-outdoor.html",
+            "sha256": "b7c8b30f4b74961b8abe2d6257834aa4f688f7af527d1daaba4d950729459e45"
+          },
+          {
+            "path": "docs/review/atlas-craft-13/final/15-outdoor-light-1x.png",
+            "sha256": "1ad6af97297779724161682511650fa460ab040337fa8f83750e3f030532ecb5"
+          },
+          {
+            "path": "docs/review/atlas-craft-13/final/15-outdoor-light-2x.png",
+            "sha256": "0222a1b2ebe61374fc8b1416a50facd0a2a361e7ea407be39511ed9ad099ee9f"
+          },
+          {
+            "path": "docs/review/atlas-craft-13/final/15-outdoor-dark-1x.png",
+            "sha256": "5d0eb97c40ac56ffb8ddbbb46ac04a82e64e8e8ea973a058c7b352af92d8e6df"
+          },
+          {
+            "path": "docs/review/atlas-craft-13/final/15-outdoor-dark-2x.png",
+            "sha256": "1b4700e80f8b9fc06cc02e8e4753dc044dbd31ce716164c8dbb640d9364f400f"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-13/final/15-outdoor-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-13/final/15-outdoor-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-13/final/15-outdoor-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-13/final/15-outdoor-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Lucide",
+        "license": "ISC",
+        "licenseFile": "licenses/lucide.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "hiking",
+      "purpose": "健行",
+      "recognitionCues": "背包、前傾步態與登山杖",
+      "confusableWith": [
+        "person-walking",
+        "running"
+      ],
+      "sourceObservation": "Phosphor的外置背包與長杖有清楚留白，Tabler將背包和雙臂緊密相接。最新稿採Phosphor的分組方式，保留前傾軀幹、跨步和登山杖；完稿回比16/20/24，背包不黏肩部，杖與前腿分開，與一般步行圖示有明確差別。",
+      "references": [
+        {
+          "name": "hiking",
+          "library": "Phosphor",
+          "repository": "phosphor-icons/core",
+          "commit": "2b75f3ad12b420c9504ef05df8d2564a28f8500e",
+          "path": "assets/regular/person-simple-hike.svg",
+          "localPath": "references/atlas-01/phosphor-person-simple-hike.svg",
+          "url": "https://github.com/phosphor-icons/core/blob/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular/person-simple-hike.svg",
+          "sha256": "8115e5ee08c252698326219205e1e8a6b5af0493831b3ab571951fe177bef701",
+          "license": "MIT",
+          "sourceName": "person-simple-hike",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "hiking",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/trekking.svg",
+          "localPath": "references/atlas-01/tabler-trekking.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/trekking.svg",
+          "sha256": "3dd6c58967c358f57af789b0a18731284a9a6297b02b2c10557ccbbc35701363",
+          "license": "MIT",
+          "sourceName": "trekking",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "器具及步態以完整輪廓辨識，不需裝飾虛線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "單色輪廓與留白已區分各部件，不需漸淡分層。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "平面物件圖示不以連續漸層模擬材質。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-13/master-before.json",
+          "variantsSha256": "0d59eb763a1077a8fb1eae2d8e858f2adda46dd2c366180b1513f117b85a076e"
+        },
+        "reason": "背包依身體傾角放置，肩臂以連續曲線接入杖頂；髖部兩腿共接，sharp肩部使用平切以避免端帽凸點，不加入速度線或山峰補語意。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "1e494b2928b84a65138368e8090aec44e6214d00973de4830cec1bfcdddcbe9e",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/61-hiking-kayak/review.html",
+            "sha256": "7a7371716bf80fe74b590f7707f9c58d9cc7ca8061bed51a08e8f15895109975"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/61-hiking-kayak/definitions.json",
+            "sha256": "45c862d2b2d63f5e180d423b349abec375f4b3c7633c67aa69c6f627423f1e41"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/61-hiking-kayak/light-1x.png",
+            "sha256": "9bd837573d8c7eb04dc44bc3edef0d89bc132517b179de6e0bac57fb81cde33e"
+          },
+          {
+            "path": "docs/review/atlas-craft-13/final/definitions.json",
+            "sha256": "f855671fcc6605633c9a1e9f779cd0b9f53d043f7f8723357cc240e9786b068b"
+          },
+          {
+            "path": "docs/review/atlas-craft-13/final/15-outdoor.html",
+            "sha256": "b7c8b30f4b74961b8abe2d6257834aa4f688f7af527d1daaba4d950729459e45"
+          },
+          {
+            "path": "docs/review/atlas-craft-13/final/15-outdoor-light-1x.png",
+            "sha256": "1ad6af97297779724161682511650fa460ab040337fa8f83750e3f030532ecb5"
+          },
+          {
+            "path": "docs/review/atlas-craft-13/final/15-outdoor-light-2x.png",
+            "sha256": "0222a1b2ebe61374fc8b1416a50facd0a2a361e7ea407be39511ed9ad099ee9f"
+          },
+          {
+            "path": "docs/review/atlas-craft-13/final/15-outdoor-dark-1x.png",
+            "sha256": "5d0eb97c40ac56ffb8ddbbb46ac04a82e64e8e8ea973a058c7b352af92d8e6df"
+          },
+          {
+            "path": "docs/review/atlas-craft-13/final/15-outdoor-dark-2x.png",
+            "sha256": "1b4700e80f8b9fc06cc02e8e4753dc044dbd31ce716164c8dbb640d9364f400f"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-13/final/15-outdoor-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-13/final/15-outdoor-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-13/final/15-outdoor-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-13/final/15-outdoor-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Phosphor",
+        "license": "MIT",
+        "licenseFile": "licenses/phosphor.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "kayak",
+      "purpose": "獨木舟",
+      "recognitionCues": "雙尖修長船身與雙葉槳",
+      "confusableWith": [
+        "sailboat",
+        "ship"
+      ],
+      "sourceObservation": "Lucide以雙尖船身和雙葉槳保留大面積留白，Tabler增加座艙橫線。最新稿沿用Lucide的簡約構造，重畫兩條相對船腹曲線；完稿回比後，修長雙尖與橫向槳已足以表達獨木舟，無需填入密集座艙分隔。",
+      "references": [
+        {
+          "name": "kayak",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/kayak.svg",
+          "localPath": "references/atlas-01/lucide-kayak.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/kayak.svg",
+          "sha256": "807c8e665190b55767f1106536a9c6bf0096b91e866ce873bd5e3cb4967dcd40",
+          "license": "ISC AND MIT",
+          "sourceName": "kayak",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "kayak",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/kayak.svg",
+          "localPath": "references/atlas-01/tabler-kayak.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/kayak.svg",
+          "sha256": "6ca4ec4053679b5a56fb419a46d7608dc9e97c3df1837ecec49535b18b1e607d",
+          "license": "MIT",
+          "sourceName": "kayak",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "器具及步態以完整輪廓辨識，不需裝飾虛線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "單色輪廓與留白已區分各部件，不需漸淡分層。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "平面物件圖示不以連續漸層模擬材質。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-13/master-before.json",
+          "variantsSha256": "b0b00bdfc9d43d8b04215fbdf013db2a03af8895a717e1884586e104ff6d091d"
+        },
+        "reason": "以相對的兩條曲線塑造雙尖船體，雙槳葉共用尺寸與圓腹，桿線收在槳葉外側；保留船身內部空白，控制交叉筆畫數量。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "47ccded63d172b2795fe50bc1806e1ed7b6f4c9e88275414ccc7c57a17c93e5d",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/61-hiking-kayak/review.html",
+            "sha256": "7a7371716bf80fe74b590f7707f9c58d9cc7ca8061bed51a08e8f15895109975"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/61-hiking-kayak/definitions.json",
+            "sha256": "45c862d2b2d63f5e180d423b349abec375f4b3c7633c67aa69c6f627423f1e41"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/61-hiking-kayak/light-1x.png",
+            "sha256": "9bd837573d8c7eb04dc44bc3edef0d89bc132517b179de6e0bac57fb81cde33e"
+          },
+          {
+            "path": "docs/review/atlas-craft-13/final/definitions.json",
+            "sha256": "f855671fcc6605633c9a1e9f779cd0b9f53d043f7f8723357cc240e9786b068b"
+          },
+          {
+            "path": "docs/review/atlas-craft-13/final/15-outdoor.html",
+            "sha256": "b7c8b30f4b74961b8abe2d6257834aa4f688f7af527d1daaba4d950729459e45"
+          },
+          {
+            "path": "docs/review/atlas-craft-13/final/15-outdoor-light-1x.png",
+            "sha256": "1ad6af97297779724161682511650fa460ab040337fa8f83750e3f030532ecb5"
+          },
+          {
+            "path": "docs/review/atlas-craft-13/final/15-outdoor-light-2x.png",
+            "sha256": "0222a1b2ebe61374fc8b1416a50facd0a2a361e7ea407be39511ed9ad099ee9f"
+          },
+          {
+            "path": "docs/review/atlas-craft-13/final/15-outdoor-dark-1x.png",
+            "sha256": "5d0eb97c40ac56ffb8ddbbb46ac04a82e64e8e8ea973a058c7b352af92d8e6df"
+          },
+          {
+            "path": "docs/review/atlas-craft-13/final/15-outdoor-dark-2x.png",
+            "sha256": "1b4700e80f8b9fc06cc02e8e4753dc044dbd31ce716164c8dbb640d9364f400f"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-13/final/15-outdoor-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-13/final/15-outdoor-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-13/final/15-outdoor-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-13/final/15-outdoor-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Lucide",
+        "license": "ISC",
+        "licenseFile": "licenses/lucide.txt"
+      },
+      "remaining": []
+    }
+  ]
+}

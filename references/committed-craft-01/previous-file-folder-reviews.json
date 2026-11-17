@@ -1,0 +1,520 @@
+[
+  {
+    "name": "file-code",
+    "concept": "file",
+    "purpose": "程式碼類型文件。",
+    "recognitionCues": "直接沿用原生file母型，括號置於下半部，縮短端點避免貼近側框；不加第三筆斜線。",
+    "confusableWith": [
+      "file-text"
+    ],
+    "sourceObservation": "Lucide採角括號、Tabler接近彎括號；Master保留角括號為程式碼訊號，不加入斜線讓小尺寸更擁擠。",
+    "references": [
+      {
+        "name": "file-code",
+        "library": "Lucide",
+        "repository": "lucide-icons/lucide",
+        "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+        "path": "icons/file-code.svg",
+        "localPath": "references/productivity-01/lucide-file-code.svg",
+        "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/file-code.svg",
+        "sha256": "8ac619671f53653a483c2d5e2e6afe6d009c3198918cf76632e2cb4abf0d6721",
+        "license": "ISC AND MIT",
+        "sourceName": "file-code",
+        "match": "exact",
+        "role": "comparison-only"
+      },
+      {
+        "name": "file-code",
+        "library": "Tabler",
+        "repository": "tabler/tabler-icons",
+        "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+        "path": "icons/outline/file-code.svg",
+        "localPath": "references/productivity-01/tabler-file-code.svg",
+        "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/file-code.svg",
+        "sha256": "d5ff36cdf06d2e4a701e1f717bae2ab5057abe9f0febc84420d655f0299ac350",
+        "license": "MIT",
+        "sourceName": "file-code",
+        "match": "exact",
+        "role": "comparison-only"
+      }
+    ],
+    "effects": {
+      "dashes": {
+        "used": false,
+        "reason": "不採用；「程式檔」由連續輪廓、節點或實際斷開關係表意，沒有需虛線表示的隱藏／未完成邊界。"
+      },
+      "opacity": {
+        "used": false,
+        "reason": "不採用；「程式檔」的必要輪廓與狀態可以靠形狀、留白表達，淡化不提供額外語意。"
+      },
+      "gradients": {
+        "used": false,
+        "reason": "本期僅允許必要的逐筆透明度；未引入連續漸層或 mask。"
+      }
+    },
+    "change": {
+      "kind": "modified",
+      "reason": "修改後通過：繼承file折角收口；內部左右chevron共用中心高度，尖端與文件側壁、兩端彼此均分離，16px沒有形成封閉菱形。",
+      "before": {
+        "path": "references/craft-05/master-before.json",
+        "variantsSha256": "a83812382dc818b3e177d1ac92abf2df4693b98cf20f81b3d3218da629cbd3cf"
+      }
+    },
+    "visualReview": {
+      "status": "modified-after-visual-review",
+      "reviewer": "root",
+      "date": "2026-11-16",
+      "skillVersion": "0.5.4",
+      "batch": "craft-05-32",
+      "variantsSha256": "32ba46b8dd316fcb5dd829c2df6e54fb694fcf6880f6ec45576f39ccdff7ff7f",
+      "checks": [
+        "16/20/24",
+        "sharp/soft/rounded",
+        "light/dark",
+        "55-percent-foreground",
+        "adjacent-text",
+        "two-pinned-source-comparisons",
+        "true-before-after",
+        "painted-contour-and-cavity",
+        "semantic-effect-decision"
+      ],
+      "evidence": [
+        {
+          "path": "docs/review/craft-05/batch-32/comparison.png",
+          "sha256": "272e027633e575c8e48693d15c6c904edef338ead4bcea10720e672a14e54c37"
+        },
+        {
+          "path": "docs/review/craft-05/batch-32/native.png",
+          "sha256": "1b0364c8eabd94ae37ac59c0dc7b84719a6dd9ef7126839ded183e92f3778664"
+        },
+        {
+          "path": "docs/review/craft-05/batch-32/native-dark.png",
+          "sha256": "03d707f40922b1aa7e1de326cb49f23c91e44810ead30794b1d69cedd6419d86"
+        },
+        {
+          "path": "docs/review/craft-05/batch-32/diagnostic.png",
+          "sha256": "e01329dd8b0e95141ab456e3a0e008036960ffbfab4c97fcf47c6efbba978e7d"
+        }
+      ]
+    },
+    "status": "visually-reviewed-candidate",
+    "userApproval": "pending",
+    "beforeHash": "a83812382dc818b3e177d1ac92abf2df4693b98cf20f81b3d3218da629cbd3cf",
+    "afterHash": "32ba46b8dd316fcb5dd829c2df6e54fb694fcf6880f6ec45576f39ccdff7ff7f"
+  },
+  {
+    "name": "folder-up",
+    "concept": "folder",
+    "purpose": "上傳資料夾。",
+    "recognitionCues": "箭頭放內部，向上尖端遠離標籤轉折；使用與向下完全共用的軸長。",
+    "confusableWith": [
+      "folder-down"
+    ],
+    "sourceObservation": "Lucide內置上箭頭、Tabler外置；Master維持內置傳入操作，比例與folder-down成對。",
+    "references": [
+      {
+        "name": "folder-up",
+        "library": "Lucide",
+        "repository": "lucide-icons/lucide",
+        "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+        "path": "icons/folder-up.svg",
+        "localPath": "references/productivity-01/lucide-folder-up.svg",
+        "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/folder-up.svg",
+        "sha256": "059eecddec0b50f445b905c21cc917c5b74ae90a3fb3804e6d6bbbe64c1e2a82",
+        "license": "ISC AND MIT",
+        "sourceName": "folder-up",
+        "match": "exact",
+        "role": "comparison-only"
+      },
+      {
+        "name": "folder-up",
+        "library": "Tabler",
+        "repository": "tabler/tabler-icons",
+        "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+        "path": "icons/outline/folder-up.svg",
+        "localPath": "references/productivity-01/tabler-folder-up.svg",
+        "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/folder-up.svg",
+        "sha256": "4b7233a0271301e0e6fe0f9734881e8687c549b85cb451b7b71d11c90f5424f1",
+        "license": "MIT",
+        "sourceName": "folder-up",
+        "match": "exact",
+        "role": "comparison-only"
+      }
+    ],
+    "effects": {
+      "dashes": {
+        "used": false,
+        "reason": "不採用；「上傳資料夾」由連續輪廓、節點或實際斷開關係表意，沒有需虛線表示的隱藏／未完成邊界。"
+      },
+      "opacity": {
+        "used": false,
+        "reason": "不採用；「上傳資料夾」的必要輪廓與狀態可以靠形狀、留白表達，淡化不提供額外語意。"
+      },
+      "gradients": {
+        "used": false,
+        "reason": "本期僅允許必要的逐筆透明度；未引入連續漸層或 mask。"
+      }
+    },
+    "change": {
+      "kind": "retained",
+      "reason": "保留：向上箭頭的桿尖接合已有收口，箭尖離夾標籤及上框、桿底離底壁皆有可見空隙；16px採較短尾端，避免內部擁擠。",
+      "before": {
+        "path": "references/craft-05/master-before.json",
+        "variantsSha256": "6be95a9c70df611f9f9c09b0923eb9006c89fd1a4628f8cfef002ce7bf07928b"
+      }
+    },
+    "visualReview": {
+      "status": "retained-after-visual-review",
+      "reviewer": "root",
+      "date": "2026-11-16",
+      "skillVersion": "0.5.4",
+      "batch": "craft-05-33",
+      "variantsSha256": "6be95a9c70df611f9f9c09b0923eb9006c89fd1a4628f8cfef002ce7bf07928b",
+      "checks": [
+        "16/20/24",
+        "sharp/soft/rounded",
+        "light/dark",
+        "55-percent-foreground",
+        "adjacent-text",
+        "two-pinned-source-comparisons",
+        "true-before-after",
+        "painted-contour-and-cavity",
+        "semantic-effect-decision"
+      ],
+      "evidence": [
+        {
+          "path": "docs/review/craft-05/batch-33/comparison.png",
+          "sha256": "90468900b9479d19b2bafb3c94a308412e2295b8cc5c626242b425d3d878c82e"
+        },
+        {
+          "path": "docs/review/craft-05/batch-33/native.png",
+          "sha256": "dab1dbf7e5fa2b7d620bf4ace790d51279ae9a2fcec93768022a343ec63eb0c6"
+        },
+        {
+          "path": "docs/review/craft-05/batch-33/native-dark.png",
+          "sha256": "7c00b75112a975c8ef82926ff84fd8675b924d6bcf830853156bfb1d58dd0217"
+        },
+        {
+          "path": "docs/review/craft-05/batch-33/diagnostic.png",
+          "sha256": "9199f0a1c82ab6557dff0f370c642081b849fbbe7b3d303ee1015e12d25e3977"
+        }
+      ]
+    },
+    "status": "visually-reviewed-candidate",
+    "userApproval": "pending",
+    "beforeHash": "6be95a9c70df611f9f9c09b0923eb9006c89fd1a4628f8cfef002ce7bf07928b",
+    "afterHash": "6be95a9c70df611f9f9c09b0923eb9006c89fd1a4628f8cfef002ce7bf07928b"
+  },
+  {
+    "name": "folder-down",
+    "concept": "folder",
+    "purpose": "下載資料夾。",
+    "recognitionCues": "共享上傳母型，僅箭尖反轉，底端距母型底框仍有清楚間隔。",
+    "confusableWith": [
+      "folder-up"
+    ],
+    "sourceObservation": "Lucide內置、Tabler外置下箭頭；Master保留共同夾框，用相反方向箭頭表輸出／下載，不額外加避讓。",
+    "references": [
+      {
+        "name": "folder-down",
+        "library": "Lucide",
+        "repository": "lucide-icons/lucide",
+        "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+        "path": "icons/folder-down.svg",
+        "localPath": "references/productivity-01/lucide-folder-down.svg",
+        "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/folder-down.svg",
+        "sha256": "bfde34efe7e6637ecb193eea73b11e190ab8c0755c5fd8d5a7b3887a12ab850f",
+        "license": "ISC AND MIT",
+        "sourceName": "folder-down",
+        "match": "exact",
+        "role": "comparison-only"
+      },
+      {
+        "name": "folder-down",
+        "library": "Tabler",
+        "repository": "tabler/tabler-icons",
+        "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+        "path": "icons/outline/folder-down.svg",
+        "localPath": "references/productivity-01/tabler-folder-down.svg",
+        "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/folder-down.svg",
+        "sha256": "76b2bac4830e7854f3d67db4fb22dd8247fe4310a8daaae42cc76465b9eb84b0",
+        "license": "MIT",
+        "sourceName": "folder-down",
+        "match": "exact",
+        "role": "comparison-only"
+      }
+    ],
+    "effects": {
+      "dashes": {
+        "used": false,
+        "reason": "不採用；「下載資料夾」由連續輪廓、節點或實際斷開關係表意，沒有需虛線表示的隱藏／未完成邊界。"
+      },
+      "opacity": {
+        "used": false,
+        "reason": "不採用；「下載資料夾」的必要輪廓與狀態可以靠形狀、留白表達，淡化不提供額外語意。"
+      },
+      "gradients": {
+        "used": false,
+        "reason": "本期僅允許必要的逐筆透明度；未引入連續漸層或 mask。"
+      }
+    },
+    "change": {
+      "kind": "retained",
+      "reason": "保留：向下箭頭使用相同橫向中心、箭翼寬度及尺寸專用底點，16px底尖離夾壁足夠，與上箭頭並排重量一致。",
+      "before": {
+        "path": "references/craft-05/master-before.json",
+        "variantsSha256": "afcfc542e77d1594a1f4ba1d98b2cd65fe2b3008818c0d71bd97b588b02d6cda"
+      }
+    },
+    "visualReview": {
+      "status": "retained-after-visual-review",
+      "reviewer": "root",
+      "date": "2026-11-16",
+      "skillVersion": "0.5.4",
+      "batch": "craft-05-33",
+      "variantsSha256": "afcfc542e77d1594a1f4ba1d98b2cd65fe2b3008818c0d71bd97b588b02d6cda",
+      "checks": [
+        "16/20/24",
+        "sharp/soft/rounded",
+        "light/dark",
+        "55-percent-foreground",
+        "adjacent-text",
+        "two-pinned-source-comparisons",
+        "true-before-after",
+        "painted-contour-and-cavity",
+        "semantic-effect-decision"
+      ],
+      "evidence": [
+        {
+          "path": "docs/review/craft-05/batch-33/comparison.png",
+          "sha256": "90468900b9479d19b2bafb3c94a308412e2295b8cc5c626242b425d3d878c82e"
+        },
+        {
+          "path": "docs/review/craft-05/batch-33/native.png",
+          "sha256": "dab1dbf7e5fa2b7d620bf4ace790d51279ae9a2fcec93768022a343ec63eb0c6"
+        },
+        {
+          "path": "docs/review/craft-05/batch-33/native-dark.png",
+          "sha256": "7c00b75112a975c8ef82926ff84fd8675b924d6bcf830853156bfb1d58dd0217"
+        },
+        {
+          "path": "docs/review/craft-05/batch-33/diagnostic.png",
+          "sha256": "9199f0a1c82ab6557dff0f370c642081b849fbbe7b3d303ee1015e12d25e3977"
+        }
+      ]
+    },
+    "status": "visually-reviewed-candidate",
+    "userApproval": "pending",
+    "beforeHash": "afcfc542e77d1594a1f4ba1d98b2cd65fe2b3008818c0d71bd97b588b02d6cda",
+    "afterHash": "afcfc542e77d1594a1f4ba1d98b2cd65fe2b3008818c0d71bd97b588b02d6cda"
+  },
+  {
+    "name": "file-question",
+    "concept": "file",
+    "purpose": "待釐清、未知或需要說明的文件。",
+    "recognitionCues": "既有文件母型加內部問號。",
+    "confusableWith": [
+      "file",
+      "help-circle"
+    ],
+    "sourceObservation": "Lucide file-question-mark和Tabler file-unknown均文件加問號；Master保留折頁及內置問號，以一個訊號表未知文件。",
+    "references": [
+      {
+        "name": "file-question",
+        "library": "Lucide",
+        "repository": "lucide-icons/lucide",
+        "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+        "path": "icons/file-question-mark.svg",
+        "localPath": "references/expansion-01/lucide-file-question-mark.svg",
+        "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/file-question-mark.svg",
+        "sha256": "d87955d7556dc82bc527efe2db22d39841c04ee09d50e0ef1f6806db16c1b9ed",
+        "license": "ISC AND MIT",
+        "sourceName": "file-question-mark",
+        "match": "exact",
+        "role": "comparison-only"
+      },
+      {
+        "name": "file-question",
+        "library": "Tabler",
+        "repository": "tabler/tabler-icons",
+        "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+        "path": "icons/outline/file-unknown.svg",
+        "localPath": "references/expansion-01/tabler-file-unknown.svg",
+        "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/file-unknown.svg",
+        "sha256": "9e46d53aebe09cd97559b2fb066a0dbfa6e6136a15901a5999ccd8252080c153",
+        "license": "MIT",
+        "sourceName": "file-unknown",
+        "match": "exact",
+        "role": "comparison-only"
+      }
+    ],
+    "effects": {
+      "dashes": {
+        "used": false,
+        "reason": "不採用；待釐清文件以連續實體輪廓表達，沒有未完成或隱藏邊界。"
+      },
+      "opacity": {
+        "used": false,
+        "reason": "不採用；待釐清文件的主體及必要訊號以留白分離，淡化不增加語意。"
+      },
+      "gradients": {
+        "used": false,
+        "reason": "本期僅允許必要的逐筆透明度；未引入連續漸層或 mask。"
+      }
+    },
+    "change": {
+      "kind": "modified",
+      "reason": "修改後通過：沿用本輪文件母型折頁收口，移除折線對圓角輪廓的越界；問號彎鉤、落點及圓點保留，16px與折頁及底框均分離。",
+      "before": {
+        "path": "references/craft-05/master-before.json",
+        "variantsSha256": "16c58db504d48ae7277938d1843b2104dc100d9d24a9b04f79907058ad94afe9"
+      }
+    },
+    "visualReview": {
+      "status": "modified-after-visual-review",
+      "reviewer": "root",
+      "date": "2026-11-16",
+      "skillVersion": "0.5.4",
+      "batch": "craft-05-39",
+      "variantsSha256": "8301b4c1293aabe1def1389e410acf0e73f9297f212064c641c9f68cf16d504c",
+      "checks": [
+        "16/20/24",
+        "sharp/soft/rounded",
+        "light/dark",
+        "55-percent-foreground",
+        "adjacent-text",
+        "two-pinned-source-comparisons",
+        "true-before-after",
+        "painted-contour-and-cavity",
+        "semantic-effect-decision"
+      ],
+      "evidence": [
+        {
+          "path": "docs/review/craft-05/batch-39/comparison.png",
+          "sha256": "be3164fb5d18caea09ba2e4b13f62d487bde10dd6bed506ef4589dc7f14a44da"
+        },
+        {
+          "path": "docs/review/craft-05/batch-39/native.png",
+          "sha256": "35987981004ac2a510df0e32fc0a0e9772be8108927e2565fff21176c15ebe46"
+        },
+        {
+          "path": "docs/review/craft-05/batch-39/native-dark.png",
+          "sha256": "68e1ca3b7a648c3a4ca52df1436a267e6ca00eaa7ed65e8482e9a8bfb6a853ab"
+        },
+        {
+          "path": "docs/review/craft-05/batch-39/diagnostic.png",
+          "sha256": "2fc5f952200bff40782f83ea1dc36bc4de697f6d581a78a303bb1f1b4ba7aaa2"
+        }
+      ]
+    },
+    "status": "visually-reviewed-candidate",
+    "userApproval": "pending",
+    "beforeHash": "16c58db504d48ae7277938d1843b2104dc100d9d24a9b04f79907058ad94afe9",
+    "afterHash": "8301b4c1293aabe1def1389e410acf0e73f9297f212064c641c9f68cf16d504c"
+  },
+  {
+    "name": "file-json",
+    "concept": "file",
+    "purpose": "JSON與結構化資料檔案",
+    "recognitionCues": "文件折角與內置成對大括號",
+    "confusableWith": [
+      "file-code",
+      "file-text",
+      "braces"
+    ],
+    "sourceObservation": "Lucide file-braces 為同語意；Tabler file-code-2 是程式文件構造參考。Master 使用可辨識的大括號而不是把一般 code 符號當作 JSON。",
+    "references": [
+      {
+        "name": "file-json",
+        "library": "Lucide",
+        "repository": "lucide-icons/lucide",
+        "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+        "path": "icons/file-braces.svg",
+        "localPath": "references/expansion-01/lucide-file-braces.svg",
+        "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/file-braces.svg",
+        "sha256": "f1ea60ee7f303887033d9b05c9b8c903b31c01dc2d8d15082f5c4d1a8899aa6a",
+        "license": "ISC AND MIT",
+        "sourceName": "file-braces",
+        "match": "exact",
+        "role": "comparison-only"
+      },
+      {
+        "name": "file-json",
+        "library": "Tabler",
+        "repository": "tabler/tabler-icons",
+        "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+        "path": "icons/outline/file-code-2.svg",
+        "localPath": "references/expansion-01/tabler-file-code-2.svg",
+        "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/file-code-2.svg",
+        "sha256": "f9286df55ed777c9ac6a5d5fdeaa35281663596ad661bd8efca2040424531b28",
+        "license": "MIT",
+        "sourceName": "file-code-2",
+        "match": "structure-only",
+        "role": "comparison-only"
+      }
+    ],
+    "effects": {
+      "dashes": {
+        "used": false,
+        "reason": "不採用；JSON文件以連續實體輪廓表達，沒有未完成或隱藏邊界。"
+      },
+      "opacity": {
+        "used": false,
+        "reason": "不採用；JSON文件的主體及必要訊號以留白分離，淡化不增加語意。"
+      },
+      "gradients": {
+        "used": false,
+        "reason": "本期僅允許必要的逐筆透明度；未引入連續漸層或 mask。"
+      }
+    },
+    "change": {
+      "kind": "modified",
+      "reason": "隨文件母型修改：折角內線按外殼墨線裁切，sharp 和 rounded 不再有接縫外凸；保留成對大括號及其內部空隙。",
+      "before": {
+        "path": "references/craft-05/master-before.json",
+        "variantsSha256": "deef5c914eed6d40a20a0b0a7f8090c2d4db21aeb81b01ba3e879822e4c834b9"
+      }
+    },
+    "visualReview": {
+      "status": "modified-after-visual-review",
+      "reviewer": "root",
+      "date": "2026-11-16",
+      "skillVersion": "0.5.4",
+      "batch": "craft-05-48",
+      "variantsSha256": "ee39fa910eb4dcb2570b6e8b285b8fb6162dda040b88fa4d534ecac88bbafc63",
+      "checks": [
+        "16/20/24",
+        "sharp/soft/rounded",
+        "light/dark",
+        "55-percent-foreground",
+        "adjacent-text",
+        "two-pinned-source-comparisons",
+        "true-before-after",
+        "painted-contour-and-cavity",
+        "semantic-effect-decision"
+      ],
+      "evidence": [
+        {
+          "path": "docs/review/craft-05/batch-48/comparison.png",
+          "sha256": "69e5544ffc3869bbaddf40571407c23a704369452cdb19099a55bf4abd07bac2"
+        },
+        {
+          "path": "docs/review/craft-05/batch-48/native.png",
+          "sha256": "ad4cd763d81e6c8bacc5ea2914ac73c354f363523007e1af9bc5f5a555429855"
+        },
+        {
+          "path": "docs/review/craft-05/batch-48/native-dark.png",
+          "sha256": "37449fd0933599df1fb161b12a4af89f346cce4596527ccc3d3ebde511256629"
+        },
+        {
+          "path": "docs/review/craft-05/batch-48/diagnostic.png",
+          "sha256": "001bf3be03b06558af134838ca5accf5412e5eef4a16e37a4cb70d748f6e894b"
+        }
+      ]
+    },
+    "status": "visually-reviewed-candidate",
+    "userApproval": "pending",
+    "beforeHash": "deef5c914eed6d40a20a0b0a7f8090c2d4db21aeb81b01ba3e879822e4c834b9",
+    "afterHash": "ee39fa910eb4dcb2570b6e8b285b8fb6162dda040b88fa4d534ecac88bbafc63"
+  }
+]

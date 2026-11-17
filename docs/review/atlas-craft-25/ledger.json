@@ -1,0 +1,1537 @@
+{
+  "schemaVersion": 2,
+  "reviewer": "Codex (AI)",
+  "userApproval": "pending",
+  "icons": [
+    {
+      "name": "chart-radar",
+      "purpose": "雷達圖",
+      "recognitionCues": "五向放射軸與不等值資料多邊形",
+      "confusableWith": [
+        "star",
+        "chart-network"
+      ],
+      "sourceObservation": "Lucide只有資料輪廓與五條軸，Tabler另加外層網格而更密。最新稿採Lucide疏朗構造，資料點改按共同中心與五軸比例定位；完稿回比16px五個區域仍可讀，沒有增加第二層網格把中心擠成小孔群。",
+      "references": [
+        {
+          "name": "chart-radar",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/chart-radar.svg",
+          "localPath": "references/atlas-01/lucide-chart-radar.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/chart-radar.svg",
+          "sha256": "f0e29f58acf501336416957eb1c0fba06a8fdc0e08fa9541ad9c0e8f9749d60c",
+          "license": "ISC AND MIT",
+          "sourceName": "chart-radar",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "chart-radar",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/chart-radar.svg",
+          "localPath": "references/atlas-01/tabler-chart-radar.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/chart-radar.svg",
+          "sha256": "8d032d134c2ecc81f971402fcb6d14f979e3a47af0df7ab09aba47d42a47253f",
+          "license": "MIT",
+          "sourceName": "chart-radar",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "圖示呈現確定的資料類型，不增加輔助虛線格網或推估連線壓縮原生留白。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "資料線和座標軸以位置及間距分離，無需淡化任一資料序列才能辨識。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "圖表類型以輪廓和線條編碼即可區別，不以連續漸層暗示未提供的數值。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-25/master-before.json",
+          "variantsSha256": "b3f870156e0f4eaaf912e88658d119b9f36c8972040980d1b9f3eba3d48804a9"
+        },
+        "reason": "以同一中心建立五向軸，資料點落在各自軸上並保持不同數值比例；角型調整資料多邊形的實際小圓角，軸線保持連續相接。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "e8de8b7ff9e70d7207826a8647e73a0841f9333048d2f18c0ce3ada6a470bb5a",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/109-radar-candle/review.html",
+            "sha256": "3533c4aad17ccf6c1e3690d24b4ae982f89c01bf2d8e3c5646c955560e5ed2d3"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/109-radar-candle/definitions.json",
+            "sha256": "2d81dd92092cc2c6681f7303b8acfe4468f5922a30d838633d376d9f8a11d52a"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/109-radar-candle/light-1x.png",
+            "sha256": "5f4626ec5ba7621b75607c99276dd06f0619858e577b256feb251288d79ba024"
+          },
+          {
+            "path": "docs/review/atlas-craft-25/final/definitions.json",
+            "sha256": "fc0df8792d16b780f6c53434ec927162798e148794baf18d81ad1b96557a99de"
+          },
+          {
+            "path": "docs/review/atlas-craft-25/final/27-charts.html",
+            "sha256": "f87ee54d11025c2f4927fb92edd1080467380c650959ac9f15904e5977c36785"
+          },
+          {
+            "path": "docs/review/atlas-craft-25/final/27-charts-light-1x.png",
+            "sha256": "8378e76d2019d2718ed99cd9b143ca8de85bff9b65c554a1303829cee2434816"
+          },
+          {
+            "path": "docs/review/atlas-craft-25/final/27-charts-light-2x.png",
+            "sha256": "a61d91b40c83c1376d2ae4b1d2ee3e3bf3b458f68530a2707cfcd4328c902b22"
+          },
+          {
+            "path": "docs/review/atlas-craft-25/final/27-charts-dark-1x.png",
+            "sha256": "35d29a0d8e318adca785114e66066ac3a1bf067e1d212f8ba91ba5d6a8938187"
+          },
+          {
+            "path": "docs/review/atlas-craft-25/final/27-charts-dark-2x.png",
+            "sha256": "651b0a72dbcb7ff18063eac05b1d0f390afb2c746da9566d2f2266fb987d9bab"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-25/final/27-charts-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-25/final/27-charts-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-25/final/27-charts-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-25/final/27-charts-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Lucide",
+        "license": "ISC",
+        "licenseFile": "licenses/lucide.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "chart-candlestick",
+      "purpose": "K 線圖",
+      "recognitionCues": "不同高度的燭身、上下影線及座標軸",
+      "confusableWith": [
+        "chart-bar",
+        "chart-waterfall"
+      ],
+      "sourceObservation": "Lucide兩根K線加座標軸，Tabler三根K線不帶軸。最新稿採Lucide兩根構造並共用Master座標軸；完稿回比16px燭身內孔、影線和兩柱間距均清楚，影線不穿進燭身空腔。",
+      "references": [
+        {
+          "name": "chart-candlestick",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/chart-candlestick.svg",
+          "localPath": "references/atlas-01/lucide-chart-candlestick.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/chart-candlestick.svg",
+          "sha256": "4cb3503f8b22d5b33237e05a6b7e0625e6d5669fef30827c6f8de42054e02432",
+          "license": "ISC AND MIT",
+          "sourceName": "chart-candlestick",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "chart-candlestick",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/chart-candle.svg",
+          "localPath": "references/atlas-01/tabler-chart-candle.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/chart-candle.svg",
+          "sha256": "74565140ef036d3c3429e91d9a4b3a69428cf09277684aa5f4075b191c58cf04",
+          "license": "MIT",
+          "sourceName": "chart-candle",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "圖示呈現確定的資料類型，不增加輔助虛線格網或推估連線壓縮原生留白。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "資料線和座標軸以位置及間距分離，無需淡化任一資料序列才能辨識。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "圖表類型以輪廓和線條編碼即可區別，不以連續漸層暗示未提供的數值。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-25/master-before.json",
+          "variantsSha256": "2e56f491496adb20b40454308bb374ee5c57a345a8554786538c8d7b85656a7f"
+        },
+        "reason": "兩個不同高度燭身保留上下影線，將影線墨跡裁在燭身外側；燭身小角半徑隨預設改變，與開放座標軸保持通道。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "2e08533c42fa435865ad236b2b297d0d07c1cad59b79ae04596bfac86533c172",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/109-radar-candle/review.html",
+            "sha256": "3533c4aad17ccf6c1e3690d24b4ae982f89c01bf2d8e3c5646c955560e5ed2d3"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/109-radar-candle/definitions.json",
+            "sha256": "2d81dd92092cc2c6681f7303b8acfe4468f5922a30d838633d376d9f8a11d52a"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/109-radar-candle/light-1x.png",
+            "sha256": "5f4626ec5ba7621b75607c99276dd06f0619858e577b256feb251288d79ba024"
+          },
+          {
+            "path": "docs/review/atlas-craft-25/final/definitions.json",
+            "sha256": "fc0df8792d16b780f6c53434ec927162798e148794baf18d81ad1b96557a99de"
+          },
+          {
+            "path": "docs/review/atlas-craft-25/final/27-charts.html",
+            "sha256": "f87ee54d11025c2f4927fb92edd1080467380c650959ac9f15904e5977c36785"
+          },
+          {
+            "path": "docs/review/atlas-craft-25/final/27-charts-light-1x.png",
+            "sha256": "8378e76d2019d2718ed99cd9b143ca8de85bff9b65c554a1303829cee2434816"
+          },
+          {
+            "path": "docs/review/atlas-craft-25/final/27-charts-light-2x.png",
+            "sha256": "a61d91b40c83c1376d2ae4b1d2ee3e3bf3b458f68530a2707cfcd4328c902b22"
+          },
+          {
+            "path": "docs/review/atlas-craft-25/final/27-charts-dark-1x.png",
+            "sha256": "35d29a0d8e318adca785114e66066ac3a1bf067e1d212f8ba91ba5d6a8938187"
+          },
+          {
+            "path": "docs/review/atlas-craft-25/final/27-charts-dark-2x.png",
+            "sha256": "651b0a72dbcb7ff18063eac05b1d0f390afb2c746da9566d2f2266fb987d9bab"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-25/final/27-charts-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-25/final/27-charts-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-25/final/27-charts-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-25/final/27-charts-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Lucide",
+        "license": "ISC",
+        "licenseFile": "licenses/lucide.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "chart-waterfall",
+      "purpose": "瀑布圖",
+      "recognitionCues": "沿水平進程累加或扣減的懸空資料柱",
+      "confusableWith": [
+        "chart-bar",
+        "chart-candlestick"
+      ],
+      "sourceObservation": "MDI用上升實心方柱，Hugeicons用下降與回升的懸空線柱。最新稿採Hugeicons四段增減節奏，換成本庫座標軸；完稿回比16px短段仍讀為獨立資料柱，與所有柱落地的普通長條圖有清楚差異。",
+      "references": [
+        {
+          "name": "chart-waterfall",
+          "library": "Material Design Icons",
+          "repository": "Templarian/MaterialDesign",
+          "commit": "2424e748e0cc63ab7b9c095a099b9fe239b737c0",
+          "path": "svg/chart-waterfall.svg",
+          "localPath": "references/atlas-01/mdi-chart-waterfall.svg",
+          "url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/chart-waterfall.svg",
+          "sha256": "b7a1182732639f70690a180a5c2af2b7ecf07729427522ffb15d383ed003efc3",
+          "license": "Apache-2.0",
+          "sourceName": "chart-waterfall",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "chart-waterfall",
+          "library": "Hugeicons Free",
+          "repository": "hugeicons/hugeicons",
+          "commit": "834e28d965946c1ee60d080027fe9dae4adc58d0",
+          "path": "icons/waterfall-down-01.svg",
+          "localPath": "references/atlas-01/hugeicons-waterfall-down-01.svg",
+          "url": "https://github.com/hugeicons/hugeicons/blob/834e28d965946c1ee60d080027fe9dae4adc58d0/icons/waterfall-down-01.svg",
+          "sha256": "9ad5463e2deb096eca9d104861412f338f24b8c07ade61987aa83af7d57efc80",
+          "license": "MIT",
+          "sourceName": "waterfall-down-01",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "圖示呈現確定的資料類型，不增加輔助虛線格網或推估連線壓縮原生留白。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "資料線和座標軸以位置及間距分離，無需淡化任一資料序列才能辨識。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "圖表類型以輪廓和線條編碼即可區別，不以連續漸層暗示未提供的數值。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-25/master-before.json",
+          "variantsSha256": "f95a264e2d37ea3073833e1c695c9ae5a00ec64b54dba53b56940ead46c0fdb9"
+        },
+        "reason": "四段資料柱沿水平進程分布，端點高度表達累加與扣減；保持柱間等距與柱底到橫軸留白，不補微小連接虛線。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "2dead1dc875ea0598f27936cc5d4b3e227dded89af045f326ffc1efffb1a1eca",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/110-waterfall-bubble-network/review.html",
+            "sha256": "8d62f84ebf23f7d26c3c2aefe31558d64535ac976dee8e5364275a9e49fd676f"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/110-waterfall-bubble-network/definitions.json",
+            "sha256": "200d6dc390475cbc5537394d066588d2ca2b1728ee7b00a2eef623a4b5c8e69c"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/110-waterfall-bubble-network/light-1x.png",
+            "sha256": "86dc4a263cf4026da7cb0e99c8d1405a5f569d757b2de13a7e679ccac5c819db"
+          },
+          {
+            "path": "docs/review/atlas-craft-25/final/definitions.json",
+            "sha256": "fc0df8792d16b780f6c53434ec927162798e148794baf18d81ad1b96557a99de"
+          },
+          {
+            "path": "docs/review/atlas-craft-25/final/27-charts.html",
+            "sha256": "f87ee54d11025c2f4927fb92edd1080467380c650959ac9f15904e5977c36785"
+          },
+          {
+            "path": "docs/review/atlas-craft-25/final/27-charts-light-1x.png",
+            "sha256": "8378e76d2019d2718ed99cd9b143ca8de85bff9b65c554a1303829cee2434816"
+          },
+          {
+            "path": "docs/review/atlas-craft-25/final/27-charts-light-2x.png",
+            "sha256": "a61d91b40c83c1376d2ae4b1d2ee3e3bf3b458f68530a2707cfcd4328c902b22"
+          },
+          {
+            "path": "docs/review/atlas-craft-25/final/27-charts-dark-1x.png",
+            "sha256": "35d29a0d8e318adca785114e66066ac3a1bf067e1d212f8ba91ba5d6a8938187"
+          },
+          {
+            "path": "docs/review/atlas-craft-25/final/27-charts-dark-2x.png",
+            "sha256": "651b0a72dbcb7ff18063eac05b1d0f390afb2c746da9566d2f2266fb987d9bab"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-25/final/27-charts-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-25/final/27-charts-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-25/final/27-charts-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-25/final/27-charts-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Hugeicons Free",
+        "license": "MIT",
+        "licenseFile": "licenses/hugeicons-MIT.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "chart-bubble",
+      "purpose": "氣泡圖",
+      "recognitionCues": "大小不一且分散配置的氣泡",
+      "confusableWith": [
+        "chart-scatter",
+        "circle"
+      ],
+      "sourceObservation": "Tabler無座標軸而三顆氣泡大小差異明確，Hugeicons軸內配置較密。最新稿採Tabler三個圈的比例與位置；完稿回比16px最小圈仍有內孔，三圈間各有通道，保留圓面積差異而不將小圈改成散點圖的實心點。",
+      "references": [
+        {
+          "name": "chart-bubble",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/chart-bubble.svg",
+          "localPath": "references/atlas-01/tabler-chart-bubble.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/chart-bubble.svg",
+          "sha256": "04e46590cd7c2234d9c0f677e9313ed570cf6d5a16fb6ba3f6f504e3660e53da",
+          "license": "MIT",
+          "sourceName": "chart-bubble",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "chart-bubble",
+          "library": "Hugeicons Free",
+          "repository": "hugeicons/hugeicons",
+          "commit": "834e28d965946c1ee60d080027fe9dae4adc58d0",
+          "path": "icons/chart-bubble-01.svg",
+          "localPath": "references/atlas-01/hugeicons-chart-bubble-01.svg",
+          "url": "https://github.com/hugeicons/hugeicons/blob/834e28d965946c1ee60d080027fe9dae4adc58d0/icons/chart-bubble-01.svg",
+          "sha256": "04b31498ceeffd59fbbb24eb42a3b26214f4895a447202326198b5db4bc0537b",
+          "license": "MIT",
+          "sourceName": "chart-bubble-01",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "圖示呈現確定的資料類型，不增加輔助虛線格網或推估連線壓縮原生留白。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "資料線和座標軸以位置及間距分離，無需淡化任一資料序列才能辨識。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "圖表類型以輪廓和線條編碼即可區別，不以連續漸層暗示未提供的數值。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-25/master-before.json",
+          "variantsSha256": "95fab0fa632224705b7789df36f127dea8efb55579d4fa3a15a082eaa99ab444"
+        },
+        "reason": "三個不同半徑的氣泡以大圈偏上、中圈左下、小圈右下平衡配置；不加格線與刻度，圓曲面不隨sharp預設改成多邊形。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "9a747a4d73286fcf32d87d603a485f865fd768f9d2d4ddfed5b855b19b36ee03",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/110-waterfall-bubble-network/review.html",
+            "sha256": "8d62f84ebf23f7d26c3c2aefe31558d64535ac976dee8e5364275a9e49fd676f"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/110-waterfall-bubble-network/definitions.json",
+            "sha256": "200d6dc390475cbc5537394d066588d2ca2b1728ee7b00a2eef623a4b5c8e69c"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/110-waterfall-bubble-network/light-1x.png",
+            "sha256": "86dc4a263cf4026da7cb0e99c8d1405a5f569d757b2de13a7e679ccac5c819db"
+          },
+          {
+            "path": "docs/review/atlas-craft-25/final/definitions.json",
+            "sha256": "fc0df8792d16b780f6c53434ec927162798e148794baf18d81ad1b96557a99de"
+          },
+          {
+            "path": "docs/review/atlas-craft-25/final/27-charts.html",
+            "sha256": "f87ee54d11025c2f4927fb92edd1080467380c650959ac9f15904e5977c36785"
+          },
+          {
+            "path": "docs/review/atlas-craft-25/final/27-charts-light-1x.png",
+            "sha256": "8378e76d2019d2718ed99cd9b143ca8de85bff9b65c554a1303829cee2434816"
+          },
+          {
+            "path": "docs/review/atlas-craft-25/final/27-charts-light-2x.png",
+            "sha256": "a61d91b40c83c1376d2ae4b1d2ee3e3bf3b458f68530a2707cfcd4328c902b22"
+          },
+          {
+            "path": "docs/review/atlas-craft-25/final/27-charts-dark-1x.png",
+            "sha256": "35d29a0d8e318adca785114e66066ac3a1bf067e1d212f8ba91ba5d6a8938187"
+          },
+          {
+            "path": "docs/review/atlas-craft-25/final/27-charts-dark-2x.png",
+            "sha256": "651b0a72dbcb7ff18063eac05b1d0f390afb2c746da9566d2f2266fb987d9bab"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-25/final/27-charts-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-25/final/27-charts-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-25/final/27-charts-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-25/final/27-charts-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Tabler",
+        "license": "MIT",
+        "licenseFile": "licenses/tabler.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "chart-network",
+      "purpose": "網路圖",
+      "recognitionCues": "座標圖中的相連節點及分支",
+      "confusableWith": [
+        "chart-scatter",
+        "network"
+      ],
+      "sourceObservation": "Lucide三個節點與一個外伸連結，比Hugeicons四個圈更適合小尺寸。最新稿採Lucide構造、略擴圈孔；完稿回比發現底節點離軸太近，已上移1u，16px底圈不再貼住橫軸，連線止於各圈外緣。",
+      "references": [
+        {
+          "name": "chart-network",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/chart-network.svg",
+          "localPath": "references/atlas-01/lucide-chart-network.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/chart-network.svg",
+          "sha256": "ce0432bbd3c7a0d9c08bb12da4265be78d50df5c9fa5687a0ca1efb4ee79c055",
+          "license": "ISC AND MIT",
+          "sourceName": "chart-network",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "chart-network",
+          "library": "Hugeicons Free",
+          "repository": "hugeicons/hugeicons",
+          "commit": "834e28d965946c1ee60d080027fe9dae4adc58d0",
+          "path": "icons/chart-network.svg",
+          "localPath": "references/atlas-01/hugeicons-chart-network.svg",
+          "url": "https://github.com/hugeicons/hugeicons/blob/834e28d965946c1ee60d080027fe9dae4adc58d0/icons/chart-network.svg",
+          "sha256": "2422f2d4c4a240ab17b5c9a27fd97b5f106aac5cf384839a8df7c76f883bfcad",
+          "license": "MIT",
+          "sourceName": "chart-network",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "圖示呈現確定的資料類型，不增加輔助虛線格網或推估連線壓縮原生留白。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "資料線和座標軸以位置及間距分離，無需淡化任一資料序列才能辨識。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "圖表類型以輪廓和線條編碼即可區別，不以連續漸層暗示未提供的數值。"
+        }
+      },
+      "change": {
+        "kind": "modified",
+        "before": {
+          "path": "references/atlas-craft-25/master-before.json",
+          "variantsSha256": "1fe64c9e94a9b794b4505a8e28f6e56686b31d288937ad59621afd6e5cb7eec5"
+        },
+        "reason": "三個圈孔依相連資料配置，連線墨跡逐一裁在圈外而保留真實相接；下節點上移擴大與橫軸通道，共用本庫座標軸。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "d6e435eff8d58fdfd8b2258379bbac0f265443561f708e6808c4f76f2e0f9d91",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/110b-network/review.html",
+            "sha256": "d670caca9f491cad42289b6e8bc879fd77d69a3400b8f5c0d9d2ab9b789b87f9"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/110b-network/definitions.json",
+            "sha256": "9fab37837df7a127b55ebf72014f432031dc3eab8225ab9af554e8492cd57d1e"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/110b-network/light-1x.png",
+            "sha256": "21992633ed2af84f876828ffd5ee14a3e679f05be165d759c4e51b7b43db1ee7"
+          },
+          {
+            "path": "docs/review/atlas-craft-25/final/definitions.json",
+            "sha256": "fc0df8792d16b780f6c53434ec927162798e148794baf18d81ad1b96557a99de"
+          },
+          {
+            "path": "docs/review/atlas-craft-25/final/27-charts.html",
+            "sha256": "f87ee54d11025c2f4927fb92edd1080467380c650959ac9f15904e5977c36785"
+          },
+          {
+            "path": "docs/review/atlas-craft-25/final/27-charts-light-1x.png",
+            "sha256": "8378e76d2019d2718ed99cd9b143ca8de85bff9b65c554a1303829cee2434816"
+          },
+          {
+            "path": "docs/review/atlas-craft-25/final/27-charts-light-2x.png",
+            "sha256": "a61d91b40c83c1376d2ae4b1d2ee3e3bf3b458f68530a2707cfcd4328c902b22"
+          },
+          {
+            "path": "docs/review/atlas-craft-25/final/27-charts-dark-1x.png",
+            "sha256": "35d29a0d8e318adca785114e66066ac3a1bf067e1d212f8ba91ba5d6a8938187"
+          },
+          {
+            "path": "docs/review/atlas-craft-25/final/27-charts-dark-2x.png",
+            "sha256": "651b0a72dbcb7ff18063eac05b1d0f390afb2c746da9566d2f2266fb987d9bab"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-25/final/27-charts-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-25/final/27-charts-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-25/final/27-charts-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-25/final/27-charts-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Lucide",
+        "license": "ISC",
+        "licenseFile": "licenses/lucide.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "chart-histogram",
+      "purpose": "分布直方圖",
+      "recognitionCues": "高低資料柱與上方分布曲線",
+      "confusableWith": [
+        "chart-bar",
+        "chart-bell-curve"
+      ],
+      "sourceObservation": "Tabler四個分布柱與上方曲線，Hugeicons只有三個柱且曲線較平。最新稿採Tabler四柱語意並共用Master軸；完稿回比將曲線起點對準縱軸，去掉外突，柱底對齊橫軸並恢復soft圓收筆，16px柱與曲線之間仍有充足空間。",
+      "references": [
+        {
+          "name": "chart-histogram",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/chart-histogram.svg",
+          "localPath": "references/atlas-01/tabler-chart-histogram.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/chart-histogram.svg",
+          "sha256": "4a825df6845d4b478ef1242847ab16d3394ecf1ab1ee172e561198708c23707a",
+          "license": "MIT",
+          "sourceName": "chart-histogram",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "chart-histogram",
+          "library": "Hugeicons Free",
+          "repository": "hugeicons/hugeicons",
+          "commit": "834e28d965946c1ee60d080027fe9dae4adc58d0",
+          "path": "icons/chart-histogram.svg",
+          "localPath": "references/atlas-01/hugeicons-chart-histogram.svg",
+          "url": "https://github.com/hugeicons/hugeicons/blob/834e28d965946c1ee60d080027fe9dae4adc58d0/icons/chart-histogram.svg",
+          "sha256": "363c05680f1908c626b51e2c17d7710be852ef235f65acbf867913eeaceb222d",
+          "license": "MIT",
+          "sourceName": "chart-histogram",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "圖示呈現確定的資料類型，不增加輔助虛線格網或推估連線壓縮原生留白。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "資料線和座標軸以位置及間距分離，無需淡化任一資料序列才能辨識。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "圖表類型以輪廓和線條編碼即可區別，不以連續漸層暗示未提供的數值。"
+        }
+      },
+      "change": {
+        "kind": "modified",
+        "before": {
+          "path": "references/atlas-craft-25/master-before.json",
+          "variantsSha256": "d4b883bb79b14dd154efa61dabbf721e834ffcc973d2b21e90d73300b4490cd3"
+        },
+        "reason": "分布曲線由水平切線進入單峰再回水平，四柱表達對應分布趨勢；曲線起點和柱底依母型軸座標收口，不另畫不一致基線。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "2097b466682c6872f053a1604a6049490872aed1a25897fb29f3486b1351658f",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/111b-histogram/review.html",
+            "sha256": "e212d54f6a11329ecc11b440e85abdfc527a705747495288d2b484518115b99a"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/111b-histogram/definitions.json",
+            "sha256": "c7fb06867bfaa1d7b8890058c50f3c4ec74daac3445d25c16d7fe43a527ac8dd"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/111b-histogram/light-1x.png",
+            "sha256": "dddf236cd40712ce8da1048fe79807af250e074d09c9797adf53a13762bfd2b4"
+          },
+          {
+            "path": "docs/review/atlas-craft-25/final/definitions.json",
+            "sha256": "fc0df8792d16b780f6c53434ec927162798e148794baf18d81ad1b96557a99de"
+          },
+          {
+            "path": "docs/review/atlas-craft-25/final/27-charts.html",
+            "sha256": "f87ee54d11025c2f4927fb92edd1080467380c650959ac9f15904e5977c36785"
+          },
+          {
+            "path": "docs/review/atlas-craft-25/final/27-charts-light-1x.png",
+            "sha256": "8378e76d2019d2718ed99cd9b143ca8de85bff9b65c554a1303829cee2434816"
+          },
+          {
+            "path": "docs/review/atlas-craft-25/final/27-charts-light-2x.png",
+            "sha256": "a61d91b40c83c1376d2ae4b1d2ee3e3bf3b458f68530a2707cfcd4328c902b22"
+          },
+          {
+            "path": "docs/review/atlas-craft-25/final/27-charts-dark-1x.png",
+            "sha256": "35d29a0d8e318adca785114e66066ac3a1bf067e1d212f8ba91ba5d6a8938187"
+          },
+          {
+            "path": "docs/review/atlas-craft-25/final/27-charts-dark-2x.png",
+            "sha256": "651b0a72dbcb7ff18063eac05b1d0f390afb2c746da9566d2f2266fb987d9bab"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-25/final/27-charts-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-25/final/27-charts-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-25/final/27-charts-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-25/final/27-charts-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Tabler",
+        "license": "MIT",
+        "licenseFile": "licenses/tabler.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "chart-sankey",
+      "purpose": "桑基圖",
+      "recognitionCues": "多道流向曲線的分流與交織",
+      "confusableWith": [
+        "shuffle",
+        "chart-spline"
+      ],
+      "sourceObservation": "Tabler三道交織流向，MDI以座標框和分流曲線表達，構圖不同。最新稿採Tabler無箭頭的流向曲線；完稿回比16px兩個交會點分開可讀，兩端分流保持間隔，不再加節點或箭頭使其誤讀為shuffle。",
+      "references": [
+        {
+          "name": "chart-sankey",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/chart-sankey.svg",
+          "localPath": "references/atlas-01/tabler-chart-sankey.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/chart-sankey.svg",
+          "sha256": "6f9cf04ca9ce734f9584b616f8486b862669c08a589b739c9978dbcff4493be5",
+          "license": "MIT",
+          "sourceName": "chart-sankey",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "chart-sankey",
+          "library": "Material Design Icons",
+          "repository": "Templarian/MaterialDesign",
+          "commit": "2424e748e0cc63ab7b9c095a099b9fe239b737c0",
+          "path": "svg/chart-sankey.svg",
+          "localPath": "references/atlas-01/mdi-chart-sankey.svg",
+          "url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/chart-sankey.svg",
+          "sha256": "0ea54515c9a763f601a4e8ee527e8cd2b3414b3162cbc5d01da657ef82db94d6",
+          "license": "Apache-2.0",
+          "sourceName": "chart-sankey",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "圖示呈現確定的資料類型，不增加輔助虛線格網或推估連線壓縮原生留白。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "資料線和座標軸以位置及間距分離，無需淡化任一資料序列才能辨識。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "圖表類型以輪廓和線條編碼即可區別，不以連續漸層暗示未提供的數值。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-25/master-before.json",
+          "variantsSha256": "6e7bfa95f8c04325c369ab6cfef859105359231f039791888cb91f90610ffb28"
+        },
+        "reason": "三道水平切線進出的曲線表達流向交織，保留來源的抽象桑基圖語意；交會屬圖示資料線，不假裝實體物件遮擋而挖出碎斷線。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "cd63680fa97488f296ff62bc3bf25b58dee333c173b5809aebe51ede98b33766",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/111-histogram-sankey/review.html",
+            "sha256": "66366fcb1a399b485034c55ea9870d6927e8097ddd525050d7fd970fd77b7a3c"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/111-histogram-sankey/definitions.json",
+            "sha256": "0eb72a26fd53246d2c25d9793018be5d2718718bbefb3bad3d8bca8f8cbc1303"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/111-histogram-sankey/light-1x.png",
+            "sha256": "f3421884ac0e5b8b5785a7a27c27f08f395a870d5f02c8a83dffe7362a03a5c6"
+          },
+          {
+            "path": "docs/review/atlas-craft-25/final/definitions.json",
+            "sha256": "fc0df8792d16b780f6c53434ec927162798e148794baf18d81ad1b96557a99de"
+          },
+          {
+            "path": "docs/review/atlas-craft-25/final/27-charts.html",
+            "sha256": "f87ee54d11025c2f4927fb92edd1080467380c650959ac9f15904e5977c36785"
+          },
+          {
+            "path": "docs/review/atlas-craft-25/final/27-charts-light-1x.png",
+            "sha256": "8378e76d2019d2718ed99cd9b143ca8de85bff9b65c554a1303829cee2434816"
+          },
+          {
+            "path": "docs/review/atlas-craft-25/final/27-charts-light-2x.png",
+            "sha256": "a61d91b40c83c1376d2ae4b1d2ee3e3bf3b458f68530a2707cfcd4328c902b22"
+          },
+          {
+            "path": "docs/review/atlas-craft-25/final/27-charts-dark-1x.png",
+            "sha256": "35d29a0d8e318adca785114e66066ac3a1bf067e1d212f8ba91ba5d6a8938187"
+          },
+          {
+            "path": "docs/review/atlas-craft-25/final/27-charts-dark-2x.png",
+            "sha256": "651b0a72dbcb7ff18063eac05b1d0f390afb2c746da9566d2f2266fb987d9bab"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-25/final/27-charts-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-25/final/27-charts-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-25/final/27-charts-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-25/final/27-charts-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Tabler",
+        "license": "MIT",
+        "licenseFile": "licenses/tabler.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "chart-spline",
+      "purpose": "平滑曲線圖",
+      "recognitionCues": "具有峰谷的平滑資料曲線與座標軸",
+      "confusableWith": [
+        "chart-line",
+        "chart-bell-curve"
+      ],
+      "sourceObservation": "Lucide曲線的峰谷變化較穩，Hugeicons右側上升更陡。最新稿採Lucide連續曲線配Master座標軸；完稿回比16px波峰與低谷仍清楚，曲線起收端與座標軸分離，這是chart-line的平滑變體而非額外基本概念。",
+      "references": [
+        {
+          "name": "chart-spline",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/chart-spline.svg",
+          "localPath": "references/atlas-01/lucide-chart-spline.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/chart-spline.svg",
+          "sha256": "52b232c9e69dee2b11392f66c5db332e2dce307f489ee435150c91bf202bf481",
+          "license": "ISC AND MIT",
+          "sourceName": "chart-spline",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "chart-spline",
+          "library": "Hugeicons Free",
+          "repository": "hugeicons/hugeicons",
+          "commit": "834e28d965946c1ee60d080027fe9dae4adc58d0",
+          "path": "icons/chart-spline.svg",
+          "localPath": "references/atlas-01/hugeicons-chart-spline.svg",
+          "url": "https://github.com/hugeicons/hugeicons/blob/834e28d965946c1ee60d080027fe9dae4adc58d0/icons/chart-spline.svg",
+          "sha256": "0a74c5b3b78fa1317c0dd4ea01faaf97f13dc58588ac4a888c9de2f526b83688",
+          "license": "MIT",
+          "sourceName": "chart-spline",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "圖示呈現確定的資料類型，不增加輔助虛線格網或推估連線壓縮原生留白。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "資料線和座標軸以位置及間距分離，無需淡化任一資料序列才能辨識。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "圖表類型以輪廓和線條編碼即可區別，不以連續漸層暗示未提供的數值。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-25/master-before.json",
+          "variantsSha256": "8bb4f62ff187cf293220e42fd74b9eff25c6ec7cd97c27544a0d61d1fb9f6a3d"
+        },
+        "reason": "連續曲線以相切控制柄接起上升、下降及再次上升，避免用圓角折線冒充曲線；保留既有軸角型與尺寸。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "0a582da225af743596bc30929a6066b911b288279d3975f5defc311bea283eaa",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/112-spline-bell-combo/review.html",
+            "sha256": "008e78c856a583489e138e33f9e3260d1626937af1ad0f34ae7888c79ba900fe"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/112-spline-bell-combo/definitions.json",
+            "sha256": "ec1061bface74fbd2ad7b7a35fdb7dfa497bc4dd5509f8f79b04a57eda019b79"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/112-spline-bell-combo/light-1x.png",
+            "sha256": "fa1f680b98ae2b5ab61b05bbf51520b7267a30fd4b07c55853bea7dfd0fc7620"
+          },
+          {
+            "path": "docs/review/atlas-craft-25/final/definitions.json",
+            "sha256": "fc0df8792d16b780f6c53434ec927162798e148794baf18d81ad1b96557a99de"
+          },
+          {
+            "path": "docs/review/atlas-craft-25/final/27-charts.html",
+            "sha256": "f87ee54d11025c2f4927fb92edd1080467380c650959ac9f15904e5977c36785"
+          },
+          {
+            "path": "docs/review/atlas-craft-25/final/27-charts-light-1x.png",
+            "sha256": "8378e76d2019d2718ed99cd9b143ca8de85bff9b65c554a1303829cee2434816"
+          },
+          {
+            "path": "docs/review/atlas-craft-25/final/27-charts-light-2x.png",
+            "sha256": "a61d91b40c83c1376d2ae4b1d2ee3e3bf3b458f68530a2707cfcd4328c902b22"
+          },
+          {
+            "path": "docs/review/atlas-craft-25/final/27-charts-dark-1x.png",
+            "sha256": "35d29a0d8e318adca785114e66066ac3a1bf067e1d212f8ba91ba5d6a8938187"
+          },
+          {
+            "path": "docs/review/atlas-craft-25/final/27-charts-dark-2x.png",
+            "sha256": "651b0a72dbcb7ff18063eac05b1d0f390afb2c746da9566d2f2266fb987d9bab"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-25/final/27-charts-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-25/final/27-charts-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-25/final/27-charts-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-25/final/27-charts-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Lucide",
+        "license": "ISC",
+        "licenseFile": "licenses/lucide.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "chart-bell-curve",
+      "purpose": "鐘形曲線圖",
+      "recognitionCues": "對稱單峰分布曲線及座標軸",
+      "confusableWith": [
+        "chart-histogram",
+        "chart-spline"
+      ],
+      "sourceObservation": "Lucide鐘形曲線離開兩軸，MDI左側接軸且鐘形更寬。最新稿採Lucide單峰對稱構造；完稿回比16px左右尾端、峰頂與軸線分開可讀，保留峰頂圓滑和兩側自然收束，沒有添加刻度切碎空間。",
+      "references": [
+        {
+          "name": "chart-bell-curve",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/chart-bell-curve.svg",
+          "localPath": "references/atlas-01/lucide-chart-bell-curve.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/chart-bell-curve.svg",
+          "sha256": "3183ddd790282308f520faf0f4079055b631911fdfb8e538ceac205fdc43f977",
+          "license": "ISC AND MIT",
+          "sourceName": "chart-bell-curve",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "chart-bell-curve",
+          "library": "Material Design Icons",
+          "repository": "Templarian/MaterialDesign",
+          "commit": "2424e748e0cc63ab7b9c095a099b9fe239b737c0",
+          "path": "svg/chart-bell-curve.svg",
+          "localPath": "references/atlas-01/mdi-chart-bell-curve.svg",
+          "url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/chart-bell-curve.svg",
+          "sha256": "a3e296114028db3c5f160865294fec5176950ac9345ac26147fcc7a6de5d59b6",
+          "license": "Apache-2.0",
+          "sourceName": "chart-bell-curve",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "圖示呈現確定的資料類型，不增加輔助虛線格網或推估連線壓縮原生留白。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "資料線和座標軸以位置及間距分離，無需淡化任一資料序列才能辨識。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "圖表類型以輪廓和線條編碼即可區別，不以連續漸層暗示未提供的數值。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-25/master-before.json",
+          "variantsSha256": "03135956cc9fb034aa1a7d0037144e23e1ef695abd8a9b4fd3c5360a49463c36"
+        },
+        "reason": "曲線以共同中心鏡像構成單峰，兩側水平尾端平衡收束；座標軸共用母型，sharp仍保留分布曲線的物理平滑性。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "7993a7b8ca97be4bbf28e4f4e1cbbdcfe8198d64acda58021a85d9a163298d6d",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/112-spline-bell-combo/review.html",
+            "sha256": "008e78c856a583489e138e33f9e3260d1626937af1ad0f34ae7888c79ba900fe"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/112-spline-bell-combo/definitions.json",
+            "sha256": "ec1061bface74fbd2ad7b7a35fdb7dfa497bc4dd5509f8f79b04a57eda019b79"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/112-spline-bell-combo/light-1x.png",
+            "sha256": "fa1f680b98ae2b5ab61b05bbf51520b7267a30fd4b07c55853bea7dfd0fc7620"
+          },
+          {
+            "path": "docs/review/atlas-craft-25/final/definitions.json",
+            "sha256": "fc0df8792d16b780f6c53434ec927162798e148794baf18d81ad1b96557a99de"
+          },
+          {
+            "path": "docs/review/atlas-craft-25/final/27-charts.html",
+            "sha256": "f87ee54d11025c2f4927fb92edd1080467380c650959ac9f15904e5977c36785"
+          },
+          {
+            "path": "docs/review/atlas-craft-25/final/27-charts-light-1x.png",
+            "sha256": "8378e76d2019d2718ed99cd9b143ca8de85bff9b65c554a1303829cee2434816"
+          },
+          {
+            "path": "docs/review/atlas-craft-25/final/27-charts-light-2x.png",
+            "sha256": "a61d91b40c83c1376d2ae4b1d2ee3e3bf3b458f68530a2707cfcd4328c902b22"
+          },
+          {
+            "path": "docs/review/atlas-craft-25/final/27-charts-dark-1x.png",
+            "sha256": "35d29a0d8e318adca785114e66066ac3a1bf067e1d212f8ba91ba5d6a8938187"
+          },
+          {
+            "path": "docs/review/atlas-craft-25/final/27-charts-dark-2x.png",
+            "sha256": "651b0a72dbcb7ff18063eac05b1d0f390afb2c746da9566d2f2266fb987d9bab"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-25/final/27-charts-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-25/final/27-charts-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-25/final/27-charts-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-25/final/27-charts-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Lucide",
+        "license": "ISC",
+        "licenseFile": "licenses/lucide.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "chart-combo",
+      "purpose": "組合圖",
+      "recognitionCues": "同時呈現折線及直柱資料",
+      "confusableWith": [
+        "chart-line",
+        "chart-bar"
+      ],
+      "sourceObservation": "Lucide折線配五柱，Hugeicons折線有三個節點圈和基線。最新稿採Lucide較簡潔的線柱分層，減為四柱；完稿回比16px折線與柱頂各有間距，四柱高度仍有節奏，不以額外點圈或基線增加密度。",
+      "references": [
+        {
+          "name": "chart-combo",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/chart-no-axes-combined.svg",
+          "localPath": "references/atlas-01/lucide-chart-no-axes-combined.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/chart-no-axes-combined.svg",
+          "sha256": "2f8a708c357488cfde7428d9b055b9bb4a99c08dc71e9296da03ecc19291c4ab",
+          "license": "ISC AND MIT",
+          "sourceName": "chart-no-axes-combined",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "chart-combo",
+          "library": "Hugeicons Free",
+          "repository": "hugeicons/hugeicons",
+          "commit": "834e28d965946c1ee60d080027fe9dae4adc58d0",
+          "path": "icons/chart-bar-line.svg",
+          "localPath": "references/atlas-01/hugeicons-chart-bar-line.svg",
+          "url": "https://github.com/hugeicons/hugeicons/blob/834e28d965946c1ee60d080027fe9dae4adc58d0/icons/chart-bar-line.svg",
+          "sha256": "ef3d54521fddb1ee24834b57b9a390fa2d685be2f7eba85b869303d233e6a738",
+          "license": "MIT",
+          "sourceName": "chart-bar-line",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "圖示呈現確定的資料類型，不增加輔助虛線格網或推估連線壓縮原生留白。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "資料線和座標軸以位置及間距分離，無需淡化任一資料序列才能辨識。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "圖表類型以輪廓和線條編碼即可區別，不以連續漸層暗示未提供的數值。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-25/master-before.json",
+          "variantsSha256": "96f0274fad79580a77b3ffbdf0fa82da240bcc580e988265009b2d3d319066d0"
+        },
+        "reason": "折線沿上方形成高低轉折，四個直柱配置於下方且共享底線高度；柱數減少後保持資料組合語意，折點按角型改實際曲率。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "78a62681ddf5ef5452f108680d23c37a0f2f748b9cd1b04cbb6460a3300cfe86",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/112-spline-bell-combo/review.html",
+            "sha256": "008e78c856a583489e138e33f9e3260d1626937af1ad0f34ae7888c79ba900fe"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/112-spline-bell-combo/definitions.json",
+            "sha256": "ec1061bface74fbd2ad7b7a35fdb7dfa497bc4dd5509f8f79b04a57eda019b79"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/112-spline-bell-combo/light-1x.png",
+            "sha256": "fa1f680b98ae2b5ab61b05bbf51520b7267a30fd4b07c55853bea7dfd0fc7620"
+          },
+          {
+            "path": "docs/review/atlas-craft-25/final/definitions.json",
+            "sha256": "fc0df8792d16b780f6c53434ec927162798e148794baf18d81ad1b96557a99de"
+          },
+          {
+            "path": "docs/review/atlas-craft-25/final/27-charts.html",
+            "sha256": "f87ee54d11025c2f4927fb92edd1080467380c650959ac9f15904e5977c36785"
+          },
+          {
+            "path": "docs/review/atlas-craft-25/final/27-charts-light-1x.png",
+            "sha256": "8378e76d2019d2718ed99cd9b143ca8de85bff9b65c554a1303829cee2434816"
+          },
+          {
+            "path": "docs/review/atlas-craft-25/final/27-charts-light-2x.png",
+            "sha256": "a61d91b40c83c1376d2ae4b1d2ee3e3bf3b458f68530a2707cfcd4328c902b22"
+          },
+          {
+            "path": "docs/review/atlas-craft-25/final/27-charts-dark-1x.png",
+            "sha256": "35d29a0d8e318adca785114e66066ac3a1bf067e1d212f8ba91ba5d6a8938187"
+          },
+          {
+            "path": "docs/review/atlas-craft-25/final/27-charts-dark-2x.png",
+            "sha256": "651b0a72dbcb7ff18063eac05b1d0f390afb2c746da9566d2f2266fb987d9bab"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-25/final/27-charts-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-25/final/27-charts-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-25/final/27-charts-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-25/final/27-charts-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Lucide",
+        "license": "ISC",
+        "licenseFile": "licenses/lucide.txt"
+      },
+      "remaining": []
+    }
+  ]
+}

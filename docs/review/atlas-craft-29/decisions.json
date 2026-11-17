@@ -1,0 +1,152 @@
+{
+  "batch": "31-celebration",
+  "cycle": "atlas-craft-29",
+  "familyRoot": "docs/review/atlas-craft-29/final",
+  "baseline": "references/atlas-craft-29/master-before.json",
+  "reviewer": "Codex (AI)",
+  "visualInspectionComplete": true,
+  "inspectedCombinations": [
+    {
+      "theme": "light",
+      "dpr": 1
+    },
+    {
+      "theme": "light",
+      "dpr": 2
+    },
+    {
+      "theme": "dark",
+      "dpr": 1
+    },
+    {
+      "theme": "dark",
+      "dpr": 2
+    }
+  ],
+  "effects": {
+    "dashes": {
+      "used": false,
+      "reason": "物件主體與噴發短線均為可見形態，不表達隱藏邊或選取狀態。"
+    },
+    "opacity": {
+      "used": false,
+      "reason": "物件輪廓、杯耳及按鈕用留白區隔，無需淡化來掩飾密度。"
+    },
+    "gradients": {
+      "used": false,
+      "reason": "獎章、球體與手把用輪廓和必要內線傳達體量，不使用材質漸層。"
+    }
+  },
+  "decisions": [
+    {
+      "name": "diamond-gem",
+      "groupRoot": "docs/review/atlas-craft-01/125b-gem",
+      "confusableWith": [
+        "diamond",
+        "triangle"
+      ],
+      "sourceObservation": "Lucide切面比Tabler僅有閃光記號更能表現寶石結構。最新稿採Lucide切面；回比後16px移除上方兩條短斜線，保留主橫切面和下部收尖，完稿再比上部空腔更疏朗且仍是切割寶石。",
+      "reason": "外殼和下方切面共享底尖，內線裁在外殼墨線內；16單獨簡化細切面，20和24保留完整切面，不機械縮放所有細線。",
+      "adaptedFrom": "Lucide"
+    },
+    {
+      "name": "crown",
+      "groupRoot": "docs/review/atlas-craft-01/125-gem-crown",
+      "confusableWith": [
+        "trophy",
+        "award"
+      ],
+      "sourceObservation": "Phosphor單一冠身比Lucide另加底部短橫更簡練。最新稿採Phosphor三尖冠形；完稿回比16px三個尖峰和兩個凹口清楚，底部穩定而不加珠點擠壓輪廓。",
+      "reason": "三尖冠身沿共同中軸對稱，傾斜側壁與底邊形成完整閉合輪廓；以小轉角控制尖峰，不把王冠做成通用圓角矩形。",
+      "adaptedFrom": "Phosphor"
+    },
+    {
+      "name": "trophy",
+      "groupRoot": "docs/review/atlas-craft-01/126b-trophy",
+      "confusableWith": [
+        "medal",
+        "wine"
+      ],
+      "sourceObservation": "Tabler的單柱底座比Lucide階梯底座更疏朗。最新稿採Tabler杯身、圓耳與簡單底座，放大杯耳空腔；完稿回比16px杯耳孔清楚，杯口實際圓角和圓底連續，支柱不穿入杯內。",
+      "reason": "雙耳及支柱裁於杯身外緣，主杯從垂直壁連續進入半圓底；修正杯口為實際幾何圓角，三種角型不只更換linejoin。",
+      "adaptedFrom": "Tabler"
+    },
+    {
+      "name": "medal",
+      "groupRoot": "docs/review/atlas-craft-01/126-awards-ribbon",
+      "confusableWith": [
+        "award",
+        "trophy"
+      ],
+      "sourceObservation": "Phosphor軍功章的直懸帶和空白章體比Lucide交叉帶及數字更清楚。最新稿採Phosphor構造；完稿回比16px懸帶三區與圓章孔可辨，沒有加星或數字使章體變成黑點。",
+      "reason": "章體保持圓形，懸帶內分界裁在帶內且帶尖收於章體外緣；兩者為相接結構，沒有不必要透明斷口。",
+      "adaptedFrom": "Phosphor"
+    },
+    {
+      "name": "ribbon",
+      "groupRoot": "docs/review/atlas-craft-01/126-awards-ribbon",
+      "confusableWith": [
+        "medal",
+        "infinity"
+      ],
+      "sourceObservation": "Hugeicons雙邊帶含多條內線，Tabler連續單線能以較少墨量保留關懷緞帶姿態。最新稿採Tabler迴圈交繞；完稿回比16px頂部空腔與兩條垂帶清楚，曲線順暢而非幾何圓環拼兩條斜線。",
+      "reason": "用一條連續曲線形成頂部迴圈、交叉和兩側收筆；交叉是緞帶語意所需，保持實線相交，不另加會壓縮空間的帶寬邊線。",
+      "adaptedFrom": "Tabler"
+    },
+    {
+      "name": "party-popper",
+      "groupRoot": "docs/review/atlas-craft-01/127-party-balloon",
+      "confusableWith": [
+        "cone",
+        "sparkles"
+      ],
+      "sourceObservation": "Lucide多條捲紙和開口橢圓在小尺寸較密，Tabler簡單錐筒更清楚。最新稿採Tabler簡化構圖，減少星點；完稿回比16px筒內孔開放，三條噴發短線與一點都有獨立留白。",
+      "reason": "沿斜向主軸安排錐筒與向外短線，保留噴發方向而不堆疊碎紙；尖端隨角型調整實際小半徑，主要輪廓保持清楚。",
+      "adaptedFrom": "Tabler"
+    },
+    {
+      "name": "balloon",
+      "groupRoot": "docs/review/atlas-craft-01/127-party-balloon",
+      "confusableWith": [
+        "droplet",
+        "party-popper"
+      ],
+      "sourceObservation": "Lucide繩線比Phosphor獨立氣嘴更能表現氣球浮起姿態。最新稿採Lucide連續球腹和繩線；完稿回比16px省略內部高光後更清爽，20與24保留短弧，收束處沒有繩線端帽穿入球腹。",
+      "reason": "球腹由圓肩連續收向下部，繩線沿下端承接並裁在球體外；16刪除裝飾弧而保留核心收束與繩線。",
+      "adaptedFrom": "Lucide"
+    },
+    {
+      "name": "dice",
+      "groupRoot": "docs/review/atlas-craft-01/128-game-controls",
+      "confusableWith": [
+        "grid",
+        "square"
+      ],
+      "sourceObservation": "Lucide五點與Tabler四點都能清楚表示骰子。最新稿獨立建立常見五點配置；完稿回比16px中央點與四角點的間距均勻，點不貼邊，rounded保留方體而非圓形。",
+      "reason": "五點沿共同中心對稱配置，點徑按原生尺寸調整；外框實際圓角隨預設變化，不以路徑數充當簡約判斷。",
+      "adaptedFrom": null
+    },
+    {
+      "name": "gamepad",
+      "groupRoot": "docs/review/atlas-craft-01/128b-gamepad",
+      "confusableWith": [
+        "joystick",
+        "keyboard"
+      ],
+      "sourceObservation": "Lucide連續雙握柄比Tabler另加中央斜線更有一體感。最新稿採Lucide主構造；回比後把下緣兩個折點改成連續過渡，完稿再比16px方向鍵和兩個按鈕清楚，握柄與主殼不似零件拼湊。",
+      "reason": "以對稱連續外殼形成雙握柄，肩部和下凹口有明確切線過渡；按鈕以少量點與十字配置，不加入不必要的搖桿圈。",
+      "adaptedFrom": "Lucide"
+    },
+    {
+      "name": "joystick",
+      "groupRoot": "docs/review/atlas-craft-01/128-game-controls",
+      "confusableWith": [
+        "gamepad",
+        "toggle-off"
+      ],
+      "sourceObservation": "Lucide接於底座的小按鈕比Phosphor浮離短橫更符合實體搖桿。最新稿採Lucide構造；完稿回比16px球頭空孔和底座空腔均清楚，桿身不穿入球內，rounded底座與方形版本維持共同尺度。",
+      "reason": "球頭、桿身和底座沿共同垂直軸承接，桿身和按鈕按實際輪廓收口；底座角型變化不影響物理球頭。",
+      "adaptedFrom": "Lucide"
+    }
+  ]
+}

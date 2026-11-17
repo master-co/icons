@@ -1,0 +1,209 @@
+[
+  {
+    "name": "check-circle",
+    "concept": "check",
+    "purpose": "形狀與狀態：成功",
+    "recognitionCues": "保留右上收筆與圓框間距",
+    "confusableWith": [
+      "checkbox-checked"
+    ],
+    "sourceObservation": "兩份原稿同以內置勾號表成功，Master保持連續圓框並以留白分隔，無需knockout。",
+    "references": [
+      {
+        "name": "check-circle",
+        "library": "Lucide",
+        "repository": "lucide-icons/lucide",
+        "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+        "path": "icons/circle-check.svg",
+        "localPath": "references/ui-v1/lucide-circle-check.svg",
+        "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/circle-check.svg",
+        "sha256": "9711e045a5999f8a3b0782eb88e09b04e0559bc7b379dcc0a4ae645223e10345",
+        "license": "ISC AND MIT",
+        "sourceName": "circle-check",
+        "match": "exact",
+        "role": "comparison-only"
+      },
+      {
+        "name": "check-circle",
+        "library": "Tabler",
+        "repository": "tabler/tabler-icons",
+        "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+        "path": "icons/outline/circle-check.svg",
+        "localPath": "references/ui-v1/tabler-circle-check.svg",
+        "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/circle-check.svg",
+        "sha256": "c4cb2e026be5f4c217c3ff9b0ccefb9a26b7a135bc82eef28a8bead0cc02a958",
+        "license": "MIT",
+        "sourceName": "circle-check",
+        "match": "exact",
+        "role": "comparison-only"
+      }
+    ],
+    "effects": {
+      "dashes": {
+        "used": false,
+        "reason": "不採用；「確認狀態」由連續輪廓、節點或實際斷開關係表意，沒有需虛線表示的隱藏／未完成邊界。"
+      },
+      "opacity": {
+        "used": false,
+        "reason": "不採用；「確認狀態」的必要輪廓與狀態可以靠形狀、留白表達，淡化不提供額外語意。"
+      },
+      "gradients": {
+        "used": false,
+        "reason": "本期僅允許必要的逐筆透明度；未引入連續漸層或 mask。"
+      }
+    },
+    "change": {
+      "kind": "retained",
+      "reason": "勾號在圓框內偏右上但未逼近框線，短長臂清楚，三角型的中間孔皆完整，保留。",
+      "before": {
+        "path": "references/craft-05/master-before.json",
+        "variantsSha256": "aceba48e4999280e5c8e3dd8e560bea5243cf9ae14d81c7e603311b97007836e"
+      }
+    },
+    "visualReview": {
+      "status": "retained-after-visual-review",
+      "reviewer": "root",
+      "date": "2026-11-16",
+      "skillVersion": "0.5.4",
+      "batch": "craft-05-05",
+      "variantsSha256": "aceba48e4999280e5c8e3dd8e560bea5243cf9ae14d81c7e603311b97007836e",
+      "checks": [
+        "16/20/24",
+        "sharp/soft/rounded",
+        "light/dark",
+        "55-percent-foreground",
+        "adjacent-text",
+        "two-pinned-source-comparisons",
+        "true-before-after",
+        "painted-contour-and-cavity",
+        "semantic-effect-decision"
+      ],
+      "evidence": [
+        {
+          "path": "docs/review/craft-05/batch-05/comparison.png",
+          "sha256": "23ac2745f515603e08ae9b1c6ba9bf0dabe062b8bf2c06ff06d3f5974594c33b"
+        },
+        {
+          "path": "docs/review/craft-05/batch-05/native.png",
+          "sha256": "74c025e7e3952828bc8431687755c3394d07e058885f5565111552d229bb114a"
+        },
+        {
+          "path": "docs/review/craft-05/batch-05/native-dark.png",
+          "sha256": "a631d666bfd5784bfd5a47e2e440ea5551eb1a495c11b4b72955693194e3187d"
+        },
+        {
+          "path": "docs/review/craft-05/batch-05/diagnostic.png",
+          "sha256": "c3f4d5acf4f3fa00764557cf19c495ee6628a6cd0d129a2d145b4faf1cac2496"
+        }
+      ]
+    },
+    "status": "visually-reviewed-candidate",
+    "userApproval": "pending",
+    "beforeHash": "aceba48e4999280e5c8e3dd8e560bea5243cf9ae14d81c7e603311b97007836e",
+    "afterHash": "aceba48e4999280e5c8e3dd8e560bea5243cf9ae14d81c7e603311b97007836e"
+  },
+  {
+    "name": "keyboard-return",
+    "concept": "keyboard-return",
+    "purpose": "表示Enter／Return確認輸入鍵。",
+    "recognitionCues": "鍵帽內向左折返箭頭。",
+    "confusableWith": [
+      "undo",
+      "log-in"
+    ],
+    "sourceObservation": "Phosphor帶鍵帽原稿與Lucide corner-down-left箭形構造對照，Master保留按鍵語意及局部箭桿收口。",
+    "references": [
+      {
+        "name": "keyboard-return",
+        "library": "Phosphor",
+        "repository": "phosphor-icons/core",
+        "commit": "2b75f3ad12b420c9504ef05df8d2564a28f8500e",
+        "path": "assets/regular/key-return.svg",
+        "localPath": "references/expansion-01/phosphor-key-return.svg",
+        "url": "https://github.com/phosphor-icons/core/blob/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular/key-return.svg",
+        "sha256": "fbdd2134fb315153f5e33c78f7f2677556d2ad4006d4a274de11f61b06daf558",
+        "license": "MIT",
+        "sourceName": "key-return",
+        "match": "exact",
+        "role": "comparison-only"
+      },
+      {
+        "name": "keyboard-return",
+        "library": "Lucide",
+        "repository": "lucide-icons/lucide",
+        "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+        "path": "icons/corner-down-left.svg",
+        "localPath": "references/expansion-01/lucide-corner-down-left.svg",
+        "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/corner-down-left.svg",
+        "sha256": "1e6eef07c5f63c794acbacd48067681e2ef81fc74a84cec619d6c567dd799679",
+        "license": "ISC AND MIT",
+        "sourceName": "corner-down-left",
+        "match": "structure-only",
+        "role": "comparison-only"
+      }
+    ],
+    "effects": {
+      "dashes": {
+        "used": false,
+        "reason": "不採用；確認輸入以連續實體輪廓表達，沒有未完成或隱藏邊界。"
+      },
+      "opacity": {
+        "used": false,
+        "reason": "不採用；確認輸入的主體及必要訊號以留白分離，淡化不增加語意。"
+      },
+      "gradients": {
+        "used": false,
+        "reason": "本期僅允許必要的逐筆透明度；未引入連續漸層或 mask。"
+      }
+    },
+    "change": {
+      "kind": "retained",
+      "reason": "保留先前修正：折返箭桿在三角型均未穿出箭尖，rounded箭頭內縮後仍連通；鍵帽與箭頭各端保有空隙，16px可讀回車方向。",
+      "before": {
+        "path": "references/craft-05/master-before.json",
+        "variantsSha256": "8984ebe616fd62aeef2033aebbd039e65e2ddebeb91232842e2013f934f0d898"
+      }
+    },
+    "visualReview": {
+      "status": "retained-after-visual-review",
+      "reviewer": "root",
+      "date": "2026-11-16",
+      "skillVersion": "0.5.4",
+      "batch": "craft-05-37",
+      "variantsSha256": "8984ebe616fd62aeef2033aebbd039e65e2ddebeb91232842e2013f934f0d898",
+      "checks": [
+        "16/20/24",
+        "sharp/soft/rounded",
+        "light/dark",
+        "55-percent-foreground",
+        "adjacent-text",
+        "two-pinned-source-comparisons",
+        "true-before-after",
+        "painted-contour-and-cavity",
+        "semantic-effect-decision"
+      ],
+      "evidence": [
+        {
+          "path": "docs/review/craft-05/batch-37/comparison.png",
+          "sha256": "adc24eba880995d3577f72dde4453a20021e477485e98f5e8af1e2246f0511cc"
+        },
+        {
+          "path": "docs/review/craft-05/batch-37/native.png",
+          "sha256": "8a5dde2ac1c607bdfa4ac232b0824cd30569a2ddacbe8af53e927fb92fc8c805"
+        },
+        {
+          "path": "docs/review/craft-05/batch-37/native-dark.png",
+          "sha256": "5efd4c4899f4b44a0dd0e3baf66fcc02836e931565f41065717ac48064d74d93"
+        },
+        {
+          "path": "docs/review/craft-05/batch-37/diagnostic.png",
+          "sha256": "111330811f6bf12c7b876c5966fdaf787f917b030a744cf048c4020de139c9b8"
+        }
+      ]
+    },
+    "status": "visually-reviewed-candidate",
+    "userApproval": "pending",
+    "beforeHash": "8984ebe616fd62aeef2033aebbd039e65e2ddebeb91232842e2013f934f0d898",
+    "afterHash": "8984ebe616fd62aeef2033aebbd039e65e2ddebeb91232842e2013f934f0d898"
+  }
+]

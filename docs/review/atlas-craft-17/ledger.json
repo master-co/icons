@@ -1,0 +1,1537 @@
+{
+  "schemaVersion": 2,
+  "reviewer": "Codex (AI)",
+  "userApproval": "pending",
+  "icons": [
+    {
+      "name": "guitar",
+      "purpose": "木吉他",
+      "recognitionCues": "圓腹收腰琴身與斜向琴頸",
+      "confusableWith": [
+        "guitar-electric",
+        "violin"
+      ],
+      "sourceObservation": "Lucide的琴身收腰和下腹用連續曲線表達，Phosphor以音孔及雙線琴頸增加實物細節。最新稿採Lucide的簡潔琴身與單線琴頸；完稿回比，原生16px保留腰部轉折和琴橋，不為增加音孔再擠壓琴腹空間。",
+      "references": [
+        {
+          "name": "guitar",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/guitar.svg",
+          "localPath": "references/atlas-01/lucide-guitar.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/guitar.svg",
+          "sha256": "ca2026598763ff4c8991912524f8050326e24307ea241ea2a0735af529f7e67f",
+          "license": "ISC AND MIT",
+          "sourceName": "guitar",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "guitar",
+          "library": "Phosphor",
+          "repository": "phosphor-icons/core",
+          "commit": "2b75f3ad12b420c9504ef05df8d2564a28f8500e",
+          "path": "assets/regular/guitar.svg",
+          "localPath": "references/atlas-01/phosphor-guitar.svg",
+          "url": "https://github.com/phosphor-icons/core/blob/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular/guitar.svg",
+          "sha256": "d6e48337f02617efe65f407054ce0e7d842c6df1e2ed976cfdbbf0c17cd94c9f",
+          "license": "MIT",
+          "sourceName": "guitar",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "樂器輪廓與管路連續呈現，無需以虛線暗示隱藏構造。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以空白和前後遮擋區分部件，不用淡化處理擁擠。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "樂器採單色輪廓，沒有材質漸層。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-17/master-before.json",
+          "variantsSha256": "72118106a8fc5cff835fd5922ef60a9e0179611cafbff6298df59d7e64be39b6"
+        },
+        "reason": "琴身以連續肩部、腰部和下腹曲線成形，琴頸按同一斜軸接到琴頭；內部僅保留短琴橋與弦方向，不填滿狹小琴身。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "9cfe628fd9960ccf9ec19b345532e280a14645f795159af7470b844ee0c82917",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/76-guitars-piano/review.html",
+            "sha256": "706528ed9ba64c0438f09b0c00d66fc94ed367eceb826ecbc9fbea47afd817f0"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/76-guitars-piano/definitions.json",
+            "sha256": "95fa5d88d4c3fe03e055304973de187ef10499a0f5c3700573eed2598238e439"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/76-guitars-piano/light-1x.png",
+            "sha256": "9554b64be410ca05b34379b2ec9ea2eff7a607a3e89615678e8118a01f90e99e"
+          },
+          {
+            "path": "docs/review/atlas-craft-17/final/definitions.json",
+            "sha256": "60f16e7113b102e5f8cec8d498b10edd3f53a1172a9a5f9436303f31cca18ca3"
+          },
+          {
+            "path": "docs/review/atlas-craft-17/final/19-music.html",
+            "sha256": "a24c7111d2132eaca407c0ea4ac24230782a3d4813045f3aed1ff7c5e4e32eee"
+          },
+          {
+            "path": "docs/review/atlas-craft-17/final/19-music-light-1x.png",
+            "sha256": "617b1ed346f154138490861a09a99bfa6cf9d1e41218dc8f161932e5122af8b9"
+          },
+          {
+            "path": "docs/review/atlas-craft-17/final/19-music-light-2x.png",
+            "sha256": "f82b8231eb9fd283f6dbbe4281015cc9597b71b72f03510d629ae0e07fbe4d10"
+          },
+          {
+            "path": "docs/review/atlas-craft-17/final/19-music-dark-1x.png",
+            "sha256": "ee9d32f409073a325b8f83bf2825c6bdd147c0f1d527b70fd3afe49b30de81a5"
+          },
+          {
+            "path": "docs/review/atlas-craft-17/final/19-music-dark-2x.png",
+            "sha256": "a5fc2e5d68c5c51fcb2c3ec95ccfea676467756388d89ccdbf4d46c0bdf72578"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-17/final/19-music-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-17/final/19-music-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-17/final/19-music-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-17/final/19-music-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Lucide",
+        "license": "ISC",
+        "licenseFile": "licenses/lucide.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "piano",
+      "purpose": "鋼琴",
+      "recognitionCues": "弧形翼狀琴身與前緣琴鍵",
+      "confusableWith": [
+        "music-keyboard",
+        "keyboard"
+      ],
+      "sourceObservation": "Lucide以翼狀琴身區別鋼琴，Tabler piano只畫琴鍵，故第二份只作琴鍵構造比較，並非完整琴身對照。最新稿保留連續翼形與前緣鍵盤；完稿回比，四鍵與下邊空白穩定，sharp底角已改為真正直角而保留琴身曲面。",
+      "references": [
+        {
+          "name": "piano",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/piano.svg",
+          "localPath": "references/atlas-01/lucide-piano.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/piano.svg",
+          "sha256": "acdb781a29f075c0afb4abf48b6ca46420e22684ff5c98e3e05838a6d586c2d4",
+          "license": "ISC AND MIT",
+          "sourceName": "piano",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "piano",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/piano.svg",
+          "localPath": "references/atlas-01/tabler-piano.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/piano.svg",
+          "sha256": "ca5a24d5b903741de540c044f2d19228754831e5bbf1c2e14924463fa7fff866",
+          "license": "MIT",
+          "sourceName": "piano",
+          "match": "structural",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "樂器輪廓與管路連續呈現，無需以虛線暗示隱藏構造。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以空白和前後遮擋區分部件，不用淡化處理擁擠。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "樂器採單色輪廓，沒有材質漸層。"
+        }
+      },
+      "change": {
+        "kind": "modified",
+        "before": {
+          "path": "references/atlas-craft-17/master-before.json",
+          "variantsSha256": "60255facc62abcd7323ef01cb316c83564f16a8f311ed0c3664651735733d881"
+        },
+        "reason": "琴身從圓腹收向右肩再接鍵盤，四條鍵線連在共用橫線；底部角半徑隨預設變化，物體本身的弧形琴身保持連續。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "11f4de2303de1cdd17b704fda313f0df3e99e9a8efc6d2dc028d87e2cf41af2d",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/76b-electric-piano/review.html",
+            "sha256": "c9c35aa22960668e04070902fa801fbe474f15743598a63e6125d6be416001ab"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/76b-electric-piano/definitions.json",
+            "sha256": "55700913ee1e3b476c05d914831c43954776f37a61019e4efe733513e049d9ec"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/76b-electric-piano/light-1x.png",
+            "sha256": "0ea6d571e5f96b171f57007f3e1255bfa9547732a7479c9bd55aa1d45204e797"
+          },
+          {
+            "path": "docs/review/atlas-craft-17/final/definitions.json",
+            "sha256": "60f16e7113b102e5f8cec8d498b10edd3f53a1172a9a5f9436303f31cca18ca3"
+          },
+          {
+            "path": "docs/review/atlas-craft-17/final/19-music.html",
+            "sha256": "a24c7111d2132eaca407c0ea4ac24230782a3d4813045f3aed1ff7c5e4e32eee"
+          },
+          {
+            "path": "docs/review/atlas-craft-17/final/19-music-light-1x.png",
+            "sha256": "617b1ed346f154138490861a09a99bfa6cf9d1e41218dc8f161932e5122af8b9"
+          },
+          {
+            "path": "docs/review/atlas-craft-17/final/19-music-light-2x.png",
+            "sha256": "f82b8231eb9fd283f6dbbe4281015cc9597b71b72f03510d629ae0e07fbe4d10"
+          },
+          {
+            "path": "docs/review/atlas-craft-17/final/19-music-dark-1x.png",
+            "sha256": "ee9d32f409073a325b8f83bf2825c6bdd147c0f1d527b70fd3afe49b30de81a5"
+          },
+          {
+            "path": "docs/review/atlas-craft-17/final/19-music-dark-2x.png",
+            "sha256": "a5fc2e5d68c5c51fcb2c3ec95ccfea676467756388d89ccdbf4d46c0bdf72578"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-17/final/19-music-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-17/final/19-music-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-17/final/19-music-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-17/final/19-music-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Lucide",
+        "license": "ISC",
+        "licenseFile": "licenses/lucide.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "drum",
+      "purpose": "鼓",
+      "recognitionCues": "橢圓鼓面、桶身與鼓棒",
+      "confusableWith": [
+        "cup-soda",
+        "music-keyboard"
+      ],
+      "sourceObservation": "Lucide雙鼓棒與三條鼓身線較密，Hugeicons單鼓棒和兩條鼓身線更清楚。最新稿採後者；首稿直線冒入鼓面，回比後改以前方桶身輪廓裁線。最新16/20/24橢圓鼓面完整、鼓棒分離清楚，沒有接點小凸刺。",
+      "references": [
+        {
+          "name": "drum",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/drum.svg",
+          "localPath": "references/atlas-01/lucide-drum.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/drum.svg",
+          "sha256": "bd334f14dd0489e22ebd3b531605da25b39c54c0e16fb00a8dcaeda2201053e9",
+          "license": "ISC AND MIT",
+          "sourceName": "drum",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "drum",
+          "library": "Hugeicons Free",
+          "repository": "hugeicons/hugeicons",
+          "commit": "834e28d965946c1ee60d080027fe9dae4adc58d0",
+          "path": "icons/drum.svg",
+          "localPath": "references/atlas-01/hugeicons-drum.svg",
+          "url": "https://github.com/hugeicons/hugeicons/blob/834e28d965946c1ee60d080027fe9dae4adc58d0/icons/drum.svg",
+          "sha256": "e11bae4458f957194534ad4da87deef6b2671738a4a2157a78c96795c7862643",
+          "license": "MIT",
+          "sourceName": "drum",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "樂器輪廓與管路連續呈現，無需以虛線暗示隱藏構造。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以空白和前後遮擋區分部件，不用淡化處理擁擠。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "樂器採單色輪廓，沒有材質漸層。"
+        }
+      },
+      "change": {
+        "kind": "modified",
+        "before": {
+          "path": "references/atlas-craft-17/master-before.json",
+          "variantsSha256": "c1ec690ad41d8abc3c47acdf54e423e0319b75719b30ccd45437b83eeabd85dc"
+        },
+        "reason": "前方桶身自帶連續鼓面前弧與下緣，直線只裁入前方桶身；後半鼓面另接成同一橢圓，鼓棒遮擋依墨線留出透明空隙。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "71feedb8b34edb0da8527393ef3eca3f6922af66db4b6ac932b771582ba23ca4",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/77b-drum-violin/review.html",
+            "sha256": "a4d81a41ab026ff8b8d11333f34122355bf2510183b0eb56b77bbce7b620b2ad"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/77b-drum-violin/definitions.json",
+            "sha256": "4e7e497a669f0f85bb3ca1bcc5e617abe9c9c252c80c634ef21ab6949bb7ce67"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/77b-drum-violin/light-1x.png",
+            "sha256": "3163659f000db4027b7a06e9c89c57b6b583b60beff872f02185261e2efaf655"
+          },
+          {
+            "path": "docs/review/atlas-craft-17/final/definitions.json",
+            "sha256": "60f16e7113b102e5f8cec8d498b10edd3f53a1172a9a5f9436303f31cca18ca3"
+          },
+          {
+            "path": "docs/review/atlas-craft-17/final/19-music.html",
+            "sha256": "a24c7111d2132eaca407c0ea4ac24230782a3d4813045f3aed1ff7c5e4e32eee"
+          },
+          {
+            "path": "docs/review/atlas-craft-17/final/19-music-light-1x.png",
+            "sha256": "617b1ed346f154138490861a09a99bfa6cf9d1e41218dc8f161932e5122af8b9"
+          },
+          {
+            "path": "docs/review/atlas-craft-17/final/19-music-light-2x.png",
+            "sha256": "f82b8231eb9fd283f6dbbe4281015cc9597b71b72f03510d629ae0e07fbe4d10"
+          },
+          {
+            "path": "docs/review/atlas-craft-17/final/19-music-dark-1x.png",
+            "sha256": "ee9d32f409073a325b8f83bf2825c6bdd147c0f1d527b70fd3afe49b30de81a5"
+          },
+          {
+            "path": "docs/review/atlas-craft-17/final/19-music-dark-2x.png",
+            "sha256": "a5fc2e5d68c5c51fcb2c3ec95ccfea676467756388d89ccdbf4d46c0bdf72578"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-17/final/19-music-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-17/final/19-music-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-17/final/19-music-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-17/final/19-music-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Hugeicons Free",
+        "license": "MIT",
+        "licenseFile": "licenses/hugeicons-MIT.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "violin",
+      "purpose": "小提琴",
+      "recognitionCues": "上下雙腹、兩側深腰與琴頸琴橋",
+      "confusableWith": [
+        "guitar",
+        "guitar-electric"
+      ],
+      "sourceObservation": "MDI以直立雙腹和深腰表現小提琴，OpenMoji斜放並加入弦孔等細節。最新稿採MDI直立輪廓，重畫成有留白的outline；回比後用實心琴頸承接肩部並延伸弦線，避免首稿部件分離和中間稿的瓶頸感。原生尺寸保留上下雙腹與琴橋。",
+      "references": [
+        {
+          "name": "violin",
+          "library": "Material Design Icons",
+          "repository": "Templarian/MaterialDesign",
+          "commit": "2424e748e0cc63ab7b9c095a099b9fe239b737c0",
+          "path": "svg/violin.svg",
+          "localPath": "references/atlas-01/mdi-violin.svg",
+          "url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/violin.svg",
+          "sha256": "faa5baf038c7f05d92e96657b56c43f8862f8bb66991d01ba3693471efdfb618",
+          "license": "Apache-2.0",
+          "sourceName": "violin",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "violin",
+          "library": "OpenMoji",
+          "repository": "hfg-gmuend/openmoji",
+          "commit": "3e01de523ddefe9c5e46a7765b15efef04bf9002",
+          "path": "black/svg/1F3BB.svg",
+          "localPath": "references/atlas-01/openmoji-1F3BB.svg",
+          "url": "https://github.com/hfg-gmuend/openmoji/blob/3e01de523ddefe9c5e46a7765b15efef04bf9002/black/svg/1F3BB.svg",
+          "sha256": "3ed2709e82b18ed9d1f781fcef455dc9aef6819953d3b552d40928e0a8505a6b",
+          "license": "CC-BY-SA-4.0",
+          "sourceName": "1F3BB",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "樂器輪廓與管路連續呈現，無需以虛線暗示隱藏構造。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以空白和前後遮擋區分部件，不用淡化處理擁擠。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "樂器採單色輪廓，沒有材質漸層。"
+        }
+      },
+      "change": {
+        "kind": "modified",
+        "before": {
+          "path": "references/atlas-craft-17/master-before.json",
+          "variantsSha256": "e78fccb6d07d0ef65dc048a899e48c850e82ca39e468115958fab6d5f8561cd6"
+        },
+        "reason": "上下琴腹以兩側內凹腰線連為一體，實心琴頸直接承接肩部再以單筆弦線向下延伸；保留琴橋而略去小尺寸難讀的弦孔。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "4285d8821ad85dc28dad12afa44ea5051d0e64b745af923c75d3f6c82cf13b74",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/77c-violin/review.html",
+            "sha256": "ca3660998628a8f3805822f6bef48e993e7cd773ec3af237fdc6b2e00a5ac1db"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/77c-violin/definitions.json",
+            "sha256": "0bc38b48b2127a6414304f3ae682074de2335bc53247dc6f2d63f109fa2c3221"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/77c-violin/light-1x.png",
+            "sha256": "3e6a7cd74692f25bd822b71dfe4a2d65b6299914f9125934abc8937f37f09643"
+          },
+          {
+            "path": "docs/review/atlas-craft-17/final/definitions.json",
+            "sha256": "60f16e7113b102e5f8cec8d498b10edd3f53a1172a9a5f9436303f31cca18ca3"
+          },
+          {
+            "path": "docs/review/atlas-craft-17/final/19-music.html",
+            "sha256": "a24c7111d2132eaca407c0ea4ac24230782a3d4813045f3aed1ff7c5e4e32eee"
+          },
+          {
+            "path": "docs/review/atlas-craft-17/final/19-music-light-1x.png",
+            "sha256": "617b1ed346f154138490861a09a99bfa6cf9d1e41218dc8f161932e5122af8b9"
+          },
+          {
+            "path": "docs/review/atlas-craft-17/final/19-music-light-2x.png",
+            "sha256": "f82b8231eb9fd283f6dbbe4281015cc9597b71b72f03510d629ae0e07fbe4d10"
+          },
+          {
+            "path": "docs/review/atlas-craft-17/final/19-music-dark-1x.png",
+            "sha256": "ee9d32f409073a325b8f83bf2825c6bdd147c0f1d527b70fd3afe49b30de81a5"
+          },
+          {
+            "path": "docs/review/atlas-craft-17/final/19-music-dark-2x.png",
+            "sha256": "a5fc2e5d68c5c51fcb2c3ec95ccfea676467756388d89ccdbf4d46c0bdf72578"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-17/final/19-music-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-17/final/19-music-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-17/final/19-music-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-17/final/19-music-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Material Design Icons",
+        "license": "Apache-2.0",
+        "licenseFile": "licenses/mdi-music-adaptations.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "trumpet",
+      "purpose": "小號",
+      "recognitionCues": "水平管身、向外擴張喇叭口與迴轉管",
+      "confusableWith": [
+        "saxophone",
+        "megaphone"
+      ],
+      "sourceObservation": "MDI的小號以實心水平管與喇叭口概括，OpenMoji保留多個按鍵和迴轉管。最新稿提煉MDI輪廓並重畫線性版本；首稿雙線細管幾乎黏合，回比後改為單筆主管。最新16px喇叭口與下方迴轉管的孔洞均完整。",
+      "references": [
+        {
+          "name": "trumpet",
+          "library": "Material Design Icons",
+          "repository": "Templarian/MaterialDesign",
+          "commit": "2424e748e0cc63ab7b9c095a099b9fe239b737c0",
+          "path": "svg/trumpet.svg",
+          "localPath": "references/atlas-01/mdi-trumpet.svg",
+          "url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/trumpet.svg",
+          "sha256": "60e7ce6966ccbb60113565a627788caa959dacc256c2a1b8dbe57702b9e030aa",
+          "license": "Apache-2.0",
+          "sourceName": "trumpet",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "trumpet",
+          "library": "OpenMoji",
+          "repository": "hfg-gmuend/openmoji",
+          "commit": "3e01de523ddefe9c5e46a7765b15efef04bf9002",
+          "path": "black/svg/1F3BA.svg",
+          "localPath": "references/atlas-01/openmoji-1F3BA.svg",
+          "url": "https://github.com/hfg-gmuend/openmoji/blob/3e01de523ddefe9c5e46a7765b15efef04bf9002/black/svg/1F3BA.svg",
+          "sha256": "7e9f5b18704ed7f315ddfaf7b019ae5033e5352fc0ff865dfb44d05be0c90284",
+          "license": "CC-BY-SA-4.0",
+          "sourceName": "1F3BA",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "樂器輪廓與管路連續呈現，無需以虛線暗示隱藏構造。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以空白和前後遮擋區分部件，不用淡化處理擁擠。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "樂器採單色輪廓，沒有材質漸層。"
+        }
+      },
+      "change": {
+        "kind": "modified",
+        "before": {
+          "path": "references/atlas-craft-17/master-before.json",
+          "variantsSha256": "d54df7573a622a054450f948bf643325adeabbafe1a3be39dc67fee3bd146c06"
+        },
+        "reason": "將極細水平主管概括為單筆，向外擴張的喇叭口保留曲線；迴轉管與兩個按鍵結構相接，不以細小管壁內孔追求不適合小尺寸的寫實。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "cf3a819b044cb88d2a7c3b7e98053d778bccad4a56f1b61914f48ce3f1a7d7c3",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/78b-brass/review.html",
+            "sha256": "ec44753b36422c1e91c55e24160ed5467db2e5c77215234977d3c81f7ea42414"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/78b-brass/definitions.json",
+            "sha256": "19faac66073a683eb6fe35ca701d38a280e07998f7fbc44074a8c6221be3d51b"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/78b-brass/light-1x.png",
+            "sha256": "4b42e7ad5e14d3967c61b70db7b4e2261aeb5db78a9a5714d50aa0b967d2c571"
+          },
+          {
+            "path": "docs/review/atlas-craft-17/final/definitions.json",
+            "sha256": "60f16e7113b102e5f8cec8d498b10edd3f53a1172a9a5f9436303f31cca18ca3"
+          },
+          {
+            "path": "docs/review/atlas-craft-17/final/19-music.html",
+            "sha256": "a24c7111d2132eaca407c0ea4ac24230782a3d4813045f3aed1ff7c5e4e32eee"
+          },
+          {
+            "path": "docs/review/atlas-craft-17/final/19-music-light-1x.png",
+            "sha256": "617b1ed346f154138490861a09a99bfa6cf9d1e41218dc8f161932e5122af8b9"
+          },
+          {
+            "path": "docs/review/atlas-craft-17/final/19-music-light-2x.png",
+            "sha256": "f82b8231eb9fd283f6dbbe4281015cc9597b71b72f03510d629ae0e07fbe4d10"
+          },
+          {
+            "path": "docs/review/atlas-craft-17/final/19-music-dark-1x.png",
+            "sha256": "ee9d32f409073a325b8f83bf2825c6bdd147c0f1d527b70fd3afe49b30de81a5"
+          },
+          {
+            "path": "docs/review/atlas-craft-17/final/19-music-dark-2x.png",
+            "sha256": "a5fc2e5d68c5c51fcb2c3ec95ccfea676467756388d89ccdbf4d46c0bdf72578"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-17/final/19-music-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-17/final/19-music-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-17/final/19-music-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-17/final/19-music-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Material Design Icons",
+        "license": "Apache-2.0",
+        "licenseFile": "licenses/mdi-music-adaptations.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "saxophone",
+      "purpose": "薩克斯風",
+      "recognitionCues": "彎曲吹嘴、長管與上翻喇叭口",
+      "confusableWith": [
+        "trumpet",
+        "stethoscope"
+      ],
+      "sourceObservation": "MDI的寬U形下腹與上翻喇叭口明確，OpenMoji較細長且用較多斜管線。最新稿選寬管輪廓並重畫內外連續曲線；完稿回比後加寬直管內部空白，收合吹嘴，原生16px管路沒有變成兩條貼近的黑邊。",
+      "references": [
+        {
+          "name": "saxophone",
+          "library": "Material Design Icons",
+          "repository": "Templarian/MaterialDesign",
+          "commit": "2424e748e0cc63ab7b9c095a099b9fe239b737c0",
+          "path": "svg/saxophone.svg",
+          "localPath": "references/atlas-01/mdi-saxophone.svg",
+          "url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/saxophone.svg",
+          "sha256": "f89c699243d8155f0b0ce1303fed0c23e513f2f98f0e2b38ef5e6b9ec2bf11ae",
+          "license": "Apache-2.0",
+          "sourceName": "saxophone",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "saxophone",
+          "library": "OpenMoji",
+          "repository": "hfg-gmuend/openmoji",
+          "commit": "3e01de523ddefe9c5e46a7765b15efef04bf9002",
+          "path": "black/svg/1F3B7.svg",
+          "localPath": "references/atlas-01/openmoji-1F3B7.svg",
+          "url": "https://github.com/hfg-gmuend/openmoji/blob/3e01de523ddefe9c5e46a7765b15efef04bf9002/black/svg/1F3B7.svg",
+          "sha256": "099ac90cb9e1f6e6264ec3c464fe698bcf5e48667eddfe823ac5c24a5a9d1a03",
+          "license": "CC-BY-SA-4.0",
+          "sourceName": "1F3B7",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "樂器輪廓與管路連續呈現，無需以虛線暗示隱藏構造。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以空白和前後遮擋區分部件，不用淡化處理擁擠。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "樂器採單色輪廓，沒有材質漸層。"
+        }
+      },
+      "change": {
+        "kind": "modified",
+        "before": {
+          "path": "references/atlas-craft-17/master-before.json",
+          "variantsSha256": "717042a37c0bb543d2e42f616ed2c540f7b7933fdc6deadd604ae349e6cfa4e2"
+        },
+        "reason": "直管、下腹和上翻喇叭口放在同一封閉輪廓，左側曲線向吹嘴漸收；兩個外側短按鍵只作語意訊號，不在管內再加密點。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "5d5af09ffdf1ed7cbcd40e14d8605b9152129f991fdae785156d29f843804848",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/78b-brass/review.html",
+            "sha256": "ec44753b36422c1e91c55e24160ed5467db2e5c77215234977d3c81f7ea42414"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/78b-brass/definitions.json",
+            "sha256": "19faac66073a683eb6fe35ca701d38a280e07998f7fbc44074a8c6221be3d51b"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/78b-brass/light-1x.png",
+            "sha256": "4b42e7ad5e14d3967c61b70db7b4e2261aeb5db78a9a5714d50aa0b967d2c571"
+          },
+          {
+            "path": "docs/review/atlas-craft-17/final/definitions.json",
+            "sha256": "60f16e7113b102e5f8cec8d498b10edd3f53a1172a9a5f9436303f31cca18ca3"
+          },
+          {
+            "path": "docs/review/atlas-craft-17/final/19-music.html",
+            "sha256": "a24c7111d2132eaca407c0ea4ac24230782a3d4813045f3aed1ff7c5e4e32eee"
+          },
+          {
+            "path": "docs/review/atlas-craft-17/final/19-music-light-1x.png",
+            "sha256": "617b1ed346f154138490861a09a99bfa6cf9d1e41218dc8f161932e5122af8b9"
+          },
+          {
+            "path": "docs/review/atlas-craft-17/final/19-music-light-2x.png",
+            "sha256": "f82b8231eb9fd283f6dbbe4281015cc9597b71b72f03510d629ae0e07fbe4d10"
+          },
+          {
+            "path": "docs/review/atlas-craft-17/final/19-music-dark-1x.png",
+            "sha256": "ee9d32f409073a325b8f83bf2825c6bdd147c0f1d527b70fd3afe49b30de81a5"
+          },
+          {
+            "path": "docs/review/atlas-craft-17/final/19-music-dark-2x.png",
+            "sha256": "a5fc2e5d68c5c51fcb2c3ec95ccfea676467756388d89ccdbf4d46c0bdf72578"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-17/final/19-music-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-17/final/19-music-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-17/final/19-music-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-17/final/19-music-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Material Design Icons",
+        "license": "Apache-2.0",
+        "licenseFile": "licenses/mdi-music-adaptations.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "metronome",
+      "purpose": "節拍器",
+      "recognitionCues": "梯形機殼與傾斜擺桿",
+      "confusableWith": [
+        "timer",
+        "traffic-cone"
+      ],
+      "sourceObservation": "Lucide使用開放機殼與圓形擺錘，Phosphor以完整梯形和一條斜擺桿表達。最新稿採較簡潔的Phosphor構造；回比後sharp擺桿起點改為平切以消除橫線下凸刺，原生16px底座與擺桿仍清楚。",
+      "references": [
+        {
+          "name": "metronome",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/metronome.svg",
+          "localPath": "references/atlas-01/lucide-metronome.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/metronome.svg",
+          "sha256": "67b34c6f77ec01ec97e00445244282e37db45c5a654d6d23184a0c127272d406",
+          "license": "ISC AND MIT",
+          "sourceName": "metronome",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "metronome",
+          "library": "Phosphor",
+          "repository": "phosphor-icons/core",
+          "commit": "2b75f3ad12b420c9504ef05df8d2564a28f8500e",
+          "path": "assets/regular/metronome.svg",
+          "localPath": "references/atlas-01/phosphor-metronome.svg",
+          "url": "https://github.com/phosphor-icons/core/blob/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular/metronome.svg",
+          "sha256": "9fadb1c3dce0c2cbbdd8b371f69c94dd10163dcd1ebbed5dafee5d56b2b87478",
+          "license": "MIT",
+          "sourceName": "metronome",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "樂器輪廓與管路連續呈現，無需以虛線暗示隱藏構造。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以空白和前後遮擋區分部件，不用淡化處理擁擠。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "樂器採單色輪廓，沒有材質漸層。"
+        }
+      },
+      "change": {
+        "kind": "modified",
+        "before": {
+          "path": "references/atlas-craft-17/master-before.json",
+          "variantsSha256": "a0992496357016755c61f72f545a5e05de1e9e3d4e746d825941d5f1f1720625"
+        },
+        "reason": "梯形側壁和底座共用外殼，內橫線裁住外壁接點；擺桿保留穿出側壁的姿態，sharp起點不以方端帽越過支點橫線。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "51b6ddaad06896aa4a903f7078c3dd393d3b4d1c5489e6eff64c5f758243ea96",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/79b-metronome/review.html",
+            "sha256": "65edfb86efd68c2db55f4d1274dc5d62dafbdeefc2f60fdffc4b30c53fc08bac"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/79b-metronome/definitions.json",
+            "sha256": "df36a257d51f0b0ee8eae50c1e8c3fa4dd1ede2323e2cda7d2e2a16dbb55ccd4"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/79b-metronome/light-1x.png",
+            "sha256": "7cde9b70fed97d591a50d921c406eb497df92d5e37d3fbcba11959e9bfd6b071"
+          },
+          {
+            "path": "docs/review/atlas-craft-17/final/definitions.json",
+            "sha256": "60f16e7113b102e5f8cec8d498b10edd3f53a1172a9a5f9436303f31cca18ca3"
+          },
+          {
+            "path": "docs/review/atlas-craft-17/final/19-music.html",
+            "sha256": "a24c7111d2132eaca407c0ea4ac24230782a3d4813045f3aed1ff7c5e4e32eee"
+          },
+          {
+            "path": "docs/review/atlas-craft-17/final/19-music-light-1x.png",
+            "sha256": "617b1ed346f154138490861a09a99bfa6cf9d1e41218dc8f161932e5122af8b9"
+          },
+          {
+            "path": "docs/review/atlas-craft-17/final/19-music-light-2x.png",
+            "sha256": "f82b8231eb9fd283f6dbbe4281015cc9597b71b72f03510d629ae0e07fbe4d10"
+          },
+          {
+            "path": "docs/review/atlas-craft-17/final/19-music-dark-1x.png",
+            "sha256": "ee9d32f409073a325b8f83bf2825c6bdd147c0f1d527b70fd3afe49b30de81a5"
+          },
+          {
+            "path": "docs/review/atlas-craft-17/final/19-music-dark-2x.png",
+            "sha256": "a5fc2e5d68c5c51fcb2c3ec95ccfea676467756388d89ccdbf4d46c0bdf72578"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-17/final/19-music-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-17/final/19-music-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-17/final/19-music-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-17/final/19-music-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Phosphor",
+        "license": "MIT",
+        "licenseFile": "licenses/phosphor.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "guitar-electric",
+      "purpose": "電吉他",
+      "recognitionCues": "肩部切角琴身與斜向琴頸",
+      "confusableWith": [
+        "guitar",
+        "violin"
+      ],
+      "sourceObservation": "Lucide用肩部切角區別電吉他，MDI採尖角V形琴身。最新稿沿用與木吉他一致的圓腹家族，增加可讀的肩部切角；完稿回比後琴頭改為較輕的實心形，取消小尺寸只有亮點的孔洞，琴頸與肩部依然自然銜接。",
+      "references": [
+        {
+          "name": "guitar-electric",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/guitar-electric.svg",
+          "localPath": "references/atlas-01/lucide-guitar-electric.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/guitar-electric.svg",
+          "sha256": "9376ed7d2401d1a5dc99d1f796783128367aacb74481d62aaacafa81765fcddd",
+          "license": "ISC AND MIT",
+          "sourceName": "guitar-electric",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "guitar-electric",
+          "library": "Material Design Icons",
+          "repository": "Templarian/MaterialDesign",
+          "commit": "2424e748e0cc63ab7b9c095a099b9fe239b737c0",
+          "path": "svg/guitar-electric.svg",
+          "localPath": "references/atlas-01/mdi-guitar-electric.svg",
+          "url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/guitar-electric.svg",
+          "sha256": "1b25da7d2509b9888c2cf8cb48957a6ca46296c809b3d871cf2ff02d249923eb",
+          "license": "Apache-2.0",
+          "sourceName": "guitar-electric",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "樂器輪廓與管路連續呈現，無需以虛線暗示隱藏構造。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以空白和前後遮擋區分部件，不用淡化處理擁擠。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "樂器採單色輪廓，沒有材質漸層。"
+        }
+      },
+      "change": {
+        "kind": "modified",
+        "before": {
+          "path": "references/atlas-craft-17/master-before.json",
+          "variantsSha256": "b0176f486f6a85ef7004fafd4eeea51546d9bf41cfcc405f7d374593775b417b"
+        },
+        "reason": "與木吉他共用下腹與腰部曲線，上肩改為連續內凹切角；琴頭使用實心輪廓減去狹小內孔，保留斜軸與琴橋方向一致。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "b557c9dd971b676970c145a970414b725b43c1ab5083f7b2fb4add8f5007807f",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/76b-electric-piano/review.html",
+            "sha256": "c9c35aa22960668e04070902fa801fbe474f15743598a63e6125d6be416001ab"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/76b-electric-piano/definitions.json",
+            "sha256": "55700913ee1e3b476c05d914831c43954776f37a61019e4efe733513e049d9ec"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/76b-electric-piano/light-1x.png",
+            "sha256": "0ea6d571e5f96b171f57007f3e1255bfa9547732a7479c9bd55aa1d45204e797"
+          },
+          {
+            "path": "docs/review/atlas-craft-17/final/definitions.json",
+            "sha256": "60f16e7113b102e5f8cec8d498b10edd3f53a1172a9a5f9436303f31cca18ca3"
+          },
+          {
+            "path": "docs/review/atlas-craft-17/final/19-music.html",
+            "sha256": "a24c7111d2132eaca407c0ea4ac24230782a3d4813045f3aed1ff7c5e4e32eee"
+          },
+          {
+            "path": "docs/review/atlas-craft-17/final/19-music-light-1x.png",
+            "sha256": "617b1ed346f154138490861a09a99bfa6cf9d1e41218dc8f161932e5122af8b9"
+          },
+          {
+            "path": "docs/review/atlas-craft-17/final/19-music-light-2x.png",
+            "sha256": "f82b8231eb9fd283f6dbbe4281015cc9597b71b72f03510d629ae0e07fbe4d10"
+          },
+          {
+            "path": "docs/review/atlas-craft-17/final/19-music-dark-1x.png",
+            "sha256": "ee9d32f409073a325b8f83bf2825c6bdd147c0f1d527b70fd3afe49b30de81a5"
+          },
+          {
+            "path": "docs/review/atlas-craft-17/final/19-music-dark-2x.png",
+            "sha256": "a5fc2e5d68c5c51fcb2c3ec95ccfea676467756388d89ccdbf4d46c0bdf72578"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-17/final/19-music-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-17/final/19-music-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-17/final/19-music-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-17/final/19-music-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Lucide",
+        "license": "ISC",
+        "licenseFile": "licenses/lucide.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "vinyl-record",
+      "purpose": "黑膠唱片",
+      "recognitionCues": "圓盤、中心孔與對向音軌弧線",
+      "confusableWith": [
+        "circle",
+        "orbit"
+      ],
+      "sourceObservation": "初選Tabler vinyl其實包含唱針，最終改成Lucide disc-3與Phosphor vinyl-record的裸唱片比較。Phosphor音軌弧較長，Lucide較短；最新稿取較短的兩段對向弧線，回比後中心孔、音軌及外圈在16px仍各自分離。",
+      "references": [
+        {
+          "name": "vinyl-record",
+          "library": "Phosphor",
+          "repository": "phosphor-icons/core",
+          "commit": "2b75f3ad12b420c9504ef05df8d2564a28f8500e",
+          "path": "assets/regular/vinyl-record.svg",
+          "localPath": "references/atlas-01/phosphor-vinyl-record.svg",
+          "url": "https://github.com/phosphor-icons/core/blob/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular/vinyl-record.svg",
+          "sha256": "9f670fdd8ae1b144f372b97b9be8acd0cc0d796d2e78607b58a4baa2683461e2",
+          "license": "MIT",
+          "sourceName": "vinyl-record",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "vinyl-record",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/disc-3.svg",
+          "localPath": "references/atlas-01/lucide-disc-3.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/disc-3.svg",
+          "sha256": "93b3102c857a46d590ffc268a8d9ea740abf9bfb30f76de42b9899e34bbba438",
+          "license": "ISC AND MIT",
+          "sourceName": "disc-3",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "樂器輪廓與管路連續呈現，無需以虛線暗示隱藏構造。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以空白和前後遮擋區分部件，不用淡化處理擁擠。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "樂器採單色輪廓，沒有材質漸層。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-17/master-before.json",
+          "variantsSha256": "bea2606d5ed1e2cba82bde2bded12d843f497f3528a1e8373f0b562e45ee01b0"
+        },
+        "reason": "外圈和中心孔共用圓心，兩段音軌等半徑且旋轉對稱；保留清楚的環形留白，不加入多層密集唱片紋路。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "5273e4fdef507a494dcb957b9b46ab71b1ea44d573bdb36e9f058f293f973337",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/79-metronome-record-keyboard/review.html",
+            "sha256": "f1397f8b6637a1357001f43727558392fe1e39b14cce1a02ede96f5e8e75cfd4"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/79-metronome-record-keyboard/definitions.json",
+            "sha256": "7b7987eb5f88d3e280a9dfc22f7a409522803cb314f6f6482301c1244cf6b00d"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/79-metronome-record-keyboard/light-1x.png",
+            "sha256": "1772faa5a32f71dbdea66032d2667c38243b116f414825126bdef76252e492f0"
+          },
+          {
+            "path": "docs/review/atlas-craft-17/final/definitions.json",
+            "sha256": "60f16e7113b102e5f8cec8d498b10edd3f53a1172a9a5f9436303f31cca18ca3"
+          },
+          {
+            "path": "docs/review/atlas-craft-17/final/19-music.html",
+            "sha256": "a24c7111d2132eaca407c0ea4ac24230782a3d4813045f3aed1ff7c5e4e32eee"
+          },
+          {
+            "path": "docs/review/atlas-craft-17/final/19-music-light-1x.png",
+            "sha256": "617b1ed346f154138490861a09a99bfa6cf9d1e41218dc8f161932e5122af8b9"
+          },
+          {
+            "path": "docs/review/atlas-craft-17/final/19-music-light-2x.png",
+            "sha256": "f82b8231eb9fd283f6dbbe4281015cc9597b71b72f03510d629ae0e07fbe4d10"
+          },
+          {
+            "path": "docs/review/atlas-craft-17/final/19-music-dark-1x.png",
+            "sha256": "ee9d32f409073a325b8f83bf2825c6bdd147c0f1d527b70fd3afe49b30de81a5"
+          },
+          {
+            "path": "docs/review/atlas-craft-17/final/19-music-dark-2x.png",
+            "sha256": "a5fc2e5d68c5c51fcb2c3ec95ccfea676467756388d89ccdbf4d46c0bdf72578"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-17/final/19-music-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-17/final/19-music-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-17/final/19-music-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-17/final/19-music-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Lucide",
+        "license": "ISC",
+        "licenseFile": "licenses/lucide.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "music-keyboard",
+      "purpose": "電子琴",
+      "recognitionCues": "矩形機身、上方控制與下方琴鍵",
+      "confusableWith": [
+        "piano",
+        "keyboard"
+      ],
+      "sourceObservation": "Lucide keyboard-music包含控制區與琴鍵，Phosphor piano-keys只有鍵組，因此第二份是琴鍵構造比較。最新稿採Lucide的完整機身，將上方兩個控制點簡為一點；完稿回比，原生16px控制區與下方鍵盤分層清楚，也與翼形鋼琴區分。",
+      "references": [
+        {
+          "name": "music-keyboard",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/keyboard-music.svg",
+          "localPath": "references/atlas-01/lucide-keyboard-music.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/keyboard-music.svg",
+          "sha256": "8bedf2f9cdab469ed82c5ca8d865eef5b449a5bdb3dfa47b222566dcf9b1469a",
+          "license": "ISC AND MIT",
+          "sourceName": "keyboard-music",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "music-keyboard",
+          "library": "Phosphor",
+          "repository": "phosphor-icons/core",
+          "commit": "2b75f3ad12b420c9504ef05df8d2564a28f8500e",
+          "path": "assets/regular/piano-keys.svg",
+          "localPath": "references/atlas-01/phosphor-piano-keys.svg",
+          "url": "https://github.com/phosphor-icons/core/blob/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular/piano-keys.svg",
+          "sha256": "8209fc820a1af4377847dc000fe4640e5167dd32afdd4a3c72135701d71349f7",
+          "license": "MIT",
+          "sourceName": "piano-keys",
+          "match": "structural",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "樂器輪廓與管路連續呈現，無需以虛線暗示隱藏構造。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以空白和前後遮擋區分部件，不用淡化處理擁擠。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "樂器採單色輪廓，沒有材質漸層。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-17/master-before.json",
+          "variantsSha256": "eb5012ca0b04504aa92e71292a183a1ee42a080186b20f8d1127f9cb39c573e6"
+        },
+        "reason": "矩形機身採家族圓角，橫線分隔控制區與四鍵；上方一條顯示短線加一個控制點，維持必要訊號而不在控制面板堆疊小孔。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "09a4202d8825e8d49317437ba6eae9998288762ee3c75c58f40650814c99f24e",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/79-metronome-record-keyboard/review.html",
+            "sha256": "f1397f8b6637a1357001f43727558392fe1e39b14cce1a02ede96f5e8e75cfd4"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/79-metronome-record-keyboard/definitions.json",
+            "sha256": "7b7987eb5f88d3e280a9dfc22f7a409522803cb314f6f6482301c1244cf6b00d"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/79-metronome-record-keyboard/light-1x.png",
+            "sha256": "1772faa5a32f71dbdea66032d2667c38243b116f414825126bdef76252e492f0"
+          },
+          {
+            "path": "docs/review/atlas-craft-17/final/definitions.json",
+            "sha256": "60f16e7113b102e5f8cec8d498b10edd3f53a1172a9a5f9436303f31cca18ca3"
+          },
+          {
+            "path": "docs/review/atlas-craft-17/final/19-music.html",
+            "sha256": "a24c7111d2132eaca407c0ea4ac24230782a3d4813045f3aed1ff7c5e4e32eee"
+          },
+          {
+            "path": "docs/review/atlas-craft-17/final/19-music-light-1x.png",
+            "sha256": "617b1ed346f154138490861a09a99bfa6cf9d1e41218dc8f161932e5122af8b9"
+          },
+          {
+            "path": "docs/review/atlas-craft-17/final/19-music-light-2x.png",
+            "sha256": "f82b8231eb9fd283f6dbbe4281015cc9597b71b72f03510d629ae0e07fbe4d10"
+          },
+          {
+            "path": "docs/review/atlas-craft-17/final/19-music-dark-1x.png",
+            "sha256": "ee9d32f409073a325b8f83bf2825c6bdd147c0f1d527b70fd3afe49b30de81a5"
+          },
+          {
+            "path": "docs/review/atlas-craft-17/final/19-music-dark-2x.png",
+            "sha256": "a5fc2e5d68c5c51fcb2c3ec95ccfea676467756388d89ccdbf4d46c0bdf72578"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-17/final/19-music-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-17/final/19-music-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-17/final/19-music-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-17/final/19-music-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Lucide",
+        "license": "ISC",
+        "licenseFile": "licenses/lucide.txt"
+      },
+      "remaining": []
+    }
+  ]
+}

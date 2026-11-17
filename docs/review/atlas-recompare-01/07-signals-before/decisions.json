@@ -1,0 +1,37 @@
+{
+  "reviewer":"Codex (AI)","batch":"07-signals-before",
+  "baseline":"references/atlas-recompare-01/master-before.json","date":"2026-11-17",
+  "viewedSuffixes":["light-1x","dark-1x","native-light-2x","native-dark-2x"],
+  "decisions":[
+    {
+      "name":"traffic-light","decision":"retained",
+      "purpose":"以直立三燈外殼表示交通號誌設備，不表示某個燈色目前亮起的狀態。",
+      "recognitionCues":"直立燈殼、共同中心線上的三個燈位、20／24px的兩側短支架。",
+      "confusableWith":["panel-top-open","more-vertical"],
+      "defect":"本輪未見必須回修的幾何缺陷；主要檢查三燈的間距、上下燈到外框的留白，以及小尺寸省略支架後的辨識。",
+      "sourceObservation":"Phosphor是兩燈方殼器型，提供外殼與側支架的比較，不能假稱相同三燈配置；Tabler則是三燈膠囊殼，輪廓較柔和但燈孔近似實心。Master既有Phosphor改作以16px三個實心點避免微小燈孔，20／24px恢復燈環與短支架。兩來源的分組優點已有吸收，沒有把方殼全部改成膠囊殼的必要。",
+      "reason":"保留按尺寸分配細節的策略。16px三個點是燈面訊號，20／24的燈孔、上下邊距及兩側支架仍能分辨；外框依角型有實際圓角，沒有為了模仿Tabler而改掉既有方殼器型。",
+      "postComparison":"最新未改稿與Phosphor／Tabler在16／20／24及三角型回比，三燈節奏清楚，20／24燈環之間沒有黏合，16px省略支架後仍保留三燈設備輪廓。Phosphor兩燈本來較疏，這是器型差異，不以刪掉第三燈換取留白。明暗DPR1全圖、DPR2原生區與55%文字均已查看。",
+      "effects":{
+        "dashes":{"used":false,"reason":"外殼、燈位及支架為實體設備訊號，不需要虛線。"},
+        "opacity":{"used":false,"reason":"本圖表示設備而非亮燈狀態，三燈同權，不以透明度指定目前燈色。"},
+        "gradients":{"used":false,"reason":"燈面用單色圓點或圓孔表示，不需要光暈漸層。"}
+      },"remaining":[]
+    },
+    {
+      "name":"road","decision":"retained",
+      "purpose":"以向遠方收束的路緣和分段中線表示道路或公路，與單支方向箭頭及鐵軌區分。",
+      "recognitionCues":"左右對稱外展路緣、上窄下寬透視，以及三段置中的道路標線。",
+      "confusableWith":["route","train"],
+      "defect":"本輪未見需要回修的比例與留白缺陷；檢查三段中線是否黏合、上方窄處是否擁擠及道路透視。",
+      "sourceObservation":"Tabler用兩條路緣與三段中線形成簡潔道路，Master既有改作延續相同成熟構造。Phosphor增加水平地平線並大幅張開路緣，更像帶景深的道路場景，但16px頂部的橫線與中線較密。現稿較長的外展路緣保持足夠內部空間，無須為追求場景感新增地平線。",
+      "reason":"保留開放輪廓及三段中線。標線採獨立線段安排可見間距，兩側路緣維持連續；上方留白不封口，整體不會退化成箭頭或密集軌道。",
+      "postComparison":"最新未改稿與Tabler／Phosphor以三個原生尺寸回比，兩側路緣、中線及各段間的空白均清楚；現稿與Tabler的簡潔符號取向一致，Phosphor地平線帶來的場景差異不構成必須增加一筆的優勢。明暗DPR1及DPR2、低對比文字均已查看。",
+      "effects":{
+        "dashes":{"used":true,"reason":"道路中線本身就是分段標線，使用三個獨立線段控制原生段長與間隔；兩側路緣維持實線。"},
+        "opacity":{"used":false,"reason":"透視由路緣收束表達，不用遠端淡化以免減弱原生中線。"},
+        "gradients":{"used":false,"reason":"道路的方向與深度由輪廓和間距傳意，不需要漸層。"}
+      },"remaining":[]
+    }
+  ]
+}

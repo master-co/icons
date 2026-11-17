@@ -1,0 +1,152 @@
+{
+  "batch": "10-appliances",
+  "cycle": "atlas-craft-07",
+  "familyRoot": "docs/review/atlas-craft-07/final",
+  "baseline": "references/atlas-craft-07/master-before.json",
+  "reviewer": "Codex (AI)",
+  "visualInspectionComplete": true,
+  "inspectedCombinations": [
+    {
+      "theme": "light",
+      "dpr": 1
+    },
+    {
+      "theme": "light",
+      "dpr": 2
+    },
+    {
+      "theme": "dark",
+      "dpr": 1
+    },
+    {
+      "theme": "dark",
+      "dpr": 2
+    }
+  ],
+  "effects": {
+    "dashes": {
+      "used": false,
+      "reason": "家電外殼與控制元件均為實體構造，沒有隱藏邊界。"
+    },
+    "opacity": {
+      "used": false,
+      "reason": "用空間分配與共同邊界分離元件，不靠淡化減少擁擠。"
+    },
+    "gradients": {
+      "used": false,
+      "reason": "單色平面器具與空氣流向不需要連續漸層。"
+    }
+  },
+  "decisions": [
+    {
+      "name": "refrigerator",
+      "groupRoot": "docs/review/atlas-craft-01/37",
+      "confusableWith": [
+        "washing-machine",
+        "oven"
+      ],
+      "sourceObservation": "Lucide採圓拱上門及跨門把手，Tabler採上下雙門與分開把手。Master選上下門，短上把手改成實心點，下門保留直把手；門縫不與把手交叉。",
+      "reason": "雙門比例、直立機身與各自把手保留冰箱構造；上門不塞長桿，門縫收在外殼內，三種角型均保留寬內孔。",
+      "adaptedFrom": "Tabler"
+    },
+    {
+      "name": "washing-machine",
+      "groupRoot": "docs/review/atlas-craft-01/37",
+      "confusableWith": [
+        "oven",
+        "refrigerator"
+      ],
+      "sourceObservation": "Lucide以圓槽及曲水面表意，Phosphor以雙斜線表示玻璃反光。Master保留一圈洗衣槽和一道緩波，槽與機殼留足側面及底部空間，取消第二圈門環。",
+      "reason": "洗衣槽下移與控制點分組，圓槽內水面收在槽壁；圓槽和外殼的可見通道在16px仍清楚，沒有多層圓環或密集控制排。",
+      "adaptedFrom": "Lucide"
+    },
+    {
+      "name": "microwave",
+      "groupRoot": "docs/review/atlas-craft-01/37",
+      "confusableWith": [
+        "oven",
+        "washing-machine"
+      ],
+      "sourceObservation": "Lucide用觀察窗、側邊直柄和短腳，Tabler以波形及多顆側鈕表意。Master選寬觀察窗和兩個側鈕，減少側面直分界，保留橫向比例。",
+      "reason": "觀察窗、外殼及側鈕先分配空間；窗孔不縮成小縫，短腳交代支承，三尺寸保持微波爐橫向機身。",
+      "adaptedFrom": "Lucide"
+    },
+    {
+      "name": "oven",
+      "groupRoot": "docs/review/atlas-craft-01/38",
+      "confusableWith": [
+        "microwave",
+        "washing-machine"
+      ],
+      "sourceObservation": "Phosphor是三顆上控鈕及方窗，Hugeicons加入門把和較圓機殼。Master採三鈕及寬方窗，省去窗內把手，使用短腳與直立比例區別微波爐。",
+      "reason": "控制列與下方視窗分組，三鈕保持點距；方窗上下留白均勻，短腳延續實體家電構造，圓角不擠掉窗邊通道。",
+      "adaptedFrom": "Phosphor"
+    },
+    {
+      "name": "air-conditioner",
+      "groupRoot": "docs/review/atlas-craft-01/38",
+      "confusableWith": [
+        "heater",
+        "fan"
+      ],
+      "sourceObservation": "Iconoir用機殼分界與向下分散氣流，Tabler在機身內套出風小框。Master採單道橫分界，不再套小框；三股氣流在機身下方分開。",
+      "reason": "出風口以共享邊界表達，長窄通道保留可見高度；氣流與機殼分離，兩側曲線向外展開，沒有用淡色掩蓋近接。",
+      "adaptedFrom": "Iconoir"
+    },
+    {
+      "name": "fan",
+      "groupRoot": "docs/review/atlas-craft-01/38",
+      "confusableWith": [
+        "wind",
+        "flower"
+      ],
+      "sourceObservation": "Lucide採四片連成一圈的彎葉，Phosphor採三片弧葉和中央輪轂。Master選三葉，一片母型旋轉120度形成全組，保留同向曲面與中央孔。",
+      "reason": "三片葉的寬度、弧腹和收束完全同構；葉根收在輪轂外側相接，中央孔不被葉線穿過，小尺寸仍有三個獨立葉孔。",
+      "adaptedFrom": "Phosphor"
+    },
+    {
+      "name": "vacuum-cleaner",
+      "groupRoot": "docs/review/atlas-craft-01/39",
+      "confusableWith": [
+        "washing-machine",
+        "iron"
+      ],
+      "sourceObservation": "Hugeicons用軟管彎弧、帶輪筒身和長吸管；MDI vacuum-outline也是帶輪筒身與吸頭。Tabler同名圖實為掃地機器人，已改選同構造來源，沒有用圓盤湊對照。",
+      "reason": "保留機輪、圓腹筒身與長軟管，吸頭有明確接地橫段；輪子在前、筒身在後，接點按外殼收口，筒身和長管之間維持開放空白。",
+      "adaptedFrom": "Hugeicons Free"
+    },
+    {
+      "name": "hair-dryer",
+      "groupRoot": "docs/review/atlas-craft-01/39b",
+      "confusableWith": [
+        "megaphone",
+        "fan"
+      ],
+      "sourceObservation": "Phosphor以圓形進氣口和手柄表意，Hugeicons強調圓機腹、收窄風嘴與曲柄。初稿省去進氣口後太接近擴音器，最後加寬機腹並補回圓形進氣孔。",
+      "reason": "重建較寬後腹讓進氣孔有空間，保留收窄風嘴、曲柄和短電線；進氣孔具有區分用途的作用，沒有當成裝飾刪掉，16px內孔及外側留白都可見。",
+      "adaptedFrom": "Hugeicons Free"
+    },
+    {
+      "name": "iron",
+      "groupRoot": "docs/review/atlas-craft-01/39",
+      "confusableWith": [
+        "vacuum-cleaner",
+        "heater"
+      ],
+      "sourceObservation": "Tabler ironing以平底、弧形前端和開放把手表示熨斗；MDI iron-outline加上後方電線。Master保留相同主要構造，省去電線與底板雙線，平底維持接觸熨燙的姿態。",
+      "reason": "把手與機腹間有完整開口，前端弧線向平底收束；不以通用矩形替代熨斗輪廓，也不在底部加近乎黏合的第二道線。",
+      "adaptedFrom": "Tabler"
+    },
+    {
+      "name": "heater",
+      "groupRoot": "docs/review/atlas-craft-01/40",
+      "confusableWith": [
+        "air-conditioner",
+        "oven"
+      ],
+      "sourceObservation": "Lucide有三條格柵、側控點和兩筆熱氣，Hugeicons省去側控點並讓熱氣穿過開放上緣。Master將兩筆熱氣移到完整機身上方，保留三條疏落格柵及雙腳。",
+      "reason": "熱氣、機身及格柵分成清楚層次，格柵上下留白充足；腳與機身相接，完整外殼表達暖氣機實體，不依賴淡色或內部套框。",
+      "adaptedFrom": "Lucide"
+    }
+  ]
+}

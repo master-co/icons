@@ -1,0 +1,882 @@
+{
+  "car": {
+    "confusableWith": [
+      "bus"
+    ],
+    "sourceObservation": "Lucide 以側向車頂交代車身，Tabler 用斜擋風玻璃分割；本稿採低梯形車頂，保留雙輪與長引擎艙的間距。",
+    "decision": "修正底盤穿入輪孔：兩端止於輪胎外側，輪孔保持透明；三角型的車頂轉折不侵入擋風玻璃。",
+    "reviewedThemes": [
+      "light",
+      "dark"
+    ],
+    "reviewedSizes": [
+      16,
+      20,
+      24
+    ],
+    "reviewedCorners": [
+      "sharp",
+      "soft",
+      "rounded"
+    ],
+    "status": "visually-reviewed-candidate"
+  },
+  "bus": {
+    "confusableWith": [
+      "car"
+    ],
+    "sourceObservation": "Lucide 以長橫窗帶辨識巴士，Tabler 的直立車頭更重；本稿使用三段窗帶，但不加入密集車門小格。",
+    "decision": "把封閉矩形底邊改為輪間及輪外分段，消除底盤切穿圓輪；16px 省略車門短線。",
+    "reviewedThemes": [
+      "light",
+      "dark"
+    ],
+    "reviewedSizes": [
+      16,
+      20,
+      24
+    ],
+    "reviewedCorners": [
+      "sharp",
+      "soft",
+      "rounded"
+    ],
+    "status": "visually-reviewed-candidate"
+  },
+  "train": {
+    "confusableWith": [
+      "tram"
+    ],
+    "sourceObservation": "Lucide 是正面流線車頭，Tabler 是側向列車；兩者是同用途而非同視角。本稿保留正面大車窗及兩條分離軌腳。",
+    "decision": "保留雙燈實心點與方形大窗，避免在16px再切分車窗；軌腳與車身保持結構相接。",
+    "reviewedThemes": [
+      "light",
+      "dark"
+    ],
+    "reviewedSizes": [
+      16,
+      20,
+      24
+    ],
+    "reviewedCorners": [
+      "sharp",
+      "soft",
+      "rounded"
+    ],
+    "status": "visually-reviewed-candidate"
+  },
+  "tram": {
+    "confusableWith": [
+      "train"
+    ],
+    "sourceObservation": "Lucide 的頂部受電裝置和正面車窗可辨識電車；Tabler train僅作車廂結構參考。本稿以菱形上半集電弓區隔火車。",
+    "decision": "保留集電弓與平直窗帶；不加入多個車窗竪分隔，以維持16px的留白。",
+    "reviewedThemes": [
+      "light",
+      "dark"
+    ],
+    "reviewedSizes": [
+      16,
+      20,
+      24
+    ],
+    "reviewedCorners": [
+      "sharp",
+      "soft",
+      "rounded"
+    ],
+    "status": "visually-reviewed-candidate"
+  },
+  "bicycle": {
+    "confusableWith": [
+      "motorcycle"
+    ],
+    "sourceObservation": "兩份來源都有騎乘人物，輪組與斜車架是共通線索；本稿僅畫車體，去除人物以保持用途中立。",
+    "decision": "保留兩個相同輪徑、三角車架與獨立坐墊；車架接輪軸是構造連接，不使用徽標避讓。",
+    "reviewedThemes": [
+      "light",
+      "dark"
+    ],
+    "reviewedSizes": [
+      16,
+      20,
+      24
+    ],
+    "reviewedCorners": [
+      "sharp",
+      "soft",
+      "rounded"
+    ],
+    "status": "visually-reviewed-candidate"
+  },
+  "motorcycle": {
+    "confusableWith": [
+      "bicycle"
+    ],
+    "sourceObservation": "Lucide bike只是輪組結構參考，Tabler motorbike有較長座墊與油箱線索；本稿用水平油箱上緣和前傾前叉區別自行車。",
+    "decision": "保留上提車把與長座墊；不增加引擎散熱線，避免16px車身成黑塊。",
+    "reviewedThemes": [
+      "light",
+      "dark"
+    ],
+    "reviewedSizes": [
+      16,
+      20,
+      24
+    ],
+    "reviewedCorners": [
+      "sharp",
+      "soft",
+      "rounded"
+    ],
+    "status": "visually-reviewed-candidate"
+  },
+  "scooter": {
+    "confusableWith": [
+      "bicycle"
+    ],
+    "sourceObservation": "Lucide bike僅參考兩輪構造；Tabler scooter以高直把手和低踏板辨識。本稿移除人物，保留低踏板轉入車頸的斜線。",
+    "decision": "保留小輪、大直立把手與開放中段；輪軸接桿保持相連，不能當作重疊錯誤挖空。",
+    "reviewedThemes": [
+      "light",
+      "dark"
+    ],
+    "reviewedSizes": [
+      16,
+      20,
+      24
+    ],
+    "reviewedCorners": [
+      "sharp",
+      "soft",
+      "rounded"
+    ],
+    "status": "visually-reviewed-candidate"
+  },
+  "plane": {
+    "confusableWith": [
+      "helicopter"
+    ],
+    "sourceObservation": "Lucide 採斜向機身，Tabler採對稱正視輪廓；本稿以垂直中軸維持左右主翼與尾翼的共同尺度。",
+    "decision": "保留窄尾翼與主翼的寬度差；rounded僅修局部轉折，不把機翼尖端變成膠囊。",
+    "reviewedThemes": [
+      "light",
+      "dark"
+    ],
+    "reviewedSizes": [
+      16,
+      20,
+      24
+    ],
+    "reviewedCorners": [
+      "sharp",
+      "soft",
+      "rounded"
+    ],
+    "status": "visually-reviewed-candidate"
+  },
+  "helicopter": {
+    "confusableWith": [
+      "plane"
+    ],
+    "sourceObservation": "Lucide plane僅作航空器輪廓結構參考；Tabler helicopter以長旋翼、座艙和滑橇區分。本稿保留這三個必要訊號。",
+    "decision": "座艙前端使用連續曲面，尾桿保持窄而開放；座艙分界止於殼內，不延伸成外部凸點。",
+    "reviewedThemes": [
+      "light",
+      "dark"
+    ],
+    "reviewedSizes": [
+      16,
+      20,
+      24
+    ],
+    "reviewedCorners": [
+      "sharp",
+      "soft",
+      "rounded"
+    ],
+    "status": "visually-reviewed-candidate"
+  },
+  "sailboat": {
+    "confusableWith": [
+      "ship"
+    ],
+    "sourceObservation": "Lucide以圓弧船殼連接單帆，Tabler以雙帆和水線表現；本稿保留雙帆，採獨立淺船殼以減少16px底部密度。",
+    "decision": "保留帆間空隙與桅杆到船殼的結構接點；不加入水波，與輪船的波浪訊號分開。",
+    "reviewedThemes": [
+      "light",
+      "dark"
+    ],
+    "reviewedSizes": [
+      16,
+      20,
+      24
+    ],
+    "reviewedCorners": [
+      "sharp",
+      "soft",
+      "rounded"
+    ],
+    "status": "visually-reviewed-candidate"
+  },
+  "ship": {
+    "confusableWith": [
+      "sailboat"
+    ],
+    "sourceObservation": "Lucide 與Tabler皆以船首V形和上層甲板辨識；本稿船首中線、甲板與低水線分層，未加入煙囪細節。",
+    "decision": "保留中央船首線與波浪；16px仍可見船殼下緣與波浪之間的間隔。",
+    "reviewedThemes": [
+      "light",
+      "dark"
+    ],
+    "reviewedSizes": [
+      16,
+      20,
+      24
+    ],
+    "reviewedCorners": [
+      "sharp",
+      "soft",
+      "rounded"
+    ],
+    "status": "visually-reviewed-candidate"
+  },
+  "anchor": {
+    "confusableWith": [
+      "ship"
+    ],
+    "sourceObservation": "兩來源均用頂環、橫桿及彎鉤；本稿使用對稱大曲線，把辨識重量集中在鉤臂，避免中央環過小。",
+    "decision": "保留環孔與對稱鉤尖；中桿接入鉤底是結構連接，三角型皆維持連續。",
+    "reviewedThemes": [
+      "light",
+      "dark"
+    ],
+    "reviewedSizes": [
+      16,
+      20,
+      24
+    ],
+    "reviewedCorners": [
+      "sharp",
+      "soft",
+      "rounded"
+    ],
+    "status": "visually-reviewed-candidate"
+  },
+  "luggage": {
+    "confusableWith": [
+      "backpack"
+    ],
+    "sourceObservation": "Lucide偏重縱向箱條，Tabler偏重矩形箱面；本稿以外拉桿和獨立底輪提供最少線索。",
+    "decision": "16px移除箱內縱向條紋；20及24px保留兩條以交代箱面，不以縮細描邊塞入細節。",
+    "reviewedThemes": [
+      "light",
+      "dark"
+    ],
+    "reviewedSizes": [
+      16,
+      20,
+      24
+    ],
+    "reviewedCorners": [
+      "sharp",
+      "soft",
+      "rounded"
+    ],
+    "status": "visually-reviewed-candidate"
+  },
+  "backpack": {
+    "confusableWith": [
+      "luggage"
+    ],
+    "sourceObservation": "兩來源皆有弧形上肩與前袋，Lucide另有外側口袋；本稿保留主袋及前袋，去除側袋以控制寬度。",
+    "decision": "首稿上肩有兩條短線形成突刺，複審後移除；平順穹頂和前袋已足以辨識後背包。",
+    "reviewedThemes": [
+      "light",
+      "dark"
+    ],
+    "reviewedSizes": [
+      16,
+      20,
+      24
+    ],
+    "reviewedCorners": [
+      "sharp",
+      "soft",
+      "rounded"
+    ],
+    "status": "visually-reviewed-candidate"
+  },
+  "tent": {
+    "confusableWith": [
+      "mountain"
+    ],
+    "sourceObservation": "Lucide有交叉營柱，Tabler以三角外框及入口表現；本稿保留外框、開口與頂部交叉柱，不添加布料分割。",
+    "decision": "內外三角保持共同中軸；入口底部與帳篷底線相接，rounded不改變尖頂的語意。",
+    "reviewedThemes": [
+      "light",
+      "dark"
+    ],
+    "reviewedSizes": [
+      16,
+      20,
+      24
+    ],
+    "reviewedCorners": [
+      "sharp",
+      "soft",
+      "rounded"
+    ],
+    "status": "visually-reviewed-candidate"
+  },
+  "caravan": {
+    "confusableWith": [
+      "bus"
+    ],
+    "sourceObservation": "Lucide 露營車以車門與圓角頂辨識，Tabler簡化為單輪拖車；本稿保留牽引桿、單輪、門窗三種線索。",
+    "decision": "輪胎上緣與車身形成遮擋但孔內不穿線；車門放在輪後，避免16px窗輪交疊。",
+    "reviewedThemes": [
+      "light",
+      "dark"
+    ],
+    "reviewedSizes": [
+      16,
+      20,
+      24
+    ],
+    "reviewedCorners": [
+      "sharp",
+      "soft",
+      "rounded"
+    ],
+    "status": "visually-reviewed-candidate"
+  },
+  "fuel": {
+    "confusableWith": [
+      "charging-station"
+    ],
+    "sourceObservation": "Lucide與Tabler均用泵體及側面油槍；本稿放寬顯示窗並採單條側管，維持可讀內孔。",
+    "decision": "保留油管連續回彎與短油槍，取消數字；sharp中窗格仍與外殼有可見間隔。",
+    "reviewedThemes": [
+      "light",
+      "dark"
+    ],
+    "reviewedSizes": [
+      16,
+      20,
+      24
+    ],
+    "reviewedCorners": [
+      "sharp",
+      "soft",
+      "rounded"
+    ],
+    "status": "visually-reviewed-candidate"
+  },
+  "traffic-cone": {
+    "confusableWith": [
+      "pyramid"
+    ],
+    "sourceObservation": "兩來源的底板和分層錐身共同成立；本稿採窄平頂和兩道警示帶，不以尖角三角形冒充錐體。",
+    "decision": "保留水平底板與錐身底邊間隔，條帶止於共同側邊；rounded僅微修轉角。",
+    "reviewedThemes": [
+      "light",
+      "dark"
+    ],
+    "reviewedSizes": [
+      16,
+      20,
+      24
+    ],
+    "reviewedCorners": [
+      "sharp",
+      "soft",
+      "rounded"
+    ],
+    "status": "visually-reviewed-candidate"
+  },
+  "traffic-light": {
+    "confusableWith": [
+      "more-vertical"
+    ],
+    "sourceObservation": "Lucide ellipsis-vertical僅作三點節奏結構參考；Tabler提供實際號誌外殼。本稿保留直立三燈及側遮光罩。",
+    "decision": "三個燈孔等距並保持獨立；16px不添加燈色，使用單色輪廓而不靠色彩判別物體。",
+    "reviewedThemes": [
+      "light",
+      "dark"
+    ],
+    "reviewedSizes": [
+      16,
+      20,
+      24
+    ],
+    "reviewedCorners": [
+      "sharp",
+      "soft",
+      "rounded"
+    ],
+    "status": "visually-reviewed-candidate"
+  },
+  "road": {
+    "confusableWith": [
+      "route"
+    ],
+    "sourceObservation": "Lucide route只是路徑結構參考，Tabler road以透視雙邊和斷續中線辨識；本稿採相同慣用道路概念，但重新設定收束幅度。",
+    "decision": "保留三段中線；斷段表道路標線而非載入狀態，三個尺寸維持有意義的段距。",
+    "reviewedThemes": [
+      "light",
+      "dark"
+    ],
+    "reviewedSizes": [
+      16,
+      20,
+      24
+    ],
+    "reviewedCorners": [
+      "sharp",
+      "soft",
+      "rounded"
+    ],
+    "status": "visually-reviewed-candidate"
+  },
+  "cloud-rain": {
+    "confusableWith": [
+      "cloud-snow"
+    ],
+    "sourceObservation": "Lucide 雨線穿入雲底開口，Tabler採短分段雨線；本稿把完整雲底與雨線分離。",
+    "decision": "保留完整雲輪廓；16px由三道雨線減為兩道，避免雨線與雲底黏合。",
+    "reviewedThemes": [
+      "light",
+      "dark"
+    ],
+    "reviewedSizes": [
+      16,
+      20,
+      24
+    ],
+    "reviewedCorners": [
+      "sharp",
+      "soft",
+      "rounded"
+    ],
+    "status": "visually-reviewed-candidate"
+  },
+  "cloud-snow": {
+    "confusableWith": [
+      "cloud-rain"
+    ],
+    "sourceObservation": "兩庫使用錯列雪點，雲底開口不同；本稿以封閉雲及三點節奏保留降雪語意。",
+    "decision": "16px只保留三個雪點，20與24px恢復六點；不以空心小圈增加不必要密度。",
+    "reviewedThemes": [
+      "light",
+      "dark"
+    ],
+    "reviewedSizes": [
+      16,
+      20,
+      24
+    ],
+    "reviewedCorners": [
+      "sharp",
+      "soft",
+      "rounded"
+    ],
+    "status": "visually-reviewed-candidate"
+  },
+  "cloud-lightning": {
+    "confusableWith": [
+      "zap"
+    ],
+    "sourceObservation": "兩庫讓閃電靠近雲底中心；本稿把小折線放在雲下，保留主雲完整辨識。",
+    "decision": "閃電與雲底分離，短折線保持折返；其下尖端近畫布底部，後續邊界檢查須覆蓋sharp。",
+    "reviewedThemes": [
+      "light",
+      "dark"
+    ],
+    "reviewedSizes": [
+      16,
+      20,
+      24
+    ],
+    "reviewedCorners": [
+      "sharp",
+      "soft",
+      "rounded"
+    ],
+    "status": "visually-reviewed-candidate"
+  },
+  "cloud-fog": {
+    "confusableWith": [
+      "cloud"
+    ],
+    "sourceObservation": "Lucide有雲底缺口與兩條不等長霧帶，Tabler採封閉雲；本稿沿用封閉雲母型及下短上長的霧線。",
+    "decision": "兩條霧線與雲底等距，16px仍保有兩段清楚負空間；不使用漸淡隱藏下緣。",
+    "reviewedThemes": [
+      "light",
+      "dark"
+    ],
+    "reviewedSizes": [
+      16,
+      20,
+      24
+    ],
+    "reviewedCorners": [
+      "sharp",
+      "soft",
+      "rounded"
+    ],
+    "status": "visually-reviewed-candidate"
+  },
+  "cloud-sun": {
+    "confusableWith": [
+      "sun"
+    ],
+    "sourceObservation": "Lucide以露出太陽和光芒表現晴雲；Tabler cloud僅供雲層結構比較。",
+    "decision": "太陽位於雲層右上，保留三道短光芒；雲頂與太陽弧分離，不在交界堆疊描邊。",
+    "reviewedThemes": [
+      "light",
+      "dark"
+    ],
+    "reviewedSizes": [
+      16,
+      20,
+      24
+    ],
+    "reviewedCorners": [
+      "sharp",
+      "soft",
+      "rounded"
+    ],
+    "status": "visually-reviewed-candidate"
+  },
+  "cloud-moon": {
+    "confusableWith": [
+      "moon"
+    ],
+    "sourceObservation": "Lucide以彎月凹弧與低雲區別日間雲；Tabler cloud僅是雲層結構參考。",
+    "decision": "保留上方月牙負形和低雲，月牙與雲線不相切；不以星點裝飾造成額外語意。",
+    "reviewedThemes": [
+      "light",
+      "dark"
+    ],
+    "reviewedSizes": [
+      16,
+      20,
+      24
+    ],
+    "reviewedCorners": [
+      "sharp",
+      "soft",
+      "rounded"
+    ],
+    "status": "visually-reviewed-candidate"
+  },
+  "sunrise": {
+    "confusableWith": [
+      "sunset"
+    ],
+    "sourceObservation": "兩來源皆以地平線與向上箭頭區分日出；本稿將箭頭和半日分離，保留共同中心軸。",
+    "decision": "箭桿改用既有joinedArrow收口，避免sharp方端及rounded帽突出箭翼；明暗原生大小維持上升方向。",
+    "reviewedThemes": [
+      "light",
+      "dark"
+    ],
+    "reviewedSizes": [
+      16,
+      20,
+      24
+    ],
+    "reviewedCorners": [
+      "sharp",
+      "soft",
+      "rounded"
+    ],
+    "status": "visually-reviewed-candidate"
+  },
+  "sunset": {
+    "confusableWith": [
+      "sunrise"
+    ],
+    "sourceObservation": "兩來源皆以向下箭頭區分日落；本稿沿用日出半日與地平線，使配對只改方向訊號。",
+    "decision": "使用joinedArrow控制箭桿墨線包絡，保留箭頭與太陽之間的間隔，不剪斷結構接點。",
+    "reviewedThemes": [
+      "light",
+      "dark"
+    ],
+    "reviewedSizes": [
+      16,
+      20,
+      24
+    ],
+    "reviewedCorners": [
+      "sharp",
+      "soft",
+      "rounded"
+    ],
+    "status": "visually-reviewed-candidate"
+  },
+  "wind": {
+    "confusableWith": [
+      "waves"
+    ],
+    "sourceObservation": "Lucide三道長度錯落氣流、Tabler採上下回彎；本稿用不同長度水平線和單端回彎維持動態方向。",
+    "decision": "曲線回彎保持空孔，16px仍能分辨三條氣流；沒有加入箭頭以避免風向功能混淆。",
+    "reviewedThemes": [
+      "light",
+      "dark"
+    ],
+    "reviewedSizes": [
+      16,
+      20,
+      24
+    ],
+    "reviewedCorners": [
+      "sharp",
+      "soft",
+      "rounded"
+    ],
+    "status": "visually-reviewed-candidate"
+  },
+  "snowflake": {
+    "confusableWith": [
+      "asterisk"
+    ],
+    "sourceObservation": "Lucide有中心六角，Tabler以六條分叉主枝構造；本稿採無中心六角的對稱枝狀結構。",
+    "decision": "六條主軸用共同角度計算，分叉點等距；保留小尺寸枝間空隙，不以額外內環增加墨量。",
+    "reviewedThemes": [
+      "light",
+      "dark"
+    ],
+    "reviewedSizes": [
+      16,
+      20,
+      24
+    ],
+    "reviewedCorners": [
+      "sharp",
+      "soft",
+      "rounded"
+    ],
+    "status": "visually-reviewed-candidate"
+  },
+  "leaf": {
+    "confusableWith": [
+      "sprout"
+    ],
+    "sourceObservation": "Lucide以彎腹葉片搭配延伸葉梗，Tabler葉片較平；本稿採不對稱尖葉及短內脈。",
+    "decision": "保留葉腹的連續曲線，葉脈從葉梗進入內部而不穿出右上葉尖。",
+    "reviewedThemes": [
+      "light",
+      "dark"
+    ],
+    "reviewedSizes": [
+      16,
+      20,
+      24
+    ],
+    "reviewedCorners": [
+      "sharp",
+      "soft",
+      "rounded"
+    ],
+    "status": "visually-reviewed-candidate"
+  },
+  "sprout": {
+    "confusableWith": [
+      "leaf"
+    ],
+    "sourceObservation": "Lucide兩葉高低錯落，Tabler左右葉較對稱；本稿以右葉略高形成生長方向。",
+    "decision": "莖葉有共同接點，保留兩個大葉孔；不加入內葉脈以維持16px空白。",
+    "reviewedThemes": [
+      "light",
+      "dark"
+    ],
+    "reviewedSizes": [
+      16,
+      20,
+      24
+    ],
+    "reviewedCorners": [
+      "sharp",
+      "soft",
+      "rounded"
+    ],
+    "status": "visually-reviewed-candidate"
+  },
+  "tree-pine": {
+    "confusableWith": [
+      "tree-deciduous"
+    ],
+    "sourceObservation": "兩庫皆有鋸齒樹冠，Tabler保留較寬樹幹；本稿用兩層分枝和中空短樹幹。",
+    "decision": "保留階梯外緣與幹孔；rounded半徑限於局部轉角，樹冠不收成圓錐。",
+    "reviewedThemes": [
+      "light",
+      "dark"
+    ],
+    "reviewedSizes": [
+      16,
+      20,
+      24
+    ],
+    "reviewedCorners": [
+      "sharp",
+      "soft",
+      "rounded"
+    ],
+    "status": "visually-reviewed-candidate"
+  },
+  "tree-deciduous": {
+    "confusableWith": [
+      "tree-pine"
+    ],
+    "sourceObservation": "Lucide用雲狀樹冠，Tabler加入分叉樹幹；本稿保留圓冠，按尺寸決定內枝。",
+    "decision": "16px省略兩支細枝，20及24px增加分叉；樹幹從冠內連續延伸到地面。",
+    "reviewedThemes": [
+      "light",
+      "dark"
+    ],
+    "reviewedSizes": [
+      16,
+      20,
+      24
+    ],
+    "reviewedCorners": [
+      "sharp",
+      "soft",
+      "rounded"
+    ],
+    "status": "visually-reviewed-candidate"
+  },
+  "flower": {
+    "confusableWith": [
+      "sparkles"
+    ],
+    "sourceObservation": "Lucide四瓣較方，Tabler六瓣較密；本稿獨立建立五瓣，花心與瓣尖保持連續曲率。",
+    "decision": "保留五個圓瓣及中央圓孔；16px不加花梗，避免將花朵與植栽語意混在一起。",
+    "reviewedThemes": [
+      "light",
+      "dark"
+    ],
+    "reviewedSizes": [
+      16,
+      20,
+      24
+    ],
+    "reviewedCorners": [
+      "sharp",
+      "soft",
+      "rounded"
+    ],
+    "status": "visually-reviewed-candidate"
+  },
+  "cactus": {
+    "confusableWith": [
+      "sprout"
+    ],
+    "sourceObservation": "Lucide幼苗僅作莖葉結構參考，Tabler仙人掌提供直莖與上彎側枝；本稿保留高低兩枝。",
+    "decision": "肉質主莖用圓頂保持物體曲面，sharp亦保留；側枝交接在主莖外側，不穿過莖孔。",
+    "reviewedThemes": [
+      "light",
+      "dark"
+    ],
+    "reviewedSizes": [
+      16,
+      20,
+      24
+    ],
+    "reviewedCorners": [
+      "sharp",
+      "soft",
+      "rounded"
+    ],
+    "status": "visually-reviewed-candidate"
+  },
+  "mountain": {
+    "confusableWith": [
+      "mountain-snow"
+    ],
+    "sourceObservation": "Lucide山峰高低錯落，Tabler單峰有雪界；後者僅作山形結構參考。本稿採兩峰不加內線。",
+    "decision": "保留高低峰的角度差與共同底線，三角型在尖端僅作微小修整。",
+    "reviewedThemes": [
+      "light",
+      "dark"
+    ],
+    "reviewedSizes": [
+      16,
+      20,
+      24
+    ],
+    "reviewedCorners": [
+      "sharp",
+      "soft",
+      "rounded"
+    ],
+    "status": "visually-reviewed-candidate"
+  },
+  "mountain-snow": {
+    "confusableWith": [
+      "mountain"
+    ],
+    "sourceObservation": "Lucide雪界是弧線，Tabler採折線；本稿使用對應雙峰的折線雪界，與無雪母型共用外框。",
+    "decision": "雪界兩端落在斜邊接點，保留山腰空白；後續需要以墨線包絡檢查sharp端帽是否微凸。",
+    "reviewedThemes": [
+      "light",
+      "dark"
+    ],
+    "reviewedSizes": [
+      16,
+      20,
+      24
+    ],
+    "reviewedCorners": [
+      "sharp",
+      "soft",
+      "rounded"
+    ],
+    "status": "visually-reviewed-candidate"
+  },
+  "waves": {
+    "confusableWith": [
+      "wind"
+    ],
+    "sourceObservation": "Lucide波幅交替，Tabler用長週期波紋；本稿採三條同相位曲線，以水平節奏區別風。",
+    "decision": "三層曲線同形且等距，保持端點切線一致；不使用透明度表示遠近。",
+    "reviewedThemes": [
+      "light",
+      "dark"
+    ],
+    "reviewedSizes": [
+      16,
+      20,
+      24
+    ],
+    "reviewedCorners": [
+      "sharp",
+      "soft",
+      "rounded"
+    ],
+    "status": "visually-reviewed-candidate"
+  },
+  "droplet": {
+    "confusableWith": [
+      "leaf"
+    ],
+    "sourceObservation": "Lucide水滴肩部較寬，Tabler近三角水滴；本稿以圓形下腹及連續上肩構造單一輪廓。",
+    "decision": "保留上尖下圓，sharp仍保持物體曲面；無附加反光線，避免細節變成驚嘆號。",
+    "reviewedThemes": [
+      "light",
+      "dark"
+    ],
+    "reviewedSizes": [
+      16,
+      20,
+      24
+    ],
+    "reviewedCorners": [
+      "sharp",
+      "soft",
+      "rounded"
+    ],
+    "status": "visually-reviewed-candidate"
+  }
+}

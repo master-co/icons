@@ -1,0 +1,22 @@
+{
+  "reviewer": "Codex (AI)",
+  "notes": {
+    "text": "保留：T字主幹、頂橫與兩端短垂線建立字體工具的襯線訊號；Lucide較重、Iconoir更纖細，現稿介於兩者，16px頂端與底足清楚而不鼓包。",
+    "align-left": "保留：四行共享左緣、長短交替，原生16px仍可讀出不齊右緣。Tabler三行較疏、Iconoir四行相近，現稿行距沒有黏合，與其他對齊工具保持同列數。",
+    "align-center": "保留：四行長短圍繞同一軸線，與左對齊有明確差別；Tabler較少行但沒有改善語意，保留與家族一致的四行、等距節奏。",
+    "align-right": "保留：與左對齊鏡向共享長度，右緣整齊且短行偏右不飄；兩份來源同構造，16px行間負空白仍清晰。",
+    "align-justify": "保留：四行等長且左右共線，和其他三種對齊只改行長，不改行距或圖示位置。Lucide三行更疏、Iconoir四行相近，現稿在16px仍有明確四筆，毋須為減筆而改家族。",
+    "indent-increase": "保留：中行相對上下行向右縮，和向右箭翼共同表達增加縮排；Tabler同樣用內容位置而非只換箭頭，Lucide內容齊邊，保留Master較完整的操作訊號。",
+    "indent-decrease": "保留：中行較上下行向左伸，左箭翼與內容相呼應；相比Lucide共邊文字行，現稿與Tabler同類位置語意更明確，16px箭尖與文字仍分開。",
+    "distribute-horizontal": "保留：兩個不同高度矩形及中央導線建立水平分布關係。Lucide同構造，Tabler用外側導線與單矩形；選兩物件構造讓橫向比較更明確，窄框孔在16px仍存活。",
+    "distribute-vertical": "保留：橫向分布母型旋轉，兩個寬度不同的橫框與水平導線相連；Lucide近似、Tabler單框構造較少訊息，現稿兩框間通道完整，三角型內孔不被吃掉。",
+    "wrap-text": "保留：上方完整文字線、下方短行和回折箭頭交代自動換行。Lucide較粗短、Iconoir筆重更細，現稿回彎曲率與箭翼接合自然，16px短行和箭頭分明。"
+  },
+  "modified": [],
+  "effects": "不採虛線或透明度：文字行的長短與位置已承載操作，導線與物件是相連構造，無需以淡化建立層級。",
+  "viewed": [
+    "1-dpr1.png",
+    "2-dpr1.png"
+  ],
+  "scope": "16/20/24 × sharp/soft/rounded; light/dark; 55% alongside text"
+}

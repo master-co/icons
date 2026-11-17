@@ -1,0 +1,1537 @@
+{
+  "schemaVersion": 2,
+  "reviewer": "Codex (AI)",
+  "userApproval": "pending",
+  "icons": [
+    {
+      "name": "factory",
+      "purpose": "工廠",
+      "recognitionCues": "高煙囪、鋸齒廠房屋頂與排窗",
+      "confusableWith": [
+        "warehouse",
+        "building"
+      ],
+      "sourceObservation": "Lucide以煙囪與鋸齒屋頂形成連續輪廓，Phosphor將煙囪放右側、窗改短線。最新稿採Lucide構造，擴開下方窗點間距；完稿回比16/20/24，三個窗點和屋頂分離，煙囪與廠房共用外殼，無需補煙霧。",
+      "references": [
+        {
+          "name": "factory",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/factory.svg",
+          "localPath": "references/atlas-01/lucide-factory.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/factory.svg",
+          "sha256": "5482b8d73276e072a951f4c1be530d31efa584c8d1a7affbeec22a560f0d5cc0",
+          "license": "ISC AND MIT",
+          "sourceName": "factory",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "factory",
+          "library": "Phosphor",
+          "repository": "phosphor-icons/core",
+          "commit": "2b75f3ad12b420c9504ef05df8d2564a28f8500e",
+          "path": "assets/regular/factory.svg",
+          "localPath": "references/atlas-01/phosphor-factory.svg",
+          "url": "https://github.com/phosphor-icons/core/blob/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular/factory.svg",
+          "sha256": "aa80d3459397014a15f50b525771dbd2edff9e005cfcda40a75e85c3c237f747",
+          "license": "MIT",
+          "sourceName": "factory",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "機械與建物均呈現可見外形，不需虛線暗示隱藏部件。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "透過完整留白和接縫區分部件，無須以淡化掩蓋擁擠。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "以單色輪廓傳達工業設備，不需金屬或磚面材質漸層。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-20/master-before.json",
+          "variantsSha256": "9919e7aeb5bfffa1070e88b88a276abdceb0a23f6569713d451acef38d96d15d"
+        },
+        "reason": "煙囪、鋸齒屋頂與底部一體成形；煙囪頂角和底角依角型改實際半徑，屋頂折點保持較小圓角，三點窗不再套細框。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "bda19fc5f038d7b5835e8fae27a4899ef37f625e679ec2076b97bab357853d4e",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/88-factory-tower-truck/review.html",
+            "sha256": "89cd98ae15f1b3ecc23a7c5cca53bb1fc99c6c8d867d32919db15de9d46d5a28"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/88-factory-tower-truck/definitions.json",
+            "sha256": "20a2aba091b61b2e4892123832cafa20d4004c2716ad3e0411cbd50bc774673d"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/88-factory-tower-truck/light-1x.png",
+            "sha256": "6f3e147faf79b3d90d65f07e6d383ad4c711fc3410908eb116adad0775ac2106"
+          },
+          {
+            "path": "docs/review/atlas-craft-20/final/definitions.json",
+            "sha256": "760a6ef1dbc97df7be8fcda1cb63ab79317a4533a8278fcff8b3854263ee0a9e"
+          },
+          {
+            "path": "docs/review/atlas-craft-20/final/22-industry.html",
+            "sha256": "89d4dcad95cf83ddc6c83da3cc5f1d0bbbb90ed4c20e697f8c019e168bbee966"
+          },
+          {
+            "path": "docs/review/atlas-craft-20/final/22-industry-light-1x.png",
+            "sha256": "61473a6384607ea3486e760b00a0066c2f5f90203f68ad87f165132b366b1bb2"
+          },
+          {
+            "path": "docs/review/atlas-craft-20/final/22-industry-light-2x.png",
+            "sha256": "dd3642910139f363fb95fbab2b162bd4b98e559b4dd354152d30b770bd218306"
+          },
+          {
+            "path": "docs/review/atlas-craft-20/final/22-industry-dark-1x.png",
+            "sha256": "de12e3f1d678c72919707a27e0f7be048a15c092af8f6aefec8d2a2b6de7dcda"
+          },
+          {
+            "path": "docs/review/atlas-craft-20/final/22-industry-dark-2x.png",
+            "sha256": "5c84cb4f066d097553c37d3955b6a3c2bb250ec2a4a8f0c35ec6ae0198b12a47"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-20/final/22-industry-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-20/final/22-industry-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-20/final/22-industry-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-20/final/22-industry-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Lucide",
+        "license": "ISC",
+        "licenseFile": "licenses/lucide.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "crane-tower",
+      "purpose": "塔式起重機",
+      "recognitionCues": "垂直塔身、水平吊臂與垂吊鉤",
+      "confusableWith": [
+        "crane-truck",
+        "construction-barrier"
+      ],
+      "sourceObservation": "Phosphor塔身有兩個大格，Hugeicons窄塔身配漸收吊臂。最新稿採Phosphor寬塔身與開放水平臂，吊鉤用連續圓弧；完稿回比，16px塔格沒有被額外斜撐填滿，垂吊鉤與塔身保持大空白。",
+      "references": [
+        {
+          "name": "crane-tower",
+          "library": "Phosphor",
+          "repository": "phosphor-icons/core",
+          "commit": "2b75f3ad12b420c9504ef05df8d2564a28f8500e",
+          "path": "assets/regular/crane-tower.svg",
+          "localPath": "references/atlas-01/phosphor-crane-tower.svg",
+          "url": "https://github.com/phosphor-icons/core/blob/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular/crane-tower.svg",
+          "sha256": "b9f21c024fe1d3a057ea872e650ddfd9d57032a54ad6f6eff07caafa7d711927",
+          "license": "MIT",
+          "sourceName": "crane-tower",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "crane-tower",
+          "library": "Hugeicons Free",
+          "repository": "hugeicons/hugeicons",
+          "commit": "834e28d965946c1ee60d080027fe9dae4adc58d0",
+          "path": "icons/crane-tower.svg",
+          "localPath": "references/atlas-01/hugeicons-crane-tower.svg",
+          "url": "https://github.com/hugeicons/hugeicons/blob/834e28d965946c1ee60d080027fe9dae4adc58d0/icons/crane-tower.svg",
+          "sha256": "3314d2798b2989cb68788fb67f5afc35f1005c956c0f737982ef17f0f9f52098",
+          "license": "MIT",
+          "sourceName": "crane-tower",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "機械與建物均呈現可見外形，不需虛線暗示隱藏部件。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "透過完整留白和接縫區分部件，無須以淡化掩蓋擁擠。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "以單色輪廓傳達工業設備，不需金屬或磚面材質漸層。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-20/master-before.json",
+          "variantsSha256": "e1bd6b6930d9a26d7d56fb70c195114194234699a8e99cca9e69fc73bff1cd76"
+        },
+        "reason": "塔身與兩個橫向構件按共同位置接合，上部保留斜向帽架；吊線連入鉤底圓弧，避免額外的小圈與雙線吊臂。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "e936030b452a9cebea1d25adda207c2396175e6042b65b6bc7e5e6cc996b3a4a",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/88-factory-tower-truck/review.html",
+            "sha256": "89cd98ae15f1b3ecc23a7c5cca53bb1fc99c6c8d867d32919db15de9d46d5a28"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/88-factory-tower-truck/definitions.json",
+            "sha256": "20a2aba091b61b2e4892123832cafa20d4004c2716ad3e0411cbd50bc774673d"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/88-factory-tower-truck/light-1x.png",
+            "sha256": "6f3e147faf79b3d90d65f07e6d383ad4c711fc3410908eb116adad0775ac2106"
+          },
+          {
+            "path": "docs/review/atlas-craft-20/final/definitions.json",
+            "sha256": "760a6ef1dbc97df7be8fcda1cb63ab79317a4533a8278fcff8b3854263ee0a9e"
+          },
+          {
+            "path": "docs/review/atlas-craft-20/final/22-industry.html",
+            "sha256": "89d4dcad95cf83ddc6c83da3cc5f1d0bbbb90ed4c20e697f8c019e168bbee966"
+          },
+          {
+            "path": "docs/review/atlas-craft-20/final/22-industry-light-1x.png",
+            "sha256": "61473a6384607ea3486e760b00a0066c2f5f90203f68ad87f165132b366b1bb2"
+          },
+          {
+            "path": "docs/review/atlas-craft-20/final/22-industry-light-2x.png",
+            "sha256": "dd3642910139f363fb95fbab2b162bd4b98e559b4dd354152d30b770bd218306"
+          },
+          {
+            "path": "docs/review/atlas-craft-20/final/22-industry-dark-1x.png",
+            "sha256": "de12e3f1d678c72919707a27e0f7be048a15c092af8f6aefec8d2a2b6de7dcda"
+          },
+          {
+            "path": "docs/review/atlas-craft-20/final/22-industry-dark-2x.png",
+            "sha256": "5c84cb4f066d097553c37d3955b6a3c2bb250ec2a4a8f0c35ec6ae0198b12a47"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-20/final/22-industry-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-20/final/22-industry-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-20/final/22-industry-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-20/final/22-industry-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Phosphor",
+        "license": "MIT",
+        "licenseFile": "licenses/phosphor.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "crane-truck",
+      "purpose": "吊車",
+      "recognitionCues": "輪式底盤、駕駛艙、上揚吊臂與吊鉤",
+      "confusableWith": [
+        "crane-tower",
+        "excavator"
+      ],
+      "sourceObservation": "Tabler是輪式卡車，Hugeicons是履帶移動吊車，兩者都具移動吊裝語意。最新稿採Hugeicons駕駛艙與抬升吊臂的構造，底盤改成雙輪；完稿回比，較Tabler少了密集車頭分格，保留車輪孔與清楚吊鉤，並修掉sharp吊臂侵入駕駛艙的小刺。",
+      "references": [
+        {
+          "name": "crane-truck",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/car-crane.svg",
+          "localPath": "references/atlas-01/tabler-car-crane.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/car-crane.svg",
+          "sha256": "8f5552e90ac5cf3f7fe93836800751184ea2e4d3a664a2776e4c40770d03ad79",
+          "license": "MIT",
+          "sourceName": "car-crane",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "crane-truck",
+          "library": "Hugeicons Free",
+          "repository": "hugeicons/hugeicons",
+          "commit": "834e28d965946c1ee60d080027fe9dae4adc58d0",
+          "path": "icons/crane.svg",
+          "localPath": "references/atlas-01/hugeicons-crane.svg",
+          "url": "https://github.com/hugeicons/hugeicons/blob/834e28d965946c1ee60d080027fe9dae4adc58d0/icons/crane.svg",
+          "sha256": "44feb2dede3b9d3d075742331ad9377445defbf2eb1288021b35ddbfe1eec350",
+          "license": "MIT",
+          "sourceName": "crane",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "機械與建物均呈現可見外形，不需虛線暗示隱藏部件。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "透過完整留白和接縫區分部件，無須以淡化掩蓋擁擠。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "以單色輪廓傳達工業設備，不需金屬或磚面材質漸層。"
+        }
+      },
+      "change": {
+        "kind": "modified",
+        "before": {
+          "path": "references/atlas-craft-20/master-before.json",
+          "variantsSha256": "73ef83f89eb95b3ee7f25f87aadfe41d3adbb28421567b10d458308333ad6703"
+        },
+        "reason": "駕駛艙上弧自然接側壁，斜吊臂從機身上緣伸出；接點按艙體外側裁線，底盤線止於兩個輪胎外緣，輪式底盤與履帶挖土機分開。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "ffded06cb4e76ec4814a26bb3a479ac8424ffcff28267b17b889ba92e9a495cb",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/88b-truck/review.html",
+            "sha256": "9a51915fd00299d475e3fea14eae6eedb9337ca8d8e52a49834457d40e51d1ff"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/88b-truck/definitions.json",
+            "sha256": "3fdcdc29190eea6c15f3e378bdae8a13507773f7395b474174520d15f24aac02"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/88b-truck/light-1x.png",
+            "sha256": "1054d6fb087e5d6c14fec9c807d7118060ca73124bce150188d9f27c67f7a8bd"
+          },
+          {
+            "path": "docs/review/atlas-craft-20/final/definitions.json",
+            "sha256": "760a6ef1dbc97df7be8fcda1cb63ab79317a4533a8278fcff8b3854263ee0a9e"
+          },
+          {
+            "path": "docs/review/atlas-craft-20/final/22-industry.html",
+            "sha256": "89d4dcad95cf83ddc6c83da3cc5f1d0bbbb90ed4c20e697f8c019e168bbee966"
+          },
+          {
+            "path": "docs/review/atlas-craft-20/final/22-industry-light-1x.png",
+            "sha256": "61473a6384607ea3486e760b00a0066c2f5f90203f68ad87f165132b366b1bb2"
+          },
+          {
+            "path": "docs/review/atlas-craft-20/final/22-industry-light-2x.png",
+            "sha256": "dd3642910139f363fb95fbab2b162bd4b98e559b4dd354152d30b770bd218306"
+          },
+          {
+            "path": "docs/review/atlas-craft-20/final/22-industry-dark-1x.png",
+            "sha256": "de12e3f1d678c72919707a27e0f7be048a15c092af8f6aefec8d2a2b6de7dcda"
+          },
+          {
+            "path": "docs/review/atlas-craft-20/final/22-industry-dark-2x.png",
+            "sha256": "5c84cb4f066d097553c37d3955b6a3c2bb250ec2a4a8f0c35ec6ae0198b12a47"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-20/final/22-industry-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-20/final/22-industry-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-20/final/22-industry-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-20/final/22-industry-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Hugeicons Free",
+        "license": "MIT",
+        "licenseFile": "licenses/hugeicons-MIT.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "forklift",
+      "purpose": "堆高機",
+      "recognitionCues": "低機身、駕駛架、直立門架與前伸貨叉",
+      "confusableWith": [
+        "crane-truck",
+        "excavator"
+      ],
+      "sourceObservation": "Lucide的門架、斜向駕駛架與前伸貨叉構造簡潔，Tabler另有方形頂棚。最新稿採Lucide的開放側面；完稿回比，16px駕駛空間沒有再放內框，貨叉和門架相連，輪孔與車身的空白足以分組。",
+      "references": [
+        {
+          "name": "forklift",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/forklift.svg",
+          "localPath": "references/atlas-01/lucide-forklift.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/forklift.svg",
+          "sha256": "11848223148ada5fc472d8d23dce57b7864cbf85745f301651fc998a0f7ddde2",
+          "license": "ISC AND MIT",
+          "sourceName": "forklift",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "forklift",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/forklift.svg",
+          "localPath": "references/atlas-01/tabler-forklift.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/forklift.svg",
+          "sha256": "5835149e45a1702a71021f75744ed562a1efc70602cb967084b74d1eca1207fa",
+          "license": "MIT",
+          "sourceName": "forklift",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "機械與建物均呈現可見外形，不需虛線暗示隱藏部件。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "透過完整留白和接縫區分部件，無須以淡化掩蓋擁擠。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "以單色輪廓傳達工業設備，不需金屬或磚面材質漸層。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-20/master-before.json",
+          "variantsSha256": "23c56b52e47f3a30fdb0dfb31d09287eb5ec33757beb678a59e0d8b704fbead0"
+        },
+        "reason": "駕駛架由上弧接斜支撐，前方高門架直接下折為貨叉；車身線在車輪外緣收口，保留兩輪和空腔，不加入貨物遮住主要辨識構造。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "e11319bebc0aef2ca580a3405862bd7d8bfe94502f2e2c92bf02ce2aa6adb209",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/89-forklift-warehouse-excavator/review.html",
+            "sha256": "861ee6c9dd9af9c929da697e4efd36e02bc3b986c749f97eaaecde44c4e62fd1"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/89-forklift-warehouse-excavator/definitions.json",
+            "sha256": "30904fac5e16d536caaf7c026a6b4dd00204ec37959296771d92fd089acb3ef6"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/89-forklift-warehouse-excavator/light-1x.png",
+            "sha256": "d408d1aed6fca8e3b86643896efa1c4d9393d3ff6affd8ee864a07283f34598f"
+          },
+          {
+            "path": "docs/review/atlas-craft-20/final/definitions.json",
+            "sha256": "760a6ef1dbc97df7be8fcda1cb63ab79317a4533a8278fcff8b3854263ee0a9e"
+          },
+          {
+            "path": "docs/review/atlas-craft-20/final/22-industry.html",
+            "sha256": "89d4dcad95cf83ddc6c83da3cc5f1d0bbbb90ed4c20e697f8c019e168bbee966"
+          },
+          {
+            "path": "docs/review/atlas-craft-20/final/22-industry-light-1x.png",
+            "sha256": "61473a6384607ea3486e760b00a0066c2f5f90203f68ad87f165132b366b1bb2"
+          },
+          {
+            "path": "docs/review/atlas-craft-20/final/22-industry-light-2x.png",
+            "sha256": "dd3642910139f363fb95fbab2b162bd4b98e559b4dd354152d30b770bd218306"
+          },
+          {
+            "path": "docs/review/atlas-craft-20/final/22-industry-dark-1x.png",
+            "sha256": "de12e3f1d678c72919707a27e0f7be048a15c092af8f6aefec8d2a2b6de7dcda"
+          },
+          {
+            "path": "docs/review/atlas-craft-20/final/22-industry-dark-2x.png",
+            "sha256": "5c84cb4f066d097553c37d3955b6a3c2bb250ec2a4a8f0c35ec6ae0198b12a47"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-20/final/22-industry-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-20/final/22-industry-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-20/final/22-industry-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-20/final/22-industry-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Lucide",
+        "license": "ISC",
+        "licenseFile": "licenses/lucide.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "warehouse",
+      "purpose": "倉庫",
+      "recognitionCues": "寬廠房與大面捲門",
+      "confusableWith": [
+        "factory",
+        "home"
+      ],
+      "sourceObservation": "Lucide山形屋頂與大捲門明確，Phosphor用單斜屋頂和較矮捲門。最新稿採Lucide寬山形輪廓，但只留一條門內橫線；完稿回比16px，捲門孔較開闊，頂面、門楣與兩側牆仍可辨，不堆疊狹窄橫槽。",
+      "references": [
+        {
+          "name": "warehouse",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/warehouse.svg",
+          "localPath": "references/atlas-01/lucide-warehouse.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/warehouse.svg",
+          "sha256": "709f50b56a6808e03de3f0d3a9dc74234825d1dd162382cc87460e414e1eb915",
+          "license": "ISC AND MIT",
+          "sourceName": "warehouse",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "warehouse",
+          "library": "Phosphor",
+          "repository": "phosphor-icons/core",
+          "commit": "2b75f3ad12b420c9504ef05df8d2564a28f8500e",
+          "path": "assets/regular/warehouse.svg",
+          "localPath": "references/atlas-01/phosphor-warehouse.svg",
+          "url": "https://github.com/phosphor-icons/core/blob/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular/warehouse.svg",
+          "sha256": "26cb320cecaed5ce66ef1a493e0d2d4b65807515947292ba1d0c6bb727919f5d",
+          "license": "MIT",
+          "sourceName": "warehouse",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "機械與建物均呈現可見外形，不需虛線暗示隱藏部件。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "透過完整留白和接縫區分部件，無須以淡化掩蓋擁擠。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "以單色輪廓傳達工業設備，不需金屬或磚面材質漸層。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-20/master-before.json",
+          "variantsSha256": "699852015bb04f37b52f3a2a50d89d526cbe639acfa416fb51b1ba015956f78d"
+        },
+        "reason": "屋頂、側牆與底部連成完整建築，捲門共用底邊並保留單道捲片分界；底角按家族角型改實際半徑，門上方維持足夠空白。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "d10cb366e5226dba01431dc2935faf238be7496e67df31b65301833f6fa089f9",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/89-forklift-warehouse-excavator/review.html",
+            "sha256": "861ee6c9dd9af9c929da697e4efd36e02bc3b986c749f97eaaecde44c4e62fd1"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/89-forklift-warehouse-excavator/definitions.json",
+            "sha256": "30904fac5e16d536caaf7c026a6b4dd00204ec37959296771d92fd089acb3ef6"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/89-forklift-warehouse-excavator/light-1x.png",
+            "sha256": "d408d1aed6fca8e3b86643896efa1c4d9393d3ff6affd8ee864a07283f34598f"
+          },
+          {
+            "path": "docs/review/atlas-craft-20/final/definitions.json",
+            "sha256": "760a6ef1dbc97df7be8fcda1cb63ab79317a4533a8278fcff8b3854263ee0a9e"
+          },
+          {
+            "path": "docs/review/atlas-craft-20/final/22-industry.html",
+            "sha256": "89d4dcad95cf83ddc6c83da3cc5f1d0bbbb90ed4c20e697f8c019e168bbee966"
+          },
+          {
+            "path": "docs/review/atlas-craft-20/final/22-industry-light-1x.png",
+            "sha256": "61473a6384607ea3486e760b00a0066c2f5f90203f68ad87f165132b366b1bb2"
+          },
+          {
+            "path": "docs/review/atlas-craft-20/final/22-industry-light-2x.png",
+            "sha256": "dd3642910139f363fb95fbab2b162bd4b98e559b4dd354152d30b770bd218306"
+          },
+          {
+            "path": "docs/review/atlas-craft-20/final/22-industry-dark-1x.png",
+            "sha256": "de12e3f1d678c72919707a27e0f7be048a15c092af8f6aefec8d2a2b6de7dcda"
+          },
+          {
+            "path": "docs/review/atlas-craft-20/final/22-industry-dark-2x.png",
+            "sha256": "5c84cb4f066d097553c37d3955b6a3c2bb250ec2a4a8f0c35ec6ae0198b12a47"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-20/final/22-industry-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-20/final/22-industry-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-20/final/22-industry-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-20/final/22-industry-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Lucide",
+        "license": "ISC",
+        "licenseFile": "licenses/lucide.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "excavator",
+      "purpose": "挖土機",
+      "recognitionCues": "履帶底盤、駕駛艙、折臂與鏟斗",
+      "confusableWith": [
+        "crane-truck",
+        "forklift"
+      ],
+      "sourceObservation": "Tabler抬高折臂與弧形鏟斗讓動作清楚，Hugeicons鏟斗較直立而吊臂短。最新稿採Tabler姿態，把履帶內輪簡為兩點；完稿回比16px，折臂和鏟斗空腔仍分明，修掉駕駛艙和吊臂交接內角的凸刺。",
+      "references": [
+        {
+          "name": "excavator",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/backhoe.svg",
+          "localPath": "references/atlas-01/tabler-backhoe.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/backhoe.svg",
+          "sha256": "d44ca243fff03f774bbde705f3c354e80cea8b0b9a98f6a0405075fd8d1ad972",
+          "license": "MIT",
+          "sourceName": "backhoe",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "excavator",
+          "library": "Hugeicons Free",
+          "repository": "hugeicons/hugeicons",
+          "commit": "834e28d965946c1ee60d080027fe9dae4adc58d0",
+          "path": "icons/excavator.svg",
+          "localPath": "references/atlas-01/hugeicons-excavator.svg",
+          "url": "https://github.com/hugeicons/hugeicons/blob/834e28d965946c1ee60d080027fe9dae4adc58d0/icons/excavator.svg",
+          "sha256": "77f8aac0c7f75fc25e3c109fc33246f62e82a767763230622dc853fba5df5994",
+          "license": "MIT",
+          "sourceName": "excavator",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "機械與建物均呈現可見外形，不需虛線暗示隱藏部件。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "透過完整留白和接縫區分部件，無須以淡化掩蓋擁擠。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "以單色輪廓傳達工業設備，不需金屬或磚面材質漸層。"
+        }
+      },
+      "change": {
+        "kind": "modified",
+        "before": {
+          "path": "references/atlas-craft-20/master-before.json",
+          "variantsSha256": "552fa086f656c60d4a0955addd36ca45bf8636e4a89de4e3ea71dc2bc17611e5"
+        },
+        "reason": "履帶以連續膠囊外殼支承機身，內部兩點表示輪軸；駕駛艙頂弧接入折臂，鏟斗有斜切開口及圓腹，接點以實際墨線裁在艙與斗外側。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "697d404f74006504a4eaa4b6c562e700b03083d3ab1ddd953d01d3aa2b0772a6",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/89b-excavator/review.html",
+            "sha256": "53665992c144511e9ea7aa6e5a0865481f858b641dbd10e5b0a3688a74da94a1"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/89b-excavator/definitions.json",
+            "sha256": "e0a3aad2d1dc3c1510f2dfee5665e734e649c107e78cdaef2eb5cfbae2e5069f"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/89b-excavator/light-1x.png",
+            "sha256": "d1452f2160bd11e30d817402488a5687711c64b47c8172f523193ec1f8ac703a"
+          },
+          {
+            "path": "docs/review/atlas-craft-20/final/definitions.json",
+            "sha256": "760a6ef1dbc97df7be8fcda1cb63ab79317a4533a8278fcff8b3854263ee0a9e"
+          },
+          {
+            "path": "docs/review/atlas-craft-20/final/22-industry.html",
+            "sha256": "89d4dcad95cf83ddc6c83da3cc5f1d0bbbb90ed4c20e697f8c019e168bbee966"
+          },
+          {
+            "path": "docs/review/atlas-craft-20/final/22-industry-light-1x.png",
+            "sha256": "61473a6384607ea3486e760b00a0066c2f5f90203f68ad87f165132b366b1bb2"
+          },
+          {
+            "path": "docs/review/atlas-craft-20/final/22-industry-light-2x.png",
+            "sha256": "dd3642910139f363fb95fbab2b162bd4b98e559b4dd354152d30b770bd218306"
+          },
+          {
+            "path": "docs/review/atlas-craft-20/final/22-industry-dark-1x.png",
+            "sha256": "de12e3f1d678c72919707a27e0f7be048a15c092af8f6aefec8d2a2b6de7dcda"
+          },
+          {
+            "path": "docs/review/atlas-craft-20/final/22-industry-dark-2x.png",
+            "sha256": "5c84cb4f066d097553c37d3955b6a3c2bb250ec2a4a8f0c35ec6ae0198b12a47"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-20/final/22-industry-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-20/final/22-industry-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-20/final/22-industry-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-20/final/22-industry-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Tabler",
+        "license": "MIT",
+        "licenseFile": "licenses/tabler.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "container",
+      "purpose": "貨櫃",
+      "recognitionCues": "長箱體、轉角面與垂直壓紋",
+      "confusableWith": [
+        "package",
+        "warehouse"
+      ],
+      "sourceObservation": "Lucide的立體箱角與垂直壓紋比Phosphor門扣視角更適合呈現貨櫃。最新稿採Lucide構造，16px壓紋減成一筆，20/24保留兩筆；完稿回比，側面小格更開放，另將壓紋收在側面內，消除sharp頂面上的小凸刺。",
+      "references": [
+        {
+          "name": "container",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/container.svg",
+          "localPath": "references/atlas-01/lucide-container.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/container.svg",
+          "sha256": "8a41c445ba181b69b4ccf652f46fec5df0f410d64fff5e2cc202600b4862c633",
+          "license": "ISC AND MIT",
+          "sourceName": "container",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "container",
+          "library": "Phosphor",
+          "repository": "phosphor-icons/core",
+          "commit": "2b75f3ad12b420c9504ef05df8d2564a28f8500e",
+          "path": "assets/regular/shipping-container.svg",
+          "localPath": "references/atlas-01/phosphor-shipping-container.svg",
+          "url": "https://github.com/phosphor-icons/core/blob/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular/shipping-container.svg",
+          "sha256": "0f70a9d8534e0c16af425fa03a4282372da2c2a0101049d088e0e913ea8c8d5c",
+          "license": "MIT",
+          "sourceName": "shipping-container",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "機械與建物均呈現可見外形，不需虛線暗示隱藏部件。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "透過完整留白和接縫區分部件，無須以淡化掩蓋擁擠。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "以單色輪廓傳達工業設備，不需金屬或磚面材質漸層。"
+        }
+      },
+      "change": {
+        "kind": "modified",
+        "before": {
+          "path": "references/atlas-craft-20/master-before.json",
+          "variantsSha256": "db468f054994b1f2e5c195527b59fd18404d2cebb04459d54dcee739503a4838"
+        },
+        "reason": "三個可見平面共用轉角和分界，側面壓紋按各尺寸分配；壓紋墨線裁在側面多邊形內，不穿過斜頂邊進入上表面。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "1e78cbc8ee2ee6af037a8d146a394d29e0ca60224fcc1de626c69801e3299e11",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/90b-container-robot/review.html",
+            "sha256": "b9d4a23d18bd5d68e24d9b1ad655c34d0c793ac41cdfdabe72cad245a4ac987e"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/90b-container-robot/definitions.json",
+            "sha256": "a2e6216365f1136b94f6bd1f64682772ee6df848ffa99deb5b50861c74de4a8d"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/90b-container-robot/light-1x.png",
+            "sha256": "5661637c11d4e3dbeb835bfc3f3fe7ef6647ea2eba6944a7b57ed0f19f593266"
+          },
+          {
+            "path": "docs/review/atlas-craft-20/final/definitions.json",
+            "sha256": "760a6ef1dbc97df7be8fcda1cb63ab79317a4533a8278fcff8b3854263ee0a9e"
+          },
+          {
+            "path": "docs/review/atlas-craft-20/final/22-industry.html",
+            "sha256": "89d4dcad95cf83ddc6c83da3cc5f1d0bbbb90ed4c20e697f8c019e168bbee966"
+          },
+          {
+            "path": "docs/review/atlas-craft-20/final/22-industry-light-1x.png",
+            "sha256": "61473a6384607ea3486e760b00a0066c2f5f90203f68ad87f165132b366b1bb2"
+          },
+          {
+            "path": "docs/review/atlas-craft-20/final/22-industry-light-2x.png",
+            "sha256": "dd3642910139f363fb95fbab2b162bd4b98e559b4dd354152d30b770bd218306"
+          },
+          {
+            "path": "docs/review/atlas-craft-20/final/22-industry-dark-1x.png",
+            "sha256": "de12e3f1d678c72919707a27e0f7be048a15c092af8f6aefec8d2a2b6de7dcda"
+          },
+          {
+            "path": "docs/review/atlas-craft-20/final/22-industry-dark-2x.png",
+            "sha256": "5c84cb4f066d097553c37d3955b6a3c2bb250ec2a4a8f0c35ec6ae0198b12a47"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-20/final/22-industry-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-20/final/22-industry-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-20/final/22-industry-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-20/final/22-industry-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Lucide",
+        "license": "ISC",
+        "licenseFile": "licenses/lucide.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "robot-arm",
+      "purpose": "機械手臂",
+      "recognitionCues": "支座、關節、連續臂桿與夾爪",
+      "confusableWith": [
+        "crane-tower",
+        "person-standing"
+      ],
+      "sourceObservation": "Lucide用圓鉸點與開放夾爪表現機械臂，MDI有更粗的平行支柱及三線夾爪。最新稿採Lucide較輕的輪廓，稍放大關節與夾口；完稿回比，16px仍見關節孔，連桿共用同一軸線，sharp底座接點已消除端帽凸角。",
+      "references": [
+        {
+          "name": "robot-arm",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/robot-arm.svg",
+          "localPath": "references/atlas-01/lucide-robot-arm.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/robot-arm.svg",
+          "sha256": "6e39b6dd23fc10691263c55fbdf176a8abe5c2d79680d3dec2556f7af0a655ed",
+          "license": "ISC AND MIT",
+          "sourceName": "robot-arm",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "robot-arm",
+          "library": "Material Design Icons",
+          "repository": "Templarian/MaterialDesign",
+          "commit": "2424e748e0cc63ab7b9c095a099b9fe239b737c0",
+          "path": "svg/robot-industrial-outline.svg",
+          "localPath": "references/atlas-01/mdi-robot-industrial-outline.svg",
+          "url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/robot-industrial-outline.svg",
+          "sha256": "b44f109f2d2e53228bd125e0d00a7eee1f490479f22a8cfc40ad4b23f35f903f",
+          "license": "Apache-2.0",
+          "sourceName": "robot-industrial-outline",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "機械與建物均呈現可見外形，不需虛線暗示隱藏部件。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "透過完整留白和接縫區分部件，無須以淡化掩蓋擁擠。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "以單色輪廓傳達工業設備，不需金屬或磚面材質漸層。"
+        }
+      },
+      "change": {
+        "kind": "modified",
+        "before": {
+          "path": "references/atlas-craft-20/master-before.json",
+          "variantsSha256": "ffc198fdfd7243efcd51f91ecdb0bff7b678d159bc311226b81bcdf9407cf8f8"
+        },
+        "reason": "支柱、鉸點與水平臂按共同關節位置構造，兩片夾爪由同一頂點展開；支柱接底座使用平端收口，圈內不露出連桿線，不添第二圈鉸鏈。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "ae88677074808017f0b051f66638a5d8fbca47db01e719d351016a4aaca6ee13",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/90b-container-robot/review.html",
+            "sha256": "b9d4a23d18bd5d68e24d9b1ad655c34d0c793ac41cdfdabe72cad245a4ac987e"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/90b-container-robot/definitions.json",
+            "sha256": "a2e6216365f1136b94f6bd1f64682772ee6df848ffa99deb5b50861c74de4a8d"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/90b-container-robot/light-1x.png",
+            "sha256": "5661637c11d4e3dbeb835bfc3f3fe7ef6647ea2eba6944a7b57ed0f19f593266"
+          },
+          {
+            "path": "docs/review/atlas-craft-20/final/definitions.json",
+            "sha256": "760a6ef1dbc97df7be8fcda1cb63ab79317a4533a8278fcff8b3854263ee0a9e"
+          },
+          {
+            "path": "docs/review/atlas-craft-20/final/22-industry.html",
+            "sha256": "89d4dcad95cf83ddc6c83da3cc5f1d0bbbb90ed4c20e697f8c019e168bbee966"
+          },
+          {
+            "path": "docs/review/atlas-craft-20/final/22-industry-light-1x.png",
+            "sha256": "61473a6384607ea3486e760b00a0066c2f5f90203f68ad87f165132b366b1bb2"
+          },
+          {
+            "path": "docs/review/atlas-craft-20/final/22-industry-light-2x.png",
+            "sha256": "dd3642910139f363fb95fbab2b162bd4b98e559b4dd354152d30b770bd218306"
+          },
+          {
+            "path": "docs/review/atlas-craft-20/final/22-industry-dark-1x.png",
+            "sha256": "de12e3f1d678c72919707a27e0f7be048a15c092af8f6aefec8d2a2b6de7dcda"
+          },
+          {
+            "path": "docs/review/atlas-craft-20/final/22-industry-dark-2x.png",
+            "sha256": "5c84cb4f066d097553c37d3955b6a3c2bb250ec2a4a8f0c35ec6ae0198b12a47"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-20/final/22-industry-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-20/final/22-industry-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-20/final/22-industry-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-20/final/22-industry-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Lucide",
+        "license": "ISC",
+        "licenseFile": "licenses/lucide.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "construction-barrier",
+      "purpose": "施工圍欄",
+      "recognitionCues": "橫向警示板、斜紋與兩側支腳",
+      "confusableWith": [
+        "wall",
+        "fence"
+      ],
+      "sourceObservation": "Lucide斜紋板與長直腳簡潔，Tabler另加水平腳掌。最新稿保留Lucide構造並將斜紋減為兩筆；完稿回比16px，斜向白帶完整而不過密，警示板與支柱相接，未加入狹窄反光小格。",
+      "references": [
+        {
+          "name": "construction-barrier",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/construction.svg",
+          "localPath": "references/atlas-01/lucide-construction.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/construction.svg",
+          "sha256": "75eadbc2abdde6da2b16d55c3d100280bf6bde60d192978d7752930d8cc508a7",
+          "license": "ISC AND MIT",
+          "sourceName": "construction",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "construction-barrier",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/barrier-block.svg",
+          "localPath": "references/atlas-01/tabler-barrier-block.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/barrier-block.svg",
+          "sha256": "dcd2fbeda0a09eda069f647470cefd9c3b6d3553150c2de7f0c3a3e063022310",
+          "license": "MIT",
+          "sourceName": "barrier-block",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "機械與建物均呈現可見外形，不需虛線暗示隱藏部件。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "透過完整留白和接縫區分部件，無須以淡化掩蓋擁擠。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "以單色輪廓傳達工業設備，不需金屬或磚面材質漸層。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-20/master-before.json",
+          "variantsSha256": "03ca8be0e546f54f7eea32f80495fe5c5ea039076bca3c70e82748467babeff4"
+        },
+        "reason": "長橫板與兩根支柱形成明確施工圍欄，兩筆斜紋裁在板內，支柱只露出板外；主板按角型微調真實角半徑，不以虛線或材質裝飾補語意。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "4323320d20762773660871eef399f611110f3b35e96f6278620c5dae204ca9bd",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/91-barrier-wall/review.html",
+            "sha256": "e27e3d4aff985f6a8c83bee0239b3905aa8c4e0a9c2d76bc66b5aeac261c6e41"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/91-barrier-wall/definitions.json",
+            "sha256": "dbb278e5cc0928e12d7bf115139385c5ee771cb82e01681472346f5d620d120d"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/91-barrier-wall/light-1x.png",
+            "sha256": "cd8adb2e7079915230e56444ac3076e0a439728b505479639f7cddd18b3dd692"
+          },
+          {
+            "path": "docs/review/atlas-craft-20/final/definitions.json",
+            "sha256": "760a6ef1dbc97df7be8fcda1cb63ab79317a4533a8278fcff8b3854263ee0a9e"
+          },
+          {
+            "path": "docs/review/atlas-craft-20/final/22-industry.html",
+            "sha256": "89d4dcad95cf83ddc6c83da3cc5f1d0bbbb90ed4c20e697f8c019e168bbee966"
+          },
+          {
+            "path": "docs/review/atlas-craft-20/final/22-industry-light-1x.png",
+            "sha256": "61473a6384607ea3486e760b00a0066c2f5f90203f68ad87f165132b366b1bb2"
+          },
+          {
+            "path": "docs/review/atlas-craft-20/final/22-industry-light-2x.png",
+            "sha256": "dd3642910139f363fb95fbab2b162bd4b98e559b4dd354152d30b770bd218306"
+          },
+          {
+            "path": "docs/review/atlas-craft-20/final/22-industry-dark-1x.png",
+            "sha256": "de12e3f1d678c72919707a27e0f7be048a15c092af8f6aefec8d2a2b6de7dcda"
+          },
+          {
+            "path": "docs/review/atlas-craft-20/final/22-industry-dark-2x.png",
+            "sha256": "5c84cb4f066d097553c37d3955b6a3c2bb250ec2a4a8f0c35ec6ae0198b12a47"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-20/final/22-industry-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-20/final/22-industry-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-20/final/22-industry-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-20/final/22-industry-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Lucide",
+        "license": "ISC",
+        "licenseFile": "licenses/lucide.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "wall",
+      "purpose": "磚牆",
+      "recognitionCues": "三層錯縫磚砌牆面",
+      "confusableWith": [
+        "construction-barrier",
+        "layout-columns"
+      ],
+      "sourceObservation": "Lucide是較高的方形磚面，Phosphor用較寬的三層錯縫磚。最新稿採Phosphor橫向比例；完稿回比16/20/24，三層高度與中排兩側小磚空間均衡，錯縫可辨，沒有再加第四層讓縫線黏合。",
+      "references": [
+        {
+          "name": "wall",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/brick-wall.svg",
+          "localPath": "references/atlas-01/lucide-brick-wall.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/brick-wall.svg",
+          "sha256": "819daf0e7b1aec7a40d725c1400e698b6f94015f2fc5db8f33bde133be8e55af",
+          "license": "ISC AND MIT",
+          "sourceName": "brick-wall",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "wall",
+          "library": "Phosphor",
+          "repository": "phosphor-icons/core",
+          "commit": "2b75f3ad12b420c9504ef05df8d2564a28f8500e",
+          "path": "assets/regular/wall.svg",
+          "localPath": "references/atlas-01/phosphor-wall.svg",
+          "url": "https://github.com/phosphor-icons/core/blob/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular/wall.svg",
+          "sha256": "ff673d6e917fa094771079158a97e56075d6c5602636b529a4f9fc77850b143b",
+          "license": "MIT",
+          "sourceName": "wall",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "機械與建物均呈現可見外形，不需虛線暗示隱藏部件。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "透過完整留白和接縫區分部件，無須以淡化掩蓋擁擠。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "以單色輪廓傳達工業設備，不需金屬或磚面材質漸層。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-20/master-before.json",
+          "variantsSha256": "07a9c84258bccd638ea386a79471162bd65426e3c534f9921731c6ddf682deff"
+        },
+        "reason": "牆面用三層錯縫分割，上下層中線對齊，中層左右各一條短縫；所有內線收在外框內，維持橫向建材的比例和均勻磚層。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "849b4ebfa897cd803220842b26cd64d2c1d5c2620e0b3c3138883ae46caa3bde",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/91-barrier-wall/review.html",
+            "sha256": "e27e3d4aff985f6a8c83bee0239b3905aa8c4e0a9c2d76bc66b5aeac261c6e41"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/91-barrier-wall/definitions.json",
+            "sha256": "dbb278e5cc0928e12d7bf115139385c5ee771cb82e01681472346f5d620d120d"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/91-barrier-wall/light-1x.png",
+            "sha256": "cd8adb2e7079915230e56444ac3076e0a439728b505479639f7cddd18b3dd692"
+          },
+          {
+            "path": "docs/review/atlas-craft-20/final/definitions.json",
+            "sha256": "760a6ef1dbc97df7be8fcda1cb63ab79317a4533a8278fcff8b3854263ee0a9e"
+          },
+          {
+            "path": "docs/review/atlas-craft-20/final/22-industry.html",
+            "sha256": "89d4dcad95cf83ddc6c83da3cc5f1d0bbbb90ed4c20e697f8c019e168bbee966"
+          },
+          {
+            "path": "docs/review/atlas-craft-20/final/22-industry-light-1x.png",
+            "sha256": "61473a6384607ea3486e760b00a0066c2f5f90203f68ad87f165132b366b1bb2"
+          },
+          {
+            "path": "docs/review/atlas-craft-20/final/22-industry-light-2x.png",
+            "sha256": "dd3642910139f363fb95fbab2b162bd4b98e559b4dd354152d30b770bd218306"
+          },
+          {
+            "path": "docs/review/atlas-craft-20/final/22-industry-dark-1x.png",
+            "sha256": "de12e3f1d678c72919707a27e0f7be048a15c092af8f6aefec8d2a2b6de7dcda"
+          },
+          {
+            "path": "docs/review/atlas-craft-20/final/22-industry-dark-2x.png",
+            "sha256": "5c84cb4f066d097553c37d3955b6a3c2bb250ec2a4a8f0c35ec6ae0198b12a47"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-20/final/22-industry-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-20/final/22-industry-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-20/final/22-industry-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-20/final/22-industry-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Phosphor",
+        "license": "MIT",
+        "licenseFile": "licenses/phosphor.txt"
+      },
+      "remaining": []
+    }
+  ]
+}

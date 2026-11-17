@@ -270,6 +270,7 @@ test('shared language, theme and document search controls',async({page})=>{
  await expect(page).toHaveURL(/\/tw\/guide\/svg/)
  await expect(page.locator('html')).toHaveAttribute('lang','zh-TW')
  expect(await page.locator('h2#svg').evaluate(e=>parseFloat(getComputedStyle(e).fontSize))).toBeGreaterThan(20)
+ await expect(page.locator('astro-island[ssr]')).toHaveCount(0)
  await page.keyboard.press('Control+k')
  const dialog=page.getByRole('dialog',{name:'搜尋文件',exact:true})
  await expect(dialog).toBeVisible()

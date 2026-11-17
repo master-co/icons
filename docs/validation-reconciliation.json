@@ -1,0 +1,199 @@
+{
+  "schemaVersion": 1,
+  "completedAt": "2026-11-17T12:30:03.550Z",
+  "status": "requested-regressions-fixed-and-validated",
+  "fixes": [
+    "Original compatibility tests now recognize the exact, independently reviewed 15-icon refinement scope.",
+    "Craft 05 is checked against its immutable final masters and preserved historical decisions; current masters and evidence are checked separately.",
+    "Every generated Svelte component is type-checked in bounded groups to avoid heap exhaustion.",
+    "Search and reference pagination expectations include all current additions and actual source counts; input waits for initialization.",
+    "Preview URL writes are idempotent to avoid WebKit rapid-pagination failures.",
+    "macOS Firefox tests use isolated application data.",
+    "Astro SVG runtime resolves through Vite, preventing the cold-dev document route 500.",
+    "Website readiness checks wait for lazy icons and hydrated document search."
+  ],
+  "preservation": {
+    "filesChecked": 7977,
+    "refinedIconsPreserved": [
+      "calendar-plus",
+      "check-circle",
+      "file-code",
+      "file-json",
+      "file-question",
+      "folder-down",
+      "folder-up",
+      "keyboard-return",
+      "link",
+      "list-minus",
+      "list-plus",
+      "subscript",
+      "superscript",
+      "unlink",
+      "volume"
+    ],
+    "refinedSVGsPreserved": 135,
+    "onlyGeometryChange": [
+      {
+        "path": "packages/icons/src/atlas/music-shapes.mjs",
+        "before": "e8e6a38b1c13955844f3c39aeaeca7e477044db3068adb44687437754c72af55",
+        "after": "ebd09d40a90e0c05cb2a99a37968e0a74f98fa768ba7333de5937b2a702bc8fb"
+      },
+      {
+        "path": "packages/icons/icons/16/sharp/trumpet.svg",
+        "before": "9f9a0044778987b9a42136812c49062614bfc9d685e3c97fb3c5e548262ba66f",
+        "after": "6a5a8902ac4e0d3ad10c78a612e599a3d306d94b8914a5c19dcbdb474fc9c20e"
+      }
+    ],
+    "review": "docs/review/atlas-craft-30/ledger.json"
+  },
+  "negativeControls": [
+    {
+      "mutated": "check-circle",
+      "inMemoryOnly": true,
+      "rejected": true
+    },
+    {
+      "mutated": "search",
+      "inMemoryOnly": true,
+      "rejected": true
+    }
+  ],
+  "checks": [
+    {
+      "name": "workspace-validation",
+      "status": "passed",
+      "result": "passed",
+      "log": "work/atlas-01/reconcile/workspace-validation.log",
+      "sha256": "b32140afe335f7f3dbe26195acf4ef27922c973e63c611aca07070f59e5db33c",
+      "finished": "2026-11-17T12:25:48.773Z"
+    },
+    {
+      "name": "workspace-unit-tests",
+      "status": "passed",
+      "result": "46/46",
+      "log": "work/atlas-01/reconcile/workspace-tests.log",
+      "sha256": "96c1a3992b0f10fdaf91952905cf5f8dcd426c857e182e6259bd4946dca94721",
+      "finished": "2026-11-17T12:25:50.552Z"
+    },
+    {
+      "name": "latest-icon-build-review-types-package",
+      "status": "passed",
+      "result": "passed",
+      "log": "work/atlas-01/reconcile/latest-icons.log",
+      "sha256": "d611392d22d16a7e60455a35a9c0bc8dfa7ab96fff39a0c3d9285ee62256d4c4",
+      "finished": "2026-11-17T12:23:02.163Z"
+    },
+    {
+      "name": "site-build",
+      "status": "passed",
+      "result": "24 pages",
+      "log": "work/atlas-01/reconcile/latest-site-build.log",
+      "sha256": "55a94068aa081cca4e0a03868443433570057d0beac1d890704028d02df14727",
+      "finished": "2026-11-17T12:23:39.849Z"
+    },
+    {
+      "name": "site-types",
+      "status": "passed",
+      "result": "0 errors, 0 warnings",
+      "log": "work/atlas-01/reconcile/latest-site-types.log",
+      "sha256": "e9081c79ac14d762ce5e4573f77c9b14194c79d26793d7517c23bc40db95199c",
+      "finished": "2026-11-17T12:23:52.714Z"
+    },
+    {
+      "name": "reproducible",
+      "status": "passed",
+      "result": "151572 outputs identical across timezones",
+      "log": "work/atlas-01/reconcile/latest-reproducible.log",
+      "sha256": "b49ee721642c690ddb43bd070cd8a620bb4e9db46e726cce79cd6af62272f4e8",
+      "finished": "2026-11-17T12:24:48.588Z"
+    },
+    {
+      "name": "framework-browser",
+      "status": "passed",
+      "result": "3/3",
+      "log": "work/atlas-01/reconcile/isolated-frameworks.log",
+      "sha256": "c092b19915f72ca497ba23d0c50834048c5d40c66695f0c5c859a65ea032cb1f",
+      "finished": "2026-11-17T12:05:28.685Z"
+    },
+    {
+      "name": "preview-browser",
+      "status": "passed",
+      "result": "54/54",
+      "log": "work/atlas-01/reconcile/isolated-browser.log",
+      "sha256": "c36bdd7cf3ad27562d45d02d444785ce968d33f9f24f61dfa2fe7e119be10f0f",
+      "finished": "2026-11-17T12:09:40.766Z"
+    },
+    {
+      "name": "site-browser",
+      "status": "passed",
+      "result": "75/75",
+      "log": "work/atlas-01/reconcile/latest-site.log",
+      "sha256": "d355207eaa022b2f95bf9b814bc080754bac01236fb2daf6e6f1330fbf1d2de1",
+      "finished": "2026-11-17T12:28:19.760Z"
+    },
+    {
+      "name": "site-cold-start",
+      "status": "passed",
+      "result": "2/2",
+      "log": "work/atlas-01/reconcile/latest-site-dev.log",
+      "sha256": "2f9688eb4d462379643aa716aede0e40ec55115274554b32eff2bf95d073ccd0",
+      "finished": "2026-11-17T12:28:49.309Z"
+    },
+    {
+      "name": "site-readiness-repeat",
+      "status": "passed",
+      "result": "18/18",
+      "log": "work/atlas-01/reconcile/site-focus-repeat.log",
+      "sha256": "a2fc1de0e0d37dd3a4003f32a981db198eacdd9cdd3f9a06b3ee9f145550fd6b",
+      "finished": "2026-11-17T12:27:37.600Z"
+    },
+    {
+      "name": "atlas-scope",
+      "status": "passed",
+      "result": "310 names / 2790 SVG / 9 ZIP",
+      "log": "work/atlas-01/reconcile/atlas-validation.log",
+      "sha256": "30670abfdb8c2bc0ab9b56bdc521ea8e754e78ad6c2f5d54a9b605a332182e62",
+      "finished": "2026-11-17T12:25:52.103Z"
+    },
+    {
+      "name": "atlas-package",
+      "status": "passed",
+      "result": "round trip passed",
+      "log": "work/atlas-01/reconcile/atlas-package.log",
+      "sha256": "71934ff80291bcd62f5433d30079ac0d6fcaaa12aee988d59d126774064240dd",
+      "finished": "2026-11-17T12:25:52.572Z"
+    }
+  ],
+  "snapshot": {
+    "path": "work/atlas-01/reconcile/checkout/",
+    "inputs": 7642,
+    "manifest": "work/atlas-01/reconcile/tested-inputs.json",
+    "manifestSha256": "dc9773a825360033841faccbf52f06a8a2d027eb92e9bdb95bc037ae0bf0f8c2",
+    "currentNonWebsiteInputsMatch": true,
+    "concurrentWebsiteChangesOutsideSnapshot": [
+      "site/components/Explorer.svelte",
+      "site/components/InlineIcon.svelte",
+      "site/i18n/en.json",
+      "site/i18n/tw.json",
+      "site/scripts/check-dev-updates.mjs",
+      "site/styles/icons.css",
+      "site/styles/site.ts"
+    ],
+    "limitation": "Website checks cover the verified integration snapshot. Subsequent modal work in the other active chat is preserved and is not claimed as tested here. Current workspace icon validation and all 46 unit tests also passed directly."
+  },
+  "research": [
+    {
+      "topic": "Vite environment transformation",
+      "url": "https://vite.dev/guide/env-and-mode.html"
+    },
+    {
+      "topic": "macOS Firefox application-data isolation",
+      "url": "https://github.com/microsoft/playwright/issues/42768"
+    }
+  ],
+  "scopeNotes": [
+    "No commit or push performed in this turn.",
+    "Historical evidence and other chats’ refinements were retained."
+  ],
+  "commitVerification": "docs/atlas-commit-verification.json"
+}

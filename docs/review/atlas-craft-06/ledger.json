@@ -1,0 +1,315 @@
+{
+  "schemaVersion": 2,
+  "reviewer": "Codex (AI)",
+  "userApproval": "pending",
+  "icons": [
+    {
+      "name": "soup",
+      "purpose": "湯品",
+      "recognitionCues": "寬碗口、收腹短底足與兩筆上升蒸氣",
+      "confusableWith": [
+        "salad",
+        "cooking-pot"
+      ],
+      "sourceObservation": "Tabler soup用碗腹收進短底足，外輪廓直接表達支承；Lucide soup在圓腹底部加短水平線。舊Master只保留均勻圓腹，雖仍可辨識，卻忽略兩份來源的落點處理。現改用連續收腹與底足，原生大小能讀出碗的支承，同時維持內孔開放。",
+      "references": [
+        {
+          "name": "soup",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/soup.svg",
+          "localPath": "references/atlas-01/lucide-soup.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/soup.svg",
+          "sha256": "e8272ad08bf70332ce5f8f8b60d821a1347dfadcf57a95ce932ab4861cb9d5ef",
+          "license": "ISC AND MIT",
+          "sourceName": "soup",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "soup",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/soup.svg",
+          "localPath": "references/atlas-01/tabler-soup.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/soup.svg",
+          "sha256": "5eb86ea08feb147f365d495b12105d4deab02b399ded666d073b78b014c3127e",
+          "license": "MIT",
+          "sourceName": "soup",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "餐點的實體輪廓沒有隱藏或未完成邊界。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以部件留白區別食材和器皿，不以淡化處理擁擠。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "食物以單色平面線條表意，無連續漸層需求。"
+        }
+      },
+      "change": {
+        "kind": "modified",
+        "before": {
+          "path": "references/atlas-craft-06/master-before.json",
+          "variantsSha256": "d1fb75e5b767240bce0c6ec435253f15e886b23807b5b4e02bb6c076e178f4fc"
+        },
+        "reason": "依使用者指出的物件語意缺口回修：將均勻圓腹改為收腹接短底足的連續外輪廓，採Tabler式支承構造，保留寬碗孔與兩筆蒸氣；不另外疊加近乎黏合的底線。16/20/24明暗及DPR1/2已實際查看。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "864a82de6fb30d259c05d920bf2650c022322eaf8dafc052a8d6a287b635f268",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/36/review.html",
+            "sha256": "b6fabe71db55c049de6dbc2d80e3a6c8287a694f28a983dec5445c3c5bcd413d"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/36/definitions.json",
+            "sha256": "36a469d4dbf3ae3068034c1ff4d563680567cdf704128c1baef9a43a7bae1886"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/36/light-1x.png",
+            "sha256": "e353a75c529abfd96b6c688028e0e5a3d29206a61d935b688905c9da0c5fae60"
+          },
+          {
+            "path": "docs/review/atlas-craft-06/families/definitions.json",
+            "sha256": "305ace26d7d27db04aa32e32f7f6792e1b7be9f71730ac010f96a65be591925e"
+          },
+          {
+            "path": "docs/review/atlas-craft-06/families/08-food.html",
+            "sha256": "5e501410e3600278475788aea5a1b1c7180bfcb8751e0d15710d1f6440fd1f9e"
+          },
+          {
+            "path": "docs/review/atlas-craft-06/families/08-food-light-1x.png",
+            "sha256": "722bfe650a4364fd16272ea21c99ba4b3d6f06afad7dc39d47466c608ce27873"
+          },
+          {
+            "path": "docs/review/atlas-craft-06/families/08-food-light-2x.png",
+            "sha256": "5acdaf395a7220c30e5ec4e620382831719a856403f9d2a263f95a77252c5cc8"
+          },
+          {
+            "path": "docs/review/atlas-craft-06/families/08-food-dark-1x.png",
+            "sha256": "19988b3d27ed2314e80ed9a2cca85d8c2b76d47f68c878bae4dc3b0b4ea0f27a"
+          },
+          {
+            "path": "docs/review/atlas-craft-06/families/08-food-dark-2x.png",
+            "sha256": "c5080bfe540411ac5ec0035f9c5c962903c20eacfd186503a9fb0ac7ab801e5a"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-06/families/08-food-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-06/families/08-food-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-06/families/08-food-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-06/families/08-food-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Tabler",
+        "license": "MIT",
+        "licenseFile": "licenses/tabler.txt"
+      },
+      "remaining": []
+    }
+  ],
+  "history": [
+    {
+      "name": "soup",
+      "purpose": "湯品",
+      "recognitionCues": "寬口圓碗與兩筆上升蒸氣",
+      "confusableWith": [
+        "salad",
+        "cooking-pot"
+      ],
+      "sourceObservation": "Lucide以三筆蒸氣、湯匙及平底表意，Tabler以三筆蒸氣和折角碗表意。Master採兩筆相隔較寬的蒸氣與連續圓腹，省略湯匙和底座線。",
+      "references": [
+        {
+          "name": "soup",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/soup.svg",
+          "localPath": "references/atlas-01/lucide-soup.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/soup.svg",
+          "sha256": "e8272ad08bf70332ce5f8f8b60d821a1347dfadcf57a95ce932ab4861cb9d5ef",
+          "license": "ISC AND MIT",
+          "sourceName": "soup",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "soup",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/soup.svg",
+          "localPath": "references/atlas-01/tabler-soup.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/soup.svg",
+          "sha256": "5eb86ea08feb147f365d495b12105d4deab02b399ded666d073b78b014c3127e",
+          "license": "MIT",
+          "sourceName": "soup",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "餐點的實體輪廓沒有隱藏或未完成邊界。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以部件留白區別食材和器皿，不以淡化處理擁擠。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "食物以單色平面線條表意，無連續漸層需求。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-04/master-before.json",
+          "variantsSha256": "d1fb75e5b767240bce0c6ec435253f15e886b23807b5b4e02bb6c076e178f4fc"
+        },
+        "reason": "湯碗共用一條口緣，碗內不加水面；蒸氣止於碗口上方，避免多條水平線把小尺寸碗孔切碎。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "311ee1b003993429cbb38c165fe5d6cfe483e5ae06b22b2cd4a69ad5d6ba4d5a",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/28/review.html",
+            "sha256": "44de222520baf1288305e70e6c63d294efdfcb488c01c5e873e82f924840ae12"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/28/definitions.json",
+            "sha256": "aa158ec3ef5cd0f2fbaebc751fee9e781d32f9699f1e8aa67c3a90022ba76ea7"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/28/light-1x.png",
+            "sha256": "99e5cf725786a8ce5a5f62b268979ddc1cc30f0a4f96ca87e354fff2f6ff8b74"
+          },
+          {
+            "path": "docs/review/atlas-craft-04/families/definitions.json",
+            "sha256": "a98d37b6a89de7e7c8801d470d14c710158f73028c8fee4265fd463778889ebb"
+          },
+          {
+            "path": "docs/review/atlas-craft-04/families/08-food.html",
+            "sha256": "826f6cb52c8ab2afb424c08009599f6a1e1c3c6c49f2eec2013582208513f327"
+          },
+          {
+            "path": "docs/review/atlas-craft-04/families/08-food-light-1x.png",
+            "sha256": "de82d50f4d7a2fa4d37d16b2e04d929d0b578db6bb5f221a8a099efba5eafd35"
+          },
+          {
+            "path": "docs/review/atlas-craft-04/families/08-food-light-2x.png",
+            "sha256": "f17b946f910ec9f7af869e6f9e4dcdf679343a7b7d0c7037d5be6141f663fba7"
+          },
+          {
+            "path": "docs/review/atlas-craft-04/families/08-food-dark-1x.png",
+            "sha256": "4e5bbeb1e01084d4c7786b2294efbd29f5a9d100e47dcae76daaf25a4290f282"
+          },
+          {
+            "path": "docs/review/atlas-craft-04/families/08-food-dark-2x.png",
+            "sha256": "ec0e05acf21ad6184a340d8fdcbf5ee70bb0570222d840270772f13baf870745"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-04/families/08-food-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-04/families/08-food-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-04/families/08-food-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-04/families/08-food-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "independent-construction"
+      },
+      "remaining": []
+    }
+  ],
+  "retainedObservations": {
+    "salad": "沙拉保留寬口圓腹盛菜碗及葉菜分組；此處選不同器型，不把湯碗底足變成所有碗的固定要求。已在同尺寸來源及新家族明暗圖回看。"
+  }
+}

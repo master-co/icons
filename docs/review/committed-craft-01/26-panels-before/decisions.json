@@ -1,0 +1,22 @@
+{
+  "reviewer": "Codex (AI)",
+  "notes": {
+    "panel-left": "保留：左側窄欄約占三分之一，主內容留白明確大於側欄；Lucide及Tabler同分區策略。直分界兩端準確接入上下框，rounded外角不影響分界收口。",
+    "panel-right": "保留：右側窄欄與panel-left對應，左右鏡像的主內容空間一致；兩份來源同構造。16px窄欄仍有內腔，不因圓角而退化成一條粗豎線。",
+    "panel-top": "保留：上方較薄橫區與下方內容區形成頂部面板，和等分layout-rows有明顯比例差；Lucide與Tabler同上分區。內線保持水平，兩端不突出外殼。",
+    "panel-bottom": "保留：較薄下區維持與panel-top相同的分區重量；兩份來源同底部策略。16px底區空白存活，上部留白不被額外符號干擾，適合單純顯示版面位置。",
+    "panel-left-open": "保留：向右chevron位於右側主區，提示左面板展開方向；Lucide和Tabler同策略。現稿箭尖與右框、箭尾與分界都有間隔，主區未為箭頭額外變寬。",
+    "panel-left-close": "保留：向左chevron回指左分界，與open僅改方向、主體比例不變；兩份來源同方向。箭尖未觸分界，16px仍可分出側欄和內置箭頭。",
+    "panel-right-open": "保留：右側欄配向左chevron，展開方向與右面板位置一致；兩份來源同構造。左側主區的箭尾與分界、箭尖與外框留白平衡。",
+    "panel-right-close": "保留：向右chevron指回右側欄，與right-open成對，和left-close互為對稱構造；兩份來源同策略。sharp斜接尖端未侵入分界，rounded保留開口。",
+    "layout-columns": "保留：正中豎線將主框分為等寬兩欄，與左右側欄的偏分位置有明確差異；兩份來源同等分策略。中央共同邊界只有一筆，避免雙框疊加加粗。",
+    "layout-rows": "保留：正中橫線將主框分為等高兩列，與上下panel的偏分位置不同；兩份來源同等分構造。線段接框乾淨，16px上下空腔均衡，無需額外內容線。"
+  },
+  "modified": [],
+  "effects": "無虛線、透明度或漸層；分區線為實際版面共同邊界，箭頭以方向表達開合，不以淡化區域代替結構。",
+  "viewed": [
+    "1-dpr1.png",
+    "2-dpr1.png"
+  ],
+  "scope": "16/20/24 × sharp/soft/rounded; light/dark; 55% alongside text"
+}

@@ -1,5 +1,6 @@
 import {comparisonReferences as loadComparisonReferences} from './lib/review-data.mjs';
 import assert from 'node:assert/strict';
+import {isDeepStrictEqual} from 'node:util';
 import { readFile, readdir } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
 import { unzipSync, strFromU8 } from 'fflate';
@@ -16,7 +17,8 @@ const coreNames=await json('packages/icons/src/core-names.json');
 assert.equal(coreNames.length,48);
 const expansionScope=await json('packages/icons/src/expansion-scope.json');
 const expansionBaseline=await json('references/craft-03/master-before.json');
-const scope=[...await json('packages/icons/src/ui-scope.json'),...await json('packages/icons/src/organization-scope.json'),...await json('packages/icons/src/productivity-scope.json'),...expansionScope,...brandCatalog];
+const atlasScope=await json('packages/icons/src/atlas-scope.json');
+const scope=[...await json('packages/icons/src/ui-scope.json'),...await json('packages/icons/src/organization-scope.json'),...await json('packages/icons/src/productivity-scope.json'),...expansionScope,...atlasScope,...brandCatalog];
 assert.deepEqual(catalog.map(x=>x.name).sort(),[...coreNames,...scope.map(x=>x.name)].sort(),'Exact original + approved UI scope');
 assert.equal(manifest.conceptCount,conceptCount);
 const names=new Set(catalog.map(x=>x.name));
@@ -64,7 +66,7 @@ for(const item of manifest.inventory){
     for(const value of Object.values(attrs))if(typeof value==='number')assert.ok(Number.isFinite(value));
   }
   if(preservedNotices[item.name])assert.ok(source.includes(preservedNotices[item.name]));
-  if(adaptedSources[item.name]){assert.ok(source.includes(adaptedSources[item.name].copyright));assert.ok(source.includes('ISC License'));}
+  if(adaptedSources[item.name]){const ref=adaptedSources[item.name];assert.ok(source.includes(ref.copyright));assert.ok(source.includes((await readFile(ref.licenseFile,'utf8')).trim().replace(/--/g,'—')),item.name+': complete source license');}
 }
 const references = await json('references/manifest.json');
 assert.equal(references.references.length,48);
@@ -74,8 +76,13 @@ for(const ref of references.references){
 }
 const uiRefs=await loadComparisonReferences();
 const uiCatalog=catalog.filter(x=>x.category!=='brands');
-assert.equal(uiRefs.references.length,uiCatalog.length*2);
-for(const entry of uiCatalog)assert.equal(uiRefs.references.filter(r=>r.name===entry.name).length,2,entry.name);
+assert.ok(uiRefs.references.length>=uiCatalog.length*2);
+for(const entry of uiCatalog){
+  const refs=uiRefs.references.filter(r=>r.name===entry.name);
+  assert.ok(refs.length>=2,entry.name+': requires at least two comparisons');
+  assert.ok(new Set(refs.map(r=>r.library)).size>=2,entry.name+': requires distinct source libraries');
+  assert.equal(new Set(refs.map(r=>r.url)).size,refs.length,entry.name+': duplicate source');
+}
 // Brands use the actual identity source, not unrelated outline-library proxies.
 const brandReview=await json('docs/review/brands-01/evidence.json');
 const brandDecisions=await json('docs/review/brands-01/decisions.json');
@@ -102,14 +109,14 @@ for(const record of ledger.icons){
   assert.equal(record.visualReview.variantsSha256,sha(JSON.stringify(definitions[record.name].variants)),record.name+': geometry changed since review');
   if(record.change.kind==='new'){
     assert.equal(record.change.before,null,record.name+': new drawings must not fabricate a previous master');
-    assert.ok(expansionScope.some(r=>r.name===record.name),record.name+': not in approved new scope');
+    assert.ok([...expansionScope,...atlasScope].some(r=>r.name===record.name),record.name+': not in approved new scope');
     assert.ok(!(record.name in expansionBaseline),record.name+': existing drawing misclassified as new');
   }else{
     const path=record.change.before.path;
     if(!reviewBaselines.has(path))reviewBaselines.set(path,await json(path));
     const before=reviewBaselines.get(path);
     assert.equal(record.change.before.variantsSha256,sha(JSON.stringify(before[record.name].variants)),record.name+': incorrect before master');
-    const changed=JSON.stringify(definitions[record.name].variants)!==JSON.stringify(before[record.name].variants);
+    const changed=!isDeepStrictEqual(definitions[record.name].variants,before[record.name].variants);
     assert.equal(record.change.kind,changed?'modified':'retained',record.name+': decision does not describe actual change');
   }
   assert.ok(record.change.reason.length>20,record.name+': missing individual decision');
@@ -131,6 +138,9 @@ for(const name of await readdir('dist/downloads')){
   assert.ok(zip.LICENSE && zip['THIRD_PARTY_NOTICES.md']);
   assert.ok(zip['licenses/lucide.txt']);
   assert.ok(zip['licenses/simple-icons-CC0.txt'] && zip['licenses/simple-icons-DISCLAIMER.md'] && zip['licenses/brand-additions.txt']);
-  for(const name of Object.keys(adaptedSources))assert.match(strFromU8(zip[name+'.svg']),/ISC License/);
+  for(const [name,ref] of Object.entries(adaptedSources)){
+    assert.ok(zip[ref.licenseFile],name+': missing bundled license');
+    assert.ok(strFromU8(zip[name+'.svg']).includes(strFromU8(zip[ref.licenseFile]).trim().replace(/--/g,'—')),name+': missing SVG source notice');
+  }
 }
 console.log(`Validated ${conceptCount} base concepts / ${catalog.length} named drawings, ${total} SVG hashes, geometry, notices, 48 historical + ${uiRefs.references.length} current pinned references, and 9 licensed ZIPs.`);

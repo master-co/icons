@@ -1,0 +1,19 @@
+{
+  "reviewer": "Codex (AI)",
+  "notes": {
+    "table": "保留：頂部整列與下方左窄右寬的欄位構成表格，16px刪去一條橫分界，仍保留列與欄兩種訊號；Lucide為完整網格、Tabler較簡，現稿分區密度介於兩者。",
+    "table-row-add": "保留：一條空心橫列與下方加號直接表達新增列，橫列長寬比例清楚；Tabler單列、Phosphor雙列，現稿單列可避免16px平行線擁擠，加號與列底留白充足。",
+    "table-row-delete": "保留：同一橫列下方用叉號替代加號，增刪保持相同構圖；Tabler同單列策略、Hugeicons保留完整表格。現稿叉號不貼列底，16px與加號仍能區分。",
+    "table-column-add": "保留：從row-add整體旋轉得到直欄與右側加號，共用構造避免列／欄比例漂移；Tabler單欄、Phosphor雙欄。16px直欄內孔存在，加號左右伸展不碰框。",
+    "table-column-delete": "保留：直欄右側叉號與column-add使用同一主體，叉號中心距離穩定；Tabler同構造、Hugeicons完整表格較密。現稿直欄不因叉號變窄，留白和新增狀態平衡。",
+    "table-cells-merge": "保留：上下列分成兩格、中間列連成一整格，直接展示合併結果；Lucide與Hugeicons同結果式策略。三列內腔和中間通道在16px可辨，無需再加小箭頭造成擁擠。",
+    "table-cells-split": "保留：上、下為整列，中間增加豎向分界，與merge互補地展示拆分；兩份來源同構造。中央分界正確接入上下橫線，兩個中間格空白均衡且沒有雙描邊。"
+  },
+  "modified": [],
+  "effects": "無虛線、透明度或漸層；增刪符號以獨立位置表意，合併拆分直接呈現結果網格，不以淡化分界隱藏意義。",
+  "viewed": [
+    "1-dpr1.png",
+    "2-dpr1.png"
+  ],
+  "scope": "16/20/24 × sharp/soft/rounded; light/dark; 55% alongside text"
+}

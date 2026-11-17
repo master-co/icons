@@ -1,0 +1,357 @@
+{
+  "date": "2026-11-17",
+  "batch": "07-signals-before",
+  "reviewed": 20,
+  "remaining": 290,
+  "checks": [
+    {
+      "command": "bun run build:icons",
+      "result": "passed",
+      "names": 790,
+      "svgFiles": 7110
+    },
+    {
+      "command": "bun run build:review",
+      "result": "passed"
+    },
+    {
+      "command": "bun run validate",
+      "result": "passed",
+      "pinnedCurrentReferences": 1407,
+      "licensedZips": 9
+    },
+    {
+      "command": "node scripts/check-atlas.mjs",
+      "result": "passed",
+      "names": 310,
+      "collisions": [],
+      "errors": []
+    },
+    {
+      "command": "node scripts/check-atlas-recompare.mjs",
+      "result": "passed",
+      "outsideScopeUnchanged": 480,
+      "verifiedViewedImages": 80,
+      "verifiedSourceFiles": 40
+    },
+    {
+      "command": "node --test packages/icons/tests/contours.test.mjs packages/icons/tests/junctions.test.mjs packages/icons/tests/paint.test.mjs packages/icons/tests/occlusion.test.mjs",
+      "result": "passed",
+      "tests": 14
+    },
+    {
+      "check": "skill native renderer",
+      "result": "90 raster cases, 0 empty/clipped",
+      "viewed": [
+        "06-07-native/native-1-light-1x.png",
+        "06-07-native/native-1-dark-1x.png",
+        "06-07-native/context-light-1x.png"
+      ]
+    },
+    {
+      "command": "git diff --check",
+      "result": "passed"
+    }
+  ],
+  "limitation": "Twenty transport and travel icons completed individual aesthetic re-comparison; 290 remain in the full 310-icon scope. Engineering checks do not establish aesthetic approval.",
+  "history": [
+    {
+      "date": "2026-11-17",
+      "batch": "01-vehicles-candidate-1",
+      "reviewed": 3,
+      "remaining": 307,
+      "checks": [
+        {
+          "command": "bun run build:icons",
+          "result": "passed",
+          "names": 790,
+          "svgFiles": 7110
+        },
+        {
+          "command": "bun run build:review",
+          "result": "passed"
+        },
+        {
+          "command": "bun run validate",
+          "result": "passed",
+          "pinnedCurrentReferences": 1407,
+          "licensedZips": 9
+        },
+        {
+          "command": "node scripts/check-atlas.mjs",
+          "result": "passed",
+          "names": 310,
+          "collisions": [],
+          "errors": []
+        },
+        {
+          "command": "node scripts/check-atlas-recompare.mjs",
+          "result": "passed",
+          "outsideScopeUnchanged": 480,
+          "verifiedViewedImages": 24,
+          "verifiedSourceFiles": 12
+        },
+        {
+          "command": "node --test packages/icons/tests/contours.test.mjs packages/icons/tests/junctions.test.mjs packages/icons/tests/paint.test.mjs packages/icons/tests/occlusion.test.mjs",
+          "result": "passed",
+          "tests": 14
+        },
+        {
+          "check": "skill native renderer",
+          "result": "54 raster cases, 0 empty/clipped",
+          "viewed": [
+            "02-native/native-1-light-1x.png",
+            "02-native/native-1-dark-1x.png",
+            "02-native/context-light-1x.png"
+          ]
+        },
+        {
+          "command": "git diff --check",
+          "result": "passed"
+        }
+      ],
+      "limitation": "Engineering validation covers the current build. Only the three recorded icons completed this new aesthetic re-comparison."
+    },
+    {
+      "date": "2026-11-17",
+      "batch": "02-cycles-final",
+      "reviewed": 6,
+      "remaining": 304,
+      "checks": [
+        {
+          "command": "bun run build:icons",
+          "result": "passed",
+          "names": 790,
+          "svgFiles": 7110
+        },
+        {
+          "command": "bun run build:review",
+          "result": "passed"
+        },
+        {
+          "command": "bun run validate",
+          "result": "passed",
+          "pinnedCurrentReferences": 1407,
+          "licensedZips": 9
+        },
+        {
+          "command": "node scripts/check-atlas.mjs",
+          "result": "passed",
+          "names": 310,
+          "collisions": [],
+          "errors": []
+        },
+        {
+          "command": "node scripts/check-atlas-recompare.mjs",
+          "result": "passed",
+          "outsideScopeUnchanged": 480,
+          "verifiedViewedImages": 24,
+          "verifiedSourceFiles": 12
+        },
+        {
+          "command": "node --test packages/icons/tests/contours.test.mjs packages/icons/tests/junctions.test.mjs packages/icons/tests/paint.test.mjs packages/icons/tests/occlusion.test.mjs",
+          "result": "passed",
+          "tests": 14
+        },
+        {
+          "check": "skill native renderer",
+          "result": "54 raster cases, 0 empty/clipped",
+          "viewed": [
+            "02-native/native-1-light-1x.png",
+            "02-native/native-1-dark-1x.png",
+            "02-native/context-light-1x.png"
+          ]
+        },
+        {
+          "command": "git diff --check",
+          "result": "passed"
+        }
+      ],
+      "limitation": "Engineering validation covers the current build. Six recorded icons completed this new aesthetic re-comparison; 304 remain."
+    },
+    {
+      "date": "2026-11-17",
+      "batch": "03-flight-final",
+      "reviewed": 9,
+      "remaining": 301,
+      "checks": [
+        {
+          "command": "bun run build:icons",
+          "result": "passed",
+          "names": 790,
+          "svgFiles": 7110
+        },
+        {
+          "command": "bun run build:review",
+          "result": "passed"
+        },
+        {
+          "command": "bun run validate",
+          "result": "passed",
+          "pinnedCurrentReferences": 1407,
+          "licensedZips": 9
+        },
+        {
+          "command": "node scripts/check-atlas.mjs",
+          "result": "passed",
+          "names": 310,
+          "collisions": [],
+          "errors": []
+        },
+        {
+          "command": "node scripts/check-atlas-recompare.mjs",
+          "result": "passed",
+          "outsideScopeUnchanged": 480,
+          "verifiedViewedImages": 36,
+          "verifiedSourceFiles": 18
+        },
+        {
+          "command": "node --test packages/icons/tests/contours.test.mjs packages/icons/tests/junctions.test.mjs packages/icons/tests/paint.test.mjs packages/icons/tests/occlusion.test.mjs",
+          "result": "passed",
+          "tests": 14
+        },
+        {
+          "check": "skill native renderer",
+          "result": "54 raster cases, 0 empty/clipped",
+          "viewed": [
+            "03-native/native-1-light-1x.png",
+            "03-native/native-1-dark-1x.png",
+            "03-native/context-light-1x.png"
+          ]
+        },
+        {
+          "command": "git diff --check",
+          "result": "passed"
+        }
+      ],
+      "limitation": "Engineering validation covers the current build. Nine recorded icons completed this new aesthetic re-comparison; 301 remain.",
+      "resolvedValidationIssues": [
+        "A check ran before build:review completed and reported stale plane definitions; rerun after the completed build passed.",
+        "The helicopter review named drone, which is outside the catalog. Removed that comparison label from the decision and both ledgers; full validation passed."
+      ]
+    },
+    {
+      "date": "2026-11-17",
+      "batch": "04-marine-final",
+      "reviewed": 12,
+      "remaining": 298,
+      "checks": [
+        {
+          "command": "bun run build:icons",
+          "result": "passed",
+          "names": 790,
+          "svgFiles": 7110
+        },
+        {
+          "command": "bun run build:review",
+          "result": "passed"
+        },
+        {
+          "command": "bun run validate",
+          "result": "passed",
+          "pinnedCurrentReferences": 1407,
+          "licensedZips": 9
+        },
+        {
+          "command": "node scripts/check-atlas.mjs",
+          "result": "passed",
+          "names": 310,
+          "collisions": [],
+          "errors": []
+        },
+        {
+          "command": "node scripts/check-atlas-recompare.mjs",
+          "result": "passed",
+          "outsideScopeUnchanged": 480,
+          "verifiedViewedImages": 48,
+          "verifiedSourceFiles": 24
+        },
+        {
+          "command": "node --test packages/icons/tests/contours.test.mjs packages/icons/tests/junctions.test.mjs packages/icons/tests/paint.test.mjs packages/icons/tests/occlusion.test.mjs",
+          "result": "passed",
+          "tests": 14
+        },
+        {
+          "check": "skill native renderer",
+          "result": "54 raster cases, 0 empty/clipped",
+          "viewed": [
+            "04-native/native-1-light-1x.png",
+            "04-native/native-1-dark-1x.png",
+            "04-native/context-light-1x.png"
+          ]
+        },
+        {
+          "command": "git diff --check",
+          "result": "passed"
+        }
+      ],
+      "limitation": "Twelve recorded icons completed this aesthetic re-comparison; 298 remain.",
+      "resolvedValidationIssues": [
+        "The paint test ran while build:icons was replacing dist and could not import react-runtime.js. After the build completed, all 14 tests passed. Future tests must follow the completed build."
+      ]
+    },
+    {
+      "date": "2026-11-17",
+      "batch": "05-camping-final",
+      "reviewed": 15,
+      "remaining": 295,
+      "checks": [
+        {
+          "command": "bun run build:icons",
+          "result": "passed",
+          "names": 790,
+          "svgFiles": 7110
+        },
+        {
+          "command": "bun run build:review",
+          "result": "passed"
+        },
+        {
+          "command": "bun run validate",
+          "result": "passed",
+          "pinnedCurrentReferences": 1407,
+          "licensedZips": 9
+        },
+        {
+          "command": "node scripts/check-atlas.mjs",
+          "result": "passed",
+          "names": 310,
+          "collisions": [],
+          "errors": []
+        },
+        {
+          "command": "node scripts/check-atlas-recompare.mjs",
+          "result": "passed",
+          "outsideScopeUnchanged": 480,
+          "verifiedViewedImages": 60,
+          "verifiedSourceFiles": 30
+        },
+        {
+          "command": "node --test packages/icons/tests/contours.test.mjs packages/icons/tests/junctions.test.mjs packages/icons/tests/paint.test.mjs packages/icons/tests/occlusion.test.mjs",
+          "result": "passed",
+          "tests": 14
+        },
+        {
+          "check": "skill native renderer",
+          "result": "54 raster cases, 0 empty/clipped",
+          "viewed": [
+            "05-native/native-1-light-1x.png",
+            "05-native/native-1-dark-1x.png",
+            "05-native/context-light-1x.png"
+          ]
+        },
+        {
+          "command": "git diff --check",
+          "result": "passed"
+        }
+      ],
+      "limitation": "Fifteen recorded icons completed this new aesthetic re-comparison; 295 remain. Automated engineering checks do not establish aesthetic approval.",
+      "resolvedValidationIssues": []
+    }
+  ],
+  "resolvedValidationIssues": [],
+  "batches": [
+    "06-road-candidate-1",
+    "07-signals-before"
+  ]
+}

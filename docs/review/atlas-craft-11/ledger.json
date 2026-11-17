@@ -1,0 +1,1537 @@
+{
+  "schemaVersion": 2,
+  "reviewer": "Codex (AI)",
+  "userApproval": "pending",
+  "icons": [
+    {
+      "name": "dumbbell",
+      "purpose": "啞鈴",
+      "recognitionCues": "中央握桿、兩端配重與短軸端",
+      "confusableWith": [
+        "kettlebell",
+        "bone"
+      ],
+      "sourceObservation": "Lucide採多片配重及單握桿，Hugeicons dumbbell-01採較單純的雙端配重。Tabler同名圖實際是壺鈴，因此不拿來當啞鈴對照。Master保留雙端配重、中央握桿和短軸端，減少重複層板。",
+      "references": [
+        {
+          "name": "dumbbell",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/dumbbell.svg",
+          "localPath": "references/atlas-01/lucide-dumbbell.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/dumbbell.svg",
+          "sha256": "058a51e1fd42319d7eee4988a68bee4a23bc94fc69cb8aa1450835246126382d",
+          "license": "ISC AND MIT",
+          "sourceName": "dumbbell",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "dumbbell",
+          "library": "Hugeicons Free",
+          "repository": "hugeicons/hugeicons",
+          "commit": "834e28d965946c1ee60d080027fe9dae4adc58d0",
+          "path": "icons/dumbbell-01.svg",
+          "localPath": "references/atlas-01/hugeicons-dumbbell-01.svg",
+          "url": "https://github.com/hugeicons/hugeicons/blob/834e28d965946c1ee60d080027fe9dae4adc58d0/icons/dumbbell-01.svg",
+          "sha256": "e6b6be63dcc10368e219ab6d92bfa965fa60d3b2975b1fe8d5ab8f27e5998abf",
+          "license": "MIT",
+          "sourceName": "dumbbell-01",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "以必要構造及實體輪廓表達器材與動作，不增加裝飾虛線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "球面與人物動作以曲線和比例表達，不需要透明度分層。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "單色運動圖示不需皮革光澤或連續材質漸層。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-11/master-before.json",
+          "variantsSha256": "d52bae2e635e139ef9b23b4930e9977c9b9977147a8c77e90b729da0198ba934"
+        },
+        "reason": "配重內孔與握桿長度分開安排，兩端共軸且對稱；軸線在配重外側收口，不穿進配重孔。以固定式啞鈴的構造保持清楚的持握區。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "66eb575796962eb067398d216689a282fa9b071145bc49ee5381d39bd7ad00f8",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/53-dumbbell-kettlebell-basketball/review.html",
+            "sha256": "c430dc6712c295bbd7c219040385b1698c477bd51fd7214701e1b4677778daa8"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/53-dumbbell-kettlebell-basketball/definitions.json",
+            "sha256": "9c2e0868d27f0b580ef5d80b47411dc581abec51d928dadce1b717bbeaad5b81"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/53-dumbbell-kettlebell-basketball/light-1x.png",
+            "sha256": "3f39674c92089e05ee0128bfcce2a888bd431b319c4dd0316f4ff0d685652b13"
+          },
+          {
+            "path": "docs/review/atlas-craft-11/final-v2/definitions.json",
+            "sha256": "d74be079baac83d764ee68d85d4c9a2377b389af3adc7b252dc94d98d8edf3cc"
+          },
+          {
+            "path": "docs/review/atlas-craft-11/final-v2/14-sports.html",
+            "sha256": "f9634a833a526895e321eaf41d102252afa386a921818f0abfbbf531ec7e8469"
+          },
+          {
+            "path": "docs/review/atlas-craft-11/final-v2/14-sports-light-1x.png",
+            "sha256": "68a5d48ec315b702399658d001cac355fbe37d58e9f1e8ba5b9e57b75065f6f9"
+          },
+          {
+            "path": "docs/review/atlas-craft-11/final-v2/14-sports-light-2x.png",
+            "sha256": "5f22d3a4b6d02a5205c26f2fcfb0591d7332dc0231c9ff2027099985e13d3b91"
+          },
+          {
+            "path": "docs/review/atlas-craft-11/final-v2/14-sports-dark-1x.png",
+            "sha256": "66eef8754fd93aa1dfd979e4e0543e315b53930dcdc63290910b9eed195e6a4c"
+          },
+          {
+            "path": "docs/review/atlas-craft-11/final-v2/14-sports-dark-2x.png",
+            "sha256": "eaec2bdfb748a6db09cec92378111646c9d5b551b95391237fceb7be8ec3010a"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-11/final-v2/14-sports-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-11/final-v2/14-sports-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-11/final-v2/14-sports-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-11/final-v2/14-sports-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Hugeicons Free",
+        "license": "MIT",
+        "licenseFile": "licenses/hugeicons-MIT.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "kettlebell",
+      "purpose": "壺鈴",
+      "recognitionCues": "上方弧形握把、飽滿鈴腹與平底",
+      "confusableWith": [
+        "dumbbell",
+        "kettle"
+      ],
+      "sourceObservation": "Hugeicons有飽滿鈴腹、上握把與重量標牌，MDI以實心輪廓保留握把孔與平底。Master採Hugeicons輪廓構造，移除裝飾標牌，讓握把和鈴腹比例先成立。",
+      "references": [
+        {
+          "name": "kettlebell",
+          "library": "Hugeicons Free",
+          "repository": "hugeicons/hugeicons",
+          "commit": "834e28d965946c1ee60d080027fe9dae4adc58d0",
+          "path": "icons/kettlebell.svg",
+          "localPath": "references/atlas-01/hugeicons-kettlebell.svg",
+          "url": "https://github.com/hugeicons/hugeicons/blob/834e28d965946c1ee60d080027fe9dae4adc58d0/icons/kettlebell.svg",
+          "sha256": "d933c9f75cc6bad4f0ed08c25e26e0825d948dfda57461974548a419ba672354",
+          "license": "MIT",
+          "sourceName": "kettlebell",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "kettlebell",
+          "library": "Material Design Icons",
+          "repository": "Templarian/MaterialDesign",
+          "commit": "2424e748e0cc63ab7b9c095a099b9fe239b737c0",
+          "path": "svg/kettlebell.svg",
+          "localPath": "references/atlas-01/mdi-kettlebell.svg",
+          "url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/kettlebell.svg",
+          "sha256": "4fa5bc70d3e9f2634b1f54e6561290b933723f55479c8d3b4d7fe4ae855971ea",
+          "license": "Apache-2.0",
+          "sourceName": "kettlebell",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "以必要構造及實體輪廓表達器材與動作，不增加裝飾虛線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "球面與人物動作以曲線和比例表達，不需要透明度分層。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "單色運動圖示不需皮革光澤或連續材質漸層。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-11/master-before.json",
+          "variantsSha256": "b900fe44079707f50bfb9f3679aec4ec5edc3ac0aa28745867507ebac4cb9e2c"
+        },
+        "reason": "上方握孔有足夠高度，鈴腹曲線平順收進底部平台；平底與腹部相切，沒有硬加一條底座線。三種角型保留物件本身的連續曲面。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "39df7f19d497c16c4f77336a19d6a8ff5e454d36633942ea63b5f1751ff162bd",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/53-dumbbell-kettlebell-basketball/review.html",
+            "sha256": "c430dc6712c295bbd7c219040385b1698c477bd51fd7214701e1b4677778daa8"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/53-dumbbell-kettlebell-basketball/definitions.json",
+            "sha256": "9c2e0868d27f0b580ef5d80b47411dc581abec51d928dadce1b717bbeaad5b81"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/53-dumbbell-kettlebell-basketball/light-1x.png",
+            "sha256": "3f39674c92089e05ee0128bfcce2a888bd431b319c4dd0316f4ff0d685652b13"
+          },
+          {
+            "path": "docs/review/atlas-craft-11/final-v2/definitions.json",
+            "sha256": "d74be079baac83d764ee68d85d4c9a2377b389af3adc7b252dc94d98d8edf3cc"
+          },
+          {
+            "path": "docs/review/atlas-craft-11/final-v2/14-sports.html",
+            "sha256": "f9634a833a526895e321eaf41d102252afa386a921818f0abfbbf531ec7e8469"
+          },
+          {
+            "path": "docs/review/atlas-craft-11/final-v2/14-sports-light-1x.png",
+            "sha256": "68a5d48ec315b702399658d001cac355fbe37d58e9f1e8ba5b9e57b75065f6f9"
+          },
+          {
+            "path": "docs/review/atlas-craft-11/final-v2/14-sports-light-2x.png",
+            "sha256": "5f22d3a4b6d02a5205c26f2fcfb0591d7332dc0231c9ff2027099985e13d3b91"
+          },
+          {
+            "path": "docs/review/atlas-craft-11/final-v2/14-sports-dark-1x.png",
+            "sha256": "66eef8754fd93aa1dfd979e4e0543e315b53930dcdc63290910b9eed195e6a4c"
+          },
+          {
+            "path": "docs/review/atlas-craft-11/final-v2/14-sports-dark-2x.png",
+            "sha256": "eaec2bdfb748a6db09cec92378111646c9d5b551b95391237fceb7be8ec3010a"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-11/final-v2/14-sports-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-11/final-v2/14-sports-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-11/final-v2/14-sports-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-11/final-v2/14-sports-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Hugeicons Free",
+        "license": "MIT",
+        "licenseFile": "licenses/hugeicons-MIT.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "basketball",
+      "purpose": "籃球",
+      "recognitionCues": "球體、十字分線與兩側弧形縫線",
+      "confusableWith": [
+        "football",
+        "baseball"
+      ],
+      "sourceObservation": "Phosphor採垂直與水平分線，加上兩側對稱弧；Tabler將十字分線斜轉。Master選正向分線，讓中央通道與側弧的寬度可直接控制。",
+      "references": [
+        {
+          "name": "basketball",
+          "library": "Phosphor",
+          "repository": "phosphor-icons/core",
+          "commit": "2b75f3ad12b420c9504ef05df8d2564a28f8500e",
+          "path": "assets/regular/basketball.svg",
+          "localPath": "references/atlas-01/phosphor-basketball.svg",
+          "url": "https://github.com/phosphor-icons/core/blob/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular/basketball.svg",
+          "sha256": "39de5332a88b6ab8899e6f8c6ba62b792c77a406c31cd9c44d18ee95784f49f9",
+          "license": "MIT",
+          "sourceName": "basketball",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "basketball",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/ball-basketball.svg",
+          "localPath": "references/atlas-01/tabler-ball-basketball.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/ball-basketball.svg",
+          "sha256": "dd2160bf690927ceb66d9ef86c9bb75ce93d36cfd8898a4cf7b1fa9b52c8af6c",
+          "license": "MIT",
+          "sourceName": "ball-basketball",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "以必要構造及實體輪廓表達器材與動作，不增加裝飾虛線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "球面與人物動作以曲線和比例表達，不需要透明度分層。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "單色運動圖示不需皮革光澤或連續材質漸層。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-11/master-before.json",
+          "variantsSha256": "03b6a0b7f7f06315d16efbbd89a5e03c32f8be2bb2584dc5bd3bac4f06848143"
+        },
+        "reason": "兩側弧線等曲率、中心對稱，分線墨跡限制在完整球殼內；16px仍可分辨中央與兩側分片，沒有用額外細紋表達皮革。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "db10055b3b82def00e65cff673f21296baa4a6d27cc17d6c3d11e94ed588a05d",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/53-dumbbell-kettlebell-basketball/review.html",
+            "sha256": "c430dc6712c295bbd7c219040385b1698c477bd51fd7214701e1b4677778daa8"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/53-dumbbell-kettlebell-basketball/definitions.json",
+            "sha256": "9c2e0868d27f0b580ef5d80b47411dc581abec51d928dadce1b717bbeaad5b81"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/53-dumbbell-kettlebell-basketball/light-1x.png",
+            "sha256": "3f39674c92089e05ee0128bfcce2a888bd431b319c4dd0316f4ff0d685652b13"
+          },
+          {
+            "path": "docs/review/atlas-craft-11/final-v2/definitions.json",
+            "sha256": "d74be079baac83d764ee68d85d4c9a2377b389af3adc7b252dc94d98d8edf3cc"
+          },
+          {
+            "path": "docs/review/atlas-craft-11/final-v2/14-sports.html",
+            "sha256": "f9634a833a526895e321eaf41d102252afa386a921818f0abfbbf531ec7e8469"
+          },
+          {
+            "path": "docs/review/atlas-craft-11/final-v2/14-sports-light-1x.png",
+            "sha256": "68a5d48ec315b702399658d001cac355fbe37d58e9f1e8ba5b9e57b75065f6f9"
+          },
+          {
+            "path": "docs/review/atlas-craft-11/final-v2/14-sports-light-2x.png",
+            "sha256": "5f22d3a4b6d02a5205c26f2fcfb0591d7332dc0231c9ff2027099985e13d3b91"
+          },
+          {
+            "path": "docs/review/atlas-craft-11/final-v2/14-sports-dark-1x.png",
+            "sha256": "66eef8754fd93aa1dfd979e4e0543e315b53930dcdc63290910b9eed195e6a4c"
+          },
+          {
+            "path": "docs/review/atlas-craft-11/final-v2/14-sports-dark-2x.png",
+            "sha256": "eaec2bdfb748a6db09cec92378111646c9d5b551b95391237fceb7be8ec3010a"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-11/final-v2/14-sports-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-11/final-v2/14-sports-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-11/final-v2/14-sports-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-11/final-v2/14-sports-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Phosphor",
+        "license": "MIT",
+        "licenseFile": "licenses/phosphor.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "football",
+      "purpose": "足球",
+      "recognitionCues": "中央五角拼片與向外接合的球面縫線",
+      "confusableWith": [
+        "basketball",
+        "volleyball"
+      ],
+      "sourceObservation": "Phosphor soccer-ball有更多邊緣拼片，Tabler ball-football以中央五角形與五條外接線簡化。Master選Tabler的拼片結構，維持五向對稱並保留中央較大的空腔。",
+      "references": [
+        {
+          "name": "football",
+          "library": "Phosphor",
+          "repository": "phosphor-icons/core",
+          "commit": "2b75f3ad12b420c9504ef05df8d2564a28f8500e",
+          "path": "assets/regular/soccer-ball.svg",
+          "localPath": "references/atlas-01/phosphor-soccer-ball.svg",
+          "url": "https://github.com/phosphor-icons/core/blob/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular/soccer-ball.svg",
+          "sha256": "32f4b1b42d041b9b7ba35cd16230bcb478955259df609402ffd96ea731d115a3",
+          "license": "MIT",
+          "sourceName": "soccer-ball",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "football",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/ball-football.svg",
+          "localPath": "references/atlas-01/tabler-ball-football.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/ball-football.svg",
+          "sha256": "8890c599c511f2393b46be9b78a7d9f68dfd765868dae5f563f10fa2575a235d",
+          "license": "MIT",
+          "sourceName": "ball-football",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "以必要構造及實體輪廓表達器材與動作，不增加裝飾虛線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "球面與人物動作以曲線和比例表達，不需要透明度分層。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "單色運動圖示不需皮革光澤或連續材質漸層。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-11/master-before.json",
+          "variantsSha256": "41bdc3b6c9e31ebb3592639fa2c7043126ddf83870f30310563a32f8645f528e"
+        },
+        "reason": "五角片按角型作實際微倒角，接線依片緣重新裁切後連到球殼，不留圓角後的微縫；沒有把美式足球混作同語意來源。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "9609b092f516c70230645a546e98fbd83bb0f6f081c21f15ee5403f1694094af",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/54-football-tennis-volleyball/review.html",
+            "sha256": "060c7b9617e4f2528326453006c4d6a406294aeb61eddd28c86ddcec0bc24afd"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/54-football-tennis-volleyball/definitions.json",
+            "sha256": "ebd1645c965aada35ea9b2b8fc949bc2d994560b2354f11c53db67f04612db6f"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/54-football-tennis-volleyball/light-1x.png",
+            "sha256": "740541bab48cc3d9ebf875335d0d7ec313f9869c93dbe0ff9c853271d7c35da6"
+          },
+          {
+            "path": "docs/review/atlas-craft-11/final-v2/definitions.json",
+            "sha256": "d74be079baac83d764ee68d85d4c9a2377b389af3adc7b252dc94d98d8edf3cc"
+          },
+          {
+            "path": "docs/review/atlas-craft-11/final-v2/14-sports.html",
+            "sha256": "f9634a833a526895e321eaf41d102252afa386a921818f0abfbbf531ec7e8469"
+          },
+          {
+            "path": "docs/review/atlas-craft-11/final-v2/14-sports-light-1x.png",
+            "sha256": "68a5d48ec315b702399658d001cac355fbe37d58e9f1e8ba5b9e57b75065f6f9"
+          },
+          {
+            "path": "docs/review/atlas-craft-11/final-v2/14-sports-light-2x.png",
+            "sha256": "5f22d3a4b6d02a5205c26f2fcfb0591d7332dc0231c9ff2027099985e13d3b91"
+          },
+          {
+            "path": "docs/review/atlas-craft-11/final-v2/14-sports-dark-1x.png",
+            "sha256": "66eef8754fd93aa1dfd979e4e0543e315b53930dcdc63290910b9eed195e6a4c"
+          },
+          {
+            "path": "docs/review/atlas-craft-11/final-v2/14-sports-dark-2x.png",
+            "sha256": "eaec2bdfb748a6db09cec92378111646c9d5b551b95391237fceb7be8ec3010a"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-11/final-v2/14-sports-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-11/final-v2/14-sports-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-11/final-v2/14-sports-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-11/final-v2/14-sports-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Tabler",
+        "license": "MIT",
+        "licenseFile": "licenses/tabler.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "tennis-racket",
+      "purpose": "網球拍",
+      "recognitionCues": "橢圓拍框、網線、三角拍喉與握柄",
+      "confusableWith": [
+        "search",
+        "dumbbell"
+      ],
+      "sourceObservation": "Hugeicons有橢圓拍框、三角拍喉和點狀網面，MDI tennis是球拍與球的組合，僅其球拍部分作構造比較。Master保留狹長拍框和握柄；初稿九格網面與小拍喉過密，已減筆並調整比例。",
+      "references": [
+        {
+          "name": "tennis-racket",
+          "library": "Hugeicons Free",
+          "repository": "hugeicons/hugeicons",
+          "commit": "834e28d965946c1ee60d080027fe9dae4adc58d0",
+          "path": "icons/tennis-racket.svg",
+          "localPath": "references/atlas-01/hugeicons-tennis-racket.svg",
+          "url": "https://github.com/hugeicons/hugeicons/blob/834e28d965946c1ee60d080027fe9dae4adc58d0/icons/tennis-racket.svg",
+          "sha256": "c5081ce14afeaee5cf40d6a6b24c5bb5d48afed304a8b1de24567805bf634bc3",
+          "license": "MIT",
+          "sourceName": "tennis-racket",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "tennis-racket",
+          "library": "Material Design Icons",
+          "repository": "Templarian/MaterialDesign",
+          "commit": "2424e748e0cc63ab7b9c095a099b9fe239b737c0",
+          "path": "svg/tennis.svg",
+          "localPath": "references/atlas-01/mdi-tennis.svg",
+          "url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/tennis.svg",
+          "sha256": "231243424c9d54cef75b45772f4ae5da8c8d5ff912add24429b8affb4025ce8e",
+          "license": "Apache-2.0",
+          "sourceName": "tennis",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "以必要構造及實體輪廓表達器材與動作，不增加裝飾虛線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "球面與人物動作以曲線和比例表達，不需要透明度分層。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "單色運動圖示不需皮革光澤或連續材質漸層。"
+        }
+      },
+      "change": {
+        "kind": "modified",
+        "before": {
+          "path": "references/atlas-craft-11/master-before.json",
+          "variantsSha256": "3f11cf8c1e163428bebaf4feb42a4270cb79ab6214de664c83a69bd68ae86970"
+        },
+        "reason": "拍框改為較狹長橢圓以維持球拍姿態；16px採四格網面和單桿拍喉，20/24採六格與開放拍喉。網線裁在框內，去除原稿邊角細碎空隙，握柄孔仍可見。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "fdf30619ff194d07227f8093f9f63e8c468b0139f7aece8c28886acce996119b",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/54c-tennis/review.html",
+            "sha256": "4070a57fc9eaf98e176bef9921b8ebbd6c01e26b64ad35e5139679e3825a0176"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/54c-tennis/definitions.json",
+            "sha256": "bf8092ab7596ec0e01187d23eacaf90cd427608b27c72f867f35d3bb59302fff"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/54c-tennis/light-1x.png",
+            "sha256": "2fa61a6eaf6b96ce756b2ed4f2dc5b98a9f1f6ccf64fe73f88724840333d3e57"
+          },
+          {
+            "path": "docs/review/atlas-craft-11/final-v2/definitions.json",
+            "sha256": "d74be079baac83d764ee68d85d4c9a2377b389af3adc7b252dc94d98d8edf3cc"
+          },
+          {
+            "path": "docs/review/atlas-craft-11/final-v2/14-sports.html",
+            "sha256": "f9634a833a526895e321eaf41d102252afa386a921818f0abfbbf531ec7e8469"
+          },
+          {
+            "path": "docs/review/atlas-craft-11/final-v2/14-sports-light-1x.png",
+            "sha256": "68a5d48ec315b702399658d001cac355fbe37d58e9f1e8ba5b9e57b75065f6f9"
+          },
+          {
+            "path": "docs/review/atlas-craft-11/final-v2/14-sports-light-2x.png",
+            "sha256": "5f22d3a4b6d02a5205c26f2fcfb0591d7332dc0231c9ff2027099985e13d3b91"
+          },
+          {
+            "path": "docs/review/atlas-craft-11/final-v2/14-sports-dark-1x.png",
+            "sha256": "66eef8754fd93aa1dfd979e4e0543e315b53930dcdc63290910b9eed195e6a4c"
+          },
+          {
+            "path": "docs/review/atlas-craft-11/final-v2/14-sports-dark-2x.png",
+            "sha256": "eaec2bdfb748a6db09cec92378111646c9d5b551b95391237fceb7be8ec3010a"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-11/final-v2/14-sports-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-11/final-v2/14-sports-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-11/final-v2/14-sports-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-11/final-v2/14-sports-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Hugeicons Free",
+        "license": "MIT",
+        "licenseFile": "licenses/hugeicons-MIT.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "volleyball",
+      "purpose": "排球",
+      "recognitionCues": "圓球上的三向旋轉分片",
+      "confusableWith": [
+        "basketball",
+        "football"
+      ],
+      "sourceObservation": "Lucide以三向旋轉曲線形成球面分帶，Phosphor採三條較直的主分線搭配弧帶。Master沿用Lucide的曲面分帶，保留各帶的方向與連續弧度。",
+      "references": [
+        {
+          "name": "volleyball",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/volleyball.svg",
+          "localPath": "references/atlas-01/lucide-volleyball.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/volleyball.svg",
+          "sha256": "483a620360e9e7a7378d08f8d32a4fb0ca34caca04a00ec1bdb9f92bb7c15942",
+          "license": "ISC AND MIT",
+          "sourceName": "volleyball",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "volleyball",
+          "library": "Phosphor",
+          "repository": "phosphor-icons/core",
+          "commit": "2b75f3ad12b420c9504ef05df8d2564a28f8500e",
+          "path": "assets/regular/volleyball.svg",
+          "localPath": "references/atlas-01/phosphor-volleyball.svg",
+          "url": "https://github.com/phosphor-icons/core/blob/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular/volleyball.svg",
+          "sha256": "5bf74d309b579788534710b335cbee7ebf0e8b0ad369584bfd51653009caf71e",
+          "license": "MIT",
+          "sourceName": "volleyball",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "以必要構造及實體輪廓表達器材與動作，不增加裝飾虛線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "球面與人物動作以曲線和比例表達，不需要透明度分層。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "單色運動圖示不需皮革光澤或連續材質漸層。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-11/master-before.json",
+          "variantsSha256": "b6842eaa400458bf8c9d7f6721b0cc9a1ed150442ab1c5f6372babca65a89d83"
+        },
+        "reason": "三組分帶由中央向球緣展開，接縫墨跡收在球殼內；原生16px各帶仍有白色通道，物件曲面不因sharp角型而被折成直線。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "5e948735c617bbd898500278af05a08cf2ae251f9c8c051a4acc133a7c4a9737",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/54-football-tennis-volleyball/review.html",
+            "sha256": "060c7b9617e4f2528326453006c4d6a406294aeb61eddd28c86ddcec0bc24afd"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/54-football-tennis-volleyball/definitions.json",
+            "sha256": "ebd1645c965aada35ea9b2b8fc949bc2d994560b2354f11c53db67f04612db6f"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/54-football-tennis-volleyball/light-1x.png",
+            "sha256": "740541bab48cc3d9ebf875335d0d7ec313f9869c93dbe0ff9c853271d7c35da6"
+          },
+          {
+            "path": "docs/review/atlas-craft-11/final-v2/definitions.json",
+            "sha256": "d74be079baac83d764ee68d85d4c9a2377b389af3adc7b252dc94d98d8edf3cc"
+          },
+          {
+            "path": "docs/review/atlas-craft-11/final-v2/14-sports.html",
+            "sha256": "f9634a833a526895e321eaf41d102252afa386a921818f0abfbbf531ec7e8469"
+          },
+          {
+            "path": "docs/review/atlas-craft-11/final-v2/14-sports-light-1x.png",
+            "sha256": "68a5d48ec315b702399658d001cac355fbe37d58e9f1e8ba5b9e57b75065f6f9"
+          },
+          {
+            "path": "docs/review/atlas-craft-11/final-v2/14-sports-light-2x.png",
+            "sha256": "5f22d3a4b6d02a5205c26f2fcfb0591d7332dc0231c9ff2027099985e13d3b91"
+          },
+          {
+            "path": "docs/review/atlas-craft-11/final-v2/14-sports-dark-1x.png",
+            "sha256": "66eef8754fd93aa1dfd979e4e0543e315b53930dcdc63290910b9eed195e6a4c"
+          },
+          {
+            "path": "docs/review/atlas-craft-11/final-v2/14-sports-dark-2x.png",
+            "sha256": "eaec2bdfb748a6db09cec92378111646c9d5b551b95391237fceb7be8ec3010a"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-11/final-v2/14-sports-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-11/final-v2/14-sports-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-11/final-v2/14-sports-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-11/final-v2/14-sports-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Lucide",
+        "license": "ISC",
+        "licenseFile": "licenses/lucide.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "baseball",
+      "purpose": "棒球",
+      "recognitionCues": "球體與兩側分段縫線",
+      "confusableWith": [
+        "basketball",
+        "football"
+      ],
+      "sourceObservation": "Phosphor以分段縫線表達棒球，Tabler採連續弧加短針腳。Master採分段縫線；初稿三段的中段偏長，最後改為每側四段，使用平切端部保持間隔。",
+      "references": [
+        {
+          "name": "baseball",
+          "library": "Phosphor",
+          "repository": "phosphor-icons/core",
+          "commit": "2b75f3ad12b420c9504ef05df8d2564a28f8500e",
+          "path": "assets/regular/baseball.svg",
+          "localPath": "references/atlas-01/phosphor-baseball.svg",
+          "url": "https://github.com/phosphor-icons/core/blob/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular/baseball.svg",
+          "sha256": "b0c86bf7fd716f1d55a354c3e08edd27435332c748bd3cfbaa9a92e307636193",
+          "license": "MIT",
+          "sourceName": "baseball",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "baseball",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/ball-baseball.svg",
+          "localPath": "references/atlas-01/tabler-ball-baseball.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/ball-baseball.svg",
+          "sha256": "5a7acf2ba39f5411cfb97d79b45735468fc230ebfd6b1c5ffe12fafcd8d06b19",
+          "license": "MIT",
+          "sourceName": "ball-baseball",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": true,
+          "reason": "以分段短弧表達球皮縫線；每側四段，平切端部保留原生尺寸間隔。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "球面與人物動作以曲線和比例表達，不需要透明度分層。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "單色運動圖示不需皮革光澤或連續材質漸層。"
+        }
+      },
+      "change": {
+        "kind": "modified",
+        "before": {
+          "path": "references/atlas-craft-11/master-before.json",
+          "variantsSha256": "77990a0ae62ae9aedae77cb17ff03cdc75256824f5f2b8b36122149cec2e3e72"
+        },
+        "reason": "兩側縫線沿相同的鏡射曲線安排，短線間留白在16px可見；平切是縫線的部件語言，不套用全圖圓端帽。沒有增加交叉細針腳造成黑結。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "6e4dad4594ab3f1c3a36985d7a89a118f190c2df39e96bce45a41a664097cdd3",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/56b-baseball-running/review.html",
+            "sha256": "0aac8d2ea662ebab2c73954c53644f2d27cf893915e56bd8dba6d1037f65ca31"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/56b-baseball-running/definitions.json",
+            "sha256": "742653871018e3869cdd6fd72d45b420cdcc473dba86cb5d386490391f72b32a"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/56b-baseball-running/light-1x.png",
+            "sha256": "dcb06c2d17fecb85e18938b03232475475127b74dca15f4fccad4444942265f5"
+          },
+          {
+            "path": "docs/review/atlas-craft-11/final-v2/definitions.json",
+            "sha256": "d74be079baac83d764ee68d85d4c9a2377b389af3adc7b252dc94d98d8edf3cc"
+          },
+          {
+            "path": "docs/review/atlas-craft-11/final-v2/14-sports.html",
+            "sha256": "f9634a833a526895e321eaf41d102252afa386a921818f0abfbbf531ec7e8469"
+          },
+          {
+            "path": "docs/review/atlas-craft-11/final-v2/14-sports-light-1x.png",
+            "sha256": "68a5d48ec315b702399658d001cac355fbe37d58e9f1e8ba5b9e57b75065f6f9"
+          },
+          {
+            "path": "docs/review/atlas-craft-11/final-v2/14-sports-light-2x.png",
+            "sha256": "5f22d3a4b6d02a5205c26f2fcfb0591d7332dc0231c9ff2027099985e13d3b91"
+          },
+          {
+            "path": "docs/review/atlas-craft-11/final-v2/14-sports-dark-1x.png",
+            "sha256": "66eef8754fd93aa1dfd979e4e0543e315b53930dcdc63290910b9eed195e6a4c"
+          },
+          {
+            "path": "docs/review/atlas-craft-11/final-v2/14-sports-dark-2x.png",
+            "sha256": "eaec2bdfb748a6db09cec92378111646c9d5b551b95391237fceb7be8ec3010a"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-11/final-v2/14-sports-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-11/final-v2/14-sports-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-11/final-v2/14-sports-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-11/final-v2/14-sports-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Phosphor",
+        "license": "MIT",
+        "licenseFile": "licenses/phosphor.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "golf-hole",
+      "purpose": "高爾夫球洞",
+      "recognitionCues": "旗面、直旗桿與地面球洞",
+      "confusableWith": [
+        "flag",
+        "map-pin"
+      ],
+      "sourceObservation": "原先Phosphor golf是球與球座，與Tabler的球洞旗不同，因此改用Hugeicons golf-hole與Tabler golf。Master採三角旗、直桿和寬橢圓球洞，明確命名golf-hole。",
+      "references": [
+        {
+          "name": "golf-hole",
+          "library": "Hugeicons Free",
+          "repository": "hugeicons/hugeicons",
+          "commit": "834e28d965946c1ee60d080027fe9dae4adc58d0",
+          "path": "icons/golf-hole.svg",
+          "localPath": "references/atlas-01/hugeicons-golf-hole.svg",
+          "url": "https://github.com/hugeicons/hugeicons/blob/834e28d965946c1ee60d080027fe9dae4adc58d0/icons/golf-hole.svg",
+          "sha256": "d0e59f43d9de3c5b32ccbe3848b60825cbedfc81fe02e8aac598541612141cb1",
+          "license": "MIT",
+          "sourceName": "golf-hole",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "golf-hole",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/golf.svg",
+          "localPath": "references/atlas-01/tabler-golf.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/golf.svg",
+          "sha256": "55b063972a607a9c4020162b2d9c09e191d4ce0a7f383740c9a2e9ed6f9034d8",
+          "license": "MIT",
+          "sourceName": "golf",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "以必要構造及實體輪廓表達器材與動作，不增加裝飾虛線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "球面與人物動作以曲線和比例表達，不需要透明度分層。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "單色運動圖示不需皮革光澤或連續材質漸層。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-11/master-before.json",
+          "variantsSha256": "cf2043b98503f1cf2bd07d898a80a87466f5b804c89cdc163a13264d801b50ac"
+        },
+        "reason": "旗桿末端與球洞底弧保留留白，旗面與旗桿相接，底部橢圓開口容納桿身；沒有把球座和球洞當成同一構造。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "69cf0fdad8254890711763b6d951960098101a04b87bb7a0a012e0dfc60e94a6",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/55-baseball-golf/review.html",
+            "sha256": "e99be9ac75c32ed35858c5666e22cda780fc7145a34b0267b5e01b7afcccd5c0"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/55-baseball-golf/definitions.json",
+            "sha256": "0cc5e22c6ee1a0376580b55b082313a7dd4c958691da6ef0c643d24b7b336cd8"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/55-baseball-golf/light-1x.png",
+            "sha256": "04687437d7471244bb80093b3caa00e24e6b5518c5706abb951f62aa041a35ad"
+          },
+          {
+            "path": "docs/review/atlas-craft-11/final-v2/definitions.json",
+            "sha256": "d74be079baac83d764ee68d85d4c9a2377b389af3adc7b252dc94d98d8edf3cc"
+          },
+          {
+            "path": "docs/review/atlas-craft-11/final-v2/14-sports.html",
+            "sha256": "f9634a833a526895e321eaf41d102252afa386a921818f0abfbbf531ec7e8469"
+          },
+          {
+            "path": "docs/review/atlas-craft-11/final-v2/14-sports-light-1x.png",
+            "sha256": "68a5d48ec315b702399658d001cac355fbe37d58e9f1e8ba5b9e57b75065f6f9"
+          },
+          {
+            "path": "docs/review/atlas-craft-11/final-v2/14-sports-light-2x.png",
+            "sha256": "5f22d3a4b6d02a5205c26f2fcfb0591d7332dc0231c9ff2027099985e13d3b91"
+          },
+          {
+            "path": "docs/review/atlas-craft-11/final-v2/14-sports-dark-1x.png",
+            "sha256": "66eef8754fd93aa1dfd979e4e0543e315b53930dcdc63290910b9eed195e6a4c"
+          },
+          {
+            "path": "docs/review/atlas-craft-11/final-v2/14-sports-dark-2x.png",
+            "sha256": "eaec2bdfb748a6db09cec92378111646c9d5b551b95391237fceb7be8ec3010a"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-11/final-v2/14-sports-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-11/final-v2/14-sports-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-11/final-v2/14-sports-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-11/final-v2/14-sports-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Tabler",
+        "license": "MIT",
+        "licenseFile": "licenses/tabler.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "swimming",
+      "purpose": "游泳",
+      "recognitionCues": "前方頭部、划水手臂與水波",
+      "confusableWith": [
+        "waves",
+        "running"
+      ],
+      "sourceObservation": "Phosphor以長划臂和兩層水波表現游泳，Tabler以屈臂和一層水線精簡。Master採屈臂與前方圓頭，保留兩層低幅水波來穩定水面情境。",
+      "references": [
+        {
+          "name": "swimming",
+          "library": "Phosphor",
+          "repository": "phosphor-icons/core",
+          "commit": "2b75f3ad12b420c9504ef05df8d2564a28f8500e",
+          "path": "assets/regular/person-simple-swim.svg",
+          "localPath": "references/atlas-01/phosphor-person-simple-swim.svg",
+          "url": "https://github.com/phosphor-icons/core/blob/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular/person-simple-swim.svg",
+          "sha256": "5d973ecb955e38b5e650f29752fc6dc8d94b6c98955025da936eb9fb437db154",
+          "license": "MIT",
+          "sourceName": "person-simple-swim",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "swimming",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/swimming.svg",
+          "localPath": "references/atlas-01/tabler-swimming.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/swimming.svg",
+          "sha256": "8d71fb7c5af3a910983bcd87b5cc26ec351fc62eb357b6794c9a3a8685329ff8",
+          "license": "MIT",
+          "sourceName": "swimming",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "以必要構造及實體輪廓表達器材與動作，不增加裝飾虛線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "球面與人物動作以曲線和比例表達，不需要透明度分層。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "單色運動圖示不需皮革光澤或連續材質漸層。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-11/master-before.json",
+          "variantsSha256": "9a9df6e4f139ada5d5fd4905de6718ecf02011a67d5139b71a49e3a813eb8efd"
+        },
+        "reason": "手臂、軀幹與水面接點清楚，頭肩間有可見空白；兩層水波共用節奏、間距足夠，水線不靠透明度避開人體。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "1a5c4cda51654974c8b61dc72130dbece4a0a4848e0eb04d0c4174a0bdf7a7e2",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/56-swimming-running/review.html",
+            "sha256": "2229c76ca8b087b94189454bdf52fc423e9620c8012a0f3a771a3d6f2c5d7274"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/56-swimming-running/definitions.json",
+            "sha256": "7617fb8fe3f9c369d478f4a1a2124e968f1cd2c7f6c1caf6d3c500ea4da863ce"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/56-swimming-running/light-1x.png",
+            "sha256": "c8e1f1621fdf4275754574e7e7a335da774ae56c45164ed1145b3bd9849d6d58"
+          },
+          {
+            "path": "docs/review/atlas-craft-11/final-v2/definitions.json",
+            "sha256": "d74be079baac83d764ee68d85d4c9a2377b389af3adc7b252dc94d98d8edf3cc"
+          },
+          {
+            "path": "docs/review/atlas-craft-11/final-v2/14-sports.html",
+            "sha256": "f9634a833a526895e321eaf41d102252afa386a921818f0abfbbf531ec7e8469"
+          },
+          {
+            "path": "docs/review/atlas-craft-11/final-v2/14-sports-light-1x.png",
+            "sha256": "68a5d48ec315b702399658d001cac355fbe37d58e9f1e8ba5b9e57b75065f6f9"
+          },
+          {
+            "path": "docs/review/atlas-craft-11/final-v2/14-sports-light-2x.png",
+            "sha256": "5f22d3a4b6d02a5205c26f2fcfb0591d7332dc0231c9ff2027099985e13d3b91"
+          },
+          {
+            "path": "docs/review/atlas-craft-11/final-v2/14-sports-dark-1x.png",
+            "sha256": "66eef8754fd93aa1dfd979e4e0543e315b53930dcdc63290910b9eed195e6a4c"
+          },
+          {
+            "path": "docs/review/atlas-craft-11/final-v2/14-sports-dark-2x.png",
+            "sha256": "eaec2bdfb748a6db09cec92378111646c9d5b551b95391237fceb7be8ec3010a"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-11/final-v2/14-sports-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-11/final-v2/14-sports-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-11/final-v2/14-sports-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-11/final-v2/14-sports-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Tabler",
+        "license": "MIT",
+        "licenseFile": "licenses/tabler.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "running",
+      "purpose": "跑步",
+      "recognitionCues": "前傾身體、屈肘擺臂與抬起後腿",
+      "confusableWith": [
+        "person-walking",
+        "person-standing"
+      ],
+      "sourceObservation": "Phosphor用連續弧線表達跨步，Tabler以屈肘、抬後腿和前腿折角表現跑步。Master採Tabler動作結構，將後腳抬起，與既有步行姿態區分。",
+      "references": [
+        {
+          "name": "running",
+          "library": "Phosphor",
+          "repository": "phosphor-icons/core",
+          "commit": "2b75f3ad12b420c9504ef05df8d2564a28f8500e",
+          "path": "assets/regular/person-simple-run.svg",
+          "localPath": "references/atlas-01/phosphor-person-simple-run.svg",
+          "url": "https://github.com/phosphor-icons/core/blob/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular/person-simple-run.svg",
+          "sha256": "d76c07e6727db0dbcf3eb83a6b9a360940096ca8fcf396f11469c7053dac2bda",
+          "license": "MIT",
+          "sourceName": "person-simple-run",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "running",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/run.svg",
+          "localPath": "references/atlas-01/tabler-run.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/run.svg",
+          "sha256": "3679b290a057b4fe4ddad7e3fa01348cd16281c1788165db30ab00a39a7728af",
+          "license": "MIT",
+          "sourceName": "run",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "以必要構造及實體輪廓表達器材與動作，不增加裝飾虛線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "球面與人物動作以曲線和比例表達，不需要透明度分層。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "單色運動圖示不需皮革光澤或連續材質漸層。"
+        }
+      },
+      "change": {
+        "kind": "modified",
+        "before": {
+          "path": "references/atlas-craft-11/master-before.json",
+          "variantsSha256": "0515f9ed7d430131afeaf4907c7843f4795d0d0dadffb740f7cd1271b8bf6467"
+        },
+        "reason": "頭部前移、軀幹前傾，後腿離地且手臂屈曲；sharp軀幹起點改平切，解除肩部端帽小凸點。髖部保持共接，不加入速度線取代身體姿態。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "12306f46e2df2667a1d8a4c1af9cdcbe4f81f1b47b7135a238218e8db2695279",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/56b-baseball-running/review.html",
+            "sha256": "0aac8d2ea662ebab2c73954c53644f2d27cf893915e56bd8dba6d1037f65ca31"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/56b-baseball-running/definitions.json",
+            "sha256": "742653871018e3869cdd6fd72d45b420cdcc473dba86cb5d386490391f72b32a"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/56b-baseball-running/light-1x.png",
+            "sha256": "dcb06c2d17fecb85e18938b03232475475127b74dca15f4fccad4444942265f5"
+          },
+          {
+            "path": "docs/review/atlas-craft-11/final-v2/definitions.json",
+            "sha256": "d74be079baac83d764ee68d85d4c9a2377b389af3adc7b252dc94d98d8edf3cc"
+          },
+          {
+            "path": "docs/review/atlas-craft-11/final-v2/14-sports.html",
+            "sha256": "f9634a833a526895e321eaf41d102252afa386a921818f0abfbbf531ec7e8469"
+          },
+          {
+            "path": "docs/review/atlas-craft-11/final-v2/14-sports-light-1x.png",
+            "sha256": "68a5d48ec315b702399658d001cac355fbe37d58e9f1e8ba5b9e57b75065f6f9"
+          },
+          {
+            "path": "docs/review/atlas-craft-11/final-v2/14-sports-light-2x.png",
+            "sha256": "5f22d3a4b6d02a5205c26f2fcfb0591d7332dc0231c9ff2027099985e13d3b91"
+          },
+          {
+            "path": "docs/review/atlas-craft-11/final-v2/14-sports-dark-1x.png",
+            "sha256": "66eef8754fd93aa1dfd979e4e0543e315b53930dcdc63290910b9eed195e6a4c"
+          },
+          {
+            "path": "docs/review/atlas-craft-11/final-v2/14-sports-dark-2x.png",
+            "sha256": "eaec2bdfb748a6db09cec92378111646c9d5b551b95391237fceb7be8ec3010a"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-11/final-v2/14-sports-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-11/final-v2/14-sports-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-11/final-v2/14-sports-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-11/final-v2/14-sports-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Tabler",
+        "license": "MIT",
+        "licenseFile": "licenses/tabler.txt"
+      },
+      "remaining": []
+    }
+  ]
+}

@@ -1,0 +1,4054 @@
+{
+  "schemaVersion": 1,
+  "task": "Atlas 310 post-drawing source aesthetic re-comparison",
+  "skillVersion": "0.5.11",
+  "baselineCommit": "01aeafb8445f5ae9e8dd999b0c2a7e02e671c047",
+  "baseline": "references/atlas-recompare-01/master-before.json",
+  "reviewer": "Codex (AI)",
+  "userApproval": "pending",
+  "scope": [
+    "car",
+    "bus",
+    "train",
+    "tram",
+    "bicycle",
+    "motorcycle",
+    "scooter",
+    "plane",
+    "helicopter",
+    "sailboat",
+    "ship",
+    "anchor",
+    "luggage",
+    "backpack",
+    "tent",
+    "caravan",
+    "fuel",
+    "traffic-cone",
+    "traffic-light",
+    "road",
+    "cloud-rain",
+    "cloud-snow",
+    "cloud-lightning",
+    "cloud-fog",
+    "cloud-sun",
+    "cloud-moon",
+    "sunrise",
+    "sunset",
+    "wind",
+    "snowflake",
+    "leaf",
+    "sprout",
+    "tree-pine",
+    "tree-deciduous",
+    "flower",
+    "cactus",
+    "mountain",
+    "mountain-snow",
+    "waves",
+    "droplet",
+    "cat",
+    "dog",
+    "fish",
+    "bird",
+    "rabbit",
+    "turtle",
+    "snail",
+    "butterfly",
+    "bee",
+    "paw-print",
+    "apple-fruit",
+    "cherry",
+    "grape",
+    "citrus",
+    "banana",
+    "carrot",
+    "corn",
+    "mushroom",
+    "egg",
+    "wheat",
+    "coffee",
+    "cup-soda",
+    "wine",
+    "beer",
+    "milk",
+    "bottle",
+    "teapot",
+    "kettle",
+    "glass-water",
+    "cooking-pot",
+    "utensils",
+    "soup",
+    "salad",
+    "sandwich",
+    "pizza",
+    "burger",
+    "ice-cream",
+    "cake",
+    "cookie",
+    "bread",
+    "bed",
+    "sofa",
+    "armchair",
+    "lamp",
+    "desk",
+    "door-open",
+    "door-closed",
+    "fence",
+    "bathtub",
+    "shower-head",
+    "refrigerator",
+    "washing-machine",
+    "microwave",
+    "oven",
+    "air-conditioner",
+    "fan",
+    "vacuum-cleaner",
+    "hair-dryer",
+    "iron",
+    "heater",
+    "shirt",
+    "trousers",
+    "dress",
+    "coat",
+    "sock",
+    "shoe",
+    "glasses",
+    "sunglasses",
+    "watch",
+    "umbrella",
+    "stethoscope",
+    "syringe",
+    "pill",
+    "medical-mask",
+    "bandage",
+    "thermometer",
+    "hospital",
+    "ambulance",
+    "heart-pulse",
+    "first-aid-kit",
+    "bone",
+    "tooth",
+    "brain",
+    "lungs",
+    "ear",
+    "hand-heart",
+    "person-standing",
+    "person-walking",
+    "wheelchair",
+    "crutch",
+    "dumbbell",
+    "kettlebell",
+    "basketball",
+    "football",
+    "tennis-racket",
+    "volleyball",
+    "baseball",
+    "golf-hole",
+    "swimming",
+    "running",
+    "binoculars",
+    "flashlight",
+    "axe",
+    "shovel",
+    "pickaxe",
+    "fishing-hook",
+    "campfire",
+    "footprints",
+    "hiking",
+    "kayak",
+    "atom",
+    "flask-conical",
+    "flask-round",
+    "test-tube",
+    "microscope",
+    "telescope",
+    "dna",
+    "orbit",
+    "rocket",
+    "satellite",
+    "pi",
+    "sigma",
+    "infinity",
+    "radical",
+    "equal",
+    "not-equal",
+    "divide",
+    "plus-minus",
+    "fraction",
+    "function-square",
+    "graduation-cap",
+    "school",
+    "presentation",
+    "chalkboard",
+    "abacus",
+    "book-marked",
+    "library",
+    "diploma",
+    "globe-stand",
+    "pencil-ruler",
+    "guitar",
+    "piano",
+    "drum",
+    "violin",
+    "trumpet",
+    "saxophone",
+    "metronome",
+    "guitar-electric",
+    "vinyl-record",
+    "music-keyboard",
+    "radio-receiver",
+    "tv",
+    "projector",
+    "speaker",
+    "film-reel",
+    "cassette",
+    "film",
+    "clapperboard",
+    "podcast",
+    "antenna",
+    "hammer",
+    "screwdriver",
+    "drill",
+    "saw",
+    "tape-measure",
+    "toolbox",
+    "hard-hat",
+    "paint-roller",
+    "pocket-knife",
+    "nut",
+    "factory",
+    "crane-tower",
+    "crane-truck",
+    "forklift",
+    "warehouse",
+    "excavator",
+    "container",
+    "robot-arm",
+    "construction-barrier",
+    "wall",
+    "solar-panel",
+    "wind-turbine",
+    "battery-full",
+    "battery-low",
+    "battery-medium",
+    "battery-warning",
+    "car-battery",
+    "charging-station",
+    "transmission-tower",
+    "power-socket",
+    "cctv",
+    "siren",
+    "alarm-smoke",
+    "fire-extinguisher",
+    "fire-hydrant",
+    "vault",
+    "key-square",
+    "scan-face",
+    "seat-belt",
+    "safety-pin",
+    "scale",
+    "gavel",
+    "stamp",
+    "shopping-basket",
+    "basket-check",
+    "basket-plus",
+    "bag-check",
+    "bag-plus",
+    "cash-register",
+    "receipt-dollar",
+    "mailbox",
+    "phone-incoming",
+    "phone-outgoing",
+    "phone-missed",
+    "phone-call",
+    "satellite-dish",
+    "message-heart",
+    "message-dots",
+    "message-lock",
+    "message-search",
+    "chart-radar",
+    "chart-candlestick",
+    "chart-waterfall",
+    "chart-bubble",
+    "chart-network",
+    "chart-histogram",
+    "chart-sankey",
+    "chart-spline",
+    "chart-bell-curve",
+    "chart-combo",
+    "vector-square",
+    "bezier-curve",
+    "spline",
+    "vector-polygon",
+    "pentagon",
+    "octagon",
+    "ellipse",
+    "cone",
+    "cylinder",
+    "pyramid",
+    "layout-list",
+    "layout-template",
+    "layout-panel-left",
+    "split-horizontal",
+    "split-vertical",
+    "picture-in-picture",
+    "panels-top-left",
+    "panel-bottom-open",
+    "panel-top-open",
+    "focus",
+    "hourglass",
+    "calendar-heart",
+    "calendar-lock",
+    "calendar-recurring",
+    "alarm-plus",
+    "alarm-minus",
+    "alarm-check",
+    "timer-reset",
+    "calendar-search",
+    "calendar-off",
+    "diamond-gem",
+    "crown",
+    "trophy",
+    "medal",
+    "ribbon",
+    "party-popper",
+    "balloon",
+    "dice",
+    "gamepad",
+    "joystick"
+  ],
+  "reviewed": 20,
+  "remaining": 290,
+  "items": [
+    {
+      "name": "car",
+      "label": "汽車",
+      "category": "travel",
+      "status": "visually-reviewed",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision.",
+      "decision": "refined",
+      "defect": "原稿擋風玻璃斜邊直接折入引擎蓋，在sharp及放大診斷中有較硬的肩點；Lucide的車頭過渡較自然。",
+      "purpose": "以側視乘用車表示一般汽車交通，與長車廂的公車及露營車區分。",
+      "confusableWith": [
+        "bus",
+        "caravan"
+      ],
+      "sourceObservation": "Lucide的優勢是斜車頂到短引擎蓋的完整輪廓，轉折不搶眼；Tabler的窗帶與前後窗比例則更具實際車廂訊號。原稿已有Tabler改作關係，本輪保留窗帶及輪距，只把玻璃到引擎蓋的硬折改成短曲線過渡。最新稿重新與兩份來源並列，16／20／24的車頂仍清楚，肩部在sharp也不再形成突兀折點，沒有為仿Lucide而刪去已成立的窗帶。",
+      "reason": "精修擋風玻璃與引擎蓋的局部切線過渡，維持車身、輪距、窗孔和既有微圓家族比例。原生改善是輕微的輪廓放鬆，不宣稱為整顆重設；三尺寸輪孔及55%文字情境沒有因修肩而變密。",
+      "postComparison": "採納Lucide較自然的車頭過渡原則，保留Tabler式窗帶辨識。最新稿在三原生尺寸及明暗DPR1／2回比後，沒有觀察到需再靠齊來源的明顯比例差距。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "車身與車窗是完整可見構造，沒有隱藏邊界需要虛線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "輪胎、車身及窗孔以實際輪廓和空白區分，不需要淡化。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "交通符號採單色平面輪廓，不需要漸層表現車身曲面。"
+        }
+      },
+      "references": [
+        {
+          "name": "car",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/car.svg",
+          "localPath": "references/atlas-01/lucide-car.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/car.svg",
+          "sha256": "6d70bc146ca53b9c140a859319df471616c1ee6758bfb31a346d549d1fe92211",
+          "license": "ISC AND MIT",
+          "sourceName": "car",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "car",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/car.svg",
+          "localPath": "references/atlas-01/tabler-car.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/car.svg",
+          "sha256": "778ae49c8b59c1c3cdd619a5f55d2dd79b97709bb177469d8de6c4cc580c01d6",
+          "license": "MIT",
+          "sourceName": "car",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "batch": "01-vehicles-candidate-1",
+      "beforeHash": "d1755d6a4d7f287a9a36d775d822c4cb0dac56821f85755d7b453aba4dc9615a",
+      "afterHash": "8374a8f144e984950c4be8f5a82fdabf3e109a3705487ebe21b1347878e9fe03",
+      "evidence": [
+        {
+          "path": "docs/review/atlas-recompare-01/01-vehicles-candidate-1/car-light-1x.png",
+          "sha256": "b020a79125d161d54b7def29b3a21f1b5b7f77ea3cb699092015a261e913947c"
+        },
+        {
+          "path": "docs/review/atlas-recompare-01/01-vehicles-candidate-1/car-dark-1x.png",
+          "sha256": "de6b8e9a555421274ff52c3e56189a8894a4da6666b2ed22304d699a5aee8680"
+        },
+        {
+          "path": "docs/review/atlas-recompare-01/01-vehicles-candidate-1/car-light-2x.png",
+          "sha256": "e5bc222dba41c2bb513b19aef6d1b2a7cfa58267d677ee13d2c3cd901eb211c1"
+        },
+        {
+          "path": "docs/review/atlas-recompare-01/01-vehicles-candidate-1/car-dark-2x.png",
+          "sha256": "b1c15343f9f91a004859ce722b5e417b175cea1d2c27793f8cfeb79c71f9cc4f"
+        }
+      ],
+      "reviewer": "Codex (AI)",
+      "userApproval": "pending",
+      "remaining": []
+    },
+    {
+      "name": "bus",
+      "label": "公車",
+      "category": "travel",
+      "status": "visually-reviewed",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision.",
+      "decision": "refined",
+      "defect": "16px仍保留三個窄窗孔，整條窗帶較像細格柵；來源的窗格分組與主體輪廓比單純增加窗數更成熟。",
+      "purpose": "以長車廂、窗帶及雙輪表示公車交通，與低車頂乘用車區分。",
+      "confusableWith": [
+        "car",
+        "caravan"
+      ],
+      "sourceObservation": "Lucide以開放的窗帶和較少分割保持小尺寸清楚，Tabler多窗及車門提供更完整車體，但16px的細節也較密。最新稿只在16px改成兩個較寬窗孔，保留長頂、前側圓肩和同一底盤；20／24px的三窗本來有足夠空腔。重新並列後，16px不再有三個緊密亮點，窗帶仍比汽車高且長；兩個較大尺寸維持公車特有的重複窗節奏。",
+      "reason": "16px取消一根窗柱並把留下的窗柱置於中央，讓兩窗孔有穩定寬度；沒有縮細描邊或放大整顆。三尺寸都保留車頭、車輪與高窗帶的構造，保留已有Lucide改作聲明。",
+      "postComparison": "吸收來源以窗格分組形成長車廂的優點，依16px空間改成兩窗；與Lucide及Tabler原稿同CSS尺寸回比，減量後仍是公車而非單純方框或乘用車。明暗DPR1／2及低對比均已查看。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "車窗和車身都是連續實體，不以虛線表示正常公車。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "小窗密度以減少窗柱解決，不用透明度掩飾窄窗孔。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "平面公車符號由輪廓與窗帶成立，不需要漸層。"
+        }
+      },
+      "references": [
+        {
+          "name": "bus",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/bus.svg",
+          "localPath": "references/atlas-01/lucide-bus.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/bus.svg",
+          "sha256": "653d2c106ea719f34aa1c703fda450367d536477d61dab42723256c001d267bc",
+          "license": "ISC AND MIT",
+          "sourceName": "bus",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "bus",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/bus.svg",
+          "localPath": "references/atlas-01/tabler-bus.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/bus.svg",
+          "sha256": "5534f3dc6dae4e84019b16826d77ab336d1cc397ea776e321fa527c5befef1cf",
+          "license": "MIT",
+          "sourceName": "bus",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "batch": "01-vehicles-candidate-1",
+      "beforeHash": "1565da4906f0b6119d7fa0733656bef988694c452c00318ce098edb21be82697",
+      "afterHash": "cef58dbaebdd8a5bc310cff73a5e09725a0e8db20f216aef8e4f19fdda81474f",
+      "evidence": [
+        {
+          "path": "docs/review/atlas-recompare-01/01-vehicles-candidate-1/bus-light-1x.png",
+          "sha256": "fb39c68d9647835083ceab79e387427e3783b038b81a2b266f5bcead24292e6e"
+        },
+        {
+          "path": "docs/review/atlas-recompare-01/01-vehicles-candidate-1/bus-dark-1x.png",
+          "sha256": "86e016ce8d084904c7f3d04eb1509bf210568cb58d9af9cddc0c6d7d1fa2a219"
+        },
+        {
+          "path": "docs/review/atlas-recompare-01/01-vehicles-candidate-1/bus-light-2x.png",
+          "sha256": "d564f36ffc1ab8b3e2f620106284e775180701d034d005e424dc85015ece417a"
+        },
+        {
+          "path": "docs/review/atlas-recompare-01/01-vehicles-candidate-1/bus-dark-2x.png",
+          "sha256": "5226f3096c21569e34727c8380b512bad4ab919b0c820920ca85aca2a5245a0d"
+        }
+      ],
+      "reviewer": "Codex (AI)",
+      "userApproval": "pending",
+      "remaining": []
+    },
+    {
+      "name": "train",
+      "label": "列車",
+      "category": "travel",
+      "status": "visually-reviewed",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision.",
+      "decision": "refined",
+      "defect": "原稿的均勻半圓頂使上半部偏向通用膠囊，車廂頂面不明確；Phosphor寬而平的頂冠在物件形態上較成熟。",
+      "purpose": "以正面車廂和兩條軌腳表示列車；與有集電桿的電車及側視公車區分。",
+      "confusableWith": [
+        "tram",
+        "bus"
+      ],
+      "sourceObservation": "Lucide強調流線型高速列車，窄U形前窗與圓鼻形成完整器型；Phosphor的平頂、圓肩和窗帶則明確呈現一般車廂。原稿介於兩者卻只保留通用半圓頂，本輪採較寬的頂冠與圓肩關係，以自家曲線重排上半輪廓，保留既有下收車頭及全寬前窗。最新稿在16／20／24已較像完整車廂，沒有加入來源的額外窗框與車頂分隔，避免削弱原有簡潔度。",
+      "reason": "重塑上半部為平頂圓肩，保持下半車鼻、頭燈位置與軌腳不動，讓物體的上寬下收更明確。這是一般車廂構造與比例的研究提煉，未移植來源路徑；原生三尺寸皆保有單一前窗與雙燈的清楚層級。",
+      "postComparison": "採Phosphor較明確的頂冠關係，保留自家弧形下鼻，不追隨Lucide高速列車的窄U窗器型。最新稿與兩來源同尺寸回比後，寬頂與下收車頭相互承接，較原稿膠囊形有車廂特徵；三角型、明暗DPR1／2及55%文字均已查看。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "車廂輪廓及軌腳都是可見構造，沒有虛擬路徑的表意需求。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "前窗、燈點和車鼻以空間分組區分，不使用漸淡處理層級。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "以輪廓曲線表現車鼻收束，單色圖示不需要漸層。"
+        }
+      },
+      "references": [
+        {
+          "name": "train",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/train-front.svg",
+          "localPath": "references/atlas-01/lucide-train-front.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/train-front.svg",
+          "sha256": "27757ea510a6d1d6258cb838a72a7b239c96f3724923adb5d529a25c3ee8e2eb",
+          "license": "ISC AND MIT",
+          "sourceName": "train-front",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "train",
+          "library": "Phosphor",
+          "repository": "phosphor-icons/core",
+          "commit": "2b75f3ad12b420c9504ef05df8d2564a28f8500e",
+          "path": "assets/regular/train.svg",
+          "localPath": "references/atlas-01/phosphor-train.svg",
+          "url": "https://github.com/phosphor-icons/core/blob/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular/train.svg",
+          "sha256": "07fc0688faa9a521d38f5b49caeb118c329461646ce5b9238889642c8af73a3b",
+          "license": "MIT",
+          "sourceName": "train",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "batch": "01-vehicles-candidate-1",
+      "beforeHash": "3b99a3a254b9b4d4f37acbcd214d187b2487ebed78831618324bf0d8d24b3189",
+      "afterHash": "fba3fbc85f08ad8b4502b356d5c6a5664bcdc0cc36852308ebae030e3f04183b",
+      "evidence": [
+        {
+          "path": "docs/review/atlas-recompare-01/01-vehicles-candidate-1/train-light-1x.png",
+          "sha256": "ddcee0adcc380e6da7a7610e60453b0e8193efbb5f10c72ea804df406675cb33"
+        },
+        {
+          "path": "docs/review/atlas-recompare-01/01-vehicles-candidate-1/train-dark-1x.png",
+          "sha256": "40dd0f3d0561f2c7086f872ae2b7d1e74c49bd3296fcaf95af84a9333be742d3"
+        },
+        {
+          "path": "docs/review/atlas-recompare-01/01-vehicles-candidate-1/train-light-2x.png",
+          "sha256": "c6817494ffd9b609005ee3a1f334ad0552facaf030c3e6c502d2163b03c923f4"
+        },
+        {
+          "path": "docs/review/atlas-recompare-01/01-vehicles-candidate-1/train-dark-2x.png",
+          "sha256": "51bd1d88cb65576c1d12200d94e627d438123ccd9b41d85d045c9b5a5bd16b07"
+        }
+      ],
+      "reviewer": "Codex (AI)",
+      "userApproval": "pending",
+      "remaining": []
+    },
+    {
+      "name": "tram",
+      "label": "電車",
+      "category": "travel",
+      "status": "visually-reviewed",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision.",
+      "decision": "retained",
+      "defect": "本輪沒有發現需要回修的比例或承接缺陷；檢查重點為集電桿與車頂空白、前窗及燈點分區。",
+      "purpose": "以集電桿與正面車廂表示電車，和一般列車及公車區分。",
+      "confusableWith": [
+        "train",
+        "bus"
+      ],
+      "sourceObservation": "Lucide的雙窗前臉較有傳統車廂感，Phosphor的全寬前窗與獨立T形集電桿則更簡潔，兩者不是僅靠相同名稱充數。Master已有Phosphor改作關係，前窗採同一寬度的水平分界，車頂到集電橫桿仍有清楚空白，兩個燈點不擠下框。與本輪較平頂的train並排，tram的集電桿、較方車廂及平底仍有清楚差異，無須為模仿Lucide額外加入一根窗柱。",
+      "reason": "保留全寬前窗、車頂集電桿及方車廂的整體構造。三尺寸的上方桿件、窗帶、燈點、下方軌腳有分層節奏；rounded收角後窗孔仍完整，sharp接點沒有向框外多出細刺。",
+      "postComparison": "重新與Lucide、Phosphor在16／20／24並列後，現稿與Phosphor同樣以簡潔前窗和集電桿成立；沒有看到來源略勝而需要新增內線的部位。Lucide雙窗是合理器型差異，維持既有全寬窗選擇。明暗DPR1全圖與DPR2原生區均已查看。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "集電桿、窗框及軌腳皆為可見構造，沒有需要虛線表示的隱藏區。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "車廂與集電桿以真實空白區分，不需用透明度分離部件。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "正面單色交通符號以輪廓成立，不需要漸層。"
+        }
+      },
+      "references": [
+        {
+          "name": "tram",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/tram-front.svg",
+          "localPath": "references/atlas-01/lucide-tram-front.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/tram-front.svg",
+          "sha256": "44e1b7e2b5fb9b6c56341286a3fb93e75f1dae28cbbf6a04a6528e246767d895",
+          "license": "ISC AND MIT",
+          "sourceName": "tram-front",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "tram",
+          "library": "Phosphor",
+          "repository": "phosphor-icons/core",
+          "commit": "2b75f3ad12b420c9504ef05df8d2564a28f8500e",
+          "path": "assets/regular/tram.svg",
+          "localPath": "references/atlas-01/phosphor-tram.svg",
+          "url": "https://github.com/phosphor-icons/core/blob/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular/tram.svg",
+          "sha256": "ca6eaddf75676310bdd41a404f50b6ad465c2699e62c0abfc5032d6fc5d03878",
+          "license": "MIT",
+          "sourceName": "tram",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "batch": "02-cycles-final",
+      "beforeHash": "29d3ddbad4fd42f802f0ce2ea2ad069ee1455b8f02e522bd5786ff3f87fc83ba",
+      "afterHash": "29d3ddbad4fd42f802f0ce2ea2ad069ee1455b8f02e522bd5786ff3f87fc83ba",
+      "evidence": [
+        {
+          "path": "docs/review/atlas-recompare-01/02-cycles-final/tram-light-1x.png",
+          "sha256": "a3991a56b0909a987bfc236d08b33811000a3b0ba20f6746314e9020bfa3e7ab"
+        },
+        {
+          "path": "docs/review/atlas-recompare-01/02-cycles-final/tram-dark-1x.png",
+          "sha256": "2e84be25badb12df26c2d74fcd0c8eca151e808f5ff51def66d49f40e4612c6a"
+        },
+        {
+          "path": "docs/review/atlas-recompare-01/02-cycles-final/tram-native-light-2x.png",
+          "sha256": "07ddfc9f4a15efc1aa67b14224e6baa20694cb1373868742a0a5617508b5b3aa"
+        },
+        {
+          "path": "docs/review/atlas-recompare-01/02-cycles-final/tram-native-dark-2x.png",
+          "sha256": "10e0f8eb90f34658fdaeebce74f3071205cd74481b6e3710607f5c929257e24e"
+        }
+      ],
+      "reviewer": "Codex (AI)",
+      "userApproval": "pending",
+      "remaining": []
+    },
+    {
+      "name": "bicycle",
+      "label": "自行車",
+      "category": "travel",
+      "status": "visually-reviewed",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision.",
+      "decision": "refined",
+      "defect": "原稿輪徑相對車架偏小，前叉與座管顯得過高；sharp車把以急折連接，像硬尖折桿，缺少彎管形態。",
+      "purpose": "以雙輪、開放車架、座墊與車把表示自行車，與有油箱的機車及低踏板滑板車區分。",
+      "confusableWith": [
+        "motorcycle",
+        "scooter"
+      ],
+      "sourceObservation": "Phosphor較大的輪徑與開放車架讓整車穩定，彎管車把也比原稿急折自然；Iconoir的大輪與較低車架同樣有良好支承感，但額外曲柄在原生16px增加密度。本輪沿既有Phosphor改作方向，先加大輪徑、微收輪距並上移輪心，再將車把改為有連續承接和短下彎的管形。最新稿回比保留輪孔及開放車架，沒有補回密集的後三角底邊或曲柄；三尺寸的車身不再像高架在小輪之上。",
+      "reason": "輪徑按原生尺寸取3.8／3.9／4構造單位，輪心移至5.3與18.7、共同高度16；橫管接點由前叉軸線求交。車把的彎管是物件曲面，在sharp也保留，避免以miter尖角代替管件轉彎。",
+      "postComparison": "第一候選只修輪徑仍留下尖折車把，最新稿再吸收Phosphor的彎管優勢。16／20／24與兩來源重新並列後，輪子支承感和車把形態更完整，輪孔仍開放；不增加Iconoir的曲柄以維持原生16px的清楚空白。明暗DPR1全圖、DPR2原生區與55%文字已查看。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "車架與輪胎皆需呈現連續實體，虛線無法增加自行車語意。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "輪孔和開放車架由幾何留白保持，不以淡化弱化前叉或輪胎。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "彎管與輪胎以單色曲線成立，不需要漸層。"
+        }
+      },
+      "references": [
+        {
+          "name": "bicycle",
+          "library": "Phosphor",
+          "repository": "phosphor-icons/core",
+          "commit": "2b75f3ad12b420c9504ef05df8d2564a28f8500e",
+          "path": "assets/regular/bicycle.svg",
+          "localPath": "references/atlas-01/phosphor-bicycle.svg",
+          "url": "https://github.com/phosphor-icons/core/blob/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular/bicycle.svg",
+          "sha256": "5830a596814df4e9ac4298e5889b8a6a7a2c56a49018f4faf1f1e2f8f824c14f",
+          "license": "MIT",
+          "sourceName": "bicycle",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "bicycle",
+          "library": "Iconoir",
+          "repository": "iconoir-icons/iconoir",
+          "commit": "39834e3f193bc0cca2c36bebb6a650471977433d",
+          "path": "icons/regular/bicycle.svg",
+          "localPath": "references/atlas-01/iconoir-bicycle.svg",
+          "url": "https://github.com/iconoir-icons/iconoir/blob/39834e3f193bc0cca2c36bebb6a650471977433d/icons/regular/bicycle.svg",
+          "sha256": "901a8b8e9e5b6a561bb0f9a2763f53d46126e14eb2235b9a284faecca5a449ab",
+          "license": "MIT",
+          "sourceName": "bicycle",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "batch": "02-cycles-final",
+      "beforeHash": "55c757159efafc21509f54995b8722b5897fb85162a09f6e33cb717274551dba",
+      "afterHash": "94293aa3b9fa33f0039fa8f70077939ccee21ec47c4ae80298593324499f1e58",
+      "evidence": [
+        {
+          "path": "docs/review/atlas-recompare-01/02-cycles-final/bicycle-light-1x.png",
+          "sha256": "57c4b7622757c37634beecfca33df2c626a1b4ade8cf883795f8451f063830da"
+        },
+        {
+          "path": "docs/review/atlas-recompare-01/02-cycles-final/bicycle-dark-1x.png",
+          "sha256": "8907b2d54c0875edc7cd12453fa357597a0153842e9d14a259ae2df276380ddb"
+        },
+        {
+          "path": "docs/review/atlas-recompare-01/02-cycles-final/bicycle-native-light-2x.png",
+          "sha256": "a04662064911603a4624fb9bf184ca62626763f0375c74540845614b46942f25"
+        },
+        {
+          "path": "docs/review/atlas-recompare-01/02-cycles-final/bicycle-native-dark-2x.png",
+          "sha256": "487873186a1a26cf9b95065cadd574b7f73bc987fac34fb5e6d707ba72f3dc7a"
+        }
+      ],
+      "reviewer": "Codex (AI)",
+      "userApproval": "pending",
+      "remaining": []
+    },
+    {
+      "name": "motorcycle",
+      "label": "機車",
+      "category": "travel",
+      "status": "visually-reviewed",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision.",
+      "decision": "refined",
+      "defect": "原稿兩輪相對油箱和高前叉偏小，整體顯得細長且支承不足；Phosphor的輪身比例更穩定。",
+      "purpose": "以油箱、座墊、底盤、斜前叉及雙輪表示機車，和自行車的細車架區分。",
+      "confusableWith": [
+        "bicycle",
+        "scooter"
+      ],
+      "sourceObservation": "Phosphor以較大的輪孔支承流動的座墊油箱與底盤曲線，整體有完整機車體量；Tabler用短直線和斜三角把機械構造收得更緊，但小尺寸中央交叉較重。Master既有Phosphor改作的上、下曲線已自然，本輪只放大雙輪並略收輪距，將底盤及油箱接前叉的點重新從同一軸線求出。回比後車輪與車身的比例接近來源的穩定感，保留曲線車身，不必另加Tabler式內交叉。",
+      "reason": "輪半徑由3增為3.5，輪心由4.5／19.5收至5／19；油箱、底盤和前叉仍接在同一結構點，位置以幾何求交代替近似常數。維持座墊到油箱及底盤上收曲線，只修正輪身比例。",
+      "postComparison": "最新稿與Phosphor／Tabler在三個原生尺寸回比，雙輪不再顯得偏小，車身曲線有較穩的支承；前輪的斜叉與輪孔仍可分辨。沒有為採取Tabler較緊的造型而增加中央黑結，保留已成立的Phosphor式流線主體。明暗DPR1全圖、DPR2原生區及低對比文字皆已查看。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "輪胎、座墊及車架是連續可見構造，不需要虛線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "車身體量由輪徑及曲線比例修正，不使用淡化掩飾輪孔或接點。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "機車以單色平面輪廓傳意，沒有漸層需求。"
+        }
+      },
+      "references": [
+        {
+          "name": "motorcycle",
+          "library": "Phosphor",
+          "repository": "phosphor-icons/core",
+          "commit": "2b75f3ad12b420c9504ef05df8d2564a28f8500e",
+          "path": "assets/regular/motorcycle.svg",
+          "localPath": "references/atlas-01/phosphor-motorcycle.svg",
+          "url": "https://github.com/phosphor-icons/core/blob/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular/motorcycle.svg",
+          "sha256": "984ece942155405c6578eb78b322e74e9ba5d89618d19441f18577a56f3118be",
+          "license": "MIT",
+          "sourceName": "motorcycle",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "motorcycle",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/motorbike.svg",
+          "localPath": "references/atlas-01/tabler-motorbike.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/motorbike.svg",
+          "sha256": "12f2f059998757265c839a817387f1c577d9477ddd5fb2f1e1ce23e1214dab9f",
+          "license": "MIT",
+          "sourceName": "motorbike",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "batch": "02-cycles-final",
+      "beforeHash": "641ccaeefe50d000f34548f3f9b6466938fbdfec9aab04e3e5a996130bad5430",
+      "afterHash": "bdaa4b0fcfe25422e3270ef5b71074c5ea6e12a4b60c6bdd4a8e6c8f149106c4",
+      "evidence": [
+        {
+          "path": "docs/review/atlas-recompare-01/02-cycles-final/motorcycle-light-1x.png",
+          "sha256": "8a113d3a6d8339e2eccecdf2da9e982b95c0528daa8d5ebe02f8152dc191c449"
+        },
+        {
+          "path": "docs/review/atlas-recompare-01/02-cycles-final/motorcycle-dark-1x.png",
+          "sha256": "2839bd831703e8589c2e04e3e5065806d85213c6a4b76a15cab0dc68b05c45c2"
+        },
+        {
+          "path": "docs/review/atlas-recompare-01/02-cycles-final/motorcycle-native-light-2x.png",
+          "sha256": "ae589c29aa43aab390fb98fc15e81b3de4238266251fc21e67380bd362c8fc8c"
+        },
+        {
+          "path": "docs/review/atlas-recompare-01/02-cycles-final/motorcycle-native-dark-2x.png",
+          "sha256": "2c83dbfe0d587a6659a8be1b63e773b8396e93e20bab95bdc872af1a2943b59a"
+        }
+      ],
+      "reviewer": "Codex (AI)",
+      "userApproval": "pending",
+      "remaining": []
+    },
+    {
+      "name": "scooter",
+      "label": "滑板車",
+      "category": "travel",
+      "status": "visually-reviewed",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision.",
+      "decision": "retained",
+      "defect": "本輪未見需要回修的比例缺陷；重點檢查踏板與後輪接點、前輪內孔及立管支架交點。",
+      "purpose": "以低踏板和前傾立管表示站立式滑板車，與有座墊及油箱的機車區分。",
+      "confusableWith": [
+        "bicycle",
+        "motorcycle"
+      ],
+      "sourceObservation": "Phosphor以長斜立管與連續踏板形成安靜的三段節奏，Tabler以直立管、短踏板及厚小輪形成更緊湊的電動滑板車器型。Master既有Phosphor改作保留寬輪距和較清楚的輪孔，踏板與輪緣實接，沒有在後輪中心另畫一段線。原生16px中前輪斜管雖穿過輪孔，兩側仍可讀；Tabler小輪較實心，並沒有更好的負空間需要借用。",
+      "reason": "維持現有踏板和輪身比例，不將已清楚的開放三角改成Tabler短踏板構造。sharp斜桿折點表現直管接合，soft與rounded有實際小圓角，無需一律改成自行車彎把。",
+      "postComparison": "最新未改稿與Phosphor／Tabler在16、20、24及三角型重新並列，長立管和低踏板的姿態自然，輪孔及中央開放區均成立；來源屬器型差異，未見需要回修的優勢。已查看明暗DPR1全圖、明暗DPR2原生區與55%文字情境。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "踏板、立管與輪胎是連續可見構造，不使用虛線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "前輪與支架依實際空白區分，不用透明度掩飾交點。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "單色滑板車輪廓不需要連續漸層。"
+        }
+      },
+      "references": [
+        {
+          "name": "scooter",
+          "library": "Phosphor",
+          "repository": "phosphor-icons/core",
+          "commit": "2b75f3ad12b420c9504ef05df8d2564a28f8500e",
+          "path": "assets/regular/scooter.svg",
+          "localPath": "references/atlas-01/phosphor-scooter.svg",
+          "url": "https://github.com/phosphor-icons/core/blob/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular/scooter.svg",
+          "sha256": "c3f190b8a1c7a4e67772a1e189b8ac54c1da677f72e4c731f51047afa407787b",
+          "license": "MIT",
+          "sourceName": "scooter",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "scooter",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/scooter.svg",
+          "localPath": "references/atlas-01/tabler-scooter.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/scooter.svg",
+          "sha256": "73de4d372307a9912ac3d809920fd6dd9eba4423eb99c90be9535acb7a78f7b5",
+          "license": "MIT",
+          "sourceName": "scooter",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "batch": "03-flight-final",
+      "beforeHash": "f7678c24f49e16e500283f48626a3e373d53ab955c3edcf43ef4692efa99dce7",
+      "afterHash": "f7678c24f49e16e500283f48626a3e373d53ab955c3edcf43ef4692efa99dce7",
+      "evidence": [
+        {
+          "path": "docs/review/atlas-recompare-01/03-flight-final/scooter-light-1x.png",
+          "sha256": "daddf23d3f3244a89408a58302d925c5ae816a847bc882c8f729d3425a797cb2"
+        },
+        {
+          "path": "docs/review/atlas-recompare-01/03-flight-final/scooter-dark-1x.png",
+          "sha256": "d6f7647f9e40ad3b779655d01c4733487bcfbca6a52b048bdd136712ca01906c"
+        },
+        {
+          "path": "docs/review/atlas-recompare-01/03-flight-final/scooter-native-light-2x.png",
+          "sha256": "b806a7de7ec8e5331a32c4efc2e88dd598988733f3a4203b70b08147b431377e"
+        },
+        {
+          "path": "docs/review/atlas-recompare-01/03-flight-final/scooter-native-dark-2x.png",
+          "sha256": "3dff7716c12d82a37b0737107668e2e741fa17bb59249b2fcda7b55af3c8706e"
+        }
+      ],
+      "reviewer": "Codex (AI)",
+      "userApproval": "pending",
+      "remaining": []
+    },
+    {
+      "name": "plane",
+      "label": "飛機",
+      "category": "travel",
+      "status": "visually-reviewed",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision.",
+      "decision": "refined",
+      "defect": "原稿機身及翼尖略厚，與來源較俐落的後掠輪廓相比顯得笨重，尤其主翼端部有厚矩形感。",
+      "purpose": "以對稱俯視機身、主翼與尾翼表示一般飛機及航空交通，不增加起降方向符號。",
+      "confusableWith": [
+        "rocket",
+        "helicopter"
+      ],
+      "sourceObservation": "Lucide斜向輪廓有動態張力，機身與後掠翼的收束較俐落；Tabler橫向俯視以完整長機鼻和薄翼尖形成清楚比例。Master選擇向上的對稱俯視，不需要照搬斜向姿態，但可以吸收來源較薄的翼尖及窄機身。機身寬度由4縮至3.6構造單位，翼尖厚度由2.5縮至2，保留機身內孔與圓鼻。這是通用航空比例的微調，沒有複製來源路徑或移植其特定輪廓。",
+      "reason": "對稱縮窄機身，主翼前緣端點下降0.5形成更薄翼尖，保留原有翼展與尾翼；圓機鼻維持垂直切線，不把sharp鼻端做成尖頭。",
+      "postComparison": "最新稿與Lucide／Tabler以三個原生尺寸回比，主翼端部較輕，機身在16px仍有連續內孔，20與24的後掠比例更俐落。維持向上對稱符號的穩定性；Lucide斜向姿態較活潑是用途取捨，不靠增加內線改善。明暗DPR1、DPR2與55%文字均已查看。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "主翼及機身皆為可見外輪廓，無隱藏構造需要虛線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "左右機翼和機身同等重要，以比例分配墨量，不採透明度。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "飛機以單色外形傳意，不需要連續漸層。"
+        }
+      },
+      "references": [
+        {
+          "name": "plane",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/plane.svg",
+          "localPath": "references/atlas-01/lucide-plane.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/plane.svg",
+          "sha256": "4c775a62a524be78fe20aed8544933d4bd3802c5eca17cd6923509f87671d6d6",
+          "license": "ISC AND MIT",
+          "sourceName": "plane",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "plane",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/plane.svg",
+          "localPath": "references/atlas-01/tabler-plane.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/plane.svg",
+          "sha256": "7cb6e6178e90920f87b2bba22886921457ffbb84a5719db8b870d72d03803bf7",
+          "license": "MIT",
+          "sourceName": "plane",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "batch": "03-flight-final",
+      "beforeHash": "7a4f42ee0eaa134be8384e1f7045447f097b8ff72a70b41e61e16acc929243e1",
+      "afterHash": "acbfc76c9ada136a48f307a0354e84c6f3b3202dabcd0777742553374a66fffa",
+      "evidence": [
+        {
+          "path": "docs/review/atlas-recompare-01/03-flight-final/plane-light-1x.png",
+          "sha256": "0cda97c2f6c3838e021298746bad19792b6701c0c40495e4f0071eb18dfa4021"
+        },
+        {
+          "path": "docs/review/atlas-recompare-01/03-flight-final/plane-dark-1x.png",
+          "sha256": "d29fc22646cce9c003ef8e591dd3745d2df11bcb8cdcc11088212d3ab2c46890"
+        },
+        {
+          "path": "docs/review/atlas-recompare-01/03-flight-final/plane-native-light-2x.png",
+          "sha256": "fcab972254cbfa6c64f94a9e8513988f42825a0896ce4c91fb5a5474e7b26056"
+        },
+        {
+          "path": "docs/review/atlas-recompare-01/03-flight-final/plane-native-dark-2x.png",
+          "sha256": "e17821b10b27cea5bda72bce0dd14d8edd1adae161df250ded8a7f1812527ffd"
+        }
+      ],
+      "reviewer": "Codex (AI)",
+      "userApproval": "pending",
+      "remaining": []
+    },
+    {
+      "name": "helicopter",
+      "label": "直升機",
+      "category": "travel",
+      "status": "visually-reviewed",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision.",
+      "decision": "refined",
+      "defect": "原稿座艙前腹偏圓厚，上下支架拉得較高，整體近乎方形；直角窗線也比Lucide的轉彎生硬。",
+      "purpose": "用主旋翼、圓座艙、尾桿與滑橇表示直升機，與固定翼飛機區分。",
+      "confusableWith": [
+        "plane"
+      ],
+      "sourceObservation": "Lucide窗線隨座艙轉彎，比原稿硬折自然；Tabler較低的旋翼和滑橇使機身橫向姿態更完整，但單支柱不是必須照搬的構造。Master延續既有Lucide改作，略拉長前艙並收腹，縮短旋翼及滑橇的上下外伸，窗分界用短曲線承接。保留雙支柱、獨立尾桿與前窗孔，不改成密集拼裝或另加座艙內線。",
+      "reason": "重整前肩到機鼻和下腹的連續曲線，機鼻外伸0.5、底部上收0.5；旋翼由y3到4、滑橇由y21到20。窗分界以一段曲線轉向，在sharp中仍作為真實機艙曲面保留。",
+      "postComparison": "回修後在16、20、24與Lucide／Tabler並列，座艙更有向前延伸的形態，上下支架不再壓過主體。Lucide窗線的流動性已吸收，前窗與下方空腔仍清楚；保留比Tabler略完整的雙支柱器型，沒有增加其短尾上翹線。明暗DPR1全圖與DPR2原生區、低對比文字皆已查看。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "旋翼、尾桿和滑橇為實體構造，虛線會削弱直升機辨識。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "窗孔、滑橇空腔以實際空白呈現，不以透明度降低密度。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "直升機以單色平面輪廓成立，不需要連續漸層。"
+        }
+      },
+      "references": [
+        {
+          "name": "helicopter",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/helicopter.svg",
+          "localPath": "references/atlas-01/lucide-helicopter.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/helicopter.svg",
+          "sha256": "8d92a155340d0f041f47b91fce7aa3865b2dcea448d01402f8b9d6f9f009e2eb",
+          "license": "ISC AND MIT",
+          "sourceName": "helicopter",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "helicopter",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/helicopter.svg",
+          "localPath": "references/atlas-01/tabler-helicopter.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/helicopter.svg",
+          "sha256": "66ecaf44e629b3f2cd57360decfb2d86a1907b6e5c017ffb6c1f4d2b5e5fa5e1",
+          "license": "MIT",
+          "sourceName": "helicopter",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "batch": "03-flight-final",
+      "beforeHash": "f2ea9534d5c2b3035c59b6a763b84626b0a4c40fc55e3663727bd1dd788932d4",
+      "afterHash": "30d76f130ae87c54d9dcc803b608e92cd29b6a121d5b983107698ad3ccb18496",
+      "evidence": [
+        {
+          "path": "docs/review/atlas-recompare-01/03-flight-final/helicopter-light-1x.png",
+          "sha256": "2fbdb9601fadda5464c376072196da1a3fad47fca7f47646cc217f348b061f22"
+        },
+        {
+          "path": "docs/review/atlas-recompare-01/03-flight-final/helicopter-dark-1x.png",
+          "sha256": "c3b66918b664f410e78dfcfab725d792429a14fc2736aa5c1aa2e98dd30232e9"
+        },
+        {
+          "path": "docs/review/atlas-recompare-01/03-flight-final/helicopter-native-light-2x.png",
+          "sha256": "cc6c09877535ee5df29f2bc49d0c7d568c24c8012b1ccf86f7e70b2d79bdb927"
+        },
+        {
+          "path": "docs/review/atlas-recompare-01/03-flight-final/helicopter-native-dark-2x.png",
+          "sha256": "62c4625f9c8cd5ba1e4d574fe97a56616366fefb376b0516da6d15f62f64f5bf"
+        }
+      ],
+      "reviewer": "Codex (AI)",
+      "userApproval": "pending",
+      "remaining": []
+    },
+    {
+      "name": "sailboat",
+      "label": "帆船",
+      "category": "travel",
+      "status": "visually-reviewed",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision.",
+      "decision": "refined",
+      "defect": "原稿桅杆接近中央、左右帆面近乎等分，整體比較像立在碗上的三角形，缺少帆船的方向感。",
+      "purpose": "以雙帆、桅杆及船殼表示帆船航行，與有甲板的輪船和單純三角旗區分。",
+      "confusableWith": [
+        "ship",
+        "flag"
+      ],
+      "sourceObservation": "Lucide偏左桅杆與較大右帆比原稿近等分三角更有帆船姿態；Tabler用一大帆和一短斜線呈現雙帆，雖有輕快感，但水波與斷開帆面在16px增加零碎訊號。沿既有Lucide改作關係，把桅杆左移一單位、右帆端右移一單位，直接靠近其成熟的大小帆比例。保留連續船腹及帆底到甲板四單位空白，不增加Tabler波浪。",
+      "reason": "以桅杆及雙帆比例為單一主變數。桅杆和帆內分界共用x10，主帆右端為x21；船殼、描邊和帆底高度不變，避免改比例同時引入新細節。",
+      "postComparison": "最新稿在16／20／24與Lucide、Tabler重新並列，大小帆有清楚主次，俯近對稱三角的僵硬感減少；原生16左帆孔仍可分辨，帆底空白沒有縮小。Lucide優勢已吸收到既有改作中，保留完整船殼而不採Tabler水波器型。明暗DPR1全圖與DPR2原生區、55%文字情境均已查看。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "帆邊、桅杆及船殼均為可見構造，沒有隱藏邊界需要虛線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "大小帆的主次用面積及真實空白表達，不使用淡化。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "單色航行符號由輪廓和比例成立，不需要漸層。"
+        }
+      },
+      "references": [
+        {
+          "name": "sailboat",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/sailboat.svg",
+          "localPath": "references/atlas-01/lucide-sailboat.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/sailboat.svg",
+          "sha256": "5e772794ba3157558622aae62e808bf95a29a5f507e8a625f7df35736cb01f40",
+          "license": "ISC AND MIT",
+          "sourceName": "sailboat",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "sailboat",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/sailboat.svg",
+          "localPath": "references/atlas-01/tabler-sailboat.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/sailboat.svg",
+          "sha256": "e1c3f0ab69aec34467850e501894db143be16f7b1dd5fcd4c81dd29bab197414",
+          "license": "MIT",
+          "sourceName": "sailboat",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "batch": "04-marine-final",
+      "beforeHash": "3905d8a4f29eeb69ac7c8007810e607322e152695f17bcee807978bdce88b0c9",
+      "afterHash": "dbca03b4a12eb3ce1ca91026949b66a830b66ccc5bbe037535967ba6eec7b06f",
+      "evidence": [
+        {
+          "path": "docs/review/atlas-recompare-01/04-marine-final/sailboat-light-1x.png",
+          "sha256": "4f5128ecb4bb05fe306e8846d710ff96335a7d56e1e3dee73789797093036b6d"
+        },
+        {
+          "path": "docs/review/atlas-recompare-01/04-marine-final/sailboat-dark-1x.png",
+          "sha256": "b101ac6565ce69a7defd98bcfc0888d54f8dfd867ef7f3f944ba070e1cc8aa89"
+        },
+        {
+          "path": "docs/review/atlas-recompare-01/04-marine-final/sailboat-native-light-2x.png",
+          "sha256": "a69b4bea1177db0aad26d5f41a10dd0e235f79335e2c50c5bfbd721787772de4"
+        },
+        {
+          "path": "docs/review/atlas-recompare-01/04-marine-final/sailboat-native-dark-2x.png",
+          "sha256": "99d80811308ee2b1d0e45a40caa41f2f6d6736eb85cfcef8c7c16d5613e000e8"
+        }
+      ],
+      "reviewer": "Codex (AI)",
+      "userApproval": "pending",
+      "remaining": []
+    },
+    {
+      "name": "ship",
+      "label": "輪船",
+      "category": "travel",
+      "status": "visually-reviewed",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision.",
+      "decision": "refined",
+      "defect": "原稿船腹由多段折線形成，尤其sharp像六邊形容器；只改角點半徑沒有給船殼自身的曲面。",
+      "purpose": "以正面船首、上層甲板與水面表示輪船，和帆船及普通容器區分。",
+      "confusableWith": [
+        "sailboat",
+        "shopping-basket"
+      ],
+      "sourceObservation": "Lucide船殼兩側的收腹曲線比原稿多邊形自然，船首有整體體量；Tabler側向甲板和斜船身是另一種器型，水面與下方開放船殼較輕，但其小煙囪不是本稿缺少的主要品質。沿既有Lucide改作方向重畫下腹，維持船首中脊與一層甲板、獨立水線，避免用更多小線補救輪廓。",
+      "reason": "以四段左右鏡像曲線替換折線下腹，兩側轉折與底部維持切線連續；sharp仍保留結構船腹曲面。上緣船首按角型收角，原有船底高度17.5與水線位置不變。候選一之後再校正左右控制柄，保持肩腹銜接。",
+      "postComparison": "最新稿與Lucide／Tabler三尺寸回比，兩側到船底的收束不再像多邊形盆器，中央船脊保留正面船首結構。水面與船底在16px仍有可見通道，沒有為靠近Lucide而壓縮原有留白。選擇完整船殼及單層甲板，不添加煙囪；明暗DPR1、DPR2及低對比文字均已查看。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "船殼、甲板及水面都是可見輪廓，不需要隱藏線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "水面以實際間距與船體分離，不靠透明度掩飾相黏。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "船首立體方向由中脊和腹線表示，不使用漸層。"
+        }
+      },
+      "references": [
+        {
+          "name": "ship",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/ship.svg",
+          "localPath": "references/atlas-01/lucide-ship.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/ship.svg",
+          "sha256": "bb958a2f8c37dbb3412b07493f2739bb32349713222108bd9a3468c8893a0eb5",
+          "license": "ISC AND MIT",
+          "sourceName": "ship",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "ship",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/ship.svg",
+          "localPath": "references/atlas-01/tabler-ship.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/ship.svg",
+          "sha256": "cbde856282569c0bdd06750d9bd8f3aedb162f0a4e37ed897617e68e009f8e92",
+          "license": "MIT",
+          "sourceName": "ship",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "batch": "04-marine-final",
+      "beforeHash": "6008eda625f0043e67a77a57fe01053f26d0b5299d393c8f77b87dd6e8c2c091",
+      "afterHash": "650b52c15f76531fe325784e72a9b6650acdd0179aea1871e4716bd942f347e3",
+      "evidence": [
+        {
+          "path": "docs/review/atlas-recompare-01/04-marine-final/ship-light-1x.png",
+          "sha256": "d9b74635e69fdaa5a4c5e982ed5326914e4eb9d8771d67ed65b0c6fecc939cb1"
+        },
+        {
+          "path": "docs/review/atlas-recompare-01/04-marine-final/ship-dark-1x.png",
+          "sha256": "2ccdcba73c57e31393fe3b4449c2fc86e13c291b806f7b8b798a463c208da244"
+        },
+        {
+          "path": "docs/review/atlas-recompare-01/04-marine-final/ship-native-light-2x.png",
+          "sha256": "51abe3ecc27f40d6b48c4e0816119418a9f4d8dc7524fe9da02ceed495070084"
+        },
+        {
+          "path": "docs/review/atlas-recompare-01/04-marine-final/ship-native-dark-2x.png",
+          "sha256": "6b9fc4db74cc8c7d680441377b33d4a094dee587a3559085ce70fa049fe93d50"
+        }
+      ],
+      "reviewer": "Codex (AI)",
+      "userApproval": "pending",
+      "remaining": []
+    },
+    {
+      "name": "anchor",
+      "label": "船錨",
+      "category": "travel",
+      "status": "visually-reviewed",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision.",
+      "decision": "retained",
+      "defect": "本輪未見需回修的比例或輪廓問題；著重檢查環孔、橫桿到回鉤的空白以及sharp鉤尖。",
+      "purpose": "以環孔、主幹和兩側錨臂表示船錨及停泊，與掛鉤及一般向下箭頭區分。",
+      "confusableWith": [
+        "fishing-hook",
+        "arrow-down"
+      ],
+      "sourceObservation": "Tabler大環孔和簡潔下弧有清楚節奏，Lucide短橫桿及回鉤更像傳統船錨，但其上環在16px較小。Master既有Tabler改作保留較大的環孔，下臂連續對稱，加入的橫桿與錨尖沒有逼近環孔或彼此黏合。sharp較尖的回鉤屬錨爪構造，主臂仍是曲線；不因尖爪存在就把整段圓弧拉成折線。",
+      "reason": "保留目前大環孔、橫桿和回鉤的比例。三角型的鉤尖有實際差異，主幹貼合外環不穿入內孔；兩側錨臂的鏡像與下方圓弧已形成完整支承。",
+      "postComparison": "最新未改稿與Lucide／Tabler在16／20／24重新並列，環孔比Lucide小環更清楚，錨尖又比Tabler平短端更明確；兩者的成熟特徵在現稿已有具體表達，未見需要另加線或調比例的差距。明暗DPR1全圖、DPR2原生區與55%文字均已查看，sharp回鉤屬合理器型選擇。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "錨臂及主幹需要連續實體線條，虛線沒有語意收益。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "環孔和錨臂內的開放區以幾何留白成立，不用透明度。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "平面船錨符號以單色構造傳意，無需漸層。"
+        }
+      },
+      "references": [
+        {
+          "name": "anchor",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/anchor.svg",
+          "localPath": "references/atlas-01/lucide-anchor.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/anchor.svg",
+          "sha256": "dcb3f2de41e067983f31b35d896b41ae0e5c1782b527289d17d6efeec1ae8239",
+          "license": "ISC AND MIT",
+          "sourceName": "anchor",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "anchor",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/anchor.svg",
+          "localPath": "references/atlas-01/tabler-anchor.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/anchor.svg",
+          "sha256": "6f11cb256ea6422edb1aa98aa044a2737bb0f9185d9c04bdf10bf88ff1bee10f",
+          "license": "MIT",
+          "sourceName": "anchor",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "batch": "04-marine-final",
+      "beforeHash": "11873a61c937385700663a9eba8decfea58e7aed6e613d833bdf6c5f830a6d73",
+      "afterHash": "11873a61c937385700663a9eba8decfea58e7aed6e613d833bdf6c5f830a6d73",
+      "evidence": [
+        {
+          "path": "docs/review/atlas-recompare-01/04-marine-final/anchor-light-1x.png",
+          "sha256": "8ef68f24a93bb2191ed1d4c655023da056767211e9a7b47d56a082adde0cac3f"
+        },
+        {
+          "path": "docs/review/atlas-recompare-01/04-marine-final/anchor-dark-1x.png",
+          "sha256": "522ecdc746f1cbe2ff6192900d2663edc1795ee9554b4d799f2fba916c3b954e"
+        },
+        {
+          "path": "docs/review/atlas-recompare-01/04-marine-final/anchor-native-light-2x.png",
+          "sha256": "f5e54b0106df6afa53df46673a97e85f15e7e6c63f08e8feccaf1054bad0cdc5"
+        },
+        {
+          "path": "docs/review/atlas-recompare-01/04-marine-final/anchor-native-dark-2x.png",
+          "sha256": "061d37c3aec449ae9605165129638d69496c199a2214ce62c1064fb20ab5a57c"
+        }
+      ],
+      "reviewer": "Codex (AI)",
+      "userApproval": "pending",
+      "remaining": []
+    },
+    {
+      "name": "luggage",
+      "label": "行李箱",
+      "category": "travel",
+      "status": "visually-reviewed",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision.",
+      "decision": "refined",
+      "defect": "原稿箱體寬14高13，近方形且拉桿偏高；來源的直立箱身更有旅行箱比例，原稿較像小型提袋。",
+      "purpose": "以直立箱身、拉桿和底輪表示旅行行李箱，與橫向公事包及柔軟後背包區分。",
+      "confusableWith": [
+        "briefcase",
+        "backpack"
+      ],
+      "sourceObservation": "Lucide的縱向拉桿和完整雙輪強化直立行李箱，Tabler的窄箱身及短把手也比原稿近方形自然。把通用矩形箱身調為寬12高14、頂部提高一單位，讓拉桿露出部分略短。保留既有箱紋和簡化底輪，不照搬Lucide貫穿箱體的拉桿線或Tabler橫帶。這是現有矩形構造的比例校正，未移植來源的具體路徑。",
+      "reason": "以箱身長寬比例為主變數，左右各收一單位並把頂部由y7提高至6。拉桿接點跟隨新頂部，底輪位置不變；16px維持空箱體，20與24保留兩條直紋。",
+      "postComparison": "最新稿與Lucide／Tabler在三尺寸並列後，直立旅行箱比例更明確，拉桿不再像額外堆高的把手。16px仍有完整箱腔；20／24直紋與邊框之間保持可見空白。來源較完整的輪孔不是小尺寸必須新增的細節，保留短輪柱器型。明暗DPR1全圖、DPR2原生區及低對比文字均已查看。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "箱身、拉桿和箱紋皆為可見構造，不需要隱藏線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "箱紋以16px省略、較大尺寸保留處理，無須用淡化。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "平面旅行箱符號由比例及線條傳意，不需要漸層。"
+        }
+      },
+      "references": [
+        {
+          "name": "luggage",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/luggage.svg",
+          "localPath": "references/atlas-01/lucide-luggage.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/luggage.svg",
+          "sha256": "b0cb9548912ec4bae26f2441eda91197759ac85e37aa10721f07e0f8496051a8",
+          "license": "ISC AND MIT",
+          "sourceName": "luggage",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "luggage",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/luggage.svg",
+          "localPath": "references/atlas-01/tabler-luggage.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/luggage.svg",
+          "sha256": "4f95b9d0328b92a7a322b842eda037c5a569cb80b21b6a27fbe3f6c87f1e5357",
+          "license": "MIT",
+          "sourceName": "luggage",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "batch": "05-camping-final",
+      "beforeHash": "155395ec2c002a93f466f1eadbecd0d61e233630bc236a2453dc31b9666a7fdf",
+      "afterHash": "cbd988dd8598288421b5af3f006fefb93d529366d49c2b9747b89f5e92fa2091",
+      "evidence": [
+        {
+          "path": "docs/review/atlas-recompare-01/05-camping-final/luggage-light-1x.png",
+          "sha256": "be0cacc026570fa44904b111fdfa31465d2d6b92bb755f249a223a33a8c55229"
+        },
+        {
+          "path": "docs/review/atlas-recompare-01/05-camping-final/luggage-dark-1x.png",
+          "sha256": "b6dc6652fa9968f7ea94531455597a22443b71b99f9aa07f2cf8420635be8085"
+        },
+        {
+          "path": "docs/review/atlas-recompare-01/05-camping-final/luggage-native-light-2x.png",
+          "sha256": "46986d3aa5e56799ee09f7950969c4711edfed41518800e02c76ada76e4b950f"
+        },
+        {
+          "path": "docs/review/atlas-recompare-01/05-camping-final/luggage-native-dark-2x.png",
+          "sha256": "d619f8ea9664c54d1d65737612afa405214f8b4f99a191f49deb249474ced4cf"
+        }
+      ],
+      "reviewer": "Codex (AI)",
+      "userApproval": "pending",
+      "remaining": []
+    },
+    {
+      "name": "backpack",
+      "label": "後背包",
+      "category": "travel",
+      "status": "visually-reviewed",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision.",
+      "decision": "refined",
+      "defect": "原稿袋身偏矮寬，除前袋外沒有開口訊號，較像午餐袋或通用拱形物件；來源後背包的姿態與用途更完整。",
+      "purpose": "以圓肩袋身、提把、上方開口與前袋表示後背包，與硬箱及簡單手提袋區分。",
+      "confusableWith": [
+        "luggage",
+        "shopping-bag"
+      ],
+      "sourceObservation": "Lucide上方的水平開口是有用途的細節，Tabler則用短開口及較窄圓肩表現包體；兩者比例皆比原稿寬17的主袋更像背包。第一候選先補一條6單位開口，回比後仍顯寬，第二候選將主袋收至15、前袋由8收至7，維持兩側空白。沿既有Lucide改作吸收必要開口，不加入前袋第二道拉鍊以避免16px堆疊過密。",
+      "reason": "先補開口訊號，再修主袋比例。圓肩控制柄隨寬度共同調整，前袋同步收窄以保留側邊通道；頂部開口位於y10，與主袋頂及前袋頂各保持4單位中心線距。結構圓肩在sharp中亦保留。",
+      "postComparison": "最新稿與兩來源三尺寸回比，較直立的圓肩主袋和上方開口已補足物件形態。原生16px能分辨提把、開口及前袋，開口與前袋沒有黏成橫條；保留比Lucide少一道的前袋內線，避免用細節數取代完整造型。明暗DPR1、DPR2及55%文字情境均已查看。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "短線表示可見拉鍊開口，不繪細拉鍊齒或虛線以免原生密集。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "主袋與前袋由輪廓及空白分層，不使用透明度掩飾密度。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "單色袋身以圓肩及前袋構造成立，不需要漸層。"
+        }
+      },
+      "references": [
+        {
+          "name": "backpack",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/backpack.svg",
+          "localPath": "references/atlas-01/lucide-backpack.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/backpack.svg",
+          "sha256": "239fdca9bfe7d550be2dbbbe40f3c62f748a96235cde509d15dd32596e982f95",
+          "license": "ISC AND MIT",
+          "sourceName": "backpack",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "backpack",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/backpack.svg",
+          "localPath": "references/atlas-01/tabler-backpack.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/backpack.svg",
+          "sha256": "b5e8fc7d4c2a97a7809379d4225d4467250cf8c54a6f650bd20972f1d291cccf",
+          "license": "MIT",
+          "sourceName": "backpack",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "batch": "05-camping-final",
+      "beforeHash": "18d8ddad00428e4b16a99ec458d65fee22edc15e874e41a3db311d7e2ecedd9c",
+      "afterHash": "c98e08039dfcb819c4e8a83737b2fab37797fabbe060ee681d43c851632cdc8f",
+      "evidence": [
+        {
+          "path": "docs/review/atlas-recompare-01/05-camping-final/backpack-light-1x.png",
+          "sha256": "ab357b25bf29b07da80f9063960066840d8eec2ac44ff81212de9bd4f6ca7f7e"
+        },
+        {
+          "path": "docs/review/atlas-recompare-01/05-camping-final/backpack-dark-1x.png",
+          "sha256": "fb93c37346dc85f70cd2deb36cfdc3184b2007b6c73f43ece7b2fa3754ffb3e3"
+        },
+        {
+          "path": "docs/review/atlas-recompare-01/05-camping-final/backpack-native-light-2x.png",
+          "sha256": "5d9fc2e89add71d286d859607cd8a4e5c3343f53ea90f5cad7eb13643c63f5eb"
+        },
+        {
+          "path": "docs/review/atlas-recompare-01/05-camping-final/backpack-native-dark-2x.png",
+          "sha256": "9f382cb17f68db334a8f6dd64e66c0bac0aefdbd5bf0398a9785bd5980510844"
+        }
+      ],
+      "reviewer": "Codex (AI)",
+      "userApproval": "pending",
+      "remaining": []
+    },
+    {
+      "name": "tent",
+      "label": "帳篷",
+      "category": "travel",
+      "status": "visually-reviewed",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision.",
+      "decision": "refined",
+      "defect": "原稿頂端營柱斜率與外側斜邊不同，交點上方稍微外張，沒有完全延續支柱的結構軸線。",
+      "purpose": "以交叉營柱、三角帳身和帳門表示露營帳篷，與山峰及普通三角符號區分。",
+      "confusableWith": [
+        "mountain",
+        "triangle"
+      ],
+      "sourceObservation": "Lucide交叉營柱直接沿外側斜邊延伸，桿件一體感比原稿近似角度更完整；Tabler省略上方交叉柱，將交叉訊號移至帳門，是另一種較緊湊器型。沿既有Lucide改作把頂端延伸從同一構造軸線求出，維持帳身與帳門面積，不因另一器型省筆就刪掉明確的營柱訊號。",
+      "reason": "用外側9比16的水平／垂直比例推算3單位的頂部延伸，左右端點由x10／14改為10.3125／13.6875。保持鏡像，仍按外殼裁切收口；帳門及底邊不變。",
+      "postComparison": "最新稿與Lucide／Tabler以16／20／24並列，整體仍是清楚的交叉柱帳篷，改善集中在頂部兩段桿件的連續走向。帳門孔及兩側布面未縮小；保留現有完整底邊，不加Lucide向外延長的地面線，避免加重底部。這是細微結構精修，非整顆重畫。明暗DPR1及DPR2、低對比文字均已查看。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "營柱及帳門都是可見邊界，虛線不增加露營語意。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "帳門以真實空白表示入口，帳布不需透明度分層。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "平面帳篷以支柱和三角開口成立，不需要漸層。"
+        }
+      },
+      "references": [
+        {
+          "name": "tent",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/tent.svg",
+          "localPath": "references/atlas-01/lucide-tent.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/tent.svg",
+          "sha256": "6915cac45dc3f1a4490c089c209078eaa44ccfef7b01023d3fd59ea4213a9d0a",
+          "license": "ISC AND MIT",
+          "sourceName": "tent",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "tent",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/tent.svg",
+          "localPath": "references/atlas-01/tabler-tent.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/tent.svg",
+          "sha256": "a8cdfe1dc62f5b290a1697c698eb37f0b3fa27bd4c5f035f2d73578e84567716",
+          "license": "MIT",
+          "sourceName": "tent",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "batch": "05-camping-final",
+      "beforeHash": "98e0413fbcfe514480fa5ecd0b4b4c3a131811333a8820afef122654eaaa3cbf",
+      "afterHash": "6cbfae4feb6bfa3b987a11071363b915e67082e8b1a642732f5ad4f285077d5c",
+      "evidence": [
+        {
+          "path": "docs/review/atlas-recompare-01/05-camping-final/tent-light-1x.png",
+          "sha256": "ea8b392e8fe22fa56efe6da41fba51b0b35aa59a1b7b64dab480080cd0c5ad70"
+        },
+        {
+          "path": "docs/review/atlas-recompare-01/05-camping-final/tent-dark-1x.png",
+          "sha256": "470cc0e89d3f3a4807d07cd3b16f3be3ebd8ec1602b6be471fdacfd3f18a5fe0"
+        },
+        {
+          "path": "docs/review/atlas-recompare-01/05-camping-final/tent-native-light-2x.png",
+          "sha256": "0eb046a325783aa52c3f64400bcee265087114ef05b902818524fa18a0a8b5d6"
+        },
+        {
+          "path": "docs/review/atlas-recompare-01/05-camping-final/tent-native-dark-2x.png",
+          "sha256": "f4facffb3e0321259477c1708d3a3be1e9ebf5ae2de841e2a125a82b98d83232"
+        }
+      ],
+      "reviewer": "Codex (AI)",
+      "userApproval": "pending",
+      "remaining": []
+    },
+    {
+      "name": "caravan",
+      "label": "露營車",
+      "category": "travel",
+      "status": "visually-reviewed",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision.",
+      "decision": "refined",
+      "defect": "原稿右上肩只依角型套小圓角，sharp成為完整直角箱體，與左側車殼曲面缺少一致的物件形態。",
+      "purpose": "以單輪車廂、側窗及牽引桿表示露營拖車，與一般汽車及貨箱區分。",
+      "confusableWith": [
+        "car",
+        "bus"
+      ],
+      "sourceObservation": "Lucide兩側圓肩和Tabler圓收車廂都比原稿右側直角自然；Lucide車門及Tabler升頂訊號是不同露營車器型，並非本稿缺少的主要輪廓品質。沿既有Tabler改作修右上肩，在所有角型保留結構曲線，維持側窗與單輪的清楚空間，不增加密集車門或升頂線。",
+      "reason": "右上肩改為從水平車頂到垂直車壁的三單位曲面，控制柄分別沿水平和垂直方向承接；底角仍依角型處理，輪位、窗孔和牽引桿不變。",
+      "postComparison": "最新稿與Lucide／Tabler在16／20／24回比，車殼兩端有共同的圓肩語言，sharp不再像左圓右方的貨箱。窗孔和輪孔保持分離；保留簡潔側窗器型，而不照搬來源的門或升頂。明暗DPR1全圖、DPR2原生區與55%文字均已查看。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "車殼、側窗與牽引桿為可見構造，沒有虛線用途。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "窗孔及輪孔以真實空白呈現，不以透明度分離。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "車殼曲面由輪廓表達，單色符號不需要漸層。"
+        }
+      },
+      "references": [
+        {
+          "name": "caravan",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/caravan.svg",
+          "localPath": "references/atlas-01/lucide-caravan.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/caravan.svg",
+          "sha256": "39688ddd2fa863c97143fa7a9fd036fee277657b78e1a9927aff44839d9315d7",
+          "license": "ISC AND MIT",
+          "sourceName": "caravan",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "caravan",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/caravan.svg",
+          "localPath": "references/atlas-01/tabler-caravan.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/caravan.svg",
+          "sha256": "291a6e08bea0e4dc026fbff97e51fbc71f0489c9a3bb4f5fa4cb12d720cbd54e",
+          "license": "MIT",
+          "sourceName": "caravan",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "batch": "06-road-candidate-1",
+      "beforeHash": "0cb0c644ed4ce14eb52e6fd63c74dafb94dcdc8f35a6370633e2dc39d30bbb3b",
+      "afterHash": "81d284e4cdca32548754135db619964fa3a98f54695bbaf0b7168ee1ca9660e0",
+      "evidence": [
+        {
+          "path": "docs/review/atlas-recompare-01/06-road-candidate-1/caravan-light-1x.png",
+          "sha256": "f27251d99ff913f876cd3014e76f7e4a49420cde2394cba9ddfc91e9882e4cfc"
+        },
+        {
+          "path": "docs/review/atlas-recompare-01/06-road-candidate-1/caravan-dark-1x.png",
+          "sha256": "5c29c829c1571e576d93420c42e5fdd6935ada1095f7d585ccb052026dd268ff"
+        },
+        {
+          "path": "docs/review/atlas-recompare-01/06-road-candidate-1/caravan-native-light-2x.png",
+          "sha256": "3500ba092d677d23350620fede68369d5c330be22440792d07fa3e48951b370b"
+        },
+        {
+          "path": "docs/review/atlas-recompare-01/06-road-candidate-1/caravan-native-dark-2x.png",
+          "sha256": "a458f807821c92d8c7c35f144c269a072419e4e14f8f4949b1d6a73e0b9d57ca"
+        }
+      ],
+      "reviewer": "Codex (AI)",
+      "userApproval": "pending",
+      "remaining": []
+    },
+    {
+      "name": "fuel",
+      "label": "加油",
+      "category": "travel",
+      "status": "visually-reviewed",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision.",
+      "decision": "retained",
+      "defect": "本輪未發現需要回修的輪廓或比例缺陷，重點檢查油管回彎與泵身之間的空白及顯示區。",
+      "purpose": "以泵身、上方顯示區及回彎油管表示加油服務，與電池及普通直立設備區分。",
+      "confusableWith": [
+        "battery",
+        "charging-station"
+      ],
+      "sourceObservation": "Lucide寬泵身和圓油管提供穩定原型；Tabler較緊湊並多一個槍口內孔，但原生16px的槍口較密。Master既有Lucide改作以較窄泵身換取油管空間，泵身上段與下段比例清楚，回彎保持連續而非方折。來源的槍口小內線未帶來必須吸收的原生收益，現稿的斜端和回彎已表達油管用途。",
+      "reason": "保留現有泵身、顯示區與油管。油管出殼後向下回彎，兩條豎段間有完整空腔；與泵身之間也保持分離，無需用新增細線增加辨識。",
+      "postComparison": "最新未改稿與兩來源三尺寸並列，現有泵身和油管比例自然，16px油管孔與泵身空白仍清楚，20／24回彎沒有生硬接角。未見來源略勝而需修改的部位；Tabler額外槍口內孔屬合理細節取捨。明暗DPR1、DPR2及低對比文字皆已查看。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "泵身和油管都是連續實體，不需要虛線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "油管與主體依實際間距區分，不用透明度淡化細節。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "加油符號以單色設備輪廓成立，不需要漸層。"
+        }
+      },
+      "references": [
+        {
+          "name": "fuel",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/fuel.svg",
+          "localPath": "references/atlas-01/lucide-fuel.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/fuel.svg",
+          "sha256": "1e2f065370733e919bda97f92a946c1fec79cae809da4b53d364ead08eea136e",
+          "license": "ISC AND MIT",
+          "sourceName": "fuel",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "fuel",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/gas-station.svg",
+          "localPath": "references/atlas-01/tabler-gas-station.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/gas-station.svg",
+          "sha256": "83f6f3cfefaba97cbde37a282758e84f4498ed0ec8453fec7a3230766b81d389",
+          "license": "MIT",
+          "sourceName": "gas-station",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "batch": "06-road-candidate-1",
+      "beforeHash": "aeb627d4399766c43c4a7ac39b9ae9c05a90682e0f42051efbbe627e9255b346",
+      "afterHash": "aeb627d4399766c43c4a7ac39b9ae9c05a90682e0f42051efbbe627e9255b346",
+      "evidence": [
+        {
+          "path": "docs/review/atlas-recompare-01/06-road-candidate-1/fuel-light-1x.png",
+          "sha256": "311a98ad4d183c8660144fb8fa82e53da9fe7b68ed23cc4874a81db24d9566ba"
+        },
+        {
+          "path": "docs/review/atlas-recompare-01/06-road-candidate-1/fuel-dark-1x.png",
+          "sha256": "d524f76c1c3f2dd235b866445cf8abafc1e7ef0c767e5eda6f966b39f6a36c01"
+        },
+        {
+          "path": "docs/review/atlas-recompare-01/06-road-candidate-1/fuel-native-light-2x.png",
+          "sha256": "8be2e28f8ed85b9a7edb3a24a077961deb74553b248e7ff4b9e0fae95ed7019f"
+        },
+        {
+          "path": "docs/review/atlas-recompare-01/06-road-candidate-1/fuel-native-dark-2x.png",
+          "sha256": "52f96c4240a5189c8d676e981f13ab2843bd27d80cb2e67102023b4bd7e345f2"
+        }
+      ],
+      "reviewer": "Codex (AI)",
+      "userApproval": "pending",
+      "remaining": []
+    },
+    {
+      "name": "traffic-cone",
+      "label": "交通錐",
+      "category": "travel",
+      "status": "visually-reviewed",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision.",
+      "decision": "refined",
+      "defect": "原稿平頂寬5單位，較像等寬分層的梯形桶；兩份來源的窄冠更能表現交通錐的收尖姿態。",
+      "purpose": "以收尖錐體、警示帶與寬底板表示道路施工交通錐，與一般梯形器物區分。",
+      "confusableWith": [
+        "triangle",
+        "cone"
+      ],
+      "sourceObservation": "Tabler窄頂與開放平面錐體比原稿更俐落；Lucide的圓錐曲面和透視底板也清楚，但需要較多弧線及墨量。延續既有Tabler平面改作，將平頂由5收至3，保留兩道警示帶和一條底板，不混入Lucide透視語言。",
+      "reason": "以冠部寬度為主變數，左右頂端各向內一單位，底寬與總高度不變。兩道警示帶按新外殼裁切，避免沿用舊側邊端點造成越界；側邊維持平切收進底板。",
+      "postComparison": "最新稿三尺寸回比後，錐體由寬底向窄冠收束更明確，16px上區仍有可辨識的空白，警示帶不黏成實心塊。比Tabler保留稍寬平頂以維持小尺寸開口，維持平面底板而不增加Lucide透視基座。明暗DPR1與DPR2、55%文字皆已查看。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "警示帶為實際連續分界，不需用虛線表示。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "警示帶在單色中以分區傳意，不使用透明度代替空白。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "錐體由比例及斜邊成立，不需要漸層塑造體積。"
+        }
+      },
+      "references": [
+        {
+          "name": "traffic-cone",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/traffic-cone.svg",
+          "localPath": "references/atlas-01/lucide-traffic-cone.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/traffic-cone.svg",
+          "sha256": "988ae428132305b37b55b9a32bc2ee6fdea42290d16a6b4b57fadd32b2afbf6d",
+          "license": "ISC AND MIT",
+          "sourceName": "traffic-cone",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "traffic-cone",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/traffic-cone.svg",
+          "localPath": "references/atlas-01/tabler-traffic-cone.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/traffic-cone.svg",
+          "sha256": "5eb67d43cd4eb41dc0b4de07be216e7ee7e86380201999c5e3df8f453c552a8d",
+          "license": "MIT",
+          "sourceName": "traffic-cone",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "batch": "06-road-candidate-1",
+      "beforeHash": "8820de1f6c63f3fd09173870767b814a4e6965008320b1f8bb1ad2cca048b8fd",
+      "afterHash": "dc7cc9dce96b0fe2c93e7c7178c67dbef2e6c1605ff6041c6e29f824fd89f3b2",
+      "evidence": [
+        {
+          "path": "docs/review/atlas-recompare-01/06-road-candidate-1/traffic-cone-light-1x.png",
+          "sha256": "b37ebc9ee3f79c8328fcae8163b26f6922b7a664dc5e631fb5323ca4b426a407"
+        },
+        {
+          "path": "docs/review/atlas-recompare-01/06-road-candidate-1/traffic-cone-dark-1x.png",
+          "sha256": "f9c943a6495da08c991d6a077aa27e8848db04dc99612c056917a3e236e36446"
+        },
+        {
+          "path": "docs/review/atlas-recompare-01/06-road-candidate-1/traffic-cone-native-light-2x.png",
+          "sha256": "e6a9ebad65c6117017ba868f52e9842ae9678537a8714d8984c80dea9a4021e5"
+        },
+        {
+          "path": "docs/review/atlas-recompare-01/06-road-candidate-1/traffic-cone-native-dark-2x.png",
+          "sha256": "97954e162c92bc903d1461bc1d170d4f4e60f9a81fadf8999f894c1e061b948d"
+        }
+      ],
+      "reviewer": "Codex (AI)",
+      "userApproval": "pending",
+      "remaining": []
+    },
+    {
+      "name": "traffic-light",
+      "label": "交通號誌",
+      "category": "travel",
+      "status": "visually-reviewed",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision.",
+      "decision": "retained",
+      "defect": "本輪未見必須回修的幾何缺陷；主要檢查三燈的間距、上下燈到外框的留白，以及小尺寸省略支架後的辨識。",
+      "purpose": "以直立三燈外殼表示交通號誌設備，不表示某個燈色目前亮起的狀態。",
+      "confusableWith": [
+        "panel-top-open",
+        "more-vertical"
+      ],
+      "sourceObservation": "Phosphor是兩燈方殼器型，提供外殼與側支架的比較，不能假稱相同三燈配置；Tabler則是三燈膠囊殼，輪廓較柔和但燈孔近似實心。Master既有Phosphor改作以16px三個實心點避免微小燈孔，20／24px恢復燈環與短支架。兩來源的分組優點已有吸收，沒有把方殼全部改成膠囊殼的必要。",
+      "reason": "保留按尺寸分配細節的策略。16px三個點是燈面訊號，20／24的燈孔、上下邊距及兩側支架仍能分辨；外框依角型有實際圓角，沒有為了模仿Tabler而改掉既有方殼器型。",
+      "postComparison": "最新未改稿與Phosphor／Tabler在16／20／24及三角型回比，三燈節奏清楚，20／24燈環之間沒有黏合，16px省略支架後仍保留三燈設備輪廓。Phosphor兩燈本來較疏，這是器型差異，不以刪掉第三燈換取留白。明暗DPR1全圖、DPR2原生區與55%文字均已查看。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "外殼、燈位及支架為實體設備訊號，不需要虛線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "本圖表示設備而非亮燈狀態，三燈同權，不以透明度指定目前燈色。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "燈面用單色圓點或圓孔表示，不需要光暈漸層。"
+        }
+      },
+      "references": [
+        {
+          "name": "traffic-light",
+          "library": "Phosphor",
+          "repository": "phosphor-icons/core",
+          "commit": "2b75f3ad12b420c9504ef05df8d2564a28f8500e",
+          "path": "assets/regular/traffic-signal.svg",
+          "localPath": "references/atlas-01/phosphor-traffic-signal.svg",
+          "url": "https://github.com/phosphor-icons/core/blob/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular/traffic-signal.svg",
+          "sha256": "44982fb6086009f97a4f3a77d241b2fcf0b6e7b27a893627fa20747f0acef097",
+          "license": "MIT",
+          "sourceName": "traffic-signal",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "traffic-light",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/traffic-lights.svg",
+          "localPath": "references/atlas-01/tabler-traffic-lights.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/traffic-lights.svg",
+          "sha256": "e5a7c71375ec06b4dd5ea61eaa506eba786a45a6560accfc0b42c5eeea13def5",
+          "license": "MIT",
+          "sourceName": "traffic-lights",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "batch": "07-signals-before",
+      "beforeHash": "8b939e472232d7757715ed7efcd01b5f4572070ad000f314a38f9fe601c3d77f",
+      "afterHash": "8b939e472232d7757715ed7efcd01b5f4572070ad000f314a38f9fe601c3d77f",
+      "evidence": [
+        {
+          "path": "docs/review/atlas-recompare-01/07-signals-before/traffic-light-light-1x.png",
+          "sha256": "e015227d67dab22e01cc6904652d00f431b06f96ee92a48e5dbe4c700ab80788"
+        },
+        {
+          "path": "docs/review/atlas-recompare-01/07-signals-before/traffic-light-dark-1x.png",
+          "sha256": "bccda2c4b34088447a9bfcbd0de05a87fd4d488a3bf3cdc9e960fb2a4fb757f8"
+        },
+        {
+          "path": "docs/review/atlas-recompare-01/07-signals-before/traffic-light-native-light-2x.png",
+          "sha256": "5962568442a7c2773d9e2713289bfe33f5c6054161c3b4f206200ec3cd404741"
+        },
+        {
+          "path": "docs/review/atlas-recompare-01/07-signals-before/traffic-light-native-dark-2x.png",
+          "sha256": "1b33460c016fd6df1ab844ee7fef7155d6280c0a2356d9284077c65c04a10a43"
+        }
+      ],
+      "reviewer": "Codex (AI)",
+      "userApproval": "pending",
+      "remaining": []
+    },
+    {
+      "name": "road",
+      "label": "道路",
+      "category": "travel",
+      "status": "visually-reviewed",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision.",
+      "decision": "retained",
+      "defect": "本輪未見需要回修的比例與留白缺陷；檢查三段中線是否黏合、上方窄處是否擁擠及道路透視。",
+      "purpose": "以向遠方收束的路緣和分段中線表示道路或公路，與單支方向箭頭及鐵軌區分。",
+      "confusableWith": [
+        "route",
+        "train"
+      ],
+      "sourceObservation": "Tabler用兩條路緣與三段中線形成簡潔道路，Master既有改作延續相同成熟構造。Phosphor增加水平地平線並大幅張開路緣，更像帶景深的道路場景，但16px頂部的橫線與中線較密。現稿較長的外展路緣保持足夠內部空間，無須為追求場景感新增地平線。",
+      "reason": "保留開放輪廓及三段中線。標線採獨立線段安排可見間距，兩側路緣維持連續；上方留白不封口，整體不會退化成箭頭或密集軌道。",
+      "postComparison": "最新未改稿與Tabler／Phosphor以三個原生尺寸回比，兩側路緣、中線及各段間的空白均清楚；現稿與Tabler的簡潔符號取向一致，Phosphor地平線帶來的場景差異不構成必須增加一筆的優勢。明暗DPR1及DPR2、低對比文字均已查看。",
+      "effects": {
+        "dashes": {
+          "used": true,
+          "reason": "道路中線本身就是分段標線，使用三個獨立線段控制原生段長與間隔；兩側路緣維持實線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "透視由路緣收束表達，不用遠端淡化以免減弱原生中線。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "道路的方向與深度由輪廓和間距傳意，不需要漸層。"
+        }
+      },
+      "references": [
+        {
+          "name": "road",
+          "library": "Phosphor",
+          "repository": "phosphor-icons/core",
+          "commit": "2b75f3ad12b420c9504ef05df8d2564a28f8500e",
+          "path": "assets/regular/road-horizon.svg",
+          "localPath": "references/atlas-01/phosphor-road-horizon.svg",
+          "url": "https://github.com/phosphor-icons/core/blob/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular/road-horizon.svg",
+          "sha256": "ccb5c1d0595d2131b4ae97690a4e980b3a562378fc400ac3b61995c8b8c53948",
+          "license": "MIT",
+          "sourceName": "road-horizon",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "road",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/road.svg",
+          "localPath": "references/atlas-01/tabler-road.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/road.svg",
+          "sha256": "3524dff35b2b15ff4d1d557cf1409ab54aa788b5a723a731304c669fa2d1cb0e",
+          "license": "MIT",
+          "sourceName": "road",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "batch": "07-signals-before",
+      "beforeHash": "bb95dba2c2ca76ae1d8ae58f36defb72475a9fb627d857c53f0958a2b1861cb8",
+      "afterHash": "bb95dba2c2ca76ae1d8ae58f36defb72475a9fb627d857c53f0958a2b1861cb8",
+      "evidence": [
+        {
+          "path": "docs/review/atlas-recompare-01/07-signals-before/road-light-1x.png",
+          "sha256": "f61bd88bef20965378a32a66b0706c1da68340eec88a20cd2b1acedd79f20612"
+        },
+        {
+          "path": "docs/review/atlas-recompare-01/07-signals-before/road-dark-1x.png",
+          "sha256": "e3d57adf5294f1e287483efd9561c8111a688f7c77d21549dec0a4e3d4723aa6"
+        },
+        {
+          "path": "docs/review/atlas-recompare-01/07-signals-before/road-native-light-2x.png",
+          "sha256": "e9b88fb9425dac263d3d43d1995b5d58b4fcb3328a3f396fc75b27c78fa931da"
+        },
+        {
+          "path": "docs/review/atlas-recompare-01/07-signals-before/road-native-dark-2x.png",
+          "sha256": "3a4e092c666c9131fc552b0c9ef2be596798d03c9abf2db6195934934e153ecc"
+        }
+      ],
+      "reviewer": "Codex (AI)",
+      "userApproval": "pending",
+      "remaining": []
+    },
+    {
+      "name": "cloud-rain",
+      "label": "雨天",
+      "category": "weather",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "cloud-snow",
+      "label": "降雪",
+      "category": "weather",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "cloud-lightning",
+      "label": "雷雨",
+      "category": "weather",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "cloud-fog",
+      "label": "霧",
+      "category": "weather",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "cloud-sun",
+      "label": "晴時多雲",
+      "category": "weather",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "cloud-moon",
+      "label": "夜間多雲",
+      "category": "weather",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "sunrise",
+      "label": "日出",
+      "category": "weather",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "sunset",
+      "label": "日落",
+      "category": "weather",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "wind",
+      "label": "風",
+      "category": "weather",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "snowflake",
+      "label": "雪花",
+      "category": "weather",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "leaf",
+      "label": "葉子",
+      "category": "nature",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "sprout",
+      "label": "幼苗",
+      "category": "nature",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "tree-pine",
+      "label": "松樹",
+      "category": "nature",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "tree-deciduous",
+      "label": "闊葉樹",
+      "category": "nature",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "flower",
+      "label": "花朵",
+      "category": "nature",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "cactus",
+      "label": "仙人掌",
+      "category": "nature",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "mountain",
+      "label": "山脈",
+      "category": "nature",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "mountain-snow",
+      "label": "雪山",
+      "category": "nature",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "waves",
+      "label": "波浪",
+      "category": "nature",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "droplet",
+      "label": "水滴",
+      "category": "nature",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "cat",
+      "label": "貓",
+      "category": "nature",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "dog",
+      "label": "狗",
+      "category": "nature",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "fish",
+      "label": "魚",
+      "category": "nature",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "bird",
+      "label": "鳥",
+      "category": "nature",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "rabbit",
+      "label": "兔子",
+      "category": "nature",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "turtle",
+      "label": "烏龜",
+      "category": "nature",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "snail",
+      "label": "蝸牛",
+      "category": "nature",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "butterfly",
+      "label": "蝴蝶",
+      "category": "nature",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "bee",
+      "label": "蜜蜂",
+      "category": "nature",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "paw-print",
+      "label": "掌印",
+      "category": "nature",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "apple-fruit",
+      "label": "蘋果",
+      "category": "food",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "cherry",
+      "label": "櫻桃",
+      "category": "food",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "grape",
+      "label": "葡萄",
+      "category": "food",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "citrus",
+      "label": "柑橘切片",
+      "category": "food",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "banana",
+      "label": "香蕉",
+      "category": "food",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "carrot",
+      "label": "胡蘿蔔",
+      "category": "food",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "corn",
+      "label": "玉米",
+      "category": "food",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "mushroom",
+      "label": "蘑菇",
+      "category": "food",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "egg",
+      "label": "雞蛋",
+      "category": "food",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "wheat",
+      "label": "小麥",
+      "category": "food",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "coffee",
+      "label": "咖啡",
+      "category": "food",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "cup-soda",
+      "label": "外帶飲料",
+      "category": "food",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "wine",
+      "label": "葡萄酒",
+      "category": "food",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "beer",
+      "label": "啤酒",
+      "category": "food",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "milk",
+      "label": "牛奶",
+      "category": "food",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "bottle",
+      "label": "飲料瓶",
+      "category": "food",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "teapot",
+      "label": "茶壺",
+      "category": "food",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "kettle",
+      "label": "煮水壺",
+      "category": "food",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "glass-water",
+      "label": "水杯",
+      "category": "food",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "cooking-pot",
+      "label": "烹飪鍋",
+      "category": "food",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "utensils",
+      "label": "餐具",
+      "category": "food",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "soup",
+      "label": "湯品",
+      "category": "food",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "salad",
+      "label": "沙拉",
+      "category": "food",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "sandwich",
+      "label": "三明治",
+      "category": "food",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "pizza",
+      "label": "披薩",
+      "category": "food",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "burger",
+      "label": "漢堡",
+      "category": "food",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "ice-cream",
+      "label": "冰淇淋",
+      "category": "food",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "cake",
+      "label": "蛋糕",
+      "category": "food",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "cookie",
+      "label": "餅乾",
+      "category": "food",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "bread",
+      "label": "麵包",
+      "category": "food",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "bed",
+      "label": "床鋪",
+      "category": "home",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "sofa",
+      "label": "沙發",
+      "category": "home",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "armchair",
+      "label": "扶手椅",
+      "category": "home",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "lamp",
+      "label": "檯燈",
+      "category": "home",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "desk",
+      "label": "書桌",
+      "category": "home",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "door-open",
+      "label": "開門",
+      "category": "home",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "door-closed",
+      "label": "關門",
+      "category": "home",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "fence",
+      "label": "柵欄",
+      "category": "home",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "bathtub",
+      "label": "浴缸",
+      "category": "home",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "shower-head",
+      "label": "蓮蓬頭",
+      "category": "home",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "refrigerator",
+      "label": "冰箱",
+      "category": "home",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "washing-machine",
+      "label": "洗衣機",
+      "category": "home",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "microwave",
+      "label": "微波爐",
+      "category": "home",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "oven",
+      "label": "烤箱",
+      "category": "home",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "air-conditioner",
+      "label": "冷氣機",
+      "category": "home",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "fan",
+      "label": "風扇",
+      "category": "home",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "vacuum-cleaner",
+      "label": "吸塵器",
+      "category": "home",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "hair-dryer",
+      "label": "吹風機",
+      "category": "home",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "iron",
+      "label": "熨斗",
+      "category": "home",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "heater",
+      "label": "暖氣機",
+      "category": "home",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "shirt",
+      "label": "上衣",
+      "category": "clothing",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "trousers",
+      "label": "長褲",
+      "category": "clothing",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "dress",
+      "label": "洋裝",
+      "category": "clothing",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "coat",
+      "label": "外套",
+      "category": "clothing",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "sock",
+      "label": "襪子",
+      "category": "clothing",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "shoe",
+      "label": "鞋子",
+      "category": "clothing",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "glasses",
+      "label": "眼鏡",
+      "category": "clothing",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "sunglasses",
+      "label": "太陽眼鏡",
+      "category": "clothing",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "watch",
+      "label": "手錶",
+      "category": "clothing",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "umbrella",
+      "label": "雨傘",
+      "category": "clothing",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "stethoscope",
+      "label": "聽診器",
+      "category": "medical",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "syringe",
+      "label": "針筒",
+      "category": "medical",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "pill",
+      "label": "藥丸",
+      "category": "medical",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "medical-mask",
+      "label": "醫療口罩",
+      "category": "medical",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "bandage",
+      "label": "OK繃",
+      "category": "medical",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "thermometer",
+      "label": "體溫計",
+      "category": "medical",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "hospital",
+      "label": "醫院",
+      "category": "medical",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "ambulance",
+      "label": "救護車",
+      "category": "medical",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "heart-pulse",
+      "label": "心跳",
+      "category": "medical",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "first-aid-kit",
+      "label": "急救箱",
+      "category": "medical",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "bone",
+      "label": "骨頭",
+      "category": "medical",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "tooth",
+      "label": "牙齒",
+      "category": "medical",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "brain",
+      "label": "大腦",
+      "category": "medical",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "lungs",
+      "label": "肺",
+      "category": "medical",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "ear",
+      "label": "耳朵",
+      "category": "medical",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "hand-heart",
+      "label": "關懷",
+      "category": "medical",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "person-standing",
+      "label": "站立",
+      "category": "medical",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "person-walking",
+      "label": "步行",
+      "category": "medical",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "wheelchair",
+      "label": "輪椅",
+      "category": "medical",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "crutch",
+      "label": "拐杖",
+      "category": "medical",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "dumbbell",
+      "label": "啞鈴",
+      "category": "sports",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "kettlebell",
+      "label": "壺鈴",
+      "category": "sports",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "basketball",
+      "label": "籃球",
+      "category": "sports",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "football",
+      "label": "足球",
+      "category": "sports",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "tennis-racket",
+      "label": "網球拍",
+      "category": "sports",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "volleyball",
+      "label": "排球",
+      "category": "sports",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "baseball",
+      "label": "棒球",
+      "category": "sports",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "golf-hole",
+      "label": "高爾夫球洞",
+      "category": "sports",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "swimming",
+      "label": "游泳",
+      "category": "sports",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "running",
+      "label": "跑步",
+      "category": "sports",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "binoculars",
+      "label": "雙筒望遠鏡",
+      "category": "outdoor",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "flashlight",
+      "label": "手電筒",
+      "category": "outdoor",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "axe",
+      "label": "斧頭",
+      "category": "outdoor",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "shovel",
+      "label": "鏟子",
+      "category": "outdoor",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "pickaxe",
+      "label": "十字鎬",
+      "category": "outdoor",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "fishing-hook",
+      "label": "魚鉤",
+      "category": "outdoor",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "campfire",
+      "label": "營火",
+      "category": "outdoor",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "footprints",
+      "label": "足跡",
+      "category": "outdoor",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "hiking",
+      "label": "健行",
+      "category": "outdoor",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "kayak",
+      "label": "獨木舟",
+      "category": "outdoor",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "atom",
+      "label": "原子",
+      "category": "science",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "flask-conical",
+      "label": "錐形瓶",
+      "category": "science",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "flask-round",
+      "label": "圓底燒瓶",
+      "category": "science",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "test-tube",
+      "label": "試管",
+      "category": "science",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "microscope",
+      "label": "顯微鏡",
+      "category": "science",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "telescope",
+      "label": "天文望遠鏡",
+      "category": "science",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "dna",
+      "label": "DNA",
+      "category": "science",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "orbit",
+      "label": "軌道",
+      "category": "science",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "rocket",
+      "label": "火箭",
+      "category": "science",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "satellite",
+      "label": "衛星",
+      "category": "science",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "pi",
+      "label": "圓周率",
+      "category": "math",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "sigma",
+      "label": "總和",
+      "category": "math",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "infinity",
+      "label": "無限",
+      "category": "math",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "radical",
+      "label": "根號",
+      "category": "math",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "equal",
+      "label": "等於",
+      "category": "math",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "not-equal",
+      "label": "不等於",
+      "category": "math",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "divide",
+      "label": "除以",
+      "category": "math",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "plus-minus",
+      "label": "正負號",
+      "category": "math",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "fraction",
+      "label": "分數",
+      "category": "math",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "function-square",
+      "label": "函數",
+      "category": "math",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "graduation-cap",
+      "label": "學士帽",
+      "category": "education",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "school",
+      "label": "學校",
+      "category": "education",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "presentation",
+      "label": "簡報螢幕",
+      "category": "education",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "chalkboard",
+      "label": "黑板",
+      "category": "education",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "abacus",
+      "label": "算盤",
+      "category": "education",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "book-marked",
+      "label": "書籤書本",
+      "category": "education",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "library",
+      "label": "圖書館",
+      "category": "education",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "diploma",
+      "label": "畢業證書",
+      "category": "education",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "globe-stand",
+      "label": "地球儀",
+      "category": "education",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "pencil-ruler",
+      "label": "鉛筆尺規",
+      "category": "education",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "guitar",
+      "label": "木吉他",
+      "category": "music-equipment",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "piano",
+      "label": "鋼琴",
+      "category": "music-equipment",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "drum",
+      "label": "鼓",
+      "category": "music-equipment",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "violin",
+      "label": "小提琴",
+      "category": "music-equipment",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "trumpet",
+      "label": "小號",
+      "category": "music-equipment",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "saxophone",
+      "label": "薩克斯風",
+      "category": "music-equipment",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "metronome",
+      "label": "節拍器",
+      "category": "music-equipment",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "guitar-electric",
+      "label": "電吉他",
+      "category": "music-equipment",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "vinyl-record",
+      "label": "黑膠唱片",
+      "category": "music-equipment",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "music-keyboard",
+      "label": "電子琴",
+      "category": "music-equipment",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "radio-receiver",
+      "label": "收音機",
+      "category": "media-equipment",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "tv",
+      "label": "電視",
+      "category": "media-equipment",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "projector",
+      "label": "投影機",
+      "category": "media-equipment",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "speaker",
+      "label": "喇叭",
+      "category": "media-equipment",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "film-reel",
+      "label": "底片捲盤",
+      "category": "media-equipment",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "cassette",
+      "label": "卡帶",
+      "category": "media-equipment",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "film",
+      "label": "底片",
+      "category": "media-equipment",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "clapperboard",
+      "label": "場記板",
+      "category": "media-equipment",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "podcast",
+      "label": "播客",
+      "category": "media-equipment",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "antenna",
+      "label": "天線",
+      "category": "media-equipment",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "hammer",
+      "label": "鐵鎚",
+      "category": "workshop",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "screwdriver",
+      "label": "螺絲起子",
+      "category": "workshop",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "drill",
+      "label": "電鑽",
+      "category": "workshop",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "saw",
+      "label": "手鋸",
+      "category": "workshop",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "tape-measure",
+      "label": "捲尺",
+      "category": "workshop",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "toolbox",
+      "label": "工具箱",
+      "category": "workshop",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "hard-hat",
+      "label": "工程安全帽",
+      "category": "workshop",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "paint-roller",
+      "label": "油漆滾筒",
+      "category": "workshop",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "pocket-knife",
+      "label": "瑞士刀",
+      "category": "workshop",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "nut",
+      "label": "螺帽",
+      "category": "workshop",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "factory",
+      "label": "工廠",
+      "category": "industry",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "crane-tower",
+      "label": "塔式起重機",
+      "category": "industry",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "crane-truck",
+      "label": "吊車",
+      "category": "industry",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "forklift",
+      "label": "堆高機",
+      "category": "industry",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "warehouse",
+      "label": "倉庫",
+      "category": "industry",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "excavator",
+      "label": "挖土機",
+      "category": "industry",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "container",
+      "label": "貨櫃",
+      "category": "industry",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "robot-arm",
+      "label": "機械手臂",
+      "category": "industry",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "construction-barrier",
+      "label": "施工圍欄",
+      "category": "industry",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "wall",
+      "label": "磚牆",
+      "category": "industry",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "solar-panel",
+      "label": "太陽能板",
+      "category": "energy",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "wind-turbine",
+      "label": "風力發電機",
+      "category": "energy",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "battery-full",
+      "label": "電池滿電",
+      "category": "energy",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "battery-low",
+      "label": "電池低電量",
+      "category": "energy",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "battery-medium",
+      "label": "電池中電量",
+      "category": "energy",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "battery-warning",
+      "label": "電池警告",
+      "category": "energy",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "car-battery",
+      "label": "汽車電瓶",
+      "category": "energy",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "charging-station",
+      "label": "充電樁",
+      "category": "energy",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "transmission-tower",
+      "label": "輸電塔",
+      "category": "energy",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "power-socket",
+      "label": "電源插座",
+      "category": "energy",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "cctv",
+      "label": "監視器",
+      "category": "safety",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "siren",
+      "label": "警示燈",
+      "category": "safety",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "alarm-smoke",
+      "label": "煙霧警報器",
+      "category": "safety",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "fire-extinguisher",
+      "label": "滅火器",
+      "category": "safety",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "fire-hydrant",
+      "label": "消防栓",
+      "category": "safety",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "vault",
+      "label": "保險庫",
+      "category": "safety",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "key-square",
+      "label": "方頭鑰匙",
+      "category": "safety",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "scan-face",
+      "label": "臉部辨識",
+      "category": "safety",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "seat-belt",
+      "label": "安全帶",
+      "category": "safety",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "safety-pin",
+      "label": "安全別針",
+      "category": "safety",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "scale",
+      "label": "天秤",
+      "category": "commerce-tools",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "gavel",
+      "label": "法槌",
+      "category": "commerce-tools",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "stamp",
+      "label": "印章",
+      "category": "commerce-tools",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "shopping-basket",
+      "label": "購物籃",
+      "category": "commerce-tools",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "basket-check",
+      "label": "購物籃完成",
+      "category": "commerce-tools",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "basket-plus",
+      "label": "新增購物籃",
+      "category": "commerce-tools",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "bag-check",
+      "label": "購物袋完成",
+      "category": "commerce-tools",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "bag-plus",
+      "label": "新增購物袋",
+      "category": "commerce-tools",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "cash-register",
+      "label": "收銀機",
+      "category": "commerce-tools",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "receipt-dollar",
+      "label": "金額收據",
+      "category": "commerce-tools",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "mailbox",
+      "label": "信箱",
+      "category": "communication-tools",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "phone-incoming",
+      "label": "來電",
+      "category": "communication-tools",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "phone-outgoing",
+      "label": "撥出電話",
+      "category": "communication-tools",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "phone-missed",
+      "label": "未接來電",
+      "category": "communication-tools",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "phone-call",
+      "label": "通話中",
+      "category": "communication-tools",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "satellite-dish",
+      "label": "衛星天線",
+      "category": "communication-tools",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "message-heart",
+      "label": "喜愛訊息",
+      "category": "communication-tools",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "message-dots",
+      "label": "訊息輸入中",
+      "category": "communication-tools",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "message-lock",
+      "label": "鎖定訊息",
+      "category": "communication-tools",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "message-search",
+      "label": "搜尋訊息",
+      "category": "communication-tools",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "chart-radar",
+      "label": "雷達圖",
+      "category": "chart-types",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "chart-candlestick",
+      "label": "K 線圖",
+      "category": "chart-types",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "chart-waterfall",
+      "label": "瀑布圖",
+      "category": "chart-types",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "chart-bubble",
+      "label": "氣泡圖",
+      "category": "chart-types",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "chart-network",
+      "label": "網路圖",
+      "category": "chart-types",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "chart-histogram",
+      "label": "分布直方圖",
+      "category": "chart-types",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "chart-sankey",
+      "label": "桑基圖",
+      "category": "chart-types",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "chart-spline",
+      "label": "平滑曲線圖",
+      "category": "chart-types",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "chart-bell-curve",
+      "label": "鐘形曲線圖",
+      "category": "chart-types",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "chart-combo",
+      "label": "組合圖",
+      "category": "chart-types",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "vector-square",
+      "label": "方形向量路徑",
+      "category": "geometry-tools",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "bezier-curve",
+      "label": "貝茲曲線",
+      "category": "geometry-tools",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "spline",
+      "label": "曲線路徑",
+      "category": "geometry-tools",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "vector-polygon",
+      "label": "多邊形向量路徑",
+      "category": "geometry-tools",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "pentagon",
+      "label": "五邊形",
+      "category": "geometry-tools",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "octagon",
+      "label": "八邊形",
+      "category": "geometry-tools",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "ellipse",
+      "label": "橢圓形",
+      "category": "geometry-tools",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "cone",
+      "label": "圓錐",
+      "category": "geometry-tools",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "cylinder",
+      "label": "圓柱",
+      "category": "geometry-tools",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "pyramid",
+      "label": "角錐",
+      "category": "geometry-tools",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "layout-list",
+      "label": "縮圖清單",
+      "category": "layout-tools",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "layout-template",
+      "label": "版面範本",
+      "category": "layout-tools",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "layout-panel-left",
+      "label": "左側分欄版面",
+      "category": "layout-tools",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "split-horizontal",
+      "label": "水平拆分",
+      "category": "layout-tools",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "split-vertical",
+      "label": "垂直拆分",
+      "category": "layout-tools",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "picture-in-picture",
+      "label": "子母畫面",
+      "category": "layout-tools",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "panels-top-left",
+      "label": "上方與左側面板",
+      "category": "layout-tools",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "panel-bottom-open",
+      "label": "展開底部面板",
+      "category": "layout-tools",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "panel-top-open",
+      "label": "展開頂部面板",
+      "category": "layout-tools",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "focus",
+      "label": "對焦",
+      "category": "layout-tools",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "hourglass",
+      "label": "沙漏",
+      "category": "time-tools",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "calendar-heart",
+      "label": "重要日期",
+      "category": "time-tools",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "calendar-lock",
+      "label": "鎖定日曆",
+      "category": "time-tools",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "calendar-recurring",
+      "label": "重複行程",
+      "category": "time-tools",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "alarm-plus",
+      "label": "新增鬧鐘",
+      "category": "time-tools",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "alarm-minus",
+      "label": "減少鬧鐘",
+      "category": "time-tools",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "alarm-check",
+      "label": "鬧鐘已設定",
+      "category": "time-tools",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "timer-reset",
+      "label": "重設計時",
+      "category": "time-tools",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "calendar-search",
+      "label": "搜尋日曆",
+      "category": "time-tools",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "calendar-off",
+      "label": "停用日曆",
+      "category": "time-tools",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "diamond-gem",
+      "label": "寶石",
+      "category": "celebration",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "crown",
+      "label": "王冠",
+      "category": "celebration",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "trophy",
+      "label": "獎盃",
+      "category": "celebration",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "medal",
+      "label": "獎章",
+      "category": "celebration",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "ribbon",
+      "label": "關懷緞帶",
+      "category": "celebration",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "party-popper",
+      "label": "派對拉炮",
+      "category": "celebration",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "balloon",
+      "label": "氣球",
+      "category": "celebration",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "dice",
+      "label": "骰子",
+      "category": "celebration",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "gamepad",
+      "label": "遊戲手把",
+      "category": "celebration",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    },
+    {
+      "name": "joystick",
+      "label": "搖桿",
+      "category": "celebration",
+      "status": "pending-comparison",
+      "previousReview": "Preserved as historical evidence; not inherited as this review decision."
+    }
+  ]
+}

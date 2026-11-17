@@ -1,0 +1,23 @@
+import {readFile,writeFile,mkdir,readdir} from 'node:fs/promises';
+import {createHash} from 'node:crypto';
+import {chromium} from '@playwright/test';
+import {context} from '../packages/icons/src/geometry.mjs';
+import {renderSvg} from '../packages/icons/src/runtime.mjs';
+import {reference} from './lib/atlas-reference.mjs';
+const id=process.argv[2],names=process.argv.slice(3),root=`docs/review/atlas-craft-01/${id}`;
+const before=JSON.parse(await readFile(process.env.ATLAS_BASELINE||'references/atlas-craft-01/master-before.json'));
+// A new concept has no previous master; never fabricate an A image.
+const previous=(name,s,c,display=s)=>before[name]?svg(before[name],s,c,display):'<small>新稿／無前稿</small>';
+const entries=[];for(const file of await readdir('packages/icons/src/atlas'))if(/^\d/.test(file))entries.push(...(await import(`../packages/icons/src/atlas/${file}`)).batch);
+const all=Object.fromEntries(entries.map(e=>[e.name,e]));
+await mkdir(root,{recursive:true});
+const defs={},rows=[];
+const svg=(def,s,c,display=s)=>renderSvg(def,{size:display,opticalSize:s,corner:c});
+for(const name of names){const e=all[name];defs[name]={name,direction:'fixed',variants:Object.fromEntries([16,20,24].map(s=>[s,Object.fromEntries(['sharp','soft','rounded'].map(c=>{const g=context(s,c);return[c,{strokeWidth:g.stroke,nodes:e.draw(g)}]}))]))};
+const refs=await Promise.all([reference(name,e.referenceA,'lucide'),reference(name,e.referenceB,'tabler')]);
+rows.push(`<article><h2>${name} · ${e.label}</h2><div class="sources">${refs.map(r=>`<div>${r.svg(48)}<small>${r.record.library} ${r.record.sourceName}</small></div>`).join('')}</div><div class="masters">${['sharp','soft','rounded'].map(c=>`<div><h3>${c}</h3>${[16,20,24].map(s=>`<div class="native"><small>${s}px</small><span class="ref" title="${refs[0].record.library}">${refs[0].svg(s)}</span><span class="ref" title="${refs[1].record.library}">${refs[1].svg(s)}</span><span>A ${previous(name,s,c)}</span><span>B ${svg(defs[name],s,c)}</span><span class="text">${svg(defs[name],s,c)}${e.label}</span></div>`).join('')}</div>`).join('')}</div><div class="zoom"><div>A · 24px × 6${previous(name,24,'soft',144)}</div><div>B · 24px × 6${svg(defs[name],24,'soft',144)}</div><div>B · 16px × 6${svg(defs[name],16,'soft',96)}</div><div>B · sharp 24px × 6${svg(defs[name],24,'sharp',144)}</div></div></article>`);
+}
+const html=`<meta charset="utf-8"><style>*{box-sizing:border-box}body{font:13px/20px system-ui;color:#27272a;background:#fafafa;margin:0;padding:24px}.dark{color:#e4e4e7;background:#18181b}h1{font-size:20px;line-height:28px;margin:0 0 16px}h2{font-size:16px;line-height:24px;margin:0 0 12px}h3{margin:0 0 8px}h3,small{font-size:10px;line-height:16px;color:#888}article{border-bottom:1px solid #8884;padding:12px 0 24px}.sources,.zoom{display:flex;gap:40px;align-items:center}.sources small{display:block}svg{display:block;flex-shrink:0}.masters{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:16px 0}.native{display:grid;grid-template-columns:24px 24px 24px 48px 48px 112px;align-items:center;height:44px;gap:8px}.native span{display:grid;grid-template-columns:8px 24px;align-items:center;gap:8px}.native .text{display:flex}.native .ref{display:block}.text{color:#888}.zoom{font-size:10px;line-height:16px;color:#888}.zoom svg{color:#27272a;margin-top:12px}.dark .zoom svg{color:#e4e4e7}.sources{margin:16px 0}.native-only .sources,.native-only .zoom{display:none}</style><h1>Atlas craft ${id} · sources at matching native sizes · A preserved draft / B revision</h1>${rows.join('')}`;
+await writeFile(`${root}/review.html`,html);await writeFile(`${root}/definitions.json`,JSON.stringify(defs));
+const b=await chromium.launch();for(const dpr of [1,2]){const p=await b.newPage({viewport:{width:1080,height:1000},deviceScaleFactor:dpr});await p.setContent(html);const failures=await p.locator('.native svg').evaluateAll(nodes=>nodes.filter(n=>{const r=n.getBoundingClientRect();return r.width!==+n.getAttribute('width')||r.height!==+n.getAttribute('height')||r.x*devicePixelRatio%1||r.y*devicePixelRatio%1}).length);if(failures)throw Error(`${failures} native glyphs are scaled or off pixel grid`);for(const theme of ['light','dark']){await p.evaluate(t=>document.body.className=t,theme);await p.screenshot({path:`${root}/${theme}-${dpr}x.png`,fullPage:true});await p.evaluate(()=>document.body.classList.add('native-only'));await p.screenshot({path:`${root}/native-${theme}-${dpr}x.png`,fullPage:true});await p.evaluate(()=>document.body.classList.remove('native-only'));}await p.close()}await b.close();
+console.log(root);

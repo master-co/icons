@@ -1,0 +1,152 @@
+{
+  "batch": "28-geometry",
+  "cycle": "atlas-craft-26",
+  "familyRoot": "docs/review/atlas-craft-26/final",
+  "baseline": "references/atlas-craft-26/master-before.json",
+  "reviewer": "Codex (AI)",
+  "visualInspectionComplete": true,
+  "inspectedCombinations": [
+    {
+      "theme": "light",
+      "dpr": 1
+    },
+    {
+      "theme": "light",
+      "dpr": 2
+    },
+    {
+      "theme": "dark",
+      "dpr": 1
+    },
+    {
+      "theme": "dark",
+      "dpr": 2
+    }
+  ],
+  "effects": {
+    "dashes": {
+      "used": false,
+      "reason": "這批呈現可見路徑及形體表面，不額外描繪隱藏邊或選取虛線框。"
+    },
+    "opacity": {
+      "used": false,
+      "reason": "控制節點、連線與幾何面由空腔和輪廓辨識，不靠淡化曲線區分。"
+    },
+    "gradients": {
+      "used": false,
+      "reason": "單色邊界與必要稜線足以表達立體幾何，不用光照漸層補形體。"
+    }
+  },
+  "decisions": [
+    {
+      "name": "vector-square",
+      "groupRoot": "docs/review/atlas-craft-01/113-vector-bezier",
+      "confusableWith": [
+        "square",
+        "vector-polygon"
+      ],
+      "sourceObservation": "Lucide以圓節點和微彎邊構成方形路徑，Tabler方節點加直邊更貼近編輯控制框。最新稿採Tabler構造；完稿回比16px四個節點孔仍清楚，連線止於節點外緣，不穿入方孔或變成四個黑塊。",
+      "reason": "四個同尺寸控制方框沿共同矩形配置，相連邊的實際墨線裁在方框之外；節點角型使用小半徑，保留方形控制柄語意。",
+      "adaptedFrom": "Tabler"
+    },
+    {
+      "name": "bezier-curve",
+      "groupRoot": "docs/review/atlas-craft-01/113-vector-bezier",
+      "confusableWith": [
+        "spline",
+        "vector-polygon"
+      ],
+      "sourceObservation": "Phosphor三個圓節點加一根控制桿比Tabler五個節點更疏朗。最新稿採Phosphor拱形構造；完稿回比16px頂部圓孔、兩個端孔與水平控制桿均成立，沒有加入控制桿端點小圈增加密度。",
+      "reason": "對稱拱形曲線共用水平切線與中央控制點，三個節點半徑一致；連線與曲線均裁在節點孔外，保留相接但不填入內孔。",
+      "adaptedFrom": "Phosphor"
+    },
+    {
+      "name": "spline",
+      "groupRoot": "docs/review/atlas-craft-01/114-spline-polygon",
+      "confusableWith": [
+        "bezier-curve",
+        "chart-spline"
+      ],
+      "sourceObservation": "Lucide圓端點與Tabler方端點都表達簡單可編輯曲線。最新稿採Lucide四分之一圓弧和兩端圓點；完稿回比16px端點內孔清楚、曲線自然承接，和帶控制桿的貝茲圖示有可辨別的結構差異。",
+      "reason": "以同一圓弧連接水平與垂直短切線，端點圈稍擴大以保持小尺寸孔徑；曲線墨跡只到節點外緣，不讓端帽穿孔。",
+      "adaptedFrom": "Lucide"
+    },
+    {
+      "name": "vector-polygon",
+      "groupRoot": "docs/review/atlas-craft-01/114-spline-polygon",
+      "confusableWith": [
+        "vector-square",
+        "pentagon"
+      ],
+      "sourceObservation": "Lucide四個節點形成不規則四邊形，Tabler也採不規則多邊形但重心較高。最新稿採Lucide斜向構造並略內收端點；完稿回比16px四個孔與中間空腔分開可讀，和沒有控制點的幾何五邊形明確區別。",
+      "reason": "四個節點使用一致圈徑，連線依相鄰節點中心建立並裁於各自外緣；保留不規則四邊形的編輯語意，沒有隨意添加更多節點。",
+      "adaptedFrom": "Lucide"
+    },
+    {
+      "name": "pentagon",
+      "groupRoot": "docs/review/atlas-craft-01/115-flat-shapes",
+      "confusableWith": [
+        "octagon",
+        "hexagon"
+      ],
+      "sourceObservation": "Lucide五邊形較圓且填滿畫布，Phosphor比較尖直。最新稿以等角極座標獨立建立正五邊形；完稿回比三角型仍保留五個明確邊段，16px上尖與平底有穩定比例，不因rounded變成盾形。",
+      "reason": "以共同中心和半徑建立五個等距頂點，實際轉角半徑按預設改變；保留上下構造和左右對稱，不以不等長手繪邊冒充正五邊形。",
+      "adaptedFrom": null
+    },
+    {
+      "name": "octagon",
+      "groupRoot": "docs/review/atlas-craft-01/115-flat-shapes",
+      "confusableWith": [
+        "pentagon",
+        "circle"
+      ],
+      "sourceObservation": "Lucide八邊形轉角較圓，Phosphor保持明確斜切邊。最新稿以正八邊形幾何獨立構造；完稿回比16px斜邊與直邊仍有區別，三角型都有足夠直段而非幾乎圓形。",
+      "reason": "用正八邊形切角比例使八邊等長，左右上下共用對稱軸；實際圓角按預設調整，避免只改linejoin造成假角型。",
+      "adaptedFrom": null
+    },
+    {
+      "name": "ellipse",
+      "groupRoot": "docs/review/atlas-craft-01/115-flat-shapes",
+      "confusableWith": [
+        "circle",
+        "cylinder"
+      ],
+      "sourceObservation": "Lucide橢圓較扁、Hugeicons稍高。最新稿獨立採水平長軸與約5:3比例；完稿回比16px仍清楚區別圓形，四端曲率連續且沒有閉合接縫硬角，不為角型把橢圓變成膠囊。",
+      "reason": "以兩段解析橢圓弧閉合，長短軸共享同一中心；沒有幾何轉角，因此三個角型維持相同輪廓，靠原生描邊呈現尺寸重量。",
+      "adaptedFrom": null
+    },
+    {
+      "name": "cone",
+      "groupRoot": "docs/review/atlas-craft-01/116-solid-shapes",
+      "confusableWith": [
+        "traffic-cone",
+        "pyramid"
+      ],
+      "sourceObservation": "Lucide明示橢圓底面、Tabler僅保留弧底剪影。最新稿採Lucide底面語意，重算側壁對橢圓的切點；完稿回比16px底面內孔完整，兩側過渡沒有突角，尖頂依角型略作圓化，與有橫帶的交通錐清楚區別。",
+      "reason": "由頂點解出側壁與底面橢圓的切點，用側壁及下半底弧組成連續外殼；上方底面弧作內部結構並收在殼內，避免三角形直接貼橢圓。",
+      "adaptedFrom": "Lucide"
+    },
+    {
+      "name": "cylinder",
+      "groupRoot": "docs/review/atlas-craft-01/116-solid-shapes",
+      "confusableWith": [
+        "database",
+        "ellipse"
+      ],
+      "sourceObservation": "Lucide較寬圓柱與Tabler較窄圓柱皆有完整頂面。最新稿採Lucide比例，重建頂部上弧、兩壁與底弧為共同外殼；完稿回比16px頂面孔仍分離，sharp側壁與橢圓交接不產生方耳，三尺寸保留圓柱體量。",
+      "reason": "外殼由上半橢圓、平行側壁與下半底弧連續構成，頂面的下半橢圓裁在內側；保留曲面而非以獨立矩形拼接兩個橢圓。",
+      "adaptedFrom": "Lucide"
+    },
+    {
+      "name": "pyramid",
+      "groupRoot": "docs/review/atlas-craft-01/116-solid-shapes",
+      "confusableWith": [
+        "cone",
+        "triangle"
+      ],
+      "sourceObservation": "Lucide較寬雙面角錐與Tabler較瘦構圖相比更穩定。最新稿採Lucide雙面輪廓；完稿回比16px中央稜線收於外殼內，頂尖和底尖沒有多出端帽，兩個三角面仍清楚且左右平衡。",
+      "reason": "左右輪廓沿共同垂直軸對稱配置，中央稜線依實際墨線裁在封閉殼體內；小轉角隨預設改變，保持頂點與底邊支承。",
+      "adaptedFrom": "Lucide"
+    }
+  ]
+}

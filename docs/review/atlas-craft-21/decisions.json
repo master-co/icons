@@ -1,0 +1,152 @@
+{
+  "batch": "23-energy",
+  "cycle": "atlas-craft-21",
+  "familyRoot": "docs/review/atlas-craft-21/final",
+  "baseline": "references/atlas-craft-21/master-before.json",
+  "reviewer": "Codex (AI)",
+  "visualInspectionComplete": true,
+  "inspectedCombinations": [
+    {
+      "theme": "light",
+      "dpr": 1
+    },
+    {
+      "theme": "light",
+      "dpr": 2
+    },
+    {
+      "theme": "dark",
+      "dpr": 1
+    },
+    {
+      "theme": "dark",
+      "dpr": 2
+    }
+  ],
+  "effects": {
+    "dashes": {
+      "used": false,
+      "reason": "設備與電量狀態已有明確實線構造，不需虛線表示隱藏部件。"
+    },
+    "opacity": {
+      "used": false,
+      "reason": "電量由格數而非淡化表達，設備內線也不藉透明度減密。"
+    },
+    "gradients": {
+      "used": false,
+      "reason": "以單色辨識能源與電力設備，不需光照或材質漸層。"
+    }
+  },
+  "decisions": [
+    {
+      "name": "solar-panel",
+      "groupRoot": "docs/review/atlas-craft-01/92b-solar",
+      "confusableWith": [
+        "sunrise",
+        "grid"
+      ],
+      "sourceObservation": "Lucide用偏斜面板及局部太陽，Phosphor正面梯形面板與半日更易分組。最新稿採Phosphor的正面構造；完稿回比後16px改兩個大格，20/24保留六格，讓面板孔洞不退化成一列小亮點，日照與板面之間也保持留白。",
+      "reason": "梯形面板內線裁在板內，兩側邊線表達傾斜；16px只留中央分界，較大尺寸保留三欄兩列。太陽半弧與五段短光線保持開放，避免額外太陽外圈。",
+      "adaptedFrom": "Phosphor"
+    },
+    {
+      "name": "wind-turbine",
+      "groupRoot": "docs/review/atlas-craft-01/92-solar-wind",
+      "confusableWith": [
+        "fan",
+        "transmission-tower"
+      ],
+      "sourceObservation": "Hugeicons的寬葉片和旋轉弧較像扇葉動態，Tabler細長漸收葉片更貼近風機。最新稿採Tabler三葉輪廓，保留共同輪轂並以單塔柱支承；完稿回比16px，葉片與中孔清楚，省去旋轉弧和第二條塔柱，避免下半部擁擠。",
+      "reason": "三片葉片由同一漸收曲線繞輪轂旋轉120度，以原始座標輸出；根部裁在輪轂外，長塔柱與底座沿中央軸承接，保持風力設備的整體姿態。",
+      "adaptedFrom": "Tabler"
+    },
+    {
+      "name": "battery-full",
+      "groupRoot": "docs/review/atlas-craft-01/93b-battery-levels",
+      "confusableWith": [
+        "battery",
+        "battery-medium"
+      ],
+      "sourceObservation": "Lucide三格電量較Phosphor四格開闊。最新稿沿用現有battery母型並採三格電量，維持同家族外框；完稿回比後16px略縮內線上下端，讓三筆短線與外殼之間有清楚白邊，不靠改外框大小塞入更多格數。",
+      "reason": "共用現有battery外殼、端子及角型，三筆電量短線等距；16px短線由5u縮為4u，保留較大的上下留白。",
+      "adaptedFrom": "Lucide"
+    },
+    {
+      "name": "battery-low",
+      "groupRoot": "docs/review/atlas-craft-01/93b-battery-levels",
+      "confusableWith": [
+        "battery",
+        "battery-full"
+      ],
+      "sourceObservation": "Lucide與Phosphor皆用左側一格表示低電量。最新稿共用現有電池和滿電版本的第一格位置；完稿回比，單格與外框的左側和上下距離穩定，16px同步縮短內線，不用紅色或淡化作唯一狀態區分。",
+      "reason": "保留相同外殼和第一格座標，以一格對應低電量；三種電量共用一個繪製函式，避免狀態切換時外框或電量基準線漂移。",
+      "adaptedFrom": "Lucide"
+    },
+    {
+      "name": "battery-medium",
+      "groupRoot": "docs/review/atlas-craft-01/93b-battery-levels",
+      "confusableWith": [
+        "battery-low",
+        "battery-full"
+      ],
+      "sourceObservation": "Lucide中電量保留三格中的兩格，Phosphor是四格中的兩格。最新稿採Lucide三階格數系統，因此命名medium而不宣稱精確50%；完稿回比，兩格與滿電前兩格完全對應，16px上下留白經短線縮減更穩定。",
+      "reason": "與滿電和低電量共用外框、端子及格數座標；兩格只表示中電量而非精確比例，原生16px減少短線長度以維持外殼內空間。",
+      "adaptedFrom": "Lucide"
+    },
+    {
+      "name": "battery-warning",
+      "groupRoot": "docs/review/atlas-craft-01/94b-battery-warning",
+      "confusableWith": [
+        "battery",
+        "battery-charging"
+      ],
+      "sourceObservation": "Lucide把外殼打開以容納驚嘆號，Phosphor把警告留在完整外框內。最新稿採完整外殼並沿用現有battery母型；完稿回比後短豎筆向內移1u，16px上端不再緊貼框線，豎筆與圓點分開而仍讀作驚嘆號。",
+      "reason": "警告符號位於電池殼體視覺中心，短豎筆向內移，圓點保持獨立；不以外部徽標或改變電池長寬來表達狀態。",
+      "adaptedFrom": "Phosphor"
+    },
+    {
+      "name": "car-battery",
+      "groupRoot": "docs/review/atlas-craft-01/94-warning-car-battery",
+      "confusableWith": [
+        "battery",
+        "battery-full"
+      ],
+      "sourceObservation": "Lucide用短接點、Phosphor用小空心端子表示電瓶。最新稿採Lucide短接點以保留小尺寸清晰度；完稿回比16/20/24，寬電瓶與正負極分組明確，兩個接點直接承接外殼，沒有擁擠的小端子孔。",
+      "reason": "寬殼上方兩個短接點與殼體相連，內部負極短線和正極十字各佔一側；殼角沿家族角型，符號與外壁保持開闊空間。",
+      "adaptedFrom": "Lucide"
+    },
+    {
+      "name": "charging-station",
+      "groupRoot": "docs/review/atlas-craft-01/95-charging-tower-socket",
+      "confusableWith": [
+        "fuel",
+        "battery-charging"
+      ],
+      "sourceObservation": "Lucide有上方顯示區及側線，Phosphor機身更簡單。最新稿採Lucide構造，但讓線纜與機身之間留較寬通道；完稿回比16px，顯示區、內部閃電和彎線各自可讀，沒有再加插槍小框壓縮空間。",
+      "reason": "直立機身共用底座和單道顯示區分界，線纜向外彎後回升至充電端；小閃電保持開放折線，與燃油泵的油量窗形成區別。",
+      "adaptedFrom": "Lucide"
+    },
+    {
+      "name": "transmission-tower",
+      "groupRoot": "docs/review/atlas-craft-01/95b-transmission",
+      "confusableWith": [
+        "crane-tower",
+        "wind-turbine"
+      ],
+      "sourceObservation": "Hugeicons尖頂與橫擔一體但交叉紋較密，MDI把上部橫擔分開。最新稿採Hugeicons連續塔架並減為一組交叉支撐；完稿回比後支撐接到塔身真實邊界與共同底腳，消除sharp底端凸角，16px菱形與三角空腔保留。",
+      "reason": "漸寬塔身支承橫擔，內部兩條斜撐以同一組端點交會並裁在塔框內；單組X取代多層交叉紋，不增加電線干擾主輪廓。",
+      "adaptedFrom": "Hugeicons Free"
+    },
+    {
+      "name": "power-socket",
+      "groupRoot": "docs/review/atlas-craft-01/95-charging-tower-socket",
+      "confusableWith": [
+        "plug",
+        "unplug"
+      ],
+      "sourceObservation": "Tabler outlet是雙圓孔簡潔面板，MDI power-socket-eu增加圓形凹面。最新稿採Tabler面板與雙孔，避免再套圈；完稿回比16px，兩孔大小、距離及框內空白均衡。此造型以雙圓孔插座為原型，不宣稱代表所有地區插座規格。",
+      "reason": "方形面板依三種角型改實際圓角，雙孔用相同實心圓並沿水平軸等距；不添加小接地孔或凹面輪廓以免變成過密框中框。",
+      "adaptedFrom": "Tabler"
+    }
+  ]
+}

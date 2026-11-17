@@ -1,0 +1,1537 @@
+{
+  "schemaVersion": 2,
+  "reviewer": "Codex (AI)",
+  "userApproval": "pending",
+  "icons": [
+    {
+      "name": "solar-panel",
+      "purpose": "太陽能板",
+      "recognitionCues": "傾斜分格面板與上方日照",
+      "confusableWith": [
+        "sunrise",
+        "grid"
+      ],
+      "sourceObservation": "Lucide用偏斜面板及局部太陽，Phosphor正面梯形面板與半日更易分組。最新稿採Phosphor的正面構造；完稿回比後16px改兩個大格，20/24保留六格，讓面板孔洞不退化成一列小亮點，日照與板面之間也保持留白。",
+      "references": [
+        {
+          "name": "solar-panel",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/solar-panel.svg",
+          "localPath": "references/atlas-01/lucide-solar-panel.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/solar-panel.svg",
+          "sha256": "05acf7dc98497c7a57f6d4bf2a7b33436b8787cd7b0d374de350d7c2f703073d",
+          "license": "ISC AND MIT",
+          "sourceName": "solar-panel",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "solar-panel",
+          "library": "Phosphor",
+          "repository": "phosphor-icons/core",
+          "commit": "2b75f3ad12b420c9504ef05df8d2564a28f8500e",
+          "path": "assets/regular/solar-panel.svg",
+          "localPath": "references/atlas-01/phosphor-solar-panel.svg",
+          "url": "https://github.com/phosphor-icons/core/blob/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular/solar-panel.svg",
+          "sha256": "087d7a1dd2a06b117fb9f449252f5404a3e35daa63e38e542fe728cd6ca28088",
+          "license": "MIT",
+          "sourceName": "solar-panel",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "設備與電量狀態已有明確實線構造，不需虛線表示隱藏部件。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "電量由格數而非淡化表達，設備內線也不藉透明度減密。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "以單色辨識能源與電力設備，不需光照或材質漸層。"
+        }
+      },
+      "change": {
+        "kind": "modified",
+        "before": {
+          "path": "references/atlas-craft-21/master-before.json",
+          "variantsSha256": "0f1da25d8be688954cc10631aed2d9138f6ae7c5884e4114023d0791cb914727"
+        },
+        "reason": "梯形面板內線裁在板內，兩側邊線表達傾斜；16px只留中央分界，較大尺寸保留三欄兩列。太陽半弧與五段短光線保持開放，避免額外太陽外圈。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "7eeb089f73a15bf7a7c62ba1a001f7bff64e24abc8aea53542468bf7a749172c",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/92b-solar/review.html",
+            "sha256": "8e35549f7503c6aba71c16618b4a2dce14f4fe741cc2bebd8b8f0e83694ffc1c"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/92b-solar/definitions.json",
+            "sha256": "54a1ad51a431efe7c206da81d402abc8b8d8a67fc86d7a1df45a541d1005b5dd"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/92b-solar/light-1x.png",
+            "sha256": "89378a9b8ba9ce665a12a76c5f402ecfa96a4df0e5f5c1f98954907e45adcda8"
+          },
+          {
+            "path": "docs/review/atlas-craft-21/final/definitions.json",
+            "sha256": "23b99632bda27e693ca0c5587781d622d2457327829486c48b9f47ba34f84e0e"
+          },
+          {
+            "path": "docs/review/atlas-craft-21/final/23-energy.html",
+            "sha256": "4ae0ca3214515372b885c21ff55e1c8a0c0a2462ecc0eb4da06fe729a1159902"
+          },
+          {
+            "path": "docs/review/atlas-craft-21/final/23-energy-light-1x.png",
+            "sha256": "3bb6a0b39d7a4c08a6858bab8ea9ef1b7c60913b67735b04ca78f89fbbceb974"
+          },
+          {
+            "path": "docs/review/atlas-craft-21/final/23-energy-light-2x.png",
+            "sha256": "57fe7d4219a35a21696852322b353b531f9af5a6756c02aab4fde750230cf0ad"
+          },
+          {
+            "path": "docs/review/atlas-craft-21/final/23-energy-dark-1x.png",
+            "sha256": "b6b0bc36c42ba43c20726954abcd9e9a6cbf55112eb7c942c5c073953def97df"
+          },
+          {
+            "path": "docs/review/atlas-craft-21/final/23-energy-dark-2x.png",
+            "sha256": "0f7b19372ea466b9e27581be989f7cceba621bd014f68592bedf46faee8bdced"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-21/final/23-energy-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-21/final/23-energy-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-21/final/23-energy-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-21/final/23-energy-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Phosphor",
+        "license": "MIT",
+        "licenseFile": "licenses/phosphor.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "wind-turbine",
+      "purpose": "風力發電機",
+      "recognitionCues": "三片漸收葉片、中央輪轂與長塔柱",
+      "confusableWith": [
+        "fan",
+        "transmission-tower"
+      ],
+      "sourceObservation": "Hugeicons的寬葉片和旋轉弧較像扇葉動態，Tabler細長漸收葉片更貼近風機。最新稿採Tabler三葉輪廓，保留共同輪轂並以單塔柱支承；完稿回比16px，葉片與中孔清楚，省去旋轉弧和第二條塔柱，避免下半部擁擠。",
+      "references": [
+        {
+          "name": "wind-turbine",
+          "library": "Hugeicons Free",
+          "repository": "hugeicons/hugeicons",
+          "commit": "834e28d965946c1ee60d080027fe9dae4adc58d0",
+          "path": "icons/wind-turbine.svg",
+          "localPath": "references/atlas-01/hugeicons-wind-turbine.svg",
+          "url": "https://github.com/hugeicons/hugeicons/blob/834e28d965946c1ee60d080027fe9dae4adc58d0/icons/wind-turbine.svg",
+          "sha256": "6e00d9b3b1d5c2c00a9d6e971d91f40116a0b73437c4e588d8273a9302db6aab",
+          "license": "MIT",
+          "sourceName": "wind-turbine",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "wind-turbine",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/building-wind-turbine.svg",
+          "localPath": "references/atlas-01/tabler-building-wind-turbine.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/building-wind-turbine.svg",
+          "sha256": "b72730db98eac6adccbf972d24960c68590bc59f3bacfb93ae9df29113e55fa0",
+          "license": "MIT",
+          "sourceName": "building-wind-turbine",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "設備與電量狀態已有明確實線構造，不需虛線表示隱藏部件。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "電量由格數而非淡化表達，設備內線也不藉透明度減密。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "以單色辨識能源與電力設備，不需光照或材質漸層。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-21/master-before.json",
+          "variantsSha256": "31abe9b6d6fb5a7f94d05027bf2e3371c58eebd80d219ec9e2749da0d20b3692"
+        },
+        "reason": "三片葉片由同一漸收曲線繞輪轂旋轉120度，以原始座標輸出；根部裁在輪轂外，長塔柱與底座沿中央軸承接，保持風力設備的整體姿態。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "f3a95a5ac36842eedffcf2265af4b8b8a558b3f5bc5f79a2e59c82ee9f635d04",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/92-solar-wind/review.html",
+            "sha256": "55ef254084e90d2344d5fa3067a80b1e6d712e335aee5d9782595ebcbb6689b3"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/92-solar-wind/definitions.json",
+            "sha256": "45fe1f8b73f5c7c817b792b5ae98e8e7cd13a3ff3d00b127893ac0ae1506aafd"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/92-solar-wind/light-1x.png",
+            "sha256": "4060d30e54261e590c0d9c3424f71cb54e6257806dcfa610741c9f7d42d5ed74"
+          },
+          {
+            "path": "docs/review/atlas-craft-21/final/definitions.json",
+            "sha256": "23b99632bda27e693ca0c5587781d622d2457327829486c48b9f47ba34f84e0e"
+          },
+          {
+            "path": "docs/review/atlas-craft-21/final/23-energy.html",
+            "sha256": "4ae0ca3214515372b885c21ff55e1c8a0c0a2462ecc0eb4da06fe729a1159902"
+          },
+          {
+            "path": "docs/review/atlas-craft-21/final/23-energy-light-1x.png",
+            "sha256": "3bb6a0b39d7a4c08a6858bab8ea9ef1b7c60913b67735b04ca78f89fbbceb974"
+          },
+          {
+            "path": "docs/review/atlas-craft-21/final/23-energy-light-2x.png",
+            "sha256": "57fe7d4219a35a21696852322b353b531f9af5a6756c02aab4fde750230cf0ad"
+          },
+          {
+            "path": "docs/review/atlas-craft-21/final/23-energy-dark-1x.png",
+            "sha256": "b6b0bc36c42ba43c20726954abcd9e9a6cbf55112eb7c942c5c073953def97df"
+          },
+          {
+            "path": "docs/review/atlas-craft-21/final/23-energy-dark-2x.png",
+            "sha256": "0f7b19372ea466b9e27581be989f7cceba621bd014f68592bedf46faee8bdced"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-21/final/23-energy-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-21/final/23-energy-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-21/final/23-energy-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-21/final/23-energy-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Tabler",
+        "license": "MIT",
+        "licenseFile": "licenses/tabler.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "battery-full",
+      "purpose": "電池滿電",
+      "recognitionCues": "電池母型內的三格電量",
+      "confusableWith": [
+        "battery",
+        "battery-medium"
+      ],
+      "sourceObservation": "Lucide三格電量較Phosphor四格開闊。最新稿沿用現有battery母型並採三格電量，維持同家族外框；完稿回比後16px略縮內線上下端，讓三筆短線與外殼之間有清楚白邊，不靠改外框大小塞入更多格數。",
+      "references": [
+        {
+          "name": "battery-full",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/battery-full.svg",
+          "localPath": "references/atlas-01/lucide-battery-full.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/battery-full.svg",
+          "sha256": "9ef66bd46e676bbcf1e8befca8e904b93be9214abccea4f8a4d20432a0c5ccf8",
+          "license": "ISC AND MIT",
+          "sourceName": "battery-full",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "battery-full",
+          "library": "Phosphor",
+          "repository": "phosphor-icons/core",
+          "commit": "2b75f3ad12b420c9504ef05df8d2564a28f8500e",
+          "path": "assets/regular/battery-full.svg",
+          "localPath": "references/atlas-01/phosphor-battery-full.svg",
+          "url": "https://github.com/phosphor-icons/core/blob/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular/battery-full.svg",
+          "sha256": "99626598f286e1c73e23fb1024981665c9ec02cee7c2c705046312ca25adc9c7",
+          "license": "MIT",
+          "sourceName": "battery-full",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "設備與電量狀態已有明確實線構造，不需虛線表示隱藏部件。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "電量由格數而非淡化表達，設備內線也不藉透明度減密。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "以單色辨識能源與電力設備，不需光照或材質漸層。"
+        }
+      },
+      "change": {
+        "kind": "modified",
+        "before": {
+          "path": "references/atlas-craft-21/master-before.json",
+          "variantsSha256": "3b4c251d93e40d76bf9393b672e350eaf25ae25acac0961cacc12a921488949a"
+        },
+        "reason": "共用現有battery外殼、端子及角型，三筆電量短線等距；16px短線由5u縮為4u，保留較大的上下留白。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "e1e43ca968383f2daedf70b5a7157a1d130960f150e8045b3b972da64704c1b9",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/93b-battery-levels/review.html",
+            "sha256": "ab2a887c5540ec0511d469f210a63f946875e828f4876bc58ee42db50f5274ee"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/93b-battery-levels/definitions.json",
+            "sha256": "a3fc3ff76158c2cc79cb129c61b3694eca6315d1677c6531779f367078c7226b"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/93b-battery-levels/light-1x.png",
+            "sha256": "0607451495c2a5686c615f3c24c5ec21e31cda110ed8700059178f16977bab04"
+          },
+          {
+            "path": "docs/review/atlas-craft-21/final/definitions.json",
+            "sha256": "23b99632bda27e693ca0c5587781d622d2457327829486c48b9f47ba34f84e0e"
+          },
+          {
+            "path": "docs/review/atlas-craft-21/final/23-energy.html",
+            "sha256": "4ae0ca3214515372b885c21ff55e1c8a0c0a2462ecc0eb4da06fe729a1159902"
+          },
+          {
+            "path": "docs/review/atlas-craft-21/final/23-energy-light-1x.png",
+            "sha256": "3bb6a0b39d7a4c08a6858bab8ea9ef1b7c60913b67735b04ca78f89fbbceb974"
+          },
+          {
+            "path": "docs/review/atlas-craft-21/final/23-energy-light-2x.png",
+            "sha256": "57fe7d4219a35a21696852322b353b531f9af5a6756c02aab4fde750230cf0ad"
+          },
+          {
+            "path": "docs/review/atlas-craft-21/final/23-energy-dark-1x.png",
+            "sha256": "b6b0bc36c42ba43c20726954abcd9e9a6cbf55112eb7c942c5c073953def97df"
+          },
+          {
+            "path": "docs/review/atlas-craft-21/final/23-energy-dark-2x.png",
+            "sha256": "0f7b19372ea466b9e27581be989f7cceba621bd014f68592bedf46faee8bdced"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-21/final/23-energy-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-21/final/23-energy-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-21/final/23-energy-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-21/final/23-energy-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Lucide",
+        "license": "ISC",
+        "licenseFile": "licenses/lucide.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "battery-low",
+      "purpose": "電池低電量",
+      "recognitionCues": "電池母型內的單格電量",
+      "confusableWith": [
+        "battery",
+        "battery-full"
+      ],
+      "sourceObservation": "Lucide與Phosphor皆用左側一格表示低電量。最新稿共用現有電池和滿電版本的第一格位置；完稿回比，單格與外框的左側和上下距離穩定，16px同步縮短內線，不用紅色或淡化作唯一狀態區分。",
+      "references": [
+        {
+          "name": "battery-low",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/battery-low.svg",
+          "localPath": "references/atlas-01/lucide-battery-low.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/battery-low.svg",
+          "sha256": "a158265a07d3ea60134de7ca88c023ebbe35d9af9c724c410ed251f248987a52",
+          "license": "ISC AND MIT",
+          "sourceName": "battery-low",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "battery-low",
+          "library": "Phosphor",
+          "repository": "phosphor-icons/core",
+          "commit": "2b75f3ad12b420c9504ef05df8d2564a28f8500e",
+          "path": "assets/regular/battery-low.svg",
+          "localPath": "references/atlas-01/phosphor-battery-low.svg",
+          "url": "https://github.com/phosphor-icons/core/blob/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular/battery-low.svg",
+          "sha256": "8da96eea15cb753f1a7a60856b34ad65ef9f8ed2b6d16298c52a76005ca2ccb7",
+          "license": "MIT",
+          "sourceName": "battery-low",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "設備與電量狀態已有明確實線構造，不需虛線表示隱藏部件。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "電量由格數而非淡化表達，設備內線也不藉透明度減密。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "以單色辨識能源與電力設備，不需光照或材質漸層。"
+        }
+      },
+      "change": {
+        "kind": "modified",
+        "before": {
+          "path": "references/atlas-craft-21/master-before.json",
+          "variantsSha256": "905ab319468e9c054f2ab79d07007b61c1befe306ec5fe565a6225a53896e41d"
+        },
+        "reason": "保留相同外殼和第一格座標，以一格對應低電量；三種電量共用一個繪製函式，避免狀態切換時外框或電量基準線漂移。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "3f869293bf69782350eef57bf2893216561c2c1c23150e82f5072a7170665beb",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/93b-battery-levels/review.html",
+            "sha256": "ab2a887c5540ec0511d469f210a63f946875e828f4876bc58ee42db50f5274ee"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/93b-battery-levels/definitions.json",
+            "sha256": "a3fc3ff76158c2cc79cb129c61b3694eca6315d1677c6531779f367078c7226b"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/93b-battery-levels/light-1x.png",
+            "sha256": "0607451495c2a5686c615f3c24c5ec21e31cda110ed8700059178f16977bab04"
+          },
+          {
+            "path": "docs/review/atlas-craft-21/final/definitions.json",
+            "sha256": "23b99632bda27e693ca0c5587781d622d2457327829486c48b9f47ba34f84e0e"
+          },
+          {
+            "path": "docs/review/atlas-craft-21/final/23-energy.html",
+            "sha256": "4ae0ca3214515372b885c21ff55e1c8a0c0a2462ecc0eb4da06fe729a1159902"
+          },
+          {
+            "path": "docs/review/atlas-craft-21/final/23-energy-light-1x.png",
+            "sha256": "3bb6a0b39d7a4c08a6858bab8ea9ef1b7c60913b67735b04ca78f89fbbceb974"
+          },
+          {
+            "path": "docs/review/atlas-craft-21/final/23-energy-light-2x.png",
+            "sha256": "57fe7d4219a35a21696852322b353b531f9af5a6756c02aab4fde750230cf0ad"
+          },
+          {
+            "path": "docs/review/atlas-craft-21/final/23-energy-dark-1x.png",
+            "sha256": "b6b0bc36c42ba43c20726954abcd9e9a6cbf55112eb7c942c5c073953def97df"
+          },
+          {
+            "path": "docs/review/atlas-craft-21/final/23-energy-dark-2x.png",
+            "sha256": "0f7b19372ea466b9e27581be989f7cceba621bd014f68592bedf46faee8bdced"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-21/final/23-energy-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-21/final/23-energy-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-21/final/23-energy-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-21/final/23-energy-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Lucide",
+        "license": "ISC",
+        "licenseFile": "licenses/lucide.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "battery-medium",
+      "purpose": "電池中電量",
+      "recognitionCues": "電池母型內的兩格電量",
+      "confusableWith": [
+        "battery-low",
+        "battery-full"
+      ],
+      "sourceObservation": "Lucide中電量保留三格中的兩格，Phosphor是四格中的兩格。最新稿採Lucide三階格數系統，因此命名medium而不宣稱精確50%；完稿回比，兩格與滿電前兩格完全對應，16px上下留白經短線縮減更穩定。",
+      "references": [
+        {
+          "name": "battery-medium",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/battery-medium.svg",
+          "localPath": "references/atlas-01/lucide-battery-medium.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/battery-medium.svg",
+          "sha256": "f8a79b837f96c801ffc394d1d154c5a792823e3bb506bb98a4379b0647067e0a",
+          "license": "ISC AND MIT",
+          "sourceName": "battery-medium",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "battery-medium",
+          "library": "Phosphor",
+          "repository": "phosphor-icons/core",
+          "commit": "2b75f3ad12b420c9504ef05df8d2564a28f8500e",
+          "path": "assets/regular/battery-medium.svg",
+          "localPath": "references/atlas-01/phosphor-battery-medium.svg",
+          "url": "https://github.com/phosphor-icons/core/blob/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular/battery-medium.svg",
+          "sha256": "e0a526292b1e4fe703358d43e470527d6aac9433bbe9f3485d1bdd1bcbaa327c",
+          "license": "MIT",
+          "sourceName": "battery-medium",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "設備與電量狀態已有明確實線構造，不需虛線表示隱藏部件。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "電量由格數而非淡化表達，設備內線也不藉透明度減密。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "以單色辨識能源與電力設備，不需光照或材質漸層。"
+        }
+      },
+      "change": {
+        "kind": "modified",
+        "before": {
+          "path": "references/atlas-craft-21/master-before.json",
+          "variantsSha256": "9879e7ba696347037926901b6e54b70535b5964ecc13fea61e6ae68acf25bb68"
+        },
+        "reason": "與滿電和低電量共用外框、端子及格數座標；兩格只表示中電量而非精確比例，原生16px減少短線長度以維持外殼內空間。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "83e41bf0d362c3890966ff931911164b4192d9a9913db4dbd7fb305a9d0e2533",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/93b-battery-levels/review.html",
+            "sha256": "ab2a887c5540ec0511d469f210a63f946875e828f4876bc58ee42db50f5274ee"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/93b-battery-levels/definitions.json",
+            "sha256": "a3fc3ff76158c2cc79cb129c61b3694eca6315d1677c6531779f367078c7226b"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/93b-battery-levels/light-1x.png",
+            "sha256": "0607451495c2a5686c615f3c24c5ec21e31cda110ed8700059178f16977bab04"
+          },
+          {
+            "path": "docs/review/atlas-craft-21/final/definitions.json",
+            "sha256": "23b99632bda27e693ca0c5587781d622d2457327829486c48b9f47ba34f84e0e"
+          },
+          {
+            "path": "docs/review/atlas-craft-21/final/23-energy.html",
+            "sha256": "4ae0ca3214515372b885c21ff55e1c8a0c0a2462ecc0eb4da06fe729a1159902"
+          },
+          {
+            "path": "docs/review/atlas-craft-21/final/23-energy-light-1x.png",
+            "sha256": "3bb6a0b39d7a4c08a6858bab8ea9ef1b7c60913b67735b04ca78f89fbbceb974"
+          },
+          {
+            "path": "docs/review/atlas-craft-21/final/23-energy-light-2x.png",
+            "sha256": "57fe7d4219a35a21696852322b353b531f9af5a6756c02aab4fde750230cf0ad"
+          },
+          {
+            "path": "docs/review/atlas-craft-21/final/23-energy-dark-1x.png",
+            "sha256": "b6b0bc36c42ba43c20726954abcd9e9a6cbf55112eb7c942c5c073953def97df"
+          },
+          {
+            "path": "docs/review/atlas-craft-21/final/23-energy-dark-2x.png",
+            "sha256": "0f7b19372ea466b9e27581be989f7cceba621bd014f68592bedf46faee8bdced"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-21/final/23-energy-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-21/final/23-energy-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-21/final/23-energy-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-21/final/23-energy-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Lucide",
+        "license": "ISC",
+        "licenseFile": "licenses/lucide.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "battery-warning",
+      "purpose": "電池警告",
+      "recognitionCues": "電池外殼與內部驚嘆號",
+      "confusableWith": [
+        "battery",
+        "battery-charging"
+      ],
+      "sourceObservation": "Lucide把外殼打開以容納驚嘆號，Phosphor把警告留在完整外框內。最新稿採完整外殼並沿用現有battery母型；完稿回比後短豎筆向內移1u，16px上端不再緊貼框線，豎筆與圓點分開而仍讀作驚嘆號。",
+      "references": [
+        {
+          "name": "battery-warning",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/battery-exclamation-point.svg",
+          "localPath": "references/atlas-01/lucide-battery-exclamation-point.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/battery-exclamation-point.svg",
+          "sha256": "ac63fc997f375f14c2f282337e19fdc2a7a805d72bfa342d4f5401d457ca9302",
+          "license": "ISC AND MIT",
+          "sourceName": "battery-exclamation-point",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "battery-warning",
+          "library": "Phosphor",
+          "repository": "phosphor-icons/core",
+          "commit": "2b75f3ad12b420c9504ef05df8d2564a28f8500e",
+          "path": "assets/regular/battery-warning.svg",
+          "localPath": "references/atlas-01/phosphor-battery-warning.svg",
+          "url": "https://github.com/phosphor-icons/core/blob/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular/battery-warning.svg",
+          "sha256": "76ee3f98efed9b663b40ebcb1842fba43a1c42e9843f2b7d16fb3e5fb52d75bf",
+          "license": "MIT",
+          "sourceName": "battery-warning",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "設備與電量狀態已有明確實線構造，不需虛線表示隱藏部件。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "電量由格數而非淡化表達，設備內線也不藉透明度減密。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "以單色辨識能源與電力設備，不需光照或材質漸層。"
+        }
+      },
+      "change": {
+        "kind": "modified",
+        "before": {
+          "path": "references/atlas-craft-21/master-before.json",
+          "variantsSha256": "0bb31e5f85f175d35965bf5e77f0f05d31a1cf155ec7e06fec7ca9a7bec8dc2c"
+        },
+        "reason": "警告符號位於電池殼體視覺中心，短豎筆向內移，圓點保持獨立；不以外部徽標或改變電池長寬來表達狀態。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "5487c8e028dd001673fd78fdeb0d2693d4feea3272a7de4bc5ed772f137804d5",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/94b-battery-warning/review.html",
+            "sha256": "13db1eb47a16dd9ae9c9f5ce32d53c4fd34a0e13759a816f4cd1255d897cb012"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/94b-battery-warning/definitions.json",
+            "sha256": "046322e71498ec76c0e7496cfab1112298b5c80083dbbe08bf177bf93c8ab335"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/94b-battery-warning/light-1x.png",
+            "sha256": "7da2a0b1d1d89fe7e9d60e049ca4d96c650faac744afffc2e67cb54b277c9dc3"
+          },
+          {
+            "path": "docs/review/atlas-craft-21/final/definitions.json",
+            "sha256": "23b99632bda27e693ca0c5587781d622d2457327829486c48b9f47ba34f84e0e"
+          },
+          {
+            "path": "docs/review/atlas-craft-21/final/23-energy.html",
+            "sha256": "4ae0ca3214515372b885c21ff55e1c8a0c0a2462ecc0eb4da06fe729a1159902"
+          },
+          {
+            "path": "docs/review/atlas-craft-21/final/23-energy-light-1x.png",
+            "sha256": "3bb6a0b39d7a4c08a6858bab8ea9ef1b7c60913b67735b04ca78f89fbbceb974"
+          },
+          {
+            "path": "docs/review/atlas-craft-21/final/23-energy-light-2x.png",
+            "sha256": "57fe7d4219a35a21696852322b353b531f9af5a6756c02aab4fde750230cf0ad"
+          },
+          {
+            "path": "docs/review/atlas-craft-21/final/23-energy-dark-1x.png",
+            "sha256": "b6b0bc36c42ba43c20726954abcd9e9a6cbf55112eb7c942c5c073953def97df"
+          },
+          {
+            "path": "docs/review/atlas-craft-21/final/23-energy-dark-2x.png",
+            "sha256": "0f7b19372ea466b9e27581be989f7cceba621bd014f68592bedf46faee8bdced"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-21/final/23-energy-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-21/final/23-energy-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-21/final/23-energy-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-21/final/23-energy-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Phosphor",
+        "license": "MIT",
+        "licenseFile": "licenses/phosphor.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "car-battery",
+      "purpose": "汽車電瓶",
+      "recognitionCues": "寬電瓶、頂部接點與正負極",
+      "confusableWith": [
+        "battery",
+        "battery-full"
+      ],
+      "sourceObservation": "Lucide用短接點、Phosphor用小空心端子表示電瓶。最新稿採Lucide短接點以保留小尺寸清晰度；完稿回比16/20/24，寬電瓶與正負極分組明確，兩個接點直接承接外殼，沒有擁擠的小端子孔。",
+      "references": [
+        {
+          "name": "car-battery",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/car-battery.svg",
+          "localPath": "references/atlas-01/lucide-car-battery.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/car-battery.svg",
+          "sha256": "b2f181b18b346a3f366bdad28bf2b4a8d910dbb284148947712f1ce862ca975b",
+          "license": "ISC AND MIT",
+          "sourceName": "car-battery",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "car-battery",
+          "library": "Phosphor",
+          "repository": "phosphor-icons/core",
+          "commit": "2b75f3ad12b420c9504ef05df8d2564a28f8500e",
+          "path": "assets/regular/car-battery.svg",
+          "localPath": "references/atlas-01/phosphor-car-battery.svg",
+          "url": "https://github.com/phosphor-icons/core/blob/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular/car-battery.svg",
+          "sha256": "ba119b776c0039342952cb1b1f185a9d9683321f07b1f1070feb3a655d21d673",
+          "license": "MIT",
+          "sourceName": "car-battery",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "設備與電量狀態已有明確實線構造，不需虛線表示隱藏部件。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "電量由格數而非淡化表達，設備內線也不藉透明度減密。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "以單色辨識能源與電力設備，不需光照或材質漸層。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-21/master-before.json",
+          "variantsSha256": "4c8ae372c1b023f0e67e54d64e5806eba749aeb48b3fc555256c562e390eaed2"
+        },
+        "reason": "寬殼上方兩個短接點與殼體相連，內部負極短線和正極十字各佔一側；殼角沿家族角型，符號與外壁保持開闊空間。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "4f9a8a397e66bff6869015635b1882448e83a48f2bb22ce0a8cd3e5199236293",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/94-warning-car-battery/review.html",
+            "sha256": "4d2bb97c103f694a5c6fb427dc48f7e791f82dd7c3e9a92436d4cf47b257d006"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/94-warning-car-battery/definitions.json",
+            "sha256": "ec33e12264bdfeb5152998fef2fdaf4b752ac6bacc555ecfc2d2ff196f22e339"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/94-warning-car-battery/light-1x.png",
+            "sha256": "f34b9edfb386877d154963d2ce57f75c3ffcf037d2dd835581373c818d912a59"
+          },
+          {
+            "path": "docs/review/atlas-craft-21/final/definitions.json",
+            "sha256": "23b99632bda27e693ca0c5587781d622d2457327829486c48b9f47ba34f84e0e"
+          },
+          {
+            "path": "docs/review/atlas-craft-21/final/23-energy.html",
+            "sha256": "4ae0ca3214515372b885c21ff55e1c8a0c0a2462ecc0eb4da06fe729a1159902"
+          },
+          {
+            "path": "docs/review/atlas-craft-21/final/23-energy-light-1x.png",
+            "sha256": "3bb6a0b39d7a4c08a6858bab8ea9ef1b7c60913b67735b04ca78f89fbbceb974"
+          },
+          {
+            "path": "docs/review/atlas-craft-21/final/23-energy-light-2x.png",
+            "sha256": "57fe7d4219a35a21696852322b353b531f9af5a6756c02aab4fde750230cf0ad"
+          },
+          {
+            "path": "docs/review/atlas-craft-21/final/23-energy-dark-1x.png",
+            "sha256": "b6b0bc36c42ba43c20726954abcd9e9a6cbf55112eb7c942c5c073953def97df"
+          },
+          {
+            "path": "docs/review/atlas-craft-21/final/23-energy-dark-2x.png",
+            "sha256": "0f7b19372ea466b9e27581be989f7cceba621bd014f68592bedf46faee8bdced"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-21/final/23-energy-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-21/final/23-energy-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-21/final/23-energy-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-21/final/23-energy-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Lucide",
+        "license": "ISC",
+        "licenseFile": "licenses/lucide.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "charging-station",
+      "purpose": "充電樁",
+      "recognitionCues": "直立充電機、閃電與側邊充電線",
+      "confusableWith": [
+        "fuel",
+        "battery-charging"
+      ],
+      "sourceObservation": "Lucide有上方顯示區及側線，Phosphor機身更簡單。最新稿採Lucide構造，但讓線纜與機身之間留較寬通道；完稿回比16px，顯示區、內部閃電和彎線各自可讀，沒有再加插槍小框壓縮空間。",
+      "references": [
+        {
+          "name": "charging-station",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/ev-charger.svg",
+          "localPath": "references/atlas-01/lucide-ev-charger.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/ev-charger.svg",
+          "sha256": "3ce3664aee0592ffe815e46e9660562d9f499dc23675924e88e75324138c7212",
+          "license": "ISC AND MIT",
+          "sourceName": "ev-charger",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "charging-station",
+          "library": "Phosphor",
+          "repository": "phosphor-icons/core",
+          "commit": "2b75f3ad12b420c9504ef05df8d2564a28f8500e",
+          "path": "assets/regular/charging-station.svg",
+          "localPath": "references/atlas-01/phosphor-charging-station.svg",
+          "url": "https://github.com/phosphor-icons/core/blob/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular/charging-station.svg",
+          "sha256": "2bfb435eb07c6facd40bb93313af561e7302e73e0470e3f140963a993787cdfe",
+          "license": "MIT",
+          "sourceName": "charging-station",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "設備與電量狀態已有明確實線構造，不需虛線表示隱藏部件。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "電量由格數而非淡化表達，設備內線也不藉透明度減密。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "以單色辨識能源與電力設備，不需光照或材質漸層。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-21/master-before.json",
+          "variantsSha256": "dc6ec16056c38aa83f936fd4cf6908333ec3e5df5db1019b28f6cc84128d4b7b"
+        },
+        "reason": "直立機身共用底座和單道顯示區分界，線纜向外彎後回升至充電端；小閃電保持開放折線，與燃油泵的油量窗形成區別。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "4270ceb9401ed92df3b67c898337474186d704fba6a6dae1aae2d9e987052c7d",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/95-charging-tower-socket/review.html",
+            "sha256": "e9f2e369282be41d1098873624be86315c4ba4979443a5751bc1c828bf4ae1bf"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/95-charging-tower-socket/definitions.json",
+            "sha256": "f973108a627b482250ed5f9a55b2bfa5840e888b56586e94a0978b12b8987ddb"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/95-charging-tower-socket/light-1x.png",
+            "sha256": "7f95327c697bc2623e859dbda91f77dffca9ec520c7ef4caf83bc03d864b489d"
+          },
+          {
+            "path": "docs/review/atlas-craft-21/final/definitions.json",
+            "sha256": "23b99632bda27e693ca0c5587781d622d2457327829486c48b9f47ba34f84e0e"
+          },
+          {
+            "path": "docs/review/atlas-craft-21/final/23-energy.html",
+            "sha256": "4ae0ca3214515372b885c21ff55e1c8a0c0a2462ecc0eb4da06fe729a1159902"
+          },
+          {
+            "path": "docs/review/atlas-craft-21/final/23-energy-light-1x.png",
+            "sha256": "3bb6a0b39d7a4c08a6858bab8ea9ef1b7c60913b67735b04ca78f89fbbceb974"
+          },
+          {
+            "path": "docs/review/atlas-craft-21/final/23-energy-light-2x.png",
+            "sha256": "57fe7d4219a35a21696852322b353b531f9af5a6756c02aab4fde750230cf0ad"
+          },
+          {
+            "path": "docs/review/atlas-craft-21/final/23-energy-dark-1x.png",
+            "sha256": "b6b0bc36c42ba43c20726954abcd9e9a6cbf55112eb7c942c5c073953def97df"
+          },
+          {
+            "path": "docs/review/atlas-craft-21/final/23-energy-dark-2x.png",
+            "sha256": "0f7b19372ea466b9e27581be989f7cceba621bd014f68592bedf46faee8bdced"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-21/final/23-energy-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-21/final/23-energy-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-21/final/23-energy-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-21/final/23-energy-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Lucide",
+        "license": "ISC",
+        "licenseFile": "licenses/lucide.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "transmission-tower",
+      "purpose": "輸電塔",
+      "recognitionCues": "漸寬塔架、橫擔與交叉支撐",
+      "confusableWith": [
+        "crane-tower",
+        "wind-turbine"
+      ],
+      "sourceObservation": "Hugeicons尖頂與橫擔一體但交叉紋較密，MDI把上部橫擔分開。最新稿採Hugeicons連續塔架並減為一組交叉支撐；完稿回比後支撐接到塔身真實邊界與共同底腳，消除sharp底端凸角，16px菱形與三角空腔保留。",
+      "references": [
+        {
+          "name": "transmission-tower",
+          "library": "Hugeicons Free",
+          "repository": "hugeicons/hugeicons",
+          "commit": "834e28d965946c1ee60d080027fe9dae4adc58d0",
+          "path": "icons/electric-tower-01.svg",
+          "localPath": "references/atlas-01/hugeicons-electric-tower-01.svg",
+          "url": "https://github.com/hugeicons/hugeicons/blob/834e28d965946c1ee60d080027fe9dae4adc58d0/icons/electric-tower-01.svg",
+          "sha256": "bee59a553bd278ba223e391519086d9e91204f021187c232e6aaa2d94079b423",
+          "license": "MIT",
+          "sourceName": "electric-tower-01",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "transmission-tower",
+          "library": "Material Design Icons",
+          "repository": "Templarian/MaterialDesign",
+          "commit": "2424e748e0cc63ab7b9c095a099b9fe239b737c0",
+          "path": "svg/transmission-tower.svg",
+          "localPath": "references/atlas-01/mdi-transmission-tower.svg",
+          "url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/transmission-tower.svg",
+          "sha256": "bd8420bdb5a6e4708fdb6a9f4c6916553734cd29bbf5ac3ccb6342857994d3e2",
+          "license": "Apache-2.0",
+          "sourceName": "transmission-tower",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "設備與電量狀態已有明確實線構造，不需虛線表示隱藏部件。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "電量由格數而非淡化表達，設備內線也不藉透明度減密。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "以單色辨識能源與電力設備，不需光照或材質漸層。"
+        }
+      },
+      "change": {
+        "kind": "modified",
+        "before": {
+          "path": "references/atlas-craft-21/master-before.json",
+          "variantsSha256": "22be11e81c71b1935cdf8926c89e765492afb6095334c6f6d730e177c48fc16a"
+        },
+        "reason": "漸寬塔身支承橫擔，內部兩條斜撐以同一組端點交會並裁在塔框內；單組X取代多層交叉紋，不增加電線干擾主輪廓。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "bcd6d9c060747caaea408b7817af1a1c207597cb10ad9b777abf665140ea4ba9",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/95b-transmission/review.html",
+            "sha256": "f1979caac94aa0e2ada16d3b5aab2258cd42bdb6b0b3686901e9b6985296bf97"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/95b-transmission/definitions.json",
+            "sha256": "acf01ab428d8b53c50a6bd48c04c6487ff278b901efb3b6695b498e597e35feb"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/95b-transmission/light-1x.png",
+            "sha256": "9a7bef893563a2532a4256fdcaf76106fca3f3d480ab9d30f8e93a2d57be02b4"
+          },
+          {
+            "path": "docs/review/atlas-craft-21/final/definitions.json",
+            "sha256": "23b99632bda27e693ca0c5587781d622d2457327829486c48b9f47ba34f84e0e"
+          },
+          {
+            "path": "docs/review/atlas-craft-21/final/23-energy.html",
+            "sha256": "4ae0ca3214515372b885c21ff55e1c8a0c0a2462ecc0eb4da06fe729a1159902"
+          },
+          {
+            "path": "docs/review/atlas-craft-21/final/23-energy-light-1x.png",
+            "sha256": "3bb6a0b39d7a4c08a6858bab8ea9ef1b7c60913b67735b04ca78f89fbbceb974"
+          },
+          {
+            "path": "docs/review/atlas-craft-21/final/23-energy-light-2x.png",
+            "sha256": "57fe7d4219a35a21696852322b353b531f9af5a6756c02aab4fde750230cf0ad"
+          },
+          {
+            "path": "docs/review/atlas-craft-21/final/23-energy-dark-1x.png",
+            "sha256": "b6b0bc36c42ba43c20726954abcd9e9a6cbf55112eb7c942c5c073953def97df"
+          },
+          {
+            "path": "docs/review/atlas-craft-21/final/23-energy-dark-2x.png",
+            "sha256": "0f7b19372ea466b9e27581be989f7cceba621bd014f68592bedf46faee8bdced"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-21/final/23-energy-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-21/final/23-energy-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-21/final/23-energy-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-21/final/23-energy-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Hugeicons Free",
+        "license": "MIT",
+        "licenseFile": "licenses/hugeicons-MIT.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "power-socket",
+      "purpose": "電源插座",
+      "recognitionCues": "方形面板與雙圓插孔",
+      "confusableWith": [
+        "plug",
+        "unplug"
+      ],
+      "sourceObservation": "Tabler outlet是雙圓孔簡潔面板，MDI power-socket-eu增加圓形凹面。最新稿採Tabler面板與雙孔，避免再套圈；完稿回比16px，兩孔大小、距離及框內空白均衡。此造型以雙圓孔插座為原型，不宣稱代表所有地區插座規格。",
+      "references": [
+        {
+          "name": "power-socket",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/outlet.svg",
+          "localPath": "references/atlas-01/tabler-outlet.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/outlet.svg",
+          "sha256": "9de74a6d04c920beb8fd23ef32af96b4ade4aad8de46b1ba948fc26311142281",
+          "license": "MIT",
+          "sourceName": "outlet",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "power-socket",
+          "library": "Material Design Icons",
+          "repository": "Templarian/MaterialDesign",
+          "commit": "2424e748e0cc63ab7b9c095a099b9fe239b737c0",
+          "path": "svg/power-socket-eu.svg",
+          "localPath": "references/atlas-01/mdi-power-socket-eu.svg",
+          "url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/power-socket-eu.svg",
+          "sha256": "1490cac2dbbc04997079b9410e74edaea7d3838245436dee48bdd754aef35c0f",
+          "license": "Apache-2.0",
+          "sourceName": "power-socket-eu",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "設備與電量狀態已有明確實線構造，不需虛線表示隱藏部件。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "電量由格數而非淡化表達，設備內線也不藉透明度減密。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "以單色辨識能源與電力設備，不需光照或材質漸層。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-21/master-before.json",
+          "variantsSha256": "e6d2603c68f5790eafd495a4ae677aff94766a19fd9d5da4bc430ff215616ce6"
+        },
+        "reason": "方形面板依三種角型改實際圓角，雙孔用相同實心圓並沿水平軸等距；不添加小接地孔或凹面輪廓以免變成過密框中框。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "b904c20b085dd1534bf24ab964ab62dbcc9988a932ae4a6e908e8c336312c06b",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/95-charging-tower-socket/review.html",
+            "sha256": "e9f2e369282be41d1098873624be86315c4ba4979443a5751bc1c828bf4ae1bf"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/95-charging-tower-socket/definitions.json",
+            "sha256": "f973108a627b482250ed5f9a55b2bfa5840e888b56586e94a0978b12b8987ddb"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/95-charging-tower-socket/light-1x.png",
+            "sha256": "7f95327c697bc2623e859dbda91f77dffca9ec520c7ef4caf83bc03d864b489d"
+          },
+          {
+            "path": "docs/review/atlas-craft-21/final/definitions.json",
+            "sha256": "23b99632bda27e693ca0c5587781d622d2457327829486c48b9f47ba34f84e0e"
+          },
+          {
+            "path": "docs/review/atlas-craft-21/final/23-energy.html",
+            "sha256": "4ae0ca3214515372b885c21ff55e1c8a0c0a2462ecc0eb4da06fe729a1159902"
+          },
+          {
+            "path": "docs/review/atlas-craft-21/final/23-energy-light-1x.png",
+            "sha256": "3bb6a0b39d7a4c08a6858bab8ea9ef1b7c60913b67735b04ca78f89fbbceb974"
+          },
+          {
+            "path": "docs/review/atlas-craft-21/final/23-energy-light-2x.png",
+            "sha256": "57fe7d4219a35a21696852322b353b531f9af5a6756c02aab4fde750230cf0ad"
+          },
+          {
+            "path": "docs/review/atlas-craft-21/final/23-energy-dark-1x.png",
+            "sha256": "b6b0bc36c42ba43c20726954abcd9e9a6cbf55112eb7c942c5c073953def97df"
+          },
+          {
+            "path": "docs/review/atlas-craft-21/final/23-energy-dark-2x.png",
+            "sha256": "0f7b19372ea466b9e27581be989f7cceba621bd014f68592bedf46faee8bdced"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-21/final/23-energy-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-21/final/23-energy-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-21/final/23-energy-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-21/final/23-energy-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Tabler",
+        "license": "MIT",
+        "licenseFile": "licenses/tabler.txt"
+      },
+      "remaining": []
+    }
+  ]
+}

@@ -1,0 +1,1534 @@
+{
+  "schemaVersion": 2,
+  "reviewer": "Codex (AI)",
+  "userApproval": "pending",
+  "icons": [
+    {
+      "name": "shirt",
+      "purpose": "上衣",
+      "recognitionCues": "圓領、短袖與平整下襬",
+      "confusableWith": [
+        "coat",
+        "dress"
+      ],
+      "sourceObservation": "Lucide採圓領與斜袖口，Tabler採較方的袖身。Master保留圓領、下斜肩線與短袖口，以單一輪廓表達上衣，不額外增加領圈或袖口內線。",
+      "references": [
+        {
+          "name": "shirt",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/shirt.svg",
+          "localPath": "references/atlas-01/lucide-shirt.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/shirt.svg",
+          "sha256": "6e7df3e5ab01881bce6e00eebd449c950fd8535de656c7b720e6cba6b5a70602",
+          "license": "ISC AND MIT",
+          "sourceName": "shirt",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "shirt",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/shirt.svg",
+          "localPath": "references/atlas-01/tabler-shirt.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/shirt.svg",
+          "sha256": "ef988788499b726d3a5b2744a8242aefd64c8801c32016239b138379c788771a",
+          "license": "MIT",
+          "sourceName": "shirt",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "衣物縫線與配件均以必要實體輪廓表達，不添加裝飾虛線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "鏡片訊號以一筆斜線表示，衣料以輪廓表達，沒有淡化分層需求。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "單色服飾圖示不需要材質反光或連續漸層。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-08/master-before.json",
+          "variantsSha256": "95ad15d5a62e7dcec8d252d081ed977f2e57778415532e69a61ea708c2b914bc"
+        },
+        "reason": "肩線和圓領有明確轉折，袖口與身片比例保持舒展；下襬實際微倒角，sharp省略零長度曲線，沒有裝飾性套邊。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "962820e7aafd1e85a9537c24f1f25237faeb1942e18e6a89bc6e922c3fb92c7d",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/41/review.html",
+            "sha256": "d8eeb090832bf250ba81717e2c4e5f55171c4ea87bbfe62b105ecc83bb401c26"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/41/definitions.json",
+            "sha256": "d0a9a86eef586f167de8b1d4c3605188778415f62901f6a8df8af271e22b238d"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/41/light-1x.png",
+            "sha256": "950cc3eefa57fcffea7eac80478114fa02db421b132aa527d894e09bcbc63640"
+          },
+          {
+            "path": "docs/review/atlas-craft-08/final/definitions.json",
+            "sha256": "0ac112e92e7f2ca1d0931414c8c25e5c0ec5f6e42264d56718f62f16c367dede"
+          },
+          {
+            "path": "docs/review/atlas-craft-08/final/11-clothing.html",
+            "sha256": "25a9e5f48f20446eb95a775df552e187206f66438df590857314661705231a72"
+          },
+          {
+            "path": "docs/review/atlas-craft-08/final/11-clothing-light-1x.png",
+            "sha256": "f36a6db7fb48c251df3667c6c3c8c3c052213be759432bea851e1f6ceac10392"
+          },
+          {
+            "path": "docs/review/atlas-craft-08/final/11-clothing-light-2x.png",
+            "sha256": "2a1afcc8531d26e51ae0a1384d1d362044ed8e602c8ee2da0b58e1866b4a2aa2"
+          },
+          {
+            "path": "docs/review/atlas-craft-08/final/11-clothing-dark-1x.png",
+            "sha256": "4c22b5d1e1aee3d2eee4c1ce5e2ce331a5e47127d2052921564481aae0a05384"
+          },
+          {
+            "path": "docs/review/atlas-craft-08/final/11-clothing-dark-2x.png",
+            "sha256": "bf63fa9a13bfa73edfe3d2ea0764dd9ce509e6c139dd223f80a9bf384b2312d2"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-08/final/11-clothing-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-08/final/11-clothing-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-08/final/11-clothing-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-08/final/11-clothing-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Lucide",
+        "license": "ISC",
+        "licenseFile": "licenses/lucide.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "trousers",
+      "purpose": "長褲",
+      "recognitionCues": "腰頭、褲襠與分開的長褲管",
+      "confusableWith": [
+        "sock",
+        "shirt"
+      ],
+      "sourceObservation": "Phosphor用腰頭、口袋及分開褲管，Iconoir採更簡單的直筒輪廓。Master保留腰頭和褲襠，刪除口袋曲線，讓兩條褲管各自保持寬孔。",
+      "references": [
+        {
+          "name": "trousers",
+          "library": "Phosphor",
+          "repository": "phosphor-icons/core",
+          "commit": "2b75f3ad12b420c9504ef05df8d2564a28f8500e",
+          "path": "assets/regular/pants.svg",
+          "localPath": "references/atlas-01/phosphor-pants.svg",
+          "url": "https://github.com/phosphor-icons/core/blob/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular/pants.svg",
+          "sha256": "efca935ea1bb2d3bc728a5e24f62cb62dd3ee146aa7e36930b3d403acc84bca1",
+          "license": "MIT",
+          "sourceName": "pants",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "trousers",
+          "library": "Iconoir",
+          "repository": "iconoir-icons/iconoir",
+          "commit": "39834e3f193bc0cca2c36bebb6a650471977433d",
+          "path": "icons/regular/pants.svg",
+          "localPath": "references/atlas-01/iconoir-pants.svg",
+          "url": "https://github.com/iconoir-icons/iconoir/blob/39834e3f193bc0cca2c36bebb6a650471977433d/icons/regular/pants.svg",
+          "sha256": "45d63d652a7cb25205ccbec19f086a01dd86e84691a981f9024a448da9f99b99",
+          "license": "MIT",
+          "sourceName": "pants",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "衣物縫線與配件均以必要實體輪廓表達，不添加裝飾虛線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "鏡片訊號以一筆斜線表示，衣料以輪廓表達，沒有淡化分層需求。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "單色服飾圖示不需要材質反光或連續漸層。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-08/master-before.json",
+          "variantsSha256": "a5ae79715164d57f94fc6d8f39e7f0376e2d430d98b108de0771210c15b6f0a3"
+        },
+        "reason": "腰頭有足夠高度，褲襠與褲管形成連續輪廓，尖窄處是實際構造收束而非獨立線條近接；不加容易擠窄腰部的鈕扣與門襟線。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "28e13406d2fb68fc0d22715ab4accd2cf0fa690b6b5d2f8f7a5d155c44b01dee",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/41/review.html",
+            "sha256": "d8eeb090832bf250ba81717e2c4e5f55171c4ea87bbfe62b105ecc83bb401c26"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/41/definitions.json",
+            "sha256": "d0a9a86eef586f167de8b1d4c3605188778415f62901f6a8df8af271e22b238d"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/41/light-1x.png",
+            "sha256": "950cc3eefa57fcffea7eac80478114fa02db421b132aa527d894e09bcbc63640"
+          },
+          {
+            "path": "docs/review/atlas-craft-08/final/definitions.json",
+            "sha256": "0ac112e92e7f2ca1d0931414c8c25e5c0ec5f6e42264d56718f62f16c367dede"
+          },
+          {
+            "path": "docs/review/atlas-craft-08/final/11-clothing.html",
+            "sha256": "25a9e5f48f20446eb95a775df552e187206f66438df590857314661705231a72"
+          },
+          {
+            "path": "docs/review/atlas-craft-08/final/11-clothing-light-1x.png",
+            "sha256": "f36a6db7fb48c251df3667c6c3c8c3c052213be759432bea851e1f6ceac10392"
+          },
+          {
+            "path": "docs/review/atlas-craft-08/final/11-clothing-light-2x.png",
+            "sha256": "2a1afcc8531d26e51ae0a1384d1d362044ed8e602c8ee2da0b58e1866b4a2aa2"
+          },
+          {
+            "path": "docs/review/atlas-craft-08/final/11-clothing-dark-1x.png",
+            "sha256": "4c22b5d1e1aee3d2eee4c1ce5e2ce331a5e47127d2052921564481aae0a05384"
+          },
+          {
+            "path": "docs/review/atlas-craft-08/final/11-clothing-dark-2x.png",
+            "sha256": "bf63fa9a13bfa73edfe3d2ea0764dd9ce509e6c139dd223f80a9bf384b2312d2"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-08/final/11-clothing-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-08/final/11-clothing-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-08/final/11-clothing-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-08/final/11-clothing-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Phosphor",
+        "license": "MIT",
+        "licenseFile": "licenses/phosphor.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "dress",
+      "purpose": "洋裝",
+      "recognitionCues": "肩帶、合身腰部與展開裙襬",
+      "confusableWith": [
+        "shirt",
+        "coat"
+      ],
+      "sourceObservation": "Phosphor採肩帶及合身上身，Hugeicons dress-01採短袖和圓弧裙襬。Master選肩帶、收腰與微弧裙襬，保留衣料向外展開的姿態。",
+      "references": [
+        {
+          "name": "dress",
+          "library": "Phosphor",
+          "repository": "phosphor-icons/core",
+          "commit": "2b75f3ad12b420c9504ef05df8d2564a28f8500e",
+          "path": "assets/regular/dress.svg",
+          "localPath": "references/atlas-01/phosphor-dress.svg",
+          "url": "https://github.com/phosphor-icons/core/blob/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular/dress.svg",
+          "sha256": "9adf749009d2735ef7c5efe0d9cc7881da3716e8327be204e700cebbc4770b94",
+          "license": "MIT",
+          "sourceName": "dress",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "dress",
+          "library": "Hugeicons Free",
+          "repository": "hugeicons/hugeicons",
+          "commit": "834e28d965946c1ee60d080027fe9dae4adc58d0",
+          "path": "icons/dress-01.svg",
+          "localPath": "references/atlas-01/hugeicons-dress-01.svg",
+          "url": "https://github.com/hugeicons/hugeicons/blob/834e28d965946c1ee60d080027fe9dae4adc58d0/icons/dress-01.svg",
+          "sha256": "01d75ea8a4a863a8a32b665b153a8b30bf883963fcf64114320cc2c3de0682ab",
+          "license": "MIT",
+          "sourceName": "dress-01",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "衣物縫線與配件均以必要實體輪廓表達，不添加裝飾虛線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "鏡片訊號以一筆斜線表示，衣料以輪廓表達，沒有淡化分層需求。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "單色服飾圖示不需要材質反光或連續漸層。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-08/master-before.json",
+          "variantsSha256": "61b20a94242a32916b170506852632f2b95ab4766a060fd1f0ddb8cedc663e61"
+        },
+        "reason": "肩帶接到領口，腰線收在外殼內；裙襬以寬弧輕微下垂，16px不加摺痕，讓腰身與裙片空腔各自成立。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "9544ca5bdba6cca801aef70a13b396dcff4856f73e21b09a26c6e4aa93711c9e",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/41/review.html",
+            "sha256": "d8eeb090832bf250ba81717e2c4e5f55171c4ea87bbfe62b105ecc83bb401c26"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/41/definitions.json",
+            "sha256": "d0a9a86eef586f167de8b1d4c3605188778415f62901f6a8df8af271e22b238d"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/41/light-1x.png",
+            "sha256": "950cc3eefa57fcffea7eac80478114fa02db421b132aa527d894e09bcbc63640"
+          },
+          {
+            "path": "docs/review/atlas-craft-08/final/definitions.json",
+            "sha256": "0ac112e92e7f2ca1d0931414c8c25e5c0ec5f6e42264d56718f62f16c367dede"
+          },
+          {
+            "path": "docs/review/atlas-craft-08/final/11-clothing.html",
+            "sha256": "25a9e5f48f20446eb95a775df552e187206f66438df590857314661705231a72"
+          },
+          {
+            "path": "docs/review/atlas-craft-08/final/11-clothing-light-1x.png",
+            "sha256": "f36a6db7fb48c251df3667c6c3c8c3c052213be759432bea851e1f6ceac10392"
+          },
+          {
+            "path": "docs/review/atlas-craft-08/final/11-clothing-light-2x.png",
+            "sha256": "2a1afcc8531d26e51ae0a1384d1d362044ed8e602c8ee2da0b58e1866b4a2aa2"
+          },
+          {
+            "path": "docs/review/atlas-craft-08/final/11-clothing-dark-1x.png",
+            "sha256": "4c22b5d1e1aee3d2eee4c1ce5e2ce331a5e47127d2052921564481aae0a05384"
+          },
+          {
+            "path": "docs/review/atlas-craft-08/final/11-clothing-dark-2x.png",
+            "sha256": "bf63fa9a13bfa73edfe3d2ea0764dd9ce509e6c139dd223f80a9bf384b2312d2"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-08/final/11-clothing-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-08/final/11-clothing-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-08/final/11-clothing-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-08/final/11-clothing-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Phosphor",
+        "license": "MIT",
+        "licenseFile": "licenses/phosphor.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "coat",
+      "purpose": "外套",
+      "recognitionCues": "長袖、V形領口與中央開襟",
+      "confusableWith": [
+        "shirt",
+        "dress"
+      ],
+      "sourceObservation": "Tabler jacket是短厚外套構造，OpenMoji coat是較長的有領外套，兩者屬外套但版型不同。Master獨立建立長袖直身外套，以V領和中央開襟表達穿著方式，沒有照搬任一來源版型。",
+      "references": [
+        {
+          "name": "coat",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/jacket.svg",
+          "localPath": "references/atlas-01/tabler-jacket.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/jacket.svg",
+          "sha256": "cf2623d8d3ba264e8e14ee49260ff92f068ae565443a1cfc1dce40a91c733e0f",
+          "license": "MIT",
+          "sourceName": "jacket",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "coat",
+          "library": "OpenMoji",
+          "repository": "hfg-gmuend/openmoji",
+          "commit": "3e01de523ddefe9c5e46a7765b15efef04bf9002",
+          "path": "black/svg/1F9E5.svg",
+          "localPath": "references/atlas-01/openmoji-1F9E5.svg",
+          "url": "https://github.com/hfg-gmuend/openmoji/blob/3e01de523ddefe9c5e46a7765b15efef04bf9002/black/svg/1F9E5.svg",
+          "sha256": "9d5f226bb1cb973492c9a64244595ffc07976612442106ff0bb0c261a33619e5",
+          "license": "CC-BY-SA-4.0",
+          "sourceName": "1F9E5",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "衣物縫線與配件均以必要實體輪廓表達，不添加裝飾虛線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "鏡片訊號以一筆斜線表示，衣料以輪廓表達，沒有淡化分層需求。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "單色服飾圖示不需要材質反光或連續漸層。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-08/master-before.json",
+          "variantsSha256": "f6932c75bcfa8db6fe943dce5d8ade10a80721c0dc9fb44f14dabed117d8d5f3"
+        },
+        "reason": "長袖、身片和中央開襟各自清楚；袖身共用外邊界，中央線平切接入V領，避免端帽突出領口；省去口袋小框與密集鈕扣。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "1054740739d9e3af7c13322b54e12c2b81460a1ae9b37e211d124f4a0baabda1",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/42/review.html",
+            "sha256": "b47d1b40621797460b8cd4432f5d39f8740b4b455e3d754df72f191ac59b34ad"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/42/definitions.json",
+            "sha256": "23d2c0cbb266810e3f948490cd0f25b9e00343066814e99da2ef938bc6597cbd"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/42/light-1x.png",
+            "sha256": "083b6e390e7bb176971b500efbb46c1febd683cb391399847544ade96f2cd34b"
+          },
+          {
+            "path": "docs/review/atlas-craft-08/final/definitions.json",
+            "sha256": "0ac112e92e7f2ca1d0931414c8c25e5c0ec5f6e42264d56718f62f16c367dede"
+          },
+          {
+            "path": "docs/review/atlas-craft-08/final/11-clothing.html",
+            "sha256": "25a9e5f48f20446eb95a775df552e187206f66438df590857314661705231a72"
+          },
+          {
+            "path": "docs/review/atlas-craft-08/final/11-clothing-light-1x.png",
+            "sha256": "f36a6db7fb48c251df3667c6c3c8c3c052213be759432bea851e1f6ceac10392"
+          },
+          {
+            "path": "docs/review/atlas-craft-08/final/11-clothing-light-2x.png",
+            "sha256": "2a1afcc8531d26e51ae0a1384d1d362044ed8e602c8ee2da0b58e1866b4a2aa2"
+          },
+          {
+            "path": "docs/review/atlas-craft-08/final/11-clothing-dark-1x.png",
+            "sha256": "4c22b5d1e1aee3d2eee4c1ce5e2ce331a5e47127d2052921564481aae0a05384"
+          },
+          {
+            "path": "docs/review/atlas-craft-08/final/11-clothing-dark-2x.png",
+            "sha256": "bf63fa9a13bfa73edfe3d2ea0764dd9ce509e6c139dd223f80a9bf384b2312d2"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-08/final/11-clothing-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-08/final/11-clothing-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-08/final/11-clothing-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-08/final/11-clothing-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "independent-construction"
+      },
+      "remaining": []
+    },
+    {
+      "name": "sock",
+      "purpose": "襪子",
+      "recognitionCues": "襪口、直立襪筒與圓趾足部",
+      "confusableWith": [
+        "shoe",
+        "trousers"
+      ],
+      "sourceObservation": "Phosphor保留襪口與圓弧腳跟分界，Tabler採較短襪筒及一塊腳跟訊號。Master用較長直筒接圓趾足部，16px省去腳跟內線，20/24保留一段弧。",
+      "references": [
+        {
+          "name": "sock",
+          "library": "Phosphor",
+          "repository": "phosphor-icons/core",
+          "commit": "2b75f3ad12b420c9504ef05df8d2564a28f8500e",
+          "path": "assets/regular/sock.svg",
+          "localPath": "references/atlas-01/phosphor-sock.svg",
+          "url": "https://github.com/phosphor-icons/core/blob/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular/sock.svg",
+          "sha256": "a6575b9bc0d5261445c6fdc77681540a05c41358cf1b578bff9630637ee6880f",
+          "license": "MIT",
+          "sourceName": "sock",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "sock",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/sock.svg",
+          "localPath": "references/atlas-01/tabler-sock.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/sock.svg",
+          "sha256": "5a3c1d776b5f191095ac2064c5c348b7103714b9edd71a99c4dc4fd3a055b4db",
+          "license": "MIT",
+          "sourceName": "sock",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "衣物縫線與配件均以必要實體輪廓表達，不添加裝飾虛線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "鏡片訊號以一筆斜線表示，衣料以輪廓表達，沒有淡化分層需求。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "單色服飾圖示不需要材質反光或連續漸層。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-08/master-before.json",
+          "variantsSha256": "3a51977129904750a6cdbe1775290dea4ff86bff49f3792bba05a2dc9edc4d2d"
+        },
+        "reason": "襪口、襪筒轉折和圓趾外形保留物件姿態；小尺寸取消腳跟分界仍保留足部形態，弧線在較大尺寸裁在襪體內，不突出輪廓。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "a8c5ff1e9d31bc2722c9dc3e3358572250eadfdb876cdb5511e6b9b6145496d1",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/42/review.html",
+            "sha256": "b47d1b40621797460b8cd4432f5d39f8740b4b455e3d754df72f191ac59b34ad"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/42/definitions.json",
+            "sha256": "23d2c0cbb266810e3f948490cd0f25b9e00343066814e99da2ef938bc6597cbd"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/42/light-1x.png",
+            "sha256": "083b6e390e7bb176971b500efbb46c1febd683cb391399847544ade96f2cd34b"
+          },
+          {
+            "path": "docs/review/atlas-craft-08/final/definitions.json",
+            "sha256": "0ac112e92e7f2ca1d0931414c8c25e5c0ec5f6e42264d56718f62f16c367dede"
+          },
+          {
+            "path": "docs/review/atlas-craft-08/final/11-clothing.html",
+            "sha256": "25a9e5f48f20446eb95a775df552e187206f66438df590857314661705231a72"
+          },
+          {
+            "path": "docs/review/atlas-craft-08/final/11-clothing-light-1x.png",
+            "sha256": "f36a6db7fb48c251df3667c6c3c8c3c052213be759432bea851e1f6ceac10392"
+          },
+          {
+            "path": "docs/review/atlas-craft-08/final/11-clothing-light-2x.png",
+            "sha256": "2a1afcc8531d26e51ae0a1384d1d362044ed8e602c8ee2da0b58e1866b4a2aa2"
+          },
+          {
+            "path": "docs/review/atlas-craft-08/final/11-clothing-dark-1x.png",
+            "sha256": "4c22b5d1e1aee3d2eee4c1ce5e2ce331a5e47127d2052921564481aae0a05384"
+          },
+          {
+            "path": "docs/review/atlas-craft-08/final/11-clothing-dark-2x.png",
+            "sha256": "bf63fa9a13bfa73edfe3d2ea0764dd9ce509e6c139dd223f80a9bf384b2312d2"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-08/final/11-clothing-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-08/final/11-clothing-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-08/final/11-clothing-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-08/final/11-clothing-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Phosphor",
+        "license": "MIT",
+        "licenseFile": "licenses/phosphor.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "shoe",
+      "purpose": "鞋子",
+      "recognitionCues": "鞋口、弧形鞋面、鞋帶與平底",
+      "confusableWith": [
+        "sock",
+        "iron"
+      ],
+      "sourceObservation": "Phosphor sneaker有上揚鞋口、鞋帶及鞋底，Tabler shoe有圓鞋頭和鞋帶。Master保留弧形鞋面、平底和鞋口，16px一筆鞋帶，20/24兩筆。",
+      "references": [
+        {
+          "name": "shoe",
+          "library": "Phosphor",
+          "repository": "phosphor-icons/core",
+          "commit": "2b75f3ad12b420c9504ef05df8d2564a28f8500e",
+          "path": "assets/regular/sneaker.svg",
+          "localPath": "references/atlas-01/phosphor-sneaker.svg",
+          "url": "https://github.com/phosphor-icons/core/blob/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular/sneaker.svg",
+          "sha256": "9a8c0e818c23e5e62db2344cabc9a90a3e719627f739803d16ccc9d2284da28a",
+          "license": "MIT",
+          "sourceName": "sneaker",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "shoe",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/shoe.svg",
+          "localPath": "references/atlas-01/tabler-shoe.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/shoe.svg",
+          "sha256": "59548a241723209fd41d0640f4fb1cded4fb81a03c1c3190ea2893e37749847b",
+          "license": "MIT",
+          "sourceName": "shoe",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "衣物縫線與配件均以必要實體輪廓表達，不添加裝飾虛線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "鏡片訊號以一筆斜線表示，衣料以輪廓表達，沒有淡化分層需求。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "單色服飾圖示不需要材質反光或連續漸層。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-08/master-before.json",
+          "variantsSha256": "855203e791db686691275298d1a6b52ae72b250f65397d1b1c9ca4a75e000f65"
+        },
+        "reason": "鞋面由鞋口向鞋頭緩降，鞋底保持可見厚度；鞋帶收在外殼內，減筆後仍有鞋子的結構和接地姿態，沒有另外疊加雙層底線。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "2d4670b8fdaa355b85302c6febae264bfe5fa7b7c02567e7831af7105150b974",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/42/review.html",
+            "sha256": "b47d1b40621797460b8cd4432f5d39f8740b4b455e3d754df72f191ac59b34ad"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/42/definitions.json",
+            "sha256": "23d2c0cbb266810e3f948490cd0f25b9e00343066814e99da2ef938bc6597cbd"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/42/light-1x.png",
+            "sha256": "083b6e390e7bb176971b500efbb46c1febd683cb391399847544ade96f2cd34b"
+          },
+          {
+            "path": "docs/review/atlas-craft-08/final/definitions.json",
+            "sha256": "0ac112e92e7f2ca1d0931414c8c25e5c0ec5f6e42264d56718f62f16c367dede"
+          },
+          {
+            "path": "docs/review/atlas-craft-08/final/11-clothing.html",
+            "sha256": "25a9e5f48f20446eb95a775df552e187206f66438df590857314661705231a72"
+          },
+          {
+            "path": "docs/review/atlas-craft-08/final/11-clothing-light-1x.png",
+            "sha256": "f36a6db7fb48c251df3667c6c3c8c3c052213be759432bea851e1f6ceac10392"
+          },
+          {
+            "path": "docs/review/atlas-craft-08/final/11-clothing-light-2x.png",
+            "sha256": "2a1afcc8531d26e51ae0a1384d1d362044ed8e602c8ee2da0b58e1866b4a2aa2"
+          },
+          {
+            "path": "docs/review/atlas-craft-08/final/11-clothing-dark-1x.png",
+            "sha256": "4c22b5d1e1aee3d2eee4c1ce5e2ce331a5e47127d2052921564481aae0a05384"
+          },
+          {
+            "path": "docs/review/atlas-craft-08/final/11-clothing-dark-2x.png",
+            "sha256": "bf63fa9a13bfa73edfe3d2ea0764dd9ce509e6c139dd223f80a9bf384b2312d2"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-08/final/11-clothing-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-08/final/11-clothing-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-08/final/11-clothing-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-08/final/11-clothing-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Tabler",
+        "license": "MIT",
+        "licenseFile": "licenses/tabler.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "glasses",
+      "purpose": "眼鏡",
+      "recognitionCues": "圓鏡框、弧形鼻橋與鏡腳",
+      "confusableWith": [
+        "sunglasses",
+        "eye"
+      ],
+      "sourceObservation": "Lucide用圓鏡框、曲鼻橋與外張鏡腳，Iconoir採直鏡腳與水平鼻橋。Master選曲鼻橋及稍外張鏡腳，兩個鏡孔各自保持寬度。",
+      "references": [
+        {
+          "name": "glasses",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/glasses.svg",
+          "localPath": "references/atlas-01/lucide-glasses.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/glasses.svg",
+          "sha256": "8a260083626ebe0ce7c30fa88f31dc27c01244ca9c99147ad785f9c04aa0aacb",
+          "license": "ISC AND MIT",
+          "sourceName": "glasses",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "glasses",
+          "library": "Iconoir",
+          "repository": "iconoir-icons/iconoir",
+          "commit": "39834e3f193bc0cca2c36bebb6a650471977433d",
+          "path": "icons/regular/glasses.svg",
+          "localPath": "references/atlas-01/iconoir-glasses.svg",
+          "url": "https://github.com/iconoir-icons/iconoir/blob/39834e3f193bc0cca2c36bebb6a650471977433d/icons/regular/glasses.svg",
+          "sha256": "18be0db2616164aefd3c89118af2149cbd1b62a74d0e6639a882f1cdefbf2543",
+          "license": "MIT",
+          "sourceName": "glasses",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "衣物縫線與配件均以必要實體輪廓表達，不添加裝飾虛線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "鏡片訊號以一筆斜線表示，衣料以輪廓表達，沒有淡化分層需求。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "單色服飾圖示不需要材質反光或連續漸層。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-08/master-before.json",
+          "variantsSha256": "80e584dc6f1e3e9b5142c70a669a0e14876214ca4141d2a1f1f03d96ad242fa3"
+        },
+        "reason": "鏡腳與鼻橋都按鏡框外殼收口，鼻橋不刺進圓孔；左右共軸、孔徑一致，不因微圓語言改變物體的圓鏡片。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "da3004877e298c40eb47fde4931acca48cdbe5d4e9e46b4f32fe2e664dc50d40",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/43/review.html",
+            "sha256": "a76dbc4c52415f6cc085497c39d37f6f1c12623c940843010a47e6752b74e017"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/43/definitions.json",
+            "sha256": "f2d20f726cd96d31bcb8091bae9dee6172225487ee11ddfec6fe5f7eeaf5b337"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/43/light-1x.png",
+            "sha256": "151ab6233e5adf9c624913eff925e78d7338bf8bf7b2729760000dfc5cddc381"
+          },
+          {
+            "path": "docs/review/atlas-craft-08/final/definitions.json",
+            "sha256": "0ac112e92e7f2ca1d0931414c8c25e5c0ec5f6e42264d56718f62f16c367dede"
+          },
+          {
+            "path": "docs/review/atlas-craft-08/final/11-clothing.html",
+            "sha256": "25a9e5f48f20446eb95a775df552e187206f66438df590857314661705231a72"
+          },
+          {
+            "path": "docs/review/atlas-craft-08/final/11-clothing-light-1x.png",
+            "sha256": "f36a6db7fb48c251df3667c6c3c8c3c052213be759432bea851e1f6ceac10392"
+          },
+          {
+            "path": "docs/review/atlas-craft-08/final/11-clothing-light-2x.png",
+            "sha256": "2a1afcc8531d26e51ae0a1384d1d362044ed8e602c8ee2da0b58e1866b4a2aa2"
+          },
+          {
+            "path": "docs/review/atlas-craft-08/final/11-clothing-dark-1x.png",
+            "sha256": "4c22b5d1e1aee3d2eee4c1ce5e2ce331a5e47127d2052921564481aae0a05384"
+          },
+          {
+            "path": "docs/review/atlas-craft-08/final/11-clothing-dark-2x.png",
+            "sha256": "bf63fa9a13bfa73edfe3d2ea0764dd9ce509e6c139dd223f80a9bf384b2312d2"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-08/final/11-clothing-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-08/final/11-clothing-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-08/final/11-clothing-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-08/final/11-clothing-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Lucide",
+        "license": "ISC",
+        "licenseFile": "licenses/lucide.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "sunglasses",
+      "purpose": "太陽眼鏡",
+      "recognitionCues": "平頂鏡框、斜向鏡片訊號與鏡腳",
+      "confusableWith": [
+        "glasses",
+        "eye"
+      ],
+      "sourceObservation": "Phosphor與Tabler都以平頂鏡片和斜向訊號區分太陽眼鏡；Tabler鏡腳較斜。Master保留平頂、兩筆斜線和外張鏡腳，初稿sharp端帽在鏡框接點突出，已修整。",
+      "references": [
+        {
+          "name": "sunglasses",
+          "library": "Phosphor",
+          "repository": "phosphor-icons/core",
+          "commit": "2b75f3ad12b420c9504ef05df8d2564a28f8500e",
+          "path": "assets/regular/sunglasses.svg",
+          "localPath": "references/atlas-01/phosphor-sunglasses.svg",
+          "url": "https://github.com/phosphor-icons/core/blob/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular/sunglasses.svg",
+          "sha256": "d1bc3d71bfe104b134620d62d6085b56ab2935c6d44858fba362500d46310c99",
+          "license": "MIT",
+          "sourceName": "sunglasses",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "sunglasses",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/sunglasses.svg",
+          "localPath": "references/atlas-01/tabler-sunglasses.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/sunglasses.svg",
+          "sha256": "1cb970e96b1b904aad15a278082a4966ef416efbe3a7b0605dae561c92dfe9a8",
+          "license": "MIT",
+          "sourceName": "sunglasses",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "衣物縫線與配件均以必要實體輪廓表達，不添加裝飾虛線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "鏡片訊號以一筆斜線表示，衣料以輪廓表達，沒有淡化分層需求。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "單色服飾圖示不需要材質反光或連續漸層。"
+        }
+      },
+      "change": {
+        "kind": "modified",
+        "before": {
+          "path": "references/atlas-craft-08/master-before.json",
+          "variantsSha256": "93d8cfa4cfe048891fb35c2fd27c0231752a6dce15db8258d75036e7168df842"
+        },
+        "reason": "sharp鏡腳使用平切端帽接入框體，解除外側小凸點；斜線墨跡限制在鏡片內，16px仍可分辨鏡片兩側空白，沒有用實心黑塊取代整片鏡孔。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "2e7aa222234589a4ceb58d466ad0563b52739c90b53f60b4b98c5ace75f972b1",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/43b/review.html",
+            "sha256": "3ce7f46c87f42c99defb0ad6d8bbef1ee3f1aed39352c47e17b867268a6ed5ac"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/43b/definitions.json",
+            "sha256": "23b432d99a2e279c2d176ea26812c9152733a907b043bdef679b9837d63a3bc3"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/43b/light-1x.png",
+            "sha256": "cec999898b06cd98951be771ac7e44609ac6032545fd6444f50ecdcf208e1a69"
+          },
+          {
+            "path": "docs/review/atlas-craft-08/final/definitions.json",
+            "sha256": "0ac112e92e7f2ca1d0931414c8c25e5c0ec5f6e42264d56718f62f16c367dede"
+          },
+          {
+            "path": "docs/review/atlas-craft-08/final/11-clothing.html",
+            "sha256": "25a9e5f48f20446eb95a775df552e187206f66438df590857314661705231a72"
+          },
+          {
+            "path": "docs/review/atlas-craft-08/final/11-clothing-light-1x.png",
+            "sha256": "f36a6db7fb48c251df3667c6c3c8c3c052213be759432bea851e1f6ceac10392"
+          },
+          {
+            "path": "docs/review/atlas-craft-08/final/11-clothing-light-2x.png",
+            "sha256": "2a1afcc8531d26e51ae0a1384d1d362044ed8e602c8ee2da0b58e1866b4a2aa2"
+          },
+          {
+            "path": "docs/review/atlas-craft-08/final/11-clothing-dark-1x.png",
+            "sha256": "4c22b5d1e1aee3d2eee4c1ce5e2ce331a5e47127d2052921564481aae0a05384"
+          },
+          {
+            "path": "docs/review/atlas-craft-08/final/11-clothing-dark-2x.png",
+            "sha256": "bf63fa9a13bfa73edfe3d2ea0764dd9ce509e6c139dd223f80a9bf384b2312d2"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-08/final/11-clothing-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-08/final/11-clothing-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-08/final/11-clothing-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-08/final/11-clothing-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Tabler",
+        "license": "MIT",
+        "licenseFile": "licenses/tabler.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "watch",
+      "purpose": "手錶",
+      "recognitionCues": "圓錶殼、上下錶帶與雙指針",
+      "confusableWith": [
+        "clock",
+        "timer"
+      ],
+      "sourceObservation": "Lucide採收窄錶帶和圓錶殼，Phosphor採較平直錶帶及直角指針。Master保留上下帶孔與圓錶殼，16px縮短分針，避免針尖靠近錶圈。",
+      "references": [
+        {
+          "name": "watch",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/watch.svg",
+          "localPath": "references/atlas-01/lucide-watch.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/watch.svg",
+          "sha256": "2a5b263eb6a1d45e5f2b99e07a31950fcbf16c6003c9c3f831db9fc4703afc7a",
+          "license": "ISC AND MIT",
+          "sourceName": "watch",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "watch",
+          "library": "Phosphor",
+          "repository": "phosphor-icons/core",
+          "commit": "2b75f3ad12b420c9504ef05df8d2564a28f8500e",
+          "path": "assets/regular/watch.svg",
+          "localPath": "references/atlas-01/phosphor-watch.svg",
+          "url": "https://github.com/phosphor-icons/core/blob/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular/watch.svg",
+          "sha256": "485ec06c2a37636766b357f2e0888781c310f99f70d10e92f9e7d1906bcdc267",
+          "license": "MIT",
+          "sourceName": "watch",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "衣物縫線與配件均以必要實體輪廓表達，不添加裝飾虛線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "鏡片訊號以一筆斜線表示，衣料以輪廓表達，沒有淡化分層需求。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "單色服飾圖示不需要材質反光或連續漸層。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-08/master-before.json",
+          "variantsSha256": "b8b05fe14e34cbff4f5497c7e21e1289ff38d5ffe47dfc4d94f34fcc185f002e"
+        },
+        "reason": "錶帶從錶殼外側接出，上下各有可見孔；指針依錶殼圓心建立，原生16/20/24均保留針尖留白，沒有密集刻度。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "54ef3e2542089d35fd5f4ab6ec07f0b09d15c8657f7792e7561313691560f703",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/44/review.html",
+            "sha256": "e167785f96f9681501331834c6363b8d1d1d0143a703c86d4baeac32402e5427"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/44/definitions.json",
+            "sha256": "403744a6354422d03cd5497fe44c0977855c6834baac4d685f5046874f651762"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/44/light-1x.png",
+            "sha256": "28317063d813d0d0e9bf004eaf700b81fb7c13420a6eef127dbaaef6583140bc"
+          },
+          {
+            "path": "docs/review/atlas-craft-08/final/definitions.json",
+            "sha256": "0ac112e92e7f2ca1d0931414c8c25e5c0ec5f6e42264d56718f62f16c367dede"
+          },
+          {
+            "path": "docs/review/atlas-craft-08/final/11-clothing.html",
+            "sha256": "25a9e5f48f20446eb95a775df552e187206f66438df590857314661705231a72"
+          },
+          {
+            "path": "docs/review/atlas-craft-08/final/11-clothing-light-1x.png",
+            "sha256": "f36a6db7fb48c251df3667c6c3c8c3c052213be759432bea851e1f6ceac10392"
+          },
+          {
+            "path": "docs/review/atlas-craft-08/final/11-clothing-light-2x.png",
+            "sha256": "2a1afcc8531d26e51ae0a1384d1d362044ed8e602c8ee2da0b58e1866b4a2aa2"
+          },
+          {
+            "path": "docs/review/atlas-craft-08/final/11-clothing-dark-1x.png",
+            "sha256": "4c22b5d1e1aee3d2eee4c1ce5e2ce331a5e47127d2052921564481aae0a05384"
+          },
+          {
+            "path": "docs/review/atlas-craft-08/final/11-clothing-dark-2x.png",
+            "sha256": "bf63fa9a13bfa73edfe3d2ea0764dd9ce509e6c139dd223f80a9bf384b2312d2"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-08/final/11-clothing-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-08/final/11-clothing-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-08/final/11-clothing-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-08/final/11-clothing-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Phosphor",
+        "license": "MIT",
+        "licenseFile": "licenses/phosphor.txt"
+      },
+      "remaining": []
+    },
+    {
+      "name": "umbrella",
+      "purpose": "雨傘",
+      "recognitionCues": "弧形傘面、張開傘骨與彎鉤握柄",
+      "confusableWith": [
+        "mushroom",
+        "cloud-rain"
+      ],
+      "sourceObservation": "Lucide以單片傘面和彎柄表意，Phosphor加入兩道張開的傘骨。Master保留兩道曲骨，讓傘面有張力和分片構造，彎柄表達持握。",
+      "references": [
+        {
+          "name": "umbrella",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/umbrella.svg",
+          "localPath": "references/atlas-01/lucide-umbrella.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/umbrella.svg",
+          "sha256": "c1c21ec8b289676b8b984ffa4cd76ef1a011aedb2f2082460656a8fb1d2eb8a9",
+          "license": "ISC AND MIT",
+          "sourceName": "umbrella",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "umbrella",
+          "library": "Phosphor",
+          "repository": "phosphor-icons/core",
+          "commit": "2b75f3ad12b420c9504ef05df8d2564a28f8500e",
+          "path": "assets/regular/umbrella.svg",
+          "localPath": "references/atlas-01/phosphor-umbrella.svg",
+          "url": "https://github.com/phosphor-icons/core/blob/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular/umbrella.svg",
+          "sha256": "f41e7e365c71267e2429d031446d6ba1a9f63dc23088afcd793cc65ed6731fae",
+          "license": "MIT",
+          "sourceName": "umbrella",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "衣物縫線與配件均以必要實體輪廓表達，不添加裝飾虛線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "鏡片訊號以一筆斜線表示，衣料以輪廓表達，沒有淡化分層需求。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "單色服飾圖示不需要材質反光或連續漸層。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "before": {
+          "path": "references/atlas-craft-08/master-before.json",
+          "variantsSha256": "e663189f10b652b6ae473b9cf2d10adc1d018a60f1bb7d22fbe99fb457650493"
+        },
+        "reason": "傘骨收在完整傘面內，交會處不越出頂部弧；兩側空腔保持開放，直桿接出傘面並連成彎鉤，沒有靠額外雨點補語意。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "b9d79ac35d6987f453818c6425da6bca8f6cc38e7358c37f9f6712a883ae273f",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-craft-01/44/review.html",
+            "sha256": "e167785f96f9681501331834c6363b8d1d1d0143a703c86d4baeac32402e5427"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/44/definitions.json",
+            "sha256": "403744a6354422d03cd5497fe44c0977855c6834baac4d685f5046874f651762"
+          },
+          {
+            "path": "docs/review/atlas-craft-01/44/light-1x.png",
+            "sha256": "28317063d813d0d0e9bf004eaf700b81fb7c13420a6eef127dbaaef6583140bc"
+          },
+          {
+            "path": "docs/review/atlas-craft-08/final/definitions.json",
+            "sha256": "0ac112e92e7f2ca1d0931414c8c25e5c0ec5f6e42264d56718f62f16c367dede"
+          },
+          {
+            "path": "docs/review/atlas-craft-08/final/11-clothing.html",
+            "sha256": "25a9e5f48f20446eb95a775df552e187206f66438df590857314661705231a72"
+          },
+          {
+            "path": "docs/review/atlas-craft-08/final/11-clothing-light-1x.png",
+            "sha256": "f36a6db7fb48c251df3667c6c3c8c3c052213be759432bea851e1f6ceac10392"
+          },
+          {
+            "path": "docs/review/atlas-craft-08/final/11-clothing-light-2x.png",
+            "sha256": "2a1afcc8531d26e51ae0a1384d1d362044ed8e602c8ee2da0b58e1866b4a2aa2"
+          },
+          {
+            "path": "docs/review/atlas-craft-08/final/11-clothing-dark-1x.png",
+            "sha256": "4c22b5d1e1aee3d2eee4c1ce5e2ce331a5e47127d2052921564481aae0a05384"
+          },
+          {
+            "path": "docs/review/atlas-craft-08/final/11-clothing-dark-2x.png",
+            "sha256": "bf63fa9a13bfa73edfe3d2ea0764dd9ce509e6c139dd223f80a9bf384b2312d2"
+          }
+        ],
+        "inspectedCombinations": [
+          {
+            "theme": "light",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-08/final/11-clothing-light-1x.png"
+          },
+          {
+            "theme": "light",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-08/final/11-clothing-light-2x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 1,
+            "evidence": "docs/review/atlas-craft-08/final/11-clothing-dark-1x.png"
+          },
+          {
+            "theme": "dark",
+            "dpr": 2,
+            "evidence": "docs/review/atlas-craft-08/final/11-clothing-dark-2x.png"
+          }
+        ],
+        "remainingCombinations": []
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "library": "Phosphor",
+        "license": "MIT",
+        "licenseFile": "licenses/phosphor.txt"
+      },
+      "remaining": []
+    }
+  ]
+}
