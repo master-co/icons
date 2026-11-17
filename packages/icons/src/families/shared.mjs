@@ -20,7 +20,7 @@ export function figure(g) {
     path:d=>path(d.replace(/([a-df-z])([^a-df-z]*)/gi,(_,command,body)=>command+(body.match(/-?\d*\.?\d+(?:e[-+]?\d+)?/gi)||[]).map((x,i)=>command.toUpperCase()==='A'&&[2,3,4].includes(i%7)?Number(x):u(Number(x))).join(' '))),
   };
 }
-export const rotate=(nodes,angle,g)=>nodes.map(([tag,attrs])=>[tag,{...attrs,transform:`rotate(${angle} ${g.c} ${g.c})`}]);
+export const rotate=(nodes,angle,g)=>nodes.map(([tag,attrs,children])=>[tag,{...attrs,transform:`rotate(${angle} ${g.c} ${g.c})`},...(children?[children]:[])]);
 export const opacity=(node,value)=>[node[0],{...node[1],opacity:value}];
 export const dashed=(node,g)=>[node[0],{...node[1],'stroke-dasharray':`${g.v(1.2,1.5,1.8)} ${g.v(2,2.5,3)}`}];
 export function mark(g,kind,x=17,y=17) {

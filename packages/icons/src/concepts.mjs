@@ -1,5 +1,9 @@
 // Direction and state variants remain named drawings, not extra base concepts.
 export const conceptOf = {
+  'folder-kanban':'folder','archive-restore':'archive','image-plus':'image','square-plus':'plus',
+  'circle-dashed':'circle','play-circle':'play','pause-circle':'pause','alert-circle':'alert-triangle',
+  'chevrons-left-right':'chevrons-up-down','arrow-down-right':'arrow-right','arrow-big-up':'arrow-right',
+  'heading-1':'heading','heading-2':'heading','heading-3':'heading','chart-bar-increasing':'chart-bar',
   frown:'smile','thumbs-down':'thumbs-up','book-open':'book',notebook:'book',
   'bookmark-plus':'bookmark','bookmark-minus':'bookmark','file-question':'file','file-json':'file',
   'table-row-add':'table','table-column-add':'table','table-row-delete':'table','table-column-delete':'table',

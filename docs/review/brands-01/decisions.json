@@ -1,5 +1,5 @@
 {
-  "date": "2026-11-17",
+  "date": "2026-11-18",
   "reviewer": "Codex",
   "status": "visually-reviewed-candidate",
   "method": "Source beside native 16/20/24 in all corners; light/dark, 55% foreground, DPR1 plus selected DPR2 diagnostics inspected. Dcard includes archived PNG beside its documented trace. Not a human recognition study.",
@@ -1378,6 +1378,34 @@
       },
       "observation": "13.5/16.5/20 保留袋口提把與 S 字腹；16px 提把較細，與 Shopify 的傾斜提袋維持不同輪廓。",
       "effects": "No decorative effects; source vector shape retained, monochrome paint and optical placement only.",
+      "status": "visually-reviewed-candidate"
+    },
+    {
+      "name": "brand-html5",
+      "variantsSha256": "78f8df00b4fd1e61308a11080037bb7ab45cebb7967d0fa7d02f1b5864a97a7d",
+      "sourceSha256": "dfd65fdd7e4f997c6b163e48793de5ad18c4c99e191807a61752ea702f123d1d",
+      "sheet": 6,
+      "label": "HTML5",
+      "profile": "standard",
+      "optical": {
+        "16": {
+          "extent": 14,
+          "dx": 0,
+          "dy": 0
+        },
+        "20": {
+          "extent": 17,
+          "dx": 0,
+          "dy": 0
+        },
+        "24": {
+          "extent": 20,
+          "dx": 0,
+          "dy": 0
+        }
+      },
+      "observation": "保留固定版本 Simple Icons 的單色盾牌和反白 5。比較 14px 檔案頁籤及三個原生尺寸後，採 14／17／20 的佔幅維持字腔。",
+      "effects": "單色保留 5 的反白，依各尺寸調整佔幅。",
       "status": "visually-reviewed-candidate"
     }
   ],

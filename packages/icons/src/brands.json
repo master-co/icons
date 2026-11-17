@@ -3208,5 +3208,55 @@
         "dy": 0
       }
     }
+  },
+  {
+    "name": "brand-html5",
+    "label": "HTML5",
+    "profile": "standard",
+    "keywords": [
+      "html",
+      "hypertext markup language",
+      "網頁標記語言"
+    ],
+    "viewBox": [
+      0,
+      0,
+      24,
+      24
+    ],
+    "paths": [
+      "M1.5 0h21l-1.91 21.563L11.977 24l-8.564-2.438L1.5 0zm7.031 9.75l-.232-2.718 10.059.003.23-2.622L5.412 4.41l.698 8.01h9.126l-.326 3.426-2.91.804-2.955-.81-.188-2.11H6.248l.33 4.171L12 19.351l5.379-1.443.744-8.157H8.531z"
+    ],
+    "source": {
+      "kind": "brand-adaptation",
+      "library": "Simple Icons",
+      "author": "W3C; monochrome vector by Simple Icons contributors",
+      "license": "CC-BY-3.0 (artwork); CC0-1.0 (Simple Icons contribution)",
+      "commit": "17cd4ee07612198a1d8777a060d4100423762a8b",
+      "reference": "https://github.com/simple-icons/simple-icons/blob/17cd4ee07612198a1d8777a060d4100423762a8b/icons/html5.svg",
+      "official": "https://www.w3.org/html/logo/",
+      "localPath": "references/product-ui-01/simpleicons-html5.svg",
+      "sha256": "dfd65fdd7e4f997c6b163e48793de5ad18c4c99e191807a61752ea702f123d1d",
+      "modifications": "Retained the monochrome shield and numeral; tuned the optical envelope for small file tabs.",
+      "licenseFile": "licenses/brand-additions.txt",
+      "notice": "HTML5 Logo by W3C (https://www.w3.org/html/logo/), licensed under CC BY 3.0 (https://creativecommons.org/licenses/by/3.0/). Adapted to monochrome and optically scaled."
+    },
+    "optical": {
+      "16": {
+        "extent": 14,
+        "dx": 0,
+        "dy": 0
+      },
+      "20": {
+        "extent": 17,
+        "dx": 0,
+        "dy": 0
+      },
+      "24": {
+        "extent": 20,
+        "dx": 0,
+        "dy": 0
+      }
+    }
   }
 ]

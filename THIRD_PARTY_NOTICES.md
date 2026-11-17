@@ -501,3 +501,9 @@ The revised `vinyl-record` develops Phosphor's opposing quarter-circle grooves w
 
 - Lucide: `lucide-icons/lucide`, commit `55782beff3a0133df79c417eb68f96e8f19e2404`, `icons/disc-3.svg`; Copyright (c) 2026 Lucide Icons and Contributors.
 - Phosphor: `phosphor-icons/core`, commit `2b75f3ad12b420c9504ef05df8d2564a28f8500e`, `assets/regular/vinyl-record.svg`; Copyright (c) 2023 Phosphor Icons.
+
+The HTML5 shield uses the monochrome Simple Icons artwork at revision
+`17cd4ee07612198a1d8777a060d4100423762a8b`. Its source SVG is preserved
+in `references/product-ui-01/simpleicons-html5.svg`. HTML5 Logo by W3C, licensed under [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/). The vector uses monochrome paint and native-size scaling. [W3C attribution and artwork terms](https://www.w3.org/html/logo/faq.html).
+
+The resize icon adapts the shared-corner and projected-boundary construction from Tabler resize. The SVGs and bundles include the Tabler MIT license.

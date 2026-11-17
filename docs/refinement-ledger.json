@@ -1,12 +1,12 @@
 {
   "schemaVersion": 2,
-  "date": "2026-11-17",
-  "scope": "Craft 05 retained review plus individually reviewed Atlas additions",
-  "namedDrawings": 702,
-  "baseConcepts": 523,
+  "date": "2026-11-18",
+  "scope": "Craft 05 retained review plus individually reviewed Atlas additions and product UI additions",
+  "namedDrawings": 724,
+  "baseConcepts": 530,
   "statusMeaning": "工程檢查與 Codex 目視紀錄獨立；visually-reviewed-candidate 不等於使用者最終定案。",
   "userApproval": "pending",
-  "reviewCycle": "craft-05 + atlas-craft-01 + atlas-craft-02 + atlas-craft-03 + atlas-craft-04 + atlas-craft-06 soup form refinement + atlas-craft-05 + atlas-craft-07 + atlas-craft-08 + atlas-craft-09 + atlas-craft-10 + atlas-craft-11 + atlas-craft-12 sports simplicity refinement + atlas-craft-13 + atlas-craft-14 + atlas-craft-15 + atlas-craft-16 + atlas-craft-17 + atlas-craft-18 + atlas-craft-19 + atlas-craft-20 + atlas-craft-21 + atlas-craft-22 + atlas-craft-23 + atlas-craft-24 + atlas-craft-25 + atlas-craft-26 + atlas-craft-27 + atlas-craft-28 + atlas-craft-29 + atlas-craft-30 trumpet viewport correction",
+  "reviewCycle": "craft-05 + atlas-craft-01 + atlas-craft-02 + atlas-craft-03 + atlas-craft-04 + atlas-craft-06 soup form refinement + atlas-craft-05 + atlas-craft-07 + atlas-craft-08 + atlas-craft-09 + atlas-craft-10 + atlas-craft-11 + atlas-craft-12 sports simplicity refinement + atlas-craft-13 + atlas-craft-14 + atlas-craft-15 + atlas-craft-16 + atlas-craft-17 + atlas-craft-18 + atlas-craft-19 + atlas-craft-20 + atlas-craft-21 + atlas-craft-22 + atlas-craft-23 + atlas-craft-24 + atlas-craft-25 + atlas-craft-26 + atlas-craft-27 + atlas-craft-28 + atlas-craft-29 + atlas-craft-30 trumpet viewport correction + product-ui-01",
   "baselineCommit": "5413d054",
   "reviewedNames": [
     "arrow-right",
@@ -710,7 +710,29 @@
     "balloon",
     "dice",
     "gamepad",
-    "joystick"
+    "joystick",
+    "folder-kanban",
+    "archive-restore",
+    "id-card",
+    "image-plus",
+    "square-plus",
+    "circle-dashed",
+    "play-circle",
+    "pause-circle",
+    "alert-circle",
+    "chevrons-up-down",
+    "chevrons-left-right",
+    "arrow-left-right",
+    "arrow-down-right",
+    "arrow-big-up",
+    "heading-1",
+    "heading-2",
+    "heading-3",
+    "pilcrow",
+    "remove-formatting",
+    "hand-click",
+    "resize",
+    "chart-bar-increasing"
   ],
   "reviewSummary": "本輪逐顆審查全部 392 個命名圖稿，59 顆修改（含共用母型修正與退化路徑清理），333 顆保留。每顆均重新比對兩份固定來源、九組尺寸／角型、明暗、文字旁及 55% 前景；不是沿用前輪目視標記。",
   "previousReview": "docs/refinement-ledger-before-craft-05.json",
@@ -78928,6 +78950,2678 @@
       },
       "remaining": [],
       "userApproval": "pending"
+    },
+    {
+      "name": "folder-kanban",
+      "purpose": "導覽至專案或顯示專案預設圖",
+      "recognitionCues": "沿用 folder 的肩部與底線",
+      "confusableWith": [
+        "folder",
+        "kanban"
+      ],
+      "sourceObservation": "沿用 folder 的肩部與底線。Lucide 的三欄較直，Hugeicons 的短欄較疏；16px 把欄頂略提高，保留中欄最短、右欄最長的節奏。",
+      "references": [
+        {
+          "name": "folder-kanban",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/folder-kanban.svg",
+          "localPath": "references/product-ui-01/lucide-folder-kanban.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/folder-kanban.svg",
+          "sha256": "7ccff27583e2eced364fd2680e60ac11b137b603ced9cbbe99143484abe911ba",
+          "license": "ISC AND MIT",
+          "sourceName": "folder-kanban",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "folder-kanban",
+          "library": "Hugeicons Free",
+          "repository": "hugeicons/hugeicons",
+          "commit": "834e28d965946c1ee60d080027fe9dae4adc58d0",
+          "path": "icons/folder-kanban.svg",
+          "localPath": "references/product-ui-01/huge-folder-kanban.svg",
+          "url": "https://github.com/hugeicons/hugeicons/blob/834e28d965946c1ee60d080027fe9dae4adc58d0/icons/folder-kanban.svg",
+          "sha256": "1b1697f7929375247c3482ae453911116216a9f27deca6160860aa02da29d531",
+          "license": "MIT",
+          "sourceName": "folder-kanban",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "以連續的結構輪廓和部件之間的留白識別。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "保留單色並以負空間分開各個筆畫。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "輪廓和部件比例已足以表達此用途。"
+        }
+      },
+      "change": {
+        "kind": "new",
+        "before": null,
+        "reason": "沿用 folder 的肩部與底線。Lucide 的三欄較直，Hugeicons 的短欄較疏；16px 把欄頂略提高，保留中欄最短、右欄最長的節奏。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "date": "2026-11-18",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "f6abc83cad57a466abc93b65621f344091d66557b334bbf5ed0fca10ceddab3f",
+        "evidence": [
+          {
+            "path": "docs/review/product-ui-01/compare-dark-1x.png",
+            "sha256": "77eba16cb9db64ecdcc7e6c5716c9163b320c63080cd3293fd0f62a89065c556"
+          },
+          {
+            "path": "docs/review/product-ui-01/compare-dark-2x.png",
+            "sha256": "e33457a2ccf622173a1f9390d2c269183224a236c2177d044e64017ea4794b97"
+          },
+          {
+            "path": "docs/review/product-ui-01/compare-light-1x.png",
+            "sha256": "fb2910b2a8968b20133ca15edf23b8a62ecb1914a1e64fe1d9354ef64f6da8f8"
+          },
+          {
+            "path": "docs/review/product-ui-01/compare-light-2x.png",
+            "sha256": "ecb69273edb33700f07ee3a814aaf8fbda97fb078debbe8f1e4fd5a5bcbb14e3"
+          },
+          {
+            "path": "docs/review/product-ui-01/native-dark-1x.png",
+            "sha256": "fedff76b1d60290ad5d59bde2b337168fd4b60d4e19790cc823d2ac4cd7ec72f"
+          },
+          {
+            "path": "docs/review/product-ui-01/native-dark-2x.png",
+            "sha256": "372e1fa4a990929f81ed48d6a24d826c33548891a00abf8ba3f6561496655330"
+          },
+          {
+            "path": "docs/review/product-ui-01/native-light-1x.png",
+            "sha256": "dc193e451c06905ad3bba72388ab50d79ee705ae2d46f83c0743b88dd79cbc2a"
+          },
+          {
+            "path": "docs/review/product-ui-01/native-light-2x.png",
+            "sha256": "256cbcb6d6926e1589cb0085ab9985abb33ecdf8bf24803a050c58c4d4fa0951"
+          },
+          {
+            "path": "docs/review/product-ui-01/strokes.png",
+            "sha256": "57d4fa3f445301a3e141d116e3d5817bd6dc606754f4e7bc84803edbbbe50aa9"
+          }
+        ]
+      }
+    },
+    {
+      "name": "archive-restore",
+      "purpose": "還原已封存項目",
+      "recognitionCues": "參考圖都保有顯眼的盒蓋",
+      "confusableWith": [
+        "archive",
+        "upload"
+      ],
+      "sourceObservation": "參考圖都保有顯眼的盒蓋。初稿的蓋緣太靠近箭翼，將盒蓋下移並縮短厚度，保留兩側凸緣；箭桿越過盒口時切出透明間隙。",
+      "references": [
+        {
+          "name": "archive-restore",
+          "library": "Hugeicons Free",
+          "repository": "hugeicons/hugeicons",
+          "commit": "834e28d965946c1ee60d080027fe9dae4adc58d0",
+          "path": "icons/archive-restore.svg",
+          "localPath": "references/product-ui-01/huge-archive-restore.svg",
+          "url": "https://github.com/hugeicons/hugeicons/blob/834e28d965946c1ee60d080027fe9dae4adc58d0/icons/archive-restore.svg",
+          "sha256": "f4a5677b7405f9e1b783ed5f8095c2e118077777d61c9ec80ade947e97efdc41",
+          "license": "MIT",
+          "sourceName": "archive-restore",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "archive-restore",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/archive-restore.svg",
+          "localPath": "references/product-ui-01/tabler-archive-restore.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/archive-restore.svg",
+          "sha256": "3e00764d28c5748058a5e6b4c29ff8df3c722d4d327a86e96b00952ee0826a22",
+          "license": "MIT",
+          "sourceName": "archive-restore",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "以連續的結構輪廓和部件之間的留白識別。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "保留單色並以負空間分開各個筆畫。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "輪廓和部件比例已足以表達此用途。"
+        }
+      },
+      "change": {
+        "kind": "new",
+        "before": null,
+        "reason": "參考圖都保有顯眼的盒蓋。初稿的蓋緣太靠近箭翼，將盒蓋下移並縮短厚度，保留兩側凸緣；箭桿越過盒口時切出透明間隙。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "date": "2026-11-18",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "f8f725b67b3a54ebd199f19e8540647f4230b56b89b761e3aa2cefc86ffdccd7",
+        "evidence": [
+          {
+            "path": "docs/review/product-ui-01/compare-dark-1x.png",
+            "sha256": "77eba16cb9db64ecdcc7e6c5716c9163b320c63080cd3293fd0f62a89065c556"
+          },
+          {
+            "path": "docs/review/product-ui-01/compare-dark-2x.png",
+            "sha256": "e33457a2ccf622173a1f9390d2c269183224a236c2177d044e64017ea4794b97"
+          },
+          {
+            "path": "docs/review/product-ui-01/compare-light-1x.png",
+            "sha256": "fb2910b2a8968b20133ca15edf23b8a62ecb1914a1e64fe1d9354ef64f6da8f8"
+          },
+          {
+            "path": "docs/review/product-ui-01/compare-light-2x.png",
+            "sha256": "ecb69273edb33700f07ee3a814aaf8fbda97fb078debbe8f1e4fd5a5bcbb14e3"
+          },
+          {
+            "path": "docs/review/product-ui-01/native-dark-1x.png",
+            "sha256": "fedff76b1d60290ad5d59bde2b337168fd4b60d4e19790cc823d2ac4cd7ec72f"
+          },
+          {
+            "path": "docs/review/product-ui-01/native-dark-2x.png",
+            "sha256": "372e1fa4a990929f81ed48d6a24d826c33548891a00abf8ba3f6561496655330"
+          },
+          {
+            "path": "docs/review/product-ui-01/native-light-1x.png",
+            "sha256": "dc193e451c06905ad3bba72388ab50d79ee705ae2d46f83c0743b88dd79cbc2a"
+          },
+          {
+            "path": "docs/review/product-ui-01/native-light-2x.png",
+            "sha256": "256cbcb6d6926e1589cb0085ab9985abb33ecdf8bf24803a050c58c4d4fa0951"
+          },
+          {
+            "path": "docs/review/product-ui-01/strokes.png",
+            "sha256": "57d4fa3f445301a3e141d116e3d5817bd6dc606754f4e7bc84803edbbbe50aa9"
+          }
+        ]
+      }
+    },
+    {
+      "name": "id-card",
+      "purpose": "標示人物資料卡或身份證件",
+      "recognitionCues": "採 Lucide 的橫向人像與資料分區",
+      "confusableWith": [
+        "contact",
+        "credit-card"
+      ],
+      "sourceObservation": "採 Lucide 的橫向人像與資料分區。和 Tabler 上方雙區、下方通欄的做法相比，這裡把右側短線留給身份資料，並將肩線下移以分開頭肩。",
+      "references": [
+        {
+          "name": "id-card",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/id-card.svg",
+          "localPath": "references/product-ui-01/lucide-id-card.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/id-card.svg",
+          "sha256": "b2a55b00b0cb4c7a84f2596610a9240f7d05e4d9cd260ec85028a79c4ab10ced",
+          "license": "ISC AND MIT",
+          "sourceName": "id-card",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "id-card",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/id.svg",
+          "localPath": "references/product-ui-01/tabler-id.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/id.svg",
+          "sha256": "e76a88444e79afcdcfdf527dcf2a25e38f7dfb209191b6c05c2a1ff01585a46b",
+          "license": "MIT",
+          "sourceName": "id",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "以連續的結構輪廓和部件之間的留白識別。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "保留單色並以負空間分開各個筆畫。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "輪廓和部件比例已足以表達此用途。"
+        }
+      },
+      "change": {
+        "kind": "new",
+        "before": null,
+        "reason": "採 Lucide 的橫向人像與資料分區。和 Tabler 上方雙區、下方通欄的做法相比，這裡把右側短線留給身份資料，並將肩線下移以分開頭肩。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "date": "2026-11-18",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "f2224e451d73bfc6d3f13e80ba89851b9e5852e2523c26ffe059b0591c202477",
+        "evidence": [
+          {
+            "path": "docs/review/product-ui-01/compare-dark-1x.png",
+            "sha256": "77eba16cb9db64ecdcc7e6c5716c9163b320c63080cd3293fd0f62a89065c556"
+          },
+          {
+            "path": "docs/review/product-ui-01/compare-dark-2x.png",
+            "sha256": "e33457a2ccf622173a1f9390d2c269183224a236c2177d044e64017ea4794b97"
+          },
+          {
+            "path": "docs/review/product-ui-01/compare-light-1x.png",
+            "sha256": "fb2910b2a8968b20133ca15edf23b8a62ecb1914a1e64fe1d9354ef64f6da8f8"
+          },
+          {
+            "path": "docs/review/product-ui-01/compare-light-2x.png",
+            "sha256": "ecb69273edb33700f07ee3a814aaf8fbda97fb078debbe8f1e4fd5a5bcbb14e3"
+          },
+          {
+            "path": "docs/review/product-ui-01/native-dark-1x.png",
+            "sha256": "fedff76b1d60290ad5d59bde2b337168fd4b60d4e19790cc823d2ac4cd7ec72f"
+          },
+          {
+            "path": "docs/review/product-ui-01/native-dark-2x.png",
+            "sha256": "372e1fa4a990929f81ed48d6a24d826c33548891a00abf8ba3f6561496655330"
+          },
+          {
+            "path": "docs/review/product-ui-01/native-light-1x.png",
+            "sha256": "dc193e451c06905ad3bba72388ab50d79ee705ae2d46f83c0743b88dd79cbc2a"
+          },
+          {
+            "path": "docs/review/product-ui-01/native-light-2x.png",
+            "sha256": "256cbcb6d6926e1589cb0085ab9985abb33ecdf8bf24803a050c58c4d4fa0951"
+          },
+          {
+            "path": "docs/review/product-ui-01/strokes.png",
+            "sha256": "57d4fa3f445301a3e141d116e3d5817bd6dc606754f4e7bc84803edbbbe50aa9"
+          }
+        ]
+      }
+    },
+    {
+      "name": "image-plus",
+      "purpose": "在空白圖片節點選擇或加入圖片",
+      "recognitionCues": "Lucide 的右上角加號和 Tabler 的右下角加號都保留照片線索",
+      "confusableWith": [
+        "image",
+        "folder-plus"
+      ],
+      "sourceObservation": "Lucide 的右上角加號和 Tabler 的右下角加號都保留照片線索。採右上配置避開山脊，拉長加號兩臂，保留原圖左側的日點。",
+      "references": [
+        {
+          "name": "image-plus",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/image-plus.svg",
+          "localPath": "references/product-ui-01/lucide-image-plus.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/image-plus.svg",
+          "sha256": "19a5bef8f17d2397b2c41422553f53746e7c8ad9886a11e7ad397c5371368ec0",
+          "license": "ISC AND MIT",
+          "sourceName": "image-plus",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "image-plus",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/photo-plus.svg",
+          "localPath": "references/product-ui-01/tabler-photo-plus.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/photo-plus.svg",
+          "sha256": "2a608c0ff34e760dddaee61830b3201cce196b4845b45be46b628679ec15733b",
+          "license": "MIT",
+          "sourceName": "photo-plus",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "以連續的結構輪廓和部件之間的留白識別。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "保留單色並以負空間分開各個筆畫。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "輪廓和部件比例已足以表達此用途。"
+        }
+      },
+      "change": {
+        "kind": "new",
+        "before": null,
+        "reason": "Lucide 的右上角加號和 Tabler 的右下角加號都保留照片線索。採右上配置避開山脊，拉長加號兩臂，保留原圖左側的日點。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "date": "2026-11-18",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "e67697cfd48c9fd2aad4aa1a2996973fc40c9bc915472a10948a334289359e29",
+        "evidence": [
+          {
+            "path": "docs/review/product-ui-01/compare-dark-1x.png",
+            "sha256": "77eba16cb9db64ecdcc7e6c5716c9163b320c63080cd3293fd0f62a89065c556"
+          },
+          {
+            "path": "docs/review/product-ui-01/compare-dark-2x.png",
+            "sha256": "e33457a2ccf622173a1f9390d2c269183224a236c2177d044e64017ea4794b97"
+          },
+          {
+            "path": "docs/review/product-ui-01/compare-light-1x.png",
+            "sha256": "fb2910b2a8968b20133ca15edf23b8a62ecb1914a1e64fe1d9354ef64f6da8f8"
+          },
+          {
+            "path": "docs/review/product-ui-01/compare-light-2x.png",
+            "sha256": "ecb69273edb33700f07ee3a814aaf8fbda97fb078debbe8f1e4fd5a5bcbb14e3"
+          },
+          {
+            "path": "docs/review/product-ui-01/native-dark-1x.png",
+            "sha256": "fedff76b1d60290ad5d59bde2b337168fd4b60d4e19790cc823d2ac4cd7ec72f"
+          },
+          {
+            "path": "docs/review/product-ui-01/native-dark-2x.png",
+            "sha256": "372e1fa4a990929f81ed48d6a24d826c33548891a00abf8ba3f6561496655330"
+          },
+          {
+            "path": "docs/review/product-ui-01/native-light-1x.png",
+            "sha256": "dc193e451c06905ad3bba72388ab50d79ee705ae2d46f83c0743b88dd79cbc2a"
+          },
+          {
+            "path": "docs/review/product-ui-01/native-light-2x.png",
+            "sha256": "256cbcb6d6926e1589cb0085ab9985abb33ecdf8bf24803a050c58c4d4fa0951"
+          },
+          {
+            "path": "docs/review/product-ui-01/strokes.png",
+            "sha256": "57d4fa3f445301a3e141d116e3d5817bd6dc606754f4e7bc84803edbbbe50aa9"
+          }
+        ]
+      }
+    },
+    {
+      "name": "square-plus",
+      "purpose": "比對 iOS 加入主畫面的選單項目",
+      "recognitionCues": "與兩份方框參考並排後，沿用 square 的邊距與外角，中央十字各留一臂長的呼吸空間；iOS 選單教學需要清楚的方框",
+      "confusableWith": [
+        "square",
+        "plus"
+      ],
+      "sourceObservation": "與兩份方框參考並排後，沿用 square 的邊距與外角，中央十字各留一臂長的呼吸空間；iOS 選單教學需要清楚的方框。",
+      "references": [
+        {
+          "name": "square-plus",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/square-plus.svg",
+          "localPath": "references/product-ui-01/lucide-square-plus.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/square-plus.svg",
+          "sha256": "c0856053827b2796170556f874a3017f7cb8d5b7a53bbb00f95600891fc76cc1",
+          "license": "ISC AND MIT",
+          "sourceName": "square-plus",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "square-plus",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/square-plus.svg",
+          "localPath": "references/product-ui-01/tabler-square-plus.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/square-plus.svg",
+          "sha256": "a1190cfeee6a07b630854b1ea3dc28c8d2080cc1eee5c862ac7c3c801fee825e",
+          "license": "MIT",
+          "sourceName": "square-plus",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "以連續的結構輪廓和部件之間的留白識別。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "保留單色並以負空間分開各個筆畫。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "輪廓和部件比例已足以表達此用途。"
+        }
+      },
+      "change": {
+        "kind": "new",
+        "before": null,
+        "reason": "與兩份方框參考並排後，沿用 square 的邊距與外角，中央十字各留一臂長的呼吸空間；iOS 選單教學需要清楚的方框。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "date": "2026-11-18",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "c75f65af4fffc0fb488e06d7f7ad105b70ac65c91d9db603f89f74208f4663de",
+        "evidence": [
+          {
+            "path": "docs/review/product-ui-01/compare-dark-1x.png",
+            "sha256": "77eba16cb9db64ecdcc7e6c5716c9163b320c63080cd3293fd0f62a89065c556"
+          },
+          {
+            "path": "docs/review/product-ui-01/compare-dark-2x.png",
+            "sha256": "e33457a2ccf622173a1f9390d2c269183224a236c2177d044e64017ea4794b97"
+          },
+          {
+            "path": "docs/review/product-ui-01/compare-light-1x.png",
+            "sha256": "fb2910b2a8968b20133ca15edf23b8a62ecb1914a1e64fe1d9354ef64f6da8f8"
+          },
+          {
+            "path": "docs/review/product-ui-01/compare-light-2x.png",
+            "sha256": "ecb69273edb33700f07ee3a814aaf8fbda97fb078debbe8f1e4fd5a5bcbb14e3"
+          },
+          {
+            "path": "docs/review/product-ui-01/native-dark-1x.png",
+            "sha256": "fedff76b1d60290ad5d59bde2b337168fd4b60d4e19790cc823d2ac4cd7ec72f"
+          },
+          {
+            "path": "docs/review/product-ui-01/native-dark-2x.png",
+            "sha256": "372e1fa4a990929f81ed48d6a24d826c33548891a00abf8ba3f6561496655330"
+          },
+          {
+            "path": "docs/review/product-ui-01/native-light-1x.png",
+            "sha256": "dc193e451c06905ad3bba72388ab50d79ee705ae2d46f83c0743b88dd79cbc2a"
+          },
+          {
+            "path": "docs/review/product-ui-01/native-light-2x.png",
+            "sha256": "256cbcb6d6926e1589cb0085ab9985abb33ecdf8bf24803a050c58c4d4fa0951"
+          },
+          {
+            "path": "docs/review/product-ui-01/strokes.png",
+            "sha256": "57d4fa3f445301a3e141d116e3d5817bd6dc606754f4e7bc84803edbbbe50aa9"
+          }
+        ]
+      }
+    },
+    {
+      "name": "circle-dashed",
+      "purpose": "標示工作尚未開始或中性狀態",
+      "recognitionCues": "來源都有規律的斷弧",
+      "confusableWith": [
+        "circle",
+        "loader"
+      ],
+      "sourceObservation": "來源都有規律的斷弧。16px 用六段讓間隙在圓頭下仍能分開，20 和 24px 用八段；每段等重，表示未開始。",
+      "references": [
+        {
+          "name": "circle-dashed",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/circle-dashed.svg",
+          "localPath": "references/product-ui-01/lucide-circle-dashed.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/circle-dashed.svg",
+          "sha256": "9b964be491a821be8ffd714baf3b94ca2d70af789bddcfc1bda6bde250d89187",
+          "license": "ISC AND MIT",
+          "sourceName": "circle-dashed",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "circle-dashed",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/circle-dashed.svg",
+          "localPath": "references/product-ui-01/tabler-circle-dashed.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/circle-dashed.svg",
+          "sha256": "7df7f2cf05d1283c7443382168b4dfa5c1d91cab1d709d48117df4d567e7ed54",
+          "license": "MIT",
+          "sourceName": "circle-dashed",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": true,
+          "reason": "規律斷弧代表開放狀態，依尺寸與端帽調整。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "保留單色並以負空間分開各個筆畫。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "輪廓和部件比例已足以表達此用途。"
+        }
+      },
+      "change": {
+        "kind": "new",
+        "before": null,
+        "reason": "來源都有規律的斷弧。16px 用六段讓間隙在圓頭下仍能分開，20 和 24px 用八段；每段等重，表示未開始。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "date": "2026-11-18",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "17cf0cc830fcf9f3a316d72693a0e7f059217147b57dfdd43ced614b0623fbc3",
+        "evidence": [
+          {
+            "path": "docs/review/product-ui-01/compare-dark-1x.png",
+            "sha256": "77eba16cb9db64ecdcc7e6c5716c9163b320c63080cd3293fd0f62a89065c556"
+          },
+          {
+            "path": "docs/review/product-ui-01/compare-dark-2x.png",
+            "sha256": "e33457a2ccf622173a1f9390d2c269183224a236c2177d044e64017ea4794b97"
+          },
+          {
+            "path": "docs/review/product-ui-01/compare-light-1x.png",
+            "sha256": "fb2910b2a8968b20133ca15edf23b8a62ecb1914a1e64fe1d9354ef64f6da8f8"
+          },
+          {
+            "path": "docs/review/product-ui-01/compare-light-2x.png",
+            "sha256": "ecb69273edb33700f07ee3a814aaf8fbda97fb078debbe8f1e4fd5a5bcbb14e3"
+          },
+          {
+            "path": "docs/review/product-ui-01/native-dark-1x.png",
+            "sha256": "fedff76b1d60290ad5d59bde2b337168fd4b60d4e19790cc823d2ac4cd7ec72f"
+          },
+          {
+            "path": "docs/review/product-ui-01/native-dark-2x.png",
+            "sha256": "372e1fa4a990929f81ed48d6a24d826c33548891a00abf8ba3f6561496655330"
+          },
+          {
+            "path": "docs/review/product-ui-01/native-light-1x.png",
+            "sha256": "dc193e451c06905ad3bba72388ab50d79ee705ae2d46f83c0743b88dd79cbc2a"
+          },
+          {
+            "path": "docs/review/product-ui-01/native-light-2x.png",
+            "sha256": "256cbcb6d6926e1589cb0085ab9985abb33ecdf8bf24803a050c58c4d4fa0951"
+          },
+          {
+            "path": "docs/review/product-ui-01/strokes.png",
+            "sha256": "57d4fa3f445301a3e141d116e3d5817bd6dc606754f4e7bc84803edbbbe50aa9"
+          }
+        ]
+      }
+    },
+    {
+      "name": "play-circle",
+      "purpose": "在看板顯示進行中並可啟用排程",
+      "recognitionCues": "兩份圈中播放參考都把三角重心移向右方",
+      "confusableWith": [
+        "play",
+        "check-circle"
+      ],
+      "sourceObservation": "兩份圈中播放參考都把三角重心移向右方。沿用看板狀態圓，微微加寬三角，讓 16px 的 sharp 和 rounded 都還看得出內孔。",
+      "references": [
+        {
+          "name": "play-circle",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/circle-play.svg",
+          "localPath": "references/product-ui-01/lucide-circle-play.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/circle-play.svg",
+          "sha256": "10b5deb7c8fa5587897a1eb3d7ffc3c6c2f7b1b7f9a5b5080050aa529e9eb9ae",
+          "license": "ISC AND MIT",
+          "sourceName": "circle-play",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "play-circle",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/circle-play.svg",
+          "localPath": "references/product-ui-01/tabler-circle-play.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/circle-play.svg",
+          "sha256": "e8581ebaa7606469d443defa73f78e2c7fe9e7309023ef0db604fbe40ccdd640",
+          "license": "MIT",
+          "sourceName": "circle-play",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "以連續的結構輪廓和部件之間的留白識別。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "保留單色並以負空間分開各個筆畫。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "輪廓和部件比例已足以表達此用途。"
+        }
+      },
+      "change": {
+        "kind": "new",
+        "before": null,
+        "reason": "兩份圈中播放參考都把三角重心移向右方。沿用看板狀態圓，微微加寬三角，讓 16px 的 sharp 和 rounded 都還看得出內孔。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "date": "2026-11-18",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "06b998b7b3f2a0c02e2054cc47c8daae21e65aba54a9743c1fbec24c02fc6be8",
+        "evidence": [
+          {
+            "path": "docs/review/product-ui-01/compare-dark-1x.png",
+            "sha256": "77eba16cb9db64ecdcc7e6c5716c9163b320c63080cd3293fd0f62a89065c556"
+          },
+          {
+            "path": "docs/review/product-ui-01/compare-dark-2x.png",
+            "sha256": "e33457a2ccf622173a1f9390d2c269183224a236c2177d044e64017ea4794b97"
+          },
+          {
+            "path": "docs/review/product-ui-01/compare-light-1x.png",
+            "sha256": "fb2910b2a8968b20133ca15edf23b8a62ecb1914a1e64fe1d9354ef64f6da8f8"
+          },
+          {
+            "path": "docs/review/product-ui-01/compare-light-2x.png",
+            "sha256": "ecb69273edb33700f07ee3a814aaf8fbda97fb078debbe8f1e4fd5a5bcbb14e3"
+          },
+          {
+            "path": "docs/review/product-ui-01/native-dark-1x.png",
+            "sha256": "fedff76b1d60290ad5d59bde2b337168fd4b60d4e19790cc823d2ac4cd7ec72f"
+          },
+          {
+            "path": "docs/review/product-ui-01/native-dark-2x.png",
+            "sha256": "372e1fa4a990929f81ed48d6a24d826c33548891a00abf8ba3f6561496655330"
+          },
+          {
+            "path": "docs/review/product-ui-01/native-light-1x.png",
+            "sha256": "dc193e451c06905ad3bba72388ab50d79ee705ae2d46f83c0743b88dd79cbc2a"
+          },
+          {
+            "path": "docs/review/product-ui-01/native-light-2x.png",
+            "sha256": "256cbcb6d6926e1589cb0085ab9985abb33ecdf8bf24803a050c58c4d4fa0951"
+          },
+          {
+            "path": "docs/review/product-ui-01/strokes.png",
+            "sha256": "57d4fa3f445301a3e141d116e3d5817bd6dc606754f4e7bc84803edbbbe50aa9"
+          }
+        ]
+      }
+    },
+    {
+      "name": "pause-circle",
+      "purpose": "停用週期排程或顯示暫停狀態",
+      "recognitionCues": "兩份來源以短直筆表達暫停",
+      "confusableWith": [
+        "pause",
+        "play-circle"
+      ],
+      "sourceObservation": "兩份來源以短直筆表達暫停。兩筆對稱、同高，和播放鍵共用外圈；省去描兩個窄矩形會產生的四條緊鄰長邊。",
+      "references": [
+        {
+          "name": "pause-circle",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/circle-pause.svg",
+          "localPath": "references/product-ui-01/lucide-circle-pause.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/circle-pause.svg",
+          "sha256": "b2b57521079678063eef9f038cee5cb21795ac501676ac1e71efa1d958fdd1a7",
+          "license": "ISC AND MIT",
+          "sourceName": "circle-pause",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "pause-circle",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/circle-pause.svg",
+          "localPath": "references/product-ui-01/tabler-circle-pause.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/circle-pause.svg",
+          "sha256": "044ff66d61317edfcdb8e4dc1dc93a1fc5fd558f2f49f4a91bb25d5de9ee92d8",
+          "license": "MIT",
+          "sourceName": "circle-pause",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "以連續的結構輪廓和部件之間的留白識別。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "保留單色並以負空間分開各個筆畫。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "輪廓和部件比例已足以表達此用途。"
+        }
+      },
+      "change": {
+        "kind": "new",
+        "before": null,
+        "reason": "兩份來源以短直筆表達暫停。兩筆對稱、同高，和播放鍵共用外圈；省去描兩個窄矩形會產生的四條緊鄰長邊。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "date": "2026-11-18",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "db406033000e5d1d5231f099889954251ff15a3d8962c7b50df3ce96e119755f",
+        "evidence": [
+          {
+            "path": "docs/review/product-ui-01/compare-dark-1x.png",
+            "sha256": "77eba16cb9db64ecdcc7e6c5716c9163b320c63080cd3293fd0f62a89065c556"
+          },
+          {
+            "path": "docs/review/product-ui-01/compare-dark-2x.png",
+            "sha256": "e33457a2ccf622173a1f9390d2c269183224a236c2177d044e64017ea4794b97"
+          },
+          {
+            "path": "docs/review/product-ui-01/compare-light-1x.png",
+            "sha256": "fb2910b2a8968b20133ca15edf23b8a62ecb1914a1e64fe1d9354ef64f6da8f8"
+          },
+          {
+            "path": "docs/review/product-ui-01/compare-light-2x.png",
+            "sha256": "ecb69273edb33700f07ee3a814aaf8fbda97fb078debbe8f1e4fd5a5bcbb14e3"
+          },
+          {
+            "path": "docs/review/product-ui-01/native-dark-1x.png",
+            "sha256": "fedff76b1d60290ad5d59bde2b337168fd4b60d4e19790cc823d2ac4cd7ec72f"
+          },
+          {
+            "path": "docs/review/product-ui-01/native-dark-2x.png",
+            "sha256": "372e1fa4a990929f81ed48d6a24d826c33548891a00abf8ba3f6561496655330"
+          },
+          {
+            "path": "docs/review/product-ui-01/native-light-1x.png",
+            "sha256": "dc193e451c06905ad3bba72388ab50d79ee705ae2d46f83c0743b88dd79cbc2a"
+          },
+          {
+            "path": "docs/review/product-ui-01/native-light-2x.png",
+            "sha256": "256cbcb6d6926e1589cb0085ab9985abb33ecdf8bf24803a050c58c4d4fa0951"
+          },
+          {
+            "path": "docs/review/product-ui-01/strokes.png",
+            "sha256": "57d4fa3f445301a3e141d116e3d5817bd6dc606754f4e7bc84803edbbbe50aa9"
+          }
+        ]
+      }
+    },
+    {
+      "name": "alert-circle",
+      "purpose": "在通知或逾期金額旁傳達警示",
+      "recognitionCues": "Hugeicons 的驚嘆號較細，Tabler 的點較重",
+      "confusableWith": [
+        "info-circle",
+        "alert-triangle"
+      ],
+      "sourceObservation": "Hugeicons 的驚嘆號較細，Tabler 的點較重。保留 info-circle 的外圈，將直筆置上，獨立圓點置下，靠距離分開兩筆。",
+      "references": [
+        {
+          "name": "alert-circle",
+          "library": "Hugeicons Free",
+          "repository": "hugeicons/hugeicons",
+          "commit": "834e28d965946c1ee60d080027fe9dae4adc58d0",
+          "path": "icons/alert-circle.svg",
+          "localPath": "references/product-ui-01/huge-alert-circle.svg",
+          "url": "https://github.com/hugeicons/hugeicons/blob/834e28d965946c1ee60d080027fe9dae4adc58d0/icons/alert-circle.svg",
+          "sha256": "42817ce5aaac310627bfb9332fac6976af1109a65339f002e2b45c87c2922541",
+          "license": "MIT",
+          "sourceName": "alert-circle",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "alert-circle",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/alert-circle.svg",
+          "localPath": "references/product-ui-01/tabler-alert-circle.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/alert-circle.svg",
+          "sha256": "7aff9be6b14daf212f982513de43ad7784752c021995719d00006cad8a75bef0",
+          "license": "MIT",
+          "sourceName": "alert-circle",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "以連續的結構輪廓和部件之間的留白識別。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "保留單色並以負空間分開各個筆畫。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "輪廓和部件比例已足以表達此用途。"
+        }
+      },
+      "change": {
+        "kind": "new",
+        "before": null,
+        "reason": "Hugeicons 的驚嘆號較細，Tabler 的點較重。保留 info-circle 的外圈，將直筆置上，獨立圓點置下，靠距離分開兩筆。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "date": "2026-11-18",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "0b9b5c97bf8b03dd6174ccc1190b7f014febffddabe1620365258a088dfb933a",
+        "evidence": [
+          {
+            "path": "docs/review/product-ui-01/compare-dark-1x.png",
+            "sha256": "77eba16cb9db64ecdcc7e6c5716c9163b320c63080cd3293fd0f62a89065c556"
+          },
+          {
+            "path": "docs/review/product-ui-01/compare-dark-2x.png",
+            "sha256": "e33457a2ccf622173a1f9390d2c269183224a236c2177d044e64017ea4794b97"
+          },
+          {
+            "path": "docs/review/product-ui-01/compare-light-1x.png",
+            "sha256": "fb2910b2a8968b20133ca15edf23b8a62ecb1914a1e64fe1d9354ef64f6da8f8"
+          },
+          {
+            "path": "docs/review/product-ui-01/compare-light-2x.png",
+            "sha256": "ecb69273edb33700f07ee3a814aaf8fbda97fb078debbe8f1e4fd5a5bcbb14e3"
+          },
+          {
+            "path": "docs/review/product-ui-01/native-dark-1x.png",
+            "sha256": "fedff76b1d60290ad5d59bde2b337168fd4b60d4e19790cc823d2ac4cd7ec72f"
+          },
+          {
+            "path": "docs/review/product-ui-01/native-dark-2x.png",
+            "sha256": "372e1fa4a990929f81ed48d6a24d826c33548891a00abf8ba3f6561496655330"
+          },
+          {
+            "path": "docs/review/product-ui-01/native-light-1x.png",
+            "sha256": "dc193e451c06905ad3bba72388ab50d79ee705ae2d46f83c0743b88dd79cbc2a"
+          },
+          {
+            "path": "docs/review/product-ui-01/native-light-2x.png",
+            "sha256": "256cbcb6d6926e1589cb0085ab9985abb33ecdf8bf24803a050c58c4d4fa0951"
+          },
+          {
+            "path": "docs/review/product-ui-01/strokes.png",
+            "sha256": "57d4fa3f445301a3e141d116e3d5817bd6dc606754f4e7bc84803edbbbe50aa9"
+          }
+        ]
+      }
+    },
+    {
+      "name": "chevrons-up-down",
+      "purpose": "觸發帳戶或原生選擇選單",
+      "recognitionCues": "Lucide 折角張幅較大，Tabler 的 selector 較緊湊",
+      "confusableWith": [
+        "sort-unsorted",
+        "chevron-down"
+      ],
+      "sourceObservation": "Lucide 折角張幅較大，Tabler 的 selector 較緊湊。取等寬短翼與開放中央，讓 16px 選單觸發鈕仍有兩個清楚的尖端。",
+      "references": [
+        {
+          "name": "chevrons-up-down",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/chevrons-up-down.svg",
+          "localPath": "references/product-ui-01/lucide-chevrons-up-down.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/chevrons-up-down.svg",
+          "sha256": "edc561e007cfab9b6b45301a8cb02711fd7c901e53e30ee29c5491b74dbe6bcc",
+          "license": "ISC AND MIT",
+          "sourceName": "chevrons-up-down",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "chevrons-up-down",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/selector.svg",
+          "localPath": "references/product-ui-01/tabler-selector.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/selector.svg",
+          "sha256": "948f562c313c33183b1a88371ec9714a8529de2e368fbaddaaf7946c8056a0ac",
+          "license": "MIT",
+          "sourceName": "selector",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "以連續的結構輪廓和部件之間的留白識別。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "保留單色並以負空間分開各個筆畫。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "輪廓和部件比例已足以表達此用途。"
+        }
+      },
+      "change": {
+        "kind": "new",
+        "before": null,
+        "reason": "Lucide 折角張幅較大，Tabler 的 selector 較緊湊。取等寬短翼與開放中央，讓 16px 選單觸發鈕仍有兩個清楚的尖端。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "date": "2026-11-18",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "120d50f2ce45fabdf387313fe59d9679cf45b31f6a784a04d6fd4d639e055fbf",
+        "evidence": [
+          {
+            "path": "docs/review/product-ui-01/compare-dark-1x.png",
+            "sha256": "77eba16cb9db64ecdcc7e6c5716c9163b320c63080cd3293fd0f62a89065c556"
+          },
+          {
+            "path": "docs/review/product-ui-01/compare-dark-2x.png",
+            "sha256": "e33457a2ccf622173a1f9390d2c269183224a236c2177d044e64017ea4794b97"
+          },
+          {
+            "path": "docs/review/product-ui-01/compare-light-1x.png",
+            "sha256": "fb2910b2a8968b20133ca15edf23b8a62ecb1914a1e64fe1d9354ef64f6da8f8"
+          },
+          {
+            "path": "docs/review/product-ui-01/compare-light-2x.png",
+            "sha256": "ecb69273edb33700f07ee3a814aaf8fbda97fb078debbe8f1e4fd5a5bcbb14e3"
+          },
+          {
+            "path": "docs/review/product-ui-01/native-dark-1x.png",
+            "sha256": "fedff76b1d60290ad5d59bde2b337168fd4b60d4e19790cc823d2ac4cd7ec72f"
+          },
+          {
+            "path": "docs/review/product-ui-01/native-dark-2x.png",
+            "sha256": "372e1fa4a990929f81ed48d6a24d826c33548891a00abf8ba3f6561496655330"
+          },
+          {
+            "path": "docs/review/product-ui-01/native-light-1x.png",
+            "sha256": "dc193e451c06905ad3bba72388ab50d79ee705ae2d46f83c0743b88dd79cbc2a"
+          },
+          {
+            "path": "docs/review/product-ui-01/native-light-2x.png",
+            "sha256": "256cbcb6d6926e1589cb0085ab9985abb33ecdf8bf24803a050c58c4d4fa0951"
+          },
+          {
+            "path": "docs/review/product-ui-01/strokes.png",
+            "sha256": "57d4fa3f445301a3e141d116e3d5817bd6dc606754f4e7bc84803edbbbe50aa9"
+          }
+        ]
+      }
+    },
+    {
+      "name": "chevrons-left-right",
+      "purpose": "指出 Compare 把手可往兩側拖動",
+      "recognitionCues": "沿用上下折角母型轉向，左右展開；兩份來源都是無桿的同軸折角，中央留空讓 Compare 把手可辨認",
+      "confusableWith": [
+        "split-horizontal",
+        "chevrons-right"
+      ],
+      "sourceObservation": "沿用上下折角母型轉向，左右展開；兩份來源都是無桿的同軸折角，中央留空讓 Compare 把手可辨認。",
+      "references": [
+        {
+          "name": "chevrons-left-right",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/chevrons-left-right.svg",
+          "localPath": "references/product-ui-01/lucide-chevrons-left-right.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/chevrons-left-right.svg",
+          "sha256": "d91f68f58115b43b7c46f04b0df8ae70312b068468720ab2001fc5a8deb2a8cf",
+          "license": "ISC AND MIT",
+          "sourceName": "chevrons-left-right",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "chevrons-left-right",
+          "library": "Hugeicons Free",
+          "repository": "hugeicons/hugeicons",
+          "commit": "834e28d965946c1ee60d080027fe9dae4adc58d0",
+          "path": "icons/chevrons-left-right.svg",
+          "localPath": "references/product-ui-01/huge-chevrons-left-right.svg",
+          "url": "https://github.com/hugeicons/hugeicons/blob/834e28d965946c1ee60d080027fe9dae4adc58d0/icons/chevrons-left-right.svg",
+          "sha256": "2b9ef450c235167ab69a511e752bfea7b204a3ea461c035ad391ab8e0fbe8abc",
+          "license": "MIT",
+          "sourceName": "chevrons-left-right",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "以連續的結構輪廓和部件之間的留白識別。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "保留單色並以負空間分開各個筆畫。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "輪廓和部件比例已足以表達此用途。"
+        }
+      },
+      "change": {
+        "kind": "new",
+        "before": null,
+        "reason": "沿用上下折角母型轉向，左右展開；兩份來源都是無桿的同軸折角，中央留空讓 Compare 把手可辨認。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "date": "2026-11-18",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "7f3bc1f754acbfcb19f5346be26b77bb24c27071fa8d3eeb2ea268158ac1528d",
+        "evidence": [
+          {
+            "path": "docs/review/product-ui-01/compare-dark-1x.png",
+            "sha256": "77eba16cb9db64ecdcc7e6c5716c9163b320c63080cd3293fd0f62a89065c556"
+          },
+          {
+            "path": "docs/review/product-ui-01/compare-dark-2x.png",
+            "sha256": "e33457a2ccf622173a1f9390d2c269183224a236c2177d044e64017ea4794b97"
+          },
+          {
+            "path": "docs/review/product-ui-01/compare-light-1x.png",
+            "sha256": "fb2910b2a8968b20133ca15edf23b8a62ecb1914a1e64fe1d9354ef64f6da8f8"
+          },
+          {
+            "path": "docs/review/product-ui-01/compare-light-2x.png",
+            "sha256": "ecb69273edb33700f07ee3a814aaf8fbda97fb078debbe8f1e4fd5a5bcbb14e3"
+          },
+          {
+            "path": "docs/review/product-ui-01/native-dark-1x.png",
+            "sha256": "fedff76b1d60290ad5d59bde2b337168fd4b60d4e19790cc823d2ac4cd7ec72f"
+          },
+          {
+            "path": "docs/review/product-ui-01/native-dark-2x.png",
+            "sha256": "372e1fa4a990929f81ed48d6a24d826c33548891a00abf8ba3f6561496655330"
+          },
+          {
+            "path": "docs/review/product-ui-01/native-light-1x.png",
+            "sha256": "dc193e451c06905ad3bba72388ab50d79ee705ae2d46f83c0743b88dd79cbc2a"
+          },
+          {
+            "path": "docs/review/product-ui-01/native-light-2x.png",
+            "sha256": "256cbcb6d6926e1589cb0085ab9985abb33ecdf8bf24803a050c58c4d4fa0951"
+          },
+          {
+            "path": "docs/review/product-ui-01/strokes.png",
+            "sha256": "57d4fa3f445301a3e141d116e3d5817bd6dc606754f4e7bc84803edbbbe50aa9"
+          }
+        ]
+      }
+    },
+    {
+      "name": "arrow-left-right",
+      "purpose": "反轉漸層或在欄間移動資料",
+      "recognitionCues": "兩份來源都用反向的完整箭桿",
+      "confusableWith": [
+        "repeat",
+        "arrow-right"
+      ],
+      "sourceObservation": "兩份來源都用反向的完整箭桿。依 Gradient 現行按鈕使上排向右、下排向左，各排留出一個箭翼的高度。",
+      "references": [
+        {
+          "name": "arrow-left-right",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/arrow-left-right.svg",
+          "localPath": "references/product-ui-01/lucide-arrow-left-right.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/arrow-left-right.svg",
+          "sha256": "2d64da427cbb3f14e522658459903829575b09ec15162c1a69ea6ad341a4359a",
+          "license": "ISC AND MIT",
+          "sourceName": "arrow-left-right",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "arrow-left-right",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/arrows-left-right.svg",
+          "localPath": "references/product-ui-01/tabler-arrows-left-right.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/arrows-left-right.svg",
+          "sha256": "1530a257f97b6d15d7391db8be839ffc6314d583ca8f7188c7f85f20a850bc12",
+          "license": "MIT",
+          "sourceName": "arrows-left-right",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "以連續的結構輪廓和部件之間的留白識別。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "保留單色並以負空間分開各個筆畫。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "輪廓和部件比例已足以表達此用途。"
+        }
+      },
+      "change": {
+        "kind": "new",
+        "before": null,
+        "reason": "兩份來源都用反向的完整箭桿。依 Gradient 現行按鈕使上排向右、下排向左，各排留出一個箭翼的高度。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "date": "2026-11-18",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "ab59f713775750b25adfcda374d82f67bc11a3a89f44f72d2a074aec995b900e",
+        "evidence": [
+          {
+            "path": "docs/review/product-ui-01/compare-dark-1x.png",
+            "sha256": "77eba16cb9db64ecdcc7e6c5716c9163b320c63080cd3293fd0f62a89065c556"
+          },
+          {
+            "path": "docs/review/product-ui-01/compare-dark-2x.png",
+            "sha256": "e33457a2ccf622173a1f9390d2c269183224a236c2177d044e64017ea4794b97"
+          },
+          {
+            "path": "docs/review/product-ui-01/compare-light-1x.png",
+            "sha256": "fb2910b2a8968b20133ca15edf23b8a62ecb1914a1e64fe1d9354ef64f6da8f8"
+          },
+          {
+            "path": "docs/review/product-ui-01/compare-light-2x.png",
+            "sha256": "ecb69273edb33700f07ee3a814aaf8fbda97fb078debbe8f1e4fd5a5bcbb14e3"
+          },
+          {
+            "path": "docs/review/product-ui-01/native-dark-1x.png",
+            "sha256": "fedff76b1d60290ad5d59bde2b337168fd4b60d4e19790cc823d2ac4cd7ec72f"
+          },
+          {
+            "path": "docs/review/product-ui-01/native-dark-2x.png",
+            "sha256": "372e1fa4a990929f81ed48d6a24d826c33548891a00abf8ba3f6561496655330"
+          },
+          {
+            "path": "docs/review/product-ui-01/native-light-1x.png",
+            "sha256": "dc193e451c06905ad3bba72388ab50d79ee705ae2d46f83c0743b88dd79cbc2a"
+          },
+          {
+            "path": "docs/review/product-ui-01/native-light-2x.png",
+            "sha256": "256cbcb6d6926e1589cb0085ab9985abb33ecdf8bf24803a050c58c4d4fa0951"
+          },
+          {
+            "path": "docs/review/product-ui-01/strokes.png",
+            "sha256": "57d4fa3f445301a3e141d116e3d5817bd6dc606754f4e7bc84803edbbbe50aa9"
+          }
+        ]
+      }
+    },
+    {
+      "name": "arrow-down-right",
+      "purpose": "顯示相較前期下降的方向",
+      "recognitionCues": "兩份來源都保留折尺形箭翼",
+      "confusableWith": [
+        "arrow-up-right",
+        "trending-down"
+      ],
+      "sourceObservation": "兩份來源都保留折尺形箭翼。直接將既有右上箭頭旋轉四分之一圈，統計升降並排時能維持翼長與軸線重量。",
+      "references": [
+        {
+          "name": "arrow-down-right",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/arrow-down-right.svg",
+          "localPath": "references/product-ui-01/lucide-arrow-down-right.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/arrow-down-right.svg",
+          "sha256": "c3b557b5561c42008adfadade79341158dfd2cf3437b586fd0639447415f7545",
+          "license": "ISC AND MIT",
+          "sourceName": "arrow-down-right",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "arrow-down-right",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/arrow-down-right.svg",
+          "localPath": "references/product-ui-01/tabler-arrow-down-right.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/arrow-down-right.svg",
+          "sha256": "b4aa0dd1f2d8566c6fcb0d91859ab4d8ed77162b54429434107b5a80969e9749",
+          "license": "MIT",
+          "sourceName": "arrow-down-right",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "以連續的結構輪廓和部件之間的留白識別。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "保留單色並以負空間分開各個筆畫。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "輪廓和部件比例已足以表達此用途。"
+        }
+      },
+      "change": {
+        "kind": "new",
+        "before": null,
+        "reason": "兩份來源都保留折尺形箭翼。直接將既有右上箭頭旋轉四分之一圈，統計升降並排時能維持翼長與軸線重量。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "date": "2026-11-18",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "2a2c3e74ca416bc0d9aa9e146dd013dea9a0c8fcd6e157df23213c0c6169c1ef",
+        "evidence": [
+          {
+            "path": "docs/review/product-ui-01/compare-dark-1x.png",
+            "sha256": "77eba16cb9db64ecdcc7e6c5716c9163b320c63080cd3293fd0f62a89065c556"
+          },
+          {
+            "path": "docs/review/product-ui-01/compare-dark-2x.png",
+            "sha256": "e33457a2ccf622173a1f9390d2c269183224a236c2177d044e64017ea4794b97"
+          },
+          {
+            "path": "docs/review/product-ui-01/compare-light-1x.png",
+            "sha256": "fb2910b2a8968b20133ca15edf23b8a62ecb1914a1e64fe1d9354ef64f6da8f8"
+          },
+          {
+            "path": "docs/review/product-ui-01/compare-light-2x.png",
+            "sha256": "ecb69273edb33700f07ee3a814aaf8fbda97fb078debbe8f1e4fd5a5bcbb14e3"
+          },
+          {
+            "path": "docs/review/product-ui-01/native-dark-1x.png",
+            "sha256": "fedff76b1d60290ad5d59bde2b337168fd4b60d4e19790cc823d2ac4cd7ec72f"
+          },
+          {
+            "path": "docs/review/product-ui-01/native-dark-2x.png",
+            "sha256": "372e1fa4a990929f81ed48d6a24d826c33548891a00abf8ba3f6561496655330"
+          },
+          {
+            "path": "docs/review/product-ui-01/native-light-1x.png",
+            "sha256": "dc193e451c06905ad3bba72388ab50d79ee705ae2d46f83c0743b88dd79cbc2a"
+          },
+          {
+            "path": "docs/review/product-ui-01/native-light-2x.png",
+            "sha256": "256cbcb6d6926e1589cb0085ab9985abb33ecdf8bf24803a050c58c4d4fa0951"
+          },
+          {
+            "path": "docs/review/product-ui-01/strokes.png",
+            "sha256": "57d4fa3f445301a3e141d116e3d5817bd6dc606754f4e7bc84803edbbbe50aa9"
+          }
+        ]
+      }
+    },
+    {
+      "name": "arrow-big-up",
+      "purpose": "提交一票",
+      "recognitionCues": "相較兩份寬身箭頭參考，保留較直的短柄和兩側平肩；收小尖端圓角，避免 soft 與 rounded 在 16px 成為小屋輪廓",
+      "confusableWith": [
+        "arrow-up"
+      ],
+      "sourceObservation": "相較兩份寬身箭頭參考，保留較直的短柄和兩側平肩；收小尖端圓角，避免 soft 與 rounded 在 16px 成為小屋輪廓。",
+      "references": [
+        {
+          "name": "arrow-big-up",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/arrow-big-up.svg",
+          "localPath": "references/product-ui-01/lucide-arrow-big-up.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/arrow-big-up.svg",
+          "sha256": "3149e1edfa3d8042f37bda6505305d629b0389e313e54327bbb251099977c639",
+          "license": "ISC AND MIT",
+          "sourceName": "arrow-big-up",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "arrow-big-up",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/arrow-big-up.svg",
+          "localPath": "references/product-ui-01/tabler-arrow-big-up.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/arrow-big-up.svg",
+          "sha256": "f32d1d960fd7fb2dc9be19de5cbedba763ca43cd724dbde1dbe56dda9f49effe",
+          "license": "MIT",
+          "sourceName": "arrow-big-up",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "以連續的結構輪廓和部件之間的留白識別。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "保留單色並以負空間分開各個筆畫。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "輪廓和部件比例已足以表達此用途。"
+        }
+      },
+      "change": {
+        "kind": "new",
+        "before": null,
+        "reason": "相較兩份寬身箭頭參考，保留較直的短柄和兩側平肩；收小尖端圓角，避免 soft 與 rounded 在 16px 成為小屋輪廓。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "date": "2026-11-18",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "0b67045666dbf6ad02919ca21873877f5c2c413cbfb68df52a6edcd9eef7684c",
+        "evidence": [
+          {
+            "path": "docs/review/product-ui-01/compare-dark-1x.png",
+            "sha256": "77eba16cb9db64ecdcc7e6c5716c9163b320c63080cd3293fd0f62a89065c556"
+          },
+          {
+            "path": "docs/review/product-ui-01/compare-dark-2x.png",
+            "sha256": "e33457a2ccf622173a1f9390d2c269183224a236c2177d044e64017ea4794b97"
+          },
+          {
+            "path": "docs/review/product-ui-01/compare-light-1x.png",
+            "sha256": "fb2910b2a8968b20133ca15edf23b8a62ecb1914a1e64fe1d9354ef64f6da8f8"
+          },
+          {
+            "path": "docs/review/product-ui-01/compare-light-2x.png",
+            "sha256": "ecb69273edb33700f07ee3a814aaf8fbda97fb078debbe8f1e4fd5a5bcbb14e3"
+          },
+          {
+            "path": "docs/review/product-ui-01/native-dark-1x.png",
+            "sha256": "fedff76b1d60290ad5d59bde2b337168fd4b60d4e19790cc823d2ac4cd7ec72f"
+          },
+          {
+            "path": "docs/review/product-ui-01/native-dark-2x.png",
+            "sha256": "372e1fa4a990929f81ed48d6a24d826c33548891a00abf8ba3f6561496655330"
+          },
+          {
+            "path": "docs/review/product-ui-01/native-light-1x.png",
+            "sha256": "dc193e451c06905ad3bba72388ab50d79ee705ae2d46f83c0743b88dd79cbc2a"
+          },
+          {
+            "path": "docs/review/product-ui-01/native-light-2x.png",
+            "sha256": "256cbcb6d6926e1589cb0085ab9985abb33ecdf8bf24803a050c58c4d4fa0951"
+          },
+          {
+            "path": "docs/review/product-ui-01/strokes.png",
+            "sha256": "57d4fa3f445301a3e141d116e3d5817bd6dc606754f4e7bc84803edbbbe50aa9"
+          }
+        ]
+      }
+    },
+    {
+      "name": "heading-1",
+      "purpose": "套用一級標題",
+      "recognitionCues": "兩份參考分別使用無襯線與襯線字形",
+      "confusableWith": [
+        "heading",
+        "heading-2"
+      ],
+      "sourceObservation": "兩份參考分別使用無襯線與襯線字形。共用無襯線 H，數字 1 用斜起筆和直落筆，底部對齊 H。",
+      "references": [
+        {
+          "name": "heading-1",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/heading-1.svg",
+          "localPath": "references/product-ui-01/lucide-heading-1.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/heading-1.svg",
+          "sha256": "d5920a0a7182751a071374f9c4dad0519afe4ca509da1e893cb09deba52d5c8f",
+          "license": "ISC AND MIT",
+          "sourceName": "heading-1",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "heading-1",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/h-1.svg",
+          "localPath": "references/product-ui-01/tabler-h-1.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/h-1.svg",
+          "sha256": "bf1dd33146328d5b8fe911aecc014fd1eeb10f843543a9ef777ea94bcf27ae95",
+          "license": "MIT",
+          "sourceName": "h-1",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "以連續的結構輪廓和部件之間的留白識別。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "保留單色並以負空間分開各個筆畫。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "輪廓和部件比例已足以表達此用途。"
+        }
+      },
+      "change": {
+        "kind": "new",
+        "before": null,
+        "reason": "兩份參考分別使用無襯線與襯線字形。共用無襯線 H，數字 1 用斜起筆和直落筆，底部對齊 H。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "date": "2026-11-18",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "71e71db44132ca9405b74e4bf9af6c53b551bf1e39122dee4f6cbb46c5c8c3c6",
+        "evidence": [
+          {
+            "path": "docs/review/product-ui-01/compare-dark-1x.png",
+            "sha256": "77eba16cb9db64ecdcc7e6c5716c9163b320c63080cd3293fd0f62a89065c556"
+          },
+          {
+            "path": "docs/review/product-ui-01/compare-dark-2x.png",
+            "sha256": "e33457a2ccf622173a1f9390d2c269183224a236c2177d044e64017ea4794b97"
+          },
+          {
+            "path": "docs/review/product-ui-01/compare-light-1x.png",
+            "sha256": "fb2910b2a8968b20133ca15edf23b8a62ecb1914a1e64fe1d9354ef64f6da8f8"
+          },
+          {
+            "path": "docs/review/product-ui-01/compare-light-2x.png",
+            "sha256": "ecb69273edb33700f07ee3a814aaf8fbda97fb078debbe8f1e4fd5a5bcbb14e3"
+          },
+          {
+            "path": "docs/review/product-ui-01/native-dark-1x.png",
+            "sha256": "fedff76b1d60290ad5d59bde2b337168fd4b60d4e19790cc823d2ac4cd7ec72f"
+          },
+          {
+            "path": "docs/review/product-ui-01/native-dark-2x.png",
+            "sha256": "372e1fa4a990929f81ed48d6a24d826c33548891a00abf8ba3f6561496655330"
+          },
+          {
+            "path": "docs/review/product-ui-01/native-light-1x.png",
+            "sha256": "dc193e451c06905ad3bba72388ab50d79ee705ae2d46f83c0743b88dd79cbc2a"
+          },
+          {
+            "path": "docs/review/product-ui-01/native-light-2x.png",
+            "sha256": "256cbcb6d6926e1589cb0085ab9985abb33ecdf8bf24803a050c58c4d4fa0951"
+          },
+          {
+            "path": "docs/review/product-ui-01/strokes.png",
+            "sha256": "57d4fa3f445301a3e141d116e3d5817bd6dc606754f4e7bc84803edbbbe50aa9"
+          }
+        ]
+      }
+    },
+    {
+      "name": "heading-2",
+      "purpose": "套用二級標題",
+      "recognitionCues": "沿用 H1 的字距及基線",
+      "confusableWith": [
+        "heading-1",
+        "heading-3"
+      ],
+      "sourceObservation": "沿用 H1 的字距及基線。比起有襯線的 Tabler，保留較開的數字 2，弧頂接斜腹和水平底線，讓 16px 有清楚方向。",
+      "references": [
+        {
+          "name": "heading-2",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/heading-2.svg",
+          "localPath": "references/product-ui-01/lucide-heading-2.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/heading-2.svg",
+          "sha256": "a1fc4240bad7d883433927faca643b346e148ef721a571f95043be085555ae05",
+          "license": "ISC AND MIT",
+          "sourceName": "heading-2",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "heading-2",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/h-2.svg",
+          "localPath": "references/product-ui-01/tabler-h-2.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/h-2.svg",
+          "sha256": "ec2f722269ae32d74459f7388b569e822c2ddbbfbe9fe20e6a73966193475f51",
+          "license": "MIT",
+          "sourceName": "h-2",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "以連續的結構輪廓和部件之間的留白識別。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "保留單色並以負空間分開各個筆畫。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "輪廓和部件比例已足以表達此用途。"
+        }
+      },
+      "change": {
+        "kind": "new",
+        "before": null,
+        "reason": "沿用 H1 的字距及基線。比起有襯線的 Tabler，保留較開的數字 2，弧頂接斜腹和水平底線，讓 16px 有清楚方向。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "date": "2026-11-18",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "ddfaa97c5f7e1a0dc07036c150428f8ed32c548faf4ed29332a375e9bd2e508f",
+        "evidence": [
+          {
+            "path": "docs/review/product-ui-01/compare-dark-1x.png",
+            "sha256": "77eba16cb9db64ecdcc7e6c5716c9163b320c63080cd3293fd0f62a89065c556"
+          },
+          {
+            "path": "docs/review/product-ui-01/compare-dark-2x.png",
+            "sha256": "e33457a2ccf622173a1f9390d2c269183224a236c2177d044e64017ea4794b97"
+          },
+          {
+            "path": "docs/review/product-ui-01/compare-light-1x.png",
+            "sha256": "fb2910b2a8968b20133ca15edf23b8a62ecb1914a1e64fe1d9354ef64f6da8f8"
+          },
+          {
+            "path": "docs/review/product-ui-01/compare-light-2x.png",
+            "sha256": "ecb69273edb33700f07ee3a814aaf8fbda97fb078debbe8f1e4fd5a5bcbb14e3"
+          },
+          {
+            "path": "docs/review/product-ui-01/native-dark-1x.png",
+            "sha256": "fedff76b1d60290ad5d59bde2b337168fd4b60d4e19790cc823d2ac4cd7ec72f"
+          },
+          {
+            "path": "docs/review/product-ui-01/native-dark-2x.png",
+            "sha256": "372e1fa4a990929f81ed48d6a24d826c33548891a00abf8ba3f6561496655330"
+          },
+          {
+            "path": "docs/review/product-ui-01/native-light-1x.png",
+            "sha256": "dc193e451c06905ad3bba72388ab50d79ee705ae2d46f83c0743b88dd79cbc2a"
+          },
+          {
+            "path": "docs/review/product-ui-01/native-light-2x.png",
+            "sha256": "256cbcb6d6926e1589cb0085ab9985abb33ecdf8bf24803a050c58c4d4fa0951"
+          },
+          {
+            "path": "docs/review/product-ui-01/strokes.png",
+            "sha256": "57d4fa3f445301a3e141d116e3d5817bd6dc606754f4e7bc84803edbbbe50aa9"
+          }
+        ]
+      }
+    },
+    {
+      "name": "heading-3",
+      "purpose": "套用三級標題",
+      "recognitionCues": "與同尺寸 H2 回比後保留上下兩段弧腹，中腰停在字面內側",
+      "confusableWith": [
+        "heading",
+        "heading-2"
+      ],
+      "sourceObservation": "與同尺寸 H2 回比後保留上下兩段弧腹，中腰停在字面內側。維持三顆 H 同高同寬，減少工具列切換時的跳動。",
+      "references": [
+        {
+          "name": "heading-3",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/heading-3.svg",
+          "localPath": "references/product-ui-01/lucide-heading-3.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/heading-3.svg",
+          "sha256": "32d24e7734fc9bdba2c64f42c34761781249599364417c14b5cd06fa19c87551",
+          "license": "ISC AND MIT",
+          "sourceName": "heading-3",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "heading-3",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/h-3.svg",
+          "localPath": "references/product-ui-01/tabler-h-3.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/h-3.svg",
+          "sha256": "219ce656d2fa1fb492c7ef026c387accbe1d476e9a52ae3ec64c577dc6d368f9",
+          "license": "MIT",
+          "sourceName": "h-3",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "以連續的結構輪廓和部件之間的留白識別。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "保留單色並以負空間分開各個筆畫。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "輪廓和部件比例已足以表達此用途。"
+        }
+      },
+      "change": {
+        "kind": "new",
+        "before": null,
+        "reason": "與同尺寸 H2 回比後保留上下兩段弧腹，中腰停在字面內側。維持三顆 H 同高同寬，減少工具列切換時的跳動。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "date": "2026-11-18",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "59afe30e60b26e1b4c6ebf8d36b6ee1f8465bc3c5516260d987f49c853f761e0",
+        "evidence": [
+          {
+            "path": "docs/review/product-ui-01/compare-dark-1x.png",
+            "sha256": "77eba16cb9db64ecdcc7e6c5716c9163b320c63080cd3293fd0f62a89065c556"
+          },
+          {
+            "path": "docs/review/product-ui-01/compare-dark-2x.png",
+            "sha256": "e33457a2ccf622173a1f9390d2c269183224a236c2177d044e64017ea4794b97"
+          },
+          {
+            "path": "docs/review/product-ui-01/compare-light-1x.png",
+            "sha256": "fb2910b2a8968b20133ca15edf23b8a62ecb1914a1e64fe1d9354ef64f6da8f8"
+          },
+          {
+            "path": "docs/review/product-ui-01/compare-light-2x.png",
+            "sha256": "ecb69273edb33700f07ee3a814aaf8fbda97fb078debbe8f1e4fd5a5bcbb14e3"
+          },
+          {
+            "path": "docs/review/product-ui-01/native-dark-1x.png",
+            "sha256": "fedff76b1d60290ad5d59bde2b337168fd4b60d4e19790cc823d2ac4cd7ec72f"
+          },
+          {
+            "path": "docs/review/product-ui-01/native-dark-2x.png",
+            "sha256": "372e1fa4a990929f81ed48d6a24d826c33548891a00abf8ba3f6561496655330"
+          },
+          {
+            "path": "docs/review/product-ui-01/native-light-1x.png",
+            "sha256": "dc193e451c06905ad3bba72388ab50d79ee705ae2d46f83c0743b88dd79cbc2a"
+          },
+          {
+            "path": "docs/review/product-ui-01/native-light-2x.png",
+            "sha256": "256cbcb6d6926e1589cb0085ab9985abb33ecdf8bf24803a050c58c4d4fa0951"
+          },
+          {
+            "path": "docs/review/product-ui-01/strokes.png",
+            "sha256": "57d4fa3f445301a3e141d116e3d5817bd6dc606754f4e7bc84803edbbbe50aa9"
+          }
+        ]
+      }
+    },
+    {
+      "name": "pilcrow",
+      "purpose": "切換為一般段落",
+      "recognitionCues": "兩份來源都靠左腹與兩條下伸筆建立段落記號",
+      "confusableWith": [
+        "text",
+        "heading"
+      ],
+      "sourceObservation": "兩份來源都靠左腹與兩條下伸筆建立段落記號。保留開敞的腹孔、雙柱間隙及略長的頂部收筆。",
+      "references": [
+        {
+          "name": "pilcrow",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/pilcrow.svg",
+          "localPath": "references/product-ui-01/lucide-pilcrow.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/pilcrow.svg",
+          "sha256": "23a80c0bba874b7b6c9a8cee0651ea72b189cbe4ae826e6539a3344cfb85b1d8",
+          "license": "ISC AND MIT",
+          "sourceName": "pilcrow",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "pilcrow",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/pilcrow.svg",
+          "localPath": "references/product-ui-01/tabler-pilcrow.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/pilcrow.svg",
+          "sha256": "541a99a6a503032702450794d2379543b15fcea6b7e59243f0f78a6c3dc9b712",
+          "license": "MIT",
+          "sourceName": "pilcrow",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "以連續的結構輪廓和部件之間的留白識別。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "保留單色並以負空間分開各個筆畫。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "輪廓和部件比例已足以表達此用途。"
+        }
+      },
+      "change": {
+        "kind": "new",
+        "before": null,
+        "reason": "兩份來源都靠左腹與兩條下伸筆建立段落記號。保留開敞的腹孔、雙柱間隙及略長的頂部收筆。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "date": "2026-11-18",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "a23fdd0247400c5c2bd021cf396cc6765596d28c46ca2b2438eb44123f63b883",
+        "evidence": [
+          {
+            "path": "docs/review/product-ui-01/compare-dark-1x.png",
+            "sha256": "77eba16cb9db64ecdcc7e6c5716c9163b320c63080cd3293fd0f62a89065c556"
+          },
+          {
+            "path": "docs/review/product-ui-01/compare-dark-2x.png",
+            "sha256": "e33457a2ccf622173a1f9390d2c269183224a236c2177d044e64017ea4794b97"
+          },
+          {
+            "path": "docs/review/product-ui-01/compare-light-1x.png",
+            "sha256": "fb2910b2a8968b20133ca15edf23b8a62ecb1914a1e64fe1d9354ef64f6da8f8"
+          },
+          {
+            "path": "docs/review/product-ui-01/compare-light-2x.png",
+            "sha256": "ecb69273edb33700f07ee3a814aaf8fbda97fb078debbe8f1e4fd5a5bcbb14e3"
+          },
+          {
+            "path": "docs/review/product-ui-01/native-dark-1x.png",
+            "sha256": "fedff76b1d60290ad5d59bde2b337168fd4b60d4e19790cc823d2ac4cd7ec72f"
+          },
+          {
+            "path": "docs/review/product-ui-01/native-dark-2x.png",
+            "sha256": "372e1fa4a990929f81ed48d6a24d826c33548891a00abf8ba3f6561496655330"
+          },
+          {
+            "path": "docs/review/product-ui-01/native-light-1x.png",
+            "sha256": "dc193e451c06905ad3bba72388ab50d79ee705ae2d46f83c0743b88dd79cbc2a"
+          },
+          {
+            "path": "docs/review/product-ui-01/native-light-2x.png",
+            "sha256": "256cbcb6d6926e1589cb0085ab9985abb33ecdf8bf24803a050c58c4d4fa0951"
+          },
+          {
+            "path": "docs/review/product-ui-01/strokes.png",
+            "sha256": "57d4fa3f445301a3e141d116e3d5817bd6dc606754f4e7bc84803edbbbe50aa9"
+          }
+        ]
+      }
+    },
+    {
+      "name": "remove-formatting",
+      "purpose": "清除文字標記與格式",
+      "recognitionCues": "兩份參考都保留斜體文字與右下叉號",
+      "confusableWith": [
+        "eraser",
+        "strikethrough"
+      ],
+      "sourceObservation": "兩份參考都保留斜體文字與右下叉號。採短橫足和向右上傾的主幹，叉號與字腳分開，避免誤讀為刪除線。",
+      "references": [
+        {
+          "name": "remove-formatting",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/remove-formatting.svg",
+          "localPath": "references/product-ui-01/lucide-remove-formatting.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/remove-formatting.svg",
+          "sha256": "aa3e6103e5ed9b6a8323867c600b4af8c415680feb73cddf578337d3e756fe91",
+          "license": "ISC AND MIT",
+          "sourceName": "remove-formatting",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "remove-formatting",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/clear-formatting.svg",
+          "localPath": "references/product-ui-01/tabler-clear-formatting.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/clear-formatting.svg",
+          "sha256": "1891c73ba8f694298a87e7b669c77523b158bbae0778a8be2d04830616bbdc26",
+          "license": "MIT",
+          "sourceName": "clear-formatting",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "以連續的結構輪廓和部件之間的留白識別。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "保留單色並以負空間分開各個筆畫。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "輪廓和部件比例已足以表達此用途。"
+        }
+      },
+      "change": {
+        "kind": "new",
+        "before": null,
+        "reason": "兩份參考都保留斜體文字與右下叉號。採短橫足和向右上傾的主幹，叉號與字腳分開，避免誤讀為刪除線。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "date": "2026-11-18",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "9290cdea7497734e1851ac7f609208776802cfeb0aef02aec212fa8ea569537a",
+        "evidence": [
+          {
+            "path": "docs/review/product-ui-01/compare-dark-1x.png",
+            "sha256": "77eba16cb9db64ecdcc7e6c5716c9163b320c63080cd3293fd0f62a89065c556"
+          },
+          {
+            "path": "docs/review/product-ui-01/compare-dark-2x.png",
+            "sha256": "e33457a2ccf622173a1f9390d2c269183224a236c2177d044e64017ea4794b97"
+          },
+          {
+            "path": "docs/review/product-ui-01/compare-light-1x.png",
+            "sha256": "fb2910b2a8968b20133ca15edf23b8a62ecb1914a1e64fe1d9354ef64f6da8f8"
+          },
+          {
+            "path": "docs/review/product-ui-01/compare-light-2x.png",
+            "sha256": "ecb69273edb33700f07ee3a814aaf8fbda97fb078debbe8f1e4fd5a5bcbb14e3"
+          },
+          {
+            "path": "docs/review/product-ui-01/native-dark-1x.png",
+            "sha256": "fedff76b1d60290ad5d59bde2b337168fd4b60d4e19790cc823d2ac4cd7ec72f"
+          },
+          {
+            "path": "docs/review/product-ui-01/native-dark-2x.png",
+            "sha256": "372e1fa4a990929f81ed48d6a24d826c33548891a00abf8ba3f6561496655330"
+          },
+          {
+            "path": "docs/review/product-ui-01/native-light-1x.png",
+            "sha256": "dc193e451c06905ad3bba72388ab50d79ee705ae2d46f83c0743b88dd79cbc2a"
+          },
+          {
+            "path": "docs/review/product-ui-01/native-light-2x.png",
+            "sha256": "256cbcb6d6926e1589cb0085ab9985abb33ecdf8bf24803a050c58c4d4fa0951"
+          },
+          {
+            "path": "docs/review/product-ui-01/strokes.png",
+            "sha256": "57d4fa3f445301a3e141d116e3d5817bd6dc606754f4e7bc84803edbbbe50aa9"
+          }
+        ]
+      }
+    },
+    {
+      "name": "hand-click",
+      "purpose": "指出需要點按的互動步驟",
+      "recognitionCues": "Phosphor 的接觸弧集中於食指，Tabler 用短放射線",
+      "confusableWith": [
+        "mouse-pointer",
+        "hand"
+      ],
+      "sourceObservation": "Phosphor 的接觸弧集中於食指，Tabler 用短放射線。沿用單弧，重畫拇指的回折和握起的指節，縮小時仍可辨認被點到的位置。",
+      "references": [
+        {
+          "name": "hand-click",
+          "library": "Phosphor",
+          "repository": "phosphor-icons/core",
+          "commit": "2b75f3ad12b420c9504ef05df8d2564a28f8500e",
+          "path": "assets/regular/hand-tap.svg",
+          "localPath": "references/product-ui-01/phosphor-hand-tap.svg",
+          "url": "https://github.com/phosphor-icons/core/blob/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular/hand-tap.svg",
+          "sha256": "32c4c4f80fbbe5ee6bf45a6769da96466dcafddf79965c2bbdb7635fab405409",
+          "license": "MIT",
+          "sourceName": "hand-tap",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "hand-click",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/hand-click.svg",
+          "localPath": "references/product-ui-01/tabler-hand-click.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/hand-click.svg",
+          "sha256": "833922a29f43ff0aeabadf7bd49cac5995e95008b3c6a5dd2bd581ff56f49fb3",
+          "license": "MIT",
+          "sourceName": "hand-click",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "以連續的結構輪廓和部件之間的留白識別。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "保留單色並以負空間分開各個筆畫。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "輪廓和部件比例已足以表達此用途。"
+        }
+      },
+      "change": {
+        "kind": "new",
+        "before": null,
+        "reason": "Phosphor 的接觸弧集中於食指，Tabler 用短放射線。沿用單弧，重畫拇指的回折和握起的指節，縮小時仍可辨認被點到的位置。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "date": "2026-11-18",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "044139a08e555d892320336866b4a2595cc2bdfc334e87434e25d3169ab92450",
+        "evidence": [
+          {
+            "path": "docs/review/product-ui-01/compare-dark-1x.png",
+            "sha256": "77eba16cb9db64ecdcc7e6c5716c9163b320c63080cd3293fd0f62a89065c556"
+          },
+          {
+            "path": "docs/review/product-ui-01/compare-dark-2x.png",
+            "sha256": "e33457a2ccf622173a1f9390d2c269183224a236c2177d044e64017ea4794b97"
+          },
+          {
+            "path": "docs/review/product-ui-01/compare-light-1x.png",
+            "sha256": "fb2910b2a8968b20133ca15edf23b8a62ecb1914a1e64fe1d9354ef64f6da8f8"
+          },
+          {
+            "path": "docs/review/product-ui-01/compare-light-2x.png",
+            "sha256": "ecb69273edb33700f07ee3a814aaf8fbda97fb078debbe8f1e4fd5a5bcbb14e3"
+          },
+          {
+            "path": "docs/review/product-ui-01/native-dark-1x.png",
+            "sha256": "fedff76b1d60290ad5d59bde2b337168fd4b60d4e19790cc823d2ac4cd7ec72f"
+          },
+          {
+            "path": "docs/review/product-ui-01/native-dark-2x.png",
+            "sha256": "372e1fa4a990929f81ed48d6a24d826c33548891a00abf8ba3f6561496655330"
+          },
+          {
+            "path": "docs/review/product-ui-01/native-light-1x.png",
+            "sha256": "dc193e451c06905ad3bba72388ab50d79ee705ae2d46f83c0743b88dd79cbc2a"
+          },
+          {
+            "path": "docs/review/product-ui-01/native-light-2x.png",
+            "sha256": "256cbcb6d6926e1589cb0085ab9985abb33ecdf8bf24803a050c58c4d4fa0951"
+          },
+          {
+            "path": "docs/review/product-ui-01/strokes.png",
+            "sha256": "57d4fa3f445301a3e141d116e3d5817bd6dc606754f4e7bc84803edbbbe50aa9"
+          }
+        ]
+      }
+    },
+    {
+      "name": "resize",
+      "purpose": "調整範例視口的尺寸",
+      "recognitionCues": "採用 Tabler 大小框共角的構造，重畫外框的三個開角，拉長上邊以表示尺度延伸",
+      "confusableWith": [
+        "maximize",
+        "crop"
+      ],
+      "sourceObservation": "採用 Tabler 大小框共角的構造，重畫外框的三個開角，拉長上邊以表示尺度延伸。右上留空與左下實框形成差異。",
+      "references": [
+        {
+          "name": "resize",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/scaling.svg",
+          "localPath": "references/product-ui-01/lucide-scaling.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/scaling.svg",
+          "sha256": "587b5758bfbf2df54bc4701819a58fc63278682760bfb05213f093840ff1cfd5",
+          "license": "ISC AND MIT",
+          "sourceName": "scaling",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "resize",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/resize.svg",
+          "localPath": "references/product-ui-01/tabler-resize.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/resize.svg",
+          "sha256": "3fc95b18567610a164405872a9326b695425b3b61291e2fdb7afd27787b1f21b",
+          "license": "MIT",
+          "sourceName": "resize",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "以連續的結構輪廓和部件之間的留白識別。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "保留單色並以負空間分開各個筆畫。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "輪廓和部件比例已足以表達此用途。"
+        }
+      },
+      "change": {
+        "kind": "new",
+        "before": null,
+        "reason": "採用 Tabler 大小框共角的構造，重畫外框的三個開角，拉長上邊以表示尺度延伸。右上留空與左下實框形成差異。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "date": "2026-11-18",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "30804bb81237572627a0740e3d267e909d15fe5a46b921ef80f2104c59dadc4d",
+        "evidence": [
+          {
+            "path": "docs/review/product-ui-01/compare-dark-1x.png",
+            "sha256": "77eba16cb9db64ecdcc7e6c5716c9163b320c63080cd3293fd0f62a89065c556"
+          },
+          {
+            "path": "docs/review/product-ui-01/compare-dark-2x.png",
+            "sha256": "e33457a2ccf622173a1f9390d2c269183224a236c2177d044e64017ea4794b97"
+          },
+          {
+            "path": "docs/review/product-ui-01/compare-light-1x.png",
+            "sha256": "fb2910b2a8968b20133ca15edf23b8a62ecb1914a1e64fe1d9354ef64f6da8f8"
+          },
+          {
+            "path": "docs/review/product-ui-01/compare-light-2x.png",
+            "sha256": "ecb69273edb33700f07ee3a814aaf8fbda97fb078debbe8f1e4fd5a5bcbb14e3"
+          },
+          {
+            "path": "docs/review/product-ui-01/native-dark-1x.png",
+            "sha256": "fedff76b1d60290ad5d59bde2b337168fd4b60d4e19790cc823d2ac4cd7ec72f"
+          },
+          {
+            "path": "docs/review/product-ui-01/native-dark-2x.png",
+            "sha256": "372e1fa4a990929f81ed48d6a24d826c33548891a00abf8ba3f6561496655330"
+          },
+          {
+            "path": "docs/review/product-ui-01/native-light-1x.png",
+            "sha256": "dc193e451c06905ad3bba72388ab50d79ee705ae2d46f83c0743b88dd79cbc2a"
+          },
+          {
+            "path": "docs/review/product-ui-01/native-light-2x.png",
+            "sha256": "256cbcb6d6926e1589cb0085ab9985abb33ecdf8bf24803a050c58c4d4fa0951"
+          },
+          {
+            "path": "docs/review/product-ui-01/strokes.png",
+            "sha256": "57d4fa3f445301a3e141d116e3d5817bd6dc606754f4e7bc84803edbbbe50aa9"
+          }
+        ]
+      },
+      "designOrigin": {
+        "kind": "adapted-redraw",
+        "author": "Paweł Kuna",
+        "library": "Tabler",
+        "license": "MIT",
+        "copyright": "Copyright (c) 2020-2026 Paweł Kuna",
+        "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+        "reference": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/resize.svg",
+        "licenseFile": "licenses/tabler.txt",
+        "modifications": "Retained the shared corner of two extents. Rebuilt the larger boundary with three open corners sized for native UI controls."
+      }
+    },
+    {
+      "name": "chart-bar-increasing",
+      "purpose": "區分報價成效與其他報表",
+      "recognitionCues": "Lucide 和 Hugeicons 的直柱配有座標軸",
+      "confusableWith": [
+        "chart-bar",
+        "trending-up"
+      ],
+      "sourceObservation": "Lucide 和 Hugeicons 的直柱配有座標軸。這裡採現有 chart-bar 的空心柱寬、基線和柱距，逐柱升高即可與相鄰報表區分。",
+      "references": [
+        {
+          "name": "chart-bar-increasing",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/chart-column-increasing.svg",
+          "localPath": "references/product-ui-01/lucide-chart-column-increasing.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/chart-column-increasing.svg",
+          "sha256": "3c20178ab3fd13fa06176f1e391b50d68bdca07f8116913eb7918fb8d028d524",
+          "license": "ISC AND MIT",
+          "sourceName": "chart-column-increasing",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "chart-bar-increasing",
+          "library": "Hugeicons Free",
+          "repository": "hugeicons/hugeicons",
+          "commit": "834e28d965946c1ee60d080027fe9dae4adc58d0",
+          "path": "icons/chart-column-increasing.svg",
+          "localPath": "references/product-ui-01/huge-chart-column-increasing.svg",
+          "url": "https://github.com/hugeicons/hugeicons/blob/834e28d965946c1ee60d080027fe9dae4adc58d0/icons/chart-column-increasing.svg",
+          "sha256": "f178e0e26c6c5a1e060a7bef8094bfbca052683f08b97cb8de70c788de062a6c",
+          "license": "MIT",
+          "sourceName": "chart-column-increasing",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "status": "visually-reviewed-candidate",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "以連續的結構輪廓和部件之間的留白識別。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "保留單色並以負空間分開各個筆畫。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "輪廓和部件比例已足以表達此用途。"
+        }
+      },
+      "change": {
+        "kind": "new",
+        "before": null,
+        "reason": "Lucide 和 Hugeicons 的直柱配有座標軸。這裡採現有 chart-bar 的空心柱寬、基線和柱距，逐柱升高即可與相鄰報表區分。"
+      },
+      "visualReview": {
+        "reviewer": "Codex (AI)",
+        "date": "2026-11-18",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "corners": [
+          "sharp",
+          "soft",
+          "rounded"
+        ],
+        "themes": [
+          "light",
+          "dark"
+        ],
+        "dpr": [
+          1,
+          2
+        ],
+        "variantsSha256": "70449699b6472ac7ce3cba117771f987bde834e940b79f900260e328e0d050df",
+        "evidence": [
+          {
+            "path": "docs/review/product-ui-01/compare-dark-1x.png",
+            "sha256": "77eba16cb9db64ecdcc7e6c5716c9163b320c63080cd3293fd0f62a89065c556"
+          },
+          {
+            "path": "docs/review/product-ui-01/compare-dark-2x.png",
+            "sha256": "e33457a2ccf622173a1f9390d2c269183224a236c2177d044e64017ea4794b97"
+          },
+          {
+            "path": "docs/review/product-ui-01/compare-light-1x.png",
+            "sha256": "fb2910b2a8968b20133ca15edf23b8a62ecb1914a1e64fe1d9354ef64f6da8f8"
+          },
+          {
+            "path": "docs/review/product-ui-01/compare-light-2x.png",
+            "sha256": "ecb69273edb33700f07ee3a814aaf8fbda97fb078debbe8f1e4fd5a5bcbb14e3"
+          },
+          {
+            "path": "docs/review/product-ui-01/native-dark-1x.png",
+            "sha256": "fedff76b1d60290ad5d59bde2b337168fd4b60d4e19790cc823d2ac4cd7ec72f"
+          },
+          {
+            "path": "docs/review/product-ui-01/native-dark-2x.png",
+            "sha256": "372e1fa4a990929f81ed48d6a24d826c33548891a00abf8ba3f6561496655330"
+          },
+          {
+            "path": "docs/review/product-ui-01/native-light-1x.png",
+            "sha256": "dc193e451c06905ad3bba72388ab50d79ee705ae2d46f83c0743b88dd79cbc2a"
+          },
+          {
+            "path": "docs/review/product-ui-01/native-light-2x.png",
+            "sha256": "256cbcb6d6926e1589cb0085ab9985abb33ecdf8bf24803a050c58c4d4fa0951"
+          },
+          {
+            "path": "docs/review/product-ui-01/strokes.png",
+            "sha256": "57d4fa3f445301a3e141d116e3d5817bd6dc606754f4e7bc84803edbbbe50aa9"
+          }
+        ]
+      }
     }
   ],
   "additions": {
@@ -79873,5 +82567,32 @@
         "remaining": []
       }
     }
-  ]
+  ],
+  "productReview": {
+    "names": [
+      "folder-kanban",
+      "archive-restore",
+      "id-card",
+      "image-plus",
+      "square-plus",
+      "circle-dashed",
+      "play-circle",
+      "pause-circle",
+      "alert-circle",
+      "chevrons-up-down",
+      "chevrons-left-right",
+      "arrow-left-right",
+      "arrow-down-right",
+      "arrow-big-up",
+      "heading-1",
+      "heading-2",
+      "heading-3",
+      "pilcrow",
+      "remove-formatting",
+      "hand-click",
+      "resize",
+      "chart-bar-increasing"
+    ],
+    "page": "docs/review/product-ui-01/index.html"
+  }
 }

@@ -3,7 +3,8 @@ import organizationScope from './organization-scope.json' with {type:'json'};
 import productivityScope from './productivity-scope.json' with {type:'json'};
 import expansionScope from './expansion-scope.json' with {type:'json'};
 import atlasScope from './atlas-scope.json' with {type:'json'};
-const scope=[...uiScope,...organizationScope,...productivityScope,...expansionScope,...atlasScope];
+import productScope from './product-scope.json' with {type:'json'};
+const scope=[...uiScope,...organizationScope,...productivityScope,...expansionScope,...atlasScope,...productScope];
 import {aliases} from './aliases.mjs';
 import {conceptOf} from './concepts.mjs';
 import {brandCatalog} from './brands.mjs';
@@ -46,7 +47,7 @@ const core = groups.flatMap(([category,categoryLabel,icons])=>icons.map(([name,l
   license:'MIT',status:'alpha',
 })));
 const mirrored=new Set(['arrow-left','arrow-right','chevron-left','chevron-right','chevrons-left','chevrons-right','undo','redo']);
-const extra=scope.map(entry=>({...entry,keywords:entry.name.split('-'),pilot:false,component:entry.name.split('-').map(x=>x[0].toUpperCase()+x.slice(1)).join('')+'Icon',license:'MIT',status:'alpha'}));
+const extra=scope.map(entry=>({...entry,keywords:[...entry.name.split('-'),...(entry.keywords||[])],pilot:false,component:entry.name.split('-').map(x=>x[0].toUpperCase()+x.slice(1)).join('')+'Icon',license:'MIT',status:'alpha'}));
 export const catalog=[...core,...extra,...brandCatalog].map(entry=>({...entry,direction:mirrored.has(entry.name)?'mirror':'fixed',keywords:[...new Set([...entry.keywords,...(aliases[entry.name]||[])])],concept:entry.aliasOf||conceptOf[entry.name]||entry.name}));
 export const conceptCount=new Set(catalog.map(x=>x.concept)).size;
 export const categories=[...new Map(catalog.map(x=>[x.category,{id:x.category,label:x.categoryLabel}])).values()];

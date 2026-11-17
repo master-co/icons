@@ -2,7 +2,9 @@
 
 微圓、簡約，為 Dashboard、App 與 Web 介面設計的 SVG 圖示。
 
-Master Icons 著重輪廓、比例、留白與小尺寸的細節取捨。目前為 **0.1.0-alpha.0**，包含 **790 個命名圖示、610 個基本概念**；介面圖示提供 16 / 20 / 24 三種光學尺寸，以及 sharp / soft / rounded 三種角型；品牌圖示按尺寸調整留白、共用角型圖稿，共 **7,110 份 SVG**。方向與狀態版本計入命名數，搜尋別名不另計數。
+Master Icons 著重輪廓、比例、留白與小尺寸的細節取捨。目前為 **0.1.0-alpha.0**，包含 **813 個命名圖示、618 個基本概念**；介面圖示提供 16 / 20 / 24 三種光學尺寸，以及 sharp / soft / rounded 三種角型；品牌圖示按尺寸調整留白、共用角型圖稿，共 **7,317 份 SVG**。方向與狀態版本計入命名數，搜尋別名不另計數。
+
+[產品介面新增圖示與原生尺寸審稿](docs/review/product-ui-01/index.html) · [使用端替代對照](docs/review/product-ui-01/substitutions.md)
 
 ## 設計與輸出
 
@@ -13,7 +15,7 @@ Master Icons 著重輪廓、比例、留白與小尺寸的細節取捨。目前�
 
 圖庫仍在 alpha 階段，圖形與 API 可能調整。這些設計取向不代表所有圖示、顯示尺寸或背景都已達到相同完成度；各批已執行的檢查與限制見 [驗證紀錄](docs/validation.md) 及對應批次報告，報告僅涵蓋其記載的版本與範圍。
 
-品牌分類包含 88 個品牌與平台名稱，包含 Master、GitHub、Figma、Instagram、LINE、YouTube、Claude、OpenAI、ChatGPT、Microsoft、LinkedIn、Slack、Cursor、Supabase、Vite 等。品牌使用單色實心輪廓、個別尺寸留白，三種角型保留相同標誌；不隨描邊設定變形。來源紀錄見 [第三方聲明](THIRD_PARTY_NOTICES.md)。
+品牌分類包含 89 個品牌與平台名稱，包含 Master、GitHub、Figma、Instagram、LINE、YouTube、Claude、OpenAI、ChatGPT、Microsoft、LinkedIn、Slack、Cursor、Supabase、Vite 等。品牌使用單色實心輪廓、個別尺寸留白，三種角型保留相同標誌；不隨描邊設定變形。來源紀錄見 [第三方聲明](THIRD_PARTY_NOTICES.md)。
 
 ## 本地開始使用
 

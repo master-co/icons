@@ -1,5 +1,5 @@
 {
-  "date": "2026-11-17",
+  "date": "2026-11-18",
   "icons": [
     {
       "name": "brand-master",
@@ -528,6 +528,12 @@
       "variantsSha256": "e6de8325187fea90e21f44383d1c6cd367e37355fed6658223268db04dec8461",
       "sourceSha256": "b51a59e1463937286acca1b03bf9dd11df629fcde3f6fa91822f55d7bcb976bd",
       "sheet": 6
+    },
+    {
+      "name": "brand-html5",
+      "variantsSha256": "78f8df00b4fd1e61308a11080037bb7ab45cebb7967d0fa7d02f1b5864a97a7d",
+      "sourceSha256": "dfd65fdd7e4f997c6b163e48793de5ad18c4c99e191807a61752ea702f123d1d",
+      "sheet": 6
     }
   ],
   "evidence": [
@@ -553,7 +559,7 @@
     },
     {
       "path": "docs/review/brands-01/sheet-6-light-1x.png",
-      "sha256": "4275f3acf7afe8376c7d4c7b8748da4e2ebf1a4e8a106b3a060f494ef89fd0ec"
+      "sha256": "bd0d743f4bd81dd74476228f9896d6b98eed44cc1dcf12a1a9e2f73f58bef808"
     },
     {
       "path": "docs/review/brands-01/sheet-1-dark-1x.png",
@@ -577,7 +583,7 @@
     },
     {
       "path": "docs/review/brands-01/sheet-6-dark-1x.png",
-      "sha256": "ef30a899fe4d440f77bb7971e2b4f79455664343e878657040900063f4e4bbf6"
+      "sha256": "7e6e0a4b2392b89648eb82911134c776cbf503075162d8316aa33a8afa116e78"
     },
     {
       "path": "docs/review/brands-01/sheet-1-light-2x.png",
@@ -601,7 +607,7 @@
     },
     {
       "path": "docs/review/brands-01/sheet-6-light-2x.png",
-      "sha256": "855669b99c4a4c4c6e71a186836cdc02c063fc32aefe033c68010935372d4a3a"
+      "sha256": "000db1bd7510a509e67b657b5a31d676f43cea1a4e04cb16d92aeecdb5a51858"
     },
     {
       "path": "docs/review/brands-01/sheet-1-dark-2x.png",
@@ -625,16 +631,16 @@
     },
     {
       "path": "docs/review/brands-01/sheet-6-dark-2x.png",
-      "sha256": "c675ef3d9cdfbb37a43d0cda32396f8b8b55c7d9e963a5bd5d840537b704428b"
+      "sha256": "3645a3887588ec5416fc2dc75b92b5af24bbadf5f879b92e57215a14c0e766ca"
     },
     {
       "path": "docs/review/brands-03/overview.png",
-      "sha256": "9e4c9a9a13f97fea176550611c210c62464f03840742a5194a70bbde28e95fac"
+      "sha256": "fd4a7073dfd82c120dbd451fcb42b5f79cd730bc8aff21cb6a4231b0b1d607b4"
     }
   ],
   "checks": {
     "clippedPaths": 0,
-    "renderedCombinations": 792,
+    "renderedCombinations": 801,
     "themes": [
       "light",
       "dark"

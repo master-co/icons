@@ -3,7 +3,7 @@ import {readFile} from 'node:fs/promises'
 test('requested brand additions can be found and opened at 16px',async({page})=>{
  await page.goto('/icons?category=brands&size=16')
  await expect(page.locator('astro-island[ssr]')).toHaveCount(0)
- for(const [label,slug]of [['OpenAI','openai'],['ChatGPT','chatgpt'],['Microsoft','microsoft'],['LinkedIn','linkedin'],['Slack','slack'],['Cursor','cursor'],['Supabase','supabase'],['Vite','vite'],["Vue.js", "vue-js"],["JavaScript", "javascript"],["Bun", "bun"],["GitHub Copilot", "github-copilot"],["Hugging Face", "hugging-face"],["AWS", "aws"],["Firebase", "firebase"],["PostgreSQL", "postgresql"],["Microsoft Teams", "microsoft-teams"],["Outlook", "outlook"],["Google Meet", "google-meet"],["Canva", "canva"],["Dribbble", "dribbble"],["WordPress", "wordpress"],["Dcard", "dcard"],["Shopee", "shopee"]]){
+ for(const [label,slug]of [['OpenAI','openai'],['ChatGPT','chatgpt'],['Microsoft','microsoft'],['LinkedIn','linkedin'],['Slack','slack'],['Cursor','cursor'],['Supabase','supabase'],['Vite','vite'],["Vue.js", "vue-js"],["JavaScript", "javascript"],["Bun", "bun"],["GitHub Copilot", "github-copilot"],["Hugging Face", "hugging-face"],["AWS", "aws"],["Firebase", "firebase"],["PostgreSQL", "postgresql"],["Microsoft Teams", "microsoft-teams"],["Outlook", "outlook"],["Google Meet", "google-meet"],["Canva", "canva"],["Dribbble", "dribbble"],["WordPress", "wordpress"],["Dcard", "dcard"],["Shopee", "shopee"],["HTML5", "html5"]]){
   await page.getByRole('searchbox',{name:'Search icons',exact:true}).fill(label)
   await page.getByRole('button',{name:label,exact:true}).click()
   const dialog=page.getByRole('dialog'),code=dialog.locator('textarea')
@@ -20,7 +20,7 @@ for(const locale of ['', '/tw'])test(`brands search, identity and download ${loc
  const errors:string[]=[];page.on('pageerror',e=>errors.push(e.message))
  await page.goto(`${locale}/icons?category=brands`)
  await expect(page.locator('astro-island[ssr]')).toHaveCount(0)
- await expect(page.locator('.explorer-tile')).toHaveCount(88)
+ await expect(page.locator('.explorer-tile')).toHaveCount(89)
  const search=page.getByRole('searchbox',{name:locale?'搜尋圖示':'Search icons',exact:true})
  await search.fill('master css');await expect(page.locator('.explorer-tile')).toHaveCount(1)
  await expect(page.locator('.explorer-tile')).toHaveAccessibleName('Master')
