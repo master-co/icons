@@ -59,6 +59,8 @@ assert.equal(escapeXml('<'), '&lt;');
 assert.match(renderSvg(Search), /viewBox="0 0 24 24"/);
 assert.match(renderToStaticMarkup(createElement(SearchIcon,{size:20,label:'Search'})), /aria-label="Search"/);
 assert.match(renderToStaticMarkup(createElement(Fixed)), /viewBox="0 0 16 16"/);
+assert.match(renderToStaticMarkup(createElement(Fixed,{strokeWidth:2})), /stroke-width="1.5"/);
+assert.match(renderToStaticMarkup(createElement(SearchIcon,{strokeWidth:2})), /stroke-width="2"/);
 assert.match(readFileSync(new URL(import.meta.resolve('@master/icons/svg/16/soft/search.svg')),'utf8'), /MIT License/);
 console.log('Packed consumer: data, runtime, dynamic/static React, SVG subpath and notices passed.');
 `);

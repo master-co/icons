@@ -20,7 +20,7 @@ On a package cache miss, unchanged generated modules keep their mtimes and chang
 
 `assets/favicon.svg` and `assets/favicon.ico` are copied from the Master project's `site/public/` (identical to `brand/icon/`); preparation copies these tracked sources into the ignored public directory.
 
-The site pins Master Site 0.2.18, Master CSS 2.1.7, Master UI 0.0.11, Astro 7.4.2, Svelte 5.57.2 and Vite 8.3.5. Shared sections own the document shell, navigation, theme, search and locale controls. Product pages own their content and icon explorer. Package exports remain independent of the website; the explorer fetches one icon definition when opening its details.
+The site pins Master Site 0.2.18, Master CSS 2.1.7, Master UI 0.0.11, Astro 7.4.2, Svelte 5.57.2 and Vite 8.3.5. Shared sections own the document shell, navigation, theme, search and locale controls. Product pages own their content and icon explorer. The homepage uses `@master/icons-astro`. The explorer loads individual generated Svelte icon components only for the visible page and renders inline SVG; it does not load SVG images or CSS masks. Custom stroke specimens use a recursive Svelte SVG component with instance-scoped mask IDs. Their geometry and the copy/download panel share cached per-icon definitions. The framework selector generates React, Vue, Svelte, Preact and Astro examples; custom strokes use the same component imports with `strokeWidth`, selecting the shared, precomputed geometry.
 
 Master Site 0.2.15 includes incremental development updates. Ordinary Astro, Svelte, CSS and MDX edits use HMR; localized frontmatter refreshes its virtual metadata module. Route additions/removals, dynamic params and changes in published locale availability still rebuild the route inventory.
 

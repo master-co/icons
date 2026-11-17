@@ -31,7 +31,7 @@ All frameworks use the same drawings and expose the same icon names. Install onl
 | Preact | `@master/icons-preact` | 11 | 11.2.0 |
 | Astro | `@master/icons-astro` | 7 | 7.4.2 |
 
-Each framework package also has all nine fixed variants at `@master/icons-{framework}/{16|20|24}/{sharp|soft|rounded}`. A generic icon includes its nine drawings; a fixed icon includes only its selected drawing. Both forms tree-shake unused icons.
+Each framework package also has all nine fixed variants at `@master/icons-{framework}/{16|20|24}/{sharp|soft|rounded}`. A generic icon includes nine optical size and corner combinations with their supported stroke widths; a fixed icon includes only its selected size and corner with the supported widths. Both forms tree-shake unused icons.
 
 ### Vue
 
@@ -93,6 +93,8 @@ Astro entries ship native `.astro` components. They render inline SVG without cl
 ## Shared behavior
 
 `size` defaults to 24, `corner` to `soft` and `direction` to `ltr`. Automatic optical selection chooses the nearest of 16, 20 and 24; ties choose the larger. Fixed entries do not accept `corner` or `opticalSize`; changing `size` only scales the selected drawing. CSS width/height do not change the optical drawing.
+
+`strokeWidth` selects precomputed geometry for both dynamic and fixed icons. Values use native viewBox units in 0.25 increments and clamp to 0.75–1.5 (16 px), 1–2 (20 px), or 1.25–2.5 (24 px). Invalid nonpositive, nonfinite or non-quarter-step values throw. Omit it for the original drawing. Cutouts and masks follow the selected width; brand silhouettes keep their shape. Use `:stroke-width="2"` in Vue templates and `strokeWidth={2}` in JSX, Svelte and Astro. The explorer always copies framework component usage, including this prop when needed.
 
 Unlabeled icons are decorative (`aria-hidden`). `label` adds `role="img"` and an accessible name; `aria-label` and `aria-labelledby` are also supported by framework components. `direction="rtl"` mirrors only directional icons. Standard SVG attributes may override defaults, and design options are consumed rather than forwarded as DOM attributes.
 

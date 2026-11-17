@@ -11,7 +11,8 @@ export function draw(name,g){
   // Preserve compact source path grammar (e.g. adjacent .5.6 coordinates).
   // Replacing numeric tokens in-place can merge them and invalidate the path.
   if(name.startsWith('brand-'))return drawings[name](g);
-  return drawings[name](g).map(([tag,attrs])=>[tag,Object.fromEntries(Object.entries(attrs).map(([key,value])=>[key,
+  const normalize=nodes=>nodes.map(([tag,attrs,children])=>[tag,Object.fromEntries(Object.entries(attrs).map(([key,value])=>[key,
     typeof value==='number'?n(value):key==='d'?value.replace(/-?\d*\.?\d+(?:e[-+]?\d+)?/gi,x=>String(n(Number(x)))):value
-  ]))]);
+  ])),...(children?[normalize(children)]:[])]);
+  return normalize(drawings[name](g));
 }

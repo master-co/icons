@@ -1,5 +1,5 @@
 ---
-import { Search, Home, Folder, Bell, Calendar, Settings, Heart, Star, renderSvg } from '@master/icons'
+import { SearchIcon, HomeIcon, FolderIcon, BellIcon, CalendarIcon, SettingsIcon, HeartIcon, StarIcon } from '@master/icons-astro'
 import {readFile} from 'node:fs/promises'
 import DocHeader from '@master/internal-site/components/DocHeader.svelte'
 import Footer from '@master/internal-site/components/Footer.svelte'
@@ -9,7 +9,7 @@ const copy=translations[locale]??translations.en
 const t=(key:string)=>copy[key]??key
 const prefix=locale==='en'?'':`/${locale}`
 const catalog=JSON.parse(await readFile(new URL('../../packages/icons/dist/catalog.json',import.meta.url),'utf8'))
-const samples=[Home,Folder,Search,Bell,Calendar,Settings,Heart,Star]
+const samples=[HomeIcon,FolderIcon,SearchIcon,BellIcon,CalendarIcon,SettingsIcon,HeartIcon,StarIcon]
 export const documentStyles=false
 export const metadata={title:{absolute:'Master Icons — Optical icons for interfaces'},description:'A softly geometric icon library, refined at 16, 20 and 24 pixels. Each size has its own drawing.'}
 export async function generateMetadata({params}:{params:{locale:string}}){const copy=translations[params.locale]??translations.en;return{title:{absolute:copy[metadata.title.absolute]},description:copy[metadata.description]}}
@@ -18,11 +18,11 @@ export async function generateMetadata({params}:{params:{locale:string}}){const 
 <main class="icons-container home-content">
  <section class="home-hero">
   <div><p class="eyebrow">Master Icons / {t('Private alpha')}</p><h1>{t('Quiet lines. Clear meaning.')}</h1><p class="lead">{t('A softly geometric icon library, refined at 16, 20 and 24 pixels. Each size has its own drawing.')}</p><div class="home-actions"><a class="btn btn-lg" href={`${prefix}/icons`}>{t('Explore icons')} <span aria-hidden="true">↗</span></a><a class="btn btn-quiet btn-lg" href={`${prefix}/guide/getting-started`}>{t('Start building')}</a></div></div>
-  <div class="hero-specimen" aria-label={t('Interface icons at their native size.')}><div class="hero-grid">{samples.map(icon=><div class="hero-glyph" set:html={renderSvg(icon,{size:24})}/>)}</div><div class="specimen-foot"><span>24 PX / SOFT</span><span>{t('Native sizes')}</span></div></div>
+  <div class="hero-specimen" aria-label={t('Interface icons at their native size.')}><div class="hero-grid">{samples.map(Icon=><div class="hero-glyph"><Icon size={24}/></div>)}</div><div class="specimen-foot"><span>24 PX / SOFT</span><span>{t('Native sizes')}</span></div></div>
  </section>
  <dl class="home-stats"><div><dt>{t('Named icons')}</dt><dd>{catalog.iconCount}</dd></div><div><dt>{t('Optical sizes')}</dt><dd>16 / 20 / 24</dd></div><div><dt>{t('Corner styles')}</dt><dd>3</dd></div><div><dt>{t('Open source')}</dt><dd>MIT</dd></div></dl>
- <section class="home-feature"><div><p class="eyebrow">01 / {t('Optical sizes')}</p><h2>{t('Small by design.')}</h2><p class="lead">{t('Choose a native optical size for your interface, then choose the corners that belong in it.')}</p></div><div class="size-study">{([16,20,24] as const).map(size=><div><span set:html={renderSvg(Calendar,{size})}/><span set:html={renderSvg(Folder,{size})}/><span set:html={renderSvg(Settings,{size})}/><small>{size} PX</small></div>)}</div></section>
- <section class="home-feature"><div><p class="eyebrow">02 / {t('Corner styles')}</p><h2>{t('One family. Three expressions.')}</h2><p class="lead">{t('The geometry changes with the corner style, including the space inside each shape.')}</p></div><div class="size-study">{(['sharp','soft','rounded'] as const).map(corner=><div><span set:html={renderSvg(Folder,{size:24,corner})}/><span set:html={renderSvg(Calendar,{size:24,corner})}/><small>{t(corner[0].toUpperCase()+corner.slice(1))}</small></div>)}</div></section>
- <section class="home-close"><p class="eyebrow">SVG / JAVASCRIPT / REACT</p><h2>{t('Made to work with your interface.')}</h2><p class="lead">{t('Use plain SVG, a small JavaScript renderer, or React components with optical sizing.')}</p><a class="btn" href={`${prefix}/guide/getting-started`}>{t('Read the guide')}</a><p class="alpha-note">{t('Available through a local workspace or packed archive. Not published to npm yet.')}</p></section>
+ <section class="home-feature"><div><p class="eyebrow">01 / {t('Optical sizes')}</p><h2>{t('Small by design.')}</h2><p class="lead">{t('Choose a native optical size for your interface, then choose the corners that belong in it.')}</p></div><div class="size-study">{([16,20,24] as const).map(size=><div><span><CalendarIcon {size}/></span><span><FolderIcon {size}/></span><span><SettingsIcon {size}/></span><small>{size} PX</small></div>)}</div></section>
+ <section class="home-feature"><div><p class="eyebrow">02 / {t('Corner styles')}</p><h2>{t('One family. Three expressions.')}</h2><p class="lead">{t('The geometry changes with the corner style, including the space inside each shape.')}</p></div><div class="size-study">{(['sharp','soft','rounded'] as const).map(corner=><div><span><FolderIcon size={24} {corner}/></span><span><CalendarIcon size={24} {corner}/></span><small>{t(corner[0].toUpperCase()+corner.slice(1))}</small></div>)}</div></section>
+ <section class="home-close"><p class="eyebrow">SVG / REACT / VUE / SVELTE / PREACT / ASTRO</p><h2>{t('Made to work with your interface.')}</h2><p class="lead">{t('Use plain SVG or optical icon components for React, Vue, Svelte, Preact and Astro.')}</p><a class="btn" href={`${prefix}/guide/getting-started`}>{t('Read the guide')}</a><p class="alpha-note">{t('Available through a local workspace or packed archive. Not published to npm yet.')}</p></section>
 </main>
 <Footer client:load navGroups={[{name:'Navigation',links:[{name:'Icons',href:'/icons'},{name:'Guide',href:'/guide/getting-started'},{name:'License',href:'/guide/license'}]}]}/>

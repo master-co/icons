@@ -7,7 +7,7 @@ import { SearchIcon } from '@master/icons-react';
 <SearchIcon size={20} corner="rounded" label="Search" />
 ```
 
-The dynamic entry includes nine drawings for each imported icon. Components accept standard SVG props, events and refs through `forwardRef`.
+The dynamic entry includes all nine optical size and corner combinations, along with their supported stroke widths, for each imported icon. Components accept standard SVG props, events and refs through `forwardRef`.
 
 ## Fixed icons \{#fixed\}
 
@@ -17,3 +17,14 @@ import { SearchIcon } from '@master/icons-react/16/soft';
 ```
 
 Fixed entries include one optical size and corner style. They do not accept `corner` or `opticalSize`; changing `size` only scales that drawing. Use the same fixed entry across an interface to keep its visual language consistent.
+
+## Custom stroke width \{#stroke-width\}
+
+Use `strokeWidth` with either entry. It selects precomputed geometry, including cutouts and masks, rather than only changing the SVG stroke attribute. The explorer copies the component import with this prop and keeps SVG markup exclusive to the SVG format.
+
+```tsx
+import { SearchIcon } from '@master/icons-react/24/soft';
+<SearchIcon size={48} strokeWidth={2} />
+```
+
+Widths use native viewBox units in 0.25 increments. The ranges are 0.75–1.5 for the 16 px master, 1–2 for 20 px, and 1.25–2.5 for 24 px. Values outside the selected master’s range are clamped; nonpositive, nonfinite or non-quarter-step values throw an error. Omit the prop to use the original drawing. Display `size` scales the entire drawing, including its stroke. Brand silhouettes keep their original shape. Fixed imports include only their selected optical size and corner, with its supported widths; unused icons still tree-shake.

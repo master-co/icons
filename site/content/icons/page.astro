@@ -13,7 +13,7 @@ export const metadata={title:'Browse Master Icons',description:'Interface icons 
 export async function generateMetadata({params}:{params:{locale:string}}){const copy=translations[params.locale]??translations.en;return{title:copy['Browse Master Icons'],description:copy['Interface icons at their native size.']}}
 ---
 <main class="icons-container collection-container" aria-label={t('Browse Master Icons')}>
- <Explorer client:load {entries} {categories} {copy}>
+ <Explorer client:load {entries} {categories} {copy} {locale}>
   <Footer client:load class="explorer-footer" />
  </Explorer>
  <noscript><p>{t('Enable JavaScript for filtering and details. SVG and ZIP downloads remain available.')}</p><a href="/icons/24/soft/search.svg" download>{t('Download SVG')}</a></noscript>

@@ -43,8 +43,9 @@
  .explorer-grid { --explorer-cell-width:max(6.5rem,calc(var(--display-size) * 2.5 + 2.75rem)); --explorer-cell-height:max(7.75rem,calc(var(--display-size) * 2 + 4.75rem)); --explorer-cell-gap:max(1rem,calc(var(--display-size) * .375)); display:grid; grid-template-columns:repeat(auto-fill,minmax(min(100%,var(--explorer-cell-width)),1fr)); gap:0; overflow:hidden; isolation:isolate; }
  .explorer-tile { display:flex; position:relative; flex-direction:column; align-items:center; justify-content:center; gap:var(--explorer-cell-gap); min-height:var(--explorer-cell-height); padding:.75rem .375rem; background:transparent; border:0; color:var(--color-text-strong); border-radius:0; box-shadow:1px 0 var(--color-line-hair),0 1px var(--color-line-hair); cursor:pointer; transition:background .15s; }
  .explorer-cell { display:grid; place-items:center; height:max(2rem,var(--display-size)); }
- .explorer-mask { display:block; background:currentColor; mask-image:var(--glyph); mask-size:contain; mask-repeat:no-repeat; mask-position:center; }
- .explorer-name { font-size:.625rem; color:var(--color-text-muted); max-width:100%; overflow-wrap:anywhere; text-align:center; }
+ .explorer-icon { display:grid; place-items:center; flex-shrink:0; }
+ .explorer-name { font-size:.625rem; max-width:100%; overflow-wrap:anywhere; text-align:center; }
+ .explorer-name, .detail-name { color:color-mix(in oklab,var(--color-text-muted) 75%,var(--color-text-disabled)); }
  .explorer-tile:focus-visible { outline:2px solid var(--color-focus); outline-offset:-3px; z-index:1; }
  .explorer-tile:active { background:var(--color-surface-inset); }
  .explorer-pagination { position:sticky; bottom:var(--collection-inset); align-self:start; display:flex; align-items:center; justify-content:space-between; gap:.5rem; min-height:var(--explorer-footer-height); padding-top:1rem; margin:0; border-top:1px solid var(--color-line-hair); font-size:.75rem; color:var(--color-text-muted); }
@@ -55,19 +56,16 @@
  .optical-row { display:flex; gap:2rem; align-items:end; }
  .optical-cell { display:flex; flex-direction:column; gap:1rem; align-items:center; }
  .size-caption { font-size:.625rem; color:var(--color-text-muted); }
- .explorer-dialog { --dialog-width:36rem; }
- .detail-heading { display:flex; align-items:center; justify-content:space-between; gap:1rem; }
- .detail-heading h2 { font-size:1.25rem; letter-spacing:-.03em; }
- .detail-caption { font-size:.75rem; color:var(--color-text-muted); margin-block:1.5rem; }
- .master-grid { padding:1rem; border-radius:calc(var(--radius-control) * var(--corner-scale)); background:var(--color-surface-tray); margin-block-end:1.5rem; }
- .master-row { display:grid; grid-template-columns:1.3fr repeat(3,1fr); align-items:center; min-height:5rem; font-size:.75rem; }
- .master-cell { display:flex; flex-direction:column; align-items:center; gap:.75rem; }
- .master-cell span { color:var(--color-text-muted); font-size:.625rem; }
- .detail-actions { display:flex; gap:.5rem; flex-wrap:wrap; margin-top:1rem; }
- .copy-status { min-height:1.5rem; font-size:.75rem; margin-top:.75rem; }
+ .explorer-dialog { --dialog-width:54rem; }
+ .detail-name { display:block; margin-top:.25rem; font-size:.75rem; font-weight:400; letter-spacing:normal; }
+ .master-grid { display:grid; gap:.375rem; }
+ .master-row { display:grid; grid-template-columns:4.5rem repeat(3,minmax(0,1fr)); gap:.375rem; align-items:center; font-size:.75rem; }
+ .master-cell { min-width:0; }
+ .copy-status { font-size:.75rem; color:var(--color-text-muted); }
+ .copy-status:empty { display:none; }
  @media (hover:hover) { .explorer-tile:hover { background:var(--color-surface-chip); } }
  @media (prefers-reduced-motion:reduce) { .explorer-tile { transition:none; } }
- @media (forced-colors:active) { .explorer-mask { background:CanvasText; } .explorer-tile { border:1px solid ButtonText; } }
+ @media (forced-colors:active) { .explorer-icon { color:CanvasText; } .explorer-tile { border:1px solid ButtonText; } }
  @media (pointer:coarse) { .explorer { --explorer-page-button:2.75rem; } }
  @media (width < 64rem) {
   .collection-container { --collection-gutter:var(--ui-space-lg); }

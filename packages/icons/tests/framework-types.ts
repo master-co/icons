@@ -7,8 +7,8 @@ import { SearchIcon as SvelteFixed } from '@master/icons-svelte/20/sharp';
 
 h(VueSearch, { size: 20, opticalSize: 16, corner: 'rounded', onClick: (event: MouseEvent) => event.preventDefault() });
 h(VueFixed, { size: 32 });
-const vue: VueProps = { size: 16, class: 'icon' };
-const svelte: SvelteProps<typeof SvelteSearch> = { size: 16, corner: 'soft', onclick: event => event.preventDefault() };
+const vue: VueProps = { size: 16, strokeWidth:1, class: 'icon' };
+const svelte: SvelteProps<typeof SvelteSearch> = { size: 16, strokeWidth:1, corner: 'soft', onclick: event => event.preventDefault() };
 // @ts-expect-error fixed Vue master
 const invalidVue: VueFixedProps = { corner: 'sharp' };
 // @ts-expect-error fixed Svelte master

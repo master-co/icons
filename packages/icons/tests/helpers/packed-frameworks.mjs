@@ -13,16 +13,16 @@ import { bundle, importBundle, repo } from './framework-build.mjs';
 export async function checkPackedFrameworks(consumer) {
   const frameworkNames = ['vue', 'preact', 'svelte', 'astro'];
   const source = frameworkNames.flatMap(framework => [
-    `export { SearchIcon as ${framework} } from '@master/icons-${framework}';`,
+    `export { SearchIcon as ${framework}, BellOffIcon as ${framework}Masked } from '@master/icons-${framework}';`,
     `export { SearchIcon as ${framework}Fixed } from '@master/icons-${framework}/16/soft';`,
   ]).join('\n');
   const icons = await importBundle(await bundle(source, { resolveDir: consumer }));
   const astro = await experimental_AstroContainer.create();
   const renderers = {
-    vue: component => renderVue(vueElement(component, { size: 32, label: 'Search' })),
-    preact: component => renderPreact(preactElement(component, { size: 32, label: 'Search' })),
-    svelte: async component => (await renderSvelte(component, { props: { size: 32, label: 'Search' } })).body,
-    astro: component => astro.renderToString(component, { props: { size: 32, label: 'Search' } }),
+    vue: (component, strokeWidth) => renderVue(vueElement(component, { size: 32, label: 'Search', strokeWidth })),
+    preact: (component, strokeWidth) => renderPreact(preactElement(component, { size: 32, label: 'Search', strokeWidth })),
+    svelte: async (component, strokeWidth) => (await renderSvelte(component, { props: { size: 32, label: 'Search', strokeWidth } })).body,
+    astro: (component, strokeWidth) => astro.renderToString(component, { props: { size: 32, label: 'Search', strokeWidth } }),
   };
   for (const framework of frameworkNames) {
     for (const fixed of [false, true]) {
@@ -30,7 +30,12 @@ export async function checkPackedFrameworks(consumer) {
       assert.match(html, new RegExp(`viewBox="0 0 ${fixed ? 16 : 24} ${fixed ? 16 : 24}"`));
       assert.match(html, /aria-label="Search"/);
       assert.match(html, /width="32"/);
+      const custom=await renderers[framework](icons[`${framework}${fixed ? 'Fixed' : ''}`],2);
+      assert.match(custom,new RegExp(`stroke-width="${fixed?1.5:2}"`));
     }
+    const masked=await renderers[framework](icons[framework+'Masked'],2);
+    assert.match(masked,/<mask /);
+    assert.doesNotMatch(masked,/strokeWidth=/);
   }
 
   // Real Astro + Svelte consumer: exercise package exports and framework tooling,
@@ -43,21 +48,23 @@ export default defineConfig({ integrations: [svelte()], devToolbar: { enabled: f
 `);
   await writeFile(resolve(consumer, 'src/Consumer.svelte'), `
 <script>
-  import { SearchIcon } from '@master/icons-svelte';
+  import { SearchIcon, BellOffIcon } from '@master/icons-svelte';
   import { ArrowRightIcon } from '@master/icons-svelte/16/soft';
 </script>
 <SearchIcon size={20} corner="rounded" label="Svelte search" />
 <ArrowRightIcon size={32} direction="rtl" />
+<BellOffIcon strokeWidth={2} />
 `);
   await writeFile(resolve(consumer, 'src/pages/index.astro'), `
 ---
-import { SearchIcon } from '@master/icons-astro';
+import { SearchIcon, BellOffIcon } from '@master/icons-astro';
 import { ArrowRightIcon } from '@master/icons-astro/16/soft';
 import Consumer from '../Consumer.svelte';
 ---
 <html lang="en"><head><title>Framework package smoke test</title></head><body>
 <SearchIcon size={20} corner="rounded" label="Astro search" class:list={['icon', { active: true }]} />
 <ArrowRightIcon size={32} direction="rtl" />
+<BellOffIcon strokeWidth={2} />
 <Consumer client:load />
 </body></html>
 `);
@@ -71,5 +78,8 @@ import Consumer from '../Consumer.svelte';
   assert.match(html, /class="icon active"/);
   assert.match(html, /translate\(16 0\) scale\(-1 1\)/);
   assert.match(html, /astro-island/);
+  assert.match(html, /stroke-width="2"/);
+  const ids=[...html.matchAll(/\bid="([^"]+)"/g)].map(match=>match[1]);
+  assert.equal(new Set(ids).size,ids.length);
   console.log('Packed Vue, Preact, Svelte and Astro: generic/fixed SSR and real Astro + Svelte consumer build passed.');
 }

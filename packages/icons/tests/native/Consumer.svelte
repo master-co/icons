@@ -4,5 +4,5 @@
   let element = $state<SVGSVGElement>();
 </script>
 
-<SearchIcon size={20} opticalSize={16} corner="rounded" label="Search" bind:ref={element} onclick={event => event.currentTarget.focus()} />
-<Fixed size={32} class="icon" aria-label="Search" />
+<SearchIcon strokeWidth={1.5} size={20} opticalSize={16} corner="rounded" label="Search" bind:ref={element} onclick={event => event.currentTarget.focus()} />
+<Fixed strokeWidth={1} size={32} class="icon" aria-label="Search" />

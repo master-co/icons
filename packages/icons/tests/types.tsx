@@ -22,3 +22,8 @@ renderSvg(Search,{size:18,corner:'soft',opticalSize:'auto',label:'搜尋'});
 <SelectionIcon size={16} corner="sharp" label="框選" />;
 <DatabaseBackupIcon opticalSize={20} ref={createRef<SVGSVGElement>()} />;
 <GitPullRequestIcon size={24} direction="rtl" />;
+
+<SearchIcon strokeWidth={2} />;
+<StaticSearch strokeWidth={1} />;
+// @ts-expect-error geometry selection uses a numeric stroke width
+<SearchIcon strokeWidth="2" />;

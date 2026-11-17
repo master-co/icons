@@ -13,7 +13,7 @@ await lockGeneration(repo);
 const {sizes,corners,context,specifications}=await import('../src/geometry.mjs');
 const {draw}=await import('../src/drawings.mjs');
 const {catalog,pilot,categories,conceptCount}=await import('../src/catalog.mjs');
-const {renderSvg}=await import('../src/runtime.mjs');
+const {renderSvg,strokeWidths,strokeRanges}=await import('../src/runtime.mjs');
 const {preservedNotices,adaptedSources}=await import('../src/provenance.mjs');
 const {brandNotice}=await import('../src/brands.mjs');
 const started=performance.now();
@@ -50,10 +50,19 @@ for(const entry of catalog){
   const variants={};
   for(const size of sizes){variants[size]={};for(const corner of corners){
     const ctx=context(size,corner);
-    variants[size][corner]={nodes:draw(entry.name,ctx),strokeWidth:ctx.stroke};
+    const strokes={};
+    const [min,max]=strokeRanges[size];
+    for(const stroke of strokeWidths.filter(width=>width>=min&&width<=max)){
+      strokes[stroke]={nodes:draw(entry.name,{...ctx,stroke,variableStroke:true}),strokeWidth:stroke};
+    }
+    variants[size][corner]={nodes:draw(entry.name,ctx),strokeWidth:ctx.stroke,strokes};
   }}
   const definition={name:entry.name,direction:entry.direction,variants};
-  definitions[entry.name]=definition;
+  // Review snapshots keep the original masters' shape and hashes. Framework
+  // modules carry the extra widths; adding support must not rewrite art evidence.
+  definitions[entry.name]={...definition,variants:Object.fromEntries(sizes.map(size=>[size,Object.fromEntries(corners.map(corner=>{
+    const {strokes,...master}=variants[size][corner];return [corner,master];
+  }))]))};
   const dataName=entry.component.replace(/Icon$/,'');
   await put(`dist/data/${entry.name}.js`,`export const ${dataName} = ${JSON.stringify(definition)};\n`);
   await put(`dist/data/${entry.name}.d.ts`,`import type { IconDefinition } from '../runtime.js';\nexport const ${dataName}: IconDefinition;\n`);

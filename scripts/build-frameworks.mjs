@@ -44,8 +44,8 @@ for(const group of [null,...sizes.flatMap(size=>corners.map(corner=>({size,corne
       const render=fixed?'staticIconElement':'iconElement';
       const args=fixed?`master, ${direction}, props`:`${dataName}, props`;
       source=`${dataImport}\nimport { ${render} } from '${base}runtime.js';\n`;
-      if(framework==='react')source+=`import { forwardRef } from 'react';\nexport const ${entry.component} = /* @__PURE__ */ forwardRef(function ${entry.component}(props, ref) { return ${render}(${fixed?`master, ${direction}`:dataName}, {...props, ref}); });\n`;
-      else source+=`export function ${entry.component}(props) { return ${render}(${args}); }\n${framework==='vue'?`${entry.component}.inheritAttrs = false;\n`:''}`;
+      if(framework==='react')source+=`import { forwardRef, useId } from 'react';\nexport const ${entry.component} = /* @__PURE__ */ forwardRef(function ${entry.component}(props, ref) { return ${render}(${fixed?`master, ${direction}`:dataName}, {...props, ref}, useId()); });\n`;
+      else source+=`${framework==='preact'?"import { useId } from 'preact/hooks';\n":''}export function ${entry.component}(props) { return ${render}(${args}${framework==='preact'?', useId()':''}); }\n${framework==='vue'?`${entry.component}.inheritAttrs = false;\n`:''}`;
     }else if(framework==='svelte'){
       source=`${fixed?'':`<script module>\n${dataImport}\n</script>\n`}
 <script lang="ts">

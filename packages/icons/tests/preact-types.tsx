@@ -8,3 +8,5 @@ import { SearchIcon as Fixed } from '@master/icons-preact/16/soft';
 <Fixed opticalSize={24} />;
 // @ts-expect-error numeric sizes only
 <SearchIcon size="1em" />;
+
+<SearchIcon strokeWidth={2} />;

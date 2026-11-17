@@ -1,6 +1,6 @@
 import {readFile, writeFile, mkdir, readdir, rm} from 'node:fs/promises';
 import {resolve, dirname} from 'node:path';
-import {fileURLToPath} from 'node:url';
+import {fileURLToPath,pathToFileURL} from 'node:url';
 import {contentCache} from './content-cache.mjs';
 import {lockGeneration} from './generation-lock.mjs';
 import {zipSync, strToU8} from 'fflate';
@@ -8,13 +8,12 @@ import {strokeWidths,strokeWidthsFor} from './stroke-width.mjs';
 const root=fileURLToPath(new URL('../../',import.meta.url));
 export async function buildStrokes({force=false}={}) {
   await lockGeneration(root);
-  const {context,sizes,corners}=await import('../../packages/icons/src/geometry.mjs');
-  const {draw}=await import('../../packages/icons/src/drawings.mjs');
+  const {sizes,corners}=await import('../../packages/icons/src/geometry.mjs');
   const {renderSvg}=await import('../../packages/icons/src/runtime.mjs');
   const started=performance.now();
   const out=resolve(root,'work/stroke-assets');
   const cache=await contentCache({
-    inputs:['packages/icons/src','scripts/lib/build-strokes.mjs','scripts/lib/stroke-width.mjs','scripts/lib/content-cache.mjs','scripts/lib/generation-lock.mjs','packages/icons/dist/definitions.json','packages/icons/dist/catalog.json','LICENSE','THIRD_PARTY_NOTICES.md','licenses','bun.lock'].map(path=>resolve(root,path)),
+    inputs:['packages/icons/src','packages/icons/scripts/build.mjs','scripts/lib/build-strokes.mjs','scripts/lib/stroke-width.mjs','scripts/lib/content-cache.mjs','scripts/lib/generation-lock.mjs','packages/icons/dist/definitions.json','packages/icons/dist/catalog.json','LICENSE','THIRD_PARTY_NOTICES.md','licenses','bun.lock'].map(path=>resolve(root,path)),
     outputs:[out],file:resolve(root,'work/cache/strokes.json'),force
   });
   if(cache.hit){console.log(`Strokes: content cache hit (${Math.round(performance.now()-started)}ms)`);return out;}
@@ -23,6 +22,11 @@ export async function buildStrokes({force=false}={}) {
   const put=async(path,body)=>{const file=resolve(out,path),dir=dirname(file);if(!directories.has(dir)){await mkdir(dir,{recursive:true});directories.add(dir);}await writeFile(file,body);};
   const catalog=JSON.parse(await readFile(resolve(root,'packages/icons/dist/catalog.json'),'utf8'));
   const definitions=JSON.parse(await readFile(resolve(root,'packages/icons/dist/definitions.json'),'utf8'));
+  const strokeDefinitions={};
+  for(const entry of catalog.icons){
+    const data=await import(pathToFileURL(resolve(root,`packages/icons/dist/data/${entry.name}.js`)).href);
+    strokeDefinitions[entry.name]=data[entry.component.replace(/Icon$/,'')];
+  }
   const license=await readFile(resolve(root,'LICENSE'),'utf8');
   const common={LICENSE:strToU8(license),'THIRD_PARTY_NOTICES.md':strToU8(await readFile(resolve(root,'THIRD_PARTY_NOTICES.md'),'utf8'))};
   for(const name of await readdir(resolve(root,'licenses')))common['licenses/'+name]=strToU8(await readFile(resolve(root,'licenses',name),'utf8'));
@@ -33,9 +37,9 @@ export async function buildStrokes({force=false}={}) {
       for(const size of sizes.filter(s=>strokeWidthsFor(s).includes(width))) {
         variants[size]={};
         for(const corner of corners) {
-          const g={...context(size,corner),stroke:width,variableStroke:true};
-          try{variants[size][corner]={strokeWidth:width,nodes:draw(entry.name,g)};}
-          catch(error){throw new Error(`${entry.name}/${size}/${corner}/stroke-${width}`,{cause:error});}
+          const master=strokeDefinitions[entry.name].variants[size][corner].strokes?.[width];
+          if(!master)throw new Error(`Build core first: missing ${entry.name}/${size}/${corner}/stroke-${width}`);
+          variants[size][corner]=master;
         }
       }
       (definition.strokes??={})[width]=variants;

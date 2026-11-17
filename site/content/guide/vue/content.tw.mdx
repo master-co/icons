@@ -17,7 +17,7 @@ import { SearchIcon } from '@master/icons-vue';
 </template>
 ```
 
-動態入口會為每個匯入的圖示包含九份圖稿，與 React 和 SVG 共用相同幾何。`size` 會選擇最近的光學圖稿；`corner` 預設為 `soft`。
+動態入口會為每個匯入的圖示包含九種光學尺寸與圓角組合，以及各組合支援的線寬圖稿，與 React 和 SVG 共用相同幾何。`size` 會選擇最近的光學圖稿；`corner` 預設為 `soft`。
 
 ## 固定圖示 \{#fixed\}
 
@@ -39,4 +39,18 @@ import { SearchIcon } from '@master/icons-vue/16/soft';
 
 沒有標籤的圖示會視為裝飾。對有意義的圖示使用 `label`、`aria-label` 或 `aria-labelledby`，或替外層按鈕命名，詳見[無障礙](/guide/accessibility)。
 
-在圖庫選擇此框架並使用預設線寬時，程式碼選單會複製固定元件的匯入用法。若調整了自訂線寬，則會複製此框架可用的 inline SVG 標記，保留所選圖形的實際幾何。
+## 自訂線寬 \{#stroke-width\}
+
+動態與固定入口都接受 `strokeWidth`。它會選用預先計算的圖稿，連同挖空與遮罩一起更新，而非只修改 SVG 的線寬屬性。圖庫會複製附有此 prop 的元件匯入用法；只有選擇 SVG 格式時才輸出 SVG 標記。
+
+```vue
+<script setup lang="ts">
+import { SearchIcon } from '@master/icons-vue/24/soft';
+</script>
+
+<template>
+  <SearchIcon :size="48" :stroke-width="2" />
+</template>
+```
+
+線寬採用原生 viewBox 座標單位，以 0.25 為間距：16 px 母版支援 0.75–1.5，20 px 支援 1–2，24 px 支援 1.25–2.5。超出所選母版範圍的值會限制在上下限；非正數、非有限數或不符合 0.25 間距的值會拋出錯誤。省略此 prop 即使用原始圖稿。顯示尺寸 `size` 會連同線寬一起縮放；品牌剪影則維持原始形狀。固定入口只包含所選尺寸與圓角支援的線寬，未使用的圖示仍可被 tree-shaking 移除。

@@ -1,4 +1,5 @@
 // Authoring-only Boolean geometry. PathKit/WASM never enters SVG or React output.
+import {createHash} from 'node:crypto';
 import {readFile} from 'node:fs/promises';
 import {contour} from './geometry.mjs';
 import {createRequire} from 'node:module';
@@ -65,7 +66,34 @@ export function offsetRegion(region,distance) {
 // Structural seams meet their own shell; they do not receive badge clearance.
 // Clip expanded seam ink to the closed shell's interior, then retain the shell
 // stroke. This prevents endpoint caps from protruding beyond rounded corners.
+// Explorer-only variable-width output retains live strokes. SVG masks/clip
+// paths avoid unstable Boolean operations on coincident edges at new widths.
+// Fixed-width package artwork continues through the original PathKit pipeline.
+const group=(nodes,attrs={})=>['g',attrs,nodes];
+const solid=node=>[node[0],{...node[1],fill:'currentColor',stroke:'none'},node[2]];
+function masked(nodes,paint,g) {
+  const id='stroke-'+createHash('sha256').update(JSON.stringify([nodes,paint,g.s,g.stroke,g.corner])).digest('hex').slice(0,20);
+  const box={x:-g.s*4,y:-g.s*4,width:g.s*9,height:g.s*9};
+  return [['defs',{},[['mask',{id,...box,maskUnits:'userSpaceOnUse','mask-type':'luminance'},paint]]],group(nodes,{mask:`url(#${id})`})];
+}
+const whiteCanvas=g=>['rect',{x:-g.s*4,y:-g.s*4,width:g.s*9,height:g.s*9,fill:'white',stroke:'none'}];
+function expanded(nodes,g,gap) {
+  return nodes.map(([tag,a,children])=>{
+    if(tag==='defs')return [tag,a,children];
+    if(children)return [tag,a,expanded(children,g,gap)];
+    // Dilate the actual painted outline, not its centerline: square caps and
+    // sharp miters must retain their real envelope before the round offset.
+    // Keep each outline separate; SVG unions the black mask coverage without
+    // asking Skia to Boolean coincident edges at arbitrary widths.
+    const {transform,...attrs}=a,ink=paintedRegion([[tag,attrs]],g);
+    try{return ['path',{d:regionPathData(ink),fill:'currentColor',stroke:'currentColor',
+      'stroke-width':gap*2,'stroke-linejoin':'round','stroke-linecap':'round',
+      'fill-rule':ink.getFillTypeString(),...(transform?{transform}:{})}];}
+    finally{ink.delete();}
+  });
+}
 export function enclosedDetails(outline,details,g) {
+  if(g.variableStroke)return [outline,...masked(details,[group([solid(outline)],{color:'white'})],g)];
   const inside=geometry(outline),ink=paintedRegion(details,g);
   try{
     if(!ink.op(inside,P.PathOp.INTERSECT))throw new Error('Detail containment failed');
@@ -76,6 +104,7 @@ export function enclosedDetails(outline,details,g) {
 // Retain the shell stroke and the stem's exposed end cap; only remove ink
 // inside the closed shell. Unlike badge knockout this creates no clearance.
 export function exteriorDetails(outline,details,g) {
+  if(g.variableStroke)return [outline,...masked(details,[whiteCanvas(g),group([solid(outline)],{color:'black'})],g)];
   const inside=geometry(outline),ink=paintedRegion(details,g);
   try{
     if(!ink.op(inside,P.PathOp.DIFFERENCE))throw new Error('Exterior attachment clipping failed');
@@ -90,6 +119,12 @@ export function joinedArrow(shaft,head,points,g) {
   const length=Math.hypot(tip[0]-mid[0],tip[1]-mid[1]);
   const axis=[(tip[0]-mid[0])/length,(tip[1]-mid[1])/length],side=[-axis[1],axis[0]],far=g.s*4;
   const at=(u,v)=>[mid[0]+axis[0]*u+side[0]*v,mid[1]+axis[1]*u+side[1]*v];
+  if(g.variableStroke){
+    const rear=contour([at(0,-far),at(0,far),at(-far,far),at(-far,-far)],0,true);
+    const paint=[whiteCanvas(g),['circle',{cx:tip[0],cy:tip[1],r:g.stroke*2+g.tip,fill:'black',stroke:'none'}],
+      group([solid(rear),solid(head),head],{color:'white'})];
+    return [...masked(shaft,paint,g),head];
+  }
   const allowed=geometry(contour([at(0,-far),at(0,far),at(-far,far),at(-far,-far)],0,true));
   const wedge=geometry(head),edge=paintedRegion([head],g),ink=paintedRegion(shaft,g);
   const forbidden=geometry(['circle',{cx:tip[0],cy:tip[1],r:g.stroke*2+g.tip}]);
@@ -104,6 +139,12 @@ export function joinedArrow(shaft,head,points,g) {
   }finally{allowed.delete();wedge.delete();edge.delete();ink.delete();forbidden.delete();}
 }
 export function knockout(background,foreground,g,{silhouettes=[]}={}) {
+  if(g.variableStroke){
+    // Nested arrow masks are preserved; expand live strokes, and include solid
+    // badge interiors so background lines never show through their holes.
+    const exclusion=[...expanded(foreground,g,clearance(g)),...expanded(silhouettes.map(solid),g,clearance(g))];
+    return [...masked(background,[whiteCanvas(g),group(exclusion,{color:'black'})],g),...foreground];
+  }
   const back=paintedRegion(background,g),front=paintedRegion(foreground,g);
   let exclusion;
   try{

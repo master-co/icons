@@ -16,7 +16,7 @@ import { SearchIcon } from '@master/icons-react';
 import { SearchIcon as SmallSearch } from '@master/icons-react/16/soft';
 ```
 
-Dynamic components select among 16, 20 and 24 px optical sizes and sharp, soft and rounded corners. Fixed imports contain one drawing and still accept a display `size`. Unused icons can be tree-shaken. Direct component imports are also available at `@master/icons-react/icons/search` and `@master/icons-react/16/soft/search`.
+Dynamic components select among 16, 20 and 24 px optical sizes and sharp, soft and rounded corners. Fixed imports contain one optical size and corner with its supported stroke widths, and still accept a display `size`. Both entries accept numeric `strokeWidth` in 0.25 increments to select precomputed stroke geometry. Unused icons can be tree-shaken. Direct component imports are also available at `@master/icons-react/icons/search` and `@master/icons-react/16/soft/search`.
 
 See the [shared usage guide](../icons/README.md) for props, accessibility, direction and framework examples. Geometry and its applicable artwork notices are supplied by `@master/icons`; code is MIT licensed.
 

@@ -1,17 +1,19 @@
 import { h } from 'preact';
-import { resolveIcon } from '@master/icons/runtime';
-import { iconPresentation } from '@master/icons/presentation';
+import { resolveIcon, resolveStroke } from '@master/icons/runtime';
+import { iconPresentation, scopeNodes } from '@master/icons/presentation';
 
-function drawPreact(master, directionPolicy, props) {
+const elements = nodes => nodes.map(([tag, attrs, children], key) => h(tag, { ...attrs, key }, children ? elements(children) : undefined));
+function drawPreact(master, directionPolicy, props, scope) {
+  master = resolveStroke(master, props.strokeWidth ?? props['stroke-width']);
   const { attributes, transform } = iconPresentation(master, directionPolicy, props);
-  const nodes = master.nodes.map(([tag, attrs], key) => h(tag, { ...attrs, key }));
+  const nodes = elements(scopeNodes(master.nodes, scope));
   return h('svg', attributes, transform ? h('g', { transform }, nodes) : nodes);
 }
 
-export function iconElement(definition, props = {}) {
-  return drawPreact(resolveIcon(definition, props), definition.direction, props);
+export function iconElement(definition, props = {}, scope) {
+  return drawPreact(resolveIcon(definition, props), definition.direction, props, scope);
 }
 
-export function staticIconElement(master, directionPolicy, props = {}) {
-  return drawPreact(master, directionPolicy, props);
+export function staticIconElement(master, directionPolicy, props = {}, scope) {
+  return drawPreact(master, directionPolicy, props, scope);
 }

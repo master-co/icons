@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { ArrowRightIcon } from '@master/icons-svelte';
+  import { ArrowRightIcon, BellOffIcon } from '@master/icons-svelte';
   import { SearchIcon as Fixed } from '@master/icons-svelte/16/soft';
   import type { IconProps } from '@master/icons-svelte';
   let { onclick }: { onclick?: (event: MouseEvent) => void } = $props();
@@ -9,4 +9,4 @@
   export function getElement() { return element; }
 </script>
 
-<div><ArrowRightIcon {...options} {onclick} bind:ref={element} /><Fixed size={40} /></div>
+<div><ArrowRightIcon {...options} {onclick} bind:ref={element} /><Fixed size={40} /><BellOffIcon {...options} /><BellOffIcon {...options} /></div>

@@ -1,16 +1,22 @@
 ---
-import type { IconDefinition, ResolvedIcon } from '@master/icons/runtime';
+import {resolveStroke, serializeNodes, type IconDefinition, type ResolvedIcon} from '@master/icons/runtime';
 import type { IconProps } from './types.js';
-import { iconPresentation } from '@master/icons/presentation';
+import { iconPresentation, scopeNodes } from '@master/icons/presentation';
 
 type Props = IconProps & { master: ResolvedIcon; directionPolicy: IconDefinition['direction'] };
 const { master, directionPolicy, ...props } = Astro.props;
-const { attributes, transform } = iconPresentation(master, directionPolicy, props);
+const selected = resolveStroke(master, props.strokeWidth ?? props['stroke-width'] as number | undefined);
+const { attributes, transform } = iconPresentation(selected, directionPolicy, props);
+// A request-local sequence stays deterministic and does not leak across renders.
+const key = Symbol.for('@master/icons/astro-id');
+const ids = Astro.locals as Record<symbol, number>;
+const scope = `a${ids[key] = (ids[key] ?? 0) + 1}`;
+const content = serializeNodes(scopeNodes(selected.nodes, scope));
 ---
 
 <svg {...attributes}>
   {transform
-    ? <g transform={transform}>{master.nodes.map(([Tag, attrs]) => <Tag {...attrs} />)}</g>
-    : master.nodes.map(([Tag, attrs]) => <Tag {...attrs} />)}
+    ? <g transform={transform}><Fragment set:html={content} /></g>
+    : <Fragment set:html={content} />}
   <slot />
 </svg>

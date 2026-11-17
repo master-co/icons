@@ -1,6 +1,6 @@
 // Shared by the two explorers. Widths are in native viewBox units.
-export const strokeWidths = Object.freeze([0.75, 1, 1.25, 1.5, 1.75, 2, 2.25, 2.5]);
-export const strokeRanges = Object.freeze({16:Object.freeze([0.75,1.5]),20:Object.freeze([1,2]),24:Object.freeze([1.25,2.5])});
+import {strokeWidths,strokeRanges} from '../../packages/icons/src/runtime.mjs';
+export {strokeWidths,strokeRanges};
 export const strokeWidthsFor = size => strokeWidths.filter(w=>w>=strokeRanges[size][0]&&w<=strokeRanges[size][1]);
 export function clampStroke(width,size) {
   if(width==null)return null;

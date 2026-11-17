@@ -28,6 +28,8 @@ test('sidebar dividers align with controls and scroll viewports preserve keyboar
  await page.setViewportSize({width:1440,height:600})
  await page.goto('/icons')
  await expect(page.locator('astro-island[ssr]')).toHaveCount(0)
+ // Lazy icon modules can still change layout after the island hydrates.
+ await expect(page.locator('.explorer-tile svg')).toHaveCount(96)
  const sidebar=page.locator('.explorer-sidebar')
  const edge=(await sidebar.boundingBox())!
  for(const selector of ['.explorer-toolbar','.explorer-categories > span','.explorer-categories nav','.explorer-pagination','.explorer-search input']){
@@ -118,7 +120,7 @@ for(const [locale,search] of [['','Search icons'],['/tw','搜尋圖示']]){
   await expect(page.locator('h1')).toContainText(locale?'安靜的線條':'Quiet lines')
   await page.getByRole('link',{name:locale?'探索圖示':'Explore icons',exact:false}).click()
   await expect(page).toHaveURL(new RegExp(`${locale}/icons`))
-  for(const slug of ['getting-started','svg','react','optical-sizes','accessibility','license']){
+  for(const slug of ['getting-started','svg','react','vue','svelte','preact','astro','optical-sizes','accessibility','license']){
    const result=await page.goto(`${locale}/guide/${slug}`);expect(result?.status()).toBe(200)
    await expect(page.locator('html')).toHaveAttribute('lang',locale?'zh-TW':'en')
    await expect(page.locator('h1')).toBeVisible()
@@ -149,7 +151,7 @@ test('larger display sizes use valid masters and export the selected dimensions'
  await slider.press('Home')
  for(const size of [16,20,24,32,48,64]){
   await expect(slider).toHaveAttribute('aria-valuetext',`${size} px`)
-  await expect(page.getByTestId('icon-grid').locator('.explorer-mask').first()).toHaveCSS('width',`${size}px`)
+  await expect(page.getByTestId('icon-grid').locator('.explorer-icon').first()).toHaveCSS('width',`${size}px`)
   await expect(page).toHaveURL(new RegExp(`size=${size}`))
   if(size!==64)await slider.press('ArrowRight')
  }
@@ -161,6 +163,7 @@ test('larger display sizes use valid masters and export the selected dimensions'
  await expect(dialog.locator('textarea')).toHaveValue(/width="64" height="64" viewBox="0 0 24 24"/)
  await expect(dialog.locator('.master-cell svg')).toHaveCount(9)
  await page.evaluate(()=>Object.defineProperty(navigator,'clipboard',{value:{writeText:()=>Promise.reject(new Error('denied'))},configurable:true}))
+ await dialog.getByRole('combobox',{name:'Code format',exact:true}).selectOption('react')
  await dialog.getByRole('button',{name:'Copy React',exact:true}).click()
  await expect(dialog.locator('textarea')).toHaveValue(/@master\/icons-react\/24\/rounded/)
  await expect(dialog.locator('textarea')).toHaveValue(/size=\{64\}/)
@@ -183,7 +186,7 @@ test('size guidance is disclosed by the help tooltip without occupying a field r
   await page.goto(`${locale}/icons?size=64`)
   await expect(page.locator('astro-island[ssr]')).toHaveCount(0)
   const help=page.getByRole('button',{name:label,exact:true})
-  const tip=page.locator('.tooltip[popover="hint"]')
+  const tip=page.locator(`[id="${await help.getAttribute('popovertarget')}"]`)
   const geometry=await help.evaluate(button=>{
    const row=button.parentElement!
    const withHelp=row.getBoundingClientRect().height
@@ -244,7 +247,7 @@ test('larger icons reduce column density and retain room on narrow screens',asyn
   await page.setViewportSize({width,height:844})
   expect(await page.evaluate(()=>document.documentElement.scrollWidth)).toBe(width)
   const tile=(await grid.locator('button').first().boundingBox())!
-  const icon=(await grid.locator('.explorer-mask').first().boundingBox())!
+  const icon=(await grid.locator('.explorer-icon').first().boundingBox())!
   expect(icon.x-tile.x).toBeGreaterThan(24)
  }
  await page.getByRole('button',{name:'Size comparison',exact:true}).click()
