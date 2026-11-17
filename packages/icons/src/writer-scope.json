@@ -1,0 +1,1106 @@
+[
+  {
+    "name": "heading-4",
+    "label": "四級標題",
+    "category": "typography",
+    "categoryLabel": "進階文字編輯",
+    "keywords": [
+      "h4",
+      "level-four"
+    ]
+  },
+  {
+    "name": "heading-5",
+    "label": "五級標題",
+    "category": "typography",
+    "categoryLabel": "進階文字編輯",
+    "keywords": [
+      "h5",
+      "level-five"
+    ]
+  },
+  {
+    "name": "heading-6",
+    "label": "六級標題",
+    "category": "typography",
+    "categoryLabel": "進階文字編輯",
+    "keywords": [
+      "h6",
+      "level-six"
+    ]
+  },
+  {
+    "name": "hard-break",
+    "label": "插入強制換行",
+    "category": "typography",
+    "categoryLabel": "進階文字編輯",
+    "keywords": [
+      "setHardBreak",
+      "shift-enter",
+      "換行符號"
+    ]
+  },
+  {
+    "name": "nonbreaking-space",
+    "label": "不斷行空格",
+    "category": "typography",
+    "categoryLabel": "進階文字編輯",
+    "keywords": [
+      "nbsp",
+      "no-break-space",
+      "不換行空白"
+    ]
+  },
+  {
+    "name": "soft-hyphen",
+    "label": "選擇性連字號",
+    "category": "typography",
+    "categoryLabel": "進階文字編輯",
+    "keywords": [
+      "discretionary-hyphen",
+      "shy",
+      "軟連字號"
+    ]
+  },
+  {
+    "name": "tab-stop-left",
+    "label": "靠左定位點",
+    "category": "typography",
+    "categoryLabel": "進階文字編輯",
+    "keywords": [
+      "left-tab",
+      "tabulator",
+      "左定位"
+    ]
+  },
+  {
+    "name": "tab-stop-right",
+    "label": "靠右定位點",
+    "category": "typography",
+    "categoryLabel": "進階文字編輯",
+    "keywords": [
+      "right-tab",
+      "tabulator",
+      "右定位"
+    ]
+  },
+  {
+    "name": "tab-stop-center",
+    "label": "置中定位點",
+    "category": "typography",
+    "categoryLabel": "進階文字編輯",
+    "keywords": [
+      "center-tab",
+      "tabulator",
+      "置中定位"
+    ]
+  },
+  {
+    "name": "tab-stop-decimal",
+    "label": "小數點定位",
+    "category": "typography",
+    "categoryLabel": "進階文字編輯",
+    "keywords": [
+      "decimal-tab",
+      "tabulator",
+      "小數點對齊"
+    ]
+  },
+  {
+    "name": "find-next",
+    "label": "下一個符合項目",
+    "category": "editor",
+    "categoryLabel": "內容編輯",
+    "keywords": [
+      "next-match",
+      "findNext",
+      "尋找下一個"
+    ]
+  },
+  {
+    "name": "find-previous",
+    "label": "上一個符合項目",
+    "category": "editor",
+    "categoryLabel": "內容編輯",
+    "keywords": [
+      "previous-match",
+      "findPrevious",
+      "尋找上一個"
+    ]
+  },
+  {
+    "name": "replace",
+    "label": "取代一處",
+    "category": "editor",
+    "categoryLabel": "內容編輯",
+    "keywords": [
+      "replace-one",
+      "substitute",
+      "取代文字"
+    ]
+  },
+  {
+    "name": "replace-all",
+    "label": "全部取代",
+    "category": "editor",
+    "categoryLabel": "內容編輯",
+    "keywords": [
+      "replaceAll",
+      "substitute-all",
+      "全部替換"
+    ]
+  },
+  {
+    "name": "match-whole-word",
+    "label": "全字匹配",
+    "category": "editor",
+    "categoryLabel": "內容編輯",
+    "keywords": [
+      "whole-word",
+      "wholeWord",
+      "純文字比對"
+    ]
+  },
+  {
+    "name": "search-selection",
+    "label": "在選取範圍尋找",
+    "category": "editor",
+    "categoryLabel": "內容編輯",
+    "keywords": [
+      "find-in-selection",
+      "selected-text",
+      "範圍搜尋"
+    ]
+  },
+  {
+    "name": "spell-check",
+    "label": "拼字檢查",
+    "category": "editor",
+    "categoryLabel": "內容編輯",
+    "keywords": [
+      "spellcheck",
+      "spelling",
+      "拼字校正"
+    ]
+  },
+  {
+    "name": "spell-check-off",
+    "label": "停用拼字檢查",
+    "category": "editor",
+    "categoryLabel": "內容編輯",
+    "keywords": [
+      "spellcheck-off",
+      "disable-spelling",
+      "停止校正"
+    ]
+  },
+  {
+    "name": "word-count",
+    "label": "字數統計",
+    "category": "editor",
+    "categoryLabel": "內容編輯",
+    "keywords": [
+      "wordCount",
+      "words",
+      "字詞數"
+    ]
+  },
+  {
+    "name": "character-count",
+    "label": "字元統計",
+    "category": "editor",
+    "categoryLabel": "內容編輯",
+    "keywords": [
+      "characterCount",
+      "characters",
+      "字符數"
+    ]
+  },
+  {
+    "name": "list-alpha",
+    "label": "字母編號清單",
+    "category": "editor",
+    "categoryLabel": "內容編輯",
+    "keywords": [
+      "alphabetical-list",
+      "upper-alpha",
+      "英文字母編號"
+    ]
+  },
+  {
+    "name": "list-roman",
+    "label": "羅馬數字清單",
+    "category": "editor",
+    "categoryLabel": "內容編輯",
+    "keywords": [
+      "roman-numerals",
+      "lower-roman",
+      "羅馬編號"
+    ]
+  },
+  {
+    "name": "list-restart",
+    "label": "重新編號",
+    "category": "editor",
+    "categoryLabel": "內容編輯",
+    "keywords": [
+      "restart-numbering",
+      "start-at-one",
+      "從一開始"
+    ]
+  },
+  {
+    "name": "list-continue",
+    "label": "接續編號",
+    "category": "editor",
+    "categoryLabel": "內容編輯",
+    "keywords": [
+      "continue-numbering",
+      "resume-list",
+      "延續編號"
+    ]
+  },
+  {
+    "name": "block-copy",
+    "label": "複製區塊",
+    "category": "editor",
+    "categoryLabel": "內容編輯",
+    "keywords": [
+      "duplicate-block",
+      "cloneNode",
+      "區塊副本"
+    ]
+  },
+  {
+    "name": "block-delete",
+    "label": "刪除區塊",
+    "category": "editor",
+    "categoryLabel": "內容編輯",
+    "keywords": [
+      "deleteNode",
+      "remove-block",
+      "移除區塊"
+    ]
+  },
+  {
+    "name": "block-insert-above",
+    "label": "在區塊上方插入",
+    "category": "editor",
+    "categoryLabel": "內容編輯",
+    "keywords": [
+      "insertContentAt",
+      "insert-before",
+      "前插區塊"
+    ]
+  },
+  {
+    "name": "block-insert-below",
+    "label": "在區塊下方插入",
+    "category": "editor",
+    "categoryLabel": "內容編輯",
+    "keywords": [
+      "insert-after",
+      "insertContent",
+      "後插區塊"
+    ]
+  },
+  {
+    "name": "block-move-up",
+    "label": "上移區塊",
+    "category": "editor",
+    "categoryLabel": "內容編輯",
+    "keywords": [
+      "move-block-up",
+      "reorder-block",
+      "向上排序"
+    ]
+  },
+  {
+    "name": "block-move-down",
+    "label": "下移區塊",
+    "category": "editor",
+    "categoryLabel": "內容編輯",
+    "keywords": [
+      "move-block-down",
+      "reorder-block",
+      "向下排序"
+    ]
+  },
+  {
+    "name": "table-header-cell",
+    "label": "表頭儲存格",
+    "category": "table-layout",
+    "categoryLabel": "表格結構與面板",
+    "keywords": [
+      "toggleHeaderCell",
+      "th",
+      "標頭單格"
+    ]
+  },
+  {
+    "name": "table-cell-next",
+    "label": "下一個儲存格",
+    "category": "table-layout",
+    "categoryLabel": "表格結構與面板",
+    "keywords": [
+      "goToNextCell",
+      "next-cell",
+      "下一格"
+    ]
+  },
+  {
+    "name": "table-cell-previous",
+    "label": "上一個儲存格",
+    "category": "table-layout",
+    "categoryLabel": "表格結構與面板",
+    "keywords": [
+      "goToPreviousCell",
+      "previous-cell",
+      "上一格"
+    ]
+  },
+  {
+    "name": "cell-align-top",
+    "label": "儲存格頂端對齊",
+    "category": "table-layout",
+    "categoryLabel": "表格結構與面板",
+    "keywords": [
+      "vertical-align-top",
+      "cell-content",
+      "文字置頂"
+    ]
+  },
+  {
+    "name": "cell-align-middle",
+    "label": "儲存格垂直置中",
+    "category": "table-layout",
+    "categoryLabel": "表格結構與面板",
+    "keywords": [
+      "vertical-align-middle",
+      "cell-content",
+      "文字置中"
+    ]
+  },
+  {
+    "name": "cell-align-bottom",
+    "label": "儲存格底端對齊",
+    "category": "table-layout",
+    "categoryLabel": "表格結構與面板",
+    "keywords": [
+      "vertical-align-bottom",
+      "cell-content",
+      "文字置底"
+    ]
+  },
+  {
+    "name": "table-column-width",
+    "label": "調整欄寬",
+    "category": "table-layout",
+    "categoryLabel": "表格結構與面板",
+    "keywords": [
+      "colwidth",
+      "column-resize",
+      "欄寬"
+    ]
+  },
+  {
+    "name": "table-row-height",
+    "label": "調整列高",
+    "category": "table-layout",
+    "categoryLabel": "表格結構與面板",
+    "keywords": [
+      "row-height",
+      "row-resize",
+      "列高"
+    ]
+  },
+  {
+    "name": "table-transpose",
+    "label": "表格轉置",
+    "category": "table-layout",
+    "categoryLabel": "表格結構與面板",
+    "keywords": [
+      "transpose",
+      "swap-axes",
+      "行列互換"
+    ]
+  },
+  {
+    "name": "table-insert",
+    "label": "插入表格",
+    "category": "table-layout",
+    "categoryLabel": "表格結構與面板",
+    "keywords": [
+      "insertTable",
+      "create-table",
+      "建立表格"
+    ]
+  },
+  {
+    "name": "border-all",
+    "label": "所有框線",
+    "category": "table-layout",
+    "categoryLabel": "表格結構與面板",
+    "keywords": [
+      "cell-borders",
+      "all-borders",
+      "全框線"
+    ]
+  },
+  {
+    "name": "border-none",
+    "label": "無框線",
+    "category": "table-layout",
+    "categoryLabel": "表格結構與面板",
+    "keywords": [
+      "border-clear",
+      "border-none",
+      "清除框線"
+    ]
+  },
+  {
+    "name": "border-outer",
+    "label": "外框線",
+    "category": "table-layout",
+    "categoryLabel": "表格結構與面板",
+    "keywords": [
+      "border-outer",
+      "outside-borders",
+      "外側框線"
+    ]
+  },
+  {
+    "name": "border-inner",
+    "label": "內框線",
+    "category": "table-layout",
+    "categoryLabel": "表格結構與面板",
+    "keywords": [
+      "border-inner",
+      "inside-borders",
+      "內部框線"
+    ]
+  },
+  {
+    "name": "border-horizontal",
+    "label": "水平內框線",
+    "category": "table-layout",
+    "categoryLabel": "表格結構與面板",
+    "keywords": [
+      "inside-horizontal",
+      "horizontal-border",
+      "橫框線"
+    ]
+  },
+  {
+    "name": "border-vertical",
+    "label": "垂直內框線",
+    "category": "table-layout",
+    "categoryLabel": "表格結構與面板",
+    "keywords": [
+      "inside-vertical",
+      "vertical-border",
+      "直框線"
+    ]
+  },
+  {
+    "name": "border-top",
+    "label": "上框線",
+    "category": "table-layout",
+    "categoryLabel": "表格結構與面板",
+    "keywords": [
+      "cell-border-top",
+      "top-edge",
+      "頂部框線"
+    ]
+  },
+  {
+    "name": "border-bottom",
+    "label": "下框線",
+    "category": "table-layout",
+    "categoryLabel": "表格結構與面板",
+    "keywords": [
+      "cell-border-bottom",
+      "bottom-edge",
+      "底部框線"
+    ]
+  },
+  {
+    "name": "border-left",
+    "label": "左框線",
+    "category": "table-layout",
+    "categoryLabel": "表格結構與面板",
+    "keywords": [
+      "cell-border-left",
+      "left-edge",
+      "左側框線"
+    ]
+  },
+  {
+    "name": "border-right",
+    "label": "右框線",
+    "category": "table-layout",
+    "categoryLabel": "表格結構與面板",
+    "keywords": [
+      "cell-border-right",
+      "right-edge",
+      "右側框線"
+    ]
+  },
+  {
+    "name": "image-align-left",
+    "label": "圖片靠左",
+    "category": "editor",
+    "categoryLabel": "內容編輯",
+    "keywords": [
+      "align-image-left",
+      "靠左圖片"
+    ]
+  },
+  {
+    "name": "image-align-center",
+    "label": "圖片置中",
+    "category": "editor",
+    "categoryLabel": "內容編輯",
+    "keywords": [
+      "align-image-center",
+      "置中圖片"
+    ]
+  },
+  {
+    "name": "image-align-right",
+    "label": "圖片靠右",
+    "category": "editor",
+    "categoryLabel": "內容編輯",
+    "keywords": [
+      "align-image-right",
+      "靠右圖片"
+    ]
+  },
+  {
+    "name": "image-wrap-left",
+    "label": "圖片置左並環繞",
+    "category": "editor",
+    "categoryLabel": "內容編輯",
+    "keywords": [
+      "float-left",
+      "wrap-right",
+      "左圖右文"
+    ]
+  },
+  {
+    "name": "image-wrap-right",
+    "label": "圖片置右並環繞",
+    "category": "editor",
+    "categoryLabel": "內容編輯",
+    "keywords": [
+      "float-right",
+      "wrap-left",
+      "右圖左文"
+    ]
+  },
+  {
+    "name": "image-inline",
+    "label": "行內圖片",
+    "category": "editor",
+    "categoryLabel": "內容編輯",
+    "keywords": [
+      "inline-image",
+      "inline-node",
+      "行內媒體"
+    ]
+  },
+  {
+    "name": "image-caption",
+    "label": "圖片說明",
+    "category": "editor",
+    "categoryLabel": "內容編輯",
+    "keywords": [
+      "figcaption",
+      "caption",
+      "圖說"
+    ]
+  },
+  {
+    "name": "image-alt",
+    "label": "替代文字",
+    "category": "editor",
+    "categoryLabel": "內容編輯",
+    "keywords": [
+      "alt-text",
+      "set-alt",
+      "無障礙圖片"
+    ]
+  },
+  {
+    "name": "image-replace",
+    "label": "替換圖片",
+    "category": "editor",
+    "categoryLabel": "內容編輯",
+    "keywords": [
+      "replace-image",
+      "swap-image",
+      "更換圖片"
+    ]
+  },
+  {
+    "name": "image-off",
+    "label": "隱藏圖片",
+    "category": "editor",
+    "categoryLabel": "內容編輯",
+    "keywords": [
+      "image-disabled",
+      "photo-off",
+      "停用圖片"
+    ]
+  },
+  {
+    "name": "message-reply",
+    "label": "回覆留言",
+    "category": "communication",
+    "categoryLabel": "人物與通訊",
+    "keywords": [
+      "reply-thread",
+      "comment-reply",
+      "回覆討論"
+    ]
+  },
+  {
+    "name": "message-quote",
+    "label": "引用留言",
+    "category": "communication",
+    "categoryLabel": "人物與通訊",
+    "keywords": [
+      "quoted-comment",
+      "block-comment",
+      "引述留言"
+    ]
+  },
+  {
+    "name": "message-pin",
+    "label": "釘選留言",
+    "category": "communication",
+    "categoryLabel": "人物與通訊",
+    "keywords": [
+      "pin-thread",
+      "pinned-comment",
+      "置頂討論"
+    ]
+  },
+  {
+    "name": "message-pen",
+    "label": "編輯留言",
+    "category": "communication",
+    "categoryLabel": "人物與通訊",
+    "keywords": [
+      "edit-comment",
+      "edit-thread",
+      "修改留言"
+    ]
+  },
+  {
+    "name": "message-x",
+    "label": "刪除留言",
+    "category": "communication",
+    "categoryLabel": "人物與通訊",
+    "keywords": [
+      "delete-thread",
+      "remove-comment",
+      "移除留言"
+    ]
+  },
+  {
+    "name": "message-off",
+    "label": "隱藏留言",
+    "category": "communication",
+    "categoryLabel": "人物與通訊",
+    "keywords": [
+      "hide-comments",
+      "disable-comments",
+      "關閉討論"
+    ]
+  },
+  {
+    "name": "message-clock",
+    "label": "稍後處理留言",
+    "category": "communication",
+    "categoryLabel": "人物與通訊",
+    "keywords": [
+      "defer-thread",
+      "pending-comment",
+      "待辦討論"
+    ]
+  },
+  {
+    "name": "message-reopen",
+    "label": "重新開啟討論",
+    "category": "communication",
+    "categoryLabel": "人物與通訊",
+    "keywords": [
+      "unresolve-thread",
+      "reopen-comment",
+      "重開留言",
+      "unresolveThread"
+    ]
+  },
+  {
+    "name": "thread-next",
+    "label": "下一則討論",
+    "category": "communication",
+    "categoryLabel": "人物與通訊",
+    "keywords": [
+      "next-thread",
+      "next-comment",
+      "下一則留言"
+    ]
+  },
+  {
+    "name": "thread-previous",
+    "label": "上一則討論",
+    "category": "communication",
+    "categoryLabel": "人物與通訊",
+    "keywords": [
+      "previous-thread",
+      "previous-comment",
+      "上一則留言"
+    ]
+  },
+  {
+    "name": "inline-math",
+    "label": "行內公式",
+    "category": "math",
+    "categoryLabel": "數學符號",
+    "keywords": [
+      "inlineMath",
+      "latex-inline",
+      "行內數學",
+      "insertInlineMath"
+    ]
+  },
+  {
+    "name": "block-math",
+    "label": "區塊公式",
+    "category": "math",
+    "categoryLabel": "數學符號",
+    "keywords": [
+      "blockMath",
+      "display-math",
+      "數學區塊",
+      "insertBlockMath"
+    ]
+  },
+  {
+    "name": "integral",
+    "label": "積分",
+    "category": "math",
+    "categoryLabel": "數學符號",
+    "keywords": [
+      "integral",
+      "calculus",
+      "微積分"
+    ]
+  },
+  {
+    "name": "product-symbol",
+    "label": "連乘",
+    "category": "math",
+    "categoryLabel": "數學符號",
+    "keywords": [
+      "product",
+      "pi-operator",
+      "連乘積"
+    ]
+  },
+  {
+    "name": "matrix",
+    "label": "矩陣",
+    "category": "math",
+    "categoryLabel": "數學符號",
+    "keywords": [
+      "matrix",
+      "array",
+      "方陣"
+    ]
+  },
+  {
+    "name": "nth-root",
+    "label": "高次方根",
+    "category": "math",
+    "categoryLabel": "數學符號",
+    "keywords": [
+      "nth-root",
+      "indexed-radical",
+      "次方根"
+    ]
+  },
+  {
+    "name": "factorial",
+    "label": "階乘",
+    "category": "math",
+    "categoryLabel": "數學符號",
+    "keywords": [
+      "factorial",
+      "n-factorial",
+      "階乘運算"
+    ]
+  },
+  {
+    "name": "less-than-or-equal",
+    "label": "小於等於",
+    "category": "math",
+    "categoryLabel": "數學符號",
+    "keywords": [
+      "less-equal",
+      "leq",
+      "不大於"
+    ]
+  },
+  {
+    "name": "greater-than-or-equal",
+    "label": "大於等於",
+    "category": "math",
+    "categoryLabel": "數學符號",
+    "keywords": [
+      "greater-equal",
+      "geq",
+      "不小於"
+    ]
+  },
+  {
+    "name": "approximately-equal",
+    "label": "約等於",
+    "category": "math",
+    "categoryLabel": "數學符號",
+    "keywords": [
+      "approx",
+      "asymp",
+      "近似等於"
+    ]
+  },
+  {
+    "name": "page-number",
+    "label": "頁碼",
+    "category": "layout",
+    "categoryLabel": "應用與版面",
+    "keywords": [
+      "page-number",
+      "pagination",
+      "頁次"
+    ]
+  },
+  {
+    "name": "page-margins",
+    "label": "頁面邊界",
+    "category": "layout",
+    "categoryLabel": "應用與版面",
+    "keywords": [
+      "page-margins",
+      "inset",
+      "邊距"
+    ]
+  },
+  {
+    "name": "page-orientation-portrait",
+    "label": "直向紙張",
+    "category": "layout",
+    "categoryLabel": "應用與版面",
+    "keywords": [
+      "orientation-portrait",
+      "portrait-mode",
+      "直式頁面"
+    ]
+  },
+  {
+    "name": "page-orientation-landscape",
+    "label": "橫向紙張",
+    "category": "layout",
+    "categoryLabel": "應用與版面",
+    "keywords": [
+      "orientation-landscape",
+      "landscape-mode",
+      "橫式頁面"
+    ]
+  },
+  {
+    "name": "facing-pages",
+    "label": "對頁檢視",
+    "category": "layout",
+    "categoryLabel": "應用與版面",
+    "keywords": [
+      "two-page-view",
+      "facing-pages",
+      "跨頁"
+    ]
+  },
+  {
+    "name": "page-add",
+    "label": "新增頁面",
+    "category": "layout",
+    "categoryLabel": "應用與版面",
+    "keywords": [
+      "insert-page",
+      "add-page",
+      "插頁"
+    ]
+  },
+  {
+    "name": "page-duplicate",
+    "label": "複製頁面",
+    "category": "layout",
+    "categoryLabel": "應用與版面",
+    "keywords": [
+      "duplicate-page",
+      "clone-page",
+      "複本頁"
+    ]
+  },
+  {
+    "name": "fit-page-width",
+    "label": "符合頁寬",
+    "category": "layout",
+    "categoryLabel": "應用與版面",
+    "keywords": [
+      "fit-width",
+      "zoom-to-width",
+      "適合寬度"
+    ]
+  },
+  {
+    "name": "fit-page-height",
+    "label": "符合頁高",
+    "category": "layout",
+    "categoryLabel": "應用與版面",
+    "keywords": [
+      "fit-height",
+      "zoom-to-height",
+      "適合高度"
+    ]
+  },
+  {
+    "name": "print-preview",
+    "label": "預覽列印",
+    "category": "layout",
+    "categoryLabel": "應用與版面",
+    "keywords": [
+      "print-preview",
+      "proof",
+      "預覽輸出"
+    ]
+  },
+  {
+    "name": "suggestion-insert",
+    "label": "建議新增文字",
+    "category": "editor",
+    "categoryLabel": "內容編輯",
+    "keywords": [
+      "insertion",
+      "tracked-insert",
+      "插入修訂",
+      "addTrackedInsertion"
+    ]
+  },
+  {
+    "name": "suggestion-delete",
+    "label": "建議刪除文字",
+    "category": "editor",
+    "categoryLabel": "內容編輯",
+    "keywords": [
+      "deletion",
+      "tracked-delete",
+      "刪除修訂",
+      "addTrackedDeletion"
+    ]
+  },
+  {
+    "name": "accept-change",
+    "label": "接受修訂",
+    "category": "editor",
+    "categoryLabel": "內容編輯",
+    "keywords": [
+      "accept-suggestion",
+      "approve-change",
+      "套用建議",
+      "acceptSuggestion"
+    ]
+  },
+  {
+    "name": "reject-change",
+    "label": "拒絕修訂",
+    "category": "editor",
+    "categoryLabel": "內容編輯",
+    "keywords": [
+      "reject-suggestion",
+      "discard-change",
+      "拒絕建議",
+      "rejectSuggestion"
+    ]
+  },
+  {
+    "name": "accept-all-changes",
+    "label": "接受全部修訂",
+    "category": "editor",
+    "categoryLabel": "內容編輯",
+    "keywords": [
+      "accept-all",
+      "approve-all",
+      "全部接受",
+      "acceptAllSuggestions"
+    ]
+  },
+  {
+    "name": "reject-all-changes",
+    "label": "拒絕全部修訂",
+    "category": "editor",
+    "categoryLabel": "內容編輯",
+    "keywords": [
+      "reject-all",
+      "discard-all",
+      "全部拒絕",
+      "rejectAllSuggestions"
+    ]
+  },
+  {
+    "name": "compare-documents",
+    "label": "比較文件",
+    "category": "editor",
+    "categoryLabel": "內容編輯",
+    "keywords": [
+      "document-diff",
+      "compare-versions",
+      "比對文件"
+    ]
+  },
+  {
+    "name": "version-restore",
+    "label": "還原文件版本",
+    "category": "editor",
+    "categoryLabel": "內容編輯",
+    "keywords": [
+      "restore-version",
+      "rollback",
+      "恢復版本"
+    ]
+  },
+  {
+    "name": "version-save",
+    "label": "保存版本",
+    "category": "editor",
+    "categoryLabel": "內容編輯",
+    "keywords": [
+      "save-version",
+      "snapshot",
+      "儲存快照"
+    ]
+  },
+  {
+    "name": "track-changes",
+    "label": "追蹤修訂",
+    "category": "editor",
+    "categoryLabel": "內容編輯",
+    "keywords": [
+      "tracked-changes",
+      "suggest-mode",
+      "修訂模式",
+      "toggleTrackedChanges"
+    ]
+  }
+]

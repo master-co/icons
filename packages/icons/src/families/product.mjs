@@ -53,6 +53,9 @@ function exchange(g) {
 function headingLevel(g, level) {
   const f = figure(g);
   const digits = {
+    4: 'M19.6 19V10.5L14.8 16H21.5',
+    5: 'M20.6 10.6H16L15.6 14.4C18.4 13.2 21.1 14.2 20.8 16.8C20.5 19.4 17.2 20 15.1 18.2',
+    6: 'M20 10.4C17.5 10.8 15.3 13.6 15.4 16.1C15.5 19.8 20.8 20.2 20.9 16.7C21 13.8 17.2 13.2 15.5 15.9',
     1: 'M16 13L18.8 10.7V19',
     2: 'M15.3 12.8C15.8 9.8 20.6 9.7 20.6 12.7C20.6 14.6 18.5 15.6 15.5 19H21',
     3: 'M15.5 11.5C17.7 9.5 20.8 10.6 20.4 12.9C20.2 14.2 18.9 14.8 17.3 14.8C19.3 14.7 20.9 15.4 20.9 17.1C20.9 19.5 17.4 20.2 15.4 18.2',
@@ -123,6 +126,9 @@ export const productDrawings = {
   'heading-1': g => headingLevel(g,1),
   'heading-2': g => headingLevel(g,2),
   'heading-3': g => headingLevel(g,3),
+  'heading-4': g => headingLevel(g,4),
+  'heading-5': g => headingLevel(g,5),
+  'heading-6': g => headingLevel(g,6),
   pilcrow(g) {
     const f = figure(g);
     return [f.path('M20 4.25H9.75C3 4.25 3 13.75 9.75 13.75H12'),

@@ -1,0 +1,602 @@
+{
+  "heading-4": {
+    "group": "字元與定位",
+    "peer": "heading-3",
+    "decision": "四的斜筆落在橫腰，保留與既有 H 相同的頂線和基線。",
+    "sourceObservation": "兩份字樣的 4 都保留開頭斜筆。沿用 H1–H3 的字幹寬度，四的橫腰穿過右柱。"
+  },
+  "heading-5": {
+    "group": "字元與定位",
+    "peer": "heading-2",
+    "decision": "五的上橫與下腹分別以平筆及圓弧收尾，使輪廓與二分開。",
+    "sourceObservation": "參考稿在數字上保留短頂橫，候選稿把下方字腹加深，與 6 的內孔拉開。"
+  },
+  "heading-6": {
+    "group": "字元與定位",
+    "peer": "heading-3",
+    "decision": "由右上起筆折回封閉字腹，和 H3 開放的雙弧並排區分。",
+    "sourceObservation": "參考字樣的上半部向內捲。保留下半封閉字腹，短直徑仍能與 H5 的開口區分。"
+  },
+  "hard-break": {
+    "group": "字元與定位",
+    "peer": "keyboard-return",
+    "decision": "上方短行結束後，折返箭頭向左切到新行，維持與單顆 Return 鍵不同的文字情境。",
+    "sourceObservation": "上方短行結束後，折返箭頭向左切到新行，維持與單顆 Return 鍵不同的文字情境。"
+  },
+  "nonbreaking-space": {
+    "group": "字元與定位",
+    "peer": "text-cursor",
+    "decision": "以開頂的空白托線配中央小環，與一般鍵盤空白鍵區分。",
+    "sourceObservation": "以開頂的空白托線配中央小環，與一般鍵盤空白鍵區分。"
+  },
+  "soft-hyphen": {
+    "group": "字元與定位",
+    "peer": "minus",
+    "decision": "右端向下折成 ¬ 形的可見排版記號，和單純的短橫及離開段落的折箭區分。",
+    "sourceObservation": "兩份短橫參考交代連字號本體，右端下折補出選擇性連字號的記號。"
+  },
+  "tab-stop-left": {
+    "group": "字元與定位",
+    "peer": "align-left",
+    "decision": "以尺規上的 L 形定位符標示起排端，橫筆向右伸展。",
+    "sourceObservation": "以尺規上的 L 形定位符標示起排端，橫筆向右伸展。"
+  },
+  "tab-stop-right": {
+    "group": "字元與定位",
+    "peer": "align-right",
+    "decision": "定位短柱留在右端，底筆向左，和左定位成對。",
+    "sourceObservation": "定位短柱留在右端，底筆向左，和左定位成對。"
+  },
+  "tab-stop-center": {
+    "group": "字元與定位",
+    "peer": "align-center",
+    "decision": "置中定位符的直柱居於橫腳中點，尺規基線獨立。",
+    "sourceObservation": "置中定位符的直柱居於橫腳中點，尺規基線獨立。"
+  },
+  "tab-stop-decimal": {
+    "group": "字元與定位",
+    "peer": "align-center",
+    "decision": "在置中定位符右側留一個獨立的小數點，避免與尺規刻度相連。",
+    "sourceObservation": "在置中定位符右側留一個獨立的小數點，避免與尺規刻度相連。"
+  },
+  "find-next": {
+    "group": "尋找與校對",
+    "peer": "search",
+    "decision": "放大鏡右側向下的箭頭，沿文件順序跳到下一筆。",
+    "sourceObservation": "放大鏡右側向下的箭頭，沿文件順序跳到下一筆。"
+  },
+  "find-previous": {
+    "group": "尋找與校對",
+    "peer": "search",
+    "decision": "同一鏡身旁換成上箭頭，鏡柄的位置維持固定。",
+    "sourceObservation": "同一鏡身旁換成上箭頭，鏡柄的位置維持固定。"
+  },
+  "replace": {
+    "group": "尋找與校對",
+    "peer": "refresh",
+    "decision": "從上方圓形沿折箭移至下方方形，表示單次取代。",
+    "sourceObservation": "參考造型有來回兩支箭。這裡把來源畫成圓、結果畫成方，折箭只指出一次替換。"
+  },
+  "replace-all": {
+    "group": "尋找與校對",
+    "peer": "repeat",
+    "decision": "同一折箭指向兩個結果，靠目的端的數量區分批次操作。",
+    "sourceObservation": "對照稿用重複的結果標記表示全部取代。把第二個框移向右上，露邊跟折箭分開。"
+  },
+  "match-whole-word": {
+    "group": "尋找與校對",
+    "peer": "text",
+    "decision": "字形下方的邊界括線包住完整字寬，避免與大小寫開關混淆。",
+    "sourceObservation": "同義稿把完整字形收進底部括線。用一個 W 取代兩個並列短 T，端點與括線留白。"
+  },
+  "search-selection": {
+    "group": "尋找與校對",
+    "peer": "file-search",
+    "decision": "四個選取角包住小鏡面，表示搜尋範圍受到限制。",
+    "sourceObservation": "四個選取角包住小鏡面，表示搜尋範圍受到限制。"
+  },
+  "spell-check": {
+    "group": "尋找與校對",
+    "peer": "check",
+    "decision": "大寫字母旁置勾號，將拼字校對和一般核准區分。",
+    "sourceObservation": "大寫字母旁置勾號，將拼字校對和一般核准區分。"
+  },
+  "spell-check-off": {
+    "group": "尋找與校對",
+    "peer": "eye-off",
+    "decision": "校對字母與勾號共用母型，前景斜線在交疊處保持淨空。",
+    "sourceObservation": "覆蓋符號的斜線在兩處切開字母，勾號的右上端保持可見。"
+  },
+  "word-count": {
+    "group": "尋找與校對",
+    "peer": "list",
+    "decision": "用分開的詞段作計數對象，底下的數字符號表示統計。",
+    "sourceObservation": "用分開的詞段作計數對象，底下的數字符號表示統計。"
+  },
+  "character-count": {
+    "group": "尋找與校對",
+    "peer": "text-cursor",
+    "decision": "以單一大寫字和計數符號並列，區分字元與整詞統計。",
+    "sourceObservation": "計數字號與大寫字幹原先太靠近。收窄字母並將井字右移，兩個記號可各自閱讀。"
+  },
+  "list-alpha": {
+    "group": "清單與區塊",
+    "peer": "list-ordered",
+    "decision": "以小寫 a 和 b 作兩行標記，第二行保留升部。",
+    "sourceObservation": "以小寫 a 和 b 作兩行標記，第二行保留升部。"
+  },
+  "list-roman": {
+    "group": "清單與區塊",
+    "peer": "list-ordered",
+    "decision": "第一行單柱、第二行雙柱，文字行與羅馬數字之間保持間距。",
+    "sourceObservation": "第一行單柱、第二行雙柱，文字行與羅馬數字之間保持間距。"
+  },
+  "list-restart": {
+    "group": "清單與區塊",
+    "peer": "list-ordered",
+    "decision": "數字一上方搭配回返箭頭，表示編號重新從首項起算。",
+    "sourceObservation": "數字一上方搭配回返箭頭，表示編號重新從首項起算。"
+  },
+  "list-continue": {
+    "group": "清單與區塊",
+    "peer": "list-ordered",
+    "decision": "上一段清單的短線接向下一個數字，指示跨段接續。",
+    "sourceObservation": "上一段清單的短線接向下一個數字，指示跨段接續。"
+  },
+  "block-copy": {
+    "group": "清單與區塊",
+    "peer": "copy",
+    "decision": "前方段落有文字短筆，後方露邊表明複製整個區塊。",
+    "sourceObservation": "前方段落有文字短筆，後方露邊表明複製整個區塊。"
+  },
+  "block-delete": {
+    "group": "清單與區塊",
+    "peer": "trash",
+    "decision": "整塊內容的右下角疊加叉號，與刪除單一字元區分。",
+    "sourceObservation": "整塊內容的右下角疊加叉號，與刪除單一字元區分。"
+  },
+  "block-insert-above": {
+    "group": "清單與區塊",
+    "peer": "table-row-insert-above",
+    "decision": "新增記號放在文字區塊上方，區塊內保留一行文字。",
+    "sourceObservation": "新增記號放在文字區塊上方，區塊內保留一行文字。"
+  },
+  "block-insert-below": {
+    "group": "清單與區塊",
+    "peer": "table-row-add",
+    "decision": "維持區塊的橫向比例，新增記號放在下方空白。",
+    "sourceObservation": "維持區塊的橫向比例，新增記號放在下方空白。"
+  },
+  "block-move-up": {
+    "group": "清單與區塊",
+    "peer": "arrow-up",
+    "decision": "文字區塊固定在左側，外部向上箭頭表示位置改變。",
+    "sourceObservation": "文字區塊固定在左側，外部向上箭頭表示位置改變。"
+  },
+  "block-move-down": {
+    "group": "清單與區塊",
+    "peer": "arrow-down",
+    "decision": "右側向下箭頭和上移共用軸線，區塊文字保持正向。",
+    "sourceObservation": "右側向下箭頭和上移共用軸線，區塊文字保持正向。"
+  },
+  "table-header-cell": {
+    "group": "表格操作",
+    "peer": "table-header-row",
+    "decision": "斜筆集中在左上單格，整列與整欄的其他格線仍然完整。",
+    "sourceObservation": "相近表格圖有完整格線，沿用上一輪表頭的斜筆，僅在左上格標記一次。"
+  },
+  "table-cell-next": {
+    "group": "表格操作",
+    "peer": "table-select-cell",
+    "decision": "表格上排留出通路，向右箭頭指示儲存格導覽方向。",
+    "sourceObservation": "表格上排留出通路，向右箭頭指示儲存格導覽方向。"
+  },
+  "table-cell-previous": {
+    "group": "表格操作",
+    "peer": "table-select-cell",
+    "decision": "保留表格下排參考格，向左箭頭表示反向導覽。",
+    "sourceObservation": "保留表格下排參考格，向左箭頭表示反向導覽。"
+  },
+  "cell-align-top": {
+    "group": "表格操作",
+    "peer": "align-objects-top",
+    "decision": "直立儲存格中的長短文字行集中於上端，下半留白。",
+    "sourceObservation": "直立儲存格中的長短文字行集中於上端，下半留白。"
+  },
+  "cell-align-middle": {
+    "group": "表格操作",
+    "peer": "align-objects-center-vertical",
+    "decision": "兩行文字的共同中心對準儲存格中線，上下留白相等。",
+    "sourceObservation": "兩行文字的共同中心對準儲存格中線，上下留白相等。"
+  },
+  "cell-align-bottom": {
+    "group": "表格操作",
+    "peer": "align-objects-bottom",
+    "decision": "文字行壓低到儲存格底端，與頂端對齊形成上下對照。",
+    "sourceObservation": "文字行壓低到儲存格底端，與頂端對齊形成上下對照。"
+  },
+  "table-column-width": {
+    "group": "表格操作",
+    "peer": "move-horizontal",
+    "decision": "上方的欄線說明調整對象，下方橫向尺寸尺標出寬度。",
+    "sourceObservation": "上方的欄線說明調整對象，下方橫向尺寸尺標出寬度。"
+  },
+  "table-row-height": {
+    "group": "表格操作",
+    "peer": "move-vertical",
+    "decision": "列線旁的垂直尺寸尺標出高度，尺度端點與列邊對位。",
+    "sourceObservation": "列線旁的垂直尺寸尺標出高度，尺度端點與列邊對位。"
+  },
+  "table-transpose": {
+    "group": "表格操作",
+    "peer": "arrow-left-right",
+    "decision": "左上的列條與右下的直欄錯位，折箭指向交換後的軸。",
+    "sourceObservation": "左上的列條與右下的直欄錯位，折箭指向交換後的軸。"
+  },
+  "table-insert": {
+    "group": "表格操作",
+    "peer": "table",
+    "decision": "保留格線交點，在右下加號周圍留白以標示新增整表。",
+    "sourceObservation": "保留格線交點，在右下加號周圍留白以標示新增整表。"
+  },
+  "border-all": {
+    "group": "儲存格框線",
+    "peer": "grid",
+    "decision": "四格共用一個正方形，外邊與內部分隔線同樣連續。",
+    "sourceObservation": "四格共用一個正方形，外邊與內部分隔線同樣連續。"
+  },
+  "border-none": {
+    "group": "儲存格框線",
+    "peer": "square",
+    "decision": "僅留九個定位點，沒有任何連續邊線，顯示清除後的狀態。",
+    "sourceObservation": "僅留九個定位點，沒有任何連續邊線，顯示清除後的狀態。"
+  },
+  "border-outer": {
+    "group": "儲存格框線",
+    "peer": "square",
+    "decision": "連續方框內保留點狀十字，指出外框有墨線而內部格線未啟用。",
+    "sourceObservation": "參考外框還有淡化的內格。使用五個定位點交代內部分界，在深底上也能認出外框範圍。"
+  },
+  "border-inner": {
+    "group": "儲存格框線",
+    "peer": "plus",
+    "decision": "只有內側十字連續，四個外角以定位點交代範圍。",
+    "sourceObservation": "只有內側十字連續，四個外角以定位點交代範圍。"
+  },
+  "border-horizontal": {
+    "group": "儲存格框線",
+    "peer": "minus",
+    "decision": "中央水平實線貫穿儲存格，其餘交點只保留點狀提示。",
+    "sourceObservation": "中央水平實線貫穿儲存格，其餘交點只保留點狀提示。"
+  },
+  "border-vertical": {
+    "group": "儲存格框線",
+    "peer": "minus",
+    "decision": "中軸的垂直實線標出欄界，左右定位點保持相同節奏。",
+    "sourceObservation": "中軸的垂直實線標出欄界，左右定位點保持相同節奏。"
+  },
+  "border-top": {
+    "group": "儲存格框線",
+    "peer": "panel-top",
+    "decision": "只有上緣是完整實線，其他兩列的定位點標示空白。",
+    "sourceObservation": "只有上緣是完整實線，其他兩列的定位點標示空白。"
+  },
+  "border-bottom": {
+    "group": "儲存格框線",
+    "peer": "panel-bottom",
+    "decision": "底緣實線和頂緣版本等長，中間與上方維持點陣。",
+    "sourceObservation": "底緣實線和頂緣版本等長，中間與上方維持點陣。"
+  },
+  "border-left": {
+    "group": "儲存格框線",
+    "peer": "panel-left",
+    "decision": "左側邊線從上角貫到底角，右邊兩欄都是定位點。",
+    "sourceObservation": "左側邊線從上角貫到底角，右邊兩欄都是定位點。"
+  },
+  "border-right": {
+    "group": "儲存格框線",
+    "peer": "panel-right",
+    "decision": "右緣以一筆明確實線收邊，與左緣控制成對，其他格點的位置保持固定。",
+    "sourceObservation": "右緣以一筆明確實線收邊，與左緣控制成對，其他格點的位置保持固定。"
+  },
+  "image-align-left": {
+    "group": "圖片與環繞",
+    "peer": "align-left",
+    "decision": "縮圖貼近左邊界，下面一條滿幅正文標出可用行寬。",
+    "sourceObservation": "縮圖貼近左邊界，下面一條滿幅正文標出可用行寬。"
+  },
+  "image-align-center": {
+    "group": "圖片與環繞",
+    "peer": "align-center",
+    "decision": "縮圖在滿幅文字行中央，左右兩側留同寬空間。",
+    "sourceObservation": "縮圖在滿幅文字行中央，左右兩側留同寬空間。"
+  },
+  "image-align-right": {
+    "group": "圖片與環繞",
+    "peer": "align-right",
+    "decision": "縮圖貼近右邊界，基準文字行和其他對齊選項相同。",
+    "sourceObservation": "縮圖貼近右邊界，基準文字行和其他對齊選項相同。"
+  },
+  "image-wrap-left": {
+    "group": "圖片與環繞",
+    "peer": "wrap-text",
+    "decision": "圖片位於左側，右方兩行短文續接底部滿寬文字。",
+    "sourceObservation": "對照中圖片和右側的短行共用同一段高度，保留完整底行代表文字重新取得整行寬度。"
+  },
+  "image-wrap-right": {
+    "group": "圖片與環繞",
+    "peer": "wrap-text",
+    "decision": "右側縮圖與左側短行並排，完整底行標示環繞結束。",
+    "sourceObservation": "反轉文圖左右順序，縮圖山稜本身保持正向，與單純圖片靠右在文字行數上不同。"
+  },
+  "image-inline": {
+    "group": "圖片與環繞",
+    "peer": "image",
+    "decision": "兩段正文夾住同基線縮圖，16px 版本提高峰頂，使山稜內孔保有空白。",
+    "sourceObservation": "兩段正文夾住同基線縮圖，16px 版本提高峰頂，使山稜內孔保有空白。"
+  },
+  "image-caption": {
+    "group": "圖片與環繞",
+    "peer": "image",
+    "decision": "圖片下方置中短句，呈現圖說與圖片的從屬關係。",
+    "sourceObservation": "圖片下方置中短句，呈現圖說與圖片的從屬關係。"
+  },
+  "image-alt": {
+    "group": "圖片與環繞",
+    "peer": "image",
+    "decision": "以大寫 A 覆住縮圖右下角，表示影像的文字替代，山稜留在左側。",
+    "sourceObservation": "以大寫 A 覆住縮圖右下角，表示影像的文字替代，山稜留在左側。"
+  },
+  "image-replace": {
+    "group": "圖片與環繞",
+    "peer": "images",
+    "decision": "在原圖輪廓之外加回轉箭，標示選另一張影像替換。",
+    "sourceObservation": "在原圖輪廓之外加回轉箭，標示選另一張影像替換。"
+  },
+  "image-off": {
+    "group": "圖片與環繞",
+    "peer": "eye-off",
+    "decision": "橫穿照片的斜線避開山稜，圖框、峰頂仍能辨認。",
+    "sourceObservation": "橫穿照片的斜線避開山稜，圖框、峰頂仍能辨認。"
+  },
+  "message-reply": {
+    "group": "留言討論",
+    "peer": "reply",
+    "decision": "對話框中的折返箭頭表示回覆此串，尾尖獨立保留。",
+    "sourceObservation": "對話框中的折返箭頭表示回覆此串，尾尖獨立保留。"
+  },
+  "message-quote": {
+    "group": "留言討論",
+    "peer": "quote",
+    "decision": "框內兩個逗形引號共享基線，和省略點留言區別。",
+    "sourceObservation": "框內兩個逗形引號共享基線，和省略點留言區別。"
+  },
+  "message-pin": {
+    "group": "留言討論",
+    "peer": "pin",
+    "decision": "圖釘斜跨泡泡右上角，頭部兩端削角，最粗的 sharp 筆畫仍留在畫布內。",
+    "sourceObservation": "參考圖以圖釘和泡泡的組合表達固定討論；保留頭部、收窄的柄與單筆針尖。"
+  },
+  "message-pen": {
+    "group": "留言討論",
+    "peer": "pencil",
+    "decision": "斜筆與尾尖分居兩端，區分改留言和編輯文件。",
+    "sourceObservation": "斜筆與尾尖分居兩端，區分改留言和編輯文件。"
+  },
+  "message-x": {
+    "group": "留言討論",
+    "peer": "message",
+    "decision": "叉號居於泡泡內，和方框刪除區塊的輪廓分開。",
+    "sourceObservation": "叉號居於泡泡內，和方框刪除區塊的輪廓分開。"
+  },
+  "message-off": {
+    "group": "留言討論",
+    "peer": "message",
+    "decision": "前景斜線橫過泡泡並扣除背後筆畫，表示隱藏討論。",
+    "sourceObservation": "前景斜線橫過泡泡並扣除背後筆畫，表示隱藏討論。"
+  },
+  "message-clock": {
+    "group": "留言討論",
+    "peer": "clock",
+    "decision": "在泡泡右下疊上小時鐘，保留兩針夾角和留言尾尖。",
+    "sourceObservation": "在泡泡右下疊上小時鐘，保留兩針夾角和留言尾尖。"
+  },
+  "message-reopen": {
+    "group": "留言討論",
+    "peer": "message-check",
+    "decision": "回轉箭頭在已封閉的留言框內重開，和單向回覆折箭區分。",
+    "sourceObservation": "回覆使用折返箭，重新開啟改用環狀箭；尾尖保留留言外形。"
+  },
+  "thread-next": {
+    "group": "留言討論",
+    "peer": "message",
+    "decision": "向下箭頭獨立於對話框右側，跳到下一則討論時，泡泡尾尖保持朝左。",
+    "sourceObservation": "向下箭頭獨立於對話框右側，跳到下一則討論時，泡泡尾尖保持朝左。"
+  },
+  "thread-previous": {
+    "group": "留言討論",
+    "peer": "message",
+    "decision": "向上箭頭獨立於留言框右側，箭尾與下方的對話框尾尖之間留有空間。",
+    "sourceObservation": "向上箭頭獨立於留言框右側，箭尾與下方的對話框尾尖之間留有空間。"
+  },
+  "inline-math": {
+    "group": "數學與公式",
+    "peer": "function-square",
+    "decision": "將帶上標的 x² 放在左右正文短線之間，讓公式坐在同一行。",
+    "sourceObservation": "兩份參考以函數字形表達數學。與獨立公式共用 x²，再讓外圍文字留在同一基線。"
+  },
+  "block-math": {
+    "group": "數學與公式",
+    "peer": "function-square",
+    "decision": "將相同的 x² 置於上下兩行正文之間，留出獨立公式的垂直空間。",
+    "sourceObservation": "既有 function-square 已是方框中的函數；將 x² 放在兩道正文之間能直接表達公式獨佔一行。"
+  },
+  "integral": {
+    "group": "數學與公式",
+    "peer": "sigma",
+    "decision": "長 S 曲線在上下兩端向外翻出，保留積分號的斜勢。",
+    "sourceObservation": "長 S 曲線在上下兩端向外翻出，保留積分號的斜勢。"
+  },
+  "product-symbol": {
+    "group": "數學與公式",
+    "peer": "sigma",
+    "decision": "上橫跨過兩根直柱並在底端收腳，表達大型連乘運算子。",
+    "sourceObservation": "上橫跨過兩根直柱並在底端收腳，表達大型連乘運算子。"
+  },
+  "matrix": {
+    "group": "數學與公式",
+    "peer": "brackets",
+    "decision": "左右方括號包住等距四點，表示二維矩陣元素。",
+    "sourceObservation": "左右方括號包住等距四點，表示二維矩陣元素。"
+  },
+  "nth-root": {
+    "group": "數學與公式",
+    "peer": "radical",
+    "decision": "在根號左上留出獨立的次數 n，和平方根工具區分。",
+    "sourceObservation": "在根號左上留出獨立的次數 n，和平方根工具區分。"
+  },
+  "factorial": {
+    "group": "數學與公式",
+    "peer": "function-square",
+    "decision": "斜體小寫 n 配細長驚嘆號，字母右側保留可見空白。",
+    "sourceObservation": "斜體小寫 n 配細長驚嘆號，字母右側保留可見空白。"
+  },
+  "less-than-or-equal": {
+    "group": "數學與公式",
+    "peer": "equal",
+    "decision": "向左的開角與底下等線分開，維持小尺寸白隙。",
+    "sourceObservation": "向左的開角與底下等線分開，維持小尺寸白隙。"
+  },
+  "greater-than-or-equal": {
+    "group": "數學與公式",
+    "peer": "equal",
+    "decision": "向右開角配同高水平底線，與小於等於共用比例。",
+    "sourceObservation": "向右開角配同高水平底線，與小於等於共用比例。"
+  },
+  "approximately-equal": {
+    "group": "數學與公式",
+    "peer": "equal",
+    "decision": "兩條同相位波線共用振幅，和直線等號保持區別。",
+    "sourceObservation": "兩條同相位波線共用振幅，和直線等號保持區別。"
+  },
+  "page-number": {
+    "group": "頁面與輸出",
+    "peer": "hash",
+    "decision": "直式紙頁上留一行正文，下方以數字一和短基腳標出頁碼；16px 可省去井字交叉處的墨量。",
+    "sourceObservation": "直式紙頁上留一行正文，下方以數字一和短基腳標出頁碼；16px 可省去井字交叉處的墨量。"
+  },
+  "page-margins": {
+    "group": "頁面與輸出",
+    "peer": "file",
+    "decision": "頁框內的四個定位角界定可排版區域，保留中央留白。",
+    "sourceObservation": "頁框內的四個定位角界定可排版區域，保留中央留白。"
+  },
+  "page-orientation-portrait": {
+    "group": "頁面與輸出",
+    "peer": "file",
+    "decision": "直立紙面下端放短行當基準，使方向由紙張比例傳達。",
+    "sourceObservation": "直立紙面下端放短行當基準，使方向由紙張比例傳達。"
+  },
+  "page-orientation-landscape": {
+    "group": "頁面與輸出",
+    "peer": "file",
+    "decision": "橫置紙面仍保留水平短行，與直向頁共用頁腳位置。",
+    "sourceObservation": "橫置紙面仍保留水平短行，與直向頁共用頁腳位置。"
+  },
+  "facing-pages": {
+    "group": "頁面與輸出",
+    "peer": "book-open",
+    "decision": "兩張等高紙頁由窄裝訂溝隔開，各自保留頁腳。",
+    "sourceObservation": "兩張等高紙頁由窄裝訂溝隔開，各自保留頁腳。"
+  },
+  "page-add": {
+    "group": "頁面與輸出",
+    "peer": "file-plus",
+    "decision": "無摺角的直式紙面疊上加號，與一般檔案建立並列。",
+    "sourceObservation": "無摺角的直式紙面疊上加號，與一般檔案建立並列。"
+  },
+  "page-duplicate": {
+    "group": "頁面與輸出",
+    "peer": "copy",
+    "decision": "前後兩個紙面等比例錯開，前頁保留頁腳短筆。",
+    "sourceObservation": "前後兩個紙面等比例錯開，前頁保留頁腳短筆。"
+  },
+  "fit-page-width": {
+    "group": "頁面與輸出",
+    "peer": "move-horizontal",
+    "decision": "把左右頁界外移並拉長雙向箭桿，16px 的兩端箭翼仍隔著一段水平線。",
+    "sourceObservation": "把左右頁界外移並拉長雙向箭桿，16px 的兩端箭翼仍隔著一段水平線。"
+  },
+  "fit-page-height": {
+    "group": "頁面與輸出",
+    "peer": "move-vertical",
+    "decision": "上下頁界保留獨立橫線，中間的垂直雙箭拉長，兩組箭翼能各自收口。",
+    "sourceObservation": "上下頁界保留獨立橫線，中間的垂直雙箭拉長，兩組箭翼能各自收口。"
+  },
+  "print-preview": {
+    "group": "頁面與輸出",
+    "peer": "print",
+    "decision": "保留印表機上方進紙與側肩，放大鏡覆在輸出側。",
+    "sourceObservation": "保留印表機上方進紙與側肩，放大鏡覆在輸出側。"
+  },
+  "suggestion-insert": {
+    "group": "修訂與版本",
+    "peer": "underline",
+    "decision": "帶底線的新文字旁放加號，毋須依賴綠色辨識新增。",
+    "sourceObservation": "帶底線的新文字旁放加號，毋須依賴綠色辨識新增。"
+  },
+  "suggestion-delete": {
+    "group": "修訂與版本",
+    "peer": "strikethrough",
+    "decision": "橫線穿過大寫字幹中段，另一個短減號標出這是一項待審的刪除。",
+    "sourceObservation": "橫線穿過大寫字幹中段，另一個短減號標出這是一項待審的刪除。"
+  },
+  "accept-change": {
+    "group": "修訂與版本",
+    "peer": "check",
+    "decision": "單張修訂紙配外置勾號，表示僅套用目前建議。",
+    "sourceObservation": "單張修訂紙配外置勾號，表示僅套用目前建議。"
+  },
+  "reject-change": {
+    "group": "修訂與版本",
+    "peer": "x",
+    "decision": "單張修訂紙配叉號，和接受控制保留相同的視覺位置。",
+    "sourceObservation": "單張修訂紙配叉號，和接受控制保留相同的視覺位置。"
+  },
+  "accept-all-changes": {
+    "group": "修訂與版本",
+    "peer": "clipboard-check",
+    "decision": "多頁露邊配勾號，辨別一次接受全部建議的操作。",
+    "sourceObservation": "多頁露邊配勾號，辨別一次接受全部建議的操作。"
+  },
+  "reject-all-changes": {
+    "group": "修訂與版本",
+    "peer": "clipboard-x",
+    "decision": "多張修訂紙配叉號，後頁露邊維持批次操作的辨識度。",
+    "sourceObservation": "多張修訂紙配叉號，後頁露邊維持批次操作的辨識度。"
+  },
+  "compare-documents": {
+    "group": "修訂與版本",
+    "peer": "git-compare",
+    "decision": "兩張紙各保留不同長度的文字，中央縫隙分隔對照內容。",
+    "sourceObservation": "對照來源使用左右分頁或版本節點。採並排紙面並錯開內文筆數，方便與對頁閱讀區分。"
+  },
+  "version-restore": {
+    "group": "修訂與版本",
+    "peer": "history",
+    "decision": "紙面右側承接逆向弧箭，箭頭朝向先前快照並與紙頁邊線分離。",
+    "sourceObservation": "紙面右側承接逆向弧箭，箭頭朝向先前快照並與紙頁邊線分離。"
+  },
+  "version-save": {
+    "group": "修訂與版本",
+    "peer": "save",
+    "decision": "小尺寸把快照相機鏡頭略微放大，以保留圓孔；後方的單頁提示儲存版本。",
+    "sourceObservation": "小尺寸把快照相機鏡頭略微放大，以保留圓孔；後方的單頁提示儲存版本。"
+  },
+  "track-changes": {
+    "group": "修訂與版本",
+    "peer": "file-pen",
+    "decision": "文字側邊保留修訂直線，斜筆提示後續編輯將被記錄。",
+    "sourceObservation": "文字側邊保留修訂直線，斜筆提示後續編輯將被記錄。"
+  }
+}
