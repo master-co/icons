@@ -1,0 +1,101 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "batch": "72-instruments-candidate-1",
+  "baseline": "references/atlas-recompare-01/master-before.json",
+  "viewedSuffixes": [
+    "light-1x",
+    "dark-1x",
+    "native-light-2x",
+    "native-dark-2x"
+  ],
+  "decisions": [
+    {
+      "name": "violin",
+      "decision": "refined",
+      "purpose": "以直立提琴輪廓表示弦樂器、小提琴演奏與課程。",
+      "recognitionCues": "較小上琴腹、較寬下琴腹、兩側深腰、中央琴頸與短琴橋。",
+      "confusableWith": [
+        "guitar",
+        "guitar-electric"
+      ],
+      "defect": "上下琴腹原本同寬，上腹偏圓且偏大，整體較像等寬雙瓣，提琴肩腹主次不足。",
+      "sourceObservation": "MDI的琴身上窄下寬，肩部從屬於下琴腹；OpenMoji斜置提琴也有大小腹與明確腰部，但細弦孔不適合直接搬到16px。",
+      "reason": "沿既有MDI改作將上琴腹左右各內收1個母型單位，由13寬改為11寬，重排上肩及內腰控制柄；下琴腹、中央琴頸、腰部最窄點與琴橋保持。",
+      "postComparison": "與MDI／OpenMoji回比，新稿上肩較收、下腹較寬，提琴的上下主次較清楚，16px腰孔及琴橋下留白仍可辨。三尺寸三角型、明暗DPR1／2及55%文字已查看，不加入f孔或多弦線。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "琴身與弦方向均為可見構造，不需要虛線訊號。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "琴頸實心與琴身輪廓已分工，不用淡化補救空間。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "以單色輪廓表達提琴，不增加木材色澤或體積漸層。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "trumpet",
+      "decision": "retained",
+      "purpose": "以向前擴張的喇叭口及迴轉管表示小號演奏。",
+      "recognitionCues": "水平吹嘴與主管、向右擴張的曲面喇叭口、下方迴轉管及兩個按鍵。",
+      "confusableWith": [
+        "saxophone",
+        "megaphone"
+      ],
+      "defect": "本輪未見喇叭口、迴轉管或按鍵間距需要回修的具體缺陷。",
+      "sourceObservation": "MDI與OpenMoji均保留擴張喇叭口和下方管路；兩者的三閥及多層管線較寫實，現稿用兩個按鍵及單圈管路保持較清楚的原生空間。",
+      "reason": "保留曲面喇叭口、下方開放管孔及兩個接於主管的按鍵；來源多層結構不加入16px，sharp的喇叭口仍保留既有邊界補償。",
+      "postComparison": "三尺寸仍可辨水平主管、喇叭口內孔與下方管孔，兩個按鍵分隔清楚；與兩來源回比，保留現有緊湊輪廓，不增加細小閥門孔。明暗DPR1／2及55%文字已查看。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "主管、喇叭口和迴轉管都需連續，沒有虛線用途。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "各部件都是主要結構，不透過降低透明度區分。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "單色曲線已表達喇叭口擴張，不添加金屬漸層。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "saxophone",
+      "decision": "retained",
+      "purpose": "以彎頸、長管和上翻口表示薩克斯風演奏與爵士樂器。",
+      "recognitionCues": "左上彎曲吹嘴、直立長管、圓形下彎、右側上翻口與兩個短按鍵。",
+      "confusableWith": [
+        "trumpet",
+        "music"
+      ],
+      "defect": "本輪未見需修改的管身承接或內孔問題，保留既定緊湊直立器型。",
+      "sourceObservation": "MDI採緊湊直立J形與橫向口沿，現稿維持這種器型；OpenMoji為較細長斜管與斜口，姿態較寫實，但轉成目前描邊會壓縮下彎內孔。",
+      "reason": "保留較寬的下彎及完整管腔、橫向口沿和兩個短按鍵；不為靠齊細長來源而把管壁擠成狹縫，也不增加管內細點。",
+      "postComparison": "與MDI／OpenMoji同尺寸比較，16px仍可讀左側管腔與下彎內孔，20／24的彎頸和上翻口承接連續；保留MDI式緊湊姿態。三角型、明暗DPR1／2及55%文字已查看。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "管壁與口沿是完整可見外形，不使用裝飾虛線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "兩個按鍵與主管都須清楚可辨，維持單色對比。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "不以金屬漸層表達管身體積，保持平面輪廓。"
+        }
+      },
+      "remaining": []
+    }
+  ]
+}

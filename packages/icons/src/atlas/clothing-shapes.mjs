@@ -5,9 +5,10 @@ export function shirt({g,p}){
  const hem=t?`V${21-t}Q18 21 ${18-t} 21H${6+t}Q6 21 6 ${21-t}V11`:'V21H6V11';
  return [p('M8 3C8 7 16 7 16 3L21 5L22 10L18 11'+hem+'L2 10L3 5Z')];
 }
-export function trousers({g,o,l}){
- const body=o([[5,3],[19,3],[20,22],[14,22],[12,11],[10,22],[4,22]],true,g.tip);
- return enclosedDetails(body,[l(5,7,19,7)],g);
+export function trousers({g,o,l,p}){
+ const body=o([[6,3],[18,3],[20,22],[14,22],[12,11],[10,22],[4,22]],true,g.tip);
+ const pockets=[p('M9 6.5C9 9 7.5 10.5 5 10.5M15 6.5C15 9 16.5 10.5 19 10.5')];
+ return enclosedDetails(body,[l(5,6.5,19,6.5),...pockets],g);
 }
 export function dress({g,p,l}){
  const body=p('M8 5C10 8 14 8 16 5L18 9L15 12L20.5 22Q12 23 3.5 22L9 12L6 9Z');
@@ -21,17 +22,19 @@ export function coat({g,o,l}){
 }
 export function sock({g,p,l,small}){
  const body=p('M6 2H14V10L20 16C24 20 18 25 14 21L7 14Q6 13 6 11Z');
- return enclosedDetails(body,[l(6,6,14,6),...small?[]:[p('M6 10Q11 10 11 15')]],g);
+ return enclosedDetails(body,[l(6,6,14,6),...small?[]:[p('M6 10C10 10 12 13.5 9.5 16.5')]],g);
 }
 export function shoe({g,p,l,small}){
- const body=p('M2.5 7H8C9 11 13 12.5 18 13.5C21 14 21.5 15.5 21.5 18V21H2.5Z');
- return enclosedDetails(body,[l(2.5,17,21.5,17),l(8,12,11,9),...small?[]:[l(12,14,15,11)]],g);
+ const rr=g.tip*24/g.s;
+ const sole=rr?`V${21-rr}Q21.5 21 ${21.5-rr} 21H${2.5+rr}Q2.5 21 2.5 ${21-rr}Z`:'V21H2.5Z';
+ const body=p('M2.5 7H8C9 11 13 12.5 18 13.5C21 14 21.5 15.5 21.5 18'+sole);
+ return enclosedDetails(body,[l(2.5,18,21.5,18),l(8,12,11,9),...small?[]:[l(12,14,15,11)]],g);
 }
 
 export function glasses({g,c,p}){
  const left=c(6,15,4),right=c(18,15,4);
- const bridge=exteriorDetails(left,[p('M10 15C10 12 14 12 14 15')],g).slice(1);
- return [...exteriorDetails(left,[p('M2 14L4 5Q4.5 4 6 4')],g),...exteriorDetails(right,[p('M22 14L20 5Q19.5 4 18 4')],g),...exteriorDetails(right,bridge,g).slice(1)];
+ const bridge=exteriorDetails(left,[p('M10 15A2 2 0 0 1 14 15')],g).slice(1);
+ return [...exteriorDetails(left,[p('M2.5 13L5.2 6.5C5.7 5.3 6.5 5 8 5')],g),...exteriorDetails(right,[p('M21.5 13L18.8 6.5C18.3 5.3 17.5 5 16 5')],g),...exteriorDetails(right,bridge,g).slice(1)];
 }
 export function sunglasses({g,p,l,o}){
  const left=p('M2 12H10V16C10 21 2 21 2 16Z'),right=p('M14 12H22V16C22 21 14 21 14 16Z');
@@ -40,7 +43,7 @@ export function sunglasses({g,p,l,o}){
 }
 
 export function watch({g,c,p,o}){
- const face=c(12,12,6.5),top=o([[8,6.5],[8,2],[16,2],[16,6.5]],false,g.tip),bottom=o([[8,17.5],[8,22],[16,22],[16,17.5]],false,g.tip);
+ const face=c(12,12,6.5),top=o([[7.75,7],[9,2],[15,2],[16.25,7]],false,g.tip),bottom=o([[7.75,17],[9,22],[15,22],[16.25,17]],false,g.tip);
  return [...exteriorDetails(face,[top,bottom],g),p(`M12 ${g.v(9,8.5,8.5)}V12L14.5 13.5`)];
 }
 export function umbrella({g,p,l}){

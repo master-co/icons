@@ -1,0 +1,101 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "batch": "60-lab-candidate-1",
+  "baseline": "references/atlas-recompare-01/master-before.json",
+  "viewedSuffixes": [
+    "light-1x",
+    "dark-1x",
+    "native-light-2x",
+    "native-dark-2x"
+  ],
+  "decisions": [
+    {
+      "name": "test-tube",
+      "decision": "retained",
+      "purpose": "以直立窄管、開口與半圓管底表示試管。",
+      "recognitionCues": "平口、長直管壁、圓底及低液面。",
+      "confusableWith": [
+        "flask-conical",
+        "flask-round"
+      ],
+      "defect": "本輪未見需要修正的具體缺陷，管壁與圓底承接連續。",
+      "sourceObservation": "Lucide的直立管身與現稿同構；Phosphor採斜置管身及波動液面，屬姿態差異，沒有需要取代現有直立構造的優勢。",
+      "reason": "保留直立管身、半圓底及水平液面，與燒瓶家族共同使用靜態液面。",
+      "postComparison": "最新稿與Lucide／Phosphor同尺寸回比，16px管腔及低液面仍可讀；三尺寸三角型、明暗DPR1／2與55%文字均已查看。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "器材外輪廓、液面與支架皆為可見結構，不需隱藏線或軌跡虛線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以輪廓與留白區分部件，不靠透明度掩飾接點。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "維持單色平面器材圖示，不加入材質或液體漸層。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "microscope",
+      "decision": "refined",
+      "purpose": "以鏡筒、弧臂、載物台與底座表示顯微鏡。",
+      "recognitionCues": "直立鏡筒、單側弧臂、水平載物台及穩定底座。",
+      "confusableWith": [
+        "telescope",
+        "binoculars"
+      ],
+      "defect": "弧臂到達底座時仍帶向下斜率，收尾與水平底座的承接偏硬。",
+      "sourceObservation": "Phosphor的完整曲臂與鏡筒構造已為現稿採用；Lucide的圓臂收尾提示底座應有明確水平承接。",
+      "reason": "將弧臂末端控制點的y值由21改為22，與末點同高，使切線水平接入底座；鏡筒、載物台與底座尺度保持。",
+      "postComparison": "與Phosphor／Lucide回比，弧臂下緣更連續，鏡筒孔與載物台間距保持；三尺寸三角型、明暗DPR1／2與55%文字均已查看。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "器材外輪廓、液面與支架皆為可見結構，不需隱藏線或軌跡虛線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以輪廓與留白區分部件，不靠透明度掩飾接點。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "維持單色平面器材圖示，不加入材質或液體漸層。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "telescope",
+      "decision": "refined",
+      "purpose": "以向上傾斜的漸寬鏡筒與三腳架表示天文望遠鏡。",
+      "recognitionCues": "窄目鏡端、寬物鏡端、鏡環與共點三腳架。",
+      "confusableWith": [
+        "microscope",
+        "binoculars"
+      ],
+      "defect": "原稿鏡筒兩端面與內鏡環角度各自設定，未共同垂直於鏡筒軸線，局部有拼接感。",
+      "sourceObservation": "Tabler的漸寬筒身及Lucide的共軸端面都有清楚器材結構；沿既有Tabler改作統一構造軸線。",
+      "reason": "以同一組正交軸推算前後端面與鏡環，保留漸寬鏡筒及原三腳架；環線依新外殼裁切，立桿重算外側承接。",
+      "postComparison": "與Tabler／Lucide回比，兩端面與鏡環平行，整支鏡筒的朝向更一致；原生16仍可辨鏡環及支架。三尺寸三角型、明暗DPR1／2與55%文字均已查看。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "器材外輪廓、液面與支架皆為可見結構，不需隱藏線或軌跡虛線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以輪廓與留白區分部件，不靠透明度掩飾接點。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "維持單色平面器材圖示，不加入材質或液體漸層。"
+        }
+      },
+      "remaining": []
+    }
+  ]
+}

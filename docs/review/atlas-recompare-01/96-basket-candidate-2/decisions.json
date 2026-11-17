@@ -1,0 +1,98 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "baseline": "references/atlas-recompare-01/master-before.json",
+  "viewedSuffixes": [
+    "light-1x",
+    "dark-1x",
+    "native-light-2x",
+    "native-dark-2x"
+  ],
+  "batch": "96-basket-candidate-2",
+  "decisions": [
+    {
+      "name": "shopping-basket",
+      "decision": "retained",
+      "purpose": "以開放雙提把、寬籃口、下收籃身和兩條通風線呈現購物籃。",
+      "recognitionCues": "開放雙提把、寬籃口、下收籃身和兩條通風線",
+      "confusableWith": [
+        "shopping-bag"
+      ],
+      "defect": "重查兩條籃條是否夠疏，以及提把穿入籃口的端點。",
+      "sourceObservation": "Lucide 的雙斜提把與寬籃口清楚，Phosphor 用開放直條讓籃身比較疏朗。",
+      "reason": "保留雙提把和梯形籃身，兩條對稱短籃條比 Lucide 完整格網更清楚。",
+      "postComparison": "與 Lucide 和 Phosphor 回比，現稿 16px 籃身不會被格網擠滿，雙斜提把和兩條籃條仍可辨識。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "提把和籃條均為連續的可見構造。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "用籃身內留白區分通風條。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "保留單色輪廓和提把造型。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "basket-check",
+      "decision": "refined",
+      "purpose": "以雙斜提把與籃口、兩條籃條、右下勾號呈現購物籃完成。",
+      "recognitionCues": "雙斜提把與籃口、兩條籃條、右下勾號",
+      "confusableWith": [
+        "basket-plus"
+      ],
+      "defect": "勾號避讓斜切到右籃條底部，使兩條籃條露出不等長。",
+      "sourceObservation": "Tabler 以單一圓孔簡化籃身，Hugeicons 保留兩條等高的通風條和開放的完成符號。",
+      "reason": "沿用 Lucide 籃身和專案的勾號，成對移動籃條到勾號避讓區左側，保持其長度與垂直方向。",
+      "postComparison": "與兩份來源並列，兩條籃條和勾號間有清楚空間，籃身和共用母型仍易於對應。小尺寸保留雙提把。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "實體籃條與完成符號皆使用完整筆畫。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "勾號以真透明空間分開籃身。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "符號與籃身靠形狀區分。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "basket-plus",
+      "decision": "refined",
+      "purpose": "以雙斜提把、梯形籃身與右下加號呈現新增購物籃。",
+      "recognitionCues": "雙斜提把、梯形籃身與右下加號",
+      "confusableWith": [
+        "bag-plus"
+      ],
+      "defect": "加號避讓會挖到右側籃條下方，較硬角型的斷口像削掉一角。",
+      "sourceObservation": "Tabler 使用較空的單孔籃身。Hugeicons 以兩條完整籃條和右下的加號維持清楚主次。",
+      "reason": "與完成狀態共用調整後的籃條位置，在加號較寬的水平筆旁留空，保持相同籃口和提把。",
+      "postComparison": "第二候選把第一候選 sharp 中略被切到的籃條再往左收。三尺寸的兩條籃條與加號分開，構圖仍接近 Hugeicons 的清楚分組。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "加號和兩條籃條都使用實線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "保留加號周圍透明避讓。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "用單色加號表現新增狀態。"
+        }
+      },
+      "remaining": []
+    }
+  ]
+}

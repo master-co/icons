@@ -1,9 +1,11 @@
 import {enclosedDetails,exteriorDetails} from '../occlusion.mjs';
 
 export function binoculars({g,p,l}){
- const factor=4*Math.sqrt(154)/170,tx=6+16/170-13*factor,ty=17-208/170-factor;
- const left=p(`M10 17V4C10 1.5 7.8 2.047 7 4L${tx} ${ty}A4 4 0 1 0 10 17Z`);
- const right=p(`M14 17V4C14 1.5 16.2 2.047 17 4L${24-tx} ${ty}A4 4 0 1 1 14 17Z`);
+ const dx=.5,dy=-12.5,d2=dx*dx+dy*dy,factor=4*Math.sqrt(d2-16)/d2;
+ const tx=6+16*dx/d2+dy*factor,ty=17+16*dy/d2-dx*factor;
+ const cx=6.5-(tx-6.5)*1.5/(ty-4.5);
+ const left=p(`M10 17V4.5C10 2.5 ${cx} 3 6.5 4.5L${tx} ${ty}A4 4 0 1 0 10 17Z`);
+ const right=p(`M14 17V4.5C14 2.5 ${24-cx} 3 17.5 4.5L${24-tx} ${ty}A4 4 0 1 1 14 17Z`);
  return [...enclosedDetails(left,[p(`M${tx} ${ty}A4 4 0 0 1 10 17`)],g),...enclosedDetails(right,[p(`M${24-tx} ${ty}A4 4 0 0 0 14 17`)],g),l(10,8,14,8)];
 }
 export function flashlight({g,p,l}){
@@ -29,8 +31,8 @@ export function shovel({g,p,l}){
 }
 export function pickaxe({g,o,p}){
  const head=o([[17.5,3],[21,6.5],[14,13.5],[10.5,10]],true,g.tip);
- const left=p('M16.5 3.5C13 1.5 8 1 4.5 2.5C4 3 4.5 4 5.5 4.5C8 5.5 10 6.5 12 8');
- const right=p('M20.5 7.5C22.5 11 23 16 21.5 19.5C21 20 20 19.5 19.5 18.5C18.5 16 17.5 14 16 12');
+ const left=p('M16.5 3.5C13 2 9 1.8 6 2.7C5 3 5.3 4 6.3 4.4C8.5 5.3 10.5 6.5 12 8');
+ const right=p('M20.5 7.5C22 11 22.2 15 21.3 18C21 19 20 18.7 19.6 17.7C18.7 15.5 17.5 13.5 16 12');
  return exteriorDetails(head,[left,right,o([[11,10],[14,13],[5,22],[2,19]],true,g.r*.7)],g);
 }
 export function fishingHook({g,c,l,p}){
@@ -47,12 +49,20 @@ export function footprints({g,p,l}){
  return [...enclosedDetails(left,[l(3,13,9,13)],g),...enclosedDetails(right,[l(15,17,21,17)],g)];
 }
 export function hiking({g,c,o,p,l}){
- const torso=o([[11,8.5],[9,14],[14,17],[14,22]],false,g.tip);if(g.corner==='sharp')torso[1]['stroke-linecap']='butt';
+ const torso=o([[11,8.5],[9,14],[13,16.5],[13,22]],false,g.tip);if(g.corner==='sharp')torso[1]['stroke-linecap']='butt';
  const arm=p('M11 8.5C13 10 13.5 12 18 12V22');if(g.corner==='sharp')arm[1]['stroke-linecap']='butt';
  return [c(13,3.5,2),o([[4.5,7],[7.5,8.5],[5,14],[2,12.5]],true,g.tip),torso,l(9,14,5,22),arm];
 }
 export function kayak({g,p,l}){
- const hull=p('M21 3C10.5 6.5 6.5 10.5 3 21C13.5 17.5 17.5 13.5 21 3Z');
+ const points=[[21,3],[10.5,6.5],[6.5,10.5],[3,21]],t=g.tip*24/g.s/20;
+ const value=t=>[0,1].map(k=>(1-t)**3*points[0][k]+3*(1-t)**2*t*points[1][k]+3*(1-t)*t*t*points[2][k]+t**3*points[3][k]);
+ const tangent=t=>[0,1].map(k=>3*(1-t)**2*(points[1][k]-points[0][k])+6*(1-t)*t*(points[2][k]-points[1][k])+3*t*t*(points[3][k]-points[2][k]));
+ const a=value(t),b=value(1-t),da=tangent(t),db=tangent(1-t),h=(1-2*t)/3;
+ const c1=a.map((v,k)=>v+da[k]*h),c2=b.map((v,k)=>v-db[k]*h);
+ const mirror=([x,y])=>[24-y,24-x],at=p=>p.join(' ');
+ // Intersect the cut-point tangents on the hull axis for a smooth tip join.
+ const join=(point,d)=>point.map((v,k)=>v+d[k]*(24-point[0]-point[1])/(d[0]+d[1]));
+ const hull=p(t?`M${at(a)}C${at(c1)} ${at(c2)} ${at(b)}Q${at(join(b,db))} ${at(mirror(b))}C${at(mirror(c2))} ${at(mirror(c1))} ${at(mirror(a))}Q${at(join(a,da))} ${at(a)}Z`:'M21 3C10.5 6.5 6.5 10.5 3 21C13.5 17.5 17.5 13.5 21 3Z');
  const top=p('M7 5A2 2 0 1 0 5 7H6A1 1 0 0 0 7 6Z');
  const bottom=p('M18 17A1 1 0 0 0 17 18V19A2 2 0 1 0 19 17Z');
  return [hull,...exteriorDetails(bottom,exteriorDetails(top,[l(6,6,18,18)],g),g)];

@@ -1,0 +1,130 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "baseline": "references/atlas-recompare-01/master-before.json",
+  "viewedSuffixes": [
+    "light-1x",
+    "dark-1x",
+    "native-light-2x",
+    "native-dark-2x"
+  ],
+  "batch": "88-batteries-before",
+  "decisions": [
+    {
+      "name": "battery-full",
+      "decision": "retained",
+      "purpose": "用橫向電池及三筆電量線表示滿電狀態。",
+      "recognitionCues": "共用矩形電池外殼和右側端子，內部三筆短豎線表示可用電量。",
+      "confusableWith": [
+        "battery",
+        "battery-warning"
+      ],
+      "defect": "重查電量短線與殼體的上下留白、格間分離，以及同家族狀態切換是否改變殼體。",
+      "sourceObservation": "Lucide以三格作為滿電，Phosphor以四格作為滿電；兩者均從左向右增加短線。現稿採Lucide三格序列，並與既有battery共用17乘11外殼。三筆電量線在殼內左右平衡，與Phosphor四格相比保留更寬的格間空白。",
+      "reason": "保留同一母型的逐格電量表示。三筆電量線在殼內左右平衡，與Phosphor四格相比保留更寬的格間空白。16px短線縮為四單位高，20／24px使用五單位高，維持上下空間。",
+      "postComparison": "已查看最新保留稿與Lucide／Phosphor的16／20／24、三角型、明暗DPR1與2。三筆電量線在殼內左右平衡，與Phosphor四格相比保留更寬的格間空白。原生小尺寸短線仍與上、下框分離，外殼及端子在三個電量狀態間一致，保留現稿。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "電量用實線數量表示，不用虛線暗示未定容量。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "空格直接留白，無需半透明電量線。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "不依賴顏色或漸層表示電量，維持單色狀態。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "battery-low",
+      "decision": "retained",
+      "purpose": "用橫向電池及一筆電量線表示低電量狀態。",
+      "recognitionCues": "共用矩形電池外殼和右側端子，內部一筆短豎線表示可用電量。",
+      "confusableWith": [
+        "battery",
+        "battery-warning"
+      ],
+      "defect": "重查電量短線與殼體的上下留白、格間分離，以及同家族狀態切換是否改變殼體。",
+      "sourceObservation": "Lucide以三格作為滿電，Phosphor以四格作為滿電；兩者均從左向右增加短線。現稿採Lucide三格序列，並與既有battery共用17乘11外殼。單筆電量線保持在與滿電第一格相同的位置，右側開放空間清楚表示剩餘容量低。",
+      "reason": "保留同一母型的逐格電量表示。單筆電量線保持在與滿電第一格相同的位置，右側開放空間清楚表示剩餘容量低。16px短線縮為四單位高，20／24px使用五單位高，維持上下空間。",
+      "postComparison": "已查看最新保留稿與Lucide／Phosphor的16／20／24、三角型、明暗DPR1與2。單筆電量線保持在與滿電第一格相同的位置，右側開放空間清楚表示剩餘容量低。原生小尺寸短線仍與上、下框分離，外殼及端子在三個電量狀態間一致，保留現稿。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "電量用實線數量表示，不用虛線暗示未定容量。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "空格直接留白，無需半透明電量線。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "不依賴顏色或漸層表示電量，維持單色狀態。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "battery-medium",
+      "decision": "retained",
+      "purpose": "用橫向電池及二筆電量線表示中電量狀態。",
+      "recognitionCues": "共用矩形電池外殼和右側端子，內部二筆短豎線表示可用電量。",
+      "confusableWith": [
+        "battery",
+        "battery-warning"
+      ],
+      "defect": "重查電量短線與殼體的上下留白、格間分離，以及同家族狀態切換是否改變殼體。",
+      "sourceObservation": "Lucide以三格作為滿電，Phosphor以四格作為滿電；兩者均從左向右增加短線。現稿採Lucide三格序列，並與既有battery共用17乘11外殼。兩筆電量線保持在滿電前兩格的位置，第三格空間留空，與低電量、滿電構成穩定的遞增序列。",
+      "reason": "保留同一母型的逐格電量表示。兩筆電量線保持在滿電前兩格的位置，第三格空間留空，與低電量、滿電構成穩定的遞增序列。16px短線縮為四單位高，20／24px使用五單位高，維持上下空間。",
+      "postComparison": "已查看最新保留稿與Lucide／Phosphor的16／20／24、三角型、明暗DPR1與2。兩筆電量線保持在滿電前兩格的位置，第三格空間留空，與低電量、滿電構成穩定的遞增序列。原生小尺寸短線仍與上、下框分離，外殼及端子在三個電量狀態間一致，保留現稿。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "電量用實線數量表示，不用虛線暗示未定容量。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "空格直接留白，無需半透明電量線。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "不依賴顏色或漸層表示電量，維持單色狀態。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "battery-warning",
+      "decision": "retained",
+      "purpose": "以電池內置驚嘆號表示電池異常或電量警告。",
+      "recognitionCues": "與電量系列相同的外殼及端子，殼內中央一短豎筆與獨立圓點。",
+      "confusableWith": [
+        "battery-low",
+        "battery-charging"
+      ],
+      "defect": "重查警告符號是否偏向端子、圓點與短豎筆是否黏合，以及小尺寸是否仍能辨識驚嘆號。",
+      "sourceObservation": "Phosphor把驚嘆號完整放在閉合外殼內；Lucide把上下殼線打斷以放大驚嘆號。現稿採Phosphor內置訊號，與低、中、滿電維持完整相同的電池殼。",
+      "reason": "保留完整電池外形和殼體中心x10.5的驚嘆號。短豎筆與圓點分離，符號不跟隨含端子的整體外接框偏右，四種狀態切換時外殼不跳動。",
+      "postComparison": "已查看最新保留稿與Lucide／Phosphor三尺寸、三角型及明暗DPR1與2。內置驚嘆號在16px仍保有上筆和下點，20／24px留白更充足；閉合殼體與電量家族一致，沒有採用Lucide上下開口的另一套狀態構造。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "警告用驚嘆號表示，無需虛線電池外殼。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "驚嘆號和電池同為主要訊號，不使用淡化。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "警告語意不依賴漸層或色彩，保留單色。"
+        }
+      },
+      "remaining": []
+    }
+  ]
+}

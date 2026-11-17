@@ -1,0 +1,101 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "batch": "81-tools-candidate-1",
+  "baseline": "references/atlas-recompare-01/master-before.json",
+  "viewedSuffixes": [
+    "light-1x",
+    "dark-1x",
+    "native-light-2x",
+    "native-dark-2x"
+  ],
+  "decisions": [
+    {
+      "name": "hard-hat",
+      "decision": "retained",
+      "purpose": "以圓頂、中央加強脊和外伸帽簷表示工程安全帽及施工防護。",
+      "recognitionCues": "左右落下的帽頂曲面、中央短脊、水平外伸帽簷。",
+      "confusableWith": [
+        "bell",
+        "umbrella"
+      ],
+      "defect": "重查帽簷較厚是否搶走帽頂體量，以及中央加強脊是否堵住帽內空間。",
+      "sourceObservation": "Lucide的中央脊提前收筆，帽頂內部保持開放；Phosphor把雙線脊延伸到底，將帽頂分成三塊。現稿沿用Lucide的開放內部，但帽簷孔較高，避免小尺寸變成雙底線。",
+      "reason": "保留5單位高的帽簷，讓16px仍有清楚的帽簷內孔；中央脊在y11收筆，與y16帽簷間留下空間。較高帽頂平衡帽簷重量，不採Phosphor全高雙脊增加線密度。",
+      "postComparison": "已查看Lucide／Phosphor與最新稿的16／20／24、三角型、明暗DPR1與2。帽簷雖較來源厚，但空腔穩定，中央脊不接底線，圓頂仍是主體；原生16可分辨帽頂與帽簷，因此保留現有比例。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "安全帽外殼是可見完整邊界，不用虛線描述內部。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以中央脊收筆及帽簷孔分配留白，不靠淡化線條。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "防護用品以輪廓傳意，無需光照漸層。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "paint-roller",
+      "decision": "refined",
+      "purpose": "以滾筒、彎折支架及下方握柄表示油漆滾刷與牆面塗裝。",
+      "recognitionCues": "水平寬滾筒、右側折回支架、偏中央的下垂握柄。",
+      "confusableWith": [
+        "paintbrush",
+        "hammer"
+      ],
+      "defect": "支架沿用極小的通用角半徑，三個轉折像矩形線框，沒有彎製金屬桿的連續感。",
+      "sourceObservation": "Lucide在支架的三個折點使用明確弧段，呈現彎桿；Phosphor則以斜向回桿和單線握柄形成更簡略的工具。現稿保留Lucide式水平折回及獨立握柄，適合用弧段改善承接。",
+      "reason": "將支架三個轉折改為24母型1.5單位半徑，按光學尺寸縮放；sharp亦保留金屬彎桿的結構曲線。滾筒、握柄、支架端點和下橫桿位置不變。",
+      "postComparison": "最新稿已與Lucide及Phosphor在16／20／24、三角型、明暗DPR1與2重新並列。右側回折與下接握柄更順，支架和滾筒間仍有穩定通道；sharp滾筒保持方形而彎桿保留弧段，構造差異清楚，不需改成Phosphor單線握柄。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "支架與握柄為實體，不以虛線暗示滾動或施工軌跡。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "用連續彎桿和留白呈現結構，不淡化支架。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "不加入油漆流光或材質漸層，保持單色工具語意。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "pocket-knife",
+      "decision": "retained",
+      "purpose": "以多工具摺刀展開刀刃與螺旋開瓶器表示隨身工具及瑞士刀。",
+      "recognitionCues": "水平膠囊柄、兩端鉚點、一側刀刃與另一側螺旋開瓶器。",
+      "confusableWith": [
+        "saw",
+        "screwdriver"
+      ],
+      "defect": "重查兩個展開工具的間距、刀刃尖端與螺旋節奏，以及柄內鉚點密度。",
+      "sourceObservation": "Hugeicons的水平柄把刀刃與螺旋分置兩端，留出寬中央空間；Lucide採斜柄，刀刃與螺旋向相反方向展開。現稿沿用Hugeicons正立展示，螺旋較疏且曲線連續。",
+      "reason": "刀刃直背與弧形刃口、開瓶器波形、膠囊柄及鉚點已各自清楚；中央空間寬，兩工具不交疊。保留水平姿態，無需以Lucide的斜向構圖取代或增加額外刀具。",
+      "postComparison": "已查看最新稿與Lucide／Hugeicons的16／20／24、三角型、明暗DPR1與2。原生16的刀刃內孔、螺旋及柄內鉚點仍能區分，正立輪廓較安定；不為細節完整度增加密螺紋或刀刃內線，因此保留。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "展開工具均為可見實體，不需要隱藏折疊位置虛線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以寬間隔分開刀刃與開瓶器，不用透明度區分。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "膠囊柄和刀刃不需金屬反光或連續漸層。"
+        }
+      },
+      "remaining": []
+    }
+  ]
+}

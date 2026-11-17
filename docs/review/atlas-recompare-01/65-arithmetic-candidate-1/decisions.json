@@ -1,0 +1,101 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "batch": "65-arithmetic-candidate-1",
+  "baseline": "references/atlas-recompare-01/master-before.json",
+  "viewedSuffixes": [
+    "light-1x",
+    "dark-1x",
+    "native-light-2x",
+    "native-dark-2x"
+  ],
+  "decisions": [
+    {
+      "name": "divide",
+      "decision": "retained",
+      "purpose": "以水平橫線及上下兩點表示除法運算。",
+      "recognitionCues": "中央橫線、上下同軸圓點及對稱間距。",
+      "confusableWith": [
+        "fraction",
+        "plus-minus"
+      ],
+      "defect": "本輪未見需要修正的具體比例或點線留白缺陷。",
+      "sourceObservation": "Lucide的圓點較大，Phosphor較輕；現稿依尺寸調整點徑，保留清楚但不過重的兩點。",
+      "reason": "保留橫線及上下6.5母型單位的對稱點距，點徑按光學尺寸分配，不改成空心小環。",
+      "postComparison": "與Lucide／Phosphor回比，三尺寸圓點與橫線分離清楚，低對比文字旁仍可辨識除法。 三尺寸三角型、明暗DPR1／2及55%文字均已查看。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "數字及運算符號均需完整筆畫，不加入虛線或裝飾斷點。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "上下部件共同承載運算語意，不分透明度層次。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "保持單色數學字形，不加入材質或體積漸層。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "plus-minus",
+      "decision": "retained",
+      "purpose": "以上方加號及下方減號表示正負兩種取值。",
+      "recognitionCues": "共用中軸的加號、下方等寬減號與清楚垂直間距。",
+      "confusableWith": [
+        "plus",
+        "minus"
+      ],
+      "defect": "本輪未見需要修正的具體比例或筆畫間距缺陷。",
+      "sourceObservation": "Hugeicons的完整上加下減與現稿同構，MDI更緊湊且較重；現稿保留較舒展的上下間距。",
+      "reason": "保留加號的水平與垂直構造及下方等寬減號，無須把下橫貼近加號或加重筆畫。",
+      "postComparison": "與Hugeicons／MDI回比，16px加號與減號清楚分離，兩橫對齊且各尺寸重心穩定。 三尺寸三角型、明暗DPR1／2及55%文字均已查看。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "數字及運算符號均需完整筆畫，不加入虛線或裝飾斷點。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "上下部件共同承載運算語意，不分透明度層次。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "保持單色數學字形，不加入材質或體積漸層。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "fraction",
+      "decision": "refined",
+      "purpose": "以上方分子1、分數線與下方分母2表示分數。",
+      "recognitionCues": "上下數字1與2、完整分數線及三層留白。",
+      "confusableWith": [
+        "divide",
+        "function-square"
+      ],
+      "defect": "原稿分母2的弧頂寬扁，右肩迅速轉入斜筆，字形偏橫向。",
+      "sourceObservation": "Tabler的分母字面較窄且有明確上半部，MDI使用斜式分數與方形數字；沿既有Tabler改作收窄2的字面，同時保留曲線字形。",
+      "reason": "2的弧頂寬由6收至5，兩端由y16.5降至17而最高點保持y15，增加弧頂高度；右側切線連續接入斜筆，底橫仍落在y21。分子與分數線保持。",
+      "postComparison": "與Tabler／MDI回比，2的上半部較圓整、字面較直立，原生16仍可辨上下數字，分數線周圍留白不變。 三尺寸三角型、明暗DPR1／2及55%文字均已查看。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "數字及運算符號均需完整筆畫，不加入虛線或裝飾斷點。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "上下部件共同承載運算語意，不分透明度層次。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "保持單色數學字形，不加入材質或體積漸層。"
+        }
+      },
+      "remaining": []
+    }
+  ]
+}

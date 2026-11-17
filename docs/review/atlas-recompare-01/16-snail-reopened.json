@@ -1,0 +1,208 @@
+{
+  "date": "2026-11-17",
+  "reason": "使用者指出：蝸牛的頭部跟身體轉接還是太生硬，沒有一體感。先前只修小轉角，未解決整體承接。",
+  "previousTaskItem": {
+    "name": "snail",
+    "label": "蝸牛",
+    "category": "nature",
+    "status": "visually-reviewed",
+    "previousReview": "Preserved as historical evidence; not inherited as this review decision.",
+    "decision": "refined",
+    "defect": "舊稿從殼側水平線轉入頸部時有硬直角，與柔軟腹足及圓頭的自然曲面不一致。",
+    "purpose": "以背負螺旋殼的低伏軟體動物表示蝸牛及緩慢移動。",
+    "confusableWith": [
+      "turtle"
+    ],
+    "sourceObservation": "Tabler頸身轉接較柔順；Lucide大殼的雙重螺旋較密，但頸身與低伏足部仍有連續姿態。保留現稿較疏的單圈螺旋，沿既有Tabler改作修順頸根，不添加Lucide的第二圈。",
+    "reason": "將頸根水平到垂直的折點改為1.2單位的二次曲線過渡；殼、腹足、頭與觸角位置保持，三角型皆保留這個實體曲面。",
+    "postComparison": "最新稿與Lucide／Tabler在三尺寸重新並列，頸根轉彎較連貫，殼內螺旋和腹足仍有清楚空腔。這是細微接角精修，沒有聲稱整體重設；明暗DPR1／2與55%文字均已目視，原生16的觸角與頸部仍可辨認。",
+    "effects": {
+      "dashes": {
+        "used": false,
+        "reason": "殼與軟體表面是完整實體，不需要隱藏邊界。"
+      },
+      "opacity": {
+        "used": false,
+        "reason": "以寬鬆螺旋和曲面分配空間，不淡化內圈。"
+      },
+      "gradients": {
+        "used": false,
+        "reason": "蝸牛以殼和身體輪廓傳意，不添加殼紋或光照漸層。"
+      }
+    },
+    "references": [
+      {
+        "name": "snail",
+        "library": "Lucide",
+        "repository": "lucide-icons/lucide",
+        "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+        "path": "icons/snail.svg",
+        "localPath": "references/atlas-01/lucide-snail.svg",
+        "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/snail.svg",
+        "sha256": "9d96adeecf21c50fee194db1c08704c192f3ef067924876a7526abcb45c644f8",
+        "license": "ISC AND MIT",
+        "sourceName": "snail",
+        "match": "exact",
+        "role": "comparison-only"
+      },
+      {
+        "name": "snail",
+        "library": "Tabler",
+        "repository": "tabler/tabler-icons",
+        "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+        "path": "icons/outline/snail.svg",
+        "localPath": "references/atlas-01/tabler-snail.svg",
+        "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/snail.svg",
+        "sha256": "341916073c9b43a0daa8d02d791c623e90587454f2bb79e01da0f23ea4e07c4e",
+        "license": "MIT",
+        "sourceName": "snail",
+        "match": "exact",
+        "role": "comparison-only"
+      }
+    ],
+    "batch": "16-invertebrates-candidate-3",
+    "beforeHash": "6be19f339ab8507c3200d99865bf65f29ce5d3acccc960c9b8ecc26508415afc",
+    "afterHash": "0ded4b851b97e874bc43a0b1286294f84d321baeec27bfbaa34cc4bae8556031",
+    "evidence": [
+      {
+        "path": "docs/review/atlas-recompare-01/16-invertebrates-candidate-3/snail-light-1x.png",
+        "sha256": "c6ab831181db4c85099cd93bc8a856bccbffe5b942d5cbbf9bebdfbebc4018b3"
+      },
+      {
+        "path": "docs/review/atlas-recompare-01/16-invertebrates-candidate-3/snail-dark-1x.png",
+        "sha256": "2320878bcb4f2124e0086957c96fc3995faaac2afe124f432d73120a9950e2ae"
+      },
+      {
+        "path": "docs/review/atlas-recompare-01/16-invertebrates-candidate-3/snail-native-light-2x.png",
+        "sha256": "d534302c391f5a8419d24da815fc1f5563c177a2b48fcfd031c7262a3b938631"
+      },
+      {
+        "path": "docs/review/atlas-recompare-01/16-invertebrates-candidate-3/snail-native-dark-2x.png",
+        "sha256": "44cf68fdf36db59be0c0b66c57963c0af1a953eb01d16cdb459d57b335f64289"
+      }
+    ],
+    "reviewer": "Codex (AI)",
+    "userApproval": "pending",
+    "remaining": []
+  },
+  "previousGlobalItem": {
+    "name": "snail",
+    "purpose": "以背負螺旋殼的低伏軟體動物表示蝸牛及緩慢移動。",
+    "recognitionCues": "單一寬鬆螺旋、直立短頸、雙觸角及貼地腹足。",
+    "confusableWith": [
+      "turtle"
+    ],
+    "sourceObservation": "Tabler頸身轉接較柔順；Lucide大殼的雙重螺旋較密，但頸身與低伏足部仍有連續姿態。保留現稿較疏的單圈螺旋，沿既有Tabler改作修順頸根，不添加Lucide的第二圈。",
+    "references": [
+      {
+        "name": "snail",
+        "library": "Lucide",
+        "repository": "lucide-icons/lucide",
+        "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+        "path": "icons/snail.svg",
+        "localPath": "references/atlas-01/lucide-snail.svg",
+        "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/snail.svg",
+        "sha256": "9d96adeecf21c50fee194db1c08704c192f3ef067924876a7526abcb45c644f8",
+        "license": "ISC AND MIT",
+        "sourceName": "snail",
+        "match": "exact",
+        "role": "comparison-only"
+      },
+      {
+        "name": "snail",
+        "library": "Tabler",
+        "repository": "tabler/tabler-icons",
+        "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+        "path": "icons/outline/snail.svg",
+        "localPath": "references/atlas-01/tabler-snail.svg",
+        "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/snail.svg",
+        "sha256": "341916073c9b43a0daa8d02d791c623e90587454f2bb79e01da0f23ea4e07c4e",
+        "license": "MIT",
+        "sourceName": "snail",
+        "match": "exact",
+        "role": "comparison-only"
+      }
+    ],
+    "status": "visually-reviewed-candidate",
+    "effects": {
+      "dashes": {
+        "used": false,
+        "reason": "殼與軟體表面是完整實體，不需要隱藏邊界。"
+      },
+      "opacity": {
+        "used": false,
+        "reason": "以寬鬆螺旋和曲面分配空間，不淡化內圈。"
+      },
+      "gradients": {
+        "used": false,
+        "reason": "蝸牛以殼和身體輪廓傳意，不添加殼紋或光照漸層。"
+      }
+    },
+    "change": {
+      "kind": "modified",
+      "before": {
+        "path": "references/atlas-recompare-01/master-before.json",
+        "variantsSha256": "6be19f339ab8507c3200d99865bf65f29ce5d3acccc960c9b8ecc26508415afc"
+      },
+      "reason": "將頸根水平到垂直的折點改為1.2單位的二次曲線過渡；殼、腹足、頭與觸角位置保持，三角型皆保留這個實體曲面。"
+    },
+    "visualReview": {
+      "reviewer": "Codex (AI)",
+      "date": "2026-11-17",
+      "skillVersion": "0.5.11",
+      "sizes": [
+        16,
+        20,
+        24
+      ],
+      "corners": [
+        "sharp",
+        "soft",
+        "rounded"
+      ],
+      "themes": [
+        "light",
+        "dark"
+      ],
+      "dpr": [
+        1,
+        2
+      ],
+      "variantsSha256": "0ded4b851b97e874bc43a0b1286294f84d321baeec27bfbaa34cc4bae8556031",
+      "evidence": [
+        {
+          "path": "docs/review/atlas-recompare-01/16-invertebrates-candidate-3/snail-light-1x.png",
+          "sha256": "c6ab831181db4c85099cd93bc8a856bccbffe5b942d5cbbf9bebdfbebc4018b3"
+        },
+        {
+          "path": "docs/review/atlas-recompare-01/16-invertebrates-candidate-3/snail-dark-1x.png",
+          "sha256": "2320878bcb4f2124e0086957c96fc3995faaac2afe124f432d73120a9950e2ae"
+        },
+        {
+          "path": "docs/review/atlas-recompare-01/16-invertebrates-candidate-3/snail-native-light-2x.png",
+          "sha256": "d534302c391f5a8419d24da815fc1f5563c177a2b48fcfd031c7262a3b938631"
+        },
+        {
+          "path": "docs/review/atlas-recompare-01/16-invertebrates-candidate-3/snail-native-dark-2x.png",
+          "sha256": "44cf68fdf36db59be0c0b66c57963c0af1a953eb01d16cdb459d57b335f64289"
+        }
+      ],
+      "inspectedCombinations": [
+        "light-1x",
+        "dark-1x",
+        "native-light-2x",
+        "native-dark-2x"
+      ],
+      "remainingCombinations": [],
+      "postDrawingSourceComparison": "最新稿與Lucide／Tabler在三尺寸重新並列，頸根轉彎較連貫，殼內螺旋和腹足仍有清楚空腔。這是細微接角精修，沒有聲稱整體重設；明暗DPR1／2與55%文字均已目視，原生16的觸角與頸部仍可辨認。"
+    },
+    "designOrigin": {
+      "kind": "adapted-redraw",
+      "library": "Tabler",
+      "license": "MIT",
+      "licenseFile": "licenses/tabler.txt"
+    },
+    "remaining": [],
+    "userApproval": "pending"
+  }
+}

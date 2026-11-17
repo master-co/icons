@@ -1,0 +1,101 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "batch": "85-industry-candidate-1",
+  "baseline": "references/atlas-recompare-01/master-before.json",
+  "viewedSuffixes": [
+    "light-1x",
+    "dark-1x",
+    "native-light-2x",
+    "native-dark-2x"
+  ],
+  "decisions": [
+    {
+      "name": "container",
+      "decision": "retained",
+      "purpose": "以三面箱體及側面壓紋表示貨櫃與貨運容器。",
+      "recognitionCues": "長向箱體、共邊的頂面與兩個側面，以及長側面的垂直壓紋。",
+      "confusableWith": [
+        "package",
+        "warehouse"
+      ],
+      "defect": "重查三個可見面的邊是否共用同一透視方向，以及側面壓紋在小尺寸是否過密。",
+      "sourceObservation": "Lucide使用三面斜視與長側面兩道壓紋，Phosphor則偏向端門正面、以門鎖短線表意。現稿沿用Lucide視角，對應邊保持平行，16px改為一道壓紋。",
+      "reason": "頂面和長側面共用12,-7方向，短側面共用8,5方向，所有垂直邊等高；16的一道壓紋保留兩個較寬孔，20／24兩道仍可分辨。保留三面器型，不增加門鎖或上表面內線。",
+      "postComparison": "已查看最新稿與Lucide／Phosphor的16／20／24、三角型、明暗DPR1與2。側面壓紋收在斜邊內，頂面保持空白，三面透視一致；原生16沒有窄小三連孔，故保留現有尺寸簡化。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "箱體與壓紋是可見構造，不需要虛線顯示背面。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "三面以共邊方向區分，不用透明度描出不同材質面。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "貨櫃不需金屬反光或連續漸層。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "robot-arm",
+      "decision": "retained",
+      "purpose": "以固定支柱、鉸點、水平連桿和夾爪表示工業機械手臂及自動化。",
+      "recognitionCues": "底座上的三角支承、單圈關節、向右伸出的連桿和張開的兩片夾爪。",
+      "confusableWith": [
+        "crane-tower",
+        "wrench"
+      ],
+      "defect": "重查支柱與關節承接、夾爪開口及水平連桿是否穿入關節內孔。",
+      "sourceObservation": "Lucide以單圈鉸點、傾斜支柱與開放夾爪形成輕巧機械臂；MDI採較粗支柱和近乎平行的夾爪端。現稿沿用Lucide張開的鉗口，稍大鉸孔保留小尺寸空間。",
+      "reason": "支柱與水平臂共用鉸點，線條裁在圓外，圈內不露連桿；支柱下端平切接底座，兩片夾爪沿共同頂點展開。保留寬開口與單圈鉸點，不加入第二個關節或密集機械線。",
+      "postComparison": "已查看Lucide／MDI與最新稿的16／20／24、三角型、明暗DPR1與2。鉸孔在16仍清楚，支柱底部沒有突出短刺，爪口寬度穩定；比MDI較重的夾爪方向更適合現有線重，故保留。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "連桿與夾爪為實際構造，不增加虛線運動軌跡。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以關節孔和夾爪開口分配留白，不淡化機械臂。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "不加入機械反光或動作漸淡。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "construction-barrier",
+      "decision": "refined",
+      "purpose": "以雙支柱警示板及斜紋表示施工圍欄與暫時阻隔。",
+      "recognitionCues": "橫向長板、跨出板面的兩根支柱、平行斜向警示紋。",
+      "confusableWith": [
+        "fence",
+        "traffic-cone"
+      ],
+      "defect": "兩筆斜紋在板面中線的間距及左右留白不均，第一筆直接從左上角起筆，使角落墨量較重。",
+      "sourceObservation": "Lucide與Tabler的警示斜紋具有均勻節奏，皆使用三筆；現稿簡化成兩筆後仍從角落起筆，沒有重新分配板面空間。",
+      "reason": "維持兩筆45度斜紋，讓它們在板高中線分別通過寬度的三分之一與三分之二；端點移離板角，仍裁在板內。板面比例與支柱位置保持。",
+      "postComparison": "最新稿已與Lucide／Tabler在16／20／24、三角型、明暗DPR1與2重新並列。斜紋在板面分布較均衡，左上角不再集中成粗結，原生16仍清楚保留兩條警示紋；不增加第三筆造成狹縫。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "警示斜紋是實體塗裝，以連續實線表達，不改成虛線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "不以淡化斜紋修補墨量，透過位置分配改善。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "警示板保持單色，不需材質或反光漸層。"
+        }
+      },
+      "remaining": []
+    }
+  ]
+}

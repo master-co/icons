@@ -1,0 +1,37 @@
+{
+  "reviewer":"Codex (AI)","batch":"09-sky-candidate-2",
+  "baseline":"references/atlas-recompare-01/master-before.json","date":"2026-11-17",
+  "viewedSuffixes":["light-1x","dark-1x","native-light-2x","native-dark-2x"],
+  "decisions":[
+    {
+      "name":"cloud-sun","decision":"refined",
+      "purpose":"以部分被雲遮住的太陽表示晴時多雲，與純晴天及日出區分。",
+      "recognitionCues":"前方的大主雲團與小雲瓣、後方太陽圓弧及三條放射光芒。",
+      "confusableWith":["sun","cloud-moon","sunrise"],
+      "defect":"原稿前景雲有多餘小左瓣，像三段拼成的帽形；光芒長度過短且半徑不一致，較像零散小點。",
+      "sourceObservation":"Lucide的主雲團和明確短光線比原稿更成熟，Phosphor也以大雲團與放射線形成完整前後層次。第一候選先合併左小瓣與主雲冠，使底腹自然承接；第二候選再把太陽光芒整理為等長、等徑的三條放射線。保留既有Lucide改作及太陽在右後方的構圖，不為照搬Phosphor位置而鏡像整顆。",
+      "reason":"低雲母型由左側大雲團接右小瓣，曲線和底線切向相接。太陽中心下移0.5，光芒統一在5.5至7單位半徑間，方向為上、右上、右；維持三道而非增加第四道擁擠線。前景雲仍按實際墨線對後方太陽做避讓。",
+      "postComparison":"最新稿與Lucide／Phosphor在16／20／24回比，雲腹更完整，光芒讀成短射線而非散點，太陽與雲之間仍有清楚通道。sharp的太陽端帽與自然雲曲面分工清楚；明暗DPR1、DPR2及55%文字均已查看，未靠白色遮片製造間隙。",
+      "effects":{
+        "dashes":{"used":false,"reason":"三條獨立光芒表示放射方向，不需再切成虛線。"},
+        "opacity":{"used":false,"reason":"前後層次透過真實輪廓避讓呈現，不淡化後方太陽。"},
+        "gradients":{"used":false,"reason":"晴時多雲用圓弧和光芒傳意，不需要發光漸層。"}
+      },"remaining":[]
+    },
+    {
+      "name":"cloud-moon","decision":"refined",
+      "purpose":"以雲後方的彎月表示夜間多雲，和晴時多雲及獨立月亮區分。",
+      "recognitionCues":"前景雙雲團、後方有內凹與月尖的彎月，以及兩者之間的開放通道。",
+      "confusableWith":["cloud-sun","moon"],
+      "defect":"原稿前景雲有多餘左小瓣，輪廓偏帽形；月牙本身的內凹與雙尖已成立，主要缺陷在雲的整體曲面。",
+      "sourceObservation":"Lucide前景大雲團較自然，Phosphor的大右雲團和彎月也形成清楚主次；原稿左小雲瓣讓主體較零碎。沿既有Lucide改作合併左小瓣與頂冠，保留目前月牙的方向、尺度及內凹，不增加星點。",
+      "reason":"與cloud-sun共用低雲母型，將左側改為連續大雲團，底腹與水平底線自然銜接。月亮原始完整幾何不變，但依新前景雲重新計算真實描邊避讓，不能沿用舊切口。",
+      "postComparison":"最新稿三尺寸與Lucide／Phosphor回比，前景雲更像完整體量，月牙仍有清楚內凹與月尖；16px雲月之間保有空白，沒有因放大主雲團而吞掉彎月。保留右後月亮的構圖與單一夜間訊號，明暗DPR1、DPR2及低對比文字均已查看。",
+      "effects":{
+        "dashes":{"used":false,"reason":"月牙與雲都是連續輪廓，沒有虛線語意。"},
+        "opacity":{"used":false,"reason":"雲月遮擋用真實透明空白處理，不以淡化掩飾相接。"},
+        "gradients":{"used":false,"reason":"夜間訊號由彎月輪廓成立，不需漸淡或星空漸層。"}
+      },"remaining":[]
+    }
+  ]
+}

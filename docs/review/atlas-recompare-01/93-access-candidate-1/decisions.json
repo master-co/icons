@@ -1,0 +1,98 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "baseline": "references/atlas-recompare-01/master-before.json",
+  "viewedSuffixes": [
+    "light-1x",
+    "dark-1x",
+    "native-light-2x",
+    "native-dark-2x"
+  ],
+  "batch": "93-access-candidate-1",
+  "decisions": [
+    {
+      "name": "vault",
+      "decision": "retained",
+      "purpose": "以厚門面板、中央輪孔與四向帶旋鈕的放射把手表達保險庫。",
+      "recognitionCues": "厚門面板、中央輪孔與四向帶旋鈕的放射把手",
+      "confusableWith": [
+        "settings"
+      ],
+      "defect": "重查四個末端和門框在 rounded 是否擁擠，以及中央輪孔是否還能辨識。",
+      "sourceObservation": "Lucide 用方門和中央四向轉輪表示保險庫。Phosphor 的腳座和偏右圓形門把偏向家用保險箱。",
+      "reason": "保留方門正面視角和中央四向鎖具，四個桿端與框角間留白對稱，輪孔由裁線保護。",
+      "postComparison": "四向把手像 Lucide 的轉輪，現稿末端比門框微輕，中心在三尺寸可見。Phosphor 式腳座不適合這個正面庫門構圖。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "四臂都屬於可見的旋轉把手。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "把手與門框靠空間而非透明度分離。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "以對稱輪孔和四把手辨識。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "key-square",
+      "decision": "refined",
+      "purpose": "以沿對角線排列的方握頭、短槽和階梯鎖齒表達方頭鑰匙。",
+      "recognitionCues": "沿對角線排列的方握頭、短槽和階梯鎖齒",
+      "confusableWith": [
+        "key"
+      ],
+      "defect": "靠近握頭的齒肩偏斜，讓鑰匙桿的短頸突然收窄。",
+      "sourceObservation": "Lucide 的階梯最後回到平行桿邊再接握頭。Hugeicons 同樣有明確的同軸短頸。",
+      "reason": "重算末齒至握頭的交點，讓兩側鑰匙桿與同一斜軸平行，在方握頭邊界收口。",
+      "postComparison": "相比原稿，階梯後短頸寬度更穩定，方頭和桿身連成同一物件。兩來源的方握頭與短槽辨識線索在三尺寸保留。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "階梯鎖齒是連續實體外緣。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以共同斜軸與接縫呈現握頭和桿身。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "保持單色輪廓與握頭槽。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "scan-face",
+      "decision": "retained",
+      "purpose": "以四個掃描框角、對稱眼點和短嘴弧表達臉部辨識。",
+      "recognitionCues": "四個掃描框角、對稱眼點和短嘴弧",
+      "confusableWith": [
+        "scan"
+      ],
+      "defect": "重查框角與五官在 16px 的視覺比例和四側間隔。",
+      "sourceObservation": "Lucide 和 Tabler 都使用四個框角和簡單五官。Tabler 的嘴弧較短，現稿嘴弧寬度和兩眼構成較穩定的三點分布。",
+      "reason": "保留全對稱布局，使用很少的五官線條給框角留出識別空間，角型按四角的實際輪廓半徑變化。",
+      "postComparison": "現稿和兩來源並列時，臉和框的主次清楚，四角和五官在 16px 都未互相黏合。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "四個角是掃描定位記號，各自為完整線條。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "臉部特徵保持清楚，不需淡化框角。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "以四角和五官表達識別區域。"
+        }
+      },
+      "remaining": []
+    }
+  ]
+}

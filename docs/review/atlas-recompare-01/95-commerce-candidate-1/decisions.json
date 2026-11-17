@@ -1,0 +1,98 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "batch": "95-commerce-candidate-1",
+  "baseline": "references/atlas-recompare-01/master-before.json",
+  "viewedSuffixes": [
+    "light-1x",
+    "dark-1x",
+    "native-light-2x",
+    "native-dark-2x"
+  ],
+  "decisions": [
+    {
+      "name": "scale",
+      "decision": "refined",
+      "purpose": "以等高雙秤盤、拱形橫樑、中央支柱和底座呈現天平。",
+      "recognitionCues": "等高雙秤盤、拱形橫樑、中央支柱和底座",
+      "confusableWith": [
+        "gavel"
+      ],
+      "defect": "橫樑在左右懸點仍有少量斜率，吊線起點和橫樑水平收筆的位置不同。",
+      "sourceObservation": "Lucide 強調水平平衡和中央拱形橫樑，Phosphor 以單根斜樑表示一側較重。現稿採 Lucide 的平衡姿態。",
+      "reason": "將兩個秤盤吊點設在橫樑曲段與水平端部的共同點，曲段沿水平切線接入。左右保持鏡射。",
+      "postComparison": "重新與 Lucide 和 Phosphor 並列，原生三尺寸保留了等高雙盤和中央支承，放大時可看出吊點到橫樑末段的走向更一致。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "秤盤吊線沿實體連接連續描繪。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "秤盤亮度一致以表達平衡。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "以左右對稱和輪廓呈現構造。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "gavel",
+      "decision": "retained",
+      "purpose": "以斜向長柄、直筒槌身與兩個外伸端面呈現法槌。",
+      "recognitionCues": "斜向長柄、直筒槌身與兩個外伸端面",
+      "confusableWith": [
+        "hammer"
+      ],
+      "defect": "重查斜柄、槌身比例，以及兩端槌面和槌身的接點。",
+      "sourceObservation": "Lucide 以寬槌身和兩個略為外伸的端面辨識法槌。Phosphor 將端面各畫成獨立窄框，更強調端面厚度。",
+      "reason": "保留 Lucide 式外伸端面和較長圓尾手柄，三個部件共享同一斜軸，槌身內部維持完整空腔。",
+      "postComparison": "與兩來源並列，原生 16px 易區分手柄和較寬的槌身，端面不因疊加窄框而過密。角型在握柄接槌身及槌面維持清楚。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "端面和木柄各有完整實線構造。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以輪廓區分槌面而非淡化端部。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "輪廓已足以表達結構和握柄。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "stamp",
+      "decision": "retained",
+      "purpose": "以圓頭收腰握柄、寬扁印面與分離的印痕線呈現印章。",
+      "recognitionCues": "圓頭收腰握柄、寬扁印面與分離的印痕線",
+      "confusableWith": [
+        "gavel"
+      ],
+      "defect": "重查握柄收腰與印面底邊的形態，以及三條近水平線在小尺寸的間隔。",
+      "sourceObservation": "Lucide 的圓頭收腰握柄具物件姿態，Phosphor 使用偏梯形握柄與方正印面。兩者均以底下一筆表示印痕。",
+      "reason": "保留 Lucide 式圓頭握柄，印面依角型而變，印痕與底邊之間有獨立通道。",
+      "postComparison": "兩來源比較後，現稿圓頭和細頸比梯形方案更容易和印面區分。三尺寸印面內部及下方印痕可分開。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "印痕是一筆完整的落印線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "印面和印痕靠留白區分。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "用握柄剪影與印痕辨識印章。"
+        }
+      },
+      "remaining": []
+    }
+  ]
+}

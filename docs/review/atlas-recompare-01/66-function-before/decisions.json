@@ -1,0 +1,43 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "batch": "66-function-before",
+  "baseline": "references/atlas-recompare-01/master-before.json",
+  "viewedSuffixes": [
+    "light-1x",
+    "dark-1x",
+    "native-light-2x",
+    "native-dark-2x"
+  ],
+  "decisions": [
+    {
+      "name": "function-square",
+      "decision": "retained",
+      "purpose": "以方框內的曲線ƒ字形表示數學函數。",
+      "recognitionCues": "方形外框、微斜主幹、上下曲尾與中腰橫筆。",
+      "confusableWith": [
+        "pi",
+        "fraction"
+      ],
+      "defect": "本輪未見需要修正的具體字形承接或框內留白缺陷。",
+      "sourceObservation": "Lucide的開放上下曲尾與Tabler的回鉤ƒ各有字形特徵；現稿沿Lucide保留開放曲尾，加上微斜主幹，沒有採用較密回鉤的必要。",
+      "reason": "保留框內曲線ƒ與短橫筆，外框按角型使用實際半徑；字形本身的自然曲線不因sharp變成折線。",
+      "postComparison": "與Lucide／Tabler回比，16px字形仍與外框分離，四側留白清楚；上下曲尾與中腰橫筆的結構成立。三尺寸三角型、明暗DPR1／2及55%文字均已查看。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "外框與函數字形均為完整可見結構，不需要虛線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "框與字形共同表達函數，不淡化任何一層。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "保持單色數學字形，不加入材質或體積漸層。"
+        }
+      },
+      "remaining": []
+    }
+  ]
+}

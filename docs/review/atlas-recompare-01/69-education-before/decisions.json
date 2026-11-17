@@ -1,0 +1,101 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "batch": "69-education-before",
+  "baseline": "references/atlas-recompare-01/master-before.json",
+  "viewedSuffixes": [
+    "light-1x",
+    "dark-1x",
+    "native-light-2x",
+    "native-dark-2x"
+  ],
+  "decisions": [
+    {
+      "name": "library",
+      "decision": "retained",
+      "purpose": "以直立與傾斜書脊的排列表示圖書館及藏書。",
+      "recognitionCues": "三冊高低不同的直立書脊與末端傾斜書冊。",
+      "confusableWith": [
+        "book",
+        "book-marked"
+      ],
+      "defect": "本輪未見需要回修的具體比例、留白或構造承接缺陷。",
+      "sourceObservation": "Lucide的四筆書脊與現稿同構，Hugeicons採兩冊具厚度書本；現稿的排列節奏與開放留白適合表示一組藏書，不需加入封閉框和標籤孔。",
+      "reason": "保留三筆直立書脊與末端斜筆，底部落點及高低節奏保持；不因來源冊數差異壓縮間距。",
+      "postComparison": "原生16仍可分辨四冊，高低及傾斜筆畫清楚，20／24的書脊間留白完整。 已與兩份來源回比，三尺寸三角型、明暗DPR1／2及55%文字均已查看。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "可見書脊、證書及球架以連續輪廓表達，不需虛線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以構造與留白分辨部件，不依靠淡化建立層次。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "維持單色平面教育圖示，不加入材質或體積漸層。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "diploma",
+      "decision": "retained",
+      "purpose": "以橫式證書、短文字線及圓章垂帶表示畢業證明。",
+      "recognitionCues": "橫式紙張、兩道短文線、右下圓章與V形垂帶。",
+      "confusableWith": [
+        "file-text",
+        "medal"
+      ],
+      "defect": "本輪未見需要回修的具體比例、留白或構造承接缺陷。",
+      "sourceObservation": "Phosphor的橫式證書與右側圓章已為現稿採用，Hugeicons的中央章是另一種構圖；現稿右下配置讓文字區與印章分工清楚。",
+      "reason": "保留兩道短文線及右下印章，紙張依印章實際輪廓避讓，垂帶在圓章外側承接，不加入內層章紋。",
+      "postComparison": "三尺寸圓章孔、垂帶及紙張周圍留白清楚，16px沒有因額外文字或章紋變密。 已與兩份來源回比，三尺寸三角型、明暗DPR1／2及55%文字均已查看。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "可見書脊、證書及球架以連續輪廓表達，不需虛線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以構造與留白分辨部件，不依靠淡化建立層次。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "維持單色平面教育圖示，不加入材質或體積漸層。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "globe-stand",
+      "decision": "retained",
+      "purpose": "以球體、傾斜半圓支架及底座表示教學地球儀。",
+      "recognitionCues": "完整球環、外側半圓架、中央短柱與水平底足。",
+      "confusableWith": [
+        "globe",
+        "orbit"
+      ],
+      "defect": "本輪未見需要回修的具體比例、留白或構造承接缺陷。",
+      "sourceObservation": "Phosphor的完整球體與半圓支架已被現稿保留，Tabler球體更小且方向相反；現稿球架間距與底座支承成立，無須縮小球體。",
+      "reason": "保留球體及同心弧架，立柱接在弧架最低點，維持水平底座；不加入小尺寸難讀的經緯線。",
+      "postComparison": "與Phosphor／Tabler回比，原生16球環與弧架之間仍有可見通道，底座承接清楚，三角型保持自然圓弧。 已與兩份來源回比，三尺寸三角型、明暗DPR1／2及55%文字均已查看。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "可見書脊、證書及球架以連續輪廓表達，不需虛線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以構造與留白分辨部件，不依靠淡化建立層次。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "維持單色平面教育圖示，不加入材質或體積漸層。"
+        }
+      },
+      "remaining": []
+    }
+  ]
+}

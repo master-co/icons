@@ -1,0 +1,70 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "baseline": "references/atlas-recompare-01/master-before.json",
+  "viewedSuffixes": [
+    "light-1x",
+    "dark-1x",
+    "native-light-2x",
+    "native-dark-2x"
+  ],
+  "batch": "92-fire-candidate-1",
+  "decisions": [
+    {
+      "name": "fire-extinguisher",
+      "decision": "retained",
+      "purpose": "以直立瓶身、圓肩、短閥與側邊下垂的軟管表達滅火器。",
+      "recognitionCues": "直立瓶身、圓肩、短閥與側邊下垂的軟管",
+      "confusableWith": [
+        "bottle"
+      ],
+      "defect": "重查閥頸有無塞滿，軟管與瓶身之間是否留下連續通道。",
+      "sourceObservation": "Lucide 使用矩形閥帽、單方向把手和管夾。Phosphor 的張開雙把手更寫實，顶部也更密集。",
+      "reason": "現稿保留 Lucide 的單把手和短閥，瓶體與軟管間距足以辨識兩者，瓶肩和直壁的連續輪廓傳達壓力瓶形。",
+      "postComparison": "與兩來源相比，現稿較寬的瓶身和外掛軟管在 16px 仍有穩定留白。管夾連接處不穿過瓶壁。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "軟管和瓶身都是實體輪廓。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "不需淡化閥和握把以區分層次。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "以圓肩和外掛軟管表達瓶體。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "fire-hydrant",
+      "decision": "refined",
+      "purpose": "以圓帽、雙側接頭、中央圓孔與水平底座表達消防栓。",
+      "recognitionCues": "圓帽、雙側接頭、中央圓孔與水平底座",
+      "confusableWith": [
+        "power-socket"
+      ],
+      "defect": "雙側接頭的硬直角和圓帽形狀落差較大，原稿外輪廓的角型差異也太小。",
+      "sourceObservation": "Tabler 的接頭外角微圓，根部仍看得出接入立柱。MDI 用粗實形單獨突出兩側接頭。",
+      "reason": "soft、rounded 把接頭外角改為相切圓弧，半徑依角型分開，根部仍有明確折角。保留圓帽、孔洞和底座。",
+      "postComparison": "新稿兩側更接近 Tabler 的實體接頭，保留較寬的雙側伸出量。16px 圓孔仍開放，sharp 接頭維持直角姿態。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "所有接頭均保留完整可見邊界。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以完整圓孔呈現中央出水口。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "以輪廓表達立柱和接頭的構造。"
+        }
+      },
+      "remaining": []
+    }
+  ]
+}

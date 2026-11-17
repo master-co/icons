@@ -6,7 +6,7 @@ export function hammer({g,p,o,l}){
  return [...exteriorDetails(head,[handle],g),l(17.5,14.5,21.5,10.5)];
 }
 export function screwdriver({g,p,o,l}){
- const handle=p('M12 7L16 3A3.5355 3.5355 0 0 1 21 8L17 12H14V15L12 17L7 12L9 10H12Z');
+ const handle=p('M12 7L16 3A3.5355 3.5355 0 0 1 21 8L17 12H14.8Q14 12 14 12.8V15L12 17L7 12L9 10H11.2Q12 10 12 9.2Z');
  return [...exteriorDetails(handle,[l(2,22,9.5,14.5)],g),l(15,9,18.5,5.5)];
 }
 export function drill({g,r,o,l,p}){
@@ -17,13 +17,13 @@ export function drill({g,r,o,l,p}){
  return exteriorDetails(base,upper,g);
 }
 export function saw({g,o,l}){
- const outline=o([[6,12],[20,2],[22,5],[19,6],[19,9],[16,9],[16,12],[13,12],[13,15],[10,17],[6.5,22],[2.5,17]],true,g.tip);
+ const outline=o([[6,12],[20,2],[22,5],[19,6],[19,9],[16,9],[16,12],[13,12],[13,15],[10,17],[6.25,20],[2.25,15]],true,g.tip);
  return enclosedDetails(outline,[l(6,12,10,17)],g);
 }
 export function tapeMeasure({g,p,l}){
  const shell=p('M2 8.5C2 6.567 5.134 5 9 5C12.866 5 16 6.567 16 8.5C16 10.433 12.866 12 9 12H21Q22 12 22 13V18Q22 19 21 19H9C5.134 19 2 17.433 2 15.5Z');
  const spiral=p('M2 8.5C2 10.433 5.134 12 9 12V9C9 7.5 6 8 6 9.5');
- return enclosedDetails(shell,[spiral,...[6,11,16].map(x=>l(x,16.5,x,20))],g);
+ return enclosedDetails(shell,[spiral,...[6,12,18].map(x=>l(x,16.5,x,20))],g);
 }
 export function toolbox({g,o,l}){
  const box=o([[2,10],[6,6],[18,6],[22,10],[22,21],[2,21]],true,[g.tip,g.tip,g.tip,g.tip,g.r,g.r]);
@@ -38,7 +38,7 @@ export function hardHat({g,o,p,r}){
 }
 export function paintRoller({g,r,o}){
  const roller=r(2,2,15,7,g.r),grip=r(8,17,4,5,g.tip);
- const arm=o([[17,5.5],[22,5.5],[22,13],[10,13],[10,17]],false,g.tip);
+ const arm=o([[17,5.5],[22,5.5],[22,13],[10,13],[10,17]],false,1.5*g.s/24);
  return [...exteriorDetails(roller,exteriorDetails(grip,[arm],g),g)];
 }
 export function pocketKnife({g,r,p,l,d}){

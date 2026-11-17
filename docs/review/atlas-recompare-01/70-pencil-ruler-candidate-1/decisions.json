@@ -1,0 +1,43 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "batch": "70-pencil-ruler-candidate-1",
+  "baseline": "references/atlas-recompare-01/master-before.json",
+  "viewedSuffixes": [
+    "light-1x",
+    "dark-1x",
+    "native-light-2x",
+    "native-dark-2x"
+  ],
+  "decisions": [
+    {
+      "name": "pencil-ruler",
+      "decision": "refined",
+      "purpose": "以交叉的鉛筆與刻度尺表示繪圖及量測工具。",
+      "recognitionCues": "收尖鉛筆、筆尾分界、斜向尺身及兩端刻度。",
+      "confusableWith": [
+        "pencil",
+        "ruler"
+      ],
+      "defect": "兩道刻度距離尺端過近，與端角墨線聚在一起，難以看出獨立的尺刻度。",
+      "sourceObservation": "Lucide與Tabler均把刻度安排在尺端內側，與端面之間留出清楚區段；沿既有Lucide改作調整刻度位置。",
+      "reason": "兩道刻度沿尺身向內平移，座標各移1.5個母型單位；保留刻度長度與方向、尺身及鉛筆的外輪廓，刻度仍裁於尺內。",
+      "postComparison": "與Lucide／Tabler回比，兩端刻度不再擠在端角，尺端留白更完整；16px仍可辨鉛筆與尺的交叉構造，筆尾內孔及筆尖保持。三尺寸三角型、明暗DPR1／2及55%文字均已查看。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "兩道短刻度有量測語意，維持獨立實線，不改成裝飾虛線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "前後工具用輪廓遮擋表達，不淡化後方尺身。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "維持單色平面工具圖示，不增加材質漸層。"
+        }
+      },
+      "remaining": []
+    }
+  ]
+}

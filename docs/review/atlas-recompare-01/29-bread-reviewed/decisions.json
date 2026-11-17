@@ -1,0 +1,43 @@
+{
+  "reviewer": "Codex (AI)",
+  "batch": "29-bread-reviewed",
+  "baseline": "references/atlas-recompare-01/master-before.json",
+  "date": "2026-11-17",
+  "viewedSuffixes": [
+    "light-1x",
+    "dark-1x",
+    "native-light-2x",
+    "native-dark-2x"
+  ],
+  "decisions": [
+    {
+      "name": "bread",
+      "decision": "retained",
+      "purpose": "以單片吐司的圓肩及平底輪廓表示麵包、早餐與烘焙食品。",
+      "recognitionCues": "較寬的圓肩頂冠、下收側壁及平底，內部保持開放。",
+      "confusableWith": [
+        "sandwich",
+        "cake"
+      ],
+      "defect": "本輪未發現需重畫的可見缺陷；需確認肩部收口、底角及空腔在原生小尺寸是否成立。",
+      "sourceObservation": "Phosphor以重疊吐司增加厚度，Tabler為更緊湊的單片吐司；現稿保留同一單片語意，肩部突出比Tabler稍明確，無需新增Phosphor的內部層線。",
+      "reason": "保留既有Tabler改作的連續圓肩、直身與分角型底部；三尺寸肩部收束清楚，整個吐司內腔開放，來源器型差異不足以構成改畫理由。",
+      "postComparison": "最新現稿與Phosphor／Tabler於16／20／24重新並列，三角型和明暗DPR1／2均已查看。輪廓已有吐司的上寬下收及平底，側肩收口可辨；不為增加細節改成疊片或添加內框。此項保留是本輪實際回比結論，非承接舊通過紀錄。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "吐司外緣是完整可見輪廓，不需虛線表示內部。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "單片吐司沒有前後層級，不以淡色增添裝飾。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "麵包以肩部輪廓辨識，不需烘焙色彩或光照漸層。"
+        }
+      },
+      "remaining": []
+    }
+  ]
+}

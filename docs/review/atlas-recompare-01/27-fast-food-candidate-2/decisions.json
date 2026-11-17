@@ -1,0 +1,101 @@
+{
+  "reviewer": "Codex (AI)",
+  "batch": "27-fast-food-candidate-2",
+  "baseline": "references/atlas-recompare-01/master-before.json",
+  "date": "2026-11-17",
+  "viewedSuffixes": [
+    "light-1x",
+    "dark-1x",
+    "native-light-2x",
+    "native-dark-2x"
+  ],
+  "decisions": [
+    {
+      "name": "sandwich",
+      "decision": "refined",
+      "purpose": "以三角麵包和垂落起司表示三明治。",
+      "recognitionCues": "三角麵包頂、明確麵包厚度、偏斜圓收的起司及下層麵包。",
+      "confusableWith": [
+        "burger",
+        "pizza"
+      ],
+      "defect": "舊稿像屋頂加矩形盒，淺折餡料線沒有食物的厚度與垂落感。",
+      "sourceObservation": "Lucide的厚麵包與不對稱垂落起司更具三明治構造，Hugeicons則以斜切麵包及波浪餡料表現另一切面。沿既有Lucide改作，更靠近厚麵包與圓收起司，沒有為保持差異留下舊淺折線。",
+      "reason": "將麵包分為三角上面與有厚度的前緣，起司垂至下層外緣並按其完整形狀裁去後方麵包墨線。第二輪將尖V起司改為偏斜圓收，避免像規整幾何倒三角；下層麵包維持實際角型與清楚空腔。",
+      "postComparison": "第二輪與Lucide／Hugeicons在16／20／24重新並列，前緣厚度及起司的前後關係清楚，起司與底部沒有狹小假縫。三角型、明暗DPR1／2及55%文字已目視；sharp仍保留起司自身的柔軟彎曲，沒有靠linejoin掩飾硬角。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "麵包、餡料及餅皮均為可見輪廓，不需要隱藏邊界虛線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "層次透過輪廓及可見空腔建立，不以淡化掩飾交接。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "食物形態由單色輪廓表達，不依賴烘烤或食材色彩漸層。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "pizza",
+      "decision": "refined",
+      "purpose": "以帶弧形餅皮及配料的三角切片表示披薩。",
+      "recognitionCues": "切片尖端、寬弧形餅皮、兩枚錯落圓配料。",
+      "confusableWith": [
+        "sandwich",
+        "citrus"
+      ],
+      "defect": "舊稿三枚配料過度對稱，像規整種子排列；soft／rounded餅皮兩端仍沒有實際微圓轉折。",
+      "sourceObservation": "Tabler兩枚錯落配料比舊三點三角排列更自然，Lucide斜向切片以較大配料圈呈另一視角。沿既有Tabler直立切片改作，採錯落兩點，不引入小尺寸容易擁擠的空心配料圈。",
+      "reason": "配料改為兩枚錯落圓點，釋放切片尖端及餅皮附近留白；soft／rounded餅皮兩端加入實際曲線轉折，sharp保留切片邊界角。原有弧形餅皮厚度與內分界收口保留。",
+      "postComparison": "最新稿與Tabler／Lucide以三尺寸重新並列，兩枚配料與餅皮各自清楚，排列較自然，直立切片仍完整。三角型、明暗DPR1／2及55%文字均已目視；16配料沒有貼邊，餅皮弧帶仍有可見空腔。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "麵包、餡料及餅皮均為可見輪廓，不需要隱藏邊界虛線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "層次透過輪廓及可見空腔建立，不以淡化掩飾交接。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "食物形態由單色輪廓表達，不依賴烘烤或食材色彩漸層。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "burger",
+      "decision": "refined",
+      "purpose": "以上下麵包和中間餡料表示漢堡。",
+      "recognitionCues": "圓頂上麵包、微波餡料、較厚下麵包與短平底；20／24保留兩枚芝麻。",
+      "confusableWith": [
+        "sandwich",
+        "bread"
+      ],
+      "defect": "舊三層距離過大，像分解展示；下麵包只是薄弧，缺少承托上層的體量。",
+      "sourceObservation": "Tabler三層間距較緊湊，Lucide將起司與肉排整合成更具體的起司漢堡。保留既有Tabler一般漢堡方向，先吸收緊湊比例，增加下麵包體量；沒有把另一種起司餡料當成所有漢堡必需細節。",
+      "reason": "收近三層中心距，下麵包以連續圓腹接短平底，上麵包略增高度；16省略芝麻。第二輪在soft／rounded上下麵包切面兩端加入實際微圓，保持清楚的餡料上下通道。",
+      "postComparison": "第二輪與Tabler／Lucide在原生三尺寸重新並列，麵包與餡料較像一份完整食物，底麵包有體量。三角型、明暗DPR1／2及55%文字均已目視，16仍能分辨三層且沒有縮成黑塊；保留一般漢堡的簡潔構造。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "麵包、餡料及餅皮均為可見輪廓，不需要隱藏邊界虛線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "層次透過輪廓及可見空腔建立，不以淡化掩飾交接。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "食物形態由單色輪廓表達，不依賴烘烤或食材色彩漸層。"
+        }
+      },
+      "remaining": []
+    }
+  ]
+}

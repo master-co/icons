@@ -3,7 +3,7 @@ import {connectivity} from '../families/connectivity.mjs';
 
 export function solarPanel({g,o,p,l,small}){
  const panel=o([[6,14],[18,14],[22,22],[2,22]],true,g.tip);
- const grid=small?[l(12,14,12,22)]:[l(10,14,8,22),l(14,14,16,22),l(4,18,20,18)];
+ const grid=small?[l(12,14,12,22)]:[...[1,2].map(i=>l(6+12*i/3,14,2+20*i/3,22)),l(4,18,20,18)];
  const sun=p('M8 10A4 4 0 0 1 16 10');
  return [...enclosedDetails(panel,grid,g),sun,l(12,2,12,3),l(4,10,5,10),l(19,10,20,10),l(5.5,3.5,6.5,4.5),l(17.5,4.5,18.5,3.5)];
 }
@@ -22,11 +22,11 @@ export function batteryWarning({g,l,d}){
 }
 export function carBattery({g,r,l}){
  const shell=r(2,7,20,13,g.r);
- return [...exteriorDetails(shell,[l(6,4,6,7),l(18,4,18,7)],g),l(5.5,13.5,9.5,13.5),l(14,13.5,18,13.5),l(16,11.5,16,15.5)];
+ return [...exteriorDetails(shell,[l(6,4,6,7),l(18,4,18,7)],g),l(6,13.5,10,13.5),l(14,13.5,18,13.5),l(16,11.5,16,15.5)];
 }
 export function chargingStation({g,o,p,l}){
  const body=o([[3,22],[3,3],[14,3],[14,22]],false,g.r);
- const cable=p('M14 13H16Q18 13 18 15V17C18 18.1046 18.8954 19 20 19C21.1046 19 22 18.1046 22 17V9L18 5');
+ const cable=p('M14 13H16Q18 13 18 15V17C18 18.1046 18.8954 19 20 19C21.1046 19 22 18.1046 22 17V9.8284A2 2 0 0 0 21.4142 8.4142L18 5');
  const bolt=o([[9.5,10.5],[7,14],[10,14],[7.5,17.5]],false,g.tip);
  return [body,l(2,22,15,22),l(3,7,14,7),cable,bolt];
 }

@@ -1,0 +1,72 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "batch": "50-mobility-candidate-1",
+  "baseline": "references/atlas-recompare-01/master-before.json",
+  "viewedSuffixes": [
+    "light-1x",
+    "dark-1x",
+    "native-light-2x",
+    "native-dark-2x"
+  ],
+  "decisions": [
+    {
+      "name": "wheelchair",
+      "decision": "retained",
+      "purpose": "以無乘坐者的座架、推把與大小輪表示輪椅器具。",
+      "recognitionCues": "後方大輪、前方小輪、座面、扶手和推把。",
+      "confusableWith": [
+        "accessibility",
+        "crutch"
+      ],
+      "defect": "本輪回比沒有發現需回修的具體缺陷；需維持座架與輪孔、扶手之間的留白。",
+      "sourceObservation": "現稿與Hugeicons有相同的清楚大小輪及座架結構，Tabler亦採相近側視器型；沒有來源優勢需要改動目前比例。",
+      "reason": "保留大小輪、座面、扶手與彎曲推把，車架按輪體外緣遮擋，輪孔不被內部支架穿過。",
+      "postComparison": "最新稿與Hugeicons／Tabler在三尺寸回比，兩輪孔與座架空腔保持開放、車架接點連續；16仍能區分輪椅器具與乘坐者符號。三角型、明暗DPR1／2與55%文字已查看。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "輪椅結構均為可見實體，不添加隱藏支架虛線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以實際輪廓與空腔呈現承重結構，不以淡化遮掩接點。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "輔具保持單色平面輪廓，不增加光照或材質漸層。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "crutch",
+      "decision": "refined",
+      "purpose": "以腋托、握桿、雙側支架與接地桿表示腋下拐杖。",
+      "recognitionCues": "橫向腋托、內部握桿、雙側長支架、收束支撐桿與腳墊。",
+      "confusableWith": [
+        "wheelchair",
+        "wine"
+      ],
+      "defect": "雙側支架偏寬且收束過早，腋托也偏寬，整體略呈杯形，承重桿的修長感不足。",
+      "sourceObservation": "Tabler的腋托和支架較窄，直段較長，承重形態更清楚；OpenMoji是前臂拐杖的另一種器型，只用於同概念對照，未採用其圖稿。",
+      "reason": "腋托寬10減至8，支架間距7減至5，直段延長到y12再以曲線收進中央桿；握桿依新支架縮短，底端及整體高度保持。",
+      "postComparison": "最新稿與Tabler／OpenMoji回比，腋下拐杖的修長支承更明確，16的腋托孔、握桿上下空白仍可讀；三角型、明暗DPR1／2及55%文字已查看，沒有採用OpenMoji前臂器型。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "腋托、握桿和支架為完整實體，不需要虛線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以實際輪廓與空腔呈現承重結構，不以淡化遮掩接點。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "輔具保持單色平面輪廓，不增加光照或材質漸層。"
+        }
+      },
+      "remaining": []
+    }
+  ]
+}

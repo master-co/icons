@@ -11,15 +11,19 @@ export function craneTower({g,o,l,p}){
 export function craneTruck({g,p,o,l,c}){
  const body=o([[2,20],[2,13],[12,13],[12,20]],true,g.tip);
  const cab=p('M6 13V8Q6 6 8 6H9C10.657 6 12 7.343 12 9V13Z');
- const boom=o([[12,9],[20,3],[20,12]],false,g.tip);
- const hook=p('M20 12C21.1046 12 22 12.8954 22 14C22 15.1046 21.1046 16 20 16C18.8954 16 18 15.1046 18 14');
+ const boom=o([[12,9],[20,3],[20,12]],false,g.s/24);
+ // Open the hook mouth before heavier strokes close the diagonal gap.
+ const hookEnd=g.variableStroke&&g.stroke*24/g.s>2
+  ?'C19.2855 16 18.6252 15.6188 18.2679 15'
+  :'C18.8954 16 18 15.1046 18 14';
+ const hook=p('M20 12C21.1046 12 22 12.8954 22 14C22 15.1046 21.1046 16 20 16'+hookEnd);
  const wheels=[c(4.5,20,2),c(12,20,2)];
  let upper=[...exteriorDetails(body,exteriorDetails(cab,[boom],g),g),hook];
  for(const wheel of wheels)upper=exteriorDetails(wheel,upper,g);
  return upper;
 }
 export function forklift({g,p,l,c}){
- const body=p('M3 19V14Q3 12 5 12H12M6 12V7Q6 5 8 5H10L16 11M16 2V19H22M7 19H11');
+ const body=p('M3 19V14Q3 12 5 12H12M6 12V7Q6 5 8 5H10L15.4343 10.4343Q16 11 16 11.8M16 2V19H22M7 19H11');
  let result=[body];for(const wheel of [c(5,19,2),c(13,19,2)])result=exteriorDetails(wheel,result,g);
  return result;
 }
@@ -51,7 +55,8 @@ export function robotArm({g,c,o,l}){
 }
 export function constructionBarrier({g,r,l}){
  const panel=r(2,6,20,9,g.tip);
- return [...exteriorDetails(panel,[l(7,3,7,22),l(17,3,17,22)],g),...enclosedDetails(panel,[l(2,6,11,15),l(11,6,20,15)],g).slice(1)];
+ const stripes=[1,2].map(i=>{const x=2+20*i/3;return l(x-4.5,6,x+4.5,15);});
+ return [...exteriorDetails(panel,[l(7,3,7,22),l(17,3,17,22)],g),...enclosedDetails(panel,stripes,g).slice(1)];
 }
 export function wall({g,r,l}){
  const frame=r(2,4,20,16,g.tip);

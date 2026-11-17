@@ -1,0 +1,43 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "batch": "86-wall-before",
+  "baseline": "references/atlas-recompare-01/master-before.json",
+  "viewedSuffixes": [
+    "light-1x",
+    "dark-1x",
+    "native-light-2x",
+    "native-dark-2x"
+  ],
+  "decisions": [
+    {
+      "name": "wall",
+      "decision": "retained",
+      "purpose": "以三層錯縫磚塊表示磚牆、砌體及建築隔牆。",
+      "recognitionCues": "橫向矩形牆面、三個等高磚層、上下層中縫及中層錯開的左右縫。",
+      "confusableWith": [
+        "grid",
+        "warehouse"
+      ],
+      "defect": "重查小尺寸磚縫是否太密，以及錯縫排列與橫向比例是否保持磚砌語意。",
+      "sourceObservation": "Phosphor用橫向牆面與二、三、二塊磚的錯縫節奏，Lucide用較方的外形和三、二、三塊排列。現稿沿用Phosphor橫向砌體比例，三層等高且中縫交錯。",
+      "reason": "20乘16外框讓整塊磚的寬高接近二比一，中層兩側半磚保持合理尺度；內線裁在外框內，沒有端帽突出。保留橫向牆面與七格空腔，不改成較方且多一格的Lucide排列。",
+      "postComparison": "已查看最新稿與Lucide／Phosphor的16／20／24、三角型、明暗DPR1與2。原生16仍能辨識三層和上下錯縫，半磚空腔沒有填黑，rounded維持微圓矩形外框；現有節奏與橫向建材比例穩定，故保留。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "磚縫是實際可見分界，不使用虛線表示隱藏砌體。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以等高磚層和錯縫留白表達結構，不淡化內縫。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "不增加磚材紋理或光照漸層，維持單色砌體。"
+        }
+      },
+      "remaining": []
+    }
+  ]
+}

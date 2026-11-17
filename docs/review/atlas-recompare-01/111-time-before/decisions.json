@@ -1,0 +1,154 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "baseline": "references/atlas-recompare-01/master-before.json",
+  "viewedSuffixes": [
+    "light-1x",
+    "dark-1x",
+    "native-light-2x",
+    "native-dark-2x"
+  ],
+  "batch": "111-time-before",
+  "decisions": [
+    {
+      "name": "hourglass",
+      "decision": "retained",
+      "purpose": "以上下平蓋與相交收束的雙側壁呈現沙漏的語意。",
+      "recognitionCues": "上下平蓋與相交收束的雙側壁",
+      "confusableWith": [
+        "timer-reset"
+      ],
+      "defect": "確認沙漏細腰置中及上下容器無偏斜，粗線時仍保留兩個空腔。",
+      "sourceObservation": "Lucide 使用平蓋與外露端點，Tabler 收成更軟的腰身並加入容器分層。",
+      "reason": "保留 Lucide 式上下平蓋、對稱交叉線與乾淨的空容器，讓沙漏一眼可讀。",
+      "postComparison": "三尺寸和兩來源對照，瓶身兩腔與中腰可分辨，銳角版的底座和側壁也能相接。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "以完整輪廓和獨立符號筆畫表達形狀。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "用單色線和清楚的間隙區分相鄰形體。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "用單色筆畫即可傳達輪廓及功能。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "alarm-plus",
+      "decision": "retained",
+      "purpose": "以雙斜鈴和支腳包住中間帶小加號的圓形鐘面呈現新增鬧鐘的語意。",
+      "recognitionCues": "雙斜鈴和支腳包住中間帶小加號的圓形鐘面",
+      "confusableWith": [
+        "alarm-minus"
+      ],
+      "defect": "檢查加號四端與鐘面邊緣的距離，以及雙鈴是否與框線合併。",
+      "sourceObservation": "Lucide 保留兩個短支腳，Tabler 省略支腳，二者使用對稱的中央加號。",
+      "reason": "保留本庫鬧鐘母型的雙鈴與支腳，以同一符號比例置中加號並保有內孔。",
+      "postComparison": "和兩來源並排，16px 加號仍可分辨，最粗描邊的直枝和鐘面也留有空氣感。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "以完整輪廓和獨立符號筆畫表達形狀。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "用單色線和清楚的間隙區分相鄰形體。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "用單色筆畫即可傳達輪廓及功能。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "alarm-minus",
+      "decision": "retained",
+      "purpose": "以雙斜鈴和支腳包住中間帶一字減號的圓形鐘面呈現減少鬧鐘的語意。",
+      "recognitionCues": "雙斜鈴和支腳包住中間帶一字減號的圓形鐘面",
+      "confusableWith": [
+        "alarm-plus"
+      ],
+      "defect": "確認減號可與圓形鐘面區分，兩端留白相等，並呼應加號的寬幅。",
+      "sourceObservation": "Lucide 的減號加上兩個支腳，Tabler 的省略支腳版本使負號成為唯一內部細節。",
+      "reason": "保留共同母型與和加號橫筆等長的減號，讓使用者能清楚比較兩種操作。",
+      "postComparison": "在三尺寸與來源並列後，減號仍位於鐘面正中央，左右距外框均有可辨間隙。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "以完整輪廓和獨立符號筆畫表達形狀。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "用單色線和清楚的間隙區分相鄰形體。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "用單色筆畫即可傳達輪廓及功能。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "alarm-check",
+      "decision": "retained",
+      "purpose": "以共同圓形鬧鐘、左右兩鈴、對稱腳和中心勾號呈現鬧鐘已設定的語意。",
+      "recognitionCues": "共同圓形鬧鐘、左右兩鈴、對稱腳和中心勾號",
+      "confusableWith": [
+        "alarm-plus"
+      ],
+      "defect": "確認勾號長短兩筆的方向，及尖端與鐘面之間的距離。",
+      "sourceObservation": "Lucide 和 Hugeicons 都在鬧鐘內置勾號，Hugeicons 的勾稍扁且用較細的筆畫。",
+      "reason": "保留本庫鐘身和同一狀態符號的勾號角度，確保和加減鬧鐘聯用時比例一致。",
+      "postComparison": "三尺寸與兩源同時回比，勾號的長短兩筆仍明確，勾尾與鐘面在較粗描邊時仍分開。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "以完整輪廓和獨立符號筆畫表達形狀。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "用單色線和清楚的間隙區分相鄰形體。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "用單色筆畫即可傳達輪廓及功能。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "timer-reset",
+      "decision": "retained",
+      "purpose": "以上方計時鈕、斜針及左下環狀回轉箭頭呈現重設計時的語意。",
+      "recognitionCues": "上方計時鈕、斜針及左下環狀回轉箭頭",
+      "confusableWith": [
+        "hourglass"
+      ],
+      "defect": "檢查回轉箭頭翼的可辨性和開口的留白，及頂部計時鈕是否明確。",
+      "sourceObservation": "Lucide 的指針為垂直，Hugeicons 用斜針加右上按鈕，兩者皆有左下回轉箭。",
+      "reason": "保留斜針與從輪廓伸出的計時旋鈕，配合左下開口的回轉箭頭表達重設。",
+      "postComparison": "和 Lucide、Hugeicons 並列後，三尺寸仍能分出指針、旋鈕和左下箭翼，保留現有結構。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "以完整輪廓和獨立符號筆畫表達形狀。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "用單色線和清楚的間隙區分相鄰形體。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "用單色筆畫即可傳達輪廓及功能。"
+        }
+      },
+      "remaining": []
+    }
+  ]
+}

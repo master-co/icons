@@ -1,0 +1,101 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "batch": "52-ball-sports-candidate-1",
+  "baseline": "references/atlas-recompare-01/master-before.json",
+  "viewedSuffixes": [
+    "light-1x",
+    "dark-1x",
+    "native-light-2x",
+    "native-dark-2x"
+  ],
+  "decisions": [
+    {
+      "name": "football",
+      "purpose": "以五角分片與圓球輪廓表示足球。",
+      "recognitionCues": "中央五角片與向外放射的五條接縫。",
+      "confusableWith": [
+        "basketball",
+        "volleyball"
+      ],
+      "defect": "本輪未見需要修正的具體缺陷；中央片與周邊留白比例成立。",
+      "sourceObservation": "Tabler的簡潔分片與現稿接近，Phosphor周邊加入更多多邊形。既有使用者取捨明確偏好簡潔五角分片。",
+      "reason": "保留中央五角片及五向球縫，不增加會壓縮小尺寸留白的周邊分片。",
+      "postComparison": "最新稿與Tabler／Phosphor同尺寸回比，中央片仍清楚，五向球縫接外殼而不突出；三尺寸、三角型、明暗DPR1／2與55%文字均已查看。",
+      "decision": "retained",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "球面接縫或器材結構為連續實線，無隱藏邊界。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以輪廓與留白表達結構，不需淡化主體。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "維持單色平面圖示，不加入材質光照漸層。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "tennis-racket",
+      "purpose": "以橢圓拍框、簡化網面及長握柄表示網球拍。",
+      "recognitionCues": "傾斜橢圓拍框、四個網面點、拍喉與握柄。",
+      "confusableWith": [
+        "dumbbell",
+        "baseball"
+      ],
+      "defect": "本輪未見需要回修的具體缺陷，四點網面保持足夠留白。",
+      "sourceObservation": "Hugeicons以四點簡化網面，MDI以空拍面加球表示另一種組合。現稿沿用使用者先前降低網面密度的取捨。",
+      "reason": "保留四點網面、寬拍框與實心握柄；16單線拍喉、20／24三角拍喉，不重新加入密集網格。",
+      "postComparison": "與Hugeicons／MDI回比，16仍能區分拍框、網點及握柄；20／24拍喉內孔清楚。三角型、明暗DPR1／2及55%文字均已查看。",
+      "decision": "retained",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "球面接縫或器材結構為連續實線，無隱藏邊界。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以輪廓與留白表達結構，不需淡化主體。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "維持單色平面圖示，不加入材質光照漸層。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "volleyball",
+      "purpose": "以三向旋轉分帶與圓形外殼表示排球。",
+      "recognitionCues": "三組交錯彎曲分帶、完整圓球外殼。",
+      "confusableWith": [
+        "basketball",
+        "football"
+      ],
+      "defect": "本輪未見須回修的具體缺陷，三向分帶的白色通道在16仍保持開放。",
+      "sourceObservation": "Lucide的三向雙線分帶與現稿接近，Phosphor較疏的單線分帶是另一種球面分片。現稿已保留Lucide的旋轉節奏。",
+      "reason": "保留三向分帶與既有弧線，球縫在外殼內收口，不為減少線數而改變既有球面構造。",
+      "postComparison": "最新稿與Lucide／Phosphor回比，三尺寸旋轉分帶可讀，交接沒有向外突出；三角型、明暗DPR1／2與55%文字均已查看。",
+      "decision": "retained",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "球面接縫或器材結構為連續實線，無隱藏邊界。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以輪廓與留白表達結構，不需淡化主體。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "維持單色平面圖示，不加入材質光照漸層。"
+        }
+      },
+      "remaining": []
+    }
+  ]
+}

@@ -1,0 +1,1381 @@
+{
+  "date": "2026-11-18",
+  "baseline": "references/atlas-recompare-01/master-before.json",
+  "items": [
+    {
+      "name": "carrot",
+      "review": {
+        "name": "carrot",
+        "label": "胡蘿蔔",
+        "category": "food",
+        "status": "visually-reviewed",
+        "previousReview": "Preserved as historical evidence; not inherited as this review decision.",
+        "decision": "refined",
+        "defect": "舊稿20／24的兩道根紋集中同側，第二道太靠近尖端，局部墨量偏重而另一側空置。",
+        "purpose": "以漸尖根部、根紋與上方葉柄表示胡蘿蔔。",
+        "confusableWith": [
+          "corn",
+          "pencil"
+        ],
+        "sourceObservation": "Lucide／Tabler把根紋分配在不同側面，比舊稿同側兩筆均衡。兩來源的完整寬葉是另一種簡化方式；保留現稿較像細葉柄的三筆舒展曲線，不增加會佔用小尺寸頂部空間的葉孔。",
+        "reason": "保留根部母型和第一道根紋，將20／24第二道由近尖端左側移到右側中段，仍沿橫跨根部的方向切入。16保持單一道根紋。根紋墨線依原根殼裁切，保持相接不突出。",
+        "postComparison": "最新稿與Lucide／Tabler三尺寸回比，20／24兩側短根紋節奏較均衡，尖端空間釋出；16維持原本簡潔根形。明暗DPR1／2與55%文字均已查看，根紋沒有穿出外殼，葉柄與根肩仍連成完整物件。",
+        "effects": {
+          "dashes": {
+            "used": false,
+            "reason": "根紋以兩道必要短線表達，不增加表面虛線裝飾。"
+          },
+          "opacity": {
+            "used": false,
+            "reason": "藉根紋位置調整密度，不淡化擁擠區域。"
+          },
+          "gradients": {
+            "used": false,
+            "reason": "根部形狀和葉柄已表達食材，不添加橙綠漸層。"
+          }
+        },
+        "references": [
+          {
+            "name": "carrot",
+            "library": "Lucide",
+            "repository": "lucide-icons/lucide",
+            "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+            "path": "icons/carrot.svg",
+            "localPath": "references/atlas-01/lucide-carrot.svg",
+            "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/carrot.svg",
+            "sha256": "dd9d026ad2b192a28d72086ca6c1fa3047f313058ff7547f5b9c1c4d50b9b857",
+            "license": "ISC AND MIT",
+            "sourceName": "carrot",
+            "match": "exact",
+            "role": "comparison-only"
+          },
+          {
+            "name": "carrot",
+            "library": "Tabler",
+            "repository": "tabler/tabler-icons",
+            "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+            "path": "icons/outline/carrot.svg",
+            "localPath": "references/atlas-01/tabler-carrot.svg",
+            "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/carrot.svg",
+            "sha256": "ac5f7f612a7d0d508509a46395d34778f3688a7375d877336de45938962985bd",
+            "license": "MIT",
+            "sourceName": "carrot",
+            "match": "exact",
+            "role": "comparison-only"
+          }
+        ],
+        "batch": "19-produce-candidate-2",
+        "beforeHash": "ef434ef72c06d296164d51bb8b7c4207623b92fdd2186420f2531fdc3c4ad5f8",
+        "afterHash": "08c5a7e4747c1c4f1d3dcc33a38c1001e3e4148a8aa6dfcb38d12e60af04ee3f",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-recompare-01/19-produce-candidate-2/carrot-light-1x.png",
+            "sha256": "e06c02a9cd50780bc3c8ebf2543caf9f38edd38034d0fdad3b03d26d52c90503"
+          },
+          {
+            "path": "docs/review/atlas-recompare-01/19-produce-candidate-2/carrot-dark-1x.png",
+            "sha256": "8fd509392e7f004d02efb07084a634ae157a25a577426fe3da11b1c271f05b9a"
+          },
+          {
+            "path": "docs/review/atlas-recompare-01/19-produce-candidate-2/carrot-native-light-2x.png",
+            "sha256": "6a2e915b9911395d48489e203ca9384fa880efe77de74c979fff2978bbc9b7da"
+          },
+          {
+            "path": "docs/review/atlas-recompare-01/19-produce-candidate-2/carrot-native-dark-2x.png",
+            "sha256": "e2a1e19c2e6843d49849201771ff54585b49fe875932ff8e4c3536ae313c9fff"
+          }
+        ],
+        "reviewer": "Codex (AI)",
+        "userApproval": "pending",
+        "remaining": []
+      },
+      "refinement": {
+        "name": "carrot",
+        "purpose": "以漸尖根部、根紋與上方葉柄表示胡蘿蔔。",
+        "recognitionCues": "斜向長錐根、圓肩、舒展葉柄和兩側錯落短根紋。",
+        "confusableWith": [
+          "corn",
+          "pencil"
+        ],
+        "sourceObservation": "Lucide／Tabler把根紋分配在不同側面，比舊稿同側兩筆均衡。兩來源的完整寬葉是另一種簡化方式；保留現稿較像細葉柄的三筆舒展曲線，不增加會佔用小尺寸頂部空間的葉孔。",
+        "references": [
+          {
+            "name": "carrot",
+            "library": "Lucide",
+            "repository": "lucide-icons/lucide",
+            "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+            "path": "icons/carrot.svg",
+            "localPath": "references/atlas-01/lucide-carrot.svg",
+            "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/carrot.svg",
+            "sha256": "dd9d026ad2b192a28d72086ca6c1fa3047f313058ff7547f5b9c1c4d50b9b857",
+            "license": "ISC AND MIT",
+            "sourceName": "carrot",
+            "match": "exact",
+            "role": "comparison-only"
+          },
+          {
+            "name": "carrot",
+            "library": "Tabler",
+            "repository": "tabler/tabler-icons",
+            "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+            "path": "icons/outline/carrot.svg",
+            "localPath": "references/atlas-01/tabler-carrot.svg",
+            "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/carrot.svg",
+            "sha256": "ac5f7f612a7d0d508509a46395d34778f3688a7375d877336de45938962985bd",
+            "license": "MIT",
+            "sourceName": "carrot",
+            "match": "exact",
+            "role": "comparison-only"
+          }
+        ],
+        "status": "visually-reviewed-candidate",
+        "effects": {
+          "dashes": {
+            "used": false,
+            "reason": "根紋以兩道必要短線表達，不增加表面虛線裝飾。"
+          },
+          "opacity": {
+            "used": false,
+            "reason": "藉根紋位置調整密度，不淡化擁擠區域。"
+          },
+          "gradients": {
+            "used": false,
+            "reason": "根部形狀和葉柄已表達食材，不添加橙綠漸層。"
+          }
+        },
+        "change": {
+          "kind": "modified",
+          "before": {
+            "path": "references/atlas-recompare-01/master-before.json",
+            "variantsSha256": "ef434ef72c06d296164d51bb8b7c4207623b92fdd2186420f2531fdc3c4ad5f8"
+          },
+          "reason": "保留根部母型和第一道根紋，將20／24第二道由近尖端左側移到右側中段，仍沿橫跨根部的方向切入。16保持單一道根紋。根紋墨線依原根殼裁切，保持相接不突出。"
+        },
+        "visualReview": {
+          "reviewer": "Codex (AI)",
+          "date": "2026-11-17",
+          "skillVersion": "0.5.11",
+          "sizes": [
+            16,
+            20,
+            24
+          ],
+          "corners": [
+            "sharp",
+            "soft",
+            "rounded"
+          ],
+          "themes": [
+            "light",
+            "dark"
+          ],
+          "dpr": [
+            1,
+            2
+          ],
+          "variantsSha256": "08c5a7e4747c1c4f1d3dcc33a38c1001e3e4148a8aa6dfcb38d12e60af04ee3f",
+          "evidence": [
+            {
+              "path": "docs/review/atlas-recompare-01/19-produce-candidate-2/carrot-light-1x.png",
+              "sha256": "e06c02a9cd50780bc3c8ebf2543caf9f38edd38034d0fdad3b03d26d52c90503"
+            },
+            {
+              "path": "docs/review/atlas-recompare-01/19-produce-candidate-2/carrot-dark-1x.png",
+              "sha256": "8fd509392e7f004d02efb07084a634ae157a25a577426fe3da11b1c271f05b9a"
+            },
+            {
+              "path": "docs/review/atlas-recompare-01/19-produce-candidate-2/carrot-native-light-2x.png",
+              "sha256": "6a2e915b9911395d48489e203ca9384fa880efe77de74c979fff2978bbc9b7da"
+            },
+            {
+              "path": "docs/review/atlas-recompare-01/19-produce-candidate-2/carrot-native-dark-2x.png",
+              "sha256": "e2a1e19c2e6843d49849201771ff54585b49fe875932ff8e4c3536ae313c9fff"
+            }
+          ],
+          "inspectedCombinations": [
+            "light-1x",
+            "dark-1x",
+            "native-light-2x",
+            "native-dark-2x"
+          ],
+          "remainingCombinations": [],
+          "postDrawingSourceComparison": "最新稿與Lucide／Tabler三尺寸回比，20／24兩側短根紋節奏較均衡，尖端空間釋出；16維持原本簡潔根形。明暗DPR1／2與55%文字均已查看，根紋沒有穿出外殼，葉柄與根肩仍連成完整物件。"
+        },
+        "designOrigin": {
+          "kind": "adapted-redraw",
+          "library": "Lucide",
+          "license": "ISC",
+          "licenseFile": "licenses/lucide.txt"
+        },
+        "remaining": [],
+        "userApproval": "pending"
+      },
+      "provenance": {
+        "kind": "adapted-redraw",
+        "author": "Lucide Icons and Contributors",
+        "library": "Lucide",
+        "license": "ISC",
+        "copyright": "Copyright (c) 2026 Lucide Icons and Contributors",
+        "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+        "reference": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/carrot.svg",
+        "licenseFile": "licenses/lucide.txt",
+        "modifications": "新作重畫根部漸尖曲面，根紋裁在殼內、葉柄裁在殼外，相連而不侵入空腔；16px刪除第二道根紋。 本輪20／24將第二道根紋從近尖端左側移到右側中段，保留16單一道根紋。"
+      }
+    },
+    {
+      "name": "heart-pulse",
+      "review": {
+        "name": "heart-pulse",
+        "label": "心跳",
+        "category": "medical",
+        "status": "visually-reviewed",
+        "previousReview": "Preserved as historical evidence; not inherited as this review decision.",
+        "decision": "refined",
+        "defect": "舊脈波高低峰近乎等幅，主峰較弱，容易像一般鋸齒線而失去心跳節奏。",
+        "purpose": "以心形內的起伏脈波表示心跳與生命徵象。",
+        "confusableWith": [
+          "heart",
+          "activity"
+        ],
+        "sourceObservation": "Lucide的較高主峰與較淺谷點形成清楚心跳節奏；Tabler採開口心形。保留完整心形，沿既有Lucide改作強化主峰。",
+        "reason": "基線下移0.5，波形改為先淺谷再陡升主峰，主峰y8.5、谷點y15；保留心形母型與內線按外殼收口的構造。",
+        "postComparison": "最新稿與Lucide／Tabler在三尺寸回比，主峰更突出、谷點較淺，左右上下空腔仍開放；完整心形沒有被外突波線破壞。三角型、明暗DPR1／2與55%文字已目視。",
+        "effects": {
+          "dashes": {
+            "used": false,
+            "reason": "脈波保持連續實線，不以虛線破壞可讀的起伏節奏。"
+          },
+          "opacity": {
+            "used": false,
+            "reason": "以輪廓與留白表達構造，不以淡化掩飾接點或密度。"
+          },
+          "gradients": {
+            "used": false,
+            "reason": "維持單色平面醫療圖示，不需要材質光照漸層。"
+          }
+        },
+        "references": [
+          {
+            "name": "heart-pulse",
+            "library": "Lucide",
+            "repository": "lucide-icons/lucide",
+            "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+            "path": "icons/heart-pulse.svg",
+            "localPath": "references/atlas-01/lucide-heart-pulse.svg",
+            "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/heart-pulse.svg",
+            "sha256": "103d6b99ac9ab53c5861317673880ae5d6e2491efa7a40e8b89ecac449842df2",
+            "license": "ISC AND MIT",
+            "sourceName": "heart-pulse",
+            "match": "exact",
+            "role": "comparison-only"
+          },
+          {
+            "name": "heart-pulse",
+            "library": "Tabler",
+            "repository": "tabler/tabler-icons",
+            "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+            "path": "icons/outline/heartbeat.svg",
+            "localPath": "references/atlas-01/tabler-heartbeat.svg",
+            "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/heartbeat.svg",
+            "sha256": "972d5c0d0db24614275521fe93b3c98e375ececec25b087d139d83cb9221e8e7",
+            "license": "MIT",
+            "sourceName": "heartbeat",
+            "match": "exact",
+            "role": "comparison-only"
+          }
+        ],
+        "batch": "44-medical-candidate-1",
+        "beforeHash": "2b5022d7e3f5ba33609839e8b29fe4967a57377186e2e432a7c73de3710d8c7d",
+        "afterHash": "a2773a5ad4a13a898c076b305874345d058863d0138d7de2d0b719ea7bf41e2c",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-recompare-01/44-medical-candidate-1/heart-pulse-light-1x.png",
+            "sha256": "727b06460f9b03590d7f265106e9a70493c132a5dcf78e263eb0c5e83fdc5c09"
+          },
+          {
+            "path": "docs/review/atlas-recompare-01/44-medical-candidate-1/heart-pulse-dark-1x.png",
+            "sha256": "8837ac851e0e1a382bcbd122294b3e56cbfd21f2667514aeba6ab267a9ad21de"
+          },
+          {
+            "path": "docs/review/atlas-recompare-01/44-medical-candidate-1/heart-pulse-native-light-2x.png",
+            "sha256": "99d9fd040ed165587fb99429c5dfc7fe0737eb12d9933727d9d8281ad66df8e7"
+          },
+          {
+            "path": "docs/review/atlas-recompare-01/44-medical-candidate-1/heart-pulse-native-dark-2x.png",
+            "sha256": "6e3f10ef5086304ffde4de6397ec215630e5226161a0affce8edda5e829ba289"
+          }
+        ],
+        "reviewer": "Codex (AI)",
+        "userApproval": "pending",
+        "remaining": []
+      },
+      "refinement": {
+        "name": "heart-pulse",
+        "purpose": "以心形內的起伏脈波表示心跳與生命徵象。",
+        "recognitionCues": "心形雙肩、中央主峰、較淺谷點與兩側基線。",
+        "confusableWith": [
+          "heart",
+          "activity"
+        ],
+        "sourceObservation": "Lucide的較高主峰與較淺谷點形成清楚心跳節奏；Tabler採開口心形。保留完整心形，沿既有Lucide改作強化主峰。",
+        "references": [
+          {
+            "name": "heart-pulse",
+            "library": "Lucide",
+            "repository": "lucide-icons/lucide",
+            "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+            "path": "icons/heart-pulse.svg",
+            "localPath": "references/atlas-01/lucide-heart-pulse.svg",
+            "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/heart-pulse.svg",
+            "sha256": "103d6b99ac9ab53c5861317673880ae5d6e2491efa7a40e8b89ecac449842df2",
+            "license": "ISC AND MIT",
+            "sourceName": "heart-pulse",
+            "match": "exact",
+            "role": "comparison-only"
+          },
+          {
+            "name": "heart-pulse",
+            "library": "Tabler",
+            "repository": "tabler/tabler-icons",
+            "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+            "path": "icons/outline/heartbeat.svg",
+            "localPath": "references/atlas-01/tabler-heartbeat.svg",
+            "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/heartbeat.svg",
+            "sha256": "972d5c0d0db24614275521fe93b3c98e375ececec25b087d139d83cb9221e8e7",
+            "license": "MIT",
+            "sourceName": "heartbeat",
+            "match": "exact",
+            "role": "comparison-only"
+          }
+        ],
+        "status": "visually-reviewed-candidate",
+        "effects": {
+          "dashes": {
+            "used": false,
+            "reason": "脈波保持連續實線，不以虛線破壞可讀的起伏節奏。"
+          },
+          "opacity": {
+            "used": false,
+            "reason": "以輪廓與留白表達構造，不以淡化掩飾接點或密度。"
+          },
+          "gradients": {
+            "used": false,
+            "reason": "維持單色平面醫療圖示，不需要材質光照漸層。"
+          }
+        },
+        "change": {
+          "kind": "modified",
+          "before": {
+            "path": "references/atlas-recompare-01/master-before.json",
+            "variantsSha256": "2b5022d7e3f5ba33609839e8b29fe4967a57377186e2e432a7c73de3710d8c7d"
+          },
+          "reason": "基線下移0.5，波形改為先淺谷再陡升主峰，主峰y8.5、谷點y15；保留心形母型與內線按外殼收口的構造。"
+        },
+        "visualReview": {
+          "reviewer": "Codex (AI)",
+          "date": "2026-11-18",
+          "skillVersion": "0.5.11",
+          "sizes": [
+            16,
+            20,
+            24
+          ],
+          "corners": [
+            "sharp",
+            "soft",
+            "rounded"
+          ],
+          "themes": [
+            "light",
+            "dark"
+          ],
+          "dpr": [
+            1,
+            2
+          ],
+          "variantsSha256": "a2773a5ad4a13a898c076b305874345d058863d0138d7de2d0b719ea7bf41e2c",
+          "evidence": [
+            {
+              "path": "docs/review/atlas-recompare-01/44-medical-candidate-1/heart-pulse-light-1x.png",
+              "sha256": "727b06460f9b03590d7f265106e9a70493c132a5dcf78e263eb0c5e83fdc5c09"
+            },
+            {
+              "path": "docs/review/atlas-recompare-01/44-medical-candidate-1/heart-pulse-dark-1x.png",
+              "sha256": "8837ac851e0e1a382bcbd122294b3e56cbfd21f2667514aeba6ab267a9ad21de"
+            },
+            {
+              "path": "docs/review/atlas-recompare-01/44-medical-candidate-1/heart-pulse-native-light-2x.png",
+              "sha256": "99d9fd040ed165587fb99429c5dfc7fe0737eb12d9933727d9d8281ad66df8e7"
+            },
+            {
+              "path": "docs/review/atlas-recompare-01/44-medical-candidate-1/heart-pulse-native-dark-2x.png",
+              "sha256": "6e3f10ef5086304ffde4de6397ec215630e5226161a0affce8edda5e829ba289"
+            }
+          ],
+          "inspectedCombinations": [
+            "light-1x",
+            "dark-1x",
+            "native-light-2x",
+            "native-dark-2x"
+          ],
+          "remainingCombinations": [],
+          "postDrawingSourceComparison": "最新稿與Lucide／Tabler在三尺寸回比，主峰更突出、谷點較淺，左右上下空腔仍開放；完整心形沒有被外突波線破壞。三角型、明暗DPR1／2與55%文字已目視。"
+        },
+        "designOrigin": {
+          "kind": "adapted-redraw",
+          "library": "Lucide",
+          "license": "ISC",
+          "licenseFile": "licenses/lucide.txt"
+        },
+        "remaining": [],
+        "userApproval": "pending"
+      },
+      "provenance": {
+        "kind": "adapted-redraw",
+        "author": "Lucide Icons and Contributors",
+        "library": "Lucide",
+        "license": "ISC",
+        "licenseFile": "licenses/lucide.txt",
+        "copyright": "Copyright (c) 2026 Lucide Icons and Contributors",
+        "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+        "reference": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/heart-pulse.svg",
+        "modifications": "基線下移0.5，波形改為先淺谷再陡升主峰，主峰y8.5、谷點y15；保留心形母型與內線按外殼收口的構造。"
+      }
+    },
+    {
+      "name": "basket-check",
+      "review": {
+        "name": "basket-check",
+        "label": "購物籃完成",
+        "category": "commerce-tools",
+        "status": "visually-reviewed",
+        "previousReview": "Preserved as historical evidence; not inherited as this review decision.",
+        "decision": "refined",
+        "defect": "勾號避讓斜切到右籃條底部，使兩條籃條露出不等長。",
+        "purpose": "以雙斜提把與籃口、兩條籃條、右下勾號呈現購物籃完成。",
+        "confusableWith": [
+          "basket-plus"
+        ],
+        "sourceObservation": "Tabler 以單一圓孔簡化籃身，Hugeicons 保留兩條等高的通風條和開放的完成符號。",
+        "reason": "沿用 Lucide 籃身和專案的勾號，成對移動籃條到勾號避讓區左側，保持其長度與垂直方向。",
+        "postComparison": "與兩份來源並列，兩條籃條和勾號間有清楚空間，籃身和共用母型仍易於對應。小尺寸保留雙提把。",
+        "effects": {
+          "dashes": {
+            "used": false,
+            "reason": "實體籃條與完成符號皆使用完整筆畫。"
+          },
+          "opacity": {
+            "used": false,
+            "reason": "勾號以真透明空間分開籃身。"
+          },
+          "gradients": {
+            "used": false,
+            "reason": "符號與籃身靠形狀區分。"
+          }
+        },
+        "references": [
+          {
+            "name": "basket-check",
+            "library": "Tabler",
+            "repository": "tabler/tabler-icons",
+            "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+            "path": "icons/outline/basket-check.svg",
+            "localPath": "references/atlas-01/tabler-basket-check.svg",
+            "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/basket-check.svg",
+            "sha256": "3d601fc0ab4a92f91987b5dab76bdc8104ef348fc2d74bff02e53187a1a40835",
+            "license": "MIT",
+            "sourceName": "basket-check",
+            "match": "exact",
+            "role": "comparison-only"
+          },
+          {
+            "name": "basket-check",
+            "library": "Hugeicons Free",
+            "repository": "hugeicons/hugeicons",
+            "commit": "834e28d965946c1ee60d080027fe9dae4adc58d0",
+            "path": "icons/shopping-basket-done-03.svg",
+            "localPath": "references/atlas-01/hugeicons-shopping-basket-done-03.svg",
+            "url": "https://github.com/hugeicons/hugeicons/blob/834e28d965946c1ee60d080027fe9dae4adc58d0/icons/shopping-basket-done-03.svg",
+            "sha256": "6c26aae1cbb0625e69ad338343c78cb68c14dc28aeec0f984b6b000d4004b9c5",
+            "license": "MIT",
+            "sourceName": "shopping-basket-done-03",
+            "match": "exact",
+            "role": "comparison-only"
+          },
+          {
+            "name": "basket-check",
+            "library": "Lucide",
+            "repository": "lucide-icons/lucide",
+            "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+            "path": "icons/shopping-basket.svg",
+            "localPath": "references/atlas-01/lucide-shopping-basket.svg",
+            "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/shopping-basket.svg",
+            "sha256": "eb844af87b5858eef48effb43548e2bcce3b87cc5c18c12329c1cb3da338d6dd",
+            "license": "ISC AND MIT",
+            "sourceName": "shopping-basket",
+            "match": "exact",
+            "role": "comparison-only"
+          }
+        ],
+        "batch": "96-basket-candidate-2",
+        "beforeHash": "b0a472536d6c123cb4ce510075de8a76d228fe400f439fbb633ae7f24aafe370",
+        "afterHash": "cea57403e20c92cdc9ec78977741ce61a5f59926d88ad12e5df12ba38cf5d905",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-recompare-01/96-basket-candidate-2/basket-check-light-1x.png",
+            "sha256": "eeddc02a32de44943c954bfb2d3265fa1c6b8d1044c1c2c769fd914ddeaba777"
+          },
+          {
+            "path": "docs/review/atlas-recompare-01/96-basket-candidate-2/basket-check-dark-1x.png",
+            "sha256": "22da9129f5e8d28f2eb092cc5ac75663917f5c88a745c45d072a38f74b691c73"
+          },
+          {
+            "path": "docs/review/atlas-recompare-01/96-basket-candidate-2/basket-check-native-light-2x.png",
+            "sha256": "7080e89dc76855b83bf04b90ca6d9ce099f10272d414eb8c0d9db2f4db585d6c"
+          },
+          {
+            "path": "docs/review/atlas-recompare-01/96-basket-candidate-2/basket-check-native-dark-2x.png",
+            "sha256": "fd158ef354d858c94a6e106f66ccaa49326963ae4fd7c0d404c586026a9c8970"
+          }
+        ],
+        "reviewer": "Codex (AI)",
+        "userApproval": "pending",
+        "remaining": []
+      },
+      "refinement": {
+        "name": "basket-check",
+        "purpose": "以雙斜提把與籃口、兩條籃條、右下勾號呈現購物籃完成。",
+        "recognitionCues": "雙斜提把與籃口、兩條籃條、右下勾號",
+        "confusableWith": [
+          "basket-plus"
+        ],
+        "sourceObservation": "Tabler 以單一圓孔簡化籃身，Hugeicons 保留兩條等高的通風條和開放的完成符號。",
+        "references": [
+          {
+            "name": "basket-check",
+            "library": "Tabler",
+            "repository": "tabler/tabler-icons",
+            "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+            "path": "icons/outline/basket-check.svg",
+            "localPath": "references/atlas-01/tabler-basket-check.svg",
+            "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/basket-check.svg",
+            "sha256": "3d601fc0ab4a92f91987b5dab76bdc8104ef348fc2d74bff02e53187a1a40835",
+            "license": "MIT",
+            "sourceName": "basket-check",
+            "match": "exact",
+            "role": "comparison-only"
+          },
+          {
+            "name": "basket-check",
+            "library": "Hugeicons Free",
+            "repository": "hugeicons/hugeicons",
+            "commit": "834e28d965946c1ee60d080027fe9dae4adc58d0",
+            "path": "icons/shopping-basket-done-03.svg",
+            "localPath": "references/atlas-01/hugeicons-shopping-basket-done-03.svg",
+            "url": "https://github.com/hugeicons/hugeicons/blob/834e28d965946c1ee60d080027fe9dae4adc58d0/icons/shopping-basket-done-03.svg",
+            "sha256": "6c26aae1cbb0625e69ad338343c78cb68c14dc28aeec0f984b6b000d4004b9c5",
+            "license": "MIT",
+            "sourceName": "shopping-basket-done-03",
+            "match": "exact",
+            "role": "comparison-only"
+          },
+          {
+            "name": "basket-check",
+            "library": "Lucide",
+            "repository": "lucide-icons/lucide",
+            "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+            "path": "icons/shopping-basket.svg",
+            "localPath": "references/atlas-01/lucide-shopping-basket.svg",
+            "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/shopping-basket.svg",
+            "sha256": "eb844af87b5858eef48effb43548e2bcce3b87cc5c18c12329c1cb3da338d6dd",
+            "license": "ISC AND MIT",
+            "sourceName": "shopping-basket",
+            "match": "exact",
+            "role": "comparison-only"
+          }
+        ],
+        "status": "visually-reviewed-candidate",
+        "effects": {
+          "dashes": {
+            "used": false,
+            "reason": "實體籃條與完成符號皆使用完整筆畫。"
+          },
+          "opacity": {
+            "used": false,
+            "reason": "勾號以真透明空間分開籃身。"
+          },
+          "gradients": {
+            "used": false,
+            "reason": "符號與籃身靠形狀區分。"
+          }
+        },
+        "change": {
+          "kind": "modified",
+          "before": {
+            "path": "references/atlas-recompare-01/master-before.json",
+            "variantsSha256": "b0a472536d6c123cb4ce510075de8a76d228fe400f439fbb633ae7f24aafe370"
+          },
+          "reason": "沿用 Lucide 籃身和專案的勾號，成對移動籃條到勾號避讓區左側，保持其長度與垂直方向。"
+        },
+        "visualReview": {
+          "reviewer": "Codex (AI)",
+          "date": "2026-11-18",
+          "skillVersion": "0.5.11",
+          "sizes": [
+            16,
+            20,
+            24
+          ],
+          "corners": [
+            "sharp",
+            "soft",
+            "rounded"
+          ],
+          "themes": [
+            "light",
+            "dark"
+          ],
+          "dpr": [
+            1,
+            2
+          ],
+          "variantsSha256": "cea57403e20c92cdc9ec78977741ce61a5f59926d88ad12e5df12ba38cf5d905",
+          "evidence": [
+            {
+              "path": "docs/review/atlas-recompare-01/96-basket-candidate-2/basket-check-light-1x.png",
+              "sha256": "eeddc02a32de44943c954bfb2d3265fa1c6b8d1044c1c2c769fd914ddeaba777"
+            },
+            {
+              "path": "docs/review/atlas-recompare-01/96-basket-candidate-2/basket-check-dark-1x.png",
+              "sha256": "22da9129f5e8d28f2eb092cc5ac75663917f5c88a745c45d072a38f74b691c73"
+            },
+            {
+              "path": "docs/review/atlas-recompare-01/96-basket-candidate-2/basket-check-native-light-2x.png",
+              "sha256": "7080e89dc76855b83bf04b90ca6d9ce099f10272d414eb8c0d9db2f4db585d6c"
+            },
+            {
+              "path": "docs/review/atlas-recompare-01/96-basket-candidate-2/basket-check-native-dark-2x.png",
+              "sha256": "fd158ef354d858c94a6e106f66ccaa49326963ae4fd7c0d404c586026a9c8970"
+            }
+          ],
+          "inspectedCombinations": [
+            "light-1x",
+            "dark-1x",
+            "native-light-2x",
+            "native-dark-2x"
+          ],
+          "remainingCombinations": [],
+          "postDrawingSourceComparison": "與兩份來源並列，兩條籃條和勾號間有清楚空間，籃身和共用母型仍易於對應。小尺寸保留雙提把。"
+        },
+        "designOrigin": {
+          "kind": "adapted-redraw",
+          "library": "Lucide",
+          "license": "ISC",
+          "licenseFile": "licenses/lucide.txt"
+        },
+        "remaining": [],
+        "userApproval": "pending"
+      },
+      "provenance": {
+        "kind": "adapted-redraw",
+        "author": "Lucide Icons and Contributors",
+        "library": "Lucide",
+        "license": "ISC",
+        "licenseFile": "licenses/lucide.txt",
+        "copyright": "Copyright (c) 2026 Lucide Icons and Contributors",
+        "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+        "reference": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/shopping-basket.svg",
+        "modifications": "沿用本批Lucide改作購物籃的全部母型修正，包括提把外側收口；勾號以共同狀態記號加在右下角，保留透明避讓區及可辨識籃底。 本輪把兩條通風線成對置於狀態符號的避讓區左側，維持等長直條。"
+      }
+    },
+    {
+      "name": "basket-plus",
+      "review": {
+        "name": "basket-plus",
+        "label": "新增購物籃",
+        "category": "commerce-tools",
+        "status": "visually-reviewed",
+        "previousReview": "Preserved as historical evidence; not inherited as this review decision.",
+        "decision": "refined",
+        "defect": "加號避讓會挖到右側籃條下方，較硬角型的斷口像削掉一角。",
+        "purpose": "以雙斜提把、梯形籃身與右下加號呈現新增購物籃。",
+        "confusableWith": [
+          "bag-plus"
+        ],
+        "sourceObservation": "Tabler 使用較空的單孔籃身。Hugeicons 以兩條完整籃條和右下的加號維持清楚主次。",
+        "reason": "與完成狀態共用調整後的籃條位置，在加號較寬的水平筆旁留空，保持相同籃口和提把。",
+        "postComparison": "第二候選把第一候選 sharp 中略被切到的籃條再往左收。三尺寸的兩條籃條與加號分開，構圖仍接近 Hugeicons 的清楚分組。",
+        "effects": {
+          "dashes": {
+            "used": false,
+            "reason": "加號和兩條籃條都使用實線。"
+          },
+          "opacity": {
+            "used": false,
+            "reason": "保留加號周圍透明避讓。"
+          },
+          "gradients": {
+            "used": false,
+            "reason": "用單色加號表現新增狀態。"
+          }
+        },
+        "references": [
+          {
+            "name": "basket-plus",
+            "library": "Tabler",
+            "repository": "tabler/tabler-icons",
+            "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+            "path": "icons/outline/basket-plus.svg",
+            "localPath": "references/atlas-01/tabler-basket-plus.svg",
+            "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/basket-plus.svg",
+            "sha256": "88c2344552f559d74aba690f56686415913f747878e6dfc5a9a45e6f13b80af7",
+            "license": "MIT",
+            "sourceName": "basket-plus",
+            "match": "exact",
+            "role": "comparison-only"
+          },
+          {
+            "name": "basket-plus",
+            "library": "Hugeicons Free",
+            "repository": "hugeicons/hugeicons",
+            "commit": "834e28d965946c1ee60d080027fe9dae4adc58d0",
+            "path": "icons/shopping-basket-add-03.svg",
+            "localPath": "references/atlas-01/hugeicons-shopping-basket-add-03.svg",
+            "url": "https://github.com/hugeicons/hugeicons/blob/834e28d965946c1ee60d080027fe9dae4adc58d0/icons/shopping-basket-add-03.svg",
+            "sha256": "1d771b080e3745694e726d227f6cd54f138bf35ad26c0d0070e3d65a458065f7",
+            "license": "MIT",
+            "sourceName": "shopping-basket-add-03",
+            "match": "exact",
+            "role": "comparison-only"
+          },
+          {
+            "name": "basket-plus",
+            "library": "Lucide",
+            "repository": "lucide-icons/lucide",
+            "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+            "path": "icons/shopping-basket.svg",
+            "localPath": "references/atlas-01/lucide-shopping-basket.svg",
+            "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/shopping-basket.svg",
+            "sha256": "eb844af87b5858eef48effb43548e2bcce3b87cc5c18c12329c1cb3da338d6dd",
+            "license": "ISC AND MIT",
+            "sourceName": "shopping-basket",
+            "match": "exact",
+            "role": "comparison-only"
+          }
+        ],
+        "batch": "96-basket-candidate-2",
+        "beforeHash": "13c60701a2ecf6c0ae785402cf0988e2595bd4b38676477e82f687b72ef06ba9",
+        "afterHash": "c39ce87ddb6b094b92c4b722bf671e7942f229e8bf1a3eefd2bd9411c0f024a1",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-recompare-01/96-basket-candidate-2/basket-plus-light-1x.png",
+            "sha256": "4d2af28d50c613a6e2d072c8b6e9bad436a4ca23ad86f65735e91e5e7addaf25"
+          },
+          {
+            "path": "docs/review/atlas-recompare-01/96-basket-candidate-2/basket-plus-dark-1x.png",
+            "sha256": "21081902c755e1521d0720b2125ef807db012b9a6c97083a8df12d1fa557129e"
+          },
+          {
+            "path": "docs/review/atlas-recompare-01/96-basket-candidate-2/basket-plus-native-light-2x.png",
+            "sha256": "258c4d571611ade402f9a9a097c241f65a78f799d12629377297d3bfd9b8896c"
+          },
+          {
+            "path": "docs/review/atlas-recompare-01/96-basket-candidate-2/basket-plus-native-dark-2x.png",
+            "sha256": "e47bd218019b1f0f8ea4ca7b0c5ca9f38a8cf5228216a1570fc0902bf9dea84c"
+          }
+        ],
+        "reviewer": "Codex (AI)",
+        "userApproval": "pending",
+        "remaining": []
+      },
+      "refinement": {
+        "name": "basket-plus",
+        "purpose": "以雙斜提把、梯形籃身與右下加號呈現新增購物籃。",
+        "recognitionCues": "雙斜提把、梯形籃身與右下加號",
+        "confusableWith": [
+          "bag-plus"
+        ],
+        "sourceObservation": "Tabler 使用較空的單孔籃身。Hugeicons 以兩條完整籃條和右下的加號維持清楚主次。",
+        "references": [
+          {
+            "name": "basket-plus",
+            "library": "Tabler",
+            "repository": "tabler/tabler-icons",
+            "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+            "path": "icons/outline/basket-plus.svg",
+            "localPath": "references/atlas-01/tabler-basket-plus.svg",
+            "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/basket-plus.svg",
+            "sha256": "88c2344552f559d74aba690f56686415913f747878e6dfc5a9a45e6f13b80af7",
+            "license": "MIT",
+            "sourceName": "basket-plus",
+            "match": "exact",
+            "role": "comparison-only"
+          },
+          {
+            "name": "basket-plus",
+            "library": "Hugeicons Free",
+            "repository": "hugeicons/hugeicons",
+            "commit": "834e28d965946c1ee60d080027fe9dae4adc58d0",
+            "path": "icons/shopping-basket-add-03.svg",
+            "localPath": "references/atlas-01/hugeicons-shopping-basket-add-03.svg",
+            "url": "https://github.com/hugeicons/hugeicons/blob/834e28d965946c1ee60d080027fe9dae4adc58d0/icons/shopping-basket-add-03.svg",
+            "sha256": "1d771b080e3745694e726d227f6cd54f138bf35ad26c0d0070e3d65a458065f7",
+            "license": "MIT",
+            "sourceName": "shopping-basket-add-03",
+            "match": "exact",
+            "role": "comparison-only"
+          },
+          {
+            "name": "basket-plus",
+            "library": "Lucide",
+            "repository": "lucide-icons/lucide",
+            "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+            "path": "icons/shopping-basket.svg",
+            "localPath": "references/atlas-01/lucide-shopping-basket.svg",
+            "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/shopping-basket.svg",
+            "sha256": "eb844af87b5858eef48effb43548e2bcce3b87cc5c18c12329c1cb3da338d6dd",
+            "license": "ISC AND MIT",
+            "sourceName": "shopping-basket",
+            "match": "exact",
+            "role": "comparison-only"
+          }
+        ],
+        "status": "visually-reviewed-candidate",
+        "effects": {
+          "dashes": {
+            "used": false,
+            "reason": "加號和兩條籃條都使用實線。"
+          },
+          "opacity": {
+            "used": false,
+            "reason": "保留加號周圍透明避讓。"
+          },
+          "gradients": {
+            "used": false,
+            "reason": "用單色加號表現新增狀態。"
+          }
+        },
+        "change": {
+          "kind": "modified",
+          "before": {
+            "path": "references/atlas-recompare-01/master-before.json",
+            "variantsSha256": "13c60701a2ecf6c0ae785402cf0988e2595bd4b38676477e82f687b72ef06ba9"
+          },
+          "reason": "與完成狀態共用調整後的籃條位置，在加號較寬的水平筆旁留空，保持相同籃口和提把。"
+        },
+        "visualReview": {
+          "reviewer": "Codex (AI)",
+          "date": "2026-11-18",
+          "skillVersion": "0.5.11",
+          "sizes": [
+            16,
+            20,
+            24
+          ],
+          "corners": [
+            "sharp",
+            "soft",
+            "rounded"
+          ],
+          "themes": [
+            "light",
+            "dark"
+          ],
+          "dpr": [
+            1,
+            2
+          ],
+          "variantsSha256": "c39ce87ddb6b094b92c4b722bf671e7942f229e8bf1a3eefd2bd9411c0f024a1",
+          "evidence": [
+            {
+              "path": "docs/review/atlas-recompare-01/96-basket-candidate-2/basket-plus-light-1x.png",
+              "sha256": "4d2af28d50c613a6e2d072c8b6e9bad436a4ca23ad86f65735e91e5e7addaf25"
+            },
+            {
+              "path": "docs/review/atlas-recompare-01/96-basket-candidate-2/basket-plus-dark-1x.png",
+              "sha256": "21081902c755e1521d0720b2125ef807db012b9a6c97083a8df12d1fa557129e"
+            },
+            {
+              "path": "docs/review/atlas-recompare-01/96-basket-candidate-2/basket-plus-native-light-2x.png",
+              "sha256": "258c4d571611ade402f9a9a097c241f65a78f799d12629377297d3bfd9b8896c"
+            },
+            {
+              "path": "docs/review/atlas-recompare-01/96-basket-candidate-2/basket-plus-native-dark-2x.png",
+              "sha256": "e47bd218019b1f0f8ea4ca7b0c5ca9f38a8cf5228216a1570fc0902bf9dea84c"
+            }
+          ],
+          "inspectedCombinations": [
+            "light-1x",
+            "dark-1x",
+            "native-light-2x",
+            "native-dark-2x"
+          ],
+          "remainingCombinations": [],
+          "postDrawingSourceComparison": "第二候選把第一候選 sharp 中略被切到的籃條再往左收。三尺寸的兩條籃條與加號分開，構圖仍接近 Hugeicons 的清楚分組。"
+        },
+        "designOrigin": {
+          "kind": "adapted-redraw",
+          "library": "Lucide",
+          "license": "ISC",
+          "licenseFile": "licenses/lucide.txt"
+        },
+        "remaining": [],
+        "userApproval": "pending"
+      },
+      "provenance": {
+        "kind": "adapted-redraw",
+        "author": "Lucide Icons and Contributors",
+        "library": "Lucide",
+        "license": "ISC",
+        "licenseFile": "licenses/lucide.txt",
+        "copyright": "Copyright (c) 2026 Lucide Icons and Contributors",
+        "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+        "reference": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/shopping-basket.svg",
+        "modifications": "沿用Lucide改作母型與最新提把裁線，右下加號使用既有狀態幾何；對前景實際墨線作透明避讓，三種角型同步檢查切口。 本輪把兩條通風線成對置於狀態符號的避讓區左側，維持等長直條。"
+      }
+    },
+    {
+      "name": "bezier-curve",
+      "review": {
+        "name": "bezier-curve",
+        "label": "貝茲曲線",
+        "category": "geometry-tools",
+        "status": "visually-reviewed",
+        "previousReview": "Preserved as historical evidence; not inherited as this review decision.",
+        "decision": "refined",
+        "defect": "粗描邊時高拱的肩部與控制桿幾乎相貼。",
+        "purpose": "在一條水平控制桿下方呈現對稱貝茲弧線",
+        "confusableWith": [
+          "spline"
+        ],
+        "sourceObservation": "Phosphor 的圓形控制點較容易辨認，Tabler 讓兩側弧從節點下方離開。",
+        "reason": "讓拱頂從中點下緣相接，保留圓節點與桿兩側的留白。",
+        "postComparison": "改稿與兩來源並列，弧肩和控制桿之間在 16px 也留下可辨識的空隙。",
+        "effects": {
+          "dashes": {
+            "used": false,
+            "reason": "連續的邊和接點構成此圖示的輪廓。"
+          },
+          "opacity": {
+            "used": false,
+            "reason": "以清楚的單色空隙分開相鄰線條。"
+          },
+          "gradients": {
+            "used": false,
+            "reason": "單色輪廓已足以呈現形狀和方向。"
+          }
+        },
+        "references": [
+          {
+            "name": "bezier-curve",
+            "library": "Phosphor",
+            "repository": "phosphor-icons/core",
+            "commit": "2b75f3ad12b420c9504ef05df8d2564a28f8500e",
+            "path": "assets/regular/bezier-curve.svg",
+            "localPath": "references/atlas-01/phosphor-bezier-curve.svg",
+            "url": "https://github.com/phosphor-icons/core/blob/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular/bezier-curve.svg",
+            "sha256": "5ffb4c2ea00f0a68d631173f17b9f353d2fe0f44ed213ac7c943d6b10e6dc364",
+            "license": "MIT",
+            "sourceName": "bezier-curve",
+            "match": "exact",
+            "role": "comparison-only"
+          },
+          {
+            "name": "bezier-curve",
+            "library": "Tabler",
+            "repository": "tabler/tabler-icons",
+            "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+            "path": "icons/outline/vector-bezier.svg",
+            "localPath": "references/atlas-01/tabler-vector-bezier.svg",
+            "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/vector-bezier.svg",
+            "sha256": "631b0e54163bcf64ea012a3b15d93e47eb30f7142c6e20cedf1de80fdeea2aed",
+            "license": "MIT",
+            "sourceName": "vector-bezier",
+            "match": "exact",
+            "role": "comparison-only"
+          }
+        ],
+        "batch": "105-vector-candidate-1",
+        "beforeHash": "b9411aaea067f2835d1b0117006d16892ac066f515746b0b9198805013e5f89f",
+        "afterHash": "99dd58392952b3890cfda9913652055cd309589240d5e043b41b07e8fe625a0d",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-recompare-01/105-vector-candidate-1/bezier-curve-light-1x.png",
+            "sha256": "36a42d2543615249920116ffcb6d66531cc4005e524be2d0445a8a949c8df060"
+          },
+          {
+            "path": "docs/review/atlas-recompare-01/105-vector-candidate-1/bezier-curve-dark-1x.png",
+            "sha256": "e208e81b7993f36c3d525ea41698129643ecf63ea2ab82d47f8bc46c6943c5fe"
+          },
+          {
+            "path": "docs/review/atlas-recompare-01/105-vector-candidate-1/bezier-curve-native-light-2x.png",
+            "sha256": "2fbc8051fcb61beb9339f8abb89d31912cb55df6744a72057a9e74162291e401"
+          },
+          {
+            "path": "docs/review/atlas-recompare-01/105-vector-candidate-1/bezier-curve-native-dark-2x.png",
+            "sha256": "4dcae9037b03102de0c03e4edc5b01ea4728c6bbf95adb8bd3c8186cd8fd1b28"
+          }
+        ],
+        "reviewer": "Codex (AI)",
+        "userApproval": "pending",
+        "remaining": []
+      },
+      "refinement": {
+        "name": "bezier-curve",
+        "purpose": "在一條水平控制桿下方呈現對稱貝茲弧線",
+        "recognitionCues": "三個空心圓節點、水平控制桿與下方兩支弧",
+        "confusableWith": [
+          "spline"
+        ],
+        "sourceObservation": "Phosphor 的圓形控制點較容易辨認，Tabler 讓兩側弧從節點下方離開。",
+        "references": [
+          {
+            "name": "bezier-curve",
+            "library": "Phosphor",
+            "repository": "phosphor-icons/core",
+            "commit": "2b75f3ad12b420c9504ef05df8d2564a28f8500e",
+            "path": "assets/regular/bezier-curve.svg",
+            "localPath": "references/atlas-01/phosphor-bezier-curve.svg",
+            "url": "https://github.com/phosphor-icons/core/blob/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular/bezier-curve.svg",
+            "sha256": "5ffb4c2ea00f0a68d631173f17b9f353d2fe0f44ed213ac7c943d6b10e6dc364",
+            "license": "MIT",
+            "sourceName": "bezier-curve",
+            "match": "exact",
+            "role": "comparison-only"
+          },
+          {
+            "name": "bezier-curve",
+            "library": "Tabler",
+            "repository": "tabler/tabler-icons",
+            "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+            "path": "icons/outline/vector-bezier.svg",
+            "localPath": "references/atlas-01/tabler-vector-bezier.svg",
+            "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/vector-bezier.svg",
+            "sha256": "631b0e54163bcf64ea012a3b15d93e47eb30f7142c6e20cedf1de80fdeea2aed",
+            "license": "MIT",
+            "sourceName": "vector-bezier",
+            "match": "exact",
+            "role": "comparison-only"
+          }
+        ],
+        "status": "visually-reviewed-candidate",
+        "effects": {
+          "dashes": {
+            "used": false,
+            "reason": "連續的邊和接點構成此圖示的輪廓。"
+          },
+          "opacity": {
+            "used": false,
+            "reason": "以清楚的單色空隙分開相鄰線條。"
+          },
+          "gradients": {
+            "used": false,
+            "reason": "單色輪廓已足以呈現形狀和方向。"
+          }
+        },
+        "change": {
+          "kind": "modified",
+          "before": {
+            "path": "references/atlas-recompare-01/master-before.json",
+            "variantsSha256": "b9411aaea067f2835d1b0117006d16892ac066f515746b0b9198805013e5f89f"
+          },
+          "reason": "讓拱頂從中點下緣相接，保留圓節點與桿兩側的留白。"
+        },
+        "visualReview": {
+          "reviewer": "Codex (AI)",
+          "date": "2026-11-18",
+          "skillVersion": "0.5.11",
+          "sizes": [
+            16,
+            20,
+            24
+          ],
+          "corners": [
+            "sharp",
+            "soft",
+            "rounded"
+          ],
+          "themes": [
+            "light",
+            "dark"
+          ],
+          "dpr": [
+            1,
+            2
+          ],
+          "variantsSha256": "99dd58392952b3890cfda9913652055cd309589240d5e043b41b07e8fe625a0d",
+          "evidence": [
+            {
+              "path": "docs/review/atlas-recompare-01/105-vector-candidate-1/bezier-curve-light-1x.png",
+              "sha256": "36a42d2543615249920116ffcb6d66531cc4005e524be2d0445a8a949c8df060"
+            },
+            {
+              "path": "docs/review/atlas-recompare-01/105-vector-candidate-1/bezier-curve-dark-1x.png",
+              "sha256": "e208e81b7993f36c3d525ea41698129643ecf63ea2ab82d47f8bc46c6943c5fe"
+            },
+            {
+              "path": "docs/review/atlas-recompare-01/105-vector-candidate-1/bezier-curve-native-light-2x.png",
+              "sha256": "2fbc8051fcb61beb9339f8abb89d31912cb55df6744a72057a9e74162291e401"
+            },
+            {
+              "path": "docs/review/atlas-recompare-01/105-vector-candidate-1/bezier-curve-native-dark-2x.png",
+              "sha256": "4dcae9037b03102de0c03e4edc5b01ea4728c6bbf95adb8bd3c8186cd8fd1b28"
+            }
+          ],
+          "inspectedCombinations": [
+            "light-1x",
+            "dark-1x",
+            "native-light-2x",
+            "native-dark-2x"
+          ],
+          "remainingCombinations": [],
+          "postDrawingSourceComparison": "改稿與兩來源並列，弧肩和控制桿之間在 16px 也留下可辨識的空隙。"
+        },
+        "designOrigin": {
+          "kind": "adapted-redraw",
+          "library": "Phosphor",
+          "license": "MIT",
+          "licenseFile": "licenses/phosphor.txt"
+        },
+        "remaining": [],
+        "userApproval": "pending"
+      },
+      "provenance": {
+        "kind": "adapted-redraw",
+        "author": "Phosphor Icons",
+        "library": "Phosphor",
+        "license": "MIT",
+        "licenseFile": "licenses/phosphor.txt",
+        "copyright": "Copyright (c) 2023 Phosphor Icons",
+        "commit": "2b75f3ad12b420c9504ef05df8d2564a28f8500e",
+        "reference": "https://github.com/phosphor-icons/core/blob/2b75f3ad12b420c9504ef05df8d2564a28f8500e/assets/regular/bezier-curve.svg",
+        "modifications": "對稱拱形曲線共用水平切線與中央控制點，三個節點半徑一致；連線與曲線均裁在節點孔外，保留相接但不填入內孔。 拱頂降低至中央節點下緣，讓左右弧肩與水平控制桿保有間隔，最粗描邊也可辨識。"
+      }
+    },
+    {
+      "name": "waves",
+      "review": {
+        "name": "waves",
+        "label": "波浪",
+        "category": "nature",
+        "status": "visually-reviewed",
+        "previousReview": "Preserved as historical evidence; not inherited as this review decision.",
+        "decision": "refined",
+        "defect": "舊稿每道有兩組短週期起伏，16px較像密集鋸齒或抖動線，曲線節奏比來源零碎。",
+        "purpose": "以三道起伏水線表示波浪或水面，區分直線霧帶和帶捲尾的風。",
+        "confusableWith": [
+          "wind",
+          "cloud-fog",
+          "droplet"
+        ],
+        "sourceObservation": "Tabler的ripple以一組長波峰和波谷形成較安靜的水面，Lucide的waves-horizontal保留較多短波。最新稿採納Tabler較長週期的構造，三道線維持現有6單位垂直間隔，並略增加起伏以在原生尺寸維持水面訊號；據實新增Tabler改作歸屬。",
+        "reason": "每道波線由兩週期改成一週期，前半段控制點位於同一高側，後半段以鏡像控制柄進入波谷；曲線在中央保持切線連續。三條使用同一母型平移，不各自手畫近似曲率。",
+        "postComparison": "最新稿在16／20／24與Lucide／Tabler回比，短碎起伏變成寬而連續的波形；三道線間仍有清楚通道，未因較大的波幅而相互黏合。sharp保留水線自然曲面與平切端點，明暗DPR1／2和55%文字均已目視，較長週期比前稿更舒展。",
+        "effects": {
+          "dashes": {
+            "used": false,
+            "reason": "水面訊號需要連續曲線，虛線會削弱波浪節奏。"
+          },
+          "opacity": {
+            "used": false,
+            "reason": "三層水線等量表達水面，不需淡化其中一層。"
+          },
+          "gradients": {
+            "used": false,
+            "reason": "以起伏和間距表達水，不增加藍色或反光漸層。"
+          }
+        },
+        "references": [
+          {
+            "name": "waves",
+            "library": "Lucide",
+            "repository": "lucide-icons/lucide",
+            "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+            "path": "icons/waves-horizontal.svg",
+            "localPath": "references/atlas-01/lucide-waves-horizontal.svg",
+            "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/waves-horizontal.svg",
+            "sha256": "b31f6534ef601e7c138922e99b0557ae61db7e5704c1a05806ecb78b2eaad443",
+            "license": "ISC AND MIT",
+            "sourceName": "waves-horizontal",
+            "match": "exact",
+            "role": "comparison-only"
+          },
+          {
+            "name": "waves",
+            "library": "Tabler",
+            "repository": "tabler/tabler-icons",
+            "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+            "path": "icons/outline/ripple.svg",
+            "localPath": "references/atlas-01/tabler-ripple.svg",
+            "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/ripple.svg",
+            "sha256": "f288378ee9a00b68b86c86ce71f696d2461b56cfb3b34c671e1cb3d945216733",
+            "license": "MIT",
+            "sourceName": "ripple",
+            "match": "exact",
+            "role": "comparison-only"
+          }
+        ],
+        "batch": "13-landscape-candidate-1",
+        "beforeHash": "7cd1ea7e026441c6f58993671809e74fb39ef082449053e6c64f3cde4c18700f",
+        "afterHash": "7c5f990d710af79568d2a50a1db8385b669a46651707b0f3f347e98e96a3388e",
+        "evidence": [
+          {
+            "path": "docs/review/atlas-recompare-01/13-landscape-candidate-1/waves-light-1x.png",
+            "sha256": "f18ec614a0483d1d5024b7621d10a3f3bf03dca646149af8be4e45b5e1903011"
+          },
+          {
+            "path": "docs/review/atlas-recompare-01/13-landscape-candidate-1/waves-dark-1x.png",
+            "sha256": "5eefb2ac31ee9384ec76a5b272e2d5f607f76d6bc1440abbdc3e72e2dc34f62b"
+          },
+          {
+            "path": "docs/review/atlas-recompare-01/13-landscape-candidate-1/waves-native-light-2x.png",
+            "sha256": "d5eee8ab21ef4fea5385fca8e29c0121b2a580f71ccfd920d631fb5fa94b6b49"
+          },
+          {
+            "path": "docs/review/atlas-recompare-01/13-landscape-candidate-1/waves-native-dark-2x.png",
+            "sha256": "a440051d1d503e97b86747c0ccad80c9942807684f100255a63704ce0a0e79c0"
+          }
+        ],
+        "reviewer": "Codex (AI)",
+        "userApproval": "pending",
+        "remaining": []
+      },
+      "refinement": {
+        "name": "waves",
+        "purpose": "以三道起伏水線表示波浪或水面，區分直線霧帶和帶捲尾的風。",
+        "recognitionCues": "三道相同節奏的連續波線，每道有一個寬波峰與一個寬波谷。",
+        "confusableWith": [
+          "wind",
+          "cloud-fog",
+          "droplet"
+        ],
+        "sourceObservation": "Tabler的ripple以一組長波峰和波谷形成較安靜的水面，Lucide的waves-horizontal保留較多短波。最新稿採納Tabler較長週期的構造，三道線維持現有6單位垂直間隔，並略增加起伏以在原生尺寸維持水面訊號；據實新增Tabler改作歸屬。",
+        "references": [
+          {
+            "name": "waves",
+            "library": "Lucide",
+            "repository": "lucide-icons/lucide",
+            "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+            "path": "icons/waves-horizontal.svg",
+            "localPath": "references/atlas-01/lucide-waves-horizontal.svg",
+            "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/waves-horizontal.svg",
+            "sha256": "b31f6534ef601e7c138922e99b0557ae61db7e5704c1a05806ecb78b2eaad443",
+            "license": "ISC AND MIT",
+            "sourceName": "waves-horizontal",
+            "match": "exact",
+            "role": "comparison-only"
+          },
+          {
+            "name": "waves",
+            "library": "Tabler",
+            "repository": "tabler/tabler-icons",
+            "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+            "path": "icons/outline/ripple.svg",
+            "localPath": "references/atlas-01/tabler-ripple.svg",
+            "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/ripple.svg",
+            "sha256": "f288378ee9a00b68b86c86ce71f696d2461b56cfb3b34c671e1cb3d945216733",
+            "license": "MIT",
+            "sourceName": "ripple",
+            "match": "exact",
+            "role": "comparison-only"
+          }
+        ],
+        "status": "visually-reviewed-candidate",
+        "effects": {
+          "dashes": {
+            "used": false,
+            "reason": "水面訊號需要連續曲線，虛線會削弱波浪節奏。"
+          },
+          "opacity": {
+            "used": false,
+            "reason": "三層水線等量表達水面，不需淡化其中一層。"
+          },
+          "gradients": {
+            "used": false,
+            "reason": "以起伏和間距表達水，不增加藍色或反光漸層。"
+          }
+        },
+        "change": {
+          "kind": "modified",
+          "before": {
+            "path": "references/atlas-recompare-01/master-before.json",
+            "variantsSha256": "7cd1ea7e026441c6f58993671809e74fb39ef082449053e6c64f3cde4c18700f"
+          },
+          "reason": "每道波線由兩週期改成一週期，前半段控制點位於同一高側，後半段以鏡像控制柄進入波谷；曲線在中央保持切線連續。三條使用同一母型平移，不各自手畫近似曲率。"
+        },
+        "visualReview": {
+          "reviewer": "Codex (AI)",
+          "date": "2026-11-17",
+          "skillVersion": "0.5.11",
+          "sizes": [
+            16,
+            20,
+            24
+          ],
+          "corners": [
+            "sharp",
+            "soft",
+            "rounded"
+          ],
+          "themes": [
+            "light",
+            "dark"
+          ],
+          "dpr": [
+            1,
+            2
+          ],
+          "variantsSha256": "7c5f990d710af79568d2a50a1db8385b669a46651707b0f3f347e98e96a3388e",
+          "evidence": [
+            {
+              "path": "docs/review/atlas-recompare-01/13-landscape-candidate-1/waves-light-1x.png",
+              "sha256": "f18ec614a0483d1d5024b7621d10a3f3bf03dca646149af8be4e45b5e1903011"
+            },
+            {
+              "path": "docs/review/atlas-recompare-01/13-landscape-candidate-1/waves-dark-1x.png",
+              "sha256": "5eefb2ac31ee9384ec76a5b272e2d5f607f76d6bc1440abbdc3e72e2dc34f62b"
+            },
+            {
+              "path": "docs/review/atlas-recompare-01/13-landscape-candidate-1/waves-native-light-2x.png",
+              "sha256": "d5eee8ab21ef4fea5385fca8e29c0121b2a580f71ccfd920d631fb5fa94b6b49"
+            },
+            {
+              "path": "docs/review/atlas-recompare-01/13-landscape-candidate-1/waves-native-dark-2x.png",
+              "sha256": "a440051d1d503e97b86747c0ccad80c9942807684f100255a63704ce0a0e79c0"
+            }
+          ],
+          "inspectedCombinations": [
+            "light-1x",
+            "dark-1x",
+            "native-light-2x",
+            "native-dark-2x"
+          ],
+          "remainingCombinations": [],
+          "postDrawingSourceComparison": "最新稿在16／20／24與Lucide／Tabler回比，短碎起伏變成寬而連續的波形；三道線間仍有清楚通道，未因較大的波幅而相互黏合。sharp保留水線自然曲面與平切端點，明暗DPR1／2和55%文字均已目視，較長週期比前稿更舒展。"
+        },
+        "designOrigin": {
+          "kind": "adapted-redraw",
+          "library": "Tabler",
+          "license": "MIT",
+          "licenseFile": "licenses/tabler.txt",
+          "reference": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/ripple.svg",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "history": "references/atlas-recompare-01/previous-refinement-ledger.json"
+        },
+        "remaining": [],
+        "userApproval": "pending"
+      },
+      "provenance": {
+        "kind": "adapted-redraw",
+        "author": "Paweł Kuna",
+        "library": "Tabler",
+        "license": "MIT",
+        "copyright": "Copyright (c) 2020-2026 Paweł Kuna",
+        "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+        "reference": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/ripple.svg",
+        "licenseFile": "licenses/tabler.txt",
+        "modifications": "本輪由原先兩週期短波改作Tabler的單週期長波構造；三道波線共用連續曲率，垂直間隔保持6單位、控制柄波幅改為2.5單位。"
+      }
+    }
+  ]
+}

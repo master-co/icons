@@ -1,0 +1,154 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "baseline": "references/atlas-recompare-01/master-before.json",
+  "viewedSuffixes": [
+    "light-1x",
+    "dark-1x",
+    "native-light-2x",
+    "native-dark-2x"
+  ],
+  "batch": "108-layout-candidate-1",
+  "decisions": [
+    {
+      "name": "layout-list",
+      "decision": "refined",
+      "purpose": "以兩列空心縮圖與各列成對的文字橫線呈現縮圖清單的語意。",
+      "recognitionCues": "兩列空心縮圖與各列成對的文字橫線",
+      "confusableWith": [
+        "layout-template"
+      ],
+      "defect": "兩列原稿的四條等長線易讀成格線，弱化了圖文兩欄的區別。",
+      "sourceObservation": "Lucide 保持等長的文字線，Hugeicons 以每組長短不同的線條明確提示文字。",
+      "reason": "縮短每列的第二條文字線，保留原本的方形縮圖、行距和左對齊起點。",
+      "postComparison": "和 Lucide、Hugeicons 回比，16px 灰階仍看得出兩列分組，較短的線仍具有足夠長度。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "以完整輪廓和獨立符號筆畫表達形狀。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "用單色線和清楚的間隙區分相鄰形體。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "用單色筆畫即可傳達輪廓及功能。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "layout-template",
+      "decision": "retained",
+      "purpose": "以一條通欄橫幅與下方一寬一窄的兩塊內容呈現版面範本的語意。",
+      "recognitionCues": "一條通欄橫幅與下方一寬一窄的兩塊內容",
+      "confusableWith": [
+        "layout-panel-left"
+      ],
+      "defect": "檢查下方較窄區塊在最粗描邊仍能保有矩形內孔。",
+      "sourceObservation": "Lucide 的左下欄較寬，Hugeicons 的兩個下欄順序相反，兩者均用完整的橫幅。",
+      "reason": "保留與 Lucide 相同的左寬右窄順序，讓三塊欄位以相同間隔排開。",
+      "postComparison": "與兩套來源並列，三尺寸能清楚讀出上整列和下分欄，粗描邊時右下角亦有留白。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "以完整輪廓和獨立符號筆畫表達形狀。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "用單色線和清楚的間隙區分相鄰形體。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "用單色筆畫即可傳達輪廓及功能。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "layout-panel-left",
+      "decision": "retained",
+      "purpose": "以左側通高長欄和右側上下兩枚方塊呈現左側分欄版面的語意。",
+      "recognitionCues": "左側通高長欄和右側上下兩枚方塊",
+      "confusableWith": [
+        "panels-top-left"
+      ],
+      "defect": "確認欄距比線寬大，且欄位在小尺寸仍看得出個別輪廓。",
+      "sourceObservation": "Lucide 採較大幅固定比例，Hugeicons 稍細且轉角更圓，兩者皆為三個獨立區塊。",
+      "reason": "保留相同寬度的兩欄與等高等寬的右方區塊，讓三個內孔成為辨識線索。",
+      "postComparison": "與兩源回比，16px 的長欄和兩短欄仍清楚分隔，三種角型皆保持一致的對齊。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "以完整輪廓和獨立符號筆畫表達形狀。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "用單色線和清楚的間隙區分相鄰形體。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "用單色筆畫即可傳達輪廓及功能。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "split-horizontal",
+      "decision": "retained",
+      "purpose": "以雙垂直分界與左右向外的兩支開口箭頭呈現水平拆分的語意。",
+      "recognitionCues": "雙垂直分界與左右向外的兩支開口箭頭",
+      "confusableWith": [
+        "split-vertical"
+      ],
+      "defect": "確認小尺寸箭翼與分隔桿之間不黏合，以及對稱的雙桿仍分開。",
+      "sourceObservation": "Phosphor 使用兩支開口箭，MDI 則以實心三角加強箭尖，兩者箭頭都離開中線。",
+      "reason": "保留開口的箭翼與同組拆分符號旋轉對稱的尺寸，維持清楚的左右動線。",
+      "postComparison": "並欄對照兩源後，左右箭翼在 16px 仍分得出來，最粗描邊的雙垂直線留白清楚。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "以完整輪廓和獨立符號筆畫表達形狀。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "用單色線和清楚的間隙區分相鄰形體。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "用單色筆畫即可傳達輪廓及功能。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "split-vertical",
+      "decision": "retained",
+      "purpose": "以雙水平分界與上下向外的兩支開口箭頭呈現垂直拆分的語意。",
+      "recognitionCues": "雙水平分界與上下向外的兩支開口箭頭",
+      "confusableWith": [
+        "split-horizontal"
+      ],
+      "defect": "檢查箭翼最靠近分隔桿的末端，並確認上下朝向都清楚。",
+      "sourceObservation": "Phosphor 的開角箭翼較接近現稿，MDI 有更短的實心箭頭與較重的水平分界。",
+      "reason": "保留對稱的兩支開口箭，整體使用與水平拆分可旋轉對應的比例。",
+      "postComparison": "三尺寸和兩來源並列，兩條水平線彼此分開，上下箭尖未被相鄰粗描邊吞沒。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "以完整輪廓和獨立符號筆畫表達形狀。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "用單色線和清楚的間隙區分相鄰形體。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "用單色筆畫即可傳達輪廓及功能。"
+        }
+      },
+      "remaining": []
+    }
+  ]
+}

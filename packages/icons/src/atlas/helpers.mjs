@@ -1,7 +1,7 @@
 import {figure} from '../families/shared.mjs';
 import {n} from '../geometry.mjs';
 // Match the production drawing serializer before reviewing authoring output.
-const normalize=nodes=>nodes.map(([tag,attrs])=>[tag,Object.fromEntries(Object.entries(attrs).map(([key,value])=>[key,typeof value==='number'?n(value):key==='d'?value.replace(/-?\d*\.?\d+(?:e[-+]?\d+)?/gi,x=>String(n(Number(x)))):value]))]);
+const normalize=nodes=>nodes.map(([tag,attrs,children])=>[tag,Object.fromEntries(Object.entries(attrs).map(([key,value])=>[key,typeof value==='number'?n(value):key==='d'?value.replace(/-?\d*\.?\d+(?:e[-+]?\d+)?/gi,x=>String(n(Number(x)))):value])),...(children?[normalize(children)]:[])]);
 // Readable construction per concept; source relationships are recorded per icon. The grid is 24u;
 // corner radii and stroke are native, and detail() omits secondary marks at 16.
 export function author(rows,category,categoryLabel){

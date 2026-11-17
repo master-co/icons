@@ -1,0 +1,101 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "baseline": "references/atlas-recompare-01/master-before.json",
+  "viewedSuffixes": [
+    "light-1x",
+    "dark-1x",
+    "native-light-2x",
+    "native-dark-2x"
+  ],
+  "batch": "89-energy-candidate-1",
+  "decisions": [
+    {
+      "name": "car-battery",
+      "decision": "refined",
+      "purpose": "以頂部雙接點和正負極表示汽車用蓄電池。",
+      "recognitionCues": "寬矩形電瓶殼、頂部兩個短接點、左右負極短線與正極十字。",
+      "confusableWith": [
+        "battery-full",
+        "battery-warning"
+      ],
+      "defect": "負極中心x7.5與正極中心x16的配置不對稱，負極距左壁較近，左右符號的外側空間不一致。",
+      "sourceObservation": "Lucide把兩符號置於x8與x16，左右空間平衡；Phosphor也維持對稱符號，但用較寬的矩形接頭。現稿的短接點在小尺寸較疏朗，符號位置則應回到共同對稱軸。",
+      "reason": "負極右移0.5單位至中心x8，與正極中心x16對稱於電池中心x12；保留四單位符號寬度、同一水平軸、殼體與兩個短接點。",
+      "postComparison": "已查看修改後與Lucide／Phosphor的三尺寸、三角型及明暗DPR1／2。左右符號外側距殼體相同，中央間隙保持開放，16px正負極仍有清楚區別；採Lucide符號配置，沒有加入Phosphor接頭的額外小孔。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "雙接點和極性符號均為可見構造，不需虛線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "正負極同為必要訊號，以實線等量表現。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "電瓶不用光照漸層或顏色區分極性。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "charging-station",
+      "decision": "refined",
+      "purpose": "用直立機櫃、閃電與側邊電纜表示電動車充電樁。",
+      "recognitionCues": "落地直立機身、上方顯示帶、內置閃電、側邊回彎電纜和斜向充電端。",
+      "confusableWith": [
+        "fuel",
+        "battery-charging"
+      ],
+      "defect": "充電端斜線直接硬折到垂直電纜，sharp尤其僵硬，與下方圓滑回彎不屬於同一根線纜的曲面語言。",
+      "sourceObservation": "Lucide原稿在斜端與垂直纜線之間設有圓弧過渡；Phosphor用簡潔機身與較短側線。現稿保留Lucide機身和回彎構造，但先前省掉轉接弧，使上方像折斷的硬管。",
+      "reason": "在原斜線與垂直線之間加入半徑2的相切圓弧，兩側保持原方向和位置；弧線屬於電纜本體曲面，所以sharp也保留。機身、閃電和回彎底部保持。",
+      "postComparison": "已查看最新稿與Lucide／Phosphor三尺寸、三角型及明暗DPR1／2。斜端平順轉入垂直電纜，sharp的無意硬角消除；原生16px側線和機身分開，顯示帶與閃電仍有留白，整體承接更接近Lucide原稿。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "完整充電線表示實體連接，不用虛線表示路徑。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "電纜與閃電均保留完整對比，不靠淡化處理接縫。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "設備辨識由外形和閃電完成，不增加光照漸層。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "transmission-tower",
+      "decision": "retained",
+      "purpose": "以漸寬塔架和橫擔表示高壓輸電塔。",
+      "recognitionCues": "尖塔冠、左右橫擔及下垂端、向下展開的雙腳、中央交叉斜撐與接地底線。",
+      "confusableWith": [
+        "crane-tower",
+        "antenna"
+      ],
+      "defect": "重查塔身交叉是否在小尺寸塞滿空腔、塔冠橫擔是否與下方支承斷開，以及底腳是否失去穩定落點。",
+      "sourceObservation": "Hugeicons保留完整接地底線、多層橫擔和交叉支撐，構造豐富；MDI用填形與分離橫擔更抽象。現稿沿用Hugeicons塔架語意，以一組X和單道橫擔簡化層次。",
+      "reason": "保留漸寬支承和單組X。塔冠、橫擔及梯形塔身共用上緣高度，斜撐裁在塔框內，底腳落在同一條底線；增加Hugeicons第二層交叉會壓縮16px空腔。",
+      "postComparison": "已查看最新保留稿與Hugeicons／MDI三尺寸、三角型、明暗DPR1／2。中央X上下及兩側仍有可見空腔，塔頂尖冠與外伸橫擔清楚，底腳沒有描邊突出；保留完整接地姿態與較疏的支架層次。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "塔架為可見承重構造，沒有隱藏部分需要虛線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "塔身和橫擔同為主體，保持等對比單色。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "不以材質漸層表示金屬塔架，輪廓足以交代結構。"
+        }
+      },
+      "remaining": []
+    }
+  ]
+}

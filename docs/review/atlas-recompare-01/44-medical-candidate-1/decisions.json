@@ -1,0 +1,101 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "batch": "44-medical-candidate-1",
+  "baseline": "references/atlas-recompare-01/master-before.json",
+  "viewedSuffixes": [
+    "light-1x",
+    "dark-1x",
+    "native-light-2x",
+    "native-dark-2x"
+  ],
+  "decisions": [
+    {
+      "name": "hospital",
+      "decision": "refined",
+      "purpose": "以醫療十字、主樓、側翼及入口表示醫院建築。",
+      "recognitionCues": "高低樓體、醫療十字、入口與共用地面。",
+      "confusableWith": [
+        "building",
+        "first-aid-kit"
+      ],
+      "defect": "入口偏窄，主樓和側翼底面沒有外伸接地線，建築支承較弱。",
+      "sourceObservation": "Phosphor以共用外伸地面承接高低樓體；Lucide雙翼為另一種建築布局。本次沿既有Phosphor構造改善接地和入口比例。",
+      "reason": "入口寬4.5增至5.5、高5.5增至6；主樓與側翼移除重複底線，改由單一外伸地面連接，保留樓高和醫療十字。",
+      "postComparison": "最新稿與Lucide／Phosphor回比，入口在16仍有明確內孔，兩棟樓共用地面，底部沒有疊線。三尺寸、三角型、明暗DPR1／2及55%文字已查看。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "建築外輪廓和地面為實體，不需要隱藏邊界虛線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以輪廓與留白表達構造，不以淡化掩飾接點或密度。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "維持單色平面醫療圖示，不需要材質光照漸層。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "ambulance",
+      "decision": "retained",
+      "purpose": "以醫療車廂、駕駛艙與雙輪表示救護車。",
+      "recognitionCues": "高車廂、醫療十字、斜前窗、雙車輪。",
+      "confusableWith": [
+        "truck",
+        "hospital"
+      ],
+      "defect": "本輪回比未見需修正的具體缺陷；需維持醫療標記和車窗、輪孔之間的留白。",
+      "sourceObservation": "Tabler的車窗與車廂共用邊界，Lucide省略窗內分界而強調車頭肩部；現稿保留較清楚的車窗，車輪亦有足夠孔徑。",
+      "reason": "保留既有車廂、斜前窗及輪距比例；沒有增加燈具與門把，避免16px小圖塞滿細節。",
+      "postComparison": "最新並列確認16／20／24的十字、車窗和輪孔仍分層可辨，輪孔內沒有穿過底線，前座與車廂一體。明暗DPR1／2、三角型和55%文字已目視，保留現稿。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "車窗與車輪均直接可見，不使用未完成或隱藏線虛線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以輪廓與留白表達構造，不以淡化掩飾接點或密度。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "維持單色平面醫療圖示，不需要材質光照漸層。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "heart-pulse",
+      "decision": "refined",
+      "purpose": "以心形內的起伏脈波表示心跳與生命徵象。",
+      "recognitionCues": "心形雙肩、中央主峰、較淺谷點與兩側基線。",
+      "confusableWith": [
+        "heart",
+        "activity"
+      ],
+      "defect": "舊脈波高低峰近乎等幅，主峰較弱，容易像一般鋸齒線而失去心跳節奏。",
+      "sourceObservation": "Lucide的較高主峰與較淺谷點形成清楚心跳節奏；Tabler採開口心形。保留完整心形，沿既有Lucide改作強化主峰。",
+      "reason": "基線下移0.5，波形改為先淺谷再陡升主峰，主峰y8.5、谷點y15；保留心形母型與內線按外殼收口的構造。",
+      "postComparison": "最新稿與Lucide／Tabler在三尺寸回比，主峰更突出、谷點較淺，左右上下空腔仍開放；完整心形沒有被外突波線破壞。三角型、明暗DPR1／2與55%文字已目視。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "脈波保持連續實線，不以虛線破壞可讀的起伏節奏。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以輪廓與留白表達構造，不以淡化掩飾接點或密度。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "維持單色平面醫療圖示，不需要材質光照漸層。"
+        }
+      },
+      "remaining": []
+    }
+  ]
+}

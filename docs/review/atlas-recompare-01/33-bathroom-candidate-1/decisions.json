@@ -1,0 +1,72 @@
+{
+  "reviewer": "Codex (AI)",
+  "batch": "33-bathroom-candidate-1",
+  "baseline": "references/atlas-recompare-01/master-before.json",
+  "date": "2026-11-17",
+  "viewedSuffixes": [
+    "light-1x",
+    "dark-1x",
+    "native-light-2x",
+    "native-dark-2x"
+  ],
+  "decisions": [
+    {
+      "name": "bathtub",
+      "decision": "retained",
+      "purpose": "以帶水龍頭與支腳的獨立浴缸表示沐浴、浴室及住宿設備。",
+      "recognitionCues": "寬缸口、下收圓腹、拱形龍頭與兩根短腳。",
+      "confusableWith": [
+        "soup",
+        "shower-head"
+      ],
+      "defect": "本輪未發現需重畫的可見缺陷，重點確認缸腹、支腳及龍頭是否形成完整器物。",
+      "sourceObservation": "Phosphor圓腹及支腳保留浴缸構造，Lucide以較直缸壁及斜向龍頭呈現另一器型；現稿圓腹承接已自然，無需新增Phosphor搭掛毛巾。",
+      "reason": "保留現有缸口、連續下收曲面及支腳，龍頭弧與缸口保持空間；不把圓腹改成方盒，也不加入毛巾的小框。",
+      "postComparison": "與Lucide／Phosphor在原生三尺寸重新比較，缸腹及腳的承接清楚，16仍可辨龍頭、缸口和下方支承；明暗DPR1／2、三角型及55%文字已查看。此為本輪新比較後的保留決策。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "缸口和缸腹是可見實體，不需虛線表達。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "依龍頭與缸腹輪廓分配空間，不淡化支腳。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "不用水面或材質漸層增添未必要的圖形訊號。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "shower-head",
+      "decision": "refined",
+      "purpose": "以傾斜出水面與分散水滴表示蓮蓬頭、淋浴及浴室設施。",
+      "recognitionCues": "短接管、小弧罩、延伸出水緣與沿出水方向排列的水點。",
+      "confusableWith": [
+        "umbrella",
+        "cloud-rain"
+      ],
+      "defect": "舊弧罩過大且缺少獨立出水外緣，近似半圓傘面；大尺寸水點散落方向不夠一致。",
+      "sourceObservation": "Lucide較小的弧罩及外伸出水緣更像蓮蓬頭，水點沿斜向排列更有出水方向；Phosphor為錐形罩器型，保留既有Lucide圓罩改作。",
+      "reason": "縮小弧罩直徑，另外以同軸斜線形成略外伸的出水緣，接管按新罩面裁切；20／24改為三列斜向七點，16保留疏落四點。",
+      "postComparison": "最新稿與Lucide／Phosphor於16／20／24重新並列，罩體與水流主次更自然，出水緣的兩端可辨；明暗DPR1／2、三角型與55%文字已查看，弧罩內孔保持開放，接管未刺入罩內。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "以實心水點表示離散水滴，無需另加虛線水束。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "水點以位置和數量表達流向，不用漸淡掩飾小尺寸。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "淋浴訊號依罩面與離散水滴成立，不添加連續漸層。"
+        }
+      },
+      "remaining": []
+    }
+  ]
+}

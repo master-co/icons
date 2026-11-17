@@ -1,0 +1,28 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "name": "crane-truck",
+  "defect": "最大線寬下吊鉤回收端與垂吊線的斜向間隙過窄，原生圖接近封閉小圈。",
+  "change": "換算24母型的描邊大於2時，將回收端從270度弧縮短到240度；一般線寬幾何不變。",
+  "sourceComparison": "已查看Tabler與Hugeicons原始描邊、粗線前稿及最新稿的16／20／24、三角型、明暗DPR1／2。最新稿保留Hugeicons式圓腹鉤，回收端縮短後鉤口在原生粗線版更明確；未增加鉤圈或改變吊線位置。",
+  "evidence": [
+    {
+      "path": "docs/review/atlas-recompare-01/83-84-weights-2/hook-light-1x.png",
+      "sha256": "f7b7f7f409e56b5b35caa0390c67ec720b4772aa9a8767700d0346b847e928a7"
+    },
+    {
+      "path": "docs/review/atlas-recompare-01/83-84-weights-2/hook-dark-1x.png",
+      "sha256": "276c222a194f3b20a8a8c984e80b14457438fe93e1bdd18ca588ea1bd880fe95"
+    },
+    {
+      "path": "docs/review/atlas-recompare-01/83-84-weights-2/hook-light-2x.png",
+      "sha256": "e45e1731c91496362da31f90f5cf0fc85ffb53d4de8c9613a28acb5fe5afbdb3"
+    },
+    {
+      "path": "docs/review/atlas-recompare-01/83-84-weights-2/hook-dark-2x.png",
+      "sha256": "eac351911160709a2eb467a36b35c0d208c4cadd498832dbbf5201f09d5d96bd"
+    }
+  ],
+  "userApproval": "pending",
+  "remaining": []
+}

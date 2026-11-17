@@ -1,0 +1,101 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "batch": "80-tools-candidate-1",
+  "baseline": "references/atlas-recompare-01/master-before.json",
+  "viewedSuffixes": [
+    "light-1x",
+    "dark-1x",
+    "native-light-2x",
+    "native-dark-2x"
+  ],
+  "decisions": [
+    {
+      "name": "saw",
+      "decision": "refined",
+      "purpose": "以帶粗鋸齒的鋸片及中空握柄表示手鋸和手工切割。",
+      "recognitionCues": "向前收窄的鋸片、下緣三個粗齒、中空且橫跨鋸片方向的握柄。",
+      "confusableWith": [
+        "pocket-knife",
+        "ruler"
+      ],
+      "defect": "握柄兩組邊雖各自平行，夾角卻偏斜，內孔成為下墜的斜菱形，與鋸片方向不協調。",
+      "sourceObservation": "MDI的握柄前後緣近乎垂直短邊，形成穩定的斜向矩形握孔；OpenMoji也有獨立握持方向，但細齒和複雜柄端更適合較大圖幅。",
+      "reason": "沿既有MDI改作，將握柄後緣兩端改為6.25,20與2.25,15；長邊向量4,5和短邊向量-3.75,3垂直，握柄從斜菱形改為矩形。保留鋸背、三個粗齒及柄刃共用分界。",
+      "postComparison": "已查看最新稿與MDI／OpenMoji固定來源在16／20／24、三角型、明暗DPR1與2的並列。握柄的矩形孔較穩定，整體不再向下拖長；三個粗齒仍清楚。保留MDI式粗齒節奏，不增加OpenMoji的細齒或柄端小件，以維持原生16的輪廓與空腔。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "鋸片與握柄是可見實體，不需要虛線表示切割軌跡。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "鋸齒和握孔用輪廓區分，不淡化工作刃。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "不加入金屬反光，單色即可表現工具構造。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "tape-measure",
+      "decision": "refined",
+      "purpose": "以捲起並展開的軟尺表示量測尺寸與長度。",
+      "recognitionCues": "橢圓捲面、內部回捲、向右伸出的寬尺帶與底緣刻度。",
+      "confusableWith": [
+        "ruler",
+        "film-reel"
+      ],
+      "defect": "三筆刻度集中在x6、11、16，右端多出大段留白，尺帶節奏偏向左側。",
+      "sourceObservation": "Hugeicons的四筆刻度沿尺帶均勻展開；現稿已簡化成三筆，但沒有重新分配位置。MDI是硬殼鋼捲尺，僅可比較捲體與伸出段的構造，並非同器型軟尺參考。",
+      "reason": "保留三筆刻度，位置改為x6、12、18，把最後一筆向右端展開；捲面、尺帶高度、內捲與刻度長度均不變。",
+      "postComparison": "已查看最新稿與Hugeicons同器型原稿及MDI硬殼構造參考，在16／20／24、三角型、明暗DPR1與2並列。三筆刻度沿尺帶分布較均衡，原生16仍能區分捲面與尺帶；不為追隨來源增加第四筆。MDI維持structural角色，沒有宣稱兩份同器型軟尺來源。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "量測刻度是實線結構，不用虛線暗示未完成量測。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "捲面與尺帶以共同輪廓承接，不使用淡化分層。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "軟尺以捲面弧線表達體積，不需要漸層材質。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "toolbox",
+      "decision": "retained",
+      "purpose": "以提把、斜肩箱蓋和雙扣鎖表示工具箱與工具收納。",
+      "recognitionCues": "中央提把、兩側斜肩、水平開箱分界和跨分界的雙扣鎖。",
+      "confusableWith": [
+        "briefcase",
+        "first-aid-kit"
+      ],
+      "defect": "重查提把和斜肩的承接，以及雙扣鎖是否使箱蓋過密。",
+      "sourceObservation": "Lucide的斜肩箱蓋和寬下箱有明確層次，Phosphor則用平頂矩形箱體與短扣鎖。現稿沿用Lucide器型，提把較方、肩部轉角較小，仍有清楚的上下體量。",
+      "reason": "斜肩區讓工具箱有別於公事包，中央提把與箱頂共邊，雙扣鎖跨開箱線且遠離肩角；原生16提把孔和箱蓋仍清楚。保留微圓斜肩器型，不改成Phosphor平頂以免削弱分類線索。",
+      "postComparison": "已查看最新稿與Lucide及Phosphor的16／20／24、三角型、明暗DPR1與2。箱蓋斜肩、提把空腔、雙扣鎖和下箱留白均穩定；較方的提把屬現有家族角型選擇，沒有接縫突出或輪廓失衡，因此保留。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "箱蓋與扣鎖為可見部件，不需虛線表示內部收納。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以共邊開箱線表達上下箱，不淡化扣鎖或把手。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "平面工具箱輪廓無須光照漸層。"
+        }
+      },
+      "remaining": []
+    }
+  ]
+}

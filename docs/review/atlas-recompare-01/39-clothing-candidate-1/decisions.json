@@ -1,0 +1,101 @@
+{
+  "reviewer": "Codex (AI)",
+  "batch": "39-clothing-candidate-1",
+  "baseline": "references/atlas-recompare-01/master-before.json",
+  "date": "2026-11-18",
+  "viewedSuffixes": [
+    "light-1x",
+    "dark-1x",
+    "native-light-2x",
+    "native-dark-2x"
+  ],
+  "decisions": [
+    {
+      "name": "coat",
+      "decision": "retained",
+      "purpose": "以長袖、V領與中央開襟表示一般外套。",
+      "recognitionCues": "長袖、斜肩、V領、中央衣襟與較長身片。",
+      "confusableWith": [
+        "shirt",
+        "dress"
+      ],
+      "defect": "原Tabler jacket實為無袖背心，不足以核對長袖外套的整體形態；需要更換同語意來源，圖稿未發現明確結構缺陷。",
+      "sourceObservation": "改以固定Lucide Lab jacket和OpenMoji外套比較。Lucide立領、口袋與曲線衣襟較完整，OpenMoji是翻領長外套；現稿採無翻領的V形開襟款式，袖與身片承接清楚。",
+      "reason": "保留一般V領外套，三角領口與中央開襟共用交點，兩側袖子保持舒展而不增加立領或口袋。來源更換只作比較，未沿用Lucide或OpenMoji圖稿，保留獨立構造的來源身分。",
+      "postComparison": "最新稿與修正後兩份長袖來源在16／20／24並列，袖長與身片比例、領口及衣襟均可辨。選擇簡潔V領而非立領夾克，沒有因來源較多細節就堆入細線。三角型、明暗DPR1／2已查看；舊來源記錄獨立保存。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "衣襟與袖口完整可見，不需虛線暗示內裡。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "各部件以實際輪廓和留白區分，不依賴透明度掩飾交接。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "衣物配件以單色平面構造呈現，不增加光照漸層。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "sock",
+      "decision": "refined",
+      "purpose": "以襪口、襪筒與圓趾足部表示襪子。",
+      "recognitionCues": "直立襪筒、襪口分界、圓趾與較大尺寸的後跟拼片。",
+      "confusableWith": [
+        "shoe",
+        "trousers"
+      ],
+      "defect": "20／24的後跟內線止於襪身中央，未接回足部外緣，形成沒有構造意義的懸空鉤線。",
+      "sourceObservation": "Phosphor和Tabler都把後跟分界接回襪體外緣，清楚形成拼片；這是原稿應保留的衣物構造，不是可任意懸空的裝飾。",
+      "reason": "沿既有Phosphor改作重畫後跟分界為連續曲線，從襪筒背面接到足底斜邊，內線按襪體收口。16保留較簡潔的無拼片輪廓，襪口與圓趾保持。",
+      "postComparison": "最新稿與Phosphor／Tabler在三尺寸回比，20／24的後跟成為封閉拼片，與襪筒及足底有一致承接，沒有伸出外輪廓。16仍以襪口、折踝及圓趾讀出襪子；三角型和明暗DPR1／2已查看。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "後跟以可見拼片分界表達，不增加虛線縫紉記號。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "各部件以實際輪廓和留白區分，不依賴透明度掩飾交接。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "衣物配件以單色平面構造呈現，不增加光照漸層。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "shoe",
+      "decision": "refined",
+      "purpose": "以鞋口、弧形鞋面、鞋帶及平底表示日常鞋子。",
+      "recognitionCues": "平鞋口、下降鞋面、圓鞋頭、短鞋帶與可見鞋底。",
+      "confusableWith": [
+        "sock",
+        "iron"
+      ],
+      "defect": "原鞋底高度4單位，佔據下半部較多空間，看起來像厚底方塊；底部兩端沒有實際角型差異。",
+      "sourceObservation": "Phosphor的底板較薄，Tabler鞋頭及後跟收角柔順。沿既有Tabler改作保留平鞋口與鞋面姿態，調整底板比例及收角，不改成Phosphor高筒鞋款。",
+      "reason": "鞋底分界由y17下移至18，底板高度4減至3。soft／rounded在鞋頭與後跟下緣加入實際短曲線，sharp保留硬角；鞋帶依原規則在16保留一筆。",
+      "postComparison": "最新稿與Phosphor／Tabler在16／20／24回比，底板較輕、鞋面空間更充分，16仍有可辨的底板通道。鞋頭保持圓弧且收口未突出，三角型與明暗DPR1／2皆已查看。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "鞋帶與鞋底是可見結構，不需隱藏接縫虛線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "各部件以實際輪廓和留白區分，不依賴透明度掩飾交接。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "衣物配件以單色平面構造呈現，不增加光照漸層。"
+        }
+      },
+      "remaining": []
+    }
+  ]
+}

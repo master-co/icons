@@ -6,6 +6,8 @@ export const specifications = {
   20: { stroke: 1.5, radius: 1.25, roundRadius: 2.5, inset: 2.5, gap: 1.75 },
   24: { stroke: 1.75, radius: 1.5, roundRadius: 3, inset: 3, gap: 2 },
 };
+// Optical corrections apply only above the native weight in the explorer.
+export const weightDelta = g => g.variableStroke ? Math.max(0,g.stroke-specifications[g.s].stroke) : 0;
 export const n = value => Number(value.toFixed(4));
 const point = ([x, y]) => `${n(x)} ${n(y)}`;
 export const path = d => ['path', { d }];

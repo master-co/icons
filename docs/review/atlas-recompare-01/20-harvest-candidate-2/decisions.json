@@ -1,0 +1,52 @@
+{
+  "reviewer":"Codex (AI)","batch":"20-harvest-candidate-2",
+  "baseline":"references/atlas-recompare-01/master-before.json","date":"2026-11-17",
+  "viewedSuffixes":["light-1x","dark-1x","native-light-2x","native-dark-2x"],
+  "decisions":[
+    {
+      "name":"corn","decision":"refined",
+      "purpose":"以露出穗粒、苞葉下收的直立玉米表示穀物與食材。",
+      "recognitionCues":"長穗、二列穗粒、兩側向下收束的苞葉及共同穗底。",
+      "confusableWith":["wheat","flower"],
+      "defect":"舊稿苞葉太寬且呈碗狀，像花瓣；16px只有橫線，缺少穗粒分列的線索。",
+      "sourceObservation":"MDI讓長穗與下收苞葉有清楚主次，Hugeicons斜向穗也以狹長苞葉包裹果身，兩者均比舊稿寬花瓣更有玉米構造。提煉穗葉比例和收束方向，保留獨立繪製的對稱outline母型，未採來源填色、斜向姿態或路徑。",
+      "reason":"下移葉穗交界，重畫苞葉為較狹長的曲面，讓外緣由葉尖漸收至共同穗底。16改為二列二排，20／24為二列三排；內分界裁在整體外殼內。第二輪回收sharp葉尖以補償斜接延伸。",
+      "postComparison":"最新稿與Hugeicons／MDI在原生三尺寸回比，長穗成為主體，苞葉不再像寬圓花瓣。16二列穗粒孔仍可辨，20／24格線與苞葉空腔分開；明暗DPR1／2和55%文字均已目視，sharp葉尖不再過度外伸。",
+      "effects":{
+        "dashes":{"used":false,"reason":"穗粒分界及苞葉都是可見構造，不需虛線。"},
+        "opacity":{"used":false,"reason":"用穗葉比例和排數分配空間，不以淡化掩飾擁擠。"},
+        "gradients":{"used":false,"reason":"輪廓與穗粒已能傳意，不依靠黃綠漸層辨認。"}
+      },"remaining":[]
+    },
+    {
+      "name":"mushroom","decision":"refined",
+      "purpose":"以寬菌蓋及中央菌柄表示蘑菇與菇類食材。",
+      "recognitionCues":"連續圓頂菌蓋、淺弧下緣、向下微展的菌柄及圓收底足。",
+      "confusableWith":["umbrella","lamp"],
+      "defect":"舊稿平切菌蓋接等寬U形菌柄，部件偏幾何拼裝，缺少菌蓋下緣及菌柄收放。",
+      "sourceObservation":"Hugeicons的弧形蓋緣與向下展開菌柄，比舊稿平底接直管更有生物形態。採納這兩處構造，同時保留Tabler改作的閉合簡潔菌蓋與菌柄；不加入Hugeicons斑點和雙層蓋緣，以免16px變密。",
+      "reason":"菌蓋底邊改為淺弧，左右蓋唇用實際曲線收口；菌柄向下微展並用連續曲線圓收底足。第二輪修去蓋唇及柄底硬轉角，sharp也保持自然曲面。新增Hugeicons改作來源，保留Tabler baseSource，完整雙MIT條款合併於mushroom-sources.txt。",
+      "postComparison":"最新稿與Hugeicons／Tabler在三尺寸重新並列，蓋緣與菌柄的收放形成完整蘑菇，菌柄墨線仍接於蓋下而不侵入蓋內。明暗DPR1／2和低對比文字均已目視，16仍有寬蓋及柄內空腔；不藉更多表面裝飾建立辨識。",
+      "effects":{
+        "dashes":{"used":false,"reason":"可見蓋緣及菌柄不需要隱藏邊界，沒有菌褶虛線。"},
+        "opacity":{"used":false,"reason":"以輪廓收放建立形態，不用透明度區分菌柄。"},
+        "gradients":{"used":false,"reason":"不依靠光照或菌蓋斑色漸層，保留單色結構。"}
+      },"remaining":[]
+    },
+    {
+      "name":"egg","decision":"retained",
+      "purpose":"以完整卵形表示雞蛋及蛋類食材。",
+      "recognitionCues":"上端較窄、下腹較寬、左右對稱且連續圓收的外輪廓。",
+      "confusableWith":["droplet","ellipse"],
+      "defect":"本輪未見需要回修的可見缺陷；上收下寬比例清楚，頂端與底腹都沒有突兀接角。",
+      "sourceObservation":"Lucide較寬、下腹接近圓形，Tabler稍短；現稿較修長但仍屬自然卵形，沒有落成普通橢圓或尖水滴。兩來源均沒有需要加入的細節，也未呈現優於現稿的必要曲面修正。",
+      "reason":"保留目前獨立繪製的連續卵形。單一外輪廓已完整表達蛋的體量，不添加裂紋、陰影或內部分割。",
+      "postComparison":"最新未改稿與Lucide／Tabler以16／20／24重新並列，頂冠、側腹及圓底的曲率轉換自然，原生三尺寸保留上窄下寬。明暗DPR1／2和55%文字皆已查看；保留判斷來自此次比較，沒有承接舊通過標記。",
+      "effects":{
+        "dashes":{"used":false,"reason":"完整蛋殼不是破裂或隱藏狀態，不需要虛線。"},
+        "opacity":{"used":false,"reason":"單一主要輪廓無需層次淡化，保持辨識完整。"},
+        "gradients":{"used":false,"reason":"卵形已表達體量，不添加蛋殼材質或光照漸層。"}
+      },"remaining":[]
+    }
+  ]
+}

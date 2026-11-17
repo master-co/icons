@@ -1,0 +1,32 @@
+{
+  "date": "2026-11-17",
+  "icons": [
+    "snail"
+  ],
+  "checks": {
+    "buildIcons": "passed",
+    "buildReview": "passed",
+    "validate": "passed",
+    "atlas": "passed",
+    "atlasRecompare": "passed",
+    "diffCheck": "passed"
+  },
+  "native": {
+    "cases": 18,
+    "empty": 0,
+    "clipped": 0,
+    "viewed": [
+      "native-1-light-1x",
+      "native-1-dark-1x",
+      "context-light-1x"
+    ],
+    "path": "docs/review/atlas-recompare-01/16-snail-feedback-native"
+  },
+  "comparison": {
+    "before": "docs/review/atlas-recompare-01/16-snail-feedback-before/definitions.json",
+    "after": "docs/review/atlas-recompare-01/16-snail-feedback-candidate-1/definitions.json",
+    "viewed": "docs/review/atlas-recompare-01/16-snail-feedback-candidate-1/comparison.png"
+  },
+  "reviewer": "Codex (AI)",
+  "userApproval": "pending"
+}

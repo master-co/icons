@@ -1,0 +1,42 @@
+{
+  "reviewer": "Codex (AI)",
+  "batch": "16-snail-candidate-4",
+  "baseline": "references/atlas-recompare-01/master-before.json",
+  "date": "2026-11-17",
+  "viewedSuffixes": [
+    "light-1x",
+    "dark-1x",
+    "native-light-2x",
+    "native-dark-2x"
+  ],
+  "decisions": [
+    {
+      "name": "snail",
+      "decision": "refined",
+      "purpose": "以背負螺旋殼的低伏軟體動物表示蝸牛及緩慢移動。",
+      "recognitionCues": "單一寬鬆螺旋、直立短頸、雙觸角及貼地腹足。",
+      "confusableWith": [
+        "turtle"
+      ],
+      "defect": "使用者指出第一輪只修頸根小圓角，頭頸依然像直立管子接上身體，缺乏一體感。此問題已重新開啟，舊決策完整保存。",
+      "sourceObservation": "Lucide和Tabler都有頭、頸與腹足的一體輪廓。原稿兩條長直頸邊與水平身體形成管形，來源輪廓整體承接的優點未被小圓角修正吸收；此次沿既有Tabler改作重畫連續軟體身形。",
+      "reason": "移除水平折入垂直的頸部構造。身體上緣由殼側以連續曲線上升，逐漸收窄成略前傾的頸；圓頭外緣直接延續為向腹足展開的長曲線，底部切向接回地面。雙觸角依新頭部重新定位，墨線在頭殼外收口，避免插入頭腔。",
+      "postComparison": "最新稿與Lucide／Tabler重新以原生16／20／24並列，頭頸到腹足由寬到窄連續轉變，原本管狀頸根及硬水平折點已消除。螺旋殼與頭部仍分工清楚，明暗DPR1／2和低對比文字均已查看；sharp也保持生物曲面。使用者指出的缺陷已實際重畫，此為AI新候選，尚未取得使用者定案。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "殼與軟體表面是完整實體，不需要隱藏邊界。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以寬鬆螺旋和曲面分配空間，不淡化內圈。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "蝸牛以殼和身體輪廓傳意，不添加殼紋或光照漸層。"
+        }
+      },
+      "remaining": []
+    }
+  ]
+}

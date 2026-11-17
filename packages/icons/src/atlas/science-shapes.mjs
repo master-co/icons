@@ -9,7 +9,8 @@ export function atom({p,d,g}){
  return [ellipse(Math.PI/4),ellipse(-Math.PI/4),d(12,12,g.v(.85,1,1.2))];
 }
 export function flaskConical({g,o,l}){
- const body=o([[9.5,2],[14.5,2],[14.5,8],[21,21.5],[3,21.5],[9.5,8]],true,[0,0,g.tip,g.r*.8,g.r*.8,g.tip]);
+ const shoulder=g.s/12;
+ const body=o([[9.5,2],[14.5,2],[14.5,8],[21,21.5],[3,21.5],[9.5,8]],true,[0,0,shoulder,g.r*.8,g.r*.8,shoulder]);
  return [...enclosedDetails(body,[l(3,15,21,15)],g),l(8,2,16,2)];
 }
 export function flaskRound({g,p,l}){
@@ -23,11 +24,14 @@ export function testTube({g,p,l}){
 }
 export function microscope({g,r,p,l}){
  const barrel=r(7,2,6,11,g.tip);
- return [...exteriorDetails(barrel,[p('M13 7C23 7 24 21 15 22')],g),l(6,17,13,17),l(3,22,21,22)];
+ return [...exteriorDetails(barrel,[p('M13 7C23 7 24 22 15 22')],g),l(6,17,13,17),l(3,22,21,22)];
 }
 export function telescope({g,o,l}){
- const barrel=o([[2.8,11.7],[18,2.8],[21,8.7],[4.7,14.7]],true,g.r*.5);
- return [...enclosedDetails(barrel,[l(14.2,5,17.1,10.1)],g),...exteriorDetails(barrel,[l(12,10,12,21)],g).slice(1),o([[6,21],[12,16],[18,21]],false,g.tip)];
+ const u=[2/Math.sqrt(5),-1/Math.sqrt(5)],v=[-u[1],u[0]];
+ const at=(x,y)=>[11.9+x*u[0]+y*v[0],9.4+x*u[1]+y*v[1]];
+ const barrel=o([at(-8.8,-1.75),at(8.8,-3.25),at(8.8,3.25),at(-8.8,1.75)],true,g.r*.5);
+ const ring=4,halfWidth=1.75+(ring+8.8)*1.5/17.6;
+ return [...enclosedDetails(barrel,[l(...at(ring,-halfWidth),...at(ring,halfWidth))],g),...exteriorDetails(barrel,[l(12,10,12,21)],g).slice(1),o([[6,21],[12,16],[18,21]],false,g.tip)];
 }
 
 export function dna({g,p,l}){
@@ -42,7 +46,7 @@ export function orbit({g,c,p}){
  return [c(12,12,4),...exteriorDetails(satellite,[p(`M20 6A10 10 0 1 0 ${12+Math.sqrt(99)} 11`)],g)];
 }
 export function rocket({g,p,o,d,l}){
- const body=p('M12 2C5 7 5 13 8.5 18.5H15.5C19 13 19 7 12 2Z');
+ const body=p('M12 2C6 7 5.5 13 8.5 18.5H15.5C18.5 13 18 7 12 2Z');
  const left=o([[7,10],[3.5,14],[4.5,20],[8.5,18]],true,g.tip);
  const right=o([[17,10],[20.5,14],[19.5,20],[15.5,18]],true,g.tip);
  return [body,d(12,10,g.v(.85,1,1.2)),...exteriorDetails(body,[left,right],g).slice(1),l(10,22.5,14,22.5)];

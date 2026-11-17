@@ -1,7 +1,8 @@
 import {enclosedDetails,exteriorDetails,knockout} from '../occlusion.mjs';
 
 export function cctv({g,p,o,l,d}){
- const body=p('M4 5C4.7 3.6 6.5 3.1 7.9 3.8L17.5 8.6L13.5 16.6L3.9 11.8C2.5 11.1 2 9.3 2.7 7.9Z');
+ const u=1/Math.sqrt(5),backRadius=3*g.s/24;
+ const body=o([[7.9-6*u,3.8-3*u],[17.5,8.6],[13.5,16.6],[3.9-6*u,11.8-3*u]],true,[backRadius,g.tip,g.tip,backRadius]);
  const lens=o([[16.5,10.6],[21,12.85],[19,16.85],[14.5,14.6]],true,g.tip);
  const support=p('M8.7 14.2L7.3 17Q6.3 19 4.5 19H2');
  return [...exteriorDetails(body,[lens,support],g),l(2,17,2,22),d(7,8.5,g.v(.6,.75,.85))];
@@ -20,8 +21,11 @@ export function fireExtinguisher({g,p,r,l}){
  const hose=p('M12 3C6 3 3 6 3 11V20');
  return [...exteriorDetails(body,exteriorDetails(valve,[hose,l(16,3,20,3),l(3,14,9,14)],g),g),...enclosedDetails(body,[l(9,17,19,17)],g).slice(1)];
 }
-export function fireHydrant({g,p,l,c}){
- const shell=p('M7 22V16H4V12H7V8A5 5 0 0 1 17 8V12H20V16H17V22Z');
+export function fireHydrant({g,o,p,l,c}){
+ const sidePorts=o([[7,8],[7,12],[4,12],[4,16],[7,16],[7,22],[17,22],[17,16],[20,16],[20,12],[17,12],[17,8]],
+  false,[0,g.tip,g.r,g.r,g.tip,0,0,g.tip,g.r,g.r,g.tip,0]);
+ const dome=p('M17 8A5 5 0 0 0 7 8');
+ const shell=['path',{d:sidePorts[1].d+dome[1].d.slice(dome[1].d.indexOf('A'))+'Z'}];
  return [...enclosedDetails(shell,[l(6,8,18,8)],g),l(5,22,19,22),c(12,14,2.25)];
 }
 export function vault({g,r,c,l,d}){
@@ -32,7 +36,7 @@ export function vault({g,r,c,l,d}){
 }
 export function keySquare({g,o,l}){
  const head=o([[9,6.5],[13.5,2],[22,10.5],[17.5,15]],true,g.r);
- const shaft=o([[10.5,8],[2,16.5],[2,22],[6,22],[6,19],[9,19],[9,16],[12,16],[14.5,12]],true,g.tip);
+ const shaft=o([[10.5,8],[2,16.5],[2,22],[6,22],[6,19],[9,19],[9,16],[12,16],[15.25,12.75]],true,g.tip);
  return [...exteriorDetails(head,[shaft],g),l(14,6.5,17.5,10)];
 }
 export function scanFace({g,o,p,d}){

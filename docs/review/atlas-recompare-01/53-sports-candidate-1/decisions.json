@@ -1,0 +1,101 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "batch": "53-sports-candidate-1",
+  "baseline": "references/atlas-recompare-01/master-before.json",
+  "viewedSuffixes": [
+    "light-1x",
+    "dark-1x",
+    "native-light-2x",
+    "native-dark-2x"
+  ],
+  "decisions": [
+    {
+      "name": "baseball",
+      "purpose": "以圓球與左右弧形分段縫線表示棒球。",
+      "recognitionCues": "鏡射的內凹弧縫、短分段與完整球體。",
+      "confusableWith": [
+        "basketball",
+        "volleyball"
+      ],
+      "defect": "本輪未見需要回修的具體缺陷，分段間的留白在原生16仍可辨。",
+      "sourceObservation": "Phosphor以兩側分段弧線維持清楚球面；Tabler加入橫向針腳較密。現稿已有Phosphor的主要構造，平切短段表達縫線而不增加黑結。",
+      "reason": "保留鏡射曲線上的四段縫線、平切收筆與外殼收口，不增加交叉針腳；中段及中央留白保持。",
+      "postComparison": "最新稿與Phosphor／Tabler同尺寸回比，兩側分段與球面輪廓仍分明，三尺寸、三角型、明暗DPR1／2及55%文字已查看。",
+      "decision": "retained",
+      "effects": {
+        "dashes": {
+          "used": true,
+          "reason": "短分段直接表達棒球縫線，平切端帽使分段間保持可見留白。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以輪廓及留白區分結構，不需淡化主要訊號。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "維持單色平面圖示，不添加連續材質漸層。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "golf-hole",
+      "purpose": "以旗面、旗桿與橢圓洞口表示高爾夫球洞。",
+      "recognitionCues": "三角旗、直立旗桿與橫向開口橢圓。",
+      "confusableWith": [
+        "flag",
+        "map-pin"
+      ],
+      "defect": "本輪未見需回修的具體缺陷，旗面內孔與桿端周圍的洞口留白成立。",
+      "sourceObservation": "Hugeicons的寬洞口與旗面比例舒展，Tabler較小洞口使桿端集中。現稿已保留寬洞口並以簡潔直邊旗面維持家族語言。",
+      "reason": "保留寬橢圓開口與直立旗桿，桿端在洞內但不黏底弧；不為追隨另一旗面曲率而更換成立的三角旗構造。",
+      "postComparison": "最新稿與Hugeicons／Tabler回比，16／20／24旗面內孔清楚，洞口前弧與桿端分離，三角型、明暗DPR1／2及55%文字已查看。",
+      "decision": "retained",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "旗面、旗桿與可見洞口為連續輪廓，不使用隱藏線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以輪廓及留白區分結構，不需淡化主要訊號。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "維持單色平面圖示，不添加連續材質漸層。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "swimming",
+      "purpose": "以划水屈臂、前方頭部與兩層水波表示游泳。",
+      "recognitionCues": "抬肘屈臂、頭肩留白、斜軀幹進入水面。",
+      "confusableWith": [
+        "running",
+        "waves"
+      ],
+      "defect": "本輪未見需要修改的具體缺陷，屈臂姿態與兩層水波的分組仍清楚。",
+      "sourceObservation": "Tabler的屈臂姿態精簡，Phosphor採更長的伸臂與寬波形。現稿延續Tabler的肢體構造並保留兩層水面；伸臂屬不同動作階段，未見必須替換的優勢。",
+      "reason": "保留屈臂與斜軀幹的連續折線、前方獨立頭圈與兩層等節奏水波；不以速度線或透明度補充動作。",
+      "postComparison": "最新稿與Phosphor／Tabler回比，頭肩空白、軀幹與水面的接點及上下水線間隙在三尺寸成立；三角型、明暗DPR1／2與55%文字已查看。",
+      "decision": "retained",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "身體與水面皆以連續線條表達，無需分段虛線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以輪廓及留白區分結構，不需淡化主要訊號。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "維持單色平面圖示，不添加連續材質漸層。"
+        }
+      },
+      "remaining": []
+    }
+  ]
+}

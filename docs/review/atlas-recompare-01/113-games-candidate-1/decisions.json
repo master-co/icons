@@ -1,0 +1,154 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "baseline": "references/atlas-recompare-01/master-before.json",
+  "viewedSuffixes": [
+    "light-1x",
+    "dark-1x",
+    "native-light-2x",
+    "native-dark-2x"
+  ],
+  "batch": "113-games-candidate-1",
+  "decisions": [
+    {
+      "name": "party-popper",
+      "decision": "refined",
+      "purpose": "以斜向錐筒、分散於右上方的短紙條與圓紙屑呈現派對拉炮的語意。",
+      "recognitionCues": "斜向錐筒、分散於右上方的短紙條與圓紙屑",
+      "confusableWith": [
+        "cone"
+      ],
+      "defect": "原稿上方直線和兩個等重射線形成規律放射，容易讀成聲量而非紙屑。",
+      "sourceObservation": "Lucide 的捲彩帶與點更多，Tabler 以散點和短線交替更像噴出的碎紙。",
+      "reason": "依 Tabler 的疏密節奏將上方直線改為圓點，保留向右上噴發的主軸。",
+      "postComparison": "與兩源回比後，圓紙屑與兩筆短紙條在三尺寸仍分開，錐筒方向清楚且整體有較多呼吸空間。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "以完整輪廓和獨立符號筆畫表達形狀。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "用單色線和清楚的間隙區分相鄰形體。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "用單色筆畫即可傳達輪廓及功能。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "balloon",
+      "decision": "retained",
+      "purpose": "以上寬下收的氣球外形、左下至右的短繩和離開外緣的內側短弧呈現氣球的語意。",
+      "recognitionCues": "上寬下收的氣球外形、左下至右的短繩和離開外緣的內側短弧",
+      "confusableWith": [
+        "map-pin"
+      ],
+      "defect": "確認繩段由球體底點接續，內光弧在較細與較粗描邊均和氣球分離。",
+      "sourceObservation": "Lucide 的氣球接一條曲繩，Phosphor 的尾端是小結，兩者在大尺寸保留同側反光。",
+      "reason": "保留短曲繩拉出清楚方向，16px 移除反光，20 與 24px 保留高光弧。",
+      "postComparison": "和兩來源並列，16px 的球身加繩線仍能表明充氣而非定位，兩個較大尺寸的內光弧保有留白。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "以完整輪廓和獨立符號筆畫表達形狀。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "用單色線和清楚的間隙區分相鄰形體。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "用單色筆畫即可傳達輪廓及功能。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "dice",
+      "decision": "retained",
+      "purpose": "以一個空心方框以及中央對稱的五個圓點呈現骰子的語意。",
+      "recognitionCues": "一個空心方框以及中央對稱的五個圓點",
+      "confusableWith": [
+        "gamepad"
+      ],
+      "defect": "確認最小尺寸的中心點和四角點不互相混併，也不貼近外框。",
+      "sourceObservation": "Lucide 顯示五點，Tabler 顯示四點且點徑較大，二者都有類似的方形骰面。",
+      "reason": "保留對角線錯位的五點節奏，小尺寸調整點徑讓四角和中央點都清楚。",
+      "postComparison": "在三尺寸、兩個來源和最粗描邊對照下，五點各自可見，骰面外框沒有吃掉四角點。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "以完整輪廓和獨立符號筆畫表達形狀。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "用單色線和清楚的間隙區分相鄰形體。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "用單色筆畫即可傳達輪廓及功能。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "gamepad",
+      "decision": "retained",
+      "purpose": "以連續雙握把輪廓、左十字與右方兩個相錯的按鈕呈現遊戲手把的語意。",
+      "recognitionCues": "連續雙握把輪廓、左十字與右方兩個相錯的按鈕",
+      "confusableWith": [
+        "joystick"
+      ],
+      "defect": "檢查兩握把的凹谷、右上按鈕離框的距離和十字內部留白。",
+      "sourceObservation": "Lucide 用清楚的左十字與右雙點，Tabler 上窄下寬且使用較大的控制鍵。",
+      "reason": "保留連續圓滑殼形及 Lucide 式十字和錯位雙點，兩側操作保持分明。",
+      "postComparison": "與兩源並列後，16px 手把中央缺口和十字容易辨識，按鈕在最大線寬仍與外框分離。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "以完整輪廓和獨立符號筆畫表達形狀。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "用單色線和清楚的間隙區分相鄰形體。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "用單色筆畫即可傳達輪廓及功能。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "joystick",
+      "decision": "retained",
+      "purpose": "以居中的空心球頭、相接直桿和帶左按鍵的扁底座呈現搖桿的語意。",
+      "recognitionCues": "居中的空心球頭、相接直桿和帶左按鍵的扁底座",
+      "confusableWith": [
+        "gamepad"
+      ],
+      "defect": "檢查球頭和直桿、直桿和底座的接頭，以及左按鍵有無凸入輪廓。",
+      "sourceObservation": "Lucide 的短按鍵接在底座，Phosphor 的小線浮在右側，兩支均是圓球竿頭。",
+      "reason": "保留 Lucide 式落地的按鍵與同一中心上的球頭相接直桿，底面維持低寬。",
+      "postComparison": "與兩個來源並列，三尺寸的球頭內孔和細直桿都清楚，底座按鍵保持獨立輪廓。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "以完整輪廓和獨立符號筆畫表達形狀。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "用單色線和清楚的間隙區分相鄰形體。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "用單色筆畫即可傳達輪廓及功能。"
+        }
+      },
+      "remaining": []
+    }
+  ]
+}

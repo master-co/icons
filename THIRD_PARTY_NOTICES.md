@@ -149,6 +149,18 @@ The 50 drawings retain explicit per-icon research and refinement records in `doc
 
 Other Atlas drawings use independent construction. Pinned originals, roles and checksums for all comparisons are in `references/atlas-01/manifest.json`. Iconoir and Hugeicons are comparison references only; their existing license files remain included.
 
+### Atlas source re-comparison: cactus
+
+The revised `cactus` develops Phosphor's continuous, fleshy branch construction while retaining its earlier Tabler-derived proportions and staggered pose. The original Tabler attribution is retained alongside the added Phosphor attribution in `packages/icons/src/atlas-provenance.json`. Both complete MIT notices are included in `licenses/cactus-sources.txt` and embedded in each cactus SVG; the combined file is also shipped in the package and downloadable ZIPs.
+
+- Tabler: `tabler/tabler-icons`, commit `4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35`, `icons/outline/cactus.svg`; Copyright (c) 2020-2026 Paweł Kuna.
+- Phosphor: `phosphor-icons/core`, commit `2b75f3ad12b420c9504ef05df8d2564a28f8500e`, `assets/regular/cactus.svg`; Copyright (c) 2023 Phosphor Icons.
+- The source comparison records describe the saved comparison assets; the current adaptation relationship is recorded separately in `designOrigin` and the exported catalog provenance. Earlier geometry and attribution remain in `references/atlas-recompare-01/`.
+
+### Atlas source re-comparison of waves
+
+The current `waves` uses the independent construction restored from the round's baseline. The withdrawn candidate adapted Tabler's `icons/outline/ripple.svg` at commit `4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35` (Copyright (c) 2020-2026 Paweł Kuna, MIT, `licenses/tabler.txt`). Its attribution is preserved in the [superseded review](docs/review/atlas-recompare-01/114-user-restore/superseded.json).
+
 The bee comparison additionally includes unmodified OpenMoji `1F41D.svg` by OpenMoji contributors, CC BY-SA 4.0, from https://github.com/hfg-gmuend/openmoji/blob/3e01de523ddefe9c5e46a7765b15efef04bf9002/black/svg/1F41D.svg (license: `licenses/openmoji-CC-BY-SA-4.0.txt`), and Material Design Icons `bee.svg` by the Pictogrammers contributors from https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/bee.svg (Apache 2.0; `licenses/mdi-notice.txt` and `licenses/Apache-2.0.txt`). They are reproduced for comparison, not distributed as Master geometry. The review renderer recolors monochrome sources to the current foreground for dark backgrounds without changing saved originals. Lucide Lab bee remains an explicitly experimental supplementary reference.
 
 
@@ -162,6 +174,21 @@ Individual source observations and native-size decisions are in `docs/review/atl
 
 `corn` and `egg` use independent construction. Corn compares Hugeicons and MDI; the existing Hugeicons MIT and MDI Apache-2.0 notices apply to the saved originals only. All 20 pinned comparison records are in `references/atlas-craft-02/manifest.json`.
 
+### Atlas source re-comparison: mushroom
+
+The revised `mushroom` develops Hugeicons Free's curved cap underside and flared stem while retaining the earlier Tabler-derived closed cap and stem construction. Both sources are recorded in `packages/icons/src/atlas-provenance.json`; the previous Tabler record remains preserved as `baseSource`. The combined `licenses/mushroom-sources.txt` contains both complete MIT notices and is embedded in each mushroom SVG and included in the package and downloadable ZIPs.
+
+- Tabler: `tabler/tabler-icons`, commit `4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35`, `icons/outline/mushroom.svg`; Copyright (c) 2020-2026 Paweł Kuna.
+- Hugeicons Free: `hugeicons/hugeicons`, commit `834e28d965946c1ee60d080027fe9dae4adc58d0`, `icons/mushroom-01.svg`; Copyright (c) 2025 Hugeicons.
+
+The source comparison records describe saved original assets; the current dual-source adaptation is recorded in `designOrigin` and exported catalog provenance. Earlier geometry and attribution are preserved in `references/atlas-recompare-01/`.
+
+### Atlas source re-comparison: wheat
+
+The current `wheat` is redrawn from Lucide's seven-grain, diagonal-ear construction, with Master optical strokes, actual small corner arcs in soft/rounded, and stem ink clipped outside the grain cavities. Lucide source: `lucide-icons/lucide`, commit `55782beff3a0133df79c417eb68f96e8f19e2404`, `icons/wheat.svg`; Copyright (c) 2026 Lucide Icons and Contributors, ISC.
+
+The earlier three-grain drawing was adapted from Tabler's `icons/outline/wheat.svg` at commit `4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35` (Copyright (c) 2020-2026 Paweł Kuna, MIT). Its geometry and attribution remain in the task baseline and `baseSource`; it is historical provenance, not the source of the current seven-grain arrangement. `licenses/wheat-sources.txt` includes the complete earlier Tabler and current Lucide notices, embedded in each wheat SVG and included in package and ZIP outputs.
+
 
 ## Atlas 07-drinks
 
@@ -172,9 +199,10 @@ Individual comparisons and changes: `docs/review/atlas-craft-03/ledger.json`. Pi
 - Adapted Hugeicons Free constructions: `milk`. MIT; licenses/hugeicons-MIT.txt.
 - Adapted Tabler constructions: `bottle`. MIT; licenses/tabler.txt.
 - Adapted Iconoir constructions: `glass-water`. MIT; licenses/iconoir.txt.
-- Independent construction: `teapot`, `kettle`.
+- Independent construction: `kettle`.
+- Adapted OpenMoji construction: `teapot`. The domed lid and short knob were adopted from OpenMoji U+1FAD6, with redrawn spout, handle, native proportions and joins. The teapot artwork and its modifications are licensed under **CC BY-SA 4.0** (https://creativecommons.org/licenses/by-sa/4.0/), not the package’s general MIT grant. Source and adapter attribution plus the complete license: `licenses/teapot-openmoji-CC-BY-SA-4.0.txt`. Earlier independent geometry remains in `references/atlas-recompare-01/master-before.json`.
 
-Comparison only: unmodified OpenMoji 1FAD6 by OpenMoji contributors, CC BY-SA 4.0; https://github.com/hfg-gmuend/openmoji/blob/3e01de523ddefe9c5e46a7765b15efef04bf9002/black/svg/1FAD6.svg. Full terms: licenses/openmoji-CC-BY-SA-4.0.txt. This original is not Master product geometry.
+Pinned OpenMoji source: unmodified OpenMoji 1FAD6 by OpenMoji contributors, CC BY-SA 4.0; https://github.com/hfg-gmuend/openmoji/blob/3e01de523ddefe9c5e46a7765b15efef04bf9002/black/svg/1FAD6.svg. Full terms: licenses/openmoji-CC-BY-SA-4.0.txt. The original remains a separate comparison asset; the current Master teapot adaptation is identified above and carries its own source and adapter notice.
 
 
 ## Atlas 08-food
@@ -208,7 +236,8 @@ Individual comparisons and changes: `docs/review/atlas-craft-07/ledger.json`. Pi
 - Adapted Lucide constructions: `washing-machine`, `microwave`, `heater`. ISC; licenses/lucide.txt.
 - Adapted Phosphor constructions: `oven`, `fan`. MIT; licenses/phosphor.txt.
 - Adapted Iconoir constructions: `air-conditioner`. MIT; licenses/iconoir.txt.
-- Adapted Hugeicons Free constructions: `vacuum-cleaner`, `hair-dryer`. MIT; licenses/hugeicons-MIT.txt.
+- Adapted Hugeicons Free constructions: `vacuum-cleaner`. MIT; licenses/hugeicons-MIT.txt.
+- Adapted Hugeicons Free and Phosphor constructions: `hair-dryer`. MIT; both complete source notices in licenses/hair-dryer-sources.txt.
 
 
 ## Atlas 11-clothing
@@ -237,9 +266,10 @@ Individual comparisons and changes: `docs/review/atlas-craft-09/ledger.json`. Pi
 Individual comparisons and changes: `docs/review/atlas-craft-10/ledger.json`. Pinned source originals and checksums: `references/atlas-craft-10/manifest.json`.
 
 - Adapted Lucide constructions: `bone`, `ear`, `person-standing`. ISC; licenses/lucide.txt.
-- Adapted Tabler constructions: `tooth`, `brain`, `lungs`, `crutch`. MIT; licenses/tabler.txt.
+- Adapted Tabler constructions: `tooth`, `brain`, `crutch`. MIT; licenses/tabler.txt.
 - Adapted Phosphor constructions: `hand-heart`, `person-walking`. MIT; licenses/phosphor.txt.
 - Adapted Hugeicons Free constructions: `wheelchair`. MIT; licenses/hugeicons-MIT.txt.
+- Adapted Tabler and Hugeicons Free constructions: `lungs`. MIT; both complete source notices in licenses/lungs-sources.txt.
 
 Comparison only: unmodified OpenMoji 1FA7C by OpenMoji contributors, CC BY-SA 4.0; https://github.com/hfg-gmuend/openmoji/blob/3e01de523ddefe9c5e46a7765b15efef04bf9002/black/svg/1FA7C.svg. Full terms: licenses/openmoji-CC-BY-SA-4.0.txt. This original is not Master product geometry.
 
@@ -250,7 +280,7 @@ Individual comparisons and changes: `docs/review/atlas-craft-11/ledger.json`. Pi
 
 - Adapted Hugeicons Free constructions: `dumbbell`, `kettlebell`, `tennis-racket`. MIT; licenses/hugeicons-MIT.txt.
 - Adapted Phosphor constructions: `basketball`, `baseball`. MIT; licenses/phosphor.txt.
-- Adapted Tabler constructions: `football`, `golf-hole`, `swimming`, `running`. MIT; licenses/tabler.txt.
+- Adapted Tabler constructions: `football`, `golf-hole`, `swimming`. MIT; licenses/tabler.txt.
 - Adapted Lucide constructions: `volleyball`. ISC; licenses/lucide.txt.
 
 ## Brand silhouettes · brands-03
@@ -329,7 +359,8 @@ Individual comparisons and changes: `docs/review/atlas-craft-16/ledger.json`. Pi
 
 Individual comparisons and changes: `docs/review/atlas-craft-17/ledger.json`. Pinned source originals and checksums: `references/atlas-craft-17/manifest.json`.
 
-- Adapted Lucide constructions: `guitar`, `piano`, `guitar-electric`, `vinyl-record`, `music-keyboard`. ISC; licenses/lucide.txt.
+- Adapted Lucide constructions: `guitar`, `piano`, `guitar-electric`, `music-keyboard`. ISC; licenses/lucide.txt.
+- Adapted Lucide and Phosphor constructions: `vinyl-record`. ISC AND MIT; both complete notices in licenses/vinyl-record-sources.txt.
 - Adapted Hugeicons Free constructions: `drum`. MIT; licenses/hugeicons-MIT.txt.
 - Adapted Material Design Icons constructions: `violin`, `trumpet`, `saxophone`. Apache-2.0; licenses/mdi-music-adaptations.txt.
 - Adapted Phosphor constructions: `metronome`. MIT; licenses/phosphor.txt.
@@ -456,3 +487,17 @@ Individual comparisons and changes: `docs/review/atlas-craft-29/ledger.json`. Pi
 - Adapted Phosphor constructions: `crown`, `medal`. MIT; licenses/phosphor.txt.
 - Adapted Tabler constructions: `trophy`, `ribbon`, `party-popper`. MIT; licenses/tabler.txt.
 - Independent construction: `dice`.
+
+## Atlas running refinement
+
+The revised `running` develops Phosphor's curved arm swing and continuous stride while retaining the earlier Tabler-derived torso, head placement and overall proportions. Both sources are recorded in `packages/icons/src/atlas-provenance.json`; the earlier Tabler record is preserved as `baseSource`. Both complete MIT notices are included in `licenses/running-sources.txt`, embedded in the running SVGs and shipped in the core package and downloadable ZIPs.
+
+- Tabler: `tabler/tabler-icons`, commit `4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35`, `icons/outline/run.svg`; Copyright (c) 2020-2026 Paweł Kuna.
+- Phosphor: `phosphor-icons/core`, commit `2b75f3ad12b420c9504ef05df8d2564a28f8500e`, `assets/regular/person-simple-run.svg`; Copyright (c) 2023 Phosphor Icons.
+
+## Atlas vinyl record refinement
+
+The revised `vinyl-record` develops Phosphor's opposing quarter-circle grooves while retaining the earlier Lucide-derived outer circle and center hole. The earlier Lucide record is preserved as `baseSource` in `packages/icons/src/atlas-provenance.json`. The combined license file `licenses/vinyl-record-sources.txt` contains the complete Lucide and Phosphor notices and is used for SVG metadata, package notices and downloadable ZIPs.
+
+- Lucide: `lucide-icons/lucide`, commit `55782beff3a0133df79c417eb68f96e8f19e2404`, `icons/disc-3.svg`; Copyright (c) 2026 Lucide Icons and Contributors.
+- Phosphor: `phosphor-icons/core`, commit `2b75f3ad12b420c9504ef05df8d2564a28f8500e`, `assets/regular/vinyl-record.svg`; Copyright (c) 2023 Phosphor Icons.

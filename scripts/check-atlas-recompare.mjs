@@ -7,6 +7,7 @@ import {isDeepStrictEqual} from 'node:util';
 import {draw} from '../packages/icons/src/drawings.mjs';
 import {context} from '../packages/icons/src/geometry.mjs';
 import {catalog} from '../packages/icons/src/catalog.mjs';
+import {nativeVariants} from './lib/native-variants.mjs';
 const json=async p=>JSON.parse(await readFile(p,'utf8'));
 const sha=x=>createHash('sha256').update(x).digest('hex');
 const root='docs/review/atlas-recompare-01';
@@ -21,7 +22,7 @@ assert.deepEqual([...Object.keys(before),...Object.keys(outside)].sort(),catalog
 const modified=[],retained=[],pending=[],refFiles=new Map(),images=new Map();
 for(const item of ledger.items){
  const current=variants(item.name),changed=!isDeepStrictEqual(current,before[item.name].variants);
- assert.deepEqual(built[item.name].variants,current,`${item.name}: stale build`);
+ assert.deepEqual(nativeVariants(built[item.name].variants),current,`${item.name}: stale build`);
  if(item.status==='pending-comparison'){
    assert.equal(changed,false,`${item.name}: changed before its explicit review`);pending.push(item.name);continue;
  }

@@ -15,7 +15,7 @@ export function notEqual(f){return [...equal(f),f.l(6,20,18,4)];}
 export function divide({g,l,d}){return [l(5,12,19,12),d(12,5.5,g.v(1,1.2,1.4)),d(12,18.5,g.v(1,1.2,1.4))];}
 export function plusMinus({l}){return [l(5,9,19,9),l(12,3,12,15),l(5,21,19,21)];}
 export function fraction({g,o,p,l}){
- return [o([[10,5],[12.5,3],[12.5,9]],false,g.tip),l(5,12,19,12),p('M9 16.5C9 14.5 15 14.5 15 16.5C15 18 12 18.5 9 21H15')];
+ return [o([[10,5],[12.5,3],[12.5,9]],false,g.tip),l(5,12,19,12),p('M9.5 17C9.5 14.3333 14.5 14.3333 14.5 17C14.5 18.25 12 19 9.5 21H15')];
 }
 export function functionSquare({g,r,p,l}){
  return [r(3,3,18,18,g.r),p('M8.5 17C10.5 17 11.4 16.1 11.7 14.1L12.3 9.9C12.6 7.9 13.5 7 15.5 7'),l(9,11.5,15,11.5)];

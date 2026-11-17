@@ -1,0 +1,101 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "batch": "63-math-before",
+  "baseline": "references/atlas-recompare-01/master-before.json",
+  "viewedSuffixes": [
+    "light-1x",
+    "dark-1x",
+    "native-light-2x",
+    "native-dark-2x"
+  ],
+  "decisions": [
+    {
+      "name": "pi",
+      "decision": "retained",
+      "purpose": "以小寫希臘字母π表示圓周率常數。",
+      "recognitionCues": "左彎頂橫、雙直腳與右腳短曲尾。",
+      "confusableWith": [
+        "sigma",
+        "function-square"
+      ],
+      "defect": "本輪未見需要修正的具體字形或曲線缺陷。",
+      "sourceObservation": "Lucide的單彎右腳與現稿同構；Phosphor以較低寬字面及上鉤尾收筆，是另一種字形風格，沒有需要換掉既有字面比例的優勢。",
+      "reason": "保留近方字面、左側頂橫彎入及右腳單向曲尾，不增加U形回鉤；自然彎曲在三角型共用。",
+      "postComparison": "雙腳間留白及頂橫的左右伸出成立，16px右腳收筆仍可辨。 已與兩份來源回比，三尺寸三角型、明暗DPR1／2及55%文字均已查看。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "數學字形需要完整筆畫，不加入虛線或裝飾斷點。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "各筆畫同等承載符號語意，不分主要或次要透明度。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "維持單色字形，不加入體積或材質漸層。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "sigma",
+      "decision": "retained",
+      "purpose": "以大寫希臘字母Σ表示數列的求和運算。",
+      "recognitionCues": "等長上下橫、中央折入及右側短直收筆。",
+      "confusableWith": [
+        "pi",
+        "fraction"
+      ],
+      "defect": "本輪未見需要修正的具體字形或曲線缺陷。",
+      "sourceObservation": "Lucide與Tabler皆使用上下橫、中央折入及短直收筆，現稿比例已與來源相近；不需加寬或改成無收筆的幾何折線。",
+      "reason": "保留上下對稱字面及中央折點，依角型調整實際微圓，sharp保持明確尖折。",
+      "postComparison": "原生三尺寸的右側開口、中央折入和上下收筆仍清楚，沒有窄縫或多餘結點。 已與兩份來源回比，三尺寸三角型、明暗DPR1／2及55%文字均已查看。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "數學字形需要完整筆畫，不加入虛線或裝飾斷點。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "各筆畫同等承載符號語意，不分主要或次要透明度。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "維持單色字形，不加入體積或材質漸層。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "infinity",
+      "decision": "retained",
+      "purpose": "以連續交錯的雙環表示無限。",
+      "recognitionCues": "左右對稱雙圓腹、連續筆畫與中央交叉。",
+      "confusableWith": [
+        "link",
+        "orbit"
+      ],
+      "defect": "本輪未見需要修正的具體字形或曲線缺陷。",
+      "sourceObservation": "Lucide保留完整交叉，Phosphor在其中一筆留下斷口；現稿的完整雙環已具有清楚空腔，不需要為避交而切斷線條。",
+      "reason": "保留對稱圓腹、連續中央交叉與兩側相切承接；無角結構在三角型共用，不額外加缺口。",
+      "postComparison": "16px雙孔與中央交叉仍清楚，曲線沒有鼓包或尖折；整體橫向比例接近Lucide。 已與兩份來源回比，三尺寸三角型、明暗DPR1／2及55%文字均已查看。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "數學字形需要完整筆畫，不加入虛線或裝飾斷點。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "各筆畫同等承載符號語意，不分主要或次要透明度。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "維持單色字形，不加入體積或材質漸層。"
+        }
+      },
+      "remaining": []
+    }
+  ]
+}

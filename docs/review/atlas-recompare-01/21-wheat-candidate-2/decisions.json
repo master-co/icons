@@ -1,0 +1,20 @@
+{
+  "reviewer":"Codex (AI)","batch":"21-wheat-candidate-2",
+  "baseline":"references/atlas-recompare-01/master-before.json","date":"2026-11-17",
+  "viewedSuffixes":["light-1x","dark-1x","native-light-2x","native-dark-2x"],
+  "decisions":[{
+    "name":"wheat","decision":"refined",
+    "purpose":"以成對穀粒沿莖排列的麥穗表示小麥、穀物及麵粉原料。",
+    "recognitionCues":"斜向中央莖、三對依序排列的穀粒、單一頂粒與外露短莖。",
+    "confusableWith":["sprout","corn"],
+    "defect":"舊稿三枚寬大穀粒像葉片或幼苗，缺少沿莖重複排列的麥穗特徵。",
+    "sourceObservation":"Tabler的三粒符號比舊稿窄，但仍偏抽象植物；Lucide成對穀粒沿斜莖排列的完整麥穗，在同尺寸更明確表達小麥。此次直接向較成熟的Lucide構造靠齊，不為保留舊比例而僅微調葉寬。",
+    "reason":"由三粒直立稿重畫為Lucide式七粒斜麥穗，三對穀粒共用母型與莖節。第二輪在soft／rounded的粒尖及頂粒轉角加入實際小圓弧，按原生半徑換算；sharp保留穀粒尖端。莖墨線依每枚穀粒收口，避免穿入空腔。新增Lucide來源及ISC條款，保留原Tabler稿的MIT歸屬與完整歷史。",
+    "postComparison":"最新稿與Lucide／Tabler在原生16／20／24重新並列，斜向穗列清楚區分幼苗與小麥，七個粒孔在明暗DPR1／2仍可辨。soft／rounded具有實際圓弧而非只換linejoin，莖與粒根保持連接；55%文字旁也已查看。當前七粒構造明確記為Lucide改作，舊Tabler三粒稿僅保留作歷史來源。",
+    "effects":{
+      "dashes":{"used":false,"reason":"穀粒與莖是完整可見構造，不添加虛線麥芒。"},
+      "opacity":{"used":false,"reason":"用粒孔和重複排列分組，不淡化後排穀粒。"},
+      "gradients":{"used":false,"reason":"麥穗形態已成立，不靠金黃色或漸層表達穀物。"}
+    },"remaining":[]
+  }]
+}

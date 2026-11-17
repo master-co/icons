@@ -1,0 +1,99 @@
+{
+  "reviewer": "Codex (AI)",
+  "batch": "42-medical-candidate-1",
+  "baseline": "references/atlas-recompare-01/master-before.json",
+  "date": "2026-11-18",
+  "viewedSuffixes": [
+    "light-1x",
+    "dark-1x",
+    "native-light-2x",
+    "native-dark-2x"
+  ],
+  "decisions": [
+    {
+      "name": "stethoscope",
+      "decision": "refined",
+      "purpose": "以雙耳管、柔性導管與圓形聽頭表示聽診器。",
+      "recognitionCues": "雙耳端、U形耳管、向右回彎的軟管與圓聽頭。",
+      "confusableWith": [
+        "headphones",
+        "thermometer"
+      ],
+      "defect": "耳管上端以短水平與垂直段形成階梯，與下方圓管的曲面不連貫。",
+      "sourceObservation": "Lucide與Tabler以彎曲管肩承接耳端，整體較自然。沿既有Lucide改作保留雙耳、U管與聽頭，只重畫上端過渡。",
+      "reason": "將兩側階梯改為短水平接入二次曲線，再連續向下進入U管；耳端保持獨立短直段。導管與聽頭位置、管底共同接點保持。",
+      "postComparison": "最新稿與Lucide／Tabler在16／20／24重新並列，耳端到U管的彎曲更自然，雙耳開口和聽頭孔仍清楚。sharp也保留管件自身曲面；三角型、明暗DPR1／2及55%文字均已查看。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "物件外輪廓與可見接合完整，不需要虛線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "內外結構以輪廓與留白區分，不用淡化掩飾接縫。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "以單色平面輪廓表意，不增加玻璃或金屬光照漸層。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "syringe",
+      "decision": "refined",
+      "purpose": "以推桿、筒身、刻度與針尖表示針筒。",
+      "recognitionCues": "推桿橫頭、指托、短刻度、收窄筒肩與針尖。",
+      "confusableWith": [
+        "pipette"
+      ],
+      "defect": "原筒身以平底直接接出細針，粗細突然轉換，缺少針筒向針座收窄的構造。",
+      "sourceObservation": "Phosphor以向針尖收束的筒端帶出構造，Lucide用圓收筒底。沿既有Phosphor改作採用收窄筒肩，不增加針座套框。",
+      "reason": "筒身下段從寬6收至寬2，形成對稱斜肩及短底面；針尖從新底面接出。指托、推桿與刻度位置保持，三角型作用在新增折角。",
+      "postComparison": "最新稿與Lucide／Phosphor在16／20／24回比，筒身到針尖有清楚收束，16仍保留單刻度與推桿間隙。兩側肩部對稱，針尖按新外殼收口；明暗DPR1／2與三角型已查看。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "刻度以短實線表達，沒有隱藏管路或未完成狀態。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "內外結構以輪廓與留白區分，不用淡化掩飾接縫。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "以單色平面輪廓表意，不增加玻璃或金屬光照漸層。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "pill",
+      "decision": "retained",
+      "purpose": "以斜向雙圓端膠囊和中央分界表示藥丸。",
+      "recognitionCues": "兩端半圓、平行側壁與垂直於長軸的中央分界。",
+      "confusableWith": [
+        "bandage"
+      ],
+      "defect": "本輪重新核對膠囊比例、中央分界與兩端曲率，未發現需要修正的粗糙處。",
+      "sourceObservation": "Lucide與Tabler都是雙半圓膠囊，差異主要在長寬與描邊。現稿圓端相切接平行側壁，中央分界收在殼內，比例與兩來源同樣清楚。",
+      "reason": "保留完整圓端、平行側壁及中央接合線。沒有新增刻字或反光，sharp也保持藥丸本身的曲面，不將其轉成多邊形。",
+      "postComparison": "最新稿與Lucide／Tabler在16／20／24重新並列，兩半空腔相稱，分界沒有突出側壁，曲面連接自然。明暗DPR1／2、三角型和55%文字已查看，此次保留基於新回比。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "物件外輪廓與可見接合完整，不需要虛線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "內外結構以輪廓與留白區分，不用淡化掩飾接縫。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "以單色平面輪廓表意，不增加玻璃或金屬光照漸層。"
+        }
+      },
+      "remaining": []
+    }
+  ]
+}

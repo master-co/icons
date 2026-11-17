@@ -1,0 +1,101 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "batch": "77-film-candidate-1",
+  "baseline": "references/atlas-recompare-01/master-before.json",
+  "viewedSuffixes": [
+    "light-1x",
+    "dark-1x",
+    "native-light-2x",
+    "native-dark-2x"
+  ],
+  "decisions": [
+    {
+      "name": "film",
+      "decision": "retained",
+      "purpose": "以影格及兩側齒孔表示電影底片、膠卷片段與影片內容。",
+      "recognitionCues": "中央上下兩格影像區、左右各四格齒孔與完整外框。",
+      "confusableWith": [
+        "film-reel",
+        "grid"
+      ],
+      "defect": "本輪未見兩側孔距、中央影格比例或外框接點需要回修的問題。",
+      "sourceObservation": "Lucide採左右齒孔與上下影格，現稿保留同一構造並稍放寬中央；Phosphor橫向走片、齒孔在上下，是另一合理方向，未見需換向的優勢。",
+      "reason": "保留左右四孔及中央兩格，所有分界接在共用框線上；不增加影像內容，也不為減線而失去齒孔訊號。",
+      "postComparison": "16px仍能讀出左右齒孔與較大中央影格，20／24孔距和內框更清楚；與Lucide／Phosphor同尺寸回比後保留。三角型、明暗DPR1／2及55%文字已查看。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "齒孔由實際框線構成，不用虛線替代底片邊緣。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "框線與影格同屬主要訊號，不加入淡色影像填面。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "保持單色底片符號，不增加透明膠片或影像漸層。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "clapperboard",
+      "decision": "refined",
+      "purpose": "以可上掀的斜紋拍板與下板表示影片拍攝和場記。",
+      "recognitionCues": "左側鉸接、傾斜等寬拍板、兩道斜紋及下方矩形紀錄板。",
+      "confusableWith": [
+        "film",
+        "video"
+      ],
+      "defect": "斜紋按個別座標配置，三段留白略不均勻，條紋也較來源直立。",
+      "sourceObservation": "Lucide斜紋沿拍板呈較舒展斜度，Phosphor也以均勻斜向分段形成節奏；沿既有Lucide改作重整斜紋方向和分段。",
+      "reason": "以拍板的長軸和垂直軸定位兩道斜紋，讓中心線在板寬中段等分長度；每道斜紋由上緣到下緣沿長軸偏移2個母型單位，輪廓、鉸接及下板保持。",
+      "postComparison": "最新稿與Lucide／Phosphor回比，三段留白更均勻，斜紋較舒展，16px仍可辨三段板面；所有條紋墨線裁在拍板內。三尺寸三角型、明暗DPR1／2及55%文字已查看。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "斜紋本身就是場記板辨識訊號，保留短實線，不再切成虛線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "拍板與下板由外形區分，無須以透明度淡化其中一部。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "保留平面單色，不增加拍板材質或陰影漸層。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "podcast",
+      "decision": "retained",
+      "purpose": "以麥克風及向外圓弧表示播客節目、收聽與錄製。",
+      "recognitionCues": "中央膠囊麥克風、細支柱與水平底腳，外側單層開放圓弧。",
+      "confusableWith": [
+        "microphone",
+        "radio"
+      ],
+      "defect": "本輪未見麥克風內孔、外側圓弧或底腳比例需回修的問題。",
+      "sourceObservation": "Hugeicons用麥克風加單一開放圓弧，現稿已保持此清楚構造；Iconoir採人物與雙層圓弧，內部訊號較多，沒有增加到本稿的必要。",
+      "reason": "保留單弧、膠囊麥克風和水平底腳，麥克風與支柱實接而外弧分離；不增加人物或第二圈廣播弧。",
+      "postComparison": "16／20／24的麥克風孔與外弧間距均清楚，底腳不侵入弧端，與Hugeicons／Iconoir回比後保留。三角型、明暗DPR1／2及55%文字已查看。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "外側圓弧已表達廣播，不需要再加虛線傳播軌跡。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "麥克風與廣播弧同樣需要辨識，維持完整單色對比。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "單弧輪廓足以表達傳播，不增加擴散或發光漸層。"
+        }
+      },
+      "remaining": []
+    }
+  ]
+}

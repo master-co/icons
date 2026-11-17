@@ -1,0 +1,101 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "batch": "75-media-candidate-1",
+  "baseline": "references/atlas-recompare-01/master-before.json",
+  "viewedSuffixes": [
+    "light-1x",
+    "dark-1x",
+    "native-light-2x",
+    "native-dark-2x"
+  ],
+  "decisions": [
+    {
+      "name": "radio-receiver",
+      "decision": "retained",
+      "purpose": "以帶天線的收音機表示廣播接收及音訊設備。",
+      "recognitionCues": "寬矩形機身、左上長斜天線、右側圓形單體及左側兩道短線。",
+      "confusableWith": [
+        "tv",
+        "speaker"
+      ],
+      "defect": "本輪未見天線接合、面板分組或圓孔留白需回修的問題。",
+      "sourceObservation": "Phosphor長天線與左右面板分組已在現稿表達；Hugeicons較方圓的機身配短天線屬另一器型，並未改善目前的寬面板比例。",
+      "reason": "保留長斜天線、寬機身、圓形單體與兩道短線，不增加Phosphor的第三道面板線或額外控制點。",
+      "postComparison": "與Phosphor／Hugeicons同尺寸回比，16px天線與機身相接但不穿入，兩道短線與圓孔分組清楚；三尺寸三角型、明暗DPR1／2及55%文字已查看。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "天線與面板均為可見構造，不使用虛線代表訊號。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "機身和控制訊號都需辨識，保持單色完整對比。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "平面輪廓已能表達收音機，不增加機殼材質漸層。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "tv",
+      "decision": "retained",
+      "purpose": "以帶雙天線的螢幕表示電視設備及電視內容。",
+      "recognitionCues": "橫向矩形螢幕、頂端對稱V形天線及中央共用接點。",
+      "confusableWith": [
+        "monitor",
+        "radio-receiver"
+      ],
+      "defect": "本輪未見螢幕比例、天線共接或角型內孔需要回修的問題。",
+      "sourceObservation": "Lucide同為橫向矩形與對稱雙天線，現稿保留其完整空白螢幕；Hugeicons較鼓的側壁與不等臂天線偏復古，沒有取代現稿的明確優勢。",
+      "reason": "保留既有矩形比例及對稱天線，避免增加內框、旋鈕或支腳而壓縮16px螢幕面積。",
+      "postComparison": "16／20／24均保留完整螢幕空間，天線在頂緣實接且沒有刺入內孔；與兩來源比較，現稿維持簡潔中立的器型。三角型、明暗DPR1／2及55%文字已查看。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "螢幕及天線保持實體輪廓，不增加訊號虛線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "空白螢幕已表達裝置，不以淡色填面增加層次。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "不加入螢幕反光或發光漸層，保持單色圖示。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "projector",
+      "decision": "refined",
+      "purpose": "以凸出鏡頭和放射光線表示投影機及影像投射。",
+      "recognitionCues": "低矮機身、嵌在左側上緣的圓鏡頭、三道光線及右側短通風線。",
+      "confusableWith": [
+        "camera",
+        "tv"
+      ],
+      "defect": "鏡頭圓心原本位於機身上緣，較像浮在上方的徽標；斜光線方向也未以鏡頭圓心為共同依據。",
+      "sourceObservation": "Lucide鏡頭圓心略低於機身上緣，嵌入關係更自然；Hugeicons保留更高鏡頭及支腳，屬另一器型。本次沿既有Lucide改作調整嵌入比例。",
+      "reason": "鏡頭圓心由(8,12)下移到(8,13)，半徑3.5保持；光線改由同一圓心在0及正負30度方向、半徑8至10間繪製，按新鏡頭重算機身接合。",
+      "postComparison": "與Lucide／Hugeicons回比，鏡頭稍嵌入機身、下方留白較均衡，三道光線形成共同放射方向；16px鏡頭內孔與右側通風線仍清楚。三尺寸三角型、明暗DPR1／2及55%文字已查看。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "三道光線是短實線訊號，不再拆成裝飾虛線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "鏡頭及投射光線都需清楚，無須淡化光線。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "使用單色放射線表達投射，不增加光束漸層。"
+        }
+      },
+      "remaining": []
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "reviewer": "Codex (AI)",
+  "batch": "31-workspace-candidate-1",
+  "baseline": "references/atlas-recompare-01/master-before.json",
+  "date": "2026-11-17",
+  "viewedSuffixes": [
+    "light-1x",
+    "dark-1x",
+    "native-light-2x",
+    "native-dark-2x"
+  ],
+  "decisions": [
+    {
+      "name": "lamp",
+      "purpose": "以梯形燈罩、中央燈桿及底座表示檯燈與室內照明。",
+      "recognitionCues": "上窄下寬燈罩、垂直短桿及水平底座。",
+      "confusableWith": [
+        "lightbulb",
+        "desk"
+      ],
+      "defect": "舊稿燈桿相對偏長、底座偏寬，燈罩的主體感略弱。",
+      "sourceObservation": "Phosphor的寬燈罩與短燈桿比例較穩定；Lucide使用立體座腳是另一種器型，沿既有Phosphor改作保留平底座。",
+      "reason": "燈罩上緣和下緣各略放寬，下緣由13降到14以縮短燈桿，底座寬度由10收至8；維持同一中軸及實際微圓罩角，桿件在罩外收口。",
+      "postComparison": "最新稿與Lucide／Phosphor於原生16／20／24重新並列，燈罩成為更明確主體，短桿和底座仍清楚支承。三角型、明暗DPR1／2與55%文字均已查看；未新增拉繩或厚底座造成多餘小孔。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "燈罩與燈桿為完整可見構造，不需要虛線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "依罩桿比例表達層次，不淡化主要支承。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "不以發光或材質漸層替代清楚的照明器輪廓。"
+        }
+      },
+      "decision": "refined",
+      "remaining": []
+    },
+    {
+      "name": "desk",
+      "purpose": "以帶雙抽屜的桌面和直腳表示書桌、辦公桌與工作區。",
+      "recognitionCues": "橫向桌面、雙抽屜、中央分界及兩根直腳。",
+      "confusableWith": [
+        "bed",
+        "sofa"
+      ],
+      "defect": "舊稿抽屜過高、兩腳跨度偏窄，整體更像高櫃架，桌面的橫向姿態不足。",
+      "sourceObservation": "Phosphor淺抽屜與寬腳距更像工作桌；Tabler採單側抽屜器型，保留既有Phosphor雙抽屜構造而不混入側櫃。",
+      "reason": "兩腳與抽屜側壁由4／20外移至3／21，桌面由5移至6、抽屜底由13升至12，腳底收至20；20／24的把手按新抽屜中心重排，16仍省略把手。",
+      "postComparison": "與Phosphor／Tabler原生三尺寸重新並列後，桌體橫向比例更穩定，20／24把手上下留白仍可見，16保留兩個完整抽屜孔。明暗DPR1／2、三角型與55%文字已查看，接縫保持相連。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "桌面及抽屜皆為實際邊界，不需隱藏線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "透過淺抽屜和寬腿距建立層次，不淡化把手。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "工作桌以結構及比例傳意，不加木紋或陰影漸層。"
+        }
+      },
+      "decision": "refined",
+      "remaining": []
+    }
+  ]
+}

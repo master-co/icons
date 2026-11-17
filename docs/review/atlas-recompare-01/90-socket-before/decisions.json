@@ -1,0 +1,43 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "baseline": "references/atlas-recompare-01/master-before.json",
+  "viewedSuffixes": [
+    "light-1x",
+    "dark-1x",
+    "native-light-2x",
+    "native-dark-2x"
+  ],
+  "batch": "90-socket-before",
+  "decisions": [
+    {
+      "name": "power-socket",
+      "decision": "retained",
+      "purpose": "以雙圓孔牆面面板表示電源插座。",
+      "recognitionCues": "正方形面板、同一水平軸上的兩個等大圓形插孔。",
+      "confusableWith": [
+        "grid",
+        "car-battery"
+      ],
+      "defect": "重查雙孔大小與間距是否像插孔，以及面板是否因額外套框而在16px變得過密。",
+      "sourceObservation": "Tabler以方形面板和兩圓孔完成插座語意；MDI的歐式插座加入圓形凹槽，以填形呈現。現稿採Tabler雙孔面板，與MDI共享雙圓插孔器型，並非所有地區插座的寫實通用外觀。",
+      "reason": "保留單層方形面板與等大雙孔，沿水平軸左右對稱。省去MDI凹槽讓16px有充足孔邊留白；三角型只改面板實際圓角，圓孔保持本身形態。",
+      "postComparison": "已查看保留稿與Tabler／MDI三尺寸、三角型及明暗DPR1／2。雙孔在原生16px仍獨立可辨，面板和孔的空間平衡，20／24px點徑隨尺寸增加；沒有新增會變成框中框的凹槽。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "插孔與面板皆為完整可見物件，沒有虛線語意。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "雙孔等大且同層，不使用透明度製造深度。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "不需要凹槽陰影或漸層，保留單色雙孔辨識。"
+        }
+      },
+      "remaining": []
+    }
+  ]
+}

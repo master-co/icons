@@ -1,0 +1,70 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "baseline": "references/atlas-recompare-01/master-before.json",
+  "viewedSuffixes": [
+    "light-1x",
+    "dark-1x",
+    "native-light-2x",
+    "native-dark-2x"
+  ],
+  "batch": "100-mail-candidate-1",
+  "decisions": [
+    {
+      "name": "mailbox",
+      "decision": "refined",
+      "purpose": "以同曲率的隧道形肩部、前門分界及側旗呈現信箱。",
+      "recognitionCues": "同曲率的隧道形肩部、前門分界及側旗",
+      "confusableWith": [
+        "mail"
+      ],
+      "defect": "右側肩弧原先比前門短，與前門拱頂及兩側直壁連接的高度不一致。",
+      "sourceObservation": "Lucide 以連續拱頂及收起的側旗表示信箱。Phosphor 的兩道相應圓形肩部更像同一個隧道形殼體。",
+      "reason": "沿用 Lucide 的收旗構圖，重畫後肩為與前門相同的半徑五圓弧，令兩端在同一高度進入直壁。",
+      "postComparison": "三尺寸與兩原稿並列，肩部曲率協調且保持充分的外殼留白。前後圓弧及短旗仍清楚，保留家族三種底角。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "箱殼與側旗均為完整可見構造。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "靠前門分界和側旗安排空間。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "拱形外殼已交代箱體深度。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "satellite-dish",
+      "decision": "retained",
+      "purpose": "以斜向圓盤、中心饋源桿及兩道開放訊號弧呈現衛星天線。",
+      "recognitionCues": "斜向圓盤、中心饋源桿及兩道開放訊號弧",
+      "confusableWith": [
+        "satellite"
+      ],
+      "defect": "確認訊號弧是否清楚分離，饋源與圓盤是否接成一體。",
+      "sourceObservation": "Lucide 和 Hugeicons 都以斜盤和雙弧辨識。Hugeicons 較輕的盤邊看來更開放，Lucide 令訊號弧與盤的比重更接近。",
+      "reason": "保留 Lucide 式雙弧及盤深，同一斜軸穿過饋源與弧心，桿線藏在圓盤外側。",
+      "postComparison": "與兩來源回比，現稿斜盤、桿與訊號成立，三尺寸雙弧間隙可見，沒有增加不必要的底座。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "連續訊號弧表達天線工作方向。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "雙弧等對比，靠徑向留白區分。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "波形與斜盤不需附加明暗效果。"
+        }
+      },
+      "remaining": []
+    }
+  ]
+}

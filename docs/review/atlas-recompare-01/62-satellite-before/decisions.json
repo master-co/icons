@@ -1,0 +1,43 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "batch": "62-satellite-before",
+  "baseline": "references/atlas-recompare-01/master-before.json",
+  "viewedSuffixes": [
+    "light-1x",
+    "dark-1x",
+    "native-light-2x",
+    "native-dark-2x"
+  ],
+  "decisions": [
+    {
+      "name": "satellite",
+      "decision": "retained",
+      "purpose": "以中央機體、對稱太陽能板與訊號弧表示人造衛星。",
+      "recognitionCues": "斜向機體、兩側矩形面板、短天線與單一訊號弧。",
+      "confusableWith": [
+        "satellite-dish",
+        "orbit"
+      ],
+      "defect": "本輪未見需要回修的具體缺陷，機體與面板沿共同軸線對稱接合。",
+      "sourceObservation": "Lucide的三段機體及單一訊號弧已被現稿採用；Tabler的反向配置及雙訊號弧是另一種構圖，沒有需要增加小尺寸細節的優勢。",
+      "reason": "保留兩側開放板面、中央機體與外接天線；面板沿機體邊界收口，三角型只改實際角部幾何，不加板面格紋。",
+      "postComparison": "與Lucide／Tabler回比，原生16的三個孔與訊號弧仍清楚，中央機體、板面及天線朝向一致。三尺寸三角型、明暗DPR1／2及55%文字均已查看。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "以單一訊號弧及可見機體實線表達，不加細碎的傳播虛線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "板面與機體用共用邊界區分，不以透明度表達前後。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "維持單色平面衛星，不加入太陽能板材質漸層。"
+        }
+      },
+      "remaining": []
+    }
+  ]
+}

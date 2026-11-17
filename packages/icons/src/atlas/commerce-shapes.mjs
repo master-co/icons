@@ -3,7 +3,7 @@ import {commerce} from '../families/commerce.mjs';
 import {mark} from '../families/shared.mjs';
 
 export function scale({g,p,l}){
- const beam=p('M3 7H4C7 7 9 6.5 12 5C15 6.5 17 7 20 7H21');
+ const beam=p('M3 7H5C7.5 7 9.5 6.25 12 5C14.5 6.25 16.5 7 19 7H21');
  const pans=[5,19].map(x=>p(`M${x} 7L${x-3} 16Q${x} 18.5 ${x+3} 16Z`));
  return [beam,...pans,l(12,2,12,22),l(7,22,17,22)];
 }
@@ -27,7 +27,7 @@ export function bagCheck({g}){return knockout(commerce['shopping-bag'](g),mark(g
 export function bagPlus({g}){return knockout(commerce['shopping-bag'](g),mark(g,'plus',19,19),g)}
 export function cashRegister({g,o,l,r,d}){
  const shell=o([[2,17],[5,7],[19,7],[22,17],[22,22],[2,22]],true,[g.tip,g.tip,g.tip,g.tip,g.r,g.r]);
- const display=r(7,2,8,5,g.tip);
+ const display=r(8,2,8,5,g.tip);
  const keys=[9,12,15].flatMap(x=>[11,14].map(y=>d(x,y,g.v(.55,.7,.8))));
  return [...exteriorDetails(shell,[display],g),...enclosedDetails(shell,[l(2,17,22,17),...keys],g).slice(1)];
 }

@@ -1,0 +1,98 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "baseline": "references/atlas-recompare-01/master-before.json",
+  "viewedSuffixes": [
+    "light-1x",
+    "dark-1x",
+    "native-light-2x",
+    "native-dark-2x"
+  ],
+  "batch": "103-charts-before",
+  "decisions": [
+    {
+      "name": "chart-bubble",
+      "decision": "retained",
+      "purpose": "以三個彼此分離且尺寸不同的空心圓呈現氣泡圖。",
+      "recognitionCues": "三個彼此分離且尺寸不同的空心圓",
+      "confusableWith": [
+        "chart-network"
+      ],
+      "defect": "檢查最小氣泡是否還有內孔、三顆大小能否區分。",
+      "sourceObservation": "Tabler 只用三個有尺寸差的空心圓，Hugeicons 再加上 L 軸，閱讀需要同時辨識更多線。",
+      "reason": "保留 Tabler 式圓孔群組和不同大小，三顆呈開放三角分布。",
+      "postComparison": "原生尺寸回比時，三圈有清楚階差和分離空間，最小圈仍保持自己的中心孔。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "資料氣泡用連續圓輪廓表示。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "靠面積而非透明度區分三顆。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "圓的半徑已足以傳遞大小差。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "chart-network",
+      "decision": "retained",
+      "purpose": "以L 形軸、三個中空節點和有轉折的連線呈現網路圖。",
+      "recognitionCues": "L 形軸、三個中空節點和有轉折的連線",
+      "confusableWith": [
+        "chart-bubble"
+      ],
+      "defect": "檢查節點空腔與左下軸距離，以及連線是否插進圈內。",
+      "sourceObservation": "Lucide 有三個節點和右上開放延伸線，Hugeicons 加了第四圈表示終點。",
+      "reason": "保留三個節點，讓每個圈孔有足夠空間，線只接到外側。右上延伸表達網路的連續性。",
+      "postComparison": "與兩原稿並列，三個節點和連線可以分辨，左下節點保有軸間留白，第四圈會增加右上密度。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "節點之間是已存在的連線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "節點中空，從輪廓區分資料與軸。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "用線段與空心點表達圖結構。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "chart-histogram",
+      "decision": "retained",
+      "purpose": "以共用 L 軸、四條不同高度短柱和單峰趨勢線呈現分布直方圖。",
+      "recognitionCues": "共用 L 軸、四條不同高度短柱和單峰趨勢線",
+      "confusableWith": [
+        "chart-bell-curve"
+      ],
+      "defect": "檢查四柱底部是否同軸，與上方曲線間是否有開放空間。",
+      "sourceObservation": "Tabler 的四柱和單峰曲線形成鮮明上下結構，Hugeicons 將下方柱減成三根且上方峰更平緩。",
+      "reason": "保留現稿四柱以表現分布的上升和尾端下降，上緣曲線與柱頂留空以區隔資料。",
+      "postComparison": "與兩來源比較，三尺寸均讀得到上方平滑單峰以及同基線短柱。保持四柱仍有可見間隙。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "趨勢與柱都代表可見資料構造。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "用上方曲線與柱頂留白區分兩層。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "不依賴填色或漸層呈現分布。"
+        }
+      },
+      "remaining": []
+    }
+  ]
+}

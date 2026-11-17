@@ -1,0 +1,98 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "baseline": "references/atlas-recompare-01/master-before.json",
+  "viewedSuffixes": [
+    "light-1x",
+    "dark-1x",
+    "native-light-2x",
+    "native-dark-2x"
+  ],
+  "batch": "102-charts-candidate-1",
+  "decisions": [
+    {
+      "name": "chart-radar",
+      "decision": "retained",
+      "purpose": "以從共同中心放射的五條軸與一個不等值資料多邊形呈現雷達圖。",
+      "recognitionCues": "從共同中心放射的五條軸與一個不等值資料多邊形",
+      "confusableWith": [
+        "pentagon"
+      ],
+      "defect": "檢查小尺寸的五個分區、軸端和資料點是否容易混在一起。",
+      "sourceObservation": "Lucide 以放射軸直接穿過一組資料點，Tabler 加入封閉外圈，中央密度明顯較高。",
+      "reason": "保留 Lucide 式五條軸和一組資料折線。資料頂點落在軸上，省去外圈以保留各扇形空間。",
+      "postComparison": "原生三尺寸與來源比較，雷達圖的軸、資料輪廓和分區仍有區別。現稿保留資料值高低差及外伸的軸端。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "放射軸與資料折線都完整呈現。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "用輪廓與扇形留白區分資料和軸。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "無需圖例色階來區分單組資料。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "chart-candlestick",
+      "decision": "retained",
+      "purpose": "以L 形軸與兩個有中空矩形、上下影線的蠟燭呈現K 線圖。",
+      "recognitionCues": "L 形軸與兩個有中空矩形、上下影線的蠟燭",
+      "confusableWith": [
+        "chart-waterfall"
+      ],
+      "defect": "檢查矩形內腔、上下影線和軸之間的間隔。",
+      "sourceObservation": "Lucide 採 L 形軸和兩根蠟燭，Tabler 採三根蠟燭且沒有軸。兩柱在小尺寸分隔較清楚。",
+      "reason": "保留兩根不同高度的中空蠟燭以及共用軸，實體畫面保有柱框和影線兩層。",
+      "postComparison": "與兩原稿並列，蠟燭框和影線原生可區分，兩柱的空腔在最小原生大小仍可見。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "影線需要以連續短線表示。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以蠟燭開口而非淡化表達資料柱。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "一組圖示無需價格漲跌色彩。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "chart-waterfall",
+      "decision": "refined",
+      "purpose": "以L 形軸和以累計端點接續的四根浮動柱呈現瀑布圖。",
+      "recognitionCues": "L 形軸和以累計端點接續的四根浮動柱",
+      "confusableWith": [
+        "chart-candlestick"
+      ],
+      "defect": "原稿第四柱從第三柱的起點重算，沒有承接第三柱回升後的高度。",
+      "sourceObservation": "Hugeicons 提供等距細柱與 L 軸，MDI 採較厚的遞進矩形。兩者都以浮動柱表達逐步變化。",
+      "reason": "讓四根柱取自同一組累計高度，相鄰柱的前一個終點等於下一個起點。保留間距與浮動構圖。",
+      "postComparison": "回比兩來源，瀑布柱在三尺寸均能辨識始末，柱間相同高度形成接續關係，最後一柱與橫軸仍有距離。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "以相鄰端點共高度交代接續關係。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以畫面上下位置表示正負變化。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "用單色浮動柱表達累計趨勢。"
+        }
+      },
+      "remaining": []
+    }
+  ]
+}

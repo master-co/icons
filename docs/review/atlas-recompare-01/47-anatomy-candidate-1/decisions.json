@@ -1,0 +1,72 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "batch": "47-anatomy-candidate-1",
+  "baseline": "references/atlas-recompare-01/master-before.json",
+  "viewedSuffixes": [
+    "light-1x",
+    "dark-1x",
+    "native-light-2x",
+    "native-dark-2x"
+  ],
+  "decisions": [
+    {
+      "name": "lungs",
+      "decision": "refined",
+      "purpose": "以左右肺葉、氣管及分岔支氣管表示肺與呼吸。",
+      "recognitionCues": "上窄下寬的肺葉、內緣收腰、中央氣道與分岔。",
+      "confusableWith": [
+        "brain",
+        "stethoscope"
+      ],
+      "defect": "原肺葉內緣是直線，上下變化不足，整體略像兩支膠囊，缺少氣道接入處的收腰。",
+      "sourceObservation": "Hugeicons的肺葉在氣道接入處收腰、下部較飽滿，Tabler以直內緣保留簡潔氣道。本次保留原Tabler氣道構造並吸收Hugeicons的肺葉曲面，新增雙來源改作及完整MIT條款。",
+      "reason": "將兩側直內緣改成在支氣管接入處收腰的曲線，展開下部肺葉並重畫底部圓腹；分岔氣道按新接點收口，保留中央通道與左右對稱。",
+      "postComparison": "最新稿與Hugeicons／Tabler在16／20／24回比，肺葉上窄下寬與內緣收腰更明確，中央氣道旁仍有可見留白；沒有加入小尺寸難容納的細支氣管。三角型、明暗DPR1／2及55%文字已查看。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "肺葉與氣道均為示意實體構造，不使用隱藏邊界虛線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以輪廓與負空間呈現結構，不以淡化掩飾密度或接縫。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "維持單色平面人體圖示，不需要材質或光照漸層。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "ear",
+      "decision": "retained",
+      "purpose": "以外耳輪、耳垂與內耳折曲表示耳朵與聽覺。",
+      "recognitionCues": "上方耳輪、下方耳垂、內部彎曲與左側開口。",
+      "confusableWith": [
+        "headphones",
+        "volume"
+      ],
+      "defect": "本輪未發現需要回修的具體缺陷，需維持內外輪廓間距與耳垂曲線。",
+      "sourceObservation": "現稿沿用Lucide的完整耳輪及內耳折曲；Tabler的內線更少、外耳垂較開放，沒有呈現須替換現稿的輪廓或小尺寸優勢。",
+      "reason": "保留外耳輪到耳垂的連續曲面與內耳折線，維持左側開口，不增加平行內框或額外細節。",
+      "postComparison": "最新稿與Lucide／Tabler在三尺寸回比，外耳輪、內折與耳垂均可讀，內外線條沒有黏合。sharp保留自然曲面；三角型、明暗DPR1／2及55%文字已查看，保留現稿。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "耳輪、耳垂與內耳折曲直接可見，不需要虛線表達。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以輪廓與負空間呈現結構，不以淡化掩飾密度或接縫。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "維持單色平面人體圖示，不需要材質或光照漸層。"
+        }
+      },
+      "remaining": []
+    }
+  ]
+}

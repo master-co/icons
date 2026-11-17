@@ -1,0 +1,126 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "batch": "104-charts-candidate-1",
+  "baseline": "references/atlas-recompare-01/master-before.json",
+  "viewedSuffixes": [
+    "light-1x",
+    "dark-1x",
+    "native-light-2x",
+    "native-dark-2x"
+  ],
+  "decisions": [
+    {
+      "name": "chart-sankey",
+      "decision": "retained",
+      "purpose": "以三條交錯流向及兩側橫向展開的平順端點呈現桑基圖。",
+      "recognitionCues": "三條交錯流向及兩側橫向展開的平順端點",
+      "confusableWith": [
+        "chart-network"
+      ],
+      "defect": "檢查三條流線的交點是否糊成一團，兩端能否看出分流。",
+      "sourceObservation": "Tabler 以三條交叉線表達流向重排。MDI 左、上、下三邊聚合為軸框，只保留一條自由轉折的曲線。",
+      "reason": "保留 Tabler 式交錯流向，近端和遠端以不同高度進出，流線兩側都維持橫向切線。",
+      "postComparison": "與兩來源並列，原生 16px 仍能辨識兩端各三條流線，交叉分開形成兩個節點，和單一序列的折線圖區別清楚。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "流量關係用連續曲線描畫。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以端點間隔說明分流，不使用淡化。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "保持單色流向，無需漸層機制。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "chart-spline",
+      "decision": "retained",
+      "purpose": "以L 形座標軸、一次小回落與向右上收尾的平滑曲線呈現平滑曲線圖。",
+      "recognitionCues": "L 形座標軸、一次小回落與向右上收尾的平滑曲線",
+      "confusableWith": [
+        "chart-bell-curve"
+      ],
+      "defect": "檢查峰谷之間的方向轉換，起點和座標軸是否黏連。",
+      "sourceObservation": "Lucide 的曲線以一次較低回落再上升呈現趨勢，Hugeicons 為較深的波谷和接近垂直的收尾。",
+      "reason": "保留寬緩峰谷和連續切線，以及與兩軸的空隙，讓走勢不會和基線連在一起。",
+      "postComparison": "三尺寸回比，峰谷在現稿都清楚，末段有足夠空間舒展。現稿接近 Lucide 的趨勢輪廓，保留和本庫折線圖一致的座標軸。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "資料曲線以連續線表達。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "曲線與 L 軸靠留白分開。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "單一序列不依賴色階。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "chart-bell-curve",
+      "decision": "retained",
+      "purpose": "以L 形軸及左右對稱單峰、水平落尾的資料曲線呈現鐘形曲線圖。",
+      "recognitionCues": "L 形軸及左右對稱單峰、水平落尾的資料曲線",
+      "confusableWith": [
+        "chart-spline"
+      ],
+      "defect": "檢查曲線的對稱性、單峰峰頂是否過尖、端點是否壓到軸。",
+      "sourceObservation": "Lucide 的鐘形與軸線分開，MDI 的曲線較大，左端緊鄰縱軸。",
+      "reason": "保留左右鏡射單峰、較短水平端與共用軸，讓峰頂、兩肩與軸線都在小尺寸有空間。",
+      "postComparison": "與兩來源回比，現稿比 MDI 有更清楚的曲線外空間，三尺寸均可見單峰、等高兩尾及軸線。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "鐘形曲線是一組連續資料。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以留白分離趨勢線和座標軸。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "對稱曲線本身提供分布線索。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "chart-combo",
+      "decision": "refined",
+      "purpose": "以同一組橫向位置上的四根柱與四個折線頂點呈現組合圖。",
+      "recognitionCues": "同一組橫向位置上的四根柱與四個折線頂點",
+      "confusableWith": [
+        "chart-histogram"
+      ],
+      "defect": "原稿有些折點落在柱子一側，四柱和折線並排時不易一一對應。",
+      "sourceObservation": "Lucide 用無軸折線與五柱保持構圖簡潔。Hugeicons 用三個造型強烈的節點，清楚示意每個點與柱的位置對應。",
+      "reason": "沿用 Lucide 的無框折線設計，重建本稿的四個等距位置，折線頂點與各自的柱共用橫座標。維持柱距和上緣的留白。",
+      "postComparison": "與兩來源回比，原生尺寸可以看到四根柱對齊折線的四點，無須加畫節點圈，底線留白均衡。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "四柱與折線均為連續可見資料。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以柱端和折線的空隙分開兩條資料序列。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "對齊位置和形狀即可辨識資料系列。"
+        }
+      },
+      "remaining": []
+    }
+  ]
+}

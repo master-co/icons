@@ -2,22 +2,22 @@ import {enclosedDetails,exteriorDetails,knockout} from '../occlusion.mjs';
 
 export function graduationCap({g,o,p,l}){
  const edge=g.corner==='sharp'?3:2;
- const crown=o([[edge,9],[12,4.5],[24-edge,9],[12,13.5]],true,g.tip);
+ const crown=o([[edge,10],[12,5.5],[24-edge,10],[12,14.5]],true,g.tip);
  const band=p('M6 10V16C6 20 18 20 18 16V10');
- return exteriorDetails(crown,[band,l(24-edge,9,24-edge,16)],g);
+ return exteriorDetails(crown,[band,l(24-edge,10,24-edge,16)],g);
 }
 export function school({g,o,p,l,c}){
  const building=o([[6,5.5],[12,2],[18,5.5],[18,11],[22,13.5],[22,21],[2,21],[2,13.5],[6,11]],true,g.tip);
- return enclosedDetails(building,[l(6,5.5,6,21),l(18,5.5,18,21),c(12,8.5,2),p('M10 21V17A2 2 0 0 1 14 17V21')],g);
+ return [...enclosedDetails(building,[l(6,5.5,6,21),l(18,5.5,18,21),c(12,8.5,2),p('M10 21V17A2 2 0 0 1 14 17V21')],g),...exteriorDetails(building,[l(6,5.5,4,20/3),l(18,5.5,20,20/3)],g).slice(1)];
 }
 export function presentation({g,o,l}){
  const screen=o([[3,3],[21,3],[21,16],[3,16]],true,[0,0,g.r,g.r]);
  return exteriorDetails(screen,[l(2,3,22,3),o([[7,22],[12,16],[17,22]],false,g.tip)],g);
 }
 export function chalkboard({g,o,l}){
- const board=o([[3,20],[3,4],[21,4],[21,12]],false,g.r);
- const eraser=o([[14,20],[14,16],[21,16],[21,20]],false,g.tip);
- return [board,l(2,20,22,20),eraser];
+ const board=o([[3,19],[3,5],[21,5],[21,11]],false,g.r);
+ const eraser=o([[14,19],[14,15],[21,15],[21,19]],false,g.tip);
+ return [board,l(2,19,22,19),eraser];
 }
 export function abacus({g,l,o}){
  const frame=[l(4,2.5,4,21),l(20,2.5,20,21),l(2,21,22,21),l(4,7,20,7),l(4,15,20,15)];
@@ -45,6 +45,6 @@ export function globeStand({g,c,p,l}){
 export function pencilRuler({g,o,l,p}){
  const pencil=o([[3,21],[4.5,16],[17.5,3],[21,6.5],[8,19.5]],true,g.tip);
  const ruler=o([[3,6],[6,3],[21,18],[18,21]],true,g.tip);
- const ticks=[l(7,4,5.5,5.5),l(20,17,18.5,18.5)];
+ const ticks=[l(8.5,5.5,7,7),l(18.5,15.5,17,17)];
  return [...exteriorDetails(pencil,enclosedDetails(ruler,ticks,g),g),...enclosedDetails(pencil,[l(15,5.5,18.5,9)],g).slice(1)];
 }

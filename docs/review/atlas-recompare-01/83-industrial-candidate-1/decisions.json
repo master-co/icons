@@ -1,0 +1,101 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "batch": "83-industrial-candidate-1",
+  "baseline": "references/atlas-recompare-01/master-before.json",
+  "viewedSuffixes": [
+    "light-1x",
+    "dark-1x",
+    "native-light-2x",
+    "native-dark-2x"
+  ],
+  "decisions": [
+    {
+      "name": "factory",
+      "decision": "retained",
+      "purpose": "以煙囪、鋸齒屋頂與窗列表示工廠及工業生產。",
+      "recognitionCues": "左側高煙囪、連續兩段斜屋頂、整體廠房輪廓與底部三點窗。",
+      "confusableWith": [
+        "warehouse",
+        "building"
+      ],
+      "defect": "重查煙囪與屋頂是否像拼接零件，以及三點窗與底部空白的平衡。",
+      "sourceObservation": "Lucide把高煙囪和鋸齒屋頂連成完整外殼，以三點窗保留輕盈的廠房；Phosphor改為右側收窄煙囪與兩個橫窗。現稿沿用Lucide的完整輪廓，煙囪較窄而屋頂展開較寬。",
+      "reason": "煙囪、屋頂與底部共用外殼，兩段斜坡清楚；三點窗在整體廠房寬度內居中，不增加細窗框或煙霧。Phosphor的右側煙囪是另一構圖，並未改善現稿的屋頂與煙囪承接，因此保留。",
+      "postComparison": "已查看最新稿與Lucide／Phosphor的16／20／24、三角型、明暗DPR1與2。煙囪頂部與底角的角型差異清楚，屋頂凹點不因rounded消失，16的三點窗仍分離；現有煙囪比例與窗列留白穩定。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "廠房外殼皆為可見實線，不增加隱藏構造虛線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "用高低屋頂與空白分層，不淡化窗列。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "不添加煙霧漸淡或建築光照漸層。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "crane-tower",
+      "decision": "retained",
+      "purpose": "以固定塔身、水平吊臂及吊鉤表示塔式起重機與建設。",
+      "recognitionCues": "雙直線塔身、短斜頂架、水平長吊臂、底座與右側垂吊鉤。",
+      "confusableWith": [
+        "crane-truck",
+        "construction-barrier"
+      ],
+      "defect": "重查塔身橫檔是否過密，吊臂與斜頂架交點是否過重，以及吊鉤與塔身的間隔。",
+      "sourceObservation": "Phosphor以單線水平吊臂、斜頂架與一條塔身橫檔維持疏朗結構；Hugeicons用較窄塔身和雙線斜頂吊臂，頂部構造更多。現稿沿用Phosphor，吊鉤底部改為連續弧線。",
+      "reason": "塔身兩個長方空腔清楚，橫檔和水平吊臂接到共同邊界，右側吊鉤與塔身保持足夠距離；不增加Hugeicons的雙線吊臂或更多橫檔。",
+      "postComparison": "已查看Phosphor／Hugeicons與最新稿的16／20／24、三角型、明暗DPR1與2。原生16仍有兩個塔身空腔和獨立吊鉤，斜頂架與橫臂交點沒有短刺；保留Phosphor式疏朗構造，無需改為更密的上部梁體。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "塔身和吊線表示實際承重結構，不使用虛線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以塔身空腔與吊鉤距離區分層次，不淡化吊線。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "不增加施工動態或材質光照漸層。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "crane-truck",
+      "decision": "refined",
+      "purpose": "以輪式車身、駕駛艙和上揚吊臂表示移動吊車與吊掛作業。",
+      "recognitionCues": "雙輪底盤、圓頂駕駛艙、斜向吊臂、垂吊線與開口吊鉤。",
+      "confusableWith": [
+        "excavator",
+        "forklift"
+      ],
+      "defect": "吊臂轉入垂直吊線的頂端形成尖銳轉折，sharp斜接伸出尖頭，與駕駛艙和吊鉤的曲面不協調。",
+      "sourceObservation": "Hugeicons在吊臂頂端以短弧轉入吊線，輪廓更像完整機械；Tabler採長卡車底盤與近水平吊臂，屬另一姿態。現稿沿用Hugeicons上揚吊臂及駕駛艙構造，維持輪式底盤。",
+      "reason": "把吊臂頂端的轉折半徑改為24母型1單位並按尺寸縮放；sharp亦保留這個構造弧段。吊臂斜率、起點、垂吊線及鉤的位置不變，隔離尖轉折這個變數。",
+      "postComparison": "最新稿已與Hugeicons／Tabler在16／20／24、三角型、明暗DPR1與2重新並列。頂端短弧去掉sharp的突出尖頭，斜臂仍清楚上揚，駕駛艙、兩輪與吊鉤的空白保持；不增加Tabler長底盤的細分窗格。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "吊臂與吊線都是實際受力部件，不以虛線表現。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "接點以實際輪廓與裁線處理，不淡化吊臂。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "車身與金屬吊臂不需要反光或連續漸層。"
+        }
+      },
+      "remaining": []
+    }
+  ]
+}

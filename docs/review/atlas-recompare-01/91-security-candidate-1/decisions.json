@@ -1,0 +1,98 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "baseline": "references/atlas-recompare-01/master-before.json",
+  "viewedSuffixes": [
+    "light-1x",
+    "dark-1x",
+    "native-light-2x",
+    "native-dark-2x"
+  ],
+  "batch": "91-security-candidate-1",
+  "decisions": [
+    {
+      "name": "cctv",
+      "decision": "refined",
+      "purpose": "以俯視鏡身、前鏡口與牆面折臂表達監視器。",
+      "recognitionCues": "俯視鏡身、前鏡口與牆面折臂",
+      "confusableWith": [
+        "camera"
+      ],
+      "defect": "鏡身前緣為硬折點，後蓋接側壁的曲線可用同軸相切圓弧統一。",
+      "sourceObservation": "Lucide 和 Hugeicons 都將後蓋圓弧和斜長側壁連成一體。Lucide 更小的前端圓角仍保有端面。",
+      "reason": "用同一斜軸建立等寬外殼，後端採固定物件曲面，前端依角型微圓。保持同方向鏡口與牆臂。",
+      "postComparison": "新稿後端圓弧接側壁順暢，soft 前肩比原稿柔順，rounded 仍看得出前端平面。鏡口和牆臂在原生尺寸可分辨。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "用完整外殼和支架表達固定設備。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "鏡口和外殼共用可見實線。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "以斜軸和輪廓表達鏡身深度。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "siren",
+      "decision": "retained",
+      "purpose": "以承於寬底座的圓頂、罩內短弧與三道警示光表達警示燈。",
+      "recognitionCues": "承於寬底座的圓頂、罩內短弧與三道警示光",
+      "confusableWith": [
+        "bell"
+      ],
+      "defect": "重查罩內弧與穹頂、頂部光芒與燈罩是否擠在一起。",
+      "sourceObservation": "Phosphor 用三道光與罩內短弧指向閃燈。Lucide 有五道光，罩內中央豎筆從底座向上。",
+      "reason": "保留以短弧提示罩面、三道光提示閃燈的組合，燈罩壁接在底座上方，周圍留白集中。",
+      "postComparison": "現稿比 Lucide 五道光的構圖更疏，罩內短弧與穹頂的間隔在原生尺寸仍可見。底座承托關係清楚。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "光芒以三筆完整短線表示。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "罩內短弧已能傳達燈罩曲面。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "用輪廓和放射線表示閃燈。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "alarm-smoke",
+      "decision": "retained",
+      "purpose": "以扁長裝設底板、下方收窄感測殼和三股煙線表達煙霧警報器。",
+      "recognitionCues": "扁長裝設底板、下方收窄感測殼和三股煙線",
+      "confusableWith": [
+        "wind"
+      ],
+      "defect": "重查分層外殼與煙流距離、三股煙的間隔和方向。",
+      "sourceObservation": "Lucide 用三道短緩曲線，Tabler 採波幅較深的煙線。兩者都使用上下收窄的天花板感測殼。",
+      "reason": "保留 Lucide 式緩慢轉向的三股煙，沿用等距的曲線和平直的雙層殼，收口共用邊界。",
+      "postComparison": "與 Tabler 比較，現稿三股煙的空隙比較平整，16px 仍看得到三條獨立曲線。兩層感測殼維持清楚。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "煙流由連續曲線描述。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "靠間距分離煙和感測殼。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "單色煙線已清楚表示流向。"
+        }
+      },
+      "remaining": []
+    }
+  ]
+}

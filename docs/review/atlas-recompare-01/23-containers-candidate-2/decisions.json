@@ -1,0 +1,52 @@
+{
+  "reviewer":"Codex (AI)","batch":"23-containers-candidate-2",
+  "baseline":"references/atlas-recompare-01/master-before.json","date":"2026-11-17",
+  "viewedSuffixes":["light-1x","dark-1x","native-light-2x","native-dark-2x"],
+  "decisions":[
+    {
+      "name":"beer","decision":"refined",
+      "purpose":"以有泡沫頂、直立杯身與側把手的啤酒杯表示啤酒。",
+      "recognitionCues":"隆起泡沫、淺波形泡沫下緣、直立杯壁、杯紋及外接把手。",
+      "confusableWith":["coffee","glass-water"],
+      "defect":"舊泡沫頂由相近大小的小鼓包組成，下緣卻完全平切，像獨立雲朵貼在杯頂；杯身略寬。",
+      "sourceObservation":"Lucide的中央隆起及微波下緣讓泡沫更完整自然，Phosphor更簡潔但像單一平滑泡沫蓋。沿既有Lucide改作，採中央主泡及較小側泡的比例和淺波形下緣，保留開放杯內空間。",
+      "reason":"重畫連續泡沫為中央大弧、左右小弧與微波下緣，杯身稍收窄；第二輪讓泡沫、杯紋及杯身共用中軸。16只留一條杯紋，20／24兩條，杯壁仍接入泡沫而不穿進其內。",
+      "postComparison":"第二輪最新稿與Lucide／Phosphor在三尺寸重新比較，泡沫有主次且與杯身承接自然，16仍有可見泡沫孔、杯孔與把手孔。明暗DPR1／2、三角型及55%文字均已目視；沒有移植Phosphor更方的把手與平頂構造。",
+      "effects":{
+        "dashes":{"used":false,"reason":"泡沫與杯壁以連續輪廓表達，不需要泡泡虛線。"},
+        "opacity":{"used":false,"reason":"泡沫孔與杯內空間已分開，不以淡化補救密度。"},
+        "gradients":{"used":false,"reason":"泡沫輪廓即可辨識啤酒，不增加酒液色彩漸層。"}
+      },"remaining":[]
+    },
+    {
+      "name":"milk","decision":"refined",
+      "purpose":"以封口紙盒和折面表示牛奶及盒裝乳品。",
+      "recognitionCues":"上方封口帶、三角側折、傾斜頂面、窄側面及寬正面。",
+      "confusableWith":["bottle","package"],
+      "defect":"舊稿頂部折線把斜頂切成不清楚的三角與四邊形，沒有紙盒封口帶，像幾何屋頂放在方盒上。",
+      "sourceObservation":"Hugeicons的封口、三角側折和正面接合清楚，更有紙盒的具體構造。Lucide milk是同概念的玻璃瓶，作容器語意比較但不拿瓶頸取代紙盒。沿既有Hugeicons改作重建紙盒頂面。",
+      "reason":"外輪廓加入封口帶，以窄側面上的三角折角承接盒頂，右側保留寬正面。折線依各面分配而非橫穿整盒，主面波形移到正確面內，16省略波形；實際微圓轉角由角型幾何控制。",
+      "postComparison":"最新稿與Hugeicons紙盒及Lucide奶瓶在原生16／20／24重新並列，封口與折面比舊稿更明確，16仍能看見封口帶內隙和兩個主面。三角型、明暗DPR1／2及55%文字均已目視，20／24波形沒有穿出正面；保留紙盒語意而不混入瓶裝造型。",
+      "effects":{
+        "dashes":{"used":false,"reason":"封口與折線是外部可見構造，不需虛線隱藏邊。"},
+        "opacity":{"used":false,"reason":"透過完整折面和單條主面波形區分，不淡化側面。"},
+        "gradients":{"used":false,"reason":"紙盒以幾何折面表意，不需要材質或陰影漸層。"}
+      },"remaining":[]
+    },
+    {
+      "name":"bottle","decision":"refined",
+      "purpose":"以帶瓶口分界、窄頸與寬瓶身的容器表示一般瓶裝飲料。",
+      "recognitionCues":"短瓶口、窄頸、連續圓肩、直立瓶腹、圓收底角與單道液面。",
+      "confusableWith":["milk","wine"],
+      "defect":"舊稿瓶頸偏粗，瓶肩轉為瓶壁時曲率變化急，肩部看起來近似硬斜線接直筒。",
+      "sourceObservation":"Tabler的瓶頸較窄、肩線逐漸展開，瓶肩到直壁的過渡更自然；Lucide是較長的葡萄酒瓶頸，代表另一種器型。沿既有Tabler改作改善頸肩，保留一般短頸飲料瓶。",
+      "reason":"略縮瓶頸與瓶腹寬度，以兩段對稱曲線從直頸切向展開至直壁；瓶底改為相切圓弧接短平底。液面略下移以配合肩線延長，沒有添加小矩形標籤。",
+      "postComparison":"最新稿與Tabler／Lucide以三尺寸重新並列，瓶肩到直壁的曲率較平順，短頸仍和長頸酒瓶區別。明暗DPR1／2、三角型及55%文字均已目視；16瓶口內隙、頸孔及液面上下空腔均保持可見，sharp也保留瓶身自身曲面。",
+      "effects":{
+        "dashes":{"used":false,"reason":"瓶壁和液面為完整可見邊界，不需要隱藏線。"},
+        "opacity":{"used":false,"reason":"以單條液面區分空腔，不加入淡色液體面。"},
+        "gradients":{"used":false,"reason":"瓶形已完整表達容器，不以玻璃反光漸層補充。"}
+      },"remaining":[]
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "batch": "84-industry-candidate-1",
+  "baseline": "references/atlas-recompare-01/master-before.json",
+  "viewedSuffixes": [
+    "light-1x",
+    "dark-1x",
+    "native-light-2x",
+    "native-dark-2x"
+  ],
+  "decisions": [
+    {
+      "name": "forklift",
+      "decision": "refined",
+      "purpose": "以高門架、前伸貨叉及雙輪車身表示堆高機與貨物搬運。",
+      "recognitionCues": "高於駕駛艙的垂直門架、底部前伸貨叉、斜向車頂支撐與兩個輪胎。",
+      "confusableWith": [
+        "crane-truck",
+        "excavator"
+      ],
+      "defect": "斜向支撐直接以斜端帽接到垂直門架，在sharp右側形成小凸角，破壞直立門架的外緣。",
+      "sourceObservation": "Lucide讓斜向駕駛架以短弧轉成垂直切線再接入門架；Tabler採較厚重且較低的車身與分段支架。現稿沿用Lucide較高的門架和開放車頂，需要補回接點的曲面過渡。",
+      "reason": "把斜支撐末段改為L15.4343 10.4343 Q16 11 16 11.8，使末端切線與門架平行；端帽在門架描邊內合流。其餘車身、車輪、門架和貨叉位置保持。",
+      "postComparison": "已查看最新稿與Lucide／Tabler的16／20／24、三角型、明暗DPR1與2。sharp支撐接點右側的小凸角消失，斜架到門架承接較自然；原生16駕駛架空白和輪胎內孔保持。保留Lucide式高門架，不增加Tabler的車身分段。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "門架、支撐及貨叉為實體受力部件，不使用虛線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "接點以切線方向修正，不用透明度淡化凸角。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "不增加載貨動畫或機械光照漸層。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "warehouse",
+      "decision": "retained",
+      "purpose": "以寬建築外殼及大型捲門表示倉庫與倉儲空間。",
+      "recognitionCues": "雙坡屋頂、寬側牆、大型中央捲門及一道水平門片分界。",
+      "confusableWith": [
+        "building",
+        "factory"
+      ],
+      "defect": "重查屋頂與門框間空間，以及捲門簡化後是否失去大型出入口的辨識。",
+      "sourceObservation": "Lucide以雙坡屋頂和兩道捲門分界表現倉庫，Phosphor使用單坡屋頂與橫向門片。現稿沿用Lucide正面器型，只留一道門片分界以放大內孔。",
+      "reason": "門框占中央一半寬度，屋頂與門頂仍有空白，單道橫線已提供捲門訊號；16px若補回第二道會把門片孔壓成窄縫。保留現有雙坡屋頂與較疏門片，不改為單坡器型。",
+      "postComparison": "已查看最新稿與Lucide／Phosphor的16／20／24、三角型、明暗DPR1與2。大門與牆體邊距清楚，兩個門片孔仍開放，屋頂頂點沒有被rounded抹平；原生尺寸的門片密度較兩道分界安定，故保留。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "倉庫外殼和捲門皆為可見邊界，不增加隱藏空間虛線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以門框與屋頂留白區分構造，不淡化門片。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "建築輪廓不需要光照或陰影漸層。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "excavator",
+      "decision": "retained",
+      "purpose": "以履帶底盤、駕駛艙、折臂與鏟斗表示挖土機及挖掘工程。",
+      "recognitionCues": "水平膠囊履帶、兩個輪軸點、上揚折臂和帶斜切口的圓腹鏟斗。",
+      "confusableWith": [
+        "crane-truck",
+        "forklift"
+      ],
+      "defect": "重查鏟斗與履帶的體量、折臂接點，以及駕駛艙與底盤空白是否過密。",
+      "sourceObservation": "Tabler用上揚折臂及圓腹鏟斗表現挖掘姿態，Hugeicons使用較短水平伸臂和較尖的下垂斗。現稿沿用Tabler的大開口鏟斗，以膠囊履帶和兩點輪軸降低底盤密度。",
+      "reason": "鏟斗的斜切口和圓腹足以交代容土形態，折臂與艙體及鏟斗的接點已收在實體外側；履帶支承車身且與鏟斗分離。保留明確的折臂姿態，不增加液壓桿或改成較短的水平臂。",
+      "postComparison": "已查看最新稿與Tabler／Hugeicons的16／20／24、三角型、明暗DPR1與2。原生16可區分履帶、駕駛艙與鏟斗三個空腔，折臂頂部保持有意義的機械折點；鏟斗未壓住履帶，輪軸點仍分離，因此保留。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "履帶、折臂與鏟斗均為可見實體，不使用虛線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以共邊與空腔處理機身層次，不淡化鏟斗或履帶。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "不增加塵土漸淡或金屬材質漸層。"
+        }
+      },
+      "remaining": []
+    }
+  ]
+}

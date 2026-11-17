@@ -1,0 +1,70 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "baseline": "references/atlas-recompare-01/master-before.json",
+  "viewedSuffixes": [
+    "light-1x",
+    "dark-1x",
+    "native-light-2x",
+    "native-dark-2x"
+  ],
+  "batch": "94-safety-before",
+  "decisions": [
+    {
+      "name": "seat-belt",
+      "decision": "retained",
+      "purpose": "以頭部圓孔、兩段肩線與連成一體的斜帶和腰帶表達安全帶。",
+      "recognitionCues": "頭部圓孔、兩段肩線與連成一體的斜帶和腰帶",
+      "confusableWith": [
+        "user"
+      ],
+      "defect": "重查肩線避讓是否均勻、左下帶條交點是否突出以及頭肩有無黏合。",
+      "sourceObservation": "Phosphor 將斜帶與腰帶連成可讀符號。MDI 加入座姿下身及填形，尺寸小時墨量較高。",
+      "reason": "保留兩段帶條和開放的線性胸像，肩線沿斜帶輪廓避讓，左下交點把斜帶收於水平帶墨線內。",
+      "postComparison": "現稿頭肩之間比 Phosphor 更寬，斜帶是同尺寸中最先辨識的長線。簡化的胸像比 MDI 全身形態符合家族描邊。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "帶條需要連續跨過胸前呈現繫上狀態。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "肩線避讓使用真透明的空間。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "以兩段素色帶條表示綁束。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "safety-pin",
+      "decision": "retained",
+      "purpose": "以下方彈簧圈、兩條平行斜桿、上方圓扣與內緣回勾表達安全別針。",
+      "recognitionCues": "下方彈簧圈、兩條平行斜桿、上方圓扣與內緣回勾",
+      "confusableWith": [
+        "pin"
+      ],
+      "defect": "重查圓扣和彈簧孔是否閉塞、針桿與兩端有無重疊筆畫。",
+      "sourceObservation": "Lucide Lab 將雙桿沿同一斜軸連接彈簧圈與扣頭。Hugeicons 的扣頭更彎，彈簧圈相對小。",
+      "reason": "保留 Lucide Lab 的雙斜桿與下端較大的彈簧圈，兩端裁線避免壓縮圓孔。扣內小回勾表達閉合關係。",
+      "postComparison": "同尺寸比較，現稿兩端和中央狹長空腔各可分辨，彈簧圈較大並維持別針的對角姿態。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "閉合針身和扣頭均以連續輪廓表示。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "兩端依實際輪廓裁線保留圓孔。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "以兩端曲面和雙桿呈現金屬構造。"
+        }
+      },
+      "remaining": []
+    }
+  ]
+}

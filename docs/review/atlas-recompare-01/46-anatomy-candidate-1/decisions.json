@@ -1,0 +1,101 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "batch": "46-anatomy-candidate-1",
+  "baseline": "references/atlas-recompare-01/master-before.json",
+  "viewedSuffixes": [
+    "light-1x",
+    "dark-1x",
+    "native-light-2x",
+    "native-dark-2x"
+  ],
+  "decisions": [
+    {
+      "name": "bone",
+      "decision": "retained",
+      "purpose": "以細長骨幹與兩端膨大的骨端表示骨頭。",
+      "recognitionCues": "對角骨幹、雙瓣骨端與連續內腔。",
+      "confusableWith": [
+        "dumbbell",
+        "tooth"
+      ],
+      "defect": "本輪未發現需回修的具體缺陷，需維持骨幹和骨端之間的自然連續曲線。",
+      "sourceObservation": "現稿沿用Lucide的完整骨形輪廓，Tabler亦以雙瓣骨端收接骨幹。原生並列未呈現需要取代現稿的比例或留白優勢。",
+      "reason": "保留細長骨幹、兩端雙瓣與連續曲面，三角型不為差異而把自然骨端拉直或方化。",
+      "postComparison": "最新稿與Lucide／Tabler在16／20／24回比，骨幹空腔持續開放，骨端與直幹自然銜接，沒有分離圓泡或接縫。明暗DPR1／2、三角型與55%文字已查看。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "骨形為完整可見外輪廓，不需要隱藏邊界虛線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以輪廓與負空間呈現結構，不以淡化掩飾密度或接縫。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "維持單色平面人體圖示，不需要材質或光照漸層。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "tooth",
+      "decision": "refined",
+      "purpose": "以牙冠、齒身和雙根輪廓表示牙齒與牙科。",
+      "recognitionCues": "略凹牙冠、冠部短線、飽滿齒身與分開牙根。",
+      "confusableWith": [
+        "bone",
+        "pill"
+      ],
+      "defect": "原牙根偏長、尖端轉折過急，齒身向根部的收束較生硬。",
+      "sourceObservation": "Tabler的根端較短且圓順，Phosphor保留較尖細根部與交叉冠線。本次沿既有Tabler改作提煉較短圓根，維持單一冠線。",
+      "reason": "重畫齒身下半部至牙根的曲線，縮短根端並加寬根端轉彎；中央根隙仍以連續曲線連回牙體，牙冠和短冠線保持。",
+      "postComparison": "最新稿與Phosphor／Tabler回比，根端較短且圓順，齒身向雙根的收束連貫；16px的中央根隙仍清楚，沒有補上容易像損壞記號的交叉線。三角型、明暗DPR1／2與55%文字已查看。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "牙冠與牙根的可見輪廓採實線，不添加裝飾性虛線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以輪廓與負空間呈現結構，不以淡化掩飾密度或接縫。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "維持單色平面人體圖示，不需要材質或光照漸層。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "brain",
+      "decision": "refined",
+      "purpose": "以左右腦葉、中央縱裂與少量腦迴表示大腦。",
+      "recognitionCues": "左右對稱腦葉、上中下曲面起伏、中央縱裂與下方腦迴。",
+      "confusableWith": [
+        "lungs",
+        "cloud"
+      ],
+      "defect": "舊外輪廓有過多近似圓泡的起伏，腦葉層次零碎，內部彎線又加重分塊感。",
+      "sourceObservation": "Tabler將左右輪廓整理為上中下三段，腦迴由共同曲面延伸；Lucide細節較多。本次沿既有Tabler改作重新整理外輪廓和少量內線。",
+      "reason": "以三段自然圓弧重整每側腦葉，中央線接回上下，底部腦迴使用與輪廓相稱的弧線；20／24保留短上腦迴，16省略它們。",
+      "postComparison": "最新稿與Lucide／Tabler在三尺寸回比，外輪廓由零碎四段改成清楚三段，內部有較安定的空腔，中央縱裂與腦迴仍可讀；沒有為sharp角型拉直生物曲面。明暗DPR1／2及55%文字已查看。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "腦葉與腦迴為示意實體構造，不需要虛線或未完成狀態。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以輪廓與負空間呈現結構，不以淡化掩飾密度或接縫。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "維持單色平面人體圖示，不需要材質或光照漸層。"
+        }
+      },
+      "remaining": []
+    }
+  ]
+}

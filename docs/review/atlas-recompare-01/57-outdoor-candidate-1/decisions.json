@@ -1,0 +1,101 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "batch": "57-outdoor-candidate-1",
+  "baseline": "references/atlas-recompare-01/master-before.json",
+  "viewedSuffixes": [
+    "light-1x",
+    "dark-1x",
+    "native-light-2x",
+    "native-dark-2x"
+  ],
+  "decisions": [
+    {
+      "name": "campfire",
+      "decision": "retained",
+      "purpose": "以偏斜火焰與交叉木柴表示營火。",
+      "recognitionCues": "上尖下圓火腹、偏斜火舌與下方交叉柴線。",
+      "confusableWith": [
+        "heater",
+        "tent"
+      ],
+      "defect": "本輪未見需回修的具體缺陷，火腹、收束火尖與木柴間距成立。",
+      "sourceObservation": "Tabler的單層偏斜火焰與現稿接近，Phosphor加入內層火心。現稿的偏斜輪廓已能表達火舌，不需再加小內孔。",
+      "reason": "保留連續火焰外輪廓及交叉柴線，火腹與柴頂保持空隙，不增加火心或煙線壓縮小尺寸空間。",
+      "postComparison": "最新稿與Phosphor／Tabler在三尺寸回比，火舌與交叉木柴分層清楚，三角型、明暗DPR1／2及55%文字均已查看。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "主體輪廓與構造直接可見，不需要隱藏邊界虛線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以輪廓和留白區分部件，不需淡化必要訊號。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "維持單色平面圖示，不加入火焰或材質漸層。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "footprints",
+      "decision": "retained",
+      "purpose": "以錯落鞋底、足弓與鞋跟表示足跡。",
+      "recognitionCues": "雙鞋底左右不同朝向、前後錯位、足弓及鞋跟分界。",
+      "confusableWith": [
+        "shoe",
+        "paw-print"
+      ],
+      "defect": "本輪未見需要修正的具體缺陷，雙鞋底的比例、錯落高度與足弓曲線成立。",
+      "sourceObservation": "Lucide的非對稱鞋底與整合鞋跟已被現稿保留，Phosphor採分離鞋跟與較對稱前掌。現稿連續輪廓較能保留左右腳差異。",
+      "reason": "保留兩側足弓與錯落高度，鞋跟分界收在外輪廓內，不增加鞋底紋理，也不切出額外斷口。",
+      "postComparison": "與Lucide／Phosphor同尺寸回比，16仍能區分前掌及鞋跟，左右留白清楚，三角型、明暗DPR1／2與55%文字已查看。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "主體輪廓與構造直接可見，不需要隱藏邊界虛線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以輪廓和留白區分部件，不需淡化必要訊號。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "維持單色平面圖示，不加入火焰或材質漸層。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "hiking",
+      "decision": "refined",
+      "purpose": "以背包、前傾步態及登山杖表示健行。",
+      "recognitionCues": "斜背包、頭肩留白、跨步雙腿與手臂接入登山杖。",
+      "confusableWith": [
+        "person-walking",
+        "running"
+      ],
+      "defect": "前腿較向外張且膝部偏低，大腿稍長，落腳偏離頭部下方並靠近杖身。",
+      "sourceObservation": "Phosphor的前腿較緊湊、落腳靠近頭部垂直方向，Tabler採更密集的背包與手臂構造。沿既有Phosphor改作調整前腿比例。",
+      "reason": "前膝與前腳由x14收至x13，膝點由y17提高至16.5；縮短大腿、延長小腿並放寬杖腿間距，頭部、髖部、後腿與背包保持。",
+      "postComparison": "最新稿與Phosphor／Tabler回比，前腿比例較協調，步態與登山杖仍清楚，16背包孔及頭肩留白保持。三角型、明暗DPR1／2及55%文字已查看。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "主體輪廓與構造直接可見，不需要隱藏邊界虛線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以輪廓和留白區分部件，不需淡化必要訊號。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "維持單色平面圖示，不加入火焰或材質漸層。"
+        }
+      },
+      "remaining": []
+    }
+  ]
+}

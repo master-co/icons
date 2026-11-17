@@ -1,0 +1,206 @@
+<!doctype html><meta charset="utf-8"><title>65-arithmetic-candidate-1: divide</title><style>
+ *{box-sizing:border-box}body{margin:0;padding:24px;font:14px/20px system-ui;background:#fafafa;color:#27272a}body.dark{background:#18181b;color:#f4f4f5}
+ h1{font-size:18px;margin:0 0 8px}h2{font-size:14px;margin:0 0 8px}p{margin:0 0 16px}small{font-size:11px}
+ svg{display:block;flex-shrink:0}.sources{display:flex;gap:32px;margin-bottom:24px}.source{width:480px}.strip{display:flex;align-items:center;gap:24px;height:64px}
+ .masters{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}.native{display:grid;grid-template-columns:40px 40px 40px 40px 40px;align-items:center;gap:16px;height:48px}.heading{height:24px}
+ .zoom{display:flex;align-items:center;gap:32px;margin-top:16px}.zoom>div{display:flex;align-items:center;gap:12px}.context{display:flex;align-items:center;gap:16px;opacity:.55;height:44px}
+ </style><h1>divide · 除以 · 65-arithmetic-candidate-1</h1><p>Sources retain original geometry/strokes. A = task-start drawing; B = current candidate.</p>
+ <div class="sources"><section class="source"><h2>Lucide · divide · exact</h2><div class="strip"><svg 
+  xmlns="http://www.w3.org/2000/svg"
+ 
+ 
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+ width="16" height="16">
+  <circle cx="12" cy="6" r="1" />
+  <line x1="5" x2="19" y1="12" y2="12" />
+  <circle cx="12" cy="18" r="1" />
+</svg>
+<svg 
+  xmlns="http://www.w3.org/2000/svg"
+ 
+ 
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+ width="20" height="20">
+  <circle cx="12" cy="6" r="1" />
+  <line x1="5" x2="19" y1="12" y2="12" />
+  <circle cx="12" cy="18" r="1" />
+</svg>
+<svg 
+  xmlns="http://www.w3.org/2000/svg"
+ 
+ 
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+ width="24" height="24">
+  <circle cx="12" cy="6" r="1" />
+  <line x1="5" x2="19" y1="12" y2="12" />
+  <circle cx="12" cy="18" r="1" />
+</svg>
+<svg 
+  xmlns="http://www.w3.org/2000/svg"
+ 
+ 
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+ width="48" height="48">
+  <circle cx="12" cy="6" r="1" />
+  <line x1="5" x2="19" y1="12" y2="12" />
+  <circle cx="12" cy="18" r="1" />
+</svg>
+<small>16 / 20 / 24 / 48 CSS px</small></div></section><section class="source"><h2>Phosphor · divide · exact</h2><div class="strip"><svg  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor" width="16" height="16"><path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM128,80a16,16,0,1,0-16-16A16,16,0,0,0,128,80Zm0,96a16,16,0,1,0,16,16A16,16,0,0,0,128,176Z"/></svg><svg  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor" width="20" height="20"><path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM128,80a16,16,0,1,0-16-16A16,16,0,0,0,128,80Zm0,96a16,16,0,1,0,16,16A16,16,0,0,0,128,176Z"/></svg><svg  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor" width="24" height="24"><path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM128,80a16,16,0,1,0-16-16A16,16,0,0,0,128,80Zm0,96a16,16,0,1,0,16,16A16,16,0,0,0,128,176Z"/></svg><svg  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor" width="48" height="48"><path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM128,80a16,16,0,1,0-16-16A16,16,0,0,0,128,80Zm0,96a16,16,0,1,0,16,16A16,16,0,0,0,128,176Z"/></svg><small>16 / 20 / 24 / 48 CSS px</small></div></section></div>
+ <div class="masters"><section><h2>sharp</h2><div class="native heading"><small>px</small><small>Src 1</small><small>Src 2</small><small>A</small><small>B</small></div><div class="native"><small>16</small><svg 
+  xmlns="http://www.w3.org/2000/svg"
+ 
+ 
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+ width="16" height="16">
+  <circle cx="12" cy="6" r="1" />
+  <line x1="5" x2="19" y1="12" y2="12" />
+  <circle cx="12" cy="18" r="1" />
+</svg>
+<svg  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor" width="16" height="16"><path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM128,80a16,16,0,1,0-16-16A16,16,0,0,0,128,80Zm0,96a16,16,0,1,0,16,16A16,16,0,0,0,128,176Z"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" color="currentColor" stroke-width="1.25" stroke-linecap="square" stroke-linejoin="miter" stroke-miterlimit="3" focusable="false" aria-hidden="true"><path d="M3.3333 8L12.6667 8"/><circle cx="8" cy="3.6667" r="1" fill="currentColor" stroke="none"/><circle cx="8" cy="12.3333" r="1" fill="currentColor" stroke="none"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" color="currentColor" stroke-width="1.25" stroke-linecap="square" stroke-linejoin="miter" stroke-miterlimit="3" focusable="false" aria-hidden="true"><path d="M3.3333 8L12.6667 8"/><circle cx="8" cy="3.6667" r="1" fill="currentColor" stroke="none"/><circle cx="8" cy="12.3333" r="1" fill="currentColor" stroke="none"/></svg></div><div class="native"><small>20</small><svg 
+  xmlns="http://www.w3.org/2000/svg"
+ 
+ 
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+ width="20" height="20">
+  <circle cx="12" cy="6" r="1" />
+  <line x1="5" x2="19" y1="12" y2="12" />
+  <circle cx="12" cy="18" r="1" />
+</svg>
+<svg  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor" width="20" height="20"><path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM128,80a16,16,0,1,0-16-16A16,16,0,0,0,128,80Zm0,96a16,16,0,1,0,16,16A16,16,0,0,0,128,176Z"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" color="currentColor" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="miter" stroke-miterlimit="3" focusable="false" aria-hidden="true"><path d="M4.1667 10L15.8333 10"/><circle cx="10" cy="4.5833" r="1.2" fill="currentColor" stroke="none"/><circle cx="10" cy="15.4167" r="1.2" fill="currentColor" stroke="none"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" color="currentColor" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="miter" stroke-miterlimit="3" focusable="false" aria-hidden="true"><path d="M4.1667 10L15.8333 10"/><circle cx="10" cy="4.5833" r="1.2" fill="currentColor" stroke="none"/><circle cx="10" cy="15.4167" r="1.2" fill="currentColor" stroke="none"/></svg></div><div class="native"><small>24</small><svg 
+  xmlns="http://www.w3.org/2000/svg"
+ 
+ 
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+ width="24" height="24">
+  <circle cx="12" cy="6" r="1" />
+  <line x1="5" x2="19" y1="12" y2="12" />
+  <circle cx="12" cy="18" r="1" />
+</svg>
+<svg  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor" width="24" height="24"><path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM128,80a16,16,0,1,0-16-16A16,16,0,0,0,128,80Zm0,96a16,16,0,1,0,16,16A16,16,0,0,0,128,176Z"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" color="currentColor" stroke-width="1.75" stroke-linecap="square" stroke-linejoin="miter" stroke-miterlimit="3" focusable="false" aria-hidden="true"><path d="M5 12L19 12"/><circle cx="12" cy="5.5" r="1.4" fill="currentColor" stroke="none"/><circle cx="12" cy="18.5" r="1.4" fill="currentColor" stroke="none"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" color="currentColor" stroke-width="1.75" stroke-linecap="square" stroke-linejoin="miter" stroke-miterlimit="3" focusable="false" aria-hidden="true"><path d="M5 12L19 12"/><circle cx="12" cy="5.5" r="1.4" fill="currentColor" stroke="none"/><circle cx="12" cy="18.5" r="1.4" fill="currentColor" stroke="none"/></svg></div></section><section><h2>soft</h2><div class="native heading"><small>px</small><small>Src 1</small><small>Src 2</small><small>A</small><small>B</small></div><div class="native"><small>16</small><svg 
+  xmlns="http://www.w3.org/2000/svg"
+ 
+ 
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+ width="16" height="16">
+  <circle cx="12" cy="6" r="1" />
+  <line x1="5" x2="19" y1="12" y2="12" />
+  <circle cx="12" cy="18" r="1" />
+</svg>
+<svg  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor" width="16" height="16"><path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM128,80a16,16,0,1,0-16-16A16,16,0,0,0,128,80Zm0,96a16,16,0,1,0,16,16A16,16,0,0,0,128,176Z"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" color="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="3" focusable="false" aria-hidden="true"><path d="M3.3333 8L12.6667 8"/><circle cx="8" cy="3.6667" r="1" fill="currentColor" stroke="none"/><circle cx="8" cy="12.3333" r="1" fill="currentColor" stroke="none"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" color="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="3" focusable="false" aria-hidden="true"><path d="M3.3333 8L12.6667 8"/><circle cx="8" cy="3.6667" r="1" fill="currentColor" stroke="none"/><circle cx="8" cy="12.3333" r="1" fill="currentColor" stroke="none"/></svg></div><div class="native"><small>20</small><svg 
+  xmlns="http://www.w3.org/2000/svg"
+ 
+ 
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+ width="20" height="20">
+  <circle cx="12" cy="6" r="1" />
+  <line x1="5" x2="19" y1="12" y2="12" />
+  <circle cx="12" cy="18" r="1" />
+</svg>
+<svg  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor" width="20" height="20"><path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM128,80a16,16,0,1,0-16-16A16,16,0,0,0,128,80Zm0,96a16,16,0,1,0,16,16A16,16,0,0,0,128,176Z"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" color="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="3" focusable="false" aria-hidden="true"><path d="M4.1667 10L15.8333 10"/><circle cx="10" cy="4.5833" r="1.2" fill="currentColor" stroke="none"/><circle cx="10" cy="15.4167" r="1.2" fill="currentColor" stroke="none"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" color="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="3" focusable="false" aria-hidden="true"><path d="M4.1667 10L15.8333 10"/><circle cx="10" cy="4.5833" r="1.2" fill="currentColor" stroke="none"/><circle cx="10" cy="15.4167" r="1.2" fill="currentColor" stroke="none"/></svg></div><div class="native"><small>24</small><svg 
+  xmlns="http://www.w3.org/2000/svg"
+ 
+ 
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+ width="24" height="24">
+  <circle cx="12" cy="6" r="1" />
+  <line x1="5" x2="19" y1="12" y2="12" />
+  <circle cx="12" cy="18" r="1" />
+</svg>
+<svg  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor" width="24" height="24"><path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM128,80a16,16,0,1,0-16-16A16,16,0,0,0,128,80Zm0,96a16,16,0,1,0,16,16A16,16,0,0,0,128,176Z"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" color="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="3" focusable="false" aria-hidden="true"><path d="M5 12L19 12"/><circle cx="12" cy="5.5" r="1.4" fill="currentColor" stroke="none"/><circle cx="12" cy="18.5" r="1.4" fill="currentColor" stroke="none"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" color="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="3" focusable="false" aria-hidden="true"><path d="M5 12L19 12"/><circle cx="12" cy="5.5" r="1.4" fill="currentColor" stroke="none"/><circle cx="12" cy="18.5" r="1.4" fill="currentColor" stroke="none"/></svg></div></section><section><h2>rounded</h2><div class="native heading"><small>px</small><small>Src 1</small><small>Src 2</small><small>A</small><small>B</small></div><div class="native"><small>16</small><svg 
+  xmlns="http://www.w3.org/2000/svg"
+ 
+ 
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+ width="16" height="16">
+  <circle cx="12" cy="6" r="1" />
+  <line x1="5" x2="19" y1="12" y2="12" />
+  <circle cx="12" cy="18" r="1" />
+</svg>
+<svg  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor" width="16" height="16"><path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM128,80a16,16,0,1,0-16-16A16,16,0,0,0,128,80Zm0,96a16,16,0,1,0,16,16A16,16,0,0,0,128,176Z"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" color="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="3" focusable="false" aria-hidden="true"><path d="M3.3333 8L12.6667 8"/><circle cx="8" cy="3.6667" r="1" fill="currentColor" stroke="none"/><circle cx="8" cy="12.3333" r="1" fill="currentColor" stroke="none"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" color="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="3" focusable="false" aria-hidden="true"><path d="M3.3333 8L12.6667 8"/><circle cx="8" cy="3.6667" r="1" fill="currentColor" stroke="none"/><circle cx="8" cy="12.3333" r="1" fill="currentColor" stroke="none"/></svg></div><div class="native"><small>20</small><svg 
+  xmlns="http://www.w3.org/2000/svg"
+ 
+ 
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+ width="20" height="20">
+  <circle cx="12" cy="6" r="1" />
+  <line x1="5" x2="19" y1="12" y2="12" />
+  <circle cx="12" cy="18" r="1" />
+</svg>
+<svg  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor" width="20" height="20"><path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM128,80a16,16,0,1,0-16-16A16,16,0,0,0,128,80Zm0,96a16,16,0,1,0,16,16A16,16,0,0,0,128,176Z"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" color="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="3" focusable="false" aria-hidden="true"><path d="M4.1667 10L15.8333 10"/><circle cx="10" cy="4.5833" r="1.2" fill="currentColor" stroke="none"/><circle cx="10" cy="15.4167" r="1.2" fill="currentColor" stroke="none"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" color="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="3" focusable="false" aria-hidden="true"><path d="M4.1667 10L15.8333 10"/><circle cx="10" cy="4.5833" r="1.2" fill="currentColor" stroke="none"/><circle cx="10" cy="15.4167" r="1.2" fill="currentColor" stroke="none"/></svg></div><div class="native"><small>24</small><svg 
+  xmlns="http://www.w3.org/2000/svg"
+ 
+ 
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+ width="24" height="24">
+  <circle cx="12" cy="6" r="1" />
+  <line x1="5" x2="19" y1="12" y2="12" />
+  <circle cx="12" cy="18" r="1" />
+</svg>
+<svg  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor" width="24" height="24"><path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM128,80a16,16,0,1,0-16-16A16,16,0,0,0,128,80Zm0,96a16,16,0,1,0,16,16A16,16,0,0,0,128,176Z"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" color="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="3" focusable="false" aria-hidden="true"><path d="M5 12L19 12"/><circle cx="12" cy="5.5" r="1.4" fill="currentColor" stroke="none"/><circle cx="12" cy="18.5" r="1.4" fill="currentColor" stroke="none"/></svg><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" color="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="3" focusable="false" aria-hidden="true"><path d="M5 12L19 12"/><circle cx="12" cy="5.5" r="1.4" fill="currentColor" stroke="none"/><circle cx="12" cy="18.5" r="1.4" fill="currentColor" stroke="none"/></svg></div></section></div>
+ <div class="zoom"><div><small>A · 24 × 4</small><svg xmlns="http://www.w3.org/2000/svg" width="96" height="96" viewBox="0 0 24 24" fill="none" stroke="currentColor" color="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="3" focusable="false" aria-hidden="true"><path d="M5 12L19 12"/><circle cx="12" cy="5.5" r="1.4" fill="currentColor" stroke="none"/><circle cx="12" cy="18.5" r="1.4" fill="currentColor" stroke="none"/></svg></div><div><small>B · 24 × 4</small><svg xmlns="http://www.w3.org/2000/svg" width="96" height="96" viewBox="0 0 24 24" fill="none" stroke="currentColor" color="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="3" focusable="false" aria-hidden="true"><path d="M5 12L19 12"/><circle cx="12" cy="5.5" r="1.4" fill="currentColor" stroke="none"/><circle cx="12" cy="18.5" r="1.4" fill="currentColor" stroke="none"/></svg></div><div><small>B · 16 × 4</small><svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 16 16" fill="none" stroke="currentColor" color="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="3" focusable="false" aria-hidden="true"><path d="M3.3333 8L12.6667 8"/><circle cx="8" cy="3.6667" r="1" fill="currentColor" stroke="none"/><circle cx="8" cy="12.3333" r="1" fill="currentColor" stroke="none"/></svg></div><div><small>B sharp · 24 × 4</small><svg xmlns="http://www.w3.org/2000/svg" width="96" height="96" viewBox="0 0 24 24" fill="none" stroke="currentColor" color="currentColor" stroke-width="1.75" stroke-linecap="square" stroke-linejoin="miter" stroke-miterlimit="3" focusable="false" aria-hidden="true"><path d="M5 12L19 12"/><circle cx="12" cy="5.5" r="1.4" fill="currentColor" stroke="none"/><circle cx="12" cy="18.5" r="1.4" fill="currentColor" stroke="none"/></svg></div></div>
+ <div class="context"><span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" color="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="3" focusable="false" aria-hidden="true"><path d="M3.3333 8L12.6667 8"/><circle cx="8" cy="3.6667" r="1" fill="currentColor" stroke="none"/><circle cx="8" cy="12.3333" r="1" fill="currentColor" stroke="none"/></svg></span><span style="font-size:14px">除以 Project</span><span><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" color="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="3" focusable="false" aria-hidden="true"><path d="M4.1667 10L15.8333 10"/><circle cx="10" cy="4.5833" r="1.2" fill="currentColor" stroke="none"/><circle cx="10" cy="15.4167" r="1.2" fill="currentColor" stroke="none"/></svg></span><span style="font-size:16px">除以 Project</span><span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" color="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="3" focusable="false" aria-hidden="true"><path d="M5 12L19 12"/><circle cx="12" cy="5.5" r="1.4" fill="currentColor" stroke="none"/><circle cx="12" cy="18.5" r="1.4" fill="currentColor" stroke="none"/></svg></span><span style="font-size:18px">除以 Project</span><small>55%</small></div>

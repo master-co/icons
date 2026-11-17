@@ -14,7 +14,10 @@ export function medal({g,o,c,l}){
  return [...exteriorDetails(disk,enclosedDetails(ribbon,[l(8,3,8,12),l(16,3,16,12)],g),g)];
 }
 export function ribbon({p}){return [p('M7 21C10.5 17 16.5 10.2 16.5 7C16.5 1.5 7.5 1.5 7.5 7C7.5 10.2 13.5 17 17 21')]}
-export function partyPopper({g,o,l,d}){return [o([[3,21],[7,10],[14,17]],true,g.tip),l(12,3,12,6),l(17,7,20,4),l(18,12,21,12),d(20,19,g.v(.7,.85,1))]}
+export function partyPopper({g,o,l,d}){
+ const confetti=g.v(.75,.9,1);
+ return [o([[3,21],[7,10],[14,17]],true,g.tip),d(11.5,4.5,confetti),l(17,7,20,4),l(18,12,21,12),d(20,19,confetti)];
+}
 export function balloon({g,p,detail}){
  const shell=p('M18 8C18 12 14.5 16 12 16S6 12 6 8A6 6 0 0 1 18 8Z');
  return [...exteriorDetails(shell,[p('M12 16V17A2 2 0 0 0 14 19H15A2 2 0 0 1 17 21V22')],g),...detail(p('M12 6A2 2 0 0 1 14 8'))];

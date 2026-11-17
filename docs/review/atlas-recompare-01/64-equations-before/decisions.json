@@ -1,0 +1,101 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "batch": "64-equations-before",
+  "baseline": "references/atlas-recompare-01/master-before.json",
+  "viewedSuffixes": [
+    "light-1x",
+    "dark-1x",
+    "native-light-2x",
+    "native-dark-2x"
+  ],
+  "decisions": [
+    {
+      "name": "radical",
+      "decision": "retained",
+      "purpose": "以根號的低鉤、長斜筆及頂橫表示開根運算。",
+      "recognitionCues": "左側短橫與低鉤、長上升斜線及右頂橫。",
+      "confusableWith": [
+        "check",
+        "function-square"
+      ],
+      "defect": "本輪未見需要修正的具體比例、留白或接點缺陷。",
+      "sourceObservation": "Lucide與Tabler均採短鉤接長斜筆，現稿保留此字形比例；sharp的鉤點上移補償斜接外伸，沒有將尖角直接放到畫布下緣。",
+      "reason": "保留現有根號比例與角型的鉤點補償；soft／rounded使用實際微圓，sharp保持尖折。",
+      "postComparison": "三尺寸的低鉤、長斜筆及頂橫清楚，sharp尖端可見範圍與其他角型接近，未見需改變姿態的優勢。 已與兩份來源回比，三尺寸三角型、明暗DPR1／2及55%文字均已查看。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "數學運算符號需完整連續筆畫，不加入虛線或隱藏線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "所有筆畫共同承載運算語意，不分透明度層次。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "維持單色數學字形，不加入材質漸層。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "equal",
+      "decision": "retained",
+      "purpose": "以等長平行的兩條橫線表示等於關係。",
+      "recognitionCues": "上下等長橫線、相同端點與均勻垂直留白。",
+      "confusableWith": [
+        "not-equal",
+        "minus"
+      ],
+      "defect": "本輪未見需要修正的具體比例、留白或接點缺陷。",
+      "sourceObservation": "Lucide的雙橫間距較寬，Tabler較緊；現稿置於兩者之間，14單位寬與6單位間距保持清楚開口。",
+      "reason": "保留共享的雙橫母型及sharp平切、soft／rounded圓帽；不延長或壓縮字面。",
+      "postComparison": "16px仍為兩條清楚分離的橫線，20／24的長寬與間距平衡；與不等於共用幾何。 已與兩份來源回比，三尺寸三角型、明暗DPR1／2及55%文字均已查看。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "數學運算符號需完整連續筆畫，不加入虛線或隱藏線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "所有筆畫共同承載運算語意，不分透明度層次。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "維持單色數學字形，不加入材質漸層。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "not-equal",
+      "decision": "retained",
+      "purpose": "以等號加貫穿斜筆表示不等於關係。",
+      "recognitionCues": "等長雙橫與由左下往右上的連續斜筆。",
+      "confusableWith": [
+        "equal",
+        "divide"
+      ],
+      "defect": "本輪未見需要修正的具體比例、留白或接點缺陷。",
+      "sourceObservation": "Lucide與Phosphor的斜筆均穿過雙橫，現稿斜率略陡但上下伸出對稱；不需要為斜筆增加遮擋斷口。",
+      "reason": "保留等號母型與穿越斜筆，交點維持實接；這是完整數學字形，不把斜筆當前景徽標挖空雙橫。",
+      "postComparison": "三尺寸斜筆與雙橫仍能分辨，交會沒有額外端帽或碎線，sharp與微圓端帽各自成立。 已與兩份來源回比，三尺寸三角型、明暗DPR1／2及55%文字均已查看。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "數學運算符號需完整連續筆畫，不加入虛線或隱藏線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "所有筆畫共同承載運算語意，不分透明度層次。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "維持單色數學字形，不加入材質漸層。"
+        }
+      },
+      "remaining": []
+    }
+  ]
+}

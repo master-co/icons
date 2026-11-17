@@ -1,0 +1,186 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "baseline": "references/atlas-recompare-01/master-before.json",
+  "viewedSuffixes": [
+    "light-1x",
+    "dark-1x",
+    "native-light-2x",
+    "native-dark-2x"
+  ],
+  "batch": "114-user-restore",
+  "decisions": [
+    {
+      "name": "carrot",
+      "decision": "retained",
+      "purpose": "以漸尖根部、三筆葉梗與短根紋呈現胡蘿蔔。",
+      "recognitionCues": "漸尖根部、三筆葉梗與 20／24px 的同側兩道短根紋。",
+      "confusableWith": [
+        "corn",
+        "pencil"
+      ],
+      "defect": "使用者指定以本輪對照中的精修前樣式為準。",
+      "sourceObservation": "Lucide 與 Tabler 採較緊湊的葉冠與兩側根紋，本庫前稿以三筆展開葉梗與同側根紋區分。",
+      "reason": "依使用者指定恢復基準稿的根紋位置，16px 仍只有一道根紋。",
+      "postComparison": "明暗底與兩來源並列後，20／24px 的第二道根紋回到左側近根尖處，16px 仍保留一條。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "食材以完整物體輪廓表意，沒有隱藏邊界或未完成狀態。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以空白和部件數量控制密度，沒有前後淡化需求。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "單色食材輪廓不需要連續漸層。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "heart-pulse",
+      "decision": "retained",
+      "purpose": "以完整心形包覆先升後降的脈波表示心跳。",
+      "recognitionCues": "雙肩心形、居中尖峰與谷點及收進側邊的端點。",
+      "confusableWith": [
+        "heart",
+        "activity"
+      ],
+      "defect": "使用者指定以本輪對照中的精修前樣式為準。",
+      "sourceObservation": "Lucide 保留完整心形並用內置波線，Tabler 版把波線從左側引入，心形輪廓開口較明顯。",
+      "reason": "依使用者指定恢復先升後降的基準脈波，以及 y12 的起訖線。",
+      "postComparison": "三尺寸回比來源後，心形內的脈波先升後降，兩端接入心形並與本輪前稿完全相同。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "醫療物件以實體輪廓與必要構造表示，不需要未完成或隱藏邊界訊號。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "液柱、孔點與醫療標記均保持實色，不用淡化掩蓋密度問題。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "單色醫療圖示不需要材質漸層或光澤。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "basket-check",
+      "decision": "retained",
+      "purpose": "以雙斜提把和右下勾號呈現已完成的購物籃。",
+      "recognitionCues": "共同籃身的兩個斜提把、內側通風線與右下勾號。",
+      "confusableWith": [
+        "basket-plus"
+      ],
+      "defect": "使用者指定以本輪對照中的精修前樣式為準。",
+      "sourceObservation": "Hugeicons 保留斜把與勾號，Tabler 用圓槽辨識籃身，Lucide 的母型提供雙斜提把構造對照。",
+      "reason": "依使用者指定把兩道通風線回到基準位置，右道線依勾號避讓輪廓截短。",
+      "postComparison": "16、20、24px 和來源並列時，右下勾號仍然清楚，內部右側通風線還原為與基準稿相同的裁切。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "完整交易物件與確定狀態不需要虛線表達未完成邊界。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以真透明避讓和輪廓空白分開狀態，不用淡化掩蓋相接線條。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "單色外輪廓與必要內線足以表達商務物件，不需材質漸層。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "basket-plus",
+      "decision": "retained",
+      "purpose": "以雙斜提把和右下加號呈現新增購物籃。",
+      "recognitionCues": "共同籃身的兩個斜提把、內側通風線與右下加號。",
+      "confusableWith": [
+        "bag-plus"
+      ],
+      "defect": "使用者指定以本輪對照中的精修前樣式為準。",
+      "sourceObservation": "Hugeicons 用斜把與透明切口凸顯加號，Tabler 採圓孔與立把，Lucide 母型保留清楚的斜把。",
+      "reason": "依使用者指定把兩道通風線回到基準位置，右道線依加號避讓輪廓截短。",
+      "postComparison": "對照來源與三個尺寸後，加號四翼仍可辨識，右側內線恢復原先依加號避讓的裁切。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "完整交易物件與確定狀態不需要虛線表達未完成邊界。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以真透明避讓和輪廓空白分開狀態，不用淡化掩蓋相接線條。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "單色外輪廓與必要內線足以表達商務物件，不需材質漸層。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "bezier-curve",
+      "decision": "retained",
+      "purpose": "以三個空心控制點、對稱貝茲拱與控制桿呈現曲線。",
+      "recognitionCues": "水平控制桿、三枚圓形空心控制點與兩道對稱弧肩。",
+      "confusableWith": [
+        "spline"
+      ],
+      "defect": "使用者指定以本輪對照中的精修前樣式為準。",
+      "sourceObservation": "Phosphor 使用較簡約的圓形節點，Tabler 則增加桿端小節點並以方形下節點表示控制柄。",
+      "reason": "依使用者指定把拱頂回到中央控制點的基準高度，保留原先同軸的弧肩造型。",
+      "postComparison": "明暗底與兩來源並列後，三尺寸的高拱與水平控制桿交會方式均與本輪前稿一致。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "這批呈現可見路徑及形體表面，不額外描繪隱藏邊或選取虛線框。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "控制節點、連線與幾何面由空腔和輪廓辨識，不靠淡化曲線區分。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "單色邊界與必要稜線足以表達立體幾何，不用光照漸層補形體。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "waves",
+      "decision": "retained",
+      "purpose": "以三道平行雙週期曲線表現水面起伏。",
+      "recognitionCues": "等間距的三條平滑波線，各自有兩次上揚和下彎。",
+      "confusableWith": [
+        "wind",
+        "cloud-fog",
+        "droplet"
+      ],
+      "defect": "使用者指定以本輪對照中的精修前樣式為準。",
+      "sourceObservation": "Lucide 的三道短波有兩次起伏，Tabler 的水波採較寬的單週期，兩者都以平行曲線表示波浪。",
+      "reason": "依使用者指定恢復雙週期的基準波形，以及原有的波峰和波谷位置。",
+      "postComparison": "三尺寸與兩來源並列時，還原後的三道波線都保留兩段短波，各線間距與基準稿一致。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "物體的連續輪廓及構造已能表意，無隱藏邊界或狀態虛線需求。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "主體與部件以實際留白分離，不靠淡化處理密度。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "單色平面輪廓不需要連續漸層。"
+        }
+      },
+      "remaining": []
+    }
+  ]
+}

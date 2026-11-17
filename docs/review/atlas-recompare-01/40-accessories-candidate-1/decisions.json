@@ -1,0 +1,101 @@
+{
+  "reviewer": "Codex (AI)",
+  "batch": "40-accessories-candidate-1",
+  "baseline": "references/atlas-recompare-01/master-before.json",
+  "date": "2026-11-18",
+  "viewedSuffixes": [
+    "light-1x",
+    "dark-1x",
+    "native-light-2x",
+    "native-dark-2x"
+  ],
+  "decisions": [
+    {
+      "name": "glasses",
+      "decision": "refined",
+      "purpose": "以雙圓鏡框、鼻橋與展開鏡腳表示一般眼鏡。",
+      "recognitionCues": "左右圓框、弧形鼻橋、向後展開的成對鏡腳。",
+      "confusableWith": [
+        "sunglasses",
+        "binoculars"
+      ],
+      "defect": "舊鏡腳上端轉彎短而急，與圓鏡框的自然曲面不協調；鏡橋也用自由曲線近似圓弧。",
+      "sourceObservation": "Lucide以較長彎曲鏡腳和半圓鼻橋形成自然承接，Iconoir直腳與平橋更簡約。沿既有Lucide改作吸收長彎過渡，不換成另一種鏡框。",
+      "reason": "鏡腳上端略降，向內收束並以較長曲線接回斜桿；鼻橋改為半徑2的圓弧，仍按兩個鏡框外部收口。左右圓框及孔徑保持。",
+      "postComparison": "最新稿與Lucide／Iconoir在16／20／24回比，鏡腳向內彎的姿態更自然，鼻橋不刺進鏡孔，原生16兩孔及橋間空白仍清楚。三角型、明暗DPR1／2及55%文字已查看，曲面在sharp也保持。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "鏡框、鼻橋與鏡腳均直接可見，不需要隱藏邊界。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "各部件以共同輪廓和留白區分，不需要淡化。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "配件以單色平面輪廓表意，不添加鏡面或金屬光照漸層。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "sunglasses",
+      "decision": "retained",
+      "purpose": "以平頂鏡框和鏡片斜線表示太陽眼鏡。",
+      "recognitionCues": "平頂雙框、鏡片斜線、直鼻橋及後伸鏡腳。",
+      "confusableWith": [
+        "glasses",
+        "binoculars"
+      ],
+      "defect": "本輪重新核對鏡片斜線與框緣密度，未發現必須重畫的黏合或失衡。",
+      "sourceObservation": "Phosphor使用直立鏡腳與平頂鏡框，Tabler使用斜鏡腳及短鼻橋。現稿已採清楚的平頂雙框、斜鏡腳與單條鏡片斜線，構造簡潔。",
+      "reason": "保留目前平頂鏡框、斜鏡腳與斜線比例。斜線墨線限制在鏡片內，sharp鏡腳接框使用平切端帽；不為與圓框眼鏡完全相同而換掉成立的款式。",
+      "postComparison": "最新稿與Phosphor／Tabler在16／20／24重新並列，斜線兩側空白仍可辨，雙框與鏡腳未出現多餘凸點。三角型及明暗DPR1／2已重新查看，這是本輪具體保留判斷。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "鏡框、鼻橋與鏡腳均直接可見，不需要隱藏邊界。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "鏡片以斜線表達，保持輪廓與留白，不用透明度補救空間。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "配件以單色平面輪廓表意，不添加鏡面或金屬光照漸層。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "watch",
+      "decision": "refined",
+      "purpose": "以圓形錶盤、上下錶帶與雙指針表示手錶。",
+      "recognitionCues": "中央圓錶殼、梯形錶帶及同心雙指針。",
+      "confusableWith": [
+        "clock",
+        "timer"
+      ],
+      "defect": "原錶帶為兩個矩形框，缺少接近錶殼時展開的肩部，像圓盤疊在直框上。",
+      "sourceObservation": "Lucide與Phosphor的錶帶都朝錶殼展開、端部收窄，整體比直立矩形自然。沿既有Phosphor改作修正錶帶輪廓。",
+      "reason": "上下帶端寬8縮至6，接近錶殼的兩側展至8.5，形成對稱梯形。錶帶依錶殼外部收口，錶面半徑與指針保持，角型由實際倒角區分。",
+      "postComparison": "最新稿與Lucide／Phosphor在16／20／24回比，錶帶到錶殼的肩部有連續展開感，上下孔在16仍開放，指針留白維持。三角型、明暗DPR1／2及55%文字皆已查看，未增加刻度或錶冠。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "錶殼與錶帶均為可見結構，不需要隱藏連接虛線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "各部件以共同輪廓和留白區分，不需要淡化。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "配件以單色平面輪廓表意，不添加鏡面或金屬光照漸層。"
+        }
+      },
+      "remaining": []
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "batch": "59-science-candidate-1",
+  "baseline": "references/atlas-recompare-01/master-before.json",
+  "viewedSuffixes": [
+    "light-1x",
+    "dark-1x",
+    "native-light-2x",
+    "native-dark-2x"
+  ],
+  "decisions": [
+    {
+      "name": "atom",
+      "decision": "retained",
+      "purpose": "以兩條交叉橢圓軌道與中央點表示原子。",
+      "recognitionCues": "對稱雙軌道、中央原子核與四側開放空腔。",
+      "confusableWith": [
+        "orbit",
+        "dna"
+      ],
+      "defect": "本輪未見需要修正的具體缺陷，軌道比例及中央留白成立。",
+      "sourceObservation": "Lucide與Phosphor皆以對稱雙軌道及中央核表達原子，現稿採共同橢圓參數保持交叉對稱，密度已接近來源。",
+      "reason": "保留兩條橢圓及按尺寸調整的核點，不增加第三條軌道或電子標記；自然曲線在三角型共用。",
+      "postComparison": "最新稿與Lucide／Phosphor在16／20／24回比，中央點與軌道間仍有空白，交會及四側空腔清楚；三角型、明暗DPR1／2與55%文字已查看。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "可見輪廓與結構均以連續線表達，不需隱藏線或軌跡虛線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以輪廓與留白分辨部件，不以淡化處理交會或液面。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "維持單色平面科學圖示，不加入材質或液體漸層。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "flask-conical",
+      "decision": "refined",
+      "purpose": "以長頸、錐形瓶腹、平底及水平液面表示錐形燒瓶。",
+      "recognitionCues": "窄瓶頸、向下展開的斜壁、平底與水平液面。",
+      "confusableWith": [
+        "flask-round",
+        "test-tube"
+      ],
+      "defect": "瓶頸接入斜腹只有預設微圓，sharp仍為直接折點，玻璃肩部過渡偏硬。",
+      "sourceObservation": "Lucide在直頸與斜腹之間使用獨立圓弧，Tabler較直折且瓶腹較窄；沿既有Lucide改作補上結構肩弧。",
+      "reason": "兩側肩部統一使用24母型半徑2的相切圓弧，不隨角型取消；瓶口、瓶腹寬度、平底與液面保持，底角仍依角型分別處理。",
+      "postComparison": "與Lucide／Tabler回比，瓶頸到斜腹的過渡更連續，sharp仍清楚保留平底角型，三尺寸頸孔與液面留白不變。三角型、明暗DPR1／2及55%文字均已查看。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "可見輪廓與結構均以連續線表達，不需隱藏線或軌跡虛線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以輪廓與留白分辨部件，不以淡化處理交會或液面。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "維持單色平面科學圖示，不加入材質或液體漸層。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "flask-round",
+      "decision": "retained",
+      "purpose": "以直頸、收肩圓腹與水平液面表示圓底燒瓶。",
+      "recognitionCues": "窄瓶頸、相切肩部與完整圓形瓶腹。",
+      "confusableWith": [
+        "flask-conical",
+        "test-tube"
+      ],
+      "defect": "本輪未見需要回修的具體缺陷，肩部到圓腹的切線承接已成立。",
+      "sourceObservation": "Hugeicons的連續收肩及飽滿圓腹已被現稿保留，Lucide更簡潔的直頸入圓構造沒有提供額外比例優勢。",
+      "reason": "保留現有連續肩部與圓腹，液面保持水平；不採用來源的晃動水紋，維持與實驗器皿家族一致的靜態液面。",
+      "postComparison": "最新稿與Lucide／Hugeicons同尺寸回比，瓶頸、肩部與圓腹連貫，液面收在瓶壁內。三尺寸、三角型、明暗DPR1／2與55%文字已查看。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "可見輪廓與結構均以連續線表達，不需隱藏線或軌跡虛線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以輪廓與留白分辨部件，不以淡化處理交會或液面。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "維持單色平面科學圖示，不加入材質或液體漸層。"
+        }
+      },
+      "remaining": []
+    }
+  ]
+}

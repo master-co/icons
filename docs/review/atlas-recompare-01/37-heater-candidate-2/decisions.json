@@ -1,0 +1,43 @@
+{
+  "reviewer": "Codex (AI)",
+  "batch": "37-heater-candidate-2",
+  "baseline": "references/atlas-recompare-01/master-before.json",
+  "date": "2026-11-17",
+  "viewedSuffixes": [
+    "light-1x",
+    "dark-1x",
+    "native-light-2x",
+    "native-dark-2x"
+  ],
+  "decisions": [
+    {
+      "name": "heater",
+      "decision": "refined",
+      "purpose": "以帶腳散熱機身與上升熱氣表示暖氣機與室內加熱。",
+      "recognitionCues": "帶腳機身、三列散熱格柵、從頂部開口上升的雙熱氣。",
+      "confusableWith": [
+        "air-conditioner",
+        "oven"
+      ],
+      "defect": "舊稿熱氣短且與機身分離過遠，較像兩個小符號浮在低矮機盒上；第一候選只拉長一點，整體承接仍弱。",
+      "sourceObservation": "Lucide與Hugeicons都讓熱氣從機殼上方留口升起，熱氣曲線較長，整體比封閉低盒更有發熱姿態。沿既有Lucide改作吸收此構造。",
+      "reason": "機身頂部上移至y8，中央留出開口；雙熱氣靠近中軸並延長至5.5單位。格柵延長至4單位，雙腳保持；外殼半徑依角型變化。第一候選保存後退回重畫。",
+      "postComparison": "第二候選與Lucide／Hugeicons在16／20／24重新並列，熱氣和機殼形成一體的上升方向，原生16仍可分開讀出兩道氣流及三條格柵。保留較簡潔的無控制鈕機殼；明暗DPR1／2與三角型已目視，沒有以工程通過代替第一候選回修。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "熱氣以連續波線表達流動，不需要虛線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "熱氣與機殼以位置區分，主要輪廓維持一致可辨對比。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "發熱方向由曲線表達，不增加連續透明漸層。"
+        }
+      },
+      "remaining": []
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "batch": "49-people-candidate-1",
+  "baseline": "references/atlas-recompare-01/master-before.json",
+  "viewedSuffixes": [
+    "light-1x",
+    "dark-1x",
+    "native-light-2x",
+    "native-dark-2x"
+  ],
+  "decisions": [
+    {
+      "name": "person-standing",
+      "decision": "refined",
+      "purpose": "以直立軀幹、伸展雙臂和分開雙腿表示站立的人。",
+      "recognitionCues": "圓頭、直立中軸、輕微上揚雙臂、共同髖點與分開雙腿。",
+      "confusableWith": [
+        "person-walking",
+        "user"
+      ],
+      "defect": "雙臂相對軀幹和腿部偏寬，人物姿態過度橫向伸展，整體比例略鬆散。",
+      "sourceObservation": "Lucide的伸臂較收斂，與軀幹及雙腿比例更集中；Phosphor採較寬的下垂弧臂。本次維持Lucide式上揚雙臂，適度收窄臂展。",
+      "reason": "雙臂端點各內收1個母型單位，總臂展17減至15；頭部、肩線高度、軀幹與雙腿保持，維持左右對稱及共同髖點。",
+      "postComparison": "最新稿與Lucide／Phosphor回比，伸臂姿態仍清楚，頭肩間距保持，人物比例較集中；三尺寸、三角型、明暗DPR1／2與55%文字已目視。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "身體姿態以完整實線表示，不添加運動或隱藏虛線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "前後肢體以方向與留白區分，維持一致實色輪廓。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "單色人物符號不需要光照或材質漸層。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "person-walking",
+      "decision": "refined",
+      "purpose": "以前傾軀幹、擺臂與錯開雙腿表示步行的人。",
+      "recognitionCues": "前移頭部、連續擺臂、斜軀幹、直腿與屈膝腿。",
+      "confusableWith": [
+        "person-standing",
+        "running"
+      ],
+      "defect": "原屈膝腿的大腿較長、小腿偏短，膝位過低，跨步略顯蹲屈。",
+      "sourceObservation": "Phosphor的髖點與膝點較高，小腿有較清楚的長度；Tabler使用折線擺臂與不同步態。本次沿既有Phosphor姿態改善腿部比例。",
+      "reason": "髖部接點由y15上移至14並精確落在斜軀幹；膝部由15,18移至14.5,17，腳端隨之內收0.5，讓大腿縮短、小腿延長。頭部及擺臂不變。",
+      "postComparison": "最新稿與Phosphor／Tabler在16／20／24回比，步態更舒展，屈膝與直腿仍分離，髖點沒有接縫；三角型實際膝部處理、明暗DPR1／2及55%文字均已查看。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "步行由四肢姿態表達，不使用速度線或虛線替代動作。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "前後肢體以方向與留白區分，維持一致實色輪廓。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "單色人物符號不需要光照或材質漸層。"
+        }
+      },
+      "remaining": []
+    }
+  ]
+}

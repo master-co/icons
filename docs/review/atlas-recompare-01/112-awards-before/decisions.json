@@ -1,0 +1,154 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "baseline": "references/atlas-recompare-01/master-before.json",
+  "viewedSuffixes": [
+    "light-1x",
+    "dark-1x",
+    "native-light-2x",
+    "native-dark-2x"
+  ],
+  "batch": "112-awards-before",
+  "decisions": [
+    {
+      "name": "diamond-gem",
+      "decision": "retained",
+      "purpose": "以橫腰、梯形切面及兩條往底部尖端收束的稜線呈現寶石的語意。",
+      "recognitionCues": "橫腰、梯形切面及兩條往底部尖端收束的稜線",
+      "confusableWith": [
+        "pyramid"
+      ],
+      "defect": "檢查 16px 切面是否擁擠，並確認粗線仍可辨識向下聚合的三角孔。",
+      "sourceObservation": "Lucide 採完整放射剖線，Tabler 留簡約的外形和單筆反光。",
+      "reason": "保留完整切面作為材質線索，16px 取消橫腰以上的兩段細線以放大內空。",
+      "postComparison": "並列兩源後，16px 的較簡單上半形狀和下方稜面容易讀，20／24px 的切面亦保留。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "以完整輪廓和獨立符號筆畫表達形狀。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "用單色線和清楚的間隙區分相鄰形體。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "用單色筆畫即可傳達輪廓及功能。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "crown",
+      "decision": "retained",
+      "purpose": "以較高的中央尖頂、對稱側尖和一條寬平底呈現王冠的語意。",
+      "recognitionCues": "較高的中央尖頂、對稱側尖和一條寬平底",
+      "confusableWith": [
+        "trophy"
+      ],
+      "defect": "檢查三尖之間的谷口夠深，且冠底粗描邊仍呈現一體的形狀。",
+      "sourceObservation": "Lucide 在冠身下加一條底線，Phosphor 的單一輪廓給三尖更多空間。",
+      "reason": "保留單一外殼與最高的中心尖頂，透過側尖的角度及下緣直接構成王冠。",
+      "postComparison": "與兩來源回比，三尺寸仍讀得到三尖，最粗描邊的外輪廓與冠身留白完整。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "以完整輪廓和獨立符號筆畫表達形狀。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "用單色線和清楚的間隙區分相鄰形體。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "用單色筆畫即可傳達輪廓及功能。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "trophy",
+      "decision": "retained",
+      "purpose": "以弧底杯身、對稱雙耳與一根直桿底座呈現獎盃的語意。",
+      "recognitionCues": "弧底杯身、對稱雙耳與一根直桿底座",
+      "confusableWith": [
+        "medal"
+      ],
+      "defect": "確認耳朵輪廓和杯線相接，粗線時雙耳內孔可辨，底座不過重。",
+      "sourceObservation": "Lucide 的底座以多線組成，Tabler 僅一條橫腳和短柄，讓杯身更突出。",
+      "reason": "保留開闊杯身和配對圈耳，與 Tabler 式簡潔底座在同一垂直中心。",
+      "postComparison": "和兩來源並排後，兩個小耳孔和杯內留白均清楚，短桿與底座在 16px 仍可辨。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "以完整輪廓和獨立符號筆畫表達形狀。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "用單色線和清楚的間隙區分相鄰形體。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "用單色筆畫即可傳達輪廓及功能。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "medal",
+      "decision": "retained",
+      "purpose": "以向中央收束的三格寬帶及相接的空心章體呈現獎章的語意。",
+      "recognitionCues": "向中央收束的三格寬帶及相接的空心章體",
+      "confusableWith": [
+        "ribbon"
+      ],
+      "defect": "確認中央掛點和圓章相接，且上方的兩條分帶不溢出斜邊。",
+      "sourceObservation": "Lucide 用環繞前緣的斜帶與章心，Phosphor 使用平頂三格帶與純輪廓的章體。",
+      "reason": "保留三格平頂掛帶以穩定左右外形，賞章圓孔足以清楚辨識下半。",
+      "postComparison": "回比兩源與三尺寸後，掛帶格孔和空心圓保持清楚相接，粗線時圓章內孔仍可辨。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "以完整輪廓和獨立符號筆畫表達形狀。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "用單色線和清楚的間隙區分相鄰形體。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "用單色筆畫即可傳達輪廓及功能。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "ribbon",
+      "decision": "retained",
+      "purpose": "以繞成淚滴形的上環及交叉向外的兩個帶尾呈現關懷緞帶的語意。",
+      "recognitionCues": "繞成淚滴形的上環及交叉向外的兩個帶尾",
+      "confusableWith": [
+        "medal"
+      ],
+      "defect": "檢查長環由圓弧至交叉處的曲率和兩尾的偏移，避免交叉變成硬折。",
+      "sourceObservation": "Hugeicons 用完整緞帶輪廓和重疊細節，Tabler 以連續單筆線保留交叉形。",
+      "reason": "保留單筆曲線和左右對稱帶尾，讓淚滴形內空及交叉在小尺寸清楚。",
+      "postComparison": "三尺寸對照兩個來源，中央交叉與上環均可讀，較粗描邊的內空未塌縮。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "以完整輪廓和獨立符號筆畫表達形狀。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "用單色線和清楚的間隙區分相鄰形體。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "用單色筆畫即可傳達輪廓及功能。"
+        }
+      },
+      "remaining": []
+    }
+  ]
+}

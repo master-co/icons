@@ -9,20 +9,23 @@ export function tv({g,r,o}){
  return exteriorDetails(screen,[o([[7,2],[12,7],[17,2]],false,g.tip)],g);
 }
 export function projector({g,r,c,l}){
- const body=r(2,12,20,9,g.r),lens=c(8,12,3.5);
- return [...exteriorDetails(lens,[body],g),l(16,17,18,17),l(8,2,8,4),l(3,3.5,4.5,5),l(11.5,5,13,3.5)];
+ const body=r(2,12,20,9,g.r),lens=c(8,13,3.5);
+ const ray=angle=>{const a=angle*Math.PI/180;return l(8+8*Math.sin(a),13-8*Math.cos(a),8+10*Math.sin(a),13-10*Math.cos(a));};
+ return [...exteriorDetails(lens,[body],g),l(16,17,18,17),ray(0),ray(-30),ray(30)];
 }
 export function speaker({g,r,c,d}){
  return [r(4,2,16,20,g.r),c(12,14,4),d(12,6,g.v(.75,.9,1))];
 }
 export function filmReel({g,c,l,d}){
  const reel=c(11,11,9);
- return [...exteriorDetails(reel,[l(11,20,22,20)],g),...[[11,6.5],[15.5,11],[11,15.5],[6.5,11]].map(([x,y])=>d(x,y,g.v(1,1.25,1.5)))];
+ // Keep small or heavy masters from turning the perforations into pinholes.
+ const filled=g.s===16||3*g.s/24-g.stroke<1;
+ return [...exteriorDetails(reel,[l(11,20,22,20)],g),...[[11,6.5],[15.5,11],[11,15.5],[6.5,11]].map(([x,y])=>filled?d(x,y,g.v(1,1.25,1.5)):c(x,y,1.5))];
 }
 export function cassette({g,r,c,o,l}){
- const body=r(2,3,20,18,g.r);
- const base=o([[6,21],[7.5,16],[16.5,16],[18,21]],false,g.tip);
- return enclosedDetails(body,[c(7.5,9,2),c(16.5,9,2),l(7.5,11,16.5,11),base],g);
+ const body=r(2,4,20,16,g.r);
+ const base=o([[6,20],[7.5,16],[16.5,16],[18,20]],false,g.tip);
+ return enclosedDetails(body,[c(7.5,10,2),c(16.5,10,2),l(7.5,12,16.5,12),base],g);
 }
 export function film({g,r,l}){
  const body=r(2,3,20,18,g.r);
@@ -31,7 +34,9 @@ export function film({g,r,l}){
 export function clapperboard({g,o,l}){
  const body=o([[3,11],[21,11],[21,21],[3,21]],true,[0,g.tip,g.r,g.r]);
  const arm=o([[1.7585,6.7789],[18.7585,1.7789],[20,6],[3,11]],true,g.tip);
- const stripes=[l(7,5,10,10),l(13,3,16,8)];
+ const length=Math.hypot(17,5),u=[17/length,-5/length],v=[5/length,17/length];
+ const at=(along,across)=>[3+along*u[0]+across*v[0],11+along*u[1]+across*v[1]];
+ const stripes=[1,2].map(i=>{const s=length*i/3;return l(...at(s-1,-4.4),...at(s+1,0));});
  return [...exteriorDetails(arm,[body],g),...enclosedDetails(arm,stripes,g).slice(1)];
 }
 export function podcast({g,p,r,l}){

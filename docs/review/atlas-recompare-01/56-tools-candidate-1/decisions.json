@@ -1,0 +1,101 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "batch": "56-tools-candidate-1",
+  "baseline": "references/atlas-recompare-01/master-before.json",
+  "viewedSuffixes": [
+    "light-1x",
+    "dark-1x",
+    "native-light-2x",
+    "native-dark-2x"
+  ],
+  "decisions": [
+    {
+      "name": "shovel",
+      "decision": "retained",
+      "purpose": "以D形握孔、直桿與收尖鏟面表示鏟子。",
+      "recognitionCues": "共軸D形握把、細桿、寬肩曲面鏟頭。",
+      "confusableWith": [
+        "axe",
+        "pickaxe"
+      ],
+      "defect": "本輪未見需回修的具體缺陷，握孔與鏟面在小尺寸仍保持完整空腔。",
+      "sourceObservation": "Lucide採D形握把與多邊形鏟面，Tabler採橫握柄與圓腹鏟面；現稿的D握孔、曲面收尖與共同軸線已綜合表達必要結構。",
+      "reason": "保留D形握把和寬肩曲面鏟頭，細桿按兩端外緣收口，不穿入握孔或鏟面；不為器型差異切換為橫柄。",
+      "postComparison": "最新稿與Lucide／Tabler在三尺寸回比，握孔、桿、鏟面分組清楚，鏟尖及弧腹連續。三角型、明暗DPR1／2與55%文字均已查看。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "工具主體和穿線結構以連續線表達，無需隱藏線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "透過輪廓與留白表達構造，所有主要線條維持實色。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "維持單色平面工具圖示，不加入材質漸層。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "pickaxe",
+      "decision": "refined",
+      "purpose": "以雙側彎曲鎬頭、中央接座與長握柄表示十字鎬。",
+      "recognitionCues": "兩端對稱彎臂、斜向中央接座與握柄。",
+      "confusableWith": [
+        "axe",
+        "shovel"
+      ],
+      "defect": "兩側鎬臂偏長且弧腹外鼓，與Lucide相比有較重的扇形感。",
+      "sourceObservation": "Lucide曲臂較緊湊、端部較短，Hugeicons直臂屬另一種鎬頭構造。沿既有Lucide改作收短彎臂並修整弧腹。",
+      "reason": "兩端以對角鏡射同步縮短並內收弧腹，重畫端部回彎及內側曲線；保留中央接座與握柄尺寸，曲臂在接座外緣收口。",
+      "postComparison": "最新稿與Lucide／Hugeicons同尺寸回比，鎬頭較緊湊而雙側彎臂仍明確，16接座與柄孔留白保持。三角型、明暗DPR1／2與55%文字已查看。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "工具主體和穿線結構以連續線表達，無需隱藏線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "透過輪廓與留白表達構造，所有主要線條維持實色。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "維持單色平面工具圖示，不加入材質漸層。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "fishing-hook",
+      "decision": "retained",
+      "purpose": "以穿線眼、直鉤柄、彎腹與回鉤尖表示魚鉤。",
+      "recognitionCues": "上方穿線孔、J形鉤身、內向鉤尖。",
+      "confusableWith": [
+        "anchor",
+        "fish"
+      ],
+      "defect": "本輪未見需要修正的具體缺陷，孔徑、彎腹與鉤尖方向成立。",
+      "sourceObservation": "Hugeicons以直立J形與獨立穿線眼表達魚鉤，Lucide採斜向鉤身。現稿已保留Hugeicons構造，轉成斜向並未改善辨識或留白。",
+      "reason": "保留直立J形鉤身與獨立穿線孔，線頭與鉤柄按孔的外緣收口，不穿入孔腔；維持回鉤尖的方向與開放腹部。",
+      "postComparison": "最新稿與Lucide／Hugeicons在16／20／24回比，穿線孔仍可讀、彎腹連續，鉤尖不與長柄接近。三角型、明暗DPR1／2及55%文字已查看。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "工具主體和穿線結構以連續線表達，無需隱藏線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "透過輪廓與留白表達構造，所有主要線條維持實色。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "維持單色平面工具圖示，不加入材質漸層。"
+        }
+      },
+      "remaining": []
+    }
+  ]
+}

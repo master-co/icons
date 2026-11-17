@@ -1,0 +1,154 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "baseline": "references/atlas-recompare-01/master-before.json",
+  "viewedSuffixes": [
+    "light-1x",
+    "dark-1x",
+    "native-light-2x",
+    "native-dark-2x"
+  ],
+  "batch": "110-calendar-before",
+  "decisions": [
+    {
+      "name": "calendar-heart",
+      "decision": "retained",
+      "purpose": "以雙裝訂點與橫分欄、右下的空心雙瓣愛心呈現重要日期的語意。",
+      "recognitionCues": "雙裝訂點與橫分欄、右下的空心雙瓣愛心",
+      "confusableWith": [
+        "calendar-lock"
+      ],
+      "defect": "檢查心尖、左右心瓣，以及心形和框右端、下端的兩個間隔。",
+      "sourceObservation": "Lucide 與 Tabler 都使用框外心形，Tabler 將心形與日曆錯開得更明顯。",
+      "reason": "保留共用雙裝訂頁首與獨立愛心，按心形輪廓留出兩側的透明間隔。",
+      "postComparison": "三尺寸與兩個來源回比，雙瓣和心尖依然容易辨認，且右下狀態沒有侵入日曆頁首。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "以完整輪廓和獨立符號筆畫表達形狀。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "用單色線和清楚的間隙區分相鄰形體。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "用單色筆畫即可傳達輪廓及功能。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "calendar-lock",
+      "decision": "retained",
+      "purpose": "以橫頁首、右下鎖身和圓弧形鎖梁呈現鎖定日曆的語意。",
+      "recognitionCues": "橫頁首、右下鎖身和圓弧形鎖梁",
+      "confusableWith": [
+        "calendar-heart"
+      ],
+      "defect": "檢查細小鎖梁內孔、鎖身和旁邊的日曆框是否維持分離。",
+      "sourceObservation": "MDI 採實心鎖身與空心鎖梁，Hugeicons 的鎖身更接近同組單色輪廓的表現。",
+      "reason": "保留空心鎖身與封閉鎖梁，16px 省去鎖孔點，20 和 24px 保留狀態細節。",
+      "postComparison": "與兩來源並排，鎖梁和鎖身輪廓未與日曆外框黏合，最小尺寸仍可辨認鎖的形狀。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "以完整輪廓和獨立符號筆畫表達形狀。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "用單色線和清楚的間隙區分相鄰形體。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "用單色筆畫即可傳達輪廓及功能。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "calendar-recurring",
+      "decision": "retained",
+      "purpose": "以標準日曆頁首與右下方順時針回轉箭頭呈現重複行程的語意。",
+      "recognitionCues": "標準日曆頁首與右下方順時針回轉箭頭",
+      "confusableWith": [
+        "calendar-search"
+      ],
+      "defect": "檢查箭翼朝向及最上方的一翼和日曆右側斷點的間距。",
+      "sourceObservation": "Lucide 以兩支箭頭表達同步，Tabler 的單枚迴轉箭更接近重複行程的單向節奏。",
+      "reason": "保留單枚圓弧箭與共同頁首，讓箭頭保有可讀的開口，同時減少右下密度。",
+      "postComparison": "對照兩源，16px 仍可讀出順時針箭頭，較粗的箭翼和右側框端之間看得見空隙。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "以完整輪廓和獨立符號筆畫表達形狀。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "用單色線和清楚的間隙區分相鄰形體。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "用單色筆畫即可傳達輪廓及功能。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "calendar-search",
+      "decision": "retained",
+      "purpose": "以日曆頁首與右下圓鏡片、斜向鏡柄呈現搜尋日曆的語意。",
+      "recognitionCues": "日曆頁首與右下圓鏡片、斜向鏡柄",
+      "confusableWith": [
+        "calendar-heart"
+      ],
+      "defect": "確認鏡柄接在鏡框邊上，放大鏡仍與日曆兩側外框分開。",
+      "sourceObservation": "Lucide 和 Tabler 都讓鏡頭避開日曆右下角，Tabler 的鏡片位置更偏向框內。",
+      "reason": "保留與同組相同的雙裝訂與頁首，鏡柄沿鏡片徑向接出並以鏡圈輪廓避讓。",
+      "postComparison": "三尺寸和來源並列，鏡圈內孔與右下斜柄清楚可分，頁首輪廓仍統一。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "以完整輪廓和獨立符號筆畫表達形狀。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "用單色線和清楚的間隙區分相鄰形體。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "用單色筆畫即可傳達輪廓及功能。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "calendar-off",
+      "decision": "retained",
+      "purpose": "以覆過日曆框的左上至右下斜線及可辨識的頁首呈現停用日曆的語意。",
+      "recognitionCues": "覆過日曆框的左上至右下斜線及可辨識的頁首",
+      "confusableWith": [
+        "calendar-lock"
+      ],
+      "defect": "檢查斜線兩側的斷口及被切開後仍應可判讀的裝訂點。",
+      "sourceObservation": "Lucide 讓斜線一側保留一個裝訂點，Tabler 保留第二個，兩者都以完整斜線標記停用。",
+      "reason": "保留共同框形和兩個裝訂點的可辨部分，用沿斜線的通透留白強調停用狀態。",
+      "postComparison": "對照兩源與三個尺寸，斜線一直貫穿、未和主框相貼，16px 還可辨識為日曆。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "以完整輪廓和獨立符號筆畫表達形狀。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "用單色線和清楚的間隙區分相鄰形體。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "用單色筆畫即可傳達輪廓及功能。"
+        }
+      },
+      "remaining": []
+    }
+  ]
+}

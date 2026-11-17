@@ -1,0 +1,100 @@
+{
+  "reviewer": "Codex (AI)",
+  "batch": "43-medical-candidate-1",
+  "baseline": "references/atlas-recompare-01/master-before.json",
+  "date": "2026-11-18",
+  "viewedSuffixes": [
+    "light-1x",
+    "dark-1x",
+    "native-light-2x",
+    "native-dark-2x"
+  ],
+  "decisions": [
+    {
+      "name": "medical-mask",
+      "decision": "refined",
+      "purpose": "以包覆鼻樑與下巴的罩體和耳帶表示醫療口罩。",
+      "recognitionCues": "鼻樑折線、寬罩體、下巴曲面、耳帶與摺線。",
+      "confusableWith": [
+        "shield",
+        "bandage"
+      ],
+      "defect": "罩體偏窄且下巴過尖，整體更像垂直護盾，與橫向耳帶比例不協調。",
+      "sourceObservation": "Phosphor與Tabler的罩體較橫向，底部是較淺的包覆曲線。沿既有Phosphor改作放寬罩面並收淺下巴。",
+      "reason": "罩體寬14增至15，下巴從y21回收到19.5，重畫下緣成較淺曲面；耳帶依新側壁重接，保留原鼻樑與尺寸分級摺線。",
+      "postComparison": "最新稿與Phosphor／Tabler在16／20／24回比，罩體較橫向，下巴不再拉成尖盾，耳帶仍有可見孔隙。16單摺線、20／24雙摺線分層清楚，三角型、明暗DPR1／2及55%文字已目視。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "摺線為可見實體折痕，不使用隱藏或未完成虛線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以輪廓、孔徑與留白區分結構，不以淡化掩飾密度。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "醫療用品圖示維持單色平面，不添加材質光照漸層。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "bandage",
+      "decision": "refined",
+      "purpose": "以中央敷墊、四個透氣孔及兩端黏貼帶表示OK繃。",
+      "recognitionCues": "橫向貼帶、中央分界、四個透氣孔。",
+      "confusableWith": [
+        "pill",
+        "first-aid-kit"
+      ],
+      "defect": "原透氣孔偏小，在16及低對比下容易變成零碎噪點，中央敷墊語意變弱。",
+      "sourceObservation": "Lucide的四孔有較穩定的可見重量，Tabler採圓端斜向貼帶。保留既有Lucide橫向構造，吸收較明確透氣孔的優點。",
+      "reason": "三尺寸透氣孔半徑分別由0.45／0.55／0.65增為0.6／0.75／0.85，孔距與敷墊分界維持。外殼比例及角型不變。",
+      "postComparison": "最新稿與Lucide／Tabler在16／20／24回比，四孔更容易辨識，孔間與分界仍有空白，沒有合成一塊。明暗DPR1／2及55%文字已查看；這是孔徑的光學修整，不宣稱整體造型重設。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "透氣孔用明確實心點表示，不添加裝飾車縫虛線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以輪廓、孔徑與留白區分結構，不以淡化掩飾密度。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "醫療用品圖示維持單色平面，不添加材質光照漸層。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "thermometer",
+      "decision": "refined",
+      "purpose": "以直管、下方感溫球與液柱表示體溫計。",
+      "recognitionCues": "圓頂玻璃管、較寬感溫球、中央液柱及液球。",
+      "confusableWith": [
+        "stethoscope"
+      ],
+      "defect": "原感溫球相對管身偏小，內部液球也過輕，管身與球部的尺度層次不足。",
+      "sourceObservation": "Phosphor讓感溫球與液球有明確比例，Lucide以較細管身強調底球。沿既有Phosphor改作保留可容納液柱的管寬，增強球部尺度。",
+      "reason": "外感溫球半徑5增至5.5，圓心上移0.5使底界保持；按新圓重新計算管球接點。內液球依尺寸增大，液柱接到新圓心，保留兩側通道。",
+      "postComparison": "最新稿與Lucide／Phosphor在16／20／24回比，球部輪廓與內液球更明確，玻璃管兩側留白仍可讀，沒有縮管造成黏合。三角型、明暗DPR1／2及55%文字均已查看，底部邊界保持。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "液柱與玻璃管均直接可見，不需要隱藏刻度虛線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以輪廓、孔徑與留白區分結構，不以淡化掩飾密度。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "醫療用品圖示維持單色平面，不添加材質光照漸層。"
+        }
+      },
+      "remaining": []
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "baseline": "references/atlas-recompare-01/master-before.json",
+  "viewedSuffixes": [
+    "light-1x",
+    "dark-1x",
+    "native-light-2x",
+    "native-dark-2x"
+  ],
+  "batch": "106-flat-before",
+  "decisions": [
+    {
+      "name": "pentagon",
+      "decision": "retained",
+      "purpose": "以一個朝上的尖頂與平底表示正五邊形",
+      "recognitionCues": "尖頂、水平底邊與五條等長的直邊",
+      "confusableWith": [
+        "octagon"
+      ],
+      "defect": "檢查尖頂置中、底部水平及角部留白。",
+      "sourceObservation": "Lucide 與 Phosphor 都用直立的五邊形，Phosphor 最接近銳角版本。",
+      "reason": "保留五邊等長與尖頂對稱，沿用家族的三種轉角。",
+      "postComparison": "三尺寸保持尖頂與平底，兩個圓角版本也能清楚看出五條直邊，比例與兩個來源相近。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "連續的邊和接點構成此圖示的輪廓。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以清楚的單色空隙分開相鄰線條。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "單色輪廓已足以呈現形狀和方向。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "octagon",
+      "decision": "retained",
+      "purpose": "以平頂平底和四個斜角表示正八邊形",
+      "recognitionCues": "平直上下邊、左右垂邊與四段等長斜角",
+      "confusableWith": [
+        "pentagon"
+      ],
+      "defect": "檢查削角各邊的長度和小尺寸圓角清晰度。",
+      "sourceObservation": "Lucide 與 Phosphor 都是正八邊形，現稿的平頂寬度介於等比尺寸的視覺輪廓內。",
+      "reason": "保留等長八邊與準確的四角斜切，延續同一多邊形的轉角處理。",
+      "postComparison": "對照兩個來源，16px 下仍能區分水平、垂直和斜邊，沒有輪廓塌縮。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "連續的邊和接點構成此圖示的輪廓。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以清楚的單色空隙分開相鄰線條。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "單色輪廓已足以呈現形狀和方向。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "ellipse",
+      "decision": "retained",
+      "purpose": "用水平長軸與垂直短軸表示一個橢圓形",
+      "recognitionCues": "中心對稱的連續外輪廓及明顯的水平長軸",
+      "confusableWith": [
+        "circle"
+      ],
+      "defect": "檢查短軸足以留出內孔且外形有別於圓。",
+      "sourceObservation": "Lucide 較扁，Hugeicons 的上下弧較高，兩者皆使用水平長軸。",
+      "reason": "保留十比六的半徑比例，沿用 Lucide 類似的扁平外形。",
+      "postComparison": "三尺寸與來源對照時長短軸對比明確，最粗描邊的中央仍有留白，16px 橫向長軸依然清楚。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "連續的邊和接點構成此圖示的輪廓。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以清楚的單色空隙分開相鄰線條。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "單色輪廓已足以呈現形狀和方向。"
+        }
+      },
+      "remaining": []
+    }
+  ]
+}

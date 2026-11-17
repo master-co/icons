@@ -1,0 +1,101 @@
+{
+  "reviewer": "Codex (AI)",
+  "batch": "26-table-candidate-2",
+  "baseline": "references/atlas-recompare-01/master-before.json",
+  "date": "2026-11-17",
+  "viewedSuffixes": [
+    "light-1x",
+    "dark-1x",
+    "native-light-2x",
+    "native-dark-2x"
+  ],
+  "decisions": [
+    {
+      "name": "utensils",
+      "decision": "refined",
+      "purpose": "以並排的三齒叉與餐刀表示餐具、餐飲與用餐。",
+      "recognitionCues": "三齒叉與同軸直柄、長餐刀刃、圓收刀跟及較短刀柄。",
+      "confusableWith": [
+        "soup",
+        "cooking-pot"
+      ],
+      "defect": "舊刀刃短而呈楔形，與長柄搭配較像小水果刀，餐刀的直刃和刀跟不夠明確。",
+      "sourceObservation": "Lucide的長刀刃、直立刃腹與圓收刀跟比舊短楔形更像一般餐刀；Tabler刀腹同樣較長。沿既有Lucide改作延長刀身，保留目前較圓的三齒叉，不把叉子改成方形梳齒。",
+      "reason": "刀刃下緣由12移至14.5，刀腹增加直段並以圓曲線收至刀跟，外接刀柄隨之縮短；叉齒、中軸和整體總高度保留。刀柄墨線仍只從刀身外側延伸。",
+      "postComparison": "最新稿與Lucide／Tabler在原生16／20／24並列，餐刀的刃與柄比例更成熟，叉齒孔及刀刃內孔清楚。三角型、明暗DPR1／2及55%文字均已目視，刀柄沒有侵入刀身內孔，sharp保留器物本身圓曲面。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "實體餐具與可見食物輪廓不需要隱藏邊界虛線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以比例和輪廓分配空間，不以淡化掩飾擁擠。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "單色形態已表達物件，不需要材質或光照漸層。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "soup",
+      "decision": "refined",
+      "purpose": "以帶短底足的寬碗與上升蒸氣表示熱湯。",
+      "recognitionCues": "寬碗口、圓腹收進短底足、穩定平底及兩筆蒸氣。",
+      "confusableWith": [
+        "salad",
+        "coffee"
+      ],
+      "defect": "舊稿底足已有支承，但碗腹折入足部的轉接偏急；短而彎折集中的蒸氣像墨點。",
+      "sourceObservation": "Tabler的收腹與底足仍是應保留的結構，Lucide較舒展的蒸氣比舊短團塊清楚。沿既有Tabler改作修整轉接，蒸氣只提煉一般舒展方向，沒有採入Lucide湯匙或增加第三筆。",
+      "reason": "保留短底足，以連續曲線收進足部，第二輪核對左右鏡像控制柄；soft／rounded碗口加入實際微圓。拉長蒸氣並降低左右擺幅，使上升筆勢更明確，保留兩筆以維持原生留白。",
+      "postComparison": "第二輪與Lucide／Tabler重新比較，底足仍有明確落點，碗腹承接較柔順，蒸氣沒有變成密集短點。三尺寸、三角型、明暗DPR1／2與55%文字已目視；沒有因追求圓滑抹掉先前使用者要求的碗底構造。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "實體餐具與可見食物輪廓不需要隱藏邊界虛線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以比例和輪廓分配空間，不以淡化掩飾擁擠。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "單色形態已表達物件，不需要材質或光照漸層。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "salad",
+      "decision": "refined",
+      "purpose": "以盛有葉菜與半圓配料的寬碗表示沙拉。",
+      "recognitionCues": "斜向葉菜、連續分葉輪廓、半圓配料及下收平底碗腹。",
+      "confusableWith": [
+        "soup",
+        "flower"
+      ],
+      "defect": "舊葉菜直立且接近單一圓團，葉脈方向使它像插在碗內的粗短桿；碗底只有單點收束。",
+      "sourceObservation": "Lucide斜向葉菜和有大小主次的分葉輪廓比舊圓團更像菜葉，Tabler則用尖葉與多配料形成密集組合。沿既有Lucide改作整理斜葉方向，不移入Tabler更多配料。",
+      "reason": "重畫有主次的斜向分葉輪廓，20／24葉脈配合生長方向，16省略葉脈。碗腹以相切曲線收至短平底；第二輪在soft／rounded碗口加入實際微圓，維持半圓配料和寬碗孔。",
+      "postComparison": "第二輪最新稿與Lucide／Tabler在原生三尺寸並列，菜葉方向與層次較自然，半圓配料仍獨立可辨。三角型、明暗DPR1／2與55%文字均已查看；16沒有新增葉脈擠壓空間，碗腹保留平底落點而不加第二條底線。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "實體餐具與可見食物輪廓不需要隱藏邊界虛線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以比例和輪廓分配空間，不以淡化掩飾擁擠。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "單色形態已表達物件，不需要材質或光照漸層。"
+        }
+      },
+      "remaining": []
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "baseline": "references/atlas-recompare-01/master-before.json",
+  "viewedSuffixes": [
+    "light-1x",
+    "dark-1x",
+    "native-light-2x",
+    "native-dark-2x"
+  ],
+  "batch": "98-register-candidate-1",
+  "decisions": [
+    {
+      "name": "cash-register",
+      "decision": "refined",
+      "purpose": "以頂部顯示器、斜面六鍵與箱型錢櫃呈現收銀機。",
+      "recognitionCues": "頂部顯示器、斜面六鍵與箱型錢櫃",
+      "confusableWith": [
+        "calculator"
+      ],
+      "defect": "原稿顯示器偏向左側，和對稱的斜面、鍵點與下方抽屜軸線不一致。",
+      "sourceObservation": "Phosphor 用斜面與箱型錢櫃直接說明器型，顯示器靠左。Tabler 用附加貨幣符號和直立機身，較依賴第三個辨識訊號。",
+      "reason": "延續 Phosphor 的斜面結構，讓顯示器居中並接住機身上緣，與現稿鍵點陣列、抽屜共用中心。",
+      "postComparison": "與兩來源回比，居中的樑頂和梯形鍵盤形成明確縱軸，六點按鍵和錢櫃在原生尺寸仍可分辨。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "外殼、錢櫃和顯示器保持完整實線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以鍵點與面板留白區分部件。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "用斜面輪廓呈現鍵盤構造。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "receipt-dollar",
+      "decision": "retained",
+      "purpose": "以鋸齒紙邊與中央帶上下短桿的貨幣字形呈現金額收據。",
+      "recognitionCues": "鋸齒紙邊與中央帶上下短桿的貨幣字形",
+      "confusableWith": [
+        "receipt"
+      ],
+      "defect": "重查字形內空間與上下短桿距離，避免貨幣符號和紙邊黏連。",
+      "sourceObservation": "Tabler 以貫穿 S 的長直筆呈現美元。Hugeicons 的上下短桿保留 S 的轉向和行間空間。",
+      "reason": "保留 Hugeicons 式分開的上下短筆和收據母型，紙邊與錢符從外到內清楚分層。",
+      "postComparison": "三尺寸回比時，現稿 S 的上下兩段留白比 Tabler 貫穿線更清楚，鋸齒紙邊和貨幣符號仍各自可辨。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "紙張和錢符都使用連續的實體筆畫。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "靠字形與紙邊的留白維持對比。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "以素色貨幣符號和紙邊辨識。"
+        }
+      },
+      "remaining": []
+    }
+  ]
+}

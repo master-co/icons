@@ -1,0 +1,43 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "batch": "74-keyboard-before",
+  "baseline": "references/atlas-recompare-01/master-before.json",
+  "viewedSuffixes": [
+    "light-1x",
+    "dark-1x",
+    "native-light-2x",
+    "native-dark-2x"
+  ],
+  "decisions": [
+    {
+      "name": "music-keyboard",
+      "decision": "retained",
+      "purpose": "以控制面板與琴鍵表示電子琴、音樂鍵盤及演奏設備。",
+      "recognitionCues": "矩形機身、上方短顯示線與單控制點、下方四條琴鍵。",
+      "confusableWith": [
+        "piano",
+        "keyboard"
+      ],
+      "defect": "本輪未見鍵距、面板密度或外框比例需回修的具體缺陷。",
+      "sourceObservation": "Lucide完整電子琴用短顯示線與兩個控制點，現稿保留一點以減少面板密度。Phosphor只有琴鍵構造，能比較鍵端留白，不能作第二份完整電子琴來源。",
+      "reason": "保留現有矩形機身、單點面板及四條短鍵；三尺寸鍵端與底框間仍有通道，不加入額外控制鈕或通高黑白鍵分割。",
+      "postComparison": "與Lucide完整器型及Phosphor鍵盤構造並列，16px面板與鍵區能分開，20／24的四鍵間距及鍵端空白成立；明暗DPR1／2、三角型與55%文字均已查看。第二份來源僅涵蓋琴鍵的限制明記。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "控制面板及鍵線都是可見構造，不需虛線表達。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "控制訊號與琴鍵皆需辨識，維持完整單色對比。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "保持平面單色機身，不增加塑膠或金屬表面漸層。"
+        }
+      },
+      "remaining": []
+    }
+  ]
+}

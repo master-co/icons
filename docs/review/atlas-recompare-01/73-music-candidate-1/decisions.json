@@ -1,0 +1,101 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "batch": "73-music-candidate-1",
+  "baseline": "references/atlas-recompare-01/master-before.json",
+  "viewedSuffixes": [
+    "light-1x",
+    "dark-1x",
+    "native-light-2x",
+    "native-dark-2x"
+  ],
+  "decisions": [
+    {
+      "name": "metronome",
+      "decision": "retained",
+      "purpose": "以梯形機殼和傾斜擺桿表示節拍器及練習節奏。",
+      "recognitionCues": "上窄下寬的梯形殼體、下方基座分界與穿出右側的擺桿。",
+      "confusableWith": [
+        "timer",
+        "triangle"
+      ],
+      "defect": "本輪未見殼體比例、擺桿接點或底座留白需要回修的問題。",
+      "sourceObservation": "Phosphor以完整梯形及斜擺桿形成穩定的節拍器輪廓，現稿已採納。Lucide帶獨立配重及側面斷口，是較具機械細節的另一解法，16px額外小孔較密。",
+      "reason": "保留既有Phosphor式梯形比例、底座分界及單線擺桿；支點與橫線實接，sharp用平切端帽，沒有增加配重小圈或側面缺口。",
+      "postComparison": "同尺寸回比Phosphor／Lucide，16px底座內孔與擺桿兩側空白清楚，20／24的斜桿方向完整；三角型、明暗DPR1／2及55%文字均已查看。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "擺桿及外殼是實體構造，不用虛線模擬運動軌跡。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "單一擺桿位置已表達用途，不加入半透明擺動重影。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "維持平面單色，不用體積或木紋漸層。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "guitar-electric",
+      "decision": "refined",
+      "purpose": "以帶內凹肩部的吉他輪廓表示電吉他演奏與器材。",
+      "recognitionCues": "斜琴頸、實心尖琴頭、肩部內凹切口、寬下腹與短琴橋。",
+      "confusableWith": [
+        "guitar",
+        "violin"
+      ],
+      "defect": "內凹肩部的兩端由曲線突然轉為近直角尖點，與圓腹琴身承接偏硬。",
+      "sourceObservation": "Lucide同器型將切口兩端修成短曲肩，讓雙側輪廓較連續；MDI為V形琴身，屬另一合理器型，未採其三角外形。",
+      "reason": "沿既有Lucide改作，以對稱短二次曲線修順兩個肩端，再用連續內凹曲面相連；保留琴身下腹、琴橋、斜軸及實心琴頭。",
+      "postComparison": "最新稿與Lucide／MDI並列，雙肩端不再突出硬折，16px切口仍清楚，20／24的肩部與下腹較連貫；三角型皆保留物體曲面。明暗DPR1／2與55%文字已查看。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "琴身和琴頸需保持連續輪廓，不使用裝飾虛線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "實心琴頭及琴身輪廓已有層次，無須降低透明度。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "保持單色輪廓，不增加烤漆或金屬材質漸層。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "vinyl-record",
+      "decision": "refined",
+      "purpose": "以唱片外圈、中心孔與音軌表示黑膠唱片及音樂收藏。",
+      "recognitionCues": "同心外圈和中心孔，以及兩段旋轉對稱的四分之一圓音軌。",
+      "confusableWith": [
+        "circle",
+        "film-reel"
+      ],
+      "defect": "原本兩段45度音軌偏短，像中心孔兩側的小括號，唱片的環繞節奏較弱。",
+      "sourceObservation": "Phosphor兩段90度音軌沿圓盤延伸，比Lucide的較短側弧更能表達旋轉與刻紋，且不需增加第二層音軌。",
+      "reason": "將兩段半徑6的音軌各由45度延長為90度，維持共同圓心、外圈及中心孔。新增Phosphor改作來源，保留Lucide來源歷史與完整雙方授權。",
+      "postComparison": "最新稿與Phosphor／Lucide回比，較長弧線強化唱片的旋轉感，16px音軌與外圈、中心孔仍保持清楚通道；三尺寸三角型、明暗DPR1／2與55%文字已查看。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "兩段弧線表示音軌而非隱藏線，不再細分為虛線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "音軌和中心孔均為主要辨識訊號，不用淡化製造層次。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "保留平面單色，不增加唱片反光或徑向漸層。"
+        }
+      },
+      "remaining": []
+    }
+  ]
+}

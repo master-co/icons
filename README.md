@@ -124,6 +124,8 @@ node skills/master-icons/scripts/render-review.mjs --repo . --icons user,users,b
 
 Master 自行製作的程式碼與介面圖稿採用 [MIT License](LICENSE)；涉及上游素材的部分同時保留其適用聲明。目前保留 12 顆 Hugeicons Free 研究重繪的 MIT notices，以及 `megaphone`、`handshake`、`layers` 三顆 Lucide 改作的 ISC 與相關上游聲明。名稱、固定版本、修改方式及授權詳見 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。
 
+`teapot` 茶壺圖稿沿用 OpenMoji 的壺蓋構造，該圖稿及本專案對它的修改採 **CC BY-SA 4.0**，不適用一般 MIT 授權；完整來源、修改與條款見 [茶壺聲明](licenses/teapot-openmoji-CC-BY-SA-4.0.txt)。
+
 品牌資產另列來源：採用 Simple Icons、官方向量及註明來源的 Dcard 點陣轉描，Master 標誌使用自有素材；相關聲明與品牌使用資訊見 [品牌來源](THIRD_PARTY_NOTICES.md#brand-silhouettes--brands-01)。品牌資產與 Master 的程式碼授權分開記載；Vue、JavaScript、Copilot、Teams／Outlook 與 Dcard 的個別聲明見 [新增批次](docs/brands-03.md)。
 
 `references/` 中的比較原稿屬於各上游專案，保留各自授權，且不納入圖示套件。適用於改作圖稿的 notices 則隨單檔 SVG、套件及 ZIP 提供。Master Icons 與上述參考專案沒有隸屬或背書關係。

@@ -1,0 +1,20 @@
+{
+  "reviewer":"Codex (AI)","batch":"17-paw-candidate-1",
+  "baseline":"references/atlas-recompare-01/master-before.json","date":"2026-11-17",
+  "viewedSuffixes":["light-1x","dark-1x","native-light-2x","native-dark-2x"],
+  "decisions":[{
+    "name":"paw-print","decision":"refined",
+    "purpose":"以四趾與掌墊表示動物掌印及寵物分類。",
+    "recognitionCues":"沿弧形排列的四枚趾墊、寬掌墊、上部圓肩及底部淺凹。",
+    "confusableWith":["footprints","hand"],
+    "defect":"舊稿四趾皆為正圓，像散置圓點，缺少趾墊的長軸與向外展開姿態。",
+    "sourceObservation":"Tabler斜向橢圓趾墊比正圓更有足部構造；Lucide是三趾斜向掌印，姿態不同。沿既有Tabler改作恢復趾墊方向，保留本稿較寬的掌墊和疏朗間距。",
+    "reason":"兩枚內趾改為1.7×2.4半徑橢圓，左右鏡像傾斜12度；兩枚側趾為1.6×2.3並傾斜25度。中心位置和掌墊不變，16繼續使用實心趾墊，20／24保留輪廓內孔。",
+    "postComparison":"最新稿與Lucide／Tabler在三尺寸重新並列，趾墊長軸沿足部展開，四枚圓點的機械感減少。明暗DPR1／2與55%文字已查看，20／24內孔仍可辨認，16實心橢圓保持分離，掌墊與趾墊沒有黏合。",
+    "effects":{
+      "dashes":{"used":false,"reason":"掌印由完整趾墊和掌墊組成，不需要虛線邊界。"},
+      "opacity":{"used":false,"reason":"各枚趾墊同屬主要結構，不淡化任何一枚。"},
+      "gradients":{"used":false,"reason":"以印痕形狀表達動物足部，不添加材質或光照漸層。"}
+    },"remaining":[]
+  }]
+}

@@ -1,0 +1,101 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "batch": "67-education-candidate-1",
+  "baseline": "references/atlas-recompare-01/master-before.json",
+  "viewedSuffixes": [
+    "light-1x",
+    "dark-1x",
+    "native-light-2x",
+    "native-dark-2x"
+  ],
+  "decisions": [
+    {
+      "name": "graduation-cap",
+      "decision": "refined",
+      "purpose": "以菱形帽冠、弧形帽身與流蘇表示畢業及學位。",
+      "recognitionCues": "菱形平頂、下方弧形帽身與右側垂直流蘇。",
+      "confusableWith": [
+        "school",
+        "diploma"
+      ],
+      "defect": "原稿帽冠較高，帽身露出偏深，整體略像高筒帽。",
+      "sourceObservation": "Lucide的帽冠與帽身疊合較深，Phosphor也以較淺帽身承托帽冠；沿既有Lucide改作調整上下比例。",
+      "reason": "帽冠整體下移1個母型單位，保持菱形寬高及帽身下緣；流蘇上端同步下移，重新裁切帽身承接。sharp兩側尖角補償保持。",
+      "postComparison": "與Lucide／Phosphor回比，帽身可見高度減少，整體更貼合學士帽的扁平比例；16px帽冠及帽身孔仍清楚。 三尺寸三角型、明暗DPR1／2及55%文字均已查看。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "可見物件輪廓與支承構造均使用連續線，不加入隱藏虛線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以輪廓及留白分辨部件，不用淡化掩飾接點。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "維持單色平面教育圖示，不增加材質或體積漸層。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "school",
+      "decision": "refined",
+      "purpose": "以山牆、中央圓窗、拱門及側翼表示校舍。",
+      "recognitionCues": "中央山牆、短屋簷、圓窗、拱門與兩側附屬建築。",
+      "confusableWith": [
+        "hospital",
+        "home"
+      ],
+      "defect": "原稿屋頂直接止於直壁，屋簷缺失，中央樓體較像單一五邊形。",
+      "sourceObservation": "Lucide與Hugeicons皆以延伸屋簷強化屋頂與牆體關係；沿既有Lucide改作補回短屋簷。",
+      "reason": "沿原山牆斜率向左右各延伸2個母型單位，端點由共同斜率計算；外側收口依建築輪廓裁切，圓窗、拱門、側翼及單一地面保持。",
+      "postComparison": "與Lucide／Hugeicons回比，屋頂有明確遮覆牆體的形態，16px短屋簷仍可辨，窗孔與門孔留白不變。 三尺寸三角型、明暗DPR1／2及55%文字均已查看。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "可見物件輪廓與支承構造均使用連續線，不加入隱藏虛線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以輪廓及留白分辨部件，不用淡化掩飾接點。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "維持單色平面教育圖示，不增加材質或體積漸層。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "presentation",
+      "decision": "retained",
+      "purpose": "以寬幕面、上方橫桿與下方支架表示簡報。",
+      "recognitionCues": "橫向幕面、突出頂桿及從底部中央分出的雙腳。",
+      "confusableWith": [
+        "chalkboard",
+        "projector"
+      ],
+      "defect": "本輪未見需要回修的具體幕面比例或支承缺陷。",
+      "sourceObservation": "Lucide的橫桿及共點支腳已為現稿保留；Phosphor的上方短桿屬另一器型，沒有需要增添的結構優勢。",
+      "reason": "保留橫向幕面及對稱支架，支腳上端裁在幕面外，底角依家族半徑處理；不加裝飾圖表。",
+      "postComparison": "與Lucide／Phosphor回比，三尺寸幕面空腔完整，支腳從下緣穩定分出，與黑板的底托構造有所區別。 三尺寸三角型、明暗DPR1／2及55%文字均已查看。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "可見物件輪廓與支承構造均使用連續線，不加入隱藏虛線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以輪廓及留白分辨部件，不用淡化掩飾接點。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "維持單色平面教育圖示，不增加材質或體積漸層。"
+        }
+      },
+      "remaining": []
+    }
+  ]
+}

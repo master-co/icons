@@ -1,0 +1,101 @@
+{
+  "reviewer": "Codex (AI)",
+  "batch": "30-seating-candidate-1",
+  "baseline": "references/atlas-recompare-01/master-before.json",
+  "date": "2026-11-17",
+  "viewedSuffixes": [
+    "light-1x",
+    "dark-1x",
+    "native-light-2x",
+    "native-dark-2x"
+  ],
+  "decisions": [
+    {
+      "name": "bed",
+      "purpose": "以帶床頭柱、床墊及床腳的側視輪廓表示床鋪、睡眠或住宿。",
+      "recognitionCues": "左側高床頭柱、窄枕部、橫向床墊與兩根床腳。",
+      "confusableWith": [
+        "desk",
+        "sofa"
+      ],
+      "defect": "舊稿床頭柱和床腳偏長，枕部過寬，橫向床鋪因此顯得過高且接近雙格欄架。",
+      "sourceObservation": "Lucide的短支柱及較窄枕部更能建立橫向床鋪比例；Tabler以人物與床墊表示有人躺臥，是不同狀態，不加入人物圓頭。",
+      "reason": "床頭柱由3下移到4、兩腳終點由22收至20.5，枕部分界從8.5移至7；保留床墊高度和右上角預設半徑，sharp省略零長度Q。",
+      "postComparison": "與Lucide／Tabler原生三尺寸重新並列，床墊主次更明確，短腳仍清楚表達支承，16枕部內孔保持開放；明暗DPR1／2及三角型、低對比文字均已查看。",
+      "decision": "refined",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "家具外輪廓及可見接縫都是實體邊界，不需虛線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "前後構造以共同邊界和裁切收口區分，不淡化靠背。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "家具以輪廓比例及支承構造傳意，不加材質或光照漸層。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "sofa",
+      "purpose": "以寬靠背、雙扶手及連續座面表示雙人沙發與客廳座位。",
+      "recognitionCues": "雙格寬靠背、弧形扶手、橫向座面及短腳。",
+      "confusableWith": [
+        "armchair",
+        "bed"
+      ],
+      "defect": "舊稿靠背過窄而高，整個沙發偏直立；扶手接座面的內角較生硬。",
+      "sourceObservation": "Lucide及Tabler的低寬靠背比例更像沙發，Lucide座面內角有實際曲線承接；保留既有Lucide式雙格靠背與短腳。",
+      "reason": "共用座椅母型下移靠背頂、上移座面與底座，靠背側邊外移至扶手中心；soft／rounded的內角加入實際微圓，sharp省略退化底角Q。",
+      "postComparison": "最新稿與兩來源同尺寸回比，橫向靠背與底座更協調，雙格靠背在16仍分開；扶手和座面相接，背線不穿入前座。三角型、明暗DPR1／2和55%文字已查看。",
+      "decision": "refined",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "家具外輪廓及可見接縫都是實體邊界，不需虛線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "前後構造以共同邊界和裁切收口區分，不淡化靠背。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "家具以輪廓比例及支承構造傳意，不加材質或光照漸層。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "armchair",
+      "purpose": "以單片靠背、雙扶手與座面表示扶手椅或單人休息座位。",
+      "recognitionCues": "單片寬靠背、連續弧形扶手、座面內腔與兩根短腳。",
+      "confusableWith": [
+        "sofa",
+        "bed"
+      ],
+      "defect": "舊稿單座寬度過窄、靠背過高，較像直立高背椅，扶手與座面比例不夠舒展。",
+      "sourceObservation": "Lucide較寬的單人座面與Phosphor橫展扶手都更有休息座椅姿態；沿既有Lucide構造擴寬，沒有加Phosphor分離內扶手線。",
+      "reason": "整體寬度由16增至18，靠背改在扶手中心收口，與沙發共用較低的背頂、座面和底座；內角依預設建立實際微圓，保留單片背及短腳。",
+      "postComparison": "與Lucide／Phosphor三尺寸重新並列後，單座比例更舒展，靠背與扶手形成完整座椅；16的背內孔及座面孔仍清楚，三角型、明暗DPR1／2和55%文字均已查看。",
+      "decision": "refined",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "家具外輪廓及可見接縫都是實體邊界，不需虛線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "前後構造以共同邊界和裁切收口區分，不淡化靠背。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "家具以輪廓比例及支承構造傳意，不加材質或光照漸層。"
+        }
+      },
+      "remaining": []
+    }
+  ]
+}

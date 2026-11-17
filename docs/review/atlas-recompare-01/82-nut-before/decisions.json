@@ -1,0 +1,43 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "batch": "82-nut-before",
+  "baseline": "references/atlas-recompare-01/master-before.json",
+  "viewedSuffixes": [
+    "light-1x",
+    "dark-1x",
+    "native-light-2x",
+    "native-dark-2x"
+  ],
+  "decisions": [
+    {
+      "name": "nut",
+      "decision": "retained",
+      "purpose": "以六角外緣與中央圓孔表示螺帽、緊固件及組裝。",
+      "recognitionCues": "上下尖頂的六角輪廓、中央同心圓孔與足夠厚度的金屬環面。",
+      "confusableWith": [
+        "hexagon",
+        "settings"
+      ],
+      "defect": "重查六角外緣的寬高比例、中央孔大小和角型變化是否削弱金屬緊固件形態。",
+      "sourceObservation": "Phosphor保留較平直的六角邊與明確同心孔，Tabler的六角轉角更圓且外圈較厚。現稿沿用Phosphor器型，六角只作小半徑角型處理，中央孔與外環留白相稱。",
+      "reason": "外框18乘20、中央孔直徑7，保持寬金屬環面與清楚六角邊；三角型都不把螺帽外形圓化成近圓形。較Tabler輕的輪廓符合目前描邊，無需增加螺紋或第二圈內孔。",
+      "postComparison": "已查看最新稿與Phosphor／Tabler的16／20／24、三角型、明暗DPR1與2。16px中央孔仍有穩定空白，六角頂點與兩側直邊明確，rounded未抹去扳手接觸平面；保留現有同心比例和微圓角。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "螺帽的外緣及孔為實體輪廓，不用虛線表示螺紋。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "靠六角與圓孔的留白分配表現環面，不淡化內孔。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "金屬材質不需反光漸層，單色構造已充分。"
+        }
+      },
+      "remaining": []
+    }
+  ]
+}

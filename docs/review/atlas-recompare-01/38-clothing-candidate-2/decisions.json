@@ -1,0 +1,101 @@
+{
+  "reviewer": "Codex (AI)",
+  "batch": "38-clothing-candidate-2",
+  "baseline": "references/atlas-recompare-01/master-before.json",
+  "date": "2026-11-18",
+  "viewedSuffixes": [
+    "light-1x",
+    "dark-1x",
+    "native-light-2x",
+    "native-dark-2x"
+  ],
+  "decisions": [
+    {
+      "name": "shirt",
+      "decision": "retained",
+      "purpose": "以圓領短袖上衣表示一般衣物、服裝分類與穿著。",
+      "recognitionCues": "圓領、斜肩、左右短袖與平整衣襬。",
+      "confusableWith": [
+        "coat",
+        "dress"
+      ],
+      "defect": "未發現需要回修的比例缺陷；本輪重新審查肩袖與身片承接。",
+      "sourceObservation": "Lucide圓肩和下襬較柔，Tabler短平袖更方整；現稿已有舒展圓領、微斜袖口及長身片，輪廓沒有因兩來源氣質差異而失去衣物形態。",
+      "reason": "保留目前肩線、圓領、短袖與下襬比例。圓領承擔柔軟感，肩袖轉折仍清楚，沒有為增加差異加領口套線。",
+      "postComparison": "最新稿與Lucide／Tabler在16／20／24重新並列，短袖及身片層次清楚，領口沒有尖夾，三角型下襬與明暗DPR1／2均已查看。此次保留是具體新判斷，沒有沿用舊通過標記。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "服裝輪廓完整可見，沒有縫製教學的虛線需求。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "衣物以輪廓與留白區分結構，沒有需要淡化的後方部件。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "服裝以平面單色呈現，不添加布料光照漸層。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "trousers",
+      "decision": "refined",
+      "purpose": "以腰頭、分開褲管及口袋表示日常長褲。",
+      "recognitionCues": "腰頭、雙弧形口袋、褲襠與兩條長褲管。",
+      "confusableWith": [
+        "shirt",
+        "coat"
+      ],
+      "defect": "原腰寬接近下端寬，直板外緣加尖褲襠較像字母A，缺少服裝構造訊號。",
+      "sourceObservation": "Phosphor以較窄腰頭、向外展開褲管與成對口袋帶出長褲形態，較原稿成熟；Iconoir重疊褲管是另一種折放姿態。沿既有Phosphor改作方向調整。",
+      "reason": "腰寬從14縮至12，保留褲腳總寬16及既有褲襠。腰線上移0.5，新增接在腰線與外側之間的對稱弧形口袋。第一候選16省略口袋，第二候選確認可讀後在三尺寸保留。",
+      "postComparison": "最新稿與Phosphor／Iconoir重新回比，較窄腰頭配展開褲管更有衣物形態；16的口袋仍有小而可辨空腔，未遮住褲襠，20／24口袋與腰頭分層清楚。明暗DPR1／2及三角型皆已查看，保留口袋的理由是增加服裝構造而非裝飾。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "口袋以可見邊界表示，不新增隱藏袋布或車縫虛線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "衣物以輪廓與留白區分結構，沒有需要淡化的後方部件。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "服裝以平面單色呈現，不添加布料光照漸層。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "dress",
+      "decision": "retained",
+      "purpose": "以肩帶、合身腰部及展開裙襬表示洋裝。",
+      "recognitionCues": "雙肩帶、圓領、收腰與略帶弧度的寬裙襬。",
+      "confusableWith": [
+        "shirt",
+        "coat"
+      ],
+      "defect": "未發現需要改稿的構造缺陷；重新核對腰部是否像拼裝及裙襬是否過寬。",
+      "sourceObservation": "Phosphor的無袖收腰造型簡潔，Hugeicons以短袖與圓裙表達另一款式。現稿已保留Phosphor的肩帶與收腰，裙襬淺弧交代布料下垂。",
+      "reason": "保留無袖洋裝的整體輪廓與腰線，肩帶收在領口外，腰線收在身片內。避免加入短袖或摺痕使既有清楚器型變密。",
+      "postComparison": "最新稿與Phosphor／Hugeicons在16／20／24重新並列，領口、腰部與裙片空腔皆清楚。肩帶、腰線接點沒有突出，裙襬保持寬展淺弧；三角型、明暗與DPR1／2已目視。本次保留現稿，不將不同衣款誤判為造型缺陷。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "洋裝外形與腰線可直接辨識，不需隱藏縫線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "衣物以輪廓與留白區分結構，沒有需要淡化的後方部件。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "服裝以平面單色呈現，不添加布料光照漸層。"
+        }
+      },
+      "remaining": []
+    }
+  ]
+}

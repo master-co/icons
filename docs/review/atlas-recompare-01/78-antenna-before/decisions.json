@@ -1,0 +1,43 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "batch": "78-antenna-before",
+  "baseline": "references/atlas-recompare-01/master-before.json",
+  "viewedSuffixes": [
+    "light-1x",
+    "dark-1x",
+    "native-light-2x",
+    "native-dark-2x"
+  ],
+  "decisions": [
+    {
+      "name": "antenna",
+      "decision": "retained",
+      "purpose": "以橫向振子和垂直支桿表示接收天線及廣播設備。",
+      "recognitionCues": "水平支桿、等距且逐漸加長的五個振子與向下延伸的中央立桿。",
+      "confusableWith": [
+        "radio-receiver",
+        "tv"
+      ],
+      "defect": "本輪未見振子排列、長度節奏或中央支承需要回修的問題。",
+      "sourceObservation": "Tabler以五個垂直振子和中央支桿表達天線，現稿保持同一構造並稍放寬排列；Lucide斜向四振子及分離底桿屬另一投影姿態，沒有換向的必要。",
+      "reason": "保留等距振子、由左向右漸長的節奏及共接橫桿，中央支桿維持連續支承；不增加電波弧或拆開接點。",
+      "postComparison": "16px五個振子仍可分辨，20／24的漸長輪廓更明確；與Tabler／Lucide同尺寸回比後保留現有正向姿態。三角型、明暗DPR1／2及55%文字已查看。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "各振子與支桿是實體結構，不以虛線替代或增加訊號軌跡。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "振子與支架同為辨識線索，保持完整單色對比。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "平面線條已足以表示天線，不增加訊號或金屬漸層。"
+        }
+      },
+      "remaining": []
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "baseline": "references/atlas-recompare-01/master-before.json",
+  "viewedSuffixes": [
+    "light-1x",
+    "dark-1x",
+    "native-light-2x",
+    "native-dark-2x"
+  ],
+  "batch": "97-bag-before",
+  "decisions": [
+    {
+      "name": "bag-check",
+      "decision": "retained",
+      "purpose": "以拱形提把、平底袋身與右下勾號呈現購物袋完成。",
+      "recognitionCues": "拱形提把、平底袋身與右下勾號",
+      "confusableWith": [
+        "shopping-bag"
+      ],
+      "defect": "檢查勾號是否壓住袋身底角，提把在小尺寸是否還開放。",
+      "sourceObservation": "Tabler 的外拱提把接入微收袋身，Hugeicons 用袋內弧形提孔表示另一種袋型。兩者均給勾號獨立空間。",
+      "reason": "保留與購物袋母型一致的外拱提把及右下透明避讓，底線和側壁仍保有足夠可見長度。",
+      "postComparison": "和兩來源相比，原生尺寸仍看得到提把空腔、袋口直線與完成勾號。外拱比內凹提孔易與既有購物袋對應。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "袋口和勾號均為實線構造。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "透明避讓在深淺底都維持間隔。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "用輪廓和勾號表達狀態。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "bag-plus",
+      "decision": "retained",
+      "purpose": "以拱形提把、簡潔袋身與右下加號呈現新增購物袋。",
+      "recognitionCues": "拱形提把、簡潔袋身與右下加號",
+      "confusableWith": [
+        "basket-plus"
+      ],
+      "defect": "檢查加號與袋底、右壁兩個端點是否互相黏連。",
+      "sourceObservation": "Tabler 和 Hugeicons 都把加號放在袋身右下。Tabler 的外拱提把與現有袋型接近，Hugeicons 的袋內開口是另一種提握構造。",
+      "reason": "沿用購物袋母型和家族共用加號，袋內留空，保持外輪廓和狀態符號各自可讀。",
+      "postComparison": "原生 16／20／24 的加號各臂可辨識，透明空間使袋底不會視為加號的一筆。外拱保留與完成狀態一致的袋型。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "加號需要完整橫直兩筆。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以透明避讓呈現前景加號。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "以單色袋身和加號說明新增。"
+        }
+      },
+      "remaining": []
+    }
+  ]
+}

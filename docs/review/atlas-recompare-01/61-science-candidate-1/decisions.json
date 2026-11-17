@@ -1,0 +1,101 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "batch": "61-science-candidate-1",
+  "baseline": "references/atlas-recompare-01/master-before.json",
+  "viewedSuffixes": [
+    "light-1x",
+    "dark-1x",
+    "native-light-2x",
+    "native-dark-2x"
+  ],
+  "decisions": [
+    {
+      "name": "dna",
+      "decision": "retained",
+      "purpose": "以交錯雙骨架與橫向連結表示DNA。",
+      "recognitionCues": "雙螺旋曲線、中央交叉、上下各兩組連結。",
+      "confusableWith": [
+        "atom",
+        "hourglass"
+      ],
+      "defect": "本輪未見需要修正的具體缺陷，中央交叉切線及上下連結收口成立。",
+      "sourceObservation": "Tabler採直立交錯雙曲線，Lucide採斜向短段螺旋；現稿沿Tabler保留完整骨架，比斜向碎段更適合此家族。",
+      "reason": "保留四組橫向連結及中央不加橫線的安排，雙曲線在三角型共用自然結構。",
+      "postComparison": "與Lucide／Tabler同尺寸回比，上下開孔及四段連結清楚，16px中央交叉沒有額外碎線；三尺寸三角型、明暗DPR1／2及55%文字均已查看。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "連結為可見骨架結構，維持連續線，不加入隱藏線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以輪廓及留白區分結構，不以淡化掩飾交會或承接。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "維持單色平面圖示，不以材質漸層表達體積。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "orbit",
+      "decision": "retained",
+      "purpose": "以中心天體及環繞小衛星表示軌道。",
+      "recognitionCues": "中央圓環、開口軌道與右上衛星。",
+      "confusableWith": [
+        "atom",
+        "satellite"
+      ],
+      "defect": "本輪未見需要修正的具體缺陷，中心天體、軌道及衛星間留白成立。",
+      "sourceObservation": "Hugeicons的單衛星開放圓弧已被現稿採用，Lucide的雙衛星是另一種配置，沒有需要增加密度的優勢。",
+      "reason": "保留單衛星、半徑10軌道及較小中央天體；軌道在衛星外緣收口，另一端保持開放。",
+      "postComparison": "與Lucide／Hugeicons回比，三尺寸中央留白與右上開口可讀，衛星孔未被軌道穿入；三角型、明暗DPR1／2及55%文字均已查看。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "軌道用單一開放實線表達環繞，不加虛線以免小尺寸破碎。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以輪廓及留白區分結構，不以淡化掩飾交會或承接。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "維持單色平面圖示，不以材質漸層表達體積。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "rocket",
+      "decision": "refined",
+      "purpose": "以收尖箭體、對稱側翼與尾端短線表示火箭。",
+      "recognitionCues": "尖首、窄身、中央窗點、雙側翼與尾端留白。",
+      "confusableWith": [
+        "plane",
+        "satellite"
+      ],
+      "defect": "原稿上半部曲線偏鼓，相較Phosphor的修長箭體較有球腹感。",
+      "sourceObservation": "Phosphor的正面火箭肩部較收斂，Lucide以斜向姿態表達發射；沿既有Phosphor改作收窄箭體肩腹。",
+      "reason": "兩側曲線控制柄對稱內收，左側x5／5改為6／5.5，右側鏡射；尖首、底寬、窗點與側翼保持，側翼依新箭體重算承接。",
+      "postComparison": "與Lucide／Phosphor回比，新稿肩部更收斂、箭體較修長，16px窗點及側翼孔仍可分辨；三尺寸三角型、明暗DPR1／2及55%文字均已查看。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "箭體與側翼為可見連續輪廓，尾端短線保持實線，不增加速度虛線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以輪廓及留白區分結構，不以淡化掩飾交會或承接。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "維持單色平面圖示，不以材質漸層表達體積。"
+        }
+      },
+      "remaining": []
+    }
+  ]
+}

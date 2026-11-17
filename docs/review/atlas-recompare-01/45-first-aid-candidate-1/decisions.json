@@ -1,0 +1,43 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "batch": "45-first-aid-candidate-1",
+  "baseline": "references/atlas-recompare-01/master-before.json",
+  "viewedSuffixes": [
+    "light-1x",
+    "dark-1x",
+    "native-light-2x",
+    "native-dark-2x"
+  ],
+  "decisions": [
+    {
+      "name": "first-aid-kit",
+      "decision": "retained",
+      "purpose": "以帶提把的醫療箱表示急救用品與緊急處置。",
+      "recognitionCues": "橫向箱體、上方提把、中央醫療十字。",
+      "confusableWith": [
+        "briefcase",
+        "hospital"
+      ],
+      "defect": "新一輪來源回比沒有發現需修改的具體缺陷，需維持提把孔徑與十字四周的留白。",
+      "sourceObservation": "Tabler以簡潔箱體和提把交代急救箱；Lucide加上兩側束帶。現稿的簡潔箱體已成立，束帶沒有補充此用途的必要辨識訊號。",
+      "reason": "保留現有箱體、提把高度與中央十字比例，維持三種實際角型；不增加會壓縮小尺寸留白的束帶或扣件。",
+      "postComparison": "最新稿與Lucide／Tabler在16／20／24並列，提把孔和十字周圍仍有清楚空白；提把接回箱體，沒有突出端帽。三角型、明暗DPR1／2與55%文字已查看，保留現稿。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "箱體、提把和醫療標記均為直接可見結構，不使用虛線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以輪廓與留白分離提把及箱體，不需淡化次要線條。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "急救箱維持單色平面輪廓，不增加光照或材質漸層。"
+        }
+      },
+      "remaining": []
+    }
+  ]
+}

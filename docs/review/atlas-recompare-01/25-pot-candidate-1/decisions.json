@@ -1,0 +1,22 @@
+{
+  "reviewer":"Codex (AI)","batch":"25-pot-candidate-1",
+  "baseline":"references/atlas-recompare-01/master-before.json","date":"2026-11-17",
+  "viewedSuffixes":["light-1x","dark-1x","native-light-2x","native-dark-2x"],
+  "decisions":[
+    {
+      "name":"cooking-pot","decision":"refined",
+      "purpose":"以寬鍋身和微掀鍋蓋表示烹飪與鍋具。",
+      "recognitionCues":"寬而較淺的鍋身、水平外展鍋緣、傾斜鍋蓋及同軸蓋把。",
+      "confusableWith":["kettle","soup"],
+      "defect":"舊稿鍋身接近方形，垂直方提把與閉合平頂容易像帶把的盒子；兩側短耳不足以挽回鍋具比例。",
+      "sourceObservation":"Lucide的寬鍋身與微掀鍋蓋更有烹飪姿態，Phosphor以蒸氣表意但需要額外短線。沿既有Lucide改作直接靠近其寬鍋和斜蓋構造，保留簡單完整的器具而不加蒸氣。",
+      "reason":"鍋身加寬並降低高度，上移留白給斜蓋；橫向鍋緣兼作兩側持握位置，移除舊下彎短耳。蓋把依鍋蓋斜率建立平行構造，實際墨線在蓋緣上方收口；三種角型保留各自鍋底與蓋把幾何。",
+      "postComparison":"最新稿與Lucide／Phosphor在三尺寸重新並列，鍋身比例與微掀蓋姿態比舊方盒更有器具感。明暗DPR1／2、三角型及55%文字均已目視，16鍋蓋與鍋緣仍有可見間隔，蓋把孔清楚，sharp沒有蓋把端帽突出蓋緣下側。",
+      "effects":{
+        "dashes":{"used":false,"reason":"微掀鍋蓋已表達狀態，沒有隱藏鍋沿虛線需求。"},
+        "opacity":{"used":false,"reason":"鍋身與鍋蓋以實際間隔分開，不靠淡化區分。"},
+        "gradients":{"used":false,"reason":"輪廓已表達鍋具，不增加金屬光澤漸層。"}
+      },"remaining":[]
+    }
+  ]
+}

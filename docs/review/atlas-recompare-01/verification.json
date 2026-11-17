@@ -1,8 +1,18 @@
 {
-  "date": "2026-11-17",
-  "batch": "07-signals-before",
-  "reviewed": 20,
-  "remaining": 290,
+  "date": "2026-11-18",
+  "batch": "114-user-restore",
+  "reviewed": 310,
+  "refined": 140,
+  "retained": 170,
+  "remaining": 0,
+  "restored": [
+    "carrot",
+    "heart-pulse",
+    "basket-check",
+    "basket-plus",
+    "bezier-curve",
+    "waves"
+  ],
   "checks": [
     {
       "command": "bun run build:icons",
@@ -16,9 +26,12 @@
     },
     {
       "command": "bun run validate",
+      "result": "passed"
+    },
+    {
+      "command": "bun run test",
       "result": "passed",
-      "pinnedCurrentReferences": 1407,
-      "licensedZips": 9
+      "tests": 60
     },
     {
       "command": "node scripts/check-atlas.mjs",
@@ -31,21 +44,25 @@
       "command": "node scripts/check-atlas-recompare.mjs",
       "result": "passed",
       "outsideScopeUnchanged": 480,
-      "verifiedViewedImages": 80,
-      "verifiedSourceFiles": 40
+      "verifiedSourceFiles": 620,
+      "verifiedViewedImages": 1240
     },
     {
-      "command": "node --test packages/icons/tests/contours.test.mjs packages/icons/tests/junctions.test.mjs packages/icons/tests/paint.test.mjs packages/icons/tests/occlusion.test.mjs",
-      "result": "passed",
-      "tests": 14
+      "check": "Restored native masters vs task-start baseline",
+      "result": "54 of 54 match"
     },
     {
-      "check": "skill native renderer",
-      "result": "90 raster cases, 0 empty/clipped",
+      "check": "Current restored variable-stroke geometry vs generated stroke-assets definitions",
+      "result": "270 of 270 match"
+    },
+    {
+      "check": "Skill native renderer",
+      "result": "216 raster cases, 0 empty/clipped",
       "viewed": [
-        "06-07-native/native-1-light-1x.png",
-        "06-07-native/native-1-dark-1x.png",
-        "06-07-native/context-light-1x.png"
+        "114-native/native-1-light-1x.png",
+        "114-native/native-1-dark-1x.png",
+        "114-native/zoom-light-1x.png",
+        "114-native/context-light-1x.png"
       ]
     },
     {
@@ -53,7 +70,13 @@
       "result": "passed"
     }
   ],
-  "limitation": "Twenty transport and travel icons completed individual aesthetic re-comparison; 290 remain in the full 310-icon scope. Engineering checks do not establish aesthetic approval.",
+  "limitation": "The owner selected the task-start geometry for six named icons. The previous candidates remain available in the review history.",
+  "batches": [
+    "114-user-restore"
+  ],
+  "additionalViewed": [
+    "96-basket-before/shopping-basket-light-1x.png"
+  ],
   "history": [
     {
       "date": "2026-11-17",
@@ -347,11 +370,3426 @@
       ],
       "limitation": "Fifteen recorded icons completed this new aesthetic re-comparison; 295 remain. Automated engineering checks do not establish aesthetic approval.",
       "resolvedValidationIssues": []
+    },
+    {
+      "date": "2026-11-17",
+      "batch": "07-signals-before",
+      "reviewed": 20,
+      "remaining": 290,
+      "checks": [
+        {
+          "command": "bun run build:icons",
+          "result": "passed",
+          "names": 790,
+          "svgFiles": 7110
+        },
+        {
+          "command": "bun run build:review",
+          "result": "passed"
+        },
+        {
+          "command": "bun run validate",
+          "result": "passed",
+          "pinnedCurrentReferences": 1407,
+          "licensedZips": 9
+        },
+        {
+          "command": "node scripts/check-atlas.mjs",
+          "result": "passed",
+          "names": 310,
+          "collisions": [],
+          "errors": []
+        },
+        {
+          "command": "node scripts/check-atlas-recompare.mjs",
+          "result": "passed",
+          "outsideScopeUnchanged": 480,
+          "verifiedViewedImages": 80,
+          "verifiedSourceFiles": 40
+        },
+        {
+          "command": "node --test packages/icons/tests/contours.test.mjs packages/icons/tests/junctions.test.mjs packages/icons/tests/paint.test.mjs packages/icons/tests/occlusion.test.mjs",
+          "result": "passed",
+          "tests": 14
+        },
+        {
+          "check": "skill native renderer",
+          "result": "90 raster cases, 0 empty/clipped",
+          "viewed": [
+            "06-07-native/native-1-light-1x.png",
+            "06-07-native/native-1-dark-1x.png",
+            "06-07-native/context-light-1x.png"
+          ]
+        },
+        {
+          "command": "git diff --check",
+          "result": "passed"
+        }
+      ],
+      "limitation": "Twenty transport and travel icons completed individual aesthetic re-comparison; 290 remain in the full 310-icon scope. Engineering checks do not establish aesthetic approval.",
+      "resolvedValidationIssues": [],
+      "batches": [
+        "06-road-candidate-1",
+        "07-signals-before"
+      ]
+    },
+    {
+      "date": "2026-11-17",
+      "batch": "09-sky-candidate-2",
+      "reviewed": 26,
+      "remaining": 284,
+      "checks": [
+        {
+          "command": "bun run build:icons",
+          "result": "passed",
+          "names": 790,
+          "svgFiles": 7110
+        },
+        {
+          "command": "bun run build:review",
+          "result": "passed"
+        },
+        {
+          "command": "bun run validate",
+          "result": "passed",
+          "pinnedCurrentReferences": 1407,
+          "licensedZips": 9
+        },
+        {
+          "command": "node scripts/check-atlas.mjs",
+          "result": "passed",
+          "names": 310,
+          "collisions": [],
+          "errors": []
+        },
+        {
+          "command": "node scripts/check-atlas-recompare.mjs",
+          "result": "passed",
+          "outsideScopeUnchanged": 480,
+          "verifiedViewedImages": 104,
+          "verifiedSourceFiles": 52
+        },
+        {
+          "command": "node --test packages/icons/tests/contours.test.mjs packages/icons/tests/junctions.test.mjs packages/icons/tests/paint.test.mjs packages/icons/tests/occlusion.test.mjs",
+          "result": "passed",
+          "tests": 14
+        },
+        {
+          "check": "skill native renderer",
+          "result": "108 raster cases, 0 empty/clipped",
+          "viewed": [
+            "08-09-native/native-1-light-1x.png",
+            "08-09-native/native-1-dark-1x.png",
+            "08-09-native/context-light-1x.png"
+          ]
+        },
+        {
+          "command": "git diff --check",
+          "result": "passed"
+        }
+      ],
+      "limitation": "Twenty-six icons completed individual aesthetic re-comparison; 284 remain in the fixed 310-icon scope. Engineering checks do not establish aesthetic approval.",
+      "resolvedValidationIssues": [],
+      "batches": [
+        "08-precipitation-candidate-2",
+        "09-sky-candidate-2"
+      ]
+    },
+    {
+      "date": "2026-11-17",
+      "batch": "10-weather-candidate-1",
+      "reviewed": 30,
+      "remaining": 280,
+      "checks": [
+        {
+          "command": "bun run build:icons",
+          "result": "passed",
+          "names": 790,
+          "svgFiles": 7110
+        },
+        {
+          "command": "bun run build:review",
+          "result": "passed"
+        },
+        {
+          "command": "bun run validate",
+          "result": "passed",
+          "pinnedCurrentReferences": 1407,
+          "licensedZips": 9
+        },
+        {
+          "command": "node scripts/check-atlas.mjs",
+          "result": "passed",
+          "names": 310,
+          "collisions": [],
+          "errors": []
+        },
+        {
+          "command": "node scripts/check-atlas-recompare.mjs",
+          "result": "passed",
+          "outsideScopeUnchanged": 480,
+          "verifiedViewedImages": 120,
+          "verifiedSourceFiles": 60
+        },
+        {
+          "command": "node --test packages/icons/tests/contours.test.mjs packages/icons/tests/junctions.test.mjs packages/icons/tests/paint.test.mjs packages/icons/tests/occlusion.test.mjs",
+          "result": "passed",
+          "tests": 14
+        },
+        {
+          "check": "skill native renderer",
+          "result": "72 raster cases, 0 empty/clipped",
+          "viewed": [
+            "10-native/native-1-light-1x.png",
+            "10-native/native-1-dark-1x.png",
+            "10-native/context-light-1x.png"
+          ]
+        },
+        {
+          "command": "git diff --check",
+          "result": "passed"
+        }
+      ],
+      "limitation": "Thirty icons completed individual aesthetic re-comparison; 280 remain in the fixed 310-icon scope. Engineering checks do not establish aesthetic approval.",
+      "resolvedValidationIssues": [],
+      "batches": [
+        "10-weather-candidate-1"
+      ]
+    },
+    {
+      "date": "2026-11-17",
+      "batch": "11-plants-final",
+      "reviewed": 33,
+      "remaining": 277,
+      "checks": [
+        {
+          "command": "bun run build:icons",
+          "result": "passed",
+          "names": 790,
+          "svgFiles": 7110
+        },
+        {
+          "command": "bun run build:review",
+          "result": "passed"
+        },
+        {
+          "command": "bun run validate",
+          "result": "passed",
+          "pinnedCurrentReferences": 1407,
+          "licensedZips": 9
+        },
+        {
+          "command": "node scripts/check-atlas.mjs",
+          "result": "passed",
+          "names": 310,
+          "collisions": [],
+          "errors": []
+        },
+        {
+          "command": "node scripts/check-atlas-recompare.mjs",
+          "result": "passed",
+          "outsideScopeUnchanged": 480,
+          "verifiedViewedImages": 132,
+          "verifiedSourceFiles": 66
+        },
+        {
+          "command": "node --test packages/icons/tests/contours.test.mjs packages/icons/tests/junctions.test.mjs packages/icons/tests/paint.test.mjs packages/icons/tests/occlusion.test.mjs",
+          "result": "passed",
+          "tests": 14
+        },
+        {
+          "check": "skill native renderer",
+          "result": "54 raster cases, 0 empty/clipped",
+          "viewed": [
+            "11-native/native-1-light-1x.png",
+            "11-native/native-1-dark-1x.png",
+            "11-native/context-light-1x.png"
+          ]
+        },
+        {
+          "command": "git diff --check",
+          "result": "passed"
+        }
+      ],
+      "limitation": "Thirty-three icons completed individual aesthetic re-comparison; 277 remain in the fixed 310-icon scope. Engineering checks do not establish aesthetic approval.",
+      "resolvedValidationIssues": [
+        "The review-record validator rejected confusable names absent from this catalog; the leaf record now references actual sprout and droplet concepts. No review state was written by the rejected run."
+      ],
+      "batches": [
+        "11-plants-final"
+      ]
+    },
+    {
+      "date": "2026-11-17",
+      "batch": "12-nature-candidate-2",
+      "reviewed": 36,
+      "remaining": 274,
+      "checks": [
+        {
+          "command": "bun run build:icons",
+          "result": "passed",
+          "names": 790,
+          "svgFiles": 7110
+        },
+        {
+          "command": "bun run build:review",
+          "result": "passed"
+        },
+        {
+          "command": "bun run validate",
+          "result": "passed",
+          "pinnedCurrentReferences": 1407,
+          "licensedZips": 9
+        },
+        {
+          "command": "node scripts/check-atlas.mjs",
+          "result": "passed",
+          "names": 310,
+          "collisions": [],
+          "errors": []
+        },
+        {
+          "command": "node scripts/check-atlas-recompare.mjs",
+          "result": "passed",
+          "outsideScopeUnchanged": 480,
+          "verifiedViewedImages": 144,
+          "verifiedSourceFiles": 72
+        },
+        {
+          "command": "node --test packages/icons/tests/contours.test.mjs packages/icons/tests/junctions.test.mjs packages/icons/tests/paint.test.mjs packages/icons/tests/occlusion.test.mjs",
+          "result": "passed",
+          "tests": 14
+        },
+        {
+          "check": "skill native renderer",
+          "result": "54 raster cases, 0 empty/clipped",
+          "viewed": [
+            "12-native/native-1-light-1x.png",
+            "12-native/native-1-dark-1x.png",
+            "12-native/context-light-1x.png"
+          ]
+        },
+        {
+          "command": "git diff --check",
+          "result": "passed"
+        },
+        {
+          "check": "Cactus dual-source distribution",
+          "result": "passed",
+          "coverage": "Catalog retains Tabler baseSource and Phosphor additionalSources; both full notices present in package license and all nine SVG variants. Full validate also checked the combined license in all nine ZIPs."
+        }
+      ],
+      "limitation": "Thirty-six icons completed individual aesthetic re-comparison; 274 remain in the fixed 310-icon scope. Engineering checks do not establish aesthetic approval.",
+      "resolvedValidationIssues": [
+        "The first build stopped with ENOTEMPTY while replacing dist. The process was confirmed terminal and no other build was live; the retry completed before validation.",
+        "The review-record validator rejected the absent trident catalog name; it was removed before any review state was written."
+      ],
+      "batches": [
+        "12-nature-candidate-2"
+      ]
+    },
+    {
+      "date": "2026-11-17",
+      "batch": "13-landscape-candidate-1",
+      "reviewed": 40,
+      "remaining": 270,
+      "checks": [
+        {
+          "command": "bun run build:icons",
+          "result": "passed",
+          "names": 790,
+          "svgFiles": 7110
+        },
+        {
+          "command": "bun run build:review",
+          "result": "passed"
+        },
+        {
+          "command": "bun run validate",
+          "result": "passed",
+          "pinnedCurrentReferences": 1407,
+          "licensedZips": 9
+        },
+        {
+          "command": "node scripts/check-atlas.mjs",
+          "result": "passed",
+          "names": 310,
+          "collisions": [],
+          "errors": []
+        },
+        {
+          "command": "node scripts/check-atlas-recompare.mjs",
+          "result": "passed",
+          "outsideScopeUnchanged": 480,
+          "verifiedViewedImages": 160,
+          "verifiedSourceFiles": 80
+        },
+        {
+          "command": "node --test packages/icons/tests/contours.test.mjs packages/icons/tests/junctions.test.mjs packages/icons/tests/paint.test.mjs packages/icons/tests/occlusion.test.mjs",
+          "result": "passed",
+          "tests": 14
+        },
+        {
+          "check": "skill native renderer",
+          "result": "72 raster cases, 0 empty/clipped",
+          "viewed": [
+            "13-native/native-1-light-1x.png",
+            "13-native/native-1-dark-1x.png",
+            "13-native/context-light-1x.png"
+          ]
+        },
+        {
+          "command": "git diff --check",
+          "result": "passed"
+        },
+        {
+          "check": "Cactus and waves source distribution",
+          "result": "passed",
+          "coverage": "Current catalog preserves cactus Tabler baseSource plus Phosphor additionalSources and marks waves as Tabler adapted. All 18 SVG notices verified directly; full validate checked complete license files in all nine ZIPs."
+        }
+      ],
+      "limitation": "Forty icons completed individual aesthetic re-comparison; 270 remain in the fixed 310-icon scope. Engineering checks do not establish aesthetic approval.",
+      "resolvedValidationIssues": [],
+      "batches": [
+        "13-landscape-candidate-1"
+      ],
+      "buildContext": "The current workspace build command now builds @master/icons plus separate React, Vue, Svelte, Preact and Astro packages. All finished before the updated paint test and other 13 regression tests ran. No build scripts or package architecture were changed by this icon review."
+    },
+    {
+      "date": "2026-11-17",
+      "batch": "14-animals-candidate-2",
+      "reviewed": 43,
+      "remaining": 267,
+      "checks": [
+        {
+          "command": "bun run build:icons",
+          "result": "passed",
+          "names": 790,
+          "svgFiles": 7110
+        },
+        {
+          "command": "bun run build:review",
+          "result": "passed"
+        },
+        {
+          "command": "bun run validate",
+          "result": "passed",
+          "pinnedCurrentReferences": 1407,
+          "licensedZips": 9
+        },
+        {
+          "command": "node scripts/check-atlas.mjs",
+          "result": "passed",
+          "names": 310,
+          "collisions": [],
+          "errors": []
+        },
+        {
+          "command": "node scripts/check-atlas-recompare.mjs",
+          "result": "passed",
+          "outsideScopeUnchanged": 480,
+          "verifiedViewedImages": 172,
+          "verifiedSourceFiles": 86
+        },
+        {
+          "command": "node --test packages/icons/tests/contours.test.mjs packages/icons/tests/junctions.test.mjs packages/icons/tests/paint.test.mjs packages/icons/tests/occlusion.test.mjs",
+          "result": "passed",
+          "tests": 14
+        },
+        {
+          "check": "skill native renderer",
+          "result": "54 raster cases, 0 empty/clipped",
+          "viewed": [
+            "14-native/native-1-light-1x.png",
+            "14-native/native-1-dark-1x.png",
+            "14-native/context-light-1x.png"
+          ]
+        },
+        {
+          "command": "git diff --check",
+          "result": "passed"
+        }
+      ],
+      "limitation": "Forty-three icons completed individual aesthetic re-comparison; 267 remain in the fixed 310-icon scope. Engineering checks do not establish aesthetic approval.",
+      "resolvedValidationIssues": [
+        "The first validation observed only 4474 SVG files while outputs were being replaced by another workspace build. After confirming no build remained live, validation was rerun without restarting a build and passed all 7110 files."
+      ],
+      "batches": [
+        "14-animals-candidate-2"
+      ],
+      "buildContext": "The current workspace build command now builds @master/icons plus separate React, Vue, Svelte, Preact and Astro packages. All finished before the updated paint test and other 13 regression tests ran. No build scripts or package architecture were changed by this icon review."
+    },
+    {
+      "date": "2026-11-17",
+      "batch": "15-creatures-candidate-2",
+      "reviewed": 46,
+      "remaining": 264,
+      "checks": [
+        {
+          "command": "bun run build:icons",
+          "result": "passed",
+          "names": 790,
+          "svgFiles": 7110
+        },
+        {
+          "command": "bun run build:review",
+          "result": "passed"
+        },
+        {
+          "command": "bun run validate",
+          "result": "passed",
+          "pinnedCurrentReferences": 1407,
+          "licensedZips": 9
+        },
+        {
+          "command": "node scripts/check-atlas.mjs",
+          "result": "passed",
+          "names": 310,
+          "collisions": [],
+          "errors": []
+        },
+        {
+          "command": "node scripts/check-atlas-recompare.mjs",
+          "result": "passed",
+          "outsideScopeUnchanged": 480,
+          "verifiedViewedImages": 184,
+          "verifiedSourceFiles": 92
+        },
+        {
+          "command": "node --test packages/icons/tests/contours.test.mjs packages/icons/tests/junctions.test.mjs packages/icons/tests/paint.test.mjs packages/icons/tests/occlusion.test.mjs",
+          "result": "passed",
+          "tests": 14
+        },
+        {
+          "check": "skill native renderer",
+          "result": "54 raster cases, 0 empty/clipped",
+          "viewed": [
+            "15-native/native-1-light-1x.png",
+            "15-native/native-1-dark-1x.png",
+            "15-native/context-light-1x.png"
+          ]
+        },
+        {
+          "command": "git diff --check",
+          "result": "passed"
+        }
+      ],
+      "limitation": "Forty-six icons completed individual aesthetic re-comparison; 264 remain in the fixed 310-icon scope. Engineering checks do not establish aesthetic approval.",
+      "resolvedValidationIssues": [],
+      "batches": [
+        "15-creatures-candidate-2"
+      ],
+      "buildContext": "The current workspace build command now builds @master/icons plus separate React, Vue, Svelte, Preact and Astro packages. All finished before the updated paint test and other 13 regression tests ran. No build scripts or package architecture were changed by this icon review."
+    },
+    {
+      "date": "2026-11-17",
+      "batch": "16-17-invertebrates-and-paw",
+      "reviewed": 50,
+      "remaining": 260,
+      "checks": [
+        {
+          "command": "bun run build:icons",
+          "result": "passed",
+          "names": 790,
+          "svgFiles": 7110
+        },
+        {
+          "command": "bun run build:review",
+          "result": "passed"
+        },
+        {
+          "command": "bun run validate",
+          "result": "passed",
+          "pinnedCurrentReferences": 1407,
+          "licensedZips": 9
+        },
+        {
+          "command": "node scripts/check-atlas.mjs",
+          "result": "passed",
+          "names": 310,
+          "collisions": [],
+          "errors": []
+        },
+        {
+          "command": "node scripts/check-atlas-recompare.mjs",
+          "result": "passed",
+          "outsideScopeUnchanged": 480,
+          "verifiedViewedImages": 200,
+          "verifiedSourceFiles": 100
+        },
+        {
+          "command": "node --test packages/icons/tests/contours.test.mjs packages/icons/tests/junctions.test.mjs packages/icons/tests/paint.test.mjs packages/icons/tests/occlusion.test.mjs",
+          "result": "passed",
+          "tests": 14
+        },
+        {
+          "check": "skill native renderer",
+          "result": "72 raster cases, 0 empty/clipped",
+          "viewed": [
+            "16-17-native/native-1-light-1x.png",
+            "16-17-native/native-1-dark-1x.png",
+            "16-17-native/context-light-1x.png"
+          ]
+        },
+        {
+          "command": "git diff --check",
+          "result": "passed"
+        }
+      ],
+      "limitation": "Fifty icons completed individual aesthetic re-comparison; 260 remain in the fixed 310-icon scope. Engineering checks do not establish aesthetic approval.",
+      "resolvedValidationIssues": [],
+      "batches": [
+        "16-invertebrates-candidate-3",
+        "16-snail-candidate-4",
+        "17-paw-candidate-1"
+      ],
+      "buildContext": "The current workspace build command now builds @master/icons plus separate React, Vue, Svelte, Preact and Astro packages. All finished before the updated paint test and other 13 regression tests ran. No build scripts or package architecture were changed by this icon review.",
+      "userFeedbackAddressed": [
+        {
+          "name": "butterfly",
+          "feedback": "phosphor 的蝴蝶好看點",
+          "result": "Redrew larger upper wings, smaller round lower wings and a shorter body toward the existing Phosphor source; removed the forked antenna candidate."
+        },
+        {
+          "name": "snail",
+          "feedback": "蝸牛的頭部跟身體轉接還是太生硬，沒有一體感。",
+          "result": "Reopened the earlier decision and replaced the tubular neck with continuous curves from head to foot; preserved the superseded decision in 16-snail-reopened.json."
+        }
+      ],
+      "additionalViewed": [
+        "16-feedback/comparison.png"
+      ]
+    },
+    {
+      "date": "2026-11-17",
+      "batch": "18-19-produce",
+      "reviewed": 56,
+      "remaining": 254,
+      "checks": [
+        {
+          "command": "bun run build:icons",
+          "result": "passed",
+          "names": 790,
+          "svgFiles": 7110
+        },
+        {
+          "command": "bun run build:review",
+          "result": "passed"
+        },
+        {
+          "command": "bun run validate",
+          "result": "passed",
+          "pinnedCurrentReferences": 1407,
+          "licensedZips": 9
+        },
+        {
+          "command": "node scripts/check-atlas.mjs",
+          "result": "passed",
+          "names": 310,
+          "collisions": [],
+          "errors": []
+        },
+        {
+          "command": "node scripts/check-atlas-recompare.mjs",
+          "result": "passed",
+          "outsideScopeUnchanged": 480,
+          "verifiedViewedImages": 224,
+          "verifiedSourceFiles": 112
+        },
+        {
+          "command": "node --test packages/icons/tests/contours.test.mjs packages/icons/tests/junctions.test.mjs packages/icons/tests/paint.test.mjs packages/icons/tests/occlusion.test.mjs",
+          "result": "passed",
+          "tests": 14
+        },
+        {
+          "check": "skill native renderer",
+          "result": "108 raster cases, 0 empty/clipped",
+          "viewed": [
+            "18-19-native/native-1-light-1x.png",
+            "18-19-native/native-1-dark-1x.png",
+            "18-19-native/context-light-1x.png"
+          ]
+        },
+        {
+          "command": "git diff --check",
+          "result": "passed"
+        }
+      ],
+      "limitation": "Fifty-six icons completed individual aesthetic re-comparison; 254 remain in the fixed 310-icon scope. Engineering checks do not establish aesthetic approval.",
+      "resolvedValidationIssues": [],
+      "batches": [
+        "18-fruit-candidate-2",
+        "19-produce-candidate-2"
+      ],
+      "buildContext": "The current workspace build command now builds @master/icons plus separate React, Vue, Svelte, Preact and Astro packages. All finished before the updated paint test and other 13 regression tests ran. No build scripts or package architecture were changed by this icon review.",
+      "additionalViewed": [
+        "18-19-overview/comparison.png"
+      ]
+    },
+    {
+      "date": "2026-11-17",
+      "batch": "20-21-harvest",
+      "reviewed": 60,
+      "remaining": 250,
+      "checks": [
+        {
+          "command": "bun run build:icons",
+          "result": "passed",
+          "names": 790,
+          "svgFiles": 7110
+        },
+        {
+          "command": "bun run build:review",
+          "result": "passed"
+        },
+        {
+          "command": "bun run validate",
+          "result": "passed",
+          "pinnedCurrentReferences": 1407,
+          "licensedZips": 9
+        },
+        {
+          "command": "node scripts/check-atlas.mjs",
+          "result": "passed",
+          "names": 310,
+          "collisions": [],
+          "errors": []
+        },
+        {
+          "command": "node scripts/check-atlas-recompare.mjs",
+          "result": "passed",
+          "outsideScopeUnchanged": 480,
+          "verifiedViewedImages": 240,
+          "verifiedSourceFiles": 120
+        },
+        {
+          "command": "node --test packages/icons/tests/contours.test.mjs packages/icons/tests/junctions.test.mjs packages/icons/tests/paint.test.mjs packages/icons/tests/occlusion.test.mjs",
+          "result": "passed",
+          "tests": 14
+        },
+        {
+          "check": "skill native renderer",
+          "result": "72 raster cases, 0 empty/clipped",
+          "viewed": [
+            "20-21-native/native-1-light-1x.png",
+            "20-21-native/native-1-dark-1x.png",
+            "20-21-native/context-light-1x.png"
+          ]
+        },
+        {
+          "command": "git diff --check",
+          "result": "passed"
+        },
+        {
+          "check": "mushroom and wheat source notices",
+          "result": "Both complete source notices verified in all 18 SVG variants and the package license files; exported catalog retains baseSource and additionalSources. Full validate also verifies all 9 licensed ZIPs."
+        }
+      ],
+      "limitation": "Sixty icons completed individual aesthetic re-comparison; 250 remain in the fixed 310-icon scope. Engineering checks do not establish aesthetic approval.",
+      "resolvedValidationIssues": [],
+      "batches": [
+        "20-harvest-candidate-2",
+        "21-wheat-candidate-2"
+      ],
+      "buildContext": "The current workspace build command now builds @master/icons plus separate React, Vue, Svelte, Preact and Astro packages. All finished before the updated paint test and other 13 regression tests ran. No build scripts or package architecture were changed by this icon review.",
+      "additionalViewed": [
+        "20-21-overview/comparison.png"
+      ]
+    },
+    {
+      "date": "2026-11-17",
+      "batch": "22-23-drinks",
+      "reviewed": 66,
+      "remaining": 244,
+      "checks": [
+        {
+          "command": "bun run build:icons",
+          "result": "passed",
+          "names": 790,
+          "svgFiles": 7110
+        },
+        {
+          "command": "bun run build:review",
+          "result": "passed"
+        },
+        {
+          "command": "bun run validate",
+          "result": "passed",
+          "pinnedCurrentReferences": 1407,
+          "licensedZips": 9
+        },
+        {
+          "command": "node scripts/check-atlas.mjs",
+          "result": "passed",
+          "names": 310,
+          "collisions": [],
+          "errors": []
+        },
+        {
+          "command": "node scripts/check-atlas-recompare.mjs",
+          "result": "passed",
+          "outsideScopeUnchanged": 480,
+          "verifiedViewedImages": 264,
+          "verifiedSourceFiles": 132
+        },
+        {
+          "command": "node --test packages/icons/tests/contours.test.mjs packages/icons/tests/junctions.test.mjs packages/icons/tests/paint.test.mjs packages/icons/tests/occlusion.test.mjs",
+          "result": "passed",
+          "tests": 14
+        },
+        {
+          "check": "skill native renderer",
+          "result": "108 raster cases, 0 empty/clipped",
+          "viewed": [
+            "22-23-native/native-1-light-1x.png",
+            "22-23-native/native-1-dark-1x.png",
+            "22-23-native/context-light-1x.png"
+          ]
+        },
+        {
+          "command": "git diff --check",
+          "result": "passed"
+        }
+      ],
+      "limitation": "Sixty-six icons completed individual aesthetic re-comparison; 244 remain in the fixed 310-icon scope. Engineering checks do not establish aesthetic approval.",
+      "resolvedValidationIssues": [],
+      "batches": [
+        "22-drinks-candidate-2",
+        "23-containers-candidate-2"
+      ],
+      "buildContext": "Core SVGs and the separate React, Vue, Svelte, Preact and Astro packages finished before validation and native review. No build scripts or package architecture changed in this batch.",
+      "additionalViewed": [
+        "22-23-overview/comparison.png"
+      ]
+    },
+    {
+      "date": "2026-11-17",
+      "batch": "24-25-vessels",
+      "reviewed": 70,
+      "remaining": 240,
+      "checks": [
+        {
+          "command": "bun run build:icons",
+          "result": "passed",
+          "names": 790,
+          "svgFiles": 7110
+        },
+        {
+          "command": "bun run build:review",
+          "result": "passed"
+        },
+        {
+          "command": "bun run validate",
+          "result": "passed",
+          "pinnedCurrentReferences": 1407,
+          "licensedZips": 9
+        },
+        {
+          "command": "node scripts/check-atlas.mjs",
+          "result": "passed",
+          "names": 310,
+          "collisions": [],
+          "errors": []
+        },
+        {
+          "command": "node scripts/check-atlas-recompare.mjs",
+          "result": "passed",
+          "outsideScopeUnchanged": 480,
+          "verifiedViewedImages": 280,
+          "verifiedSourceFiles": 140
+        },
+        {
+          "command": "node --test packages/icons/tests/contours.test.mjs packages/icons/tests/junctions.test.mjs packages/icons/tests/paint.test.mjs packages/icons/tests/occlusion.test.mjs",
+          "result": "passed",
+          "tests": 14
+        },
+        {
+          "check": "skill native renderer",
+          "result": "72 raster cases, 0 empty/clipped",
+          "viewed": [
+            "24-25-native/native-1-light-1x.png",
+            "24-25-native/native-1-dark-1x.png",
+            "24-25-native/context-light-1x.png"
+          ]
+        },
+        {
+          "check": "teapot source and adapter license",
+          "result": "Complete CC-BY-SA-4.0 source/adapter notice verified in all 9 SVGs and core package; metadata identifies both licenses. All 5 framework packages import the core data, declare the core dependency, and carry attribution and the license URL. Full validate also checks all 9 ZIPs."
+        },
+        {
+          "command": "git diff --check",
+          "result": "passed"
+        }
+      ],
+      "limitation": "Seventy icons completed individual aesthetic re-comparison; 240 remain in the fixed 310-icon scope. Engineering checks do not establish aesthetic approval. Teapot artwork, including this adaptation, is CC-BY-SA-4.0 rather than MIT.",
+      "resolvedValidationIssues": [
+        {
+          "check": "ad hoc framework license copy assumption",
+          "issue": "The initial check expected a licenses directory in each framework package.",
+          "resolution": "Inspected current architecture: framework entries import @master/icons data rather than copying artwork. Verified complete core license, core dependency, and attribution/license URL in every framework notice. No build architecture changed."
+        }
+      ],
+      "batches": [
+        "24-vessels-candidate-2",
+        "25-pot-candidate-1"
+      ],
+      "buildContext": "Core and all five framework builds finished. A final notices-only rebuild added the explicit CC license URL to all framework notices; full validate was rerun afterward. Geometry was unchanged after native review.",
+      "additionalViewed": [
+        "24-25-overview/comparison.png"
+      ]
+    },
+    {
+      "date": "2026-11-17",
+      "batch": "26-27-food",
+      "reviewed": 76,
+      "remaining": 234,
+      "checks": [
+        {
+          "command": "bun run build:icons",
+          "result": "passed",
+          "names": 790,
+          "svgFiles": 7110
+        },
+        {
+          "command": "bun run build:review",
+          "result": "passed"
+        },
+        {
+          "command": "bun run validate",
+          "result": "passed",
+          "pinnedCurrentReferences": 1407,
+          "licensedZips": 9
+        },
+        {
+          "command": "node scripts/check-atlas.mjs",
+          "result": "passed",
+          "names": 310,
+          "collisions": [],
+          "errors": []
+        },
+        {
+          "command": "node scripts/check-atlas-recompare.mjs",
+          "result": "passed",
+          "outsideScopeUnchanged": 480,
+          "verifiedViewedImages": 304,
+          "verifiedSourceFiles": 152
+        },
+        {
+          "command": "node --test packages/icons/tests/contours.test.mjs packages/icons/tests/junctions.test.mjs packages/icons/tests/paint.test.mjs packages/icons/tests/occlusion.test.mjs",
+          "result": "passed",
+          "tests": 14
+        },
+        {
+          "check": "skill native renderer",
+          "result": "108 raster cases, 0 empty/clipped",
+          "viewed": [
+            "26-27-native/native-1-light-1x.png",
+            "26-27-native/native-1-dark-1x.png",
+            "26-27-native/context-light-1x.png"
+          ]
+        },
+        {
+          "command": "git diff --check",
+          "result": "passed"
+        },
+        {
+          "check": "Current variable-stroke geometry vs cached definitions",
+          "result": "315 variants match for snail, utensils, soup, salad, sandwich, pizza, burger"
+        }
+      ],
+      "limitation": "76 icons completed individual aesthetic re-comparison; 234 remain in the fixed 310-icon scope. Engineering checks do not establish aesthetic approval.",
+      "batches": [
+        "26-table-candidate-2",
+        "27-fast-food-candidate-2"
+      ],
+      "buildContext": "Core and all five framework builds and review build finished. Native geometry and variable-stroke cache match current source.",
+      "additionalViewed": [
+        "26-27-overview/comparison.png",
+        "16-snail-transition/comparison.png"
+      ]
+    },
+    {
+      "date": "2026-11-17",
+      "batch": "28-29-desserts-bread",
+      "reviewed": 80,
+      "remaining": 230,
+      "checks": [
+        {
+          "command": "bun run build:icons",
+          "result": "passed",
+          "names": 790,
+          "svgFiles": 7110
+        },
+        {
+          "command": "bun run build:review",
+          "result": "passed"
+        },
+        {
+          "command": "bun run validate",
+          "result": "passed",
+          "pinnedCurrentReferences": 1407,
+          "licensedZips": 9
+        },
+        {
+          "command": "node scripts/check-atlas.mjs",
+          "result": "passed",
+          "names": 310,
+          "collisions": [],
+          "errors": []
+        },
+        {
+          "command": "node scripts/check-atlas-recompare.mjs",
+          "result": "passed",
+          "outsideScopeUnchanged": 480,
+          "verifiedViewedImages": 320,
+          "verifiedSourceFiles": 160
+        },
+        {
+          "command": "node --test packages/icons/tests/contours.test.mjs packages/icons/tests/junctions.test.mjs packages/icons/tests/paint.test.mjs packages/icons/tests/occlusion.test.mjs",
+          "result": "passed",
+          "tests": 14
+        },
+        {
+          "check": "skill native renderer",
+          "result": "72 raster cases, 0 empty/clipped",
+          "viewed": [
+            "28-29-native/native-1-light-1x.png",
+            "28-29-native/native-1-dark-1x.png",
+            "28-29-native/context-light-1x.png"
+          ]
+        },
+        {
+          "command": "git diff --check",
+          "result": "passed"
+        },
+        {
+          "check": "Current variable-stroke geometry vs cached definitions",
+          "result": "180 variants match for ice-cream, cake, cookie, bread"
+        }
+      ],
+      "limitation": "80 icons completed individual aesthetic re-comparison; 230 remain in the fixed 310-icon scope. Engineering checks do not establish aesthetic approval.",
+      "batches": [
+        "28-desserts-candidate-1",
+        "29-bread-reviewed"
+      ],
+      "buildContext": "Current build scripts route through Turbo. Core, five framework targets and review completed successfully; source consistency independently confirms cached native and variable-stroke outputs match current geometry.",
+      "additionalViewed": [
+        "28-29-overview/comparison.png"
+      ]
+    },
+    {
+      "date": "2026-11-17",
+      "batch": "30-31-furniture",
+      "reviewed": 85,
+      "remaining": 225,
+      "checks": [
+        {
+          "command": "bun run build:icons",
+          "result": "passed",
+          "names": 790,
+          "svgFiles": 7110
+        },
+        {
+          "command": "bun run build:review",
+          "result": "passed"
+        },
+        {
+          "command": "bun run validate",
+          "result": "passed",
+          "pinnedCurrentReferences": 1407,
+          "licensedZips": 9
+        },
+        {
+          "command": "node scripts/check-atlas.mjs",
+          "result": "passed",
+          "names": 310,
+          "collisions": [],
+          "errors": []
+        },
+        {
+          "command": "node scripts/check-atlas-recompare.mjs",
+          "result": "passed",
+          "outsideScopeUnchanged": 480,
+          "verifiedViewedImages": 340,
+          "verifiedSourceFiles": 170
+        },
+        {
+          "command": "node --test packages/icons/tests/contours.test.mjs packages/icons/tests/junctions.test.mjs packages/icons/tests/paint.test.mjs packages/icons/tests/occlusion.test.mjs",
+          "result": "passed",
+          "tests": 14
+        },
+        {
+          "check": "skill native renderer",
+          "result": "90 raster cases, 0 empty/clipped",
+          "viewed": [
+            "30-31-native/native-1-light-1x.png",
+            "30-31-native/native-1-dark-1x.png",
+            "30-31-native/context-light-1x.png"
+          ]
+        },
+        {
+          "command": "git diff --check",
+          "result": "passed"
+        },
+        {
+          "check": "Current variable-stroke geometry vs cached definitions",
+          "result": "225 variants match for bed, sofa, armchair, lamp, desk"
+        }
+      ],
+      "limitation": "85 icons completed individual aesthetic re-comparison; 225 remain in the fixed 310-icon scope. Engineering checks do not establish aesthetic approval.",
+      "batches": [
+        "30-seating-candidate-1",
+        "31-workspace-candidate-1"
+      ],
+      "buildContext": "Core, all five framework targets and review completed successfully through current Turbo commands. Native and variable-stroke definitions independently match current geometry.",
+      "additionalViewed": [
+        "30-31-overview/comparison.png"
+      ]
+    },
+    {
+      "date": "2026-11-17",
+      "batch": "32-33-boundaries-bathroom",
+      "reviewed": 90,
+      "remaining": 220,
+      "checks": [
+        {
+          "command": "bun run build:icons",
+          "result": "passed",
+          "names": 790,
+          "svgFiles": 7110
+        },
+        {
+          "command": "bun run build:review",
+          "result": "passed"
+        },
+        {
+          "command": "bun run validate",
+          "result": "passed",
+          "pinnedCurrentReferences": 1407,
+          "licensedZips": 9
+        },
+        {
+          "command": "node scripts/check-atlas.mjs",
+          "result": "passed",
+          "names": 310,
+          "collisions": [],
+          "errors": []
+        },
+        {
+          "command": "node scripts/check-atlas-recompare.mjs",
+          "result": "passed",
+          "outsideScopeUnchanged": 480,
+          "verifiedViewedImages": 360,
+          "verifiedSourceFiles": 180
+        },
+        {
+          "command": "node --test packages/icons/tests/contours.test.mjs packages/icons/tests/junctions.test.mjs packages/icons/tests/paint.test.mjs packages/icons/tests/occlusion.test.mjs",
+          "result": "passed",
+          "tests": 14
+        },
+        {
+          "check": "skill native renderer",
+          "result": "90 raster cases, 0 empty/clipped",
+          "viewed": [
+            "32-33-native/native-1-light-1x.png",
+            "32-33-native/native-1-dark-1x.png",
+            "32-33-native/context-light-1x.png"
+          ]
+        },
+        {
+          "command": "git diff --check",
+          "result": "passed"
+        },
+        {
+          "check": "Current variable-stroke geometry vs cached definitions",
+          "result": "225 variants match for door-open, door-closed, fence, bathtub, shower-head"
+        },
+        {
+          "check": "Native review projection",
+          "result": "Ignores only generated strokes; native path and strokeWidth changes remain detectable."
+        }
+      ],
+      "limitation": "90 icons completed individual aesthetic re-comparison; 220 remain in the fixed 310-icon scope. Engineering checks do not establish aesthetic approval.",
+      "batches": [
+        "32-boundaries-candidate-1",
+        "33-bathroom-candidate-1"
+      ],
+      "buildContext": "Core generation, SVG synchronization, all five framework targets and review completed. Full validation reran successfully after native review schema compatibility fix.",
+      "resolvedValidationIssues": [
+        {
+          "check": "validate and Atlas consistency",
+          "issue": "Generated native variants gained nested strokes; raw object comparisons reported stale brand and car decisions despite unchanged native geometry.",
+          "resolution": "Added nativeVariants projection removing only generated strokes for existing native review hashes and equality. Preserved all review evidence and baselines. Confirmed 480 outside-scope masters unchanged, and native path/weight mutations still compare differently."
+        }
+      ],
+      "additionalViewed": [
+        "32-33-overview/comparison.png"
+      ]
+    },
+    {
+      "date": "2026-11-17",
+      "batch": "34-36-appliances",
+      "reviewed": 99,
+      "remaining": 211,
+      "checks": [
+        {
+          "command": "bun run build:icons",
+          "result": "passed",
+          "names": 790,
+          "svgFiles": 7110
+        },
+        {
+          "command": "bun run build:review",
+          "result": "passed"
+        },
+        {
+          "command": "bun run validate",
+          "result": "passed",
+          "pinnedCurrentReferences": 1407,
+          "licensedZips": 9
+        },
+        {
+          "command": "node scripts/check-atlas.mjs",
+          "result": "passed",
+          "names": 310,
+          "collisions": [],
+          "errors": []
+        },
+        {
+          "command": "node scripts/check-atlas-recompare.mjs",
+          "result": "passed",
+          "outsideScopeUnchanged": 480,
+          "verifiedViewedImages": 396,
+          "verifiedSourceFiles": 198
+        },
+        {
+          "check": "skill native renderer",
+          "result": "162 raster cases, 0 empty/clipped",
+          "viewed": [
+            "34-36-native/native-1-light-1x.png",
+            "34-36-native/native-1-dark-1x.png",
+            "34-36-native/context-light-1x.png"
+          ]
+        },
+        {
+          "check": "Current variable-stroke geometry vs generated stroke-assets definitions",
+          "result": "405 variants match for refrigerator, washing-machine, microwave, oven, air-conditioner, fan, vacuum-cleaner, hair-dryer, iron"
+        },
+        {
+          "command": "git diff --check",
+          "result": "passed"
+        }
+      ],
+      "limitation": "99 icons completed individual aesthetic re-comparison; 211 remain in the fixed 310-icon scope. Engineering checks do not establish aesthetic approval.",
+      "batches": [
+        "34-appliances-candidate-1",
+        "35-climate-candidate-1",
+        "36-appliances-candidate-1"
+      ],
+      "buildContext": "Core generation, SVG synchronization, all five framework targets and review completed. Full validation reran after adding combined Hugeicons and Phosphor notices for hair-dryer.",
+      "additionalViewed": [
+        "36-overview/comparison.png"
+      ]
+    },
+    {
+      "date": "2026-11-18",
+      "batch": "37-39-heater-clothing",
+      "reviewed": 106,
+      "remaining": 204,
+      "checks": [
+        {
+          "command": "bun run build:icons",
+          "result": "passed",
+          "names": 790,
+          "svgFiles": 7110
+        },
+        {
+          "command": "bun run build:review",
+          "result": "passed"
+        },
+        {
+          "command": "bun run validate",
+          "result": "passed",
+          "pinnedCurrentReferences": 1407,
+          "licensedZips": 9
+        },
+        {
+          "command": "node scripts/check-atlas.mjs",
+          "result": "passed",
+          "names": 310,
+          "collisions": [],
+          "errors": []
+        },
+        {
+          "command": "node scripts/check-atlas-recompare.mjs",
+          "result": "passed",
+          "outsideScopeUnchanged": 480,
+          "verifiedViewedImages": 424,
+          "verifiedSourceFiles": 212
+        },
+        {
+          "check": "skill native renderer",
+          "result": "126 raster cases, 0 empty/clipped",
+          "viewed": [
+            "37-39-native/native-1-light-1x.png",
+            "37-39-native/native-1-dark-1x.png",
+            "37-39-native/context-light-1x.png"
+          ]
+        },
+        {
+          "check": "Current variable-stroke geometry vs generated stroke-assets definitions",
+          "result": "315 variants match for heater, shirt, trousers, dress, coat, sock, shoe"
+        },
+        {
+          "command": "git diff --check",
+          "result": "passed"
+        }
+      ],
+      "limitation": "106 icons completed individual aesthetic re-comparison; 204 remain in the fixed 310-icon scope. Engineering checks do not establish aesthetic approval.",
+      "batches": [
+        "37-heater-candidate-2",
+        "38-clothing-candidate-2",
+        "39-clothing-candidate-1"
+      ],
+      "resolvedValidationIssues": [
+        {
+          "issue": "coat: stale source comparison",
+          "resolution": "Current comparison manifest still referenced the sleeveless Tabler jacket. Saved original manifest, created current clothing manifest with fixed Lucide Lab jacket, and updated references/current.json. Full validation passed without changing validator or historical evidence."
+        }
+      ],
+      "additionalViewed": [
+        "37-39-overview/comparison.png"
+      ]
+    },
+    {
+      "date": "2026-11-18",
+      "batch": "40-41-accessories",
+      "reviewed": 110,
+      "remaining": 200,
+      "checks": [
+        {
+          "command": "bun run build:icons",
+          "result": "passed",
+          "names": 790,
+          "svgFiles": 7110
+        },
+        {
+          "command": "bun run build:review",
+          "result": "passed"
+        },
+        {
+          "command": "bun run validate",
+          "result": "passed",
+          "pinnedCurrentReferences": 1407,
+          "licensedZips": 9
+        },
+        {
+          "command": "node scripts/check-atlas.mjs",
+          "result": "passed",
+          "names": 310,
+          "collisions": [],
+          "errors": []
+        },
+        {
+          "command": "node scripts/check-atlas-recompare.mjs",
+          "result": "passed",
+          "outsideScopeUnchanged": 480,
+          "verifiedViewedImages": 440,
+          "verifiedSourceFiles": 220
+        },
+        {
+          "check": "skill native renderer",
+          "result": "72 raster cases, 0 empty/clipped",
+          "viewed": [
+            "40-41-native/native-1-light-1x.png",
+            "40-41-native/native-1-dark-1x.png",
+            "40-41-native/context-light-1x.png"
+          ]
+        },
+        {
+          "check": "Current variable-stroke geometry vs generated stroke-assets definitions",
+          "result": "180 variants match for glasses, sunglasses, watch, umbrella"
+        },
+        {
+          "command": "git diff --check",
+          "result": "passed"
+        }
+      ],
+      "limitation": "110 icons completed individual aesthetic re-comparison; 200 remain in the fixed 310-icon scope. Engineering checks do not establish aesthetic approval.",
+      "batches": [
+        "40-accessories-candidate-1",
+        "41-umbrella-candidate-1"
+      ],
+      "additionalViewed": [
+        "40-41-overview/comparison.png"
+      ]
+    },
+    {
+      "date": "2026-11-18",
+      "batch": "42-43-medical",
+      "reviewed": 116,
+      "remaining": 194,
+      "checks": [
+        {
+          "command": "bun run build:icons",
+          "result": "passed",
+          "names": 790,
+          "svgFiles": 7110
+        },
+        {
+          "command": "bun run build:review",
+          "result": "passed"
+        },
+        {
+          "command": "bun run validate",
+          "result": "passed",
+          "pinnedCurrentReferences": 1407,
+          "licensedZips": 9
+        },
+        {
+          "command": "node scripts/check-atlas.mjs",
+          "result": "passed",
+          "names": 310,
+          "collisions": [],
+          "errors": []
+        },
+        {
+          "command": "node scripts/check-atlas-recompare.mjs",
+          "result": "passed",
+          "outsideScopeUnchanged": 480,
+          "verifiedViewedImages": 464,
+          "verifiedSourceFiles": 232
+        },
+        {
+          "check": "skill native renderer",
+          "result": "108 raster cases, 0 empty/clipped",
+          "viewed": [
+            "42-43-native/native-1-light-1x.png",
+            "42-43-native/native-1-dark-1x.png",
+            "42-43-native/context-light-1x.png"
+          ]
+        },
+        {
+          "check": "Current variable-stroke geometry vs generated stroke-assets definitions",
+          "result": "270 variants match for stethoscope, syringe, pill, medical-mask, bandage, thermometer"
+        },
+        {
+          "command": "git diff --check",
+          "result": "passed"
+        }
+      ],
+      "limitation": "116 icons completed individual aesthetic re-comparison; 194 remain in the fixed 310-icon scope. Engineering checks do not establish aesthetic approval.",
+      "batches": [
+        "42-medical-candidate-1",
+        "43-medical-candidate-1"
+      ],
+      "additionalViewed": [
+        "42-43-overview/comparison.png"
+      ]
+    },
+    {
+      "date": "2026-11-18",
+      "batch": "44-45-medical",
+      "reviewed": 120,
+      "remaining": 190,
+      "checks": [
+        {
+          "command": "bun run build:icons",
+          "result": "passed",
+          "names": 790,
+          "svgFiles": 7110
+        },
+        {
+          "command": "bun run build:review",
+          "result": "passed"
+        },
+        {
+          "command": "bun run validate",
+          "result": "passed",
+          "pinnedCurrentReferences": 1407,
+          "licensedZips": 9
+        },
+        {
+          "command": "node scripts/check-atlas.mjs",
+          "result": "passed",
+          "names": 310,
+          "collisions": [],
+          "errors": []
+        },
+        {
+          "command": "node scripts/check-atlas-recompare.mjs",
+          "result": "passed",
+          "outsideScopeUnchanged": 480,
+          "verifiedViewedImages": 480,
+          "verifiedSourceFiles": 240
+        },
+        {
+          "check": "skill native renderer",
+          "result": "72 raster cases, 0 empty/clipped",
+          "viewed": [
+            "44-45-native/native-1-light-1x.png",
+            "44-45-native/native-1-dark-1x.png",
+            "44-45-native/context-light-1x.png"
+          ]
+        },
+        {
+          "check": "Current variable-stroke geometry vs generated stroke-assets definitions",
+          "result": "180 variants match for hospital, ambulance, heart-pulse, first-aid-kit, including preserved nested SVG nodes"
+        },
+        {
+          "command": "git diff --check",
+          "result": "passed"
+        },
+        {
+          "command": "node --test packages/icons/tests/atlas-strokes.test.mjs packages/icons/tests/contours.test.mjs packages/icons/tests/junctions.test.mjs packages/icons/tests/paint.test.mjs packages/icons/tests/occlusion.test.mjs",
+          "result": "passed",
+          "tests": 16
+        }
+      ],
+      "limitation": "120 icons completed individual aesthetic re-comparison; 190 remain in the fixed 310-icon scope. Engineering checks do not establish aesthetic approval.",
+      "batches": [
+        "44-medical-candidate-1",
+        "45-first-aid-candidate-1"
+      ],
+      "additionalViewed": [
+        "44-45-overview/comparison.png",
+        "44-hospital-weights/light.png",
+        "44-hospital-weights/dark.png",
+        "44-hospital-weights-fixed/light.png",
+        "44-hospital-weights-fixed/dark.png"
+      ],
+      "resolvedValidationIssues": [
+        {
+          "issue": "Hospital ground cap extended past canvas at heavier strokes",
+          "resolution": "Constrain the ground endpoint by the native stroke envelope; nine maximum-stroke size/corner cases pass painted-bounds assertions."
+        },
+        {
+          "issue": "Atlas helper discarded nested SVG mask and group children in variable-stroke output",
+          "resolution": "Recursively normalize children. Regression coverage checks maximum strokes for all 310 Atlas icons across three sizes and corners. Hospital maximum-stroke light and dark evidence inspected after repair."
+        }
+      ]
+    },
+    {
+      "date": "2026-11-18",
+      "batch": "46-47-anatomy",
+      "reviewed": 125,
+      "remaining": 185,
+      "checks": [
+        {
+          "command": "bun run build:icons",
+          "result": "passed",
+          "names": 790,
+          "svgFiles": 7110
+        },
+        {
+          "command": "bun run build:review",
+          "result": "passed"
+        },
+        {
+          "command": "bun run validate",
+          "result": "passed",
+          "pinnedCurrentReferences": 1407,
+          "licensedZips": 9
+        },
+        {
+          "command": "node scripts/check-atlas.mjs",
+          "result": "passed",
+          "names": 310,
+          "collisions": [],
+          "errors": []
+        },
+        {
+          "command": "node scripts/check-atlas-recompare.mjs",
+          "result": "passed",
+          "outsideScopeUnchanged": 480,
+          "verifiedViewedImages": 500,
+          "verifiedSourceFiles": 250
+        },
+        {
+          "check": "skill native renderer",
+          "result": "90 raster cases, 0 empty/clipped",
+          "viewed": [
+            "46-47-native/native-1-light-1x.png",
+            "46-47-native/native-1-dark-1x.png",
+            "46-47-native/context-light-1x.png"
+          ]
+        },
+        {
+          "check": "Current variable-stroke geometry vs generated stroke-assets definitions",
+          "result": "225 variants match for bone, tooth, brain, lungs, ear"
+        },
+        {
+          "command": "git diff --check",
+          "result": "passed"
+        },
+        {
+          "check": "Lungs combined source notices",
+          "result": "Both complete MIT texts retained in core package; source attribution retained in SVG and five framework package notices. Framework packages import core geometry and depend on @master/icons."
+        }
+      ],
+      "limitation": "125 icons completed individual aesthetic re-comparison; 185 remain in the fixed 310-icon scope. Engineering checks do not establish aesthetic approval.",
+      "batches": [
+        "46-anatomy-candidate-1",
+        "47-anatomy-candidate-1"
+      ],
+      "additionalViewed": [
+        "46-47-overview/comparison.png",
+        "46-47-weights/light.png",
+        "46-47-weights/dark.png"
+      ]
+    },
+    {
+      "date": "2026-11-18",
+      "batch": "48-50-people-mobility",
+      "reviewed": 130,
+      "remaining": 180,
+      "checks": [
+        {
+          "command": "bun run build:icons",
+          "result": "passed",
+          "names": 790,
+          "svgFiles": 7110
+        },
+        {
+          "command": "bun run build:review",
+          "result": "passed"
+        },
+        {
+          "command": "bun run validate",
+          "result": "passed",
+          "pinnedCurrentReferences": 1407,
+          "licensedZips": 9
+        },
+        {
+          "command": "node scripts/check-atlas.mjs",
+          "result": "passed",
+          "names": 310,
+          "collisions": [],
+          "errors": []
+        },
+        {
+          "command": "node scripts/check-atlas-recompare.mjs",
+          "result": "passed",
+          "outsideScopeUnchanged": 480,
+          "verifiedViewedImages": 520,
+          "verifiedSourceFiles": 260
+        },
+        {
+          "check": "skill native renderer",
+          "result": "90 raster cases, 0 empty/clipped",
+          "viewed": [
+            "48-50-native/native-1-light-1x.png",
+            "48-50-native/native-1-dark-1x.png",
+            "48-50-native/context-light-1x.png"
+          ]
+        },
+        {
+          "check": "Current variable-stroke geometry vs generated stroke-assets definitions",
+          "result": "225 variants match for hand-heart, person-standing, person-walking, wheelchair, crutch"
+        },
+        {
+          "command": "git diff --check",
+          "result": "passed"
+        }
+      ],
+      "limitation": "130 icons completed individual aesthetic re-comparison; 180 remain in the fixed 310-icon scope. Engineering checks do not establish aesthetic approval.",
+      "batches": [
+        "48-hand-heart-candidate-1",
+        "49-people-candidate-1",
+        "50-mobility-candidate-1"
+      ],
+      "additionalViewed": [
+        "48-50-overview/comparison.png",
+        "48-50-weights/light.png",
+        "48-50-weights/dark.png"
+      ]
+    },
+    {
+      "date": "2026-11-18",
+      "batch": "51-52-sports",
+      "reviewed": 136,
+      "remaining": 174,
+      "checks": [
+        {
+          "command": "bun run build:icons",
+          "result": "passed",
+          "names": 790,
+          "svgFiles": 7110
+        },
+        {
+          "command": "bun run build:review",
+          "result": "passed"
+        },
+        {
+          "command": "bun run validate",
+          "result": "passed",
+          "pinnedCurrentReferences": 1407,
+          "licensedZips": 9
+        },
+        {
+          "command": "node scripts/check-atlas.mjs",
+          "result": "passed",
+          "names": 310,
+          "collisions": [],
+          "errors": []
+        },
+        {
+          "command": "node scripts/check-atlas-recompare.mjs",
+          "result": "passed",
+          "outsideScopeUnchanged": 480,
+          "verifiedViewedImages": 544,
+          "verifiedSourceFiles": 272
+        },
+        {
+          "check": "skill native renderer",
+          "result": "108 raster cases, 0 empty/clipped",
+          "viewed": [
+            "51-52-native/native-1-light-1x.png",
+            "51-52-native/native-1-dark-1x.png",
+            "51-52-native/context-light-1x.png"
+          ]
+        },
+        {
+          "check": "Current variable-stroke geometry vs generated stroke-assets definitions",
+          "result": "270 variants match for dumbbell, kettlebell, basketball, football, tennis-racket, volleyball"
+        },
+        {
+          "command": "git diff --check",
+          "result": "passed"
+        }
+      ],
+      "limitation": "136 icons completed individual aesthetic re-comparison; 174 remain in the fixed 310-icon scope. Engineering checks do not establish aesthetic approval.",
+      "batches": [
+        "51-sports-candidate-1",
+        "52-ball-sports-candidate-1"
+      ],
+      "additionalViewed": [
+        "51-52-overview/comparison.png",
+        "51-52-weights/light.png",
+        "51-52-weights/dark.png"
+      ]
+    },
+    {
+      "date": "2026-11-18",
+      "batch": "53-54-sports",
+      "reviewed": 140,
+      "remaining": 170,
+      "checks": [
+        {
+          "command": "bun run build:icons",
+          "result": "passed",
+          "names": 790,
+          "svgFiles": 7110
+        },
+        {
+          "command": "bun run build:review",
+          "result": "passed"
+        },
+        {
+          "command": "bun run validate",
+          "result": "passed",
+          "pinnedCurrentReferences": 1407,
+          "licensedZips": 9
+        },
+        {
+          "command": "node scripts/check-atlas.mjs",
+          "result": "passed",
+          "names": 310,
+          "collisions": [],
+          "errors": []
+        },
+        {
+          "command": "node scripts/check-atlas-recompare.mjs",
+          "result": "passed",
+          "outsideScopeUnchanged": 480,
+          "verifiedViewedImages": 560,
+          "verifiedSourceFiles": 280
+        },
+        {
+          "check": "skill native renderer",
+          "result": "72 raster cases, 0 empty/clipped",
+          "viewed": [
+            "53-54-native/native-1-light-1x.png",
+            "53-54-native/native-1-dark-1x.png",
+            "53-54-native/context-light-1x.png"
+          ]
+        },
+        {
+          "check": "Current variable-stroke geometry vs generated stroke-assets definitions",
+          "result": "180 variants match for baseball, golf-hole, swimming, running"
+        },
+        {
+          "command": "git diff --check",
+          "result": "passed"
+        },
+        {
+          "check": "Running combined source notices",
+          "result": "Both Tabler and Phosphor copyright notices verified in generated SVG and combined notice shipped in core package; complete validate passed for licensed ZIP outputs."
+        }
+      ],
+      "limitation": "140 icons completed individual aesthetic re-comparison; 170 remain in the fixed 310-icon scope. Engineering checks do not establish aesthetic approval.",
+      "batches": [
+        "53-sports-candidate-1",
+        "54-running-candidate-2"
+      ],
+      "additionalViewed": [
+        "53-54-overview/comparison.png",
+        "53-54-weights/light.png",
+        "53-54-weights/dark.png"
+      ]
+    },
+    {
+      "date": "2026-11-18",
+      "batch": "55-56-outdoor",
+      "reviewed": 146,
+      "remaining": 164,
+      "checks": [
+        {
+          "command": "bun run build:icons",
+          "result": "passed",
+          "names": 790,
+          "svgFiles": 7110
+        },
+        {
+          "command": "bun run build:review",
+          "result": "passed"
+        },
+        {
+          "command": "bun run validate",
+          "result": "passed",
+          "pinnedCurrentReferences": 1407,
+          "licensedZips": 9
+        },
+        {
+          "command": "node scripts/check-atlas.mjs",
+          "result": "passed",
+          "names": 310,
+          "collisions": [],
+          "errors": []
+        },
+        {
+          "command": "node scripts/check-atlas-recompare.mjs",
+          "result": "passed",
+          "outsideScopeUnchanged": 480,
+          "verifiedViewedImages": 584,
+          "verifiedSourceFiles": 292
+        },
+        {
+          "check": "skill native renderer",
+          "result": "108 raster cases, 0 empty/clipped",
+          "viewed": [
+            "55-56-native/native-1-light-1x.png",
+            "55-56-native/native-1-dark-1x.png",
+            "55-56-native/context-light-1x.png"
+          ]
+        },
+        {
+          "check": "Current variable-stroke geometry vs generated stroke-assets definitions",
+          "result": "270 variants match for binoculars, flashlight, axe, shovel, pickaxe, fishing-hook"
+        },
+        {
+          "command": "git diff --check",
+          "result": "passed"
+        }
+      ],
+      "limitation": "146 icons completed individual aesthetic re-comparison; 164 remain in the fixed 310-icon scope. Engineering checks do not establish aesthetic approval.",
+      "batches": [
+        "55-outdoor-candidate-1",
+        "56-tools-candidate-1"
+      ],
+      "additionalViewed": [
+        "55-56-overview/comparison.png",
+        "55-56-weights/light.png",
+        "55-56-weights/dark.png"
+      ]
+    },
+    {
+      "date": "2026-11-18",
+      "batch": "57-58-outdoor",
+      "reviewed": 150,
+      "remaining": 160,
+      "checks": [
+        {
+          "command": "bun run build:icons",
+          "result": "passed",
+          "names": 790,
+          "svgFiles": 7110
+        },
+        {
+          "command": "bun run build:review",
+          "result": "passed"
+        },
+        {
+          "command": "bun run validate",
+          "result": "passed",
+          "pinnedCurrentReferences": 1407,
+          "licensedZips": 9
+        },
+        {
+          "command": "node scripts/check-atlas.mjs",
+          "result": "passed",
+          "names": 310,
+          "collisions": [],
+          "errors": []
+        },
+        {
+          "command": "node scripts/check-atlas-recompare.mjs",
+          "result": "passed",
+          "outsideScopeUnchanged": 480,
+          "verifiedViewedImages": 600,
+          "verifiedSourceFiles": 300
+        },
+        {
+          "check": "skill native renderer",
+          "result": "72 raster cases, 0 empty/clipped",
+          "viewed": [
+            "57-58-native/native-1-light-1x.png",
+            "57-58-native/native-1-dark-1x.png",
+            "57-58-native/context-light-1x.png"
+          ]
+        },
+        {
+          "check": "Current variable-stroke geometry vs generated stroke-assets definitions",
+          "result": "180 variants match for campfire, footprints, hiking, kayak"
+        },
+        {
+          "command": "git diff --check",
+          "result": "passed"
+        }
+      ],
+      "limitation": "150 icons completed individual aesthetic re-comparison; 160 remain in the fixed 310-icon scope. Engineering checks do not establish aesthetic approval.",
+      "batches": [
+        "57-outdoor-candidate-1",
+        "58-kayak-candidate-1"
+      ],
+      "additionalViewed": [
+        "57-58-overview/comparison.png",
+        "57-58-weights/light.png",
+        "57-58-weights/dark.png"
+      ]
+    },
+    {
+      "date": "2026-11-18",
+      "batch": "59-60-science",
+      "reviewed": 156,
+      "remaining": 154,
+      "checks": [
+        {
+          "command": "bun run build:icons",
+          "result": "passed",
+          "names": 790,
+          "svgFiles": 7110
+        },
+        {
+          "command": "bun run build:review",
+          "result": "passed"
+        },
+        {
+          "command": "bun run validate",
+          "result": "passed",
+          "pinnedCurrentReferences": 1407,
+          "licensedZips": 9
+        },
+        {
+          "command": "node scripts/check-atlas.mjs",
+          "result": "passed",
+          "names": 310,
+          "collisions": [],
+          "errors": []
+        },
+        {
+          "command": "node scripts/check-atlas-recompare.mjs",
+          "result": "passed",
+          "outsideScopeUnchanged": 480,
+          "verifiedViewedImages": 624,
+          "verifiedSourceFiles": 312
+        },
+        {
+          "check": "skill native renderer",
+          "result": "108 raster cases, 0 empty/clipped",
+          "viewed": [
+            "59-60-native/native-1-light-1x.png",
+            "59-60-native/native-1-dark-1x.png",
+            "59-60-native/context-light-1x.png"
+          ]
+        },
+        {
+          "check": "Current variable-stroke geometry vs generated stroke-assets definitions",
+          "result": "270 variants match for atom, flask-conical, flask-round, test-tube, microscope, telescope"
+        },
+        {
+          "command": "git diff --check",
+          "result": "passed"
+        }
+      ],
+      "limitation": "156 icons completed individual aesthetic re-comparison; 154 remain in the fixed 310-icon scope. Engineering checks do not establish aesthetic approval.",
+      "batches": [
+        "59-science-candidate-1",
+        "60-lab-candidate-1"
+      ],
+      "additionalViewed": [
+        "59-60-overview/comparison.png",
+        "59-60-weights/light.png",
+        "59-60-weights/dark.png"
+      ]
+    },
+    {
+      "date": "2026-11-18",
+      "batch": "61-62-science",
+      "reviewed": 160,
+      "remaining": 150,
+      "checks": [
+        {
+          "command": "bun run build:icons",
+          "result": "passed",
+          "names": 790,
+          "svgFiles": 7110
+        },
+        {
+          "command": "bun run build:review",
+          "result": "passed"
+        },
+        {
+          "command": "bun run validate",
+          "result": "passed",
+          "pinnedCurrentReferences": 1407,
+          "licensedZips": 9
+        },
+        {
+          "command": "node scripts/check-atlas.mjs",
+          "result": "passed",
+          "names": 310,
+          "collisions": [],
+          "errors": []
+        },
+        {
+          "command": "node scripts/check-atlas-recompare.mjs",
+          "result": "passed",
+          "outsideScopeUnchanged": 480,
+          "verifiedViewedImages": 640,
+          "verifiedSourceFiles": 320
+        },
+        {
+          "check": "skill native renderer",
+          "result": "72 raster cases, 0 empty/clipped",
+          "viewed": [
+            "61-62-native/native-1-light-1x.png",
+            "61-62-native/native-1-dark-1x.png",
+            "61-62-native/context-light-1x.png"
+          ]
+        },
+        {
+          "check": "Current variable-stroke geometry vs generated stroke-assets definitions",
+          "result": "180 variants match for dna, orbit, rocket, satellite"
+        },
+        {
+          "command": "git diff --check",
+          "result": "passed"
+        }
+      ],
+      "limitation": "160 icons completed individual aesthetic re-comparison; 150 remain in the fixed 310-icon scope. Engineering checks do not establish aesthetic approval.",
+      "batches": [
+        "61-science-candidate-1",
+        "62-satellite-before"
+      ],
+      "additionalViewed": [
+        "61-62-overview/comparison.png",
+        "61-62-weights/light.png",
+        "61-62-weights/dark.png"
+      ]
+    },
+    {
+      "date": "2026-11-18",
+      "batch": "63-66-math",
+      "reviewed": 170,
+      "remaining": 140,
+      "checks": [
+        {
+          "command": "bun run build:icons",
+          "result": "passed",
+          "names": 790,
+          "svgFiles": 7110
+        },
+        {
+          "command": "bun run build:review",
+          "result": "passed"
+        },
+        {
+          "command": "bun run validate",
+          "result": "passed",
+          "pinnedCurrentReferences": 1407,
+          "licensedZips": 9
+        },
+        {
+          "command": "node scripts/check-atlas.mjs",
+          "result": "passed",
+          "names": 310,
+          "collisions": [],
+          "errors": []
+        },
+        {
+          "command": "node scripts/check-atlas-recompare.mjs",
+          "result": "passed",
+          "outsideScopeUnchanged": 480,
+          "verifiedViewedImages": 680,
+          "verifiedSourceFiles": 340
+        },
+        {
+          "check": "skill native renderer",
+          "result": "180 raster cases, 0 empty/clipped",
+          "viewed": [
+            "63-66-native/native-1-light-1x.png",
+            "63-66-native/native-1-dark-1x.png",
+            "63-66-native/context-light-1x.png"
+          ]
+        },
+        {
+          "check": "Current variable-stroke geometry vs generated stroke-assets definitions",
+          "result": "450 variants match for pi, sigma, infinity, radical, equal, not-equal, divide, plus-minus, fraction, function-square"
+        },
+        {
+          "command": "git diff --check",
+          "result": "passed"
+        }
+      ],
+      "limitation": "170 icons completed individual aesthetic re-comparison; 140 remain in the fixed 310-icon scope. Engineering checks do not establish aesthetic approval.",
+      "batches": [
+        "63-math-before",
+        "64-equations-before",
+        "65-arithmetic-candidate-1",
+        "66-function-before"
+      ],
+      "additionalViewed": [
+        "63-66-overview/comparison.png",
+        "63-66-overview/fraction.png",
+        "63-66-weights/light.png",
+        "63-66-weights/dark.png"
+      ]
+    },
+    {
+      "date": "2026-11-18",
+      "batch": "67-68-education",
+      "reviewed": 176,
+      "remaining": 134,
+      "checks": [
+        {
+          "command": "bun run build:icons",
+          "result": "passed",
+          "names": 790,
+          "svgFiles": 7110
+        },
+        {
+          "command": "bun run build:review",
+          "result": "passed"
+        },
+        {
+          "command": "bun run validate",
+          "result": "passed",
+          "pinnedCurrentReferences": 1407,
+          "licensedZips": 9
+        },
+        {
+          "command": "node scripts/check-atlas.mjs",
+          "result": "passed",
+          "names": 310,
+          "collisions": [],
+          "errors": []
+        },
+        {
+          "command": "node scripts/check-atlas-recompare.mjs",
+          "result": "passed",
+          "outsideScopeUnchanged": 480,
+          "verifiedViewedImages": 704,
+          "verifiedSourceFiles": 352
+        },
+        {
+          "check": "skill native renderer",
+          "result": "108 raster cases, 0 empty/clipped",
+          "viewed": [
+            "67-68-native/native-1-light-1x.png",
+            "67-68-native/native-1-dark-1x.png",
+            "67-68-native/context-light-1x.png"
+          ]
+        },
+        {
+          "check": "Current variable-stroke geometry vs generated stroke-assets definitions",
+          "result": "270 variants match for graduation-cap, school, presentation, chalkboard, abacus, book-marked"
+        },
+        {
+          "command": "git diff --check",
+          "result": "passed"
+        }
+      ],
+      "limitation": "176 icons completed individual aesthetic re-comparison; 134 remain in the fixed 310-icon scope. Engineering checks do not establish aesthetic approval.",
+      "batches": [
+        "67-education-candidate-1",
+        "68-learning-candidate-1"
+      ],
+      "additionalViewed": [
+        "67-68-overview/comparison.png",
+        "67-68-weights/light.png",
+        "67-68-weights/dark.png"
+      ]
+    },
+    {
+      "date": "2026-11-18",
+      "batch": "69-70-education",
+      "reviewed": 180,
+      "remaining": 130,
+      "checks": [
+        {
+          "command": "bun run build:icons",
+          "result": "passed",
+          "names": 790,
+          "svgFiles": 7110
+        },
+        {
+          "command": "bun run build:review",
+          "result": "passed"
+        },
+        {
+          "command": "bun run validate",
+          "result": "passed",
+          "pinnedCurrentReferences": 1407,
+          "licensedZips": 9
+        },
+        {
+          "command": "node scripts/check-atlas.mjs",
+          "result": "passed",
+          "names": 310,
+          "collisions": [],
+          "errors": []
+        },
+        {
+          "command": "node scripts/check-atlas-recompare.mjs",
+          "result": "passed",
+          "outsideScopeUnchanged": 480,
+          "verifiedViewedImages": 720,
+          "verifiedSourceFiles": 360
+        },
+        {
+          "check": "skill native renderer",
+          "result": "72 raster cases, 0 empty/clipped",
+          "viewed": [
+            "69-70-native/native-1-light-1x.png",
+            "69-70-native/native-1-dark-1x.png",
+            "69-70-native/context-light-1x.png"
+          ]
+        },
+        {
+          "check": "Current variable-stroke geometry vs generated stroke-assets definitions",
+          "result": "180 variants match for library, diploma, globe-stand, pencil-ruler"
+        },
+        {
+          "command": "git diff --check",
+          "result": "passed"
+        }
+      ],
+      "limitation": "180 icons completed individual aesthetic re-comparison; 130 remain in the fixed 310-icon scope. Engineering checks do not establish aesthetic approval.",
+      "batches": [
+        "69-education-before",
+        "70-pencil-ruler-candidate-1"
+      ],
+      "additionalViewed": [
+        "69-70-overview/comparison.png",
+        "69-70-weights/light.png",
+        "69-70-weights/dark.png"
+      ]
+    },
+    {
+      "date": "2026-11-18",
+      "batch": "71-72-music",
+      "reviewed": 186,
+      "remaining": 124,
+      "checks": [
+        {
+          "command": "bun run build:icons",
+          "result": "passed",
+          "names": 790,
+          "svgFiles": 7110
+        },
+        {
+          "command": "bun run build:review",
+          "result": "passed"
+        },
+        {
+          "command": "bun run validate",
+          "result": "passed",
+          "pinnedCurrentReferences": 1407,
+          "licensedZips": 9
+        },
+        {
+          "command": "node scripts/check-atlas.mjs",
+          "result": "passed",
+          "names": 310,
+          "collisions": [],
+          "errors": []
+        },
+        {
+          "command": "node scripts/check-atlas-recompare.mjs",
+          "result": "passed",
+          "outsideScopeUnchanged": 480,
+          "verifiedViewedImages": 744,
+          "verifiedSourceFiles": 372
+        },
+        {
+          "check": "skill native renderer",
+          "result": "108 raster cases, 0 empty/clipped",
+          "viewed": [
+            "71-72-native/native-1-light-1x.png",
+            "71-72-native/native-1-dark-1x.png",
+            "71-72-native/context-light-1x.png"
+          ]
+        },
+        {
+          "check": "Current variable-stroke geometry vs generated stroke-assets definitions",
+          "result": "270 variants match for guitar, piano, drum, violin, trumpet, saxophone"
+        },
+        {
+          "command": "git diff --check",
+          "result": "passed"
+        }
+      ],
+      "limitation": "186 icons completed individual aesthetic re-comparison; 124 remain in the fixed 310-icon scope. Piano has one complete same-form source and one keyboard-only structural reference. Engineering checks do not establish aesthetic approval.",
+      "batches": [
+        "71-music-candidate-1",
+        "72-instruments-candidate-1"
+      ],
+      "additionalViewed": [
+        "71-72-overview/comparison.png",
+        "71-72-weights/light.png",
+        "71-72-weights/dark.png"
+      ]
+    },
+    {
+      "date": "2026-11-18",
+      "batch": "73-74-music",
+      "reviewed": 190,
+      "remaining": 120,
+      "checks": [
+        {
+          "command": "bun run build:icons",
+          "result": "passed",
+          "names": 790,
+          "svgFiles": 7110
+        },
+        {
+          "command": "bun run build:review",
+          "result": "passed"
+        },
+        {
+          "command": "bun run validate",
+          "result": "passed",
+          "pinnedCurrentReferences": 1407,
+          "licensedZips": 9
+        },
+        {
+          "command": "node scripts/check-atlas.mjs",
+          "result": "passed",
+          "names": 310,
+          "collisions": [],
+          "errors": []
+        },
+        {
+          "command": "node scripts/check-atlas-recompare.mjs",
+          "result": "passed",
+          "outsideScopeUnchanged": 480,
+          "verifiedViewedImages": 760,
+          "verifiedSourceFiles": 380
+        },
+        {
+          "check": "skill native renderer",
+          "result": "72 raster cases, 0 empty/clipped",
+          "viewed": [
+            "73-74-native/native-1-light-1x.png",
+            "73-74-native/native-1-dark-1x.png",
+            "73-74-native/context-light-1x.png"
+          ]
+        },
+        {
+          "check": "Current variable-stroke geometry vs generated stroke-assets definitions",
+          "result": "180 variants match for metronome, guitar-electric, vinyl-record, music-keyboard"
+        },
+        {
+          "command": "git diff --check",
+          "result": "passed"
+        },
+        {
+          "check": "Vinyl record Lucide and Phosphor attribution",
+          "result": "Combined license matches the shipped core file; all 9 SVGs retain both notices; built catalog records baseSource and additionalSources; root and package notices include the combined attribution."
+        }
+      ],
+      "limitation": "190 icons completed individual aesthetic re-comparison; 120 remain in the fixed 310-icon scope. Music keyboard has one complete same-form source and one keyboard-only structural reference. Engineering checks do not establish aesthetic approval.",
+      "batches": [
+        "73-music-candidate-1",
+        "74-keyboard-before"
+      ],
+      "additionalViewed": [
+        "73-74-overview/comparison.png",
+        "73-74-weights/light.png",
+        "73-74-weights/dark.png"
+      ]
+    },
+    {
+      "date": "2026-11-18",
+      "batch": "75-76-media",
+      "reviewed": 196,
+      "remaining": 114,
+      "checks": [
+        {
+          "command": "bun run build:icons",
+          "result": "passed",
+          "names": 790,
+          "svgFiles": 7110
+        },
+        {
+          "command": "bun run build:review",
+          "result": "passed"
+        },
+        {
+          "command": "bun run validate",
+          "result": "passed",
+          "pinnedCurrentReferences": 1407,
+          "licensedZips": 9
+        },
+        {
+          "command": "node scripts/check-atlas.mjs",
+          "result": "passed",
+          "names": 310,
+          "collisions": [],
+          "errors": []
+        },
+        {
+          "command": "node scripts/check-atlas-recompare.mjs",
+          "result": "passed",
+          "outsideScopeUnchanged": 480,
+          "verifiedViewedImages": 784,
+          "verifiedSourceFiles": 392
+        },
+        {
+          "check": "skill native renderer",
+          "result": "108 raster cases, 0 empty/clipped",
+          "viewed": [
+            "75-76-native/native-1-light-1x.png",
+            "75-76-native/native-1-dark-1x.png",
+            "75-76-native/context-light-1x.png"
+          ]
+        },
+        {
+          "check": "Current variable-stroke geometry vs generated stroke-assets definitions",
+          "result": "270 variants match for radio-receiver, tv, projector, speaker, film-reel, cassette; latest maximum-width images are in 75-76-weights-2."
+        },
+        {
+          "command": "git diff --check",
+          "result": "passed"
+        }
+      ],
+      "limitation": "196 icons completed individual aesthetic re-comparison; 114 remain in the fixed 310-icon scope. Film reel uses solid perforation marks at 16px and when heavy strokes would leave holes below 1 native pixel; source-comparison and native screenshots retain the unchanged default-weight geometry. Engineering checks do not establish aesthetic approval.",
+      "batches": [
+        "75-media-candidate-1",
+        "76-audio-candidate-1"
+      ],
+      "additionalViewed": [
+        "75-76-overview/comparison.png",
+        "75-76-weights/light.png",
+        "75-76-weights/dark.png",
+        "75-76-weights-2/light.png",
+        "75-76-weights-2/dark.png"
+      ]
+    },
+    {
+      "date": "2026-11-18",
+      "batch": "77-78-media",
+      "reviewed": 200,
+      "remaining": 110,
+      "checks": [
+        {
+          "command": "bun run build:icons",
+          "result": "passed",
+          "names": 790,
+          "svgFiles": 7110
+        },
+        {
+          "command": "bun run build:review",
+          "result": "passed"
+        },
+        {
+          "command": "bun run validate",
+          "result": "passed",
+          "pinnedCurrentReferences": 1407,
+          "licensedZips": 9
+        },
+        {
+          "command": "node scripts/check-atlas.mjs",
+          "result": "passed",
+          "names": 310,
+          "collisions": [],
+          "errors": []
+        },
+        {
+          "command": "node scripts/check-atlas-recompare.mjs",
+          "result": "passed",
+          "outsideScopeUnchanged": 480,
+          "verifiedViewedImages": 800,
+          "verifiedSourceFiles": 400
+        },
+        {
+          "check": "skill native renderer",
+          "result": "72 raster cases, 0 empty/clipped",
+          "viewed": [
+            "77-78-native/native-1-light-1x.png",
+            "77-78-native/native-1-dark-1x.png",
+            "77-78-native/context-light-1x.png"
+          ]
+        },
+        {
+          "check": "Current variable-stroke geometry vs generated stroke-assets definitions",
+          "result": "180 variants match for film, clapperboard, podcast, antenna"
+        },
+        {
+          "command": "git diff --check",
+          "result": "passed"
+        }
+      ],
+      "limitation": "200 icons completed individual aesthetic re-comparison; 110 remain in the fixed 310-icon scope. Engineering checks do not establish aesthetic approval.",
+      "batches": [
+        "77-film-candidate-1",
+        "78-antenna-before"
+      ],
+      "additionalViewed": [
+        "77-78-overview/comparison.png",
+        "77-78-weights/light.png",
+        "77-78-weights/dark.png"
+      ]
+    },
+    {
+      "date": "2026-11-18",
+      "batch": "79-tools",
+      "reviewed": 203,
+      "remaining": 107,
+      "checks": [
+        {
+          "command": "bun run build:icons",
+          "result": "passed",
+          "names": 790,
+          "svgFiles": 7110
+        },
+        {
+          "command": "bun run build:review",
+          "result": "passed"
+        },
+        {
+          "command": "bun run validate",
+          "result": "passed",
+          "pinnedCurrentReferences": 1407,
+          "licensedZips": 9
+        },
+        {
+          "command": "node scripts/check-atlas.mjs",
+          "result": "passed",
+          "names": 310,
+          "collisions": [],
+          "errors": []
+        },
+        {
+          "command": "node scripts/check-atlas-recompare.mjs",
+          "result": "passed",
+          "outsideScopeUnchanged": 480,
+          "verifiedViewedImages": 812,
+          "verifiedSourceFiles": 406
+        },
+        {
+          "check": "skill native renderer",
+          "result": "54 raster cases, 0 empty/clipped",
+          "viewed": [
+            "79-native/native-1-light-1x.png",
+            "79-native/native-1-dark-1x.png",
+            "79-native/context-light-1x.png"
+          ]
+        },
+        {
+          "check": "Current variable-stroke geometry vs generated stroke-assets definitions",
+          "result": "135 variants match for hammer, screwdriver, drill"
+        },
+        {
+          "command": "git diff --check",
+          "result": "passed"
+        }
+      ],
+      "limitation": "203 icons completed individual aesthetic re-comparison; 107 remain in the fixed 310-icon scope. Engineering checks do not establish aesthetic approval.",
+      "batches": [
+        "79-tools-candidate-1"
+      ],
+      "additionalViewed": [
+        "79-overview/comparison.png",
+        "79-weights/light.png",
+        "79-weights/dark.png"
+      ]
+    },
+    {
+      "date": "2026-11-18",
+      "batch": "80-82-tools",
+      "reviewed": 210,
+      "remaining": 100,
+      "checks": [
+        {
+          "command": "bun run build:icons",
+          "result": "passed",
+          "names": 790,
+          "svgFiles": 7110
+        },
+        {
+          "command": "bun run build:review",
+          "result": "passed"
+        },
+        {
+          "command": "bun run validate",
+          "result": "passed",
+          "pinnedCurrentReferences": 1407,
+          "licensedZips": 9
+        },
+        {
+          "command": "node scripts/check-atlas.mjs",
+          "result": "passed",
+          "names": 310,
+          "collisions": [],
+          "errors": []
+        },
+        {
+          "command": "node scripts/check-atlas-recompare.mjs",
+          "result": "passed",
+          "outsideScopeUnchanged": 480,
+          "verifiedViewedImages": 840,
+          "verifiedSourceFiles": 420
+        },
+        {
+          "check": "skill native renderer",
+          "result": "126 raster cases, 0 empty/clipped",
+          "viewed": [
+            "80-82-native/native-1-light-1x.png",
+            "80-82-native/native-1-dark-1x.png",
+            "80-82-native/context-light-1x.png"
+          ]
+        },
+        {
+          "check": "Current variable-stroke geometry vs generated stroke-assets definitions",
+          "result": "315 variants match for saw, tape-measure, toolbox, hard-hat, paint-roller, pocket-knife, nut"
+        },
+        {
+          "command": "git diff --check",
+          "result": "passed"
+        }
+      ],
+      "limitation": "210 icons completed individual aesthetic re-comparison; 100 remain in the fixed 310-icon scope. Engineering checks do not establish aesthetic approval.",
+      "batches": [
+        "80-tools-candidate-1",
+        "81-tools-candidate-1",
+        "82-nut-before"
+      ],
+      "additionalViewed": [
+        "80-82-overview/comparison.png",
+        "80-82-weights/light.png",
+        "80-82-weights/dark.png"
+      ]
+    },
+    {
+      "date": "2026-11-18",
+      "batch": "83-84-industry",
+      "reviewed": 216,
+      "remaining": 94,
+      "checks": [
+        {
+          "command": "bun run build:icons",
+          "result": "passed",
+          "names": 790,
+          "svgFiles": 7110
+        },
+        {
+          "command": "bun run build:review",
+          "result": "passed"
+        },
+        {
+          "command": "bun run validate",
+          "result": "passed",
+          "pinnedCurrentReferences": 1407,
+          "licensedZips": 9
+        },
+        {
+          "command": "node scripts/check-atlas.mjs",
+          "result": "passed",
+          "names": 310,
+          "collisions": [],
+          "errors": []
+        },
+        {
+          "command": "node scripts/check-atlas-recompare.mjs",
+          "result": "passed",
+          "outsideScopeUnchanged": 480,
+          "verifiedViewedImages": 864,
+          "verifiedSourceFiles": 432
+        },
+        {
+          "check": "skill native renderer",
+          "result": "108 raster cases, 0 empty/clipped; standard geometry unchanged by subsequent variable-stroke hook adjustment",
+          "viewed": [
+            "83-84-native/native-1-light-1x.png",
+            "83-84-native/native-1-dark-1x.png",
+            "83-84-native/context-light-1x.png"
+          ]
+        },
+        {
+          "check": "Current variable-stroke geometry vs generated stroke-assets definitions",
+          "result": "270 variants match for factory, crane-tower, crane-truck, forklift, warehouse, excavator after hook adjustment"
+        },
+        {
+          "command": "git diff --check",
+          "result": "passed"
+        }
+      ],
+      "limitation": "216 icons completed individual aesthetic re-comparison; 94 remain in the fixed 310-icon scope. Engineering checks do not establish aesthetic approval.",
+      "batches": [
+        "83-industrial-candidate-1",
+        "84-industry-candidate-1"
+      ],
+      "additionalViewed": [
+        "83-84-overview/comparison.png",
+        "83-84-overview/junctions.png",
+        "83-84-weights/light.png",
+        "83-84-weights/dark.png",
+        "83-84-weights-2/light.png",
+        "83-84-weights-2/dark.png",
+        "83-84-weights-2/hook-light-1x.png",
+        "83-84-weights-2/hook-dark-1x.png",
+        "83-84-weights-2/hook-light-2x.png",
+        "83-84-weights-2/hook-dark-2x.png"
+      ]
+    },
+    {
+      "date": "2026-11-18",
+      "batch": "85-86-industry",
+      "reviewed": 220,
+      "remaining": 90,
+      "checks": [
+        {
+          "command": "bun run build:icons",
+          "result": "passed",
+          "names": 790,
+          "svgFiles": 7110
+        },
+        {
+          "command": "bun run build:review",
+          "result": "passed"
+        },
+        {
+          "command": "bun run validate",
+          "result": "passed",
+          "pinnedCurrentReferences": 1407,
+          "licensedZips": 9
+        },
+        {
+          "command": "node scripts/check-atlas.mjs",
+          "result": "passed",
+          "names": 310,
+          "collisions": [],
+          "errors": []
+        },
+        {
+          "command": "node scripts/check-atlas-recompare.mjs",
+          "result": "passed",
+          "outsideScopeUnchanged": 480,
+          "verifiedViewedImages": 880,
+          "verifiedSourceFiles": 440
+        },
+        {
+          "check": "skill native renderer",
+          "result": "72 raster cases, 0 empty/clipped",
+          "viewed": [
+            "85-86-native/native-1-light-1x.png",
+            "85-86-native/native-1-dark-1x.png",
+            "85-86-native/context-light-1x.png"
+          ]
+        },
+        {
+          "check": "Current variable-stroke geometry vs generated stroke-assets definitions",
+          "result": "180 variants match for container, robot-arm, construction-barrier, wall"
+        },
+        {
+          "command": "git diff --check",
+          "result": "passed"
+        }
+      ],
+      "limitation": "220 icons completed individual aesthetic re-comparison; 90 remain in the fixed 310-icon scope. Engineering checks do not establish aesthetic approval.",
+      "batches": [
+        "85-industry-candidate-1",
+        "86-wall-before"
+      ],
+      "additionalViewed": [
+        "85-86-overview/comparison.png",
+        "85-86-weights/light.png",
+        "85-86-weights/dark.png"
+      ]
+    },
+    {
+      "date": "2026-11-18",
+      "batch": "87-88-energy",
+      "reviewed": 226,
+      "remaining": 84,
+      "checks": [
+        {
+          "command": "bun run build:icons",
+          "result": "passed",
+          "names": 790,
+          "svgFiles": 7110
+        },
+        {
+          "command": "bun run build:review",
+          "result": "passed"
+        },
+        {
+          "command": "bun run validate",
+          "result": "passed",
+          "pinnedCurrentReferences": 1407,
+          "licensedZips": 9
+        },
+        {
+          "command": "node scripts/check-atlas.mjs",
+          "result": "passed",
+          "names": 310,
+          "collisions": [],
+          "errors": []
+        },
+        {
+          "command": "node scripts/check-atlas-recompare.mjs",
+          "result": "passed",
+          "outsideScopeUnchanged": 480,
+          "verifiedViewedImages": 904,
+          "verifiedSourceFiles": 452
+        },
+        {
+          "check": "skill native renderer",
+          "result": "108 raster cases, 0 empty/clipped",
+          "viewed": [
+            "87-88-native/native-1-light-1x.png",
+            "87-88-native/native-1-dark-1x.png",
+            "87-88-native/context-light-1x.png"
+          ]
+        },
+        {
+          "check": "Current variable-stroke geometry vs generated stroke-assets definitions",
+          "result": "270 variants match for solar-panel, wind-turbine, battery-full, battery-low, battery-medium, battery-warning"
+        },
+        {
+          "command": "git diff --check",
+          "result": "passed"
+        }
+      ],
+      "limitation": "226 icons completed individual aesthetic re-comparison; 84 remain in the fixed 310-icon scope. Engineering checks do not establish aesthetic approval.",
+      "batches": [
+        "87-energy-candidate-1",
+        "88-batteries-before"
+      ],
+      "additionalViewed": [
+        "87-88-overview/comparison.png",
+        "87-88-weights/light.png",
+        "87-88-weights/dark.png"
+      ]
+    },
+    {
+      "date": "2026-11-18",
+      "batch": "89-90-energy",
+      "reviewed": 230,
+      "remaining": 80,
+      "checks": [
+        {
+          "command": "bun run build:icons",
+          "result": "passed",
+          "names": 790,
+          "svgFiles": 7110
+        },
+        {
+          "command": "bun run build:review",
+          "result": "passed"
+        },
+        {
+          "command": "bun run validate",
+          "result": "passed",
+          "pinnedCurrentReferences": 1407,
+          "licensedZips": 9
+        },
+        {
+          "command": "node scripts/check-atlas.mjs",
+          "result": "passed",
+          "names": 310,
+          "collisions": [],
+          "errors": []
+        },
+        {
+          "command": "node scripts/check-atlas-recompare.mjs",
+          "result": "passed",
+          "outsideScopeUnchanged": 480,
+          "verifiedViewedImages": 920,
+          "verifiedSourceFiles": 460
+        },
+        {
+          "check": "skill native renderer",
+          "result": "72 raster cases, 0 empty/clipped",
+          "viewed": [
+            "89-90-native/native-1-light-1x.png",
+            "89-90-native/native-1-dark-1x.png",
+            "89-90-native/context-light-1x.png"
+          ]
+        },
+        {
+          "check": "Current variable-stroke geometry vs generated stroke-assets definitions",
+          "result": "180 variants match for car-battery, charging-station, transmission-tower, power-socket"
+        },
+        {
+          "command": "git diff --check",
+          "result": "passed"
+        }
+      ],
+      "limitation": "230 icons completed individual aesthetic re-comparison; 80 remain in the fixed 310-icon scope. Engineering checks do not establish aesthetic approval.",
+      "batches": [
+        "89-energy-candidate-1",
+        "90-socket-before"
+      ],
+      "additionalViewed": [
+        "89-90-overview/comparison.png",
+        "89-90-weights/light.png",
+        "89-90-weights/dark.png"
+      ]
+    },
+    {
+      "date": "2026-11-18",
+      "batch": "91-94-safety",
+      "reviewed": 240,
+      "remaining": 70,
+      "checks": [
+        {
+          "command": "bun run build:icons",
+          "result": "passed",
+          "names": 790,
+          "svgFiles": 7110
+        },
+        {
+          "command": "bun run build:review",
+          "result": "passed"
+        },
+        {
+          "command": "bun run validate",
+          "result": "passed",
+          "pinnedCurrentReferences": 1407,
+          "licensedZips": 9
+        },
+        {
+          "command": "node scripts/check-atlas.mjs",
+          "result": "passed",
+          "names": 310,
+          "collisions": [],
+          "errors": []
+        },
+        {
+          "command": "node scripts/check-atlas-recompare.mjs",
+          "result": "passed",
+          "outsideScopeUnchanged": 480,
+          "verifiedViewedImages": 960,
+          "verifiedSourceFiles": 480
+        },
+        {
+          "check": "skill native renderer",
+          "result": "180 raster cases, 0 empty/clipped",
+          "viewed": [
+            "91-92-native/native-1-light-1x.png",
+            "91-92-native/native-1-dark-1x.png",
+            "91-92-native/context-light-1x.png",
+            "93-94-native/native-1-light-1x.png",
+            "93-94-native/native-1-dark-1x.png",
+            "93-94-native/context-light-1x.png"
+          ]
+        },
+        {
+          "check": "Current variable-stroke geometry vs generated stroke-assets definitions",
+          "result": "450 variants match across the 10 safety drawings"
+        },
+        {
+          "command": "git diff --check",
+          "result": "passed"
+        }
+      ],
+      "limitation": "240 icons completed individual aesthetic re-comparison; 70 remain in the fixed 310-icon scope. Engineering checks do not establish aesthetic approval.",
+      "batches": [
+        "91-security-candidate-1",
+        "92-fire-candidate-1",
+        "93-access-candidate-1",
+        "94-safety-before"
+      ],
+      "additionalViewed": [
+        "91-92-overview/comparison.png",
+        "91-92-weights/light.png",
+        "91-92-weights/dark.png",
+        "93-94-overview/comparison.png",
+        "93-94-weights/light.png",
+        "93-94-weights/dark.png"
+      ]
+    },
+    {
+      "date": "2026-11-18",
+      "batch": "95-commerce",
+      "reviewed": 243,
+      "remaining": 67,
+      "checks": [
+        {
+          "command": "bun run build:icons",
+          "result": "passed",
+          "names": 790,
+          "svgFiles": 7110
+        },
+        {
+          "command": "bun run build:review",
+          "result": "passed"
+        },
+        {
+          "command": "bun run validate",
+          "result": "passed",
+          "pinnedCurrentReferences": 1407,
+          "licensedZips": 9
+        },
+        {
+          "command": "node scripts/check-atlas.mjs",
+          "result": "passed",
+          "names": 310,
+          "collisions": [],
+          "errors": []
+        },
+        {
+          "command": "node scripts/check-atlas-recompare.mjs",
+          "result": "passed",
+          "outsideScopeUnchanged": 480,
+          "verifiedViewedImages": 972,
+          "verifiedSourceFiles": 486
+        },
+        {
+          "check": "skill native renderer",
+          "result": "54 raster cases, 0 empty/clipped",
+          "viewed": [
+            "95-native/native-1-light-1x.png",
+            "95-native/native-1-dark-1x.png",
+            "95-native/context-light-1x.png"
+          ]
+        },
+        {
+          "check": "Current variable-stroke geometry vs generated stroke-assets definitions",
+          "result": "135 variants match for scale, gavel, stamp"
+        },
+        {
+          "command": "git diff --check",
+          "result": "passed"
+        }
+      ],
+      "limitation": "243 icons completed individual aesthetic re-comparison; 67 remain in the fixed 310-icon scope. Engineering checks do not establish aesthetic approval.",
+      "batches": [
+        "95-commerce-candidate-1"
+      ],
+      "additionalViewed": [
+        "95-overview/comparison.png",
+        "95-weights/light.png",
+        "95-weights/dark.png"
+      ]
+    },
+    {
+      "date": "2026-11-18",
+      "batch": "96-98-commerce",
+      "reviewed": 250,
+      "remaining": 60,
+      "checks": [
+        {
+          "command": "bun run build:icons",
+          "result": "passed",
+          "names": 790,
+          "svgFiles": 7110
+        },
+        {
+          "command": "bun run build:review",
+          "result": "passed"
+        },
+        {
+          "command": "bun run validate",
+          "result": "passed",
+          "pinnedCurrentReferences": 1407,
+          "licensedZips": 9
+        },
+        {
+          "command": "node scripts/check-atlas.mjs",
+          "result": "passed",
+          "names": 310,
+          "collisions": [],
+          "errors": []
+        },
+        {
+          "command": "node scripts/check-atlas-recompare.mjs",
+          "result": "passed",
+          "outsideScopeUnchanged": 480,
+          "verifiedViewedImages": 1000,
+          "verifiedSourceFiles": 500
+        },
+        {
+          "check": "skill native renderer",
+          "result": "126 raster cases, 0 empty/clipped",
+          "viewed": [
+            "96-98-native/native-1-light-1x.png",
+            "96-98-native/native-1-dark-1x.png",
+            "96-98-native/context-light-1x.png"
+          ]
+        },
+        {
+          "check": "Current variable-stroke geometry vs generated stroke-assets definitions",
+          "result": "315 variants match across 7 commerce drawings"
+        },
+        {
+          "command": "git diff --check",
+          "result": "passed"
+        }
+      ],
+      "limitation": "250 icons completed individual aesthetic re-comparison; 60 remain in the fixed 310-icon scope. Engineering checks do not establish aesthetic approval.",
+      "batches": [
+        "96-basket-candidate-2",
+        "97-bag-before",
+        "98-register-candidate-1"
+      ],
+      "additionalViewed": [
+        "96-98-overview/comparison.png",
+        "96-98-weights/light.png",
+        "96-98-weights/dark.png"
+      ]
+    },
+    {
+      "date": "2026-11-18",
+      "batch": "99-100-communications",
+      "reviewed": 256,
+      "remaining": 54,
+      "checks": [
+        {
+          "command": "bun run build:icons",
+          "result": "passed",
+          "names": 790,
+          "svgFiles": 7110
+        },
+        {
+          "command": "bun run build:review",
+          "result": "passed"
+        },
+        {
+          "command": "bun run validate",
+          "result": "passed",
+          "pinnedCurrentReferences": 1407,
+          "licensedZips": 9
+        },
+        {
+          "command": "node scripts/check-atlas.mjs",
+          "result": "passed",
+          "names": 310,
+          "collisions": [],
+          "errors": []
+        },
+        {
+          "command": "node scripts/check-atlas-recompare.mjs",
+          "result": "passed",
+          "outsideScopeUnchanged": 480,
+          "verifiedViewedImages": 1024,
+          "verifiedSourceFiles": 512
+        },
+        {
+          "check": "skill native renderer",
+          "result": "108 raster cases, 0 empty/clipped",
+          "viewed": [
+            "99-100-native/native-1-light-1x.png",
+            "99-100-native/native-1-dark-1x.png",
+            "99-100-native/context-light-1x.png"
+          ]
+        },
+        {
+          "check": "Current variable-stroke geometry vs generated stroke-assets definitions",
+          "result": "270 variants match across 6 communications drawings"
+        },
+        {
+          "command": "git diff --check",
+          "result": "passed"
+        }
+      ],
+      "limitation": "256 icons completed individual aesthetic re-comparison; 54 remain in the fixed 310-icon scope. Engineering checks do not establish aesthetic approval.",
+      "batches": [
+        "99-phone-before",
+        "100-mail-candidate-1"
+      ],
+      "additionalViewed": [
+        "99-100-overview/comparison.png",
+        "99-100-weights/light.png",
+        "99-100-weights/dark.png"
+      ]
+    },
+    {
+      "date": "2026-11-18",
+      "batch": "101-104-message-charts",
+      "reviewed": 270,
+      "remaining": 40,
+      "checks": [
+        {
+          "command": "bun run build:icons",
+          "result": "passed",
+          "names": 790,
+          "svgFiles": 7110
+        },
+        {
+          "command": "bun run build:review",
+          "result": "passed"
+        },
+        {
+          "command": "bun run validate",
+          "result": "passed",
+          "pinnedCurrentReferences": 1407,
+          "licensedZips": 9
+        },
+        {
+          "command": "node scripts/check-atlas.mjs",
+          "result": "passed",
+          "names": 310,
+          "collisions": [],
+          "errors": []
+        },
+        {
+          "command": "node scripts/check-atlas-recompare.mjs",
+          "result": "passed",
+          "outsideScopeUnchanged": 480,
+          "verifiedViewedImages": 1080,
+          "verifiedSourceFiles": 540
+        },
+        {
+          "check": "skill native renderer",
+          "result": "252 raster cases, 0 empty/clipped",
+          "viewed": [
+            "101-native/native-1-light-1x.png",
+            "101-native/native-1-dark-1x.png",
+            "101-native/context-light-1x.png",
+            "102-103-native/native-1-light-1x.png",
+            "102-103-native/native-1-dark-1x.png",
+            "102-103-native/context-light-1x.png",
+            "104-native/native-1-light-1x.png",
+            "104-native/native-1-dark-1x.png",
+            "104-native/context-light-1x.png"
+          ]
+        },
+        {
+          "check": "Current variable-stroke geometry vs generated stroke-assets definitions",
+          "result": "630 variants match across 14 message and chart drawings"
+        },
+        {
+          "command": "git diff --check",
+          "result": "passed"
+        }
+      ],
+      "limitation": "270 icons completed individual aesthetic re-comparison; 40 remain in the fixed 310-icon scope. Engineering checks do not establish aesthetic approval.",
+      "batches": [
+        "101-message-before",
+        "102-charts-candidate-1",
+        "103-charts-before",
+        "104-charts-candidate-1"
+      ],
+      "additionalViewed": [
+        "101-overview/comparison.png",
+        "101-weights/light.png",
+        "101-weights/dark.png",
+        "102-103-overview/comparison.png",
+        "102-103-weights/light.png",
+        "102-103-weights/dark.png",
+        "104-overview/comparison.png",
+        "104-weights/light.png",
+        "104-weights/dark.png"
+      ]
+    },
+    {
+      "date": "2026-11-18",
+      "batch": "105-107-vector-geometry",
+      "reviewed": 280,
+      "remaining": 30,
+      "checks": [
+        {
+          "command": "bun run build:icons",
+          "result": "passed",
+          "names": 790,
+          "svgFiles": 7110
+        },
+        {
+          "command": "bun run build:review",
+          "result": "passed"
+        },
+        {
+          "command": "bun run validate",
+          "result": "passed",
+          "pinnedCurrentReferences": 1407,
+          "licensedZips": 9
+        },
+        {
+          "command": "node scripts/check-atlas.mjs",
+          "result": "passed",
+          "names": 310,
+          "collisions": [],
+          "errors": []
+        },
+        {
+          "command": "node scripts/check-atlas-recompare.mjs",
+          "result": "passed",
+          "outsideScopeUnchanged": 480,
+          "verifiedViewedImages": 1120,
+          "verifiedSourceFiles": 560
+        },
+        {
+          "command": "git diff --check",
+          "result": "passed"
+        },
+        {
+          "check": "Skill native renderer",
+          "result": "180 raster cases, 0 empty/clipped",
+          "viewed": [
+            "105-native/native-1-light-1x.png",
+            "105-native/native-1-dark-1x.png",
+            "105-native/context-light-1x.png",
+            "106-107-native/native-1-light-1x.png",
+            "106-107-native/native-1-dark-1x.png",
+            "106-107-native/context-light-1x.png"
+          ]
+        },
+        {
+          "check": "Current variable-stroke geometry vs generated stroke-assets definitions",
+          "result": "450 variants match across 10 vector and geometry drawings"
+        }
+      ],
+      "limitation": "280 icons completed individual source re-comparison. 30 remained in the fixed scope at this checkpoint.",
+      "batches": [
+        "105-vector-candidate-1",
+        "106-flat-before",
+        "107-solids-before"
+      ],
+      "additionalViewed": [
+        "105-overview/comparison.png",
+        "105-weights/light.png",
+        "105-weights/dark.png",
+        "106-107-overview/comparison.png",
+        "106-107-weights/light.png",
+        "106-107-weights/dark.png"
+      ]
+    },
+    {
+      "date": "2026-11-18",
+      "batch": "108-113-layout-time-celebration",
+      "reviewed": 310,
+      "refined": 146,
+      "retained": 164,
+      "remaining": 0,
+      "checks": [
+        {
+          "command": "bun run build:icons",
+          "result": "passed",
+          "names": 790,
+          "svgFiles": 7110
+        },
+        {
+          "command": "bun run build:review",
+          "result": "passed"
+        },
+        {
+          "command": "bun run validate",
+          "result": "passed",
+          "pinnedCurrentReferences": 1407,
+          "licensedZips": 9
+        },
+        {
+          "command": "node scripts/check-atlas.mjs",
+          "result": "passed",
+          "names": 310,
+          "collisions": [],
+          "errors": []
+        },
+        {
+          "command": "node scripts/check-atlas-recompare.mjs",
+          "result": "passed",
+          "outsideScopeUnchanged": 480,
+          "verifiedViewedImages": 1240,
+          "verifiedSourceFiles": 620
+        },
+        {
+          "command": "git diff --check",
+          "result": "passed"
+        },
+        {
+          "command": "bun run test",
+          "result": "passed",
+          "tests": 60
+        },
+        {
+          "check": "Skill native renderer",
+          "result": "540 raster cases, 0 empty/clipped",
+          "viewed": [
+            "108-native/native-1-light-1x.png",
+            "108-native/native-1-dark-1x.png",
+            "108-native/context-light-1x.png",
+            "109-native/native-1-light-1x.png",
+            "109-native/native-1-dark-1x.png",
+            "109-native/context-light-1x.png",
+            "110-native/native-1-light-1x.png",
+            "110-native/native-1-dark-1x.png",
+            "110-native/context-light-1x.png",
+            "111-native/native-1-light-1x.png",
+            "111-native/native-1-dark-1x.png",
+            "111-native/context-light-1x.png",
+            "112-native/native-1-light-1x.png",
+            "112-native/native-1-dark-1x.png",
+            "112-native/context-light-1x.png",
+            "113-native/native-1-light-1x.png",
+            "113-native/native-1-dark-1x.png",
+            "113-native/context-light-1x.png"
+          ]
+        },
+        {
+          "check": "Current variable-stroke geometry vs generated stroke-assets definitions",
+          "result": "1,350 variants match in the last 30 drawings; 13,950 variants match across the full Atlas scope"
+        },
+        {
+          "check": "Final scope, mirrored review ledgers and design provenance",
+          "result": "passed",
+          "names": 310,
+          "independentConstructions": 39,
+          "adaptedRedraws": 271
+        }
+      ],
+      "limitation": "All 310 individual source re-comparisons are complete. User approval remains pending for the refinement pass.",
+      "batches": [
+        "108-layout-candidate-1",
+        "109-panels-candidate-1",
+        "110-calendar-before",
+        "111-time-before",
+        "112-awards-before",
+        "113-games-candidate-1"
+      ],
+      "additionalViewed": [
+        "108-overview/comparison.png",
+        "108-weights/light.png",
+        "108-weights/dark.png",
+        "109-overview/comparison.png",
+        "109-weights/light.png",
+        "109-weights/dark.png",
+        "110-overview/comparison.png",
+        "110-weights/light.png",
+        "110-weights/dark.png",
+        "111-overview/comparison.png",
+        "111-weights/light.png",
+        "111-weights/dark.png",
+        "112-overview/comparison.png",
+        "112-weights/light.png",
+        "112-weights/dark.png",
+        "113-overview/comparison.png",
+        "113-weights/light.png",
+        "113-weights/dark.png"
+      ]
     }
-  ],
-  "resolvedValidationIssues": [],
-  "batches": [
-    "06-road-candidate-1",
-    "07-signals-before"
   ]
 }

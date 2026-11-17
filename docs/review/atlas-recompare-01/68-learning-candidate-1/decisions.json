@@ -1,0 +1,101 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "batch": "68-learning-candidate-1",
+  "baseline": "references/atlas-recompare-01/master-before.json",
+  "viewedSuffixes": [
+    "light-1x",
+    "dark-1x",
+    "native-light-2x",
+    "native-dark-2x"
+  ],
+  "decisions": [
+    {
+      "name": "chalkboard",
+      "decision": "refined",
+      "purpose": "以橫向板面、底托與板擦表示教學黑板。",
+      "recognitionCues": "大板面、外伸底托、右下板擦與右側留空。",
+      "confusableWith": [
+        "presentation",
+        "monitor"
+      ],
+      "defect": "原稿板面高16、寬18，較兩份來源偏直立，橫向書寫板比例不足。",
+      "sourceObservation": "Phosphor的橫向板面與底托較舒展，Tabler也採較扁板面；沿既有Phosphor改作收短板面高度。",
+      "reason": "板面頂緣由y4降至5、底托由y20升至19，高度由16收至14；板擦整體上移1，右側短邊收筆同步上移，維持與板擦上緣4單位間距。",
+      "postComparison": "與Phosphor／Tabler回比，板面更橫向，板擦及底托關係保持，16px板擦孔與右側開口仍清楚。 三尺寸三角型、明暗DPR1／2及55%文字均已查看。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "可見板面、算桿或書本輪廓均用連續線表達，不需隱藏線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以位置與留白分辨部件，不透過透明度掩飾交會。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "保持單色平面教育圖示，不增加材質漸層。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "abacus",
+      "decision": "retained",
+      "purpose": "以支架中的兩排橫桿及錯開算珠表示算盤。",
+      "recognitionCues": "雙立柱、兩排橫桿、四個錯位算珠與底座。",
+      "confusableWith": [
+        "calculator",
+        "sliders"
+      ],
+      "defect": "本輪未見需要回修的具體算珠間距或支承缺陷。",
+      "sourceObservation": "Tabler用更多算珠，Hugeicons以方框與短段表達；現稿四珠錯列及開放支架更適合原生小尺寸，不必增加第三顆珠。",
+      "reason": "保留兩排各兩個算珠、交錯位置與完整支承；算珠以短直筆表達而不增加難以容納的小孔。",
+      "postComparison": "與Hugeicons／Tabler回比，原生16的兩排珠與支架分組清楚，珠間留白充足，20／24仍維持同一構造。 三尺寸三角型、明暗DPR1／2及55%文字均已查看。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "可見板面、算桿或書本輪廓均用連續線表達，不需隱藏線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以位置與留白分辨部件，不透過透明度掩飾交會。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "保持單色平面教育圖示，不增加材質漸層。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "book-marked",
+      "decision": "retained",
+      "purpose": "以連續書脊、頁邊及垂下書籤表示有標記的書本。",
+      "recognitionCues": "左側連續書脊、下方頁邊與封面內的V形書籤。",
+      "confusableWith": [
+        "book",
+        "bookmark"
+      ],
+      "defect": "本輪未見需要回修的具體書脊承接或書籤留白缺陷。",
+      "sourceObservation": "Hugeicons以分離書籤及較多開口表達，Phosphor的整合書籤與現稿較接近；現稿已保留連續書脊及頁邊的完整書本形態。",
+      "reason": "保留書脊圓弧、下緣頁邊及封面內書籤，不為仿照來源增加頂部斷口或第二層頁線。",
+      "postComparison": "與Hugeicons／Phosphor回比，三尺寸書籤、封面空腔及頁邊各自清楚，左側封面到頁邊的承接連續。 三尺寸三角型、明暗DPR1／2及55%文字均已查看。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "可見板面、算桿或書本輪廓均用連續線表達，不需隱藏線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以位置與留白分辨部件，不透過透明度掩飾交會。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "保持單色平面教育圖示，不增加材質漸層。"
+        }
+      },
+      "remaining": []
+    }
+  ]
+}

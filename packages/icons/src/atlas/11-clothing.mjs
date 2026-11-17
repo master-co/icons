@@ -4,7 +4,7 @@ export const batch=author([
  ['shirt','上衣','shirt','shirt','圓領、短袖與平整下襬',shirt],
  ['trousers','長褲','phosphor/pants','iconoir/pants','腰頭、褲襠與分開的長褲管',trousers],
  ['dress','洋裝','phosphor/dress','hugeicons/dress-01','肩帶、合身腰部與展開裙襬',dress],
- ['coat','外套','tabler/jacket','openmoji/1F9E5','長袖、V形領口與中央開襟',coat],
+ ['coat','外套','lucide-lab/jacket','openmoji/1F9E5','長袖、V形領口與中央開襟',coat],
  ['sock','襪子','phosphor/sock','sock','襪口、直立襪筒與圓趾足部',sock],
  ['shoe','鞋子','phosphor/sneaker','shoe','鞋口、弧形鞋面、鞋帶與平底',shoe],
  ['glasses','眼鏡','glasses','iconoir/glasses','圓鏡框、弧形鼻橋與鏡腳',glasses],

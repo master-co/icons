@@ -1,0 +1,101 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "batch": "76-audio-candidate-1",
+  "baseline": "references/atlas-recompare-01/master-before.json",
+  "viewedSuffixes": [
+    "light-1x",
+    "dark-1x",
+    "native-light-2x",
+    "native-dark-2x"
+  ],
+  "decisions": [
+    {
+      "name": "speaker",
+      "decision": "retained",
+      "purpose": "以直立音箱及大小單體表示實體喇叭與音響設備。",
+      "recognitionCues": "直立矩形音箱、下方大圓單體與上方同軸小點。",
+      "confusableWith": [
+        "volume",
+        "radio-receiver"
+      ],
+      "defect": "本輪未見大小單體的比例、垂直間距或外框留白需要回修。",
+      "sourceObservation": "Phosphor的單一空心大單體與高音小點較安靜，現稿已保留；Lucide另加中央小點，會增加原生16px的孔內密度。",
+      "reason": "保留共軸的大小單體與直立箱體，不新增中央小點、音網格或第二層圓圈，讓大單體維持完整空腔。",
+      "postComparison": "16／20／24的高音點、低音圓與底框間均可區分，與Phosphor／Lucide回比，現有層級和孔內空白成立；三角型、明暗DPR1／2及55%文字已查看。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "實體音箱與單體保持完整輪廓，不使用虛線網面。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "大小單體以尺寸區分，無須降低高音點透明度。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "平面單色即可表示音箱，不增加音膜或外殼漸層。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "film-reel",
+      "decision": "refined",
+      "purpose": "以帶孔圓盤和伸出底片表示電影膠卷及底片捲盤。",
+      "recognitionCues": "圓形捲盤、四個對稱孔位與沿底部切向伸出的底片。",
+      "confusableWith": [
+        "vinyl-record",
+        "film"
+      ],
+      "defect": "20／24仍使用四個實心點，較像圓盤上的標點，缺少來源較明確的穿孔結構。",
+      "sourceObservation": "Phosphor用四個小圓孔交代捲盤結構，在20／24比實心點更像實體膠卷盤；Hugeicons使用四個短斜孔和捲尾，是另一簡化方式。",
+      "reason": "沿既有Phosphor改作，在20／24將四點改為半徑1.5的圓孔，16仍保留實心點避免微孔；孔位、外圈與切向底片保持。 粗線寬若使孔內直徑不足1個原生像素，改用同尺寸原有實心點，避免針孔；一般線寬幾何保持。",
+      "postComparison": "最新稿與Phosphor／Hugeicons回比，20／24四個孔讓盤體構造更明確，孔與外圈及相鄰孔均仍分開；16保留較疏的四點表達。三角型、明暗DPR1／2及55%文字已查看。 最大線寬第一輪出現針孔，已改為實心孔點，另以最新粗線寬畫面檢視；預設線寬與本批來源並列圖完全一致。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "孔位是實際構造而非軌跡，不以虛線或連點替代。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "四孔均為辨識訊號，使用同一單色對比，不淡化。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "輪廓和孔位已表示盤體，不增加金屬或膠卷漸層。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "cassette",
+      "decision": "refined",
+      "purpose": "以雙捲軸和下方梯形帶口表示錄音卡帶及類比音訊。",
+      "recognitionCues": "橫向矩形外殼、上方雙圓捲軸、相連磁帶與底部梯形帶口。",
+      "confusableWith": [
+        "film-reel",
+        "radio-receiver"
+      ],
+      "defect": "機身20×18偏高，雙捲軸和帶口被較大的中央空白分開，整體接近方盒。",
+      "sourceObservation": "Lucide和Phosphor的機身都較橫向，雙捲軸與下方帶口更集中；沿既有Lucide改作調整高度，不加入Phosphor的完整上帶框。",
+      "reason": "外殼由20×18改為20×16，頂緣下移1、底緣上移1；雙捲軸及相連帶線下移1，梯形底端接回新底緣，寬度與左右軸距保持。",
+      "postComparison": "與Lucide／Phosphor同尺寸回比，機身較橫向，捲軸和帶口的分組更集中，16px兩個軸孔及帶口空腔仍可讀；三角型、明暗DPR1／2及55%文字已查看。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "磁帶與帶口為實體構造，保持連續實線而非虛線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "外殼、軸孔和帶口同為主要線索，不以透明度區分。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "保留單色卡帶外形，不增加塑膠或標籤漸層。"
+        }
+      },
+      "remaining": []
+    }
+  ]
+}

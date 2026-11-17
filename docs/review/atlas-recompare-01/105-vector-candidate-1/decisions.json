@@ -1,0 +1,126 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "baseline": "references/atlas-recompare-01/master-before.json",
+  "viewedSuffixes": [
+    "light-1x",
+    "dark-1x",
+    "native-light-2x",
+    "native-dark-2x"
+  ],
+  "batch": "105-vector-candidate-1",
+  "decisions": [
+    {
+      "name": "vector-square",
+      "decision": "retained",
+      "purpose": "向量矩形的四個角落各有一枚可調整節點",
+      "recognitionCues": "四個方形空心控制點和水平垂直外框",
+      "confusableWith": [
+        "vector-polygon"
+      ],
+      "defect": "確認方形節點和邊線交接沒有填入角點內孔。",
+      "sourceObservation": "Lucide 採圓點，Tabler 採方點，兩者均維持直角方框。",
+      "reason": "保留方形控制點，呼應直角矩形並與向量多邊形的圓點區分。",
+      "postComparison": "在 16、20 和 24px 與兩來源對照，四角內孔仍清楚，最粗描邊下也能辨識方點和直邊。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "連續的邊和接點構成此圖示的輪廓。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以清楚的單色空隙分開相鄰線條。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "單色輪廓已足以呈現形狀和方向。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "bezier-curve",
+      "decision": "refined",
+      "purpose": "在一條水平控制桿下方呈現對稱貝茲弧線",
+      "recognitionCues": "三個空心圓節點、水平控制桿與下方兩支弧",
+      "confusableWith": [
+        "spline"
+      ],
+      "defect": "粗描邊時高拱的肩部與控制桿幾乎相貼。",
+      "sourceObservation": "Phosphor 的圓形控制點較容易辨認，Tabler 讓兩側弧從節點下方離開。",
+      "reason": "讓拱頂從中點下緣相接，保留圓節點與桿兩側的留白。",
+      "postComparison": "改稿與兩來源並列，弧肩和控制桿之間在 16px 也留下可辨識的空隙。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "連續的邊和接點構成此圖示的輪廓。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以清楚的單色空隙分開相鄰線條。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "單色輪廓已足以呈現形狀和方向。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "spline",
+      "decision": "retained",
+      "purpose": "以雙控制點與兩側切線表示可調整樣條曲線",
+      "recognitionCues": "兩枚空心圓點與四分之一圓狀的平滑曲線",
+      "confusableWith": [
+        "bezier-curve"
+      ],
+      "defect": "檢查兩端直線與弧線接續是否有折角。",
+      "sourceObservation": "Lucide 為雙圓控制點，Tabler 使用雙方點，兩者均保留切線提示。",
+      "reason": "保留圓點與曲線的切向進出，讓雙節點構成辨識特徵。",
+      "postComparison": "與兩套原稿並列，三尺寸下的曲線與兩側切線仍連續，最粗描邊的兩個節點內孔也清楚。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "連續的邊和接點構成此圖示的輪廓。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以清楚的單色空隙分開相鄰線條。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "單色輪廓已足以呈現形狀和方向。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "vector-polygon",
+      "decision": "retained",
+      "purpose": "以四個可調整控制點表示不規則封閉向量輪廓",
+      "recognitionCues": "輕微偏斜四邊和四枚空心圓形控制點",
+      "confusableWith": [
+        "vector-square"
+      ],
+      "defect": "確認最靠近的節點有間隔，且邊線不穿入節點孔。",
+      "sourceObservation": "Lucide 與 Tabler 都用不規則封閉圖形，Tabler 的造型偏斜較明顯。",
+      "reason": "保留現有輕微偏斜與四個圓形節點，與正方形控制框並列時容易區分。",
+      "postComparison": "與兩來源並列，三尺寸封閉輪廓和四個節點都清楚，未見邊線伸進內孔。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "連續的邊和接點構成此圖示的輪廓。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以清楚的單色空隙分開相鄰線條。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "單色輪廓已足以呈現形狀和方向。"
+        }
+      },
+      "remaining": []
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "batch": "71-music-candidate-1",
+  "baseline": "references/atlas-recompare-01/master-before.json",
+  "viewedSuffixes": [
+    "light-1x",
+    "dark-1x",
+    "native-light-2x",
+    "native-dark-2x"
+  ],
+  "decisions": [
+    {
+      "name": "guitar",
+      "decision": "refined",
+      "purpose": "用斜向木吉他表示彈撥樂器、吉他演奏與課程。",
+      "recognitionCues": "大小雙腹收腰琴身、斜琴頸、鏤空琴頭與短琴橋。",
+      "confusableWith": [
+        "guitar-electric",
+        "violin"
+      ],
+      "defect": "琴頭兩側以直角台階收進琴頸，與琴身的連續曲面相比略顯拼裝。",
+      "sourceObservation": "Lucide琴頭的兩側先轉入短直段，再以曲肩向琴頸收束，整體比原稿硬折自然。Phosphor以雙線琴頸和音孔表達更多細節，但16px較密。",
+      "reason": "沿既有Lucide改作重畫琴頭兩側收肩，以對稱曲線接向斜琴頸；頂端保留依角型變化的實際微圓，琴身、橋與單線琴頸保持。",
+      "postComparison": "最新稿與Lucide／Phosphor並列，琴頭根部不再以硬台階接入琴頸，16px仍留有琴頭內孔，琴身大小腹及腰部清楚；不加入額外弦線或音孔。三尺寸三角型、明暗DPR1／2與55%文字已查看。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "實體琴身及琴頸維持連續輪廓，不用虛線表示弦。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "琴頭與琴身屬同一樂器，沒有淡化部件的需要。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "平面單色已能表達樂器輪廓，不增加木紋漸層。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "piano",
+      "decision": "retained",
+      "purpose": "以翼狀琴身與前緣鍵盤表示鋼琴演奏及鋼琴課程。",
+      "recognitionCues": "左側圓腹向右肩收束的翼狀琴身與下方四條鍵線。",
+      "confusableWith": [
+        "music-keyboard",
+        "guitar"
+      ],
+      "defect": "本輪未見需回修的琴身比例或鍵距問題，來源數量限制另行記錄。",
+      "sourceObservation": "Lucide同為翼狀琴身加四條短鍵，現稿已保留其大圓腹與右收肩。Tabler只畫鍵盤，本次僅能比較鍵盤構造，不能作第二份完整翼琴輪廓的證據。",
+      "reason": "保留現有連續琴身與四條短鍵；Tabler的通高鍵縫屬另一表達方式，無須改成密集的黑白鍵，亦不把翼狀琴身換成矩形。",
+      "postComparison": "16／20／24的鍵端與底框均有空白，左腹到右肩的曲線連續，三角型保留結構曲面。明暗DPR1／2及55%文字已查看；一份完整同器型來源加一份鍵盤構造來源的限制保持明記。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "琴身和鍵盤均為可見構造，不使用隱藏線或虛線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "四條琴鍵是主要辨識訊號，維持完整單色對比。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "翼狀外形與鍵線已足以表意，不增加琴漆反光漸層。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "drum",
+      "decision": "retained",
+      "purpose": "以鼓面、圓桶與鼓棒表示打擊樂器及鼓樂演奏。",
+      "recognitionCues": "橢圓鼓面、圓柱鼓身、兩道張力桿與一支斜鼓棒。",
+      "confusableWith": [
+        "cooking-pot",
+        "vinyl-record"
+      ],
+      "defect": "本輪未見需調整的鼓面比例、筒身接合或鼓棒留白問題。",
+      "sourceObservation": "Hugeicons以單支鼓棒和兩條桶身直線保持開放鼓面，現稿已沿用此構造。Lucide雙棒及多道直線較密，沒有改善本稿的必要。",
+      "reason": "保留連續前弧與桶底、裁於桶身的張力桿及單支鼓棒；不增加第二支棒，也不將桶身拆成互相重疊的幾何框。",
+      "postComparison": "與Hugeicons／Lucide同尺寸回比，16px仍能區分鼓棒、鼓面與三個桶身區段，20／24的桶形曲面清楚；明暗DPR1／2、三角型與55%文字均已查看。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "鼓面邊緣與張力桿都是實體結構，保持連續實線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "鼓棒與鼓面以透明避讓區分，不淡化後方鼓身。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "平面輪廓已能表示圓桶，不增加體積或材質漸層。"
+        }
+      },
+      "remaining": []
+    }
+  ]
+}

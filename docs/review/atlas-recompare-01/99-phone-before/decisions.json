@@ -1,0 +1,126 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "baseline": "references/atlas-recompare-01/master-before.json",
+  "viewedSuffixes": [
+    "light-1x",
+    "dark-1x",
+    "native-light-2x",
+    "native-dark-2x"
+  ],
+  "batch": "99-phone-before",
+  "decisions": [
+    {
+      "name": "phone-incoming",
+      "decision": "retained",
+      "purpose": "以同家族 C 形話筒與指向左下方的箭頭呈現來電。",
+      "recognitionCues": "同家族 C 形話筒與指向左下方的箭頭",
+      "confusableWith": [
+        "phone-outgoing"
+      ],
+      "defect": "重查斜箭、話筒上端和內弧間是否擁擠。",
+      "sourceObservation": "Lucide 和 Tabler 均以向左下的箭頭示意來電，Tabler 的箭身更短，較靠近話筒內彎。",
+      "reason": "保留家族話筒和與撥出相反的 45 度箭頭。箭身與箭頭按角型一起收口。",
+      "postComparison": "在三尺寸和兩來源並列，長斜箭的端點和話筒分開，原生尺寸清楚指向話筒。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "連續箭頭呈現完整來電方向。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以話筒與箭頭間距分開兩者。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "實線方向足以表達來電。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "phone-outgoing",
+      "decision": "retained",
+      "purpose": "以開口朝右上的話筒與向右上的斜箭呈現撥出電話。",
+      "recognitionCues": "開口朝右上的話筒與向右上的斜箭",
+      "confusableWith": [
+        "phone-incoming"
+      ],
+      "defect": "檢查撥出箭頭端部及來電成對顯示時的方向差異。",
+      "sourceObservation": "Lucide 使用右上斜箭，Tabler 是水平右箭。斜箭加長且自然和來電共用一條軸線。",
+      "reason": "保留 Lucide 式方向和與來電同寬的共同話筒，讓狀態變換只需反轉箭頭方向。",
+      "postComparison": "與 Tabler 的水平箭頭並列，現稿箭頭在話筒凹面中有更完整的斜向走道。原生 16px 仍分辨得出是撥出。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "連續箭身和箭頭表示撥出。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "箭頭和話筒以距離區分。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "單色方向符號便於保持家族一致。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "phone-missed",
+      "decision": "retained",
+      "purpose": "以斜向話筒、右上等臂叉號及中間留白呈現未接來電。",
+      "recognitionCues": "斜向話筒、右上等臂叉號及中間留白",
+      "confusableWith": [
+        "phone-call"
+      ],
+      "defect": "重查叉號端點到話筒的留白，以及深底上是否像單一粗點。",
+      "sourceObservation": "Lucide 和 Hugeicons 都使用右上的叉號，後者的話筒端部更細，圓孔較小。",
+      "reason": "保留與來電、撥出一致的話筒及同寬叉號，四個短臂分布對稱。",
+      "postComparison": "原生三尺寸的叉號和話筒交界有足夠空間，與兩來源同樣易分辨，並保留與電話全系列相同的接收器輪廓。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "叉號兩道均為清楚的可見實線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "保持叉號全對比使未接狀態清楚。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "用形狀表達未接，無需色調效果。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "phone-call",
+      "decision": "retained",
+      "purpose": "以共同話筒與兩道同心通話弧呈現通話中。",
+      "recognitionCues": "共同話筒與兩道同心通話弧，與話筒保持間距。",
+      "confusableWith": [
+        "phone-missed"
+      ],
+      "defect": "重查雙弧間隙和訊號端點是否靠近話筒上端。",
+      "sourceObservation": "Lucide 使用約四分之一圓的同心弧，Phosphor 採更短、偏斜的雙弧。",
+      "reason": "保留完整兩道弧和同一中心，與箭頭、叉號狀態形成明確區別，話筒保持家族輪廓。",
+      "postComparison": "和兩來源並列，現稿的同心弧仍有可辨的開口，三個大小都能看到正交端點與清楚訊號方向。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "兩道同心實線表示通話活動。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "靠弧間距表達訊號層次。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "雙弧已能表達訊號方向。"
+        }
+      },
+      "remaining": []
+    }
+  ]
+}

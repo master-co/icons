@@ -1,0 +1,101 @@
+{
+  "reviewer": "Codex (AI)",
+  "batch": "36-appliances-candidate-1",
+  "baseline": "references/atlas-recompare-01/master-before.json",
+  "date": "2026-11-17",
+  "viewedSuffixes": [
+    "light-1x",
+    "dark-1x",
+    "native-light-2x",
+    "native-dark-2x"
+  ],
+  "decisions": [
+    {
+      "name": "vacuum-cleaner",
+      "decision": "refined",
+      "purpose": "帶輪機身、軟管與接地吸頭表示家用吸塵器。",
+      "recognitionCues": "輪子、獨立筒身、長彎管與底部橫吸頭。",
+      "confusableWith": [
+        "hair-dryer",
+        "washing-machine"
+      ],
+      "defect": "原機身狹窄，輪子占滿下半部，機身像輪後的小支架。",
+      "sourceObservation": "Hugeicons的筒身有較高肩部與斜收後壁，輪子在筒身前方；MDI直立方機身辨識明確，但較硬。沿既有Hugeicons改作吸收較完整筒身比例。",
+      "reason": "機肩由y12抬至10.5，後壁展至x13；輪心由x4.5移至6，保留輪徑。輪子遮擋機身，軟管按新機身外部收口，維持吸頭位置。",
+      "postComparison": "最新稿同尺寸回比Hugeicons／MDI，機身有可辨的容積及向下斜收，輪孔在16仍開放，筒身與吸管之間保有通道。保留Hugeicons圓肩，未增加MDI的硬矩形；三角型明暗及DPR1／2均已查看。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "軟管與機身均為可見實體，不需要隱藏線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "輪與機身以遮擋區分，維持一致單色輪廓。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "圖示以平面單色輪廓表達器物，不需要光照漸層。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "hair-dryer",
+      "decision": "refined",
+      "purpose": "以握柄、收窄風嘴及圓形進氣孔表示吹風機。",
+      "recognitionCues": "圓機腹、漸窄風嘴、向下握柄與短電線。",
+      "confusableWith": [
+        "drill",
+        "vacuum-cleaner"
+      ],
+      "defect": "原機腹以多段自由曲線接風嘴，頂肩及下腹收束略不一致，前口也未按角型區分幾何。",
+      "sourceObservation": "Phosphor的圓形後腹與上下直收風嘴關係明確，比舊自由曲線更穩定；Hugeicons有較寫實的收腰風嘴。保留既有Hugeicons改作歷史，新增Phosphor簡潔機腹構造的採用記錄。",
+      "reason": "機腹改為單段大圓弧，兩端接向收窄風嘴的斜線，進氣孔保持同心附近的清楚間距。前口依角型做實際短曲線；握柄與電線保留。",
+      "postComparison": "最新稿與Phosphor／Hugeicons在16／20／24回比，機腹到風嘴的上下肩線較均衡，進氣孔和握柄空腔仍可讀。採取Phosphor簡潔輪廓，不增加Hugeicons的獨立嘴環；明暗、三角型與DPR1／2均已目視。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "風嘴、握柄與電線均可直接看見，不需虛線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "進氣孔以清楚內孔表達，不靠淡化分層。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "圖示以平面單色輪廓表達器物，不需要光照漸層。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "iron",
+      "decision": "refined",
+      "purpose": "以平底弧形機身和上方開放把手表示衣物熨斗。",
+      "recognitionCues": "平底、前端上弧、後壁與上方握持空間。",
+      "confusableWith": [
+        "shirt",
+        "hair-dryer"
+      ],
+      "defect": "整體已成立，但後壁到平底的後跟在三角型使用相同硬折點，Tabler原稿的收角更自然。",
+      "sourceObservation": "Tabler以小圓角讓斜後壁接回平底，保留寬廣把手開口；MDI有電線及閉合把手但輪廓較密。沿Tabler保留開放握柄，只吸收後跟收角。",
+      "reason": "soft與rounded在後壁與平底之間加入實際短二次曲線，sharp保留原折點。前端弧度、把手與底板比例保持；這是局部收角精修。",
+      "postComparison": "最新稿與Tabler／MDI原生並列，後跟較柔順，原本成立的弧形前端和把手開口未變。變化細微，以放大診斷確認收角，再看16／20／24未失去平底及後壁；三角型、明暗與DPR1／2均已查看。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "機身與握柄為可見外輪廓，不需要隱藏邊界。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "把手留白與平底輪廓足夠，不需要淡化底板。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "圖示以平面單色輪廓表達器物，不需要光照漸層。"
+        }
+      },
+      "remaining": []
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "reason": "Tabler jacket depicts a sleeveless vest; replace with pinned Lucide Lab long-sleeved jacket for a same-object comparison.",
+  "references": [
+    {
+      "name": "coat",
+      "library": "Tabler",
+      "repository": "tabler/tabler-icons",
+      "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+      "path": "icons/outline/jacket.svg",
+      "localPath": "references/atlas-01/tabler-jacket.svg",
+      "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/jacket.svg",
+      "sha256": "cf2623d8d3ba264e8e14ee49260ff92f068ae565443a1cfc1dce40a91c733e0f",
+      "license": "MIT",
+      "sourceName": "jacket",
+      "match": "exact",
+      "role": "comparison-only"
+    },
+    {
+      "name": "coat",
+      "library": "OpenMoji",
+      "repository": "hfg-gmuend/openmoji",
+      "commit": "3e01de523ddefe9c5e46a7765b15efef04bf9002",
+      "path": "black/svg/1F9E5.svg",
+      "localPath": "references/atlas-01/openmoji-1F9E5.svg",
+      "url": "https://github.com/hfg-gmuend/openmoji/blob/3e01de523ddefe9c5e46a7765b15efef04bf9002/black/svg/1F9E5.svg",
+      "sha256": "9d5f226bb1cb973492c9a64244595ffc07976612442106ff0bb0c261a33619e5",
+      "license": "CC-BY-SA-4.0",
+      "sourceName": "1F9E5",
+      "match": "exact",
+      "role": "comparison-only"
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "batch": "55-outdoor-candidate-1",
+  "baseline": "references/atlas-recompare-01/master-before.json",
+  "viewedSuffixes": [
+    "light-1x",
+    "dark-1x",
+    "native-light-2x",
+    "native-dark-2x"
+  ],
+  "decisions": [
+    {
+      "name": "binoculars",
+      "decision": "refined",
+      "purpose": "以成對漸擴鏡筒、圓形物鏡與中央連橋表示雙筒望遠鏡。",
+      "recognitionCues": "左右鏡筒對稱、目鏡到物鏡連續擴張、中央橋接。",
+      "confusableWith": [
+        "camera",
+        "glasses"
+      ],
+      "defect": "上端目鏡略窄長，與下方圓物鏡相比偏細，頂冠有尖長感。",
+      "sourceObservation": "Phosphor的上端較寬而緊湊，Lucide以分段鏡筒表達另一種器型。沿既有Phosphor改作縮短上端並拓寬，不增加額外目鏡套環。",
+      "reason": "目鏡外側各向外展0.5、起點下移0.5，頂冠降低並放寬；重新計算斜邊與圓物鏡的切點，頂冠控制柄沿斜筒切線收口。鏡面半徑與中央橋保持。",
+      "postComparison": "最新稿與Lucide／Phosphor同尺寸回比，頂部較緊湊、鏡筒與物鏡仍連續，16內孔與中央通道保持。三角型、明暗DPR1／2及55%文字已查看。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "器材可見結構使用連續輪廓，不需要隱藏邊界虛線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以輪廓與內部留白區分器材結構，不需淡化。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "保持單色平面器材圖示，不加材質光照漸層。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "flashlight",
+      "decision": "retained",
+      "purpose": "以寬燈頭、收肩筒身及單筆開關表示手電筒。",
+      "recognitionCues": "寬窄筒身比例、燈框分界、曲線收肩與中央開關。",
+      "confusableWith": [
+        "lamp",
+        "battery"
+      ],
+      "defect": "本輪未見需要回修的具體缺陷，燈頭到握筒的承接與內部空白成立。",
+      "sourceObservation": "Lucide以曲肩和較圓底角表示握筒，Phosphor偏直肩與平底。現稿已有曲肩結構及依角型變化的底角，比例接近兩者。",
+      "reason": "保留寬燈頭、連續收肩與單筆開關；燈框分界按外殼收口，不增加光束或額外筒身分割。",
+      "postComparison": "與Lucide／Phosphor在16／20／24回比，燈框內孔、開關與筒壁空白清楚，sharp仍保留曲肩。三角型、明暗DPR1／2及55%文字已查看。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "器材可見結構使用連續輪廓，不需要隱藏邊界虛線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以輪廓與內部留白區分器材結構，不需淡化。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "保持單色平面器材圖示，不加材質光照漸層。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "axe",
+      "decision": "retained",
+      "purpose": "以寬弧刃、收頸斧背及斜長柄表示斧頭。",
+      "recognitionCues": "扇形弧刃、斧背與斜向長握柄。",
+      "confusableWith": [
+        "pickaxe",
+        "hammer"
+      ],
+      "defect": "本輪未見需要修正的具體缺陷，刃面和握柄比例及收口已成立。",
+      "sourceObservation": "Lucide的弧刃與收頸構造已被現稿保留，Tabler為相反朝向的近似斧形。換方向並未帶來構造優勢。",
+      "reason": "保留既有Lucide改作的連續斧頭輪廓與長柄，握柄按斧頭外緣截斷，不向刃面穿入。",
+      "postComparison": "與Lucide／Tabler回比，三尺寸刃面內孔和握柄空腔仍清楚，角型差異沒有破壞刃面曲線。明暗DPR1／2與55%文字均已查看。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "器材可見結構使用連續輪廓，不需要隱藏邊界虛線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以輪廓與內部留白區分器材結構，不需淡化。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "保持單色平面器材圖示，不加材質光照漸層。"
+        }
+      },
+      "remaining": []
+    }
+  ]
+}

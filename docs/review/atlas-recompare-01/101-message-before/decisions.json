@@ -1,0 +1,126 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "baseline": "references/atlas-recompare-01/master-before.json",
+  "viewedSuffixes": [
+    "light-1x",
+    "dark-1x",
+    "native-light-2x",
+    "native-dark-2x"
+  ],
+  "batch": "101-message-before",
+  "decisions": [
+    {
+      "name": "message-heart",
+      "decision": "retained",
+      "purpose": "以左下尾尖的共用對話框與居中的雙瓣愛心呈現喜愛訊息。",
+      "recognitionCues": "左下尾尖的共用對話框與居中的雙瓣愛心",
+      "confusableWith": [
+        "message"
+      ],
+      "defect": "檢查愛心頂部與框上緣、心尖與框下緣的間隔。",
+      "sourceObservation": "Tabler 把愛心放在右下並保留文字線，Hugeicons 的內置愛心把焦點留在對話框中央。",
+      "reason": "保留 Hugeicons 式內置構圖與共用左下尾尖。只留一顆愛心，讓符號維持完整輪廓。",
+      "postComparison": "與兩來源並列，三尺寸仍能分辨雙瓣和尖端，心形與對話框之間保有留白，保留現稿。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "對話框與心形使用完整外緣。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "用內部留白區分心形和框。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "心形在單色下即可辨識。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "message-dots",
+      "decision": "retained",
+      "purpose": "以左下尾尖、長形對話框與水平等距的三顆實點呈現訊息輸入中。",
+      "recognitionCues": "左下尾尖、長形對話框與水平等距的三顆實點",
+      "confusableWith": [
+        "message-heart"
+      ],
+      "defect": "檢查 16px 三點是否分開，且沒有貼近對話框兩側。",
+      "sourceObservation": "Tabler 使用圓潤的框尾與等距三點，Phosphor 的框尾和本庫對話框位置接近。",
+      "reason": "保留同一母型、以原生尺寸調整點徑，三點位於框內中心軸。",
+      "postComparison": "三尺寸與 Tabler、Phosphor 回比，三點穩定落在對話框中間且彼此分離，尾部仍看得出對話語意。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "三個獨立點已構成輸入語意。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "三點保持相同對比表示同一狀態。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "單色點陣已足以辨識輸入。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "message-lock",
+      "decision": "retained",
+      "purpose": "以保留尾尖的對話框、右下方鎖身與拱形鎖梁呈現鎖定訊息。",
+      "recognitionCues": "保留尾尖的對話框、右下方鎖身與拱形鎖梁",
+      "confusableWith": [
+        "message-search"
+      ],
+      "defect": "檢查對話框是否穿入鎖梁、角部裁線是否搶過鎖的輪廓。",
+      "sourceObservation": "MDI 在右上用鎖徽標，Hugeicons 將鎖置中。現稿採右下安排，使尾尖和框頂完整。",
+      "reason": "保留右下鎖徽標與真透明挖空。16px 省略小鎖孔，保有拱梁內腔和框外分隔。",
+      "postComparison": "原生三尺寸檢視可見右下鎖梁和框尾仍分開，較大尺寸鎖孔存在；對比來源可維持有鎖和未加鎖的共用框。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "鎖身與鎖梁是連續可見部件。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "透明避讓讓材料背景從鎖旁透出。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "以鎖梁形狀而非明暗表達鎖定。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "message-search",
+      "decision": "retained",
+      "purpose": "以保留框尾的對話框與右下圓鏡、斜向鏡柄呈現搜尋訊息。",
+      "recognitionCues": "保留框尾的對話框與右下圓鏡、斜向鏡柄",
+      "confusableWith": [
+        "message-lock"
+      ],
+      "defect": "檢查放大鏡的圓孔、柄連接和右側框邊的間隔。",
+      "sourceObservation": "Tabler 使用右下鏡頭加兩道文字線。Hugeicons 將鏡頭放在圓框內。",
+      "reason": "保留家族的方框與右下鏡頭，把可用空間留給鏡頭、鏡柄和尾尖。",
+      "postComparison": "原生尺寸與兩來源回比，圓鏡仍是清楚的第一狀態訊號，框尾沒被遮住，省略文字線後整體更清楚。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "鏡頭、柄與框都是實線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "鏡片內孔及避讓區直接留白。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "圓鏡與斜柄已能表達搜尋。"
+        }
+      },
+      "remaining": []
+    }
+  ]
+}

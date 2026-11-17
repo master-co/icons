@@ -1,0 +1,43 @@
+{
+  "reviewer": "Codex (AI)",
+  "batch": "41-umbrella-candidate-1",
+  "baseline": "references/atlas-recompare-01/master-before.json",
+  "date": "2026-11-18",
+  "viewedSuffixes": [
+    "light-1x",
+    "dark-1x",
+    "native-light-2x",
+    "native-dark-2x"
+  ],
+  "decisions": [
+    {
+      "name": "umbrella",
+      "decision": "retained",
+      "purpose": "以張開傘面、傘骨及彎鉤握柄表示雨傘與遮雨用品。",
+      "recognitionCues": "寬弧傘面、對稱傘骨、中央直桿與彎鉤。",
+      "confusableWith": [
+        "cloud-rain",
+        "mushroom"
+      ],
+      "defect": "本輪重新核對傘骨交會、側面空腔及握柄比例，未發現需要回修的具體缺陷。",
+      "sourceObservation": "Lucide採無傘骨的簡潔弧罩，Phosphor以兩根內骨交代張開傘面。現稿保留Phosphor的分片構造與曲面，傘骨在罩內收口，握柄有自然圓彎。",
+      "reason": "保留現有寬弧傘面與對稱雙傘骨，中央桿與彎鉤一體。兩側空腔在小尺寸仍開放，沒有為簡化而移除物件構造，也不增加雨點或布紋。",
+      "postComparison": "最新稿與Lucide／Phosphor在16／20／24重新並列，罩面曲率、傘骨間距及握柄比例成立，頂部沒有交接凸刺。明暗DPR1／2及三角型已查看，55%文字情境仍可辨識；此次保留是新比較後的判斷。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "張開傘面的可見骨架與握柄不需要隱藏虛線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "傘骨與傘面以留白區分，保持完整輪廓對比。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "以單色平面傘面表達，不添加布面光照漸層。"
+        }
+      },
+      "remaining": []
+    }
+  ]
+}

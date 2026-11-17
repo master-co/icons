@@ -1,0 +1,43 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "batch": "48-hand-heart-candidate-1",
+  "baseline": "references/atlas-recompare-01/master-before.json",
+  "viewedSuffixes": [
+    "light-1x",
+    "dark-1x",
+    "native-light-2x",
+    "native-dark-2x"
+  ],
+  "decisions": [
+    {
+      "name": "hand-heart",
+      "decision": "refined",
+      "purpose": "以手掌托住心形表示關懷、支持與照護。",
+      "recognitionCues": "上方心形、承托手掌、拇指內線與袖口。",
+      "confusableWith": [
+        "handshake",
+        "heart"
+      ],
+      "defect": "掌底平段過長，接到指端的折點過急，手掌略像硬質托盤，缺少向手腕收束的形態。",
+      "sourceObservation": "Phosphor的掌底較早開始上斜，掌身向指端收薄；Lucide採斜舉手勢。本次沿既有Phosphor水平承托構造改善掌底轉接。",
+      "reason": "縮短掌底水平段，將指端至掌根的斜邊放緩，以短曲線接回手腕；保留心形、拇指與袖口，按新掌形重算遮擋收口。",
+      "postComparison": "最新稿與Lucide／Phosphor在16／20／24回比，掌底較自然收束、前掌更薄，心形仍由拇指承托；袖口與掌內空白保持。三角型、明暗DPR1／2及55%文字已查看。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "心形和手掌為完整可見構造，不需要虛線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以手掌實際遮擋表達承托，不以淡化掩飾交接。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "維持單色平面手勢，不添加光照或材質漸層。"
+        }
+      },
+      "remaining": []
+    }
+  ]
+}

@@ -1,11 +1,17 @@
 import {enclosedDetails,exteriorDetails} from '../occlusion.mjs';
+import {weightDelta} from '../geometry.mjs';
 const diagonal=([x,y])=>[12+(x-y)/Math.SQRT2,12+(x+y-24)/Math.SQRT2];
 
-export function dumbbell({g,o,l}){
+export function dumbbell({g,o,l,p,small}){
  const top=o([[7,4],[17,4],[17,8],[7,8]].map(diagonal),true,g.tip);
  const bottom=o([[7,16],[17,16],[17,20],[7,20]].map(diagonal),true,g.tip);
- const axle=l(...diagonal([12,2]),...diagonal([12,22]));
- return exteriorDetails(bottom,exteriorDetails(top,[axle],g),g);
+ const at=(x,y)=>diagonal([x,y]).join(' '),line=(x,y,x2,y2)=>l(...diagonal([x,y]),...diagonal([x2,y2]));
+ const gripSpread=weightDelta(g)*12/g.s;
+ const axle=small?[line(12,2,12,22)]:[
+  line(12,2,12,4),line(12,20,12,22),
+  ...[1,-1].map(side=>{const x=12+side*(1.75+gripSpread),m=12+side*(1.5+gripSpread);return p(`M${at(x,8)}C${at(x,10)} ${at(m,10)} ${at(m,12)}C${at(m,14)} ${at(x,14)} ${at(x,16)}`);}),
+ ];
+ return exteriorDetails(bottom,exteriorDetails(top,axle,g),g);
 }
 export function kettlebell({g,p}){
  const body=p('M12 8C7.5 8 4 11.5 4 16C4 20 5.5 22 8 22H16C18.5 22 20 20 20 16C20 11.5 16.5 8 12 8Z');
@@ -57,7 +63,7 @@ export function golfHole({g,o,p}){
 export function swimming({g,c,o,p}){
  return [c(17.5,6,2),o([[3,8],[8,6.5],[14,11.5],[12,16]],false,g.tip),...[16,21].map(y=>p(`M2 ${y}Q4.5 ${y-2} 7 ${y}T12 ${y}T17 ${y}T22 ${y}`))];
 }
-export function running({g,c,o}){
- const body=o([[12,8.5],[10.5,14],[15,17],[15,22]],false,g.tip);if(g.corner==='sharp')body[1]['stroke-linecap']='butt';
- return [c(15,4,2),o([[6,11],[7,8],[12,8.5],[16,12],[20,11]],false,g.tip),body,o([[10.5,14],[7,18],[2,16.5]],false,g.tip)];
+export function running({g,c,p}){
+ const body=p('M12 8.5L10.5 14C13.5 15.5 15 18 15 22');if(g.corner==='sharp')body[1]['stroke-linecap']='butt';
+ return [c(15,4,2),p('M6 9.5Q8.5 7 12 8.5C15 10.5 17 12.5 20 11'),body,p('M10.5 14C8.5 17.5 6 19 2 18.5')];
 }

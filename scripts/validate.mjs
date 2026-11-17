@@ -1,4 +1,5 @@
 import {comparisonReferences as loadComparisonReferences} from './lib/review-data.mjs';
+import {nativeVariants} from './lib/native-variants.mjs';
 import assert from 'node:assert/strict';
 import {isDeepStrictEqual} from 'node:util';
 import { readFile, readdir } from 'node:fs/promises';
@@ -91,10 +92,10 @@ assert.deepEqual(brandDecisions.icons.map(x=>x.name).sort(),brandCatalog.map(x=>
 for(const entry of brandCatalog){
   const decision=brandDecisions.icons.find(x=>x.name===entry.name);
   assert.equal(decision.status,'visually-reviewed-candidate');
-  assert.equal(decision.variantsSha256,sha(JSON.stringify(definitions[entry.name].variants)),entry.name+': stale brand decision');
+  assert.equal(decision.variantsSha256,sha(JSON.stringify(nativeVariants(definitions[entry.name].variants))),entry.name+': stale brand decision');
   assert.equal(sha(await readFile(entry.source.localPath)),entry.source.sha256,entry.name+': source changed');
   if(entry.source.originalPath)assert.equal(sha(await readFile(entry.source.originalPath)),entry.source.originalSha256,entry.name+': original raster changed');
-  assert.equal(brandReview.icons.find(x=>x.name===entry.name).variantsSha256,sha(JSON.stringify(definitions[entry.name].variants)),entry.name+': stale brand review');
+  assert.equal(brandReview.icons.find(x=>x.name===entry.name).variantsSha256,sha(JSON.stringify(nativeVariants(definitions[entry.name].variants))),entry.name+': stale brand review');
 }
 for(const evidence of brandReview.evidence)assert.equal(sha(await readFile(evidence.path)),evidence.sha256,evidence.path);
 for(const ref of uiRefs.references){assert.match(ref.commit,/^[a-f0-9]{40}$/);assert.equal(sha(await readFile(ref.localPath)),ref.sha256,ref.localPath);}
@@ -106,7 +107,7 @@ const verifiedEvidence=new Set();
 const reviewBaselines=new Map();
 for(const record of ledger.icons){
   assert.equal(record.status,'visually-reviewed-candidate',record.name+': awaiting visual review');
-  assert.equal(record.visualReview.variantsSha256,sha(JSON.stringify(definitions[record.name].variants)),record.name+': geometry changed since review');
+  assert.equal(record.visualReview.variantsSha256,sha(JSON.stringify(nativeVariants(definitions[record.name].variants))),record.name+': geometry changed since review');
   if(record.change.kind==='new'){
     assert.equal(record.change.before,null,record.name+': new drawings must not fabricate a previous master');
     assert.ok([...expansionScope,...atlasScope].some(r=>r.name===record.name),record.name+': not in approved new scope');
@@ -116,7 +117,7 @@ for(const record of ledger.icons){
     if(!reviewBaselines.has(path))reviewBaselines.set(path,await json(path));
     const before=reviewBaselines.get(path);
     assert.equal(record.change.before.variantsSha256,sha(JSON.stringify(before[record.name].variants)),record.name+': incorrect before master');
-    const changed=!isDeepStrictEqual(definitions[record.name].variants,before[record.name].variants);
+    const changed=!isDeepStrictEqual(nativeVariants(definitions[record.name].variants),before[record.name].variants);
     assert.equal(record.change.kind,changed?'modified':'retained',record.name+': decision does not describe actual change');
   }
   assert.ok(record.change.reason.length>20,record.name+': missing individual decision');

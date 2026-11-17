@@ -1,0 +1,72 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "baseline": "references/atlas-recompare-01/master-before.json",
+  "viewedSuffixes": [
+    "light-1x",
+    "dark-1x",
+    "native-light-2x",
+    "native-dark-2x"
+  ],
+  "batch": "87-energy-candidate-1",
+  "decisions": [
+    {
+      "name": "solar-panel",
+      "decision": "refined",
+      "purpose": "用太陽與傾斜光電板表示太陽能發電設備。",
+      "recognitionCues": "上方半圓太陽和短光線、下方前寬後窄的分格面板。",
+      "confusableWith": [
+        "sun",
+        "grid"
+      ],
+      "defect": "原先上邊三格等寬，下邊卻為六、八、六，中央格在近端過度展開。",
+      "sourceObservation": "Phosphor的正面梯形面板與上方太陽構成清楚設備剪影；Lucide採斜向面板和角落日光，是另一種姿態。現稿保留Phosphor主次關係，但分格應服從整塊板的透視展開。",
+      "reason": "把兩條縱向分界改為連接上下邊各自的三等分點，使三欄在任一橫向截面都有一致的比例；保留16px兩格簡化以及原有太陽輪廓。",
+      "postComparison": "已查看最新稿與Lucide／Phosphor的三尺寸、三角型、明暗DPR1與2。20／24px中央欄不再明顯寬於兩側，板面三欄的展開更均衡；16px維持兩塊開放空腔，沒有為分格一致而增加小尺寸內線。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "陽光和電池格為實際可見形態，沒有隱藏邊界需用虛線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以輪廓和格線區分太陽與板面，不用淡化格線。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "不增加日光漸層，維持單色設備圖示。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "wind-turbine",
+      "decision": "retained",
+      "purpose": "以三葉轉子和高塔柱表示風力發電機。",
+      "recognitionCues": "三片等角漸收葉片、中央輪轂、垂直塔柱與水平接地底座。",
+      "confusableWith": [
+        "fan",
+        "wind"
+      ],
+      "defect": "重查三葉是否失衡、輪轂與葉根是否堆黑，以及塔柱是否與轉子相連。",
+      "sourceObservation": "Tabler的修長三葉和穩定底座清楚表達風力設備；Hugeicons以短葉加外圍動態弧線表現轉動。現稿延續Tabler長葉構造，三片共用母型旋轉120度，中央保留輪轂孔。",
+      "reason": "保留長葉與單一塔柱。三葉方向和比例一致，輪轂遮擋葉根的交線，支承在中央軸上；加入Hugeicons外圍旋轉弧會增加16px周邊密度，並非本靜態設備圖示所需。",
+      "postComparison": "已查看最新保留稿與Hugeicons／Tabler的三尺寸、三角型、明暗DPR1與2。三片葉內留白及中心孔在原生大小仍可區別，塔柱從輪轂接到底座；長葉姿態比帶動態弧的方案更集中，保留現稿。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "靜態風力設備不需要額外虛線或旋轉軌跡。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "三片葉片同層、塔柱實接，不用透明度弱化任何部件。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "輪廓已表達葉片與支承，不增加光照漸層。"
+        }
+      },
+      "remaining": []
+    }
+  ]
+}

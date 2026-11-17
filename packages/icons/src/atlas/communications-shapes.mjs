@@ -5,7 +5,7 @@ import {coreDrawings} from '../families/core.mjs';
 export function mailbox({g,p,l}){
  const b=g.r*24/g.s;
  const bottom=b?`V${19-b}Q22 19 ${22-b} 19H${2+b}Q2 19 2 ${19-b}`:'V19H2';
- const shell=p(`M7 5H18C20.2 5 22 6.8 22 9${bottom}V10A5 5 0 0 1 7 5Z`);
+ const shell=p(`M7 5H17A5 5 0 0 1 22 10${bottom}V10A5 5 0 0 1 7 5Z`);
  return enclosedDetails(shell,[p('M7 5A5 5 0 0 1 12 10V19'),l(5.5,10,7.5,10),p('M15 9H18V11')],g);
 }
 export function phoneIncoming({g,l,a}){return [...support.phone(g),...a([l(21,2,14,9)],[[14,4],[14,9],[19,9]])]}

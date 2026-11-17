@@ -1,0 +1,43 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "batch": "54-running-candidate-2",
+  "baseline": "references/atlas-recompare-01/master-before.json",
+  "viewedSuffixes": [
+    "light-1x",
+    "dark-1x",
+    "native-light-2x",
+    "native-dark-2x"
+  ],
+  "decisions": [
+    {
+      "name": "running",
+      "decision": "refined",
+      "purpose": "以前傾軀幹、擺臂與前後跨步表示跑步。",
+      "recognitionCues": "前方頭圈、傾斜軀幹、前落後伸的雙腿與相反擺臂。",
+      "confusableWith": [
+        "person-walking",
+        "person-standing"
+      ],
+      "defect": "原稿的膝部及屈臂折角較硬，四肢被分成短直段，動勢不如Phosphor連續。",
+      "sourceObservation": "Phosphor以連續長曲線帶出跨步與擺臂，比現稿的折線膝部更舒展；Tabler的前傾軀幹與髖部構造仍可保留。",
+      "reason": "沿Phosphor提煉弧形擺臂與連續跨步輪廓：前腿由髖部平順展開至落腳，後腿以長曲線後伸，雙臂改成連續弧形。保留原Tabler改作的前傾軀幹、頭部位置與主要比例，髖部共接且頭肩留白。",
+      "postComparison": "第一候選只改雙腿，手臂仍顯硬；第二候選統一擺臂曲線後，頭、軀幹與四肢方向更連貫。與Phosphor／Tabler在16／20／24回比，前後跨步清楚，頭肩與雙腿留白保持；三角型、明暗DPR1／2與55%文字均已查看。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "以身體姿態直接表達跑步，不另加虛線速度符號。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "頭、軀幹與四肢均為必要訊號，保持一致實色。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "使用單色平面人物輪廓，不增加材質漸層。"
+        }
+      },
+      "remaining": []
+    }
+  ]
+}

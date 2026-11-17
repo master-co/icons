@@ -1,0 +1,98 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "baseline": "references/atlas-recompare-01/master-before.json",
+  "viewedSuffixes": [
+    "light-1x",
+    "dark-1x",
+    "native-light-2x",
+    "native-dark-2x"
+  ],
+  "batch": "107-solids-before",
+  "decisions": [
+    {
+      "name": "cone",
+      "decision": "retained",
+      "purpose": "用單一尖頂和橢圓底面呈現立體圓錐",
+      "recognitionCues": "對稱尖頂、斜側壁與完整橢圓底面",
+      "confusableWith": [
+        "pyramid"
+      ],
+      "defect": "檢查斜壁與橢圓的兩個切點，以及粗描邊的底面內孔。",
+      "sourceObservation": "Lucide 呈現完整底面橢圓，Tabler 只顯示底緣的外弧。",
+      "reason": "保留 Lucide 式完整底面。側壁沿橢圓的切線接入外緣，讓斜邊與底緣連成一筆。",
+      "postComparison": "三尺寸與來源並列，側壁到橢圓的過渡平順，最粗描邊的底面孔仍清楚。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "連續的邊和接點構成此圖示的輪廓。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以清楚的單色空隙分開相鄰線條。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "單色輪廓已足以呈現形狀和方向。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "cylinder",
+      "decision": "retained",
+      "purpose": "以平行側壁和橢圓頂面呈現直立圓柱",
+      "recognitionCues": "橢圓頂面、垂直平行邊和底部外弧",
+      "confusableWith": [
+        "cone"
+      ],
+      "defect": "檢查上下弧的連接處和 16px 頂面開口。",
+      "sourceObservation": "Lucide 與 Tabler 都用完整頂面和下方半橢圓，Lucide 的兩壁較寬。",
+      "reason": "保留寬頂面和與弧端相切的兩面平行側壁，與同組圓錐有一致的扁橢圓。",
+      "postComparison": "與兩款來源並列，三尺寸均能看出上方橢圓和等寬側壁，以最粗描邊放大檢視下緣仍然連續。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "連續的邊和接點構成此圖示的輪廓。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以清楚的單色空隙分開相鄰線條。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "單色輪廓已足以呈現形狀和方向。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "pyramid",
+      "decision": "retained",
+      "purpose": "用左右對稱的兩個三角面呈現角錐",
+      "recognitionCues": "頂尖、向下收合的前底角及垂直中央稜線",
+      "confusableWith": [
+        "cone"
+      ],
+      "defect": "檢查中央稜線在圓角頂點、底點有沒有外露。",
+      "sourceObservation": "Lucide 與 Tabler 都使用相同的雙面視角和單條居中稜線。",
+      "reason": "保留居中稜線與同幅兩面，讓稜線在圓角後沿外形相接。",
+      "postComparison": "三尺寸兩側保有留白，頂點與底點的稜線接頭平順，與圓錐的弧底可區分。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "連續的邊和接點構成此圖示的輪廓。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以清楚的單色空隙分開相鄰線條。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "單色輪廓已足以呈現形狀和方向。"
+        }
+      },
+      "remaining": []
+    }
+  ]
+}

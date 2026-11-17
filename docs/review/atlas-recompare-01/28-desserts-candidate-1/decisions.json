@@ -1,0 +1,101 @@
+{
+  "reviewer": "Codex (AI)",
+  "batch": "28-desserts-candidate-1",
+  "baseline": "references/atlas-recompare-01/master-before.json",
+  "date": "2026-11-17",
+  "viewedSuffixes": [
+    "light-1x",
+    "dark-1x",
+    "native-light-2x",
+    "native-dark-2x"
+  ],
+  "decisions": [
+    {
+      "name": "ice-cream",
+      "decision": "refined",
+      "purpose": "以冰球及收尖甜筒表示冰淇淋、冷甜品與點心。",
+      "recognitionCues": "圓拱冰球、短圓底緣及長三角甜筒，保持完整內孔。",
+      "confusableWith": [
+        "pizza",
+        "cake"
+      ],
+      "defect": "舊稿冰球底緣偏厚、整個上半部過寬，甜筒相較來源偏短，整體像雲朵落在小三角上。",
+      "sourceObservation": "Lucide較薄底緣與較長甜筒的比例更自然；Phosphor甜筒斜紋可表達餅皮，但16px會增加狹窄內孔，保留既有Lucide簡潔器型。",
+      "reason": "冰球與側緣略收窄，底緣從12上移至11，甜筒同步拉長；sharp尖端保留內收以控制斜接，soft／rounded依現有tip建立實際圓角。",
+      "postComparison": "最新稿與Lucide／Phosphor原稿於16／20／24重新並列，上下比例更接近Lucide的長甜筒，底緣不再顯得厚重。三角型與明暗DPR1／2均已查看，原生16甜筒孔保持完整，未新增斜紋造成小孔。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "冰球與甜筒為完整外形，不需要虛線區分。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "藉比例及空腔區分兩部分，不使用透明度削弱輪廓。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "冰淇淋辨識依賴形狀，不加光照或色彩漸層。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "cake",
+      "decision": "refined",
+      "purpose": "以帶蠟燭與糖霜的糕體表示蛋糕、生日及慶祝。",
+      "recognitionCues": "矩形糕體、兩道圓垂糖霜、單支蠟燭及獨立火焰。",
+      "confusableWith": [
+        "sandwich",
+        "bread"
+      ],
+      "defect": "舊糖霜以斜向波浪穿過糕體，像通用液面，缺少沿蛋糕邊緣垂落的圓弧節奏。",
+      "sourceObservation": "Tabler糖霜的圓垂節奏比舊稿自然；Lucide亦用局部圓弧表示糖霜。保留既有Tabler改作的單燭方向，不增加Lucide三支蠟燭及底盤。",
+      "reason": "改為兩道切線連續的下垂圓弧，兩端平緩接入糕體側壁，中央上拱與單燭對齊；維持既有糕體三種角型、燭芯與火焰間距。",
+      "postComparison": "與Lucide／Tabler的最新同尺寸並列中，糖霜更像附著在糕體表面的垂落層，沒有增加分層線。明暗DPR1／2、16／20／24及三角型均查看，16px上下空腔仍開放，低對比仍可辨燭火。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "蛋糕和糖霜的可見邊界皆為實體，無虛線用途。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "火焰與糕體以形狀和間隙分層，不淡化糖霜。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "輪廓已能表示糕體與燭火，不加入裝飾漸層。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "cookie",
+      "decision": "refined",
+      "purpose": "以帶咬痕及巧克力粒的圓餅表示餅乾、點心或瀏覽器cookie。",
+      "recognitionCues": "圓餅外緣、兩個連續咬口及錯落的實心巧克力粒。",
+      "confusableWith": [
+        "citrus",
+        "pizza"
+      ],
+      "defect": "舊稿上下巧克力粒近乎沿直列及水平線排列，圓餅內部的節奏過於整齊。",
+      "sourceObservation": "Lucide巧克力粒的錯落分布較自然，Tabler雖採波浪餅緣，也以不規則粒位保持烘焙感；保留現有Lucide方向的圓輪廓及雙咬口。",
+      "reason": "上粒略向右上、左下粒向左上、右下粒稍下移，中央小粒略左移；16仍保留三粒，20／24四粒，不增加咬口外碎屑。",
+      "postComparison": "最新稿與兩來源在原生三尺寸重新比較，巧克力粒的上下留白較自然，沒有形成整齊的臉形排列。明暗DPR1／2、三角型及低對比文字已查看；粒與餅緣、咬口均保有清楚分離。外輪廓未重畫，此次為內部節奏精修。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "餅緣與咬口皆是實際可見形狀，不需虛線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "巧克力粒採清楚實心點，不用透明度表現口味。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "餅乾以輪廓及疏落粒位傳意，不加烘焙漸層。"
+        }
+      },
+      "remaining": []
+    }
+  ]
+}

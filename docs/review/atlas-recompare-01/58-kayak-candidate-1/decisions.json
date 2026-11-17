@@ -1,0 +1,43 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "batch": "58-kayak-candidate-1",
+  "baseline": "references/atlas-recompare-01/master-before.json",
+  "viewedSuffixes": [
+    "light-1x",
+    "dark-1x",
+    "native-light-2x",
+    "native-dark-2x"
+  ],
+  "decisions": [
+    {
+      "name": "kayak",
+      "decision": "refined",
+      "purpose": "以雙尖狹長船身與橫向雙葉槳表示獨木舟。",
+      "recognitionCues": "俯視雙尖船殼、中央交叉槳桿及兩端槳葉。",
+      "confusableWith": [
+        "sailboat",
+        "ship"
+      ],
+      "defect": "船尖在soft／rounded仍沿用尖角中心線，主要靠描邊接角顯示圓滑，角型幾何處理不完整。",
+      "sourceObservation": "Lucide在雙尖端保留小幅曲線轉接，Tabler增加座艙橫線而較密。現稿主體比例及雙槳已接近Lucide，僅需補足船尖的實際微圓幾何。",
+      "reason": "soft／rounded在兩端短截原船殼曲線，以切線交點控制二次曲線承接，rounded裁切略大；sharp保留原尖角。主體弧腹、雙槳位置與槳葉收口保持。",
+      "postComparison": "最新稿與Lucide／Tabler在16／20／24回比，雙尖及修長船形仍清楚，曲線轉接屬細微工藝修正；未增加座艙分線。三角型、明暗DPR1／2與55%文字均已查看。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "船殼及雙槳為可見完整輪廓，無需隱藏線或路徑虛線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以輪廓及留白區分船身與雙槳，不需淡化任何主體。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "維持單色俯視器材圖示，不加入材質或水面漸層。"
+        }
+      },
+      "remaining": []
+    }
+  ]
+}

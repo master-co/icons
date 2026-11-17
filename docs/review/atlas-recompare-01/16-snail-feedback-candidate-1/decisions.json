@@ -1,0 +1,42 @@
+{
+  "reviewer": "Codex (AI)",
+  "batch": "16-snail-feedback-candidate-1",
+  "baseline": "references/atlas-recompare-01/master-before.json",
+  "date": "2026-11-17",
+  "viewedSuffixes": [
+    "light-1x",
+    "dark-1x",
+    "native-light-2x",
+    "native-dark-2x"
+  ],
+  "decisions": [
+    {
+      "name": "snail",
+      "decision": "refined",
+      "purpose": "以背負螺旋殼的低伏軟體動物表示蝸牛及緩慢移動。",
+      "recognitionCues": "單一寬鬆螺旋、前伸頭頸、雙觸角及貼地腹足。",
+      "confusableWith": [
+        "turtle"
+      ],
+      "defect": "使用者仍覺得頭身轉接生硬；前稿頭冠較高，細頸局部直立，與厚腹足的尺度變化過急。",
+      "sourceObservation": "Lucide與Tabler的頭身採共同輪廓，Tabler較簡潔的單圈殼保留清楚腹足。此次保留既有Tabler改作方向，進一步降低頭冠，讓頸部斜向展開，不增加頭身分界。",
+      "reason": "頭冠由約y7.15降低至y8.6，頸根至頭部改成較寬的斜向曲線，外側直接展開至腹足，並以水平切線接回足底；觸角隨頭部降低。殼的螺旋保持原狀，隔離頭身承接這個變數。",
+      "postComparison": "已查看最新稿與固定Lucide／Tabler原稿在16／20／24、三角型、明暗及DPR1／2的並列。最新稿頭冠較低，頭頸和腹足形成斜向連續體量；相較前稿直立細頸，原生16也有較自然的前伸姿態。保留來源的一體輪廓與簡潔腹足，未新增內線。這是AI目視後的新候選，使用者尚未定案。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "殼與軟體表面是完整實體，不需要隱藏邊界。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以寬鬆螺旋和曲面分配空間，不淡化內圈。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "蝸牛以殼和身體輪廓傳意，不添加殼紋或光照漸層。"
+        }
+      },
+      "remaining": []
+    }
+  ]
+}

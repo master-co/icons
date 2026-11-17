@@ -1,0 +1,154 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "baseline": "references/atlas-recompare-01/master-before.json",
+  "viewedSuffixes": [
+    "light-1x",
+    "dark-1x",
+    "native-light-2x",
+    "native-dark-2x"
+  ],
+  "batch": "109-panels-candidate-1",
+  "decisions": [
+    {
+      "name": "picture-in-picture",
+      "decision": "refined",
+      "purpose": "以左上主框和右下完整的獨立小視窗呈現子母畫面的語意。",
+      "recognitionCues": "左上主框和右下完整的獨立小視窗",
+      "confusableWith": [
+        "panels-top-left"
+      ],
+      "defect": "原稿的主框沿小視窗外擴區斜切，相鄰端點的斜角和留白不一致。",
+      "sourceObservation": "Lucide 以兩個開放端讓小窗保持獨立，Phosphor 使用連在一起的右下內嵌框。",
+      "reason": "把主窗畫成連續折線，兩端各留等距空隙並沿用角型自身的線帽。",
+      "postComparison": "在三尺寸與兩來源回比，小窗仍立於主框右下，主框的兩個端點更整齊且粗描邊時不沾黏。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "以完整輪廓和獨立符號筆畫表達形狀。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "用單色線和清楚的間隙區分相鄰形體。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "用單色筆畫即可傳達輪廓及功能。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "panels-top-left",
+      "decision": "retained",
+      "purpose": "以同一外框中的通欄頁首、左側欄和主區域呈現上方與左側面板的語意。",
+      "recognitionCues": "同一外框中的通欄頁首、左側欄和主區域",
+      "confusableWith": [
+        "layout-panel-left"
+      ],
+      "defect": "檢查上方橫線與左側直線交會，以及轉角後分隔線是否溢出。",
+      "sourceObservation": "Lucide 的上方與左側分界使用直線，Hugeicons 的外框則以較大的圓角包覆同樣的分區。",
+      "reason": "保留與共同面板母型相同的外框，將直線限制在框內並接到兩個交會位置。",
+      "postComparison": "對照兩源後，16px 能區分上下和左右三孔，最粗描邊的兩個相接分界沒有伸出外框。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "以完整輪廓和獨立符號筆畫表達形狀。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "用單色線和清楚的間隙區分相鄰形體。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "用單色筆畫即可傳達輪廓及功能。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "panel-bottom-open",
+      "decision": "retained",
+      "purpose": "以底部的窄分區與上方空間內的向上箭翼呈現展開底部面板的語意。",
+      "recognitionCues": "底部的窄分區與上方空間內的向上箭翼",
+      "confusableWith": [
+        "panel-top-open"
+      ],
+      "defect": "檢查箭翼底端與橫分界的間距，下欄內孔在粗線下仍能看見。",
+      "sourceObservation": "Lucide 和 Tabler 都用底部窄欄加向上的箭翼，Lucide 擺位略靠上方。",
+      "reason": "保留共享底面板外框與較寬的箭翼，讓上箭置中並與界線保持距離。",
+      "postComparison": "三尺寸與兩個來源回比，開口箭翼和下方界線仍分離，上下兩區的高度差足以辨識。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "以完整輪廓和獨立符號筆畫表達形狀。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "用單色線和清楚的間隙區分相鄰形體。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "用單色筆畫即可傳達輪廓及功能。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "panel-top-open",
+      "decision": "retained",
+      "purpose": "以頂部的窄分區與下方空間內的向下箭翼呈現展開頂部面板的語意。",
+      "recognitionCues": "頂部的窄分區與下方空間內的向下箭翼",
+      "confusableWith": [
+        "panel-bottom-open"
+      ],
+      "defect": "檢查向下箭翼的肩點與上分界，底部尖端與框邊仍要保有間隙。",
+      "sourceObservation": "Lucide 和 Tabler 都以向下箭翼對應頂部窄欄，Tabler 的箭翼略短而集中。",
+      "reason": "保留與底部展開相對應的雙邊距離與箭翼寬度，讓兩個動作能成對閱讀。",
+      "postComparison": "與兩源並排，16px 的箭翼仍可區分上下方向，最粗描邊的尖端到框底仍有清楚留白。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "以完整輪廓和獨立符號筆畫表達形狀。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "用單色線和清楚的間隙區分相鄰形體。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "用單色筆畫即可傳達輪廓及功能。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "focus",
+      "decision": "retained",
+      "purpose": "以四角取景框及一個居中的空心圓呈現對焦的語意。",
+      "recognitionCues": "四角取景框及一個居中的空心圓",
+      "confusableWith": [
+        "scan"
+      ],
+      "defect": "確認四角在三角型下維持四段，內圓在高線重時仍保有內孔。",
+      "sourceObservation": "Lucide 使用空心圓來聚焦，Tabler 使用實心小圓點，二者都保留四個取景角。",
+      "reason": "沿用本庫掃描四角與 Lucide 式空心內圓，透過中心圓區分對焦和掃描。",
+      "postComparison": "對照兩源的三尺寸，中心孔與四角均分離，灰階情境中仍能和空取景框區分。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "以完整輪廓和獨立符號筆畫表達形狀。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "用單色線和清楚的間隙區分相鄰形體。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "用單色筆畫即可傳達輪廓及功能。"
+        }
+      },
+      "remaining": []
+    }
+  ]
+}

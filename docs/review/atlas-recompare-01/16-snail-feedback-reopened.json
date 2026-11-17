@@ -1,0 +1,210 @@
+{
+  "date": "2026-11-17",
+  "reason": "使用者再次指出頭身轉接生硬；重新檢查頸部收窄、頭冠和腹足的整體姿態。",
+  "previousTaskItem": {
+    "name": "snail",
+    "label": "蝸牛",
+    "category": "nature",
+    "status": "visually-reviewed",
+    "previousReview": "Preserved as historical evidence; not inherited as this review decision.",
+    "decision": "refined",
+    "defect": "使用者指出第一輪只修頸根小圓角，頭頸依然像直立管子接上身體，缺乏一體感。此問題已重新開啟，舊決策完整保存。",
+    "purpose": "以背負螺旋殼的低伏軟體動物表示蝸牛及緩慢移動。",
+    "confusableWith": [
+      "turtle"
+    ],
+    "sourceObservation": "Lucide和Tabler都有頭、頸與腹足的一體輪廓。原稿兩條長直頸邊與水平身體形成管形，來源輪廓整體承接的優點未被小圓角修正吸收；此次沿既有Tabler改作重畫連續軟體身形。",
+    "reason": "移除水平折入垂直的頸部構造。身體上緣由殼側以連續曲線上升，逐漸收窄成略前傾的頸；圓頭外緣直接延續為向腹足展開的長曲線，底部切向接回地面。雙觸角依新頭部重新定位，墨線在頭殼外收口，避免插入頭腔。",
+    "postComparison": "最新稿與Lucide／Tabler重新以原生16／20／24並列，頭頸到腹足由寬到窄連續轉變，原本管狀頸根及硬水平折點已消除。螺旋殼與頭部仍分工清楚，明暗DPR1／2和低對比文字均已查看；sharp也保持生物曲面。使用者指出的缺陷已實際重畫，此為AI新候選，尚未取得使用者定案。",
+    "effects": {
+      "dashes": {
+        "used": false,
+        "reason": "殼與軟體表面是完整實體，不需要隱藏邊界。"
+      },
+      "opacity": {
+        "used": false,
+        "reason": "以寬鬆螺旋和曲面分配空間，不淡化內圈。"
+      },
+      "gradients": {
+        "used": false,
+        "reason": "蝸牛以殼和身體輪廓傳意，不添加殼紋或光照漸層。"
+      }
+    },
+    "references": [
+      {
+        "name": "snail",
+        "library": "Lucide",
+        "repository": "lucide-icons/lucide",
+        "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+        "path": "icons/snail.svg",
+        "localPath": "references/atlas-01/lucide-snail.svg",
+        "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/snail.svg",
+        "sha256": "9d96adeecf21c50fee194db1c08704c192f3ef067924876a7526abcb45c644f8",
+        "license": "ISC AND MIT",
+        "sourceName": "snail",
+        "match": "exact",
+        "role": "comparison-only"
+      },
+      {
+        "name": "snail",
+        "library": "Tabler",
+        "repository": "tabler/tabler-icons",
+        "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+        "path": "icons/outline/snail.svg",
+        "localPath": "references/atlas-01/tabler-snail.svg",
+        "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/snail.svg",
+        "sha256": "341916073c9b43a0daa8d02d791c623e90587454f2bb79e01da0f23ea4e07c4e",
+        "license": "MIT",
+        "sourceName": "snail",
+        "match": "exact",
+        "role": "comparison-only"
+      }
+    ],
+    "batch": "16-snail-candidate-4",
+    "beforeHash": "6be19f339ab8507c3200d99865bf65f29ce5d3acccc960c9b8ecc26508415afc",
+    "afterHash": "84e672102a27033a5acb9eb6c3bd3fe95d4d2088cf174f8d5c4d3af6e38aafaa",
+    "evidence": [
+      {
+        "path": "docs/review/atlas-recompare-01/16-snail-candidate-4/snail-light-1x.png",
+        "sha256": "db90b9cef9eafa3d168a8044962434addbd4c779e21a62c08bfc9c20968df869"
+      },
+      {
+        "path": "docs/review/atlas-recompare-01/16-snail-candidate-4/snail-dark-1x.png",
+        "sha256": "b6e534237a23f5c4d0154af4ed02b000be72eb4898e2c61f03a5ec10ab8dbdb8"
+      },
+      {
+        "path": "docs/review/atlas-recompare-01/16-snail-candidate-4/snail-native-light-2x.png",
+        "sha256": "48f6f8fc7404154cc46d7c044d40e8c270f98afe5b18cacd64ddbc11660b0471"
+      },
+      {
+        "path": "docs/review/atlas-recompare-01/16-snail-candidate-4/snail-native-dark-2x.png",
+        "sha256": "59b16a4936aafc99d37352c8f4dfff4e2165f3e52c7bcb411feb4e5e854d23bf"
+      }
+    ],
+    "reviewer": "Codex (AI)",
+    "userApproval": "pending",
+    "remaining": [],
+    "reopenedReason": "依使用者回饋重畫頭頸至腹足的連續構造。",
+    "supersededReview": "docs/review/atlas-recompare-01/16-snail-reopened.json"
+  },
+  "previousGlobalItem": {
+    "name": "snail",
+    "purpose": "以背負螺旋殼的低伏軟體動物表示蝸牛及緩慢移動。",
+    "recognitionCues": "單一寬鬆螺旋、直立短頸、雙觸角及貼地腹足。",
+    "confusableWith": [
+      "turtle"
+    ],
+    "sourceObservation": "Lucide和Tabler都有頭、頸與腹足的一體輪廓。原稿兩條長直頸邊與水平身體形成管形，來源輪廓整體承接的優點未被小圓角修正吸收；此次沿既有Tabler改作重畫連續軟體身形。",
+    "references": [
+      {
+        "name": "snail",
+        "library": "Lucide",
+        "repository": "lucide-icons/lucide",
+        "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+        "path": "icons/snail.svg",
+        "localPath": "references/atlas-01/lucide-snail.svg",
+        "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/snail.svg",
+        "sha256": "9d96adeecf21c50fee194db1c08704c192f3ef067924876a7526abcb45c644f8",
+        "license": "ISC AND MIT",
+        "sourceName": "snail",
+        "match": "exact",
+        "role": "comparison-only"
+      },
+      {
+        "name": "snail",
+        "library": "Tabler",
+        "repository": "tabler/tabler-icons",
+        "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+        "path": "icons/outline/snail.svg",
+        "localPath": "references/atlas-01/tabler-snail.svg",
+        "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/snail.svg",
+        "sha256": "341916073c9b43a0daa8d02d791c623e90587454f2bb79e01da0f23ea4e07c4e",
+        "license": "MIT",
+        "sourceName": "snail",
+        "match": "exact",
+        "role": "comparison-only"
+      }
+    ],
+    "status": "visually-reviewed-candidate",
+    "effects": {
+      "dashes": {
+        "used": false,
+        "reason": "殼與軟體表面是完整實體，不需要隱藏邊界。"
+      },
+      "opacity": {
+        "used": false,
+        "reason": "以寬鬆螺旋和曲面分配空間，不淡化內圈。"
+      },
+      "gradients": {
+        "used": false,
+        "reason": "蝸牛以殼和身體輪廓傳意，不添加殼紋或光照漸層。"
+      }
+    },
+    "change": {
+      "kind": "modified",
+      "before": {
+        "path": "references/atlas-recompare-01/master-before.json",
+        "variantsSha256": "6be19f339ab8507c3200d99865bf65f29ce5d3acccc960c9b8ecc26508415afc"
+      },
+      "reason": "移除水平折入垂直的頸部構造。身體上緣由殼側以連續曲線上升，逐漸收窄成略前傾的頸；圓頭外緣直接延續為向腹足展開的長曲線，底部切向接回地面。雙觸角依新頭部重新定位，墨線在頭殼外收口，避免插入頭腔。"
+    },
+    "visualReview": {
+      "reviewer": "Codex (AI)",
+      "date": "2026-11-17",
+      "skillVersion": "0.5.11",
+      "sizes": [
+        16,
+        20,
+        24
+      ],
+      "corners": [
+        "sharp",
+        "soft",
+        "rounded"
+      ],
+      "themes": [
+        "light",
+        "dark"
+      ],
+      "dpr": [
+        1,
+        2
+      ],
+      "variantsSha256": "84e672102a27033a5acb9eb6c3bd3fe95d4d2088cf174f8d5c4d3af6e38aafaa",
+      "evidence": [
+        {
+          "path": "docs/review/atlas-recompare-01/16-snail-candidate-4/snail-light-1x.png",
+          "sha256": "db90b9cef9eafa3d168a8044962434addbd4c779e21a62c08bfc9c20968df869"
+        },
+        {
+          "path": "docs/review/atlas-recompare-01/16-snail-candidate-4/snail-dark-1x.png",
+          "sha256": "b6e534237a23f5c4d0154af4ed02b000be72eb4898e2c61f03a5ec10ab8dbdb8"
+        },
+        {
+          "path": "docs/review/atlas-recompare-01/16-snail-candidate-4/snail-native-light-2x.png",
+          "sha256": "48f6f8fc7404154cc46d7c044d40e8c270f98afe5b18cacd64ddbc11660b0471"
+        },
+        {
+          "path": "docs/review/atlas-recompare-01/16-snail-candidate-4/snail-native-dark-2x.png",
+          "sha256": "59b16a4936aafc99d37352c8f4dfff4e2165f3e52c7bcb411feb4e5e854d23bf"
+        }
+      ],
+      "inspectedCombinations": [
+        "light-1x",
+        "dark-1x",
+        "native-light-2x",
+        "native-dark-2x"
+      ],
+      "remainingCombinations": [],
+      "postDrawingSourceComparison": "最新稿與Lucide／Tabler重新以原生16／20／24並列，頭頸到腹足由寬到窄連續轉變，原本管狀頸根及硬水平折點已消除。螺旋殼與頭部仍分工清楚，明暗DPR1／2和低對比文字均已查看；sharp也保持生物曲面。使用者指出的缺陷已實際重畫，此為AI新候選，尚未取得使用者定案。"
+    },
+    "designOrigin": {
+      "kind": "adapted-redraw",
+      "library": "Tabler",
+      "license": "MIT",
+      "licenseFile": "licenses/tabler.txt"
+    },
+    "remaining": [],
+    "userApproval": "pending"
+  }
+}

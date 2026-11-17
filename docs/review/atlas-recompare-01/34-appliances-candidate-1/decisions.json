@@ -1,0 +1,101 @@
+{
+  "reviewer": "Codex (AI)",
+  "batch": "34-appliances-candidate-1",
+  "baseline": "references/atlas-recompare-01/master-before.json",
+  "date": "2026-11-17",
+  "viewedSuffixes": [
+    "light-1x",
+    "dark-1x",
+    "native-light-2x",
+    "native-dark-2x"
+  ],
+  "decisions": [
+    {
+      "name": "refrigerator",
+      "purpose": "以直立雙門與上下把手表示冰箱、冷藏及廚房設備。",
+      "recognitionCues": "高直機身、上小下大雙門、短上把手與長下把手。",
+      "confusableWith": [
+        "washing-machine",
+        "door-closed"
+      ],
+      "defect": "舊上門只有圓點，與下門長把手的構造不一致，容易像指示燈。",
+      "sourceObservation": "Tabler以兩段長短直把手明確表達雙門，Lucide單長把手跨分界為另一器型；沿既有Tabler改作恢復上下把手關係。",
+      "reason": "上門分界由9移至10以分配短把手空間，上圓點改短直把手，下把手稍下移，保持同一垂直軸及三種外殼角型。",
+      "postComparison": "與Lucide／Tabler於三尺寸重新並列，雙門結構及上下把手更明確，16短把手仍與頂緣和分界分離。三角型、明暗DPR1／2及55%文字均已查看。",
+      "decision": "refined",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "家電外殼與門板皆為可見邊界，不需隱藏虛線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以控制區和內孔分配層次，不淡化重要辨識線條。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "家電以構造和比例傳意，不加入材質或玻璃漸層。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "washing-machine",
+      "purpose": "以控制面板和圓形滾筒表示前開式洗衣機、洗衣及清潔設備。",
+      "recognitionCues": "上方洗劑抽屜短線、單控制點、大圓滾筒及旋轉內線。",
+      "confusableWith": [
+        "oven",
+        "refrigerator"
+      ],
+      "defect": "舊雙圓點近似對稱眼睛，滾筒水平波線較像通用液面，洗衣機特徵偏弱。",
+      "sourceObservation": "Lucide的洗劑抽屜與旋轉S形內線更有機器構造，Phosphor以玻璃反光表示另一種門窗；沿既有Lucide改作吸收前者。",
+      "reason": "左控制點改與機殼相接的抽屜短線，保留右控制點；滾筒半徑由5增至5.5，內線改為上下切向相接的S形，墨線收在圓筒內。",
+      "postComparison": "最新稿與Lucide／Phosphor於16／20／24重新比較，控制區和滾筒層級更清楚，旋轉內線仍留兩個可讀空腔。三角型、明暗DPR1／2及低對比文字已查看，抽屜線未突出外殼。",
+      "decision": "refined",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "家電外殼與門板皆為可見邊界，不需隱藏虛線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以控制區和內孔分配層次，不淡化重要辨識線條。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "家電以構造和比例傳意，不加入材質或玻璃漸層。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "microwave",
+      "purpose": "以橫向機身、觀察窗、側控制鈕及短腳表示微波爐與加熱設備。",
+      "recognitionCues": "低寬外殼、橫向觀察窗、兩顆側鈕及雙腳。",
+      "confusableWith": [
+        "oven",
+        "washing-machine"
+      ],
+      "defect": "舊機身和觀察窗偏高，整體更像方形箱櫃，橫向桌上家電比例不足。",
+      "sourceObservation": "Tabler低寬機身的比例更自然，Lucide觀察窗與腳部較具器物構造；保留既有Lucide窗式構造並調整橫向比例。",
+      "reason": "機身由20×15改為20×13，觀察窗由9×8改為9×6，側鈕和短腳同步重排，保留窗框及外框間的空間。",
+      "postComparison": "與Lucide／Tabler原生三尺寸重新比較，橫向機身與觀察窗更協調，16內窗及側鈕均清楚；三角型、明暗DPR1／2及55%文字已查看，未加入額外波紋或側隔板。",
+      "decision": "refined",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "家電外殼與門板皆為可見邊界，不需隱藏虛線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以控制區和內孔分配層次，不淡化重要辨識線條。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "家電以構造和比例傳意，不加入材質或玻璃漸層。"
+        }
+      },
+      "remaining": []
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "batch": "79-tools-candidate-1",
+  "baseline": "references/atlas-recompare-01/master-before.json",
+  "viewedSuffixes": [
+    "light-1x",
+    "dark-1x",
+    "native-light-2x",
+    "native-dark-2x"
+  ],
+  "decisions": [
+    {
+      "name": "hammer",
+      "decision": "retained",
+      "purpose": "以斜向握柄和鎚頭表示敲擊、修繕及施工工具。",
+      "recognitionCues": "彎曲鎚背、短頸、平直敲擊面和沿受力方向伸出的握柄。",
+      "confusableWith": [
+        "pickaxe",
+        "gavel"
+      ],
+      "defect": "重查鎚頭與握柄是否像拼接零件，並比較敲擊面附近的短線密度。",
+      "sourceObservation": "Lucide用連續鎚背、收頸和端面形成完整鎚頭，Phosphor改用較平直的頭部與明確矩形敲擊端。現稿沿用Lucide構造，保留較飽滿的鎚背與短頸。",
+      "reason": "握柄對準鎚頭受力軸，接入處沒有穿入頭部內孔的重線；端面短線具有工作面用途。Phosphor的平頭是另一種器型，改成矩形不會改善現稿的彎背承接，因此保留。",
+      "postComparison": "已查看最新稿與Lucide及Phosphor原稿的16／20／24三角型、明暗DPR1與2。彎背到短頸的曲線、敲擊端與握柄空腔在原生16仍可區分；現稿與Lucide構造接近，未見需要以Phosphor平直器型取代的比例問題。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "鎚頭與握柄是可見實體，不使用隱藏邊界虛線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以外輪廓和內孔區分鎚頭與握柄，不淡化工作面。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "平面工具不需光照漸層，使用單色輪廓。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "screwdriver",
+      "decision": "refined",
+      "purpose": "以帶防滑肩部的握柄和細長刀桿表示螺絲起子與維修。",
+      "recognitionCues": "斜向圓頂握柄、單筆握槽、收頸與兩側肩部、細長工作桿。",
+      "confusableWith": [
+        "pipette",
+        "pencil"
+      ],
+      "defect": "握柄頸部兩個凹轉折直接折成直角，圓頂與防滑肩部之間顯得像硬階梯。",
+      "sourceObservation": "Phosphor在防滑肩部與握柄的凹轉折保留短弧，與圓頂形成一致的塑膠握柄曲面；MDI用實心細桿與矩形握柄更簡約，但省略了防滑肩部的器型訊號。",
+      "reason": "沿既有Phosphor改作，在兩個頸部凹角各加入0.8單位的二次曲線過渡；保留握柄寬度、外側肩部、握槽及工作桿，單獨改善握柄承接。",
+      "postComparison": "最新稿已和Phosphor及MDI在16／20／24三角型、明暗DPR1與2重新並列。兩個頸部凹角變為短弧，sharp也保留這個物體曲面；肩部仍明確突出，16px的握槽與細桿未變密。保留Phosphor式握柄，不採MDI實心刀桿以免增加小尺寸重量。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "工作桿與握柄均為實體，不使用虛線暗示活動。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "凹角以輪廓曲率表達，不用透明度掩飾轉折。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "塑膠握柄以曲面輪廓成立，不加入光照漸層。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "drill",
+      "decision": "retained",
+      "purpose": "以機頭、鑽頭、傾斜握柄及電池底座表示電鑽和鑽孔作業。",
+      "recognitionCues": "水平機頭及細鑽頭、向後傾的握柄、寬電池座、20與24的扳機彎線。",
+      "confusableWith": [
+        "hair-dryer",
+        "screwdriver"
+      ],
+      "defect": "重查機頭、握柄與電池座比例，以及小尺寸扳機是否擠壓握柄孔。",
+      "sourceObservation": "Hugeicons的機頭、斜握柄與電池座共用接邊，扳機向前彎；Lucide握柄較窄，電池座前端更圓，扳機則接回握柄。現稿沿用Hugeicons的開放扳機和後傾握柄。",
+      "reason": "現稿上重下輕的機頭與電池座已成一體，握柄承重位置明確；16px移除扳機，保留握柄孔及電池內孔。電池座較平直是方殼器型選擇，不另增加Lucide的回接扳機以免擠密中央。",
+      "postComparison": "已查看最新稿與Lucide／Hugeicons固定原稿的16／20／24、三角型、明暗DPR1與2。16的機頭、夾頭及底座能分層辨識，20／24的開放扳機未黏握柄；保留現有機身寬度和方形電池座，不新增通風孔或其他裝飾細節。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "電鑽輪廓和工作端皆為實線，不描述隱藏機構。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "用機頭、握柄孔和電池座留白分層，不淡化部件。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "設備圖示不需要金屬反光或連續漸層。"
+        }
+      },
+      "remaining": []
+    }
+  ]
+}

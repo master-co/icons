@@ -1,0 +1,101 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "batch": "51-sports-candidate-1",
+  "baseline": "references/atlas-recompare-01/master-before.json",
+  "viewedSuffixes": [
+    "light-1x",
+    "dark-1x",
+    "native-light-2x",
+    "native-dark-2x"
+  ],
+  "decisions": [
+    {
+      "name": "dumbbell",
+      "decision": "refined",
+      "purpose": "以兩端配重、中央握把與短軸端表示固定式啞鈴。",
+      "recognitionCues": "對角共軸配重、中央可握區、配重外短軸端。",
+      "confusableWith": [
+        "kettlebell",
+        "bone"
+      ],
+      "defect": "20／24的中央握桿只有單一細線，相對配重過輕，握持結構不夠明確。",
+      "sourceObservation": "Hugeicons以略收腰的雙側輪廓表達握把，Lucide以多片配重和單線握桿表達另一種器型。本次沿既有Hugeicons構造補強中大尺寸握持區。",
+      "reason": "20／24改用對稱雙曲線握把，中央略收腰，兩端按配重外緣收口；16保留單線以避免細縫。較粗描邊依增量展開握把，維持中央留白。",
+      "postComparison": "最新稿與Lucide／Hugeicons在三尺寸回比，20／24握持區更明確、配重孔未被穿入；16保持簡潔單線。三角型、明暗DPR1／2與55%文字已查看，實際粗描邊另於建置後核對。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "啞鈴為實體工具，不需要隱藏邊界或運動虛線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以輪廓和留白區分器材結構，維持一致實色。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "維持單色平面器材圖示，不增加材質光照漸層。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "kettlebell",
+      "decision": "retained",
+      "purpose": "以上方握孔、飽滿鈴腹與平底表示壺鈴。",
+      "recognitionCues": "寬弧握把、圓腹、收束底部與短平底。",
+      "confusableWith": [
+        "dumbbell",
+        "kettle"
+      ],
+      "defect": "本輪回比未見需修正的具體缺陷，握孔與壺腹比例及平底承接已成立。",
+      "sourceObservation": "Hugeicons的握把與圓腹構造清楚，MDI以實心剪影表現同類器材。現稿已保留兩者關鍵輪廓，不需加入Hugeicons的重量徽記。",
+      "reason": "保留握孔高度、飽滿鈴腹與相切平底，三角型保留物件自然曲面，不增加會擠壓留白的中央標牌。",
+      "postComparison": "最新稿與Hugeicons／MDI回比，三尺寸握孔保持可讀、鈴腹與平底連續，未出現額外底座或拼裝感。三角型、明暗DPR1／2與55%文字已查看。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "握把和鈴腹均直接可見，不使用虛線表示。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以輪廓和留白區分器材結構，維持一致實色。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "維持單色平面器材圖示，不增加材質光照漸層。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "basketball",
+      "decision": "retained",
+      "purpose": "以圓球、十字分線與雙側弧線表示籃球。",
+      "recognitionCues": "圓球外殼、中央十字、左右對稱弧形球縫。",
+      "confusableWith": [
+        "football",
+        "volleyball"
+      ],
+      "defect": "本輪未發現須回修的具體缺陷，中央與兩側分片的疏密在小尺寸仍成立。",
+      "sourceObservation": "Phosphor採直立十字與左右弧縫，Tabler採對角方向球縫；現稿接近Phosphor的均衡分片，沒有需更換為另一角度的理由。",
+      "reason": "保留圓球、中央十字與對稱弧線，球縫按外殼收口；不以皮革紋理或更多分片增加密度。",
+      "postComparison": "最新稿與Phosphor／Tabler在16／20／24回比，兩側弧線與中央線之間仍有空白，球體輪廓完整，接點沒有向外突出。三角型、明暗DPR1／2與55%文字已查看。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "籃球分線為連續球面接縫，不改為虛線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "以輪廓和留白區分器材結構，維持一致實色。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "維持單色平面器材圖示，不增加材質光照漸層。"
+        }
+      },
+      "remaining": []
+    }
+  ]
+}

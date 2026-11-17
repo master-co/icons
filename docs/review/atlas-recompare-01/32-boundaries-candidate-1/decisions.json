@@ -1,0 +1,99 @@
+{
+  "reviewer": "Codex (AI)",
+  "batch": "32-boundaries-candidate-1",
+  "baseline": "references/atlas-recompare-01/master-before.json",
+  "date": "2026-11-17",
+  "viewedSuffixes": [
+    "light-1x",
+    "dark-1x",
+    "native-light-2x",
+    "native-dark-2x"
+  ],
+  "decisions": [
+    {
+      "name": "door-open",
+      "decision": "refined",
+      "purpose": "以打開的門板及外露門框表示開門、入口與可進入狀態。",
+      "recognitionCues": "前展門板、後方框口、實心把手及共同地面門檻。",
+      "confusableWith": [
+        "door-closed",
+        "book-open"
+      ],
+      "defect": "舊門板上下兩邊同向傾斜，形成歪斜平行四邊形，開啟透視與直立門框不協調。",
+      "sourceObservation": "Lucide上下邊向鉸鏈端收束，門板的前展方向更自然；Phosphor以正面窄框表示開啟，保留既有Lucide透視改作方向。",
+      "reason": "重畫左鉸鏈、右自由端門板，上下邊向鉸鏈端收束；自由端上提至1.5、底端22.5。門框改與關門共用5／19側壁、3頂及21門檻，把手移到新門板內。",
+      "postComparison": "最新稿與Lucide／Phosphor原生16／20／24重新比較，門板前展與門框關係較自然，16右側框口仍開放；三角型、明暗DPR1／2與55%文字已查看，門檻被門板實際遮住而無穿線。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "門框與柵板皆為可見實體邊界，不需隱藏虛線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "前後遮擋用實際輪廓裁切區分，不淡化結構。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "依輪廓和透視傳達空間，不加材質或光照漸層。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "door-closed",
+      "decision": "retained",
+      "purpose": "以關閉門板、把手和門檻表示門、入口或關閉狀態。",
+      "recognitionCues": "直立單層門框、右側實心把手和水平門檻。",
+      "confusableWith": [
+        "door-open"
+      ],
+      "defect": "本輪未發現需要重畫的可見缺陷，需核對框角、把手間距及與開門的家族關係。",
+      "sourceObservation": "Lucide與Tabler皆採簡潔單框及實心把手，現稿的寬門板及右把手已成立；Tabler較窄器型沒有構成必要回修。",
+      "reason": "保留門框比例、三種實際頂角和門檻連接，讓改後開門沿用此框位；不添加雙層框線或更換已清楚的把手。",
+      "postComparison": "與兩來源在三尺寸重新並列，16把手和側壁仍清楚分離，門框與門檻相接；明暗DPR1／2、三角型及55%文字已查看。保留基於本輪新比較，沒有沿用舊批准。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "門框與柵板皆為可見實體邊界，不需隱藏虛線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "前後遮擋用實際輪廓裁切區分，不淡化結構。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "依輪廓和透視傳達空間，不加材質或光照漸層。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "fence",
+      "decision": "refined",
+      "purpose": "以尖頂木柵板和前方橫板表示柵欄、圍界與庭院邊界。",
+      "recognitionCues": "兩片對稱尖頂直板、前橫板與下方露出的板腳。",
+      "confusableWith": [
+        "door-closed"
+      ],
+      "defect": "舊直板偏寬、尖頂較大，兩片上部近似小屋輪廓，木柵的細長感不足。",
+      "sourceObservation": "Tabler較窄直板更能表達柵條；Lucide三板雙橫桿較密，保留既有Tabler兩片前橫板構造。",
+      "reason": "兩片板寬由6收至5，略降低尖頂、收短板腳，維持左右對稱及前橫板厚度；按預設保留實際微圓與尖頂語意。",
+      "postComparison": "與Lucide／Tabler在原生三尺寸重新比較，直板更像柵條，16上部孔、橫板孔及下部孔仍分開；三角型、明暗DPR1／2及低對比文字已查看，橫板內未殘留後方直線。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "門框與柵板皆為可見實體邊界，不需隱藏虛線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "前後遮擋用實際輪廓裁切區分，不淡化結構。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "依輪廓和透視傳達空間，不加材質或光照漸層。"
+        }
+      },
+      "remaining": []
+    }
+  ]
+}

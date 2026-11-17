@@ -1,0 +1,101 @@
+{
+  "reviewer": "Codex (AI)",
+  "batch": "35-climate-candidate-1",
+  "baseline": "references/atlas-recompare-01/master-before.json",
+  "date": "2026-11-17",
+  "viewedSuffixes": [
+    "light-1x",
+    "dark-1x",
+    "native-light-2x",
+    "native-dark-2x"
+  ],
+  "decisions": [
+    {
+      "name": "oven",
+      "decision": "retained",
+      "purpose": "以直立機身、控制鈕及觀察窗表示烤箱、烘焙與廚房設備。",
+      "recognitionCues": "上方三鈕、下方橫向窗、直立外殼及兩個短腳。",
+      "confusableWith": [
+        "microwave",
+        "washing-machine"
+      ],
+      "defect": "本輪未發現需要改畫的可見缺陷，主要核對控制列和套窗的留白。",
+      "sourceObservation": "Phosphor三鈕與方窗的清楚分組已在現稿成立，Hugeicons較大圓門及把手屬另一器型；不為增加細節塞入小窗把手。",
+      "reason": "保留既有Phosphor改作的三鈕、完整視窗及短腳，三種外殼角型保持，內窗空間在16仍可讀。",
+      "postComparison": "與Phosphor／Hugeicons原生三尺寸重新並列，控制列與視窗分層清楚，16三點分離、窗孔及外圍通道可辨。三角型、明暗DPR1／2及55%文字已查看，保留結論由本輪新比較得出。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "烤箱外殼和門窗是實體邊界，不需虛線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "用空間區分控制列和視窗，不淡化套框。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "輪廓足以表示烤箱，不加加熱或玻璃漸層。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "air-conditioner",
+      "decision": "refined",
+      "purpose": "以橫向室內機、下方出風口與向下氣流表示冷氣機及室內空調。",
+      "recognitionCues": "寬正面、下收出風殼、指示點及三道分離氣流。",
+      "confusableWith": [
+        "heater",
+        "fan"
+      ],
+      "defect": "舊矩形機殼加全寬直條近似通用盒子，底部出風構造的形態不足。",
+      "sourceObservation": "Iconoir下收的出風殼比單一矩形更有室內機器形，Tabler以內凹出風框表達另一構造；沿既有Iconoir改作補回下收輪廓。",
+      "reason": "保留正面寬度與頂角，從出風分界向下收成連續圓腹及較窄底緣，分界移至9.5、底緣至13.5；維持三道氣流位置及與機殼的可見間隔。",
+      "postComparison": "最新稿與Iconoir／Tabler原生16／20／24並列，下收底殼使出風構造更明確，沒有再套小框；16出風口內隙及機殼到氣流空白仍可辨。三角型、明暗DPR1／2及55%文字均已查看。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "出風殼是完整實體，三道氣流以連續線表意，不需虛線。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "氣流與機殼依實際間隔分離，不淡化近接。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "不以冷色或發光漸層替代機體及氣流輪廓。"
+        }
+      },
+      "remaining": []
+    },
+    {
+      "name": "fan",
+      "decision": "retained",
+      "purpose": "以三片同向旋轉的扇葉與輪轂表示風扇、通風及送風。",
+      "recognitionCues": "三片旋轉對稱弧形葉、收束葉根與中央輪轂孔。",
+      "confusableWith": [
+        "flower",
+        "air-conditioner"
+      ],
+      "defect": "本輪未發現需重畫的可見缺陷，重點確認三片葉的共同構造及中央空間。",
+      "sourceObservation": "Phosphor三葉輪廓的同向旋轉與葉腹曲面已在現稿成立；Lucide四葉連續外緣是另一種扇葉配置，不因葉數不同而替換。",
+      "reason": "保留同一母型旋轉120度的三葉構造，葉根在輪轂外收口，中央孔及三葉孔均保持開放，不增添外圈或網罩。",
+      "postComparison": "最新現稿與Lucide／Phosphor在三尺寸重新比較，三片葉的寬度與方向一致，16中央輪轂孔及三個葉孔仍可辨。三角型、明暗DPR1／2與55%文字已查看，未沿用先前通過結論。",
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "以靜態扇葉方向表示旋轉構造，不額外加虛線動態軌跡。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "各葉同等主次，不以透明度製造未要求的動態效果。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "扇葉靠輪廓與負空間辨識，不添加金屬或光照漸層。"
+        }
+      },
+      "remaining": []
+    }
+  ]
+}
