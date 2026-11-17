@@ -9,7 +9,18 @@ export const preservedNotices = Object.freeze(Object.fromEntries([
 // Craft 01 deliberately develops Lucide's horn/grip and interlocking-hand
 // construction. Retain attribution conservatively despite rewritten geometry.
 import atlasSources from './atlas-provenance.json' with {type:'json'};
-export const adaptedSources=Object.freeze({...atlasSources,
+const hugeCommit='834e28d965946c1ee60d080027fe9dae4adc58d0';
+const pilotVariants=Object.fromEntries([
+  ['bell-plus','notification-03','Added a plus with optical clearance at the crown.'],
+  ['bell-minus','notification-03','Added a minus with optical clearance at the crown.'],
+  ['folder-move','folder-01','Placed a directional arrow beneath the folder shoulder.'],
+].map(([name,source,modifications])=>[name,{
+  kind:'adapted-redraw',author:'Hugeicons',library:'Hugeicons Free',license:'MIT',
+  copyright:'Copyright (c) 2025 Hugeicons',commit:hugeCommit,
+  reference:`https://github.com/hugeicons/hugeicons/blob/${hugeCommit}/icons/${source}.svg`,
+  licenseFile:'licenses/hugeicons-MIT.txt',modifications,
+}]));
+export const adaptedSources=Object.freeze({...atlasSources,...pilotVariants,
   resize:{
     kind:'adapted-redraw',author:'Paweł Kuna',library:'Tabler',license:'MIT',
     copyright:'Copyright (c) 2020-2026 Paweł Kuna',

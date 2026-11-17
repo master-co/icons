@@ -8,6 +8,8 @@ Copyright (c) 2025 Hugeicons. Full license: `licenses/hugeicons-MIT.txt`.
 
 The 12 pilot subjects are documented as study/redraw work after Hugeicons Free: arrow-right, check, search, home, folder, file-text, calendar, settings, bell, user, heart, star. Their native optical coordinates and corner treatments were reconstructed, not mechanically converted from arbitrary SVGs. Attribution is retained conservatively for these studies. Individual SVG downloads include the full MIT notice; packages and ZIP downloads include the license files.
 
+The bell-plus, bell-minus and folder-move controls reuse the bell and folder pilot silhouettes, and carry their Hugeicons Free notice.
+
 Upstream repository: https://github.com/hugeicons/hugeicons
 
 Pinned commit: `834e28d965946c1ee60d080027fe9dae4adc58d0`.

@@ -5,7 +5,10 @@ import { additions } from './families/index.mjs';
 import {brandDrawings} from './brands.mjs';
 import {atlas} from './atlas/index.mjs';
 import {productDrawings} from './families/product.mjs';
-export const drawings={...coreDrawings,...additions,...expansion,...atlas,...productDrawings,...brandDrawings};
+import {interfaceDrawings} from './studio/interface.mjs';
+import {canvasDrawings} from './studio/canvas.mjs';
+import {editorDrawings} from './studio/editor.mjs';
+export const drawings={...coreDrawings,...additions,...expansion,...atlas,...productDrawings,...interfaceDrawings,...canvasDrawings,...editorDrawings,...brandDrawings};
 
 export function draw(name,g){
   if(!drawings[name])throw new Error(`Missing drawing: ${name}`);
