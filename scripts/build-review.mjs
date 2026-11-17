@@ -1,9 +1,13 @@
-import {brandCatalog} from '../packages/icons/src/brands.mjs';
 import { cp, mkdir, readFile, writeFile, rm } from 'node:fs/promises';
 import { resolve } from 'node:path';
 import { repoRoot, packageRoot } from './lib/paths.mjs';
 import { comparisonReferences, beforeDefinitions } from './lib/review-data.mjs';
+import {buildStrokes} from './lib/build-strokes.mjs';
+import {lockGeneration} from './lib/generation-lock.mjs';
+import {brandCatalog} from '../packages/icons/src/brands.mjs';
 process.chdir(repoRoot);
+await lockGeneration(repoRoot);
+const strokes=process.env.TURBO_HASH?resolve(repoRoot,'work/stroke-assets'):await buildStrokes();
 await rm('dist', {recursive:true, force:true});
 await cp(resolve(packageRoot,'dist'), 'dist', {recursive:true});
 await mkdir('dist/preview', {recursive:true});
@@ -12,5 +16,6 @@ for (const dir of ['references','licenses']) await cp(dir,`dist/${dir}`,{recursi
 const json=async file=>JSON.parse(await readFile(file,'utf8'));
 const comparisons=await comparisonReferences();
 comparisons.references.push(...brandCatalog.map(b=>({name:b.name,library:b.source.library,sourceName:b.label,match:'exact',url:b.source.reference,localPath:b.source.localPath})));
-await writeFile('dist/preview/data.json',JSON.stringify({catalog:await json('dist/catalog.json'),definitions:await json('dist/definitions.json'),references:comparisons,before:await beforeDefinitions(),review:await json('docs/refinement-ledger.json'),license:await readFile('LICENSE','utf8')})+'\n');
+await writeFile('dist/preview/data.json',JSON.stringify({catalog:await json('dist/catalog.json'),definitions:await json(resolve(strokes,'definitions.json')),references:comparisons,before:await beforeDefinitions(),review:await json('docs/refinement-ledger.json'),license:await readFile('LICENSE','utf8')})+'\n');
+await cp(resolve(strokes,'downloads'),'dist/downloads',{recursive:true});
 await import('./standalone.mjs');

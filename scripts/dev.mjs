@@ -1,13 +1,14 @@
 import http from 'node:http';
-import { readFile, stat } from 'node:fs/promises';
+import { readFile } from 'node:fs/promises';
 import { resolve, extname, sep } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { execFileSync } from 'node:child_process';
-import { watch } from 'node:fs';
+import {watchSource} from './lib/watch-sources.mjs';
+import {runTurbo,runTurboSync} from './lib/turbo.mjs';
+
+if(!process.env.TURBO_HASH&&!process.argv.includes('--serve-only'))process.exit(await runTurbo(['run','dev','--filter=@master/icons-review']));
 
 const root=fileURLToPath(new URL('..',import.meta.url));
 const host='127.0.0.1', port=Number(process.env.PORT||4173);
-execFileSync(process.execPath,['scripts/build.mjs'],{cwd:root,stdio:'inherit'});
 const types={'.html':'text/html; charset=utf-8','.js':'text/javascript; charset=utf-8','.json':'application/json; charset=utf-8','.css':'text/css; charset=utf-8','.svg':'image/svg+xml','.md':'text/plain; charset=utf-8','.txt':'text/plain; charset=utf-8'};
 const clients=new Set();
 const server=http.createServer(async(req,res)=>{
@@ -24,6 +25,10 @@ const server=http.createServer(async(req,res)=>{
   }catch{res.writeHead(404);res.end('Not found');}
 });
 let timer;
-for(const folder of ['packages/icons/src','preview','references'])watch(resolve(root,folder),{recursive:true},()=>{clearTimeout(timer);timer=setTimeout(()=>{try{execFileSync(process.execPath,['scripts/build.mjs'],{cwd:root,stdio:'inherit'});for(const client of clients)client.write('data: reload\n\n');}catch(error){console.error('Build failed; retaining server. Fix source and save again.');}},250);});
+const changed=()=>{clearTimeout(timer);timer=setTimeout(()=>{try{runTurboSync(['run','build','--filter=@master/icons-review']);for(const client of clients)client.write('data: reload\n\n');}catch{console.error('Build failed; retaining server. Fix source and save again.');}},250);};
+const watchers=process.argv.includes('--serve-only')?[]:[
+  ...['packages/icons/src','packages/icons/scripts','preview','references','licenses','scripts/lib'].map(path=>watchSource(resolve(root,path),changed,true)),
+  ...['LICENSE','THIRD_PARTY_NOTICES.md','docs/refinement-ledger.json','bun.lock','turbo.json','packages/icons/package.json','scripts/build-review.mjs','scripts/build-strokes.mjs','scripts/standalone.mjs'].map(path=>watchSource(resolve(root,path),changed))
+];
 server.listen(port,host,()=>console.log(`Local: http://${host}:${port}`));
-for(const signal of ['SIGINT','SIGTERM'])process.on(signal,()=>{for(const client of clients)client.end();server.close(()=>process.exit());});
+for(const signal of ['SIGINT','SIGTERM'])process.on(signal,()=>{clearTimeout(timer);for(const watcher of watchers)watcher.close();for(const client of clients)client.end();server.close(()=>process.exit());});

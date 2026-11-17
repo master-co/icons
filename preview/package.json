@@ -3,8 +3,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "cd .. && node scripts/dev.mjs",
-    "build": "cd .. && bun run build:icons && bun run build:review"
+    "dev": "node ../scripts/dev.mjs",
+    "build": "node ../scripts/build-review.mjs"
   },
   "dependencies": {
     "@master/icons": "workspace:*",

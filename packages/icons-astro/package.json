@@ -86,7 +86,7 @@
     "astro": ">=7 <8"
   },
   "scripts": {
-    "build": "node ../../scripts/build-frameworks.mjs astro",
+    "build": "node ../../scripts/build-frameworks.mjs astro --incremental",
     "prepack": "bun run build"
   }
 }

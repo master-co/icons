@@ -21,7 +21,6 @@ Master Icons 著重輪廓、比例、留白與小尺寸的細節取捨。目前�
 
 ```sh
 bun install --frozen-lockfile
-bun run build:icons
 bun run dev              # 雙語網站：http://127.0.0.1:4321
 # 或另開終端執行審稿介面
 bun run dev:review       # http://127.0.0.1:4173
@@ -77,12 +76,20 @@ bun x --no-install playwright install chromium firefox webkit
 bun run test:browser            # 圖庫與 file:// 離線流程
 bun run test:site               # 網站流程
 bun run test:site:dev           # 開發伺服器路由
+bun run test:site:hmr           # 隔離環境中的 HMR 回歸
 bun run test:frameworks:browser # Vue／Svelte／Preact 瀏覽器測試
+bun run test:turbo              # 任務圖、快取失效與產物還原回歸
 bun run check:reproducible
 bun run check:package
 ```
 
-可分別使用 `build:icons`、`build:review`、`build:site`；後兩者使用已建置的圖示套件。根目錄 `dist/preview.html` 是可離線開啟的審稿頁，保留來源與前後稿比較；上游比較原稿不放入正式網站或圖示套件。
+可分別使用 `build:icons`、`build:review`、`build:site`；Turbo 會自動先完成各自需要的上游任務。網站只建置核心、Svelte 與 Astro，`build:icons` 才建置全部六個套件。根目錄 `dist/preview.html` 是可離線開啟的審稿頁，保留來源與前後稿比較；上游比較原稿不放入正式網站或圖示套件。
+
+任務與產物快取由根目錄 `turbo.json` 管理。核心完成後，各框架可平行建置；網站與審稿頁共用一次 stroke 素材生成。未變更的任務命中 `.turbo/cache/`，缺少的產物會從快取還原。來源、生成器、授權、相關依賴與 Node.js 版本會影響快取，網站建置另追蹤 `PUBLIC_URL`。dev 伺服器與瀏覽器測試不快取；來源監看觸發 Turbo 重新判斷生成任務，普通頁面編輯仍使用 Vite HMR。
+
+核心的 `generate` 任務快取幾何、型別與 ZIP；`build` 每次從 ZIP 同步納入 Git 的 SVG，保留未變更檔案的時間。這個同步步驟不快取，避免 Turbo 將已追蹤的生成輸出反向計入生成任務的雜湊。跨框架測試的依賴位於 `tests/` workspace，避免根套件的內部依賴使所有任務一同失效。
+
+`bun run build:icons --force` 可強制重跑套件建置；`bun run turbo run prepare-site --filter=@master/icons-site --force` 可重跑網站素材及其上游。刪除 `.turbo/` 可清除本地任務快取。`check:reproducible` 刻意執行兩次不使用任務快取的建置，驗證跨時區輸出一致。CI 使用 GitHub Actions cache 保存 Turbo 快取；未啟用需要外部帳號的遠端快取。
 
 | 路徑 | 用途 |
 | --- | --- |
@@ -90,6 +97,7 @@ bun run check:package
 | `packages/icons-{react,vue,svelte,preact,astro}/` | 各框架獨立套件、元件來源與生成產物 |
 | `site/` | 雙語網站 |
 | `preview/` | 審稿介面與使用情境 |
+| `tests/` | 跨套件測試 workspace、框架依賴與審稿瀏覽器測試 |
 | `skills/master-icons/` | 版本化製作與審查 skill |
 | `references/` | 固定版本的比較資產與歷史基準 |
 | `docs/` | 設計規範、研究、決策與審查證據 |

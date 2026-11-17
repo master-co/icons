@@ -3,6 +3,7 @@ import {fileURLToPath} from 'node:url'
 import masterSite from '@master/internal-site/astro'
 import site from './site.config'
 import iconsPackage from '@master/icons/package.json' with {type:'json'}
+import {generatedAssets} from './scripts/generated-assets'
 Object.assign(process.env, { PUBLIC_PROJECT: 'Master Icons', PUBLIC_URL: site.origin, PUBLIC_IMAGE_TRANSFORMATIONS: 'false', PUBLIC_VERSION: iconsPackage.version })
 export default defineConfig({
  outDir: './out',
@@ -10,6 +11,10 @@ export default defineConfig({
  devToolbar: {enabled:false},
  integrations: [masterSite(site)],
  vite: {
+  plugins: [generatedAssets()],
+  // These generated trees contain tens of thousands of files. The dev runner
+  // reloads once after preparation, rather than sending every file through HMR.
+  server: {watch: {ignored: [fileURLToPath(new URL('./public/**', import.meta.url)), '**/.turbo/**']}},
   // Keep SVG components in Vite so import.meta.env is transformed in dev.
   resolve:{alias:{'astro/assets/runtime':fileURLToPath(import.meta.resolve('astro/assets/runtime'))}},
   cacheDir: process.env.MASTER_ICONS_VITE_CACHE_DIR,

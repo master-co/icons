@@ -1,0 +1,338 @@
+{
+  "$schema": "https://turborepo.dev/schema.json",
+  "ui": "stream",
+  "globalDependencies": [
+    ".nvmrc",
+    "scripts/check-site-node.mjs"
+  ],
+  "globalEnv": [
+    "MASTER_ICONS_NODE_VERSION",
+    "NODE_ENV"
+  ],
+  "globalPassThroughEnv": [
+    "CI",
+    "NO_COLOR",
+    "FORCE_COLOR",
+    "PLAYWRIGHT_BROWSERS_PATH"
+  ],
+  "remoteCache": {
+    "enabled": false
+  },
+  "tasks": {
+    "build": {
+      "dependsOn": [
+        "^build"
+      ],
+      "inputs": [
+        "src/**",
+        "$TURBO_ROOT$/scripts/build-frameworks.mjs",
+        "$TURBO_ROOT$/scripts/lib/content-cache.mjs",
+        "$TURBO_ROOT$/scripts/lib/generation-lock.mjs",
+        "$TURBO_ROOT$/LICENSE",
+        "$TURBO_ROOT$/THIRD_PARTY_NOTICES.md",
+        "$TURBO_ROOT$/licenses/**",
+        "!dist/**",
+        "!LICENSE",
+        "!THIRD_PARTY_NOTICES.md",
+        "!README.md"
+      ],
+      "outputs": [
+        "dist/**",
+        "LICENSE",
+        "THIRD_PARTY_NOTICES.md"
+      ]
+    },
+    "//#build:strokes": {
+      "dependsOn": [
+        "@master/icons#build"
+      ],
+      "inputs": [
+        "scripts/build-strokes.mjs",
+        "scripts/lib/build-strokes.mjs",
+        "scripts/lib/stroke-width.mjs",
+        "scripts/lib/content-cache.mjs",
+        "scripts/lib/generation-lock.mjs",
+        "LICENSE",
+        "THIRD_PARTY_NOTICES.md",
+        "licenses/**"
+      ],
+      "outputs": [
+        "work/stroke-assets/**"
+      ]
+    },
+    "@master/icons-site#prepare-site": {
+      "dependsOn": [
+        "^build",
+        "//#build:strokes"
+      ],
+      "inputs": [
+        "scripts/prepare.ts",
+        "scripts/task.mjs",
+        "content/**",
+        "i18n/**",
+        "assets/**",
+        "$TURBO_ROOT$/scripts/lib/turbo.mjs",
+        "$TURBO_ROOT$/scripts/lib/content-cache.mjs",
+        "$TURBO_ROOT$/scripts/lib/generation-lock.mjs"
+      ],
+      "outputs": [
+        "public/**",
+        ".categories/**"
+      ]
+    },
+    "@master/icons-site#build": {
+      "dependsOn": [
+        "prepare-site",
+        "i18n:audit"
+      ],
+      "inputs": [
+        "components/**",
+        "content/**",
+        "layouts/**",
+        "i18n/**",
+        "styles/**",
+        "assets/**",
+        "src/**",
+        "*.ts",
+        "*.js",
+        "scripts/**",
+        "$TURBO_ROOT$/scripts/check-site-node.mjs",
+        "$TURBO_ROOT$/scripts/lib/stroke-width.mjs",
+        "*.json"
+      ],
+      "outputs": [
+        "out/**"
+      ],
+      "env": [
+        "PUBLIC_URL"
+      ]
+    },
+    "@master/icons-review#build": {
+      "dependsOn": [
+        "^build",
+        "//#build:strokes"
+      ],
+      "inputs": [
+        "*.js",
+        "*.html",
+        "*.css",
+        "$TURBO_ROOT$/references/**",
+        "$TURBO_ROOT$/docs/refinement-ledger.json",
+        "$TURBO_ROOT$/scripts/build-review.mjs",
+        "$TURBO_ROOT$/scripts/standalone.mjs",
+        "$TURBO_ROOT$/scripts/lib/review-data.mjs",
+        "$TURBO_ROOT$/scripts/lib/stroke-width.mjs",
+        "$TURBO_ROOT$/scripts/lib/content-cache.mjs",
+        "$TURBO_ROOT$/scripts/lib/generation-lock.mjs",
+        "$TURBO_ROOT$/LICENSE",
+        "$TURBO_ROOT$/THIRD_PARTY_NOTICES.md",
+        "$TURBO_ROOT$/licenses/**",
+        "$TURBO_ROOT$/scripts/lib/paths.mjs"
+      ],
+      "outputs": [
+        "$TURBO_ROOT$/dist/**"
+      ]
+    },
+    "dev": {
+      "cache": false,
+      "persistent": true,
+      "passThroughEnv": [
+        "MASTER_ICONS_VITE_CACHE_DIR",
+        "PORT",
+        "PUBLIC_URL"
+      ]
+    },
+    "@master/icons-site#dev": {
+      "dependsOn": [
+        "prepare-site"
+      ],
+      "cache": false,
+      "persistent": true,
+      "passThroughEnv": [
+        "MASTER_ICONS_VITE_CACHE_DIR",
+        "PUBLIC_URL"
+      ]
+    },
+    "@master/icons-review#dev": {
+      "dependsOn": [
+        "build"
+      ],
+      "cache": false,
+      "persistent": true,
+      "passThroughEnv": [
+        "PORT"
+      ]
+    },
+    "@master/icons-site#type-check": {
+      "dependsOn": [
+        "prepare-site"
+      ],
+      "inputs": [
+        "components/**",
+        "content/**",
+        "layouts/**",
+        "i18n/**",
+        "styles/**",
+        "assets/**",
+        "src/**",
+        "*.ts",
+        "*.js",
+        "scripts/**",
+        "$TURBO_ROOT$/scripts/check-site-node.mjs",
+        "$TURBO_ROOT$/scripts/lib/stroke-width.mjs",
+        "*.json",
+        "tests/**"
+      ],
+      "outputs": [],
+      "env": [
+        "PUBLIC_URL"
+      ]
+    },
+    "@master/icons-site#i18n:audit": {
+      "inputs": [
+        "scripts/i18n.ts",
+        "content/**",
+        "i18n/**"
+      ],
+      "outputs": []
+    },
+    "@master/icons-site#check:ui": {
+      "inputs": [
+        "components/**",
+        "content/**",
+        "layouts/**",
+        "i18n/**",
+        "styles/**",
+        "assets/**",
+        "src/**",
+        "*.ts",
+        "*.js",
+        "scripts/**",
+        "$TURBO_ROOT$/scripts/check-site-node.mjs",
+        "$TURBO_ROOT$/scripts/lib/stroke-width.mjs",
+        "*.json"
+      ],
+      "outputs": []
+    },
+    "//#verify:assets": {
+      "dependsOn": [
+        "@master/icons-review#build"
+      ],
+      "inputs": [
+        "scripts/validate.mjs",
+        "scripts/lib/review-data.mjs",
+        "packages/icons/src/**",
+        "references/**",
+        "docs/refinement-ledger.json",
+        "LICENSE",
+        "THIRD_PARTY_NOTICES.md",
+        "licenses/**",
+        "docs/review/**"
+      ],
+      "outputs": []
+    },
+    "//#verify:review-browser": {
+      "dependsOn": [
+        "@master/icons-review#build"
+      ],
+      "cache": false
+    },
+    "//#verify:site-browser": {
+      "dependsOn": [
+        "@master/icons-site#build"
+      ],
+      "cache": false,
+      "passThroughEnv": [
+        "MASTER_ICONS_TEST_PORT"
+      ]
+    },
+    "//#verify:site-dev": {
+      "dependsOn": [
+        "@master/icons-site#prepare-site"
+      ],
+      "cache": false
+    },
+    "//#verify:site-hmr": {
+      "dependsOn": [
+        "@master/icons-site#prepare-site"
+      ],
+      "cache": false
+    },
+    "@master/icons-tests#test": {
+      "dependsOn": [
+        "^build"
+      ],
+      "inputs": [
+        "$TURBO_ROOT$/packages/icons/tests/**",
+        "$TURBO_ROOT$/packages/icons/src/**",
+        "$TURBO_ROOT$/scripts/lib/content-cache.mjs",
+        "$TURBO_ROOT$/scripts/lib/generation-lock.mjs",
+        "$TURBO_ROOT$/references/**",
+        "$TURBO_ROOT$/docs/refinement-ledger.json",
+        "$TURBO_ROOT$/docs/review/**/*.json",
+        "$TURBO_ROOT$/docs/review/committed-craft-01/**",
+        "$TURBO_ROOT$/preview/*.js",
+        "$TURBO_ROOT$/scripts/lib/watch-sources.mjs"
+      ],
+      "outputs": []
+    },
+    "@master/icons-tests#test:types": {
+      "dependsOn": [
+        "^build"
+      ],
+      "inputs": [
+        "$TURBO_ROOT$/packages/icons/tests/**",
+        "$TURBO_ROOT$/packages/icons/scripts/check-svelte.mjs"
+      ],
+      "outputs": []
+    },
+    "@master/icons-tests#test:browser": {
+      "dependsOn": [
+        "^build"
+      ],
+      "inputs": [
+        "$TURBO_ROOT$/packages/icons/tests/**"
+      ],
+      "cache": false
+    },
+    "@master/icons#generate": {
+      "dependsOn": [],
+      "inputs": [
+        "src/**",
+        "scripts/build.mjs",
+        "$TURBO_ROOT$/references/manifest.json",
+        "$TURBO_ROOT$/scripts/lib/content-cache.mjs",
+        "$TURBO_ROOT$/scripts/lib/generation-lock.mjs",
+        "$TURBO_ROOT$/LICENSE",
+        "$TURBO_ROOT$/THIRD_PARTY_NOTICES.md",
+        "$TURBO_ROOT$/licenses/**",
+        "!icons/**",
+        "!dist/**",
+        "!LICENSE",
+        "!THIRD_PARTY_NOTICES.md",
+        "!licenses/**",
+        "!tests/**",
+        "!README.md"
+      ],
+      "outputs": [
+        "dist/**",
+        "LICENSE",
+        "THIRD_PARTY_NOTICES.md",
+        "licenses/**"
+      ]
+    },
+    "@master/icons#build": {
+      "dependsOn": [
+        "generate"
+      ],
+      "inputs": [
+        "scripts/sync-svg.mjs",
+        "$TURBO_ROOT$/scripts/lib/content-cache.mjs",
+        "$TURBO_ROOT$/scripts/lib/generation-lock.mjs",
+        "$TURBO_ROOT$/scripts/lib/turbo.mjs"
+      ],
+      "cache": false,
+      "outputs": []
+    }
+  }
+}

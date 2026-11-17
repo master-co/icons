@@ -86,7 +86,7 @@
     "preact": ">=11 <12"
   },
   "scripts": {
-    "build": "node ../../scripts/build-frameworks.mjs preact",
+    "build": "node ../../scripts/build-frameworks.mjs preact --incremental",
     "prepack": "bun run build"
   }
 }

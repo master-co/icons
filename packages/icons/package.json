@@ -47,11 +47,12 @@
     }
   },
   "scripts": {
-    "build": "node scripts/build.mjs",
+    "build": "node scripts/sync-svg.mjs",
     "test": "cd ../.. && node --test packages/icons/tests/*.test.mjs",
     "test:types": "tsc -p tests/tsconfig.json && bun run test:types:native",
     "prepack": "bun run build",
     "test:types:native": "astro-check --root . --tsconfig tests/native/tsconfig.json && node scripts/check-svelte.mjs",
-    "test:browser": "node --test tests/framework-browser.mjs"
+    "test:browser": "node --test tests/framework-browser.mjs",
+    "generate": "node scripts/build.mjs --incremental --archive-svg"
   }
 }

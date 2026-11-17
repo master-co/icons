@@ -16,12 +16,12 @@ const manifest=JSON.parse(await readFile(resolve(root,'package.json'),'utf8'));
 const core=JSON.parse(await readFile(resolve(repo,'packages/icons/package.json'),'utf8'));
 if(manifest.version!==core.version)throw new Error(`${manifest.name} must share @master/icons version ${core.version}`);
 const cacheFile=resolve(repo,`work/cache/icons-${framework}.json`);
-const cache=process.argv.includes('--cache')?await contentCache({
+const cache=process.argv.includes('--cache')&&!process.env.TURBO_HASH?await contentCache({
   inputs:[resolve(root,'src'),resolve(root,'package.json'),...['packages/icons/src','packages/icons/package.json','scripts/build-frameworks.mjs','scripts/lib/content-cache.mjs','scripts/lib/generation-lock.mjs','LICENSE','THIRD_PARTY_NOTICES.md','bun.lock'].map(path=>resolve(repo,path))],
   outputs:[resolve(root,'dist'),resolve(root,'LICENSE'),resolve(root,'THIRD_PARTY_NOTICES.md')],file:cacheFile,force:process.argv.includes('--force')
 }):undefined;
 if(cache?.hit){console.log(`${manifest.name}: content cache hit (${Math.round(performance.now()-started)}ms)`);process.exit(0);}
-if(!cache){await rm(cacheFile,{force:true});await rm(resolve(root,'dist'),{recursive:true,force:true});}
+if(!cache){await rm(cacheFile,{force:true});if(!process.argv.includes('--incremental'))await rm(resolve(root,'dist'),{recursive:true,force:true});}
 const emitted=new Set();
 const put=async(path,body)=>{emitted.add(path);await writeIfChanged(resolve(root,'dist',path),body);};
 const native=framework==='svelte'||framework==='astro';

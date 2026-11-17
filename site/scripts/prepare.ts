@@ -9,10 +9,10 @@ const started=performance.now()
 const site=fileURLToPath(new URL('../',import.meta.url))
 const repo=join(site,'..')
 const icons=join(repo,'packages/icons')
-const force=process.argv.includes('--force')
+const force=Boolean(process.env.TURBO_HASH)||process.argv.includes('--force')
 await lockGeneration(repo)
 const catalog=JSON.parse(await readFile(join(icons,'dist/catalog.json'),'utf8'))
-const strokes=await buildStrokes({force})
+const strokes=process.env.TURBO_HASH?join(repo,'work/stroke-assets'):await buildStrokes({force})
 const common=['site/scripts/prepare.ts','scripts/lib/content-cache.mjs','bun.lock'].map(path=>join(repo,path))
 
 // The catalog contains every default SVG's content hash; the stroke key covers

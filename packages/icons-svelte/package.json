@@ -98,7 +98,7 @@
     "svelte": ">=5 <6"
   },
   "scripts": {
-    "build": "node ../../scripts/build-frameworks.mjs svelte",
+    "build": "node ../../scripts/build-frameworks.mjs svelte --incremental",
     "prepack": "bun run build"
   }
 }

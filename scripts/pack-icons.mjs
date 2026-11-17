@@ -2,10 +2,11 @@ import { execFileSync } from 'node:child_process';
 import { mkdir, readFile, stat, writeFile } from 'node:fs/promises';
 import { resolve } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
+import {runTurboSync} from './lib/turbo.mjs';
 
 const root=fileURLToPath(new URL('../',import.meta.url));
 export async function packIcons(){
-  execFileSync(process.execPath,['scripts/build-icons.mjs','--cache'],{cwd:root,stdio:'inherit'});
+  runTurboSync(['run','build','--filter=./packages/*']);
   await mkdir(resolve(root,'work'),{recursive:true});
   const packages=[];
   for(const name of ['icons',...['react','vue','svelte','preact','astro'].map(framework=>'icons-'+framework)]){

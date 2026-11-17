@@ -9,6 +9,34 @@ test('Master favicons are served as static assets',async({request})=>{
  }
 })
 
+test('development language switching stays responsive in both directions',async({page})=>{
+ const errors:string[]=[]
+ page.on('pageerror',error=>errors.push(error.message))
+ for(const path of ['','/icons','/guide/svg']){
+  const suffix=path==='/icons'?'?size=20&corner=rounded&q=search&view=library':'?locale-test=1#locale-test'
+  await page.goto(`/tw${path}${suffix}`)
+  for(const locale of ['en','tw','en']){
+   await expect(page.locator('astro-island[ssr]')).toHaveCount(0)
+   const language=page.locator('select').filter({has:page.locator('option[value="en"]')}).first()
+   await language.selectOption(locale)
+   const expectedPath=`${locale==='tw'?'/tw':''}${path||(locale==='en'?'/':'')}`
+   await expect(page).toHaveURL(url=>url.pathname===expectedPath)
+   await expect(page.locator('html')).toHaveAttribute('lang',locale==='tw'?'zh-TW':'en')
+   await expect(path==='/icons'?page.getByTestId('icon-grid'):page.locator('main h1')).toBeVisible()
+   await expect(page.locator('astro-island[ssr]')).toHaveCount(0)
+   const url=new URL(page.url())
+   if(path==='/icons'){
+    expect(url.searchParams.get('q')).toBe('search')
+    expect(url.searchParams.get('size')).toBe('20')
+   }else{
+    expect(url.search).toBe('?locale-test=1')
+    expect(url.hash).toBe('#locale-test')
+   }
+  }
+ }
+ expect(errors).toEqual([])
+})
+
 test('development server resolves Master Site routes on first and repeated requests',async({request})=>{
  for(let pass=0;pass<2;pass++){
   for(const locale of ['','/tw']){

@@ -4,6 +4,7 @@ export default defineConfig({
  use:{baseURL:'http://127.0.0.1:4326'},
  webServer:{
   command:'node site/scripts/test-dev-server.mjs',cwd:'..',
+  gracefulShutdown:{signal:'SIGTERM',timeout:10000},
   url:'http://127.0.0.1:4326',reuseExistingServer:false,timeout:60000
  }
 })

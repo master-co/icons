@@ -17,11 +17,20 @@ jobs:
         with:
           bun-version: 1.4.4
       - run: bun install --frozen-lockfile
+      - uses: actions/cache@v4
+        with:
+          path: .turbo/cache
+          key: turbo-${{ runner.os }}-node${{ matrix.node }}-${{ hashFiles('bun.lock') }}-${{ github.sha }}
+          restore-keys: |
+            turbo-${{ runner.os }}-node${{ matrix.node }}-${{ hashFiles('bun.lock') }}-
+      - run: bun run test:turbo
       - run: bun run check
       - run: bun run check:reproducible
       - run: bun run check:package
       - run: bun x --no-install playwright install --with-deps chromium firefox webkit
+      - run: bun run test:frameworks:browser
       - run: bun run test:browser
       - run: bun run test:site
       - run: bun run test:site:dev
+      - run: bun run test:site:hmr
       - run: git diff --exit-code -- packages/icons/icons

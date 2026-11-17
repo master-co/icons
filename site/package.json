@@ -6,11 +6,11 @@
     "node": ">=24"
   },
   "scripts": {
-    "prepare-site": "node --import tsx scripts/prepare.ts",
+    "prepare-site": "node scripts/task.mjs prepare-site",
     "dev": "node scripts/dev.mjs",
-    "build": "node ../scripts/check-site-node.mjs && bun run prepare-site && astro build",
-    "preview": "astro preview --host 127.0.0.1 --port 4321 --ignore-lock",
-    "type-check": "node ../scripts/check-site-node.mjs && bun run prepare-site && astro sync && astro-check --tsconfig tsconfig.json && svelte-check --tsconfig tsconfig.json",
+    "build": "node scripts/task.mjs build",
+    "preview": "astro preview --host 127.0.0.1 --ignore-lock",
+    "type-check": "node scripts/task.mjs type-check",
     "i18n:audit": "node --import tsx scripts/i18n.ts audit",
     "check:ui": "master-ui check --strict"
   },
@@ -33,6 +33,7 @@
   },
   "devDependencies": {
     "@astrojs/check": "0.9.12",
+    "sirv": "3.0.2",
     "svelte-check": "4.7.7"
   }
 }

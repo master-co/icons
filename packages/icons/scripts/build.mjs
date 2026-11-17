@@ -18,7 +18,7 @@ const {preservedNotices,adaptedSources}=await import('../src/provenance.mjs');
 const {brandNotice}=await import('../src/brands.mjs');
 const started=performance.now();
 // Release/reproducibility builds remain unconditional; dev opts into this cache.
-const cache=process.argv.includes('--cache') ? await contentCache({
+const cache=process.argv.includes('--cache')&&!process.env.TURBO_HASH ? await contentCache({
   inputs:['packages/icons/src','packages/icons/scripts','packages/icons/package.json','scripts/lib/content-cache.mjs','scripts/lib/generation-lock.mjs','references/manifest.json','LICENSE','THIRD_PARTY_NOTICES.md','licenses','bun.lock'].map(path=>resolve(repo,path)),
   outputs:['dist','icons','LICENSE','THIRD_PARTY_NOTICES.md','licenses'].map(path=>resolve(root,path)),
   file:resolve(repo,'work/cache/icons.json'),force:process.argv.includes('--force')
@@ -27,7 +27,9 @@ if(cache?.hit){console.log(`Icons: content cache hit (${Math.round(performance.n
 if(!cache)await rm(resolve(repo,'work/cache/icons.json'),{force:true});
 const directories=new Set();
 const emitted=new Set();
-const put=async(path,body)=>{const file=resolve(root,path),dir=dirname(file);emitted.add(file);if(cache){await writeIfChanged(file,body);return;}if(!directories.has(dir)){await mkdir(dir,{recursive:true});directories.add(dir);}await writeFile(file,body);};
+const incremental=cache||process.argv.includes('--incremental');
+const archiveSvg=process.argv.includes('--archive-svg');
+const put=async(path,body)=>{const file=resolve(root,path),dir=dirname(file);emitted.add(file);if(incremental){await writeIfChanged(file,body);return;}if(!directories.has(dir)){await mkdir(dir,{recursive:true});directories.add(dir);}await writeFile(file,body);};
 const hash=body=>createHash('sha256').update(body).digest('hex');
 const references=JSON.parse(await readFile(resolve(repo,'references/manifest.json'),'utf8'));
 const upstream=references.references.filter(x=>x.library==='Hugeicons Free');
@@ -43,9 +45,9 @@ const notices=await readFile(resolve(repo,'THIRD_PARTY_NOTICES.md'),'utf8');
 const brandLicenses=Object.fromEntries(await Promise.all(['simple-icons-CC0.txt','simple-icons-DISCLAIMER.md','openai-brand.txt','brand-additions.txt'].map(async name=>['licenses/'+name,strToU8(await readFile(resolve(repo,'licenses',name),'utf8'))])));
 const bundles=Object.fromEntries(sizes.flatMap(s=>corners.map(c=>[`${s}-${c}`,{'LICENSE':strToU8(license),'licenses/hugeicons-MIT.txt':strToU8(hugeLicense),'licenses/lucide.txt':strToU8(lucideLicense),'THIRD_PARTY_NOTICES.md':strToU8(notices)}])));
 for(const bundle of Object.values(bundles))Object.assign(bundle,brandLicenses,Object.fromEntries(Object.entries(adaptedLicenses).map(([path,body])=>[path,strToU8(body)])));
-if(!cache)await rm(resolve(root,'dist'),{recursive:true,force:true});
+if(!incremental)await rm(resolve(root,'dist'),{recursive:true,force:true});
 // icons/ is generated and checked in for plain SVG consumers.
-if(!cache)await rm(resolve(root,'icons'),{recursive:true,force:true});
+if(!incremental&&!archiveSvg)await rm(resolve(root,'icons'),{recursive:true,force:true});
 for(const entry of catalog){
   const variants={};
   for(const size of sizes){variants[size]={};for(const corner of corners){
@@ -69,7 +71,7 @@ for(const entry of catalog){
   for(const size of sizes)for(const corner of corners){
     const svg=renderSvg(definition,{size,opticalSize:size,corner});
     const notice='<!--\n'+license.trim().replace('Copyright (c) 2026 Master and contributors','Copyright (c) 2026 Master and contributors'+(preservedNotices[entry.name]?'\n'+preservedNotices[entry.name]:''))+(adaptedSources[entry.name]?'\n\n'+sourceNotice(entry.name).trim():'')+(entry.rendering==='brand-silhouette'?'\n\n'+brandNotice(entry):'')+'\n-->\n';
-    await put(`icons/${size}/${corner}/${entry.name}.svg`,notice+svg+'\n');
+    if(!archiveSvg)await put(`icons/${size}/${corner}/${entry.name}.svg`,notice+svg+'\n');
     bundles[`${size}-${corner}`][`${entry.name}.svg`]=strToU8(notice+svg+'\n');
     inventory.push({name:entry.name,opticalSize:size,corner,path:`icons/${size}/${corner}/${entry.name}.svg`,sha256:hash(notice+svg+'\n')});
     const master={...variants[size][corner],opticalSize:size,corner,size};
@@ -97,7 +99,7 @@ console.log(`Built @master/icons: ${catalog.length} icons × ${sizes.length} siz
 
 for (const file of ['LICENSE','THIRD_PARTY_NOTICES.md']) await cp(resolve(repo,file),resolve(root,file));
 await cp(resolve(repo,'licenses'),resolve(root,'licenses'),{recursive:true});
-if(cache)for(const folder of ['dist','icons'])for(const entry of await readdir(resolve(root,folder),{recursive:true,withFileTypes:true})){
+if(incremental)for(const folder of archiveSvg?['dist']:['dist','icons'])for(const entry of await readdir(resolve(root,folder),{recursive:true,withFileTypes:true})){
   const file=resolve(entry.parentPath,entry.name);
   if(entry.isFile()&&!emitted.has(file))await rm(file);
 }
