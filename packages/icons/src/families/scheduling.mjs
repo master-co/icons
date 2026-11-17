@@ -1,3 +1,4 @@
+import {line} from '../geometry.mjs';
 import { enclosedDetails, knockout } from '../occlusion.mjs';
 import { figure, mark } from './shared.mjs';
 import { coreDrawings } from './core.mjs';
@@ -17,7 +18,10 @@ function clipboardPen(g) {
   return knockout(coreDrawings.clipboard(g),pen,g,{silhouettes:[pencil]});
 }
 export const scheduling = {
-  'calendar-plus':g=>[...calendarFrame(g),...mark(g,'plus',12,15)],
+  'calendar-plus':g=>{
+    const y=g.v(10,12.5,15),h=g.v(1.25,1.75,2.25);
+    return [...calendarFrame(g),line(g.c-h,y,g.c+h,y),line(g.c,y-h,g.c,y+h)];
+  },
   'calendar-minus':g=>[...calendarFrame(g),...mark(g,'minus',12,15)],
   'calendar-x':g=>[...calendarFrame(g),...mark(g,'x',12,15)],
   'calendar-clock':calendarWithClock,

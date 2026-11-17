@@ -50,7 +50,9 @@ export const utilities={
   },
   'keyboard-return':g=>{
     const f=figure(g);
-    return [f.rect(3,5,18,14),...f.arrow([f.contour([[17,9],[17,13],[8,13]],false,g.r/2)],[[11,10],[8,13],[11,16]])];
+    // Reserve a visible channel under the arrow, including sharp end caps.
+    const wing=g.s===16?2.5:2.75;
+    return [f.rect(3,5,18,14),...f.arrow([f.contour([[17,8.5],[17,12.5],[8,12.5]],false,g.r/2)],[[8+wing,12.5-wing],[8,12.5],[8+wing,12.5+wing]])];
   },
   locate:g=>{
     const f=figure(g);

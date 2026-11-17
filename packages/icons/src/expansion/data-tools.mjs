@@ -19,6 +19,15 @@ function listSearch(g){
   return knockout(coreDrawings.list(g),[circle,f.line(16.5+d,16.5+d,21.5,21.5)],g,{silhouettes:[circle]});
 }
 
+function listAction(g,kind){
+  const body=coreDrawings.list(g);
+  // Reserve the right column for an action. A minus on the last full-width
+  // row otherwise reads as a broken text stroke instead of an independent sign.
+  const ys=[g.v(4,5,6),g.c,g.v(12,15,18)];
+  for(let i=0;i<3;i++)body[i*2+1]=line(g.v(6,7.5,9),ys[i],g.v(10.5,13.25,16),ys[i]);
+  return knockout(body,mark(g,kind,20,12),g);
+}
+
 export const dataTools={
   'chart-bar-horizontal':g=>rotate(coreDrawings['chart-bar'](g),90,g),
   'chart-bar-stacked':stackedBars,
@@ -29,6 +38,6 @@ export const dataTools={
   'list-collapse':g=>{const f=figure(g);return [6,12,18].flatMap(y=>[
     f.contour([[3.5,y-1.4],[5.5,y],[3.5,y+1.4]],false,g.tip),f.line(10, y,21,y)]);},
   'list-search':listSearch,
-  'list-plus':g=>knockout(coreDrawings.list(g),mark(g,'plus',20,18),g),
-  'list-minus':g=>knockout(coreDrawings.list(g),mark(g,'minus',20,18),g),
+  'list-plus':g=>listAction(g,'plus'),
+  'list-minus':g=>listAction(g,'minus'),
 };

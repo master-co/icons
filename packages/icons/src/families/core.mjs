@@ -96,7 +96,7 @@ export const coreDrawings={
   'star':g=>{const {c,v,tip}=g,ro=v(5.75,7.25,8.75),ri=v(2.75,3.5,4.25);const points=Array.from({length:10},(_,i)=>{const a=-Math.PI/2+i*Math.PI/5,r=i%2?ri:ro;return [c+Math.cos(a)*r,c+0.4+Math.sin(a)*r];});return [contour(points,tip,true)];},
   'heart':g=>{const {s,c,v,tip}=g,l=v(2,2.5,3),t=v(3.25,4,4.75),y=v(6.5,8,9.5),b=v(13.75,17,20.5),k=tip*0.65;return [path(`${k?`M${c+k} ${b-k}Q${c} ${b} ${c-k} ${b-k}`:`M${c} ${b}`}C${c-v(2,3,3.5)} ${b-v(1.5,2,2.5)} ${l} ${v(9,11,13)} ${l} ${y}C${l} ${t-v(1,1.25,1.5)} ${c-v(2,2.5,3)} ${t-v(1,1.25,1.5)} ${c} ${t+v(1,1.5,2)}C${c+v(2,2.5,3)} ${t-v(1,1.25,1.5)} ${s-l} ${t-v(1,1.25,1.5)} ${s-l} ${y}C${s-l} ${v(9,11,13)} ${c+v(2,3,3.5)} ${b-v(1.5,2,2.5)} ${c+k} ${b-k}Z`)];},
   'info-circle':g=>[ring(g),dot(g.c,g.v(5,6,7),g),line(g.c,g.v(8,10,12),g.c,g.v(11,14,17))],
-  'check-circle':g=>[ring(g),contour([[g.v(5,6,7.5),g.c],[g.v(7.25,9,11),g.v(10,12.5,15)],[g.v(11.25,14,17),g.v(6,7.5,9)]],g.tip)],
+  'check-circle':g=>[ring(g),contour([[g.v(5,6,7.5),g.c],[g.v(7.25,9,11),g.v(10,12.5,15)],[g.v(10.75,13.75,17),g.v(6.25,7.75,9)]],g.tip)],
   'alert-triangle':g=>{const {s,c,v,r}=g;return [contour([[c,v(2.25,3,3.5)],[v(14.25,17.5,21),v(13.5,17,20.5)],[v(1.75,2.5,3),v(13.5,17,20.5)]],Math.min(r,1.1),true),line(c,v(6.5,8,9),c,v(9,11.5,14)),dot(c,v(11.5,14.5,17.5),g)];},
   'loader':g=>{const {c,v}=g,r=v(5.5,7,8.5);return [path(`M${c+r} ${c}A${r} ${r} 0 1 1 ${c} ${c-r}`)];},
   'home':g=>{const {s,c,v,r}=g,l=v(3,4,4.5),rr=s-l,t=v(2.25,2.75,3.5),roof=v(6.5,8,9.5),b=v(14,17.5,21),half=v(1.5,2,2.5),door=v(10,12.5,15);return [contour([[l,b],[l,roof],[c,t],[rr,roof],[rr,b]],r,true),contour([[c-half,b],[c-half,door],[c+half,door],[c+half,b]],Math.min(r,1))];},

@@ -15,18 +15,23 @@ function contained(ink,shell,message){
 test('keyboard return trims only the tip and keeps its return route and connected shaft',()=>{
  for(const g of masters()){
   const nodes=draw('keyboard-return',g),f=figure(g),shaft=paintedRegion(nodes.slice(1,2),g),head=paintedRegion(nodes.slice(2),g);
+  // The refined arrow is 0.5 construction units higher; compare the historic
+  // untrimmed shaft at that position so this still detects tip over-trimming.
   const old=paintedRegion(before['keyboard-return'].variants[g.s][g.corner].nodes.slice(1,2),g);
-  const probe=paintedRegion([['rect',{x:f.u(7),y:f.u(12.75),width:f.u(4),height:f.u(.5),fill:'currentColor',stroke:'none'}]],g);
-  const joint=paintedRegion([['circle',{...f.circle(8,13,6)[1],fill:'currentColor',stroke:'none'}]],g);
+  old.transform(1,0,0,0,1,f.u(-.5),0,0,1);
+  const probe=paintedRegion([['rect',{x:f.u(7),y:f.u(12.25),width:f.u(4),height:f.u(.5),fill:'currentColor',stroke:'none'}]],g);
+  const joint=paintedRegion([['circle',{...f.circle(8,12.5,6)[1],fill:'currentColor',stroke:'none'}]],g);
   const currentOutside=shaft.copy(),oldOutside=old.copy();
   try{
    contained(shaft,old,`${g.s}/${g.corner}: added shaft ink`);
    currentOutside.op(joint,P.PathOp.DIFFERENCE);oldOutside.op(joint,P.PathOp.DIFFERENCE);
    contained(currentOutside,oldOutside,'return route changed');contained(oldOutside,currentOutside,'return route erased');
    // At the original apex the shaft cannot extend beyond the painted head.
-   const cap=shaft.copy(),tip=paintedRegion([['rect',{x:f.u(6),y:f.u(11.5),width:f.u(2),height:f.u(3),fill:'currentColor',stroke:'none'}]],g);
+   const cap=shaft.copy(),tip=paintedRegion([['rect',{x:f.u(6),y:f.u(11),width:f.u(2),height:f.u(3),fill:'currentColor',stroke:'none'}]],g);
    try{cap.op(tip,P.PathOp.INTERSECT);contained(cap,head,'shaft protrudes ahead of head');}finally{cap.delete();tip.delete();}
    const joined=shaft.copy();try{joined.op(head,P.PathOp.INTERSECT);joined.op(probe,P.PathOp.INTERSECT);assert.notEqual(joined.toSVGString(),'','disconnected arrow joint');}finally{joined.delete();}
+   const bottomGap=f.u(19)-g.stroke/2-head.computeTightBounds().fBottom;
+   assert.ok(bottomGap>=1,`${g.s}/${g.corner}: arrow crowds bottom of key (${bottomGap})`);
   }finally{shaft.delete();head.delete();old.delete();probe.delete();joint.delete();currentOutside.delete();oldOutside.delete();}
  }
 });

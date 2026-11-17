@@ -4,14 +4,14 @@ import { file, folder } from './core.mjs';
 // Keep the original native file/folder outlines and fold, including 16px edits.
 function folderArrow(g,up) {
   // Reserve visible air below the inner arrow in each native master.
-  const f=figure(g),bottom=g.v(16.5,17,17.5),tip=up?10.5:bottom,tail=up?bottom:10.5,wing=up?13.5:bottom-3;
+  const f=figure(g),bottom=g.v(15.75,16.25,16.75),tip=up?10.5:bottom,tail=up?bottom:10.5,wing=up?13.5:bottom-3;
   return [...folder(g),...f.arrow([f.line(12,tail,12,tip)],[[9,wing],[12,tip],[15,wing]])];
 }
 export const fileOperations = {
   'file-code'(g) {
     const f=figure(g);
-    return [...file(g),f.contour([[10.5,12],[8,14.5],[10.5,17]],false,g.tip),
-      f.contour([[13.5,12],[16,14.5],[13.5,17]],false,g.tip)];
+    return [...file(g),f.contour([[10.5,12.5],[8.75,14.5],[10.5,16.5]],false,g.tip),
+      f.contour([[13.5,12.5],[15.25,14.5],[13.5,16.5]],false,g.tip)];
   },
   'file-image'(g) {
     const f=figure(g);

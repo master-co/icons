@@ -11,7 +11,10 @@ function indent(g,increase) {
 }
 function script(g,raised) {
   const f=figure(g),y=raised?3.5:13.5;
-  return [f.line(3.5,7,12.5,17),f.line(3.5,17,12.5,7),
+  // A typographic x has a waist and directed terminals, unlike the close ×.
+  // Share this letter between both script positions without moving the numeral.
+  return [f.path('M3.5 7H4.3C6.8 7 7.7 17 11.7 17H12.5'),
+    f.path('M3.5 17C6.25 17 9.75 7 12.5 7'),
     f.path(`M16 ${y+1.5}C16 ${y-.5} 21 ${y-.5} 21 ${y+2}C21 ${y+3.5} 17 ${y+5} 16 ${y+6.5}H21`)];
 }
 export const typography = {

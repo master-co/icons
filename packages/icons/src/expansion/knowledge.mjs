@@ -39,7 +39,7 @@ export const knowledge={
   'bookmark-minus':g=>[...files.bookmark(g),...mark(g,'minus',12,10)],
   'file-question':g=>{
     const f=figure(g);
-    return [...file(g),f.path('M10 11.3C10 8.8 14 8.8 14 11.3C14 13.2 12 12.8 12 14.8'),
+    return [...file(g),f.path('M10 12C10 9.8 14 9.8 14 12C14 13.5 12 13.2 12 14.5'),
       f.dot(12,17.7,g.v(.65,.75,.85))];
   },
 };

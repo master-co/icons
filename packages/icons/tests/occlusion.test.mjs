@@ -1,7 +1,7 @@
 import test from 'node:test';import assert from 'node:assert/strict';
 import{draw}from'../src/drawings.mjs';import{context}from'../src/geometry.mjs';
 import{pathKit as P,paintedRegion,offsetRegion,clearance}from'../src/occlusion.mjs';
-const names=['phone-off','mail-x','file-lock','folder-lock'];
+const names=['phone-off','mail-x','file-lock','folder-lock','list-plus','list-minus'];
 test('occluded ink stays outside the foreground clearance, including solid badge interiors',()=>{
  for(const size of[16,20,24])for(const corner of['sharp','soft','rounded'])for(const name of names){
   const g=context(size,corner),nodes=draw(name,g),back=paintedRegion(nodes.slice(0,1),g),front=paintedRegion(nodes.slice(1),g);

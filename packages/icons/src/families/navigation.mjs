@@ -6,6 +6,17 @@ function doubleChevron(g) {
   const f = figure(g);
   return [5, 12].map((x) => f.contour([[x, 6], [x + 5.5, 12], [x, 18]]));
 }
+function chainLink(g, broken = false) {
+  const f = figure(g);
+  // A 45-degree capsule: two quarter circles share the diagonal's tangent.
+  // Using A4 at these endpoints made a shallower arc and a kink at each join.
+  const reach = 11 / 3 * (Math.sqrt(2) - 1);
+  const cap = `C${15+reach} ${5-reach} ${20.5-reach} ${5-reach} 20.5 5C${20.5+reach} ${5+reach} ${20.5+reach} ${10.5-reach} 20.5 10.5`;
+  const half = f.path((broken ? 'M14 6L15 5' : 'M13.5 6.5L15 5') + cap + (broken
+    ? 'L19 12'
+    : `L17.5 13.5C${17.5-reach} ${13.5+reach} ${12+reach} ${13.5+reach} 12 13.5`));
+  return [half, ...rotate([half],180,g)];
+}
 const navigation = {
   "arrow-left": (g) => rotate(coreDrawings["arrow-right"](g), 180, g),
   "arrow-down": (g) => rotate(coreDrawings["arrow-right"](g), 90, g),
@@ -24,20 +35,16 @@ const navigation = {
     return knockout([f.rect(4,5,15,15)], f.arrow([f.line(10,14,20,4)],[[14,4],[20,4],[20,10]]),g);
   },
   link: (g) => {
-    const f = figure(g);
-    return [
-      f.path("M13.5 6.5L15 5A4 4 0 0 1 20.5 10.5L17.5 13.5A4 4 0 0 1 12 13.5"),
-      f.path("M10.5 17.5L9 19A4 4 0 0 1 3.5 13.5L6.5 10.5A4 4 0 0 1 12 10.5")
-    ];
+    return chainLink(g);
   },
   unlink: (g) => {
     const f = figure(g);
     return [
-      f.path("M14 6L15 5A4 4 0 0 1 20.5 10.5L19 12"),
-      f.path("M10 18L9 19A4 4 0 0 1 3.5 13.5L5 12"),
-      f.line(8, 4, 8, 7),
-      f.line(16, 17, 16, 20),
-      ...g.s === 16 ? [] : [f.line(3, 8, 6, 8), f.line(18, 16, 21, 16)]
+      ...chainLink(g, true),
+      f.line(8, 3, 8, 5.5),
+      f.line(16, 18.5, 16, 21),
+      f.line(3, 8, 5.5, 8),
+      f.line(18.5, 16, 21, 16)
     ];
   },
   "log-in": (g) => {

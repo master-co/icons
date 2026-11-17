@@ -4224,7 +4224,7 @@
       "confusableWith": [
         "checkbox-checked"
       ],
-      "sourceObservation": "兩份原稿同以內置勾號表成功，Master保持連續圓框並以留白分隔，無需knockout。",
+      "sourceObservation": "精修：16px勾號右上端較靠近圓內緣，sharp端帽使空白偏窄。右端由(11.25,6)收至(10.75,6.25)，20px作0.25px回收，24px保留。Tabler的內勾較安靜，吸收留白優點但保留Master較明確的長右翼；小尺寸勾與圈更分明。",
       "references": [
         {
           "name": "check-circle",
@@ -4270,54 +4270,59 @@
         }
       },
       "change": {
-        "kind": "retained",
-        "reason": "勾號在圓框內偏右上但未逼近框線，短長臂清楚，三角型的中間孔皆完整，保留。",
+        "kind": "modified",
+        "reason": "精修：16px勾號右上端較靠近圓內緣，sharp端帽使空白偏窄。右端由(11.25,6)收至(10.75,6.25)，20px作0.25px回收，24px保留。Tabler的內勾較安靜，吸收留白優點但保留Master較明確的長右翼；小尺寸勾與圈更分明。",
         "before": {
-          "path": "references/craft-05/master-before.json",
+          "path": "references/committed-craft-01/master-before.json",
           "variantsSha256": "aceba48e4999280e5c8e3dd8e560bea5243cf9ae14d81c7e603311b97007836e"
         }
       },
       "visualReview": {
-        "status": "retained-after-visual-review",
-        "reviewer": "root",
-        "date": "2026-11-16",
-        "skillVersion": "0.5.4",
-        "batch": "craft-05-05",
-        "variantsSha256": "aceba48e4999280e5c8e3dd8e560bea5243cf9ae14d81c7e603311b97007836e",
+        "status": "refined-after-visual-review",
+        "reviewer": "Codex (AI)",
+        "date": "2026-11-17",
+        "skillVersion": "0.5.11",
+        "batch": "04-status-final",
+        "variantsSha256": "99ac8a274a7f959eb93d182dd682fecfb8d888b4431a028204990837868e6ba3",
         "checks": [
           "16/20/24",
           "sharp/soft/rounded",
           "light/dark",
           "55-percent-foreground",
           "adjacent-text",
-          "two-pinned-source-comparisons",
+          "pinned-source-comparisons",
           "true-before-after",
-          "painted-contour-and-cavity",
+          "painted-clearance",
           "semantic-effect-decision"
         ],
         "evidence": [
           {
-            "path": "docs/review/craft-05/batch-05/comparison.png",
-            "sha256": "23ac2745f515603e08ae9b1c6ba9bf0dabe062b8bf2c06ff06d3f5974594c33b"
+            "path": "docs/review/committed-craft-01/03-04-native/native-1-light-1x.png",
+            "sha256": "79a38a5aa9253a079081b7adad72121799a66c46dcbd65d36f34400a5f2c0a78"
           },
           {
-            "path": "docs/review/craft-05/batch-05/native.png",
-            "sha256": "74c025e7e3952828bc8431687755c3394d07e058885f5565111552d229bb114a"
+            "path": "docs/review/committed-craft-01/03-04-native/native-1-dark-1x.png",
+            "sha256": "5b9485762d958e1b2e051bca17adabed8a3db3e28aaadacbefde1d35a905d9ee"
           },
           {
-            "path": "docs/review/craft-05/batch-05/native-dark.png",
-            "sha256": "a631d666bfd5784bfd5a47e2e440ea5551eb1a495c11b4b72955693194e3187d"
+            "path": "docs/review/committed-craft-01/03-04-native/context-light-1x.png",
+            "sha256": "645d890099f4fd60024328a11b3b745d4831022aaf55e204cce5d7dbd638c0cd"
           },
           {
-            "path": "docs/review/craft-05/batch-05/diagnostic.png",
-            "sha256": "c3f4d5acf4f3fa00764557cf19c495ee6628a6cd0d129a2d145b4faf1cac2496"
+            "path": "docs/review/committed-craft-01/03-04-native/zoom-light-1x.png",
+            "sha256": "fe7db3a86562592e4ab77f844b10781d3022aade7490b071cbe405d05220e198"
+          },
+          {
+            "path": "docs/review/committed-craft-01/04-status-final/1-dpr1.png",
+            "sha256": "b26fa92e21e7571f261a6c4c73ed2913d4eb274cd7b13fd91ec12f0d724d32bc"
           }
         ]
       },
       "status": "visually-reviewed-candidate",
-      "userApproval": "pending",
+      "userApproval": "approved",
       "beforeHash": "aceba48e4999280e5c8e3dd8e560bea5243cf9ae14d81c7e603311b97007836e",
-      "afterHash": "aceba48e4999280e5c8e3dd8e560bea5243cf9ae14d81c7e603311b97007836e"
+      "afterHash": "99ac8a274a7f959eb93d182dd682fecfb8d888b4431a028204990837868e6ba3",
+      "userApprovalDate": "2026-11-17"
     },
     {
       "name": "alert-triangle",
@@ -6490,7 +6495,7 @@
       "confusableWith": [
         "paperclip"
       ],
-      "sourceObservation": "Lucide較偏有短連接弧的鏈節，Tabler使用中心斜線；Master保留兩個彎環而不再添加第三條連線，原生尺寸仍可辨識。",
+      "sourceObservation": "前稿A4圓弧在45度斜邊接點有切線折痕；改為兩段相切四分之一圓及相切內回彎，另一鏈節旋轉共用。Lucide較飽滿、Tabler中央直桿較顯性；保留現稿互扣雙環與細長比例，吸收順暢曲面優點，三尺寸內孔均保持開放。",
       "references": [
         {
           "name": "link",
@@ -6536,54 +6541,64 @@
         }
       },
       "change": {
-        "kind": "retained",
-        "reason": "保留：兩個鏈環的開口與內側短弧形成交扣訊號，三尺寸中間未變成黑結，兩端曲率呼應。",
+        "kind": "modified",
+        "reason": "前稿A4圓弧在45度斜邊接點有切線折痕；改為兩段相切四分之一圓及相切內回彎，另一鏈節旋轉共用。Lucide較飽滿、Tabler中央直桿較顯性；保留現稿互扣雙環與細長比例，吸收順暢曲面優點，三尺寸內孔均保持開放。",
         "before": {
-          "path": "references/craft-05/master-before.json",
+          "path": "references/committed-craft-01/master-before.json",
           "variantsSha256": "c933b6d55efdd4ad9a9f4d10ef9fba74bbf66ce7a48e46d0d91b3f773e075178"
         }
       },
       "visualReview": {
-        "status": "retained-after-visual-review",
-        "reviewer": "root",
-        "date": "2026-11-16",
-        "skillVersion": "0.5.4",
-        "batch": "craft-05-08",
-        "variantsSha256": "c933b6d55efdd4ad9a9f4d10ef9fba74bbf66ce7a48e46d0d91b3f773e075178",
+        "status": "refined-after-visual-review",
+        "reviewer": "Codex (AI)",
+        "date": "2026-11-17",
+        "skillVersion": "0.5.11",
+        "batch": "committed-craft-01/02-navigation-final",
+        "variantsSha256": "dd4d671b343e877f35a1e0401373c757e780b4c22257159a09f6495f859b7b5e",
         "checks": [
           "16/20/24",
           "sharp/soft/rounded",
           "light/dark",
+          "DPR1/2-source-comparison",
           "55-percent-foreground",
           "adjacent-text",
           "two-pinned-source-comparisons",
           "true-before-after",
-          "painted-contour-and-cavity",
+          "continuous-capsule-tangents",
           "semantic-effect-decision"
         ],
         "evidence": [
           {
-            "path": "docs/review/craft-05/batch-08/comparison.png",
-            "sha256": "a195ba73db007d07855a7e91e3b81a09f9d3746c7fb4a01bc783f8372bde75e3"
+            "path": "docs/review/committed-craft-01/02-navigation-final/2-dpr1.png",
+            "sha256": "602fcc9f9c752395024fe995121a108fe4f486eb1765a7d85bc9c0a17e103a26"
           },
           {
-            "path": "docs/review/craft-05/batch-08/native.png",
-            "sha256": "711ea0e7c3dd38c7209e3a92cb03f8682cac7ed152869dcb0f266a3a3a5de67c"
+            "path": "docs/review/committed-craft-01/02-navigation-final/2-dpr2.png",
+            "sha256": "35156c4229e03bcd614d3ef75823246f1b35294e7753a4cdf09e5a2b5be80c58"
           },
           {
-            "path": "docs/review/craft-05/batch-08/native-dark.png",
-            "sha256": "c08e759fd597c6d062c028f88c034611452e7bff1188ac08758b128306565b1d"
+            "path": "docs/review/committed-craft-01/02-link-native/native-1-light-1x.png",
+            "sha256": "7b31683db589a2269206aed155c0722f4e44b84dd695aa61c49a0937a9089f9f"
           },
           {
-            "path": "docs/review/craft-05/batch-08/diagnostic.png",
-            "sha256": "245839da67f65827628c780d8b6629274cc654a7078c3dd10f8aeccf434a70e0"
+            "path": "docs/review/committed-craft-01/02-link-native/native-1-dark-1x.png",
+            "sha256": "317383eac359ea68e56ca40a04b9b6552bae6003826f08d9dd14d6b5fe8da723"
+          },
+          {
+            "path": "docs/review/committed-craft-01/02-link-native/context-light-1x.png",
+            "sha256": "c3be120f4f71bc2799acfb1fdc2750d7e9c5e85d1f8a871e5c17344b6825969c"
+          },
+          {
+            "path": "docs/review/committed-craft-01/02-link-native/zoom-light-1x.png",
+            "sha256": "bcd32a695aecab6683a604c75e7d126751978ae5303701fa60050e0d08b787ae"
           }
         ]
       },
       "status": "visually-reviewed-candidate",
-      "userApproval": "pending",
+      "userApproval": "approved",
       "beforeHash": "c933b6d55efdd4ad9a9f4d10ef9fba74bbf66ce7a48e46d0d91b3f773e075178",
-      "afterHash": "c933b6d55efdd4ad9a9f4d10ef9fba74bbf66ce7a48e46d0d91b3f773e075178"
+      "afterHash": "dd4d671b343e877f35a1e0401373c757e780b4c22257159a09f6495f859b7b5e",
+      "userApprovalDate": "2026-11-17"
     },
     {
       "name": "unlink",
@@ -6593,7 +6608,7 @@
       "confusableWith": [
         "link"
       ],
-      "sourceObservation": "Lucide／Tabler皆以鏈環斷裂及短提示線表達解除；Master將16px輔助訊號簡化，避免源稿縮小後過密。",
+      "sourceObservation": "前稿20/24px兩組提示線近乎黏成L形，16px只剩直線後較像標點。共享link連續外弧，提示線移離相遇角並縮短，16px恢復四向短線；Lucide的分離提示較清楚，新稿採同類空間關係而保留既有鏈節比例，原生小圖仍有分隔。",
       "references": [
         {
           "name": "unlink",
@@ -6639,54 +6654,64 @@
         }
       },
       "change": {
-        "kind": "retained",
-        "reason": "保留：分離鏈環與斷開提示短線有可見間距；16px減少提示線但保留分離輪廓，24px四短線未相碰。",
+        "kind": "modified",
+        "reason": "前稿20/24px兩組提示線近乎黏成L形，16px只剩直線後較像標點。共享link連續外弧，提示線移離相遇角並縮短，16px恢復四向短線；Lucide的分離提示較清楚，新稿採同類空間關係而保留既有鏈節比例，原生小圖仍有分隔。",
         "before": {
-          "path": "references/craft-05/master-before.json",
+          "path": "references/committed-craft-01/master-before.json",
           "variantsSha256": "c8a9b1e4de2f289ecd653929ac9ff69085fbf005b11344c67c009bca9e53dd38"
         }
       },
       "visualReview": {
-        "status": "retained-after-visual-review",
-        "reviewer": "root",
-        "date": "2026-11-16",
-        "skillVersion": "0.5.4",
-        "batch": "craft-05-08",
-        "variantsSha256": "c8a9b1e4de2f289ecd653929ac9ff69085fbf005b11344c67c009bca9e53dd38",
+        "status": "refined-after-visual-review",
+        "reviewer": "Codex (AI)",
+        "date": "2026-11-17",
+        "skillVersion": "0.5.11",
+        "batch": "committed-craft-01/02-navigation-final",
+        "variantsSha256": "74b8757982a9a16fe29bf3e9fea0bda6a2f9966a46304202f541f874ff13cb74",
         "checks": [
           "16/20/24",
           "sharp/soft/rounded",
           "light/dark",
+          "DPR1/2-source-comparison",
           "55-percent-foreground",
           "adjacent-text",
           "two-pinned-source-comparisons",
           "true-before-after",
-          "painted-contour-and-cavity",
+          "continuous-capsule-tangents",
           "semantic-effect-decision"
         ],
         "evidence": [
           {
-            "path": "docs/review/craft-05/batch-08/comparison.png",
-            "sha256": "a195ba73db007d07855a7e91e3b81a09f9d3746c7fb4a01bc783f8372bde75e3"
+            "path": "docs/review/committed-craft-01/02-navigation-final/2-dpr1.png",
+            "sha256": "602fcc9f9c752395024fe995121a108fe4f486eb1765a7d85bc9c0a17e103a26"
           },
           {
-            "path": "docs/review/craft-05/batch-08/native.png",
-            "sha256": "711ea0e7c3dd38c7209e3a92cb03f8682cac7ed152869dcb0f266a3a3a5de67c"
+            "path": "docs/review/committed-craft-01/02-navigation-final/2-dpr2.png",
+            "sha256": "35156c4229e03bcd614d3ef75823246f1b35294e7753a4cdf09e5a2b5be80c58"
           },
           {
-            "path": "docs/review/craft-05/batch-08/native-dark.png",
-            "sha256": "c08e759fd597c6d062c028f88c034611452e7bff1188ac08758b128306565b1d"
+            "path": "docs/review/committed-craft-01/02-link-native/native-1-light-1x.png",
+            "sha256": "7b31683db589a2269206aed155c0722f4e44b84dd695aa61c49a0937a9089f9f"
           },
           {
-            "path": "docs/review/craft-05/batch-08/diagnostic.png",
-            "sha256": "245839da67f65827628c780d8b6629274cc654a7078c3dd10f8aeccf434a70e0"
+            "path": "docs/review/committed-craft-01/02-link-native/native-1-dark-1x.png",
+            "sha256": "317383eac359ea68e56ca40a04b9b6552bae6003826f08d9dd14d6b5fe8da723"
+          },
+          {
+            "path": "docs/review/committed-craft-01/02-link-native/context-light-1x.png",
+            "sha256": "c3be120f4f71bc2799acfb1fdc2750d7e9c5e85d1f8a871e5c17344b6825969c"
+          },
+          {
+            "path": "docs/review/committed-craft-01/02-link-native/zoom-light-1x.png",
+            "sha256": "bcd32a695aecab6683a604c75e7d126751978ae5303701fa60050e0d08b787ae"
           }
         ]
       },
       "status": "visually-reviewed-candidate",
-      "userApproval": "pending",
+      "userApproval": "approved",
       "beforeHash": "c8a9b1e4de2f289ecd653929ac9ff69085fbf005b11344c67c009bca9e53dd38",
-      "afterHash": "c8a9b1e4de2f289ecd653929ac9ff69085fbf005b11344c67c009bca9e53dd38"
+      "afterHash": "74b8757982a9a16fe29bf3e9fea0bda6a2f9966a46304202f541f874ff13cb74",
+      "userApprovalDate": "2026-11-17"
     },
     {
       "name": "log-in",
@@ -15859,11 +15884,12 @@
       "name": "volume",
       "concept": "volume",
       "purpose": "圖片與媒體：音量",
-      "recognitionCues": "16px 用一道聲波，較大尺寸保留兩道",
+      "recognitionCues": "三尺寸均保留兩道聲波，與volume-low的單道聲波明確區分。",
       "confusableWith": [
-        "volume-off"
+        "volume-off",
+        "volume-low"
       ],
-      "sourceObservation": "Lucide兩波、Tabler原稿一波；Master按尺寸簡化聲波數而保留通用音量語意，狀態級別需另用明確命名圖示。",
+      "sourceObservation": "精修：16px原稿省略外圈聲波，與volume-low完全相同；現恢復外圈，兩弧在16px仍清楚分離，20/24px維持原形。最新稿與Lucide volume-2及同一固定版本補查的Tabler volume雙波並列，短內弧與長外弧的節奏清楚；舊Tabler volume-2為單波，已更正為構造參考並保存歷史紀錄。",
       "references": [
         {
           "name": "volume",
@@ -15884,12 +15910,12 @@
           "library": "Tabler",
           "repository": "tabler/tabler-icons",
           "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
-          "path": "icons/outline/volume-2.svg",
-          "localPath": "references/ui-v1/tabler-volume-2.svg",
-          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/volume-2.svg",
-          "sha256": "ebd7a0c84ed8775d7bc5ecda2301182be63ddc19edd33a1fb8d56fc853038f0c",
+          "path": "icons/outline/volume.svg",
+          "localPath": "references/committed-craft-01/tabler-volume.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/volume.svg",
+          "sha256": "1c2d4ffadf15616b7d27fcc66d28df9d5a43f34537ffc4da35c9d4c84c406450",
           "license": "MIT",
-          "sourceName": "volume-2",
+          "sourceName": "volume",
           "match": "exact",
           "role": "comparison-only"
         }
@@ -15901,7 +15927,7 @@
         },
         "opacity": {
           "used": false,
-          "reason": "不採用；小尺寸聲波已精簡，淡化會使音量與喇叭母型難區分。"
+          "reason": "不採用；兩道聲波以足夠空白分離，淡化會削弱與低音量狀態的區別。"
         },
         "gradients": {
           "used": false,
@@ -15909,54 +15935,59 @@
         }
       },
       "change": {
-        "kind": "retained",
-        "reason": "保留：喇叭腔體與短頸輪廓清楚，聲波與主體分離；16px只留一條波、20／24兩波，不將通用volume誤稱固定高音量狀態。",
+        "kind": "modified",
+        "reason": "精修：16px原稿省略外圈聲波，與volume-low完全相同；現恢復外圈，兩弧在16px仍清楚分離，20/24px維持原形。最新稿與Lucide volume-2及同一固定版本補查的Tabler volume雙波並列，短內弧與長外弧的節奏清楚；舊Tabler volume-2為單波，已更正為構造參考並保存歷史紀錄。",
         "before": {
-          "path": "references/craft-05/master-before.json",
+          "path": "references/committed-craft-01/master-before.json",
           "variantsSha256": "52b2da08839882907145539452c499df19cb1b8cf1b610f0c67cbea3fd99e9e7"
         }
       },
       "visualReview": {
-        "status": "retained-after-visual-review",
-        "reviewer": "root",
-        "date": "2026-11-16",
-        "skillVersion": "0.5.4",
-        "batch": "craft-05-19",
-        "variantsSha256": "52b2da08839882907145539452c499df19cb1b8cf1b610f0c67cbea3fd99e9e7",
+        "status": "refined-after-visual-review",
+        "reviewer": "Codex (AI)",
+        "date": "2026-11-17",
+        "skillVersion": "0.5.11",
+        "batch": "23-audio-final",
+        "variantsSha256": "d623c2e5d727598a84712909a03928932cdf35732888a6dce55230c50eafa205",
         "checks": [
           "16/20/24",
           "sharp/soft/rounded",
           "light/dark",
           "55-percent-foreground",
           "adjacent-text",
-          "two-pinned-source-comparisons",
+          "pinned-source-comparisons-with-declared-limitations",
           "true-before-after",
-          "painted-contour-and-cavity",
+          "painted-clearance",
           "semantic-effect-decision"
         ],
         "evidence": [
           {
-            "path": "docs/review/craft-05/batch-19/comparison.png",
-            "sha256": "ea43db9019d8e8fb7c59bec0a74628e06ac32d01d7795e9f495fb10862c0e7d9"
+            "path": "docs/review/committed-craft-01/16-23-native/native-1-light-1x.png",
+            "sha256": "3919e0c1a273089e25ff63c3cf94c7548723ab3ffc04e3b1f2c4f6a996f6d779"
           },
           {
-            "path": "docs/review/craft-05/batch-19/native.png",
-            "sha256": "5fe502aef966ddbbb0bc137efaaf0fb8ca7cffa0bfe9f0ac85a27a063e31b4e5"
+            "path": "docs/review/committed-craft-01/16-23-native/native-1-dark-1x.png",
+            "sha256": "c23efbae31404559704c963526340a863ab735c09139455cb1945e314529ed96"
           },
           {
-            "path": "docs/review/craft-05/batch-19/native-dark.png",
-            "sha256": "3ee3df25bd6fd906669d0310403f65b7dca35fd53855e021b4bc3e9f829e6953"
+            "path": "docs/review/committed-craft-01/16-23-native/context-light-1x.png",
+            "sha256": "a3ea49d64aa4ca99aa5e98e887abf960c4b1165872a5c6377a9fe8732e36db91"
           },
           {
-            "path": "docs/review/craft-05/batch-19/diagnostic.png",
-            "sha256": "4c0a17e0f9001efd4643dc8e069456bb104ca067bba31dbd8def2db1b38b39b3"
+            "path": "docs/review/committed-craft-01/16-23-native/zoom-light-1x.png",
+            "sha256": "48390e2db38ce5278f1b60f2571a594a0623d8d68906ef07244fd1dd3d13ef76"
+          },
+          {
+            "path": "docs/review/committed-craft-01/23-audio-final/1-dpr1.png",
+            "sha256": "885e333ca9b54ba6bcab17cbc2bbd1129e41284dca953dfc3b0b5911fc4013b9"
           }
         ]
       },
       "status": "visually-reviewed-candidate",
-      "userApproval": "pending",
+      "userApproval": "approved",
       "beforeHash": "52b2da08839882907145539452c499df19cb1b8cf1b610f0c67cbea3fd99e9e7",
-      "afterHash": "52b2da08839882907145539452c499df19cb1b8cf1b610f0c67cbea3fd99e9e7"
+      "afterHash": "d623c2e5d727598a84712909a03928932cdf35732888a6dce55230c50eafa205",
+      "userApprovalDate": "2026-11-17"
     },
     {
       "name": "volume-off",
@@ -25957,7 +25988,7 @@
       "confusableWith": [
         "superscript"
       ],
-      "sourceObservation": "Lucide與Tabler均採X加右下2；Master維持成熟的格式操作語意，主字略高窄以保留數字呼吸空間。",
+      "sourceObservation": "精修：舊x是兩條直線交叉，與關閉×相同；改為有腰部、水平起收筆的兩條曲線，保留原外接尺寸與右下2的位置。Lucide／Tabler直交x更簡單，但新稿和variable的字形語言一致，16px仍讀作x₂，數字與字母間通道清楚。",
       "references": [
         {
           "name": "subscript",
@@ -26003,54 +26034,59 @@
         }
       },
       "change": {
-        "kind": "retained",
-        "reason": "保留：主字X與右下數字2的基線落差清楚，數字弧頂、斜腰與平底可辨，16px兩字不相碰；此處是文字格式範例，不替代variable的書寫體x。",
+        "kind": "modified",
+        "reason": "精修：舊x是兩條直線交叉，與關閉×相同；改為有腰部、水平起收筆的兩條曲線，保留原外接尺寸與右下2的位置。Lucide／Tabler直交x更簡單，但新稿和variable的字形語言一致，16px仍讀作x₂，數字與字母間通道清楚。",
         "before": {
-          "path": "references/craft-05/master-before.json",
+          "path": "references/committed-craft-01/master-before.json",
           "variantsSha256": "30a1188b5395675f26c1dd4292883f9fc8f6341eba18a231f483f5eb93cea3e6"
         }
       },
       "visualReview": {
-        "status": "retained-after-visual-review",
-        "reviewer": "root",
-        "date": "2026-11-16",
-        "skillVersion": "0.5.4",
-        "batch": "craft-05-32",
-        "variantsSha256": "30a1188b5395675f26c1dd4292883f9fc8f6341eba18a231f483f5eb93cea3e6",
+        "status": "refined-after-visual-review",
+        "reviewer": "Codex (AI)",
+        "date": "2026-11-17",
+        "skillVersion": "0.5.11",
+        "batch": "09-type-candidate",
+        "variantsSha256": "0c90537677e218876e98b30f2c49e90709378ad08de19216ccba4d847c0c23ba",
         "checks": [
           "16/20/24",
           "sharp/soft/rounded",
           "light/dark",
           "55-percent-foreground",
           "adjacent-text",
-          "two-pinned-source-comparisons",
+          "pinned-source-comparisons-with-declared-limitations",
           "true-before-after",
-          "painted-contour-and-cavity",
+          "family-consistency",
           "semantic-effect-decision"
         ],
         "evidence": [
           {
-            "path": "docs/review/craft-05/batch-32/comparison.png",
-            "sha256": "272e027633e575c8e48693d15c6c904edef338ead4bcea10720e672a14e54c37"
+            "path": "docs/review/committed-craft-01/09-10-native/native-1-light-1x.png",
+            "sha256": "7cfcdc022cdd18bb9a25d2f953171b06788e88f3ccbb8bb791e82d039e9210ab"
           },
           {
-            "path": "docs/review/craft-05/batch-32/native.png",
-            "sha256": "1b0364c8eabd94ae37ac59c0dc7b84719a6dd9ef7126839ded183e92f3778664"
+            "path": "docs/review/committed-craft-01/09-10-native/native-1-dark-1x.png",
+            "sha256": "ade72822e07814cf7484aa257825596da821bc0af701b083d0d554213030f63d"
           },
           {
-            "path": "docs/review/craft-05/batch-32/native-dark.png",
-            "sha256": "03d707f40922b1aa7e1de326cb49f23c91e44810ead30794b1d69cedd6419d86"
+            "path": "docs/review/committed-craft-01/09-10-native/context-light-1x.png",
+            "sha256": "26b89bee5bc0f1a596f93d2e42b6693f6e184ab7bbaec8d3c85d12965d710f58"
           },
           {
-            "path": "docs/review/craft-05/batch-32/diagnostic.png",
-            "sha256": "e01329dd8b0e95141ab456e3a0e008036960ffbfab4c97fcf47c6efbba978e7d"
+            "path": "docs/review/committed-craft-01/09-10-native/zoom-light-1x.png",
+            "sha256": "0c95a4995b11fb295fe70ef6bf5ce272d218017be89d10355be018b3b36cb2a5"
+          },
+          {
+            "path": "docs/review/committed-craft-01/09-type-candidate/2-dpr1.png",
+            "sha256": "87e8cf3d9ddf6f22b9661c6af082ba7ddc23535500a3f26da7a11a90162172d1"
           }
         ]
       },
       "status": "visually-reviewed-candidate",
-      "userApproval": "pending",
+      "userApproval": "approved",
       "beforeHash": "30a1188b5395675f26c1dd4292883f9fc8f6341eba18a231f483f5eb93cea3e6",
-      "afterHash": "30a1188b5395675f26c1dd4292883f9fc8f6341eba18a231f483f5eb93cea3e6"
+      "afterHash": "0c90537677e218876e98b30f2c49e90709378ad08de19216ccba4d847c0c23ba",
+      "userApprovalDate": "2026-11-17"
     },
     {
       "name": "superscript",
@@ -26060,7 +26096,7 @@
       "confusableWith": [
         "subscript"
       ],
-      "sourceObservation": "Lucide與Tabler同採X右上2；Master保留同家族字形與筆重，避免上下標各畫一種數字。",
+      "sourceObservation": "精修：與subscript共用有筆勢的x，僅數字保持上標位置。兩份來源同樣以右上2表意，新稿保留這個成熟位置關係，改善字母本身而不加入其他細節；三尺寸仍明確區分上下標。",
       "references": [
         {
           "name": "superscript",
@@ -26106,54 +26142,59 @@
         }
       },
       "change": {
-        "kind": "retained",
-        "reason": "保留：右上2與subscript共用字形、只改位置，16px數字不黏到X右上端，數字頂部仍在畫布內，明暗低對比都能辨認上下關係。",
+        "kind": "modified",
+        "reason": "精修：與subscript共用有筆勢的x，僅數字保持上標位置。兩份來源同樣以右上2表意，新稿保留這個成熟位置關係，改善字母本身而不加入其他細節；三尺寸仍明確區分上下標。",
         "before": {
-          "path": "references/craft-05/master-before.json",
+          "path": "references/committed-craft-01/master-before.json",
           "variantsSha256": "e01c32a5ef29d4e3320518582ae625c04ce49af983dee6810a3eb586a323b4dd"
         }
       },
       "visualReview": {
-        "status": "retained-after-visual-review",
-        "reviewer": "root",
-        "date": "2026-11-16",
-        "skillVersion": "0.5.4",
-        "batch": "craft-05-32",
-        "variantsSha256": "e01c32a5ef29d4e3320518582ae625c04ce49af983dee6810a3eb586a323b4dd",
+        "status": "refined-after-visual-review",
+        "reviewer": "Codex (AI)",
+        "date": "2026-11-17",
+        "skillVersion": "0.5.11",
+        "batch": "09-type-candidate",
+        "variantsSha256": "5faa849183150eccf4debc5516622423c73d926ed7ab92017a81a7c9ec3b71fd",
         "checks": [
           "16/20/24",
           "sharp/soft/rounded",
           "light/dark",
           "55-percent-foreground",
           "adjacent-text",
-          "two-pinned-source-comparisons",
+          "pinned-source-comparisons-with-declared-limitations",
           "true-before-after",
-          "painted-contour-and-cavity",
+          "family-consistency",
           "semantic-effect-decision"
         ],
         "evidence": [
           {
-            "path": "docs/review/craft-05/batch-32/comparison.png",
-            "sha256": "272e027633e575c8e48693d15c6c904edef338ead4bcea10720e672a14e54c37"
+            "path": "docs/review/committed-craft-01/09-10-native/native-1-light-1x.png",
+            "sha256": "7cfcdc022cdd18bb9a25d2f953171b06788e88f3ccbb8bb791e82d039e9210ab"
           },
           {
-            "path": "docs/review/craft-05/batch-32/native.png",
-            "sha256": "1b0364c8eabd94ae37ac59c0dc7b84719a6dd9ef7126839ded183e92f3778664"
+            "path": "docs/review/committed-craft-01/09-10-native/native-1-dark-1x.png",
+            "sha256": "ade72822e07814cf7484aa257825596da821bc0af701b083d0d554213030f63d"
           },
           {
-            "path": "docs/review/craft-05/batch-32/native-dark.png",
-            "sha256": "03d707f40922b1aa7e1de326cb49f23c91e44810ead30794b1d69cedd6419d86"
+            "path": "docs/review/committed-craft-01/09-10-native/context-light-1x.png",
+            "sha256": "26b89bee5bc0f1a596f93d2e42b6693f6e184ab7bbaec8d3c85d12965d710f58"
           },
           {
-            "path": "docs/review/craft-05/batch-32/diagnostic.png",
-            "sha256": "e01329dd8b0e95141ab456e3a0e008036960ffbfab4c97fcf47c6efbba978e7d"
+            "path": "docs/review/committed-craft-01/09-10-native/zoom-light-1x.png",
+            "sha256": "0c95a4995b11fb295fe70ef6bf5ce272d218017be89d10355be018b3b36cb2a5"
+          },
+          {
+            "path": "docs/review/committed-craft-01/09-type-candidate/2-dpr1.png",
+            "sha256": "87e8cf3d9ddf6f22b9661c6af082ba7ddc23535500a3f26da7a11a90162172d1"
           }
         ]
       },
       "status": "visually-reviewed-candidate",
-      "userApproval": "pending",
+      "userApproval": "approved",
       "beforeHash": "e01c32a5ef29d4e3320518582ae625c04ce49af983dee6810a3eb586a323b4dd",
-      "afterHash": "e01c32a5ef29d4e3320518582ae625c04ce49af983dee6810a3eb586a323b4dd"
+      "afterHash": "5faa849183150eccf4debc5516622423c73d926ed7ab92017a81a7c9ec3b71fd",
+      "userApprovalDate": "2026-11-17"
     },
     {
       "name": "file-code",
@@ -26163,7 +26204,7 @@
       "confusableWith": [
         "file-text"
       ],
-      "sourceObservation": "Lucide採角括號、Tabler接近彎括號；Master保留角括號為程式碼訊號，不加入斜線讓小尺寸更擁擠。",
+      "sourceObservation": "精修：前稿sharp角括號外尖太接近紙張內壁；將外尖由8/16收至8.75/15.25，翼高由5收至4，中央間距不變。Lucide括號較緊湊、Tabler較寬，吸收較充分的框內留白；原生三尺寸仍分成左右兩個括號。",
       "references": [
         {
           "name": "file-code",
@@ -26210,53 +26251,58 @@
       },
       "change": {
         "kind": "modified",
-        "reason": "修改後通過：繼承file折角收口；內部左右chevron共用中心高度，尖端與文件側壁、兩端彼此均分離，16px沒有形成封閉菱形。",
+        "reason": "精修：前稿sharp角括號外尖太接近紙張內壁；將外尖由8/16收至8.75/15.25，翼高由5收至4，中央間距不變。Lucide括號較緊湊、Tabler較寬，吸收較充分的框內留白；原生三尺寸仍分成左右兩個括號。",
         "before": {
-          "path": "references/craft-05/master-before.json",
-          "variantsSha256": "a83812382dc818b3e177d1ac92abf2df4693b98cf20f81b3d3218da629cbd3cf"
+          "path": "references/committed-craft-01/master-before.json",
+          "variantsSha256": "32ba46b8dd316fcb5dd829c2df6e54fb694fcf6880f6ec45576f39ccdff7ff7f"
         }
       },
       "visualReview": {
-        "status": "modified-after-visual-review",
-        "reviewer": "root",
-        "date": "2026-11-16",
-        "skillVersion": "0.5.4",
-        "batch": "craft-05-32",
-        "variantsSha256": "32ba46b8dd316fcb5dd829c2df6e54fb694fcf6880f6ec45576f39ccdff7ff7f",
+        "status": "refined-after-visual-review",
+        "reviewer": "Codex (AI)",
+        "date": "2026-11-17",
+        "skillVersion": "0.5.11",
+        "batch": "12-file-content-candidate",
+        "variantsSha256": "be3a5449425e1fb071f49ed1fe582c76ff749280c8104ad60dc01f754622136b",
         "checks": [
           "16/20/24",
           "sharp/soft/rounded",
           "light/dark",
           "55-percent-foreground",
           "adjacent-text",
-          "two-pinned-source-comparisons",
+          "pinned-source-comparisons-with-declared-limitations",
           "true-before-after",
-          "painted-contour-and-cavity",
+          "painted-clearance",
           "semantic-effect-decision"
         ],
         "evidence": [
           {
-            "path": "docs/review/craft-05/batch-32/comparison.png",
-            "sha256": "272e027633e575c8e48693d15c6c904edef338ead4bcea10720e672a14e54c37"
+            "path": "docs/review/committed-craft-01/11-13-native/native-1-light-1x.png",
+            "sha256": "2ec598e7fd815b483349f459cafcf2f7b48b773db543774f3b0e1bbb9fbf2833"
           },
           {
-            "path": "docs/review/craft-05/batch-32/native.png",
-            "sha256": "1b0364c8eabd94ae37ac59c0dc7b84719a6dd9ef7126839ded183e92f3778664"
+            "path": "docs/review/committed-craft-01/11-13-native/native-1-dark-1x.png",
+            "sha256": "1c867f9748867e79a23eac64d2b329d3960b5d7dd674e2521f60626c2c797d81"
           },
           {
-            "path": "docs/review/craft-05/batch-32/native-dark.png",
-            "sha256": "03d707f40922b1aa7e1de326cb49f23c91e44810ead30794b1d69cedd6419d86"
+            "path": "docs/review/committed-craft-01/11-13-native/context-light-1x.png",
+            "sha256": "69a73751bdfb7e81a6da38bd33110119703f3c434f6450a5c0e382710dc02214"
           },
           {
-            "path": "docs/review/craft-05/batch-32/diagnostic.png",
-            "sha256": "e01329dd8b0e95141ab456e3a0e008036960ffbfab4c97fcf47c6efbba978e7d"
+            "path": "docs/review/committed-craft-01/11-13-native/zoom-light-1x.png",
+            "sha256": "b1617ed878887e65ccf40b04c77550e6b465821bcaea75eb1880bff3a05b8dbd"
+          },
+          {
+            "path": "docs/review/committed-craft-01/12-file-content-candidate/1-dpr1.png",
+            "sha256": "9bf87ddd55e35a79aa7bdea1e753d24c978e8a6471bb469805e1b157d149e490"
           }
         ]
       },
       "status": "visually-reviewed-candidate",
-      "userApproval": "pending",
-      "beforeHash": "a83812382dc818b3e177d1ac92abf2df4693b98cf20f81b3d3218da629cbd3cf",
-      "afterHash": "32ba46b8dd316fcb5dd829c2df6e54fb694fcf6880f6ec45576f39ccdff7ff7f"
+      "userApproval": "approved",
+      "beforeHash": "32ba46b8dd316fcb5dd829c2df6e54fb694fcf6880f6ec45576f39ccdff7ff7f",
+      "afterHash": "be3a5449425e1fb071f49ed1fe582c76ff749280c8104ad60dc01f754622136b",
+      "userApprovalDate": "2026-11-17"
     },
     {
       "name": "file-image",
@@ -26987,7 +27033,7 @@
       "confusableWith": [
         "folder-down"
       ],
-      "sourceObservation": "Lucide內置上箭頭、Tabler外置；Master維持內置傳入操作，比例與folder-down成對。",
+      "sourceObservation": "精修：收短箭桿下端，使16/20/24在底框上方增加0.5/0.625/0.75px中心線留白。Lucide內置箭頭較寬，Tabler外掛；保留Master完整容器和較收斂箭翼，方向與上下配對不變。",
       "references": [
         {
           "name": "folder-up",
@@ -27033,54 +27079,59 @@
         }
       },
       "change": {
-        "kind": "retained",
-        "reason": "保留：向上箭頭的桿尖接合已有收口，箭尖離夾標籤及上框、桿底離底壁皆有可見空隙；16px採較短尾端，避免內部擁擠。",
+        "kind": "modified",
+        "reason": "精修：收短箭桿下端，使16/20/24在底框上方增加0.5/0.625/0.75px中心線留白。Lucide內置箭頭較寬，Tabler外掛；保留Master完整容器和較收斂箭翼，方向與上下配對不變。",
         "before": {
-          "path": "references/craft-05/master-before.json",
+          "path": "references/committed-craft-01/master-before.json",
           "variantsSha256": "6be95a9c70df611f9f9c09b0923eb9006c89fd1a4628f8cfef002ce7bf07928b"
         }
       },
       "visualReview": {
-        "status": "retained-after-visual-review",
-        "reviewer": "root",
-        "date": "2026-11-16",
-        "skillVersion": "0.5.4",
-        "batch": "craft-05-33",
-        "variantsSha256": "6be95a9c70df611f9f9c09b0923eb9006c89fd1a4628f8cfef002ce7bf07928b",
+        "status": "refined-after-visual-review",
+        "reviewer": "Codex (AI)",
+        "date": "2026-11-17",
+        "skillVersion": "0.5.11",
+        "batch": "13-folders-candidate",
+        "variantsSha256": "e891d71566b31c78007e51e3844f7acaeaea6940f8df7dcfe77a15e57bbe7e58",
         "checks": [
           "16/20/24",
           "sharp/soft/rounded",
           "light/dark",
           "55-percent-foreground",
           "adjacent-text",
-          "two-pinned-source-comparisons",
+          "pinned-source-comparisons-with-declared-limitations",
           "true-before-after",
-          "painted-contour-and-cavity",
+          "painted-clearance",
           "semantic-effect-decision"
         ],
         "evidence": [
           {
-            "path": "docs/review/craft-05/batch-33/comparison.png",
-            "sha256": "90468900b9479d19b2bafb3c94a308412e2295b8cc5c626242b425d3d878c82e"
+            "path": "docs/review/committed-craft-01/11-13-native/native-1-light-1x.png",
+            "sha256": "2ec598e7fd815b483349f459cafcf2f7b48b773db543774f3b0e1bbb9fbf2833"
           },
           {
-            "path": "docs/review/craft-05/batch-33/native.png",
-            "sha256": "dab1dbf7e5fa2b7d620bf4ace790d51279ae9a2fcec93768022a343ec63eb0c6"
+            "path": "docs/review/committed-craft-01/11-13-native/native-1-dark-1x.png",
+            "sha256": "1c867f9748867e79a23eac64d2b329d3960b5d7dd674e2521f60626c2c797d81"
           },
           {
-            "path": "docs/review/craft-05/batch-33/native-dark.png",
-            "sha256": "7c00b75112a975c8ef82926ff84fd8675b924d6bcf830853156bfb1d58dd0217"
+            "path": "docs/review/committed-craft-01/11-13-native/context-light-1x.png",
+            "sha256": "69a73751bdfb7e81a6da38bd33110119703f3c434f6450a5c0e382710dc02214"
           },
           {
-            "path": "docs/review/craft-05/batch-33/diagnostic.png",
-            "sha256": "9199f0a1c82ab6557dff0f370c642081b849fbbe7b3d303ee1015e12d25e3977"
+            "path": "docs/review/committed-craft-01/11-13-native/zoom-light-1x.png",
+            "sha256": "b1617ed878887e65ccf40b04c77550e6b465821bcaea75eb1880bff3a05b8dbd"
+          },
+          {
+            "path": "docs/review/committed-craft-01/13-folders-candidate/1-dpr1.png",
+            "sha256": "1eabad0efb7869886c5d5961e5440aa8b448ea23a5bb51eb7790f4ad4dc43e1c"
           }
         ]
       },
       "status": "visually-reviewed-candidate",
-      "userApproval": "pending",
+      "userApproval": "approved",
       "beforeHash": "6be95a9c70df611f9f9c09b0923eb9006c89fd1a4628f8cfef002ce7bf07928b",
-      "afterHash": "6be95a9c70df611f9f9c09b0923eb9006c89fd1a4628f8cfef002ce7bf07928b"
+      "afterHash": "e891d71566b31c78007e51e3844f7acaeaea6940f8df7dcfe77a15e57bbe7e58",
+      "userApprovalDate": "2026-11-17"
     },
     {
       "name": "folder-down",
@@ -27090,7 +27141,7 @@
       "confusableWith": [
         "folder-up"
       ],
-      "sourceObservation": "Lucide內置、Tabler外置下箭頭；Master保留共同夾框，用相反方向箭頭表輸出／下載，不額外加避讓。",
+      "sourceObservation": "精修：原稿sharp箭尖的實際斜接外伸接近底框，同步上收下端而保留箭翼高度。Lucide內置向下訊號清楚，吸收較鬆的框內比例；新版16px箭尖與底框分離，沒有改成另一個容器。",
       "references": [
         {
           "name": "folder-down",
@@ -27136,54 +27187,59 @@
         }
       },
       "change": {
-        "kind": "retained",
-        "reason": "保留：向下箭頭使用相同橫向中心、箭翼寬度及尺寸專用底點，16px底尖離夾壁足夠，與上箭頭並排重量一致。",
+        "kind": "modified",
+        "reason": "精修：原稿sharp箭尖的實際斜接外伸接近底框，同步上收下端而保留箭翼高度。Lucide內置向下訊號清楚，吸收較鬆的框內比例；新版16px箭尖與底框分離，沒有改成另一個容器。",
         "before": {
-          "path": "references/craft-05/master-before.json",
+          "path": "references/committed-craft-01/master-before.json",
           "variantsSha256": "afcfc542e77d1594a1f4ba1d98b2cd65fe2b3008818c0d71bd97b588b02d6cda"
         }
       },
       "visualReview": {
-        "status": "retained-after-visual-review",
-        "reviewer": "root",
-        "date": "2026-11-16",
-        "skillVersion": "0.5.4",
-        "batch": "craft-05-33",
-        "variantsSha256": "afcfc542e77d1594a1f4ba1d98b2cd65fe2b3008818c0d71bd97b588b02d6cda",
+        "status": "refined-after-visual-review",
+        "reviewer": "Codex (AI)",
+        "date": "2026-11-17",
+        "skillVersion": "0.5.11",
+        "batch": "13-folders-candidate",
+        "variantsSha256": "baea7b2ce03db0ad569778b883e265e721152ee460b452eed807bd17393e6ac5",
         "checks": [
           "16/20/24",
           "sharp/soft/rounded",
           "light/dark",
           "55-percent-foreground",
           "adjacent-text",
-          "two-pinned-source-comparisons",
+          "pinned-source-comparisons-with-declared-limitations",
           "true-before-after",
-          "painted-contour-and-cavity",
+          "painted-clearance",
           "semantic-effect-decision"
         ],
         "evidence": [
           {
-            "path": "docs/review/craft-05/batch-33/comparison.png",
-            "sha256": "90468900b9479d19b2bafb3c94a308412e2295b8cc5c626242b425d3d878c82e"
+            "path": "docs/review/committed-craft-01/11-13-native/native-1-light-1x.png",
+            "sha256": "2ec598e7fd815b483349f459cafcf2f7b48b773db543774f3b0e1bbb9fbf2833"
           },
           {
-            "path": "docs/review/craft-05/batch-33/native.png",
-            "sha256": "dab1dbf7e5fa2b7d620bf4ace790d51279ae9a2fcec93768022a343ec63eb0c6"
+            "path": "docs/review/committed-craft-01/11-13-native/native-1-dark-1x.png",
+            "sha256": "1c867f9748867e79a23eac64d2b329d3960b5d7dd674e2521f60626c2c797d81"
           },
           {
-            "path": "docs/review/craft-05/batch-33/native-dark.png",
-            "sha256": "7c00b75112a975c8ef82926ff84fd8675b924d6bcf830853156bfb1d58dd0217"
+            "path": "docs/review/committed-craft-01/11-13-native/context-light-1x.png",
+            "sha256": "69a73751bdfb7e81a6da38bd33110119703f3c434f6450a5c0e382710dc02214"
           },
           {
-            "path": "docs/review/craft-05/batch-33/diagnostic.png",
-            "sha256": "9199f0a1c82ab6557dff0f370c642081b849fbbe7b3d303ee1015e12d25e3977"
+            "path": "docs/review/committed-craft-01/11-13-native/zoom-light-1x.png",
+            "sha256": "b1617ed878887e65ccf40b04c77550e6b465821bcaea75eb1880bff3a05b8dbd"
+          },
+          {
+            "path": "docs/review/committed-craft-01/13-folders-candidate/2-dpr1.png",
+            "sha256": "e97ee4cb3435b3af6c7c769352708abe35baa18737f691678c639e1611f44193"
           }
         ]
       },
       "status": "visually-reviewed-candidate",
-      "userApproval": "pending",
+      "userApproval": "approved",
       "beforeHash": "afcfc542e77d1594a1f4ba1d98b2cd65fe2b3008818c0d71bd97b588b02d6cda",
-      "afterHash": "afcfc542e77d1594a1f4ba1d98b2cd65fe2b3008818c0d71bd97b588b02d6cda"
+      "afterHash": "baea7b2ce03db0ad569778b883e265e721152ee460b452eed807bd17393e6ac5",
+      "userApprovalDate": "2026-11-17"
     },
     {
       "name": "calendar-plus",
@@ -27193,7 +27249,7 @@
       "confusableWith": [
         "calendar-check"
       ],
-      "sourceObservation": "Lucide與Tabler均偏外置加號；Master依簡單日曆狀態家族內置，保持完整外框與單一訊號。",
+      "sourceObservation": "精修：原加號上端偏近頁首，16/20/24px改用半徑1.25/1.75/2.25px的十字，中心不變。現稿上方留白更清楚，16px仍可讀出四臂；兩份來源外掛加號僅作語意策略比較，維持本套內置狀態。",
       "references": [
         {
           "name": "calendar-plus",
@@ -27239,54 +27295,59 @@
         }
       },
       "change": {
-        "kind": "retained",
-        "reason": "保留：加號位於日曆內容區中間，豎筆不碰標題線與底框，裝訂柱仍獨立可辨；16px不因加號占位縮小主體。",
+        "kind": "modified",
+        "reason": "精修：原加號上端偏近頁首，16/20/24px改用半徑1.25/1.75/2.25px的十字，中心不變。現稿上方留白更清楚，16px仍可讀出四臂；兩份來源外掛加號僅作語意策略比較，維持本套內置狀態。",
         "before": {
-          "path": "references/craft-05/master-before.json",
+          "path": "references/committed-craft-01/master-before.json",
           "variantsSha256": "9a0334c1eada5b378ee9b4b43cb0c9d0a19f79f8ae5f04423906cb72378e10fc"
         }
       },
       "visualReview": {
-        "status": "retained-after-visual-review",
-        "reviewer": "root",
-        "date": "2026-11-16",
-        "skillVersion": "0.5.4",
-        "batch": "craft-05-33",
-        "variantsSha256": "9a0334c1eada5b378ee9b4b43cb0c9d0a19f79f8ae5f04423906cb72378e10fc",
+        "status": "refined-after-visual-review",
+        "reviewer": "Codex (AI)",
+        "date": "2026-11-17",
+        "skillVersion": "0.5.11",
+        "batch": "16-calendar-candidate",
+        "variantsSha256": "0ebb30e7eef1754d0734ec77c33e954175405050aa92ce4f6dece6c883e0474a",
         "checks": [
           "16/20/24",
           "sharp/soft/rounded",
           "light/dark",
           "55-percent-foreground",
           "adjacent-text",
-          "two-pinned-source-comparisons",
+          "pinned-source-comparisons-with-declared-limitations",
           "true-before-after",
-          "painted-contour-and-cavity",
+          "painted-clearance",
           "semantic-effect-decision"
         ],
         "evidence": [
           {
-            "path": "docs/review/craft-05/batch-33/comparison.png",
-            "sha256": "90468900b9479d19b2bafb3c94a308412e2295b8cc5c626242b425d3d878c82e"
+            "path": "docs/review/committed-craft-01/16-23-native/native-1-light-1x.png",
+            "sha256": "3919e0c1a273089e25ff63c3cf94c7548723ab3ffc04e3b1f2c4f6a996f6d779"
           },
           {
-            "path": "docs/review/craft-05/batch-33/native.png",
-            "sha256": "dab1dbf7e5fa2b7d620bf4ace790d51279ae9a2fcec93768022a343ec63eb0c6"
+            "path": "docs/review/committed-craft-01/16-23-native/native-1-dark-1x.png",
+            "sha256": "c23efbae31404559704c963526340a863ab735c09139455cb1945e314529ed96"
           },
           {
-            "path": "docs/review/craft-05/batch-33/native-dark.png",
-            "sha256": "7c00b75112a975c8ef82926ff84fd8675b924d6bcf830853156bfb1d58dd0217"
+            "path": "docs/review/committed-craft-01/16-23-native/context-light-1x.png",
+            "sha256": "a3ea49d64aa4ca99aa5e98e887abf960c4b1165872a5c6377a9fe8732e36db91"
           },
           {
-            "path": "docs/review/craft-05/batch-33/diagnostic.png",
-            "sha256": "9199f0a1c82ab6557dff0f370c642081b849fbbe7b3d303ee1015e12d25e3977"
+            "path": "docs/review/committed-craft-01/16-23-native/zoom-light-1x.png",
+            "sha256": "48390e2db38ce5278f1b60f2571a594a0623d8d68906ef07244fd1dd3d13ef76"
+          },
+          {
+            "path": "docs/review/committed-craft-01/16-calendar-candidate/1-dpr1.png",
+            "sha256": "b03f4fdd71e42275347bff339ac63ed7877b012b15f5366b997ded35a790b841"
           }
         ]
       },
       "status": "visually-reviewed-candidate",
-      "userApproval": "pending",
+      "userApproval": "approved",
       "beforeHash": "9a0334c1eada5b378ee9b4b43cb0c9d0a19f79f8ae5f04423906cb72378e10fc",
-      "afterHash": "9a0334c1eada5b378ee9b4b43cb0c9d0a19f79f8ae5f04423906cb72378e10fc"
+      "afterHash": "0ebb30e7eef1754d0734ec77c33e954175405050aa92ce4f6dece6c883e0474a",
+      "userApprovalDate": "2026-11-17"
     },
     {
       "name": "calendar-minus",
@@ -30086,7 +30147,7 @@
         "undo",
         "log-in"
       ],
-      "sourceObservation": "Phosphor帶鍵帽原稿與Lucide corner-down-left箭形構造對照，Master保留按鍵語意及局部箭桿收口。",
+      "sourceObservation": "精修：舊稿16px箭翼下端距鍵框偏近，圖案重心偏低；箭桿上移0.5個24格單位，右端起點同步上移，翼長16px用2.5、20/24用2.75。Phosphor鍵框內留白更均衡，吸收此優點後保留較明確的折返豎段；Lucide僅作折返箭頭結構參考。新版三尺寸下方空隙增加，16px方向仍清楚。",
       "references": [
         {
           "name": "keyboard-return",
@@ -30132,54 +30193,59 @@
         }
       },
       "change": {
-        "kind": "retained",
-        "reason": "保留先前修正：折返箭桿在三角型均未穿出箭尖，rounded箭頭內縮後仍連通；鍵帽與箭頭各端保有空隙，16px可讀回車方向。",
+        "kind": "modified",
+        "reason": "精修：舊稿16px箭翼下端距鍵框偏近，圖案重心偏低；箭桿上移0.5個24格單位，右端起點同步上移，翼長16px用2.5、20/24用2.75。Phosphor鍵框內留白更均衡，吸收此優點後保留較明確的折返豎段；Lucide僅作折返箭頭結構參考。新版三尺寸下方空隙增加，16px方向仍清楚。",
         "before": {
-          "path": "references/craft-05/master-before.json",
+          "path": "references/committed-craft-01/master-before.json",
           "variantsSha256": "8984ebe616fd62aeef2033aebbd039e65e2ddebeb91232842e2013f934f0d898"
         }
       },
       "visualReview": {
-        "status": "retained-after-visual-review",
-        "reviewer": "root",
-        "date": "2026-11-16",
-        "skillVersion": "0.5.4",
-        "batch": "craft-05-37",
-        "variantsSha256": "8984ebe616fd62aeef2033aebbd039e65e2ddebeb91232842e2013f934f0d898",
+        "status": "refined-after-visual-review",
+        "reviewer": "Codex (AI)",
+        "date": "2026-11-17",
+        "skillVersion": "0.5.11",
+        "batch": "03-motion-final",
+        "variantsSha256": "428f81d933d8fc04106fd1ee6fe074e1d00b11870aa41a2428a7269938dca383",
         "checks": [
           "16/20/24",
           "sharp/soft/rounded",
           "light/dark",
           "55-percent-foreground",
           "adjacent-text",
-          "two-pinned-source-comparisons",
+          "pinned-source-comparisons",
           "true-before-after",
-          "painted-contour-and-cavity",
+          "painted-clearance",
           "semantic-effect-decision"
         ],
         "evidence": [
           {
-            "path": "docs/review/craft-05/batch-37/comparison.png",
-            "sha256": "adc24eba880995d3577f72dde4453a20021e477485e98f5e8af1e2246f0511cc"
+            "path": "docs/review/committed-craft-01/03-04-native/native-1-light-1x.png",
+            "sha256": "79a38a5aa9253a079081b7adad72121799a66c46dcbd65d36f34400a5f2c0a78"
           },
           {
-            "path": "docs/review/craft-05/batch-37/native.png",
-            "sha256": "8a5dde2ac1c607bdfa4ac232b0824cd30569a2ddacbe8af53e927fb92fc8c805"
+            "path": "docs/review/committed-craft-01/03-04-native/native-1-dark-1x.png",
+            "sha256": "5b9485762d958e1b2e051bca17adabed8a3db3e28aaadacbefde1d35a905d9ee"
           },
           {
-            "path": "docs/review/craft-05/batch-37/native-dark.png",
-            "sha256": "5efd4c4899f4b44a0dd0e3baf66fcc02836e931565f41065717ac48064d74d93"
+            "path": "docs/review/committed-craft-01/03-04-native/context-light-1x.png",
+            "sha256": "645d890099f4fd60024328a11b3b745d4831022aaf55e204cce5d7dbd638c0cd"
           },
           {
-            "path": "docs/review/craft-05/batch-37/diagnostic.png",
-            "sha256": "111330811f6bf12c7b876c5966fdaf787f917b030a744cf048c4020de139c9b8"
+            "path": "docs/review/committed-craft-01/03-04-native/zoom-light-1x.png",
+            "sha256": "fe7db3a86562592e4ab77f844b10781d3022aade7490b071cbe405d05220e198"
+          },
+          {
+            "path": "docs/review/committed-craft-01/03-motion-final/2-dpr1.png",
+            "sha256": "daf8dca7fa6834ddf89442f929085726e822cd0d94f36322434c06c5cbc97be2"
           }
         ]
       },
       "status": "visually-reviewed-candidate",
-      "userApproval": "pending",
+      "userApproval": "approved",
       "beforeHash": "8984ebe616fd62aeef2033aebbd039e65e2ddebeb91232842e2013f934f0d898",
-      "afterHash": "8984ebe616fd62aeef2033aebbd039e65e2ddebeb91232842e2013f934f0d898"
+      "afterHash": "428f81d933d8fc04106fd1ee6fe074e1d00b11870aa41a2428a7269938dca383",
+      "userApprovalDate": "2026-11-17"
     },
     {
       "name": "locate",
@@ -31854,7 +31920,7 @@
         "file",
         "help-circle"
       ],
-      "sourceObservation": "Lucide file-question-mark和Tabler file-unknown均文件加問號；Master保留折頁及內置問號，以一個訊號表未知文件。",
+      "sourceObservation": "精修：前稿問號上肩靠近折頁，降低並壓短頭部曲線，收筆上收至14.5，避免與下點變近。Lucide問號與折頁有較清楚分區、Tabler問號較小；吸收空間分配優點，保留問號肩部和回折，16/20/24均確認折頁與問號分離。",
       "references": [
         {
           "name": "file-question",
@@ -31901,53 +31967,58 @@
       },
       "change": {
         "kind": "modified",
-        "reason": "修改後通過：沿用本輪文件母型折頁收口，移除折線對圓角輪廓的越界；問號彎鉤、落點及圓點保留，16px與折頁及底框均分離。",
+        "reason": "精修：前稿問號上肩靠近折頁，降低並壓短頭部曲線，收筆上收至14.5，避免與下點變近。Lucide問號與折頁有較清楚分區、Tabler問號較小；吸收空間分配優點，保留問號肩部和回折，16/20/24均確認折頁與問號分離。",
         "before": {
-          "path": "references/craft-05/master-before.json",
-          "variantsSha256": "16c58db504d48ae7277938d1843b2104dc100d9d24a9b04f79907058ad94afe9"
+          "path": "references/committed-craft-01/master-before.json",
+          "variantsSha256": "8301b4c1293aabe1def1389e410acf0e73f9297f212064c641c9f68cf16d504c"
         }
       },
       "visualReview": {
-        "status": "modified-after-visual-review",
-        "reviewer": "root",
-        "date": "2026-11-16",
-        "skillVersion": "0.5.4",
-        "batch": "craft-05-39",
-        "variantsSha256": "8301b4c1293aabe1def1389e410acf0e73f9297f212064c641c9f68cf16d504c",
+        "status": "refined-after-visual-review",
+        "reviewer": "Codex (AI)",
+        "date": "2026-11-17",
+        "skillVersion": "0.5.11",
+        "batch": "11-file-states-final",
+        "variantsSha256": "1ca494e8257b6098d781f60d49058687276cc42c91da50d89f581fb4881efeb6",
         "checks": [
           "16/20/24",
           "sharp/soft/rounded",
           "light/dark",
           "55-percent-foreground",
           "adjacent-text",
-          "two-pinned-source-comparisons",
+          "pinned-source-comparisons-with-declared-limitations",
           "true-before-after",
-          "painted-contour-and-cavity",
+          "painted-clearance",
           "semantic-effect-decision"
         ],
         "evidence": [
           {
-            "path": "docs/review/craft-05/batch-39/comparison.png",
-            "sha256": "be3164fb5d18caea09ba2e4b13f62d487bde10dd6bed506ef4589dc7f14a44da"
+            "path": "docs/review/committed-craft-01/11-13-native/native-1-light-1x.png",
+            "sha256": "2ec598e7fd815b483349f459cafcf2f7b48b773db543774f3b0e1bbb9fbf2833"
           },
           {
-            "path": "docs/review/craft-05/batch-39/native.png",
-            "sha256": "35987981004ac2a510df0e32fc0a0e9772be8108927e2565fff21176c15ebe46"
+            "path": "docs/review/committed-craft-01/11-13-native/native-1-dark-1x.png",
+            "sha256": "1c867f9748867e79a23eac64d2b329d3960b5d7dd674e2521f60626c2c797d81"
           },
           {
-            "path": "docs/review/craft-05/batch-39/native-dark.png",
-            "sha256": "68e1ca3b7a648c3a4ca52df1436a267e6ca00eaa7ed65e8482e9a8bfb6a853ab"
+            "path": "docs/review/committed-craft-01/11-13-native/context-light-1x.png",
+            "sha256": "69a73751bdfb7e81a6da38bd33110119703f3c434f6450a5c0e382710dc02214"
           },
           {
-            "path": "docs/review/craft-05/batch-39/diagnostic.png",
-            "sha256": "2fc5f952200bff40782f83ea1dc36bc4de697f6d581a78a303bb1f1b4ba7aaa2"
+            "path": "docs/review/committed-craft-01/11-13-native/zoom-light-1x.png",
+            "sha256": "b1617ed878887e65ccf40b04c77550e6b465821bcaea75eb1880bff3a05b8dbd"
+          },
+          {
+            "path": "docs/review/committed-craft-01/11-file-states-final/1-dpr1.png",
+            "sha256": "b639282771e74d5ca0dd62b89f8a1f382eb99677d69e0c1cf7a8c5107818927e"
           }
         ]
       },
       "status": "visually-reviewed-candidate",
-      "userApproval": "pending",
-      "beforeHash": "16c58db504d48ae7277938d1843b2104dc100d9d24a9b04f79907058ad94afe9",
-      "afterHash": "8301b4c1293aabe1def1389e410acf0e73f9297f212064c641c9f68cf16d504c"
+      "userApproval": "approved",
+      "beforeHash": "8301b4c1293aabe1def1389e410acf0e73f9297f212064c641c9f68cf16d504c",
+      "afterHash": "1ca494e8257b6098d781f60d49058687276cc42c91da50d89f581fb4881efeb6",
+      "userApprovalDate": "2026-11-17"
     },
     {
       "name": "table-row-add",
@@ -37805,7 +37876,7 @@
         "list",
         "message-plus"
       ],
-      "sourceObservation": "Lucide中段加號與Phosphor下方加號對照；Master採右下新增，保留列表母型。",
+      "sourceObservation": "精修：為與list-minus形成清楚配對，將操作標記由右下移至右側中央，三行內容略收短，保留原始點列與行距。Lucide的中置加號與內容分欄更直接，Phosphor右下配置亦合理；新稿在16px加號獨立、列表不黑成一塊。",
       "references": [
         {
           "name": "list-plus",
@@ -37851,54 +37922,59 @@
         }
       },
       "change": {
-        "kind": "retained",
-        "reason": "保留：加號與第三行切口分離，前兩行及三項目點完整，16px不和相鄰橫線黏合；加號大小與其他列表狀態相稱。",
+        "kind": "modified",
+        "reason": "精修：為與list-minus形成清楚配對，將操作標記由右下移至右側中央，三行內容略收短，保留原始點列與行距。Lucide的中置加號與內容分欄更直接，Phosphor右下配置亦合理；新稿在16px加號獨立、列表不黑成一塊。",
         "before": {
-          "path": "references/craft-05/master-before.json",
+          "path": "references/committed-craft-01/master-before.json",
           "variantsSha256": "05db2043dc0e0e6f0e69581e09fd29f45816135bae847a3e5182b8d932ca513a"
         }
       },
       "visualReview": {
-        "status": "retained-after-visual-review",
-        "reviewer": "root",
-        "date": "2026-11-16",
-        "skillVersion": "0.5.4",
-        "batch": "craft-05-46",
-        "variantsSha256": "05db2043dc0e0e6f0e69581e09fd29f45816135bae847a3e5182b8d932ca513a",
+        "status": "refined-after-visual-review",
+        "reviewer": "Codex (AI)",
+        "date": "2026-11-17",
+        "skillVersion": "0.5.11",
+        "batch": "10-lists-candidate",
+        "variantsSha256": "53161805490ec86dbfffa6d1f476401fa774d4fe5d2767a678889c3b62467554",
         "checks": [
           "16/20/24",
           "sharp/soft/rounded",
           "light/dark",
           "55-percent-foreground",
           "adjacent-text",
-          "two-pinned-source-comparisons",
+          "pinned-source-comparisons-with-declared-limitations",
           "true-before-after",
-          "painted-contour-and-cavity",
+          "family-consistency",
           "semantic-effect-decision"
         ],
         "evidence": [
           {
-            "path": "docs/review/craft-05/batch-46/comparison.png",
-            "sha256": "391c67ac56937159fd300b3ae3abab3506e9cdcf31a116b1433fcf06b6abaf31"
+            "path": "docs/review/committed-craft-01/09-10-native/native-1-light-1x.png",
+            "sha256": "7cfcdc022cdd18bb9a25d2f953171b06788e88f3ccbb8bb791e82d039e9210ab"
           },
           {
-            "path": "docs/review/craft-05/batch-46/native.png",
-            "sha256": "a352bb075409c7798a59065bec585ccec63c80fbf6b93a95afacffdf5ac7c744"
+            "path": "docs/review/committed-craft-01/09-10-native/native-1-dark-1x.png",
+            "sha256": "ade72822e07814cf7484aa257825596da821bc0af701b083d0d554213030f63d"
           },
           {
-            "path": "docs/review/craft-05/batch-46/native-dark.png",
-            "sha256": "14d3528309a61985d0da42cd3d29ce139fa49fef23b4ab5e621545fca053be3a"
+            "path": "docs/review/committed-craft-01/09-10-native/context-light-1x.png",
+            "sha256": "26b89bee5bc0f1a596f93d2e42b6693f6e184ab7bbaec8d3c85d12965d710f58"
           },
           {
-            "path": "docs/review/craft-05/batch-46/diagnostic.png",
-            "sha256": "dd2e450cf6fb1315ada23c7ed29fb2c3854477685e00d33d335ba336d0d0feb6"
+            "path": "docs/review/committed-craft-01/09-10-native/zoom-light-1x.png",
+            "sha256": "0c95a4995b11fb295fe70ef6bf5ce272d218017be89d10355be018b3b36cb2a5"
+          },
+          {
+            "path": "docs/review/committed-craft-01/10-lists-candidate/1-dpr1.png",
+            "sha256": "36a4f42c106f2e9f7e0fd788e99b1555ae48fe76bbf6b4b06d66cc4c91fce7c7"
           }
         ]
       },
       "status": "visually-reviewed-candidate",
-      "userApproval": "pending",
+      "userApproval": "approved",
       "beforeHash": "05db2043dc0e0e6f0e69581e09fd29f45816135bae847a3e5182b8d932ca513a",
-      "afterHash": "05db2043dc0e0e6f0e69581e09fd29f45816135bae847a3e5182b8d932ca513a"
+      "afterHash": "53161805490ec86dbfffa6d1f476401fa774d4fe5d2767a678889c3b62467554",
+      "userApprovalDate": "2026-11-17"
     },
     {
       "name": "list-minus",
@@ -37910,7 +37986,7 @@
         "list",
         "minus"
       ],
-      "sourceObservation": "Lucide list-minus直接對照，Tabler playlist-x僅列表刪除構造參考；Master保留減號而不改成X。",
+      "sourceObservation": "精修：前稿減號與底部文字同高，易讀成一條中斷的文字線；改成右側中置操作欄，縮短內容行，與list-plus共享母型。Lucide同語意的中置減號更清楚，吸收其分欄關係而保留點列。Tabler playlist-x僅為移除清單的結構參考；另查固定Phosphor版本list-minus回404，來源限制如實保留。",
       "references": [
         {
           "name": "list-minus",
@@ -37956,54 +38032,59 @@
         }
       },
       "change": {
-        "kind": "retained",
-        "reason": "保留：右下減號前的透明空隙足以分開符號和第三行，16px仍保留三個項目點；三角型下減號端點完整。",
+        "kind": "modified",
+        "reason": "精修：前稿減號與底部文字同高，易讀成一條中斷的文字線；改成右側中置操作欄，縮短內容行，與list-plus共享母型。Lucide同語意的中置減號更清楚，吸收其分欄關係而保留點列。Tabler playlist-x僅為移除清單的結構參考；另查固定Phosphor版本list-minus回404，來源限制如實保留。",
         "before": {
-          "path": "references/craft-05/master-before.json",
+          "path": "references/committed-craft-01/master-before.json",
           "variantsSha256": "63c3d063cf4794a2fa514ab01dcf1fd7e0094ad2db1c1aedf5f9e5cddf48ace8"
         }
       },
       "visualReview": {
-        "status": "retained-after-visual-review",
-        "reviewer": "root",
-        "date": "2026-11-16",
-        "skillVersion": "0.5.4",
-        "batch": "craft-05-46",
-        "variantsSha256": "63c3d063cf4794a2fa514ab01dcf1fd7e0094ad2db1c1aedf5f9e5cddf48ace8",
+        "status": "refined-after-visual-review",
+        "reviewer": "Codex (AI)",
+        "date": "2026-11-17",
+        "skillVersion": "0.5.11",
+        "batch": "10-lists-candidate",
+        "variantsSha256": "e23a6ba0d628b654062731e04b53d6a9e99d1286f823b6c342ab4cd10919dbe9",
         "checks": [
           "16/20/24",
           "sharp/soft/rounded",
           "light/dark",
           "55-percent-foreground",
           "adjacent-text",
-          "two-pinned-source-comparisons",
+          "pinned-source-comparisons-with-declared-limitations",
           "true-before-after",
-          "painted-contour-and-cavity",
+          "family-consistency",
           "semantic-effect-decision"
         ],
         "evidence": [
           {
-            "path": "docs/review/craft-05/batch-46/comparison.png",
-            "sha256": "391c67ac56937159fd300b3ae3abab3506e9cdcf31a116b1433fcf06b6abaf31"
+            "path": "docs/review/committed-craft-01/09-10-native/native-1-light-1x.png",
+            "sha256": "7cfcdc022cdd18bb9a25d2f953171b06788e88f3ccbb8bb791e82d039e9210ab"
           },
           {
-            "path": "docs/review/craft-05/batch-46/native.png",
-            "sha256": "a352bb075409c7798a59065bec585ccec63c80fbf6b93a95afacffdf5ac7c744"
+            "path": "docs/review/committed-craft-01/09-10-native/native-1-dark-1x.png",
+            "sha256": "ade72822e07814cf7484aa257825596da821bc0af701b083d0d554213030f63d"
           },
           {
-            "path": "docs/review/craft-05/batch-46/native-dark.png",
-            "sha256": "14d3528309a61985d0da42cd3d29ce139fa49fef23b4ab5e621545fca053be3a"
+            "path": "docs/review/committed-craft-01/09-10-native/context-light-1x.png",
+            "sha256": "26b89bee5bc0f1a596f93d2e42b6693f6e184ab7bbaec8d3c85d12965d710f58"
           },
           {
-            "path": "docs/review/craft-05/batch-46/diagnostic.png",
-            "sha256": "dd2e450cf6fb1315ada23c7ed29fb2c3854477685e00d33d335ba336d0d0feb6"
+            "path": "docs/review/committed-craft-01/09-10-native/zoom-light-1x.png",
+            "sha256": "0c95a4995b11fb295fe70ef6bf5ce272d218017be89d10355be018b3b36cb2a5"
+          },
+          {
+            "path": "docs/review/committed-craft-01/10-lists-candidate/2-dpr1.png",
+            "sha256": "26c435df9e4773d79c1360d4109f5e59b5933b027383d35f817c9830b9345c7b"
           }
         ]
       },
       "status": "visually-reviewed-candidate",
-      "userApproval": "pending",
+      "userApproval": "approved",
       "beforeHash": "63c3d063cf4794a2fa514ab01dcf1fd7e0094ad2db1c1aedf5f9e5cddf48ace8",
-      "afterHash": "63c3d063cf4794a2fa514ab01dcf1fd7e0094ad2db1c1aedf5f9e5cddf48ace8"
+      "afterHash": "e23a6ba0d628b654062731e04b53d6a9e99d1286f823b6c342ab4cd10919dbe9",
+      "userApprovalDate": "2026-11-17"
     },
     {
       "name": "barcode",
@@ -39799,7 +39880,7 @@
         "file-text",
         "braces"
       ],
-      "sourceObservation": "Lucide file-braces 為同語意；Tabler file-code-2 是程式文件構造參考。Master 使用可辨識的大括號而不是把一般 code 符號當作 JSON。",
+      "sourceObservation": "精修：前稿花括號腰部貼近文件側壁，收窄左右字形並保留中央通道，外腰由8/16改為8.75/15.25。Lucide花括號更集中，Tabler file-code-2只有程式文件結構參考；新版三尺寸保留上下回彎和中腰，沒有把字形改成直桿。",
       "references": [
         {
           "name": "file-json",
@@ -39846,53 +39927,58 @@
       },
       "change": {
         "kind": "modified",
-        "reason": "隨文件母型修改：折角內線按外殼墨線裁切，sharp 和 rounded 不再有接縫外凸；保留成對大括號及其內部空隙。",
+        "reason": "精修：前稿花括號腰部貼近文件側壁，收窄左右字形並保留中央通道，外腰由8/16改為8.75/15.25。Lucide花括號更集中，Tabler file-code-2只有程式文件結構參考；新版三尺寸保留上下回彎和中腰，沒有把字形改成直桿。",
         "before": {
-          "path": "references/craft-05/master-before.json",
-          "variantsSha256": "deef5c914eed6d40a20a0b0a7f8090c2d4db21aeb81b01ba3e879822e4c834b9"
+          "path": "references/committed-craft-01/master-before.json",
+          "variantsSha256": "ee39fa910eb4dcb2570b6e8b285b8fb6162dda040b88fa4d534ecac88bbafc63"
         }
       },
       "visualReview": {
-        "status": "modified-after-visual-review",
-        "reviewer": "root",
-        "date": "2026-11-16",
-        "skillVersion": "0.5.4",
-        "batch": "craft-05-48",
-        "variantsSha256": "ee39fa910eb4dcb2570b6e8b285b8fb6162dda040b88fa4d534ecac88bbafc63",
+        "status": "refined-after-visual-review",
+        "reviewer": "Codex (AI)",
+        "date": "2026-11-17",
+        "skillVersion": "0.5.11",
+        "batch": "12-file-content-candidate",
+        "variantsSha256": "d2f88dc3ec9bfa83097eeaa6b40f440747af025b6558a50ed6021090f743dfd5",
         "checks": [
           "16/20/24",
           "sharp/soft/rounded",
           "light/dark",
           "55-percent-foreground",
           "adjacent-text",
-          "two-pinned-source-comparisons",
+          "pinned-source-comparisons-with-declared-limitations",
           "true-before-after",
-          "painted-contour-and-cavity",
+          "painted-clearance",
           "semantic-effect-decision"
         ],
         "evidence": [
           {
-            "path": "docs/review/craft-05/batch-48/comparison.png",
-            "sha256": "69e5544ffc3869bbaddf40571407c23a704369452cdb19099a55bf4abd07bac2"
+            "path": "docs/review/committed-craft-01/11-13-native/native-1-light-1x.png",
+            "sha256": "2ec598e7fd815b483349f459cafcf2f7b48b773db543774f3b0e1bbb9fbf2833"
           },
           {
-            "path": "docs/review/craft-05/batch-48/native.png",
-            "sha256": "ad4cd763d81e6c8bacc5ea2914ac73c354f363523007e1af9bc5f5a555429855"
+            "path": "docs/review/committed-craft-01/11-13-native/native-1-dark-1x.png",
+            "sha256": "1c867f9748867e79a23eac64d2b329d3960b5d7dd674e2521f60626c2c797d81"
           },
           {
-            "path": "docs/review/craft-05/batch-48/native-dark.png",
-            "sha256": "37449fd0933599df1fb161b12a4af89f346cce4596527ccc3d3ebde511256629"
+            "path": "docs/review/committed-craft-01/11-13-native/context-light-1x.png",
+            "sha256": "69a73751bdfb7e81a6da38bd33110119703f3c434f6450a5c0e382710dc02214"
           },
           {
-            "path": "docs/review/craft-05/batch-48/diagnostic.png",
-            "sha256": "001bf3be03b06558af134838ca5accf5412e5eef4a16e37a4cb70d748f6e894b"
+            "path": "docs/review/committed-craft-01/11-13-native/zoom-light-1x.png",
+            "sha256": "b1617ed878887e65ccf40b04c77550e6b465821bcaea75eb1880bff3a05b8dbd"
+          },
+          {
+            "path": "docs/review/committed-craft-01/12-file-content-candidate/1-dpr1.png",
+            "sha256": "9bf87ddd55e35a79aa7bdea1e753d24c978e8a6471bb469805e1b157d149e490"
           }
         ]
       },
       "status": "visually-reviewed-candidate",
-      "userApproval": "pending",
-      "beforeHash": "deef5c914eed6d40a20a0b0a7f8090c2d4db21aeb81b01ba3e879822e4c834b9",
-      "afterHash": "ee39fa910eb4dcb2570b6e8b285b8fb6162dda040b88fa4d534ecac88bbafc63"
+      "userApproval": "approved",
+      "beforeHash": "ee39fa910eb4dcb2570b6e8b285b8fb6162dda040b88fa4d534ecac88bbafc63",
+      "afterHash": "d2f88dc3ec9bfa83097eeaa6b40f440747af025b6558a50ed6021090f743dfd5",
+      "userApprovalDate": "2026-11-17"
     },
     {
       "name": "folder-code",
