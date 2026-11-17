@@ -7,7 +7,7 @@ const locale=Astro.props.params?.locale??Astro.params.locale??'en'
 const copy=translations[locale]??translations.en
 const t=(key:string)=>copy[key]??key
 const catalog=JSON.parse(await readFile(new URL('../../../packages/icons/dist/catalog.json',import.meta.url),'utf8'))
-const entries=catalog.icons.map(({name,component,label,category,keywords,pilot}:any)=>({name,component,label,category,keywords,pilot}))
+const entries=catalog.icons.map(({name,component,label,category,keywords}:any)=>({name,component,label,category,keywords}))
 const categories=catalog.categories.map(({id}:any)=>({id,label:'category:'+id}))
 export const metadata={title:'Browse Master Icons',description:'Interface icons at their native size.'}
 export async function generateMetadata({params}:{params:{locale:string}}){const copy=translations[params.locale]??translations.en;return{title:copy['Browse Master Icons'],description:copy['Interface icons at their native size.']}}

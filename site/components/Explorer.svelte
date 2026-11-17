@@ -12,7 +12,7 @@
  import {onMount, tick, type Snippet} from 'svelte'
  import '@master/internal-site/styles/system/sidebar.css'
  import {renderSvg, getOpticalSize, type IconDefinition} from '@master/icons/runtime'
- type Entry={name:string;component:string;label:string;category:string;keywords:string[];pilot?:boolean}
+ type Entry={name:string;component:string;label:string;category:string;keywords:string[]}
  let {entries,categories,copy,locale,children}:{entries:Entry[];categories:{id:string;label:string}[];copy:Record<string,string>;locale:string;children?:Snippet}=$props()
  const t=(key:string)=>copy[key]??key
  const instanceId=$props.id()
@@ -29,7 +29,7 @@
  let format=$state<CodeFormat>('svg')
  const label=(entry:Entry)=>entry.category==='brands'||locale!=='en'?entry.label:entry.name.replaceAll('-',' ')
  const translation=(entry:Entry)=>locale!=='en'&&entry.category!=='brands'?entry.label:''
- const filtered=$derived(entries.filter(x=>(category==='all'||category==='pilot'&&x.pilot||x.category===category)&&(!query.trim()||`${x.name} ${x.label} ${x.keywords.join(' ')}`.toLowerCase().includes(query.trim().toLowerCase()))))
+ const filtered=$derived(entries.filter(x=>(category==='all'||x.category===category)&&(!query.trim()||`${x.name} ${x.label} ${x.keywords.join(' ')}`.toLowerCase().includes(query.trim().toLowerCase()))))
  const limit=$derived(view==='optical'?24:96)
  const pages=$derived(Math.max(1,Math.ceil(filtered.length/limit)))
  const current=$derived(Math.min(page,pages))
@@ -43,7 +43,6 @@
  const cornerLabel=(c:string)=>t(c[0].toUpperCase()+c.slice(1))
  const categoryOptions=$derived([
   {id:'all',label:t('All icons'),count:entries.length},
-  {id:'pilot',label:t('Representative icons'),count:entries.filter(entry=>entry.pilot).length},
   ...categories.map(c=>({id:c.id,label:t(c.label),count:entries.filter(entry=>entry.category===c.id).length}))
  ])
  function categoryURL(id:string){
@@ -55,7 +54,7 @@
  }
  function fromURL(){
   const p=new URLSearchParams(location.search)
-  query=p.get('q')??'';category=['all','pilot',...categories.map(x=>x.id)].includes(p.get('category')??'')?p.get('category')!:'all'
+  query=p.get('q')??'';category=['all',...categories.map(x=>x.id)].includes(p.get('category')??'')?p.get('category')!:'all'
   size=displaySizes.includes(Number(p.get('size')) as DisplaySize)?Number(p.get('size')) as DisplaySize:24
   stroke=parseStroke(p.get('stroke'),getOpticalSize(size))
   corner=corners.includes(p.get('corner') as 'soft')?p.get('corner') as 'soft':'soft'
@@ -112,7 +111,7 @@
    <div class="field"><span id={`${instanceId}-view`}>{t('View')}</span><div class="segmented w-full" role="group" aria-labelledby={`${instanceId}-view`}><button type="button" class="segmented-item" aria-pressed={view==='library'} onclick={()=>{view='library';page=1}}>{t('Collection')}</button><button type="button" class="segmented-item" aria-pressed={view==='optical'} onclick={()=>{view='optical';page=1}}>{t('Size comparison')}</button></div></div>
    <a class="btn btn-sm" href={`/downloads/master-icons-${opticalSize}-${corner}${stroke===null?'':`-stroke-${stroke}`}.zip`} download>{t('Download set')}<span aria-hidden="true"> · {opticalSize} px</span></a>
   </div>
-  <label class="field explorer-category"><span>{t('Category')}</span><select class="select" bind:value={category} onchange={()=>page=1}><option class="select-option" value="all">{t('All icons')}</option><option class="select-option" value="pilot">{t('Representative icons')}</option>{#each categories as c}<option class="select-option" value={c.id}>{t(c.label)}</option>{/each}</select></label>
+  <label class="field explorer-category"><span>{t('Category')}</span><select class="select" bind:value={category} onchange={()=>page=1}><option class="select-option" value="all">{t('All icons')}</option>{#each categories as c}<option class="select-option" value={c.id}>{t(c.label)}</option>{/each}</select></label>
  </div>
  </div>
   <div class="field scroll-area explorer-categories">
