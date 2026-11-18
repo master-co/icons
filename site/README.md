@@ -66,7 +66,7 @@ The Pages project is connected to `master-co/icons` with:
 | Build command | `bun run build:site:cloudflare-pages` |
 | Build output directory | `site/out` |
 | Root directory | (repository root) |
-| Build variables | `BUN_VERSION=1.4.4`, `NODE_VERSION=24` |
+| Build variables | `BUN_VERSION=1.4.4`, `NODE_VERSION=24.22.1`, `SKIP_DEPENDENCY_INSTALL=1` (the build script installs the locked dependencies itself) |
 | Custom domain | `icons.master.co` |
 
 `scripts/build-site-hosted.sh` sets `PUBLIC_URL=https://icons.master.co` and `PUBLIC_VERSION` to the newest version npm serves for `@master/icons`, installs the locked dependencies and runs `bun run build:site`. The output has about 1,100 files, well below the Pages limit of 20,000. Every SVG renders in the browser from `/data`, so neither native masters nor custom stroke weights add files, and the twelve ZIP download sets are GitHub release assets rather than site files: `aronrepo.config.js` attaches them to every release under names without a version, and the site links to `https://github.com/master-co/icons/releases/latest/download/<name>`. `assets/_redirects` sends `/download` and `/tw/download` to the download guide.
