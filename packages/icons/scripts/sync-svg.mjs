@@ -26,5 +26,5 @@ for(const entry of await readdir(resolve(root,'icons'),{recursive:true,withFileT
 }
 // The application skill is authored at the repository root and ships inside the core package.
 await rm(resolve(root,'skills'),{recursive:true,force:true});
-await cp(resolve(root,'../../skills/use-master-icons'),resolve(root,'skills/use-master-icons'),{recursive:true});
+await cp(resolve(root,'../../skills/master-icons'),resolve(root,'skills/master-icons'),{recursive:true});
 console.log(`SVGs: synchronized ${emitted.size} files in ${((performance.now()-started)/1000).toFixed(2)}s`);

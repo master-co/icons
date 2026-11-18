@@ -6,7 +6,7 @@ Use Bun 1.4.4 and Node.js 24 or later. Run `bun run check` before committing; ru
 
 ## Agent resources
 
-- `skills/master-icons/` is for contributors drawing icons; `skills/use-master-icons/` is for agents using the packages in an application. Edit the latter at the repository root: the core build (`packages/icons/scripts/sync-svg.mjs`) copies it into `packages/icons/skills/` (ignored), it ships in `@master/icons`, and `bun run check:package` runs its catalog search from the packed package. Keep its rules in step with the guides.
+- `.agents/skills/icon-craft/` is for contributors drawing, refining and reviewing icons in this repository; it never ships. `skills/master-icons/` is for agents using the packages in an application. Edit it at the repository root: the core build (`packages/icons/scripts/sync-svg.mjs`) copies it into `packages/icons/skills/` (ignored), it ships in `@master/icons`, and `bun run check:package` runs its catalog search from the packed package. Keep its rules in step with the guides.
 - `site/scripts/llms.ts` writes `llms.txt`, `llms-full.txt` and every guide as Markdown (English at the root, Traditional Chinese under `/tw/`) into `site/public/` during preparation. New guides are picked up from their metadata; only a new MDX component needs a rule there for its Markdown form.
 
 ## Generated files

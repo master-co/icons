@@ -31,7 +31,7 @@ function findCatalog() {
     candidates.push(join(dir, 'node_modules/@master/icons/dist/catalog.json'));
     if (dirname(dir) === dir) break;
   }
-  // Shipped inside @master/icons: skills/use-master-icons/scripts -> package root.
+  // Shipped inside @master/icons: skills/master-icons/scripts -> package root.
   candidates.push(fileURLToPath(new URL('../../../dist/catalog.json', import.meta.url)));
   return candidates.find(existsSync);
 }

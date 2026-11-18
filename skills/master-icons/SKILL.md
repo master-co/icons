@@ -1,99 +1,88 @@
 ---
 name: master-icons
-description: 製作、精修與審查 Master Icons 的中立微圓 SVG 圖示。用於收錄與替代判斷、圖形語意、線條與比例、曲線工藝、負空間、16/20/24 光學尺寸、sharp/soft/rounded 幾何，以及圖示家族一致性；不涵蓋品牌 logo、玻璃插畫或單純替介面挑選現成圖示。
+description: Use Master Icons (@master/icons and its React, Vue, Svelte, Preact and Astro packages) in an application. Covers choosing the package and entry, optical sizes, corners, stroke width, accessibility, and finding real icon names in the catalog. Use when adding, replacing or reviewing icons in app code that uses or should use Master Icons; not for drawing or contributing icons to the library.
 license: MIT
 metadata:
   author: master-co
-  version: "0.5.20"
+  homepage: https://icons.master.co
 ---
 
-# Master Icons
+# Use Master Icons
 
-本 skill 是 Master Icons 的製作與貢獻規範，供貢獻者與 AI 輔助工具使用。設計取向為微圓、單色、平面 outline，著重語意、輪廓、比例、留白與原生尺寸。規範描述製作要求，不代表現有圖稿均已符合或完成維護者審定。
+Master Icons are optically sized interface icons: every icon has separate drawings for 16, 20 and 24 px, each in three corner styles (`sharp`, `soft`, `rounded`). Icons draw in `currentColor`.
 
-數量目標不降低工藝門檻。先處理已見的粗糙輪廓、比例和曲線，再擴量；必要時退回重畫整顆。審美判斷須落在具體形狀，不能以「可辨識」「已渲染」「已看過」代替造型完成。
+Full documentation for agents: https://icons.master.co/llms.txt (each guide is also available as Markdown, for example https://icons.master.co/guide/getting-started.md).
 
-## 確認工作範圍
+## Never invent an icon name
 
-找到使用者指定的 repository，讀取適用的 AGENTS.md、設計規範、幾何原始碼及最接近的家族圖形。以目前原始碼為準；此 skill 的尺寸數值是 alpha 起點，以目前設計規範及任務要求為準。不要因為現有圖示是 alpha 就擴成整庫重製。
-
-- **新增概念**：先做[收錄判斷](references/review.md#收錄判斷)，通過才畫。候選須指向具體控制項，說清楚已有圖示放入同一情境後會遺失哪項必要資訊。命令名稱、套件收錄、同族缺一個方向或數量目標，單獨都不足以新增。
-- **精修**：先指出可見問題，保留修改前圖稿；一次先改一個可判斷的變數。
-- **從頭重畫**：使用者要求不保留舊稿時，先移除指定範圍的舊幾何、候選、對照頁及生成資產，撤銷其通過紀錄。從使用情境、範圍外的既有家族母型與固定外部來源重新設計；不另存舊稿、不從 Git 取回作參考，也不沿用舊造型結論。只保留需求、替代判斷與必要授權紀錄。本模式優先於下文保存前稿與 A/B 的一般要求，不要求改寫 Git 歷史。
-- **審查**：提供具體缺陷與修正方向；未要求修改時不順手重畫。
-- **改整體語言**：用少量不同結構的代表作試驗，確認對密集圖形及整個家族的影響，再推廣至要求範圍。自行完成可逆試作，不把每一步變成批准關卡。
-
-## 按需讀取
-
-| 任務 | 參考 |
-| --- | --- |
-| 語意、中立造型、曲線、間距、比例與視覺重量 | [造型工藝](references/craft.md) |
-| 小尺寸簡化、實際圓角、像素與描邊 | [光學尺寸與幾何](references/optical-geometry.md) |
-| 線條快黏合、部件擁擠、內孔與整顆疏密 | [空間分配與視覺分離](references/spacing.md) |
-| repository 接入、生成、命名、輸出與驗證 | [製作流程](references/production.md) |
-| 原生檢視、A/B、缺陷記錄與完成判斷 | [審稿與證據](references/review.md) |
-| 研究比較、改作、授權與公開表述 | [來源處理](references/authorship.md) |
-
-## 製作順序
-
-1. 用一句話定義概念、相近但不能混淆的概念，以及使用情境；指出物件靠哪些形態表達用途、構造和姿態。優先使用能跨產品理解的形狀，不為差異化發明難懂符號。
-2. 選擇至少兩份同語意的成熟圖庫原稿，固定版本並保存來源與授權資訊。可從 Lucide、Tabler、Heroicons、Phosphor、Material Symbols、Radix、Iconoir、Hugeicons 等選擇；先確認圖形與用途，不能只靠同名搜尋。比較輪廓、比例、描邊密度、曲線、間距及小尺寸；只有家族／構造參考或不足兩份時明記限制，不假稱同語意對照。
-3. 用精簡輪廓保留物件特有的形態。先處理比例、重心、支承與空白，再加入必要內部訊號；優先把構造融入外輪廓，不以最少線數為目標。共享家族母型，避免每個變體各畫一套近似輪廓。
-4. 在原生 16 與 24 同時檢查結構，讓兩端限制相互校正，再調整 20。移除小尺寸裝飾性細節；保留核心語意。簡單符號不需要刻意改拓撲。
-5. 製作需要的 sharp / soft / rounded。改實際輪廓半徑並檢查內孔與鄰接結點；不能只換 linejoin。沒有角的圖形允許不同預設共用幾何。
-6. 在單色淺底、深底、相鄰圖示與真實文字旁檢視原生大小。放大圖只用來診斷接縫。發現問題就回到可編輯幾何修正，不在輸出 SVG 上補丁。
-7. 每次畫完或改完一顆，都把最新稿與來源重新並列，做一次審美回比；來源略勝時先提煉其優點並回修，再做同尺寸比較，不能沿用繪製前的觀察充當完稿結論。方法見審稿與證據的「完稿後的來源審美回比」。
-8. 生成並執行與變更相關的檢查。保留修改前後畫面與理由；結構測試通過和視覺審定分開陳述。
-
-## 本專案製作契約
-
-- **輪廓**：剪影先成立，檢查比例、重心與負空間；不為獨特犧牲慣用語意。
-- **物件語意與形態保真**：在簡約前提下，盡可能透過線條、曲線和比例強化物件本身的構造、用途與姿態。辨識「是什麼」只是起點；底足、肩部、口沿、收腹、接地等若有助於表現該物件，先嘗試融入連續輪廓或共同邊界，不一律當裝飾刪除。簡化後須確認物件沒有退化成通用幾何，也沒有靠文字或附加符號補救薄弱主體。具體取捨與碗底反例見造型工藝的「物件語意與形態保真」。
-- **整體造型**：先成立完整物件，再安排零件。各部件的尺度、方向、曲面與承接須共同形成一體感；不能把圓、矩形等各自畫對就視為物體成立。出現拼裝感時回修母型、共用邊界與過渡，不只調圓角或強併成單一路徑。詳見造型工藝的「整體造型與部件承接」。
-- **細節**：每筆內線有辨識用途；清除重疊描邊、幾乎相碰的端點、過密孔洞與裝飾分割。
-- **結構接縫**：內分界、箭桿與外殼的交接按實際墨線收口，端帽不得突出外殼或箭翼；圓角後須重算接點；比較端帽的完整墨線包絡，不能只縮短中心線或改成 butt 就視為通過。這類連接保持相接，不套用前景徽標的淨空。
-- **字形與對稱構造**：數學變數等文字訊號按字形設計，不以關閉符號的兩條直線代替；對稱工具先建立構造軸線，再施加有理由的光學補償。
-- **墨線與光學間距**：同時檢查外輪廓與內孔；中心線對齊或沒有幾何交集不代表視覺間距成立。尖角斜接、端帽與小徽標可需各自的光學補償；母型修改後檢查所有受影響狀態。
-- **空間分配**：把留白當作需要設計的形狀。先安排主體、必要空腔及部件之間的可見通道，再放內線；檢查局部狹縫、平行線走廊及整顆疏密。框內套框先算描邊後的空間預算，容不下就改構造。原生 16px 看成一團、獨立部件近乎黏合，或只有放大才看得出分離時，退回重排／簡化，不以「未相交」放行。同批反覆出現相同擁擠時先修共同構造，再繼續擴量。依同尺寸來源比較，具體方法見空間分配參考。
-- **曲線**：檢查位置與切線連續性、曲率變化、凹口、轉折及收筆；必要時整顆重畫。
-- **造型完成度**：逐顆判斷輪廓張力、部件尺度、虛實節奏與細節的必要性。曲線須有明確的肩部、腹部、收束與切線走向；圓角工具不能替代物體自身的曲面設計。具體審法見造型工藝的「輪廓與目標曲線」。
-- **圓角的邊界**：按部件語意選擇角型與端帽。預設微圓不表示每一筆都圓；撕線、拉鏈齒軌可明確使用平切端帽。物體本身的曲面也不因 sharp 預設被拉直。
-- **遮擋輪廓避讓（knockout clearance）**：前景斜線、×、−、鎖頭等覆蓋主體時，以其實際描邊外緣作等距外擴，從後方主體扣除避讓區。切口貼合外擴輪廓，形成一致、真透明的負空間；不以縮短中心線、圓端帽或矩形挖角冒充。封閉徽標含其內部遮擋區；無碰撞的內置符號與語意相連的結構不強切。詳見工藝參考。
-- **重複物體的構造一致性**：堆疊薄片、卡片等需比較各層實際可見寬度、斜率、露邊與收筆；端點共用座標或中心線等距，不能代替輪廓一致。結構曲面與局部角型分開處理，詳見工藝參考。
-- **家族母型**：畫變體或複合圖前，按語意與別名找到現有主體及徽標，追到實際 drawing 函式。直接取用該函式或共同的參數化幾何，再安置、縮放或做遮擋。審稿時把母型、獨立部件和組合圖在 16px 並排；輪廓相似仍須核對程式是否共源。光學簡化與特例見[母型與複合圖的回查](references/review.md#母型與複合圖的回查)。
-- **完稿審美回比**：每顆最新稿都要回到來源比較整體氣質、輪廓、比例、虛實與視覺節奏。來源哪怕略勝，也須指出優勢並提煉其構造，必要時直接靠齊較成熟的造型；不為自家差異、既有投入或先前通過記錄保留較差解法。採用／改作如實記錄來源與授權。
-- **逐顆效果判斷**：記錄虛線、透明度／漸淡採用或不採用的語意理由。主要輪廓保持可辨識；漸淡以逐筆透明度表達，不新增連續 SVG 漸層、mask 或公開效果參數。
-- **範圍與批次**：保留原始 48 名稱的相容性基準，依 `packages/icons/src/core-names.json`、`ui-scope.json` 及後續明確清單（例如 `organization-scope.json`）驗證精確聯集。新增範圍由任務決定，不以數量門檻擴張。批次製作以同家族 8–12 顆為上限，完成來源並列、逐項觀察與必要精修再進下一批；複雜造型或語言尚未穩定時縮小至 1–3 顆。已授權範圍內不需逐批等待批准。
-
-- 必要時可以使用虛線，例如隱藏邊界、選取範圍、路徑與未完成狀態；按原生尺寸調整段長、間距及端帽。
-- 必要時可以使用透明度、漸淡，表達前後層次或次要訊息。不可用淡化掩飾重疊、斷線與輪廓缺陷；在淺底、深底和低對比文字色檢查辨識。
-- 可以直接借鑑成熟造型，也可以依授權採用或修改圖稿；不為了看起來不同而犧牲品質。具體沿用時記錄真實來源和 notices，研究引用與產品介面標籤分開。
-- 整庫精修使用逐項紀錄：待比對、已比對待修、已修改待目視、已目視；保存舊稿、缺陷、參考、改動和證據。輸出成功、渲染通過與數量達標不等於設計完成。
-
-## 穩定的判斷原則
-
-- 中立是少帶裝飾與文化假設，並非所有概念強塞進同一個方框。也不等於宣稱所有文化、語言都能直接辨識。
-- 同一尺寸的主要描邊維持一致；視覺重量先用尺寸、開口、路徑密度和留白修正。圓點是獨立元素，點徑不必機械等於描邊寬。
-- 對齊畫出的邊界，而非只對齊中心線或外接框。接點、端帽、凹角與斜線會改變實際墨量。
-- 原生小圖看不清時，先簡化；不以四倍放大看起來精緻作為通過理由。
-- 區分有辨識用途的孔與可改實心的細節；接點是否相連須由構造決定，端帽剛好遮住微縫不代表幾何正確。具體例子見光學與工藝參考。
-- 不從競品 SVG 自動轉換整套圖庫。研究設計原理不等於圖稿來源；獨立製作的圖示不逐顆掛參考圖庫標籤。實際沿用的資產按其來源處理。
-- 品質問題按可見缺陷描述；不把像素數、路徑數、墨量或網格整齊程度當成美感總分。
-
-## 公開紀錄與表述
-
-描述可驗證的能力與限制：原生尺寸、角型、輸出方式及具體檢查。避免「完全原創」「像素完美」「全庫品質保證」等無法由紀錄支持的說法。保留真實製作來源與適用授權；以自家幾何重寫不能自動抹除改作關係。
-
-記錄 AI 輔助與審查者身分，分開陳述工程檢查、實際目視及維護者定案。未實際查看的圖稿維持待審，不能因建置、checksum 或截圖生成成功改成通過。詳見 [來源處理](references/authorship.md) 與 [審稿與證據](references/review.md)。
-
-## 可重複的審稿產物
-
-先在專案執行 build，再使用 skill 附帶腳本。將 `<skill-dir>` 換成本 skill 的實際位置，路徑不可照抄成固定使用者目錄。
+Icon names are not guessable from other libraries. Before you import an icon whose exact name you have not seen in this project or the catalog, search the catalog:
 
 ```sh
-node <skill-dir>/scripts/render-review.mjs --repo /path/to/master-icons --icons search,file-text,calendar,settings --out /path/to/master-icons/work/review
+node node_modules/@master/icons/skills/master-icons/scripts/search.mjs search
+node node_modules/@master/icons/skills/master-icons/scripts/search.mjs "arrow left" --limit 5
 ```
 
-會生成可離線開啟的 review.html、原生明暗 contact sheets（DPR 1 / 2）、放大診斷頁截圖與 raster metrics。它讀取 repository 既有 Playwright，不安裝套件、不啟動持續服務、不改圖稿。修改前可把 dist 複製至 work/before；修改後加 `--baseline /path/to/work/before`，輸出同尺寸 A/B。依然必須實際打開截圖。
+The script prints each match's name (`folder-search`), its component (`FolderSearchIcon`) and its category. It reads `node_modules/@master/icons/dist/catalog.json` from the current directory or its parents; pass `--catalog <path>` otherwise, or `--json` for machine-readable output. If nothing fits, say so and propose the closest match instead of making up a name. The same data is importable as `@master/icons/catalog`.
 
-交付說清楚：改了哪些形狀、解決什麼可見問題、檢查了哪些尺寸／背景、有哪些未驗證之處。使用者可以審稿，不代表每次修改都要停下等批准。此 skill 不要求發布、建立 PR、提交 Git 或安裝其他 skill。
+## Packages
+
+Install exactly one package, for the framework the app already uses. Each framework package brings the `@master/icons` core with it.
+
+| Framework | Package |
+| --- | --- |
+| React 18 or 19 | `@master/icons-react` |
+| Vue 3.5 or later | `@master/icons-vue` |
+| Svelte 5 | `@master/icons-svelte` |
+| Preact 11 | `@master/icons-preact` |
+| Astro 7 (Node.js 24+) | `@master/icons-astro` |
+| No framework (SVG strings, plain JavaScript) | `@master/icons` |
+
+Install only these names, with the project's package manager; never a package with a similar name.
+
+## Entries
+
+Both kinds of entry export the same names. Framework components end in `Icon` (`SearchIcon`); the core exports geometry by plain name (`Search`) with `renderSvg`.
+
+- **Dynamic** (`@master/icons-react`): each icon carries all nine drawings and accepts `size`, `corner` and `strokeWidth`.
+- **Fixed** (`@master/icons-react/20/soft`): each icon carries one drawing and ships less. Prefer it when the app uses one size and corner everywhere.
+
+```tsx
+import { SearchIcon } from '@master/icons-react';
+<SearchIcon size={20} label="Search" />
+
+import { SearchIcon as Search20 } from '@master/icons-react/20/soft';
+<button aria-label="Search"><Search20 /></button>
+```
+
+```js
+import { Search, renderSvg } from '@master/icons';
+const svg = renderSvg(Search, { size: 16, corner: 'soft' });
+```
+
+Plain SVG files are at `@master/icons/svg/<size>/<corner>/<name>.svg`.
+
+## Size and corners
+
+- Pick the size with `size` (16, 20 or 24; default 24). It selects the nearest optical drawing. Never resize an icon with CSS `width`/`height` or `transform`; a scaled drawing loses its optical tuning.
+- 24 suits a general interface; 16 or 20 suit dense ones. Keep one corner style per interface; `soft` is the default.
+
+## Stroke width
+
+- Without `strokeWidth`, each size keeps its native stroke. Set `strokeWidth` only within its size's range, in steps of 0.25:
+  - 16 px: 0.75–1.5
+  - 20 px: 1–2
+  - 24 px: 1.25–2.5
+- Out-of-range values are clamped. `strokeWidth` chooses precomputed geometry, so never override `stroke-width` in CSS or on the SVG.
+
+## Accessibility
+
+- An icon next to visible text is decorative: no `label`.
+- An icon-only button or link carries its accessible name on the control (`aria-label` on the `<button>`), not on the icon.
+- A meaningful standalone icon gets `label`, which renders `role="img"` and `aria-label`.
+- Never remove an existing control's accessible name when swapping icons.
+
+## Adopting in an existing app
+
+- Inspect first: package manager, framework, existing icon library, and the project's lint/build/test commands.
+- Leave another icon library in place unless the user names icons to replace. To replace, map each one with the search script, show the mapping before editing, and remove the old dependency only after nothing imports it.
+- Run the project's checks afterwards.

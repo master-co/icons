@@ -16,11 +16,11 @@ export type GuidePage={slug:string;title:string;description:string;category:stri
 const prefix=(locale:Locale)=>locale==='en'?'':`/${locale}`
 const heading={en:{intro:'Optically sized interface icons for React, Vue, Svelte, Preact, Astro and plain SVG.',rules:'Rules for agents',skill:'Agent skill'},tw:{intro:'依光學尺寸繪製的介面圖示，支援 React、Vue、Svelte、Preact、Astro 與純 SVG。',rules:'給 agent 的規則',skill:'Agent skill'}}
 const rules=`- Install exactly one package: \`@master/icons-react\`, \`@master/icons-vue\`, \`@master/icons-svelte\`, \`@master/icons-preact\`, \`@master/icons-astro\`, or \`@master/icons\` without a framework. Never a similarly named package.
-- Never invent an icon name. Look it up in \`node_modules/@master/icons/dist/catalog.json\` (also \`@master/icons/catalog\`) or with \`node node_modules/@master/icons/skills/use-master-icons/scripts/search.mjs <query>\`. Components end in \`Icon\` (\`SearchIcon\`).
+- Never invent an icon name. Look it up in \`node_modules/@master/icons/dist/catalog.json\` (also \`@master/icons/catalog\`) or with \`node node_modules/@master/icons/skills/master-icons/scripts/search.mjs <query>\`. Components end in \`Icon\` (\`SearchIcon\`).
 - Choose the drawing with \`size\` (16, 20 or 24); never resize icons with CSS.
 - \`strokeWidth\` ranges 0.75–1.5 at 16 px, 1–2 at 20 px and 1.25–2.5 at 24 px in steps of 0.25; never override \`stroke-width\` in CSS.
 - An icon beside visible text is decorative; an icon-only button carries its name on the button; a meaningful standalone icon gets \`label\`.`
-const skillNote={en:'The `@master/icons` package ships an agent skill at `node_modules/@master/icons/skills/use-master-icons/SKILL.md`; copy it into your agent\'s skills folder to load these rules automatically.',tw:'`@master/icons` 套件內附 agent skill：`node_modules/@master/icons/skills/use-master-icons/SKILL.md`，複製到 agent 的 skills 資料夾即可自動載入上述規則。'}
+const skillNote={en:'The `@master/icons` package ships an agent skill at `node_modules/@master/icons/skills/master-icons/SKILL.md`; copy it into your agent\'s skills folder to load these rules automatically.',tw:'`@master/icons` 套件內附 agent skill：`node_modules/@master/icons/skills/master-icons/SKILL.md`，複製到 agent 的 skills 資料夾即可自動載入上述規則。'}
 
 /** Keep authored heading ids as anchors and turn a copyable prompt into a fenced block. */
 function portable(source:string,locale:Locale){

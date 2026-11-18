@@ -51,7 +51,7 @@ Unused icons are removed by any bundler that supports tree shaking. Continue wit
 A coding agent can run this setup for you. Paste the prompt below into the agent from the app's root directory. It inspects the project and asks for the framework package, the default size, corners and stroke, and what happens to an existing icon library before changing files. Then it installs the package, renders a first icon and runs your checks.
 
 <DocumentPrompt title="Set up Master Icons" text={`You are working in an existing web application. Set up Master Icons end to end.
-Documentation: https://icons.master.co/llms.txt, which links every guide as Markdown (read getting-started, the page for the chosen framework, optical-sizes, stroke-width and accessibility), and the README of the installed package. After installing, follow node_modules/@master/icons/skills/use-master-icons/SKILL.md.
+Documentation: https://icons.master.co/llms.txt, which links every guide as Markdown (read getting-started, the page for the chosen framework, optical-sizes, stroke-width and accessibility), and the README of the installed package. After installing, follow node_modules/@master/icons/skills/master-icons/SKILL.md.
 
 Master Icons is published on npm as @master/icons (the core) and one package per framework: @master/icons-react, @master/icons-vue, @master/icons-svelte, @master/icons-preact and @master/icons-astro. Install only these names; do not install a package with a similar name.
 
@@ -77,7 +77,7 @@ When finished, summarize the changed files, the package installed, the defaults 
 
 Two resources keep a coding agent on real names and the rules above:
 
-- **Agent skill.** `@master/icons` ships a skill at `node_modules/@master/icons/skills/use-master-icons/SKILL.md`. Copy the `use-master-icons` folder into your agent's skills folder, such as `.claude/skills` or `.agents/skills`. It covers packages, entries, sizes, stroke width and accessibility, and includes a script that searches the installed catalog so the agent never invents an icon name: `node node_modules/@master/icons/skills/use-master-icons/scripts/search.mjs search`.
+- **Agent skill.** `@master/icons` ships a skill at `node_modules/@master/icons/skills/master-icons/SKILL.md`. Copy the `master-icons` folder into your agent's skills folder, such as `.claude/skills` or `.agents/skills`. It covers packages, entries, sizes, stroke width and accessibility, and includes a script that searches the installed catalog so the agent never invents an icon name: `node node_modules/@master/icons/skills/master-icons/scripts/search.mjs search`.
 - **llms.txt.** [/llms.txt](/llms.txt) indexes every guide as Markdown, and [/llms-full.txt](/llms-full.txt) holds them in one file. Every guide page is also available as Markdown by adding `.md` to its address, such as [/guide/getting-started.md](/guide/getting-started.md).
 
 ## Next steps \{#next\}

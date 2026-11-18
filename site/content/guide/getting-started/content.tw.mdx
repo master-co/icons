@@ -56,7 +56,7 @@ import { SearchIcon } from '@master/icons-react/20/soft';
 Coding agent 可以替你完成設定。在應用程式根目錄啟動 agent，再貼上下方提示詞：它會先檢查專案，並在修改檔案前詢問框架套件、預設尺寸、圓角與線寬，以及既有圖示庫的處理方式。接著安裝套件、呈現第一個圖示並執行專案檢查。
 
 <DocumentPrompt title="Set up Master Icons" text={`你正在一個既有的 web 應用程式中工作。請完整設定 Master Icons。
-文件：https://icons.master.co/tw/llms.txt，其中以 Markdown 連結每篇指南（請閱讀 getting-started、所選框架的頁面、optical-sizes、stroke-width 與 accessibility），以及已安裝套件的 README。安裝後依照 node_modules/@master/icons/skills/use-master-icons/SKILL.md 操作。
+文件：https://icons.master.co/tw/llms.txt，其中以 Markdown 連結每篇指南（請閱讀 getting-started、所選框架的頁面、optical-sizes、stroke-width 與 accessibility），以及已安裝套件的 README。安裝後依照 node_modules/@master/icons/skills/master-icons/SKILL.md 操作。
 
 Master Icons 已發布至 npm：核心為 @master/icons，每個框架各有一個套件：@master/icons-react、@master/icons-vue、@master/icons-svelte、@master/icons-preact 與 @master/icons-astro。只安裝這些名稱，不要安裝名稱相似的套件。
 
@@ -82,7 +82,7 @@ Master Icons 已發布至 npm：核心為 @master/icons，每個框架各有一�
 
 有兩項資源能讓 coding agent 使用真實的圖示名稱，並遵守上述規則：
 
-- **Agent skill。** `@master/icons` 內附 skill：`node_modules/@master/icons/skills/use-master-icons/SKILL.md`。將 `use-master-icons` 資料夾複製到 agent 的 skills 資料夾，例如 `.claude/skills` 或 `.agents/skills`。內容涵蓋套件、入口、尺寸、線寬與無障礙，並附有搜尋已安裝 catalog 的腳本，讓 agent 不會編造圖示名稱：`node node_modules/@master/icons/skills/use-master-icons/scripts/search.mjs search`。
+- **Agent skill。** `@master/icons` 內附 skill：`node_modules/@master/icons/skills/master-icons/SKILL.md`。將 `master-icons` 資料夾複製到 agent 的 skills 資料夾，例如 `.claude/skills` 或 `.agents/skills`。內容涵蓋套件、入口、尺寸、線寬與無障礙，並附有搜尋已安裝 catalog 的腳本，讓 agent 不會編造圖示名稱：`node node_modules/@master/icons/skills/master-icons/scripts/search.mjs search`。
 - **llms.txt。** [/tw/llms.txt](/tw/llms.txt) 以 Markdown 列出每篇指南，[/tw/llms-full.txt](/tw/llms-full.txt) 則將全文合為一個檔案。每篇指南的網址加上 `.md` 即可取得 Markdown 版，例如 [/tw/guide/getting-started.md](/tw/guide/getting-started.md)。
 
 ## 下一步 \{#next\}
