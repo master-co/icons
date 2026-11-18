@@ -1,0 +1,3412 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-19",
+  "maintainerApproval": "pending",
+  "scope": [
+    "arrow-right",
+    "arrow-left",
+    "arrow-up",
+    "arrow-down",
+    "arrow-up-right",
+    "arrow-up-left",
+    "arrow-down-right",
+    "arrow-down-left",
+    "chevron-right",
+    "chevron-left",
+    "chevron-up",
+    "chevron-down",
+    "chevrons-right",
+    "chevrons-left",
+    "chevrons-up",
+    "chevrons-down",
+    "arrow-right-to-line",
+    "arrow-left-to-line",
+    "arrow-up-to-line",
+    "arrow-down-to-line",
+    "chevrons-left-right",
+    "chevrons-up-down",
+    "move-horizontal",
+    "move-vertical",
+    "move-diagonal-up-right",
+    "move-diagonal-down-right",
+    "arrow-left-right",
+    "sort-unsorted",
+    "arrow-big-up",
+    "arrow-big-down"
+  ],
+  "added": [
+    "chevrons-up",
+    "chevrons-down"
+  ],
+  "modified": [
+    "chevrons-right",
+    "chevrons-left"
+  ],
+  "retained": [
+    "arrow-right",
+    "arrow-left",
+    "arrow-up",
+    "arrow-down",
+    "arrow-up-right",
+    "arrow-up-left",
+    "arrow-down-right",
+    "arrow-down-left",
+    "chevron-right",
+    "chevron-left",
+    "chevron-up",
+    "chevron-down",
+    "arrow-right-to-line",
+    "arrow-left-to-line",
+    "arrow-up-to-line",
+    "arrow-down-to-line",
+    "chevrons-left-right",
+    "chevrons-up-down",
+    "move-horizontal",
+    "move-vertical",
+    "move-diagonal-up-right",
+    "move-diagonal-down-right",
+    "arrow-left-right",
+    "sort-unsorted",
+    "arrow-big-up",
+    "arrow-big-down"
+  ],
+  "notes": "Before/candidate/final evidence is reused only where its saved native geometry equals the final master. Early before sheets have diagnostic-row overlap; final sheets separate 48px diagnostics. Native icons are unaffected. Final context uses integer CSS coordinates at every size; previous context captures are retained separately.",
+  "items": [
+    {
+      "name": "arrow-right",
+      "concept": "arrow-right",
+      "purpose": "下一項／往右移動",
+      "recognitionCues": "水平桿、單一右向箭翼",
+      "confusableWith": [
+        "chevrons-right"
+      ],
+      "sourceObservation": "Hugeicons 的肩部較柔，Iconoir 的箭翼較開；保留 Master 較長的尖部與較窄翼幅，16px 中央交接連續，沒有方帽突出。",
+      "references": [
+        {
+          "name": "arrow-right",
+          "library": "Hugeicons Free",
+          "repository": "hugeicons/hugeicons",
+          "commit": "834e28d965946c1ee60d080027fe9dae4adc58d0",
+          "path": "icons/arrow-right-02.svg",
+          "license": "MIT",
+          "role": "reference-and-redrawing-study",
+          "localPath": "references/hugeicons/arrow-right.svg",
+          "url": "https://github.com/hugeicons/hugeicons/blob/834e28d965946c1ee60d080027fe9dae4adc58d0/icons/arrow-right-02.svg",
+          "sha256": "a4b9dc7d5eed16fa043fb7b3d366c628072224002e990bd4aa58125a5670921d"
+        },
+        {
+          "name": "arrow-right",
+          "library": "Iconoir",
+          "repository": "iconoir-icons/iconoir",
+          "commit": "39834e3f193bc0cca2c36bebb6a650471977433d",
+          "path": "icons/regular/arrow-right.svg",
+          "license": "MIT",
+          "role": "comparison-only",
+          "localPath": "references/iconoir/arrow-right.svg",
+          "url": "https://github.com/iconoir-icons/iconoir/blob/39834e3f193bc0cca2c36bebb6a650471977433d/icons/regular/arrow-right.svg",
+          "sha256": "cf13159505df944c66c9d36838508dcd58106fe0d776702aeaf08dd91553eb3f"
+        }
+      ],
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "方向及距離層級由完整折線或箭桿表達，沒有隱藏或待完成邊界。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "同方向筆畫地位相同；用透明通道保持分離，不以淡化掩飾間距。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "平面單色方向符號不需深度或漸層訊號。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "reason": "Hugeicons 的肩部較柔，Iconoir 的箭翼較開；保留 Master 較長的尖部與較窄翼幅，16px 中央交接連續，沒有方帽突出。",
+        "before": {
+          "path": "references/navigation-01/master-before.json",
+          "variantsSha256": "3d1e4fe9368a458aec242b59b6f84ef4ecacb60470dcadca5585c1f75dd23fec"
+        }
+      },
+      "visualReview": {
+        "status": "visually-reviewed-candidate",
+        "reviewer": "Codex (AI)",
+        "date": "2026-11-19",
+        "skillVersion": "0.5.20",
+        "batch": "01-arrows",
+        "variantsSha256": "3d1e4fe9368a458aec242b59b6f84ef4ecacb60470dcadca5585c1f75dd23fec",
+        "checks": [
+          "16/20/24",
+          "sharp/soft/rounded",
+          "light/dark",
+          "DPR 1/2",
+          "low-contrast text",
+          "pinned-source re-comparison"
+        ],
+        "evidence": [
+          {
+            "path": "docs/review/navigation-01/01-arrows-before/light-1x.png",
+            "sha256": "97a5dff511fa1b65a3d2360733ed2b78723084326a7b8266aec60a48b99ee371"
+          },
+          {
+            "path": "docs/review/navigation-01/01-arrows-before/dark-1x.png",
+            "sha256": "95491c2c153ba8c2bb95bd693583399c3617713d69c63ea290682ab7466fc479"
+          },
+          {
+            "path": "docs/review/navigation-01/01-arrows-before/light-2x.png",
+            "sha256": "20c730641e3588954267146a7556b79fe81720077573467b1180ae68acb6bb16"
+          },
+          {
+            "path": "docs/review/navigation-01/01-arrows-final/dark-2x.png",
+            "sha256": "cc52577bfb6c28a4e97f8b9aafb8d89c0a5a60fcc823c9df561af3c1e65a1817"
+          },
+          {
+            "path": "docs/review/navigation-01/context-final-light-1x.png",
+            "sha256": "b08e3347a79c2799173eb18d285cd2f72f3c3d2ab940403bf0d07e00729a21aa"
+          },
+          {
+            "path": "docs/review/navigation-01/context-final-dark-2x.png",
+            "sha256": "d21149842f78c2d9ee02bd2d696e4ddba788c79134fb17f39a9d098eedcd7089"
+          }
+        ]
+      },
+      "status": "visually-reviewed-candidate",
+      "userApproval": "pending",
+      "remainingIssues": []
+    },
+    {
+      "name": "arrow-left",
+      "concept": "arrow-right",
+      "purpose": "上一項／往左移動",
+      "recognitionCues": "水平桿、單一左向箭翼",
+      "confusableWith": [
+        "chevrons-left"
+      ],
+      "sourceObservation": "Lucide、Tabler 的 45 度翼更短；Master 和右向共源，較窄的翼幅維持工具列安靜感，與右向的露白及桿長一致。",
+      "references": [
+        {
+          "name": "arrow-left",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/arrow-left.svg",
+          "localPath": "references/ui-v1/lucide-arrow-left.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/arrow-left.svg",
+          "sha256": "c5f4b88076108eb1a0d95336e1aa7e7bb1419a3a92af96f6247d88cd3456f933",
+          "license": "ISC AND MIT",
+          "sourceName": "arrow-left",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "arrow-left",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/arrow-left.svg",
+          "localPath": "references/ui-v1/tabler-arrow-left.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/arrow-left.svg",
+          "sha256": "12af90f1bb49b7ae62792ecf38d2fa8b39daa4753e39ebc3520d07482a90704f",
+          "license": "MIT",
+          "sourceName": "arrow-left",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "方向及距離層級由完整折線或箭桿表達，沒有隱藏或待完成邊界。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "同方向筆畫地位相同；用透明通道保持分離，不以淡化掩飾間距。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "平面單色方向符號不需深度或漸層訊號。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "reason": "Lucide、Tabler 的 45 度翼更短；Master 和右向共源，較窄的翼幅維持工具列安靜感，與右向的露白及桿長一致。",
+        "before": {
+          "path": "references/navigation-01/master-before.json",
+          "variantsSha256": "fcdd391b1ff6fc410fbdbd81489b29a52788c0f9d623e0f5859e24f4cd9f96a6"
+        }
+      },
+      "visualReview": {
+        "status": "visually-reviewed-candidate",
+        "reviewer": "Codex (AI)",
+        "date": "2026-11-19",
+        "skillVersion": "0.5.20",
+        "batch": "01-arrows",
+        "variantsSha256": "fcdd391b1ff6fc410fbdbd81489b29a52788c0f9d623e0f5859e24f4cd9f96a6",
+        "checks": [
+          "16/20/24",
+          "sharp/soft/rounded",
+          "light/dark",
+          "DPR 1/2",
+          "low-contrast text",
+          "pinned-source re-comparison"
+        ],
+        "evidence": [
+          {
+            "path": "docs/review/navigation-01/01-arrows-before/light-1x.png",
+            "sha256": "97a5dff511fa1b65a3d2360733ed2b78723084326a7b8266aec60a48b99ee371"
+          },
+          {
+            "path": "docs/review/navigation-01/01-arrows-before/dark-1x.png",
+            "sha256": "95491c2c153ba8c2bb95bd693583399c3617713d69c63ea290682ab7466fc479"
+          },
+          {
+            "path": "docs/review/navigation-01/01-arrows-before/light-2x.png",
+            "sha256": "20c730641e3588954267146a7556b79fe81720077573467b1180ae68acb6bb16"
+          },
+          {
+            "path": "docs/review/navigation-01/01-arrows-final/dark-2x.png",
+            "sha256": "cc52577bfb6c28a4e97f8b9aafb8d89c0a5a60fcc823c9df561af3c1e65a1817"
+          },
+          {
+            "path": "docs/review/navigation-01/context-final-light-1x.png",
+            "sha256": "b08e3347a79c2799173eb18d285cd2f72f3c3d2ab940403bf0d07e00729a21aa"
+          },
+          {
+            "path": "docs/review/navigation-01/context-final-dark-2x.png",
+            "sha256": "d21149842f78c2d9ee02bd2d696e4ddba788c79134fb17f39a9d098eedcd7089"
+          }
+        ]
+      },
+      "status": "visually-reviewed-candidate",
+      "userApproval": "pending",
+      "remainingIssues": []
+    },
+    {
+      "name": "arrow-up",
+      "concept": "arrow-right",
+      "purpose": "上移一項",
+      "recognitionCues": "直桿、上向單箭翼",
+      "confusableWith": [
+        "arrow-up-to-line"
+      ],
+      "sourceObservation": "來源兩側翼較寬；Master 瘦長比例在窄欄中仍清楚，上端的桿翼連接沒有墨團，16／20／24 低對比可讀。",
+      "references": [
+        {
+          "name": "arrow-up",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/arrow-up.svg",
+          "localPath": "references/ui-v1/lucide-arrow-up.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/arrow-up.svg",
+          "sha256": "8c22c25874c80bb062bef985d207d8f1d4a4d7847237d0a8cf720a3235968518",
+          "license": "ISC AND MIT",
+          "sourceName": "arrow-up",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "arrow-up",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/arrow-up.svg",
+          "localPath": "references/ui-v1/tabler-arrow-up.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/arrow-up.svg",
+          "sha256": "c0a58436629c59996826b7980b0cbdfff51bfa289eefb2cceee494a964c5105e",
+          "license": "MIT",
+          "sourceName": "arrow-up",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "方向及距離層級由完整折線或箭桿表達，沒有隱藏或待完成邊界。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "同方向筆畫地位相同；用透明通道保持分離，不以淡化掩飾間距。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "平面單色方向符號不需深度或漸層訊號。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "reason": "來源兩側翼較寬；Master 瘦長比例在窄欄中仍清楚，上端的桿翼連接沒有墨團，16／20／24 低對比可讀。",
+        "before": {
+          "path": "references/navigation-01/master-before.json",
+          "variantsSha256": "ffa53943644b4e8b56b6e599ea044e70d18b76cdc4fb0121d18fd3bc1618889d"
+        }
+      },
+      "visualReview": {
+        "status": "visually-reviewed-candidate",
+        "reviewer": "Codex (AI)",
+        "date": "2026-11-19",
+        "skillVersion": "0.5.20",
+        "batch": "01-arrows",
+        "variantsSha256": "ffa53943644b4e8b56b6e599ea044e70d18b76cdc4fb0121d18fd3bc1618889d",
+        "checks": [
+          "16/20/24",
+          "sharp/soft/rounded",
+          "light/dark",
+          "DPR 1/2",
+          "low-contrast text",
+          "pinned-source re-comparison"
+        ],
+        "evidence": [
+          {
+            "path": "docs/review/navigation-01/01-arrows-before/light-1x.png",
+            "sha256": "97a5dff511fa1b65a3d2360733ed2b78723084326a7b8266aec60a48b99ee371"
+          },
+          {
+            "path": "docs/review/navigation-01/01-arrows-before/dark-1x.png",
+            "sha256": "95491c2c153ba8c2bb95bd693583399c3617713d69c63ea290682ab7466fc479"
+          },
+          {
+            "path": "docs/review/navigation-01/01-arrows-before/light-2x.png",
+            "sha256": "20c730641e3588954267146a7556b79fe81720077573467b1180ae68acb6bb16"
+          },
+          {
+            "path": "docs/review/navigation-01/01-arrows-final/dark-2x.png",
+            "sha256": "cc52577bfb6c28a4e97f8b9aafb8d89c0a5a60fcc823c9df561af3c1e65a1817"
+          },
+          {
+            "path": "docs/review/navigation-01/context-final-light-1x.png",
+            "sha256": "b08e3347a79c2799173eb18d285cd2f72f3c3d2ab940403bf0d07e00729a21aa"
+          },
+          {
+            "path": "docs/review/navigation-01/context-final-dark-2x.png",
+            "sha256": "d21149842f78c2d9ee02bd2d696e4ddba788c79134fb17f39a9d098eedcd7089"
+          }
+        ]
+      },
+      "status": "visually-reviewed-candidate",
+      "userApproval": "pending",
+      "remainingIssues": []
+    },
+    {
+      "name": "arrow-down",
+      "concept": "arrow-right",
+      "purpose": "下移一項",
+      "recognitionCues": "直桿、下向單箭翼",
+      "confusableWith": [
+        "arrow-down-to-line"
+      ],
+      "sourceObservation": "來源兩側翼較寬；保留與 arrow-up 同母型的修長比例，下端尖部不與桿斷開，三角型沒有不同方向的額外位移。",
+      "references": [
+        {
+          "name": "arrow-down",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/arrow-down.svg",
+          "localPath": "references/ui-v1/lucide-arrow-down.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/arrow-down.svg",
+          "sha256": "2b641c7a59d39450edfed72067fcc9940a1a316a737346af23b4b9103c0689f2",
+          "license": "ISC AND MIT",
+          "sourceName": "arrow-down",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "arrow-down",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/arrow-down.svg",
+          "localPath": "references/ui-v1/tabler-arrow-down.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/arrow-down.svg",
+          "sha256": "34efc2d5737ffa3f29f8056e6d861ea8218d8f40858539a959a9482811f6bd05",
+          "license": "MIT",
+          "sourceName": "arrow-down",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "方向及距離層級由完整折線或箭桿表達，沒有隱藏或待完成邊界。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "同方向筆畫地位相同；用透明通道保持分離，不以淡化掩飾間距。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "平面單色方向符號不需深度或漸層訊號。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "reason": "來源兩側翼較寬；保留與 arrow-up 同母型的修長比例，下端尖部不與桿斷開，三角型沒有不同方向的額外位移。",
+        "before": {
+          "path": "references/navigation-01/master-before.json",
+          "variantsSha256": "6b4a36dafb8721523f3b4433182a8b63f8653538a049a79354d9c3f4e3f48e2c"
+        }
+      },
+      "visualReview": {
+        "status": "visually-reviewed-candidate",
+        "reviewer": "Codex (AI)",
+        "date": "2026-11-19",
+        "skillVersion": "0.5.20",
+        "batch": "01-arrows",
+        "variantsSha256": "6b4a36dafb8721523f3b4433182a8b63f8653538a049a79354d9c3f4e3f48e2c",
+        "checks": [
+          "16/20/24",
+          "sharp/soft/rounded",
+          "light/dark",
+          "DPR 1/2",
+          "low-contrast text",
+          "pinned-source re-comparison"
+        ],
+        "evidence": [
+          {
+            "path": "docs/review/navigation-01/01-arrows-before/light-1x.png",
+            "sha256": "97a5dff511fa1b65a3d2360733ed2b78723084326a7b8266aec60a48b99ee371"
+          },
+          {
+            "path": "docs/review/navigation-01/01-arrows-before/dark-1x.png",
+            "sha256": "95491c2c153ba8c2bb95bd693583399c3617713d69c63ea290682ab7466fc479"
+          },
+          {
+            "path": "docs/review/navigation-01/01-arrows-before/light-2x.png",
+            "sha256": "20c730641e3588954267146a7556b79fe81720077573467b1180ae68acb6bb16"
+          },
+          {
+            "path": "docs/review/navigation-01/01-arrows-final/dark-2x.png",
+            "sha256": "cc52577bfb6c28a4e97f8b9aafb8d89c0a5a60fcc823c9df561af3c1e65a1817"
+          },
+          {
+            "path": "docs/review/navigation-01/context-final-light-1x.png",
+            "sha256": "b08e3347a79c2799173eb18d285cd2f72f3c3d2ab940403bf0d07e00729a21aa"
+          },
+          {
+            "path": "docs/review/navigation-01/context-final-dark-2x.png",
+            "sha256": "d21149842f78c2d9ee02bd2d696e4ddba788c79134fb17f39a9d098eedcd7089"
+          }
+        ]
+      },
+      "status": "visually-reviewed-candidate",
+      "userApproval": "pending",
+      "remainingIssues": []
+    },
+    {
+      "name": "arrow-up-right",
+      "concept": "arrow-right",
+      "purpose": "右上方向／外部前往",
+      "recognitionCues": "斜桿接右上直角翼",
+      "confusableWith": [
+        "arrow-right"
+      ],
+      "sourceObservation": "Lucide／Tabler 略小且集中；Master 既有 12／24 跨幅較舒展，原生 16px 並排沒有壓過直箭頭，保留直角翼與完整桿。",
+      "references": [
+        {
+          "name": "arrow-up-right",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/arrow-up-right.svg",
+          "localPath": "references/ui-v1/lucide-arrow-up-right.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/arrow-up-right.svg",
+          "sha256": "50b2503b9d11881142255466b7e3461d022b919735841c321d72003ac9959fe1",
+          "license": "ISC AND MIT",
+          "sourceName": "arrow-up-right",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "arrow-up-right",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/arrow-up-right.svg",
+          "localPath": "references/ui-v1/tabler-arrow-up-right.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/arrow-up-right.svg",
+          "sha256": "b7d952b0b6fbd089b110d85639ffffc001bb41fe53040e5e7f3e3f65ddc22595",
+          "license": "MIT",
+          "sourceName": "arrow-up-right",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "方向及距離層級由完整折線或箭桿表達，沒有隱藏或待完成邊界。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "同方向筆畫地位相同；用透明通道保持分離，不以淡化掩飾間距。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "平面單色方向符號不需深度或漸層訊號。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "reason": "Lucide／Tabler 略小且集中；Master 既有 12／24 跨幅較舒展，原生 16px 並排沒有壓過直箭頭，保留直角翼與完整桿。",
+        "before": {
+          "path": "references/navigation-01/master-before.json",
+          "variantsSha256": "27d523390165f8849b625a9ba9085cc38dec5b83ed93bfeed14761147026d83f"
+        }
+      },
+      "visualReview": {
+        "status": "visually-reviewed-candidate",
+        "reviewer": "Codex (AI)",
+        "date": "2026-11-19",
+        "skillVersion": "0.5.20",
+        "batch": "01-arrows",
+        "variantsSha256": "27d523390165f8849b625a9ba9085cc38dec5b83ed93bfeed14761147026d83f",
+        "checks": [
+          "16/20/24",
+          "sharp/soft/rounded",
+          "light/dark",
+          "DPR 1/2",
+          "low-contrast text",
+          "pinned-source re-comparison"
+        ],
+        "evidence": [
+          {
+            "path": "docs/review/navigation-01/01-arrows-before/light-1x.png",
+            "sha256": "97a5dff511fa1b65a3d2360733ed2b78723084326a7b8266aec60a48b99ee371"
+          },
+          {
+            "path": "docs/review/navigation-01/01-arrows-before/dark-1x.png",
+            "sha256": "95491c2c153ba8c2bb95bd693583399c3617713d69c63ea290682ab7466fc479"
+          },
+          {
+            "path": "docs/review/navigation-01/01-arrows-before/light-2x.png",
+            "sha256": "20c730641e3588954267146a7556b79fe81720077573467b1180ae68acb6bb16"
+          },
+          {
+            "path": "docs/review/navigation-01/01-arrows-final/dark-2x.png",
+            "sha256": "cc52577bfb6c28a4e97f8b9aafb8d89c0a5a60fcc823c9df561af3c1e65a1817"
+          },
+          {
+            "path": "docs/review/navigation-01/context-final-light-1x.png",
+            "sha256": "b08e3347a79c2799173eb18d285cd2f72f3c3d2ab940403bf0d07e00729a21aa"
+          },
+          {
+            "path": "docs/review/navigation-01/context-final-dark-2x.png",
+            "sha256": "d21149842f78c2d9ee02bd2d696e4ddba788c79134fb17f39a9d098eedcd7089"
+          }
+        ]
+      },
+      "status": "visually-reviewed-candidate",
+      "userApproval": "pending",
+      "remainingIssues": []
+    },
+    {
+      "name": "arrow-up-left",
+      "concept": "arrow-right",
+      "purpose": "左上方向移動",
+      "recognitionCues": "斜桿接左上直角翼",
+      "confusableWith": [
+        "arrow-up"
+      ],
+      "sourceObservation": "與 Lucide／Tabler 比較，較開闊的翼端仍有留白；直接旋轉右上母型，左上接角乾淨，不另縮小這個方向。",
+      "references": [
+        {
+          "name": "arrow-up-left",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/arrow-up-left.svg",
+          "localPath": "references/studio-01/lucide-arrow-up-left.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/arrow-up-left.svg",
+          "sha256": "514712d6d745aec1fde2415ede82afc3dfadd6ec9d4a9d43de1b63eaea6c0029",
+          "license": "ISC AND MIT",
+          "sourceName": "arrow-up-left",
+          "role": "comparison-only",
+          "match": "exact"
+        },
+        {
+          "name": "arrow-up-left",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/arrow-up-left.svg",
+          "localPath": "references/studio-01/tabler-arrow-up-left.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/arrow-up-left.svg",
+          "sha256": "f90c737a2f1ca254d20303e7476ed0e71b41cb82c53b3a65a8e1f6d60c703339",
+          "license": "MIT",
+          "sourceName": "arrow-up-left",
+          "role": "comparison-only",
+          "match": "exact"
+        }
+      ],
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "方向及距離層級由完整折線或箭桿表達，沒有隱藏或待完成邊界。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "同方向筆畫地位相同；用透明通道保持分離，不以淡化掩飾間距。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "平面單色方向符號不需深度或漸層訊號。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "reason": "與 Lucide／Tabler 比較，較開闊的翼端仍有留白；直接旋轉右上母型，左上接角乾淨，不另縮小這個方向。",
+        "before": {
+          "path": "references/navigation-01/master-before.json",
+          "variantsSha256": "eb965b8fc3338ec912e4d98c106e5c93796efee8c87f38361bfe20fe372bebf1"
+        }
+      },
+      "visualReview": {
+        "status": "visually-reviewed-candidate",
+        "reviewer": "Codex (AI)",
+        "date": "2026-11-19",
+        "skillVersion": "0.5.20",
+        "batch": "01-arrows",
+        "variantsSha256": "eb965b8fc3338ec912e4d98c106e5c93796efee8c87f38361bfe20fe372bebf1",
+        "checks": [
+          "16/20/24",
+          "sharp/soft/rounded",
+          "light/dark",
+          "DPR 1/2",
+          "low-contrast text",
+          "pinned-source re-comparison"
+        ],
+        "evidence": [
+          {
+            "path": "docs/review/navigation-01/01-arrows-before/light-1x.png",
+            "sha256": "97a5dff511fa1b65a3d2360733ed2b78723084326a7b8266aec60a48b99ee371"
+          },
+          {
+            "path": "docs/review/navigation-01/01-arrows-before/dark-1x.png",
+            "sha256": "95491c2c153ba8c2bb95bd693583399c3617713d69c63ea290682ab7466fc479"
+          },
+          {
+            "path": "docs/review/navigation-01/01-arrows-before/light-2x.png",
+            "sha256": "20c730641e3588954267146a7556b79fe81720077573467b1180ae68acb6bb16"
+          },
+          {
+            "path": "docs/review/navigation-01/01-arrows-final/dark-2x.png",
+            "sha256": "cc52577bfb6c28a4e97f8b9aafb8d89c0a5a60fcc823c9df561af3c1e65a1817"
+          },
+          {
+            "path": "docs/review/navigation-01/context-final-light-1x.png",
+            "sha256": "b08e3347a79c2799173eb18d285cd2f72f3c3d2ab940403bf0d07e00729a21aa"
+          },
+          {
+            "path": "docs/review/navigation-01/context-final-dark-2x.png",
+            "sha256": "d21149842f78c2d9ee02bd2d696e4ddba788c79134fb17f39a9d098eedcd7089"
+          }
+        ]
+      },
+      "status": "visually-reviewed-candidate",
+      "userApproval": "pending",
+      "remainingIssues": []
+    },
+    {
+      "name": "arrow-down-right",
+      "concept": "arrow-right",
+      "purpose": "右下方向／下降數值",
+      "recognitionCues": "斜桿接右下直角翼",
+      "confusableWith": [
+        "arrow-down"
+      ],
+      "sourceObservation": "來源略緊湊；保留與右上同尺度的開展翼幅，以數值旁成對切換保持視重，16px 箭桿仍完整。",
+      "references": [
+        {
+          "name": "arrow-down-right",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/arrow-down-right.svg",
+          "localPath": "references/product-ui-01/lucide-arrow-down-right.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/arrow-down-right.svg",
+          "sha256": "c3b557b5561c42008adfadade79341158dfd2cf3437b586fd0639447415f7545",
+          "license": "ISC AND MIT",
+          "sourceName": "arrow-down-right",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "arrow-down-right",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/arrow-down-right.svg",
+          "localPath": "references/product-ui-01/tabler-arrow-down-right.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/arrow-down-right.svg",
+          "sha256": "b4aa0dd1f2d8566c6fcb0d91859ab4d8ed77162b54429434107b5a80969e9749",
+          "license": "MIT",
+          "sourceName": "arrow-down-right",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "方向及距離層級由完整折線或箭桿表達，沒有隱藏或待完成邊界。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "同方向筆畫地位相同；用透明通道保持分離，不以淡化掩飾間距。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "平面單色方向符號不需深度或漸層訊號。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "reason": "來源略緊湊；保留與右上同尺度的開展翼幅，以數值旁成對切換保持視重，16px 箭桿仍完整。",
+        "before": {
+          "path": "references/navigation-01/master-before.json",
+          "variantsSha256": "2a2c3e74ca416bc0d9aa9e146dd013dea9a0c8fcd6e157df23213c0c6169c1ef"
+        }
+      },
+      "visualReview": {
+        "status": "visually-reviewed-candidate",
+        "reviewer": "Codex (AI)",
+        "date": "2026-11-19",
+        "skillVersion": "0.5.20",
+        "batch": "01-arrows",
+        "variantsSha256": "2a2c3e74ca416bc0d9aa9e146dd013dea9a0c8fcd6e157df23213c0c6169c1ef",
+        "checks": [
+          "16/20/24",
+          "sharp/soft/rounded",
+          "light/dark",
+          "DPR 1/2",
+          "low-contrast text",
+          "pinned-source re-comparison"
+        ],
+        "evidence": [
+          {
+            "path": "docs/review/navigation-01/01-arrows-before/light-1x.png",
+            "sha256": "97a5dff511fa1b65a3d2360733ed2b78723084326a7b8266aec60a48b99ee371"
+          },
+          {
+            "path": "docs/review/navigation-01/01-arrows-before/dark-1x.png",
+            "sha256": "95491c2c153ba8c2bb95bd693583399c3617713d69c63ea290682ab7466fc479"
+          },
+          {
+            "path": "docs/review/navigation-01/01-arrows-before/light-2x.png",
+            "sha256": "20c730641e3588954267146a7556b79fe81720077573467b1180ae68acb6bb16"
+          },
+          {
+            "path": "docs/review/navigation-01/01-arrows-final/dark-2x.png",
+            "sha256": "cc52577bfb6c28a4e97f8b9aafb8d89c0a5a60fcc823c9df561af3c1e65a1817"
+          },
+          {
+            "path": "docs/review/navigation-01/context-final-light-1x.png",
+            "sha256": "b08e3347a79c2799173eb18d285cd2f72f3c3d2ab940403bf0d07e00729a21aa"
+          },
+          {
+            "path": "docs/review/navigation-01/context-final-dark-2x.png",
+            "sha256": "d21149842f78c2d9ee02bd2d696e4ddba788c79134fb17f39a9d098eedcd7089"
+          }
+        ]
+      },
+      "status": "visually-reviewed-candidate",
+      "userApproval": "pending",
+      "remainingIssues": []
+    },
+    {
+      "name": "arrow-down-left",
+      "concept": "arrow-right",
+      "purpose": "左下方向移動",
+      "recognitionCues": "斜桿接左下直角翼",
+      "confusableWith": [
+        "arrow-left"
+      ],
+      "sourceObservation": "來源比例較集中；左下旋轉後端帽與翼交接穩定，開口未靠近畫布邊界，四個斜向保持同一母型。",
+      "references": [
+        {
+          "name": "arrow-down-left",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/arrow-down-left.svg",
+          "localPath": "references/studio-01/lucide-arrow-down-left.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/arrow-down-left.svg",
+          "sha256": "a0e72a3f47e9a8803ddfce675e3caf9119ef041b38c103065ec707af15d90202",
+          "license": "ISC AND MIT",
+          "sourceName": "arrow-down-left",
+          "role": "comparison-only",
+          "match": "exact"
+        },
+        {
+          "name": "arrow-down-left",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/arrow-down-left.svg",
+          "localPath": "references/studio-01/tabler-arrow-down-left.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/arrow-down-left.svg",
+          "sha256": "29ffd3602deaffe58e5d291a6145b122d671be9fbedf4fa3c80218c4bef2bbb5",
+          "license": "MIT",
+          "sourceName": "arrow-down-left",
+          "role": "comparison-only",
+          "match": "exact"
+        }
+      ],
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "方向及距離層級由完整折線或箭桿表達，沒有隱藏或待完成邊界。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "同方向筆畫地位相同；用透明通道保持分離，不以淡化掩飾間距。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "平面單色方向符號不需深度或漸層訊號。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "reason": "來源比例較集中；左下旋轉後端帽與翼交接穩定，開口未靠近畫布邊界，四個斜向保持同一母型。",
+        "before": {
+          "path": "references/navigation-01/master-before.json",
+          "variantsSha256": "1f979a9d83c865a00bc38e2c37510ff488b2f38292ae9ac194c0fc490a8357c2"
+        }
+      },
+      "visualReview": {
+        "status": "visually-reviewed-candidate",
+        "reviewer": "Codex (AI)",
+        "date": "2026-11-19",
+        "skillVersion": "0.5.20",
+        "batch": "01-arrows",
+        "variantsSha256": "1f979a9d83c865a00bc38e2c37510ff488b2f38292ae9ac194c0fc490a8357c2",
+        "checks": [
+          "16/20/24",
+          "sharp/soft/rounded",
+          "light/dark",
+          "DPR 1/2",
+          "low-contrast text",
+          "pinned-source re-comparison"
+        ],
+        "evidence": [
+          {
+            "path": "docs/review/navigation-01/01-arrows-before/light-1x.png",
+            "sha256": "97a5dff511fa1b65a3d2360733ed2b78723084326a7b8266aec60a48b99ee371"
+          },
+          {
+            "path": "docs/review/navigation-01/01-arrows-before/dark-1x.png",
+            "sha256": "95491c2c153ba8c2bb95bd693583399c3617713d69c63ea290682ab7466fc479"
+          },
+          {
+            "path": "docs/review/navigation-01/01-arrows-before/light-2x.png",
+            "sha256": "20c730641e3588954267146a7556b79fe81720077573467b1180ae68acb6bb16"
+          },
+          {
+            "path": "docs/review/navigation-01/01-arrows-final/dark-2x.png",
+            "sha256": "cc52577bfb6c28a4e97f8b9aafb8d89c0a5a60fcc823c9df561af3c1e65a1817"
+          },
+          {
+            "path": "docs/review/navigation-01/context-final-light-1x.png",
+            "sha256": "b08e3347a79c2799173eb18d285cd2f72f3c3d2ab940403bf0d07e00729a21aa"
+          },
+          {
+            "path": "docs/review/navigation-01/context-final-dark-2x.png",
+            "sha256": "d21149842f78c2d9ee02bd2d696e4ddba788c79134fb17f39a9d098eedcd7089"
+          }
+        ]
+      },
+      "status": "visually-reviewed-candidate",
+      "userApproval": "pending",
+      "remainingIssues": []
+    },
+    {
+      "name": "chevron-right",
+      "concept": "chevron-right",
+      "purpose": "下一個／展開下一層",
+      "recognitionCues": "單一右向折角，無桿",
+      "confusableWith": [
+        "chevrons-right"
+      ],
+      "sourceObservation": "Lucide／Tabler 的 V 角更緊湊；Master 的翼長在 16px 比較清楚，微圓轉折保持方向，保留略向前的光學位置。",
+      "references": [
+        {
+          "name": "chevron-right",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/chevron-right.svg",
+          "localPath": "references/ui-v1/lucide-chevron-right.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/chevron-right.svg",
+          "sha256": "2758143d7b2434e4aa7307dfd34405c87909ff4052f21b5f3f40d45224b4f19b",
+          "license": "ISC AND MIT",
+          "sourceName": "chevron-right",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "chevron-right",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/chevron-right.svg",
+          "localPath": "references/ui-v1/tabler-chevron-right.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/chevron-right.svg",
+          "sha256": "83733bb6e03e1d20fd2674d06a493642c8ea6eef76c44ebb2239b9ef17dedff7",
+          "license": "MIT",
+          "sourceName": "chevron-right",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "方向及距離層級由完整折線或箭桿表達，沒有隱藏或待完成邊界。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "同方向筆畫地位相同；用透明通道保持分離，不以淡化掩飾間距。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "平面單色方向符號不需深度或漸層訊號。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "reason": "Lucide／Tabler 的 V 角更緊湊；Master 的翼長在 16px 比較清楚，微圓轉折保持方向，保留略向前的光學位置。",
+        "before": {
+          "path": "references/navigation-01/master-before.json",
+          "variantsSha256": "72b9d5a158715c8d0005cea54f5d5ace89754b72cf1c50536ab531a700fe5792"
+        }
+      },
+      "visualReview": {
+        "status": "visually-reviewed-candidate",
+        "reviewer": "Codex (AI)",
+        "date": "2026-11-19",
+        "skillVersion": "0.5.20",
+        "batch": "02-chevrons",
+        "variantsSha256": "72b9d5a158715c8d0005cea54f5d5ace89754b72cf1c50536ab531a700fe5792",
+        "checks": [
+          "16/20/24",
+          "sharp/soft/rounded",
+          "light/dark",
+          "DPR 1/2",
+          "low-contrast text",
+          "pinned-source re-comparison"
+        ],
+        "evidence": [
+          {
+            "path": "docs/review/navigation-01/02-chevrons-candidate-01/light-1x.png",
+            "sha256": "7489db40794c36bcb2b02575e2f80b1b72236224072df6f1616db4bf7f83532c"
+          },
+          {
+            "path": "docs/review/navigation-01/02-chevrons-candidate-01/dark-1x.png",
+            "sha256": "842f1f1d8173ae557987446767b52ccb8234bcebfdcc2e6030d9ece00f31b233"
+          },
+          {
+            "path": "docs/review/navigation-01/02-chevrons-candidate-01/light-2x.png",
+            "sha256": "aea7bc8b88b2371856263a6862ddd2656e3ebd0501db841498ac123992eb1194"
+          },
+          {
+            "path": "docs/review/navigation-01/02-chevrons-candidate-01/dark-2x.png",
+            "sha256": "4303d48d62560eda510ad8d9092fc1bf2ede77341f5033d2383dddcf3a8ee828"
+          },
+          {
+            "path": "docs/review/navigation-01/native/native-1-light-1x.png",
+            "sha256": "c3e7ccc708bf1aa1de56bc37bc4bb0afe871967d7698f35e80dfef4ec3fbbd2e"
+          },
+          {
+            "path": "docs/review/navigation-01/native/native-1-dark-2x.png",
+            "sha256": "a69dfd10b2a1e1f9bccdbee9f335ec0478b147824355facb24c10c2569a1ffca"
+          },
+          {
+            "path": "docs/review/navigation-01/native/context-light-1x.png",
+            "sha256": "366ecf4f433f1abf6903dc3bbe5d46548e635fed60b63013377941190c7de6c5"
+          },
+          {
+            "path": "docs/review/navigation-01/native/zoom-dark-1x.png",
+            "sha256": "0f21f2f7bde0e6ad1c5720eae98e55317c7b16f2c51aacd8c990b366a5a62039"
+          },
+          {
+            "path": "docs/review/navigation-01/context-light-1x.png",
+            "sha256": "75d91b18a1a24edc374d616625b27cd6c611df0309032d922a33cb327ca5140b"
+          },
+          {
+            "path": "docs/review/navigation-01/context-dark-2x.png",
+            "sha256": "b5bd091d883fc86b319873413006e1a6473ff3f984a09bb1acaa975a096140d4"
+          },
+          {
+            "path": "docs/review/navigation-01/context-final-light-1x.png",
+            "sha256": "b08e3347a79c2799173eb18d285cd2f72f3c3d2ab940403bf0d07e00729a21aa"
+          },
+          {
+            "path": "docs/review/navigation-01/context-final-dark-2x.png",
+            "sha256": "d21149842f78c2d9ee02bd2d696e4ddba788c79134fb17f39a9d098eedcd7089"
+          }
+        ]
+      },
+      "status": "visually-reviewed-candidate",
+      "userApproval": "pending",
+      "remainingIssues": []
+    },
+    {
+      "name": "chevron-left",
+      "concept": "chevron-right",
+      "purpose": "上一個／返回一層",
+      "recognitionCues": "單一左向折角，無桿",
+      "confusableWith": [
+        "chevrons-left"
+      ],
+      "sourceObservation": "來源左右共構；Master 的左右負形對應，rounded 頂點仍像折角而非括號，保留與右向共同母型。",
+      "references": [
+        {
+          "name": "chevron-left",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/chevron-left.svg",
+          "localPath": "references/ui-v1/lucide-chevron-left.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/chevron-left.svg",
+          "sha256": "83b0681aa38bf55e9d52a1e4b4cced624abe1fe7678ecafda133a574f1161d93",
+          "license": "ISC AND MIT",
+          "sourceName": "chevron-left",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "chevron-left",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/chevron-left.svg",
+          "localPath": "references/ui-v1/tabler-chevron-left.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/chevron-left.svg",
+          "sha256": "889174801ca4213379fe4e6a574546793a72ab22be35bc2f177e3d8d24576dbd",
+          "license": "MIT",
+          "sourceName": "chevron-left",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "方向及距離層級由完整折線或箭桿表達，沒有隱藏或待完成邊界。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "同方向筆畫地位相同；用透明通道保持分離，不以淡化掩飾間距。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "平面單色方向符號不需深度或漸層訊號。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "reason": "來源左右共構；Master 的左右負形對應，rounded 頂點仍像折角而非括號，保留與右向共同母型。",
+        "before": {
+          "path": "references/navigation-01/master-before.json",
+          "variantsSha256": "7767f7e7f8af79c921171f3f662f313a964f7fd58921beaadaaa9c33cd73f689"
+        }
+      },
+      "visualReview": {
+        "status": "visually-reviewed-candidate",
+        "reviewer": "Codex (AI)",
+        "date": "2026-11-19",
+        "skillVersion": "0.5.20",
+        "batch": "02-chevrons",
+        "variantsSha256": "7767f7e7f8af79c921171f3f662f313a964f7fd58921beaadaaa9c33cd73f689",
+        "checks": [
+          "16/20/24",
+          "sharp/soft/rounded",
+          "light/dark",
+          "DPR 1/2",
+          "low-contrast text",
+          "pinned-source re-comparison"
+        ],
+        "evidence": [
+          {
+            "path": "docs/review/navigation-01/02-chevrons-candidate-01/light-1x.png",
+            "sha256": "7489db40794c36bcb2b02575e2f80b1b72236224072df6f1616db4bf7f83532c"
+          },
+          {
+            "path": "docs/review/navigation-01/02-chevrons-candidate-01/dark-1x.png",
+            "sha256": "842f1f1d8173ae557987446767b52ccb8234bcebfdcc2e6030d9ece00f31b233"
+          },
+          {
+            "path": "docs/review/navigation-01/02-chevrons-candidate-01/light-2x.png",
+            "sha256": "aea7bc8b88b2371856263a6862ddd2656e3ebd0501db841498ac123992eb1194"
+          },
+          {
+            "path": "docs/review/navigation-01/02-chevrons-candidate-01/dark-2x.png",
+            "sha256": "4303d48d62560eda510ad8d9092fc1bf2ede77341f5033d2383dddcf3a8ee828"
+          },
+          {
+            "path": "docs/review/navigation-01/native/native-1-light-1x.png",
+            "sha256": "c3e7ccc708bf1aa1de56bc37bc4bb0afe871967d7698f35e80dfef4ec3fbbd2e"
+          },
+          {
+            "path": "docs/review/navigation-01/native/native-1-dark-2x.png",
+            "sha256": "a69dfd10b2a1e1f9bccdbee9f335ec0478b147824355facb24c10c2569a1ffca"
+          },
+          {
+            "path": "docs/review/navigation-01/native/context-light-1x.png",
+            "sha256": "366ecf4f433f1abf6903dc3bbe5d46548e635fed60b63013377941190c7de6c5"
+          },
+          {
+            "path": "docs/review/navigation-01/native/zoom-dark-1x.png",
+            "sha256": "0f21f2f7bde0e6ad1c5720eae98e55317c7b16f2c51aacd8c990b366a5a62039"
+          },
+          {
+            "path": "docs/review/navigation-01/context-light-1x.png",
+            "sha256": "75d91b18a1a24edc374d616625b27cd6c611df0309032d922a33cb327ca5140b"
+          },
+          {
+            "path": "docs/review/navigation-01/context-dark-2x.png",
+            "sha256": "b5bd091d883fc86b319873413006e1a6473ff3f984a09bb1acaa975a096140d4"
+          },
+          {
+            "path": "docs/review/navigation-01/context-final-light-1x.png",
+            "sha256": "b08e3347a79c2799173eb18d285cd2f72f3c3d2ab940403bf0d07e00729a21aa"
+          },
+          {
+            "path": "docs/review/navigation-01/context-final-dark-2x.png",
+            "sha256": "d21149842f78c2d9ee02bd2d696e4ddba788c79134fb17f39a9d098eedcd7089"
+          }
+        ]
+      },
+      "status": "visually-reviewed-candidate",
+      "userApproval": "pending",
+      "remainingIssues": []
+    },
+    {
+      "name": "chevron-up",
+      "concept": "chevron-right",
+      "purpose": "向上逐行／收合",
+      "recognitionCues": "單一向上折角",
+      "confusableWith": [
+        "chevrons-up"
+      ],
+      "sourceObservation": "來源較短小；Master 向上的兩翼保留清楚頂點，文字旁沒有顯得太高，與下向開合成對穩定。",
+      "references": [
+        {
+          "name": "chevron-up",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/chevron-up.svg",
+          "localPath": "references/ui-v1/lucide-chevron-up.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/chevron-up.svg",
+          "sha256": "d09f13fcbef3c493ead7e4663b5ee91804fec38d5edb5e7cc3acfbd547641cf4",
+          "license": "ISC AND MIT",
+          "sourceName": "chevron-up",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "chevron-up",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/chevron-up.svg",
+          "localPath": "references/ui-v1/tabler-chevron-up.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/chevron-up.svg",
+          "sha256": "b9a66bccd34ae897a255a38af9e66a1149adf6549f60108907ea3066e5d0e740",
+          "license": "MIT",
+          "sourceName": "chevron-up",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "方向及距離層級由完整折線或箭桿表達，沒有隱藏或待完成邊界。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "同方向筆畫地位相同；用透明通道保持分離，不以淡化掩飾間距。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "平面單色方向符號不需深度或漸層訊號。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "reason": "來源較短小；Master 向上的兩翼保留清楚頂點，文字旁沒有顯得太高，與下向開合成對穩定。",
+        "before": {
+          "path": "references/navigation-01/master-before.json",
+          "variantsSha256": "13eff1ad85b261da903f6a03f737462f44e65d82b2ed5f935939fdc603c0598a"
+        }
+      },
+      "visualReview": {
+        "status": "visually-reviewed-candidate",
+        "reviewer": "Codex (AI)",
+        "date": "2026-11-19",
+        "skillVersion": "0.5.20",
+        "batch": "02-chevrons",
+        "variantsSha256": "13eff1ad85b261da903f6a03f737462f44e65d82b2ed5f935939fdc603c0598a",
+        "checks": [
+          "16/20/24",
+          "sharp/soft/rounded",
+          "light/dark",
+          "DPR 1/2",
+          "low-contrast text",
+          "pinned-source re-comparison"
+        ],
+        "evidence": [
+          {
+            "path": "docs/review/navigation-01/02-chevrons-candidate-01/light-1x.png",
+            "sha256": "7489db40794c36bcb2b02575e2f80b1b72236224072df6f1616db4bf7f83532c"
+          },
+          {
+            "path": "docs/review/navigation-01/02-chevrons-candidate-01/dark-1x.png",
+            "sha256": "842f1f1d8173ae557987446767b52ccb8234bcebfdcc2e6030d9ece00f31b233"
+          },
+          {
+            "path": "docs/review/navigation-01/02-chevrons-candidate-01/light-2x.png",
+            "sha256": "aea7bc8b88b2371856263a6862ddd2656e3ebd0501db841498ac123992eb1194"
+          },
+          {
+            "path": "docs/review/navigation-01/02-chevrons-candidate-01/dark-2x.png",
+            "sha256": "4303d48d62560eda510ad8d9092fc1bf2ede77341f5033d2383dddcf3a8ee828"
+          },
+          {
+            "path": "docs/review/navigation-01/native/native-1-light-1x.png",
+            "sha256": "c3e7ccc708bf1aa1de56bc37bc4bb0afe871967d7698f35e80dfef4ec3fbbd2e"
+          },
+          {
+            "path": "docs/review/navigation-01/native/native-1-dark-2x.png",
+            "sha256": "a69dfd10b2a1e1f9bccdbee9f335ec0478b147824355facb24c10c2569a1ffca"
+          },
+          {
+            "path": "docs/review/navigation-01/native/context-light-1x.png",
+            "sha256": "366ecf4f433f1abf6903dc3bbe5d46548e635fed60b63013377941190c7de6c5"
+          },
+          {
+            "path": "docs/review/navigation-01/native/zoom-dark-1x.png",
+            "sha256": "0f21f2f7bde0e6ad1c5720eae98e55317c7b16f2c51aacd8c990b366a5a62039"
+          },
+          {
+            "path": "docs/review/navigation-01/context-light-1x.png",
+            "sha256": "75d91b18a1a24edc374d616625b27cd6c611df0309032d922a33cb327ca5140b"
+          },
+          {
+            "path": "docs/review/navigation-01/context-dark-2x.png",
+            "sha256": "b5bd091d883fc86b319873413006e1a6473ff3f984a09bb1acaa975a096140d4"
+          },
+          {
+            "path": "docs/review/navigation-01/context-final-light-1x.png",
+            "sha256": "b08e3347a79c2799173eb18d285cd2f72f3c3d2ab940403bf0d07e00729a21aa"
+          },
+          {
+            "path": "docs/review/navigation-01/context-final-dark-2x.png",
+            "sha256": "d21149842f78c2d9ee02bd2d696e4ddba788c79134fb17f39a9d098eedcd7089"
+          }
+        ]
+      },
+      "status": "visually-reviewed-candidate",
+      "userApproval": "pending",
+      "remainingIssues": []
+    },
+    {
+      "name": "chevron-down",
+      "concept": "chevron-right",
+      "purpose": "向下逐行／展開",
+      "recognitionCues": "單一向下折角",
+      "confusableWith": [
+        "chevrons-down"
+      ],
+      "sourceObservation": "來源較短小；Master 折點與兩端不擁擠，作單步控制與雙折角逐頁按鈕可直接區分，保留輪廓。",
+      "references": [
+        {
+          "name": "chevron-down",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/chevron-down.svg",
+          "localPath": "references/ui-v1/lucide-chevron-down.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/chevron-down.svg",
+          "sha256": "66ea878e72ed3488bb3b464c39dfdccee8d1f78e560dccea40e5e12da0e87e87",
+          "license": "ISC AND MIT",
+          "sourceName": "chevron-down",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "chevron-down",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/chevron-down.svg",
+          "localPath": "references/ui-v1/tabler-chevron-down.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/chevron-down.svg",
+          "sha256": "5a2e5c2a155ce06264a3f7299073ed636142dfd0b324b747387d9cfbf9fb5e3e",
+          "license": "MIT",
+          "sourceName": "chevron-down",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "方向及距離層級由完整折線或箭桿表達，沒有隱藏或待完成邊界。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "同方向筆畫地位相同；用透明通道保持分離，不以淡化掩飾間距。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "平面單色方向符號不需深度或漸層訊號。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "reason": "來源較短小；Master 折點與兩端不擁擠，作單步控制與雙折角逐頁按鈕可直接區分，保留輪廓。",
+        "before": {
+          "path": "references/navigation-01/master-before.json",
+          "variantsSha256": "3fa512daad04842354eaaf3b05792dc690dc305e79d4d19ec461648a34c2bbf0"
+        }
+      },
+      "visualReview": {
+        "status": "visually-reviewed-candidate",
+        "reviewer": "Codex (AI)",
+        "date": "2026-11-19",
+        "skillVersion": "0.5.20",
+        "batch": "02-chevrons",
+        "variantsSha256": "3fa512daad04842354eaaf3b05792dc690dc305e79d4d19ec461648a34c2bbf0",
+        "checks": [
+          "16/20/24",
+          "sharp/soft/rounded",
+          "light/dark",
+          "DPR 1/2",
+          "low-contrast text",
+          "pinned-source re-comparison"
+        ],
+        "evidence": [
+          {
+            "path": "docs/review/navigation-01/02-chevrons-candidate-01/light-1x.png",
+            "sha256": "7489db40794c36bcb2b02575e2f80b1b72236224072df6f1616db4bf7f83532c"
+          },
+          {
+            "path": "docs/review/navigation-01/02-chevrons-candidate-01/dark-1x.png",
+            "sha256": "842f1f1d8173ae557987446767b52ccb8234bcebfdcc2e6030d9ece00f31b233"
+          },
+          {
+            "path": "docs/review/navigation-01/02-chevrons-candidate-01/light-2x.png",
+            "sha256": "aea7bc8b88b2371856263a6862ddd2656e3ebd0501db841498ac123992eb1194"
+          },
+          {
+            "path": "docs/review/navigation-01/02-chevrons-candidate-01/dark-2x.png",
+            "sha256": "4303d48d62560eda510ad8d9092fc1bf2ede77341f5033d2383dddcf3a8ee828"
+          },
+          {
+            "path": "docs/review/navigation-01/native/native-1-light-1x.png",
+            "sha256": "c3e7ccc708bf1aa1de56bc37bc4bb0afe871967d7698f35e80dfef4ec3fbbd2e"
+          },
+          {
+            "path": "docs/review/navigation-01/native/native-1-dark-2x.png",
+            "sha256": "a69dfd10b2a1e1f9bccdbee9f335ec0478b147824355facb24c10c2569a1ffca"
+          },
+          {
+            "path": "docs/review/navigation-01/native/context-light-1x.png",
+            "sha256": "366ecf4f433f1abf6903dc3bbe5d46548e635fed60b63013377941190c7de6c5"
+          },
+          {
+            "path": "docs/review/navigation-01/native/zoom-dark-1x.png",
+            "sha256": "0f21f2f7bde0e6ad1c5720eae98e55317c7b16f2c51aacd8c990b366a5a62039"
+          },
+          {
+            "path": "docs/review/navigation-01/context-light-1x.png",
+            "sha256": "75d91b18a1a24edc374d616625b27cd6c611df0309032d922a33cb327ca5140b"
+          },
+          {
+            "path": "docs/review/navigation-01/context-dark-2x.png",
+            "sha256": "b5bd091d883fc86b319873413006e1a6473ff3f984a09bb1acaa975a096140d4"
+          },
+          {
+            "path": "docs/review/navigation-01/context-final-light-1x.png",
+            "sha256": "b08e3347a79c2799173eb18d285cd2f72f3c3d2ab940403bf0d07e00729a21aa"
+          },
+          {
+            "path": "docs/review/navigation-01/context-final-dark-2x.png",
+            "sha256": "d21149842f78c2d9ee02bd2d696e4ddba788c79134fb17f39a9d098eedcd7089"
+          }
+        ]
+      },
+      "status": "visually-reviewed-candidate",
+      "userApproval": "pending",
+      "remainingIssues": []
+    },
+    {
+      "name": "chevrons-right",
+      "concept": "chevrons-right",
+      "purpose": "向右逐頁",
+      "recognitionCues": "同方向兩個分離折角",
+      "confusableWith": [
+        "chevron-right"
+      ],
+      "sourceObservation": "Lucide／Tabler 的兩折角位置較均衡。前稿右向整體偏左；沿用原翼長與 7／24 間距，只向右移 1／24，使光學位置回到單折角的方向規律。原生 16px 兩道折線分離，沒有用加粗補重心。",
+      "references": [
+        {
+          "name": "chevrons-right",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/chevrons-right.svg",
+          "localPath": "references/ui-v1/lucide-chevrons-right.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/chevrons-right.svg",
+          "sha256": "3491f9fe180bf75a058d480f32a0d26ff6a97c6c9a70315c77df7c6b75329d91",
+          "license": "ISC AND MIT",
+          "sourceName": "chevrons-right",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "chevrons-right",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/chevrons-right.svg",
+          "localPath": "references/ui-v1/tabler-chevrons-right.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/chevrons-right.svg",
+          "sha256": "87f2861f980f25b1e4ab8334bd192faf8b65f75cbf2f97fdd12febe2b10fe370",
+          "license": "MIT",
+          "sourceName": "chevrons-right",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "方向及距離層級由完整折線或箭桿表達，沒有隱藏或待完成邊界。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "同方向筆畫地位相同；用透明通道保持分離，不以淡化掩飾間距。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "平面單色方向符號不需深度或漸層訊號。"
+        }
+      },
+      "change": {
+        "kind": "modified",
+        "reason": "Lucide／Tabler 的兩折角位置較均衡。前稿右向整體偏左；沿用原翼長與 7／24 間距，只向右移 1／24，使光學位置回到單折角的方向規律。原生 16px 兩道折線分離，沒有用加粗補重心。",
+        "before": {
+          "path": "references/navigation-01/master-before.json",
+          "variantsSha256": "b7e3f34b30c4877162219f77eb7b13bc1f42673fd2e531c611e718c7d2901fd4"
+        }
+      },
+      "visualReview": {
+        "status": "visually-reviewed-candidate",
+        "reviewer": "Codex (AI)",
+        "date": "2026-11-19",
+        "skillVersion": "0.5.20",
+        "batch": "02-chevrons",
+        "variantsSha256": "801f2bf8200270e4679fe44e12214556a9499d951c71ace1f09099d44f941cd9",
+        "checks": [
+          "16/20/24",
+          "sharp/soft/rounded",
+          "light/dark",
+          "DPR 1/2",
+          "low-contrast text",
+          "pinned-source re-comparison"
+        ],
+        "evidence": [
+          {
+            "path": "docs/review/navigation-01/02-chevrons-candidate-01/light-1x.png",
+            "sha256": "7489db40794c36bcb2b02575e2f80b1b72236224072df6f1616db4bf7f83532c"
+          },
+          {
+            "path": "docs/review/navigation-01/02-chevrons-candidate-01/dark-1x.png",
+            "sha256": "842f1f1d8173ae557987446767b52ccb8234bcebfdcc2e6030d9ece00f31b233"
+          },
+          {
+            "path": "docs/review/navigation-01/02-chevrons-candidate-01/light-2x.png",
+            "sha256": "aea7bc8b88b2371856263a6862ddd2656e3ebd0501db841498ac123992eb1194"
+          },
+          {
+            "path": "docs/review/navigation-01/02-chevrons-candidate-01/dark-2x.png",
+            "sha256": "4303d48d62560eda510ad8d9092fc1bf2ede77341f5033d2383dddcf3a8ee828"
+          },
+          {
+            "path": "docs/review/navigation-01/native/native-1-light-1x.png",
+            "sha256": "c3e7ccc708bf1aa1de56bc37bc4bb0afe871967d7698f35e80dfef4ec3fbbd2e"
+          },
+          {
+            "path": "docs/review/navigation-01/native/native-1-dark-2x.png",
+            "sha256": "a69dfd10b2a1e1f9bccdbee9f335ec0478b147824355facb24c10c2569a1ffca"
+          },
+          {
+            "path": "docs/review/navigation-01/native/context-light-1x.png",
+            "sha256": "366ecf4f433f1abf6903dc3bbe5d46548e635fed60b63013377941190c7de6c5"
+          },
+          {
+            "path": "docs/review/navigation-01/native/zoom-dark-1x.png",
+            "sha256": "0f21f2f7bde0e6ad1c5720eae98e55317c7b16f2c51aacd8c990b366a5a62039"
+          },
+          {
+            "path": "docs/review/navigation-01/context-light-1x.png",
+            "sha256": "75d91b18a1a24edc374d616625b27cd6c611df0309032d922a33cb327ca5140b"
+          },
+          {
+            "path": "docs/review/navigation-01/context-dark-2x.png",
+            "sha256": "b5bd091d883fc86b319873413006e1a6473ff3f984a09bb1acaa975a096140d4"
+          },
+          {
+            "path": "docs/review/navigation-01/context-final-light-1x.png",
+            "sha256": "b08e3347a79c2799173eb18d285cd2f72f3c3d2ab940403bf0d07e00729a21aa"
+          },
+          {
+            "path": "docs/review/navigation-01/context-final-dark-2x.png",
+            "sha256": "d21149842f78c2d9ee02bd2d696e4ddba788c79134fb17f39a9d098eedcd7089"
+          }
+        ]
+      },
+      "status": "visually-reviewed-candidate",
+      "userApproval": "pending",
+      "remainingIssues": []
+    },
+    {
+      "name": "chevrons-left",
+      "concept": "chevrons-right",
+      "purpose": "向左逐頁",
+      "recognitionCues": "同方向兩個分離折角",
+      "confusableWith": [
+        "chevron-left"
+      ],
+      "sourceObservation": "來源左右的佔幅對稱；前稿左向整體偏右。鏡射已調整的右向母型，向左移 1／24，保留翼長、折點與間距，左右切換時不再向反方向偏移。",
+      "references": [
+        {
+          "name": "chevrons-left",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/chevrons-left.svg",
+          "localPath": "references/ui-v1/lucide-chevrons-left.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/chevrons-left.svg",
+          "sha256": "ec966bce841337a305fc7fbc0dab04c650dc9fb7f313d78645ea33378bef06e7",
+          "license": "ISC AND MIT",
+          "sourceName": "chevrons-left",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "chevrons-left",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/chevrons-left.svg",
+          "localPath": "references/ui-v1/tabler-chevrons-left.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/chevrons-left.svg",
+          "sha256": "c103d96b169b7954870f3767f45f5c894dac5ee40820b35037b03217e2e2c770",
+          "license": "MIT",
+          "sourceName": "chevrons-left",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "方向及距離層級由完整折線或箭桿表達，沒有隱藏或待完成邊界。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "同方向筆畫地位相同；用透明通道保持分離，不以淡化掩飾間距。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "平面單色方向符號不需深度或漸層訊號。"
+        }
+      },
+      "change": {
+        "kind": "modified",
+        "reason": "來源左右的佔幅對稱；前稿左向整體偏右。鏡射已調整的右向母型，向左移 1／24，保留翼長、折點與間距，左右切換時不再向反方向偏移。",
+        "before": {
+          "path": "references/navigation-01/master-before.json",
+          "variantsSha256": "3cd56977cec67d5312760c1948173bff72d70fa7eed93b50796b2c9d34db0ffb"
+        }
+      },
+      "visualReview": {
+        "status": "visually-reviewed-candidate",
+        "reviewer": "Codex (AI)",
+        "date": "2026-11-19",
+        "skillVersion": "0.5.20",
+        "batch": "02-chevrons",
+        "variantsSha256": "c1a434b12b8ad7972eb4d6fab65272a7833de167917f814539dfc1801a10fef0",
+        "checks": [
+          "16/20/24",
+          "sharp/soft/rounded",
+          "light/dark",
+          "DPR 1/2",
+          "low-contrast text",
+          "pinned-source re-comparison"
+        ],
+        "evidence": [
+          {
+            "path": "docs/review/navigation-01/02-chevrons-candidate-01/light-1x.png",
+            "sha256": "7489db40794c36bcb2b02575e2f80b1b72236224072df6f1616db4bf7f83532c"
+          },
+          {
+            "path": "docs/review/navigation-01/02-chevrons-candidate-01/dark-1x.png",
+            "sha256": "842f1f1d8173ae557987446767b52ccb8234bcebfdcc2e6030d9ece00f31b233"
+          },
+          {
+            "path": "docs/review/navigation-01/02-chevrons-candidate-01/light-2x.png",
+            "sha256": "aea7bc8b88b2371856263a6862ddd2656e3ebd0501db841498ac123992eb1194"
+          },
+          {
+            "path": "docs/review/navigation-01/02-chevrons-candidate-01/dark-2x.png",
+            "sha256": "4303d48d62560eda510ad8d9092fc1bf2ede77341f5033d2383dddcf3a8ee828"
+          },
+          {
+            "path": "docs/review/navigation-01/native/native-1-light-1x.png",
+            "sha256": "c3e7ccc708bf1aa1de56bc37bc4bb0afe871967d7698f35e80dfef4ec3fbbd2e"
+          },
+          {
+            "path": "docs/review/navigation-01/native/native-1-dark-2x.png",
+            "sha256": "a69dfd10b2a1e1f9bccdbee9f335ec0478b147824355facb24c10c2569a1ffca"
+          },
+          {
+            "path": "docs/review/navigation-01/native/context-light-1x.png",
+            "sha256": "366ecf4f433f1abf6903dc3bbe5d46548e635fed60b63013377941190c7de6c5"
+          },
+          {
+            "path": "docs/review/navigation-01/native/zoom-dark-1x.png",
+            "sha256": "0f21f2f7bde0e6ad1c5720eae98e55317c7b16f2c51aacd8c990b366a5a62039"
+          },
+          {
+            "path": "docs/review/navigation-01/context-light-1x.png",
+            "sha256": "75d91b18a1a24edc374d616625b27cd6c611df0309032d922a33cb327ca5140b"
+          },
+          {
+            "path": "docs/review/navigation-01/context-dark-2x.png",
+            "sha256": "b5bd091d883fc86b319873413006e1a6473ff3f984a09bb1acaa975a096140d4"
+          },
+          {
+            "path": "docs/review/navigation-01/context-final-light-1x.png",
+            "sha256": "b08e3347a79c2799173eb18d285cd2f72f3c3d2ab940403bf0d07e00729a21aa"
+          },
+          {
+            "path": "docs/review/navigation-01/context-final-dark-2x.png",
+            "sha256": "d21149842f78c2d9ee02bd2d696e4ddba788c79134fb17f39a9d098eedcd7089"
+          }
+        ]
+      },
+      "status": "visually-reviewed-candidate",
+      "userApproval": "pending",
+      "remainingIssues": []
+    },
+    {
+      "name": "chevrons-up",
+      "concept": "chevrons-right",
+      "purpose": "紀錄檢視器向上翻一頁",
+      "recognitionCues": "兩個向上折角，與單步和頂界三層區分",
+      "confusableWith": [
+        "chevron-up"
+      ],
+      "sourceObservation": "Lucide／Tabler 的兩個向上折角皆保留清楚中間通道。Master 旋轉修正後的右向母型，沿用微圓尖端與較寬間距；16px 明暗與灰字旁仍可看見兩個完整峰形。",
+      "references": [
+        {
+          "name": "chevrons-up",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/chevrons-up.svg",
+          "localPath": "references/studio-01/lucide-chevrons-up.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/chevrons-up.svg",
+          "sha256": "dcc30f99a1e3177505dee39749fec4722cf567d420d6829780990ef744ea533c",
+          "license": "ISC AND MIT",
+          "sourceName": "chevrons-up",
+          "role": "comparison-only",
+          "match": "exact"
+        },
+        {
+          "name": "chevrons-up",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/chevrons-up.svg",
+          "localPath": "references/studio-01/tabler-chevrons-up.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/chevrons-up.svg",
+          "sha256": "d570fa420e6794bb13e448a4df5e6011a1c57c5efcd68ca82a3db0702148c78d",
+          "license": "MIT",
+          "sourceName": "chevrons-up",
+          "role": "comparison-only",
+          "match": "exact"
+        }
+      ],
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "方向及距離層級由完整折線或箭桿表達，沒有隱藏或待完成邊界。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "同方向筆畫地位相同；用透明通道保持分離，不以淡化掩飾間距。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "平面單色方向符號不需深度或漸層訊號。"
+        }
+      },
+      "change": {
+        "kind": "new",
+        "reason": "Lucide／Tabler 的兩個向上折角皆保留清楚中間通道。Master 旋轉修正後的右向母型，沿用微圓尖端與較寬間距；16px 明暗與灰字旁仍可看見兩個完整峰形。",
+        "before": null
+      },
+      "visualReview": {
+        "status": "visually-reviewed-candidate",
+        "reviewer": "Codex (AI)",
+        "date": "2026-11-19",
+        "skillVersion": "0.5.20",
+        "batch": "02-chevrons",
+        "variantsSha256": "ff8ca17b621ef29b5ab33e74db30d6eca00bc640879162012622ea09faeb5e74",
+        "checks": [
+          "16/20/24",
+          "sharp/soft/rounded",
+          "light/dark",
+          "DPR 1/2",
+          "low-contrast text",
+          "pinned-source re-comparison"
+        ],
+        "evidence": [
+          {
+            "path": "docs/review/navigation-01/02-chevrons-candidate-01/light-1x.png",
+            "sha256": "7489db40794c36bcb2b02575e2f80b1b72236224072df6f1616db4bf7f83532c"
+          },
+          {
+            "path": "docs/review/navigation-01/02-chevrons-candidate-01/dark-1x.png",
+            "sha256": "842f1f1d8173ae557987446767b52ccb8234bcebfdcc2e6030d9ece00f31b233"
+          },
+          {
+            "path": "docs/review/navigation-01/02-chevrons-candidate-01/light-2x.png",
+            "sha256": "aea7bc8b88b2371856263a6862ddd2656e3ebd0501db841498ac123992eb1194"
+          },
+          {
+            "path": "docs/review/navigation-01/02-chevrons-candidate-01/dark-2x.png",
+            "sha256": "4303d48d62560eda510ad8d9092fc1bf2ede77341f5033d2383dddcf3a8ee828"
+          },
+          {
+            "path": "docs/review/navigation-01/native/native-1-light-1x.png",
+            "sha256": "c3e7ccc708bf1aa1de56bc37bc4bb0afe871967d7698f35e80dfef4ec3fbbd2e"
+          },
+          {
+            "path": "docs/review/navigation-01/native/native-1-dark-2x.png",
+            "sha256": "a69dfd10b2a1e1f9bccdbee9f335ec0478b147824355facb24c10c2569a1ffca"
+          },
+          {
+            "path": "docs/review/navigation-01/native/context-light-1x.png",
+            "sha256": "366ecf4f433f1abf6903dc3bbe5d46548e635fed60b63013377941190c7de6c5"
+          },
+          {
+            "path": "docs/review/navigation-01/native/zoom-dark-1x.png",
+            "sha256": "0f21f2f7bde0e6ad1c5720eae98e55317c7b16f2c51aacd8c990b366a5a62039"
+          },
+          {
+            "path": "docs/review/navigation-01/context-light-1x.png",
+            "sha256": "75d91b18a1a24edc374d616625b27cd6c611df0309032d922a33cb327ca5140b"
+          },
+          {
+            "path": "docs/review/navigation-01/context-dark-2x.png",
+            "sha256": "b5bd091d883fc86b319873413006e1a6473ff3f984a09bb1acaa975a096140d4"
+          },
+          {
+            "path": "docs/review/navigation-01/context-final-light-1x.png",
+            "sha256": "b08e3347a79c2799173eb18d285cd2f72f3c3d2ab940403bf0d07e00729a21aa"
+          },
+          {
+            "path": "docs/review/navigation-01/context-final-dark-2x.png",
+            "sha256": "d21149842f78c2d9ee02bd2d696e4ddba788c79134fb17f39a9d098eedcd7089"
+          }
+        ]
+      },
+      "status": "visually-reviewed-candidate",
+      "userApproval": "pending",
+      "remainingIssues": []
+    },
+    {
+      "name": "chevrons-down",
+      "concept": "chevrons-right",
+      "purpose": "紀錄檢視器向下翻一頁",
+      "recognitionCues": "兩個向下折角，與單步和底界三層區分",
+      "confusableWith": [
+        "chevron-down"
+      ],
+      "sourceObservation": "Lucide／Tabler 的兩折角不共用頂點。Master 沿用四向共同母型，向下兩折點有相同收角；三角型原生 16／20／24 沒有變成一條 W 或粗折線。",
+      "references": [
+        {
+          "name": "chevrons-down",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/chevrons-down.svg",
+          "localPath": "references/studio-01/lucide-chevrons-down.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/chevrons-down.svg",
+          "sha256": "9dca099985dea6e28522bff10671b3b5e7ea88f7409a5efd8ede631480f4e133",
+          "license": "ISC AND MIT",
+          "sourceName": "chevrons-down",
+          "role": "comparison-only",
+          "match": "exact"
+        },
+        {
+          "name": "chevrons-down",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/chevrons-down.svg",
+          "localPath": "references/studio-01/tabler-chevrons-down.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/chevrons-down.svg",
+          "sha256": "5f411b94d8764c87b64eb50e7f3e18abfdc18b86bc2ac8d19831c74475b2e4c6",
+          "license": "MIT",
+          "sourceName": "chevrons-down",
+          "role": "comparison-only",
+          "match": "exact"
+        }
+      ],
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "方向及距離層級由完整折線或箭桿表達，沒有隱藏或待完成邊界。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "同方向筆畫地位相同；用透明通道保持分離，不以淡化掩飾間距。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "平面單色方向符號不需深度或漸層訊號。"
+        }
+      },
+      "change": {
+        "kind": "new",
+        "reason": "Lucide／Tabler 的兩折角不共用頂點。Master 沿用四向共同母型，向下兩折點有相同收角；三角型原生 16／20／24 沒有變成一條 W 或粗折線。",
+        "before": null
+      },
+      "visualReview": {
+        "status": "visually-reviewed-candidate",
+        "reviewer": "Codex (AI)",
+        "date": "2026-11-19",
+        "skillVersion": "0.5.20",
+        "batch": "02-chevrons",
+        "variantsSha256": "a12beb0da1043a814890cce5ecb04cfe77275a7f49510026952c327e79df4858",
+        "checks": [
+          "16/20/24",
+          "sharp/soft/rounded",
+          "light/dark",
+          "DPR 1/2",
+          "low-contrast text",
+          "pinned-source re-comparison"
+        ],
+        "evidence": [
+          {
+            "path": "docs/review/navigation-01/02-chevrons-candidate-01/light-1x.png",
+            "sha256": "7489db40794c36bcb2b02575e2f80b1b72236224072df6f1616db4bf7f83532c"
+          },
+          {
+            "path": "docs/review/navigation-01/02-chevrons-candidate-01/dark-1x.png",
+            "sha256": "842f1f1d8173ae557987446767b52ccb8234bcebfdcc2e6030d9ece00f31b233"
+          },
+          {
+            "path": "docs/review/navigation-01/02-chevrons-candidate-01/light-2x.png",
+            "sha256": "aea7bc8b88b2371856263a6862ddd2656e3ebd0501db841498ac123992eb1194"
+          },
+          {
+            "path": "docs/review/navigation-01/02-chevrons-candidate-01/dark-2x.png",
+            "sha256": "4303d48d62560eda510ad8d9092fc1bf2ede77341f5033d2383dddcf3a8ee828"
+          },
+          {
+            "path": "docs/review/navigation-01/native/native-1-light-1x.png",
+            "sha256": "c3e7ccc708bf1aa1de56bc37bc4bb0afe871967d7698f35e80dfef4ec3fbbd2e"
+          },
+          {
+            "path": "docs/review/navigation-01/native/native-1-dark-2x.png",
+            "sha256": "a69dfd10b2a1e1f9bccdbee9f335ec0478b147824355facb24c10c2569a1ffca"
+          },
+          {
+            "path": "docs/review/navigation-01/native/context-light-1x.png",
+            "sha256": "366ecf4f433f1abf6903dc3bbe5d46548e635fed60b63013377941190c7de6c5"
+          },
+          {
+            "path": "docs/review/navigation-01/native/zoom-dark-1x.png",
+            "sha256": "0f21f2f7bde0e6ad1c5720eae98e55317c7b16f2c51aacd8c990b366a5a62039"
+          },
+          {
+            "path": "docs/review/navigation-01/context-light-1x.png",
+            "sha256": "75d91b18a1a24edc374d616625b27cd6c611df0309032d922a33cb327ca5140b"
+          },
+          {
+            "path": "docs/review/navigation-01/context-dark-2x.png",
+            "sha256": "b5bd091d883fc86b319873413006e1a6473ff3f984a09bb1acaa975a096140d4"
+          },
+          {
+            "path": "docs/review/navigation-01/context-final-light-1x.png",
+            "sha256": "b08e3347a79c2799173eb18d285cd2f72f3c3d2ab940403bf0d07e00729a21aa"
+          },
+          {
+            "path": "docs/review/navigation-01/context-final-dark-2x.png",
+            "sha256": "d21149842f78c2d9ee02bd2d696e4ddba788c79134fb17f39a9d098eedcd7089"
+          }
+        ]
+      },
+      "status": "visually-reviewed-candidate",
+      "userApproval": "pending",
+      "remainingIssues": []
+    },
+    {
+      "name": "arrow-right-to-line",
+      "concept": "arrow-right-to-line",
+      "purpose": "移至右界",
+      "recognitionCues": "箭頭與獨立垂直界線",
+      "confusableWith": [
+        "arrow-right"
+      ],
+      "sourceObservation": "Lucide 的尖端更貼邊界，Hugeicons 的桿較長；Master 保留較寬的尖端到界線通道，16px 兩者不黏成按鈕尾部，右界清楚。",
+      "references": [
+        {
+          "name": "arrow-right-to-line",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/arrow-right-to-line.svg",
+          "localPath": "references/studio-01/lucide-arrow-right-to-line.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/arrow-right-to-line.svg",
+          "sha256": "afcf1bab89107f5c96bd4deb2261e108b2638693b9fcb90bd9ecde2676077ede",
+          "license": "ISC AND MIT",
+          "sourceName": "arrow-right-to-line",
+          "role": "comparison-only",
+          "match": "exact"
+        },
+        {
+          "name": "arrow-right-to-line",
+          "library": "Hugeicons Free",
+          "repository": "hugeicons/hugeicons",
+          "commit": "834e28d965946c1ee60d080027fe9dae4adc58d0",
+          "path": "icons/arrow-right-to-line.svg",
+          "localPath": "references/studio-01/hugeicons-free-arrow-right-to-line.svg",
+          "url": "https://github.com/hugeicons/hugeicons/blob/834e28d965946c1ee60d080027fe9dae4adc58d0/icons/arrow-right-to-line.svg",
+          "sha256": "6081031334d405e0f63f60350388148da9ba8fcd7d22b912f94fca5fe1b51636",
+          "license": "MIT",
+          "sourceName": "arrow-right-to-line",
+          "role": "comparison-only",
+          "match": "exact"
+        }
+      ],
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "方向及距離層級由完整折線或箭桿表達，沒有隱藏或待完成邊界。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "同方向筆畫地位相同；用透明通道保持分離，不以淡化掩飾間距。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "平面單色方向符號不需深度或漸層訊號。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "reason": "Lucide 的尖端更貼邊界，Hugeicons 的桿較長；Master 保留較寬的尖端到界線通道，16px 兩者不黏成按鈕尾部，右界清楚。",
+        "before": {
+          "path": "references/navigation-01/master-before.json",
+          "variantsSha256": "d7a4181246f3721dfce11b77a8d9e2ed4048e16e27ab2a73fd66d4779a21c8aa"
+        }
+      },
+      "visualReview": {
+        "status": "visually-reviewed-candidate",
+        "reviewer": "Codex (AI)",
+        "date": "2026-11-19",
+        "skillVersion": "0.5.20",
+        "batch": "03-boundaries",
+        "variantsSha256": "d7a4181246f3721dfce11b77a8d9e2ed4048e16e27ab2a73fd66d4779a21c8aa",
+        "checks": [
+          "16/20/24",
+          "sharp/soft/rounded",
+          "light/dark",
+          "DPR 1/2",
+          "low-contrast text",
+          "pinned-source re-comparison"
+        ],
+        "evidence": [
+          {
+            "path": "docs/review/navigation-01/03-boundaries-before/light-1x.png",
+            "sha256": "f906dfbe3a9bb35b8d589bfe1ced3c781b9a9842e7b4c82822c4ddc91ed57023"
+          },
+          {
+            "path": "docs/review/navigation-01/03-boundaries-final/dark-1x.png",
+            "sha256": "8ca70a76a4cf75889879f538b55dc68ade7f8b722fa027dd6f83edc08fe3ad19"
+          },
+          {
+            "path": "docs/review/navigation-01/03-boundaries-final/dark-2x.png",
+            "sha256": "191e142ec0b1cd8217a987e0cb715810bbb408502b5e7331c7bba0035b6073f8"
+          },
+          {
+            "path": "docs/review/navigation-01/context-final-light-1x.png",
+            "sha256": "b08e3347a79c2799173eb18d285cd2f72f3c3d2ab940403bf0d07e00729a21aa"
+          },
+          {
+            "path": "docs/review/navigation-01/context-final-dark-2x.png",
+            "sha256": "d21149842f78c2d9ee02bd2d696e4ddba788c79134fb17f39a9d098eedcd7089"
+          }
+        ]
+      },
+      "status": "visually-reviewed-candidate",
+      "userApproval": "pending",
+      "remainingIssues": []
+    },
+    {
+      "name": "arrow-left-to-line",
+      "concept": "arrow-right-to-line",
+      "purpose": "移至左界",
+      "recognitionCues": "箭頭與獨立垂直界線",
+      "confusableWith": [
+        "arrow-left"
+      ],
+      "sourceObservation": "來源偏長桿、窄端隙；Master 鏡向位置留住相同左界通道，尖端雖向左仍與外界線分離，保留共享 rightBoundary。",
+      "references": [
+        {
+          "name": "arrow-left-to-line",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/arrow-left-to-line.svg",
+          "localPath": "references/studio-01/lucide-arrow-left-to-line.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/arrow-left-to-line.svg",
+          "sha256": "943b9ddfb5283ffe34c33ce8d6c967ee154aa7ea58da09a756fae07b59a80221",
+          "license": "ISC AND MIT",
+          "sourceName": "arrow-left-to-line",
+          "role": "comparison-only",
+          "match": "exact"
+        },
+        {
+          "name": "arrow-left-to-line",
+          "library": "Hugeicons Free",
+          "repository": "hugeicons/hugeicons",
+          "commit": "834e28d965946c1ee60d080027fe9dae4adc58d0",
+          "path": "icons/arrow-left-to-line.svg",
+          "localPath": "references/studio-01/hugeicons-free-arrow-left-to-line.svg",
+          "url": "https://github.com/hugeicons/hugeicons/blob/834e28d965946c1ee60d080027fe9dae4adc58d0/icons/arrow-left-to-line.svg",
+          "sha256": "773a0fc4dfc2b784a9aa17f5ae5d41e15896dea94bbce17f164d355d0d6395ef",
+          "license": "MIT",
+          "sourceName": "arrow-left-to-line",
+          "role": "comparison-only",
+          "match": "exact"
+        }
+      ],
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "方向及距離層級由完整折線或箭桿表達，沒有隱藏或待完成邊界。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "同方向筆畫地位相同；用透明通道保持分離，不以淡化掩飾間距。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "平面單色方向符號不需深度或漸層訊號。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "reason": "來源偏長桿、窄端隙；Master 鏡向位置留住相同左界通道，尖端雖向左仍與外界線分離，保留共享 rightBoundary。",
+        "before": {
+          "path": "references/navigation-01/master-before.json",
+          "variantsSha256": "749685f2e69748f499f48ebff59360fa1b1136e4e5b09877edac9b7fbdf07a36"
+        }
+      },
+      "visualReview": {
+        "status": "visually-reviewed-candidate",
+        "reviewer": "Codex (AI)",
+        "date": "2026-11-19",
+        "skillVersion": "0.5.20",
+        "batch": "03-boundaries",
+        "variantsSha256": "749685f2e69748f499f48ebff59360fa1b1136e4e5b09877edac9b7fbdf07a36",
+        "checks": [
+          "16/20/24",
+          "sharp/soft/rounded",
+          "light/dark",
+          "DPR 1/2",
+          "low-contrast text",
+          "pinned-source re-comparison"
+        ],
+        "evidence": [
+          {
+            "path": "docs/review/navigation-01/03-boundaries-before/light-1x.png",
+            "sha256": "f906dfbe3a9bb35b8d589bfe1ced3c781b9a9842e7b4c82822c4ddc91ed57023"
+          },
+          {
+            "path": "docs/review/navigation-01/03-boundaries-final/dark-1x.png",
+            "sha256": "8ca70a76a4cf75889879f538b55dc68ade7f8b722fa027dd6f83edc08fe3ad19"
+          },
+          {
+            "path": "docs/review/navigation-01/03-boundaries-final/dark-2x.png",
+            "sha256": "191e142ec0b1cd8217a987e0cb715810bbb408502b5e7331c7bba0035b6073f8"
+          },
+          {
+            "path": "docs/review/navigation-01/context-final-light-1x.png",
+            "sha256": "b08e3347a79c2799173eb18d285cd2f72f3c3d2ab940403bf0d07e00729a21aa"
+          },
+          {
+            "path": "docs/review/navigation-01/context-final-dark-2x.png",
+            "sha256": "d21149842f78c2d9ee02bd2d696e4ddba788c79134fb17f39a9d098eedcd7089"
+          }
+        ]
+      },
+      "status": "visually-reviewed-candidate",
+      "userApproval": "pending",
+      "remainingIssues": []
+    },
+    {
+      "name": "arrow-up-to-line",
+      "concept": "arrow-right-to-line",
+      "purpose": "移至頂端",
+      "recognitionCues": "上箭頭與獨立水平頂界",
+      "confusableWith": [
+        "chevrons-up"
+      ],
+      "sourceObservation": "來源頂界較近；Master 額外空白在 16px 有利於分清頂界與箭翼，沒有變成下載托盤，保留桿長和界線佔幅。",
+      "references": [
+        {
+          "name": "arrow-up-to-line",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/arrow-up-to-line.svg",
+          "localPath": "references/studio-01/lucide-arrow-up-to-line.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/arrow-up-to-line.svg",
+          "sha256": "2ce4423f157151ae5ef2a3dd24f51c28baf20b0f85b6a49cc551c15a2488845d",
+          "license": "ISC AND MIT",
+          "sourceName": "arrow-up-to-line",
+          "role": "comparison-only",
+          "match": "exact"
+        },
+        {
+          "name": "arrow-up-to-line",
+          "library": "Hugeicons Free",
+          "repository": "hugeicons/hugeicons",
+          "commit": "834e28d965946c1ee60d080027fe9dae4adc58d0",
+          "path": "icons/arrow-up-to-line.svg",
+          "localPath": "references/studio-01/hugeicons-free-arrow-up-to-line.svg",
+          "url": "https://github.com/hugeicons/hugeicons/blob/834e28d965946c1ee60d080027fe9dae4adc58d0/icons/arrow-up-to-line.svg",
+          "sha256": "2a003009cdaa522a1b4234a4cc1baee62b463a1313d3a4b46f13e561a2ec3981",
+          "license": "MIT",
+          "sourceName": "arrow-up-to-line",
+          "role": "comparison-only",
+          "match": "exact"
+        }
+      ],
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "方向及距離層級由完整折線或箭桿表達，沒有隱藏或待完成邊界。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "同方向筆畫地位相同；用透明通道保持分離，不以淡化掩飾間距。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "平面單色方向符號不需深度或漸層訊號。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "reason": "來源頂界較近；Master 額外空白在 16px 有利於分清頂界與箭翼，沒有變成下載托盤，保留桿長和界線佔幅。",
+        "before": {
+          "path": "references/navigation-01/master-before.json",
+          "variantsSha256": "62cc816c54e4371708ac049614a54e2e0ba8a91e56acc86bb489ec83032f2d96"
+        }
+      },
+      "visualReview": {
+        "status": "visually-reviewed-candidate",
+        "reviewer": "Codex (AI)",
+        "date": "2026-11-19",
+        "skillVersion": "0.5.20",
+        "batch": "03-boundaries",
+        "variantsSha256": "62cc816c54e4371708ac049614a54e2e0ba8a91e56acc86bb489ec83032f2d96",
+        "checks": [
+          "16/20/24",
+          "sharp/soft/rounded",
+          "light/dark",
+          "DPR 1/2",
+          "low-contrast text",
+          "pinned-source re-comparison"
+        ],
+        "evidence": [
+          {
+            "path": "docs/review/navigation-01/03-boundaries-before/light-1x.png",
+            "sha256": "f906dfbe3a9bb35b8d589bfe1ced3c781b9a9842e7b4c82822c4ddc91ed57023"
+          },
+          {
+            "path": "docs/review/navigation-01/03-boundaries-final/dark-1x.png",
+            "sha256": "8ca70a76a4cf75889879f538b55dc68ade7f8b722fa027dd6f83edc08fe3ad19"
+          },
+          {
+            "path": "docs/review/navigation-01/03-boundaries-final/dark-2x.png",
+            "sha256": "191e142ec0b1cd8217a987e0cb715810bbb408502b5e7331c7bba0035b6073f8"
+          },
+          {
+            "path": "docs/review/navigation-01/context-final-light-1x.png",
+            "sha256": "b08e3347a79c2799173eb18d285cd2f72f3c3d2ab940403bf0d07e00729a21aa"
+          },
+          {
+            "path": "docs/review/navigation-01/context-final-dark-2x.png",
+            "sha256": "d21149842f78c2d9ee02bd2d696e4ddba788c79134fb17f39a9d098eedcd7089"
+          }
+        ]
+      },
+      "status": "visually-reviewed-candidate",
+      "userApproval": "pending",
+      "remainingIssues": []
+    },
+    {
+      "name": "arrow-down-to-line",
+      "concept": "arrow-right-to-line",
+      "purpose": "移至底端",
+      "recognitionCues": "下箭頭與獨立水平底界",
+      "confusableWith": [
+        "chevrons-down"
+      ],
+      "sourceObservation": "來源尖端到界線較緊；Master 的水平白縫清楚，與純向下、雙折角逐頁皆有不同訊號，保留共同四向母型。",
+      "references": [
+        {
+          "name": "arrow-down-to-line",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/arrow-down-to-line.svg",
+          "localPath": "references/studio-01/lucide-arrow-down-to-line.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/arrow-down-to-line.svg",
+          "sha256": "d44032ba6c8d27fa6b1589831a4cf5e22acf3b1e7bb7852913c1bf323b1fd7de",
+          "license": "ISC AND MIT",
+          "sourceName": "arrow-down-to-line",
+          "role": "comparison-only",
+          "match": "exact"
+        },
+        {
+          "name": "arrow-down-to-line",
+          "library": "Hugeicons Free",
+          "repository": "hugeicons/hugeicons",
+          "commit": "834e28d965946c1ee60d080027fe9dae4adc58d0",
+          "path": "icons/arrow-down-to-line.svg",
+          "localPath": "references/studio-01/hugeicons-free-arrow-down-to-line.svg",
+          "url": "https://github.com/hugeicons/hugeicons/blob/834e28d965946c1ee60d080027fe9dae4adc58d0/icons/arrow-down-to-line.svg",
+          "sha256": "a68ade9ee10247113cc7db1ca6a9154eac1049d14d574becf2e259079b077e12",
+          "license": "MIT",
+          "sourceName": "arrow-down-to-line",
+          "role": "comparison-only",
+          "match": "exact"
+        }
+      ],
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "方向及距離層級由完整折線或箭桿表達，沒有隱藏或待完成邊界。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "同方向筆畫地位相同；用透明通道保持分離，不以淡化掩飾間距。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "平面單色方向符號不需深度或漸層訊號。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "reason": "來源尖端到界線較緊；Master 的水平白縫清楚，與純向下、雙折角逐頁皆有不同訊號，保留共同四向母型。",
+        "before": {
+          "path": "references/navigation-01/master-before.json",
+          "variantsSha256": "3ab9ec0cab3d5b7aca7d7c672cd1e2e484132599b2c1a3c93df9641cf5ae6344"
+        }
+      },
+      "visualReview": {
+        "status": "visually-reviewed-candidate",
+        "reviewer": "Codex (AI)",
+        "date": "2026-11-19",
+        "skillVersion": "0.5.20",
+        "batch": "03-boundaries",
+        "variantsSha256": "3ab9ec0cab3d5b7aca7d7c672cd1e2e484132599b2c1a3c93df9641cf5ae6344",
+        "checks": [
+          "16/20/24",
+          "sharp/soft/rounded",
+          "light/dark",
+          "DPR 1/2",
+          "low-contrast text",
+          "pinned-source re-comparison"
+        ],
+        "evidence": [
+          {
+            "path": "docs/review/navigation-01/03-boundaries-before/light-1x.png",
+            "sha256": "f906dfbe3a9bb35b8d589bfe1ced3c781b9a9842e7b4c82822c4ddc91ed57023"
+          },
+          {
+            "path": "docs/review/navigation-01/03-boundaries-final/dark-1x.png",
+            "sha256": "8ca70a76a4cf75889879f538b55dc68ade7f8b722fa027dd6f83edc08fe3ad19"
+          },
+          {
+            "path": "docs/review/navigation-01/03-boundaries-final/dark-2x.png",
+            "sha256": "191e142ec0b1cd8217a987e0cb715810bbb408502b5e7331c7bba0035b6073f8"
+          },
+          {
+            "path": "docs/review/navigation-01/context-final-light-1x.png",
+            "sha256": "b08e3347a79c2799173eb18d285cd2f72f3c3d2ab940403bf0d07e00729a21aa"
+          },
+          {
+            "path": "docs/review/navigation-01/context-final-dark-2x.png",
+            "sha256": "d21149842f78c2d9ee02bd2d696e4ddba788c79134fb17f39a9d098eedcd7089"
+          }
+        ]
+      },
+      "status": "visually-reviewed-candidate",
+      "userApproval": "pending",
+      "remainingIssues": []
+    },
+    {
+      "name": "chevrons-left-right",
+      "concept": "chevrons-up-down",
+      "purpose": "比較滑桿左右拖曳",
+      "recognitionCues": "朝外的兩折角，中間留白",
+      "confusableWith": [
+        "chevrons-right"
+      ],
+      "sourceObservation": "Lucide 折點更直接，Hugeicons 弧線較柔；Master 保留直折微圓，中間不連成菱形，16px 的分離足以表達雙向而非連續前進。",
+      "references": [
+        {
+          "name": "chevrons-left-right",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/chevrons-left-right.svg",
+          "localPath": "references/product-ui-01/lucide-chevrons-left-right.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/chevrons-left-right.svg",
+          "sha256": "d91f68f58115b43b7c46f04b0df8ae70312b068468720ab2001fc5a8deb2a8cf",
+          "license": "ISC AND MIT",
+          "sourceName": "chevrons-left-right",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "chevrons-left-right",
+          "library": "Hugeicons Free",
+          "repository": "hugeicons/hugeicons",
+          "commit": "834e28d965946c1ee60d080027fe9dae4adc58d0",
+          "path": "icons/chevrons-left-right.svg",
+          "localPath": "references/product-ui-01/huge-chevrons-left-right.svg",
+          "url": "https://github.com/hugeicons/hugeicons/blob/834e28d965946c1ee60d080027fe9dae4adc58d0/icons/chevrons-left-right.svg",
+          "sha256": "2b9ef450c235167ab69a511e752bfea7b204a3ea461c035ad391ab8e0fbe8abc",
+          "license": "MIT",
+          "sourceName": "chevrons-left-right",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "方向及距離層級由完整折線或箭桿表達，沒有隱藏或待完成邊界。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "同方向筆畫地位相同；用透明通道保持分離，不以淡化掩飾間距。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "平面單色方向符號不需深度或漸層訊號。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "reason": "Lucide 折點更直接，Hugeicons 弧線較柔；Master 保留直折微圓，中間不連成菱形，16px 的分離足以表達雙向而非連續前進。",
+        "before": {
+          "path": "references/navigation-01/master-before.json",
+          "variantsSha256": "d1f6167077909277d446b74d807dffd24b53b405e33ac4d12b889cdf1a88895b"
+        }
+      },
+      "visualReview": {
+        "status": "visually-reviewed-candidate",
+        "reviewer": "Codex (AI)",
+        "date": "2026-11-19",
+        "skillVersion": "0.5.20",
+        "batch": "03-boundaries",
+        "variantsSha256": "d1f6167077909277d446b74d807dffd24b53b405e33ac4d12b889cdf1a88895b",
+        "checks": [
+          "16/20/24",
+          "sharp/soft/rounded",
+          "light/dark",
+          "DPR 1/2",
+          "low-contrast text",
+          "pinned-source re-comparison"
+        ],
+        "evidence": [
+          {
+            "path": "docs/review/navigation-01/03-boundaries-before/light-1x.png",
+            "sha256": "f906dfbe3a9bb35b8d589bfe1ced3c781b9a9842e7b4c82822c4ddc91ed57023"
+          },
+          {
+            "path": "docs/review/navigation-01/03-boundaries-final/dark-1x.png",
+            "sha256": "8ca70a76a4cf75889879f538b55dc68ade7f8b722fa027dd6f83edc08fe3ad19"
+          },
+          {
+            "path": "docs/review/navigation-01/03-boundaries-final/dark-2x.png",
+            "sha256": "191e142ec0b1cd8217a987e0cb715810bbb408502b5e7331c7bba0035b6073f8"
+          },
+          {
+            "path": "docs/review/navigation-01/context-final-light-1x.png",
+            "sha256": "b08e3347a79c2799173eb18d285cd2f72f3c3d2ab940403bf0d07e00729a21aa"
+          },
+          {
+            "path": "docs/review/navigation-01/context-final-dark-2x.png",
+            "sha256": "d21149842f78c2d9ee02bd2d696e4ddba788c79134fb17f39a9d098eedcd7089"
+          }
+        ]
+      },
+      "status": "visually-reviewed-candidate",
+      "userApproval": "pending",
+      "remainingIssues": []
+    },
+    {
+      "name": "chevrons-up-down",
+      "concept": "chevrons-up-down",
+      "purpose": "數字步進／雙向選擇器",
+      "recognitionCues": "一上一下、無桿、朝外",
+      "confusableWith": [
+        "chevrons-up"
+      ],
+      "sourceObservation": "Lucide 比較寬、Tabler selector 比較短；Master 在兩者之間保留肩寬與中央空白，與兩個同方向峰形可分辨，保留。",
+      "references": [
+        {
+          "name": "chevrons-up-down",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/chevrons-up-down.svg",
+          "localPath": "references/product-ui-01/lucide-chevrons-up-down.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/chevrons-up-down.svg",
+          "sha256": "edc561e007cfab9b6b45301a8cb02711fd7c901e53e30ee29c5491b74dbe6bcc",
+          "license": "ISC AND MIT",
+          "sourceName": "chevrons-up-down",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "chevrons-up-down",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/selector.svg",
+          "localPath": "references/product-ui-01/tabler-selector.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/selector.svg",
+          "sha256": "948f562c313c33183b1a88371ec9714a8529de2e368fbaddaaf7946c8056a0ac",
+          "license": "MIT",
+          "sourceName": "selector",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "方向及距離層級由完整折線或箭桿表達，沒有隱藏或待完成邊界。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "同方向筆畫地位相同；用透明通道保持分離，不以淡化掩飾間距。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "平面單色方向符號不需深度或漸層訊號。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "reason": "Lucide 比較寬、Tabler selector 比較短；Master 在兩者之間保留肩寬與中央空白，與兩個同方向峰形可分辨，保留。",
+        "before": {
+          "path": "references/navigation-01/master-before.json",
+          "variantsSha256": "46098a7d559e7b8b660ab5c8f292bf625fefbfb662aa329c47eec18a114e2454"
+        }
+      },
+      "visualReview": {
+        "status": "visually-reviewed-candidate",
+        "reviewer": "Codex (AI)",
+        "date": "2026-11-19",
+        "skillVersion": "0.5.20",
+        "batch": "03-boundaries",
+        "variantsSha256": "46098a7d559e7b8b660ab5c8f292bf625fefbfb662aa329c47eec18a114e2454",
+        "checks": [
+          "16/20/24",
+          "sharp/soft/rounded",
+          "light/dark",
+          "DPR 1/2",
+          "low-contrast text",
+          "pinned-source re-comparison"
+        ],
+        "evidence": [
+          {
+            "path": "docs/review/navigation-01/03-boundaries-before/light-1x.png",
+            "sha256": "f906dfbe3a9bb35b8d589bfe1ced3c781b9a9842e7b4c82822c4ddc91ed57023"
+          },
+          {
+            "path": "docs/review/navigation-01/03-boundaries-final/dark-1x.png",
+            "sha256": "8ca70a76a4cf75889879f538b55dc68ade7f8b722fa027dd6f83edc08fe3ad19"
+          },
+          {
+            "path": "docs/review/navigation-01/03-boundaries-final/dark-2x.png",
+            "sha256": "191e142ec0b1cd8217a987e0cb715810bbb408502b5e7331c7bba0035b6073f8"
+          },
+          {
+            "path": "docs/review/navigation-01/context-final-light-1x.png",
+            "sha256": "b08e3347a79c2799173eb18d285cd2f72f3c3d2ab940403bf0d07e00729a21aa"
+          },
+          {
+            "path": "docs/review/navigation-01/context-final-dark-2x.png",
+            "sha256": "d21149842f78c2d9ee02bd2d696e4ddba788c79134fb17f39a9d098eedcd7089"
+          }
+        ]
+      },
+      "status": "visually-reviewed-candidate",
+      "userApproval": "pending",
+      "remainingIssues": []
+    },
+    {
+      "name": "move-horizontal",
+      "concept": "move-horizontal",
+      "purpose": "水平伸縮把手",
+      "recognitionCues": "同一橫桿兩端箭翼",
+      "confusableWith": [
+        "arrow-left-right"
+      ],
+      "sourceObservation": "Lucide／Hugeicons 的同軸結構明確；Master 桿與兩翼連成一體、翼不過長，中央沒有暗結，保留足夠長的可抓取軸向訊號。",
+      "references": [
+        {
+          "name": "move-horizontal",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/move-horizontal.svg",
+          "localPath": "references/studio-01/lucide-move-horizontal.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/move-horizontal.svg",
+          "sha256": "46f99abb37f82f822d0cb13eebc35e63ffc55a4c35bbd48a8538eb45763abcf9",
+          "license": "ISC AND MIT",
+          "sourceName": "move-horizontal",
+          "role": "comparison-only",
+          "match": "exact"
+        },
+        {
+          "name": "move-horizontal",
+          "library": "Hugeicons Free",
+          "repository": "hugeicons/hugeicons",
+          "commit": "834e28d965946c1ee60d080027fe9dae4adc58d0",
+          "path": "icons/move-horizontal.svg",
+          "localPath": "references/studio-01/hugeicons-free-move-horizontal.svg",
+          "url": "https://github.com/hugeicons/hugeicons/blob/834e28d965946c1ee60d080027fe9dae4adc58d0/icons/move-horizontal.svg",
+          "sha256": "087eea69ab84e3bf4adaf3856df3634ab4cedfd63b8a083d7df2bcfba7fdc973",
+          "license": "MIT",
+          "sourceName": "move-horizontal",
+          "role": "comparison-only",
+          "match": "exact"
+        }
+      ],
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "方向及距離層級由完整折線或箭桿表達，沒有隱藏或待完成邊界。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "同方向筆畫地位相同；用透明通道保持分離，不以淡化掩飾間距。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "平面單色方向符號不需深度或漸層訊號。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "reason": "Lucide／Hugeicons 的同軸結構明確；Master 桿與兩翼連成一體、翼不過長，中央沒有暗結，保留足夠長的可抓取軸向訊號。",
+        "before": {
+          "path": "references/navigation-01/master-before.json",
+          "variantsSha256": "80d6d6e707fce783240d0d80d737143b2e18a39a5b22875dcd68dfe0b49102a8"
+        }
+      },
+      "visualReview": {
+        "status": "visually-reviewed-candidate",
+        "reviewer": "Codex (AI)",
+        "date": "2026-11-19",
+        "skillVersion": "0.5.20",
+        "batch": "04-motion",
+        "variantsSha256": "80d6d6e707fce783240d0d80d737143b2e18a39a5b22875dcd68dfe0b49102a8",
+        "checks": [
+          "16/20/24",
+          "sharp/soft/rounded",
+          "light/dark",
+          "DPR 1/2",
+          "low-contrast text",
+          "pinned-source re-comparison"
+        ],
+        "evidence": [
+          {
+            "path": "docs/review/navigation-01/04-motion-before/light-1x.png",
+            "sha256": "b9267a55ffb1ac2a28fa1703ff5f02ff8042932e5849b830e4ff4b36728d7c29"
+          },
+          {
+            "path": "docs/review/navigation-01/04-motion-final/dark-1x.png",
+            "sha256": "f459ab71ce932a736464eeba9ea24f49b017f998e888fcfcda4fa8f305794672"
+          },
+          {
+            "path": "docs/review/navigation-01/04-motion-final/dark-2x.png",
+            "sha256": "4cadde235885bc1c5d1a77660434cf0d068e7bb1a52d9b1a5da861d666bc1662"
+          },
+          {
+            "path": "docs/review/navigation-01/context-final-light-1x.png",
+            "sha256": "b08e3347a79c2799173eb18d285cd2f72f3c3d2ab940403bf0d07e00729a21aa"
+          },
+          {
+            "path": "docs/review/navigation-01/context-final-dark-2x.png",
+            "sha256": "d21149842f78c2d9ee02bd2d696e4ddba788c79134fb17f39a9d098eedcd7089"
+          }
+        ]
+      },
+      "status": "visually-reviewed-candidate",
+      "userApproval": "pending",
+      "remainingIssues": []
+    },
+    {
+      "name": "move-vertical",
+      "concept": "move-horizontal",
+      "purpose": "垂直伸縮把手",
+      "recognitionCues": "同一直桿上下箭翼",
+      "confusableWith": [
+        "sort-unsorted"
+      ],
+      "sourceObservation": "來源以長直軸保持方向；Master 與水平相同翼長和桿長，兩端不向中心擠合，16px 清楚區別錯列上下交換箭頭。",
+      "references": [
+        {
+          "name": "move-vertical",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/move-vertical.svg",
+          "localPath": "references/studio-01/lucide-move-vertical.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/move-vertical.svg",
+          "sha256": "86b1224300716e364892b634a7004b0afaba036f1c59af0b4e229b233ca3b6fc",
+          "license": "ISC AND MIT",
+          "sourceName": "move-vertical",
+          "role": "comparison-only",
+          "match": "exact"
+        },
+        {
+          "name": "move-vertical",
+          "library": "Hugeicons Free",
+          "repository": "hugeicons/hugeicons",
+          "commit": "834e28d965946c1ee60d080027fe9dae4adc58d0",
+          "path": "icons/move-vertical.svg",
+          "localPath": "references/studio-01/hugeicons-free-move-vertical.svg",
+          "url": "https://github.com/hugeicons/hugeicons/blob/834e28d965946c1ee60d080027fe9dae4adc58d0/icons/move-vertical.svg",
+          "sha256": "72c176ade3389d14aa5c2dc54621b77fc6bf8229e1038f77d0bcb339e2718768",
+          "license": "MIT",
+          "sourceName": "move-vertical",
+          "role": "comparison-only",
+          "match": "exact"
+        }
+      ],
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "方向及距離層級由完整折線或箭桿表達，沒有隱藏或待完成邊界。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "同方向筆畫地位相同；用透明通道保持分離，不以淡化掩飾間距。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "平面單色方向符號不需深度或漸層訊號。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "reason": "來源以長直軸保持方向；Master 與水平相同翼長和桿長，兩端不向中心擠合，16px 清楚區別錯列上下交換箭頭。",
+        "before": {
+          "path": "references/navigation-01/master-before.json",
+          "variantsSha256": "628a85701f79371899fc1715bd9ed7b085ef2f3298260801dcaeb92892ef01e7"
+        }
+      },
+      "visualReview": {
+        "status": "visually-reviewed-candidate",
+        "reviewer": "Codex (AI)",
+        "date": "2026-11-19",
+        "skillVersion": "0.5.20",
+        "batch": "04-motion",
+        "variantsSha256": "628a85701f79371899fc1715bd9ed7b085ef2f3298260801dcaeb92892ef01e7",
+        "checks": [
+          "16/20/24",
+          "sharp/soft/rounded",
+          "light/dark",
+          "DPR 1/2",
+          "low-contrast text",
+          "pinned-source re-comparison"
+        ],
+        "evidence": [
+          {
+            "path": "docs/review/navigation-01/04-motion-before/light-1x.png",
+            "sha256": "b9267a55ffb1ac2a28fa1703ff5f02ff8042932e5849b830e4ff4b36728d7c29"
+          },
+          {
+            "path": "docs/review/navigation-01/04-motion-final/dark-1x.png",
+            "sha256": "f459ab71ce932a736464eeba9ea24f49b017f998e888fcfcda4fa8f305794672"
+          },
+          {
+            "path": "docs/review/navigation-01/04-motion-final/dark-2x.png",
+            "sha256": "4cadde235885bc1c5d1a77660434cf0d068e7bb1a52d9b1a5da861d666bc1662"
+          },
+          {
+            "path": "docs/review/navigation-01/context-final-light-1x.png",
+            "sha256": "b08e3347a79c2799173eb18d285cd2f72f3c3d2ab940403bf0d07e00729a21aa"
+          },
+          {
+            "path": "docs/review/navigation-01/context-final-dark-2x.png",
+            "sha256": "d21149842f78c2d9ee02bd2d696e4ddba788c79134fb17f39a9d098eedcd7089"
+          }
+        ]
+      },
+      "status": "visually-reviewed-candidate",
+      "userApproval": "pending",
+      "remainingIssues": []
+    },
+    {
+      "name": "move-diagonal-up-right",
+      "concept": "move-horizontal",
+      "purpose": "右上／左下對角伸縮",
+      "recognitionCues": "同一斜桿連兩端直角翼",
+      "confusableWith": [
+        "arrow-up-right"
+      ],
+      "sourceObservation": "Lucide 角型銳利、Hugeicons 曲線較柔；Master 的小直角翼比 Hugeicons 更安靜，斜軸沒有缺段，原生 16px 兩端仍分明。",
+      "references": [
+        {
+          "name": "move-diagonal-up-right",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/move-diagonal.svg",
+          "localPath": "references/studio-01/lucide-move-diagonal.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/move-diagonal.svg",
+          "sha256": "37a4aee2436890e3d2fe3aa707e91bbcc13e11c76b6bd28d0a60489295916db3",
+          "license": "ISC AND MIT",
+          "sourceName": "move-diagonal",
+          "role": "comparison-only",
+          "match": "exact"
+        },
+        {
+          "name": "move-diagonal-up-right",
+          "library": "Hugeicons Free",
+          "repository": "hugeicons/hugeicons",
+          "commit": "834e28d965946c1ee60d080027fe9dae4adc58d0",
+          "path": "icons/move-diagonal.svg",
+          "localPath": "references/studio-01/hugeicons-free-move-diagonal.svg",
+          "url": "https://github.com/hugeicons/hugeicons/blob/834e28d965946c1ee60d080027fe9dae4adc58d0/icons/move-diagonal.svg",
+          "sha256": "c5ac82030297164b6e0e027aeb6252de28daa4cb74da6a0c449c0d8a5c97826b",
+          "license": "MIT",
+          "sourceName": "move-diagonal",
+          "role": "comparison-only",
+          "match": "exact"
+        }
+      ],
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "方向及距離層級由完整折線或箭桿表達，沒有隱藏或待完成邊界。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "同方向筆畫地位相同；用透明通道保持分離，不以淡化掩飾間距。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "平面單色方向符號不需深度或漸層訊號。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "reason": "Lucide 角型銳利、Hugeicons 曲線較柔；Master 的小直角翼比 Hugeicons 更安靜，斜軸沒有缺段，原生 16px 兩端仍分明。",
+        "before": {
+          "path": "references/navigation-01/master-before.json",
+          "variantsSha256": "61577d38ebc52a80d9fad5b9983ab4bd3de18a223bc47139b34a0fd7f99e5acb"
+        }
+      },
+      "visualReview": {
+        "status": "visually-reviewed-candidate",
+        "reviewer": "Codex (AI)",
+        "date": "2026-11-19",
+        "skillVersion": "0.5.20",
+        "batch": "04-motion",
+        "variantsSha256": "61577d38ebc52a80d9fad5b9983ab4bd3de18a223bc47139b34a0fd7f99e5acb",
+        "checks": [
+          "16/20/24",
+          "sharp/soft/rounded",
+          "light/dark",
+          "DPR 1/2",
+          "low-contrast text",
+          "pinned-source re-comparison"
+        ],
+        "evidence": [
+          {
+            "path": "docs/review/navigation-01/04-motion-before/light-1x.png",
+            "sha256": "b9267a55ffb1ac2a28fa1703ff5f02ff8042932e5849b830e4ff4b36728d7c29"
+          },
+          {
+            "path": "docs/review/navigation-01/04-motion-final/dark-1x.png",
+            "sha256": "f459ab71ce932a736464eeba9ea24f49b017f998e888fcfcda4fa8f305794672"
+          },
+          {
+            "path": "docs/review/navigation-01/04-motion-final/dark-2x.png",
+            "sha256": "4cadde235885bc1c5d1a77660434cf0d068e7bb1a52d9b1a5da861d666bc1662"
+          },
+          {
+            "path": "docs/review/navigation-01/context-final-light-1x.png",
+            "sha256": "b08e3347a79c2799173eb18d285cd2f72f3c3d2ab940403bf0d07e00729a21aa"
+          },
+          {
+            "path": "docs/review/navigation-01/context-final-dark-2x.png",
+            "sha256": "d21149842f78c2d9ee02bd2d696e4ddba788c79134fb17f39a9d098eedcd7089"
+          }
+        ]
+      },
+      "status": "visually-reviewed-candidate",
+      "userApproval": "pending",
+      "remainingIssues": []
+    },
+    {
+      "name": "move-diagonal-down-right",
+      "concept": "move-horizontal",
+      "purpose": "右下／左上對角伸縮",
+      "recognitionCues": "同一斜桿連兩端直角翼",
+      "confusableWith": [
+        "arrow-down-right"
+      ],
+      "sourceObservation": "Lucide 連續斜桿較適合本用途；Tabler 對照有斷開中段。Master 保留連續軸來表達同一物件伸縮，不吸收不必要斷線。",
+      "references": [
+        {
+          "name": "move-diagonal-down-right",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/move-diagonal-2.svg",
+          "localPath": "references/studio-01/lucide-move-diagonal-2.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/move-diagonal-2.svg",
+          "sha256": "d7972ed2a18b1faf27c527acd48a8f5323a92390390987668b86b4a44d6ed2ef",
+          "license": "ISC AND MIT",
+          "sourceName": "move-diagonal-2",
+          "role": "comparison-only",
+          "match": "exact"
+        },
+        {
+          "name": "move-diagonal-down-right",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/arrows-diagonal-2.svg",
+          "localPath": "references/studio-01/tabler-arrows-diagonal-2.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/arrows-diagonal-2.svg",
+          "sha256": "840adc7b82e6fe395f6cdfe13edd96332ccab8c444f226e10c65aafd374b3483",
+          "license": "MIT",
+          "sourceName": "arrows-diagonal-2",
+          "role": "comparison-only",
+          "match": "exact"
+        }
+      ],
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "方向及距離層級由完整折線或箭桿表達，沒有隱藏或待完成邊界。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "同方向筆畫地位相同；用透明通道保持分離，不以淡化掩飾間距。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "平面單色方向符號不需深度或漸層訊號。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "reason": "Lucide 連續斜桿較適合本用途；Tabler 對照有斷開中段。Master 保留連續軸來表達同一物件伸縮，不吸收不必要斷線。",
+        "before": {
+          "path": "references/navigation-01/master-before.json",
+          "variantsSha256": "e0598d7c095a97ad8df358142f7a84cb6588fae5cf0d8ffd49ba2ede49e80e28"
+        }
+      },
+      "visualReview": {
+        "status": "visually-reviewed-candidate",
+        "reviewer": "Codex (AI)",
+        "date": "2026-11-19",
+        "skillVersion": "0.5.20",
+        "batch": "04-motion",
+        "variantsSha256": "e0598d7c095a97ad8df358142f7a84cb6588fae5cf0d8ffd49ba2ede49e80e28",
+        "checks": [
+          "16/20/24",
+          "sharp/soft/rounded",
+          "light/dark",
+          "DPR 1/2",
+          "low-contrast text",
+          "pinned-source re-comparison"
+        ],
+        "evidence": [
+          {
+            "path": "docs/review/navigation-01/04-motion-before/light-1x.png",
+            "sha256": "b9267a55ffb1ac2a28fa1703ff5f02ff8042932e5849b830e4ff4b36728d7c29"
+          },
+          {
+            "path": "docs/review/navigation-01/04-motion-final/dark-1x.png",
+            "sha256": "f459ab71ce932a736464eeba9ea24f49b017f998e888fcfcda4fa8f305794672"
+          },
+          {
+            "path": "docs/review/navigation-01/04-motion-final/dark-2x.png",
+            "sha256": "4cadde235885bc1c5d1a77660434cf0d068e7bb1a52d9b1a5da861d666bc1662"
+          },
+          {
+            "path": "docs/review/navigation-01/context-final-light-1x.png",
+            "sha256": "b08e3347a79c2799173eb18d285cd2f72f3c3d2ab940403bf0d07e00729a21aa"
+          },
+          {
+            "path": "docs/review/navigation-01/context-final-dark-2x.png",
+            "sha256": "d21149842f78c2d9ee02bd2d696e4ddba788c79134fb17f39a9d098eedcd7089"
+          }
+        ]
+      },
+      "status": "visually-reviewed-candidate",
+      "userApproval": "pending",
+      "remainingIssues": []
+    },
+    {
+      "name": "arrow-left-right",
+      "concept": "arrow-left-right",
+      "purpose": "交換左右兩項",
+      "recognitionCues": "上下錯列、方向相反的兩條箭桿",
+      "confusableWith": [
+        "move-horizontal"
+      ],
+      "sourceObservation": "Lucide／Tabler 都讓兩軸分開；Master 的箭翼較短、橫向通道較寬，16px 並排不會看成同軸伸縮，保留。",
+      "references": [
+        {
+          "name": "arrow-left-right",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/arrow-left-right.svg",
+          "localPath": "references/product-ui-01/lucide-arrow-left-right.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/arrow-left-right.svg",
+          "sha256": "2d64da427cbb3f14e522658459903829575b09ec15162c1a69ea6ad341a4359a",
+          "license": "ISC AND MIT",
+          "sourceName": "arrow-left-right",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "arrow-left-right",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/arrows-left-right.svg",
+          "localPath": "references/product-ui-01/tabler-arrows-left-right.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/arrows-left-right.svg",
+          "sha256": "1530a257f97b6d15d7391db8be839ffc6314d583ca8f7188c7f85f20a850bc12",
+          "license": "MIT",
+          "sourceName": "arrows-left-right",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "方向及距離層級由完整折線或箭桿表達，沒有隱藏或待完成邊界。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "同方向筆畫地位相同；用透明通道保持分離，不以淡化掩飾間距。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "平面單色方向符號不需深度或漸層訊號。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "reason": "Lucide／Tabler 都讓兩軸分開；Master 的箭翼較短、橫向通道較寬，16px 並排不會看成同軸伸縮，保留。",
+        "before": {
+          "path": "references/navigation-01/master-before.json",
+          "variantsSha256": "ba806fee96e1141680232aa653e5b697b44610f066a74d96a65ea1546b34f778"
+        }
+      },
+      "visualReview": {
+        "status": "visually-reviewed-candidate",
+        "reviewer": "Codex (AI)",
+        "date": "2026-11-19",
+        "skillVersion": "0.5.20",
+        "batch": "04-motion",
+        "variantsSha256": "ba806fee96e1141680232aa653e5b697b44610f066a74d96a65ea1546b34f778",
+        "checks": [
+          "16/20/24",
+          "sharp/soft/rounded",
+          "light/dark",
+          "DPR 1/2",
+          "low-contrast text",
+          "pinned-source re-comparison"
+        ],
+        "evidence": [
+          {
+            "path": "docs/review/navigation-01/04-motion-before/light-1x.png",
+            "sha256": "b9267a55ffb1ac2a28fa1703ff5f02ff8042932e5849b830e4ff4b36728d7c29"
+          },
+          {
+            "path": "docs/review/navigation-01/04-motion-final/dark-1x.png",
+            "sha256": "f459ab71ce932a736464eeba9ea24f49b017f998e888fcfcda4fa8f305794672"
+          },
+          {
+            "path": "docs/review/navigation-01/04-motion-final/dark-2x.png",
+            "sha256": "4cadde235885bc1c5d1a77660434cf0d068e7bb1a52d9b1a5da861d666bc1662"
+          },
+          {
+            "path": "docs/review/navigation-01/context-final-light-1x.png",
+            "sha256": "b08e3347a79c2799173eb18d285cd2f72f3c3d2ab940403bf0d07e00729a21aa"
+          },
+          {
+            "path": "docs/review/navigation-01/context-final-dark-2x.png",
+            "sha256": "d21149842f78c2d9ee02bd2d696e4ddba788c79134fb17f39a9d098eedcd7089"
+          }
+        ]
+      },
+      "status": "visually-reviewed-candidate",
+      "userApproval": "pending",
+      "remainingIssues": []
+    },
+    {
+      "name": "sort-unsorted",
+      "concept": "sort-unsorted",
+      "purpose": "上下交換／未指定排序",
+      "recognitionCues": "左右錯列的上下箭頭",
+      "confusableWith": [
+        "move-vertical"
+      ],
+      "sourceObservation": "Lucide／Tabler 的上下兩軸可直接表達 arrow-up-down；Master 長桿與短翼分工清楚，無需再建同圖別名，保留搜尋替代。",
+      "references": [
+        {
+          "name": "sort-unsorted",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/arrow-up-down.svg",
+          "localPath": "references/ui-v1/lucide-arrow-up-down.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/arrow-up-down.svg",
+          "sha256": "d15411438095bac7cab0cf91f18cadfbde2ca752284c06b4b3642c4695b1774e",
+          "license": "ISC AND MIT",
+          "sourceName": "arrow-up-down",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "sort-unsorted",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/arrows-sort.svg",
+          "localPath": "references/ui-v1/tabler-arrows-sort.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/arrows-sort.svg",
+          "sha256": "69a75e98c6128a69297e3e1cd066b9d7ed8c621b9de4c14b2e3156b7646d7b0f",
+          "license": "MIT",
+          "sourceName": "arrows-sort",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "方向及距離層級由完整折線或箭桿表達，沒有隱藏或待完成邊界。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "同方向筆畫地位相同；用透明通道保持分離，不以淡化掩飾間距。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "平面單色方向符號不需深度或漸層訊號。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "reason": "Lucide／Tabler 的上下兩軸可直接表達 arrow-up-down；Master 長桿與短翼分工清楚，無需再建同圖別名，保留搜尋替代。",
+        "before": {
+          "path": "references/navigation-01/master-before.json",
+          "variantsSha256": "8a4f0db5a8454fe0be4fa696285879ef76ce33e5c7695d34e6abb1d498ba834d"
+        }
+      },
+      "visualReview": {
+        "status": "visually-reviewed-candidate",
+        "reviewer": "Codex (AI)",
+        "date": "2026-11-19",
+        "skillVersion": "0.5.20",
+        "batch": "04-motion",
+        "variantsSha256": "8a4f0db5a8454fe0be4fa696285879ef76ce33e5c7695d34e6abb1d498ba834d",
+        "checks": [
+          "16/20/24",
+          "sharp/soft/rounded",
+          "light/dark",
+          "DPR 1/2",
+          "low-contrast text",
+          "pinned-source re-comparison"
+        ],
+        "evidence": [
+          {
+            "path": "docs/review/navigation-01/04-motion-before/light-1x.png",
+            "sha256": "b9267a55ffb1ac2a28fa1703ff5f02ff8042932e5849b830e4ff4b36728d7c29"
+          },
+          {
+            "path": "docs/review/navigation-01/04-motion-final/dark-1x.png",
+            "sha256": "f459ab71ce932a736464eeba9ea24f49b017f998e888fcfcda4fa8f305794672"
+          },
+          {
+            "path": "docs/review/navigation-01/04-motion-final/dark-2x.png",
+            "sha256": "4cadde235885bc1c5d1a77660434cf0d068e7bb1a52d9b1a5da861d666bc1662"
+          },
+          {
+            "path": "docs/review/navigation-01/context-final-light-1x.png",
+            "sha256": "b08e3347a79c2799173eb18d285cd2f72f3c3d2ab940403bf0d07e00729a21aa"
+          },
+          {
+            "path": "docs/review/navigation-01/context-final-dark-2x.png",
+            "sha256": "d21149842f78c2d9ee02bd2d696e4ddba788c79134fb17f39a9d098eedcd7089"
+          }
+        ]
+      },
+      "status": "visually-reviewed-candidate",
+      "userApproval": "pending",
+      "remainingIssues": []
+    },
+    {
+      "name": "arrow-big-up",
+      "concept": "arrow-big-up",
+      "purpose": "贊成投票",
+      "recognitionCues": "封閉寬肩與中空直幹",
+      "confusableWith": [
+        "arrow-up"
+      ],
+      "sourceObservation": "來源 Lucide／Tabler 肩較圓；Master 的 sharp 肩更明確、soft 保留小圓角，16px 幹孔可讀，較寬輪廓符合投票而非單步移動。",
+      "references": [
+        {
+          "name": "arrow-big-up",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/arrow-big-up.svg",
+          "localPath": "references/product-ui-01/lucide-arrow-big-up.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/arrow-big-up.svg",
+          "sha256": "3149e1edfa3d8042f37bda6505305d629b0389e313e54327bbb251099977c639",
+          "license": "ISC AND MIT",
+          "sourceName": "arrow-big-up",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "arrow-big-up",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/arrow-big-up.svg",
+          "localPath": "references/product-ui-01/tabler-arrow-big-up.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/arrow-big-up.svg",
+          "sha256": "f32d1d960fd7fb2dc9be19de5cbedba763ca43cd724dbde1dbe56dda9f49effe",
+          "license": "MIT",
+          "sourceName": "arrow-big-up",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "方向及距離層級由完整折線或箭桿表達，沒有隱藏或待完成邊界。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "同方向筆畫地位相同；用透明通道保持分離，不以淡化掩飾間距。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "平面單色方向符號不需深度或漸層訊號。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "reason": "來源 Lucide／Tabler 肩較圓；Master 的 sharp 肩更明確、soft 保留小圓角，16px 幹孔可讀，較寬輪廓符合投票而非單步移動。",
+        "before": {
+          "path": "references/navigation-01/master-before.json",
+          "variantsSha256": "e7a90b29632c2a213a1756bcde1bfd2a947c49be59cf823dfba909c1401a8daa"
+        }
+      },
+      "visualReview": {
+        "status": "visually-reviewed-candidate",
+        "reviewer": "Codex (AI)",
+        "date": "2026-11-19",
+        "skillVersion": "0.5.20",
+        "batch": "04-motion",
+        "variantsSha256": "e7a90b29632c2a213a1756bcde1bfd2a947c49be59cf823dfba909c1401a8daa",
+        "checks": [
+          "16/20/24",
+          "sharp/soft/rounded",
+          "light/dark",
+          "DPR 1/2",
+          "low-contrast text",
+          "pinned-source re-comparison"
+        ],
+        "evidence": [
+          {
+            "path": "docs/review/navigation-01/04-motion-before/light-1x.png",
+            "sha256": "b9267a55ffb1ac2a28fa1703ff5f02ff8042932e5849b830e4ff4b36728d7c29"
+          },
+          {
+            "path": "docs/review/navigation-01/04-motion-final/dark-1x.png",
+            "sha256": "f459ab71ce932a736464eeba9ea24f49b017f998e888fcfcda4fa8f305794672"
+          },
+          {
+            "path": "docs/review/navigation-01/04-motion-final/dark-2x.png",
+            "sha256": "4cadde235885bc1c5d1a77660434cf0d068e7bb1a52d9b1a5da861d666bc1662"
+          },
+          {
+            "path": "docs/review/navigation-01/context-final-light-1x.png",
+            "sha256": "b08e3347a79c2799173eb18d285cd2f72f3c3d2ab940403bf0d07e00729a21aa"
+          },
+          {
+            "path": "docs/review/navigation-01/context-final-dark-2x.png",
+            "sha256": "d21149842f78c2d9ee02bd2d696e4ddba788c79134fb17f39a9d098eedcd7089"
+          }
+        ]
+      },
+      "status": "visually-reviewed-candidate",
+      "userApproval": "pending",
+      "remainingIssues": []
+    },
+    {
+      "name": "arrow-big-down",
+      "concept": "arrow-big-up",
+      "purpose": "反對投票",
+      "recognitionCues": "封閉寬肩與中空直幹向下",
+      "confusableWith": [
+        "arrow-down"
+      ],
+      "sourceObservation": "與兩份來源比較，下向孔不因尖端而消失；直接旋轉上票母型，沒有改變肩寬或幹長，投票上下對稱，保留。",
+      "references": [
+        {
+          "name": "arrow-big-down",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/arrow-big-down.svg",
+          "localPath": "references/studio-01/lucide-arrow-big-down.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/arrow-big-down.svg",
+          "sha256": "0cef34b0ddf1953f36bfafff395ac67015f63e6e9505bb76782ad66bb28809e0",
+          "license": "ISC AND MIT",
+          "sourceName": "arrow-big-down",
+          "role": "comparison-only",
+          "match": "exact"
+        },
+        {
+          "name": "arrow-big-down",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/arrow-big-down.svg",
+          "localPath": "references/studio-01/tabler-arrow-big-down.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/arrow-big-down.svg",
+          "sha256": "e576e9f02261605e358b8e9883abee386cab637571ac55d10092c37665d2e054",
+          "license": "MIT",
+          "sourceName": "arrow-big-down",
+          "role": "comparison-only",
+          "match": "exact"
+        }
+      ],
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "方向及距離層級由完整折線或箭桿表達，沒有隱藏或待完成邊界。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "同方向筆畫地位相同；用透明通道保持分離，不以淡化掩飾間距。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "平面單色方向符號不需深度或漸層訊號。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "reason": "與兩份來源比較，下向孔不因尖端而消失；直接旋轉上票母型，沒有改變肩寬或幹長，投票上下對稱，保留。",
+        "before": {
+          "path": "references/navigation-01/master-before.json",
+          "variantsSha256": "35a28a4459e5041013b1359fed687adcbbe44d7105690adbe3b89dc105d989cd"
+        }
+      },
+      "visualReview": {
+        "status": "visually-reviewed-candidate",
+        "reviewer": "Codex (AI)",
+        "date": "2026-11-19",
+        "skillVersion": "0.5.20",
+        "batch": "04-motion",
+        "variantsSha256": "35a28a4459e5041013b1359fed687adcbbe44d7105690adbe3b89dc105d989cd",
+        "checks": [
+          "16/20/24",
+          "sharp/soft/rounded",
+          "light/dark",
+          "DPR 1/2",
+          "low-contrast text",
+          "pinned-source re-comparison"
+        ],
+        "evidence": [
+          {
+            "path": "docs/review/navigation-01/04-motion-before/light-1x.png",
+            "sha256": "b9267a55ffb1ac2a28fa1703ff5f02ff8042932e5849b830e4ff4b36728d7c29"
+          },
+          {
+            "path": "docs/review/navigation-01/04-motion-final/dark-1x.png",
+            "sha256": "f459ab71ce932a736464eeba9ea24f49b017f998e888fcfcda4fa8f305794672"
+          },
+          {
+            "path": "docs/review/navigation-01/04-motion-final/dark-2x.png",
+            "sha256": "4cadde235885bc1c5d1a77660434cf0d068e7bb1a52d9b1a5da861d666bc1662"
+          },
+          {
+            "path": "docs/review/navigation-01/context-final-light-1x.png",
+            "sha256": "b08e3347a79c2799173eb18d285cd2f72f3c3d2ab940403bf0d07e00729a21aa"
+          },
+          {
+            "path": "docs/review/navigation-01/context-final-dark-2x.png",
+            "sha256": "d21149842f78c2d9ee02bd2d696e4ddba788c79134fb17f39a9d098eedcd7089"
+          }
+        ]
+      },
+      "status": "visually-reviewed-candidate",
+      "userApproval": "pending",
+      "remainingIssues": []
+    }
+  ]
+}

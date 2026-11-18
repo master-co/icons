@@ -1,0 +1,56 @@
+{
+  "date": "2026-11-19",
+  "reviewer": "Codex (AI)",
+  "status": "passed",
+  "checks": [
+    {
+      "command": "node scripts/build-icons.mjs --cache",
+      "result": "944 named drawings; 8496 native SVGs; all five framework adapters built"
+    },
+    {
+      "command": "node scripts/build-review.mjs",
+      "result": "review data and standalone preview built"
+    },
+    {
+      "command": "node scripts/validate.mjs",
+      "result": "944 named drawings, 8496 SVG hashes, notices, 1684 current pinned references and 9 licensed ZIPs validated"
+    },
+    {
+      "command": "node --test packages/icons/tests/*.test.mjs",
+      "result": "65 passed, 0 failed"
+    },
+    {
+      "command": "bun run --cwd packages/icons test:types",
+      "result": "TypeScript, Astro and all generated Svelte component sizes: 0 errors, 0 warnings"
+    },
+    {
+      "command": "node scripts/check-package.mjs",
+      "result": "All 6 packages, generic/fixed framework SSR, actual Astro+Svelte consumer build and isolated offline installation passed"
+    },
+    {
+      "command": "bun run build:site",
+      "result": "8 successful tasks; 24 pages built"
+    },
+    {
+      "command": "node scripts/check-navigation.mjs",
+      "result": "810 paint comparisons passed"
+    },
+    {
+      "command": "node scripts/review-navigation-context.mjs",
+      "result": "12 scrolling actions across DPR 1/2; 36 visible SVGs; 9 size/corner combinations per DPR at integer CSS positions"
+    },
+    {
+      "command": "master-icons skill render-review.mjs",
+      "result": "72 raster cases; 0 empty/clipped"
+    },
+    {
+      "command": "git diff --check",
+      "result": "passed"
+    }
+  ],
+  "visualEvidence": "decisions.json",
+  "limitations": [
+    "Chromium visual inspection; other browser engines not reviewed in this task",
+    "AI visual review is not maintainer approval or a human recognition study"
+  ]
+}

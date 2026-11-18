@@ -1,0 +1,226 @@
+[
+  {
+    "name": "arrow-big-up",
+    "purpose": "文章評分的向上投票，與數量及向下投票並列；封閉寬箭身與一般移動細箭桿區分。",
+    "recognitionCues": "封閉向上箭頭、橫向肩部及中空短柄。",
+    "confusableWith": [
+      "arrow-up",
+      "thumbs-up",
+      "arrow-big-down"
+    ],
+    "sourceObservation": "Lucide 的內肩有明顯圓角，Tabler 保持較尖的肩部與較長短柄；兩份 24px 來源的柄較窄，縮到 16px 時內孔也相應縮小。",
+    "references": [
+      {
+        "name": "arrow-big-up",
+        "library": "Lucide",
+        "repository": "lucide-icons/lucide",
+        "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+        "path": "icons/arrow-big-up.svg",
+        "localPath": "references/product-ui-01/lucide-arrow-big-up.svg",
+        "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/arrow-big-up.svg",
+        "sha256": "3149e1edfa3d8042f37bda6505305d629b0389e313e54327bbb251099977c639",
+        "license": "ISC AND MIT",
+        "sourceName": "arrow-big-up",
+        "match": "exact",
+        "role": "comparison-only"
+      },
+      {
+        "name": "arrow-big-up",
+        "library": "Tabler",
+        "repository": "tabler/tabler-icons",
+        "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+        "path": "icons/outline/arrow-big-up.svg",
+        "localPath": "references/product-ui-01/tabler-arrow-big-up.svg",
+        "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/arrow-big-up.svg",
+        "sha256": "f32d1d960fd7fb2dc9be19de5cbedba763ca43cd724dbde1dbe56dda9f49effe",
+        "license": "MIT",
+        "sourceName": "arrow-big-up",
+        "match": "exact",
+        "role": "comparison-only"
+      }
+    ],
+    "status": "visually-reviewed-candidate",
+    "effects": {
+      "dashes": {
+        "used": false,
+        "reason": "投票輪廓是一個完整的方向訊號，不以虛線表示未完成。"
+      },
+      "opacity": {
+        "used": false,
+        "reason": "上下票權相同，完整筆畫維持相同視重；選取態由使用端控制項表達。"
+      },
+      "gradients": {
+        "used": false,
+        "reason": "這是單色線性操作圖示，不需要漸層效果。"
+      }
+    },
+    "change": {
+      "kind": "new",
+      "before": null,
+      "reason": "原庫 arrow-up 是開放細箭桿，沒有封閉寬箭身可直接沿用，因此新建 voteArrow 封閉輪廓，上下方向只相差 180 度旋轉。原生 16px 短柄寬 5px，20px 寬 6px，24px 寬 7px；24px 翼展略收進，替 sharp 尖肩最大線寬的斜接預留畫布空間。三種角型以實際頂點半徑處理，只有描邊版。"
+    },
+    "visualReview": {
+      "reviewer": "Codex (AI)",
+      "date": "2026-11-18",
+      "skillVersion": "0.5.16",
+      "sizes": [
+        16,
+        20,
+        24
+      ],
+      "corners": [
+        "sharp",
+        "soft",
+        "rounded"
+      ],
+      "themes": [
+        "light",
+        "dark"
+      ],
+      "dpr": [
+        1,
+        2
+      ],
+      "variantsSha256": "e7a90b29632c2a213a1756bcde1bfd2a947c49be59cf823dfba909c1401a8daa",
+      "evidence": [
+        {
+          "path": "docs/review/rebuild-01/voting/light-1.png",
+          "sha256": "c24f4e7da7a3103fe571d3ed0192e0de2bd8ab36fd6f64bc7e09a3d2eb18a2a3"
+        },
+        {
+          "path": "docs/review/rebuild-01/voting/dark-1.png",
+          "sha256": "74718ee8c1fd0f2dd5cf4292ea4845e18cdd4c3149b5a7aa812b1746f062d69d"
+        },
+        {
+          "path": "docs/review/rebuild-01/voting/light-2.png",
+          "sha256": "bdffd699f88c2651332975af3a0acc972f9fc6c2fd5c680b19e9f7a26aa3ec74"
+        },
+        {
+          "path": "docs/review/rebuild-01/voting/dark-2.png",
+          "sha256": "c4387ff65951b9a49b0e7b89d1895f7ac463bfd7236e5c3d85376cc345814f26"
+        }
+      ],
+      "postDrawingSourceComparison": "最新稿與兩份固定來源並排後，採較寬短柄維持原生 16px 內孔，同時保持肩部與柄長的比例；24px sharp 尖肩收進後，最大線寬仍留有畫布邊距。沒有照搬 Lucide 的大內肩半徑，soft 僅稍緩轉折，rounded 則明確柔化。三尺寸、三角型、粗細線端、明暗 DPR 1／2 已查看；投票數字旁的 16px 圖形仍呈封閉箭身，與一般上移箭頭有不同輪廓。",
+      "remainingCombinations": []
+    },
+    "usageEvidence": [
+      "/Users/aron/master-ui/packages/ui/components/vote.css:75",
+      "/Users/aron/master-ui/packages/ui/components/vote.css:147"
+    ],
+    "remaining": [],
+    "userApproval": "pending",
+    "concept": "arrow-big-up"
+  },
+  {
+    "name": "arrow-big-down",
+    "purpose": "文章評分的向下投票，與向上投票構成同等視重的評分控制。",
+    "recognitionCues": "封閉向下箭頭、橫向肩部及中空短柄。",
+    "confusableWith": [
+      "arrow-down",
+      "thumbs-down",
+      "arrow-big-up"
+    ],
+    "sourceObservation": "Lucide 的肩部柔化較多，Tabler 的柄較長且內肩較明確；兩者都保持上下方向同一輪廓，不為向下票另創一種箭身。",
+    "references": [
+      {
+        "name": "arrow-big-down",
+        "library": "Lucide",
+        "repository": "lucide-icons/lucide",
+        "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+        "path": "icons/arrow-big-down.svg",
+        "localPath": "references/studio-01/lucide-arrow-big-down.svg",
+        "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/arrow-big-down.svg",
+        "sha256": "0cef34b0ddf1953f36bfafff395ac67015f63e6e9505bb76782ad66bb28809e0",
+        "license": "ISC AND MIT",
+        "sourceName": "arrow-big-down",
+        "role": "comparison-only",
+        "match": "exact"
+      },
+      {
+        "name": "arrow-big-down",
+        "library": "Tabler",
+        "repository": "tabler/tabler-icons",
+        "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+        "path": "icons/outline/arrow-big-down.svg",
+        "localPath": "references/studio-01/tabler-arrow-big-down.svg",
+        "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/arrow-big-down.svg",
+        "sha256": "e576e9f02261605e358b8e9883abee386cab637571ac55d10092c37665d2e054",
+        "license": "MIT",
+        "sourceName": "arrow-big-down",
+        "role": "comparison-only",
+        "match": "exact"
+      }
+    ],
+    "status": "visually-reviewed-candidate",
+    "effects": {
+      "dashes": {
+        "used": false,
+        "reason": "投票輪廓是一個完整的方向訊號，不以虛線表示未完成。"
+      },
+      "opacity": {
+        "used": false,
+        "reason": "上下票權相同，完整筆畫維持相同視重；選取態由使用端控制項表達。"
+      },
+      "gradients": {
+        "used": false,
+        "reason": "這是單色線性操作圖示，不需要漸層效果。"
+      }
+    },
+    "change": {
+      "kind": "new",
+      "before": null,
+      "reason": "原庫 arrow-up 是開放細箭桿，沒有封閉寬箭身可直接沿用，因此新建 voteArrow 封閉輪廓，上下方向只相差 180 度旋轉。原生 16px 短柄寬 5px，20px 寬 6px，24px 寬 7px；24px 翼展略收進，替 sharp 尖肩最大線寬的斜接預留畫布空間。三種角型以實際頂點半徑處理，只有描邊版。"
+    },
+    "visualReview": {
+      "reviewer": "Codex (AI)",
+      "date": "2026-11-18",
+      "skillVersion": "0.5.16",
+      "sizes": [
+        16,
+        20,
+        24
+      ],
+      "corners": [
+        "sharp",
+        "soft",
+        "rounded"
+      ],
+      "themes": [
+        "light",
+        "dark"
+      ],
+      "dpr": [
+        1,
+        2
+      ],
+      "variantsSha256": "35a28a4459e5041013b1359fed687adcbbe44d7105690adbe3b89dc105d989cd",
+      "evidence": [
+        {
+          "path": "docs/review/rebuild-01/voting/light-1.png",
+          "sha256": "c24f4e7da7a3103fe571d3ed0192e0de2bd8ab36fd6f64bc7e09a3d2eb18a2a3"
+        },
+        {
+          "path": "docs/review/rebuild-01/voting/dark-1.png",
+          "sha256": "74718ee8c1fd0f2dd5cf4292ea4845e18cdd4c3149b5a7aa812b1746f062d69d"
+        },
+        {
+          "path": "docs/review/rebuild-01/voting/light-2.png",
+          "sha256": "bdffd699f88c2651332975af3a0acc972f9fc6c2fd5c680b19e9f7a26aa3ec74"
+        },
+        {
+          "path": "docs/review/rebuild-01/voting/dark-2.png",
+          "sha256": "c4387ff65951b9a49b0e7b89d1895f7ac463bfd7236e5c3d85376cc345814f26"
+        }
+      ],
+      "postDrawingSourceComparison": "最新向下稿以共用輪廓旋轉，與來源並列確認沒有為方向差異加重箭頭或延長短柄。16px 內孔比來源等比縮小的窄柄寬，粗線端仍開通；24px sharp 尖肩收進與向上相同。數字上下排列及橫排按鈕中都維持相同中心與重量，三尺寸、三角型及明暗 DPR 1／2 的最新畫面已查看。",
+      "remainingCombinations": []
+    },
+    "usageEvidence": [
+      "/Users/aron/master-ui/packages/ui/components/vote.css:75",
+      "/Users/aron/master-ui/packages/ui/components/vote.css:147"
+    ],
+    "remaining": [],
+    "userApproval": "pending",
+    "concept": "arrow-big-up"
+  }
+]

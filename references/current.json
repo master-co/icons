@@ -32,7 +32,9 @@
     "references/atlas-craft-28/manifest.json",
     "references/atlas-craft-29/manifest.json",
     "references/committed-craft-01/manifest.json",
-    "references/rebuild-01/manifest.json"
+    "references/rebuild-01/manifest.json",
+    "references/navigation-01/manifest.json",
+    "references/navigation-big-01/manifest.json"
   ],
   "before": "references/craft-05/master-before.json",
   "additionalBefore": [
@@ -66,6 +68,7 @@
     "references/atlas-craft-27/master-before.json",
     "references/atlas-craft-28/master-before.json",
     "references/atlas-craft-29/master-before.json",
-    "references/atlas-recompare-01/master-before.json"
+    "references/atlas-recompare-01/master-before.json",
+    "references/navigation-01/review-before.json"
   ]
 }

@@ -1,6 +1,8 @@
 // Search vocabulary only; these never create drawings or exports.
 import substitutions from './substitution-aliases.json' with {type:'json'};
 export const aliases={
+  'chevrons-up':['double-chevron-up','page-up','scroll-page-up','previous-page','雙折角向上','向上翻頁','上一頁'],
+  'chevrons-down':['double-chevron-down','page-down','scroll-page-down','next-page','雙折角向下','向下翻頁','下一頁'],
   "eject":["eject-media","unmount","退出媒體","卸載磁碟"],
   "match-whole-word":["whole-word","整字比對","全字匹配"],
   "spell-check":["spellcheck","spelling","拼字檢查","拼寫檢查"],
@@ -23,8 +25,10 @@ export const aliases={
   "stroke-join-miter":["miter-join","join-straight","尖角接合","斜接"],
   "stroke-join-round":["round-join","join-round","圓角接合"],
   "stroke-join-bevel":["bevel-join","join-bevel","斜切接合","削角"],
-  "arrow-big-up":["upvote","vote","向上投票","贊成票"],
-  "arrow-big-down":["downvote","vote","向下投票","反對票"],
+  "arrow-big-up":["upvote","vote","向上投票","贊成票","block-arrow-up","寬箭頭向上"],
+  "arrow-big-down":["downvote","vote","向下投票","反對票","block-arrow-down","寬箭頭向下"],
+  "arrow-big-left":["block-arrow-left","wide-arrow-left","寬箭頭向左","粗箭頭向左"],
+  "arrow-big-right":["block-arrow-right","wide-arrow-right","寬箭頭向右","粗箭頭向右"],
   "move-horizontal":["水平伸縮", "resize-horizontal", "arrows-horizontal", "水平調整"],
   "move-vertical":["垂直伸縮", "resize-vertical", "arrows-vertical", "垂直調整"],
   "move-diagonal-up-right":["右上斜向伸縮", "resize-ne-sw", "對角調整"],

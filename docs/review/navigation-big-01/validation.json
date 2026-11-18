@@ -1,0 +1,60 @@
+{
+  "date": "2026-11-19",
+  "checks": [
+    {
+      "command": "node scripts/build-icons.mjs --cache",
+      "result": "passed: 946 drawings, 8514 SVGs, five framework adapters"
+    },
+    {
+      "command": "node scripts/build-review.mjs",
+      "result": "passed: final preview synchronized"
+    },
+    {
+      "command": "node scripts/validate.mjs",
+      "result": "passed: 733 concepts, 946 drawings, 8514 hashes, references, notices and nine ZIPs"
+    },
+    {
+      "command": "node --test packages/icons/tests/*.test.mjs",
+      "result": "passed: 66 tests"
+    },
+    {
+      "command": "node --test packages/icons/tests/navigation.test.mjs",
+      "result": "passed: 3 tests after adding viewed evidence"
+    },
+    {
+      "command": "node scripts/check-navigation.mjs navigation-big-01",
+      "result": "passed: 108 cases; no clipping; inner holes intact; direct/build parity"
+    },
+    {
+      "command": "master-icons/scripts/render-review.mjs",
+      "result": "passed: 72 raster cases, zero empty/clipped"
+    },
+    {
+      "command": "node scripts/review-navigation-context.mjs",
+      "result": "passed: 38 SVGs, 32 unique drawings, 12 interactions, integer native-size placement at DPR 1/2"
+    },
+    {
+      "command": "bun run --cwd packages/icons test:types",
+      "result": "passed: TypeScript, Astro and Svelte native consumers"
+    },
+    {
+      "command": "bun run build:site",
+      "result": "passed: 8 tasks"
+    },
+    {
+      "command": "git diff --check",
+      "result": "passed"
+    }
+  ],
+  "visualEvidence": "decisions.json",
+  "geometry": "geometry-checks.json",
+  "inventory": {
+    "previous": 944,
+    "current": 946,
+    "changedExisting": 0,
+    "added": [
+      "arrow-big-left",
+      "arrow-big-right"
+    ]
+  }
+}

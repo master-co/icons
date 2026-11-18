@@ -2,8 +2,8 @@ import {contour} from '../geometry.mjs';
 import {rotate} from './shared.mjs';
 
 // A closed body is a different construction from the ordinary line arrow.
-// Both vote directions share this contour; do not redraw the down state.
-function voteArrow(g) {
+// All four directions share this contour, including the two voting controls.
+function wideArrow(g) {
   const c=g.c,tip=g.v(2.5,3,3.5),shoulder=g.v(8.5,10.5,12.5),bottom=g.s-tip;
   // The sharp shoulder's acute miter reaches farther than its vertex.
   // Reserve room at the widest supported 24px stroke without narrowing 16px.
@@ -16,6 +16,8 @@ function voteArrow(g) {
 }
 
 export const voting={
-  'arrow-big-up':voteArrow,
-  'arrow-big-down':g=>rotate(voteArrow(g),180,g),
+  'arrow-big-up':wideArrow,
+  'arrow-big-right':g=>rotate(wideArrow(g),90,g),
+  'arrow-big-down':g=>rotate(wideArrow(g),180,g),
+  'arrow-big-left':g=>rotate(wideArrow(g),-90,g),
 };

@@ -1,0 +1,477 @@
+{
+  "cycle": "navigation-big-01",
+  "date": "2026-11-19",
+  "scopeReason": "User follow-up explicitly requests arrow-big directions. Supersedes navigation-01 exclusion; these are existing-style variants, not new command concepts.",
+  "added": [
+    "arrow-big-right",
+    "arrow-big-left"
+  ],
+  "retained": [
+    "arrow-big-up",
+    "arrow-big-down"
+  ],
+  "items": [
+    {
+      "name": "arrow-big-up",
+      "concept": "arrow-big-up",
+      "purpose": "寬箭頭的 up 方向變體；延續既有視覺語言，不新增獨立操作概念。",
+      "recognitionCues": "封閉寬箭翼、兩側肩部凹口、內部留白與矩形箭身",
+      "confusableWith": [
+        "arrow-up"
+      ],
+      "sourceObservation": "Lucide 與 Tabler 的封閉箭身和肩部皆清楚；Master 保留既有較寬箭翼與方整箭身，soft 只柔化轉角、rounded 加大肩角過渡。16px 原生尺寸、明暗與灰字旁，肩部凹口和箭身內孔仍分離；四向直接旋轉同一母型，尺寸及角型比例一致。",
+      "references": [
+        {
+          "name": "arrow-big-up",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/arrow-big-up.svg",
+          "localPath": "references/product-ui-01/lucide-arrow-big-up.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/arrow-big-up.svg",
+          "sha256": "3149e1edfa3d8042f37bda6505305d629b0389e313e54327bbb251099977c639",
+          "license": "ISC AND MIT",
+          "sourceName": "arrow-big-up",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "arrow-big-up",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/arrow-big-up.svg",
+          "localPath": "references/product-ui-01/tabler-arrow-big-up.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/arrow-big-up.svg",
+          "sha256": "f32d1d960fd7fb2dc9be19de5cbedba763ca43cd724dbde1dbe56dda9f49effe",
+          "license": "MIT",
+          "sourceName": "arrow-big-up",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "完整方向輪廓不表達未完成或隱藏邊界。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "單一方向符號，以透明內孔分離輪廓，不需要淡化層級。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "平面方向符號不需要深度訊號。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "reason": "Lucide 與 Tabler 的封閉箭身和肩部皆清楚；Master 保留既有較寬箭翼與方整箭身，soft 只柔化轉角、rounded 加大肩角過渡。16px 原生尺寸、明暗與灰字旁，肩部凹口和箭身內孔仍分離；四向直接旋轉同一母型，尺寸及角型比例一致。",
+        "before": {
+          "path": "references/navigation-big-01/master-before.json",
+          "variantsSha256": "e7a90b29632c2a213a1756bcde1bfd2a947c49be59cf823dfba909c1401a8daa"
+        }
+      },
+      "visualReview": {
+        "status": "visually-reviewed-candidate",
+        "reviewer": "Codex (AI)",
+        "date": "2026-11-19",
+        "skillVersion": "0.5.20",
+        "batch": "01-wide-arrows",
+        "variantsSha256": "e7a90b29632c2a213a1756bcde1bfd2a947c49be59cf823dfba909c1401a8daa",
+        "checks": [
+          "16/20/24",
+          "sharp/soft/rounded",
+          "light/dark",
+          "DPR 1/2",
+          "low-contrast text",
+          "pinned-source re-comparison"
+        ],
+        "evidence": [
+          {
+            "path": "docs/review/navigation-big-01/01-wide-arrows-final/light-1x.png",
+            "sha256": "5af1e0c5fd3fb705b3a535929b2561cd78ad27d052e5a134a40205ef4d1eac9b"
+          },
+          {
+            "path": "docs/review/navigation-big-01/01-wide-arrows-final/dark-1x.png",
+            "sha256": "5e0efba97397c0e76551ee166f9924a98db2c13ea9179365dd5fdb75b916bd4d"
+          },
+          {
+            "path": "docs/review/navigation-big-01/01-wide-arrows-final/light-2x.png",
+            "sha256": "222a89002c40bb0bcd4a9fd3765f03d21868e49e5fce9978ad025b42fc8a728a"
+          },
+          {
+            "path": "docs/review/navigation-big-01/01-wide-arrows-final/dark-2x.png",
+            "sha256": "1d09fec8c59aac8b7a66b62caa25dad42c353e5696a2bcbd7427a9f119dc2c77"
+          },
+          {
+            "path": "docs/review/navigation-01/context-wide-light-1x.png",
+            "sha256": "2dc168dd05f5ff0efdc394f07b9091dea309c2ae6dd7fc0fcc3039489f559755"
+          },
+          {
+            "path": "docs/review/navigation-big-01/native/native-1-light-1x.png",
+            "sha256": "d217c2bd035c436fbd72402d8fc4fcef2cd7c304e1ceb317b865f6f656b66b02"
+          },
+          {
+            "path": "docs/review/navigation-big-01/native/native-1-dark-2x.png",
+            "sha256": "5631e1be951f3c7e62b9b95ee5312d527c5ac147746b82169b25efc6ea35917b"
+          },
+          {
+            "path": "docs/review/navigation-big-01/native/context-light-1x.png",
+            "sha256": "870620f8f65208257f6103cedb6598b27d0f9284af580422e0046347ededa442"
+          }
+        ]
+      },
+      "status": "visually-reviewed-candidate",
+      "userApproval": "pending",
+      "remainingIssues": [],
+      "beforeHash": "e7a90b29632c2a213a1756bcde1bfd2a947c49be59cf823dfba909c1401a8daa",
+      "afterHash": "e7a90b29632c2a213a1756bcde1bfd2a947c49be59cf823dfba909c1401a8daa"
+    },
+    {
+      "name": "arrow-big-right",
+      "concept": "arrow-big-up",
+      "purpose": "寬箭頭的 right 方向變體；延續既有視覺語言，不新增獨立操作概念。",
+      "recognitionCues": "封閉寬箭翼、兩側肩部凹口、內部留白與矩形箭身",
+      "confusableWith": [
+        "arrow-right"
+      ],
+      "sourceObservation": "Lucide 與 Tabler 的封閉箭身和肩部皆清楚；Master 保留既有較寬箭翼與方整箭身，soft 只柔化轉角、rounded 加大肩角過渡。16px 原生尺寸、明暗與灰字旁，肩部凹口和箭身內孔仍分離；四向直接旋轉同一母型，尺寸及角型比例一致。",
+      "references": [
+        {
+          "name": "arrow-big-right",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/arrow-big-right.svg",
+          "localPath": "references/studio-01/lucide-arrow-big-right.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/arrow-big-right.svg",
+          "sha256": "02ffdaaa3b725c952379f7277a00f66b1dd7c3cb0963c44a10ff6146ade846f5",
+          "license": "ISC AND MIT",
+          "sourceName": "arrow-big-right",
+          "role": "comparison-only",
+          "match": "exact"
+        },
+        {
+          "name": "arrow-big-right",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/arrow-big-right.svg",
+          "localPath": "references/studio-01/tabler-arrow-big-right.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/arrow-big-right.svg",
+          "sha256": "c6995fb76a23bad1caf23985d3da818ac69574e72f4be2afcdb0102abec43a03",
+          "license": "MIT",
+          "sourceName": "arrow-big-right",
+          "role": "comparison-only",
+          "match": "exact"
+        }
+      ],
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "完整方向輪廓不表達未完成或隱藏邊界。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "單一方向符號，以透明內孔分離輪廓，不需要淡化層級。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "平面方向符號不需要深度訊號。"
+        }
+      },
+      "change": {
+        "kind": "new",
+        "reason": "使用者明確指出 arrow big 家族缺口，新增既有寬箭頭的方向變體。沿用原母型與逐尺寸參數。",
+        "before": null
+      },
+      "visualReview": {
+        "status": "visually-reviewed-candidate",
+        "reviewer": "Codex (AI)",
+        "date": "2026-11-19",
+        "skillVersion": "0.5.20",
+        "batch": "01-wide-arrows",
+        "variantsSha256": "7960cbcd1734e2b55e24a09c138dca9dd47eabaf1e345ab8798ea4bd91f93aba",
+        "checks": [
+          "16/20/24",
+          "sharp/soft/rounded",
+          "light/dark",
+          "DPR 1/2",
+          "low-contrast text",
+          "pinned-source re-comparison"
+        ],
+        "evidence": [
+          {
+            "path": "docs/review/navigation-big-01/01-wide-arrows-final/light-1x.png",
+            "sha256": "5af1e0c5fd3fb705b3a535929b2561cd78ad27d052e5a134a40205ef4d1eac9b"
+          },
+          {
+            "path": "docs/review/navigation-big-01/01-wide-arrows-final/dark-1x.png",
+            "sha256": "5e0efba97397c0e76551ee166f9924a98db2c13ea9179365dd5fdb75b916bd4d"
+          },
+          {
+            "path": "docs/review/navigation-big-01/01-wide-arrows-final/light-2x.png",
+            "sha256": "222a89002c40bb0bcd4a9fd3765f03d21868e49e5fce9978ad025b42fc8a728a"
+          },
+          {
+            "path": "docs/review/navigation-big-01/01-wide-arrows-final/dark-2x.png",
+            "sha256": "1d09fec8c59aac8b7a66b62caa25dad42c353e5696a2bcbd7427a9f119dc2c77"
+          },
+          {
+            "path": "docs/review/navigation-01/context-wide-light-1x.png",
+            "sha256": "2dc168dd05f5ff0efdc394f07b9091dea309c2ae6dd7fc0fcc3039489f559755"
+          },
+          {
+            "path": "docs/review/navigation-big-01/native/native-1-light-1x.png",
+            "sha256": "d217c2bd035c436fbd72402d8fc4fcef2cd7c304e1ceb317b865f6f656b66b02"
+          },
+          {
+            "path": "docs/review/navigation-big-01/native/native-1-dark-2x.png",
+            "sha256": "5631e1be951f3c7e62b9b95ee5312d527c5ac147746b82169b25efc6ea35917b"
+          },
+          {
+            "path": "docs/review/navigation-big-01/native/context-light-1x.png",
+            "sha256": "870620f8f65208257f6103cedb6598b27d0f9284af580422e0046347ededa442"
+          }
+        ]
+      },
+      "status": "visually-reviewed-candidate",
+      "userApproval": "pending",
+      "remainingIssues": [],
+      "beforeHash": null,
+      "afterHash": "7960cbcd1734e2b55e24a09c138dca9dd47eabaf1e345ab8798ea4bd91f93aba"
+    },
+    {
+      "name": "arrow-big-down",
+      "concept": "arrow-big-up",
+      "purpose": "寬箭頭的 down 方向變體；延續既有視覺語言，不新增獨立操作概念。",
+      "recognitionCues": "封閉寬箭翼、兩側肩部凹口、內部留白與矩形箭身",
+      "confusableWith": [
+        "arrow-down"
+      ],
+      "sourceObservation": "Lucide 與 Tabler 的封閉箭身和肩部皆清楚；Master 保留既有較寬箭翼與方整箭身，soft 只柔化轉角、rounded 加大肩角過渡。16px 原生尺寸、明暗與灰字旁，肩部凹口和箭身內孔仍分離；四向直接旋轉同一母型，尺寸及角型比例一致。",
+      "references": [
+        {
+          "name": "arrow-big-down",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/arrow-big-down.svg",
+          "localPath": "references/studio-01/lucide-arrow-big-down.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/arrow-big-down.svg",
+          "sha256": "0cef34b0ddf1953f36bfafff395ac67015f63e6e9505bb76782ad66bb28809e0",
+          "license": "ISC AND MIT",
+          "sourceName": "arrow-big-down",
+          "role": "comparison-only",
+          "match": "exact"
+        },
+        {
+          "name": "arrow-big-down",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/arrow-big-down.svg",
+          "localPath": "references/studio-01/tabler-arrow-big-down.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/arrow-big-down.svg",
+          "sha256": "e576e9f02261605e358b8e9883abee386cab637571ac55d10092c37665d2e054",
+          "license": "MIT",
+          "sourceName": "arrow-big-down",
+          "role": "comparison-only",
+          "match": "exact"
+        }
+      ],
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "完整方向輪廓不表達未完成或隱藏邊界。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "單一方向符號，以透明內孔分離輪廓，不需要淡化層級。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "平面方向符號不需要深度訊號。"
+        }
+      },
+      "change": {
+        "kind": "retained",
+        "reason": "Lucide 與 Tabler 的封閉箭身和肩部皆清楚；Master 保留既有較寬箭翼與方整箭身，soft 只柔化轉角、rounded 加大肩角過渡。16px 原生尺寸、明暗與灰字旁，肩部凹口和箭身內孔仍分離；四向直接旋轉同一母型，尺寸及角型比例一致。",
+        "before": {
+          "path": "references/navigation-big-01/master-before.json",
+          "variantsSha256": "35a28a4459e5041013b1359fed687adcbbe44d7105690adbe3b89dc105d989cd"
+        }
+      },
+      "visualReview": {
+        "status": "visually-reviewed-candidate",
+        "reviewer": "Codex (AI)",
+        "date": "2026-11-19",
+        "skillVersion": "0.5.20",
+        "batch": "01-wide-arrows",
+        "variantsSha256": "35a28a4459e5041013b1359fed687adcbbe44d7105690adbe3b89dc105d989cd",
+        "checks": [
+          "16/20/24",
+          "sharp/soft/rounded",
+          "light/dark",
+          "DPR 1/2",
+          "low-contrast text",
+          "pinned-source re-comparison"
+        ],
+        "evidence": [
+          {
+            "path": "docs/review/navigation-big-01/01-wide-arrows-final/light-1x.png",
+            "sha256": "5af1e0c5fd3fb705b3a535929b2561cd78ad27d052e5a134a40205ef4d1eac9b"
+          },
+          {
+            "path": "docs/review/navigation-big-01/01-wide-arrows-final/dark-1x.png",
+            "sha256": "5e0efba97397c0e76551ee166f9924a98db2c13ea9179365dd5fdb75b916bd4d"
+          },
+          {
+            "path": "docs/review/navigation-big-01/01-wide-arrows-final/light-2x.png",
+            "sha256": "222a89002c40bb0bcd4a9fd3765f03d21868e49e5fce9978ad025b42fc8a728a"
+          },
+          {
+            "path": "docs/review/navigation-big-01/01-wide-arrows-final/dark-2x.png",
+            "sha256": "1d09fec8c59aac8b7a66b62caa25dad42c353e5696a2bcbd7427a9f119dc2c77"
+          },
+          {
+            "path": "docs/review/navigation-01/context-wide-light-1x.png",
+            "sha256": "2dc168dd05f5ff0efdc394f07b9091dea309c2ae6dd7fc0fcc3039489f559755"
+          },
+          {
+            "path": "docs/review/navigation-big-01/native/native-1-light-1x.png",
+            "sha256": "d217c2bd035c436fbd72402d8fc4fcef2cd7c304e1ceb317b865f6f656b66b02"
+          },
+          {
+            "path": "docs/review/navigation-big-01/native/native-1-dark-2x.png",
+            "sha256": "5631e1be951f3c7e62b9b95ee5312d527c5ac147746b82169b25efc6ea35917b"
+          },
+          {
+            "path": "docs/review/navigation-big-01/native/context-light-1x.png",
+            "sha256": "870620f8f65208257f6103cedb6598b27d0f9284af580422e0046347ededa442"
+          }
+        ]
+      },
+      "status": "visually-reviewed-candidate",
+      "userApproval": "pending",
+      "remainingIssues": [],
+      "beforeHash": "35a28a4459e5041013b1359fed687adcbbe44d7105690adbe3b89dc105d989cd",
+      "afterHash": "35a28a4459e5041013b1359fed687adcbbe44d7105690adbe3b89dc105d989cd"
+    },
+    {
+      "name": "arrow-big-left",
+      "concept": "arrow-big-up",
+      "purpose": "寬箭頭的 left 方向變體；延續既有視覺語言，不新增獨立操作概念。",
+      "recognitionCues": "封閉寬箭翼、兩側肩部凹口、內部留白與矩形箭身",
+      "confusableWith": [
+        "arrow-left"
+      ],
+      "sourceObservation": "Lucide 與 Tabler 的封閉箭身和肩部皆清楚；Master 保留既有較寬箭翼與方整箭身，soft 只柔化轉角、rounded 加大肩角過渡。16px 原生尺寸、明暗與灰字旁，肩部凹口和箭身內孔仍分離；四向直接旋轉同一母型，尺寸及角型比例一致。",
+      "references": [
+        {
+          "name": "arrow-big-left",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/arrow-big-left.svg",
+          "localPath": "references/studio-01/lucide-arrow-big-left.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/arrow-big-left.svg",
+          "sha256": "a34e92c2321fdb7923aeab8a65794a82d42a96a40a393aa846c9a4f60a8a3766",
+          "license": "ISC AND MIT",
+          "sourceName": "arrow-big-left",
+          "role": "comparison-only",
+          "match": "exact"
+        },
+        {
+          "name": "arrow-big-left",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/arrow-big-left.svg",
+          "localPath": "references/studio-01/tabler-arrow-big-left.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/arrow-big-left.svg",
+          "sha256": "49925e3829a3ff88ef12e3954853ad6f9ed5d3b2b390474d3c5da82b67c75a07",
+          "license": "MIT",
+          "sourceName": "arrow-big-left",
+          "role": "comparison-only",
+          "match": "exact"
+        }
+      ],
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "完整方向輪廓不表達未完成或隱藏邊界。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "單一方向符號，以透明內孔分離輪廓，不需要淡化層級。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "平面方向符號不需要深度訊號。"
+        }
+      },
+      "change": {
+        "kind": "new",
+        "reason": "使用者明確指出 arrow big 家族缺口，新增既有寬箭頭的方向變體。沿用原母型與逐尺寸參數。",
+        "before": null
+      },
+      "visualReview": {
+        "status": "visually-reviewed-candidate",
+        "reviewer": "Codex (AI)",
+        "date": "2026-11-19",
+        "skillVersion": "0.5.20",
+        "batch": "01-wide-arrows",
+        "variantsSha256": "e7cbc34ec4e7475a89c50a74795213b98b4aea2a66f8321072c2fc32db5b9427",
+        "checks": [
+          "16/20/24",
+          "sharp/soft/rounded",
+          "light/dark",
+          "DPR 1/2",
+          "low-contrast text",
+          "pinned-source re-comparison"
+        ],
+        "evidence": [
+          {
+            "path": "docs/review/navigation-big-01/01-wide-arrows-final/light-1x.png",
+            "sha256": "5af1e0c5fd3fb705b3a535929b2561cd78ad27d052e5a134a40205ef4d1eac9b"
+          },
+          {
+            "path": "docs/review/navigation-big-01/01-wide-arrows-final/dark-1x.png",
+            "sha256": "5e0efba97397c0e76551ee166f9924a98db2c13ea9179365dd5fdb75b916bd4d"
+          },
+          {
+            "path": "docs/review/navigation-big-01/01-wide-arrows-final/light-2x.png",
+            "sha256": "222a89002c40bb0bcd4a9fd3765f03d21868e49e5fce9978ad025b42fc8a728a"
+          },
+          {
+            "path": "docs/review/navigation-big-01/01-wide-arrows-final/dark-2x.png",
+            "sha256": "1d09fec8c59aac8b7a66b62caa25dad42c353e5696a2bcbd7427a9f119dc2c77"
+          },
+          {
+            "path": "docs/review/navigation-01/context-wide-light-1x.png",
+            "sha256": "2dc168dd05f5ff0efdc394f07b9091dea309c2ae6dd7fc0fcc3039489f559755"
+          },
+          {
+            "path": "docs/review/navigation-big-01/native/native-1-light-1x.png",
+            "sha256": "d217c2bd035c436fbd72402d8fc4fcef2cd7c304e1ceb317b865f6f656b66b02"
+          },
+          {
+            "path": "docs/review/navigation-big-01/native/native-1-dark-2x.png",
+            "sha256": "5631e1be951f3c7e62b9b95ee5312d527c5ac147746b82169b25efc6ea35917b"
+          },
+          {
+            "path": "docs/review/navigation-big-01/native/context-light-1x.png",
+            "sha256": "870620f8f65208257f6103cedb6598b27d0f9284af580422e0046347ededa442"
+          }
+        ]
+      },
+      "status": "visually-reviewed-candidate",
+      "userApproval": "pending",
+      "remainingIssues": [],
+      "beforeHash": null,
+      "afterHash": "e7cbc34ec4e7475a89c50a74795213b98b4aea2a66f8321072c2fc32db5b9427"
+    }
+  ]
+}

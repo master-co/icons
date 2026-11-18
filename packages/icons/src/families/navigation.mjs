@@ -1,10 +1,14 @@
 import { knockout } from '../occlusion.mjs';
-import { coreDrawings } from "./core.mjs";
+import { chevron, coreDrawings } from "./core.mjs";
 import { figure, rotate } from "./shared.mjs";
 const mirror = (nodes, g) => nodes.map(([tag, a]) => [tag, { ...a, transform: `translate(${g.s} 0) scale(-1 1)` }]);
 function doubleChevron(g) {
   const f = figure(g);
-  return [5, 12].map((x) => f.contour([[x, 6], [x + 5.5, 12], [x, 18]]));
+  // Match the single chevron's slight forward optical placement. Both arms
+  // keep their own open corridor; all four directions use this same master.
+  return [6, 13].flatMap(x => chevron(g, {
+    wing: f.u(x), tip: f.u(x + 5.5), top: f.u(6), bottom: f.u(18),
+  }));
 }
 function chainLink(g, broken = false) {
   const f = figure(g);
@@ -24,6 +28,8 @@ const navigation = {
   "chevron-up": (g) => rotate(coreDrawings["chevron-right"](g), -90, g),
   "chevrons-left": (g) => mirror(doubleChevron(g), g),
   "chevrons-right": doubleChevron,
+  "chevrons-up": (g) => rotate(doubleChevron(g), -90, g),
+  "chevrons-down": (g) => rotate(doubleChevron(g), 90, g),
   menu: (g) => {
     const f = figure(g);
     return [6, 12, 18].map((y) => f.line(4, y, 20, y));

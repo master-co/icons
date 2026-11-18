@@ -1,0 +1,350 @@
+{
+  "chevrons-left": {
+    "name": "chevrons-left",
+    "direction": "mirror",
+    "variants": {
+      "16": {
+        "sharp": {
+          "nodes": [
+            [
+              "path",
+              {
+                "d": "M3.3333 4L7 8L3.3333 12",
+                "transform": "translate(16 0) scale(-1 1)"
+              }
+            ],
+            [
+              "path",
+              {
+                "d": "M8 4L11.6667 8L8 12",
+                "transform": "translate(16 0) scale(-1 1)"
+              }
+            ]
+          ],
+          "strokeWidth": 1.25
+        },
+        "soft": {
+          "nodes": [
+            [
+              "path",
+              {
+                "d": "M3.3333 4L6.8761 7.8649A0.2 0.2 0 0 1 6.8761 8.1351L3.3333 12",
+                "transform": "translate(16 0) scale(-1 1)"
+              }
+            ],
+            [
+              "path",
+              {
+                "d": "M8 4L11.5428 7.8649A0.2 0.2 0 0 1 11.5428 8.1351L8 12",
+                "transform": "translate(16 0) scale(-1 1)"
+              }
+            ]
+          ],
+          "strokeWidth": 1.25
+        },
+        "rounded": {
+          "nodes": [
+            [
+              "path",
+              {
+                "d": "M3.3333 4L6.6593 7.6283A0.55 0.55 0 0 1 6.6593 8.3717L3.3333 12",
+                "transform": "translate(16 0) scale(-1 1)"
+              }
+            ],
+            [
+              "path",
+              {
+                "d": "M8 4L11.326 7.6283A0.55 0.55 0 0 1 11.326 8.3717L8 12",
+                "transform": "translate(16 0) scale(-1 1)"
+              }
+            ]
+          ],
+          "strokeWidth": 1.25
+        }
+      },
+      "20": {
+        "sharp": {
+          "nodes": [
+            [
+              "path",
+              {
+                "d": "M4.1667 5L8.75 10L4.1667 15",
+                "transform": "translate(20 0) scale(-1 1)"
+              }
+            ],
+            [
+              "path",
+              {
+                "d": "M10 5L14.5833 10L10 15",
+                "transform": "translate(20 0) scale(-1 1)"
+              }
+            ]
+          ],
+          "strokeWidth": 1.5
+        },
+        "soft": {
+          "nodes": [
+            [
+              "path",
+              {
+                "d": "M4.1667 5L8.6261 9.8649A0.2 0.2 0 0 1 8.6261 10.1351L4.1667 15",
+                "transform": "translate(20 0) scale(-1 1)"
+              }
+            ],
+            [
+              "path",
+              {
+                "d": "M10 5L14.4594 9.8649A0.2 0.2 0 0 1 14.4594 10.1351L10 15",
+                "transform": "translate(20 0) scale(-1 1)"
+              }
+            ]
+          ],
+          "strokeWidth": 1.5
+        },
+        "rounded": {
+          "nodes": [
+            [
+              "path",
+              {
+                "d": "M4.1667 5L8.4093 9.6284A0.55 0.55 0 0 1 8.4093 10.3716L4.1667 15",
+                "transform": "translate(20 0) scale(-1 1)"
+              }
+            ],
+            [
+              "path",
+              {
+                "d": "M10 5L14.2426 9.6284A0.55 0.55 0 0 1 14.2426 10.3716L10 15",
+                "transform": "translate(20 0) scale(-1 1)"
+              }
+            ]
+          ],
+          "strokeWidth": 1.5
+        }
+      },
+      "24": {
+        "sharp": {
+          "nodes": [
+            [
+              "path",
+              {
+                "d": "M5 6L10.5 12L5 18",
+                "transform": "translate(24 0) scale(-1 1)"
+              }
+            ],
+            [
+              "path",
+              {
+                "d": "M12 6L17.5 12L12 18",
+                "transform": "translate(24 0) scale(-1 1)"
+              }
+            ]
+          ],
+          "strokeWidth": 1.75
+        },
+        "soft": {
+          "nodes": [
+            [
+              "path",
+              {
+                "d": "M5 6L10.3761 11.8649A0.2 0.2 0 0 1 10.3761 12.1351L5 18",
+                "transform": "translate(24 0) scale(-1 1)"
+              }
+            ],
+            [
+              "path",
+              {
+                "d": "M12 6L17.3761 11.8649A0.2 0.2 0 0 1 17.3761 12.1351L12 18",
+                "transform": "translate(24 0) scale(-1 1)"
+              }
+            ]
+          ],
+          "strokeWidth": 1.75
+        },
+        "rounded": {
+          "nodes": [
+            [
+              "path",
+              {
+                "d": "M5 6L10.1593 11.6284A0.55 0.55 0 0 1 10.1593 12.3716L5 18",
+                "transform": "translate(24 0) scale(-1 1)"
+              }
+            ],
+            [
+              "path",
+              {
+                "d": "M12 6L17.1593 11.6284A0.55 0.55 0 0 1 17.1593 12.3716L12 18",
+                "transform": "translate(24 0) scale(-1 1)"
+              }
+            ]
+          ],
+          "strokeWidth": 1.75
+        }
+      }
+    }
+  },
+  "chevrons-right": {
+    "name": "chevrons-right",
+    "direction": "mirror",
+    "variants": {
+      "16": {
+        "sharp": {
+          "nodes": [
+            [
+              "path",
+              {
+                "d": "M3.3333 4L7 8L3.3333 12"
+              }
+            ],
+            [
+              "path",
+              {
+                "d": "M8 4L11.6667 8L8 12"
+              }
+            ]
+          ],
+          "strokeWidth": 1.25
+        },
+        "soft": {
+          "nodes": [
+            [
+              "path",
+              {
+                "d": "M3.3333 4L6.8761 7.8649A0.2 0.2 0 0 1 6.8761 8.1351L3.3333 12"
+              }
+            ],
+            [
+              "path",
+              {
+                "d": "M8 4L11.5428 7.8649A0.2 0.2 0 0 1 11.5428 8.1351L8 12"
+              }
+            ]
+          ],
+          "strokeWidth": 1.25
+        },
+        "rounded": {
+          "nodes": [
+            [
+              "path",
+              {
+                "d": "M3.3333 4L6.6593 7.6283A0.55 0.55 0 0 1 6.6593 8.3717L3.3333 12"
+              }
+            ],
+            [
+              "path",
+              {
+                "d": "M8 4L11.326 7.6283A0.55 0.55 0 0 1 11.326 8.3717L8 12"
+              }
+            ]
+          ],
+          "strokeWidth": 1.25
+        }
+      },
+      "20": {
+        "sharp": {
+          "nodes": [
+            [
+              "path",
+              {
+                "d": "M4.1667 5L8.75 10L4.1667 15"
+              }
+            ],
+            [
+              "path",
+              {
+                "d": "M10 5L14.5833 10L10 15"
+              }
+            ]
+          ],
+          "strokeWidth": 1.5
+        },
+        "soft": {
+          "nodes": [
+            [
+              "path",
+              {
+                "d": "M4.1667 5L8.6261 9.8649A0.2 0.2 0 0 1 8.6261 10.1351L4.1667 15"
+              }
+            ],
+            [
+              "path",
+              {
+                "d": "M10 5L14.4594 9.8649A0.2 0.2 0 0 1 14.4594 10.1351L10 15"
+              }
+            ]
+          ],
+          "strokeWidth": 1.5
+        },
+        "rounded": {
+          "nodes": [
+            [
+              "path",
+              {
+                "d": "M4.1667 5L8.4093 9.6284A0.55 0.55 0 0 1 8.4093 10.3716L4.1667 15"
+              }
+            ],
+            [
+              "path",
+              {
+                "d": "M10 5L14.2426 9.6284A0.55 0.55 0 0 1 14.2426 10.3716L10 15"
+              }
+            ]
+          ],
+          "strokeWidth": 1.5
+        }
+      },
+      "24": {
+        "sharp": {
+          "nodes": [
+            [
+              "path",
+              {
+                "d": "M5 6L10.5 12L5 18"
+              }
+            ],
+            [
+              "path",
+              {
+                "d": "M12 6L17.5 12L12 18"
+              }
+            ]
+          ],
+          "strokeWidth": 1.75
+        },
+        "soft": {
+          "nodes": [
+            [
+              "path",
+              {
+                "d": "M5 6L10.3761 11.8649A0.2 0.2 0 0 1 10.3761 12.1351L5 18"
+              }
+            ],
+            [
+              "path",
+              {
+                "d": "M12 6L17.3761 11.8649A0.2 0.2 0 0 1 17.3761 12.1351L12 18"
+              }
+            ]
+          ],
+          "strokeWidth": 1.75
+        },
+        "rounded": {
+          "nodes": [
+            [
+              "path",
+              {
+                "d": "M5 6L10.1593 11.6284A0.55 0.55 0 0 1 10.1593 12.3716L5 18"
+              }
+            ],
+            [
+              "path",
+              {
+                "d": "M12 6L17.1593 11.6284A0.55 0.55 0 0 1 17.1593 12.3716L12 18"
+              }
+            ]
+          ],
+          "strokeWidth": 1.75
+        }
+      }
+    }
+  }
+}

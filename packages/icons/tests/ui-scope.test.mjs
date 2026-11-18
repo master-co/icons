@@ -138,6 +138,8 @@ test('craft-05 preserves its immutable baseline, final masters and individual re
   const records=JSON.parse(await readFile(`references/committed-craft-01/previous-${group}-reviews.json`));
   Object.assign(superseded,Object.fromEntries(records.map(r=>[r.name,r])));
  }
+ const navigationHistory=JSON.parse(await readFile('references/navigation-01/ledger-before.json'));
+ for(const name of ['chevrons-left','chevrons-right'])superseded[name]=navigationHistory.icons.find(r=>r.name===name);
  assert.equal(sha(raw),review.baselineSha256);
  const uiNames=Object.keys(baseline).sort();
  for(const name of uiNames)assert.ok(defs[name],name+': original drawing removed');
@@ -157,7 +159,7 @@ test('craft-05 preserves its immutable baseline, final masters and individual re
  }
 });
 
-test('committed-craft-01 changes exactly its reviewed scope and matches current masters and evidence',async()=>{
+test('committed-craft-01 preserves its reviewed scope and evidence before navigation-01',async()=>{
  const {createHash}=await import('node:crypto');
  const sha=x=>createHash('sha256').update(x).digest('hex');
  const root='docs/review/committed-craft-01';
@@ -165,7 +167,10 @@ test('committed-craft-01 changes exactly its reviewed scope and matches current 
  const before=JSON.parse(await readFile(scope.baseline));
  const review=JSON.parse(await readFile(`${root}/ledger.json`));
  const audit=JSON.parse(await readFile(`${root}/completion-audit.json`));
- const ledger=JSON.parse(await readFile('docs/refinement-ledger.json'));
+ // Navigation's exact successor scope and current masters are checked separately.
+ // Keep this historical evidence immutable instead of rewriting old approvals.
+ const defs=JSON.parse(await readFile('references/navigation-01/master-before.json'));
+ const ledger=JSON.parse(await readFile('references/navigation-01/ledger-before.json'));
  const names=Object.keys(before).sort(),batches=new Map(),evidence=new Map();
  assert.equal(names.length,392);
  assert.equal(scope.committedGeneralCount,names.length);

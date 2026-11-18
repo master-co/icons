@@ -49,6 +49,12 @@ export const conceptOf = {
   'phone-incoming':'phone','phone-outgoing':'phone','phone-missed':'phone','phone-call':'phone',
   'message-heart':'message','message-dots':'message','message-lock':'message','message-search':'message',
   'arrow-up':'arrow-right', 'arrow-up-right':'arrow-right',
+  'arrow-up-left':'arrow-right', 'arrow-down-left':'arrow-right', 'arrow-down-right':'arrow-right',
+  'chevrons-up':'chevrons-right', 'chevrons-down':'chevrons-right',
+  'arrow-left-to-line':'arrow-right-to-line', 'arrow-up-to-line':'arrow-right-to-line', 'arrow-down-to-line':'arrow-right-to-line',
+  'move-vertical':'move-horizontal', 'move-diagonal-up-right':'move-horizontal', 'move-diagonal-down-right':'move-horizontal',
+  'arrow-big-down':'arrow-big-up', 'chevrons-left-right':'chevrons-up-down',
+  'arrow-big-left':'arrow-big-up', 'arrow-big-right':'arrow-big-up',
   'chevron-down':'chevron-right', 'bell-off':'bell', unlock:'lock',
   'folder-plus':'folder', 'file-text':'file', 'check-circle':'check',
 };
