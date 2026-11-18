@@ -1,0 +1,52 @@
+---
+title: "比較"
+description: "Master Icons 與其他圖示庫的差異。"
+---
+
+## 一覽 \{#overview\}
+
+多數圖示庫只為每個圖示繪製一份圖稿再加以縮放。Master Icons 則為每個圖示繪製三種光學尺寸與三種圓角，並為每種支援的線寬重新繪製。它的圖示數量少於最大型的圖示庫，專注於儀表板、App 與網站等介面需求。
+
+| 圖示庫 | 圖示數 | 繪製尺寸 | 風格 | 線條粗細 | 官方元件 | 授權 |
+| --- | --- | --- | --- | --- | --- | --- |
+| **Master Icons** | 946，含 107 個品牌項目 | 16、20 與 24 px | 直角、微圓與圓潤三種圓角 | 0.75–2.5，以 0.25 為級距重新繪製 | React、Vue、Svelte、Preact、Astro | MIT；部分圖稿保留各自聲明 |
+| Lucide | 2,091 | 24 px | 線條 | `strokeWidth` 設定 SVG 線寬 | React、Vue、Svelte、Preact、Solid、Angular 等 | ISC |
+| Heroicons | 324 | 24 px；實心另有 20 與 16 px | 線條與實心 | — | React、Vue | MIT |
+| Phosphor | 1,512 | 單一圖稿 | 六種字重，含實心與雙色 | 六種固定字重 | React、Vue、Web Components 等 | MIT |
+| Tabler Icons | 線條 5,491、實心 1,054 | 24 px | 線條與實心 | `stroke` 設定 SVG 線寬 | React、Vue、Svelte、Preact、Solid 等 | MIT |
+| Material Symbols | 每種風格 7,890 | 光學尺寸軸 20–48 | Outlined、Rounded、Sharp；填色軸 | 字重軸 100–700 | —（字型與 SVG 檔案） | Apache 2.0 |
+| Fluent UI System Icons | 約 3,000 | 最多八種尺寸，10–48 px | 一般與實心 | — | React | MIT |
+| Font Awesome Free | 實心 2,001、一般 273、品牌 609 | 單一圖稿 | Solid、Regular 與 Brands | — | React、Vue、Angular | 圖示 CC BY 4.0、程式碼 MIT |
+
+數量取自 2026 年 11 月已發布的 npm 套件：`lucide-static` 1.75、`heroicons` 2.2、`@phosphor-icons/core` 2.1、`@tabler/icons` 3.52、`@material-symbols/svg-400` 0.49、`@fluentui/svg-icons` 1.1.346 與 `@fortawesome/fontawesome-free` 7.3。這些數字會隨每次發布改變，最新數字請以各專案為準。
+
+## 光學尺寸 \{#optical-sizes\}
+
+把 24 px 圖稿縮小到 16 px，仍保有 24 px 的細節，這些細節會擠在一起而變得模糊。Master Icons 另行繪製 16 與 20 px 母版，在小尺寸需要時簡化或重新安排細節，並由 `size` 自動選擇最接近的母版。Fluent UI 與 Heroicons 也會重繪小尺寸，Material Symbols 則透過可變字型的光學尺寸軸調整；其他多數圖示庫只縮放單一圖稿。請見[尺寸與圓角](/guide/optical-sizes)。
+
+## 圓角 \{#corners\}
+
+三種圓角風格會改變幾何與內部空間，而不只是 SVG 的線條接合方式，因此整個介面可以在精確與親和的外觀之間切換，而不必更改圖示名稱。Material Symbols 也以 Outlined、Rounded 與 Sharp 三個獨立系列提供類似的選擇。
+
+## 線條粗細 \{#line-weight\}
+
+提供線寬設定的圖示庫，通常只修改 SVG 的 `stroke-width` 屬性。線條因此原地加粗，填滿縫隙、挖空與細節之間的空間。Master Icons 預先重新繪製每種支援的線寬，並重新計算挖空與遮罩，因此較粗的圖示仍保有間距。Phosphor 與 Material Symbols 也刻意繪製各自的字重，分別以固定字重或字型軸提供。請見[線寬](/guide/stroke-width)。
+
+## 體積 \{#size\}
+
+從固定入口匯入的元件，例如 `@master/icons-react/24/soft` 的 `SearchIcon`，在經 minify 與 gzip 處理後的 bundle 中約增加 1.5 KB，已包含共用渲染器。動態入口因包含全部九組母版與其線寬，每個圖示約增加 2 KB。十個固定圖示約增加 3 KB。未使用的圖示會被 tree-shaking 移除。
+
+安裝後的核心套件比多數圖示套件大：它包含全部九組母版的 SVG 檔案與預先計算的線寬，壓縮後約 20 MB。這只影響 `node_modules`，不影響應用程式的 bundle。
+
+## 如何選擇 \{#choosing\}
+
+若介面經常使用小尺寸、需要在所有圖示間保持一致的圓角或線條粗細，或要在 React、Vue、Svelte、Preact 與 Astro 之間共用同一套圖示，請選擇 Master Icons。
+
+以下情況可能更適合其他圖示庫：
+
+- 需要涵蓋最多概念：Material Symbols 與 Tabler Icons 都有數千個圖示。
+- 需要雙色等字重，或圖示字型：Phosphor 與 Material Symbols。
+- 介面遵循 Microsoft Fluent 或 Material Design。
+- 使用 Angular、Solid、React Native 或 Flutter：Lucide、Tabler Icons 與 Phosphor 有官方支援。
+
+Master Icons 可以與其他圖示庫並存。先在新介面使用，再逐一替換既有圖示；[設定提示詞](/guide/getting-started#set-up-with-an-ai-agent)會在修改前，先把既有圖示對應到最接近的名稱。

@@ -1,0 +1,37 @@
+## Set a width \{#set\}
+
+Every icon accepts `strokeWidth`, in the dynamic and fixed entries of each framework package and in the JavaScript renderer.
+
+```tsx
+import { SearchIcon } from '@master/icons-react/24/soft';
+<SearchIcon strokeWidth={2} />
+```
+
+```js
+import { Search, renderSvg } from '@master/icons';
+const svg = renderSvg(Search, { size: 20, strokeWidth: 1.75 });
+```
+
+Omit it to keep the drawing's native width. In the [collection](/icons), the stroke slider previews a width on every icon, and the copied code and downloads include it.
+
+## Ranges \{#ranges\}
+
+Widths are in the native units of the optical master's viewBox, in steps of 0.25. Each master supports its own range:
+
+| Optical size | Native width | Range |
+| --- | --- | --- |
+| 16 px | 1.25 | 0.75–1.5 |
+| 20 px | 1.5 | 1–2 |
+| 24 px | 1.75 | 1.25–2.5 |
+
+Values outside the selected master's range are clamped to it. Nonpositive and nonfinite values, and values that are not a multiple of 0.25, throw an error.
+
+## Redrawn geometry \{#geometry\}
+
+Changing the SVG `stroke-width` attribute only thickens lines in place, which closes gaps, cutouts and the space between details. Each supported width is drawn ahead of time instead: cutouts, masks and clearances are recomputed for it, so a heavier icon keeps its spacing. Never override `stroke-width` with CSS.
+
+Display `size` scales the whole drawing, including its stroke. Brand marks keep their original shape and ignore the width; their outline versions, such as `brand-github-outline`, accept it.
+
+## Download sets \{#downloads\}
+
+The collection offers a ZIP archive for every supported width of each size and corner style, such as `master-icons-24-soft-stroke-2.zip`. Its files carry the same license notices as the default set.

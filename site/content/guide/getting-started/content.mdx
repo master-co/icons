@@ -1,58 +1,81 @@
 import DocumentPrompt from '@master/internal-site/components/DocumentPrompt.astro'
 
+## Install \{#install\}
+
+Install the package for your framework. Each framework package brings the shared `@master/icons` core with it and uses the framework already in your application.
+
+| Framework | Package |
+| --- | --- |
+| React 18 or 19 | `@master/icons-react` |
+| Vue 3.5 or later | `@master/icons-vue` |
+| Svelte 5 | `@master/icons-svelte` |
+| Preact 11 | `@master/icons-preact` |
+| Astro 7 | `@master/icons-astro` |
+| No framework | `@master/icons` |
+
+```sh
+npm install @master/icons-react
+```
+
+With other package managers, use `bun add`, `pnpm add` or `yarn add` with the same name. Install only the package for your framework; the others are not needed. The packages support Node.js 22 and later, and the Astro package requires Node.js 24 or later.
+
+## Render an icon \{#first-icon\}
+
+Import each icon by name. Icon components end in `Icon`.
+
+```tsx
+import { SearchIcon } from '@master/icons-react';
+
+<SearchIcon size={20} label="Search" />
+```
+
+Icons draw in `currentColor`, so they take the color of the surrounding text. Without options, an icon renders the 24 px drawing with soft corners. Browse every name, copy its import and download SVG files in the [collection](/icons).
+
+## Choose an entry \{#entries\}
+
+Each package has two kinds of entry, with the same icon names:
+
+- **Dynamic**, such as `@master/icons-react`: each icon carries all nine drawings (three optical sizes by three corner styles) and accepts `size`, `corner` and `strokeWidth`.
+- **Fixed**, such as `@master/icons-react/20/soft`: each icon carries one drawing. Use it when the whole interface uses one size and corner style; it ships less.
+
+```tsx
+import { SearchIcon } from '@master/icons-react/20/soft';
+
+<button aria-label="Search"><SearchIcon /></button>
+```
+
+Unused icons are removed by any bundler that supports tree shaking. Continue with the page for your framework: [SVG and JavaScript](/guide/svg), [React](/guide/react), [Vue](/guide/vue), [Svelte](/guide/svelte), [Preact](/guide/preact) or [Astro](/guide/astro).
+
 ## Set up with an AI agent \{#set-up-with-an-ai-agent\}
 
-A coding agent can run this setup for you. Paste the prompt below into the agent from the app's root directory. It inspects the project and asks for your checkout, the framework adapter, the default size, corners and stroke, and what happens to an existing icon library before changing files. Then it installs the private alpha, renders a first icon and runs your checks.
+A coding agent can run this setup for you. Paste the prompt below into the agent from the app's root directory. It inspects the project and asks for the framework package, the default size, corners and stroke, and what happens to an existing icon library before changing files. Then it installs the package, renders a first icon and runs your checks.
 
 <DocumentPrompt title="Set up Master Icons" text={`You are working in an existing web application. Set up Master Icons end to end.
-Documentation: the guide in the master-icons repository, under site/content/guide (getting-started, the page for the chosen framework, optical-sizes and accessibility).
+Documentation: the README of the installed package and the guide at https://github.com/master-co/icons/tree/main/site/content/guide (getting-started, the page for the chosen framework, optical-sizes, stroke-width and accessibility).
 
-Master Icons is a private alpha and is not published to npm. Do not search the registry or install a package with a similar name.
+Master Icons is published on npm as @master/icons (the core) and one package per framework: @master/icons-react, @master/icons-vue, @master/icons-svelte, @master/icons-preact and @master/icons-astro. Install only these names; do not install a package with a similar name.
 
-First inspect the project before editing: package manager and lockfile, Node.js version, framework and build tool (React, Vue, Svelte, Preact, Astro or none), whether the app is a workspace of the master-icons monorepo, any icon library already in use and how it is imported, the dev/lint/build/test commands, and agent guidance files such as AGENTS.md.
+First inspect the project before editing: package manager and lockfile, Node.js version, framework and build tool (React, Vue, Svelte, Preact, Astro or none), any icon library already in use and how it is imported, the dev/lint/build/test commands, and agent guidance files such as AGENTS.md.
 
 Before editing, ask me these and wait for the answers. Do not choose them yourself:
-- Checkout: the absolute path of my master-icons checkout, unless the app is a workspace of that monorepo.
-- Integration: the adapter for the framework you found (@master/icons-react, @master/icons-vue, @master/icons-svelte, @master/icons-preact or @master/icons-astro), or @master/icons for plain SVG and JavaScript. Install exactly one adapter.
+- Integration: the package for the framework you found, or @master/icons for plain SVG and JavaScript. Install exactly one package.
 - Defaults: the optical size (16, 20 or 24; 24 for a general interface, 16 or 20 for a dense one), the corner style (sharp, soft or rounded; soft is the default), and whether to keep each master's native stroke or set one width (0.75–1.5 at 16 px, 1–2 at 20 px, 1.25–2.5 at 24 px, in steps of 0.25).
-- Existing icons: if the project already uses another icon library, whether to leave it in place (the default) and use Master Icons only for new interface, or replace the icons I name. Never replace icons I have not named.
+- Existing icons: if the project already uses another icon library, whether to leave it in place (the default) and use Master Icons only for new screens, or replace the icons I name. Never replace icons I have not named.
 
 Then adopt Master Icons conservatively:
-1. Run every command from the app root, where its package.json lives, with the project's package manager.
-2. Inside the monorepo, add "<adapter>": "workspace:*" to the app's dependencies, then run bun install and bun run build:icons from the repository root. In any other project, run bun run pack:icons in the checkout; install <checkout>/work/master-icons-alpha.tgz and the adapter's archive beside it (for example master-icons-svelte-alpha.tgz); and add an override that points @master/icons at the core archive (overrides with Bun or npm, pnpm.overrides with pnpm, resolutions with Yarn), so the adapter takes its core from the archive and never from the registry.
-3. Import each icon by name. The dynamic entry (import { SearchIcon } from '@master/icons-svelte') accepts size, corner and strokeWidth; a fixed entry such as '@master/icons-svelte/20/soft' holds one master and ships less. Prefer fixed entries when the app uses one setting everywhere.
-4. Render icons at their native sizes. Pass size, which chooses the nearest optical master, instead of resizing an icon with CSS width and height. strokeWidth chooses precomputed geometry, so never override stroke-width in CSS.
-5. Keep icons accessible: an icon beside visible text stays decorative, an icon-only button carries its accessible name on the button, and a meaningful standalone icon gets label.
-6. If I chose to replace named icons, map each one to the closest name in <checkout>/packages/icons/dist/catalog.json, show me the mapping before editing, keep every control's accessible name, and remove the old dependency only after nothing imports it.
-7. Preserve the existing architecture and styling, and avoid unrelated refactors.
-8. Verify: render a SearchIcon at size 20 (or <checkout>/packages/icons/icons/20/soft/search.svg inline) on a visible page and confirm it draws in the text color with soft corners in light and dark mode. Then remove it unless I want to keep it, and run the project's lint, build and tests.
+1. Run every command from the app root, where its package.json lives, with the project's package manager, and install the chosen package from npm.
+2. Import each icon by name. The dynamic entry (import { SearchIcon } from '@master/icons-react') accepts size, corner and strokeWidth; a fixed entry such as '@master/icons-react/20/soft' holds one master and ships less. Prefer fixed entries when the app uses one setting everywhere.
+3. Render icons at their native sizes. Pass size, which chooses the nearest optical master, instead of resizing an icon with CSS width and height. strokeWidth chooses precomputed geometry, so never override stroke-width in CSS.
+4. Keep icons accessible: an icon beside visible text stays decorative, an icon-only button carries its accessible name on the button, and a meaningful standalone icon gets label.
+5. If I chose to replace named icons, map each one to the closest name in node_modules/@master/icons/dist/catalog.json, show me the mapping before editing, keep every control's accessible name, and remove the old dependency only after nothing imports it.
+6. Preserve the existing architecture and styling, and avoid unrelated refactors.
+7. Verify: render a SearchIcon at size 20 on a visible page and confirm it draws in the text color with soft corners in light and dark mode. Then remove it unless I want to keep it, and run the project's lint, build and tests.
 
-When finished, summarize the changed files, the adapter and the workspace or archive route, the defaults chosen, the icons replaced or intentionally left unchanged, the validation results, and anything not verified in a browser.`} />
+When finished, summarize the changed files, the package installed, the defaults chosen, the icons replaced or intentionally left unchanged, the validation results, and anything not verified in a browser.`} />
 
-## Use a local workspace \{#workspace\}
+## Next steps \{#next\}
 
-Master Icons is a private alpha. It is not published to npm. In this monorepo, declare your adapter such as `"@master/icons-svelte": "workspace:*"` in your application's dependencies (or `"@master/icons": "workspace:*"` for SVG/JavaScript), then run:
-
-```sh
-bun install
-bun run build:icons
-```
-
-For another project, create archives from this repository and install the core plus your chosen adapter (Svelte shown here):
-
-```sh
-bun run pack:icons
-# In your application:
-bun pm pkg set "overrides.@master/icons=file:/absolute/path/to/master-icons/work/master-icons-alpha.tgz"
-bun add /absolute/path/to/master-icons/work/master-icons-alpha.tgz /absolute/path/to/master-icons/work/master-icons-svelte-alpha.tgz
-```
-
-Because the private alpha is not on npm, the local override also directs the adapter’s core dependency to your archive. Replace the absolute path with your checkout location.
-
-The package supports Node.js 22 and later. Developing this repository uses Node.js 24 and Bun 1.4.4.
-
-## Choose an integration \{#integration\}
-
-Use [SVG or JavaScript](/guide/svg) in any framework, or choose [React](/guide/react), [Vue](/guide/vue), [Svelte](/guide/svelte), [Preact](/guide/preact) or [Astro](/guide/astro) components. Each framework has its own `@master/icons-{framework}` package, depending on the shared `@master/icons` core. Install only your adapter and its framework; other adapters are not installed. Framework tooling may require a newer Node.js version.
-
-Start at 24px with soft corners. For a dense interface, choose the 16px or 20px optical drawing. See [sizes and corners](/guide/optical-sizes).
+- Choose a drawing for the space available in [sizes and corners](/guide/optical-sizes).
+- Adjust line weight with [stroke width](/guide/stroke-width).
+- Name icons and the controls around them in [accessibility](/guide/accessibility).
+- See how Master Icons differs from other libraries in the [comparison](/guide/comparison).

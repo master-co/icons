@@ -1,11 +1,11 @@
 ---
 title: "Preact"
-description: "在 Preact 使用動態或固定光學圖稿。"
+description: "在 Preact 呈現動態或固定的光學圖稿。"
 ---
 
 ## 動態圖示 \{#dynamic\}
 
-Preact 是必要的 peer dependency。請在應用程式安裝 Preact 11，並[加入本機套件](/guide/getting-started)。
+Preact 是必要的 peer dependency。請在應用程式安裝 Preact 11，並[安裝 `@master/icons-preact`](/guide/getting-started#install)。
 
 ```tsx
 import { SearchIcon } from '@master/icons-preact';
@@ -13,7 +13,7 @@ import { SearchIcon } from '@master/icons-preact';
 <SearchIcon size={20} corner="rounded" label="Search" />
 ```
 
-動態入口會為每個匯入的圖示包含九種光學尺寸與圓角組合，以及各組合支援的線寬圖稿，與 React 和 SVG 共用相同幾何。`size` 會選擇最近的光學圖稿；`corner` 預設為 `soft`。
+動態入口會為每個匯入的圖示包含九種光學尺寸與圓角組合，以及各組合支援的線寬圖稿，與其他框架及 SVG 共用相同幾何。`size` 會選擇最接近的光學圖稿；`corner` 預設為 `soft`。
 
 ## 固定圖示 \{#fixed\}
 
@@ -33,11 +33,11 @@ import { SearchIcon } from '@master/icons-preact/16/soft';
 
 ## 自訂線寬 \{#stroke-width\}
 
-動態與固定入口都接受 `strokeWidth`。它會選用預先計算的圖稿，連同挖空與遮罩一起更新，而非只修改 SVG 的線寬屬性。圖庫會複製附有此 prop 的元件匯入用法；只有選擇 SVG 格式時才輸出 SVG 標記。
+動態與固定入口都接受 `strokeWidth`，以原生單位與 0.25 為級距。它會選用重新繪製的幾何，而非修改 SVG 的線寬屬性。
 
 ```tsx
 import { SearchIcon } from '@master/icons-preact/24/soft';
 <SearchIcon size={48} strokeWidth={2} />
 ```
 
-線寬採用原生 viewBox 座標單位，以 0.25 為間距：16 px 母版支援 0.75–1.5，20 px 支援 1–2，24 px 支援 1.25–2.5。超出所選母版範圍的值會限制在上下限；非正數、非有限數或不符合 0.25 間距的值會拋出錯誤。省略此 prop 即使用原始圖稿。顯示尺寸 `size` 會連同線寬一起縮放；品牌剪影則維持原始形狀。固定入口只包含所選尺寸與圓角支援的線寬，未使用的圖示仍可被 tree-shaking 移除。
+各光學尺寸支援的範圍與繪製方式，請見[線寬](/guide/stroke-width)。

@@ -1,0 +1,47 @@
+## At a glance \{#overview\}
+
+Most icon libraries draw each icon once and scale it. Master Icons draws each icon at three optical sizes and in three corner styles, and redraws it for every supported stroke width. It has fewer icons than the largest libraries and concentrates on interface work: dashboards, apps and websites.
+
+| Library | Icons | Drawn sizes | Styles | Line weight | Official components | License |
+| --- | --- | --- | --- | --- | --- | --- |
+| **Master Icons** | 946, including 107 brand entries | 16, 20 and 24 px | Sharp, soft and rounded corners | 0.75–2.5 in steps of 0.25, redrawn | React, Vue, Svelte, Preact, Astro | MIT; some artwork keeps its own notice |
+| Lucide | 2,091 | 24 px | Outline | `strokeWidth` sets the SVG stroke | React, Vue, Svelte, Preact, Solid, Angular and more | ISC |
+| Heroicons | 324 | 24 px; solid also 20 and 16 px | Outline and solid | — | React, Vue | MIT |
+| Phosphor | 1,512 | One drawing | Six weights, including fill and duotone | Six fixed weights | React, Vue, web components and more | MIT |
+| Tabler Icons | 5,491 outline, 1,054 filled | 24 px | Outline and filled | `stroke` sets the SVG stroke | React, Vue, Svelte, Preact, Solid and more | MIT |
+| Material Symbols | 7,890 per style | Optical size axis, 20–48 | Outlined, rounded and sharp; fill axis | Weight axis, 100–700 | — (font and SVG files) | Apache 2.0 |
+| Fluent UI System Icons | About 3,000 | Up to eight sizes, 10–48 px | Regular and filled | — | React | MIT |
+| Font Awesome Free | 2,001 solid, 273 regular, 609 brands | One drawing | Solid, regular and brands | — | React, Vue, Angular | Icons CC BY 4.0, code MIT |
+
+Counts come from the published npm packages in November 2026: `lucide-static` 1.75, `heroicons` 2.2, `@phosphor-icons/core` 2.1, `@tabler/icons` 3.52, `@material-symbols/svg-400` 0.49, `@fluentui/svg-icons` 1.1.346 and `@fortawesome/fontawesome-free` 7.3. They change with every release; check each project for its current figures.
+
+## Optical sizes \{#optical-sizes\}
+
+A 24 px drawing scaled down to 16 px keeps its 24 px details, which crowd together and blur. Master Icons draws the 16 and 20 px masters separately, simplifying or rearranging details where a small size needs it, and `size` picks the nearest master automatically. Fluent UI and Heroicons also redraw small sizes, and Material Symbols adjusts through the optical size axis of its variable font; most other libraries scale a single drawing. See [sizes and corners](/guide/optical-sizes).
+
+## Corners \{#corners\}
+
+The three corner styles change geometry and internal spacing, not only SVG line joins, so a whole interface can move between a precise and a friendly look without changing icon names. Material Symbols offers a similar choice as separate outlined, rounded and sharp families.
+
+## Line weight \{#line-weight\}
+
+Libraries that expose a stroke width usually change the SVG `stroke-width` attribute. Lines then thicken in place and close gaps, cutouts and the space between details. Master Icons redraws each supported width ahead of time, with its cutouts and masks recomputed, so a heavier icon keeps its spacing. Phosphor and Material Symbols also draw their weights deliberately, as fixed weights or a font axis. See [stroke width](/guide/stroke-width).
+
+## Size \{#size\}
+
+A component imported from a fixed entry, such as `SearchIcon` from `@master/icons-react/24/soft`, adds about 1.5 KB to a minified and gzipped bundle, including the shared renderer. The dynamic entry adds about 2 KB per icon, because it carries all nine masters and their widths. Ten fixed icons add about 3 KB. Unused icons are tree-shaken.
+
+The installed core package is larger than most icon packages: it includes every SVG file for all nine masters and the precomputed widths, about 20 MB compressed. This affects `node_modules`, not your application bundle.
+
+## Choosing \{#choosing\}
+
+Choose Master Icons for interfaces that use small sizes, need a consistent corner style or line weight across icons, or share one icon set across React, Vue, Svelte, Preact and Astro.
+
+Another library may fit better when:
+
+- You need the widest coverage of concepts: Material Symbols and Tabler Icons have several thousand icons.
+- You want weights such as duotone or an icon font: Phosphor and Material Symbols.
+- Your interface follows Microsoft Fluent or Material Design.
+- You build with Angular, Solid, React Native or Flutter, which Lucide, Tabler Icons and Phosphor support officially.
+
+Master Icons can run beside another library. Use it for new screens first, then replace icons one at a time; the [setup prompt](/guide/getting-started#set-up-with-an-ai-agent) maps existing icons to the closest names before changing anything.

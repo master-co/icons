@@ -4,8 +4,10 @@ Each icon has drawings for 16, 20 and 24 pixels. Small drawings can simplify den
 
 The default display size is 24. Automatic optical selection chooses the nearest master; ties at 18 and 22 choose the larger one. CSS width and height do not trigger optical selection. Prefer native 16, 20 or 24 pixels for the intended result.
 
+Start at 24 px for a general interface, and choose 16 or 20 px for a dense one, such as a toolbar or a table. Larger display sizes scale the 24 px drawing.
+
 ## Corner styles \{#corners\}
 
 Choose `sharp`, `soft` or `rounded`. The default is `soft`. These styles adjust geometry and internal spacing, not only SVG line joins. Natural curves and deliberately flat details can remain unchanged across styles.
 
-Compare all nine masters in an icon's detail dialog in the [collection](/icons).
+Compare all nine masters in an icon's detail dialog in the [collection](/icons). To change line weight as well, see [stroke width](/guide/stroke-width).

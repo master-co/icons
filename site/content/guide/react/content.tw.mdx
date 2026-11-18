@@ -1,18 +1,18 @@
 ---
 title: "React"
-description: "在 React 使用動態或固定光學圖稿。"
+description: "在 React 呈現動態或固定的光學圖稿。"
 ---
 
 ## 動態圖示 \{#dynamic\}
 
-支援 React 18 與 19。React 為必要的 peer dependency，請在使用端應用程式中安裝。
+React 是必要的 peer dependency。請在應用程式安裝 React 18 或 19，並[安裝 `@master/icons-react`](/guide/getting-started#install)。
 
 ```tsx
 import { SearchIcon } from '@master/icons-react';
 <SearchIcon size={20} corner="rounded" label="Search" />
 ```
 
-動態入口會為每個匯入的圖示包含九種光學尺寸與圓角組合，以及各組合支援的線寬圖稿。元件接受標準 SVG props、事件，並透過 `forwardRef` 傳遞 ref。
+動態入口會為每個匯入的圖示包含九種光學尺寸與圓角組合，以及各組合支援的線寬圖稿，與其他框架及 SVG 共用相同幾何。`size` 會選擇最接近的光學圖稿；`corner` 預設為 `soft`。
 
 ## 固定圖示 \{#fixed\}
 
@@ -21,15 +21,21 @@ import { SearchIcon } from '@master/icons-react/16/soft';
 <button aria-label="Search"><SearchIcon /></button>
 ```
 
-固定入口只包含一種光學尺寸與圓角，不接受 `corner` 或 `opticalSize`；修改 `size` 只會縮放該圖稿。在介面中使用一致的固定入口，即可統一視覺語言。
+固定入口只包含一種光學尺寸與圓角。可將 `16/soft` 換成 `16`、`20`、`24` 與 `sharp`、`soft`、`rounded` 的任意組合。固定元件不接受 `corner` 或 `opticalSize`；`size` 只會縮放所選圖稿。在介面中使用一致的固定入口，即可統一視覺語言。
+
+## 框架行為 \{#behavior\}
+
+元件接受標準 SVG props 與事件，並透過 `forwardRef` 將 ref 傳遞至 SVG 元素。元件可在伺服器與瀏覽器渲染，不需要僅限用戶端的包裝。
+
+沒有標籤的圖示會視為裝飾。對有意義的圖示使用 `label`、`aria-label` 或 `aria-labelledby`，或替外層按鈕命名，詳見[無障礙](/guide/accessibility)。
 
 ## 自訂線寬 \{#stroke-width\}
 
-動態與固定入口都接受 `strokeWidth`。它會選用預先計算的圖稿，連同挖空與遮罩一起更新，而非只修改 SVG 的線寬屬性。圖庫會複製附有此 prop 的元件匯入用法；只有選擇 SVG 格式時才輸出 SVG 標記。
+動態與固定入口都接受 `strokeWidth`，以原生單位與 0.25 為級距。它會選用重新繪製的幾何，而非修改 SVG 的線寬屬性。
 
 ```tsx
 import { SearchIcon } from '@master/icons-react/24/soft';
 <SearchIcon size={48} strokeWidth={2} />
 ```
 
-線寬採用原生 viewBox 座標單位，以 0.25 為間距：16 px 母版支援 0.75–1.5，20 px 支援 1–2，24 px 支援 1.25–2.5。超出所選母版範圍的值會限制在上下限；非正數、非有限數或不符合 0.25 間距的值會拋出錯誤。省略此 prop 即使用原始圖稿。顯示尺寸 `size` 會連同線寬一起縮放；品牌剪影則維持原始形狀。固定入口只包含所選尺寸與圓角支援的線寬，未使用的圖示仍可被 tree-shaking 移除。
+各光學尺寸支援的範圍與繪製方式，請見[線寬](/guide/stroke-width)。

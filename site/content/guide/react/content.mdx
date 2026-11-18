@@ -1,13 +1,13 @@
 ## Dynamic icons \{#dynamic\}
 
-React 18 and 19 are supported. React is a required peer dependency; install it in the consuming application.
+React is a required peer dependency. Install React 18 or 19 in your application and [install `@master/icons-react`](/guide/getting-started#install).
 
 ```tsx
 import { SearchIcon } from '@master/icons-react';
 <SearchIcon size={20} corner="rounded" label="Search" />
 ```
 
-The dynamic entry includes all nine optical size and corner combinations, along with their supported stroke widths, for each imported icon. Components accept standard SVG props, events and refs through `forwardRef`.
+The dynamic entry includes all nine optical size and corner combinations, along with their supported stroke widths, for each imported icon. It shares the same geometry as the other frameworks and SVG. `size` selects the nearest optical drawing; `corner` defaults to `soft`.
 
 ## Fixed icons \{#fixed\}
 
@@ -16,15 +16,21 @@ import { SearchIcon } from '@master/icons-react/16/soft';
 <button aria-label="Search"><SearchIcon /></button>
 ```
 
-Fixed entries include one optical size and corner style. They do not accept `corner` or `opticalSize`; changing `size` only scales that drawing. Use the same fixed entry across an interface to keep its visual language consistent.
+Fixed entries include only one optical size and corner style. Replace `16/soft` with any combination of `16`, `20`, `24` and `sharp`, `soft`, `rounded`. Fixed components do not accept `corner` or `opticalSize`; `size` only scales the selected drawing. Use the same fixed entry across an interface to keep its visual language consistent.
+
+## Framework behavior \{#behavior\}
+
+Components accept standard SVG props and events, and forward a ref to the SVG element through `forwardRef`. They render on the server and in the browser without a client-only wrapper.
+
+Unlabeled icons are decorative. Use `label`, `aria-label` or `aria-labelledby` for a meaningful icon, or label the enclosing button. See [accessibility](/guide/accessibility).
 
 ## Custom stroke width \{#stroke-width\}
 
-Use `strokeWidth` with either entry. It selects precomputed geometry, including cutouts and masks, rather than only changing the SVG stroke attribute. The explorer copies the component import with this prop and keeps SVG markup exclusive to the SVG format.
+Both entries accept `strokeWidth`, in native units and steps of 0.25. It selects redrawn geometry rather than changing the SVG stroke attribute.
 
 ```tsx
 import { SearchIcon } from '@master/icons-react/24/soft';
 <SearchIcon size={48} strokeWidth={2} />
 ```
 
-Widths use native viewBox units in 0.25 increments. The ranges are 0.75–1.5 for the 16 px master, 1–2 for 20 px, and 1.25–2.5 for 24 px. Values outside the selected master’s range are clamped; nonpositive, nonfinite or non-quarter-step values throw an error. Omit the prop to use the original drawing. Display `size` scales the entire drawing, including its stroke. Brand silhouettes keep their original shape. Fixed imports include only their selected optical size and corner, with its supported widths; unused icons still tree-shake.
+See [stroke width](/guide/stroke-width) for the range of each optical size and how widths are drawn.

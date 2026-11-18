@@ -5,7 +5,7 @@ import site from './site.config'
 import iconsPackage from '@master/icons/package.json' with {type:'json'}
 import {generatedAssets} from './scripts/generated-assets'
 import {homeShowcase} from './scripts/home-showcase'
-Object.assign(process.env, { PUBLIC_PROJECT: 'Master Icons', PUBLIC_URL: site.origin, PUBLIC_IMAGE_TRANSFORMATIONS: 'false', PUBLIC_VERSION: iconsPackage.version })
+Object.assign(process.env, { PUBLIC_PROJECT: 'Master Icons', PUBLIC_URL: site.origin, PUBLIC_IMAGE_TRANSFORMATIONS: 'false', PUBLIC_VERSION: process.env.PUBLIC_VERSION || iconsPackage.version })
 export default defineConfig({
  outDir: './out',
  server: {host: '127.0.0.1', port: 4321},

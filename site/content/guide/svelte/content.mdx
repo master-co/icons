@@ -1,6 +1,6 @@
 ## Dynamic icons \{#dynamic\}
 
-Svelte is a required peer dependency. Install Svelte 5 in your application and [add the local package](/guide/getting-started).
+Svelte is a required peer dependency. Install Svelte 5 in your application and [install `@master/icons-svelte`](/guide/getting-started#install).
 
 ```svelte
 <script lang="ts">
@@ -11,7 +11,7 @@ Svelte is a required peer dependency. Install Svelte 5 in your application and [
 <SearchIcon size={20} corner="rounded" label="Search" bind:ref={element} />
 ```
 
-The dynamic entry includes all nine optical size and corner combinations, along with their supported stroke widths, for each imported icon. It shares the same geometry as React and SVG. `size` selects the nearest optical drawing; `corner` defaults to `soft`.
+The dynamic entry includes all nine optical size and corner combinations, along with their supported stroke widths, for each imported icon. It shares the same geometry as the other frameworks and SVG. `size` selects the nearest optical drawing; `corner` defaults to `soft`.
 
 ## Fixed icons \{#fixed\}
 
@@ -33,7 +33,7 @@ Unlabeled icons are decorative. Use `label`, `aria-label` or `aria-labelledby` f
 
 ## Custom stroke width \{#stroke-width\}
 
-Use `strokeWidth` with either entry. It selects precomputed geometry, including cutouts and masks, rather than only changing the SVG stroke attribute. The explorer copies the component import with this prop and keeps SVG markup exclusive to the SVG format.
+Both entries accept `strokeWidth`, in native units and steps of 0.25. It selects redrawn geometry rather than changing the SVG stroke attribute.
 
 ```svelte
 <script lang="ts">
@@ -43,4 +43,4 @@ Use `strokeWidth` with either entry. It selects precomputed geometry, including 
 <SearchIcon size={48} strokeWidth={2} />
 ```
 
-Widths use native viewBox units in 0.25 increments. The ranges are 0.75–1.5 for the 16 px master, 1–2 for 20 px, and 1.25–2.5 for 24 px. Values outside the selected master’s range are clamped; nonpositive, nonfinite or non-quarter-step values throw an error. Omit the prop to use the original drawing. Display `size` scales the entire drawing, including its stroke. Brand silhouettes keep their original shape. Fixed imports include only their selected optical size and corner, with its supported widths; unused icons still tree-shake.
+See [stroke width](/guide/stroke-width) for the range of each optical size and how widths are drawn.

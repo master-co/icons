@@ -1,63 +1,86 @@
 ---
 title: "開始使用"
-description: "將 private alpha 接入本機專案。"
+description: "安裝 Master Icons 並呈現第一個圖示。"
 ---
 
 import DocumentPrompt from '@master/internal-site/components/DocumentPrompt.astro'
 
+## 安裝 \{#install\}
+
+安裝對應框架的套件。每個框架套件都會一併安裝共用的 `@master/icons` 核心，並使用應用程式中既有的框架。
+
+| 框架 | 套件 |
+| --- | --- |
+| React 18 或 19 | `@master/icons-react` |
+| Vue 3.5 以上 | `@master/icons-vue` |
+| Svelte 5 | `@master/icons-svelte` |
+| Preact 11 | `@master/icons-preact` |
+| Astro 7 | `@master/icons-astro` |
+| 不使用框架 | `@master/icons` |
+
+```sh
+npm install @master/icons-react
+```
+
+使用其他套件管理工具時，以相同名稱執行 `bun add`、`pnpm add` 或 `yarn add`。只需安裝所用框架的套件，不需要其他框架套件。套件支援 Node.js 22 以上，Astro 套件則需要 Node.js 24 以上。
+
+## 呈現圖示 \{#first-icon\}
+
+以名稱匯入每個圖示。圖示元件名稱以 `Icon` 結尾。
+
+```tsx
+import { SearchIcon } from '@master/icons-react';
+
+<SearchIcon size={20} label="Search" />
+```
+
+圖示以 `currentColor` 繪製，因此會採用周圍文字的顏色。未指定選項時，圖示呈現微圓角的 24 px 圖稿。在[圖庫](/icons)可瀏覽所有名稱、複製匯入用法並下載 SVG 檔案。
+
+## 選擇入口 \{#entries\}
+
+每個套件都有兩種入口，圖示名稱相同：
+
+- **動態入口**，例如 `@master/icons-react`：每個圖示包含全部九份圖稿（三種光學尺寸乘以三種圓角），並接受 `size`、`corner` 與 `strokeWidth`。
+- **固定入口**，例如 `@master/icons-react/20/soft`：每個圖示只包含一份圖稿。整個介面使用同一種尺寸與圓角時使用，體積更小。
+
+```tsx
+import { SearchIcon } from '@master/icons-react/20/soft';
+
+<button aria-label="Search"><SearchIcon /></button>
+```
+
+支援 tree shaking 的打包工具會移除未使用的圖示。接著請閱讀所用框架的頁面：[SVG 與 JavaScript](/guide/svg)、[React](/guide/react)、[Vue](/guide/vue)、[Svelte](/guide/svelte)、[Preact](/guide/preact) 或 [Astro](/guide/astro)。
+
 ## 以 AI agent 設定 \{#set-up-with-an-ai-agent\}
 
-Coding agent 可以替你完成設定。在應用程式根目錄啟動 agent，再貼上下方提示詞：它會先檢查專案，並在修改檔案前詢問你的儲存庫位置、框架套件、預設尺寸、圓角與線寬，以及既有圖示庫的處理方式。接著安裝 private alpha、呈現第一個圖示並執行專案檢查。
+Coding agent 可以替你完成設定。在應用程式根目錄啟動 agent，再貼上下方提示詞：它會先檢查專案，並在修改檔案前詢問框架套件、預設尺寸、圓角與線寬，以及既有圖示庫的處理方式。接著安裝套件、呈現第一個圖示並執行專案檢查。
 
 <DocumentPrompt title="Set up Master Icons" text={`你正在一個既有的 web 應用程式中工作。請完整設定 Master Icons。
-文件：master-icons 儲存庫中的指南，位於 site/content/guide（getting-started、所選框架的頁面、optical-sizes 與 accessibility）。
+文件：已安裝套件的 README，以及 https://github.com/master-co/icons/tree/main/site/content/guide 的指南（getting-started、所選框架的頁面、optical-sizes、stroke-width 與 accessibility）。
 
-Master Icons 目前為 private alpha，尚未發布至 npm。不要搜尋 registry，也不要安裝名稱相似的套件。
+Master Icons 已發布至 npm：核心為 @master/icons，每個框架各有一個套件：@master/icons-react、@master/icons-vue、@master/icons-svelte、@master/icons-preact 與 @master/icons-astro。只安裝這些名稱，不要安裝名稱相似的套件。
 
-修改前先檢查專案：套件管理工具與 lockfile、Node.js 版本、框架與建置工具（React、Vue、Svelte、Preact、Astro 或無框架）、應用程式是否為 master-icons monorepo 的 workspace、目前使用的圖示庫及其匯入方式、dev／lint／build／test 指令，以及 AGENTS.md 等 agent 指引檔案。
+修改前先檢查專案：套件管理工具與 lockfile、Node.js 版本、框架與建置工具（React、Vue、Svelte、Preact、Astro 或無框架）、目前使用的圖示庫及其匯入方式、dev／lint／build／test 指令，以及 AGENTS.md 等 agent 指引檔案。
 
 修改前先問我以下問題並等待回答，不要自行決定：
-- 儲存庫：我的 master-icons checkout 絕對路徑；若應用程式就是該 monorepo 的 workspace 則免。
-- 接入方式：依偵測到的框架選擇套件（@master/icons-react、@master/icons-vue、@master/icons-svelte、@master/icons-preact 或 @master/icons-astro），純 SVG 與 JavaScript 則用 @master/icons。只安裝一個框架套件。
+- 接入方式：依偵測到的框架選擇套件，純 SVG 與 JavaScript 則用 @master/icons。只安裝一個套件。
 - 預設值：光學尺寸（16、20 或 24；一般介面用 24，密集介面用 16 或 20）、圓角（sharp、soft 或 rounded；預設 soft），以及保留各母版的原生線寬或指定單一線寬（16 px 為 0.75–1.5、20 px 為 1–2、24 px 為 1.25–2.5，以 0.25 為級距）。
 - 既有圖示：若專案已使用其他圖示庫，要保留它（預設）並只在新介面使用 Master Icons，還是替換我指名的圖示。絕不替換我未指名的圖示。
 
 接著保守地導入 Master Icons：
-1. 每個指令都在應用程式根目錄（package.json 所在處）以專案的套件管理工具執行。
-2. 在 monorepo 內：於應用程式依賴加入 "<adapter>": "workspace:*"，再於儲存庫根目錄執行 bun install 與 bun run build:icons。其他專案：在 checkout 執行 bun run pack:icons；安裝 <checkout>/work/master-icons-alpha.tgz 與同目錄的框架套件封裝檔（例如 master-icons-svelte-alpha.tgz）；並加入 override 將 @master/icons 指向核心封裝檔（Bun 或 npm 用 overrides、pnpm 用 pnpm.overrides、Yarn 用 resolutions），讓框架套件從封裝檔取得核心，絕不從 registry 取得。
-3. 以名稱匯入每個圖示。動態入口（import { SearchIcon } from '@master/icons-svelte'）接受 size、corner 與 strokeWidth；固定入口如 '@master/icons-svelte/20/soft' 只含一個母版、體積更小。整個應用程式使用同一設定時優先使用固定入口。
-4. 以原生尺寸呈現圖示。傳入 size 以選擇最接近的光學母版，不要用 CSS width 與 height 縮放圖示。strokeWidth 會選擇預先計算的幾何，因此絕不在 CSS 覆寫 stroke-width。
-5. 保持無障礙：位於可見文字旁的圖示維持裝飾性；純圖示按鈕的無障礙名稱放在按鈕上；具意義的獨立圖示加上 label。
-6. 若我選擇替換指名的圖示，將每個圖示對應到 <checkout>/packages/icons/dist/catalog.json 中最接近的名稱，修改前先給我看對照表，保留每個控制項的無障礙名稱，並在已無任何程式碼匯入舊依賴後才移除它。
-7. 保留既有架構與樣式，避免無關的重構。
-8. 驗證：在可見頁面呈現 size 20 的 SearchIcon（或內嵌 <checkout>/packages/icons/icons/20/soft/search.svg），確認它在淺色與深色模式下都以文字色繪製、呈微圓角。之後除非我要保留，否則移除它，並執行專案的 lint、build 與 tests。
+1. 每個指令都在應用程式根目錄（package.json 所在處）以專案的套件管理工具執行，並從 npm 安裝選定的套件。
+2. 以名稱匯入每個圖示。動態入口（import { SearchIcon } from '@master/icons-react'）接受 size、corner 與 strokeWidth；固定入口如 '@master/icons-react/20/soft' 只含一個母版、體積更小。整個應用程式使用同一設定時優先使用固定入口。
+3. 以原生尺寸呈現圖示。傳入 size 以選擇最接近的光學母版，不要用 CSS width 與 height 縮放圖示。strokeWidth 會選擇預先計算的幾何，因此絕不在 CSS 覆寫 stroke-width。
+4. 保持無障礙：位於可見文字旁的圖示維持裝飾性；純圖示按鈕的無障礙名稱放在按鈕上；具意義的獨立圖示加上 label。
+5. 若我選擇替換指名的圖示，將每個圖示對應到 node_modules/@master/icons/dist/catalog.json 中最接近的名稱，修改前先給我看對照表，保留每個控制項的無障礙名稱，並在已無任何程式碼匯入舊依賴後才移除它。
+6. 保留既有架構與樣式，避免無關的重構。
+7. 驗證：在可見頁面呈現 size 20 的 SearchIcon，確認它在淺色與深色模式下都以文字色繪製、呈微圓角。之後除非我要保留，否則移除它，並執行專案的 lint、build 與 tests。
 
-完成後摘要：變更的檔案、使用的框架套件與 workspace 或封裝檔路線、選定的預設值、替換或刻意保留的圖示、驗證結果，以及未在瀏覽器驗證的項目。`} />
+完成後摘要：變更的檔案、安裝的套件、選定的預設值、替換或刻意保留的圖示、驗證結果，以及未在瀏覽器驗證的項目。`} />
 
-## 使用本機 workspace \{#workspace\}
+## 下一步 \{#next\}
 
-Master Icons 目前為 private alpha，尚未發布至 npm。在此 monorepo 的應用程式依賴中加入使用的框架套件，例如 `"@master/icons-svelte": "workspace:*"`（SVG／JavaScript 則使用 `"@master/icons": "workspace:*"`），然後執行：
-
-```sh
-bun install
-bun run build:icons
-```
-
-若要在其他專案使用，先在此儲存庫產生封裝檔案，再安裝核心與使用的框架套件（以下以 Svelte 為例）：
-
-```sh
-bun run pack:icons
-# In your application:
-bun pm pkg set "overrides.@master/icons=file:/absolute/path/to/master-icons/work/master-icons-alpha.tgz"
-bun add /absolute/path/to/master-icons/work/master-icons-alpha.tgz /absolute/path/to/master-icons/work/master-icons-svelte-alpha.tgz
-```
-
-private alpha 尚未發布至 npm，因此本機 override 也會將框架套件的核心依賴指向封裝檔。請將絕對路徑換成你的儲存庫位置。
-
-套件支援 Node.js 22 以上；開發此儲存庫使用 Node.js 24 與 Bun 1.4.4。
-
-## 選擇接入方式 \{#integration\}
-
-任何框架都可使用 [SVG 或 JavaScript](/guide/svg)，也可選擇 [React](/guide/react)、[Vue](/guide/vue)、[Svelte](/guide/svelte)、[Preact](/guide/preact) 或 [Astro](/guide/astro) 元件。每個框架都有獨立的 `@master/icons-{framework}` 套件，依賴共用圖稿的 `@master/icons` 核心。只需安裝使用的圖示套件與對應框架，其他框架套件不會一併安裝。框架工具可能需要較新的 Node.js 版本。
-
-預設從 24px 與微圓開始。密集介面可選 16px 或 20px 的光學圖稿，詳見[尺寸與圓角](/guide/optical-sizes)。
+- 在[尺寸與圓角](/guide/optical-sizes)依可用空間選擇圖稿。
+- 以[線寬](/guide/stroke-width)調整線條粗細。
+- 在[無障礙](/guide/accessibility)為圖示與周圍控制項命名。
+- 在[比較](/guide/comparison)了解 Master Icons 與其他圖示庫的差異。

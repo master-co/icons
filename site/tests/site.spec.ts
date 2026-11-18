@@ -187,7 +187,7 @@ for(const [locale,search] of [['','Search icons'],['/tw','搜尋圖示']]){
   await expect(page.locator('h1')).toContainText(locale?'量身繪製':'Drawn to measure')
   await page.getByRole('link',{name:locale?'探索圖示':'Explore icons',exact:false}).first().click()
   await expect(page).toHaveURL(new RegExp(`${locale}/icons`))
-  for(const slug of ['getting-started','svg','react','vue','svelte','preact','astro','optical-sizes','accessibility','license']){
+  for(const slug of ['getting-started','comparison','svg','react','vue','svelte','preact','astro','optical-sizes','stroke-width','accessibility','license']){
    const result=await page.goto(`${locale}/guide/${slug}`);expect(result?.status()).toBe(200)
    await expect(page.locator('html')).toHaveAttribute('lang',locale?'zh-TW':'en')
    await expect(page.locator('h1')).toBeVisible()
