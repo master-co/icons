@@ -49,7 +49,7 @@ Supply the exact resource IDs reported by the audit. Preparation and production 
 
 The review workspace remains separate. Its source comparisons, research files and offline payload must not be copied to `site/public` or package archives. Generated public assets are replaced from the current icon package during preparation.
 
-The project `.nvmrc` selects Node 26; CI checks Node 24 and 26.
+The project `.nvmrc` selects Node 26; CI checks Node 24 and 26. `test:site:dev` and `test:site:hmr` run on pull requests and manual CI runs only; they never gate a release.
 
 ## Hosting
 

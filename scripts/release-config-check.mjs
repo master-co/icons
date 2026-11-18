@@ -10,7 +10,8 @@ const releaseWorkflow = YAML.parse(read('.github/workflows/release.yml'))
 const ciWorkflow = YAML.parse(read('.github/workflows/ci.yml'))
 
 assert.equal(releaseWorkflow.concurrency['cancel-in-progress'], false, 'Never cancel a release halfway through publishing')
-assert.equal(releaseWorkflow.jobs.validation.uses, './.github/workflows/ci.yml', 'A release follows the full CI')
+assert.equal(releaseWorkflow.jobs.validation.uses, './.github/workflows/ci.yml', 'A release follows CI')
+assert.equal(releaseWorkflow.jobs.validation.with?.release, true, 'Release runs the release gates of CI')
 
 const release = releaseWorkflow.jobs.release
 assert.equal(release.permissions['id-token'], 'write', 'npm trusted publishing and provenance require GitHub OIDC')
@@ -54,6 +55,11 @@ for (const name of ['icons', 'icons-react', 'icons-vue', 'icons-svelte', 'icons-
 }
 
 const validation = ciWorkflow.jobs.validate.steps.map(step => step.run ?? '').join('\n')
-for (const command of ['bun run check:release', 'bun run check:package', 'aronrepo check']) assert.ok(validation.includes(command), `CI must run ${command}`)
+for (const command of ['bun run check:release', 'bun run check:package', 'aronrepo check', 'bun run test:turbo', 'bun run check\n', 'bun run test:frameworks:browser', 'bun run test:browser', 'bun run test:site\n', 'git diff --exit-code -- packages/icons/icons']) assert.ok((validation + '\n').includes(command), `CI must run ${command.trim()}`)
+// Release gates never skip on a release; only the development checks do.
+for (const step of ciWorkflow.jobs.validate.steps) {
+  const development = /check:reproducible|test:site:dev|test:site:hmr/.test(step.run ?? '')
+  assert.equal(step.if === '${{ !inputs.release }}', development, `${step.run ?? step.uses}: only development checks skip on a release`)
+}
 
 process.stdout.write('Validated provenance npm publication and gated pages-stable delivery without Cloudflare credentials.\n')

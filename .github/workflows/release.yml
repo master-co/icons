@@ -20,6 +20,8 @@ jobs:
   validation:
     if: ${{ github.ref == 'refs/heads/main' }}
     uses: ./.github/workflows/ci.yml
+    with:
+      release: true # the release gates only; development checks run on pull requests
 
   release:
     needs: validation
