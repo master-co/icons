@@ -1,8 +1,17 @@
 # Master Icons
 
-Optically sized interface icons with 16, 20 and 24px drawings and sharp, soft and rounded corners. MIT licensed; applicable upstream notices are included.
+Optically sized interface icons with 16, 20 and 24 px drawings and sharp, soft and rounded corners. MIT licensed; applicable upstream notices are included.
 
-This package remains **private alpha** (`0.1.0-alpha.0`) and is not published to npm. In this repository, use `"@master/icons": "workspace:*"`. For another project, run `bun pm pack --filename ../../work/master-icons-alpha.tgz` from this directory and install the archive. The core package requires Node.js 22+; framework tools may require a newer Node.js version.
+Documentation and the full collection: [icons.master.co](https://icons.master.co).
+
+This is the framework-neutral core: icon data, the SVG renderer, the catalog and SVG files. For components, install the package for your framework instead; it brings this core with it.
+
+```sh
+npm install @master/icons         # SVG and JavaScript
+npm install @master/icons-react   # or -vue, -svelte, -preact, -astro
+```
+
+The core package requires Node.js 22 or later; framework tools may require a newer version.
 
 ```js
 import { Search, renderSvg } from '@master/icons';
@@ -94,14 +103,18 @@ Astro entries ship native `.astro` components. They render inline SVG without cl
 
 `size` defaults to 24, `corner` to `soft` and `direction` to `ltr`. Automatic optical selection chooses the nearest of 16, 20 and 24; ties choose the larger. Fixed entries do not accept `corner` or `opticalSize`; changing `size` only scales the selected drawing. CSS width/height do not change the optical drawing.
 
-`strokeWidth` selects precomputed geometry for both dynamic and fixed icons. Values use native viewBox units in 0.25 increments and clamp to 0.75–1.5 (16 px), 1–2 (20 px), or 1.25–2.5 (24 px). Invalid nonpositive, nonfinite or non-quarter-step values throw. Omit it for the original drawing. Cutouts and masks follow the selected width; brand silhouettes keep their shape. Use `:stroke-width="2"` in Vue templates and `strokeWidth={2}` in JSX, Svelte and Astro. The explorer always copies framework component usage, including this prop when needed.
+`strokeWidth` selects precomputed geometry for both dynamic and fixed icons. Values use native viewBox units in 0.25 increments and clamp to 0.75–1.5 (16 px), 1–2 (20 px), or 1.25–2.5 (24 px). Invalid nonpositive, nonfinite or non-quarter-step values throw. Omit it for the original drawing. Cutouts and masks are redrawn for the selected width rather than thickened in place; brand silhouettes keep their shape. See [stroke width](https://icons.master.co/guide/stroke-width). Use `:stroke-width="2"` in Vue templates and `strokeWidth={2}` in JSX, Svelte and Astro. The [collection](https://icons.master.co/icons) copies framework component usage, including this prop when needed.
 
 Unlabeled icons are decorative (`aria-hidden`). `label` adds `role="img"` and an accessible name; `aria-label` and `aria-labelledby` are also supported by framework components. `direction="rtl"` mirrors only directional icons. Standard SVG attributes may override defaults, and design options are consumed rather than forwarded as DOM attributes.
 
-This core package exports data, the SVG renderer, the catalog and SVG files. Framework components live in separate `packages/icons-*` packages. Research references and review tools are not distributed in this package.
+This core package exports data, the SVG renderer, the catalog (`@master/icons/catalog`) and SVG files. Framework components live in the separate `@master/icons-*` packages. Research references and review tools are not distributed in this package.
 
 ## Brand icons
 
-89 named brand icons (88 distinct silhouettes) use the `brand-` prefix, for example `BrandMasterIcon`, `BrandGithubIcon`, and `BrandFigmaIcon`. Import them from the same framework and fixed-size entries as UI icons. OpenAI and ChatGPT expose two names for the same official Blossom. They inherit `currentColor`; corner and stroke settings preserve the original silhouette. The 16 / 20 / 24 masters adjust placement and occupied size, not the trademark geometry. Brand artwork provenance and applicable notices are in `dist/catalog.json` and `THIRD_PARTY_NOTICES.md`; the code license does not grant trademark rights.
+Brand icons use the `brand-` prefix, for example `BrandMasterIcon`, `BrandGithubIcon`, and `BrandFigmaIcon`. Import them from the same framework and fixed-size entries as UI icons. OpenAI and ChatGPT expose two names for the same official Blossom. They inherit `currentColor`; corner and stroke settings preserve the original silhouette, while the 18 `-outline` versions, such as `BrandGithubOutlineIcon`, accept `strokeWidth`. The 16 / 20 / 24 masters adjust placement and occupied size, not the trademark geometry. Brand artwork provenance and applicable notices are in `dist/catalog.json` and `THIRD_PARTY_NOTICES.md`; the code license does not grant trademark rights.
 
-The third brand batch adds 16 names. Vue, JavaScript, GitHub Copilot, Microsoft Teams / Outlook, and Dcard retain separate artwork terms in `licenses/brand-additions.txt`. Dcard is a documented vector trace of an archived app mark, not an original official vector; its original guide specifies a 48px minimum. The small optical previews do not claim brand-guideline compliance.
+Vue, JavaScript, GitHub Copilot, Microsoft Teams / Outlook, and Dcard retain separate artwork terms in `licenses/brand-additions.txt`. Dcard is a documented vector trace of an archived app mark, not an original official vector; its original guide specifies a 48px minimum. The small optical previews do not claim brand-guideline compliance.
+
+## License
+
+Master's own code and artwork are MIT licensed. Adapted drawings keep their upstream MIT, ISC or Apache 2.0 notices in each SVG file and in `THIRD_PARTY_NOTICES.md`. The `teapot` drawing is licensed under CC BY-SA 4.0. See [license and attribution](https://icons.master.co/guide/license).
