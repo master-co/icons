@@ -2,7 +2,8 @@
 
 微圓、簡約，為 Dashboard、App 與 Web 介面設計的 SVG 圖示。
 
-Master Icons 著重輪廓、比例、留白與小尺寸的細節取捨。目前為 **0.1.0-alpha.0**。本次新增候選已依實際用途重新選圖及重製，包含 **924 個命名圖示、8,316 份 SVG**。重製紀錄見 [逐顆重製與收錄紀錄](docs/review/rebuild-01/index.html)。
+Master Icons 著重輪廓、比例、留白與小尺寸的細節取捨。目前為 **0.1.0-alpha.0**。本次新增候選已依實際用途重新選圖及重製，公開輸出目前有 **942 個命名圖示、8,478 份 SVG**。重製進度見 [逐顆重製與收錄進度](docs/review/rebuild-01/index.html)。
+
 
 
 
@@ -15,7 +16,7 @@ Master Icons 著重輪廓、比例、留白與小尺寸的細節取捨。目前�
 
 圖庫仍在 alpha 階段，圖形與 API 可能調整。這些設計取向不代表所有圖示、顯示尺寸或背景都已達到相同完成度；各批已執行的檢查與限制見 [驗證紀錄](docs/validation.md) 及對應批次報告，報告僅涵蓋其記載的版本與範圍。
 
-品牌分類包含 89 個品牌與平台名稱，包含 Master、GitHub、Figma、Instagram、LINE、YouTube、Claude、OpenAI、ChatGPT、Microsoft、LinkedIn、Slack、Cursor、Supabase、Vite 等。品牌使用單色實心輪廓、個別尺寸留白，三種角型保留相同標誌；不隨描邊設定變形。來源紀錄見 [第三方聲明](THIRD_PARTY_NOTICES.md)。
+「品牌與平台」有 88 個品牌識別、18 個線條版本，共 106 個瀏覽項目。OpenAI 與 ChatGPT 共用 Blossom，兩個名稱皆可搜尋及匯入。18 個社群品牌的線條版直接列在 icons 列表，詳情也提供單色標誌／線條版切換，包含 GitHub、Telegram、WeChat、Discord、YouTube 等。各框架使用 `BrandGithubIcon` 與 `BrandGithubOutlineIcon`，JavaScript 使用 `BrandGithub` 與 `BrandGithubOutline`。原標誌仍為預設。原標誌保持固定幾何；outline 支援 `strokeWidth` 與網站線寬控制，主描邊按實際輸出尺寸校準，品牌角型保持不變。[品牌輪廓審稿](docs/review/brand-outline-craft-04/index.html) · [來源聲明](THIRD_PARTY_NOTICES.md)
 
 ## 本地開始使用
 

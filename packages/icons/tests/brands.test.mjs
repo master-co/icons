@@ -6,8 +6,8 @@ import {unzipSync,strFromU8} from 'fflate';
 import {brands,brandCatalog,brandEnvelopes} from '../src/brands.mjs';
 import {catalog} from '../src/catalog.mjs';
 import {draw} from '../src/drawings.mjs';
-import {context} from '../src/geometry.mjs';
-import {renderSvg} from '../src/runtime.mjs';
+import {context,specifications} from '../src/geometry.mjs';
+import {renderSvg,strokeRanges} from '../src/runtime.mjs';
 const defs=JSON.parse(await readFile('packages/icons/dist/definitions.json'));
 
 test('requested additions are exported and only the explicit ChatGPT identity alias shares geometry',()=>{
@@ -15,17 +15,18 @@ test('requested additions are exported and only the explicit ChatGPT identity al
  for(const name of names)assert.ok(defs[name],name);
  assert.deepEqual(defs['brand-chatgpt'].variants,defs['brand-openai'].variants);
  assert.equal(catalog.find(b=>b.name==='brand-chatgpt').concept,'brand-openai');
+ assert.equal(catalog.find(b=>b.name==='brand-wechat-outline').concept,'brand-wechat');
  assert.equal(new Set(brandCatalog.map(b=>b.aliasOf || b.styleOf || b.name)).size,88);
- assert.equal(new Set(brands.map(b=>JSON.stringify(defs[b.name].variants))).size,88);
+ assert.equal(new Set(brands.map(b=>JSON.stringify(defs[b.name].variants))).size,brands.length-1);
  for(const b of brands.slice(64))for(const size of [16,20,24]){
   const extent=b.optical?.[size]?.extent??brandEnvelopes[b.profile][[16,20,24].indexOf(size)];
   assert.ok(extent>0 && extent<=size-2,b.name+': native whitespace');
  }
 });
 
-test('89 brand exports retain their pinned source contours and discoverable metadata',async()=>{
- assert.equal(brands.length,89);
- assert.equal(new Set(brands.map(b=>b.name)).size,89);
+test('brand exports retain their pinned source contours and discoverable metadata',async()=>{
+ assert.equal(brands.filter(b=>b.styleOf).length,18);
+ assert.equal(new Set(brands.map(b=>b.name)).size,brands.length);
  assert.ok(brands.some(b=>b.name==='brand-master'));
  for(const b of brands){
   const original=await readFile(b.source.localPath);
@@ -35,20 +36,28 @@ test('89 brand exports retain their pinned source contours and discoverable meta
    assert.equal(paths.length,6,'Official source has four wordmark paths and two shield paths');
    assert.deepEqual(b.paths,[paths.slice(4).join(' ')],'HTML5 only joins original shield paths without redrawing');
   }else for(const path of b.paths)assert.ok(original.toString().includes(`d="${path}"`),b.name+': contour is from preserved source');
-  if(b.source.originalPath)assert.equal(createHash('sha256').update(await readFile(b.source.originalPath)).digest('hex'),b.source.originalSha256,b.name+': original raster');
+  if(b.source.originalPath)assert.equal(createHash('sha256').update(await readFile(b.source.originalPath)).digest('hex'),b.source.originalSha256,b.name+': original artwork');
+  if(b.source.authoringPath)assert.equal(createHash('sha256').update(await readFile(b.source.authoringPath)).digest('hex'),b.source.authoringSha256,b.name+': editable source');
+  if(b.source.identitySource)assert.equal(createHash('sha256').update(await readFile(b.source.identitySource.localPath)).digest('hex'),b.source.identitySource.sha256,b.name+': original brand reference');
   const entry=brandCatalog.find(e=>e.name===b.name);
+  if(b.fillRule)assert.equal(b.fillRule,'evenodd',b.name+': baked rings require evenodd ink');
   assert.equal(entry.direction,'fixed');assert.equal(entry.category,'brands');
   assert.ok(entry.keywords.includes(b.label));
  }
 });
 
-test('brand silhouettes preserve identity under corner, stroke and RTL controls',()=>{
+test('original marks stay fixed while outlines vary weight without changing brand corners or RTL',()=>{
  for(const b of brands)for(const size of [16,20,24]){
   const expected=draw(b.name,context(size,'soft'));
-  assert.deepEqual(expected.map(([,a])=>a.d),b.paths,b.name+': compact SVG number grammar must survive exactly');
-  for(const corner of ['sharp','soft','rounded'])for(const stroke of [.75,1.25,2.5]){
+  if(!b.styleOf)assert.deepEqual(expected.map(([,a])=>a.d),b.paths,b.name+': compact SVG number grammar must survive exactly');
+  assert.deepEqual(defs[b.name].variants[size].soft.nodes,expected,b.name+': generated native geometry must match the drawing');
+  for(const corner of ['sharp','soft','rounded'])for(const stroke of [strokeRanges[size][0],specifications[size].stroke,strokeRanges[size][1]]){
    const actual=draw(b.name,{...context(size,corner),stroke,variableStroke:true});
-   assert.deepEqual(actual,expected,`${b.name}/${size}/${corner}/${stroke}`);
+   if(!b.styleOf||stroke===specifications[size].stroke)assert.deepEqual(actual,expected,`${b.name}/${size}/${corner}/${stroke}`);
+   else{
+    assert.notDeepEqual(actual,expected,b.name+': outline weight must change the actual ink');
+    assert.deepEqual(actual,draw(b.name,{...context(size,'soft'),stroke,variableStroke:true}),b.name+': brand corners stay fixed');
+   }
    for(const [tag,a]of actual){assert.equal(tag,'path');assert.equal(a.fill,'currentColor');assert.equal(a.stroke,'none');}
   }
   assert.equal(renderSvg(defs[b.name],{size}),renderSvg(defs[b.name],{size,direction:'rtl'}),b.name);
@@ -84,4 +93,75 @@ test('new brand artwork terms and trace provenance survive single-file exports',
   if(name==='vue-js')assert.match(svg,/Evan You/);
   if(name==='dcard')assert.match(svg,/Not the original vector master/);
  }
+});
+
+
+test('outlines appear directly in the list and only identity aliases are deduplicated', async()=>{
+ const {collectionCards}=await import('../../../scripts/lib/collection-cards.mjs');
+ const cards=collectionCards(brandCatalog);
+ assert.equal(cards.length,106);
+ const expected=['wechat','github','gitlab','discord','youtube','facebook','linkedin','mastodon','reddit','spotify','soundcloud','pinterest','tiktok','twitch','vimeo','patreon','telegram','line'];
+ assert.deepEqual(brands.filter(b=>b.styleOf).map(b=>b.styleOf).sort(),expected.map(n=>'brand-'+n).sort());
+ for(const slug of expected){
+  const name='brand-'+slug,outline=name+'-outline';
+  const card=cards.find(b=>b.name===name);
+  assert.equal(card.outline.name,outline);
+  assert.equal(card.outline.component,brandCatalog.find(b=>b.name===outline).component);
+  const outlineCard=cards.find(b=>b.name===outline);
+  assert.equal(outlineCard.mark.name,name);
+  assert.equal(outlineCard.outline.name,outline);
+  assert.equal(card.keywords.includes(outline),false,'exact outline search must not also match its mark');
+  assert.notDeepEqual(defs[name].variants,defs[outline].variants);
+  assert.equal(catalog.find(b=>b.name===outline).concept,name);
+  for(const size of [16,20,24])for(const corner of ['sharp','soft','rounded']){
+   const output=renderSvg(defs[outline],{size,corner});
+   const b=brands.find(b=>b.name===outline);
+   if(b.fillRule)assert.match(output,/fill-rule="evenodd"/);
+  }
+ }
+ assert.equal(cards.filter(c=>c.keywords.includes('ChatGPT')).length,1);
+ assert.equal(cards.find(c=>c.name==='brand-master').outline,undefined,'Master keeps its original mark only');
+ assert.equal(defs['brand-master-outline'],undefined);
+});
+
+test('inside brand ink preserves exterior bounds and the transparent centre',async()=>{
+ const {bakeBrandSvg}=await import('../../../scripts/lib/brand-ink.mjs');
+ const {pathKit:P}=await import('../src/occlusion.mjs');
+ const {d,fillRule,bounds}=bakeBrandSvg('<svg fill="none" stroke="currentColor" stroke-width="2"><path data-ink="inside" d="M2 2H22V22H2Z"/></svg>');
+ assert.deepEqual(bounds,[2,2,20,20]);
+ const ink=P.FromSVGString(d);
+ try{
+  if(fillRule==='evenodd')ink.setFillType(P.FillType.EVENODD);
+  const hasInk=(x,y)=>{
+   const probe=P.FromSVGString(`M${x-.1} ${y-.1}h.2v.2h-.2Z`),overlap=ink.copy();
+   try{overlap.op(probe,P.PathOp.INTERSECT);return overlap.toSVGString()!==''}
+   finally{overlap.delete();probe.delete()}
+  };
+  assert.equal(hasInk(1,12),false,'ink cannot expand the brand silhouette');
+  assert.equal(hasInk(3,12),true,'inside edge remains visible');
+  assert.equal(hasInk(12,12),false,'the centre remains transparent');
+ }finally{ink.delete()}
+});
+
+test('outline knockout follows the expanded foreground ink at each weight',async()=>{
+ const {bakeBrandSvg}=await import('../../../scripts/lib/brand-ink.mjs');
+ const {pathKit:P}=await import('../src/occlusion.mjs');
+ const svg='<svg fill="none" stroke="currentColor" stroke-width="2"><path id="back" d="M2 10H22"/><path d="M12 5V15" data-cut="back" data-clearance="1"/></svg>';
+ const hasInk=(ink,x,y)=>{
+  const probe=P.FromSVGString(`M${x-.05} ${y-.05}h.1v.1h-.1Z`),overlap=ink.copy();
+  try{overlap.op(probe,P.PathOp.INTERSECT);return overlap.toSVGString()!==''}
+  finally{probe.delete();overlap.delete()}
+ };
+ for(const weight of [1,2]){
+  const result=bakeBrandSvg(svg,{weight}),ink=P.FromSVGString(result.d);
+  try{
+   if(result.fillRule==='evenodd')ink.setFillType(P.FillType.EVENODD);
+   assert.equal(hasInk(ink,12,10),true,'foreground must remain');
+   assert.equal(hasInk(ink,8,10),true,'distant backdrop must remain');
+   assert.equal(hasInk(ink,9.5,10),weight===1,'the cut moves with the foreground edge');
+   assert.equal(hasInk(ink,weight===1?10.5:9.5,10),false,'clearance is genuinely transparent');
+  }finally{ink.delete()}
+ }
+ const pinterest=brands.find(b=>b.name==='brand-pinterest-outline');
+ assert.match(pinterest.outlineSvg,/data-cut="left-loop"/);
 });

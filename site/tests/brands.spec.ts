@@ -1,17 +1,18 @@
 import {test,expect} from '@playwright/test'
 import {readFile} from 'node:fs/promises'
+import {brandCatalog} from '../../packages/icons/src/brands.mjs'
 test('requested brand additions can be found and opened at 16px',async({page})=>{
  await page.goto('/icons?category=brands&size=16')
  await expect(page.locator('astro-island[ssr]')).toHaveCount(0)
- for(const [label,slug]of [['OpenAI','openai'],['ChatGPT','chatgpt'],['Microsoft','microsoft'],['LinkedIn','linkedin'],['Slack','slack'],['Cursor','cursor'],['Supabase','supabase'],['Vite','vite'],["Vue.js", "vue-js"],["JavaScript", "javascript"],["Bun", "bun"],["GitHub Copilot", "github-copilot"],["Hugging Face", "hugging-face"],["AWS", "aws"],["Firebase", "firebase"],["PostgreSQL", "postgresql"],["Microsoft Teams", "microsoft-teams"],["Outlook", "outlook"],["Google Meet", "google-meet"],["Canva", "canva"],["Dribbble", "dribbble"],["WordPress", "wordpress"],["Dcard", "dcard"],["Shopee", "shopee"],["HTML5", "html5"],["HTML5", "html5"]]){
+ for(const [label,slug]of [['OpenAI','openai'],['ChatGPT','chatgpt'],['Microsoft','microsoft'],['LinkedIn','linkedin'],['Slack','slack'],['Cursor','cursor'],['Supabase','supabase'],['Vite','vite'],["Vue.js", "vue-js"],["JavaScript", "javascript"],["Bun", "bun"],["GitHub Copilot", "github-copilot"],["Hugging Face", "hugging-face"],["AWS", "aws"],["Firebase", "firebase"],["PostgreSQL", "postgresql"],["Microsoft Teams", "microsoft-teams"],["Outlook", "outlook"],["Google Meet", "google-meet"],["Canva", "canva"],["Dribbble", "dribbble"],["WordPress", "wordpress"],["Dcard", "dcard"],["Shopee", "shopee"],["HTML5", "html5"]]){
   await page.getByRole('searchbox',{name:'Search icons',exact:true}).fill(label)
-  await page.getByRole('button',{name:label,exact:true}).click()
+  await page.getByRole('button',{name:slug==='chatgpt'?'OpenAI':label,exact:true}).click()
   const dialog=page.getByRole('dialog'),code=dialog.locator('textarea')
   await expect(code).toHaveValue(/viewBox="0 0 16 16"/)
   const response=await page.request.get(`/icons/16/soft/brand-${slug}.svg`)
   expect(response.ok()).toBe(true)
   const source=await response.text()
-  expect(source).toContain(await code.inputValue())
+  expect(source).toContain((await code.inputValue()).slice((await code.inputValue()).indexOf('<svg')))
   await expect(dialog.locator('.master-cell svg')).toHaveCount(9)
   await page.keyboard.press('Escape')
  }
@@ -20,7 +21,7 @@ for(const locale of ['', '/tw'])test(`brands search, identity and download ${loc
  const errors:string[]=[];page.on('pageerror',e=>errors.push(e.message))
  await page.goto(`${locale}/icons?category=brands`)
  await expect(page.locator('astro-island[ssr]')).toHaveCount(0)
- await expect(page.locator('.explorer-tile')).toHaveCount(89)
+ await expect(page.locator('.explorer-tile')).toHaveCount(Math.min(96,brandCatalog.filter(entry=>!entry.aliasOf).length))
  const search=page.getByRole('searchbox',{name:locale?'搜尋圖示':'Search icons',exact:true})
  await search.fill('master css');await expect(page.locator('.explorer-tile')).toHaveCount(1)
  await expect(page.locator('.explorer-tile')).toHaveAccessibleName('Master')
@@ -30,22 +31,145 @@ for(const locale of ['', '/tw'])test(`brands search, identity and download ${loc
  const code=dialog.locator('textarea');await expect(code).toHaveValue(/fill="currentColor" stroke="none"/)
  const download=page.waitForEvent('download');await dialog.getByRole('link',{name:locale?'下載 SVG':'Download SVG',exact:true}).click()
  const svg=await readFile((await(await download).path())!,'utf8')
- expect(svg).toContain('Brand artwork: Master');expect(svg).toContain(await code.inputValue())
+ expect(svg).toContain('Brand artwork: Master');expect(svg).toContain((await code.inputValue()).slice((await code.inputValue()).indexOf('<svg')))
  await page.keyboard.press('Escape');await expect(dialog).not.toBeVisible()
  await search.fill('推特');await expect(page.locator('.explorer-tile')).toHaveCount(1)
  for(const [query,label]of [['蝦皮','Shopee'],['狄卡','Dcard'],['amazon web services','AWS']]){
   await search.fill(query);await expect(page.locator('.explorer-tile')).toHaveCount(1);await expect(page.locator('.explorer-tile')).toHaveAccessibleName(label)
  }
- await search.fill('Discord');await page.locator('.explorer-tile').click()
+ await search.fill('Discord');await page.getByRole('button',{name:'Discord',exact:true}).click()
  await expect(code).toHaveValue(/<path /)
+ const before=(await code.inputValue()).match(/<path[^>]+\/>/g)
+ await page.keyboard.press('Escape')
+ await page.getByRole('slider',{name:locale?'線寬':'Stroke width',exact:true}).press('End')
+ await page.getByRole('button',{name:'Discord',exact:true}).click()
+ await expect(code).toHaveValue(/stroke-width="2.5"/)
+ expect((await code.inputValue()).match(/<path[^>]+\/>/g)).toEqual(before)
  await page.keyboard.press('Escape')
  for(const theme of ['light','dark']){
   await page.setViewportSize({width:1440,height:1000})
   await page.getByRole('combobox',{name:locale?'外觀':'Theme',exact:true}).selectOption(theme)
   await page.setViewportSize({width:390,height:844})
   expect(await page.evaluate(()=>document.documentElement.scrollWidth)).toBe(390)
-  await expect(page.locator('.explorer-tile')).toBeVisible()
+  await expect(page.getByRole('button',{name:'Discord',exact:true})).toBeVisible()
   await page.screenshot({path:`work/brands-source/site-${locale?'tw':'en'}-${theme}.png`,fullPage:true})
  }
  expect(errors).toEqual([])
+})
+
+for (const tw of [false, true]) test(`WeChat artwork selection and alias search (${tw ? 'tw' : 'en'})`, async ({page}) => {
+ const prefix = tw ? '/tw' : ''
+ await page.goto(`${prefix}/icons?category=brands&size=16`)
+ await expect(page.locator('astro-island[ssr]')).toHaveCount(0)
+ const search = page.getByRole('searchbox')
+ await search.fill('brand-chatgpt')
+ await expect(page.locator('.explorer-tile')).toHaveCount(1)
+ await expect(page.locator('.explorer-tile')).toHaveAccessibleName('OpenAI')
+ await search.fill('brand-wechat-outline')
+ await expect(page.locator('.explorer-tile')).toHaveCount(1)
+ await page.getByRole('button',{name:'WeChat Outline',exact:true}).click()
+ const dialog = page.getByRole('dialog')
+ const code = dialog.locator('textarea')
+ const mark = dialog.getByRole('radio',{name:tw?'單色標誌':'Monochrome mark'})
+ const outline = dialog.getByRole('radio',{name:tw?'線條版':'Outline'})
+ await expect(outline).toBeChecked()
+ await outline.focus()
+ await page.keyboard.press('ArrowLeft')
+ await expect(mark).toBeChecked()
+ await page.keyboard.press('ArrowRight')
+ await expect(outline).toBeChecked()
+ await expect(code).toHaveValue(/Copyright \(c\) 2021-present TDesign/)
+ const file = await (await page.request.get('/icons/16/soft/brand-wechat-outline.svg')).text()
+ expect(await code.inputValue()).toContain(file.slice(file.indexOf('<svg')).trim())
+ const download = dialog.getByRole('link',{name:tw?'下載 SVG':'Download SVG'})
+ await expect(download).toHaveAttribute('download','brand-wechat-outline.svg')
+ await expect(download).toHaveAttribute('href','/icons/16/soft/brand-wechat-outline.svg')
+ const format = dialog.getByRole('combobox',{name:tw?'程式碼格式':'Code format'})
+ for (const framework of ['react','vue','svelte','preact','astro']) {
+  await format.selectOption(framework)
+  await expect(code).toHaveValue(new RegExp(`BrandWechatOutlineIcon.*@master/icons-${framework}/16/soft`))
+ }
+ await mark.check()
+ await expect(code).toHaveValue(/BrandWechatIcon/)
+ await expect(download).toHaveAttribute('download','brand-wechat.svg')
+})
+
+
+for (const size of [16,24]) test(`all social outlines select the matching SVG at ${size}px`,async({page})=>{
+ await page.goto(`/icons?category=brands&size=${size}`)
+ await expect(page.locator('astro-island[ssr]')).toHaveCount(0)
+ const search=page.getByRole('searchbox')
+ for(const entry of brandCatalog.filter(b=>b.styleOf)){
+  await search.fill(entry.name)
+  await expect(page.locator('.explorer-tile')).toHaveCount(1)
+  await page.locator('.explorer-tile').click()
+  const dialog=page.getByRole('dialog')
+  await dialog.getByRole('radio',{name:'Outline',exact:true}).check()
+  const code=dialog.locator('textarea')
+  const response=await page.request.get(`/icons/${size}/soft/${entry.name}.svg`)
+  expect(response.ok()).toBe(true)
+  const source=await response.text()
+  await expect(code).toHaveValue(new RegExp(`viewBox="0 0 ${size} ${size}"`))
+  expect(await code.inputValue()).toContain(source.slice(source.indexOf('<svg')).trim())
+  await expect(dialog.getByRole('link',{name:'Download SVG',exact:true})).toHaveAttribute('href',`/icons/${size}/soft/${entry.name}.svg`)
+  await page.keyboard.press('Escape')
+ }
+})
+
+for(const size of [16,20,24])test(`outline list, live weights and downloads agree at ${size}px`,async({page})=>{
+ await page.goto(`/icons?category=brands&size=${size}`)
+ await expect(page.locator('astro-island[ssr]')).toHaveCount(0)
+ const search=page.getByRole('searchbox')
+ const minimum=size===16?.75:size===20?1:1.25,maximum=size===16?1.5:size===20?2:2.5
+ for(const name of ['discord','reddit','pinterest']){
+  await search.fill(`brand-${name}-outline`)
+  await expect(page.locator('.explorer-tile')).toHaveCount(1)
+  await expect(page.locator(`.explorer-tile [data-icon="brand-${name}-outline"] svg`)).toHaveCount(1)
+  await page.locator('.explorer-tile').focus();await page.keyboard.press('Enter')
+  const dialog=page.getByRole('dialog'),code=dialog.locator('textarea'),slider=dialog.getByRole('slider',{name:'Stroke width',exact:true})
+  await expect(dialog.getByRole('radio',{name:'Outline',exact:true})).toBeChecked()
+  let thin:string|undefined
+  for(const [key,width]of [['Home',minimum],['End',maximum]] as const){
+   await slider.focus();await slider.press(key)
+   await expect(code).toHaveValue(new RegExp(`stroke-width="${width}"`))
+   const current=await code.inputValue(),geometry=current.slice(current.indexOf('<path'))
+   if(thin)expect(geometry).not.toBe(thin);else thin=geometry
+   const response=await page.request.get(`/strokes/${width}/${size}/soft/brand-${name}-outline.svg`)
+   expect(response.ok()).toBe(true)
+   const file=await response.text();expect(current).toContain(file.slice(file.indexOf('<svg')).trim())
+   const download=dialog.getByRole('link',{name:'Download SVG',exact:true})
+   await expect(download).toHaveAttribute('href',`/strokes/${width}/${size}/soft/brand-${name}-outline.svg`)
+   const pending=page.waitForEvent('download');await download.click()
+   expect(await readFile((await(await pending).path())!,'utf8')).toBe(file)
+  }
+  const format=dialog.getByRole('combobox',{name:'Code format'})
+  await format.selectOption('react');await expect(code).toHaveValue(new RegExp(`OutlineIcon strokeWidth=\\{${maximum}\\}`))
+  await page.keyboard.press('Escape')
+ }
+})
+
+test('outline cards and their weight control work in both themes at desktop and narrow widths',async({page})=>{
+ await page.goto('/icons?category=brands&q=outline')
+ await expect(page.locator('astro-island[ssr]')).toHaveCount(0)
+ await expect(page.locator('.explorer-tile')).toHaveCount(18)
+ for(const theme of ['light','dark']){
+  await page.setViewportSize({width:1440,height:1000})
+  await page.getByRole('combobox',{name:'Theme',exact:true}).selectOption(theme)
+  await page.getByRole('searchbox').fill('outline')
+  await expect(page.locator('.explorer-tile svg')).toHaveCount(18)
+  await page.screenshot({path:`work/brand-outline-craft-03/list-${theme}.png`,fullPage:true,animations:'disabled'})
+  await page.setViewportSize({width:390,height:844})
+  await page.getByRole('searchbox').fill('reddit')
+  await expect(page.locator('.explorer-tile')).toHaveCount(2)
+  await page.getByRole('button',{name:'Reddit Outline',exact:true}).focus()
+  await page.keyboard.press('Enter')
+  const dialog=page.getByRole('dialog')
+  await expect(dialog.getByRole('radio',{name:'Outline',exact:true})).toBeChecked()
+  await dialog.getByRole('slider',{name:'Stroke width',exact:true}).press('End')
+  await expect(dialog.locator('textarea')).toHaveValue(/stroke-width="2.5"/)
+  await expect(dialog).toHaveCSS('opacity','1')
+  expect(await page.evaluate(()=>document.documentElement.scrollWidth)).toBe(390)
+  await page.screenshot({path:`work/brand-outline-craft-03/detail-${theme}-narrow.png`,animations:'disabled'})
+  await page.keyboard.press('Escape')
+ }
 })

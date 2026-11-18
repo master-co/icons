@@ -8,8 +8,9 @@ import { unzipSync, strFromU8 } from 'fflate';
 import { catalog, conceptCount } from '../packages/icons/src/catalog.mjs';
 import { preservedNotices, adaptedSources } from '../packages/icons/src/provenance.mjs';
 import { drawings } from '../packages/icons/src/drawings.mjs';
+import {context} from '../packages/icons/src/geometry.mjs';
 import {brandCatalog} from '../packages/icons/src/brands.mjs';
-import brandSources from '../packages/icons/src/brands.json' with {type:'json'};
+import {brands as brandSources} from '../packages/icons/src/brands.mjs';
 const json = async file => JSON.parse(await readFile(file,'utf8'));
 const sha = data => createHash('sha256').update(data).digest('hex');
 const manifest = await json('dist/catalog.json');
@@ -57,12 +58,14 @@ for(const item of manifest.inventory){
   assert.doesNotMatch(source,/NaN|Infinity|undefined|<script|<image|<foreignObject|\son\w+=|\shref=/);
   const master = definitions[item.name].variants[item.opticalSize][item.corner];
   assert.ok(master.strokeWidth>0 && master.nodes.length>0);
+  const brand=brandSources.find(b=>b.name===item.name);
+  if(brand?.styleOf)assert.deepEqual(master.nodes,drawings[item.name](context(item.opticalSize,item.corner)),item.path+': stale calibrated brand outline');
   for(const [tag,attrs] of master.nodes){
     assert.ok(validTags.has(tag),tag);
     if(tag==='path'&&item.name.startsWith('brand-')){
       // SVG allows compact arc flags (e.g. 00-4); the outline parser below
       // and PathKit do not. Check exact source identity plus browser evidence.
-      assert.ok(brandSources.find(b=>b.name===item.name).paths.includes(attrs.d),item.path+': altered brand contour');
+      if(!brand.styleOf)assert.ok(brand.paths.includes(attrs.d),item.path+': altered original brand contour');
     }
     if(tag==='path'&&!item.name.startsWith('brand-'))for(const m of attrs.d.matchAll(/([a-df-z])([^a-df-z]*)/gi)){
       const c=m[1].toUpperCase(),values=m[2].match(/-?\d*\.?\d+(?:e[-+]?\d+)?/gi)||[];

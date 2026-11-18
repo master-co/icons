@@ -4,13 +4,14 @@ import { unzipSync, strFromU8 } from 'fflate';
 import { pathToFileURL } from 'node:url';
 import { resolve } from 'node:path';
 import { catalog as sourceCatalog } from '../../packages/icons/src/catalog.mjs';
-const conceptCount=sourceCatalog.length;
+const exportCount=sourceCatalog.length;
+const cardCount=sourceCatalog.filter(entry=>!entry.aliasOf).length;
 
 test('search, presets, accessible detail, downloads, keyboard and responsive layouts',async({page},info)=>{
   const errors=[];page.on('pageerror',error=>errors.push(error.message));
-  await page.goto('/');await expect(page.locator('.icon-card')).toHaveCount(Math.min(96,conceptCount));
+  await page.goto('/');await expect(page.locator('.icon-card')).toHaveCount(Math.min(96,cardCount));
   await expect(page.locator('#pagination')).toBeVisible();
-  await expect(page.locator('#concept-count')).toHaveText(await page.evaluate(count=>count.toLocaleString(),conceptCount));
+  await expect(page.locator('#concept-count')).toHaveText(await page.evaluate(count=>count.toLocaleString(),cardCount));
   await page.getByRole('searchbox').fill('通知');await expect(page.locator('.icon-card')).toHaveCount(4);
   expect(await page.locator('.icon-card').evaluateAll(cards=>cards.map(c=>c.dataset.icon).sort())).toEqual(['bell','bell-off','bell-ring','bell-snooze']);
   await page.getByRole('searchbox').fill('搜尋');await expect(page.locator('.icon-card')).toHaveCount(11);
@@ -37,7 +38,7 @@ test('search, presets, accessible detail, downloads, keyboard and responsive lay
   await page.locator('#tab-library').click();
   const zipDownload=page.waitForEvent('download');await page.locator('#download-set').click();
   const zip=unzipSync(await readFile(await (await zipDownload).path()));
-  expect(Object.keys(zip).filter(x=>x.endsWith('.svg'))).toHaveLength(conceptCount);
+  expect(Object.keys(zip).filter(x=>x.endsWith('.svg'))).toHaveLength(exportCount);
   expect(strFromU8(zip.LICENSE)).toContain('MIT License');
   for(const width of [390,768,1440]){
     await page.setViewportSize({width,height:1000});
@@ -75,16 +76,16 @@ test('all SVG presets parse and rasterize without clipping at this DPR',async({p
   await mkdir('work/quality',{recursive:true});
   await writeFile(`work/quality/${info.project.name}-raster.json`,JSON.stringify(result));
   await info.attach('raster-metrics',{body:JSON.stringify(result,null,2),contentType:'application/json'});
-  expect(result.count).toBe(conceptCount*9);expect(result.failures).toEqual([]);
+  expect(result.count).toBe(exportCount*9);expect(result.failures).toEqual([]);
 });
 
 test('standalone review works without a server and retains comparison / ZIP export',async({page})=>{
   await page.goto(pathToFileURL(resolve('dist/preview.html')).href);
-  await expect(page.locator('.icon-card')).toHaveCount(Math.min(96,conceptCount));
+  await expect(page.locator('.icon-card')).toHaveCount(Math.min(96,cardCount));
   await page.locator('#tab-reference').click();await expect(page.locator('.reference-table tbody svg')).toHaveCount(48);
   const downloaded=page.waitForEvent('download');await page.locator('#download-set').click();
   const zip=unzipSync(await readFile(await (await downloaded).path()));
-  expect(Object.keys(zip).filter(x=>x.endsWith('.svg'))).toHaveLength(conceptCount);
+  expect(Object.keys(zip).filter(x=>x.endsWith('.svg'))).toHaveLength(exportCount);
 });
 
 test('adapted redraw downloads preserve upstream notices in valid SVG and ZIP files',async({page})=>{
@@ -92,7 +93,7 @@ test('adapted redraw downloads preserve upstream notices in valid SVG and ZIP fi
   await page.goto(url);
   // Wait for initialization before typing: the static HTML search field exists
   // before the module loads its catalog and attaches the input listener.
-  await expect(page.locator('.icon-card')).toHaveCount(Math.min(96,conceptCount));
+  await expect(page.locator('.icon-card')).toHaveCount(Math.min(96,cardCount));
   for(const name of['megaphone','handshake']){
    await page.getByRole('searchbox').fill(name);await page.locator(`.icon-card[data-icon="${name}"]`).click();
    const pending=page.waitForEvent('download');await page.locator('#download-icon').click();
@@ -105,5 +106,28 @@ test('adapted redraw downloads preserve upstream notices in valid SVG and ZIP fi
   const zip=unzipSync(await readFile(await(await pending).path()));
   expect(strFromU8(zip['licenses/lucide.txt'])).toContain('ISC License');
   for(const name of['megaphone','handshake'])expect(strFromU8(zip[name+'.svg'])).toContain('ISC License');
+ }
+});
+
+test('brand aliases are deduplicated and outlines are listed directly in the offline gallery',async({page})=>{
+ await page.goto(pathToFileURL(resolve('dist/preview.html')).href+'?category=brands&q=chatgpt');
+ await expect(page.locator('.icon-card')).toHaveCount(1);
+ await expect(page.locator('.icon-card')).toHaveAttribute('data-icon','brand-openai');
+ for(const name of ['github','telegram','discord','line']){
+  await page.getByRole('searchbox').fill(`brand-${name}-outline`);
+  await expect(page.locator('.icon-card')).toHaveCount(1);
+  await expect(page.locator('.icon-card')).toHaveAttribute('data-icon',`brand-${name}-outline`);
+  await page.locator('.icon-card').click();
+  await page.locator('#brand-artwork').selectOption('outline');
+  await expect(page.locator('#detail-code')).toContainText('fill-rule="evenodd"');
+  const pending=page.waitForEvent('download');await page.locator('#download-icon').click();
+  const file=await pending;
+  expect(file.suggestedFilename()).toBe(`brand-${name}-outline-24-soft.svg`);
+  const svg=await readFile(await file.path(),'utf8');
+  expect(svg).toContain((await page.locator('#detail-code').textContent()).replaceAll('>\n<','><'));
+  if(name==='github')expect(svg).toContain('Paweł Kuna');
+  await page.locator('#brand-artwork').selectOption('mark');
+  await expect(page.locator('#download-icon')).toHaveAttribute('download',`brand-${name}-24-soft.svg`);
+  await page.keyboard.press('Escape');
  }
 });

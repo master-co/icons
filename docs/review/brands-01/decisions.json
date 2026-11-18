@@ -1452,6 +1452,1662 @@
         "https://www.w3.org/html/logo/faq.html"
       ],
       "userApproval": "pending"
+    },
+    {
+      "name": "brand-wechat-outline",
+      "label": "WeChat Outline",
+      "profile": "wide",
+      "sheet": "brand-outline-craft-04",
+      "status": "visually-reviewed-candidate",
+      "reviewer": "Codex (AI), not user approval",
+      "date": "2026-11-18",
+      "variantsSha256": "1d88b9f65143575cf935510c424c88ab4ba18be202a0634c211f04f2f105200d",
+      "sourceSha256": "c1f799673c3cadd946494130a3dde159587b8f835a8a287b6129943f64ad4baa",
+      "beforeVariantsSha256": "44808f030d9e3d5ed2f7f4fcea3650bb7e3b0247a8d17c99432028be8d67ac55",
+      "beforeSourceSha256": "62bc706112b6a88164cf03179b02a0dd90006386571648f0ea8336dea23a6372",
+      "optical": {
+        "16": {
+          "extent": 14,
+          "dx": 0,
+          "dy": 0
+        },
+        "20": {
+          "extent": 18,
+          "dx": 0,
+          "dy": 0
+        },
+        "24": {
+          "extent": 21,
+          "dx": 0,
+          "dy": 0
+        }
+      },
+      "defect": "光學縮放連同描邊縮放，導致不同品牌相同設定的實際主線寬不一致。",
+      "observation": "重畫橢圓雙泡，前泡回到較低扁的比例；尾尖向外下伸，四眼依原標誌中心配置。後泡以可見弧段接前泡，保留前後遮擋。",
+      "visualResult": "主氣泡與前景小氣泡同時補足線寬；16px 兩組眼點仍可分開，24px 與 GitHub 混排不再偏細。",
+      "effects": "Opaque brand ink; original filled identity details retained. Outline strokes respond to strokeWidth; Pinterest clearance is recomputed from actual ink. No white covering shapes.",
+      "evidence": [
+        {
+          "path": "docs/review/brand-outline-craft-04/screenshots/batch-1-dark-1.png",
+          "sha256": "25b9f00b5dd3727c7c8158c59cfb093efff44223db4bb6be1f06e1786679c75c"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-04/screenshots/batch-1-dark-2.png",
+          "sha256": "d009f604f081c85ee260c852a50e3491e73917d2a3186b75b0f3f3b47288ed62"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-04/screenshots/batch-1-light-1.png",
+          "sha256": "5b4f5ea0063a4c209a78fa259e54999580d562808f4bfbb855fd05b8948ad0af"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-04/screenshots/batch-1-light-2.png",
+          "sha256": "01f7bb2a483c4131bf19da091040e825f3ce3c1c765b73f8ec5da8c54ac10d33"
+        }
+      ],
+      "contextEvidence": [
+        {
+          "path": "docs/review/brand-outline-craft-02/screenshots/scenes-dark-1.png",
+          "sha256": "c03dd4cef32d6112bb48dca7da817c3a660fe05fbb40ea51735788d0278d7ef1"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-02/screenshots/scenes-dark-2.png",
+          "sha256": "cf433ec01652ac159a629e7e3b6a8122736aaeb5c40f206179a361b5c0ce027c"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-02/screenshots/scenes-light-1.png",
+          "sha256": "ad69fc900abbcc859076c7a1e1ff1e68ca8e31fe97777edaee32dbe30760a0ea"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-02/screenshots/scenes-light-2.png",
+          "sha256": "198c1a6eed165f7b53752b75d6477c23a09883a99585a77dc43900f819a0e732"
+        }
+      ],
+      "weightReview": {
+        "page": "docs/review/brand-outline-craft-04/index.html",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "method": "Native output widths; minimum/default/maximum visual comparison at light/dark DPR 1/2."
+      },
+      "widthCalibration": {
+        "beforeDefault": {
+          "16": 0.9754,
+          "20": 1.2541,
+          "24": 1.4631
+        },
+        "afterDefault": {
+          "16": 1.25,
+          "20": 1.5,
+          "24": 1.75
+        },
+        "probe": "tests/browser/brand-widths.spec.mjs"
+      }
+    },
+    {
+      "name": "brand-github-outline",
+      "label": "GitHub Outline",
+      "profile": "standard",
+      "sheet": "brand-outline-craft-04",
+      "status": "visually-reviewed-candidate",
+      "reviewer": "Codex (AI), not user approval",
+      "date": "2026-11-18",
+      "variantsSha256": "59c61514d7341b36a3518a25214fdb91bd851621171d045abe82ba2410e4ae50",
+      "sourceSha256": "01ff9331ab1dc238f12dcbc22ee71bc496d2c4d50e38327db9a7617dbc3c6b42",
+      "beforeVariantsSha256": "5b537fe0ee438de76284f854d0979e68059f185be2ce3f6018e6e4519856b2a0",
+      "beforeSourceSha256": "f5abf32173b88470d2ca48ffa6928c3216a41661946f064954a62c4071d8aa46",
+      "optical": {
+        "16": {
+          "extent": 14,
+          "dx": 0,
+          "dy": 0
+        },
+        "20": {
+          "extent": 17,
+          "dx": 0,
+          "dy": 0
+        },
+        "24": {
+          "extent": 20,
+          "dx": 0,
+          "dy": 0
+        }
+      },
+      "defect": "光學縮放連同描邊縮放，導致不同品牌相同設定的實際主線寬不一致。",
+      "observation": "放平頭頂弧、平順耳根進入兩頰的切線；兩頰收向軀幹，尾巴以連續反彎接入左腳。保留 Tabler 開放腳端構成。",
+      "visualResult": "取消光學縮放造成的額外增重，24px 主描邊由約 1.808 降至 1.75；頭形、耳尖與雙腿保留。",
+      "effects": "Opaque brand ink; original filled identity details retained. Outline strokes respond to strokeWidth; Pinterest clearance is recomputed from actual ink. No white covering shapes.",
+      "evidence": [
+        {
+          "path": "docs/review/brand-outline-craft-04/screenshots/batch-1-dark-1.png",
+          "sha256": "25b9f00b5dd3727c7c8158c59cfb093efff44223db4bb6be1f06e1786679c75c"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-04/screenshots/batch-1-dark-2.png",
+          "sha256": "d009f604f081c85ee260c852a50e3491e73917d2a3186b75b0f3f3b47288ed62"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-04/screenshots/batch-1-light-1.png",
+          "sha256": "5b4f5ea0063a4c209a78fa259e54999580d562808f4bfbb855fd05b8948ad0af"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-04/screenshots/batch-1-light-2.png",
+          "sha256": "01f7bb2a483c4131bf19da091040e825f3ce3c1c765b73f8ec5da8c54ac10d33"
+        }
+      ],
+      "contextEvidence": [
+        {
+          "path": "docs/review/brand-outline-craft-02/screenshots/scenes-dark-1.png",
+          "sha256": "c03dd4cef32d6112bb48dca7da817c3a660fe05fbb40ea51735788d0278d7ef1"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-02/screenshots/scenes-dark-2.png",
+          "sha256": "cf433ec01652ac159a629e7e3b6a8122736aaeb5c40f206179a361b5c0ce027c"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-02/screenshots/scenes-light-1.png",
+          "sha256": "ad69fc900abbcc859076c7a1e1ff1e68ca8e31fe97777edaee32dbe30760a0ea"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-02/screenshots/scenes-light-2.png",
+          "sha256": "198c1a6eed165f7b53752b75d6477c23a09883a99585a77dc43900f819a0e732"
+        }
+      ],
+      "weightReview": {
+        "page": "docs/review/brand-outline-craft-04/index.html",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "method": "Native output widths; minimum/default/maximum visual comparison at light/dark DPR 1/2."
+      },
+      "widthCalibration": {
+        "beforeDefault": {
+          "16": 1.2657,
+          "20": 1.5369,
+          "24": 1.8081
+        },
+        "afterDefault": {
+          "16": 1.25,
+          "20": 1.5,
+          "24": 1.75
+        },
+        "probe": "tests/browser/brand-widths.spec.mjs"
+      }
+    },
+    {
+      "name": "brand-gitlab-outline",
+      "label": "GitLab Outline",
+      "profile": "standard",
+      "sheet": "brand-outline-craft-04",
+      "status": "visually-reviewed-candidate",
+      "reviewer": "Codex (AI), not user approval",
+      "date": "2026-11-18",
+      "variantsSha256": "2fdef265bfca03c16735b9e3acd18256f6c86dba0e038a41b9ff0ae9170744ca",
+      "sourceSha256": "a6fe87a68be4f054a7071941841ba89dcf12c3fddf47db813abd2f422ba31ad5",
+      "beforeVariantsSha256": "5eced239a83be9e0b124ed3e05033907ca6b666d2495f67cd1114cd168311b56",
+      "beforeSourceSha256": "9172e6a5ab56b9d4b467dafc84e95be78fc7645995decde8904f50c7deb22fad",
+      "optical": {
+        "16": {
+          "extent": 14,
+          "dx": 0,
+          "dy": 0
+        },
+        "20": {
+          "extent": 17,
+          "dx": 0,
+          "dy": 0
+        },
+        "24": {
+          "extent": 20,
+          "dx": 0,
+          "dy": 0
+        }
+      },
+      "defect": "光學縮放連同描邊縮放，導致不同品牌相同設定的實際主線寬不一致。",
+      "observation": "按原 Tanuki 外輪廓向內形成線條，恢復耳尖、肩弧及下尖；原始外形比例不變，保持大內孔。",
+      "visualResult": "24px 約 1.542 補至 1.75；上方水平橋與斜面同樣增重，耳峰和下頷仍保持原比例。",
+      "effects": "Opaque brand ink; original filled identity details retained. Outline strokes respond to strokeWidth; Pinterest clearance is recomputed from actual ink. No white covering shapes.",
+      "evidence": [
+        {
+          "path": "docs/review/brand-outline-craft-04/screenshots/batch-1-dark-1.png",
+          "sha256": "25b9f00b5dd3727c7c8158c59cfb093efff44223db4bb6be1f06e1786679c75c"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-04/screenshots/batch-1-dark-2.png",
+          "sha256": "d009f604f081c85ee260c852a50e3491e73917d2a3186b75b0f3f3b47288ed62"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-04/screenshots/batch-1-light-1.png",
+          "sha256": "5b4f5ea0063a4c209a78fa259e54999580d562808f4bfbb855fd05b8948ad0af"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-04/screenshots/batch-1-light-2.png",
+          "sha256": "01f7bb2a483c4131bf19da091040e825f3ce3c1c765b73f8ec5da8c54ac10d33"
+        }
+      ],
+      "contextEvidence": [
+        {
+          "path": "docs/review/brand-outline-craft-02/screenshots/scenes-dark-1.png",
+          "sha256": "c03dd4cef32d6112bb48dca7da817c3a660fe05fbb40ea51735788d0278d7ef1"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-02/screenshots/scenes-dark-2.png",
+          "sha256": "cf433ec01652ac159a629e7e3b6a8122736aaeb5c40f206179a361b5c0ce027c"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-02/screenshots/scenes-light-1.png",
+          "sha256": "ad69fc900abbcc859076c7a1e1ff1e68ca8e31fe97777edaee32dbe30760a0ea"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-02/screenshots/scenes-light-2.png",
+          "sha256": "198c1a6eed165f7b53752b75d6477c23a09883a99585a77dc43900f819a0e732"
+        }
+      ],
+      "weightReview": {
+        "page": "docs/review/brand-outline-craft-04/index.html",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "method": "Native output widths; minimum/default/maximum visual comparison at light/dark DPR 1/2."
+      },
+      "widthCalibration": {
+        "beforeDefault": {
+          "16": 1.0792,
+          "20": 1.3105,
+          "24": 1.5417
+        },
+        "afterDefault": {
+          "16": 1.25,
+          "20": 1.5,
+          "24": 1.75
+        },
+        "probe": "tests/browser/brand-widths.spec.mjs"
+      }
+    },
+    {
+      "name": "brand-discord-outline",
+      "label": "Discord Outline",
+      "profile": "wide",
+      "sheet": "brand-outline-craft-04",
+      "status": "visually-reviewed-candidate",
+      "reviewer": "Codex (AI), not user approval",
+      "date": "2026-11-18",
+      "variantsSha256": "572b1bc8ff916abae49b329c78ef26d6e74c29e088e1a9b1c43c9b95c8d251f1",
+      "sourceSha256": "085f8e5dc552159b2f1ad1346d8228774f25fed461b78dde2d66a51ff4a0d7dc",
+      "beforeVariantsSha256": "aa21081e363a8bfb88153373d2853d6dd49f125b59afcaf69275769911e924b0",
+      "beforeSourceSha256": "a8c508a8728cbbb7e353a93d3bf03bae03b6bbbe2b8a31fc6cd7f185de7f7149",
+      "optical": {
+        "16": {
+          "extent": 14,
+          "dx": 0,
+          "dy": 0
+        },
+        "20": {
+          "extent": 17.5,
+          "dx": 0,
+          "dy": 0
+        },
+        "24": {
+          "extent": 21,
+          "dx": 0,
+          "dy": 0
+        }
+      },
+      "defect": "光學縮放連同描邊縮放，導致不同品牌相同設定的實際主線寬不一致。",
+      "observation": "回到較輕的中心線描繪，以原 Clyde 的頭寬、雙眼位置和兩側腳端為準；取消擠壓下緣的內描。",
+      "visualResult": "24px 約 1.427 補至 1.75；下緣凹口跟隨主描邊，眼點不加粗，與 GitHub 不再有系統性的主線寬落差。",
+      "effects": "Opaque brand ink; original filled identity details retained. Outline strokes respond to strokeWidth; Pinterest clearance is recomputed from actual ink. No white covering shapes.",
+      "evidence": [
+        {
+          "path": "docs/review/brand-outline-craft-04/screenshots/batch-1-dark-1.png",
+          "sha256": "25b9f00b5dd3727c7c8158c59cfb093efff44223db4bb6be1f06e1786679c75c"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-04/screenshots/batch-1-dark-2.png",
+          "sha256": "d009f604f081c85ee260c852a50e3491e73917d2a3186b75b0f3f3b47288ed62"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-04/screenshots/batch-1-light-1.png",
+          "sha256": "5b4f5ea0063a4c209a78fa259e54999580d562808f4bfbb855fd05b8948ad0af"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-04/screenshots/batch-1-light-2.png",
+          "sha256": "01f7bb2a483c4131bf19da091040e825f3ce3c1c765b73f8ec5da8c54ac10d33"
+        }
+      ],
+      "contextEvidence": [
+        {
+          "path": "docs/review/brand-outline-craft-02/screenshots/scenes-dark-1.png",
+          "sha256": "c03dd4cef32d6112bb48dca7da817c3a660fe05fbb40ea51735788d0278d7ef1"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-02/screenshots/scenes-dark-2.png",
+          "sha256": "cf433ec01652ac159a629e7e3b6a8122736aaeb5c40f206179a361b5c0ce027c"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-02/screenshots/scenes-light-1.png",
+          "sha256": "ad69fc900abbcc859076c7a1e1ff1e68ca8e31fe97777edaee32dbe30760a0ea"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-02/screenshots/scenes-light-2.png",
+          "sha256": "198c1a6eed165f7b53752b75d6477c23a09883a99585a77dc43900f819a0e732"
+        }
+      ],
+      "weightReview": {
+        "page": "docs/review/brand-outline-craft-04/index.html",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "method": "Native output widths; minimum/default/maximum visual comparison at light/dark DPR 1/2."
+      },
+      "widthCalibration": {
+        "beforeDefault": {
+          "16": 0.9515,
+          "20": 1.1894,
+          "24": 1.4272
+        },
+        "afterDefault": {
+          "16": 1.25,
+          "20": 1.5,
+          "24": 1.75
+        },
+        "probe": "tests/browser/brand-widths.spec.mjs"
+      }
+    },
+    {
+      "name": "brand-youtube-outline",
+      "label": "YouTube Outline",
+      "profile": "wide",
+      "sheet": "brand-outline-craft-04",
+      "status": "visually-reviewed-candidate",
+      "reviewer": "Codex (AI), not user approval",
+      "date": "2026-11-18",
+      "variantsSha256": "ec15ee283f75a16d9c215f1bb2508a4f74c2be4ce66699c0f1a03dc4d1424ed0",
+      "sourceSha256": "be611d0410ae34cd1916c7ba5584f4e1fc804df00e20d8f92c3ce8707465274b",
+      "beforeVariantsSha256": "c1ea2ee05158dbddac23d543d76acd0a09bedd6acff7af8f035ed72a2ba8ae22",
+      "beforeSourceSha256": "5de8a56c540117c5f300bcea6c99c854e60af30c72dd4e9b4afb850fab105f36",
+      "optical": {
+        "16": {
+          "extent": 14,
+          "dx": 0,
+          "dy": 0
+        },
+        "20": {
+          "extent": 17.5,
+          "dx": 0,
+          "dy": 0
+        },
+        "24": {
+          "extent": 21,
+          "dx": 0,
+          "dy": 0
+        }
+      },
+      "defect": "光學縮放連同描邊縮放，導致不同品牌相同設定的實際主線寬不一致。",
+      "observation": "回到原標誌的寬高、四角和微凸邊界，外框向內描；三角形按原標誌佔比縮回，內線降至 1.4，恢復四周空白。",
+      "visualResult": "外框補足線寬，圓角與長寬比保留；內部三角形維持原有較細比例，以留出原生 16px 的播放孔。",
+      "effects": "Opaque brand ink; original filled identity details retained. Outline strokes respond to strokeWidth; Pinterest clearance is recomputed from actual ink. No white covering shapes.",
+      "evidence": [
+        {
+          "path": "docs/review/brand-outline-craft-04/screenshots/batch-1-dark-1.png",
+          "sha256": "25b9f00b5dd3727c7c8158c59cfb093efff44223db4bb6be1f06e1786679c75c"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-04/screenshots/batch-1-dark-2.png",
+          "sha256": "d009f604f081c85ee260c852a50e3491e73917d2a3186b75b0f3f3b47288ed62"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-04/screenshots/batch-1-light-1.png",
+          "sha256": "5b4f5ea0063a4c209a78fa259e54999580d562808f4bfbb855fd05b8948ad0af"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-04/screenshots/batch-1-light-2.png",
+          "sha256": "01f7bb2a483c4131bf19da091040e825f3ce3c1c765b73f8ec5da8c54ac10d33"
+        }
+      ],
+      "contextEvidence": [
+        {
+          "path": "docs/review/brand-outline-craft-02/screenshots/scenes-dark-1.png",
+          "sha256": "c03dd4cef32d6112bb48dca7da817c3a660fe05fbb40ea51735788d0278d7ef1"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-02/screenshots/scenes-dark-2.png",
+          "sha256": "cf433ec01652ac159a629e7e3b6a8122736aaeb5c40f206179a361b5c0ce027c"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-02/screenshots/scenes-light-1.png",
+          "sha256": "ad69fc900abbcc859076c7a1e1ff1e68ca8e31fe97777edaee32dbe30760a0ea"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-02/screenshots/scenes-light-2.png",
+          "sha256": "198c1a6eed165f7b53752b75d6477c23a09883a99585a77dc43900f819a0e732"
+        }
+      ],
+      "weightReview": {
+        "page": "docs/review/brand-outline-craft-04/index.html",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "method": "Native output widths; minimum/default/maximum visual comparison at light/dark DPR 1/2."
+      },
+      "widthCalibration": {
+        "beforeDefault": {
+          "16": 0.9625,
+          "20": 1.2031,
+          "24": 1.4437
+        },
+        "afterDefault": {
+          "16": 1.25,
+          "20": 1.5,
+          "24": 1.75
+        },
+        "probe": "tests/browser/brand-widths.spec.mjs"
+      }
+    },
+    {
+      "name": "brand-facebook-outline",
+      "label": "Facebook Outline",
+      "profile": "solid",
+      "sheet": "brand-outline-craft-04",
+      "status": "visually-reviewed-candidate",
+      "reviewer": "Codex (AI), not user approval",
+      "date": "2026-11-18",
+      "variantsSha256": "c466ea505fc6ec9bd514b3d8c41b43fbc4d4ba0022954d0f0965a35c4e6a915f",
+      "sourceSha256": "1ee8dfcd870e1577b4f4ab87e45b2ac6012b81c90d45e00ea933da7a3abdc33d",
+      "beforeVariantsSha256": "ce5f453d65ca256f2511abbbadcaa0493a45bcc132dbb4ce95b95b7d8dfa1420",
+      "beforeSourceSha256": "4358e1bf2c91fbba12f05f9fc4396ef8cae5a2b7a440c223c2326963c456881c",
+      "optical": {
+        "16": {
+          "extent": 14,
+          "dx": 0,
+          "dy": 0
+        },
+        "20": {
+          "extent": 17,
+          "dx": 0,
+          "dy": 0
+        },
+        "24": {
+          "extent": 20,
+          "dx": 0,
+          "dy": 0
+        }
+      },
+      "defect": "光學縮放連同描邊縮放，導致不同品牌相同設定的實際主線寬不一致。",
+      "observation": "保留原 f 的輪廓與比例，改沿輪廓中心描線；補足實際線寬時讓兩側增重，保留直幹與橫槓的空腔。",
+      "visualResult": "改沿原 f 輪廓中心描線，增重分配到兩邊；原生預設與最粗仍有直幹及橫槓空腔，沒有沿用細內描掩飾擁擠。",
+      "effects": "Opaque brand ink; original filled identity details retained. Outline strokes respond to strokeWidth; Pinterest clearance is recomputed from actual ink. No white covering shapes.",
+      "evidence": [
+        {
+          "path": "docs/review/brand-outline-craft-04/screenshots/batch-1-dark-1.png",
+          "sha256": "25b9f00b5dd3727c7c8158c59cfb093efff44223db4bb6be1f06e1786679c75c"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-04/screenshots/batch-1-dark-2.png",
+          "sha256": "d009f604f081c85ee260c852a50e3491e73917d2a3186b75b0f3f3b47288ed62"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-04/screenshots/batch-1-light-1.png",
+          "sha256": "5b4f5ea0063a4c209a78fa259e54999580d562808f4bfbb855fd05b8948ad0af"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-04/screenshots/batch-1-light-2.png",
+          "sha256": "01f7bb2a483c4131bf19da091040e825f3ce3c1c765b73f8ec5da8c54ac10d33"
+        }
+      ],
+      "contextEvidence": [
+        {
+          "path": "docs/review/brand-outline-craft-02/screenshots/scenes-dark-1.png",
+          "sha256": "c03dd4cef32d6112bb48dca7da817c3a660fe05fbb40ea51735788d0278d7ef1"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-02/screenshots/scenes-dark-2.png",
+          "sha256": "cf433ec01652ac159a629e7e3b6a8122736aaeb5c40f206179a361b5c0ce027c"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-02/screenshots/scenes-light-1.png",
+          "sha256": "ad69fc900abbcc859076c7a1e1ff1e68ca8e31fe97777edaee32dbe30760a0ea"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-02/screenshots/scenes-light-2.png",
+          "sha256": "198c1a6eed165f7b53752b75d6477c23a09883a99585a77dc43900f819a0e732"
+        }
+      ],
+      "weightReview": {
+        "page": "docs/review/brand-outline-craft-04/index.html",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "method": "Native output widths; minimum/default/maximum visual comparison at light/dark DPR 1/2."
+      },
+      "widthCalibration": {
+        "beforeDefault": {
+          "16": 0.8269,
+          "20": 1.0041,
+          "24": 1.1813
+        },
+        "afterDefault": {
+          "16": 1.25,
+          "20": 1.5,
+          "24": 1.75
+        },
+        "probe": "tests/browser/brand-widths.spec.mjs"
+      }
+    },
+    {
+      "name": "brand-linkedin-outline",
+      "label": "LinkedIn Outline",
+      "profile": "solid",
+      "sheet": "brand-outline-craft-04",
+      "status": "visually-reviewed-candidate",
+      "reviewer": "Codex (AI), not user approval",
+      "date": "2026-11-18",
+      "variantsSha256": "407255a730b98648cd3b7ab91018ea703a3a8ea9e407ebb9537913a205d7ad38",
+      "sourceSha256": "a1fc2d10766b725ed54d4264945c5d2ca0147f3712d61df459c14312faf0af18",
+      "beforeVariantsSha256": "3e25c6149df66a3663e3e8f1dba2673eea79ffa1fe191027485a43cc0e5b1e4a",
+      "beforeSourceSha256": "e3fcfedc48074a8224d6b6fd5df21eae2224ede92d7f12110c24d0dfd0a5ba52",
+      "optical": {
+        "16": {
+          "extent": 14,
+          "dx": 0,
+          "dy": 0
+        },
+        "20": {
+          "extent": 17,
+          "dx": 0,
+          "dy": 0
+        },
+        "24": {
+          "extent": 20,
+          "dx": 0,
+          "dy": 0
+        }
+      },
+      "defect": "光學縮放連同描邊縮放，導致不同品牌相同設定的實際主線寬不一致。",
+      "observation": "外框與 in 的線條共用校準後的主線寬；保留原外框比例與獨立實心圓點。",
+      "visualResult": "外框與 in 同用主描邊，移除內部字樣額外增重；原生 16px 的 i 圓點與直幹仍分開。",
+      "effects": "Opaque brand ink; original filled identity details retained. Outline strokes respond to strokeWidth; Pinterest clearance is recomputed from actual ink. No white covering shapes.",
+      "evidence": [
+        {
+          "path": "docs/review/brand-outline-craft-04/screenshots/batch-2-dark-1.png",
+          "sha256": "471fe7b83f62cd504e07a3c978f2c49504b338115e0234228b860eda3bc94203"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-04/screenshots/batch-2-dark-2.png",
+          "sha256": "50084d177095582a3518d92b2f794c54f6fb5f5d0779ccf1a7539621c22b017a"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-04/screenshots/batch-2-light-1.png",
+          "sha256": "4ac83bf8c518ebc4204bf05b91c83da41b6115a4b102dfdd230897992de3912d"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-04/screenshots/batch-2-light-2.png",
+          "sha256": "bbb43b5777f9b8d485dfe0209fff3c87f8ad842a1d0fdbd55360fe3c2247e59e"
+        }
+      ],
+      "contextEvidence": [
+        {
+          "path": "docs/review/brand-outline-craft-02/screenshots/scenes-dark-1.png",
+          "sha256": "c03dd4cef32d6112bb48dca7da817c3a660fe05fbb40ea51735788d0278d7ef1"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-02/screenshots/scenes-dark-2.png",
+          "sha256": "cf433ec01652ac159a629e7e3b6a8122736aaeb5c40f206179a361b5c0ce027c"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-02/screenshots/scenes-light-1.png",
+          "sha256": "ad69fc900abbcc859076c7a1e1ff1e68ca8e31fe97777edaee32dbe30760a0ea"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-02/screenshots/scenes-light-2.png",
+          "sha256": "198c1a6eed165f7b53752b75d6477c23a09883a99585a77dc43900f819a0e732"
+        }
+      ],
+      "weightReview": {
+        "page": "docs/review/brand-outline-craft-04/index.html",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "method": "Native output widths; minimum/default/maximum visual comparison at light/dark DPR 1/2."
+      },
+      "widthCalibration": {
+        "beforeDefault": {
+          "16": 0.9625,
+          "20": 1.1687,
+          "24": 1.375
+        },
+        "afterDefault": {
+          "16": 1.25,
+          "20": 1.5,
+          "24": 1.75
+        },
+        "probe": "tests/browser/brand-widths.spec.mjs"
+      }
+    },
+    {
+      "name": "brand-mastodon-outline",
+      "label": "Mastodon Outline",
+      "profile": "standard",
+      "sheet": "brand-outline-craft-04",
+      "status": "visually-reviewed-candidate",
+      "reviewer": "Codex (AI), not user approval",
+      "date": "2026-11-18",
+      "variantsSha256": "87b7859372fbfe2528065681eb8d41b6e483831ecfd38536ffab47922e2ad051",
+      "sourceSha256": "825df078d9126917c96e4bd71f63f14db707b8889a3bc26fff282f2afa68ad7d",
+      "beforeVariantsSha256": "1f4c6d58a682be37ac4ed3810999e7fe341d503816ad6ae42849e48feb41a81b",
+      "beforeSourceSha256": "65c2d158d2fa23fed1435b672e04ab81ae96affcb15757f0c6388e21dfe9727e",
+      "optical": {
+        "16": {
+          "extent": 14,
+          "dx": 0,
+          "dy": 0
+        },
+        "20": {
+          "extent": 17,
+          "dx": 0,
+          "dy": 0
+        },
+        "24": {
+          "extent": 20,
+          "dx": 0,
+          "dy": 0
+        }
+      },
+      "defect": "光學縮放連同描邊縮放，導致不同品牌相同設定的實際主線寬不一致。",
+      "observation": "恢復原外形的寬肩、右腹和下方平口，內描保留曲面；m 的雙拱擴寬，中央短幹與兩側長幹呼應原字形。",
+      "visualResult": "外框與 m 同時校準；預設下雙拱和底部折返仍可讀，極粗版本密度較高。",
+      "effects": "Opaque brand ink; original filled identity details retained. Outline strokes respond to strokeWidth; Pinterest clearance is recomputed from actual ink. No white covering shapes.",
+      "evidence": [
+        {
+          "path": "docs/review/brand-outline-craft-04/screenshots/batch-2-dark-1.png",
+          "sha256": "471fe7b83f62cd504e07a3c978f2c49504b338115e0234228b860eda3bc94203"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-04/screenshots/batch-2-dark-2.png",
+          "sha256": "50084d177095582a3518d92b2f794c54f6fb5f5d0779ccf1a7539621c22b017a"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-04/screenshots/batch-2-light-1.png",
+          "sha256": "4ac83bf8c518ebc4204bf05b91c83da41b6115a4b102dfdd230897992de3912d"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-04/screenshots/batch-2-light-2.png",
+          "sha256": "bbb43b5777f9b8d485dfe0209fff3c87f8ad842a1d0fdbd55360fe3c2247e59e"
+        }
+      ],
+      "contextEvidence": [
+        {
+          "path": "docs/review/brand-outline-craft-02/screenshots/scenes-dark-1.png",
+          "sha256": "c03dd4cef32d6112bb48dca7da817c3a660fe05fbb40ea51735788d0278d7ef1"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-02/screenshots/scenes-dark-2.png",
+          "sha256": "cf433ec01652ac159a629e7e3b6a8122736aaeb5c40f206179a361b5c0ce027c"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-02/screenshots/scenes-light-1.png",
+          "sha256": "ad69fc900abbcc859076c7a1e1ff1e68ca8e31fe97777edaee32dbe30760a0ea"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-02/screenshots/scenes-light-2.png",
+          "sha256": "198c1a6eed165f7b53752b75d6477c23a09883a99585a77dc43900f819a0e732"
+        }
+      ],
+      "weightReview": {
+        "page": "docs/review/brand-outline-craft-04/index.html",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "method": "Native output widths; minimum/default/maximum visual comparison at light/dark DPR 1/2."
+      },
+      "widthCalibration": {
+        "beforeDefault": {
+          "16": 1.0208,
+          "20": 1.2396,
+          "24": 1.4583
+        },
+        "afterDefault": {
+          "16": 1.25,
+          "20": 1.5,
+          "24": 1.75
+        },
+        "probe": "tests/browser/brand-widths.spec.mjs"
+      }
+    },
+    {
+      "name": "brand-reddit-outline",
+      "label": "Reddit Outline",
+      "profile": "standard",
+      "sheet": "brand-outline-craft-04",
+      "status": "visually-reviewed-candidate",
+      "reviewer": "Codex (AI), not user approval",
+      "date": "2026-11-18",
+      "variantsSha256": "bd5db066fee6efbffba285c709f10f9f22cfa38eed3684ae06a31ceffada2d51",
+      "sourceSha256": "bae65b3411a39be2a9b9965cc5af6a9891b70fa0f670396520982f0a4f17d0a8",
+      "beforeVariantsSha256": "08a067f7e75e883f33d544311d852f1ce45935de23bc3ff9031c7c34bd306031",
+      "beforeSourceSha256": "0d19654f916d92eb28165e294eb5798bd3d6f4966b8e4a989edf06871ada3e48",
+      "optical": {
+        "16": {
+          "extent": 14,
+          "dx": 0,
+          "dy": 0
+        },
+        "20": {
+          "extent": 17,
+          "dx": 0,
+          "dy": 0
+        },
+        "24": {
+          "extent": 20,
+          "dx": 0,
+          "dy": 0
+        }
+      },
+      "defect": "光學縮放連同描邊縮放，導致不同品牌相同設定的實際主線寬不一致。",
+      "observation": "直接按原 Snoo 頭形、兩耳、眼形與填色笑嘴配置；天線回到原上拱與圓頭位置。",
+      "visualResult": "臉部輪廓補足主線寬；沿用前輪原圖眼睛與填色笑嘴，天線維持較細的從屬比例。",
+      "effects": "Opaque brand ink; original filled identity details retained. Outline strokes respond to strokeWidth; Pinterest clearance is recomputed from actual ink. No white covering shapes.",
+      "evidence": [
+        {
+          "path": "docs/review/brand-outline-craft-04/screenshots/batch-2-dark-1.png",
+          "sha256": "471fe7b83f62cd504e07a3c978f2c49504b338115e0234228b860eda3bc94203"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-04/screenshots/batch-2-dark-2.png",
+          "sha256": "50084d177095582a3518d92b2f794c54f6fb5f5d0779ccf1a7539621c22b017a"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-04/screenshots/batch-2-light-1.png",
+          "sha256": "4ac83bf8c518ebc4204bf05b91c83da41b6115a4b102dfdd230897992de3912d"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-04/screenshots/batch-2-light-2.png",
+          "sha256": "bbb43b5777f9b8d485dfe0209fff3c87f8ad842a1d0fdbd55360fe3c2247e59e"
+        }
+      ],
+      "contextEvidence": [
+        {
+          "path": "docs/review/brand-outline-craft-02/screenshots/scenes-dark-1.png",
+          "sha256": "c03dd4cef32d6112bb48dca7da817c3a660fe05fbb40ea51735788d0278d7ef1"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-02/screenshots/scenes-dark-2.png",
+          "sha256": "cf433ec01652ac159a629e7e3b6a8122736aaeb5c40f206179a361b5c0ce027c"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-02/screenshots/scenes-light-1.png",
+          "sha256": "ad69fc900abbcc859076c7a1e1ff1e68ca8e31fe97777edaee32dbe30760a0ea"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-02/screenshots/scenes-light-2.png",
+          "sha256": "198c1a6eed165f7b53752b75d6477c23a09883a99585a77dc43900f819a0e732"
+        }
+      ],
+      "weightReview": {
+        "page": "docs/review/brand-outline-craft-04/index.html",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "method": "Native output widths; minimum/default/maximum visual comparison at light/dark DPR 1/2."
+      },
+      "widthCalibration": {
+        "beforeDefault": {
+          "16": 1.014,
+          "20": 1.2313,
+          "24": 1.4486
+        },
+        "afterDefault": {
+          "16": 1.25,
+          "20": 1.5,
+          "24": 1.75
+        },
+        "probe": "tests/browser/brand-widths.spec.mjs"
+      }
+    },
+    {
+      "name": "brand-spotify-outline",
+      "label": "Spotify Outline",
+      "profile": "solid",
+      "sheet": "brand-outline-craft-04",
+      "status": "visually-reviewed-candidate",
+      "reviewer": "Codex (AI), not user approval",
+      "date": "2026-11-18",
+      "variantsSha256": "ab2a3871dbd298d70d8f0d21cb1a8e55202c18280c9043565f33eae0356477df",
+      "sourceSha256": "2cfde1be6e73657455558ce3d9549a7d1f479dbe498c6256e11e9d607752bc2e",
+      "beforeVariantsSha256": "c5f3a1a0c259995143f41e16b3bbfa2d05728328410532b05ac9105741dce20f",
+      "beforeSourceSha256": "304fa6542697175dd5e88d4c6dee55d47028a0a1787e7c7b91721742cbb77a04",
+      "optical": {
+        "16": {
+          "extent": 14,
+          "dx": 0,
+          "dy": 0
+        },
+        "20": {
+          "extent": 17,
+          "dx": 0,
+          "dy": 0
+        },
+        "24": {
+          "extent": 20,
+          "dx": 0,
+          "dy": 0
+        }
+      },
+      "defect": "光學縮放連同描邊縮放，導致不同品牌相同設定的實際主線寬不一致。",
+      "observation": "圓框恢復原 24 單位直徑並向內描；三道原聲波的曲率、漸細與長短維持不變，右上留白回到原始比例。",
+      "visualResult": "圓框按輸出尺寸校準，三道品牌聲波保留原粗細遞變；不是把聲波誤當成同寬操作線條。",
+      "effects": "Opaque brand ink; original filled identity details retained. Outline strokes respond to strokeWidth; Pinterest clearance is recomputed from actual ink. No white covering shapes.",
+      "evidence": [
+        {
+          "path": "docs/review/brand-outline-craft-04/screenshots/batch-2-dark-1.png",
+          "sha256": "471fe7b83f62cd504e07a3c978f2c49504b338115e0234228b860eda3bc94203"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-04/screenshots/batch-2-dark-2.png",
+          "sha256": "50084d177095582a3518d92b2f794c54f6fb5f5d0779ccf1a7539621c22b017a"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-04/screenshots/batch-2-light-1.png",
+          "sha256": "4ac83bf8c518ebc4204bf05b91c83da41b6115a4b102dfdd230897992de3912d"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-04/screenshots/batch-2-light-2.png",
+          "sha256": "bbb43b5777f9b8d485dfe0209fff3c87f8ad842a1d0fdbd55360fe3c2247e59e"
+        }
+      ],
+      "contextEvidence": [
+        {
+          "path": "docs/review/brand-outline-craft-02/screenshots/scenes-dark-1.png",
+          "sha256": "c03dd4cef32d6112bb48dca7da817c3a660fe05fbb40ea51735788d0278d7ef1"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-02/screenshots/scenes-dark-2.png",
+          "sha256": "cf433ec01652ac159a629e7e3b6a8122736aaeb5c40f206179a361b5c0ce027c"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-02/screenshots/scenes-light-1.png",
+          "sha256": "ad69fc900abbcc859076c7a1e1ff1e68ca8e31fe97777edaee32dbe30760a0ea"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-02/screenshots/scenes-light-2.png",
+          "sha256": "198c1a6eed165f7b53752b75d6477c23a09883a99585a77dc43900f819a0e732"
+        }
+      ],
+      "weightReview": {
+        "page": "docs/review/brand-outline-craft-04/index.html",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "method": "Native output widths; minimum/default/maximum visual comparison at light/dark DPR 1/2."
+      },
+      "widthCalibration": {
+        "beforeDefault": {
+          "16": 0.9625,
+          "20": 1.1687,
+          "24": 1.375
+        },
+        "afterDefault": {
+          "16": 1.25,
+          "20": 1.5,
+          "24": 1.75
+        },
+        "probe": "tests/browser/brand-widths.spec.mjs"
+      }
+    },
+    {
+      "name": "brand-soundcloud-outline",
+      "label": "SoundCloud Outline",
+      "profile": "wide",
+      "sheet": "brand-outline-craft-04",
+      "status": "visually-reviewed-candidate",
+      "reviewer": "Codex (AI), not user approval",
+      "date": "2026-11-18",
+      "variantsSha256": "87fb3059e9d1b3acb84b1f32a918d8292001a680fa1dbfdcd1f51ba7b01eab6c",
+      "sourceSha256": "6d78c24339dec420c6b96d48e7f3313d76f671982f97a96f19e90a3cfa716ce8",
+      "beforeVariantsSha256": "537686c67b5b858cc7014012471b0ba94f3bd46894463d03d0bfd0c2ab3eb93c",
+      "beforeSourceSha256": "36b14b0ef592fc477058a0828eec18fd284a92427a6937b1e56f9855cc8ee468",
+      "optical": {
+        "16": {
+          "extent": 14,
+          "dx": 0,
+          "dy": 0
+        },
+        "20": {
+          "extent": 17.5,
+          "dx": 0,
+          "dy": 0
+        },
+        "24": {
+          "extent": 21,
+          "dx": 0,
+          "dy": 0
+        }
+      },
+      "defect": "光學縮放連同描邊縮放，導致不同品牌相同設定的實際主線寬不一致。",
+      "observation": "沿用原雲形的飽滿上肩與右側小弧，外框向內描；改為四根漸高聲柱，主雲與聲柱保持原標誌的寬扁節奏。",
+      "visualResult": "雲朵主輪廓補足線寬，四道短棒保留較細比例和分組；極粗時短棒間隙較緊，預設仍可分辨。",
+      "effects": "Opaque brand ink; original filled identity details retained. Outline strokes respond to strokeWidth; Pinterest clearance is recomputed from actual ink. No white covering shapes.",
+      "evidence": [
+        {
+          "path": "docs/review/brand-outline-craft-04/screenshots/batch-2-dark-1.png",
+          "sha256": "471fe7b83f62cd504e07a3c978f2c49504b338115e0234228b860eda3bc94203"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-04/screenshots/batch-2-dark-2.png",
+          "sha256": "50084d177095582a3518d92b2f794c54f6fb5f5d0779ccf1a7539621c22b017a"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-04/screenshots/batch-2-light-1.png",
+          "sha256": "4ac83bf8c518ebc4204bf05b91c83da41b6115a4b102dfdd230897992de3912d"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-04/screenshots/batch-2-light-2.png",
+          "sha256": "bbb43b5777f9b8d485dfe0209fff3c87f8ad842a1d0fdbd55360fe3c2247e59e"
+        }
+      ],
+      "contextEvidence": [
+        {
+          "path": "docs/review/brand-outline-craft-02/screenshots/scenes-dark-1.png",
+          "sha256": "c03dd4cef32d6112bb48dca7da817c3a660fe05fbb40ea51735788d0278d7ef1"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-02/screenshots/scenes-dark-2.png",
+          "sha256": "cf433ec01652ac159a629e7e3b6a8122736aaeb5c40f206179a361b5c0ce027c"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-02/screenshots/scenes-light-1.png",
+          "sha256": "ad69fc900abbcc859076c7a1e1ff1e68ca8e31fe97777edaee32dbe30760a0ea"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-02/screenshots/scenes-light-2.png",
+          "sha256": "198c1a6eed165f7b53752b75d6477c23a09883a99585a77dc43900f819a0e732"
+        }
+      ],
+      "weightReview": {
+        "page": "docs/review/brand-outline-craft-04/index.html",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "method": "Native output widths; minimum/default/maximum visual comparison at light/dark DPR 1/2."
+      },
+      "widthCalibration": {
+        "beforeDefault": {
+          "16": 0.9778,
+          "20": 1.2222,
+          "24": 1.4666
+        },
+        "afterDefault": {
+          "16": 1.25,
+          "20": 1.5,
+          "24": 1.75
+        },
+        "probe": "tests/browser/brand-widths.spec.mjs"
+      }
+    },
+    {
+      "name": "brand-pinterest-outline",
+      "label": "Pinterest Outline",
+      "profile": "standard",
+      "sheet": "brand-outline-craft-04",
+      "status": "visually-reviewed-candidate",
+      "reviewer": "Codex (AI), not user approval",
+      "date": "2026-11-18",
+      "variantsSha256": "f02a35f5bb35be0a6d37447e5c2a8b4cd5fb5fa15e2f42d8bc420e06dfe36fa9",
+      "sourceSha256": "869788f400123460ea3a237721c42458e240d527ef08ac7734ab61e3baa913b4",
+      "beforeVariantsSha256": "64ba57bc4f5ffab26395e6b0eae6d5dabe7646a08551eb8bd74be121e0c1ffa8",
+      "beforeSourceSha256": "b8711ddbc3ddcd2847d83c1d6083e8a6c61840b8fd5b4a22fe6431616c8abcb4",
+      "optical": {
+        "16": {
+          "extent": 14,
+          "dx": 0,
+          "dy": 0
+        },
+        "20": {
+          "extent": 17,
+          "dx": 0,
+          "dy": 0
+        },
+        "24": {
+          "extent": 20,
+          "dx": 0,
+          "dy": 0
+        }
+      },
+      "defect": "光學縮放連同描邊縮放，導致不同品牌相同設定的實際主線寬不一致。",
+      "observation": "左回環延伸完整，再以右側長筆實際墨形向外擴張 1.2 單位扣除；透明缺口隨線寬重新計算。",
+      "visualResult": "圓環與 P 回環、長筆同步校準；左缺口繼續由長筆實際外緣等距扣除，粗細兩端仍透明。",
+      "effects": "Opaque brand ink; original filled identity details retained. Outline strokes respond to strokeWidth; Pinterest clearance is recomputed from actual ink. No white covering shapes.",
+      "evidence": [
+        {
+          "path": "docs/review/brand-outline-craft-04/screenshots/batch-2-dark-1.png",
+          "sha256": "471fe7b83f62cd504e07a3c978f2c49504b338115e0234228b860eda3bc94203"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-04/screenshots/batch-2-dark-2.png",
+          "sha256": "50084d177095582a3518d92b2f794c54f6fb5f5d0779ccf1a7539621c22b017a"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-04/screenshots/batch-2-light-1.png",
+          "sha256": "4ac83bf8c518ebc4204bf05b91c83da41b6115a4b102dfdd230897992de3912d"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-04/screenshots/batch-2-light-2.png",
+          "sha256": "bbb43b5777f9b8d485dfe0209fff3c87f8ad842a1d0fdbd55360fe3c2247e59e"
+        }
+      ],
+      "contextEvidence": [
+        {
+          "path": "docs/review/brand-outline-craft-02/screenshots/scenes-dark-1.png",
+          "sha256": "c03dd4cef32d6112bb48dca7da817c3a660fe05fbb40ea51735788d0278d7ef1"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-02/screenshots/scenes-dark-2.png",
+          "sha256": "cf433ec01652ac159a629e7e3b6a8122736aaeb5c40f206179a361b5c0ce027c"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-02/screenshots/scenes-light-1.png",
+          "sha256": "ad69fc900abbcc859076c7a1e1ff1e68ca8e31fe97777edaee32dbe30760a0ea"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-02/screenshots/scenes-light-2.png",
+          "sha256": "198c1a6eed165f7b53752b75d6477c23a09883a99585a77dc43900f819a0e732"
+        }
+      ],
+      "weightReview": {
+        "page": "docs/review/brand-outline-craft-04/index.html",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "method": "Native output widths; minimum/default/maximum visual comparison at light/dark DPR 1/2."
+      },
+      "widthCalibration": {
+        "beforeDefault": {
+          "16": 0.9625,
+          "20": 1.1687,
+          "24": 1.375
+        },
+        "afterDefault": {
+          "16": 1.25,
+          "20": 1.5,
+          "24": 1.75
+        },
+        "probe": "tests/browser/brand-widths.spec.mjs"
+      }
+    },
+    {
+      "name": "brand-tiktok-outline",
+      "label": "TikTok Outline",
+      "profile": "standard",
+      "sheet": "brand-outline-craft-04",
+      "status": "visually-reviewed-candidate",
+      "reviewer": "Codex (AI), not user approval",
+      "date": "2026-11-18",
+      "variantsSha256": "237b642be7d9d9f1748a2ca03787e46992b7b5822d8fe653cf84934c8f1aeff7",
+      "sourceSha256": "ab2288f076ce7fa2ea2a3e5525086a269565175d9f03094def6ef691b8119de0",
+      "beforeVariantsSha256": "567b84237de8b1644364418de898a294bbd50930e7c28b9c7a1b276c76af5ab0",
+      "beforeSourceSha256": "a19d35ce8923e0e78efe0b89c738b7c90414737648178b77303c0bebd549760e",
+      "optical": {
+        "16": {
+          "extent": 14,
+          "dx": 0,
+          "dy": 0
+        },
+        "20": {
+          "extent": 17,
+          "dx": 0,
+          "dy": 0
+        },
+        "24": {
+          "extent": 20,
+          "dx": 0,
+          "dy": 0
+        }
+      },
+      "defect": "光學縮放連同描邊縮放，導致不同品牌相同設定的實際主線寬不一致。",
+      "observation": "保留原音符的長直幹、左斷面與右旗曲線；沿原輪廓中心描線，補足實際線寬並給直幹內孔更多空間。",
+      "visualResult": "由內描改沿原輪廓中心描線，為較厚的雙邊輪廓騰出直幹空腔；機身弧線、左斷面及右旗不改形。",
+      "effects": "Opaque brand ink; original filled identity details retained. Outline strokes respond to strokeWidth; Pinterest clearance is recomputed from actual ink. No white covering shapes.",
+      "evidence": [
+        {
+          "path": "docs/review/brand-outline-craft-04/screenshots/batch-3-dark-1.png",
+          "sha256": "3227c3e9b3e0c416eea99b3733abfb0e0dfef8256b836c482b9d1b2481b50c89"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-04/screenshots/batch-3-dark-2.png",
+          "sha256": "ee0cd96671e24afe915b4f0d8000d033d4bebe8acace6311f43a808983ef432f"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-04/screenshots/batch-3-light-1.png",
+          "sha256": "27e3f8861b24b82ac4070d5f849d6c0b8a98c526471b8ba6f5ef35a518cb2964"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-04/screenshots/batch-3-light-2.png",
+          "sha256": "97dcee9b78b7ea28fcd9eedfda89bb27d82793ac41647f24a06eab3714ef1c20"
+        }
+      ],
+      "contextEvidence": [
+        {
+          "path": "docs/review/brand-outline-craft-02/screenshots/scenes-dark-1.png",
+          "sha256": "c03dd4cef32d6112bb48dca7da817c3a660fe05fbb40ea51735788d0278d7ef1"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-02/screenshots/scenes-dark-2.png",
+          "sha256": "cf433ec01652ac159a629e7e3b6a8122736aaeb5c40f206179a361b5c0ce027c"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-02/screenshots/scenes-light-1.png",
+          "sha256": "ad69fc900abbcc859076c7a1e1ff1e68ca8e31fe97777edaee32dbe30760a0ea"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-02/screenshots/scenes-light-2.png",
+          "sha256": "198c1a6eed165f7b53752b75d6477c23a09883a99585a77dc43900f819a0e732"
+        }
+      ],
+      "weightReview": {
+        "page": "docs/review/brand-outline-craft-04/index.html",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "method": "Native output widths; minimum/default/maximum visual comparison at light/dark DPR 1/2."
+      },
+      "widthCalibration": {
+        "beforeDefault": {
+          "16": 0.8167,
+          "20": 0.9917,
+          "24": 1.1667
+        },
+        "afterDefault": {
+          "16": 1.25,
+          "20": 1.5,
+          "24": 1.75
+        },
+        "probe": "tests/browser/brand-widths.spec.mjs"
+      }
+    },
+    {
+      "name": "brand-twitch-outline",
+      "label": "Twitch Outline",
+      "profile": "standard",
+      "sheet": "brand-outline-craft-04",
+      "status": "visually-reviewed-candidate",
+      "reviewer": "Codex (AI), not user approval",
+      "date": "2026-11-18",
+      "variantsSha256": "6edd163ccb06195f1557f996b6168a0b505ddbab6353ea508115ab4d3ac6edee",
+      "sourceSha256": "3eab9eeb153054d25979aa4480db8554591e7c38596f26ce0e4cc57b0edd16c8",
+      "beforeVariantsSha256": "63c3410fd949969c3f49c0891089ebc4e31dcda2045b66430b8f5aea90c20277",
+      "beforeSourceSha256": "9be9f5afaef6daf7e18072a062d8b545d2551394cc68d3b6fb49b3efc47c6a7f",
+      "optical": {
+        "16": {
+          "extent": 14,
+          "dx": 0,
+          "dy": 0
+        },
+        "20": {
+          "extent": 17,
+          "dx": 0,
+          "dy": 0
+        },
+        "24": {
+          "extent": 20,
+          "dx": 0,
+          "dy": 0
+        }
+      },
+      "defect": "光學縮放連同描邊縮放，導致不同品牌相同設定的實際主線寬不一致。",
+      "observation": "保留原 Glitch 左上斜切、右下長斜面和尾尖；兩道直槽回到原矩形及相對位置，所有外邊界保持原稿。",
+      "visualResult": "外輪廓補足主線寬，兩個原實心矩形槽保持固定；斜切、尾尖的辨識未因線寬校準丟失。",
+      "effects": "Opaque brand ink; original filled identity details retained. Outline strokes respond to strokeWidth; Pinterest clearance is recomputed from actual ink. No white covering shapes.",
+      "evidence": [
+        {
+          "path": "docs/review/brand-outline-craft-04/screenshots/batch-3-dark-1.png",
+          "sha256": "3227c3e9b3e0c416eea99b3733abfb0e0dfef8256b836c482b9d1b2481b50c89"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-04/screenshots/batch-3-dark-2.png",
+          "sha256": "ee0cd96671e24afe915b4f0d8000d033d4bebe8acace6311f43a808983ef432f"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-04/screenshots/batch-3-light-1.png",
+          "sha256": "27e3f8861b24b82ac4070d5f849d6c0b8a98c526471b8ba6f5ef35a518cb2964"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-04/screenshots/batch-3-light-2.png",
+          "sha256": "97dcee9b78b7ea28fcd9eedfda89bb27d82793ac41647f24a06eab3714ef1c20"
+        }
+      ],
+      "contextEvidence": [
+        {
+          "path": "docs/review/brand-outline-craft-02/screenshots/scenes-dark-1.png",
+          "sha256": "c03dd4cef32d6112bb48dca7da817c3a660fe05fbb40ea51735788d0278d7ef1"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-02/screenshots/scenes-dark-2.png",
+          "sha256": "cf433ec01652ac159a629e7e3b6a8122736aaeb5c40f206179a361b5c0ce027c"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-02/screenshots/scenes-light-1.png",
+          "sha256": "ad69fc900abbcc859076c7a1e1ff1e68ca8e31fe97777edaee32dbe30760a0ea"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-02/screenshots/scenes-light-2.png",
+          "sha256": "198c1a6eed165f7b53752b75d6477c23a09883a99585a77dc43900f819a0e732"
+        }
+      ],
+      "weightReview": {
+        "page": "docs/review/brand-outline-craft-04/index.html",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "method": "Native output widths; minimum/default/maximum visual comparison at light/dark DPR 1/2."
+      },
+      "widthCalibration": {
+        "beforeDefault": {
+          "16": 0.9917,
+          "20": 1.2042,
+          "24": 1.4167
+        },
+        "afterDefault": {
+          "16": 1.25,
+          "20": 1.5,
+          "24": 1.75
+        },
+        "probe": "tests/browser/brand-widths.spec.mjs"
+      }
+    },
+    {
+      "name": "brand-vimeo-outline",
+      "label": "Vimeo Outline",
+      "profile": "standard",
+      "sheet": "brand-outline-craft-04",
+      "status": "visually-reviewed-candidate",
+      "reviewer": "Codex (AI), not user approval",
+      "date": "2026-11-18",
+      "variantsSha256": "4a5de3fc1f11bb5435d9a5476086388bbd88864172d18101c5279d2f702669bb",
+      "sourceSha256": "ad72b724d2015b4ac7ea46a8fadbf5b0847f567ec3bfd925ca2d13c83bebc57f",
+      "beforeVariantsSha256": "e9cfa0a2bed633a5e838a4fd931b7c0202c93cfd2612c9b510cb3fc285eb135d",
+      "beforeSourceSha256": "4a6d6fcf54993ef98d727b15eba21ec5def621de0f7a75082f33f6eb54b0fe49",
+      "optical": {
+        "16": {
+          "extent": 14,
+          "dx": 0,
+          "dy": 0
+        },
+        "20": {
+          "extent": 17,
+          "dx": 0,
+          "dy": 0
+        },
+        "24": {
+          "extent": 20,
+          "dx": 0,
+          "dy": 0
+        }
+      },
+      "defect": "光學縮放連同描邊縮放，導致不同品牌相同設定的實際主線寬不一致。",
+      "observation": "保留原 v 字的左端上挑、右側反彎和下腹收束；改沿輪廓中心描線，統一實際線寬並保留內部空腔。",
+      "visualResult": "由內描改沿原輪廓中心描線；左上挑與右上反彎仍跟原標誌，較粗時下腹內部保留空腔。",
+      "effects": "Opaque brand ink; original filled identity details retained. Outline strokes respond to strokeWidth; Pinterest clearance is recomputed from actual ink. No white covering shapes.",
+      "evidence": [
+        {
+          "path": "docs/review/brand-outline-craft-04/screenshots/batch-3-dark-1.png",
+          "sha256": "3227c3e9b3e0c416eea99b3733abfb0e0dfef8256b836c482b9d1b2481b50c89"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-04/screenshots/batch-3-dark-2.png",
+          "sha256": "ee0cd96671e24afe915b4f0d8000d033d4bebe8acace6311f43a808983ef432f"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-04/screenshots/batch-3-light-1.png",
+          "sha256": "27e3f8861b24b82ac4070d5f849d6c0b8a98c526471b8ba6f5ef35a518cb2964"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-04/screenshots/batch-3-light-2.png",
+          "sha256": "97dcee9b78b7ea28fcd9eedfda89bb27d82793ac41647f24a06eab3714ef1c20"
+        }
+      ],
+      "contextEvidence": [
+        {
+          "path": "docs/review/brand-outline-craft-02/screenshots/scenes-dark-1.png",
+          "sha256": "c03dd4cef32d6112bb48dca7da817c3a660fe05fbb40ea51735788d0278d7ef1"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-02/screenshots/scenes-dark-2.png",
+          "sha256": "cf433ec01652ac159a629e7e3b6a8122736aaeb5c40f206179a361b5c0ce027c"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-02/screenshots/scenes-light-1.png",
+          "sha256": "ad69fc900abbcc859076c7a1e1ff1e68ca8e31fe97777edaee32dbe30760a0ea"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-02/screenshots/scenes-light-2.png",
+          "sha256": "198c1a6eed165f7b53752b75d6477c23a09883a99585a77dc43900f819a0e732"
+        }
+      ],
+      "weightReview": {
+        "page": "docs/review/brand-outline-craft-04/index.html",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "method": "Native output widths; minimum/default/maximum visual comparison at light/dark DPR 1/2."
+      },
+      "widthCalibration": {
+        "beforeDefault": {
+          "16": 0.7583,
+          "20": 0.9208,
+          "24": 1.0833
+        },
+        "afterDefault": {
+          "16": 1.25,
+          "20": 1.5,
+          "24": 1.75
+        },
+        "probe": "tests/browser/brand-widths.spec.mjs"
+      }
+    },
+    {
+      "name": "brand-patreon-outline",
+      "label": "Patreon Outline",
+      "profile": "standard",
+      "sheet": "brand-outline-craft-04",
+      "status": "visually-reviewed-candidate",
+      "reviewer": "Codex (AI), not user approval",
+      "date": "2026-11-18",
+      "variantsSha256": "f73de9a44e24ad0ffd0bcb412429ea378af6656591263598396387e827fa9245",
+      "sourceSha256": "0e8bc1da17d619011ea48d33baba530381ed88d8b2ff424319e7bcd90838330a",
+      "beforeVariantsSha256": "3f04d0586fa8dc745370c3fe390df40c52353dc3abe7ba8a8121cffd48187143",
+      "beforeSourceSha256": "a7fbfa7652ba10ea0120aee2166fd336167d2ab74f349053baeeef29ffe19729",
+      "optical": {
+        "16": {
+          "extent": 14,
+          "dx": 0,
+          "dy": 0
+        },
+        "20": {
+          "extent": 17,
+          "dx": 0,
+          "dy": 0
+        },
+        "24": {
+          "extent": 20,
+          "dx": 0,
+          "dy": 0
+        }
+      },
+      "defect": "光學縮放連同描邊縮放，導致不同品牌相同設定的實際主線寬不一致。",
+      "observation": "按原塊形向內描；保留左側緩直、右上鼓腹與下方偏左收束，讓線條張力來自原曲率。",
+      "visualResult": "不對稱塊形輪廓整體補足線寬，保留右上圓肩和偏左下收束；沒有將輪廓規整成通用字母。",
+      "effects": "Opaque brand ink; original filled identity details retained. Outline strokes respond to strokeWidth; Pinterest clearance is recomputed from actual ink. No white covering shapes.",
+      "evidence": [
+        {
+          "path": "docs/review/brand-outline-craft-04/screenshots/batch-3-dark-1.png",
+          "sha256": "3227c3e9b3e0c416eea99b3733abfb0e0dfef8256b836c482b9d1b2481b50c89"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-04/screenshots/batch-3-dark-2.png",
+          "sha256": "ee0cd96671e24afe915b4f0d8000d033d4bebe8acace6311f43a808983ef432f"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-04/screenshots/batch-3-light-1.png",
+          "sha256": "27e3f8861b24b82ac4070d5f849d6c0b8a98c526471b8ba6f5ef35a518cb2964"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-04/screenshots/batch-3-light-2.png",
+          "sha256": "97dcee9b78b7ea28fcd9eedfda89bb27d82793ac41647f24a06eab3714ef1c20"
+        }
+      ],
+      "contextEvidence": [
+        {
+          "path": "docs/review/brand-outline-craft-02/screenshots/scenes-dark-1.png",
+          "sha256": "c03dd4cef32d6112bb48dca7da817c3a660fe05fbb40ea51735788d0278d7ef1"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-02/screenshots/scenes-dark-2.png",
+          "sha256": "cf433ec01652ac159a629e7e3b6a8122736aaeb5c40f206179a361b5c0ce027c"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-02/screenshots/scenes-light-1.png",
+          "sha256": "ad69fc900abbcc859076c7a1e1ff1e68ca8e31fe97777edaee32dbe30760a0ea"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-02/screenshots/scenes-light-2.png",
+          "sha256": "198c1a6eed165f7b53752b75d6477c23a09883a99585a77dc43900f819a0e732"
+        }
+      ],
+      "weightReview": {
+        "page": "docs/review/brand-outline-craft-04/index.html",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "method": "Native output widths; minimum/default/maximum visual comparison at light/dark DPR 1/2."
+      },
+      "widthCalibration": {
+        "beforeDefault": {
+          "16": 0.9625,
+          "20": 1.1687,
+          "24": 1.375
+        },
+        "afterDefault": {
+          "16": 1.25,
+          "20": 1.5,
+          "24": 1.75
+        },
+        "probe": "tests/browser/brand-widths.spec.mjs"
+      }
+    },
+    {
+      "name": "brand-telegram-outline",
+      "label": "Telegram Outline",
+      "profile": "solid",
+      "sheet": "brand-outline-craft-04",
+      "status": "visually-reviewed-candidate",
+      "reviewer": "Codex (AI), not user approval",
+      "date": "2026-11-18",
+      "variantsSha256": "f36f4ee0d6d43a4646da5508d6586026c6ca40c2503550688868cbcd2cfafa24",
+      "sourceSha256": "35789abe620f351a95bee118a3af1aab52328b0e52e5c3241e9aeb7c66648b7b",
+      "beforeVariantsSha256": "31f908a3c9e00444f9fdab1b26e30f2a96692415e0d10dfd71bef6bc9548c9ff",
+      "beforeSourceSha256": "096c0a3a403a23e7ccf5a2b9083fcadb51a80d2afb80a3e2214c791d501cb484",
+      "optical": {
+        "16": {
+          "extent": 14,
+          "dx": 0,
+          "dy": 0
+        },
+        "20": {
+          "extent": 17,
+          "dx": 0,
+          "dy": 0
+        },
+        "24": {
+          "extent": 20,
+          "dx": 0,
+          "dy": 0
+        }
+      },
+      "defect": "光學縮放連同描邊縮放，導致不同品牌相同設定的實際主線寬不一致。",
+      "observation": "恢復原圓底直徑，圓框向內描至 1.65；紙飛機路徑維持原狀，機鼻與右側圓框之間的留白恢復。",
+      "visualResult": "圓框補足主線寬，紙飛機仍用固定原始填色路徑；預設及極粗框與機鼻仍分開。",
+      "effects": "Opaque brand ink; original filled identity details retained. Outline strokes respond to strokeWidth; Pinterest clearance is recomputed from actual ink. No white covering shapes.",
+      "evidence": [
+        {
+          "path": "docs/review/brand-outline-craft-04/screenshots/batch-3-dark-1.png",
+          "sha256": "3227c3e9b3e0c416eea99b3733abfb0e0dfef8256b836c482b9d1b2481b50c89"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-04/screenshots/batch-3-dark-2.png",
+          "sha256": "ee0cd96671e24afe915b4f0d8000d033d4bebe8acace6311f43a808983ef432f"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-04/screenshots/batch-3-light-1.png",
+          "sha256": "27e3f8861b24b82ac4070d5f849d6c0b8a98c526471b8ba6f5ef35a518cb2964"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-04/screenshots/batch-3-light-2.png",
+          "sha256": "97dcee9b78b7ea28fcd9eedfda89bb27d82793ac41647f24a06eab3714ef1c20"
+        }
+      ],
+      "contextEvidence": [
+        {
+          "path": "docs/review/brand-outline-craft-02/screenshots/scenes-dark-1.png",
+          "sha256": "c03dd4cef32d6112bb48dca7da817c3a660fe05fbb40ea51735788d0278d7ef1"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-02/screenshots/scenes-dark-2.png",
+          "sha256": "cf433ec01652ac159a629e7e3b6a8122736aaeb5c40f206179a361b5c0ce027c"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-02/screenshots/scenes-light-1.png",
+          "sha256": "ad69fc900abbcc859076c7a1e1ff1e68ca8e31fe97777edaee32dbe30760a0ea"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-02/screenshots/scenes-light-2.png",
+          "sha256": "198c1a6eed165f7b53752b75d6477c23a09883a99585a77dc43900f819a0e732"
+        }
+      ],
+      "weightReview": {
+        "page": "docs/review/brand-outline-craft-04/index.html",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "method": "Native output widths; minimum/default/maximum visual comparison at light/dark DPR 1/2."
+      },
+      "widthCalibration": {
+        "beforeDefault": {
+          "16": 0.9625,
+          "20": 1.1687,
+          "24": 1.375
+        },
+        "afterDefault": {
+          "16": 1.25,
+          "20": 1.5,
+          "24": 1.75
+        },
+        "probe": "tests/browser/brand-widths.spec.mjs"
+      }
+    },
+    {
+      "name": "brand-line-outline",
+      "label": "LINE Outline",
+      "profile": "standard",
+      "sheet": "brand-outline-craft-04",
+      "status": "visually-reviewed-candidate",
+      "reviewer": "Codex (AI), not user approval",
+      "date": "2026-11-18",
+      "variantsSha256": "8eafca176dd31f5c10f852b4d1933ee7247943f7c8be3797603dc228cb4bff8b",
+      "sourceSha256": "9e32be7048e472ba782d77b74b1a2144ea3bf80943920e54d6e59143c80eefdf",
+      "beforeVariantsSha256": "fccc2ce009de8a8000272dfe30c01373b89dd37f3a1b60d428bd33d89d1d0ee0",
+      "beforeSourceSha256": "2b45c537e3772b516e6fddbac74b2135c220c4a6fb3e4d9a5f66b5c8a2d91890",
+      "optical": {
+        "16": {
+          "extent": 14,
+          "dx": 0,
+          "dy": 0
+        },
+        "20": {
+          "extent": 17.5,
+          "dx": 0,
+          "dy": 0
+        },
+        "24": {
+          "extent": 21,
+          "dx": 0,
+          "dy": 0
+        }
+      },
+      "defect": "光學縮放連同描邊縮放，導致不同品牌相同設定的實際主線寬不一致。",
+      "observation": "保留原氣泡與尾部外邊界，框線向內描至 1.55；四字形維持原路徑，恢復字標與氣泡的相對比例。",
+      "visualResult": "氣泡框補足主線寬，LINE 字樣維持原比例；尾部與字標在 16/20/24 可分辨。",
+      "effects": "Opaque brand ink; original filled identity details retained. Outline strokes respond to strokeWidth; Pinterest clearance is recomputed from actual ink. No white covering shapes.",
+      "evidence": [
+        {
+          "path": "docs/review/brand-outline-craft-04/screenshots/batch-3-dark-1.png",
+          "sha256": "3227c3e9b3e0c416eea99b3733abfb0e0dfef8256b836c482b9d1b2481b50c89"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-04/screenshots/batch-3-dark-2.png",
+          "sha256": "ee0cd96671e24afe915b4f0d8000d033d4bebe8acace6311f43a808983ef432f"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-04/screenshots/batch-3-light-1.png",
+          "sha256": "27e3f8861b24b82ac4070d5f849d6c0b8a98c526471b8ba6f5ef35a518cb2964"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-04/screenshots/batch-3-light-2.png",
+          "sha256": "97dcee9b78b7ea28fcd9eedfda89bb27d82793ac41647f24a06eab3714ef1c20"
+        }
+      ],
+      "contextEvidence": [
+        {
+          "path": "docs/review/brand-outline-craft-02/screenshots/scenes-dark-1.png",
+          "sha256": "c03dd4cef32d6112bb48dca7da817c3a660fe05fbb40ea51735788d0278d7ef1"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-02/screenshots/scenes-dark-2.png",
+          "sha256": "cf433ec01652ac159a629e7e3b6a8122736aaeb5c40f206179a361b5c0ce027c"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-02/screenshots/scenes-light-1.png",
+          "sha256": "ad69fc900abbcc859076c7a1e1ff1e68ca8e31fe97777edaee32dbe30760a0ea"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-02/screenshots/scenes-light-2.png",
+          "sha256": "198c1a6eed165f7b53752b75d6477c23a09883a99585a77dc43900f819a0e732"
+        }
+      ],
+      "weightReview": {
+        "page": "docs/review/brand-outline-craft-04/index.html",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "method": "Native output widths; minimum/default/maximum visual comparison at light/dark DPR 1/2."
+      },
+      "widthCalibration": {
+        "beforeDefault": {
+          "16": 0.9042,
+          "20": 1.1302,
+          "24": 1.3563
+        },
+        "afterDefault": {
+          "16": 1.25,
+          "20": 1.5,
+          "24": 1.75
+        },
+        "probe": "tests/browser/brand-widths.spec.mjs"
+      }
     }
   ],
   "additionsReview": {
@@ -1467,5 +3123,10 @@
       "brand-vite"
     ],
     "method": "Source side-by-side; all nine native size/corner outputs, light/dark DPR 1 and DPR 2 diagnostic inspection; no human recognition study."
+  },
+  "outlineCraftReview": {
+    "date": "2026-11-18",
+    "path": "docs/review/brand-outline-craft-04/index.html",
+    "scope": "18 outline native stroke widths calibrated; original marks and Master preserved."
   }
 }

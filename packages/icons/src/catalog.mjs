@@ -52,6 +52,6 @@ const core = groups.flatMap(([category,categoryLabel,icons])=>icons.map(([name,l
 })));
 const mirrored=new Set(['arrow-left','arrow-right','chevron-left','chevron-right','chevrons-left','chevrons-right','undo','redo']);
 const extra=scope.map(entry=>({...entry,keywords:entry.name.split('-'),pilot:false,component:entry.name.split('-').map(x=>x[0].toUpperCase()+x.slice(1)).join('')+'Icon',license:'MIT',status:'alpha'}));
-export const catalog=[...core,...extra,...brandCatalog].map(entry=>({...entry,direction:mirrored.has(entry.name)?'mirror':'fixed',keywords:[...new Set([...entry.keywords,...(aliases[entry.name]||[])])],concept:entry.aliasOf||conceptOf[entry.name]||entry.name}));
+export const catalog=[...core,...extra,...brandCatalog].map(entry=>({...entry,direction:mirrored.has(entry.name)?'mirror':'fixed',keywords:[...new Set([...entry.keywords,...(aliases[entry.name]||[])])],concept:entry.aliasOf||entry.styleOf||conceptOf[entry.name]||entry.name}));
 export const conceptCount=new Set(catalog.map(x=>x.concept)).size;
 export const categories=[...new Map(catalog.map(x=>[x.category,{id:x.category,label:x.categoryLabel}])).values()];

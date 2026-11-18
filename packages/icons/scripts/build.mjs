@@ -19,7 +19,7 @@ const {brandNotice}=await import('../src/brands.mjs');
 const started=performance.now();
 // Release/reproducibility builds remain unconditional; dev opts into this cache.
 const cache=process.argv.includes('--cache')&&!process.env.TURBO_HASH ? await contentCache({
-  inputs:['packages/icons/src','packages/icons/scripts','packages/icons/package.json','scripts/lib/content-cache.mjs','scripts/lib/generation-lock.mjs','references/manifest.json','LICENSE','THIRD_PARTY_NOTICES.md','licenses','bun.lock'].map(path=>resolve(repo,path)),
+  inputs:['packages/icons/src','packages/icons/scripts','packages/icons/package.json','scripts/lib/content-cache.mjs','scripts/lib/generation-lock.mjs','scripts/lib/brand-ink.mjs','references/manifest.json','LICENSE','THIRD_PARTY_NOTICES.md','licenses','bun.lock'].map(path=>resolve(repo,path)),
   outputs:['dist','icons','LICENSE','THIRD_PARTY_NOTICES.md','licenses'].map(path=>resolve(root,path)),
   file:resolve(repo,'work/cache/icons.json'),force:process.argv.includes('--force')
 }) : undefined;
@@ -71,7 +71,7 @@ for(const entry of catalog){
   await put(`dist/data/${entry.name}.d.ts`,`import type { IconDefinition } from '../runtime.js';\nexport const ${dataName}: IconDefinition;\n`);
   for(const size of sizes)for(const corner of corners){
     const svg=renderSvg(definition,{size,opticalSize:size,corner});
-    const notice='<!--\n'+license.trim().replace('Copyright (c) 2026 Master and contributors','Copyright (c) 2026 Master and contributors'+(preservedNotices[entry.name]?'\n'+preservedNotices[entry.name]:''))+(adaptedSources[entry.name]?'\n\n'+sourceNotice(entry.name).trim():'')+(entry.rendering==='brand-silhouette'?'\n\n'+brandNotice(entry):'')+'\n-->\n';
+    const notice='<!--\n'+license.trim().replace('Copyright (c) 2026 Master and contributors','Copyright (c) 2026 Master and contributors'+(preservedNotices[entry.name]?'\n'+preservedNotices[entry.name]:''))+(adaptedSources[entry.name]?'\n\n'+sourceNotice(entry.name).trim():'')+(entry.category==='brands'?'\n\n'+brandNotice(entry):'')+'\n-->\n';
     if(!archiveSvg)await put(`icons/${size}/${corner}/${entry.name}.svg`,notice+svg+'\n');
     bundles[`${size}-${corner}`][`${entry.name}.svg`]=strToU8(notice+svg+'\n');
     inventory.push({name:entry.name,opticalSize:size,corner,path:`icons/${size}/${corner}/${entry.name}.svg`,sha256:hash(notice+svg+'\n')});
@@ -86,7 +86,7 @@ await put('dist/runtime.js',await readFile(resolve(root,'src/runtime.mjs'),'utf8
 await put('dist/runtime.d.ts',await readFile(resolve(root,'src/runtime.d.ts'),'utf8'));
 for(const extension of ['mjs','d.ts'])await put(`dist/presentation.${extension==='mjs'?'js':extension}`,await readFile(resolve(root,`src/presentation.${extension}`),'utf8'));
 const provenance=catalog.map(entry=>{
-  if(entry.rendering==='brand-silhouette')return {...entry,source:{...entry.source,notice:brandNotice(entry)},variants:9};
+  if(entry.category==='brands')return {...entry,source:{...entry.source,notice:brandNotice(entry)},variants:9};
   if(adaptedSources[entry.name])return {...entry,source:{...adaptedSources[entry.name],notice:sourceNotice(entry.name)},variants:9};
   const ref=preservedNotices[entry.name]?upstream.find(x=>x.name===entry.name):undefined;
   if(preservedNotices[entry.name]&&!ref)throw new Error(`Missing preserved source: ${entry.name}`);

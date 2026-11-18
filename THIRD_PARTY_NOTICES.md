@@ -652,3 +652,16 @@ Unmodified LibreOffice Colibre `lc_pastetransposed.svg`, commit `afbbd0df0edb6d4
 ## HTML5 · fresh brand integration
 
 HTML5 Logo by [W3C](https://www.w3.org/), [CC-BY-3.0](https://creativecommons.org/licenses/by/3.0/). Official source: https://www.w3.org/html/logo/downloads/HTML5_1Color_Black.svg (retrieved 2026-11-18; checksum in `packages/icons/src/brands.json`). Full license: `licenses/html5-CC-BY-3.0.txt`. Master omits the wordmark and numeral shading, combines the original shield paths in one opaque currentColor silhouette, and uniformly scales/centers it for small sizes. The original shield and numeral boundaries are retained. The mark is not a W3C conformance or validation badge. No affiliation or endorsement is implied. No rejected session geometry was retrieved.
+
+### WeChat Outline
+
+The optional WeChat outline uses Tencent TDesign Icons’ [logo-wechat-stroke](https://github.com/Tencent/tdesign-icons/blob/8bbfc0d06237828d8843d47ca71992423071f4be/svg/logo-wechat-stroke.svg). Copyright (c) 2021-present TDesign. The original SVG is preserved as a reference. Master redraws the bubble proportions, curves, tails and eye positions against the existing brand mark, retaining TDesign’s overlapping-bubble construction and attribution. The [MIT license](licenses/tdesign-MIT.txt) accompanies the SVG and packages. WeChat is a Tencent brand.
+
+
+## Social brand outlines
+
+Optional outline artwork for GitHub, YouTube, Facebook, LinkedIn, Mastodon, Reddit, SoundCloud, Pinterest, TikTok, Twitch, Vimeo and Patreon adapts individual [Tabler Icons](https://github.com/tabler/tabler-icons/tree/85e870dbe8680c2d6deefd062122d30ef1544a41/icons/outline) at commit 85e870dbe8680c2d6deefd062122d30ef1544a41. Copyright (c) 2020-2026 Paweł Kuna. MIT; complete license: [licenses/tabler-brands-MIT.txt](licenses/tabler-brands-MIT.txt). Master refines native weights, placement, curves and proportions. The existing pinned Simple Icons brand contours also inform the outlines; `source.identitySource` records this reference separately from the Tabler construction source. Several outer boundaries are retained exactly with ink placed inside the silhouette. Stroke ink is baked into evenodd paths at each supported weight. The full notice travels with each distributed SVG.
+
+GitLab, Discord, Spotify, Telegram and LINE outlines are Master adaptations of the existing pinned Simple Icons CC0 artwork. GitLab retains its outer contour; Discord retains its head boundary and eye centers with reduced solid eyes; Spotify retains its three wave shapes inside an outlined circle; Telegram retains its plane inside an outlined circle; LINE retains the four letters and outlines the bubble. Unmodified upstream files, editable strokes, finished paths and SHA-256 values are retained in references/brand-outlines and packages/icons/src/brands.json. Master modifications are MIT; upstream CC0 terms remain included.
+
+These optional interpretations are not official brand assets or an assertion of brand approval. Code licenses do not grant trademark rights. Existing monochrome marks remain the default. See [current design decisions](docs/review/brand-outline-craft-03/decisions.md) for the full selection and rejected candidates.

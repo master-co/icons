@@ -1,0 +1,77 @@
+{
+  "date": "2026-11-18",
+  "packageTests": {
+    "passed": 63,
+    "failed": 0
+  },
+  "browserTests": {
+    "site": 33,
+    "offlineGallery": 2,
+    "browsers": [
+      "chromium",
+      "firefox",
+      "webkit"
+    ],
+    "visualCaptureRerun": 3
+  },
+  "typeAndContractChecks": {
+    "turboTasksPassed": 13,
+    "frameworkTypes": "passed",
+    "siteTypes": "passed",
+    "masterUIContracts": "passed"
+  },
+  "validation": {
+    "namedDrawings": 942,
+    "svgHashes": 8478,
+    "licensedZipFiles": 9,
+    "result": "passed"
+  },
+  "downloads": {
+    "assetsMatched": 810,
+    "extremeWeightZipEntriesMatched": 108,
+    "zipFiles": 6
+  },
+  "visualChecks": {
+    "sizes": [
+      16,
+      20,
+      24
+    ],
+    "dpr": [
+      1,
+      2
+    ],
+    "themes": [
+      "light",
+      "dark"
+    ],
+    "weights": [
+      "minimum",
+      "default",
+      "maximum"
+    ],
+    "reviewer": "Codex; not user approval"
+  },
+  "siteCaptures": [
+    {
+      "path": "docs/review/brand-outline-craft-03/screenshots/site-list-light.png",
+      "sha256": "644171cd22c9b38f83eb977b640620a5db161174b37d6e1e7b4f1e38c3e3b95c"
+    },
+    {
+      "path": "docs/review/brand-outline-craft-03/screenshots/site-list-dark.png",
+      "sha256": "2d9da90249a51245ff3d9842dc1c12b81b1a9be6cca39898e9173b10d537f91f"
+    },
+    {
+      "path": "docs/review/brand-outline-craft-03/screenshots/site-detail-light-narrow.png",
+      "sha256": "0319117c9e3a2e2f73c52709038f79a56eeb49bc490887ec1840cd4514d0989e"
+    },
+    {
+      "path": "docs/review/brand-outline-craft-03/screenshots/site-detail-dark-narrow.png",
+      "sha256": "3d6d74de2ecaa06ce38d2754b6cc9eeb9b30c09cf516778c6779a151b4a569e5"
+    }
+  ],
+  "constraints": {
+    "masterOutline": false,
+    "openaiChatgptIdentityCards": 1
+  }
+}

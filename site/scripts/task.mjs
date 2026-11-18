@@ -2,6 +2,7 @@ import '../../scripts/check-site-node.mjs'
 import {execFileSync} from 'node:child_process'
 import {fileURLToPath} from 'node:url'
 import {runTurbo} from '../../scripts/lib/turbo.mjs'
+import {lockGeneration} from '../../scripts/lib/generation-lock.mjs'
 const [task,...args]=process.argv.slice(2)
 if(!['build','prepare-site','type-check'].includes(task))throw new Error(`Unknown site task: ${task}`)
 if(!process.env.TURBO_HASH){
@@ -11,7 +12,12 @@ if(!process.env.TURBO_HASH){
  const run=(command,args)=>execFileSync(command,args,{cwd,stdio:'inherit'})
  const astro=fileURLToPath(new URL('./bin/astro.mjs',import.meta.resolve('astro/package.json')))
  if(task==='prepare-site')run(process.execPath,['--import','tsx','scripts/prepare.ts',...args])
- if(task==='build')run(process.execPath,[astro,'build',...args])
+ if(task==='build'){
+  // Astro copies public/ into out/. Keep the dev source watcher from replacing
+  // that tree midway through the copy, which otherwise drops entire stroke sets.
+  await lockGeneration(fileURLToPath(new URL('../../',import.meta.url)))
+  run(process.execPath,[astro,'build',...args])
+ }
  if(task==='type-check'){
   run(process.execPath,[astro,'sync'])
   run('bun',['x','--no-install','astro-check','--tsconfig','tsconfig.json',...args])

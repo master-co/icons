@@ -1,3 +1,5 @@
+import {collectionCards} from '../scripts/lib/collection-cards.mjs';
+import {parseStroke, clampStroke, strokeRanges, strokeDefinition, svgToJsx} from '../scripts/lib/stroke-width.mjs';
 import {handleExpansionClick,handleExpansionInput} from './expansion-scenarios.js';
 import {handleProductivityClick} from './productivity-scenarios.js';
 import {scenarioMarkup,scenarios} from './scenarios.js';
@@ -10,11 +12,14 @@ const data=embedded ? JSON.parse(strFromU8(decompressSync(Uint8Array.from(atob(e
 globalThis.MASTER_ICONS_DATA=data;
 const {catalog,definitions,references,license}=data;
 const iconByName=new Map(catalog.icons.map(x=>[x.name,x]));
+const cards = collectionCards(catalog.icons);
+const cardsByName = new Map(cards.map(card => [card.name, card]));
+const browseEntries = () => state.view === 'reference' ? catalog.icons : cards;
 const params=new URLSearchParams(location.search);
 const valid=(value,values,fallback)=>values.includes(value)?value:fallback;
-const state={scenario:valid(params.get('scenario'),scenarios.map(x=>x[0]),'dashboard'),corner:valid(params.get('corner'),catalog.corners,'soft'),size:valid(Number(params.get('size')),catalog.sizes,24),view:valid(params.get('view'),['library','optical','context','reference'],'library'),category:valid(params.get('category'),['all','pilot',...catalog.categories.map(c=>c.id)],'all'),query:params.get('q')||'',selected:null,page:Math.max(1,Number(params.get('page'))||1)};
+const state={stroke:parseStroke(params.get('stroke')),scenario:valid(params.get('scenario'),scenarios.map(x=>x[0]),'dashboard'),corner:valid(params.get('corner'),catalog.corners,'soft'),size:valid(Number(params.get('size')),catalog.sizes,24),view:valid(params.get('view'),['library','optical','context','reference'],'library'),category:valid(params.get('category'),['all','pilot',...catalog.categories.map(c=>c.id)],'all'),query:params.get('q')||'',selected:null,page:Math.max(1,Number(params.get('page'))||1)};
 const cornerLabels={sharp:'直角',soft:'微圓',rounded:'圓潤'};
-const glyph=(name,size=state.size,corner=state.corner,display=size)=>renderSvg(definitions[name],{size:display,opticalSize:size,corner});
+const glyph=(name,size=state.size,corner=state.corner,display=size)=>renderSvg(strokeDefinition(definitions[name],state.stroke),{size:display,opticalSize:size,corner});
 let revision=0,toastTimer,objectUrl;
 const referenceCache=new Map(Object.entries(data.inlineReferences || {}));
 const meta=name=>iconByName.get(name);
@@ -26,6 +31,7 @@ let lastUrlWrite=-Infinity,urlTimer;
 function updateUrl(){
   if(location.protocol==='file:')return;
   const q=new URLSearchParams({corner:state.corner,size:String(state.size),view:state.view});
+  if(state.stroke!==null)q.set('stroke',String(state.stroke));
   if(state.category!=='all')q.set('category',state.category);
   if(state.query)q.set('q',state.query);
   if(state.page>1)q.set('page',state.page);
@@ -38,11 +44,11 @@ function updateUrl(){
   if(wait>0)urlTimer=setTimeout(write,wait);
   else write();
 }
-function filtered(pilotOnly=false){const q=state.query.toLocaleLowerCase().trim();return catalog.icons.filter(x=>(!pilotOnly||x.pilot)&&(state.category==='all'||state.category==='pilot'&&x.pilot||x.category===state.category)&&(!q||`${x.name} ${x.label} ${x.keywords.join(' ')}`.toLocaleLowerCase().includes(q)));}
-function renderCategories(){const all=[{id:'all',label:'全部圖示',count:catalog.icons.length},{id:'pilot',label:'代表圖示',count:catalog.icons.filter(x=>x.pilot).length},...catalog.categories.map(c=>({...c,count:catalog.icons.filter(x=>x.category===c.id).length}))];$('#categories').innerHTML=all.map(c=>`<button type="button" data-category="${c.id}" aria-pressed="${state.category===c.id}"><span>${c.label}</span><span>${c.count}</span></button>`).join('');}
+function filtered(pilotOnly=false){const q=state.query.toLocaleLowerCase().trim();return browseEntries().filter(x=>(!pilotOnly||x.pilot)&&(state.category==='all'||state.category==='pilot'&&x.pilot||x.category===state.category)&&(!q||`${x.name} ${x.label} ${x.keywords.join(' ')}`.toLocaleLowerCase().includes(q)));}
+function renderCategories(){const all=[{id:'all',label:'全部圖示',count:browseEntries().length},{id:'pilot',label:'代表圖示',count:browseEntries().filter(x=>x.pilot).length},...catalog.categories.map(c=>({...c,count:browseEntries().filter(x=>x.category===c.id).length}))];$('#categories').innerHTML=all.map(c=>`<button type="button" data-category="${c.id}" aria-pressed="${state.category===c.id}"><span>${c.label}</span><span>${c.count}</span></button>`).join('');}
 function pageItems(list,limit){const pages=Math.max(1,Math.ceil(list.length/limit));state.page=Math.min(state.page,pages);$('#pagination').hidden=!['library','optical','reference'].includes(state.view)||pages===1;$('#page-info').textContent=`第 ${state.page} / ${pages} 頁 · 共 ${list.length.toLocaleString()} 項`;$('#page-previous').disabled=state.page===1;$('#page-next').disabled=state.page===pages;updateUrl();return list.slice((state.page-1)*limit,state.page*limit);}
 function renderLibrary(){const list=filtered();pageItems(list,96);$('#result-count').textContent=`${list.length} 個圖示 · ${state.size}px · ${cornerLabels[state.corner]}`;$('#icon-grid').innerHTML=list.length?pageItems(list,96).map(x=>`<button type="button" class="icon-card" data-icon="${x.name}" aria-label="${x.label}，${x.name}"><span>${glyph(x.name)}</span><span class="icon-name">${x.name}</span></button>`).join(''):'<div class="empty">沒有符合的圖示。試試「通知」、「搜尋」或英文名稱。</div>';}
-function renderOptical(){const list=filtered();pageItems(list,24);$('#optical-count').textContent=`${list.length.toLocaleString()} 個命名圖示 · 每頁 24 項`;$('#optical-grid').innerHTML=list.length?pageItems(list,24).map(x=>`<article class="optical-card"><h3>${x.name}</h3>${catalog.corners.map(c=>`<div class="optical-row"><span>${cornerLabels[c]}</span>${catalog.sizes.map(s=>`<div class="glyph">${glyph(x.name,s,c)}</div>`).join('')}</div>`).join('')}<div class="optical-row optical-labels"><span>PX</span><span class="glyph">16</span><span class="glyph">20</span><span class="glyph">24</span></div></article>`).join(''):'<div class="empty">沒有符合的圖示。</div>';}
+function renderOptical(){const list=filtered();pageItems(list,24);$('#optical-count').textContent=`${list.length.toLocaleString()} 個命名圖示 · 每頁 24 項`;$('#optical-grid').innerHTML=list.length?pageItems(list,24).map(x=>`<article class="optical-card"><h3>${x.name}</h3>${catalog.corners.map(c=>`<div class="optical-row"><span>${cornerLabels[c]}</span>${catalog.sizes.map(s=>`<div class="glyph">${glyph(x.name,s,c)}</div>`).join('')}</div>`).join('')}<div class="optical-row optical-labels"><span>PX</span>${catalog.sizes.map(s=>`<span class="glyph">${s}${state.stroke===null?'':` · ${clampStroke(state.stroke,s)}`}</span>`).join('')}</div></article>`).join(''):'<div class="empty">沒有符合的圖示。</div>';}
 function renderContext(){$('#context-examples').innerHTML=scenarioMarkup(glyph,state.scenario);}
 function sanitizeReference(text){
   if(/^data:image\/png;base64,[A-Za-z0-9+/]+={0,2}$/.test(text)){
@@ -76,11 +82,16 @@ async function renderReference(ticket){
   }catch(error){if(ticket===revision)$('#reference-table').innerHTML=`<div class="empty">${escapeXml(error.message)}。重新整理可再次載入。</div>`;}
 }
 function render(){
-  const ticket=++revision;updateUrl();renderCategories();$('#concept-count').textContent=catalog.icons.length.toLocaleString();$('#pagination').hidden=!['library','optical','reference'].includes(state.view);
+  state.stroke=clampStroke(state.stroke,state.size);
+  const ticket=++revision;updateUrl();renderCategories();$('#concept-count').textContent=cards.length.toLocaleString();$('#pagination').hidden=!['library','optical','reference'].includes(state.view);
   document.querySelectorAll('[data-view]').forEach(tab=>{const active=tab.dataset.view===state.view;tab.setAttribute('aria-selected',String(active));tab.tabIndex=active?0:-1;$('#panel-'+tab.dataset.view).hidden=!active;});
   document.querySelector(`input[name="corner"][value="${state.corner}"]`).checked=true;
   document.querySelector(`input[name="size"][value="${state.size}"]`).checked=true;
-  const zipName=`master-icons-${state.size}-${state.corner}.zip`;
+  [$('#stroke-width').min,$('#stroke-width').max]=strokeRanges[state.size];
+  $('#stroke-width').value=state.stroke??catalog.specifications[state.size].stroke;
+  $('#stroke-output').textContent=`${$('#stroke-width').value} px`;
+  $('#reset-stroke').disabled=state.stroke===null;
+  const zipName=`master-icons-${state.size}-${state.corner}${state.stroke===null?'':`-stroke-${state.stroke}`}.zip`;
   $('#download-set').href=data.inlineDownloads?.[zipName] || `/dist/downloads/${zipName}`;
   $('#download-set').download=zipName;
   $('#download-set').setAttribute('aria-label',`下載 ${state.size}px ${cornerLabels[state.corner]}，${catalog.icons.length} 個 SVG`);
@@ -94,10 +105,16 @@ function render(){
 }
 function iconNotice(entry){const source=entry.source;return license.trim().replace('Copyright (c) 2026 Master and contributors',`Copyright (c) 2026 Master and contributors${source.copyright&&!source.notice?'\n'+source.copyright:''}`)+(source.notice?'\n\n'+source.notice.trim():'');}
 function svgWithLicense(name){return `<!--\n${iconNotice(meta(name))}\n-->\n${glyph(name)}\n`;}
-function renderDetail(){const entry=meta(state.selected);$('#dialog-title').textContent=entry.label;$('#dialog-name').textContent=entry.name;$('#dialog-category').textContent=entry.categoryLabel;$('#detail-large').innerHTML=glyph(entry.name,state.size,state.corner,state.size*4);$('#detail-sizes').innerHTML=catalog.sizes.map(s=>`<div><span class="glyph">${glyph(entry.name,s)}</span><small>${s}px 原生</small></div>`).join('');$('#detail-corners').innerHTML=catalog.corners.map(c=>`<div><span class="glyph">${glyph(entry.name,state.size,c)}</span><small>${cornerLabels[c]}</small></div>`).join('');$('#detail-code').textContent=glyph(entry.name).replace(/></g,'>\n<');if(objectUrl)URL.revokeObjectURL(objectUrl);objectUrl=URL.createObjectURL(new Blob([svgWithLicense(entry.name)],{type:'image/svg+xml'}));$('#download-icon').href=objectUrl;$('#download-icon').download=`${entry.name}-${state.size}-${state.corner}.svg`;}
+function renderDetail(){const entry=meta(state.selected);
+  const card = cardsByName.get(entry.styleOf || entry.name);
+  $('#artwork-picker').hidden = !card?.outline;
+  $('#brand-artwork').value = entry.styleOf ? 'outline' : 'mark';
+  $('#dialog-title').textContent=card?.label ?? entry.label;$('#dialog-name').textContent=entry.name;$('#dialog-category').textContent=entry.categoryLabel;$('#detail-large').innerHTML=glyph(entry.name,state.size,state.corner,state.size*4);$('#detail-sizes').innerHTML=catalog.sizes.map(s=>`<div><span class="glyph">${glyph(entry.name,s)}</span><small>${s}px 原生${state.stroke===null?'':` · 線寬 ${clampStroke(state.stroke,s)}`}</small></div>`).join('');$('#detail-corners').innerHTML=catalog.corners.map(c=>`<div><span class="glyph">${glyph(entry.name,state.size,c)}</span><small>${cornerLabels[c]}</small></div>`).join('');$('#detail-code').textContent=glyph(entry.name).replace(/></g,'>\n<');if(objectUrl)URL.revokeObjectURL(objectUrl);objectUrl=URL.createObjectURL(new Blob([svgWithLicense(entry.name)],{type:'image/svg+xml'}));$('#download-icon').href=objectUrl;$('#download-icon').download=`${entry.name}-${state.size}-${state.corner}.svg`;}
 
 async function copy(text){try{await navigator.clipboard.writeText(text);announce('已複製');}catch{$('#detail-code').textContent=text;const range=document.createRange();range.selectNodeContents($('#detail-code'));const sel=getSelection();sel.removeAllRanges();sel.addRange(range);announce('無法直接存取剪貼簿，已選取內容，可手動複製。');}}
 
+$('#stroke-width').addEventListener('input',event=>{state.stroke=Number(event.target.value);render();});
+$('#reset-stroke').addEventListener('click',()=>{state.stroke=null;render();});
 $('#search').value=state.query;
 $('#search').addEventListener('input',event=>{state.query=event.target.value;state.page=1;render();});
 document.addEventListener('change',event=>{if(event.target.name==='corner'){state.corner=event.target.value;render();}if(event.target.name==='size'){state.size=Number(event.target.value);render();}});
@@ -114,8 +131,14 @@ document.addEventListener('keydown',event=>{if((event.metaKey||event.ctrlKey)&&e
 $('#dialog-close').addEventListener('click',()=>$('#icon-dialog').close());
 $('#icon-dialog').addEventListener('close',()=>{state.selected=null;if(objectUrl){URL.revokeObjectURL(objectUrl);objectUrl=null;}});
 $('#icon-dialog').addEventListener('click',event=>{if(event.target===$('#icon-dialog')){const r=event.target.getBoundingClientRect();if(event.clientX<r.left||event.clientX>r.right||event.clientY<r.top||event.clientY>r.bottom)event.target.close();}});
+$('#brand-artwork').addEventListener('change', event => {
+  const entry = meta(state.selected);
+  const card = cardsByName.get(entry.styleOf || entry.name);
+  state.selected = event.target.value === 'outline' ? card.outline.name : card.name;
+  renderDetail();
+});
 $('#copy-svg').addEventListener('click',()=>copy(svgWithLicense(state.selected)));
-$('#copy-react').addEventListener('click',()=>{const entry=meta(state.selected);copy(`import { ${entry.component} } from '@master/icons-react/${state.size}/${state.corner}';\n\n<${entry.component} />`);});
+$('#copy-react').addEventListener('click',()=>{const entry=meta(state.selected);copy(state.stroke!==null?svgToJsx(glyph(entry.name)):`import { ${entry.component} } from '@master/icons-react/${state.size}/${state.corner}';\n\n<${entry.component} />`);});
 let theme='light';try{theme=localStorage.getItem('master-icons-theme')||'light';}catch{}
 function setTheme(value){theme=value;document.documentElement.dataset.theme=theme;$('#theme-toggle').setAttribute('aria-label',theme==='light'?'切換至深色模式':'切換至淺色模式');try{localStorage.setItem('master-icons-theme',theme);}catch{}}
 setTheme(theme);$('#theme-toggle').addEventListener('click',()=>setTheme(theme==='light'?'dark':'light'));
@@ -128,15 +151,15 @@ $('#page-next').addEventListener('click',()=>{state.page++;render();$('#workspac
 $('#download-set').addEventListener('click',async event=>{
   if(!embedded)return;
   event.preventDefault();if(event.currentTarget.getAttribute('aria-busy')==='true')return;
-  const button=event.currentTarget,size=state.size,corner=state.corner;
+  const button=event.currentTarget,size=state.size,corner=state.corner,stroke=state.stroke;
   button.setAttribute('aria-busy','true');announce('正在打包完整圖庫…');
   await new Promise(resolve=>setTimeout(resolve,40));
   try{
     const files={LICENSE:strToU8(license),'THIRD_PARTY_NOTICES.md':strToU8(data.thirdPartyNotices)};
     for(const [name,text]of Object.entries(data.upstreamLicenses))files['licenses/'+name]=strToU8(text);
-    for(const entry of catalog.icons)files[entry.name+'.svg']=strToU8('<!--\n'+iconNotice(entry)+'\n-->\n'+renderSvg(definitions[entry.name],{size,opticalSize:size,corner})+'\n');
+    for(const entry of catalog.icons)files[entry.name+'.svg']=strToU8('<!--\n'+iconNotice(entry)+'\n-->\n'+renderSvg(strokeDefinition(definitions[entry.name],stroke),{size,opticalSize:size,corner})+'\n');
     const url=URL.createObjectURL(new Blob([zipSync(files,{level:6,mtime:new Date(2026,10,16)})],{type:'application/zip'}));
-    const a=document.createElement('a');a.href=url;a.download=`master-icons-${size}-${corner}.zip`;a.click();setTimeout(()=>URL.revokeObjectURL(url),60000);announce(`已打包 ${catalog.icons.length.toLocaleString()} 個 SVG`);
+    const a=document.createElement('a');a.href=url;a.download=`master-icons-${size}-${corner}${stroke===null?'':`-stroke-${stroke}`}.zip`;a.click();setTimeout(()=>URL.revokeObjectURL(url),60000);announce(`已打包 ${catalog.icons.length.toLocaleString()} 個 SVG`);
   }catch(error){announce('下載失敗：'+error.message);}finally{button.removeAttribute('aria-busy');}
 });
 

@@ -1,0 +1,28 @@
+{
+  "date": "2026-11-18",
+  "reviewer": "Codex (AI)",
+  "scope": "18 optional brand outlines: WeChat plus 17 expanded social brands",
+  "brandExports": 107,
+  "brandCards": 88,
+  "outlineVersions": 18,
+  "duplicateIdentityAliases": ["brand-chatgpt -> brand-openai"],
+  "visualReview": {
+    "sizes": [16, 20, 24],
+    "themes": ["light", "dark"],
+    "dpr": [1, 2],
+    "page": "docs/review/brand-outlines/social.html",
+    "evidence": "docs/review/brand-outlines/social/",
+    "scenes": ["contact", "portfolio", "Master project", "social profile", "video and music", "support"],
+    "decisions": "docs/review/brand-outlines/decisions.md",
+    "retainedOriginals": ["Master", "Bluesky", "Signal", "Snapchat", "Dcard"]
+  },
+  "checks": [
+    {"command": "node scripts/turbo.mjs run build", "result": "12 tasks passed"},
+    {"command": "node scripts/turbo.mjs run test test:types type-check check:ui", "result": "13 tasks passed; 61 package tests; framework and site checks passed"},
+    {"command": "node scripts/validate.mjs", "result": "942 named drawings, 8478 SVG hashes, geometry, source notices, review evidence and 9 licensed ZIPs passed"},
+    {"command": "node scripts/package-brands.mjs", "result": "107 brand exports / 963 SVGs verified"},
+    {"command": "MASTER_ICONS_TEST_PORT=4787 bun x --no-install playwright test -c site/playwright.config.ts site/tests/brands.spec.ts", "result": "21 passed across Chromium, Firefox and WebKit; both locales; all outlines selected at 16 and 24px"},
+    {"command": "bun x --no-install playwright test -c preview/playwright.config.mjs tests/browser/gallery.spec.mjs --project=chromium-1x --grep 'brand aliases|search, presets'", "result": "2 passed; offline grouping, switching, downloads and source attribution"},
+    {"check": "18 JavaScript exports and five framework declaration sets", "result": "All present in default and 16/soft, 20/rounded, 24/sharp entries"}
+  ]
+}

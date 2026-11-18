@@ -12,7 +12,8 @@
  import {onMount, tick, type Snippet} from 'svelte'
  import '@master/internal-site/styles/system/sidebar.css'
  import {renderSvg, getOpticalSize, type IconDefinition} from '@master/icons/runtime'
- type Entry={name:string;component:string;label:string;category:string;keywords:string[]}
+ type Artwork={name:string;label?:string;component:string;notice?:string}
+ type Entry=Artwork & {label:string;category:string;keywords:string[];mark?:Artwork;outline?:Artwork;styleOf?:string}
  let {entries,categories,copy,locale,children}:{entries:Entry[];categories:{id:string;label:string}[];copy:Record<string,string>;locale:string;children?:Snippet}=$props()
  const t=(key:string)=>copy[key]??key
  const instanceId=$props.id()
@@ -26,6 +27,8 @@
  let dialog:HTMLDialogElement,search:HTMLInputElement
  let code=$state<HTMLTextAreaElement>()
  let request=0
+ let useOutline=$state(false)
+ const artwork=$derived(useOutline && selected?.outline ? selected.outline : selected?.mark??selected)
  let format=$state<CodeFormat>('svg')
  const label=(entry:Entry)=>entry.category==='brands'||locale!=='en'?entry.label:entry.name.replaceAll('-',' ')
  const translation=(entry:Entry)=>locale!=='en'&&entry.category!=='brands'?entry.label:''
@@ -37,8 +40,9 @@
  const opticalSize=$derived(getOpticalSize(size))
  const strokeRange=$derived(strokeRanges[opticalSize])
  const nativeStroke=$derived(({16:1.25,20:1.5,24:1.75})[opticalSize])
- const svg=$derived(definition?renderSvg(strokeDefinition(definition,stroke),{size,corner}):'')
- const snippet=$derived(selected?codeSnippet({format,component:selected.component,size,opticalSize,corner,svg,strokeWidth:stroke}):'')
+ const rawSvg=$derived(definition?renderSvg(strokeDefinition(definition,stroke),{size,corner}):'')
+ const svg=$derived(artwork?.notice && rawSvg ? `<!--\n${artwork.notice.replaceAll('--','—')}\n-->\n${rawSvg}` : rawSvg)
+ const snippet=$derived(artwork?codeSnippet({format,component:artwork.component,size,opticalSize,corner,svg,strokeWidth:stroke}):'')
  const source=(name:string,s:number=size,c=corner)=>`${stroke===null?'/icons':`/strokes/${clampStroke(stroke,getOpticalSize(s))}`}/${getOpticalSize(s)}/${c}/${name}.svg`
  const cornerLabel=(c:string)=>t(c[0].toUpperCase()+c.slice(1))
  const categoryOptions=$derived([
@@ -68,12 +72,17 @@
   if(stroke!==null)p.set('stroke',String(stroke))
   history.replaceState(null,'',`${location.pathname}?${p}`)
  })
- async function load(entry:Entry){
+ async function load(entry:Artwork){
   const revision=++request;definition=null;error=false
   try{const data=await loadDefinition(entry.name);if(revision===request)definition=data}
   catch{if(revision===request)error=true}
  }
- async function open(entry:Entry,button:HTMLButtonElement){button.focus();selected=entry;format='svg';notice='';await tick();dialog.showModal();await load(entry)}
+ async function open(entry:Entry,button:HTMLButtonElement){button.focus();useOutline=Boolean(entry.styleOf);selected=entry;format='svg';notice='';await tick();dialog.showModal();await load(entry)}
+ function chooseArtwork(outline:boolean){
+  if(!selected || outline===useOutline)return
+  useOutline=outline
+  void load(outline && selected.outline ? selected.outline : selected.mark??selected)
+ }
  function clearSelection(){request++;selected=null;definition=null;notice=''}
  function close(){dialog.close();clearSelection()}
  function chooseMaster(s:typeof sizes[number],c:typeof corners[number]){size=s;corner=c;stroke=clampStroke(stroke,s);notice=''}
@@ -149,12 +158,22 @@
 </section>
 <dialog bind:this={dialog} class="dialog explorer-dialog" aria-labelledby="icon-title" oncancel={clearSelection}>
  <header class="dialog-header">
-  <h2 class="dialog-title" id="icon-title">{#if selected&&translation(selected)}<span lang="zh-TW">{translation(selected)}</span><span class="detail-name">{selected.name}</span>{:else}{selected?.category==='brands'?selected.label:selected?.name??t('Icon details')}{/if}</h2>
+  <h2 class="dialog-title" id="icon-title">{#if selected&&translation(selected)}<span lang="zh-TW">{translation(selected)}</span><span class="detail-name">{selected.name}</span>{:else}{selected?.category==='brands'?(artwork?.label??selected.label):selected?.name??t('Icon details')}{/if}</h2>
  </header>
  <button type="button" class="btn btn-quiet btn-square dialog-close" aria-label={t('Close')} onclick={close}><XIcon /></button>
  <div class="dialog-body">
+  <div class="grid gap(20)">
   {#if selected}
-   {#if error}<div class="grid gap(16) py(32)"><p role="alert">{t('Unable to load this icon. Please try again.')}</p><button type="button" class="btn" onclick={()=>selected&&load(selected)}>{t('Retry')}</button></div>
+   {#if selected.outline}
+    <div class="field">
+     <span id={`${instanceId}-brand-style`}>{t('Brand artwork')}</span>
+     <div class="segmented" role="radiogroup" aria-labelledby={`${instanceId}-brand-style`}>
+      <label class="segmented-item"><input class="segmented-input" type="radio" name="brand-artwork" checked={!useOutline} onchange={()=>chooseArtwork(false)} />{t('Monochrome mark')}</label>
+      <label class="segmented-item"><input class="segmented-input" type="radio" name="brand-artwork" checked={useOutline} onchange={()=>chooseArtwork(true)} />{t('Outline')}</label>
+     </div>
+    </div>
+   {/if}
+   {#if error}<div class="grid gap(16) py(32)"><p role="alert">{t('Unable to load this icon. Please try again.')}</p><button type="button" class="btn" onclick={()=>artwork&&load(artwork)}>{t('Retry')}</button></div>
    {:else if !definition}<p class="py(32)" role="status">{t('Loading icon…')}</p>
    {/if}
   {/if}
@@ -192,11 +211,12 @@
       </section>
     </div>
   </div>
+  </div>
  </div>
- {#if selected&&definition}
+ {#if artwork&&definition}
   <footer class="dialog-footer">
    <p class="copy-status w-full" role="status">{notice}</p>
-   <a class="btn" href={size>24?`data:image/svg+xml;charset=utf-8,${encodeURIComponent(svg)}`:source(selected.name)} download={`${selected.name}.svg`}><DownloadIcon />{t('Download SVG')}</a>
+   <a class="btn" href={size>24?`data:image/svg+xml;charset=utf-8,${encodeURIComponent(svg)}`:source(artwork.name)} download={`${artwork.name}.svg`}><DownloadIcon />{t('Download SVG')}</a>
    <button type="button" class="btn btn-primary" aria-label={t(`Copy ${formatLabels[format]}`)} onclick={()=>copyText(snippet)}>{#if notice===t('Copied')}<CheckIcon />{t('Copied')}{:else}<CopyIcon />{t(`Copy ${formatLabels[format]}`)}{/if}</button>
   </footer>
  {/if}

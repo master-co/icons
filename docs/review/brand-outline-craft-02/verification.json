@@ -1,0 +1,58 @@
+{
+  "date": "2026-11-18",
+  "outlinesRefined": 18,
+  "master": {
+    "outline": false,
+    "sourceAndGeometryEqualToBefore": true
+  },
+  "build": "12 tasks successful; all packages, stroke assets, site and offline preview",
+  "unitTests": 62,
+  "frameworkTypes": "JavaScript, React, Preact, Vue, Svelte and Astro; passed",
+  "siteTypeCheck": "0 errors / 0 warnings",
+  "uiContracts": "passed",
+  "siteBrowserTests": {
+    "passed": 21,
+    "browsers": [
+      "Chromium",
+      "Firefox",
+      "WebKit"
+    ]
+  },
+  "offlineGalleryTests": {
+    "passed": 2,
+    "browser": "Chromium"
+  },
+  "assets": {
+    "drawings": 942,
+    "svgHashes": 8478,
+    "licensedZips": 9,
+    "validation": "passed"
+  },
+  "brandArchive": {
+    "path": "work/master-icons-brands.zip",
+    "exports": 107,
+    "svgFiles": 963,
+    "sha256": "68df1810058820148af89796d345ab99640efe40c129f141a43a8e7e9ee61609"
+  },
+  "visual": {
+    "page": "docs/review/brand-outline-craft-02/index.html",
+    "batches": 5,
+    "brands": 18,
+    "sizes": [
+      16,
+      20,
+      24
+    ],
+    "themes": [
+      "light",
+      "dark"
+    ],
+    "dpr": [
+      1,
+      2
+    ],
+    "mixedRows": 6,
+    "status": "Codex AI visually reviewed; not maintainer approval"
+  },
+  "published": false
+}

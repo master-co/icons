@@ -98,6 +98,7 @@
         "scripts/**",
         "$TURBO_ROOT$/scripts/check-site-node.mjs",
         "$TURBO_ROOT$/scripts/lib/stroke-width.mjs",
+        "$TURBO_ROOT$/scripts/lib/collection-cards.mjs",
         "*.json"
       ],
       "outputs": [
@@ -121,6 +122,7 @@
         "$TURBO_ROOT$/scripts/build-review.mjs",
         "$TURBO_ROOT$/scripts/standalone.mjs",
         "$TURBO_ROOT$/scripts/lib/review-data.mjs",
+        "$TURBO_ROOT$/scripts/lib/collection-cards.mjs",
         "$TURBO_ROOT$/scripts/lib/stroke-width.mjs",
         "$TURBO_ROOT$/scripts/lib/content-cache.mjs",
         "$TURBO_ROOT$/scripts/lib/generation-lock.mjs",
@@ -312,7 +314,8 @@
         "!THIRD_PARTY_NOTICES.md",
         "!licenses/**",
         "!tests/**",
-        "!README.md"
+        "!README.md",
+        "$TURBO_ROOT$/scripts/lib/brand-ink.mjs"
       ],
       "outputs": [
         "dist/**",
