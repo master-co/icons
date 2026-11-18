@@ -1,42 +1,26 @@
 # Master Icons
 
-微圓、簡約，為 Dashboard、App 與 Web 介面設計的 SVG 圖示。
+Softly rounded, minimal SVG icons drawn for dashboards, apps and web interfaces.
 
-Master Icons 著重輪廓、比例、留白與小尺寸的細節取捨。公開輸出目前有 **946 個命名圖示、8,514 份 SVG**。文件與完整圖庫見 [icons.master.co](https://icons.master.co)，重製進度見 [逐顆重製與收錄進度](docs/review/rebuild-01/index.html)。
-
-```sh
-npm install @master/icons-react   # 或 -vue、-svelte、-preact、-astro；純 SVG／JavaScript 用 @master/icons
-```
-
-## 設計與輸出
-
-- **原生光學尺寸**：16、20、24 各自配置線寬與座標，密集圖形可在小尺寸減少或重排細節。
-- **三種角型**：預設 soft 微圓，可選 sharp 或 rounded。角型按構造調整；圓形與部分簡單筆畫可能共用幾何。
-- **單色輪廓**：使用 `currentColor` 配合文字與介面配色，涵蓋導覽、表單、檔案、編輯、媒體、帳戶及常見商務操作。
-- **SVG 與框架元件**：提供 JavaScript、React、Vue、Svelte、Preact、Astro 入口，以及固定尺寸／角型入口，供應用按需匯入。
-
-這些設計取向不代表所有圖示、顯示尺寸或背景都已達到相同完成度；各批已執行的檢查與限制見 [驗證紀錄](docs/validation.md) 及對應批次報告，報告僅涵蓋其記載的版本與範圍。
-
-「品牌與平台」有 89 個品牌標誌名稱與 18 個線條版本，共 107 個項目。OpenAI 與 ChatGPT 共用 Blossom，兩個名稱皆可搜尋及匯入。18 個社群品牌的線條版直接列在 icons 列表，詳情也提供單色標誌／線條版切換，包含 GitHub、Telegram、WeChat、Discord、YouTube 等。各框架使用 `BrandGithubIcon` 與 `BrandGithubOutlineIcon`，JavaScript 使用 `BrandGithub` 與 `BrandGithubOutline`。原標誌仍為預設。原標誌保持固定幾何；outline 支援 `strokeWidth` 與網站線寬控制，主描邊按實際輸出尺寸校準，品牌角型保持不變。[品牌輪廓審稿](docs/review/brand-outline-craft-05/index.html) · [來源聲明](THIRD_PARTY_NOTICES.md)
-
-## 本地開始使用
-
-開發環境需要 Node.js 24+ 與 Bun 1.4.4。圖示套件的 Node.js 要求為 22+；框架及網站另有自己的工具鏈需求。
+Master Icons focuses on outline, proportion, white space and the trade-offs small sizes demand. It has **946 named icons and 8,514 SVG files**. Read the documentation and browse the collection at [icons.master.co](https://icons.master.co).
 
 ```sh
-bun install --frozen-lockfile
-bun run dev              # 雙語網站：http://127.0.0.1:4321
-# 或另開終端執行審稿介面
-bun run dev:review       # http://127.0.0.1:4173
+npm install @master/icons-react   # or -vue, -svelte, -preact, -astro; @master/icons for plain SVG and JavaScript
 ```
 
-網站提供英文與 `/tw` 繁中版，包含搜尋、分類、尺寸與角型預覽、程式碼複製及下載。網站設定與開發方式見 [網站文件](site/README.md)。
+## Design and output
 
-套件發布於 npm：核心 `@master/icons` 與五個框架套件 `@master/icons-{react,vue,svelte,preact,astro}`，版本與發布流程見下方〈版本與發布〉。可執行 `bun run check:package` 在本機產生並驗證核心及各框架的封裝檔。
+- **Native optical sizes**: 16, 20 and 24 px each have their own stroke and coordinates, so dense drawings can drop or rearrange details at small sizes.
+- **Three corner styles**: soft by default, or sharp and rounded. Corners change construction, not only line joins; circles and some simple strokes may share geometry.
+- **Monochrome outlines**: drawn in `currentColor` to follow text and interface colors, covering navigation, forms, files, editing, media, accounts and common commerce.
+- **SVG and framework components**: JavaScript, React, Vue, Svelte, Preact and Astro entries, plus fixed size and corner entries to import only what an app uses.
+- **Stroke width**: 0.75–2.5 in steps of 0.25, with cutouts and masks redrawn for each width rather than thickened in place.
 
-## 使用圖示
+These are design goals, not a claim that every icon, display size or background has reached the same finish. The checks run on each batch and their limits are recorded in the [validation log](docs/validation.md) and the batch reports, which cover only the versions and scope they record.
 
-SVG 位於 `packages/icons/icons/{16|20|24}/{sharp|soft|rounded}/`。Inline SVG 可繼承文字顏色；以 `<img>` 載入外部 SVG 不會繼承頁面的 `currentColor`。
+Brands and platforms has 89 brand mark names and 18 outline versions, 107 entries in all. OpenAI and ChatGPT share the Blossom mark under both names. The outline versions of 18 social brands, including GitHub, Telegram, WeChat, Discord and YouTube, are listed in the collection, and each detail switches between the monochrome mark and the outline. Frameworks use `BrandGithubIcon` and `BrandGithubOutlineIcon`; JavaScript uses `BrandGithub` and `BrandGithubOutline`. Marks keep their fixed geometry; outlines accept `strokeWidth`. See the [brand outline review](docs/review/brand-outline-craft-05/index.html) and the [source notices](THIRD_PARTY_NOTICES.md).
+
+## Using icons
 
 ```tsx
 import { SearchIcon } from '@master/icons-react';
@@ -44,104 +28,110 @@ import { SearchIcon as SmallSearch } from '@master/icons-react/16/soft';
 
 export function SearchExamples() {
   return <>
-    <SearchIcon size={20} corner="rounded" label="搜尋" />
-    <button aria-label="搜尋"><SmallSearch /></button>
+    <SearchIcon size={20} corner="rounded" label="Search" />
+    <button aria-label="Search"><SmallSearch /></button>
   </>;
 }
 ```
 
-一般入口中，每個圖示包含九份圖稿；固定入口只包含選定的尺寸與角型。未使用的圖示可由支援 tree shaking 的打包工具移除。React 入口支援 React 18 / 19；其他框架提供相同名稱及固定入口，例如 `@master/icons-svelte/16/soft`。每個框架有獨立的 `@master/icons-*` 套件，只依賴共用核心與自己的框架 peer，使用方式與差異見 [套件文件](packages/icons/README.md)。
+A dynamic entry carries all nine drawings of each icon; a fixed entry carries only the selected size and corner. Bundlers that tree-shake remove unused icons. Every framework has its own `@master/icons-*` package that depends only on the shared core and its framework peer. See the [package documentation](packages/icons/README.md).
 
-也可直接產生 SVG 字串：
+To render SVG markup directly:
 
 ```js
 import { Search, renderSvg } from '@master/icons';
 
-const svg = renderSvg(Search, { size: 20, corner: 'soft', label: '搜尋' });
+const svg = renderSvg(Search, { size: 20, corner: 'soft', label: 'Search' });
 ```
 
-| 選項 | 預設 | 行為 |
+| Option | Default | Behavior |
 | --- | --- | --- |
-| `size` | `24` | 顯示尺寸，接受正有限數字 |
-| `opticalSize` | `auto` | 選擇最近的 16 / 20 / 24 母版；18、22 的邊界取較大者 |
-| `corner` | `soft` | `sharp` / `soft` / `rounded` |
-| `color` | `currentColor` | 繼承文字顏色 |
-| `label` | 無 | 無標籤時 `aria-hidden`；有標籤時 `role="img"` |
-| `direction` | `ltr` | `rtl` 僅鏡射左右箭頭、左右 chevron、雙 chevron 及 undo / redo |
+| `size` | `24` | Display size, a positive finite number |
+| `opticalSize` | `auto` | The nearest 16, 20 or 24 master; 18 and 22 pick the larger |
+| `corner` | `soft` | `sharp`, `soft` or `rounded` |
+| `strokeWidth` | native | Native units in steps of 0.25, clamped to the master's range |
+| `color` | `currentColor` | Follows the text color |
+| `label` | none | Without it the SVG is `aria-hidden`; with it the SVG gets `role="img"` |
+| `direction` | `ltr` | `rtl` mirrors only the left/right arrows and chevrons, double chevrons, undo and redo |
 
-固定入口不接受 `corner` / `opticalSize`；`size` 只改顯示大小。CSS 寬高變動也不會切換光學母版。其他顯示尺寸使用既有母版縮放，沒有額外專用圖稿；斜線與曲線仍會有反鋸齒。圖示按鈕的可存取名稱與點擊範圍由介面提供。
+Fixed entries do not accept `corner` or `opticalSize`; `size` only scales the drawing, and CSS width and height never switch the optical master. SVG files are at `packages/icons/icons/{16|20|24}/{sharp|soft|rounded}/` and in the package as `@master/icons/svg/...`. Inline SVG inherits the text color; an external SVG in `<img>` does not.
 
-### 給 AI agent
+### For AI agents
 
-- **Agent skill**：[`skills/use-master-icons/`](skills/use-master-icons/SKILL.md) 說明套件選擇、入口、光學尺寸、線寬與無障礙規則，並附 `scripts/search.mjs` 查詢已安裝的 catalog，避免 agent 編造圖示名稱。它隨 `@master/icons` 發布於 `node_modules/@master/icons/skills/use-master-icons/`，複製到 agent 的 skills 資料夾即可使用。
-- **llms.txt**：網站提供 https://icons.master.co/llms.txt（中文為 `/tw/llms.txt`）、全文 `/llms-full.txt`，以及每篇指南的 Markdown 版（例如 `/guide/react.md`）。
+- **Agent skill**: [`skills/master-icons/`](skills/master-icons/SKILL.md) covers choosing the package and entry, optical sizes, stroke width and accessibility, with `scripts/search.mjs` to look up real names in the installed catalog so agents never invent one. It ships in `@master/icons` at `node_modules/@master/icons/skills/master-icons/`; copy it into your agent's skills folder.
+- **llms.txt**: https://icons.master.co/llms.txt (Chinese at `/tw/llms.txt`), the full text at `/llms-full.txt`, and a Markdown edition of every guide, such as `/guide/react.md`.
 
-## 開發與驗證
+## Development
+
+Development needs Node.js 24 or later and Bun 1.4.4. The icon packages need Node.js 22 or later; frameworks and the site have their own toolchain requirements.
 
 ```sh
-bun run build                  # 套件、審稿與網站
-bun run check                  # 建置、資產驗證、套件測試與型別檢查
+bun install --frozen-lockfile
+bun run dev              # bilingual site: http://127.0.0.1:4321
+bun run dev:review       # review tool, in another terminal: http://127.0.0.1:4173
+```
+
+The site has English and Traditional Chinese (`/tw`) editions with search, categories, size and corner previews, code copying and downloads; see the [site documentation](site/README.md).
+
+```sh
+bun run build                  # packages, review tool and site
+bun run check                  # build, asset validation, package tests and type checks
 bun x --no-install playwright install chromium firefox webkit
-bun run test:browser            # 圖庫與 file:// 離線流程
-bun run test:site               # 網站流程
-bun run test:site:dev           # 開發伺服器路由
-bun run test:site:hmr           # 隔離環境中的 HMR 回歸
-bun run test:frameworks:browser # Vue／Svelte／Preact 瀏覽器測試
-bun run test:turbo              # 任務圖、快取失效與產物還原回歸
+bun run test:browser            # review tool and the file:// offline flow
+bun run test:site               # site flows
+bun run test:site:dev           # development server routes
+bun run test:site:hmr           # HMR regressions in an isolated copy
+bun run test:frameworks:browser # Vue, Svelte and Preact in browsers
+bun run test:turbo              # task graph, cache invalidation and output restoration
 bun run check:reproducible
 bun run check:package
 ```
 
-可分別使用 `build:icons`、`build:review`、`build:site`；Turbo 會自動先完成各自需要的上游任務。網站只建置核心、Svelte 與 Astro，`build:icons` 才建置全部六個套件。根目錄 `dist/preview.html` 是可離線開啟的審稿頁，保留來源與前後稿比較；上游比較原稿不放入正式網站或圖示套件。
+`build:icons`, `build:review` and `build:site` build one part; Turbo first runs the upstream tasks each needs. The site builds only the core, Svelte and Astro packages; `build:icons` builds all six. `dist/preview.html` is the offline review page, with sources and before/after comparisons; upstream comparison drawings never ship in the site or the packages.
 
-任務與產物快取由根目錄 `turbo.json` 管理。核心完成後，各框架可平行建置；網站與審稿頁共用一次 stroke 素材生成。未變更的任務命中 `.turbo/cache/`，缺少的產物會從快取還原。來源、生成器、授權、相關依賴與 Node.js 版本會影響快取，網站建置另追蹤 `PUBLIC_URL`。dev 伺服器與瀏覽器測試不快取；來源監看觸發 Turbo 重新判斷生成任務，普通頁面編輯仍使用 Vite HMR。
+Task outputs are cached by Turbo (`turbo.json`) in `.turbo/cache/`, keyed by sources, generators, licenses, relevant dependencies and the Node.js version; the site build also tracks `PUBLIC_URL`. The dev server and browser tests are not cached; source watching re-runs generation through Turbo, and ordinary page edits use Vite HMR. The core `generate` task caches geometry, types and ZIP sets; `build` always syncs the tracked SVGs from those archives, keeping unchanged files' mtimes. `bun run build:icons --force` forces a rebuild, and deleting `.turbo/` clears the cache.
 
-核心的 `generate` 任務快取幾何、型別與 ZIP；`build` 每次從 ZIP 同步納入 Git 的 SVG，保留未變更檔案的時間。這個同步步驟不快取，避免 Turbo 將已追蹤的生成輸出反向計入生成任務的雜湊。跨框架測試的依賴位於 `tests/` workspace，避免根套件的內部依賴使所有任務一同失效。
-
-`bun run build:icons --force` 可強制重跑套件建置；`bun run turbo run prepare-site --filter=@master/icons-site --force` 可重跑網站素材及其上游。刪除 `.turbo/` 可清除本地任務快取。`check:reproducible` 刻意執行兩次不使用任務快取的建置，驗證跨時區輸出一致。CI 使用 GitHub Actions cache 保存 Turbo 快取；未啟用需要外部帳號的遠端快取。
-
-| 路徑 | 用途 |
+| Path | Purpose |
 | --- | --- |
-| `packages/icons/` | 共用幾何原始碼、runtime、SVG 與整合測試 |
-| `packages/icons-{react,vue,svelte,preact,astro}/` | 各框架獨立套件、元件來源與生成產物 |
-| `site/` | 雙語網站 |
-| `preview/` | 審稿介面與使用情境 |
-| `tests/` | 跨套件測試 workspace、框架依賴與審稿瀏覽器測試 |
-| `skills/master-icons/` | 版本化製作與審查 skill（給貢獻者） |
-| `skills/use-master-icons/` | 在應用程式中使用圖示的 agent skill，隨 `@master/icons` 發布 |
-| `references/` | 固定版本的比較資產與歷史基準 |
-| `docs/` | 設計規範、研究、決策與審查證據 |
-| `scripts/` | 建置協調、驗證與審稿工具 |
-| `dist/` | 生成的審稿與離線輸出，不納入版本控制 |
+| `packages/icons/` | Shared geometry sources, runtime, SVGs and integration tests |
+| `packages/icons-{react,vue,svelte,preact,astro}/` | Framework packages, component sources and generated output |
+| `site/` | Bilingual website |
+| `preview/` | Review tool and usage scenarios |
+| `tests/` | Cross-package tests, framework dependencies and review browser tests |
+| `skills/master-icons/` | Agent skill for using the icons in an application; ships in `@master/icons` |
+| `.agents/skills/icon-craft/` | Skill for drawing, refining and reviewing icons in this repository |
+| `references/` | Pinned comparison assets and historical baselines |
+| `docs/` | Design system, research, decisions and review evidence |
+| `scripts/` | Build orchestration, validation and review tools |
 
-## 版本與發布
+## Versions and releases
 
-六個套件共用同一版本，版本號來自 `v*` tag 與 commit 類型（[Aronrepo](https://github.com/1aron/aronrepo)，`explicit` 模式）；`package.json` 中的 `version` 只是 `0.0.0` 佔位。`main` 是唯一的發布分支：每次 push 到 `main`，`.github/workflows/release.yml` 依序執行完整 CI、`aronrepo release`（以 npm trusted publishing 附 provenance 發布、建立 tag 與 GitHub release）、驗證 registry 提供的版本與 provenance（`scripts/verify-package.mjs`），最後把 `pages-stable` 分支快轉到該 commit，由 Cloudflare Pages 的 Git 整合建置 [icons.master.co](https://icons.master.co)。GitHub 不持有任何 Cloudflare 憑證。
+The six packages share one version, taken from `v*` tags and commit types ([Aronrepo](https://github.com/1aron/aronrepo), `explicit` mode); `version` in `package.json` is a `0.0.0` placeholder. `main` is the only release branch: every push runs `.github/workflows/release.yml`, which runs the full CI, publishes with npm provenance and creates the tag and GitHub release (`aronrepo release`), verifies what the registry serves (`scripts/verify-package.mjs`), and fast-forwards `pages-stable`, which Cloudflare Pages builds for [icons.master.co](https://icons.master.co). GitHub holds no Cloudflare credential.
 
-commit 與 PR 標題須符合 [AGENTS.md](AGENTS.md) 中的政策（`Type(Scope): Summary`），由 commit hook、PR 標題檢查與 CI 把關。只有維護者以 `Bump(Minor)`／`Bump(Major)` 提升次版號與主版號；其他發布類型只發布 patch。發布前可執行 `bun x aronrepo explain` 查看下一個版本與原因。
+Commits and pull request titles follow the policy in [AGENTS.md](AGENTS.md) (`Type(Scope): Summary`), enforced by the commit hook, the PR title check and CI. Only maintainers raise minor and major versions with `Bump(Minor)` and `Bump(Major)`; every other release type ships a patch. Run `bun x aronrepo explain` to see the next version and why.
 
-## 貢獻與製作方法
+## Contributing
 
-新增或精修圖示前，請閱讀 [設計規範](docs/design-system.md) 與 [master-icons skill](skills/master-icons/SKILL.md)。Skill 記錄製作契約、來源比較、光學處理與審查步驟，可供貢獻者閱讀，也可由支援 skill 的工具以 `$master-icons` 使用。
+Before adding or refining icons, read the [design system](docs/design-system.md) and the [icon-craft skill](.agents/skills/icon-craft/SKILL.md). The skill records the drawing contract, source comparison, optical handling and review steps; agents that support skills can use it directly in this repository.
 
-製作流程包含 AI 輔助的幾何編寫與圖稿檢查。審查紀錄分別記載工程結果、圖稿目視及審查者；AI 的檢查紀錄不代表維護者已逐顆定案。
+Drawing is AI-assisted in geometry authoring and artwork checks. Review records separate engineering results, visual review and the reviewer; an AI check does not mean a maintainer has signed off every icon.
 
-每項變更需說明用途與具體問題，保存真實前稿，並在三尺寸、三角型、明暗背景、文字旁與同家族中比較。必要時可使用虛線、透明度及逐筆漸淡；不能以效果掩飾輪廓缺陷。`chart-area` 目前維持純輪廓。來源比較與逐項判斷可在 [審查報告](docs/review/ui-v1/index.html) 查看，已知限制以 [驗證紀錄](docs/validation.md) 為準。
+Each change states its purpose and the concrete problem, keeps the real before state, and is compared at all three sizes and corners, on light and dark backgrounds, beside text and within its family. Dashes, opacity and fading strokes are allowed where needed, never to hide an outline defect. See the [review report](docs/review/ui-v1/index.html) and the [validation log](docs/validation.md) for known limits.
 
-建置後可產生局部審稿畫面：
+After a build, render a focused review sheet:
 
 ```sh
-node skills/master-icons/scripts/render-review.mjs --repo . --icons user,users,bell,bell-off --out work/detail-review
+node .agents/skills/icon-craft/scripts/render-review.mjs --repo . --icons user,users,bell,bell-off --out work/detail-review
 ```
 
-## 來源與授權
+## Sources and license
 
-設計過程研究 Lucide、Tabler、Heroicons、Phosphor、Radix、Feather、Iconoir 與 Hugeicons Free 等開源圖庫，並在 Master 的幾何系統中製作與精修。研究比較與具體改作分別保留紀錄。
+The work studied open-source sets such as Lucide, Tabler, Heroicons, Phosphor, Radix, Feather, Iconoir and Hugeicons Free, and every icon is drawn and refined in Master's geometry system. Research comparisons and actual adaptations are recorded separately.
 
-Master 自行製作的程式碼與介面圖稿採用 [MIT License](LICENSE)；涉及上游素材的部分同時保留其適用聲明。目前保留 12 顆 Hugeicons Free 研究重繪的 MIT notices，以及 `megaphone`、`handshake`、`layers` 三顆 Lucide 改作的 ISC 與相關上游聲明。名稱、固定版本、修改方式及授權詳見 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。
+Master's code and interface artwork are licensed under the [MIT License](LICENSE). Adapted drawings keep their upstream MIT, ISC or Apache 2.0 notices in each SVG, the packages and the ZIP sets; names, pinned versions, modifications and licenses are in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
 
-`teapot` 茶壺圖稿沿用 OpenMoji 的壺蓋構造，該圖稿及本專案對它的修改採 **CC BY-SA 4.0**，不適用一般 MIT 授權；完整來源、修改與條款見 [茶壺聲明](licenses/teapot-openmoji-CC-BY-SA-4.0.txt)。
+The `teapot` drawing adapts the lid of an OpenMoji emoji; it and its modifications are licensed under **CC BY-SA 4.0**, not MIT. See the [teapot notice](licenses/teapot-openmoji-CC-BY-SA-4.0.txt).
 
-品牌資產另列來源：採用 Simple Icons、官方向量及註明來源的 Dcard 點陣轉描，Master 標誌使用自有素材；相關聲明與品牌使用資訊見 [品牌來源](THIRD_PARTY_NOTICES.md#brand-silhouettes--brands-01)。品牌資產與 Master 的程式碼授權分開記載；Vue、JavaScript、Copilot、Teams／Outlook 與 Dcard 的個別聲明見 [新增批次](docs/brands-03.md)。
+Brand artwork comes from Simple Icons, official vectors, a documented Dcard trace and Master's own mark, under terms recorded apart from the code license; see the [brand sources](THIRD_PARTY_NOTICES.md#brand-silhouettes--brands-01) and [batch notes](docs/brands-03.md). Brand names and marks belong to their owners and the code license grants no trademark rights.
 
-`references/` 中的比較原稿屬於各上游專案，保留各自授權，且不納入圖示套件。適用於改作圖稿的 notices 則隨單檔 SVG、套件及 ZIP 提供。Master Icons 與上述參考專案沒有隸屬或背書關係。
+Comparison drawings in `references/` belong to their upstream projects, keep their own licenses and are not in the packages. Master Icons is not affiliated with or endorsed by any referenced project.
