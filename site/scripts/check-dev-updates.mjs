@@ -12,7 +12,7 @@ const repo = fileURLToPath(new URL('../../', import.meta.url))
 await mkdir(join(repo, 'work'), { recursive: true })
 const fixture = await realpath(await mkdtemp(join(repo, 'work/dev-hmr-')))
 const site = join(fixture, 'site')
-let server, browser, starts = 0, publicUpdates = 0
+let server, browser, starts = 0, entryTransforms = 0, publicUpdates = 0
 let restarting = Promise.resolve()
 const times = {}
 try {
@@ -33,6 +33,7 @@ try {
         const restart = current.restart.bind(current)
         current.restart = (...args) => (restarting = restart(...args))
       },
+      transform(_code, id) { if (id === join(site, 'styles/globals.css')) entryTransforms++ },
       hotUpdate({file}) { if(file.startsWith(join(site,'public')+sep)) publicUpdates++ }
     }] }
   })
@@ -62,10 +63,12 @@ try {
   await visit('/icons')
   await visit('/icons')
   const initialStarts = starts
+  const beforeCSS = entryTransforms
   start = performance.now()
   await edit('styles/icons.css', source => source + '\n@layer components { .explorer-name { letter-spacing: 3.25px; } }\n')
   await expect(page.locator('.explorer-name').first()).toHaveCSS('letter-spacing', '3.25px')
   times.cssUpdateMs = Math.round(performance.now() - start)
+  assert.equal(entryTransforms, beforeCSS, 'Layout CSS must not recompile the Master CSS entry')
   assert.equal(starts, initialStarts, 'CSS must not restart Vite')
 
   start = performance.now()
@@ -140,7 +143,7 @@ try {
   await expect.poll(() => status('/icons/hmr-check'), { timeout: 15000 }).toBe(200)
   await restartAfter(() => rm(dirname(added), { recursive: true }))
   await expect.poll(() => status('/icons/hmr-check'), { timeout: 15000 }).toBe(404)
-  console.log(JSON.stringify({ ...times, iconDataRequests: iconModules.length, ordinaryEditRestarts: 0, generatedAssetHmrEvents:publicUpdates, generatedAssetReloads:1, routeInventoryChecks: 'passed' }, null, 2))
+  console.log(JSON.stringify({ ...times, iconDataRequests: iconModules.length, ordinaryEditRestarts: 0, cssEntryRecompiles: 0, generatedAssetHmrEvents:publicUpdates, generatedAssetReloads:1, routeInventoryChecks: 'passed' }, null, 2))
 } catch (error) {
   console.error(error)
   throw error

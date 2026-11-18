@@ -13,7 +13,7 @@ This project builds its interface with Master UI: classes on native elements, ea
 
 Run commands from this directory (`site/`), the Astro/Svelte application root. Use Bun; replace the `npx master-ui` examples above with `bun x --no-install master-ui` to use the installed version.
 
-The project uses Master CSS source compilation and one full `@master/ui` import in `styles/globals.css`. The entry `styles/site.ts` is registered in `site.config.ts`. The official skill is in `.agents/skills/master-ui/SKILL.md`; read it before Master UI work. There are no locally owned components or `master-ui.json`.
+The project uses Master CSS source compilation. `styles/globals.css` owns the preset and foundation; `styles/site.ts` imports each Master UI component this site uses as a module (never add a CSS `@import` of a component: it is delivered again in every stylesheet that names it); `styles/icons.css` owns site layout. Keep these separate imports in `styles/site.ts` so layout edits do not invalidate the Master CSS entry and every dependent stylesheet. Shared shell and document components load their own CSS. The entry is registered in `site.config.ts`. The official skill is in `.agents/skills/master-ui/SKILL.md`; read it before Master UI work. There are no locally owned components or `master-ui.json`.
 
 Preserve the shared Master Site header, existing application behavior and unrelated icon artwork. Do not add behavior scripts or framework components as part of stylesheet setup.
 
