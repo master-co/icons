@@ -1,0 +1,32 @@
+---
+import '@master/ui/components/avatar.css'
+import '@master/ui/components/badge.css'
+import '@master/ui/components/icon-frame.css'
+import '@master/ui/components/kbd.css'
+import '@master/ui/components/list.css'
+import '@master/ui/components/toolbar.css'
+import '@master/ui/components/window.css'
+import HomeWorkbench from './HomeWorkbench.svelte'
+import workbench from './HomeWorkbench.svelte?raw'
+import {islandCopy} from './island-copy'
+import {scopedStyles} from './theme-scope'
+interface Props {copy:Record<string,string>}
+const {copy}=Astro.props
+const t=(key:string)=>copy[key]??key
+---
+
+{/*
+  Styles: one interface of Master UI components in four materials, and the icons that belong in each. The bench's
+  setting reaches every icon on the page at once, and a callout keeps one of them under a loupe.
+*/}
+<section id="styles" class="home-section icons-styles" aria-labelledby="styles-title">
+ <Fragment set:html={`<style>${scopedStyles()}</style>`} />
+ <div class="app-wrapper home-section-wrap">
+  <header class="home-section-header">
+   <p class="home-eyebrow"><span class="home-eyebrow-index" aria-hidden="true">01</span><span>{t('Styles')}</span></p>
+   <h2 id="styles-title" class="home-section-heading">{t('One set of icons. Any interface.')}</h2>
+   <p class="home-section-body">{t('A console, a printed page, a soft app and a poster: each takes the size, corners and stroke that suit it. Change the setting and watch it reach every icon.')}</p>
+  </header>
+  <HomeWorkbench client:visible copy={islandCopy(workbench,t)} />
+ </div>
+</section>

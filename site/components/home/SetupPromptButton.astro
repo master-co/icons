@@ -1,0 +1,60 @@
+---
+import {SparklesIcon,CopyIcon,CheckIcon} from '@master/icons-astro'
+import {setupPrompt} from './setup-prompt'
+interface Props {locale:string;t:(key:string)=>string}
+const {locale,t}=Astro.props
+---
+
+{/*
+  The glass pill that copies the getting-started guide's "Set up Master Icons" prompt. The result takes the label's
+  place for a moment, and the live region after the button announces it.
+*/}
+<button type="button" class="icons-prompt" data-setup-prompt={setupPrompt(locale)} data-copied={t('Setup prompt copied')} data-failed={t('Copy failed')} aria-label={t('Set up with your AI agent: copy the setup prompt')}>
+ <SparklesIcon class="icons-prompt-icon" size={16} />
+ <span class="icons-prompt-label">
+  <span class="icons-prompt-text">{t('Set up with your AI agent')}</span>
+  <span class="icons-prompt-result" aria-hidden="true" data-prompt-result></span>
+ </span>
+ <span class="icons-prompt-copy" aria-hidden="true">
+  <CopyIcon class="icons-prompt-idle" size={16} />
+  <CheckIcon class="icons-prompt-done" size={16} strokeWidth={1.75} />
+ </span>
+</button>
+<span class="sr-only" aria-live="polite" data-prompt-status></span>
+
+<script>
+ /** Every setup-prompt pill on the page copies its prompt; the result shows for a moment, then it rests again. */
+ for(const button of document.querySelectorAll<HTMLButtonElement>('[data-setup-prompt]')){
+  const status=button.nextElementSibling?.matches('[data-prompt-status]')?button.nextElementSibling as HTMLElement:undefined
+  const result=button.querySelector<HTMLElement>('[data-prompt-result]')
+  let timer:ReturnType<typeof setTimeout>|undefined
+  button.addEventListener('click',async()=>{
+   let outcome:'copied'|'failed'
+   const text=button.dataset.setupPrompt??''
+   try{
+    await navigator.clipboard.writeText(text)
+    outcome='copied'
+   }catch{
+    // Where the Clipboard API is refused, a selected text area still copies within the same click.
+    const area=document.createElement('textarea')
+    area.value=text
+    area.setAttribute('readonly','')
+    area.style.cssText='position:fixed;inset:0 auto auto 0;opacity:0;pointer-events:none'
+    document.body.append(area)
+    area.select()
+    outcome=document.execCommand('copy')?'copied':'failed'
+    area.remove()
+    button.focus()
+   }
+   button.dataset.status=outcome
+   const message=(outcome==='copied'?button.dataset.copied:button.dataset.failed)??''
+   if(status)status.textContent=message
+   if(result)result.textContent=message
+   clearTimeout(timer)
+   timer=setTimeout(()=>{
+    delete button.dataset.status
+    if(status)status.textContent=''
+   },1800)
+  })
+ }
+</script>

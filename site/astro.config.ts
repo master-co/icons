@@ -4,6 +4,7 @@ import masterSite from '@master/internal-site/astro'
 import site from './site.config'
 import iconsPackage from '@master/icons/package.json' with {type:'json'}
 import {generatedAssets} from './scripts/generated-assets'
+import {homeShowcase} from './scripts/home-showcase'
 Object.assign(process.env, { PUBLIC_PROJECT: 'Master Icons', PUBLIC_URL: site.origin, PUBLIC_IMAGE_TRANSFORMATIONS: 'false', PUBLIC_VERSION: iconsPackage.version })
 export default defineConfig({
  outDir: './out',
@@ -11,7 +12,7 @@ export default defineConfig({
  devToolbar: {enabled:false},
  integrations: [masterSite(site)],
  vite: {
-  plugins: [generatedAssets()],
+  plugins: [generatedAssets(),homeShowcase()],
   // These generated trees contain tens of thousands of files. The dev runner
   // reloads once after preparation, rather than sending every file through HMR.
   server: {watch: {ignored: [fileURLToPath(new URL('./public/**', import.meta.url)), '**/.turbo/**']}},

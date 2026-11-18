@@ -1,28 +1,35 @@
 ---
-import { SearchIcon, HomeIcon, FolderIcon, BellIcon, CalendarIcon, SettingsIcon, HeartIcon, StarIcon } from '@master/icons-astro'
+import '@master/internal-site/home/design.css'
+import '@master/internal-site/home/home.css'
+import '../styles/home.css'
 import {readFile} from 'node:fs/promises'
 import DocHeader from '@master/internal-site/components/DocHeader.svelte'
-import Footer from '@master/internal-site/components/Footer.svelte'
+import HomeLamp from '@master/internal-site/home/HomeLamp.svelte'
+import HomeFooter from '@master/internal-site/home/HomeFooter.svelte'
+import HomeHero from '../components/home/HomeHero.astro'
+import HomeStyles from '../components/home/HomeStyles.astro'
+import HomeFeatures from '../components/home/HomeFeatures.astro'
+import HomeClose from '../components/home/HomeClose.astro'
 import translations from '../i18n/translations'
 const locale=Astro.props.params?.locale??Astro.params.locale??'en'
 const copy=translations[locale]??translations.en
-const t=(key:string)=>copy[key]??key
 const prefix=locale==='en'?'':`/${locale}`
 const catalog=JSON.parse(await readFile(new URL('../../packages/icons/dist/catalog.json',import.meta.url),'utf8'))
-const samples=[HomeIcon,FolderIcon,SearchIcon,BellIcon,CalendarIcon,SettingsIcon,HeartIcon,StarIcon]
 export const documentStyles=false
 export const metadata={title:{absolute:'Master Icons — Optical icons for interfaces'},description:'A softly geometric icon library, refined at 16, 20 and 24 pixels. Each size has its own drawing.'}
 export async function generateMetadata({params}:{params:{locale:string}}){const copy=translations[params.locale]??translations.en;return{title:{absolute:copy[metadata.title.absolute]},description:copy[metadata.description]}}
+const footerNavGroups=[
+ {name:'Library',links:[{name:'Icons',href:'/icons'},{name:'Getting started',href:'/guide/getting-started'},{name:'Sizes and corners',href:'/guide/optical-sizes'},{name:'Accessibility',href:'/guide/accessibility'}]},
+ {name:'Frameworks',links:[{name:'SVG',href:'/guide/svg'},{name:'React',href:'/guide/react'},{name:'Vue',href:'/guide/vue'},{name:'Svelte',href:'/guide/svelte'},{name:'Preact',href:'/guide/preact'},{name:'Astro',href:'/guide/astro'}]},
+ {name:'Project',links:[{name:'License',href:'/guide/license'},{name:'GitHub',href:'https://github.com/master-co/icons'}]},
+]
 ---
-<DocHeader client:load/>
-<main class="icons-container home-content">
- <section class="home-hero">
-  <div><p class="eyebrow">Master Icons / {t('Private alpha')}</p><h1>{t('Quiet lines. Clear meaning.')}</h1><p class="lead">{t('A softly geometric icon library, refined at 16, 20 and 24 pixels. Each size has its own drawing.')}</p><div class="home-actions"><a class="btn btn-lg" href={`${prefix}/icons`}>{t('Explore icons')} <span aria-hidden="true">↗</span></a><a class="btn btn-quiet btn-lg" href={`${prefix}/guide/getting-started`}>{t('Start building')}</a></div></div>
-  <div class="hero-specimen" aria-label={t('Interface icons at their native size.')}><div class="hero-grid">{samples.map(Icon=><div class="hero-glyph"><Icon size={24}/></div>)}</div><div class="specimen-foot"><span>24 PX / SOFT</span><span>{t('Native sizes')}</span></div></div>
- </section>
- <dl class="home-stats"><div><dt>{t('Named icons')}</dt><dd>{catalog.iconCount}</dd></div><div><dt>{t('Optical sizes')}</dt><dd>16 / 20 / 24</dd></div><div><dt>{t('Corner styles')}</dt><dd>3</dd></div><div><dt>{t('Open source')}</dt><dd>MIT</dd></div></dl>
- <section class="home-feature"><div><p class="eyebrow">01 / {t('Optical sizes')}</p><h2>{t('Small by design.')}</h2><p class="lead">{t('Choose a native optical size for your interface, then choose the corners that belong in it.')}</p></div><div class="size-study">{([16,20,24] as const).map(size=><div><span><CalendarIcon {size}/></span><span><FolderIcon {size}/></span><span><SettingsIcon {size}/></span><small>{size} PX</small></div>)}</div></section>
- <section class="home-feature"><div><p class="eyebrow">02 / {t('Corner styles')}</p><h2>{t('One family. Three expressions.')}</h2><p class="lead">{t('The geometry changes with the corner style, including the space inside each shape.')}</p></div><div class="size-study">{(['sharp','soft','rounded'] as const).map(corner=><div><span><FolderIcon size={24} {corner}/></span><span><CalendarIcon size={24} {corner}/></span><small>{t(corner[0].toUpperCase()+corner.slice(1))}</small></div>)}</div></section>
- <section class="home-close"><p class="eyebrow">SVG / REACT / VUE / SVELTE / PREACT / ASTRO</p><h2>{t('Made to work with your interface.')}</h2><p class="lead">{t('Use plain SVG or optical icon components for React, Vue, Svelte, Preact and Astro.')}</p><a class="btn" href={`${prefix}/guide/getting-started`}>{t('Read the guide')}</a><p class="alpha-note">{t('Available through a local workspace or packed archive. Not published to npm yet.')}</p></section>
+<DocHeader client:load class="home-header" stickable />
+<main class="overflow-clip home-page icons-home">
+ <HomeHero {locale} {prefix} {copy} count={catalog.iconCount} />
+ <HomeStyles {copy} />
+ <HomeFeatures {locale} {prefix} {copy} count={catalog.iconCount} categories={catalog.categories.length} />
+ <HomeClose {locale} {prefix} {copy} />
+ <HomeLamp client:idle={{timeout:500}} />
 </main>
-<Footer client:load navGroups={[{name:'Navigation',links:[{name:'Icons',href:'/icons'},{name:'Guide',href:'/guide/getting-started'},{name:'License',href:'/guide/license'}]}]}/>
+<HomeFooter client:idle={{timeout:500}} navGroups={footerNavGroups} wordmark="master icons" />

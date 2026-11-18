@@ -1,0 +1,48 @@
+---
+import {ArrowRightIcon} from '@master/icons-astro'
+import HomePlate,{type Specimen} from './HomePlate.svelte'
+import SetupPromptButton from './SetupPromptButton.astro'
+import plate from './HomePlate.svelte?raw'
+import {islandCopy} from './island-copy'
+interface Props {locale:string;prefix:string;copy:Record<string,string>;count:number}
+const {locale,prefix,copy,count}=Astro.props
+const t=(key:string)=>copy[key]??key
+const number=new Intl.NumberFormat(locale==='tw'?'zh-TW':'en').format(count)
+/*
+ * The plate's specimens, each at a setting of its own, so the loop walks the whole range: every size, every corner,
+ * strokes from 1.25 to 2. Open constructions that read well large, each with a different geometry to build.
+ */
+const specimens:Specimen[]=[
+ {name:'camera',size:24,corner:'soft',stroke:1.75},
+ {name:'compass',size:20,corner:'rounded',stroke:1.5},
+ {name:'calendar',size:16,corner:'sharp',stroke:1.25},
+ {name:'bell',size:24,corner:'rounded',stroke:2},
+ {name:'map-pin',size:20,corner:'soft',stroke:1.25},
+ {name:'sparkles',size:24,corner:'sharp',stroke:1.5},
+]
+---
+
+{/*
+  The hero: the promise and the two ways in, beside a plate on which a pen draws one icon after another, each at
+  its own size, corners and stroke.
+*/}
+<section class="home-hero icons-hero" aria-labelledby="hero-title">
+ <div class="app-wrapper home-section-wrap icons-hero-body">
+  <div class="icons-hero-reading">
+   <a class="icons-hero-pill" href={`${prefix}/icons`}>
+    <span class="icons-hero-pill-badge">{t('Alpha')}</span>
+    <span class="icons-hero-pill-label">{t('{count} icons, nine drawings each').replace('{count}',number)}</span>
+    <ArrowRightIcon size={16} />
+   </a>
+   <h1 id="hero-title" class="icons-hero-title">{t('Drawn to measure.')}<br class="icons-hero-break"> {t('Fit for any interface.')}</h1>
+   <p class="icons-hero-lead">{t('Interface icons drawn natively at 16, 20 and 24 px, in sharp, soft and rounded corners, with a stroke you can tune from a hairline to bold.')}</p>
+   <div class="icons-hero-actions">
+    <a class="icons-start" href={`${prefix}/icons`}>{t('Explore icons')}<ArrowRightIcon size={16} /></a>
+    <SetupPromptButton {locale} {t} />
+   </div>
+  </div>
+  <div class="icons-hero-figure">
+   <HomePlate client:load {specimens} copy={islandCopy(plate,t)} />
+  </div>
+ </div>
+</section>

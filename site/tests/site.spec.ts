@@ -120,8 +120,8 @@ for(const [locale,search] of [['','Search icons'],['/tw','搜尋圖示']]){
  })
  test(`${locale||'en'} home and all guide editions`,async({page})=>{
   await page.goto(locale||'/')
-  await expect(page.locator('h1')).toContainText(locale?'安靜的線條':'Quiet lines')
-  await page.getByRole('link',{name:locale?'探索圖示':'Explore icons',exact:false}).click()
+  await expect(page.locator('h1')).toContainText(locale?'量身繪製':'Drawn to measure')
+  await page.getByRole('link',{name:locale?'探索圖示':'Explore icons',exact:false}).first().click()
   await expect(page).toHaveURL(new RegExp(`${locale}/icons`))
   for(const slug of ['getting-started','svg','react','vue','svelte','preact','astro','optical-sizes','accessibility','license']){
    const result=await page.goto(`${locale}/guide/${slug}`);expect(result?.status()).toBe(200)

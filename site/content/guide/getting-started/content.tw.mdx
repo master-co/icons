@@ -3,6 +3,37 @@ title: "開始使用"
 description: "將 private alpha 接入本機專案。"
 ---
 
+import DocumentPrompt from '@master/internal-site/components/DocumentPrompt.astro'
+
+## 以 AI agent 設定 \{#set-up-with-an-ai-agent\}
+
+Coding agent 可以替你完成設定。在應用程式根目錄啟動 agent，再貼上下方提示詞：它會先檢查專案，並在修改檔案前詢問你的儲存庫位置、框架套件、預設尺寸、圓角與線寬，以及既有圖示庫的處理方式。接著安裝 private alpha、呈現第一個圖示並執行專案檢查。
+
+<DocumentPrompt title="Set up Master Icons" text={`你正在一個既有的 web 應用程式中工作。請完整設定 Master Icons。
+文件：master-icons 儲存庫中的指南，位於 site/content/guide（getting-started、所選框架的頁面、optical-sizes 與 accessibility）。
+
+Master Icons 目前為 private alpha，尚未發布至 npm。不要搜尋 registry，也不要安裝名稱相似的套件。
+
+修改前先檢查專案：套件管理工具與 lockfile、Node.js 版本、框架與建置工具（React、Vue、Svelte、Preact、Astro 或無框架）、應用程式是否為 master-icons monorepo 的 workspace、目前使用的圖示庫及其匯入方式、dev／lint／build／test 指令，以及 AGENTS.md 等 agent 指引檔案。
+
+修改前先問我以下問題並等待回答，不要自行決定：
+- 儲存庫：我的 master-icons checkout 絕對路徑；若應用程式就是該 monorepo 的 workspace 則免。
+- 接入方式：依偵測到的框架選擇套件（@master/icons-react、@master/icons-vue、@master/icons-svelte、@master/icons-preact 或 @master/icons-astro），純 SVG 與 JavaScript 則用 @master/icons。只安裝一個框架套件。
+- 預設值：光學尺寸（16、20 或 24；一般介面用 24，密集介面用 16 或 20）、圓角（sharp、soft 或 rounded；預設 soft），以及保留各母版的原生線寬或指定單一線寬（16 px 為 0.75–1.5、20 px 為 1–2、24 px 為 1.25–2.5，以 0.25 為級距）。
+- 既有圖示：若專案已使用其他圖示庫，要保留它（預設）並只在新介面使用 Master Icons，還是替換我指名的圖示。絕不替換我未指名的圖示。
+
+接著保守地導入 Master Icons：
+1. 每個指令都在應用程式根目錄（package.json 所在處）以專案的套件管理工具執行。
+2. 在 monorepo 內：於應用程式依賴加入 "<adapter>": "workspace:*"，再於儲存庫根目錄執行 bun install 與 bun run build:icons。其他專案：在 checkout 執行 bun run pack:icons；安裝 <checkout>/work/master-icons-alpha.tgz 與同目錄的框架套件封裝檔（例如 master-icons-svelte-alpha.tgz）；並加入 override 將 @master/icons 指向核心封裝檔（Bun 或 npm 用 overrides、pnpm 用 pnpm.overrides、Yarn 用 resolutions），讓框架套件從封裝檔取得核心，絕不從 registry 取得。
+3. 以名稱匯入每個圖示。動態入口（import { SearchIcon } from '@master/icons-svelte'）接受 size、corner 與 strokeWidth；固定入口如 '@master/icons-svelte/20/soft' 只含一個母版、體積更小。整個應用程式使用同一設定時優先使用固定入口。
+4. 以原生尺寸呈現圖示。傳入 size 以選擇最接近的光學母版，不要用 CSS width 與 height 縮放圖示。strokeWidth 會選擇預先計算的幾何，因此絕不在 CSS 覆寫 stroke-width。
+5. 保持無障礙：位於可見文字旁的圖示維持裝飾性；純圖示按鈕的無障礙名稱放在按鈕上；具意義的獨立圖示加上 label。
+6. 若我選擇替換指名的圖示，將每個圖示對應到 <checkout>/packages/icons/dist/catalog.json 中最接近的名稱，修改前先給我看對照表，保留每個控制項的無障礙名稱，並在已無任何程式碼匯入舊依賴後才移除它。
+7. 保留既有架構與樣式，避免無關的重構。
+8. 驗證：在可見頁面呈現 size 20 的 SearchIcon（或內嵌 <checkout>/packages/icons/icons/20/soft/search.svg），確認它在淺色與深色模式下都以文字色繪製、呈微圓角。之後除非我要保留，否則移除它，並執行專案的 lint、build 與 tests。
+
+完成後摘要：變更的檔案、使用的框架套件與 workspace 或封裝檔路線、選定的預設值、替換或刻意保留的圖示、驗證結果，以及未在瀏覽器驗證的項目。`} />
+
 ## 使用本機 workspace \{#workspace\}
 
 Master Icons 目前為 private alpha，尚未發布至 npm。在此 monorepo 的應用程式依賴中加入使用的框架套件，例如 `"@master/icons-svelte": "workspace:*"`（SVG／JavaScript 則使用 `"@master/icons": "workspace:*"`），然後執行：

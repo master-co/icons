@@ -1,25 +1,5 @@
 @layer components {
  .icons-container { max-width: 80rem; margin-inline: auto; padding-inline: clamp(1.25rem, 4vw, 4rem); color: var(--color-text-strong); }
- .eyebrow { font-size: .6875rem; letter-spacing: .12em; text-transform: uppercase; color: var(--color-text-muted); margin-block-end: 1.5rem; }
- .lead { font-size: 1.0625rem; line-height: 1.8; color: var(--color-text-body); max-width: 34rem; }
- .home-hero { display: grid; grid-template-columns: 1.1fr 1fr; gap: 5rem; align-items: center; padding-block: 7rem 5rem; }
- .home-hero h1 { font-size: clamp(3rem, 5.5vw, 5.25rem); font-weight: 550; letter-spacing: -.055em; line-height: 1.08; max-width: 9em; margin-block-end: 1.5rem; text-wrap: balance; }
- .home-actions { display: flex; gap: .75rem; flex-wrap: wrap; margin-block-start: 2rem; }
- .hero-specimen { background: var(--color-surface-raised-low); border-radius: calc(2rem * var(--corner-scale)); corner-shape: var(--corner-shape); box-shadow: var(--shadow-raised); padding: 2rem; }
- .hero-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 1rem; }
- .hero-glyph { min-height: 6rem; display: grid; place-items: center; }
- .specimen-foot { display:flex; justify-content:space-between; gap:1rem; margin-top:2rem; font-size:.625rem; letter-spacing:.08em; color:var(--color-text-muted); }
- .home-stats { display:grid; grid-template-columns:repeat(4,1fr); gap:2rem; padding-block:2rem 3rem; border-bottom:1px solid var(--color-line-hair); }
- .home-stats dt { color:var(--color-text-muted); font-size:.75rem; margin-block-end:.75rem; }
- .home-stats dd { font-size:1.25rem; letter-spacing:-.03em; }
- .home-feature { display:grid; grid-template-columns:1.1fr 1fr; gap:5rem; align-items:center; padding-block:5rem; border-bottom:1px solid var(--color-line-hair); }
- .home-content h2 { font-size:clamp(1.75rem,3vw,2.75rem); line-height:1.15; letter-spacing:-.04em; font-weight:550; margin-block-end:1.25rem; text-wrap:balance; }
- .size-study { display:grid; grid-template-columns:repeat(3,1fr); gap:2rem; padding:2rem; background:var(--color-surface-tray); border-radius:calc(1.5rem * var(--corner-scale)); corner-shape:var(--corner-shape); }
- .size-study > div { display:flex; flex-direction:column; align-items:center; justify-content:center; gap:2rem; }
- .size-study small { font-size:.6875rem; color:var(--color-text-muted); }
- .home-close { padding-block:6rem; text-align:center; }
- .home-close .lead { margin-inline:auto; margin-bottom:2rem; }
- .alpha-note { font-size:.75rem; color:var(--color-text-muted); margin-top:1.5rem; }
  .collection-container { --collection-inset:2rem; max-width:none; padding-top:var(--collection-inset); }
  /* The shared header owns its own spacing. The footer follows the icon column. */
  .collection-container { --collection-gutter:var(--ui-space-xl); padding-inline:max(var(--collection-gutter),env(safe-area-inset-left)) max(var(--collection-gutter),env(safe-area-inset-right)); }
@@ -80,12 +60,6 @@
   .explorer-search { grid-column:1/-1; }
  }
  @media (width < 48rem) {
-  .home-hero,.home-feature { grid-template-columns:1fr; gap:2.5rem; padding-block:3rem; }
-  .home-hero h1 { max-width:11em; }
-  .hero-specimen { padding:1rem; }
-  .hero-glyph { min-height:4rem; }
-  .home-stats { grid-template-columns:repeat(2,1fr); }
-  .home-close { padding-block:3rem; }
   .collection-container { padding-top:1.25rem; }
   .optical-grid { grid-template-columns:1fr; }
  }

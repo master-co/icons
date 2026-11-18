@@ -1,0 +1,1228 @@
+/*
+ * The Master Icons homepage: a drafting sheet. It stands on the shared home language (`@master/internal-site/home`:
+ * its rails, rulers, crosses, eyebrows, bento cards and lamp) and adds the icon's own material, construction drawings
+ * in the Plotter grammar: one ink, 1-unit lines, opacity for hierarchy (1 form, .32 secondary and dimensions, .14
+ * guides, .06 grids), and a translucent wash only on the form being explained.
+ */
+@layer components.site {
+  .icons-home {
+    --plot-ink: var(--home-text);
+    --plot-secondary: .32;
+    --plot-guide: .14;
+    --plot-grid: .07;
+    --plot-wash: .07;
+  }
+
+  /* ------------------------------------------------------------------------------------------------------------
+   * Hero
+   * --------------------------------------------------------------------------------------------------------- */
+  .icons-hero {
+    position: relative;
+    isolation: isolate;
+    padding-block: clamp(7rem, 4.5rem + 6vw, 9rem) clamp(4rem, 2rem + 5vw, 7rem);
+  }
+
+  /* The words on the left, the plate on the right, centred on each other in a hero about one screen tall. */
+  .icons-hero-body {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 3.5rem;
+    align-items: center;
+
+    @media (width >= 64rem) {
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      gap: clamp(3rem, 1rem + 4vw, 6rem);
+      min-height: min(52rem, calc(100svh - 12rem));
+    }
+  }
+
+  .icons-hero-reading {
+    display: grid;
+    justify-items: start;
+    min-width: 0;
+  }
+
+  .icons-hero-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: .625rem;
+    max-width: 100%;
+    min-height: 1.875rem;
+    padding: .25rem .75rem .25rem .25rem;
+    border-radius: calc(infinity * 1px);
+    font-size: .8125rem;
+    color: var(--home-text-body);
+    text-decoration: none;
+    background-color: var(--home-sheet);
+    box-shadow: inset 0 1px 0 var(--home-highlight), 0 0 0 .5px var(--home-rule), 0 1px 2px -1px var(--home-shade-far);
+    transition: box-shadow var(--home-quick) var(--home-ease), color var(--home-quick) var(--home-ease);
+
+    & > svg {
+      flex: none;
+      color: var(--home-text-faint);
+      transition: translate var(--home-base) var(--home-ease);
+    }
+
+    & > svg:dir(rtl) { scale: -1 1; }
+
+    @media (hover: hover) {
+      &:hover {
+        color: var(--home-text);
+        box-shadow: inset 0 1px 0 var(--home-highlight), 0 0 0 .5px var(--home-rule-strong), 0 1px 2px -1px var(--home-shade-far);
+
+        & > svg { translate: 2px 0; }
+      }
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--home-ink);
+      outline-offset: 2px;
+    }
+  }
+
+  .icons-hero-pill-label {
+    min-width: 0;
+    line-height: 1.3;
+    text-wrap: balance;
+  }
+
+  .icons-hero-pill-badge {
+    display: inline-flex;
+    flex: none;
+    align-items: center;
+    height: 1.375rem;
+    padding-inline: .5rem;
+    border-radius: inherit;
+    font-family: var(--home-mono);
+    font-size: .625rem;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--home-text);
+    background-color: var(--home-tray);
+    box-shadow: inset 0 0 0 .5px var(--home-rule);
+  }
+
+  .icons-hero-title {
+    margin: 1.75rem 0 0;
+    font-size: clamp(2.75rem, 1.2rem + 3.2vw, 4.5rem);
+    font-weight: var(--font-weight-regular);
+    line-height: 1;
+    letter-spacing: -.05em;
+    color: var(--home-text);
+    text-wrap: balance;
+  }
+
+  .icons-home:lang(zh) .icons-hero-title {
+    letter-spacing: -.015em;
+    line-height: 1.12;
+    word-break: keep-all;
+    overflow-wrap: anywhere;
+  }
+
+  /* The title's two sentences sit on two lines where there is room for both. */
+  .icons-hero-break {
+    @media (width < 40rem) { display: none; }
+  }
+
+  .icons-hero-lead {
+    max-width: 30rem;
+    margin: 1.75rem 0 0;
+    font-size: clamp(1.0625rem, 1rem + .2vw, 1.1875rem);
+    line-height: 1.6;
+    color: var(--home-text-body);
+    text-wrap: pretty;
+  }
+
+  .icons-home:lang(zh) .icons-hero-lead { text-wrap: balance; }
+
+  .icons-hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    gap: .75rem;
+    margin-top: 2rem;
+
+    @media (width < 30rem) {
+      flex-direction: column;
+      width: 100%;
+    }
+  }
+
+  /* --- The plate: a pen draws one icon after another --- */
+  .icons-hero-figure { min-width: 0; }
+
+  .icons-plate {
+    display: grid;
+    gap: 1.25rem;
+    margin: 0;
+  }
+
+  .icons-plate-sheet {
+    position: relative;
+    color: var(--plot-ink);
+  }
+
+  .icons-plate-bar {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--home-guide);
+  }
+
+  .icons-plate-specimens {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .125rem;
+  }
+
+  /* The specimen being drawn carries the drawing's progress as a line along its foot. */
+  .icons-plate-pick {
+    position: relative;
+
+    &::after {
+      position: absolute;
+      inset: auto 25% 2px;
+      height: 1px;
+      background-color: var(--home-text);
+      scale: var(--progress, 0) 1;
+      transform-origin: left;
+      opacity: .6;
+      pointer-events: none;
+      content: '';
+    }
+  }
+
+  .icons-plate-caption {
+    display: flex;
+    gap: .75rem;
+    margin-inline-start: auto;
+    font-variant-numeric: tabular-nums;
+
+    & > * + * {
+      padding-inline-start: .75rem;
+      border-inline-start: 1px solid var(--home-rule);
+    }
+
+    @media (width < 30rem) { display: none; }
+  }
+
+  /* The carriage: two hairlines that cross at the pen, and the pen itself, a ring around its nib. */
+  .home-plate-carriage {
+    stroke-opacity: var(--plot-guide);
+  }
+
+  .home-plate-pen {
+    & > circle { fill: none; stroke: currentColor; stroke-opacity: .72; }
+    & > .home-plate-nib { fill: currentColor; stroke: none; }
+  }
+
+  /*
+   * The two actions: a stone cut from the page's one ink object, and a pill of clear glass that copies the setup
+   * prompt. Both catch the page lamp's light on their near side.
+   */
+  :is(.icons-start, .icons-prompt) {
+    --lit-x: 30%;
+    --lit-y: -160%;
+    --lit-angle: -45deg;
+    --cast-x: 2px;
+    --cast-y: 4px;
+    --lit-near: 0;
+  }
+
+  .icons-start {
+    --stone-top: light-dark(oklch(.32 .004 265), oklch(.99 .001 265));
+    --stone-mid: light-dark(oklch(.19 .003 265), oklch(.94 .002 265));
+    --stone-bottom: light-dark(oklch(.09 .002 265), oklch(.84 .004 265));
+    --stone-text: light-dark(oklch(.975 .001 265), oklch(.19 .003 265));
+    --stone-lip: light-dark(rgb(255 255 255 / .22), rgb(255 255 255 / .95));
+    --stone-rim: light-dark(rgb(255 255 255 / .42), rgb(255 255 255 / 1));
+    --stone-mirror: light-dark(oklch(.72 .004 265 / .26), oklch(.55 .004 265 / .32));
+    --stone-sheen: light-dark(rgb(255 255 255 / .14), rgb(255 255 255 / .9));
+    --stone-glare: light-dark(rgb(255 255 255 / .32), rgb(255 255 255 / 1));
+    --stone-adularescence: light-dark(transparent, oklch(.9 .03 245 / .22));
+    --stone-glint: light-dark(rgb(255 255 255 / .15), rgb(255 255 255 / .85));
+    --stone-contact: light-dark(rgb(0 0 0 / .26), rgb(0 0 0 / .55));
+    --stone-cast: light-dark(oklch(.2 .003 265 / .3), oklch(.02 0 none / .7));
+    --stone-press: light-dark(rgb(0 0 0 / .7), oklch(.5 .004 265 / .5));
+    position: relative;
+    isolation: isolate;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    min-height: 3.25rem;
+    padding: .5rem 1.625rem;
+    overflow: hidden;
+    border-radius: calc(var(--radius-control-lg) * var(--corner-scale));
+    corner-shape: var(--corner-shape);
+    font-size: .9375rem;
+    font-weight: var(--font-weight-medium);
+    letter-spacing: -.005em;
+    color: var(--stone-text);
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+    text-shadow: 0 -1px 0 light-dark(rgb(0 0 0 / .45), rgb(255 255 255 / .7));
+    background-color: var(--stone-mid);
+    background-image:
+      radial-gradient(ellipse 13% 18% at clamp(14%, var(--lit-x), 86%) 24%, color-mix(in oklab, var(--stone-glare) calc(var(--lit-near) * 100%), transparent), color-mix(in oklab, var(--stone-glare) calc(var(--lit-near) * 30%), transparent) 45%, transparent),
+      radial-gradient(ellipse 80% 70% at var(--lit-x) -10%, var(--stone-sheen), transparent 70%),
+      radial-gradient(ellipse 34% 70% at clamp(30%, calc(100% - var(--lit-x) * .5), 70%) 75%, var(--stone-adularescence), transparent),
+      linear-gradient(180deg, var(--stone-top), var(--stone-mid) 52%, var(--stone-bottom));
+    box-shadow:
+      inset 0 1px 0 var(--stone-lip),
+      inset 0 -1px 0 var(--stone-mirror),
+      inset 0 -10px 16px -12px var(--stone-mirror),
+      0 1px 1px var(--stone-contact),
+      var(--cast-x) var(--cast-y) 10px -3px var(--stone-cast),
+      calc(var(--cast-x) * 2.5) calc(var(--cast-y) * 2.5) 28px -10px var(--stone-cast);
+    transition: background-color var(--home-quick) var(--home-ease);
+
+    &::before {
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      padding: 1px;
+      border-radius: inherit;
+      corner-shape: inherit;
+      background-image: linear-gradient(var(--lit-angle), var(--stone-mirror), transparent 40%, transparent 58%, var(--stone-rim));
+      mask: linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0);
+      pointer-events: none;
+      content: '';
+    }
+
+    &::after {
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      border-radius: inherit;
+      corner-shape: inherit;
+      background-image: linear-gradient(105deg, transparent 38%, var(--stone-glint) 50%, transparent 62%);
+      background-size: 250% 100%;
+      background-position: 100% 0;
+      background-repeat: no-repeat;
+      pointer-events: none;
+      content: '';
+    }
+
+    & > svg { transition: translate var(--home-base) var(--home-ease); }
+    & > svg:dir(rtl) { scale: -1 1; }
+
+    @media (hover: hover) {
+      &:is(:hover, :focus-visible) {
+        box-shadow:
+          inset 0 1px 0 var(--stone-lip),
+          inset 0 -1px 0 var(--stone-mirror),
+          inset 0 -14px 20px -12px var(--stone-mirror),
+          0 1px 1px var(--stone-contact),
+          var(--cast-x) var(--cast-y) 12px -3px var(--stone-cast),
+          calc(var(--cast-x) * 3) calc(var(--cast-y) * 3) 34px -10px var(--stone-cast);
+
+        & > svg { translate: 3px 0; }
+
+        &::after {
+          background-position: 0 0;
+          transition: background-position 900ms var(--home-ease);
+        }
+      }
+    }
+
+    &:active {
+      box-shadow:
+        inset 0 2px 6px var(--stone-press),
+        inset 0 -1px 0 var(--stone-mirror),
+        0 1px 1px var(--stone-contact),
+        calc(var(--cast-x) * .4) calc(var(--cast-y) * .4) 6px -3px var(--stone-cast);
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--home-ink);
+      outline-offset: 4px;
+    }
+  }
+
+  .icons-prompt {
+    --glass-fill: light-dark(rgb(255 255 255 / .5), rgb(255 255 255 / .045));
+    --glass-top: light-dark(rgb(255 255 255 / .7), rgb(255 255 255 / .06));
+    --glass-lip: light-dark(rgb(255 255 255 / 1), rgb(255 255 255 / .14));
+    --glass-rim: light-dark(oklch(.22 .002 265 / .16), rgb(255 255 255 / .4));
+    --glass-rim-far: light-dark(oklch(.22 .002 265 / .07), rgb(255 255 255 / .1));
+    --glass-glint: light-dark(rgb(255 255 255 / .95), rgb(255 255 255 / .2));
+    --glass-cast: light-dark(oklch(.2 .003 265 / .12), rgb(0 0 0 / .45));
+    position: relative;
+    isolation: isolate;
+    display: inline-flex;
+    align-items: center;
+    gap: .625rem;
+    min-height: 3.25rem;
+    padding-block: .25rem;
+    padding-inline: 1.125rem .25rem;
+    border: 0;
+    border-radius: calc(var(--radius-control-lg) * var(--corner-scale));
+    corner-shape: var(--corner-shape);
+    font: inherit;
+    font-size: .9375rem;
+    font-weight: var(--font-weight-medium);
+    color: var(--home-text);
+    text-align: start;
+    background-color: var(--glass-fill);
+    background-image: linear-gradient(180deg, var(--glass-top), transparent 55%);
+    box-shadow:
+      inset 0 1px 1px var(--glass-lip),
+      0 1px 2px light-dark(oklch(.2 .003 265 / .06), rgb(0 0 0 / .3)),
+      var(--cast-x) var(--cast-y) 16px -6px var(--glass-cast);
+    backdrop-filter: blur(10px) saturate(1.2);
+    cursor: pointer;
+    transition: background-color var(--home-quick) var(--home-ease);
+
+    &::before {
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      padding: 1px;
+      border-radius: inherit;
+      corner-shape: inherit;
+      background-image: linear-gradient(var(--lit-angle), var(--glass-rim-far), var(--glass-rim-far) 30%, var(--glass-rim));
+      mask: linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0);
+      pointer-events: none;
+      content: '';
+    }
+
+    &::after {
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      border-radius: inherit;
+      corner-shape: inherit;
+      background-image: linear-gradient(105deg, transparent 40%, var(--glass-glint) 50%, transparent 60%);
+      background-size: 300% 100%;
+      background-position: 100% 0;
+      background-repeat: no-repeat;
+      opacity: 0;
+      pointer-events: none;
+      content: '';
+    }
+
+    &[data-status='copied']::after { animation: icons-glint 1000ms var(--home-ease-inout); }
+
+    @media (hover: hover) {
+      &:hover { --glass-fill: light-dark(rgb(255 255 255 / .72), rgb(255 255 255 / .075)); }
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--home-ink);
+      outline-offset: 4px;
+    }
+  }
+
+  @media (prefers-reduced-transparency: reduce) {
+    .icons-prompt {
+      backdrop-filter: none;
+
+      &, &:hover {
+        --glass-fill: var(--home-sheet);
+        --glass-top: transparent;
+      }
+    }
+  }
+
+  @media (prefers-contrast: more) {
+    .icons-prompt {
+      --glass-rim: var(--home-text-quiet);
+      --glass-rim-far: var(--home-text-quiet);
+    }
+  }
+
+  .icons-prompt-icon {
+    flex: none;
+    color: var(--home-text-quiet);
+  }
+
+  .icons-prompt-label {
+    display: grid;
+    flex: auto;
+    min-width: 0;
+
+    & > * {
+      grid-area: 1 / 1;
+      transition: opacity var(--home-quick) var(--home-ease);
+    }
+  }
+
+  .icons-prompt-result { opacity: 0; }
+  .icons-prompt[data-status] .icons-prompt-result { opacity: 1; }
+  .icons-prompt[data-status] .icons-prompt-text { opacity: 0; }
+
+  .icons-prompt-copy {
+    display: grid;
+    flex: none;
+    place-items: center;
+    width: 2.75rem;
+    height: 2.75rem;
+    border-radius: calc(var(--radius-control-lg) * var(--corner-scale) - .25rem);
+    corner-shape: var(--corner-shape);
+    color: var(--home-text-body);
+    background-color: light-dark(oklch(.22 .002 265 / .045), rgb(255 255 255 / .06));
+    box-shadow: inset 0 0 0 .5px var(--home-rule);
+    transition: background-color var(--home-quick) var(--home-ease);
+
+    & > * {
+      grid-area: 1 / 1;
+      transition: opacity var(--home-quick) var(--home-ease), scale var(--home-base) var(--home-ease);
+    }
+
+    & > .icons-prompt-done { opacity: 0; }
+
+    .icons-prompt[data-status='copied'] & > .icons-prompt-idle { opacity: 0; }
+    .icons-prompt[data-status='copied'] & > .icons-prompt-done { opacity: 1; }
+
+    @media (prefers-reduced-motion: no-preference) {
+      & > .icons-prompt-done,
+      .icons-prompt[data-status='copied'] & > .icons-prompt-idle { scale: .6; }
+
+      .icons-prompt[data-status='copied'] & > .icons-prompt-done { scale: 1; }
+    }
+
+    @media (hover: hover) {
+      .icons-prompt:hover & { background-color: light-dark(oklch(.22 .002 265 / .07), rgb(255 255 255 / .1)); }
+    }
+  }
+
+  /* ------------------------------------------------------------------------------------------------------------
+   * The bench: one setting, an interface that wears it and a detail that inspects it
+   * --------------------------------------------------------------------------------------------------------- */
+  .home-bench {
+    position: relative;
+    display: grid;
+    gap: 0;
+    margin: 0;
+    border-radius: var(--home-radius-tray);
+    background-color: var(--home-tray);
+    box-shadow: inset 0 0 0 1px var(--home-hairline);
+    padding: var(--home-gap);
+  }
+
+  .home-bench-bar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: .75rem 1.25rem;
+    padding: .5rem .75rem 1.125rem;
+  }
+
+  .home-bench-group {
+    display: flex;
+    align-items: center;
+    gap: .625rem;
+    min-width: 0;
+  }
+
+  .home-bench-stroke {
+    flex: 1 1 11rem;
+    max-width: 20rem;
+
+    & > .slider { flex: 1 1 auto; min-width: 6rem; }
+  }
+
+  .home-bench-value {
+    min-width: 2.25rem;
+    font-family: var(--home-mono);
+    font-size: .75rem;
+    font-variant-numeric: tabular-nums;
+    color: var(--home-text);
+    text-align: end;
+  }
+
+  .home-bench-play { margin-inline-start: auto; }
+
+  /* On a phone each control takes the full width under its label. */
+  @media (width < 40rem) {
+    .home-bench-bar { padding-inline: .375rem; }
+
+    .home-bench-group {
+      flex-direction: column;
+      align-items: stretch;
+      gap: .375rem;
+      width: 100%;
+    }
+
+    .home-bench-stroke {
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+      max-width: none;
+
+      & > .home-annotation { width: 100%; }
+    }
+
+    .home-bench-play {
+      position: absolute;
+      inset: calc(var(--home-gap) + .5rem) calc(var(--home-gap) + .375rem) auto auto;
+    }
+  }
+
+  .home-plate {
+    display: block;
+    width: 100%;
+    height: auto;
+    overflow: visible;
+    font-size: 12px;
+  }
+
+  /* The screen and its detail, with the callout drawn over both. */
+  .home-bench-stage {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--home-gap);
+
+    @media (width >= 64rem) {
+      grid-template-columns: minmax(0, 1fr) 17.5rem;
+    }
+  }
+
+  /* The screen holds every style in one cell, so the incoming style is drawn over the outgoing one. */
+  .home-bench-screen {
+    position: relative;
+    display: grid;
+    min-width: 0;
+    height: clamp(34rem, 26rem + 12vw, 42rem);
+    overflow: clip;
+    border-radius: var(--home-radius-sheet);
+    box-shadow: 0 0 0 1px var(--home-hairline);
+  }
+
+  .home-bench-detail {
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+    min-width: 0;
+    padding: 1.25rem 1.25rem 1.375rem;
+    border-radius: var(--home-radius-sheet);
+    color: var(--plot-ink);
+    background-color: var(--home-sheet);
+    box-shadow: 0 0 0 1px var(--home-hairline), var(--home-elevation-1);
+
+    @media (width >= 64rem) { display: flex; }
+  }
+
+  .home-bench-detail-head {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+
+    & > :last-child { color: var(--home-text); text-transform: none; letter-spacing: 0; }
+  }
+
+  .home-bench-detail-plate { margin-block: auto; }
+
+  /* The inspected icon as it renders, at its native size and at twice it. */
+  .home-bench-actual {
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    gap: 2rem;
+    color: var(--home-text);
+  }
+
+  .home-bench-actual-item {
+    display: grid;
+    justify-items: center;
+    gap: .5rem;
+
+    & > small { font-family: var(--home-mono); font-size: .625rem; color: var(--home-text-faint); }
+  }
+
+  .home-bench-spec {
+    display: grid;
+    gap: .5rem;
+    margin: 0;
+    padding-top: .875rem;
+    border-top: 1px solid var(--home-guide);
+
+    & > div { display: flex; justify-content: space-between; gap: 1rem; }
+    & dt { font-size: var(--home-caption); color: var(--home-text-quiet); }
+    & dd { margin: 0; font-family: var(--home-mono); font-size: .75rem; font-variant-numeric: tabular-nums; color: var(--home-text); }
+  }
+
+  /*
+   * The callout: a ring on the icon under inspection and a leader to its detail, in the page's one signal color,
+   * the color of the path a change takes. The ring moves first; the detail redraws when it has arrived.
+   */
+  .home-bench-callout {
+    position: absolute;
+    inset: 0;
+    z-index: 5;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+    pointer-events: none;
+    fill: none;
+    stroke: var(--home-signal);
+    stroke-width: 1.5;
+    transition: opacity 240ms var(--home-ease);
+
+    &[data-wiping] { opacity: 0; }
+
+    & > circle {
+      transition: cx 420ms var(--home-ease), cy 420ms var(--home-ease), r 420ms var(--home-ease);
+      filter: drop-shadow(0 0 3px var(--home-signal-glow));
+    }
+
+    & > .home-bench-anchor {
+      fill: var(--home-signal);
+      stroke: none;
+      transition: cy 420ms var(--home-ease);
+    }
+
+    @media (width < 64rem) { display: none; }
+  }
+
+  .home-bench-tick {
+    stroke-width: 2;
+    transition: d 420ms var(--home-ease);
+  }
+
+  .home-bench-leader {
+    stroke-width: 1;
+    stroke-dasharray: 4 6;
+    transition: d 420ms var(--home-ease);
+    animation: icons-march 900ms linear infinite;
+  }
+
+  /*
+   * Each style stands on its own ground: the surface of its theme, dotted with Master UI's texture in the style's
+   * own strong ink, quieted to a whisper. The window keeps clear room on every side; its title is the style's name.
+   */
+  .home-ui-layer.texture {
+    --texture-ink: color-mix(in oklab, var(--color-text-strong) 8%, transparent);
+  }
+
+  .home-ui-layer {
+    container: home-ui / inline-size;
+    grid-area: 1 / 1;
+    display: grid;
+    grid-template-columns: minmax(0, min(100%, 52rem));
+    justify-content: center;
+    min-width: 0;
+    min-height: 0;
+    padding: 1.25rem .75rem;
+
+    @media (width >= 40rem) {
+      padding: clamp(2rem, 6%, 3.25rem) clamp(1.75rem, 5%, 3.5rem);
+    }
+    font-family: var(--font-family-sans);
+    color: var(--color-text-strong);
+    background-color: var(--color-surface-base);
+    color-scheme: inherit;
+  }
+
+  .home-bench-seam {
+    position: absolute;
+    inset-block: 0;
+    left: 0;
+    z-index: 3;
+    width: 1px;
+    background-color: var(--home-signal);
+    box-shadow: 0 0 0 3px var(--home-signal-glow);
+    pointer-events: none;
+    animation: icons-seam 900ms cubic-bezier(.65, 0, .35, 1) both;
+  }
+
+  /* --- The interface: one composition of Master UI components --- */
+  .home-ui-window {
+    min-height: 0;
+  }
+
+  .home-ui {
+    display: grid;
+    grid-template-columns: 11.5rem minmax(0, 1fr);
+    height: 100%;
+    min-height: 0;
+  }
+
+  .home-ui-side {
+    display: flex;
+    flex-direction: column;
+    gap: .75rem;
+    min-width: 0;
+    padding: .875rem .625rem;
+    border-inline-end: 1px solid var(--color-line-hair);
+    background-color: var(--color-surface-base);
+  }
+
+  .home-ui-brand {
+    display: flex;
+    align-items: center;
+    gap: .625rem;
+    margin: 0 0 .25rem;
+    padding-inline: .375rem;
+    font-size: .875rem;
+    font-weight: var(--font-weight-control, 500);
+    color: var(--color-text-strong);
+  }
+
+  .home-ui-foot { margin-top: auto; }
+
+  .home-ui-main {
+    display: flex;
+    flex-direction: column;
+    gap: .875rem;
+    min-width: 0;
+    min-height: 0;
+    padding: 1rem 1.125rem;
+    overflow: hidden;
+  }
+
+  .home-ui-head {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+  }
+
+  .home-ui-heading {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+
+  .home-ui-title {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: var(--font-weight-control, 600);
+    letter-spacing: -.02em;
+    color: var(--color-text-strong);
+  }
+
+  .home-ui-note {
+    margin: .125rem 0 0;
+    font-size: .8125rem;
+    color: var(--color-text-muted);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .home-ui-tools {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+
+    & > .home-ui-search { flex: 1 1 auto; }
+  }
+
+  .home-ui-list {
+    flex: 1 1 auto;
+    min-height: 0;
+    overflow: hidden;
+  }
+
+  .home-ui-composer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: .5rem;
+    padding-top: .75rem;
+    border-top: 1px solid var(--color-line-hair);
+
+    & > .toolbar { min-width: 0; overflow: hidden; }
+  }
+
+  /* A narrow interface keeps its main view and lets the sidebar go, as a phone would. */
+  @container home-ui (width < 36rem) {
+    .home-ui { grid-template-columns: minmax(0, 1fr); }
+    .home-ui-side { display: none; }
+  }
+
+  @container home-ui (width < 30rem) {
+    .home-ui-tools > .segmented { display: none; }
+  }
+
+  /*
+   * A change of setting reaches the icons in order of their distance from the controls (`--d`, measured by the
+   * bench): a new stroke thickens each in turn, and new corners or a new size redraw each in turn.
+   */
+  .home-glyph {
+    transition: stroke-width 420ms var(--home-ease) var(--d, 0ms);
+  }
+
+  .home-glyph-draw {
+    transform-box: fill-box;
+    transform-origin: center;
+  }
+
+  .home-bench[data-motion][data-rippled] .home-glyph-draw {
+    animation: icons-glyph 560ms var(--home-ease) var(--d, 0ms) both;
+  }
+
+  .home-detail-stroke {
+    transition: stroke-width 420ms var(--home-ease);
+  }
+
+  /* ------------------------------------------------------------------------------------------------------------
+   * Plates and figures: the drawing grammar, shared by the bench and the cards
+   * --------------------------------------------------------------------------------------------------------- */
+  :is(.home-plate, .icons-plot) {
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1;
+    color: var(--plot-ink);
+
+    & text {
+      fill: currentColor;
+      stroke: none;
+      font-family: var(--font-family-sans);
+      font-weight: 400;
+      letter-spacing: 0;
+    }
+  }
+
+  :is(.home-plate-grid, .plot-grid) { stroke-opacity: var(--plot-grid); }
+  :is(.home-plate-guides, .plot-guide) { stroke-opacity: var(--plot-guide); }
+  :is(.home-plate-centerlines, .plot-centerline) {
+    stroke-opacity: var(--plot-guide);
+    stroke-dasharray: 8 3 1 3;
+  }
+  :is(.home-plate-dimension, .plot-dimension, .plot-leader, .home-plate-leader, .plot-tick, .plot-rule) { stroke-opacity: var(--plot-secondary); }
+  :is(.home-plate-witness, .plot-witness, .plot-frame) { stroke-opacity: var(--plot-guide); }
+  :is(.home-plate-value, .plot-value) { fill-opacity: .5; font-size: 12px; font-variant-numeric: tabular-nums; }
+  :is(.home-plate-name, .plot-name) { fill-opacity: .72; font-size: 13px; }
+  :is(.home-plate-dimension, .plot-dimension) text { fill-opacity: .6; }
+
+  /* The two masks of the envelope: the stroke at its width in white, two units narrower in black. */
+  :is(.home-plate-mask-white, .plot-mask-white) {
+    color: white;
+    stroke: white;
+    fill: none;
+
+    & [fill="currentColor"] {
+      stroke: white;
+      stroke-width: var(--dot);
+    }
+  }
+
+  :is(.home-plate-mask-black, .plot-mask-black) {
+    color: black;
+    stroke: black;
+    fill: none;
+  }
+
+  :is(.home-plate-wash, .plot-wash) {
+    fill: currentColor;
+    fill-opacity: var(--plot-wash);
+    stroke: none;
+  }
+
+  :is(.home-plate-outline, .plot-outline) {
+    fill: currentColor;
+    stroke: none;
+  }
+
+  /* The centerline the stroke is laid on; a filled dot shows as its own outline. */
+  :is(.home-plate-skeleton, .plot-skeleton) {
+    stroke: currentColor;
+    stroke-opacity: var(--plot-secondary);
+    fill: none;
+    stroke-linecap: butt;
+    stroke-linejoin: miter;
+
+    & [fill="currentColor"] {
+      fill: none;
+      stroke: currentColor;
+    }
+  }
+
+  .plot-ink { color: var(--plot-ink); }
+
+  /*
+   * The plate draws itself in the order a drafter would: the grid, then the keylines, then the centerline of the
+   * form, then the stroke laid on it. Changing the specimen, size or corners draws the new form the same way; a new
+   * stroke width only thickens or thins the one on the sheet.
+   */
+  .icons-plate .home-plate-grid > path,
+  .home-bench[data-motion] .home-plate-grid > path {
+    @media (prefers-reduced-motion: no-preference) {
+      animation: icons-appear 700ms var(--home-ease) both;
+      animation-delay: calc(var(--i) * 14ms);
+    }
+  }
+
+  .icons-plate .home-plate-guides > * {
+    @media (prefers-reduced-motion: no-preference) {
+      stroke-dasharray: 1 1;
+      animation: icons-draw 1000ms var(--home-ease-inout) 150ms both;
+    }
+  }
+
+  .home-bench[data-motion] {
+    & .home-plate-grid > path {
+      animation: icons-appear 700ms var(--home-ease) both;
+      animation-delay: calc(var(--i) * 14ms);
+    }
+
+    & .home-plate-skeleton > * {
+      stroke-dasharray: 1 1;
+      animation: icons-draw 900ms var(--home-ease-inout) 120ms both;
+    }
+
+    & :is(.home-plate-wash, .home-plate-outline) {
+      animation: icons-appear 520ms var(--home-ease) 620ms both;
+    }
+  }
+
+  /* ------------------------------------------------------------------------------------------------------------
+   * Bento
+   * --------------------------------------------------------------------------------------------------------- */
+  .icons-bento {
+    grid-template-columns: minmax(0, 1fr);
+
+    @media (width >= 48rem) {
+      grid-template-columns: repeat(12, minmax(0, 1fr));
+
+      & > .icons-bento-sizes { grid-column: span 7; }
+      & > .icons-bento-corners { grid-column: span 5; }
+      & > .icons-bento-strokes { grid-column: span 5; }
+      & > .icons-bento-code { grid-column: span 7; }
+      & > .icons-bento-catalog { grid-column: span 6; }
+      & > .icons-bento-direction { grid-column: span 6; }
+    }
+  }
+
+  .icons-figure {
+    display: grid;
+    place-items: center;
+    min-height: 15rem;
+    padding: 1.5rem;
+    color: var(--plot-ink);
+    background-image: var(--home-hatch);
+    background-size: var(--home-hatch-size) var(--home-hatch-size);
+  }
+
+  .icons-plot {
+    display: block;
+    width: 100%;
+    max-width: 34rem;
+    height: auto;
+    max-height: 17rem;
+    overflow: visible;
+  }
+
+  .icons-code {
+    display: grid;
+    align-content: start;
+    gap: .875rem;
+    padding: 1.25rem;
+    font-size: var(--home-code);
+
+    & > .code-block {
+      margin: 0;
+      white-space: pre;
+    }
+  }
+
+  .icons-frameworks {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .375rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    & > li {
+      padding: .1875rem .5rem;
+      border-radius: var(--home-radius-chip);
+      font-family: var(--home-mono);
+      font-size: .6875rem;
+      color: var(--home-text-body);
+      background-color: var(--home-sheet);
+      box-shadow: 0 0 0 .5px var(--home-rule);
+    }
+  }
+
+  .icons-code-c { color: var(--home-text-faint); }
+  .icons-code-k { color: var(--home-code-tag); }
+  .icons-code-s { color: var(--home-code-string); }
+  .icons-code-t { color: var(--home-code-selector); }
+  .icons-code-a { color: var(--home-code-attr); }
+
+  .icons-specimens {
+    display: grid;
+    grid-template-columns: repeat(8, minmax(0, 1fr));
+    min-height: 15rem;
+    color: var(--home-text);
+    mask-image: radial-gradient(ellipse 85% 90% at 50% 40%, black 45%, transparent);
+  }
+
+  .icons-specimen {
+    display: grid;
+    place-items: center;
+    aspect-ratio: 1;
+    box-shadow: 1px 0 var(--home-guide), 0 1px var(--home-guide);
+  }
+
+  .icons-features-link { margin-top: 2rem; }
+
+  /* The shared footer's wordmark is cut for nine letters; this one has twelve. */
+  .home-footer-mark[data-mark="master icons"] { font-size: 16.2cqi; }
+
+  /* ------------------------------------------------------------------------------------------------------------
+   * Close
+   * --------------------------------------------------------------------------------------------------------- */
+  .icons-close-wrap {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 3rem;
+    align-items: center;
+
+    @media (width >= 64rem) {
+      grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+      gap: 5rem;
+    }
+  }
+
+  .icons-close-figure {
+    width: min(100%, 26rem);
+    max-height: none;
+    justify-self: center;
+    color: var(--plot-ink);
+
+    @media (width < 64rem) { display: none; }
+  }
+
+  .icons-close-reading {
+    display: grid;
+    justify-items: start;
+  }
+
+  .icons-close-guide {
+    margin-top: 1.75rem;
+
+    & > svg:first-child { width: 1rem; height: 1rem; }
+  }
+
+  .icons-close-note {
+    margin: 1rem 0 0;
+    font-size: var(--home-caption);
+    color: var(--home-text-faint);
+  }
+
+  /* Drawings in the cards and the close draw themselves once as they scroll into view. */
+  @media (prefers-reduced-motion: no-preference) {
+    @supports (animation-timeline: view()) {
+      .icons-plot .plot-grid,
+      .icons-plot :is(.plot-wash, .plot-outline),
+      .icons-plot :is(.plot-dimension, .plot-leader, .plot-centerline, text) {
+        animation: icons-appear linear both;
+        animation-timeline: view();
+        animation-range: entry 10% entry 70%;
+      }
+
+      /* As in the hero, the centerline is drawn first and the stroke is laid on it after. */
+      .icons-plot .plot-skeleton > * {
+        stroke-dasharray: 1 1;
+        animation: icons-draw linear both;
+        animation-timeline: view();
+        animation-range: entry 0% cover 30%;
+      }
+
+      .icons-plot :is(.plot-wash, .plot-outline) { animation-range: cover 22% cover 38%; }
+      .icons-plot :is(.plot-dimension, .plot-leader, text) { animation-range: cover 30% cover 45%; }
+    }
+  }
+
+  /* ------------------------------------------------------------------------------------------------------------
+   * Preferences
+   * --------------------------------------------------------------------------------------------------------- */
+  @media (prefers-reduced-motion: reduce) {
+    .icons-start::after,
+    .icons-prompt::after { display: none; }
+
+    :is(.icons-start, .icons-hero-pill):is(:hover, :focus-visible) > svg { translate: none; }
+
+    .home-glyph,
+    .home-detail-stroke,
+    .home-bench-callout > circle,
+    .home-bench-tick {
+    stroke-width: 2;
+    transition: d 420ms var(--home-ease);
+  }
+
+  .home-bench-leader { transition: none; animation: none; }
+  }
+
+  @media (forced-colors: active) {
+    .icons-hero-pill,
+    .icons-hero-pill-badge {
+      outline: 1px solid CanvasText;
+      outline-offset: -1px;
+    }
+
+    :is(.icons-start, .icons-prompt) {
+      outline: 1px solid ButtonText;
+      outline-offset: -1px;
+      background: ButtonFace;
+      color: ButtonText;
+      box-shadow: none;
+      text-shadow: none;
+
+      &::before, &::after { display: none; }
+    }
+
+    :is(.home-plate, .icons-plot) { color: CanvasText; }
+  }
+
+  @media print {
+    .home-bench-bar,
+    .icons-plate-bar,
+    .home-bench-callout { display: none; }
+  }
+
+  /* The hero arrives in reading order; the bench follows the words. */
+  @media (prefers-reduced-motion: no-preference) {
+    .icons-hero-reading > *,
+    .icons-hero-figure {
+      animation: icons-arrive 1000ms var(--home-ease) both;
+    }
+
+    .icons-hero-pill { animation-delay: 80ms; }
+    .icons-hero-title { animation-delay: 160ms; }
+    .icons-hero-lead { animation-delay: 280ms; }
+    .icons-hero-reading > .icons-hero-actions { animation-delay: 380ms; }
+    .icons-hero-figure { animation-delay: 240ms; }
+  }
+}
+
+@keyframes icons-arrive {
+  from {
+    opacity: 0;
+    filter: blur(6px);
+    translate: 0 .75rem;
+  }
+}
+
+@keyframes icons-appear {
+  from { opacity: 0; }
+}
+
+@keyframes icons-draw {
+  from { stroke-dashoffset: 1; }
+  to { stroke-dashoffset: 0; }
+}
+
+@keyframes icons-seam {
+  from { left: 0; opacity: 1; }
+  90% { opacity: 1; }
+  to { left: 100%; opacity: 0; }
+}
+
+@keyframes icons-glyph {
+  from { opacity: 0; scale: .55; }
+}
+
+@keyframes icons-march {
+  to { stroke-dashoffset: -10; }
+}
+
+@keyframes icons-glint {
+  from { opacity: 1; background-position: 100% 0; }
+  to { opacity: 1; background-position: 0 0; }
+}

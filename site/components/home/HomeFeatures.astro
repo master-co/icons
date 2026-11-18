@@ -1,0 +1,173 @@
+---
+import '@master/internal-site/home/bento.css'
+import '@master/ui/components/code.css'
+import {Settings} from '@master/icons/data/settings'
+import {Calendar} from '@master/icons/data/calendar'
+import {Sparkles} from '@master/icons/data/sparkles'
+import {Undo} from '@master/icons/data/undo'
+import {resolveIcon,strokeRanges,strokeWidths} from '@master/icons/runtime'
+import * as Icons from '@master/icons-astro'
+import {ArrowRightIcon} from '@master/icons-astro'
+import {form,grid,ink,dimension,label} from './plotter'
+interface Props {prefix:string;copy:Record<string,string>;count:number;categories:number;locale:string}
+const {prefix,copy,count,categories,locale}=Astro.props
+const t=(key:string)=>copy[key]??key
+const number=new Intl.NumberFormat(locale==='tw'?'zh-TW':'en').format(count)
+
+/* Sizes: one icon's three masters at one scale, so the 16 px drawing is as much smaller as it really is. */
+const sizeScale=6
+const sizeFigure=(()=>{
+ let x=40,svg=''
+ for(const size of [16,20,24] as const){
+  const y=200-size*sizeScale,placement={size,corner:'soft' as const,x,y,scale:sizeScale}
+  svg+=grid(placement)+form(Settings,placement,`size-${size}`)+dimension(x,x+size*sizeScale,200,224,`${size}`)
+  x+=size*sizeScale+40
+ }
+ return {svg,width:x}
+})()
+
+/*
+ * Corners: a detail of the calendar's upper-left corner in each style, magnified and cut to a window, with the arc's
+ * center and radius drawn from the rect that carries it.
+ */
+const cornerFigure=(()=>{
+ let svg='<defs>'
+ const scale=16,size=24,view=118,window={x:1.75,y:2.75}
+ const corners=['sharp','soft','rounded'] as const
+ corners.forEach((corner,index)=>{svg+=`<clipPath id="corner-clip-${corner}"><rect x="${20+index*(view+24)}" y="20" width="${view}" height="${view}"/></clipPath>`})
+ svg+='</defs>'
+ corners.forEach((corner,index)=>{
+  const left=20+index*(view+24),top=20
+  const x=left-window.x*scale,y=top-window.y*scale
+  const body=resolveIcon(Calendar,{size,corner}).nodes[0][1] as {x:number;y:number;rx:number}
+  svg+=`<g clip-path="url(#corner-clip-${corner})">${grid({size,corner,x,y,scale})}${form(Calendar,{size,corner,x,y,scale},`corner-${corner}`)}</g>`
+  svg+=`<rect class="plot-frame" x="${left}" y="${top}" width="${view}" height="${view}"/>`
+  if(body.rx){
+   const r=body.rx*scale,cx=x+body.x*scale+r,cy=y+body.y*scale+r
+   svg+=`<path class="plot-leader" d="M${cx-5} ${cy}h10M${cx} ${cy-5}v10M${cx} ${cy}L${(cx-r*Math.SQRT1_2).toFixed(2)} ${(cy-r*Math.SQRT1_2).toFixed(2)}"/>`
+  }else{
+   const cx=x+body.x*scale,cy=y+body.y*scale
+   svg+=`<path class="plot-leader" d="M${cx-5} ${cy}h10M${cx} ${cy-5}v10"/>`
+  }
+  svg+=label(left,top+view+22,t(corner[0].toUpperCase()+corner.slice(1)),'name')
+  svg+=label(left+view,top+view+22,`r ${body.rx}`,'value','end')
+ })
+ return {svg,width:20+corners.length*(view+24)-4}
+})()
+
+/* Strokes: one icon in ink at every width the 24 px master takes, over a scale of the widths. */
+const strokeFigure=(()=>{
+ const widths=strokeWidths.filter(width=>width>=strokeRanges[24][0]&&width<=strokeRanges[24][1])
+ const scale=3,step=24*scale+8
+ let svg=''
+ widths.forEach((width,index)=>{
+  const x=20+index*step
+  svg+=ink(Sparkles,{size:24,corner:'soft',stroke:width,x,y:16,scale},`stroke-${index}`)
+  svg+=`<path class="plot-tick" d="M${x+12*scale} 108v${index===0||index===widths.length-1?10:6}"/>`
+  svg+=label(x+12*scale,134,String(width),'value','middle')
+ })
+ svg+=`<path class="plot-rule" d="M${20+12*scale} 108H${20+(widths.length-1)*step+12*scale}"/>`
+ return {svg,width:40+widths.length*step-8}
+})()
+
+/* Direction: undo, left to right and mirrored for right-to-left, either side of the axis that reflects it. */
+const directionFigure=(()=>{
+ const scale=5,size=24,y=24
+ let svg=`<path class="plot-centerline" d="M200 12V${y+size*scale+12}"/>`
+ svg+=form(Undo,{size,corner:'soft',x:200-28-size*scale,y,scale},'dir-ltr')
+ svg+=form(Undo,{size,corner:'soft',x:228,y,scale,direction:'rtl'},'dir-rtl')
+ svg+=label(200-28-size*scale/2,y+size*scale+30,'ltr','value','middle')
+ svg+=label(228+size*scale/2,y+size*scale+30,'rtl','value','middle')
+ return svg
+})()
+
+/* The catalog: a sheet of icons at their native 20 px, as a list would show them. */
+const specimens=['Home','Search','Bell','Calendar','Folder','Camera','Heart','Star','Settings','User','Mail','Lock','Cloud','Clock','Compass','MapPin','Music','Image','Bookmark','Paperclip','Send','Layers','Sparkles','Zap','Sun','Moon','Inbox','Filter','Link','Pencil','Trash','Download']
+ .map(name=>(Icons as Record<string,any>)[`${name}Icon`]).filter(Boolean)
+---
+
+{/*
+  What the library is, in six cards: its sizes, corners and strokes drawn as constructions, then its packages, its
+  catalog and its manners. Every figure is drawn from the icons' own geometry at build time.
+*/}
+<section id="features" class="home-section icons-features" aria-labelledby="features-title">
+ <div class="app-wrapper home-section-wrap">
+  <header class="home-section-header">
+   <p class="home-eyebrow"><span class="home-eyebrow-index" aria-hidden="true">02</span><span>{t('The library')}</span></p>
+   <h2 id="features-title" class="home-section-heading">{t('Nine drawings behind every icon.')}</h2>
+   <p class="home-section-body">{t('Three sizes by three corner styles, and a correction for every stroke. Choose the setting; the drawing that fits it is already made.')}</p>
+  </header>
+
+  <div class="home-bento-grid icons-bento">
+   <article class="home-bento-card icons-bento-sizes">
+    <header class="home-bento-card-header"><div class="home-bento-card-copy">
+     <h3 class="home-bento-card-title">{t('Three sizes, three drawings')}</h3>
+     <p class="home-bento-card-body">{t('16, 20 and 24 px each have a drawing of their own. A small master drops detail instead of shrinking it.')}</p>
+    </div></header>
+    <div class="home-bento-visual icons-figure">
+     <svg class="icons-plot" viewBox={`0 0 ${sizeFigure.width} 244`} role="img" aria-label={t('The settings icon drawn at 16, 20 and 24 px on its pixel grid.')} set:html={sizeFigure.svg} />
+    </div>
+   </article>
+
+   <article class="home-bento-card icons-bento-corners">
+    <header class="home-bento-card-header"><div class="home-bento-card-copy">
+     <h3 class="home-bento-card-title">{t('Corners change the geometry')}</h3>
+     <p class="home-bento-card-body">{t('Sharp, soft and rounded redraw the outline and the room inside it, not only the line joins.')}</p>
+    </div></header>
+    <div class="home-bento-visual icons-figure">
+     <svg class="icons-plot" viewBox={`0 0 ${cornerFigure.width} 172`} role="img" aria-label={t('The upper-left corner of the calendar icon with sharp, soft and rounded corners.')} set:html={cornerFigure.svg} />
+    </div>
+   </article>
+
+   <article class="home-bento-card icons-bento-strokes">
+    <header class="home-bento-card-header"><div class="home-bento-card-copy">
+     <h3 class="home-bento-card-title">{t('Strokes in quarter steps')}</h3>
+     <p class="home-bento-card-body">{t('From 0.75 to 2.5 units. Heavier widths take corrected geometry, so small counters stay open.')}</p>
+    </div></header>
+    <div class="home-bento-visual icons-figure">
+     <svg class="icons-plot" viewBox={`0 0 ${strokeFigure.width} 142`} role="img" aria-label={t('The sparkles icon at every stroke width from 1.25 to 2.5.')} set:html={strokeFigure.svg} />
+    </div>
+   </article>
+
+   <article class="home-bento-card icons-bento-code">
+    <header class="home-bento-card-header"><div class="home-bento-card-copy">
+     <h3 class="home-bento-card-title">{t('One geometry, six packages')}</h3>
+     <p class="home-bento-card-body">{t('Plain SVG, React, Vue, Svelte, Preact and Astro. Install only your framework’s adapter; a fixed entry ships one master.')}</p>
+    </div></header>
+    <div class="home-bento-visual icons-code">
+     <ul class="icons-frameworks" aria-label={t('Packages')}>
+      {['icons','icons-react','icons-vue','icons-svelte','icons-preact','icons-astro'].map(name=><li>@master/{name}</li>)}
+     </ul>
+     <pre class="code-block" tabindex="0" aria-label={t('Using an icon in Svelte')}><code><span class="icons-code-c">{'// '}{t('Any size, corner and stroke')}</span>
+<span class="icons-code-k">import</span> {'{'} SearchIcon {'}'} <span class="icons-code-k">from</span> <span class="icons-code-s">'@master/icons-svelte'</span>
+
+<span class="icons-code-t">&lt;SearchIcon</span> <span class="icons-code-a">size</span>={'{'}20{'}'} <span class="icons-code-a">corner</span>=<span class="icons-code-s">"rounded"</span> <span class="icons-code-a">strokeWidth</span>={'{'}1.5{'}'} <span class="icons-code-t">/&gt;</span>
+
+<span class="icons-code-c">{'// '}{t('One master, the smallest import')}</span>
+<span class="icons-code-k">import</span> {'{'} SearchIcon {'}'} <span class="icons-code-k">from</span> <span class="icons-code-s">'@master/icons-svelte/20/soft'</span></code></pre>
+    </div>
+   </article>
+
+   <article class="home-bento-card icons-bento-catalog">
+    <header class="home-bento-card-header"><div class="home-bento-card-copy">
+     <h3 class="home-bento-card-title">{t('{count} icons in {categories} categories').replace('{count}',number).replace('{categories}',String(categories))}</h3>
+     <p class="home-bento-card-body">{t('Interface, editing, media, commerce and more, each reviewed at its native size.')}</p>
+    </div></header>
+    <div class="home-bento-visual icons-specimens" aria-hidden="true">
+     {specimens.map(Icon=><span class="icons-specimen"><Icon size={20} /></span>)}
+    </div>
+   </article>
+
+   <article class="home-bento-card icons-bento-direction">
+    <header class="home-bento-card-header"><div class="home-bento-card-copy">
+     <h3 class="home-bento-card-title">{t('Accessible and direction-aware')}</h3>
+     <p class="home-bento-card-body">{t('Icons stay decorative until labeled. Directional icons mirror for right-to-left layouts; the rest keep their orientation.')}</p>
+    </div></header>
+    <div class="home-bento-visual icons-figure">
+     <svg class="icons-plot" viewBox="0 0 400 200" role="img" aria-label={t('The undo icon, left to right and mirrored for right to left.')} set:html={directionFigure} />
+    </div>
+   </article>
+  </div>
+  <a class="home-section-link icons-features-link" href={`${prefix}/guide/optical-sizes`}>{t('Read about sizes and corners')}<ArrowRightIcon size={16} /></a>
+ </div>
+</section>

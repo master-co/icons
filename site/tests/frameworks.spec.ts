@@ -86,13 +86,50 @@ test('inline custom masks stay scoped across collection and optical specimens',a
  expect(result).toEqual({duplicates:0,missing:0,invalidNamespace:0})
 })
 
-test('homepage Astro icons render without client JavaScript',async({browser,baseURL})=>{
+test('homepage icons and drawings render without client JavaScript',async({browser,baseURL})=>{
  const context=await browser.newContext({javaScriptEnabled:false})
  const page=await context.newPage()
  await page.goto(`${baseURL}/`)
- await expect(page.locator('.hero-glyph svg')).toHaveCount(8)
- await expect(page.locator('.size-study svg')).toHaveCount(15)
+ await expect(page.locator('.icons-specimen svg')).toHaveCount(32)
+ await expect(page.locator('.icons-plot')).toHaveCount(5)
+ await expect(page.locator('.icons-plate .home-plate')).toHaveAttribute('aria-label',/camera icon drawn on its 24 px grid/)
+ await expect(page.locator('[data-setup-prompt]').first()).toHaveAttribute('data-setup-prompt',/Set up Master Icons end to end/)
  await context.close()
+})
+
+test('the hero plate draws each specimen at its own setting',async({page})=>{
+ await page.emulateMedia({reducedMotion:'reduce'})
+ await page.goto('/')
+ const plate=page.locator('.icons-plate')
+ await plate.getByRole('button',{name:'compass'}).click()
+ await expect(plate.locator('.home-plate')).toHaveAttribute('aria-label',/compass icon drawn on its 20 px grid with rounded corners and a 1.5 stroke/)
+ await expect(plate.getByRole('button',{name:'compass'})).toHaveAttribute('aria-pressed','true')
+})
+
+test('the styles bench carries one setting to every icon and its detail',async({page})=>{
+ await page.emulateMedia({reducedMotion:'reduce'})
+ await page.goto('/')
+ const bench=page.locator('#styles .home-bench')
+ await bench.scrollIntoViewIfNeeded()
+ await expect(bench.locator('.home-bench-play')).toHaveCount(0)
+ await bench.getByRole('radio',{name:'Poster'}).check()
+ await expect(bench.locator('.home-ui-layer')).toHaveClass(/home-style-poster/)
+ const glyph=bench.locator('.home-ui-layer .home-glyph').first()
+ await expect(glyph).toHaveAttribute('width','24')
+ await expect(glyph).toHaveAttribute('stroke-linejoin','miter')
+ await bench.getByRole('radio',{name:'Rounded'}).check()
+ await expect(glyph).toHaveAttribute('stroke-linejoin','round')
+ await expect(bench.locator('.home-ui-layer .window-title')).toHaveText('Poster · Custom')
+ await bench.getByRole('radio',{name:'16'}).check()
+ await expect(glyph).toHaveAttribute('width','16')
+ await expect(bench.locator('.home-bench-value')).toHaveText('1.5')
+ await expect(bench.locator('.home-bench-detail .home-plate')).toHaveAttribute('aria-label',/inbox icon drawn on its 16 px grid with rounded corners and a 1.5 stroke/)
+ const search=await bench.locator('.home-ui-layer [data-slot="search"]').boundingBox()
+ await page.mouse.move(search!.x+search!.width/2,search!.y+search!.height/2)
+ await expect(bench.locator('.home-bench-detail-head')).toContainText('search')
+ await expect(bench.locator('.home-bench-callout circle').first()).toBeAttached()
+ const ids=await page.evaluate(()=>{const all=[...document.querySelectorAll('[id]')].map(node=>node.id);return all.filter((id,index)=>all.indexOf(id)!==index)})
+ expect(ids).toEqual([])
 })
 
 test('modal specimens update preview and code while actions remain reachable on small screens',async({page})=>{
