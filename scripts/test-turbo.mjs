@@ -23,7 +23,7 @@ function graph(args=['build'],extraEnv={}){
 }
 const hash=(tasks,id)=>tasks[id].hash;
 try{
- for(const name of ['package.json','bun.lock','turbo.json','.nvmrc','.gitignore','LICENSE','THIRD_PARTY_NOTICES.md','licenses','scripts','preview','site','tests']){
+ for(const name of ['package.json','bun.lock','turbo.json','.nvmrc','.gitignore','LICENSE','THIRD_PARTY_NOTICES.md','licenses','scripts','skills','preview','site','tests']){
   const source=join(root,name);
   await cp(source,join(fixture,name),{recursive:true,filter:path=>!ignored.has(relative(source,path).split(sep)[0])});
  }
