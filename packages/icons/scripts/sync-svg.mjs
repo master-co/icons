@@ -1,4 +1,4 @@
-import {readFile,readdir,rm} from 'node:fs/promises';
+import {cp,readFile,readdir,rm} from 'node:fs/promises';
 import {resolve} from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {unzipSync} from 'fflate';
@@ -24,4 +24,7 @@ for(const entry of await readdir(resolve(root,'icons'),{recursive:true,withFileT
  const file=resolve(entry.parentPath,entry.name);
  if(entry.isFile()&&!emitted.has(file))await rm(file);
 }
+// The application skill is authored at the repository root and ships inside the core package.
+await rm(resolve(root,'skills'),{recursive:true,force:true});
+await cp(resolve(root,'../../skills/use-master-icons'),resolve(root,'skills/use-master-icons'),{recursive:true});
 console.log(`SVGs: synchronized ${emitted.size} files in ${((performance.now()-started)/1000).toFixed(2)}s`);

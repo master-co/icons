@@ -71,6 +71,11 @@ const svg = renderSvg(Search, { size: 20, corner: 'soft', label: '搜尋' });
 
 固定入口不接受 `corner` / `opticalSize`；`size` 只改顯示大小。CSS 寬高變動也不會切換光學母版。其他顯示尺寸使用既有母版縮放，沒有額外專用圖稿；斜線與曲線仍會有反鋸齒。圖示按鈕的可存取名稱與點擊範圍由介面提供。
 
+### 給 AI agent
+
+- **Agent skill**：[`skills/use-master-icons/`](skills/use-master-icons/SKILL.md) 說明套件選擇、入口、光學尺寸、線寬與無障礙規則，並附 `scripts/search.mjs` 查詢已安裝的 catalog，避免 agent 編造圖示名稱。它隨 `@master/icons` 發布於 `node_modules/@master/icons/skills/use-master-icons/`，複製到 agent 的 skills 資料夾即可使用。
+- **llms.txt**：網站提供 https://icons.master.co/llms.txt（中文為 `/tw/llms.txt`）、全文 `/llms-full.txt`，以及每篇指南的 Markdown 版（例如 `/guide/react.md`）。
+
 ## 開發與驗證
 
 ```sh
@@ -102,7 +107,8 @@ bun run check:package
 | `site/` | 雙語網站 |
 | `preview/` | 審稿介面與使用情境 |
 | `tests/` | 跨套件測試 workspace、框架依賴與審稿瀏覽器測試 |
-| `skills/master-icons/` | 版本化製作與審查 skill |
+| `skills/master-icons/` | 版本化製作與審查 skill（給貢獻者） |
+| `skills/use-master-icons/` | 在應用程式中使用圖示的 agent skill，隨 `@master/icons` 發布 |
 | `references/` | 固定版本的比較資產與歷史基準 |
 | `docs/` | 設計規範、研究、決策與審查證據 |
 | `scripts/` | 建置協調、驗證與審稿工具 |

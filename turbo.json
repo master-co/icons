@@ -31,6 +31,7 @@
         "$TURBO_ROOT$/LICENSE",
         "$TURBO_ROOT$/THIRD_PARTY_NOTICES.md",
         "$TURBO_ROOT$/licenses/**",
+        "$TURBO_ROOT$/skills/use-master-icons/**",
         "!dist/**",
         "!LICENSE",
         "!THIRD_PARTY_NOTICES.md",
@@ -38,6 +39,7 @@
       ],
       "outputs": [
         "dist/**",
+        "skills/**",
         "LICENSE",
         "THIRD_PARTY_NOTICES.md"
       ]

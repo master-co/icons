@@ -4,6 +4,11 @@ Optically sized interface icons: a framework-neutral core (`packages/icons`), on
 
 Use Bun 1.4.4 and Node.js 24 or later. Run `bun run check` before committing; run the browser suites listed in `README.md` after site, review or framework changes.
 
+## Agent resources
+
+- `skills/master-icons/` is for contributors drawing icons; `skills/use-master-icons/` is for agents using the packages in an application. Edit the latter at the repository root: the core build (`packages/icons/scripts/sync-svg.mjs`) copies it into `packages/icons/skills/` (ignored), it ships in `@master/icons`, and `bun run check:package` runs its catalog search from the packed package. Keep its rules in step with the guides.
+- `site/scripts/llms.ts` writes `llms.txt`, `llms-full.txt` and every guide as Markdown (English at the root, Traditional Chinese under `/tw/`) into `site/public/` during preparation. New guides are picked up from their metadata; only a new MDX component needs a rule there for its Markdown form.
+
 ## Generated files
 
 Edit sources, never generated output: icon geometry lives in `packages/icons/src`, adapters in `packages/icons-*/src`, guides in `site/content/guide`. `packages/icons/icons/` is generated but tracked; CI fails when it differs from the generator's output. `dist/`, `work/`, `site/public/` and `site/out/` are generated and ignored.

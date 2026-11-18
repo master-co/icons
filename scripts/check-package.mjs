@@ -11,7 +11,7 @@ await mkdir('work',{recursive:true});
 const packages=await packIcons();
 const {entries}=packages[0];
 assert.equal(entries.filter(x=>x.endsWith('.svg')).length,catalog.length*9);
-for(const path of ['package/LICENSE','package/THIRD_PARTY_NOTICES.md','package/licenses/hugeicons-MIT.txt','package/licenses/lucide.txt','package/licenses/simple-icons-CC0.txt','package/licenses/simple-icons-DISCLAIMER.md','package/licenses/openai-brand.txt','package/licenses/brand-additions.txt','package/dist/runtime.d.ts','package/dist/presentation.js'])assert.ok(entries.includes(path),path);
+for(const path of ['package/LICENSE','package/THIRD_PARTY_NOTICES.md','package/licenses/hugeicons-MIT.txt','package/licenses/lucide.txt','package/licenses/simple-icons-CC0.txt','package/licenses/simple-icons-DISCLAIMER.md','package/licenses/openai-brand.txt','package/licenses/brand-additions.txt','package/dist/runtime.d.ts','package/dist/presentation.js','package/skills/use-master-icons/SKILL.md','package/skills/use-master-icons/scripts/search.mjs'])assert.ok(entries.includes(path),path);
 assert.ok(!entries.some(path=>/\/(react|vue|svelte|preact|astro)(\/|-runtime\.)/.test(path)),'Core must not ship framework components');
 assert.equal(packages[0].manifest.peerDependencies,undefined,'Core must not install any framework');
 const consumer=await mkdtemp(resolve('work/package-consumer-'));
@@ -65,6 +65,12 @@ assert.match(readFileSync(new URL(import.meta.resolve('@master/icons/svg/16/soft
 console.log('Packed consumer: data, runtime, dynamic/static React, SVG subpath and notices passed.');
 `);
 execFileSync(process.execPath,[consumer+'/smoke.mjs'],{stdio:'inherit'});
+// The shipped skill finds real names in the installed catalog, never an invented one.
+const search=(...args)=>execFileSync(process.execPath,['node_modules/@master/icons/skills/use-master-icons/scripts/search.mjs',...args],{cwd:consumer,encoding:'utf8'});
+assert.match(search('search','--limit','1'),/^search\tSearchIcon\tactions\n$/);
+assert.ok(JSON.parse(search('folder','--json')).some(icon=>icon.component==='FolderSearchIcon'));
+assert.throws(()=>search('zzzz-no-such-icon'));
+console.log('Packed skill: catalog search passed.');
 await checkPackedFrameworks(consumer);
 // Use an actual package-manager install outside this repository, so ancestor
 // workspace links cannot hide a missing dependency or pull in other adapters.
