@@ -8,10 +8,10 @@ const locale=Astro.props.params?.locale??Astro.params.locale??'en'
 const copy=translations[locale]??translations.en
 const t=(key:string)=>copy[key]??key
 const catalog=JSON.parse(await readFile(new URL('../../../packages/icons/dist/catalog.json',import.meta.url),'utf8'))
-type Icon = {name:string;component:string;label:string;category:string;keywords:string[];source:{notice?:string}}
+type Icon = {name:string;component:string;label:string;category:string;keywords:string[];source:{notice?:string;copyright?:string}}
 const entries=collectionCards(catalog.icons as Icon[])
  .sort((a,b)=>a.name.localeCompare(b.name,'en',{numeric:true}))
- .map(({name,component,label,category,keywords,outline,mark,styleOf,source}:any)=>({name,component,label,category,keywords,outline,mark,styleOf,notice:source?.notice}))
+ .map(({name,component,label,category,keywords,outline,mark,styleOf,source}:any)=>({name,component,label,category,keywords,outline,mark,styleOf,notice:source?.notice,copyright:source?.copyright}))
 const categories=catalog.categories.map(({id}:any)=>({id,label:'category:'+id}))
 export const metadata={title:'Browse Master Icons',description:'Interface icons at their native size.'}
 export async function generateMetadata({params}:{params:{locale:string}}){const copy=translations[params.locale]??translations.en;return{title:copy['Browse Master Icons'],description:copy['Interface icons at their native size.']}}

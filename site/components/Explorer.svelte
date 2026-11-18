@@ -12,7 +12,8 @@
  import {onMount, tick, type Snippet} from 'svelte'
  import '@master/internal-site/styles/system/sidebar.css'
  import {renderSvg, getOpticalSize, type IconDefinition} from '@master/icons/runtime'
- type Artwork={name:string;label?:string;component:string;notice?:string}
+ import license from '../../LICENSE?raw'
+ type Artwork={name:string;label?:string;component:string;notice?:string;copyright?:string}
  type Entry=Artwork & {label:string;category:string;keywords:string[];mark?:Artwork;outline?:Artwork;styleOf?:string}
  let {entries,categories,copy,locale,children}:{entries:Entry[];categories:{id:string;label:string}[];copy:Record<string,string>;locale:string;children?:Snippet}=$props()
  const t=(key:string)=>copy[key]??key
@@ -55,7 +56,10 @@
  const rawSvg=$derived(definition?renderSvg(strokeDefinition(definition,stroke),{size,corner}):'')
  const svg=$derived(artwork?.notice && rawSvg ? `<!--\n${artwork.notice.replaceAll('--','—')}\n-->\n${rawSvg}` : rawSvg)
  const snippet=$derived(artwork?codeSnippet({format,component:artwork.component,size,opticalSize,corner,svg,strokeWidth:stroke}):'')
- const source=(name:string,s:number=size,c=corner)=>`${stroke===null?'/icons':`/strokes/${clampStroke(stroke,getOpticalSize(s))}`}/${getOpticalSize(s)}/${c}/${name}.svg`
+ // Native masters link to their published files; scaled sizes and custom weights download the rendered SVG.
+ // Custom weights carry the same notice as the files in their ZIP set.
+ const weighted=$derived(artwork&&stroke!==null?`<!--\n${license.trim()}${artwork.notice?`\n\n${artwork.notice.trim()}`:artwork.copyright?`\n${artwork.copyright}`:''}\n-->\n${rawSvg}\n`:svg)
+ const download=$derived(artwork&&size<=24&&stroke===null?`/icons/${size}/${corner}/${artwork.name}.svg`:`data:image/svg+xml;charset=utf-8,${encodeURIComponent(weighted)}`)
  const cornerLabel=(c:string)=>t(c[0].toUpperCase()+c.slice(1))
  const categoryOptions=$derived([
   {id:'all',label:t('All icons'),count:entries.length},
@@ -246,7 +250,7 @@
  {#if artwork&&definition}
   <footer class="dialog-footer">
    <p class="copy-status w-full" role="status">{notice}</p>
-   <a class="btn" href={size>24?`data:image/svg+xml;charset=utf-8,${encodeURIComponent(svg)}`:source(artwork.name)} download={`${artwork.name}.svg`}><DownloadIcon />{t('Download SVG')}</a>
+   <a class="btn" href={download} download={`${artwork.name}.svg`}><DownloadIcon />{t('Download SVG')}</a>
    <button type="button" class="btn btn-primary" aria-label={t(`Copy ${formatLabels[format]}`)} onclick={()=>copyText(snippet)}>{#if notice===t('Copied')}<CheckIcon />{t('Copied')}{:else}<CopyIcon />{t(`Copy ${formatLabels[format]}`)}{/if}</button>
   </footer>
  {/if}

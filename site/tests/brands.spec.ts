@@ -134,13 +134,12 @@ for(const size of [16,20,24])test(`outline list, live weights and downloads agre
    await expect(code).toHaveValue(new RegExp(`stroke-width="${width}"`))
    const current=await code.inputValue(),geometry=current.slice(current.indexOf('<path'))
    if(thin)expect(geometry).not.toBe(thin);else thin=geometry
-   const response=await page.request.get(`/strokes/${width}/${size}/soft/brand-${name}-outline.svg`)
-   expect(response.ok()).toBe(true)
-   const file=await response.text();expect(current).toContain(file.slice(file.indexOf('<svg')).trim())
+   // Custom weights download the SVG rendered in the browser, never a separately hosted file.
    const download=dialog.getByRole('link',{name:'Download SVG',exact:true})
-   await expect(download).toHaveAttribute('href',`/strokes/${width}/${size}/soft/brand-${name}-outline.svg`)
+   await expect(download).toHaveAttribute('href',/^data:image\/svg\+xml/)
    const pending=page.waitForEvent('download');await download.click()
-   expect(await readFile((await(await pending).path())!,'utf8')).toBe(file)
+   const file=await readFile((await(await pending).path())!,'utf8');expect(file).toContain(current.slice(current.indexOf('<svg')).trim())
+   expect((await page.request.get(`/strokes/${width}/${size}/soft/brand-${name}-outline.svg`)).ok()).toBe(false)
   }
   const format=dialog.getByRole('combobox',{name:'Code format'})
   await format.selectOption('react');await expect(code).toHaveValue(new RegExp(`OutlineIcon strokeWidth=\\{${maximum}\\}`))

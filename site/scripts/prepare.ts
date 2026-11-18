@@ -1,4 +1,4 @@
-import { readFile, cp, rm } from 'node:fs/promises'
+import { readFile, readdir, cp, rm } from 'node:fs/promises'
 import { fileURLToPath } from 'node:url'
 import { join } from 'node:path'
 import {buildStrokes} from '../../scripts/lib/build-strokes.mjs'
@@ -16,14 +16,16 @@ const strokes=process.env.TURBO_HASH?join(repo,'work/stroke-assets'):await build
 const common=['site/scripts/prepare.ts','scripts/lib/content-cache.mjs','bun.lock'].map(path=>join(repo,path))
 
 // The catalog contains every default SVG's content hash; the stroke key covers
-// geometry, metadata, generator code and licenses. Don't rehash 35k stroke SVGs.
+// geometry, metadata, generator code and licenses. Don't rehash the stroke sets.
 const assets=await contentCache({
  inputs:[...common,...['dist/catalog.json','dist/downloads','LICENSE','THIRD_PARTY_NOTICES.md'].map(path=>join(icons,path)),join(strokes,'key')],
- outputs:['data','icons','strokes','downloads','catalog.json','THIRD_PARTY_NOTICES.md','LICENSE.txt'].map(path=>join(site,'public',path)),
+ outputs:['data','icons','downloads','catalog.json','THIRD_PARTY_NOTICES.md','LICENSE.txt'].map(path=>join(site,'public',path)),
  file:join(repo,'work/cache/site-assets.json'),force
 })
+// Older checkouts generated a per-file stroke tree; it must never be published.
+await rm(join(site,'public/strokes'),{recursive:true,force:true})
 if(!assets.hit){
- for(const [target,source] of [['data',join(strokes,'data')],['icons',join(icons,'icons')],['strokes',join(strokes,'icons')],['downloads',join(icons,'dist/downloads')]]){
+ for(const [target,source] of [['data',join(strokes,'data')],['icons',join(icons,'icons')],['downloads',join(icons,'dist/downloads')]]){
   await rm(join(site,'public',target),{recursive:true,force:true})
   await cp(source,join(site,'public',target),{recursive:true})
  }
@@ -41,10 +43,17 @@ const guides=await contentCache({
  file:join(repo,'work/cache/site-guides.json'),force
 })
 if(!guides.hit){
- const slugs=['getting-started','svg','react','vue','svelte','preact','astro','optical-sizes','accessibility','license']
- const pages=[]
- for(const slug of slugs){const {default:metadata}=await import(new URL(`../content/guide/${slug}/metadata.ts`,import.meta.url).href);pages.push(metadata)}
- await writeIfChanged(join(site,'.categories/guide.json'),JSON.stringify([{name:'Guide',pages}],null,2)+'\n')
+ // Every guide folder is a page; its metadata names the sidebar group and its order there.
+ const groups=['Getting started','Frameworks','Design','Reference']
+ const pages:{category:string;order:number}[]=[]
+ for(const entry of await readdir(join(site,'content/guide'),{withFileTypes:true})){
+  if(!entry.isDirectory())continue
+  const {default:metadata}=await import(new URL(`../content/guide/${entry.name}/metadata.ts`,import.meta.url).href)
+  if(!groups.includes(metadata.category))throw new Error(`Guide ${entry.name} has an unknown category: ${metadata.category}`)
+  pages.push(metadata)
+ }
+ const categories=groups.map(name=>({name,pages:pages.filter(page=>page.category===name).sort((a,b)=>a.order-b.order)}))
+ await writeIfChanged(join(site,'.categories/guide.json'),JSON.stringify(categories,null,2)+'\n')
  const {generateSearchPages}=await import('@master/internal-site/utils/search-pages')
  const search=await generateSearchPages({cwd:site,defaultLocale:'en',locales:['en','tw'],dictionariesDir:join(site,'i18n'),write:false})
  for(const locale of ['en','tw'])await writeIfChanged(join(site,`public/search/${locale}.json`),JSON.stringify(search[locale]))

@@ -45,8 +45,9 @@ export async function buildStrokes({force=false}={}) {
       (definition.strokes??={})[width]=variants;
       for(const size of sizes.filter(s=>strokeWidthsFor(s).includes(width)))for(const corner of corners) {
         const notice=license.trim()+(entry.source.notice?'\n\n'+entry.source.notice.trim():entry.source.copyright?'\n'+entry.source.copyright:'');
+        // Custom weights ship only inside their ZIP sets; the site renders single
+        // files in the browser, so 40k loose SVGs never reach disk or hosting.
         const svg=`<!--\n${notice}\n-->\n${renderSvg({...definition,variants},{size,corner})}\n`;
-        await put(`icons/${width}/${size}/${corner}/${entry.name}.svg`,svg);
         bundles[`${size}-${corner}`][entry.name+'.svg']=strToU8(svg);
       }
     }
