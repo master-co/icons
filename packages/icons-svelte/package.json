@@ -1,11 +1,16 @@
 {
   "name": "@master/icons-svelte",
-  "version": "0.1.0-alpha.0",
+  "version": "0.0.0",
   "description": "Master Icons components for Svelte.",
-  "private": true,
   "type": "module",
   "license": "MIT",
-  "repository": "https://github.com/master-co/icons",
+  "homepage": "https://icons.master.co",
+  "bugs": "https://github.com/master-co/icons/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/master-co/icons.git",
+    "directory": "packages/icons-svelte"
+  },
   "sideEffects": false,
   "engines": {
     "node": ">=22"
@@ -100,5 +105,18 @@
   "scripts": {
     "build": "node ../../scripts/build-frameworks.mjs svelte --incremental",
     "prepack": "bun run build"
-  }
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "keywords": [
+    "icons",
+    "svg",
+    "icon",
+    "optical-size",
+    "master",
+    "svelte",
+    "svelte-icons"
+  ]
 }

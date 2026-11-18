@@ -1,11 +1,16 @@
 {
   "name": "@master/icons",
-  "version": "0.1.0-alpha.0",
+  "version": "0.0.0",
   "description": "Framework-neutral Master Icons geometry, SVG renderer and optically sized SVG assets.",
-  "private": true,
   "type": "module",
   "license": "MIT",
-  "repository": "https://github.com/master-co/icons",
+  "homepage": "https://icons.master.co",
+  "bugs": "https://github.com/master-co/icons/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/master-co/icons.git",
+    "directory": "packages/icons"
+  },
   "sideEffects": false,
   "engines": {
     "node": ">=22"
@@ -54,5 +59,17 @@
     "test:types:native": "astro-check --root . --tsconfig tests/native/tsconfig.json && node scripts/check-svelte.mjs",
     "test:browser": "node --test tests/framework-browser.mjs",
     "generate": "node scripts/build.mjs --incremental --archive-svg"
-  }
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "keywords": [
+    "icons",
+    "svg",
+    "icon",
+    "optical-size",
+    "master",
+    "svg-icons"
+  ]
 }
