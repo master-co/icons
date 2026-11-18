@@ -25,9 +25,11 @@ export const brandCatalog=brands.map(({name,label,keywords,source,profile,aliasO
   rendering:styleOf?'brand-outline':'brand-silhouette',...(styleOf?{styleOf}:{}),profile,source,...(aliasOf?{aliasOf}:{}),
 }));
 const outlineWeights=new Map();
-const outlineStrokeWidths=new Map(brands.filter(b=>b.outlineSvg).map(b=>[
-  b.name,Number(b.outlineSvg.match(/<svg\b[^>]*\bstroke-width="([^"]+)"/)[1]),
-]));
+const outlineStrokeWidths=new Map();
+function sourceStrokeWidth(svg){
+  if(!outlineStrokeWidths.has(svg))outlineStrokeWidths.set(svg,Number(svg.match(/<svg\b[^>]*\bstroke-width="([^"]+)"/)[1]));
+  return outlineStrokeWidths.get(svg);
+}
 export const brandDrawings=Object.fromEntries(brands.map(brand=>[brand.name,g=>{
   const [x,y,w,h]=brand.bounds??brand.viewBox;
   const optical=brand.optical?.[g.s];
@@ -40,8 +42,9 @@ export const brandDrawings=Object.fromEntries(brands.map(brand=>[brand.name,g=>{
     // strokeWidth is in the native icon's units, not in each source logo's units.
     // Cancel the optical transform before expanding the ink, at every weight
     // including the default. Keep the placement fixed as the weight changes.
-    const weight=g.stroke/(outlineStrokeWidths.get(brand.name)*scale),key=`${brand.name}/${weight}`;
-    if(!outlineWeights.has(key))outlineWeights.set(key,bakeBrandSvg(brand.outlineSvg,{weight}));
+    const svg=brand.outlineSvgs?.[g.s]??brand.outlineSvg;
+    const weight=g.stroke/(sourceStrokeWidth(svg)*scale),key=`${brand.name}/${g.s}/${weight}`;
+    if(!outlineWeights.has(key))outlineWeights.set(key,bakeBrandSvg(svg,{weight}));
     const ink=outlineWeights.get(key);
     paths=[ink.d];fillRule=ink.fillRule;
   }

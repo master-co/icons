@@ -43,3 +43,31 @@ test('all brand outline exports have the requested native primary stroke width',
  await writeFile(`work/brand-outline-craft-04/widths-${testInfo.project.name}.json`,JSON.stringify(measurements,null,2)+'\n');
  for(const m of measurements)expect(Math.abs(m.measured-m.requested),JSON.stringify(m)).toBeLessThan(.025);
 });
+
+test('bubble clearance and native SoundCloud bars remain separate at every supported width',async({page})=>{
+ const cases=[];
+ for(const slug of ['wechat','soundcloud']){
+  const name=`brand-${slug}-outline`,definition=Object.values(await import(pathToFileURL(resolve(`packages/icons/dist/data/${name}.js`)).href))[0];
+  for(const size of [16,20,24])for(const width of strokeWidths.filter(w=>w>=strokeRanges[size][0]&&w<=strokeRanges[size][1]))cases.push({slug,size,width,svg:renderSvg(definition,{size,color:'#000',strokeWidth:width})});
+ }
+ const measured=await page.evaluate(async cases=>{
+  const results=[],factor=32;
+  for(const item of cases){
+   const image=new Image();image.src='data:image/svg+xml,'+encodeURIComponent(item.svg);await image.decode();
+   const canvas=document.createElement('canvas');canvas.width=canvas.height=item.size*factor;
+   const ctx=canvas.getContext('2d');ctx.drawImage(image,0,0,canvas.width,canvas.height);
+   const {data}=ctx.getImageData(0,0,canvas.width,canvas.height),seen=new Uint8Array(canvas.width*canvas.height),areas=[];
+   for(let i=0;i<seen.length;i++){
+    if(seen[i]||data[i*4+3]<128)continue;
+    const queue=[i];seen[i]=1;let area=0;
+    while(queue.length){const at=queue.pop();area++;const x=at%canvas.width,y=Math.floor(at/canvas.width);
+     for(const next of [x>0?at-1:-1,x<canvas.width-1?at+1:-1,y>0?at-canvas.width:-1,y<canvas.height-1?at+canvas.width:-1])if(next>=0&&!seen[next]&&data[next*4+3]>=128){seen[next]=1;queue.push(next);}
+    }
+    if(area>factor*factor*.1)areas.push(area/(factor*factor));
+   }
+   results.push({slug:item.slug,size:item.size,width:item.width,components:areas.length});
+  }
+  return results;
+ },cases);
+ for(const item of measured)expect(item.components,JSON.stringify(item)).toBe(item.slug==='wechat'?6:item.size===16?4:5);
+});

@@ -16,7 +16,7 @@ Master Icons 著重輪廓、比例、留白與小尺寸的細節取捨。目前�
 
 圖庫仍在 alpha 階段，圖形與 API 可能調整。這些設計取向不代表所有圖示、顯示尺寸或背景都已達到相同完成度；各批已執行的檢查與限制見 [驗證紀錄](docs/validation.md) 及對應批次報告，報告僅涵蓋其記載的版本與範圍。
 
-「品牌與平台」有 88 個品牌識別、18 個線條版本，共 106 個瀏覽項目。OpenAI 與 ChatGPT 共用 Blossom，兩個名稱皆可搜尋及匯入。18 個社群品牌的線條版直接列在 icons 列表，詳情也提供單色標誌／線條版切換，包含 GitHub、Telegram、WeChat、Discord、YouTube 等。各框架使用 `BrandGithubIcon` 與 `BrandGithubOutlineIcon`，JavaScript 使用 `BrandGithub` 與 `BrandGithubOutline`。原標誌仍為預設。原標誌保持固定幾何；outline 支援 `strokeWidth` 與網站線寬控制，主描邊按實際輸出尺寸校準，品牌角型保持不變。[品牌輪廓審稿](docs/review/brand-outline-craft-04/index.html) · [來源聲明](THIRD_PARTY_NOTICES.md)
+「品牌與平台」有 88 個品牌識別、18 個線條版本，共 106 個瀏覽項目。OpenAI 與 ChatGPT 共用 Blossom，兩個名稱皆可搜尋及匯入。18 個社群品牌的線條版直接列在 icons 列表，詳情也提供單色標誌／線條版切換，包含 GitHub、Telegram、WeChat、Discord、YouTube 等。各框架使用 `BrandGithubIcon` 與 `BrandGithubOutlineIcon`，JavaScript 使用 `BrandGithub` 與 `BrandGithubOutline`。原標誌仍為預設。原標誌保持固定幾何；outline 支援 `strokeWidth` 與網站線寬控制，主描邊按實際輸出尺寸校準，品牌角型保持不變。[品牌輪廓審稿](docs/review/brand-outline-craft-05/index.html) · [來源聲明](THIRD_PARTY_NOTICES.md)
 
 ## 本地開始使用
 

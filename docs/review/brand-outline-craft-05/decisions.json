@@ -1,0 +1,1087 @@
+{
+  "date": "2026-11-18",
+  "reviewer": "Codex (AI)",
+  "baselineCommit": "4873be7e",
+  "icons": [
+    {
+      "name": "brand-wechat-outline",
+      "decision": "refined",
+      "status": "visually-reviewed-candidate",
+      "reviewer": "Codex (AI); not user approval",
+      "sheet": "brand-outline-craft-05",
+      "beforeVariantsSha256": "1d88b9f65143575cf935510c424c88ab4ba18be202a0634c211f04f2f105200d",
+      "variantsSha256": "c49b31f01af50cb2f1228d4cfa3f3029bdc3f1ef51dbcfc2272db221d83806ff",
+      "sourceSha256": "c63789c1502ef06075e284f24c431ff284d12c07faa299cb11ba3ec001b48824",
+      "observation": "保留雙泡比例、四眼與尾尖；前泡的實際墨形外擴 1 單位，從後泡扣除透明淨空，讓粗細兩端的遮擋關係清楚。",
+      "visualResult": "前後泡交界由厚結點改為透明切口；四個眼點仍分離。 雙泡遮擋清楚，後泡的下弧不再黏前泡。 保留大泡／小泡比例、外伸尾尖與原眼距。",
+      "nativeReview": {
+        "16": "前後泡交界由厚結點改為透明切口；四個眼點仍分離。",
+        "20": "雙泡遮擋清楚，後泡的下弧不再黏前泡。",
+        "24": "保留大泡／小泡比例、外伸尾尖與原眼距。"
+      },
+      "evidence": [
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/after-native-dark-1.png",
+          "sha256": "3ff435a7a3ea95ce552717dfb1378083068b32c71cf99c358f910e38eddad322"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/after-native-dark-2.png",
+          "sha256": "88ec7674d3c3d0a8b1d041e831390a5d2c78f92bcb0dc467a4615784c3d94483"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/after-native-light-1.png",
+          "sha256": "064cc7aa90f0b2a9274bca0e53bd7447fc32bea312e4624858bb39d4a27c7b04"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/after-native-light-2.png",
+          "sha256": "38c9bf4793ee4aad3e301f0e9b0f4ee98b57f1b55ab396d85eac3e2e418f2334"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/batch-1-dark-1.png",
+          "sha256": "53174e1d228d32b9ff58e6facac9248653cc91c4611c8abfad436e6b9d1ac524"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/batch-1-dark-2.png",
+          "sha256": "f750c68a026b8c4861b9bf7870b013d38695da2ae34d104c7d0f07f13448478b"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/batch-1-light-1.png",
+          "sha256": "fe4edb4936d605c99d53a26bc9919593713f09f762612e21ce405260b79ca155"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/batch-1-light-2.png",
+          "sha256": "bcec012fbd4083d438dbf8afc50ff223f4f8a7e09c6d143db622967dac72eb00"
+        }
+      ],
+      "weightReview": {
+        "page": "docs/review/brand-outline-craft-05/index.html",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "method": "Native visual review beside all 18 brands and original marks, light/dark DPR 1/2; minimum/default/maximum weights. Primary widths remain calibrated."
+      }
+    },
+    {
+      "name": "brand-github-outline",
+      "decision": "retained",
+      "status": "visually-reviewed-candidate",
+      "reviewer": "Codex (AI); not user approval",
+      "sheet": "brand-outline-craft-05",
+      "beforeVariantsSha256": "59c61514d7341b36a3518a25214fdb91bd851621171d045abe82ba2410e4ae50",
+      "variantsSha256": "59c61514d7341b36a3518a25214fdb91bd851621171d045abe82ba2410e4ae50",
+      "sourceSha256": "01ff9331ab1dc238f12dcbc22ee71bc496d2c4d50e38327db9a7617dbc3c6b42",
+      "observation": "放平頭頂弧、平順耳根進入兩頰的切線；兩頰收向軀幹，尾巴以連續反彎接入左腳。保留 Tabler 開放腳端構成。",
+      "visualResult": "耳峰、頭部留白與開放雙腿仍可讀。 尾巴接左腿的反彎沒有加粗成獨立塊。 在圓形與寬扁品牌旁重量適中，保留開放腳端。",
+      "nativeReview": {
+        "16": "耳峰、頭部留白與開放雙腿仍可讀。",
+        "20": "尾巴接左腿的反彎沒有加粗成獨立塊。",
+        "24": "在圓形與寬扁品牌旁重量適中，保留開放腳端。"
+      },
+      "evidence": [
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/after-native-dark-1.png",
+          "sha256": "3ff435a7a3ea95ce552717dfb1378083068b32c71cf99c358f910e38eddad322"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/after-native-dark-2.png",
+          "sha256": "88ec7674d3c3d0a8b1d041e831390a5d2c78f92bcb0dc467a4615784c3d94483"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/after-native-light-1.png",
+          "sha256": "064cc7aa90f0b2a9274bca0e53bd7447fc32bea312e4624858bb39d4a27c7b04"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/after-native-light-2.png",
+          "sha256": "38c9bf4793ee4aad3e301f0e9b0f4ee98b57f1b55ab396d85eac3e2e418f2334"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/batch-1-dark-1.png",
+          "sha256": "53174e1d228d32b9ff58e6facac9248653cc91c4611c8abfad436e6b9d1ac524"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/batch-1-dark-2.png",
+          "sha256": "f750c68a026b8c4861b9bf7870b013d38695da2ae34d104c7d0f07f13448478b"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/batch-1-light-1.png",
+          "sha256": "fe4edb4936d605c99d53a26bc9919593713f09f762612e21ce405260b79ca155"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/batch-1-light-2.png",
+          "sha256": "bcec012fbd4083d438dbf8afc50ff223f4f8a7e09c6d143db622967dac72eb00"
+        }
+      ],
+      "weightReview": {
+        "page": "docs/review/brand-outline-craft-05/index.html",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "method": "Native visual review beside all 18 brands and original marks, light/dark DPR 1/2; minimum/default/maximum weights. Primary widths remain calibrated."
+      }
+    },
+    {
+      "name": "brand-gitlab-outline",
+      "decision": "retained",
+      "status": "visually-reviewed-candidate",
+      "reviewer": "Codex (AI); not user approval",
+      "sheet": "brand-outline-craft-05",
+      "beforeVariantsSha256": "2fdef265bfca03c16735b9e3acd18256f6c86dba0e038a41b9ff0ae9170744ca",
+      "variantsSha256": "2fdef265bfca03c16735b9e3acd18256f6c86dba0e038a41b9ff0ae9170744ca",
+      "sourceSha256": "a6fe87a68be4f054a7071941841ba89dcf12c3fddf47db813abd2f422ba31ad5",
+      "observation": "按原 Tanuki 外輪廓向內形成線條，恢復耳尖、肩弧及下尖；原始外形比例不變，保持大內孔。",
+      "visualResult": "耳峰間的中央空腔清楚，下頷沒有變成實心三角。 斜面與上方橋接的轉折保持乾淨。 原狐狸外輪廓比例保留，與 GitHub 的主線寬協調。",
+      "nativeReview": {
+        "16": "耳峰間的中央空腔清楚，下頷沒有變成實心三角。",
+        "20": "斜面與上方橋接的轉折保持乾淨。",
+        "24": "原狐狸外輪廓比例保留，與 GitHub 的主線寬協調。"
+      },
+      "evidence": [
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/after-native-dark-1.png",
+          "sha256": "3ff435a7a3ea95ce552717dfb1378083068b32c71cf99c358f910e38eddad322"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/after-native-dark-2.png",
+          "sha256": "88ec7674d3c3d0a8b1d041e831390a5d2c78f92bcb0dc467a4615784c3d94483"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/after-native-light-1.png",
+          "sha256": "064cc7aa90f0b2a9274bca0e53bd7447fc32bea312e4624858bb39d4a27c7b04"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/after-native-light-2.png",
+          "sha256": "38c9bf4793ee4aad3e301f0e9b0f4ee98b57f1b55ab396d85eac3e2e418f2334"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/batch-1-dark-1.png",
+          "sha256": "53174e1d228d32b9ff58e6facac9248653cc91c4611c8abfad436e6b9d1ac524"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/batch-1-dark-2.png",
+          "sha256": "f750c68a026b8c4861b9bf7870b013d38695da2ae34d104c7d0f07f13448478b"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/batch-1-light-1.png",
+          "sha256": "fe4edb4936d605c99d53a26bc9919593713f09f762612e21ce405260b79ca155"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/batch-1-light-2.png",
+          "sha256": "bcec012fbd4083d438dbf8afc50ff223f4f8a7e09c6d143db622967dac72eb00"
+        }
+      ],
+      "weightReview": {
+        "page": "docs/review/brand-outline-craft-05/index.html",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "method": "Native visual review beside all 18 brands and original marks, light/dark DPR 1/2; minimum/default/maximum weights. Primary widths remain calibrated."
+      }
+    },
+    {
+      "name": "brand-discord-outline",
+      "decision": "retained",
+      "status": "visually-reviewed-candidate",
+      "reviewer": "Codex (AI); not user approval",
+      "sheet": "brand-outline-craft-05",
+      "beforeVariantsSha256": "572b1bc8ff916abae49b329c78ef26d6e74c29e088e1a9b1c43c9b95c8d251f1",
+      "variantsSha256": "572b1bc8ff916abae49b329c78ef26d6e74c29e088e1a9b1c43c9b95c8d251f1",
+      "sourceSha256": "085f8e5dc552159b2f1ad1346d8228774f25fed461b78dde2d66a51ff4a0d7dc",
+      "observation": "回到較輕的中心線描繪，以原 Clyde 的頭寬、雙眼位置和兩側腳端為準；取消擠壓下緣的內描。",
+      "visualResult": "兩眼與下緣留白分開，低扁頭形未被加粗壓成一條。 兩側腳端凹口仍有節奏，沒有回到厚塊內描。 保留原頭寬及眼距，不為佔幅統一拉高頭部。",
+      "nativeReview": {
+        "16": "兩眼與下緣留白分開，低扁頭形未被加粗壓成一條。",
+        "20": "兩側腳端凹口仍有節奏，沒有回到厚塊內描。",
+        "24": "保留原頭寬及眼距，不為佔幅統一拉高頭部。"
+      },
+      "evidence": [
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/after-native-dark-1.png",
+          "sha256": "3ff435a7a3ea95ce552717dfb1378083068b32c71cf99c358f910e38eddad322"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/after-native-dark-2.png",
+          "sha256": "88ec7674d3c3d0a8b1d041e831390a5d2c78f92bcb0dc467a4615784c3d94483"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/after-native-light-1.png",
+          "sha256": "064cc7aa90f0b2a9274bca0e53bd7447fc32bea312e4624858bb39d4a27c7b04"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/after-native-light-2.png",
+          "sha256": "38c9bf4793ee4aad3e301f0e9b0f4ee98b57f1b55ab396d85eac3e2e418f2334"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/batch-1-dark-1.png",
+          "sha256": "53174e1d228d32b9ff58e6facac9248653cc91c4611c8abfad436e6b9d1ac524"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/batch-1-dark-2.png",
+          "sha256": "f750c68a026b8c4861b9bf7870b013d38695da2ae34d104c7d0f07f13448478b"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/batch-1-light-1.png",
+          "sha256": "fe4edb4936d605c99d53a26bc9919593713f09f762612e21ce405260b79ca155"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/batch-1-light-2.png",
+          "sha256": "bcec012fbd4083d438dbf8afc50ff223f4f8a7e09c6d143db622967dac72eb00"
+        }
+      ],
+      "weightReview": {
+        "page": "docs/review/brand-outline-craft-05/index.html",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "method": "Native visual review beside all 18 brands and original marks, light/dark DPR 1/2; minimum/default/maximum weights. Primary widths remain calibrated."
+      }
+    },
+    {
+      "name": "brand-youtube-outline",
+      "decision": "retained",
+      "status": "visually-reviewed-candidate",
+      "reviewer": "Codex (AI); not user approval",
+      "sheet": "brand-outline-craft-05",
+      "beforeVariantsSha256": "ec15ee283f75a16d9c215f1bb2508a4f74c2be4ce66699c0f1a03dc4d1424ed0",
+      "variantsSha256": "ec15ee283f75a16d9c215f1bb2508a4f74c2be4ce66699c0f1a03dc4d1424ed0",
+      "sourceSha256": "be611d0410ae34cd1916c7ba5584f4e1fc804df00e20d8f92c3ce8707465274b",
+      "observation": "回到原標誌的寬高、四角和微凸邊界，外框向內描；三角形按原標誌佔比縮回，內線降至 1.4，恢復四周空白。",
+      "visualResult": "外框與播放三角分離；三角內孔偏小但仍可辨。 橫向標誌的上下留白穩定，播放符號沒有碰框。 原寬扁比例保留；不拉高以追平圓形品牌的墨量。",
+      "nativeReview": {
+        "16": "外框與播放三角分離；三角內孔偏小但仍可辨。",
+        "20": "橫向標誌的上下留白穩定，播放符號沒有碰框。",
+        "24": "原寬扁比例保留；不拉高以追平圓形品牌的墨量。"
+      },
+      "evidence": [
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/after-native-dark-1.png",
+          "sha256": "3ff435a7a3ea95ce552717dfb1378083068b32c71cf99c358f910e38eddad322"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/after-native-dark-2.png",
+          "sha256": "88ec7674d3c3d0a8b1d041e831390a5d2c78f92bcb0dc467a4615784c3d94483"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/after-native-light-1.png",
+          "sha256": "064cc7aa90f0b2a9274bca0e53bd7447fc32bea312e4624858bb39d4a27c7b04"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/after-native-light-2.png",
+          "sha256": "38c9bf4793ee4aad3e301f0e9b0f4ee98b57f1b55ab396d85eac3e2e418f2334"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/batch-1-dark-1.png",
+          "sha256": "53174e1d228d32b9ff58e6facac9248653cc91c4611c8abfad436e6b9d1ac524"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/batch-1-dark-2.png",
+          "sha256": "f750c68a026b8c4861b9bf7870b013d38695da2ae34d104c7d0f07f13448478b"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/batch-1-light-1.png",
+          "sha256": "fe4edb4936d605c99d53a26bc9919593713f09f762612e21ce405260b79ca155"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/batch-1-light-2.png",
+          "sha256": "bcec012fbd4083d438dbf8afc50ff223f4f8a7e09c6d143db622967dac72eb00"
+        }
+      ],
+      "weightReview": {
+        "page": "docs/review/brand-outline-craft-05/index.html",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "method": "Native visual review beside all 18 brands and original marks, light/dark DPR 1/2; minimum/default/maximum weights. Primary widths remain calibrated."
+      }
+    },
+    {
+      "name": "brand-facebook-outline",
+      "decision": "retained",
+      "status": "visually-reviewed-candidate",
+      "reviewer": "Codex (AI); not user approval",
+      "sheet": "brand-outline-craft-05",
+      "beforeVariantsSha256": "c466ea505fc6ec9bd514b3d8c41b43fbc4d4ba0022954d0f0965a35c4e6a915f",
+      "variantsSha256": "c466ea505fc6ec9bd514b3d8c41b43fbc4d4ba0022954d0f0965a35c4e6a915f",
+      "sourceSha256": "1ee8dfcd870e1577b4f4ab87e45b2ac6012b81c90d45e00ea933da7a3abdc33d",
+      "observation": "保留原 f 的輪廓與比例，改沿輪廓中心描線；補足實際線寬時讓兩側增重，保留直幹與橫槓的空腔。",
+      "visualResult": "f 直幹和橫槓的空腔仍連續。 上方肩部與橫槓收筆分開，沒有填成實心字母。 細長字形自然較窄；保留原比例，沒有橫向拉寬。",
+      "nativeReview": {
+        "16": "f 直幹和橫槓的空腔仍連續。",
+        "20": "上方肩部與橫槓收筆分開，沒有填成實心字母。",
+        "24": "細長字形自然較窄；保留原比例，沒有橫向拉寬。"
+      },
+      "evidence": [
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/after-native-dark-1.png",
+          "sha256": "3ff435a7a3ea95ce552717dfb1378083068b32c71cf99c358f910e38eddad322"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/after-native-dark-2.png",
+          "sha256": "88ec7674d3c3d0a8b1d041e831390a5d2c78f92bcb0dc467a4615784c3d94483"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/after-native-light-1.png",
+          "sha256": "064cc7aa90f0b2a9274bca0e53bd7447fc32bea312e4624858bb39d4a27c7b04"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/after-native-light-2.png",
+          "sha256": "38c9bf4793ee4aad3e301f0e9b0f4ee98b57f1b55ab396d85eac3e2e418f2334"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/batch-1-dark-1.png",
+          "sha256": "53174e1d228d32b9ff58e6facac9248653cc91c4611c8abfad436e6b9d1ac524"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/batch-1-dark-2.png",
+          "sha256": "f750c68a026b8c4861b9bf7870b013d38695da2ae34d104c7d0f07f13448478b"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/batch-1-light-1.png",
+          "sha256": "fe4edb4936d605c99d53a26bc9919593713f09f762612e21ce405260b79ca155"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/batch-1-light-2.png",
+          "sha256": "bcec012fbd4083d438dbf8afc50ff223f4f8a7e09c6d143db622967dac72eb00"
+        }
+      ],
+      "weightReview": {
+        "page": "docs/review/brand-outline-craft-05/index.html",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "method": "Native visual review beside all 18 brands and original marks, light/dark DPR 1/2; minimum/default/maximum weights. Primary widths remain calibrated."
+      }
+    },
+    {
+      "name": "brand-linkedin-outline",
+      "decision": "retained",
+      "status": "visually-reviewed-candidate",
+      "reviewer": "Codex (AI); not user approval",
+      "sheet": "brand-outline-craft-05",
+      "beforeVariantsSha256": "407255a730b98648cd3b7ab91018ea703a3a8ea9e407ebb9537913a205d7ad38",
+      "variantsSha256": "407255a730b98648cd3b7ab91018ea703a3a8ea9e407ebb9537913a205d7ad38",
+      "sourceSha256": "a1fc2d10766b725ed54d4264945c5d2ca0147f3712d61df459c14312faf0af18",
+      "observation": "外框與 in 的線條共用校準後的主線寬；保留原外框比例與獨立實心圓點。",
+      "visualResult": "i 圓點與直幹分開；in 和外框沒有黏合。 外框與內字使用同一主線寬，視覺主次穩定。 n 的拱肩與右邊框留白清楚。",
+      "nativeReview": {
+        "16": "i 圓點與直幹分開；in 和外框沒有黏合。",
+        "20": "外框與內字使用同一主線寬，視覺主次穩定。",
+        "24": "n 的拱肩與右邊框留白清楚。"
+      },
+      "evidence": [
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/after-native-dark-1.png",
+          "sha256": "3ff435a7a3ea95ce552717dfb1378083068b32c71cf99c358f910e38eddad322"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/after-native-dark-2.png",
+          "sha256": "88ec7674d3c3d0a8b1d041e831390a5d2c78f92bcb0dc467a4615784c3d94483"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/after-native-light-1.png",
+          "sha256": "064cc7aa90f0b2a9274bca0e53bd7447fc32bea312e4624858bb39d4a27c7b04"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/after-native-light-2.png",
+          "sha256": "38c9bf4793ee4aad3e301f0e9b0f4ee98b57f1b55ab396d85eac3e2e418f2334"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/batch-2-dark-1.png",
+          "sha256": "dc910485f387cdb75d2c189e4b76985258a386ed34026c19aed2a7fdca097bc0"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/batch-2-dark-2.png",
+          "sha256": "d2988f2a0068ab5fa20a07dafa88627dcf6ef607eac331b79791a0a465d0b9f6"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/batch-2-light-1.png",
+          "sha256": "d9e62dc710f253912f9e084a53574efa4fb58b183e31c077488ea01dfe9c881c"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/batch-2-light-2.png",
+          "sha256": "27362b95a7d8727fd0e2cdcda48c788ac164cab8627cc40703c1ec99c5cfa11e"
+        }
+      ],
+      "weightReview": {
+        "page": "docs/review/brand-outline-craft-05/index.html",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "method": "Native visual review beside all 18 brands and original marks, light/dark DPR 1/2; minimum/default/maximum weights. Primary widths remain calibrated."
+      }
+    },
+    {
+      "name": "brand-mastodon-outline",
+      "decision": "retained",
+      "status": "visually-reviewed-candidate",
+      "reviewer": "Codex (AI); not user approval",
+      "sheet": "brand-outline-craft-05",
+      "beforeVariantsSha256": "87b7859372fbfe2528065681eb8d41b6e483831ecfd38536ffab47922e2ad051",
+      "variantsSha256": "87b7859372fbfe2528065681eb8d41b6e483831ecfd38536ffab47922e2ad051",
+      "sourceSha256": "825df078d9126917c96e4bd71f63f14db707b8889a3bc26fff282f2afa68ad7d",
+      "observation": "恢復原外形的寬肩、右腹和下方平口，內描保留曲面；m 的雙拱擴寬，中央短幹與兩側長幹呼應原字形。",
+      "visualResult": "雙拱 m 的空腔可讀，底部折返仍呈尾部。 m 與外框沒有相接；尾部兩側墨量較集中。 保留原外輪廓和偏左下尾部；極粗時較密，預設不另加粗。",
+      "nativeReview": {
+        "16": "雙拱 m 的空腔可讀，底部折返仍呈尾部。",
+        "20": "m 與外框沒有相接；尾部兩側墨量較集中。",
+        "24": "保留原外輪廓和偏左下尾部；極粗時較密，預設不另加粗。"
+      },
+      "evidence": [
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/after-native-dark-1.png",
+          "sha256": "3ff435a7a3ea95ce552717dfb1378083068b32c71cf99c358f910e38eddad322"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/after-native-dark-2.png",
+          "sha256": "88ec7674d3c3d0a8b1d041e831390a5d2c78f92bcb0dc467a4615784c3d94483"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/after-native-light-1.png",
+          "sha256": "064cc7aa90f0b2a9274bca0e53bd7447fc32bea312e4624858bb39d4a27c7b04"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/after-native-light-2.png",
+          "sha256": "38c9bf4793ee4aad3e301f0e9b0f4ee98b57f1b55ab396d85eac3e2e418f2334"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/batch-2-dark-1.png",
+          "sha256": "dc910485f387cdb75d2c189e4b76985258a386ed34026c19aed2a7fdca097bc0"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/batch-2-dark-2.png",
+          "sha256": "d2988f2a0068ab5fa20a07dafa88627dcf6ef607eac331b79791a0a465d0b9f6"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/batch-2-light-1.png",
+          "sha256": "d9e62dc710f253912f9e084a53574efa4fb58b183e31c077488ea01dfe9c881c"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/batch-2-light-2.png",
+          "sha256": "27362b95a7d8727fd0e2cdcda48c788ac164cab8627cc40703c1ec99c5cfa11e"
+        }
+      ],
+      "weightReview": {
+        "page": "docs/review/brand-outline-craft-05/index.html",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "method": "Native visual review beside all 18 brands and original marks, light/dark DPR 1/2; minimum/default/maximum weights. Primary widths remain calibrated."
+      }
+    },
+    {
+      "name": "brand-reddit-outline",
+      "decision": "retained",
+      "status": "visually-reviewed-candidate",
+      "reviewer": "Codex (AI); not user approval",
+      "sheet": "brand-outline-craft-05",
+      "beforeVariantsSha256": "bd5db066fee6efbffba285c709f10f9f22cfa38eed3684ae06a31ceffada2d51",
+      "variantsSha256": "bd5db066fee6efbffba285c709f10f9f22cfa38eed3684ae06a31ceffada2d51",
+      "sourceSha256": "bae65b3411a39be2a9b9965cc5af6a9891b70fa0f670396520982f0a4f17d0a8",
+      "observation": "直接按原 Snoo 頭形、兩耳、眼形與填色笑嘴配置；天線回到原上拱與圓頭位置。",
+      "visualResult": "兩眼和填色笑嘴仍分開，耳朵可辨。 臉部下腹與嘴形保留甜笑表情。 天線造成上方偏右重心是原特徵，不強制拉平臉形。",
+      "nativeReview": {
+        "16": "兩眼和填色笑嘴仍分開，耳朵可辨。",
+        "20": "臉部下腹與嘴形保留甜笑表情。",
+        "24": "天線造成上方偏右重心是原特徵，不強制拉平臉形。"
+      },
+      "evidence": [
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/after-native-dark-1.png",
+          "sha256": "3ff435a7a3ea95ce552717dfb1378083068b32c71cf99c358f910e38eddad322"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/after-native-dark-2.png",
+          "sha256": "88ec7674d3c3d0a8b1d041e831390a5d2c78f92bcb0dc467a4615784c3d94483"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/after-native-light-1.png",
+          "sha256": "064cc7aa90f0b2a9274bca0e53bd7447fc32bea312e4624858bb39d4a27c7b04"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/after-native-light-2.png",
+          "sha256": "38c9bf4793ee4aad3e301f0e9b0f4ee98b57f1b55ab396d85eac3e2e418f2334"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/batch-2-dark-1.png",
+          "sha256": "dc910485f387cdb75d2c189e4b76985258a386ed34026c19aed2a7fdca097bc0"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/batch-2-dark-2.png",
+          "sha256": "d2988f2a0068ab5fa20a07dafa88627dcf6ef607eac331b79791a0a465d0b9f6"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/batch-2-light-1.png",
+          "sha256": "d9e62dc710f253912f9e084a53574efa4fb58b183e31c077488ea01dfe9c881c"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/batch-2-light-2.png",
+          "sha256": "27362b95a7d8727fd0e2cdcda48c788ac164cab8627cc40703c1ec99c5cfa11e"
+        }
+      ],
+      "weightReview": {
+        "page": "docs/review/brand-outline-craft-05/index.html",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "method": "Native visual review beside all 18 brands and original marks, light/dark DPR 1/2; minimum/default/maximum weights. Primary widths remain calibrated."
+      }
+    },
+    {
+      "name": "brand-spotify-outline",
+      "decision": "retained",
+      "status": "visually-reviewed-candidate",
+      "reviewer": "Codex (AI); not user approval",
+      "sheet": "brand-outline-craft-05",
+      "beforeVariantsSha256": "ab2a3871dbd298d70d8f0d21cb1a8e55202c18280c9043565f33eae0356477df",
+      "variantsSha256": "ab2a3871dbd298d70d8f0d21cb1a8e55202c18280c9043565f33eae0356477df",
+      "sourceSha256": "2cfde1be6e73657455558ce3d9549a7d1f479dbe498c6256e11e9d607752bc2e",
+      "observation": "圓框恢復原 24 單位直徑並向內描；三道原聲波的曲率、漸細與長短維持不變，右上留白回到原始比例。",
+      "visualResult": "三道聲波分開，和圓框之間仍有空間。 原聲波的粗細遞變保留，沒有硬改為三條等粗線。 圓形佔幅和 Pinterest／Telegram 協調。",
+      "nativeReview": {
+        "16": "三道聲波分開，和圓框之間仍有空間。",
+        "20": "原聲波的粗細遞變保留，沒有硬改為三條等粗線。",
+        "24": "圓形佔幅和 Pinterest／Telegram 協調。"
+      },
+      "evidence": [
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/after-native-dark-1.png",
+          "sha256": "3ff435a7a3ea95ce552717dfb1378083068b32c71cf99c358f910e38eddad322"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/after-native-dark-2.png",
+          "sha256": "88ec7674d3c3d0a8b1d041e831390a5d2c78f92bcb0dc467a4615784c3d94483"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/after-native-light-1.png",
+          "sha256": "064cc7aa90f0b2a9274bca0e53bd7447fc32bea312e4624858bb39d4a27c7b04"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/after-native-light-2.png",
+          "sha256": "38c9bf4793ee4aad3e301f0e9b0f4ee98b57f1b55ab396d85eac3e2e418f2334"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/batch-2-dark-1.png",
+          "sha256": "dc910485f387cdb75d2c189e4b76985258a386ed34026c19aed2a7fdca097bc0"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/batch-2-dark-2.png",
+          "sha256": "d2988f2a0068ab5fa20a07dafa88627dcf6ef607eac331b79791a0a465d0b9f6"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/batch-2-light-1.png",
+          "sha256": "d9e62dc710f253912f9e084a53574efa4fb58b183e31c077488ea01dfe9c881c"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/batch-2-light-2.png",
+          "sha256": "27362b95a7d8727fd0e2cdcda48c788ac164cab8627cc40703c1ec99c5cfa11e"
+        }
+      ],
+      "weightReview": {
+        "page": "docs/review/brand-outline-craft-05/index.html",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "method": "Native visual review beside all 18 brands and original marks, light/dark DPR 1/2; minimum/default/maximum weights. Primary widths remain calibrated."
+      }
+    },
+    {
+      "name": "brand-soundcloud-outline",
+      "decision": "refined",
+      "status": "visually-reviewed-candidate",
+      "reviewer": "Codex (AI); not user approval",
+      "sheet": "brand-outline-craft-05",
+      "beforeVariantsSha256": "87fb3059e9d1b3acb84b1f32a918d8292001a680fa1dbfdcd1f51ba7b01eab6c",
+      "variantsSha256": "af11393bc77d5ebcccce906e4baa8a7a5247969b8f0f6180654980d534f272aa",
+      "sourceSha256": "243d02ed94dfbd46b163550b8d53c73d4d6466a07d1b588a5a05a5abc88c223d",
+      "observation": "雲朵沿用原輪廓及已校準主線寬；16px 使用三道漸高短棒，20/24px 保留四道，短棒以 1.3／1.65 的次要描線比例留出通道。",
+      "visualResult": "四棒改三棒、重新分配中心距；短棒和雲朵分離。 四棒保留，次要線條略收細，預設間隙較清楚。 保持原低扁雲形；粗線端四棒未相連，不將雲朵拉高補墨量。",
+      "nativeReview": {
+        "16": "四棒改三棒、重新分配中心距；短棒和雲朵分離。",
+        "20": "四棒保留，次要線條略收細，預設間隙較清楚。",
+        "24": "保持原低扁雲形；粗線端四棒未相連，不將雲朵拉高補墨量。"
+      },
+      "evidence": [
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/after-native-dark-1.png",
+          "sha256": "3ff435a7a3ea95ce552717dfb1378083068b32c71cf99c358f910e38eddad322"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/after-native-dark-2.png",
+          "sha256": "88ec7674d3c3d0a8b1d041e831390a5d2c78f92bcb0dc467a4615784c3d94483"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/after-native-light-1.png",
+          "sha256": "064cc7aa90f0b2a9274bca0e53bd7447fc32bea312e4624858bb39d4a27c7b04"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/after-native-light-2.png",
+          "sha256": "38c9bf4793ee4aad3e301f0e9b0f4ee98b57f1b55ab396d85eac3e2e418f2334"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/batch-2-dark-1.png",
+          "sha256": "dc910485f387cdb75d2c189e4b76985258a386ed34026c19aed2a7fdca097bc0"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/batch-2-dark-2.png",
+          "sha256": "d2988f2a0068ab5fa20a07dafa88627dcf6ef607eac331b79791a0a465d0b9f6"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/batch-2-light-1.png",
+          "sha256": "d9e62dc710f253912f9e084a53574efa4fb58b183e31c077488ea01dfe9c881c"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/batch-2-light-2.png",
+          "sha256": "27362b95a7d8727fd0e2cdcda48c788ac164cab8627cc40703c1ec99c5cfa11e"
+        }
+      ],
+      "weightReview": {
+        "page": "docs/review/brand-outline-craft-05/index.html",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "method": "Native visual review beside all 18 brands and original marks, light/dark DPR 1/2; minimum/default/maximum weights. Primary widths remain calibrated."
+      }
+    },
+    {
+      "name": "brand-pinterest-outline",
+      "decision": "retained",
+      "status": "visually-reviewed-candidate",
+      "reviewer": "Codex (AI); not user approval",
+      "sheet": "brand-outline-craft-05",
+      "beforeVariantsSha256": "f02a35f5bb35be0a6d37447e5c2a8b4cd5fb5fa15e2f42d8bc420e06dfe36fa9",
+      "variantsSha256": "f02a35f5bb35be0a6d37447e5c2a8b4cd5fb5fa15e2f42d8bc420e06dfe36fa9",
+      "sourceSha256": "869788f400123460ea3a237721c42458e240d527ef08ac7734ab61e3baa913b4",
+      "observation": "左回環延伸完整，再以右側長筆實際墨形向外擴張 1.2 單位扣除；透明缺口隨線寬重新計算。",
+      "visualResult": "左回環與斜筆的透明切口可見；不靠圓端帽截斷。 P 右回環與外圈分開，長筆接圈屬既有構造。 原 P 斜勢保留，圓框內留白未因加粗失衡。",
+      "nativeReview": {
+        "16": "左回環與斜筆的透明切口可見；不靠圓端帽截斷。",
+        "20": "P 右回環與外圈分開，長筆接圈屬既有構造。",
+        "24": "原 P 斜勢保留，圓框內留白未因加粗失衡。"
+      },
+      "evidence": [
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/after-native-dark-1.png",
+          "sha256": "3ff435a7a3ea95ce552717dfb1378083068b32c71cf99c358f910e38eddad322"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/after-native-dark-2.png",
+          "sha256": "88ec7674d3c3d0a8b1d041e831390a5d2c78f92bcb0dc467a4615784c3d94483"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/after-native-light-1.png",
+          "sha256": "064cc7aa90f0b2a9274bca0e53bd7447fc32bea312e4624858bb39d4a27c7b04"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/after-native-light-2.png",
+          "sha256": "38c9bf4793ee4aad3e301f0e9b0f4ee98b57f1b55ab396d85eac3e2e418f2334"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/batch-2-dark-1.png",
+          "sha256": "dc910485f387cdb75d2c189e4b76985258a386ed34026c19aed2a7fdca097bc0"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/batch-2-dark-2.png",
+          "sha256": "d2988f2a0068ab5fa20a07dafa88627dcf6ef607eac331b79791a0a465d0b9f6"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/batch-2-light-1.png",
+          "sha256": "d9e62dc710f253912f9e084a53574efa4fb58b183e31c077488ea01dfe9c881c"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/batch-2-light-2.png",
+          "sha256": "27362b95a7d8727fd0e2cdcda48c788ac164cab8627cc40703c1ec99c5cfa11e"
+        }
+      ],
+      "weightReview": {
+        "page": "docs/review/brand-outline-craft-05/index.html",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "method": "Native visual review beside all 18 brands and original marks, light/dark DPR 1/2; minimum/default/maximum weights. Primary widths remain calibrated."
+      }
+    },
+    {
+      "name": "brand-tiktok-outline",
+      "decision": "retained",
+      "status": "visually-reviewed-candidate",
+      "reviewer": "Codex (AI); not user approval",
+      "sheet": "brand-outline-craft-05",
+      "beforeVariantsSha256": "237b642be7d9d9f1748a2ca03787e46992b7b5822d8fe653cf84934c8f1aeff7",
+      "variantsSha256": "237b642be7d9d9f1748a2ca03787e46992b7b5822d8fe653cf84934c8f1aeff7",
+      "sourceSha256": "ab2288f076ce7fa2ea2a3e5525086a269565175d9f03094def6ef691b8119de0",
+      "observation": "保留原音符的長直幹、左斷面與右旗曲線；沿原輪廓中心描線，補足實際線寬並給直幹內孔更多空間。",
+      "visualResult": "直幹內部空白仍存在，左斷面和下方圓腹可辨。 上方旗面與長幹比例維持；兩道邊線沒有黏成實心。 原音符姿態保留；極粗較密，預設的空腔仍連通。",
+      "nativeReview": {
+        "16": "直幹內部空白仍存在，左斷面和下方圓腹可辨。",
+        "20": "上方旗面與長幹比例維持；兩道邊線沒有黏成實心。",
+        "24": "原音符姿態保留；極粗較密，預設的空腔仍連通。"
+      },
+      "evidence": [
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/after-native-dark-1.png",
+          "sha256": "3ff435a7a3ea95ce552717dfb1378083068b32c71cf99c358f910e38eddad322"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/after-native-dark-2.png",
+          "sha256": "88ec7674d3c3d0a8b1d041e831390a5d2c78f92bcb0dc467a4615784c3d94483"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/after-native-light-1.png",
+          "sha256": "064cc7aa90f0b2a9274bca0e53bd7447fc32bea312e4624858bb39d4a27c7b04"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/after-native-light-2.png",
+          "sha256": "38c9bf4793ee4aad3e301f0e9b0f4ee98b57f1b55ab396d85eac3e2e418f2334"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/batch-3-dark-1.png",
+          "sha256": "b2f704db87d852ea969b47533c41bb1ac7401869aedaaba33796cd2b258a65d0"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/batch-3-dark-2.png",
+          "sha256": "3e54f0cf5c48799f1949d66dcb9070a5cefd8e9b52aa8f87a95706ccd8a857b1"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/batch-3-light-1.png",
+          "sha256": "0405b3575c08f5b10c3a4e553681ba654011fdb9d86cc87786e803211e403730"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/batch-3-light-2.png",
+          "sha256": "583226ddcf2509602504ce92c0a5a6b2a58156d327408756d3e758c699b8a693"
+        }
+      ],
+      "weightReview": {
+        "page": "docs/review/brand-outline-craft-05/index.html",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "method": "Native visual review beside all 18 brands and original marks, light/dark DPR 1/2; minimum/default/maximum weights. Primary widths remain calibrated."
+      }
+    },
+    {
+      "name": "brand-twitch-outline",
+      "decision": "retained",
+      "status": "visually-reviewed-candidate",
+      "reviewer": "Codex (AI); not user approval",
+      "sheet": "brand-outline-craft-05",
+      "beforeVariantsSha256": "6edd163ccb06195f1557f996b6168a0b505ddbab6353ea508115ab4d3ac6edee",
+      "variantsSha256": "6edd163ccb06195f1557f996b6168a0b505ddbab6353ea508115ab4d3ac6edee",
+      "sourceSha256": "3eab9eeb153054d25979aa4480db8554591e7c38596f26ce0e4cc57b0edd16c8",
+      "observation": "保留原 Glitch 左上斜切、右下長斜面和尾尖；兩道直槽回到原矩形及相對位置，所有外邊界保持原稿。",
+      "visualResult": "兩道矩形眼槽分離，尾部開口可辨。 右下斜面與尾尖沒有因圓化變鈍。 保持原 Glitch 角型，沒有為柔和混排改標誌斜切。",
+      "nativeReview": {
+        "16": "兩道矩形眼槽分離，尾部開口可辨。",
+        "20": "右下斜面與尾尖沒有因圓化變鈍。",
+        "24": "保持原 Glitch 角型，沒有為柔和混排改標誌斜切。"
+      },
+      "evidence": [
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/after-native-dark-1.png",
+          "sha256": "3ff435a7a3ea95ce552717dfb1378083068b32c71cf99c358f910e38eddad322"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/after-native-dark-2.png",
+          "sha256": "88ec7674d3c3d0a8b1d041e831390a5d2c78f92bcb0dc467a4615784c3d94483"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/after-native-light-1.png",
+          "sha256": "064cc7aa90f0b2a9274bca0e53bd7447fc32bea312e4624858bb39d4a27c7b04"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/after-native-light-2.png",
+          "sha256": "38c9bf4793ee4aad3e301f0e9b0f4ee98b57f1b55ab396d85eac3e2e418f2334"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/batch-3-dark-1.png",
+          "sha256": "b2f704db87d852ea969b47533c41bb1ac7401869aedaaba33796cd2b258a65d0"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/batch-3-dark-2.png",
+          "sha256": "3e54f0cf5c48799f1949d66dcb9070a5cefd8e9b52aa8f87a95706ccd8a857b1"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/batch-3-light-1.png",
+          "sha256": "0405b3575c08f5b10c3a4e553681ba654011fdb9d86cc87786e803211e403730"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/batch-3-light-2.png",
+          "sha256": "583226ddcf2509602504ce92c0a5a6b2a58156d327408756d3e758c699b8a693"
+        }
+      ],
+      "weightReview": {
+        "page": "docs/review/brand-outline-craft-05/index.html",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "method": "Native visual review beside all 18 brands and original marks, light/dark DPR 1/2; minimum/default/maximum weights. Primary widths remain calibrated."
+      }
+    },
+    {
+      "name": "brand-vimeo-outline",
+      "decision": "retained",
+      "status": "visually-reviewed-candidate",
+      "reviewer": "Codex (AI); not user approval",
+      "sheet": "brand-outline-craft-05",
+      "beforeVariantsSha256": "4a5de3fc1f11bb5435d9a5476086388bbd88864172d18101c5279d2f702669bb",
+      "variantsSha256": "4a5de3fc1f11bb5435d9a5476086388bbd88864172d18101c5279d2f702669bb",
+      "sourceSha256": "ad72b724d2015b4ac7ea46a8fadbf5b0847f567ec3bfd925ca2d13c83bebc57f",
+      "observation": "保留原 v 字的左端上挑、右側反彎和下腹收束；改沿輪廓中心描線，統一實際線寬並保留內部空腔。",
+      "visualResult": "左上挑和右上回彎可辨，下腹仍有空腔。 細頸與較寬下腹保持原 v 字的動勢。 保留左右不對稱曲率；不以擴框拉寬原字形。",
+      "nativeReview": {
+        "16": "左上挑和右上回彎可辨，下腹仍有空腔。",
+        "20": "細頸與較寬下腹保持原 v 字的動勢。",
+        "24": "保留左右不對稱曲率；不以擴框拉寬原字形。"
+      },
+      "evidence": [
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/after-native-dark-1.png",
+          "sha256": "3ff435a7a3ea95ce552717dfb1378083068b32c71cf99c358f910e38eddad322"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/after-native-dark-2.png",
+          "sha256": "88ec7674d3c3d0a8b1d041e831390a5d2c78f92bcb0dc467a4615784c3d94483"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/after-native-light-1.png",
+          "sha256": "064cc7aa90f0b2a9274bca0e53bd7447fc32bea312e4624858bb39d4a27c7b04"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/after-native-light-2.png",
+          "sha256": "38c9bf4793ee4aad3e301f0e9b0f4ee98b57f1b55ab396d85eac3e2e418f2334"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/batch-3-dark-1.png",
+          "sha256": "b2f704db87d852ea969b47533c41bb1ac7401869aedaaba33796cd2b258a65d0"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/batch-3-dark-2.png",
+          "sha256": "3e54f0cf5c48799f1949d66dcb9070a5cefd8e9b52aa8f87a95706ccd8a857b1"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/batch-3-light-1.png",
+          "sha256": "0405b3575c08f5b10c3a4e553681ba654011fdb9d86cc87786e803211e403730"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/batch-3-light-2.png",
+          "sha256": "583226ddcf2509602504ce92c0a5a6b2a58156d327408756d3e758c699b8a693"
+        }
+      ],
+      "weightReview": {
+        "page": "docs/review/brand-outline-craft-05/index.html",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "method": "Native visual review beside all 18 brands and original marks, light/dark DPR 1/2; minimum/default/maximum weights. Primary widths remain calibrated."
+      }
+    },
+    {
+      "name": "brand-patreon-outline",
+      "decision": "retained",
+      "status": "visually-reviewed-candidate",
+      "reviewer": "Codex (AI); not user approval",
+      "sheet": "brand-outline-craft-05",
+      "beforeVariantsSha256": "f73de9a44e24ad0ffd0bcb412429ea378af6656591263598396387e827fa9245",
+      "variantsSha256": "f73de9a44e24ad0ffd0bcb412429ea378af6656591263598396387e827fa9245",
+      "sourceSha256": "0e8bc1da17d619011ea48d33baba530381ed88d8b2ff424319e7bcd90838330a",
+      "observation": "按原塊形向內描；保留左側緩直、右上鼓腹與下方偏左收束，讓線條張力來自原曲率。",
+      "visualResult": "不對稱肩部與下方收腰仍清楚。 單一外輪廓較疏，保留其通透感而不加內線補重量。 右肩與偏左下端比例接近原塊形，不改成規整字母 P。",
+      "nativeReview": {
+        "16": "不對稱肩部與下方收腰仍清楚。",
+        "20": "單一外輪廓較疏，保留其通透感而不加內線補重量。",
+        "24": "右肩與偏左下端比例接近原塊形，不改成規整字母 P。"
+      },
+      "evidence": [
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/after-native-dark-1.png",
+          "sha256": "3ff435a7a3ea95ce552717dfb1378083068b32c71cf99c358f910e38eddad322"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/after-native-dark-2.png",
+          "sha256": "88ec7674d3c3d0a8b1d041e831390a5d2c78f92bcb0dc467a4615784c3d94483"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/after-native-light-1.png",
+          "sha256": "064cc7aa90f0b2a9274bca0e53bd7447fc32bea312e4624858bb39d4a27c7b04"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/after-native-light-2.png",
+          "sha256": "38c9bf4793ee4aad3e301f0e9b0f4ee98b57f1b55ab396d85eac3e2e418f2334"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/batch-3-dark-1.png",
+          "sha256": "b2f704db87d852ea969b47533c41bb1ac7401869aedaaba33796cd2b258a65d0"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/batch-3-dark-2.png",
+          "sha256": "3e54f0cf5c48799f1949d66dcb9070a5cefd8e9b52aa8f87a95706ccd8a857b1"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/batch-3-light-1.png",
+          "sha256": "0405b3575c08f5b10c3a4e553681ba654011fdb9d86cc87786e803211e403730"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/batch-3-light-2.png",
+          "sha256": "583226ddcf2509602504ce92c0a5a6b2a58156d327408756d3e758c699b8a693"
+        }
+      ],
+      "weightReview": {
+        "page": "docs/review/brand-outline-craft-05/index.html",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "method": "Native visual review beside all 18 brands and original marks, light/dark DPR 1/2; minimum/default/maximum weights. Primary widths remain calibrated."
+      }
+    },
+    {
+      "name": "brand-telegram-outline",
+      "decision": "retained",
+      "status": "visually-reviewed-candidate",
+      "reviewer": "Codex (AI); not user approval",
+      "sheet": "brand-outline-craft-05",
+      "beforeVariantsSha256": "f36f4ee0d6d43a4646da5508d6586026c6ca40c2503550688868cbcd2cfafa24",
+      "variantsSha256": "f36f4ee0d6d43a4646da5508d6586026c6ca40c2503550688868cbcd2cfafa24",
+      "sourceSha256": "35789abe620f351a95bee118a3af1aab52328b0e52e5c3241e9aeb7c66648b7b",
+      "observation": "恢復原圓底直徑，圓框向內描至 1.65；紙飛機路徑維持原狀，機鼻與右側圓框之間的留白恢復。",
+      "visualResult": "紙飛機與圓框分離，機鼻沒有貼框。 紙飛機的實心重量和圓框形成清楚層級。 保留原機翼與圓形比例，不把實心飛機另行挖空。",
+      "nativeReview": {
+        "16": "紙飛機與圓框分離，機鼻沒有貼框。",
+        "20": "紙飛機的實心重量和圓框形成清楚層級。",
+        "24": "保留原機翼與圓形比例，不把實心飛機另行挖空。"
+      },
+      "evidence": [
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/after-native-dark-1.png",
+          "sha256": "3ff435a7a3ea95ce552717dfb1378083068b32c71cf99c358f910e38eddad322"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/after-native-dark-2.png",
+          "sha256": "88ec7674d3c3d0a8b1d041e831390a5d2c78f92bcb0dc467a4615784c3d94483"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/after-native-light-1.png",
+          "sha256": "064cc7aa90f0b2a9274bca0e53bd7447fc32bea312e4624858bb39d4a27c7b04"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/after-native-light-2.png",
+          "sha256": "38c9bf4793ee4aad3e301f0e9b0f4ee98b57f1b55ab396d85eac3e2e418f2334"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/batch-3-dark-1.png",
+          "sha256": "b2f704db87d852ea969b47533c41bb1ac7401869aedaaba33796cd2b258a65d0"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/batch-3-dark-2.png",
+          "sha256": "3e54f0cf5c48799f1949d66dcb9070a5cefd8e9b52aa8f87a95706ccd8a857b1"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/batch-3-light-1.png",
+          "sha256": "0405b3575c08f5b10c3a4e553681ba654011fdb9d86cc87786e803211e403730"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/batch-3-light-2.png",
+          "sha256": "583226ddcf2509602504ce92c0a5a6b2a58156d327408756d3e758c699b8a693"
+        }
+      ],
+      "weightReview": {
+        "page": "docs/review/brand-outline-craft-05/index.html",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "method": "Native visual review beside all 18 brands and original marks, light/dark DPR 1/2; minimum/default/maximum weights. Primary widths remain calibrated."
+      }
+    },
+    {
+      "name": "brand-line-outline",
+      "decision": "retained",
+      "status": "visually-reviewed-candidate",
+      "reviewer": "Codex (AI); not user approval",
+      "sheet": "brand-outline-craft-05",
+      "beforeVariantsSha256": "8eafca176dd31f5c10f852b4d1933ee7247943f7c8be3797603dc228cb4bff8b",
+      "variantsSha256": "8eafca176dd31f5c10f852b4d1933ee7247943f7c8be3797603dc228cb4bff8b",
+      "sourceSha256": "9e32be7048e472ba782d77b74b1a2144ea3bf80943920e54d6e59143c80eefdf",
+      "observation": "保留原氣泡與尾部外邊界，框線向內描至 1.55；四字形維持原路徑，恢復字標與氣泡的相對比例。",
+      "visualResult": "四字母仍可辨，和氣泡邊界分離。 尾部開口與字標留白保持，沒有把字母放大擠框。 原氣泡和尾尖比例保留，與 Telegram 並排不突出過重。",
+      "nativeReview": {
+        "16": "四字母仍可辨，和氣泡邊界分離。",
+        "20": "尾部開口與字標留白保持，沒有把字母放大擠框。",
+        "24": "原氣泡和尾尖比例保留，與 Telegram 並排不突出過重。"
+      },
+      "evidence": [
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/after-native-dark-1.png",
+          "sha256": "3ff435a7a3ea95ce552717dfb1378083068b32c71cf99c358f910e38eddad322"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/after-native-dark-2.png",
+          "sha256": "88ec7674d3c3d0a8b1d041e831390a5d2c78f92bcb0dc467a4615784c3d94483"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/after-native-light-1.png",
+          "sha256": "064cc7aa90f0b2a9274bca0e53bd7447fc32bea312e4624858bb39d4a27c7b04"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/after-native-light-2.png",
+          "sha256": "38c9bf4793ee4aad3e301f0e9b0f4ee98b57f1b55ab396d85eac3e2e418f2334"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/batch-3-dark-1.png",
+          "sha256": "b2f704db87d852ea969b47533c41bb1ac7401869aedaaba33796cd2b258a65d0"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/batch-3-dark-2.png",
+          "sha256": "3e54f0cf5c48799f1949d66dcb9070a5cefd8e9b52aa8f87a95706ccd8a857b1"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/batch-3-light-1.png",
+          "sha256": "0405b3575c08f5b10c3a4e553681ba654011fdb9d86cc87786e803211e403730"
+        },
+        {
+          "path": "docs/review/brand-outline-craft-05/screenshots/batch-3-light-2.png",
+          "sha256": "583226ddcf2509602504ce92c0a5a6b2a58156d327408756d3e758c699b8a693"
+        }
+      ],
+      "weightReview": {
+        "page": "docs/review/brand-outline-craft-05/index.html",
+        "sizes": [
+          16,
+          20,
+          24
+        ],
+        "method": "Native visual review beside all 18 brands and original marks, light/dark DPR 1/2; minimum/default/maximum weights. Primary widths remain calibrated."
+      }
+    }
+  ]
+}

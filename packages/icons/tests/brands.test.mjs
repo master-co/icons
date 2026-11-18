@@ -38,6 +38,11 @@ test('brand exports retain their pinned source contours and discoverable metadat
   }else for(const path of b.paths)assert.ok(original.toString().includes(`d="${path}"`),b.name+': contour is from preserved source');
   if(b.source.originalPath)assert.equal(createHash('sha256').update(await readFile(b.source.originalPath)).digest('hex'),b.source.originalSha256,b.name+': original artwork');
   if(b.source.authoringPath)assert.equal(createHash('sha256').update(await readFile(b.source.authoringPath)).digest('hex'),b.source.authoringSha256,b.name+': editable source');
+  for(const optical of b.source.opticalSources??[]){
+   const svg=await readFile(optical.path,'utf8');
+   assert.equal(createHash('sha256').update(svg).digest('hex'),optical.sha256,b.name+': optical source');
+   assert.equal(b.outlineSvgs[optical.size],svg,b.name+': native authoring geometry');
+  }
   if(b.source.identitySource)assert.equal(createHash('sha256').update(await readFile(b.source.identitySource.localPath)).digest('hex'),b.source.identitySource.sha256,b.name+': original brand reference');
   const entry=brandCatalog.find(e=>e.name===b.name);
   if(b.fillRule)assert.equal(b.fillRule,'evenodd',b.name+': baked rings require evenodd ink');

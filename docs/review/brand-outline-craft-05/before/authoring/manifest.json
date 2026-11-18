@@ -1,0 +1,236 @@
+[
+  {
+    "name": "wechat",
+    "upstream": "tdesign",
+    "extents": [
+      14,
+      18,
+      21
+    ],
+    "defect": "前泡偏圓、尾尖近乎垂直，眼點與原標誌位置不同。",
+    "observation": "重畫橢圓雙泡，前泡回到較低扁的比例；尾尖向外下伸，四眼依原標誌中心配置。後泡以可見弧段接前泡，保留前後遮擋。",
+    "review": "docs/review/brand-outline-craft-04/index.html",
+    "weightObservation": "主線寬按原生輸出單位校準，抵銷品牌佔幅縮放；預設與自訂線寬使用同一路徑。"
+  },
+  {
+    "name": "github",
+    "upstream": "tabler",
+    "extents": [
+      14,
+      17,
+      20
+    ],
+    "observation": "放平頭頂弧、平順耳根進入兩頰的切線；兩頰收向軀幹，尾巴以連續反彎接入左腳。保留 Tabler 開放腳端構成。",
+    "defect": "頭部偏圓，耳根與臉頰的接點突轉；尾巴像獨立短鉤。",
+    "review": "docs/review/brand-outline-craft-04/index.html",
+    "weightObservation": "主線寬按原生輸出單位校準，抵銷品牌佔幅縮放；預設與自訂線寬使用同一路徑。"
+  },
+  {
+    "name": "gitlab",
+    "upstream": "simple-icons",
+    "extents": [
+      14,
+      17,
+      20
+    ],
+    "observation": "按原 Tanuki 外輪廓向內形成線條，恢復耳尖、肩弧及下尖；原始外形比例不變，保持大內孔。",
+    "defect": "外描邊使耳尖膨脹，肩部及下尖的比例比原剪影寬胖。",
+    "review": "docs/review/brand-outline-craft-04/index.html",
+    "weightObservation": "主線寬按原生輸出單位校準，抵銷品牌佔幅縮放；預設與自訂線寬使用同一路徑。"
+  },
+  {
+    "name": "discord",
+    "upstream": "simple-icons",
+    "extents": [
+      14,
+      17.5,
+      21
+    ],
+    "observation": "回到較輕的中心線描繪，以原 Clyde 的頭寬、雙眼位置和兩側腳端為準；取消擠壓下緣的內描。",
+    "defect": "上一輪內描讓下緣缺口、腳端連成粗塊，神韻退化。",
+    "review": "docs/review/brand-outline-craft-04/index.html",
+    "weightObservation": "主線寬按原生輸出單位校準，抵銷品牌佔幅縮放；預設與自訂線寬使用同一路徑。"
+  },
+  {
+    "name": "youtube",
+    "upstream": "tabler",
+    "extents": [
+      14,
+      17.5,
+      21
+    ],
+    "observation": "回到原標誌的寬高、四角和微凸邊界，外框向內描；三角形按原標誌佔比縮回，內線降至 1.4，恢復四周空白。",
+    "defect": "外框與播放鍵相對偏大，內外重量接近，空白較原標誌局促。",
+    "review": "docs/review/brand-outline-craft-04/index.html",
+    "weightObservation": "主線寬按原生輸出單位校準，抵銷品牌佔幅縮放；預設與自訂線寬使用同一路徑。"
+  },
+  {
+    "name": "facebook",
+    "upstream": "tabler",
+    "extents": [
+      14,
+      17,
+      20
+    ],
+    "observation": "保留原 f 的輪廓與比例，改沿輪廓中心描線；補足實際線寬時讓兩側增重，保留直幹與橫槓的空腔。",
+    "defect": "f 偏寬，右橫臂及上彎被通用圓角改成粗壯的積木形。",
+    "review": "docs/review/brand-outline-craft-04/index.html",
+    "weightObservation": "主線寬按原生輸出單位校準，抵銷品牌佔幅縮放；預設與自訂線寬使用同一路徑。"
+  },
+  {
+    "name": "linkedin",
+    "upstream": "tabler",
+    "extents": [
+      14,
+      17,
+      20
+    ],
+    "observation": "外框與 in 的線條共用校準後的主線寬；保留原外框比例與獨立實心圓點。",
+    "defect": "in 在框內太小且偏中央，n 的肩部與長直幹比例不像原字標。",
+    "review": "docs/review/brand-outline-craft-04/index.html",
+    "weightObservation": "主線寬按原生輸出單位校準，抵銷品牌佔幅縮放；預設與自訂線寬使用同一路徑。"
+  },
+  {
+    "name": "mastodon",
+    "upstream": "tabler",
+    "extents": [
+      14,
+      17,
+      20
+    ],
+    "observation": "恢復原外形的寬肩、右腹和下方平口，內描保留曲面；m 的雙拱擴寬，中央短幹與兩側長幹呼應原字形。",
+    "defect": "下方收尾變成尖鉤，m 太窄，外形比原標誌窄瘦。",
+    "review": "docs/review/brand-outline-craft-04/index.html",
+    "weightObservation": "主線寬按原生輸出單位校準，抵銷品牌佔幅縮放；預設與自訂線寬使用同一路徑。"
+  },
+  {
+    "name": "reddit",
+    "upstream": "tabler",
+    "extents": [
+      14,
+      17,
+      20
+    ],
+    "observation": "直接按原 Snoo 頭形、兩耳、眼形與填色笑嘴配置；天線回到原上拱與圓頭位置。",
+    "defect": "臉頰太寬扁、耳朵太小，細笑弧失去原 Snoo 的表情。",
+    "review": "docs/review/brand-outline-craft-04/index.html",
+    "weightObservation": "主線寬按原生輸出單位校準，抵銷品牌佔幅縮放；預設與自訂線寬使用同一路徑。"
+  },
+  {
+    "name": "spotify",
+    "upstream": "simple-icons",
+    "extents": [
+      14,
+      17,
+      20
+    ],
+    "observation": "圓框恢復原 24 單位直徑並向內描；三道原聲波的曲率、漸細與長短維持不變，右上留白回到原始比例。",
+    "defect": "外圈比原圓底略小，聲波相對偏滿，右端留白不足。",
+    "review": "docs/review/brand-outline-craft-04/index.html",
+    "weightObservation": "主線寬按原生輸出單位校準，抵銷品牌佔幅縮放；預設與自訂線寬使用同一路徑。"
+  },
+  {
+    "name": "soundcloud",
+    "upstream": "tabler",
+    "extents": [
+      14,
+      17.5,
+      21
+    ],
+    "observation": "沿用原雲形的飽滿上肩與右側小弧，外框向內描；改為四根漸高聲柱，主雲與聲柱保持原標誌的寬扁節奏。",
+    "defect": "雲的上肩像斜直角，三根聲柱過於粗疏，整顆比原標誌偏高。",
+    "review": "docs/review/brand-outline-craft-04/index.html",
+    "weightObservation": "主線寬按原生輸出單位校準，抵銷品牌佔幅縮放；預設與自訂線寬使用同一路徑。"
+  },
+  {
+    "name": "pinterest",
+    "upstream": "tabler",
+    "extents": [
+      14,
+      17,
+      20
+    ],
+    "observation": "左回環延伸完整，再以右側長筆實際墨形向外擴張 1.2 單位扣除；透明缺口隨線寬重新計算。",
+    "defect": "左側缺口靠手動截短曲線，與右側斜筆沒有幾何關係。",
+    "review": "docs/review/brand-outline-craft-04/index.html",
+    "weightObservation": "主線寬按原生輸出單位校準，抵銷品牌佔幅縮放；預設與自訂線寬使用同一路徑。"
+  },
+  {
+    "name": "tiktok",
+    "upstream": "tabler",
+    "extents": [
+      14,
+      17,
+      20
+    ],
+    "observation": "保留原音符的長直幹、左斷面與右旗曲線；沿原輪廓中心描線，補足實際線寬並給直幹內孔更多空間。",
+    "defect": "音符下腹偏寬，左斷面斜切，直幹與右旗的比例和原標誌有落差。",
+    "review": "docs/review/brand-outline-craft-04/index.html",
+    "weightObservation": "主線寬按原生輸出單位校準，抵銷品牌佔幅縮放；預設與自訂線寬使用同一路徑。"
+  },
+  {
+    "name": "twitch",
+    "upstream": "tabler",
+    "extents": [
+      14,
+      17,
+      20
+    ],
+    "observation": "保留原 Glitch 左上斜切、右下長斜面和尾尖；兩道直槽回到原矩形及相對位置，所有外邊界保持原稿。",
+    "defect": "輪廓過圓，缺少左上斜切；右下斜面太短，兩道眼槽變成圓帽。",
+    "review": "docs/review/brand-outline-craft-04/index.html",
+    "weightObservation": "主線寬按原生輸出單位校準，抵銷品牌佔幅縮放；預設與自訂線寬使用同一路徑。"
+  },
+  {
+    "name": "vimeo",
+    "upstream": "tabler",
+    "extents": [
+      14,
+      17,
+      20
+    ],
+    "observation": "保留原 v 字的左端上挑、右側反彎和下腹收束；改沿輪廓中心描線，統一實際線寬並保留內部空腔。",
+    "defect": "右上內回折帶小凸點，左右筆畫曲率與字標的上挑姿態有差異。",
+    "review": "docs/review/brand-outline-craft-04/index.html",
+    "weightObservation": "主線寬按原生輸出單位校準，抵銷品牌佔幅縮放；預設與自訂線寬使用同一路徑。"
+  },
+  {
+    "name": "patreon",
+    "upstream": "tabler",
+    "extents": [
+      14,
+      17,
+      20
+    ],
+    "observation": "按原塊形向內描；保留左側緩直、右上鼓腹與下方偏左收束，讓線條張力來自原曲率。",
+    "defect": "圓肩外描後略胖，下腹偏圓，原塊形的左側直落與不對稱收腰變弱。",
+    "review": "docs/review/brand-outline-craft-04/index.html",
+    "weightObservation": "主線寬按原生輸出單位校準，抵銷品牌佔幅縮放；預設與自訂線寬使用同一路徑。"
+  },
+  {
+    "name": "telegram",
+    "upstream": "simple-icons",
+    "extents": [
+      14,
+      17,
+      20
+    ],
+    "observation": "恢復原圓底直徑，圓框向內描至 1.65；紙飛機路徑維持原狀，機鼻與右側圓框之間的留白恢復。",
+    "defect": "圓框比原底形略小，紙飛機相對偏大，原有細節有被圈擠壓的感覺。",
+    "review": "docs/review/brand-outline-craft-04/index.html",
+    "weightObservation": "主線寬按原生輸出單位校準，抵銷品牌佔幅縮放；預設與自訂線寬使用同一路徑。"
+  },
+  {
+    "name": "line",
+    "upstream": "simple-icons",
+    "extents": [
+      14,
+      17.5,
+      21
+    ],
+    "observation": "保留原氣泡與尾部外邊界，框線向內描至 1.55；四字形維持原路徑，恢復字標與氣泡的相對比例。",
+    "defect": "外描使尾尖變圓、氣泡膨脹，LINE 四字相對縮小。",
+    "review": "docs/review/brand-outline-craft-04/index.html",
+    "weightObservation": "主線寬按原生輸出單位校準，抵銷品牌佔幅縮放；預設與自訂線寬使用同一路徑。"
+  }
+]

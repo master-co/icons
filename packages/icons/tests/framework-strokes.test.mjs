@@ -21,7 +21,7 @@ function normalizedGeometry(html) {
   value=value.replace(/><\/(circle|line|path|rect|ellipse|polygon|polyline)>/g,'/>');
   return value.slice(value.indexOf('>')+1,value.lastIndexOf('</svg>'));
 }
-const names={Search:'search',BellOff:'bell-off',DatabaseSearch:'database-search',ArrowRight:'arrow-right',BrandDiscord:'brand-discord',BrandGithubOutline:'brand-github-outline',BrandGitlabOutline:'brand-gitlab-outline',BrandDiscordOutline:'brand-discord-outline',BrandTiktokOutline:'brand-tiktok-outline',BrandVimeoOutline:'brand-vimeo-outline',BrandRedditOutline:'brand-reddit-outline',BrandPinterestOutline:'brand-pinterest-outline'};
+const names={Search:'search',BellOff:'bell-off',DatabaseSearch:'database-search',ArrowRight:'arrow-right',BrandDiscord:'brand-discord',BrandWechatOutline:'brand-wechat-outline',BrandSoundcloudOutline:'brand-soundcloud-outline',BrandGithubOutline:'brand-github-outline',BrandGitlabOutline:'brand-gitlab-outline',BrandDiscordOutline:'brand-discord-outline',BrandTiktokOutline:'brand-tiktok-outline',BrandVimeoOutline:'brand-vimeo-outline',BrandRedditOutline:'brand-reddit-outline',BrandPinterestOutline:'brand-pinterest-outline'};
 const oracle=new Map();
 function expected(name,size,corner,width){
   const key=`${name}/${size}/${corner}/${width}`;
