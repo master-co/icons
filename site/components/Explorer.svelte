@@ -21,10 +21,10 @@
  const displaySizes=[16,20,24,32,48,64] as const
  type DisplaySize=typeof displaySizes[number]
  const corners=['sharp','soft','rounded'] as const
- let query=$state(''),category=$state('all'),size=$state<DisplaySize>(24),corner=$state<'sharp'|'soft'|'rounded'>('soft'),page=$state(1),view=$state('library')
+ let query=$state(''),browseCategory=$state('all'),size=$state<DisplaySize>(24),corner=$state<'sharp'|'soft'|'rounded'>('soft'),page=$state(1),view=$state('library')
  let stroke=$state<number|null>(null)
  let ready=$state(false),selected=$state<Entry|null>(null),definition=$state<IconDefinition|null>(null),error=$state(false),notice=$state('')
- let dialog:HTMLDialogElement,search:HTMLInputElement
+ let dialog:HTMLDialogElement
  let code=$state<HTMLTextAreaElement>()
  let request=0
  let useOutline=$state(false)
@@ -32,7 +32,19 @@
  let format=$state<CodeFormat>('svg')
  const label=(entry:Entry)=>entry.category==='brands'||locale!=='en'?entry.label:entry.name.replaceAll('-',' ')
  const translation=(entry:Entry)=>locale!=='en'&&entry.category!=='brands'?entry.label:''
- const filtered=$derived(entries.filter(x=>(category==='all'||x.category===category)&&(!query.trim()||`${x.name} ${x.label} ${x.keywords.join(' ')}`.toLowerCase().includes(query.trim().toLowerCase()))))
+ const searchTerm=$derived(query.trim().toLowerCase())
+ const activeCategory=$derived(searchTerm?'all':browseCategory)
+ const filtered=$derived.by(()=>{
+  if(!searchTerm)return browseCategory==='all'?entries:entries.filter(entry=>entry.category===browseCategory)
+  const nameTerm=searchTerm.replace(/\s+/g,'-')
+  const matches=entries.filter(entry=>{
+   const text=`${entry.name} ${entry.label} ${entry.keywords.join(' ')}`.toLowerCase()
+   return text.includes(searchTerm)||(nameTerm!==searchTerm&&text.includes(nameTerm))
+  })
+  const exactIndex=matches.findIndex(entry=>entry.name===nameTerm)
+  if(exactIndex>0)matches.unshift(...matches.splice(exactIndex,1))
+  return matches
+ })
  const limit=$derived(view==='optical'?24:96)
  const pages=$derived(Math.max(1,Math.ceil(filtered.length/limit)))
  const current=$derived(Math.min(page,pages))
@@ -49,16 +61,31 @@
   {id:'all',label:t('All icons'),count:entries.length},
   ...categories.map(c=>({id:c.id,label:t(c.label),count:entries.filter(entry=>entry.category===c.id).length}))
  ])
+ function updateSearch(value:string){
+  query=value
+  page=1
+ }
+ function selectCategory(id:string){
+  if(id!==activeCategory){
+   browseCategory=id
+   query=''
+  }
+  page=1
+ }
  function categoryURL(id:string){
   const params=new URLSearchParams({size:String(size),corner,view})
+  const keepSearch=id==='all'&&Boolean(searchTerm)
+  const nextCategory=keepSearch?browseCategory:id
   if(stroke!==null)params.set('stroke',String(stroke))
-  if(query)params.set('q',query)
-  if(id!=='all')params.set('category',id)
+  if(keepSearch)params.set('q',query)
+  if(nextCategory!=='all')params.set('category',nextCategory)
   return `?${params}`
  }
  function fromURL(){
   const p=new URLSearchParams(location.search)
-  query=p.get('q')??'';category=['all',...categories.map(x=>x.id)].includes(p.get('category')??'')?p.get('category')!:'all'
+  const requestedCategory=p.get('category')
+  query=p.get('q')??''
+  browseCategory=categories.find(x=>x.id===requestedCategory)?.id??'all'
   size=displaySizes.includes(Number(p.get('size')) as DisplaySize)?Number(p.get('size')) as DisplaySize:24
   stroke=parseStroke(p.get('stroke'),getOpticalSize(size))
   corner=corners.includes(p.get('corner') as 'soft')?p.get('corner') as 'soft':'soft'
@@ -68,7 +95,10 @@
  onMount(()=>{fromURL();ready=true;window.addEventListener('popstate',fromURL);return()=>window.removeEventListener('popstate',fromURL)})
  $effect(()=>{
   if(!ready)return
-  const p=new URLSearchParams({size:String(size),corner,view});if(query)p.set('q',query);if(category!=='all')p.set('category',category);if(current>1)p.set('page',String(current))
+  const p=new URLSearchParams({size:String(size),corner,view})
+  if(searchTerm)p.set('q',query)
+  if(browseCategory!=='all')p.set('category',browseCategory)
+  if(current>1)p.set('page',String(current))
   if(stroke!==null)p.set('stroke',String(stroke))
   history.replaceState(null,'',`${location.pathname}?${p}`)
  })
@@ -101,7 +131,7 @@
  <div class="explorer-toolbar">
  <!-- The inset belongs to this scroll viewport: it preserves the official input halo and slider bleed without widening the toolbar divider. -->
  <div class="scroll-area flex flex-col gap(20) p(5) mx(-5) mt(-5) grid-cols(2)@media(width<64rem) grid-cols(1)@media(width<48rem) gap(16)@media(width<48rem)">
-  <label class="field explorer-search"><span>{t('Search icons')}</span><input bind:this={search} class="input" type="search" bind:value={query} oninput={()=>page=1} placeholder={t('Search by name or purpose…')} /></label>
+  <label class="field explorer-search"><span>{t('Search icons')}</span><input class="input" type="search" value={query} oninput={(event)=>updateSearch(event.currentTarget.value)} placeholder={t('Search by name or purpose…')} /></label>
   <div class="field">
    <div class="flex items-baseline justify-between">
     <div class="flex items-baseline gap(6)"><label for={`${instanceId}-size`}>{t('Display size')}</label><button type="button" class="field-help" aria-label={t('Display size')} aria-describedby={`${instanceId}-size-hint`} {...{interestfor:`${instanceId}-size-hint`}} popovertarget={`${instanceId}-size-hint`}>?</button></div>
@@ -120,16 +150,16 @@
    <div class="field"><span id={`${instanceId}-view`}>{t('View')}</span><div class="segmented w-full" role="group" aria-labelledby={`${instanceId}-view`}><button type="button" class="segmented-item" aria-pressed={view==='library'} onclick={()=>{view='library';page=1}}>{t('Collection')}</button><button type="button" class="segmented-item" aria-pressed={view==='optical'} onclick={()=>{view='optical';page=1}}>{t('Size comparison')}</button></div></div>
    <a class="btn btn-sm" href={`/downloads/master-icons-${opticalSize}-${corner}${stroke===null?'':`-stroke-${stroke}`}.zip`} download>{t('Download set')}<span aria-hidden="true"> · {opticalSize} px</span></a>
   </div>
-  <label class="field explorer-category"><span>{t('Category')}</span><select class="select" bind:value={category} onchange={()=>page=1}><option class="select-option" value="all">{t('All icons')}</option>{#each categories as c}<option class="select-option" value={c.id}>{t(c.label)}</option>{/each}</select></label>
+  <label class="field explorer-category"><span>{t('Category')}</span><select class="select" value={activeCategory} onchange={(event)=>selectCategory(event.currentTarget.value)}><option class="select-option" value="all">{t('All icons')}</option>{#each categories as c}<option class="select-option" value={c.id}>{t(c.label)}</option>{/each}</select></label>
  </div>
  </div>
   <div class="field scroll-area explorer-categories">
    <span id={`${instanceId}-categories`}>{t('Category')}</span>
    <nav class="ui-nav-group (font-weight:400)" aria-labelledby={`${instanceId}-categories`}>
    {#each categoryOptions as option}
-    <a class="ui-nav-link" href={categoryURL(option.id)} aria-current={category===option.id?'page':undefined} onclick={(event)=>{
+    <a class="ui-nav-link" href={categoryURL(option.id)} aria-current={activeCategory===option.id?'page':undefined} onclick={(event)=>{
      if(event.metaKey||event.ctrlKey||event.shiftKey||event.altKey)return
-     event.preventDefault();category=option.id;page=1
+     event.preventDefault();selectCategory(option.id)
     }}><span class="grow(1)">{option.label}</span><span class="fg-text-muted (font-size:.75rem) (font-variant-numeric:tabular-nums) pl(12)" aria-hidden="true">{option.count}</span></a>
    {/each}
   </nav>

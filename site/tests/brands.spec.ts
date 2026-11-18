@@ -151,12 +151,13 @@ for(const size of [16,20,24])test(`outline list, live weights and downloads agre
 test('outline cards and their weight control work in both themes at desktop and narrow widths',async({page})=>{
  await page.goto('/icons?category=brands&q=outline')
  await expect(page.locator('astro-island[ssr]')).toHaveCount(0)
- await expect(page.locator('.explorer-tile')).toHaveCount(18)
+ const outlines=page.locator('.explorer-tile').filter({has:page.locator('.explorer-name',{hasText:/^brand-.*-outline$/})})
+ await expect(outlines).toHaveCount(18)
  for(const theme of ['light','dark']){
   await page.setViewportSize({width:1440,height:1000})
   await page.getByRole('combobox',{name:'Theme',exact:true}).selectOption(theme)
   await page.getByRole('searchbox').fill('outline')
-  await expect(page.locator('.explorer-tile svg')).toHaveCount(18)
+  await expect(outlines.locator('svg')).toHaveCount(18)
   await page.screenshot({path:`work/brand-outline-craft-03/list-${theme}.png`,fullPage:true,animations:'disabled'})
   await page.setViewportSize({width:390,height:844})
   await page.getByRole('searchbox').fill('reddit')
