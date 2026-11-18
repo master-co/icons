@@ -5,6 +5,8 @@ export default defineConfig({
  webServer:{
   command:'node site/scripts/test-dev-server.mjs',cwd:'..',
   gracefulShutdown:{signal:'SIGTERM',timeout:10000},
-  url:'http://127.0.0.1:4326',reuseExistingServer:false,timeout:60000
+  url:'http://127.0.0.1:4326',reuseExistingServer:false,
+  // The server starts after Turbo prepares the site; on a cold CI cache that alone can take over a minute.
+  timeout:300000
  }
 })
