@@ -1,6 +1,8 @@
 import {test,expect} from '@playwright/test'
 import {readFile} from 'node:fs/promises'
 import {brandCatalog} from '../../packages/icons/src/brands.mjs'
+// The site publishes no SVG files; compare with the files the core package publishes.
+const published=(path:string)=>readFile(new URL(`../../packages/icons/icons/${path}`,import.meta.url),'utf8')
 test('requested brand additions can be found and opened at 16px',async({page})=>{
  await page.goto('/icons?category=brands&size=16')
  await expect(page.locator('astro-island[ssr]')).toHaveCount(0)
@@ -9,9 +11,7 @@ test('requested brand additions can be found and opened at 16px',async({page})=>
   await page.getByRole('button',{name:slug==='chatgpt'?'OpenAI':label,exact:true}).click()
   const dialog=page.getByRole('dialog'),code=dialog.locator('textarea')
   await expect(code).toHaveValue(/viewBox="0 0 16 16"/)
-  const response=await page.request.get(`/icons/16/soft/brand-${slug}.svg`)
-  expect(response.ok()).toBe(true)
-  const source=await response.text()
+  const source=await published(`16/soft/brand-${slug}.svg`)
   expect(source).toContain((await code.inputValue()).slice((await code.inputValue()).indexOf('<svg')))
   await expect(dialog.locator('.master-cell svg')).toHaveCount(9)
   await page.keyboard.press('Escape')
@@ -79,11 +79,12 @@ for (const tw of [false, true]) test(`WeChat artwork selection and alias search 
  await page.keyboard.press('ArrowRight')
  await expect(outline).toBeChecked()
  await expect(code).toHaveValue(/Copyright \(c\) 2021-present TDesign/)
- const file = await (await page.request.get('/icons/16/soft/brand-wechat-outline.svg')).text()
+ const file = await published('16/soft/brand-wechat-outline.svg')
  expect(await code.inputValue()).toContain(file.slice(file.indexOf('<svg')).trim())
  const download = dialog.getByRole('link',{name:tw?'下載 SVG':'Download SVG'})
  await expect(download).toHaveAttribute('download','brand-wechat-outline.svg')
- await expect(download).toHaveAttribute('href','/icons/16/soft/brand-wechat-outline.svg')
+ const pending = page.waitForEvent('download');await download.click()
+ expect(await readFile((await (await pending).path())!,'utf8')).toBe(file)
  const format = dialog.getByRole('combobox',{name:tw?'程式碼格式':'Code format'})
  for (const framework of ['react','vue','svelte','preact','astro']) {
   await format.selectOption(framework)
@@ -106,12 +107,11 @@ for (const size of [16,24]) test(`all social outlines select the matching SVG at
   const dialog=page.getByRole('dialog')
   await dialog.getByRole('radio',{name:'Outline',exact:true}).check()
   const code=dialog.locator('textarea')
-  const response=await page.request.get(`/icons/${size}/soft/${entry.name}.svg`)
-  expect(response.ok()).toBe(true)
-  const source=await response.text()
+  const source=await published(`${size}/soft/${entry.name}.svg`)
   await expect(code).toHaveValue(new RegExp(`viewBox="0 0 ${size} ${size}"`))
   expect(await code.inputValue()).toContain(source.slice(source.indexOf('<svg')).trim())
-  await expect(dialog.getByRole('link',{name:'Download SVG',exact:true})).toHaveAttribute('href',`/icons/${size}/soft/${entry.name}.svg`)
+  const pending=page.waitForEvent('download');await dialog.getByRole('link',{name:'Download SVG',exact:true}).click()
+  expect(await readFile((await (await pending).path())!,'utf8')).toBe(source)
   await page.keyboard.press('Escape')
  }
 })

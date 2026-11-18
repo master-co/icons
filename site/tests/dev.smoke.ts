@@ -9,6 +9,7 @@ test('Master favicons are served as static assets',async({request})=>{
  }
 })
 
+// Islands hydrated on visibility, such as the homepage workbench, stay server-rendered until scrolled to.
 test('development language switching stays responsive in both directions',async({page})=>{
  const errors:string[]=[]
  page.on('pageerror',error=>errors.push(error.message))
@@ -16,14 +17,14 @@ test('development language switching stays responsive in both directions',async(
   const suffix=path==='/icons'?'?size=20&corner=rounded&q=search&view=library':'?locale-test=1#locale-test'
   await page.goto(`/tw${path}${suffix}`)
   for(const locale of ['en','tw','en']){
-   await expect(page.locator('astro-island[ssr]')).toHaveCount(0)
+   await expect(page.locator('astro-island[ssr]:not([client="visible"])')).toHaveCount(0)
    const language=page.locator('select').filter({has:page.locator('option[value="en"]')}).first()
    await language.selectOption(locale)
    const expectedPath=`${locale==='tw'?'/tw':''}${path||(locale==='en'?'/':'')}`
    await expect(page).toHaveURL(url=>url.pathname===expectedPath)
    await expect(page.locator('html')).toHaveAttribute('lang',locale==='tw'?'zh-TW':'en')
    await expect(path==='/icons'?page.getByTestId('icon-grid'):page.locator('main h1')).toBeVisible()
-   await expect(page.locator('astro-island[ssr]')).toHaveCount(0)
+   await expect(page.locator('astro-island[ssr]:not([client="visible"])')).toHaveCount(0)
    const url=new URL(page.url())
    if(path==='/icons'){
     expect(url.searchParams.get('q')).toBe('search')
@@ -57,7 +58,7 @@ test('development explorer hydrates and filters in both languages',async({page})
  page.on('pageerror',error=>errors.push(error.message))
  for(const [locale,label] of [['','Search icons'],['/tw','搜尋圖示']]){
   await page.goto(`${locale}/icons`)
-  await expect(page.locator('astro-island[ssr]')).toHaveCount(0)
+  await expect(page.locator('astro-island[ssr]:not([client="visible"])')).toHaveCount(0)
   const input=page.getByRole('searchbox',{name:label,exact:true})
   await input.fill('no-icon-with-this-name')
   await expect(page.getByTestId('result-count')).toContainText('0')

@@ -206,6 +206,9 @@ test('invalid URL, pagination, mobile, optical comparison and failed details',as
  await expect(page.getByTestId('icon-grid').locator('button')).toHaveCount(24)
  expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true)
  await page.route('**/data/*.json',route=>route.fulfill({status:503,body:'Unavailable'}))
+ // The grid and the dialog share cached definitions; open an icon whose definition has not loaded yet.
+ await page.getByRole('searchbox',{name:'Search icons',exact:true}).fill('zoom')
+ await expect(page.getByTestId('icon-grid').locator('[data-load-error]').first()).toBeAttached()
  await page.getByTestId('icon-grid').locator('button').first().click()
  await expect(page.getByRole('alert')).toContainText('Unable to load')
  await page.unroute('**/data/*.json');await page.getByRole('button',{name:'Retry',exact:true}).click()

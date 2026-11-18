@@ -5,6 +5,8 @@ const drawing=(text:string)=>text.slice(text.indexOf('<svg')).trim()
 import studio from '../../packages/icons/src/studio-scope.json' with {type:'json'}
 import workbench from '../../packages/icons/src/workbench-scope.json' with {type:'json'}
 import operations from '../../packages/icons/src/operations-scope.json' with {type:'json'}
+// The site publishes no SVG files; compare with the files the core package publishes.
+const published=(path:string)=>readFile(new URL(`../../packages/icons/icons/${path}`,import.meta.url),'utf8')
 
 const batches = [
   ...['tasks', 'schedules and inbox', 'views and access', 'forms and files', 'workflows and controls'].map((family, i) => ({label: 'operations ' + family, entries: operations.slice(i * 20, (i + 1) * 20)})),
@@ -22,9 +24,7 @@ for (const {label, entries} of batches) {
       await page.getByRole('button', {name: name.replaceAll('-', ' '), exact: true}).click()
       const dialog = page.getByRole('dialog')
       await expect(dialog.locator('.master-cell svg')).toHaveCount(9)
-      const source = await page.request.get(`/icons/16/soft/${name}.svg`)
-      expect(source.ok()).toBe(true)
-      expect(await source.text()).toContain(drawing(await dialog.locator('textarea').inputValue()))
+      expect(await published(`16/soft/${name}.svg`)).toContain(drawing(await dialog.locator('textarea').inputValue()))
       await page.keyboard.press('Escape')
     }
   })

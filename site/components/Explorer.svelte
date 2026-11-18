@@ -13,8 +13,7 @@
  import {onMount, tick, type Snippet} from 'svelte'
  import '@master/internal-site/styles/system/sidebar.css'
  import {renderSvg, getOpticalSize, type IconDefinition} from '@master/icons/runtime'
- import license from '../../LICENSE?raw'
- type Artwork={name:string;label?:string;component:string;notice?:string;copyright?:string}
+ type Artwork={name:string;label?:string;component:string;notice?:string}
  type Entry=Artwork & {label:string;category:string;keywords:string[];mark?:Artwork;outline?:Artwork;styleOf?:string}
  let {entries,categories,copy,locale,children}:{entries:Entry[];categories:{id:string;label:string}[];copy:Record<string,string>;locale:string;children?:Snippet}=$props()
  const t=(key:string)=>copy[key]??key
@@ -57,12 +56,11 @@
  const rawSvg=$derived(definition?renderSvg(strokeDefinition(definition,stroke),{size,corner}):'')
  const svg=$derived(artwork?.notice && rawSvg ? `<!--\n${artwork.notice.replaceAll('--','—')}\n-->\n${rawSvg}` : rawSvg)
  const snippet=$derived(artwork?codeSnippet({format,component:artwork.component,size,opticalSize,corner,svg,strokeWidth:stroke}):'')
- // Native masters link to their published files; scaled sizes and custom weights download the rendered SVG.
  // Download sets are assets of the newest GitHub release; custom weights come as one archive per optical size.
  const setURL=$derived(`${releaseDownloads}/master-icons-${opticalSize}-${stroke===null?corner:'strokes'}.zip`)
- // Custom weights carry the same notice as the files in their ZIP set.
- const weighted=$derived(artwork&&stroke!==null?`<!--\n${license.trim()}${artwork.notice?`\n\n${artwork.notice.trim()}`:artwork.copyright?`\n${artwork.copyright}`:''}\n-->\n${rawSvg}\n`:svg)
- const download=$derived(artwork&&size<=24&&stroke===null?`/icons/${size}/${corner}/${artwork.name}.svg`:`data:image/svg+xml;charset=utf-8,${encodeURIComponent(weighted)}`)
+ // Every download is rendered here and leads with the published file's notice, so it equals that file
+ // (or the same file in a weight's ZIP set); no SVG is requested from the site.
+ const download=$derived(definition&&rawSvg?`data:image/svg+xml;charset=utf-8,${encodeURIComponent(`${(definition as IconDefinition&{header?:string}).header??''}${rawSvg}\n`)}`:undefined)
  const cornerLabel=(c:string)=>t(c[0].toUpperCase()+c.slice(1))
  const categoryOptions=$derived([
   {id:'all',label:t('All icons'),count:entries.length},

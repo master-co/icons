@@ -16,18 +16,17 @@ const catalog=JSON.parse(await readFile(join(icons,'dist/catalog.json'),'utf8'))
 const strokes=process.env.TURBO_HASH?join(repo,'work/stroke-assets'):await buildStrokes({force})
 const common=['site/scripts/prepare.ts','scripts/lib/content-cache.mjs','bun.lock'].map(path=>join(repo,path))
 
-// The catalog contains every default SVG's content hash; the stroke key covers
-// geometry, metadata, generator code and licenses. Don't rehash the stroke sets.
+// The stroke key covers geometry, metadata, generator code and licenses. Don't rehash the stroke sets.
 const assets=await contentCache({
  inputs:[...common,...['dist/catalog.json','LICENSE','THIRD_PARTY_NOTICES.md'].map(path=>join(icons,path)),join(strokes,'key')],
- outputs:['data','icons','catalog.json','THIRD_PARTY_NOTICES.md','LICENSE.txt'].map(path=>join(site,'public',path)),
+ outputs:['data','catalog.json','THIRD_PARTY_NOTICES.md','LICENSE.txt'].map(path=>join(site,'public',path)),
  file:join(repo,'work/cache/site-assets.json'),force
 })
-// Download sets are GitHub release assets and stroke weights render in the browser; older checkouts
-// copied both into public/, and neither may be published again.
-for(const retired of ['strokes','downloads'])await rm(join(site,'public',retired),{recursive:true,force:true})
+// The explorer renders and downloads every SVG from data/ and download sets are GitHub release assets; older
+// checkouts copied SVG trees and archives into public/, and none of them may be published again.
+for(const retired of ['icons','strokes','downloads'])await rm(join(site,'public',retired),{recursive:true,force:true})
 if(!assets.hit){
- for(const [target,source] of [['data',join(strokes,'data')],['icons',join(icons,'icons')]]){
+ for(const [target,source] of [['data',join(strokes,'data')]]){
   await rm(join(site,'public',target),{recursive:true,force:true})
   await cp(source,join(site,'public',target),{recursive:true})
  }

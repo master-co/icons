@@ -28,6 +28,13 @@ export async function buildStrokes({force=false}={}) {
     strokeDefinitions[entry.name]=data[entry.component.replace(/Icon$/,'')];
   }
   const license=await readFile(resolve(root,'LICENSE'),'utf8');
+  // Every SVG of an icon leads with the same notice as its native file, which the core generator composes.
+  const headers={};
+  for(const entry of catalog.icons){
+    const native=await readFile(resolve(root,`packages/icons/icons/24/soft/${entry.name}.svg`),'utf8');
+    if(!native.startsWith('<!--\n'))throw new Error(`Build core first: ${entry.name}.svg has no notice`);
+    headers[entry.name]=native.slice(0,native.indexOf('-->\n')+4);
+  }
   const common={LICENSE:strToU8(license),'THIRD_PARTY_NOTICES.md':strToU8(await readFile(resolve(root,'THIRD_PARTY_NOTICES.md'),'utf8'))};
   for(const name of await readdir(resolve(root,'licenses')))common['licenses/'+name]=strToU8(await readFile(resolve(root,'licenses',name),'utf8'));
   // One release asset per optical size gathers every corner and custom width: {corner}/stroke-{width}/{name}.svg.
@@ -46,10 +53,9 @@ export async function buildStrokes({force=false}={}) {
       }
       (definition.strokes??={})[width]=variants;
       for(const size of sizes.filter(s=>strokeWidthsFor(s).includes(width)))for(const corner of corners) {
-        const notice=license.trim()+(entry.source.notice?'\n\n'+entry.source.notice.trim():entry.source.copyright?'\n'+entry.source.copyright:'');
         // Custom weights ship only inside their ZIP sets; the site renders single
         // files in the browser, so 40k loose SVGs never reach disk or hosting.
-        const svg=`<!--\n${notice}\n-->\n${renderSvg({...definition,variants},{size,corner})}\n`;
+        const svg=`${headers[entry.name]}${renderSvg({...definition,variants},{size,corner})}\n`;
         bundles[`${size}-${corner}`][entry.name+'.svg']=strToU8(svg);
         collections[size][`${corner}/stroke-${width}/${entry.name}.svg`]=bundles[`${size}-${corner}`][entry.name+'.svg'];
       }
@@ -58,7 +64,8 @@ export async function buildStrokes({force=false}={}) {
     console.log(`Generated stroke ${width}: ${catalog.icons.length} × ${Object.keys(bundles).length} masters`);
   }
   for(const [size,files] of Object.entries(collections))await put(`release/master-icons-${size}-strokes.zip`,zipSync(files,{level:9,mtime:new Date(2026,10,16)}));
-  for(const [name,definition] of Object.entries(definitions))await put(`data/${name}.json`,JSON.stringify(definition));
+  // The site renders and downloads from these; `header` makes a download identical to the published file.
+  for(const [name,definition] of Object.entries(definitions))await put(`data/${name}.json`,JSON.stringify({...definition,header:headers[name]}));
   await put('definitions.json',JSON.stringify(definitions));
   await put('key',cache.key);
   await cache.commit();

@@ -42,9 +42,10 @@ try {
   const page = await browser.newPage()
   const errors = [], iconModules = []
   page.on('pageerror', error => errors.push(error.message))
-  page.on('request', request => { if (request.url().includes('/packages/icons/dist/data/')) iconModules.push(request.url()) })
+  page.on('request', request => { const url = request.url(); if (url.includes('/packages/icons/dist/data/') || /\/data\/[^/]+\.json(?:\?|$)/.test(url)) iconModules.push(url) })
   await page.addInitScript(() => performance.setResourceTimingBufferSize(4000))
-  const hydrated = () => expect(page.locator('astro-island[ssr]')).toHaveCount(0)
+  // Islands hydrated on visibility stay server-rendered until scrolled to.
+  const hydrated = () => expect(page.locator('astro-island[ssr]:not([client="visible"])')).toHaveCount(0)
   async function visit(path) { await page.goto(origin + path); await hydrated() }
   async function edit(path, change) {
     const file = join(site, path)
@@ -58,7 +59,8 @@ try {
   times.coldIconsMs = Math.round(performance.now() - start)
   await expect(page.locator('.explorer-icon svg')).toHaveCount(96)
   const visibleModules=iconModules.filter(url=>!/(?:\/data\/16\/soft\/)(?:x|copy|download|check)\.js(?:\?|$)/.test(url))
-  assert.ok(new Set(visibleModules).size <= 96, 'Explorer must load only visible artwork and its four fixed control icons')
+  assert.ok(new Set(visibleModules.filter(url => url.includes('/data/') && url.endsWith('.json'))).size <= 96, 'Explorer must load only visible definitions')
+  assert.equal(visibleModules.filter(url => url.includes('/packages/icons/dist/data/')).length, 0, 'Grid icons draw from definitions, never per-icon modules')
   // Let first-use dependency discovery settle before testing edits.
   await visit('/icons')
   await visit('/icons')
@@ -79,8 +81,8 @@ try {
 
   await visit('/')
   start = performance.now()
-  await edit('content/page.astro', source => source.replace('Master Icons / {t(', 'Updated icons / {t('))
-  await expect(page.locator('.home-hero .eyebrow')).toContainText('Updated icons')
+  await edit('content/page.astro', source => source.replace('<main class="overflow-clip home-page icons-home">', '<main data-page-probe="updated" class="overflow-clip home-page icons-home">'))
+  await expect(page.locator('[data-page-probe="updated"]')).toHaveCount(1)
   await hydrated()
   times.pageUpdateMs = Math.round(performance.now() - start)
   assert.equal(starts, initialStarts, 'Page edits must not restart Vite')
