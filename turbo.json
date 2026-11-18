@@ -194,6 +194,9 @@
       ]
     },
     "@master/icons-site#i18n:audit": {
+      "dependsOn": [
+        "^build"
+      ],
       "inputs": [
         "scripts/i18n.ts",
         "content/**",
