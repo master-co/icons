@@ -82,8 +82,15 @@ try{
   dependencies:{'@master/icons':core,'@master/icons-svelte':'file:'+packages.find(pkg=>pkg.name==='@master/icons-svelte').archive,svelte},
   overrides:{'@master/icons':core}
  }));
- execFileSync('bun',['install','--offline','--ignore-scripts'],{cwd:installed,stdio:['ignore','pipe','pipe']});
+ // Svelte comes from the registry (a frozen CI install caches no registry metadata, so --offline cannot resolve
+ // it); both Master packages must come from the archives packed here, and no other adapter may be installed.
+ execFileSync('bun',['install','--ignore-scripts'],{cwd:installed,stdio:['ignore','pipe','pipe']});
  assert.deepEqual((await readdir(resolve(installed,'node_modules/@master'))).sort(),['icons','icons-svelte']);
- console.log('Isolated offline installation: only the core and requested Svelte adapter installed.');
+ for(const name of ['icons','icons-svelte']){
+  const installedManifest=JSON.parse(await readFile(resolve(installed,'node_modules/@master',name,'package.json'),'utf8'));
+  const packedManifest=packages.find(pkg=>pkg.name===`@master/${name}`).manifest;
+  assert.deepEqual(installedManifest,packedManifest,`@master/${name} must be installed from its packed archive`);
+ }
+ console.log('Isolated installation: only the packed core and the requested Svelte adapter installed.');
 }finally{await rm(installed,{recursive:true,force:true});}
 console.log(`All ${packages.length} packages validated; framework dependency isolation and packed consumers passed. Fixture: ${consumer}`);
