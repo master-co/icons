@@ -1,0 +1,55 @@
+// Holds the release workflow to its contract: npm publishes with provenance and no stored npm config, every
+// public package publishes publicly, and the site is delivered through the pages-stable Git ref only after a
+// completed release, without any Cloudflare credential. Run with `bun run check:release`.
+import assert from 'node:assert/strict'
+import { readFileSync } from 'node:fs'
+import { YAML } from 'bun'
+
+const read = file => readFileSync(new URL(`../${file}`, import.meta.url), 'utf8')
+const releaseWorkflow = YAML.parse(read('.github/workflows/release.yml'))
+const ciWorkflow = YAML.parse(read('.github/workflows/ci.yml'))
+
+assert.equal(releaseWorkflow.concurrency['cancel-in-progress'], false, 'Never cancel a release halfway through publishing')
+assert.equal(releaseWorkflow.jobs.validation.uses, './.github/workflows/ci.yml', 'A release follows the full CI')
+
+const release = releaseWorkflow.jobs.release
+assert.equal(release.permissions['id-token'], 'write', 'npm trusted publishing and provenance require GitHub OIDC')
+const runs = release.steps.map(step => step.run ?? '')
+const install = runs.findIndex(run => /^npm install --global npm@/m.test(run))
+const build = runs.findIndex(run => run.includes('bun run build:icons'))
+const publish = runs.findIndex(run => /bun x aronrepo release\b/.test(run))
+assert.ok(install >= 0 && build > install && publish > build, 'Install the OIDC npm CLI and build before publication')
+for (const env of [releaseWorkflow.env, release.env, ...release.steps.map(step => step.env)]) {
+  for (const key of Object.keys(env ?? {})) {
+    assert.doesNotMatch(key, /^npm_config|^node_auth_token$/i, 'The release must not inject npm config')
+  }
+}
+
+const site = releaseWorkflow.jobs['deploy-site']
+assert.deepEqual(site.needs, ['release', 'verify-registry'], 'Site delivery follows the release and its registry check')
+for (const condition of [`needs.release.result == 'success'`, `needs.verify-registry.result == 'success'`,
+  `needs.release.outputs.released == 'false'`, `needs.verify-registry.result == 'skipped'`]) {
+  assert.ok(site.if.includes(condition), `Site delivery is missing a release gate: ${condition}`)
+}
+assert.deepEqual(site.permissions, { contents: 'write' })
+const delivery = site.steps.map(step => step.run ?? '').join('\n')
+assert.match(delivery, /refs\/heads\/pages-stable/, 'The site is delivered by moving pages-stable')
+assert.doesNotMatch(delivery, /--force|\s-f\s/, 'pages-stable only moves forward')
+for (const [file, workflow] of [['release.yml', releaseWorkflow], ['ci.yml', ciWorkflow]]) {
+  assert.doesNotMatch(JSON.stringify(workflow), /CLOUDFLARE_API_TOKEN|CLOUDFLARE_ACCOUNT_ID|wrangler pages deploy/, `${file}: Git delivery must not use Cloudflare credentials or uploads`)
+}
+assert.equal(JSON.parse(read('package.json')).scripts['build:site:cloudflare-pages'], 'bash scripts/build-site-hosted.sh')
+assert.match(read('scripts/build-site-hosted.sh'), /PUBLIC_URL=https:\/\/icons\.master\.co/)
+
+for (const name of ['icons', 'icons-react', 'icons-vue', 'icons-svelte', 'icons-preact', 'icons-astro']) {
+  const manifest = JSON.parse(read(`packages/${name}/package.json`))
+  assert.equal(manifest.private, undefined, `${manifest.name} must be publishable`)
+  assert.deepEqual(manifest.publishConfig, { access: 'public', provenance: true }, `${manifest.name} publishes publicly with provenance`)
+  assert.equal(manifest.repository?.url, 'https://github.com/master-co/icons.git', `${manifest.name} provenance names this repository`)
+  assert.equal(manifest.repository?.directory, `packages/${name}`)
+}
+
+const validation = ciWorkflow.jobs.validate.steps.map(step => step.run ?? '').join('\n')
+for (const command of ['bun run check:release', 'bun run check:package', 'aronrepo check']) assert.ok(validation.includes(command), `CI must run ${command}`)
+
+process.stdout.write('Validated provenance npm publication and gated pages-stable delivery without Cloudflare credentials.\n')

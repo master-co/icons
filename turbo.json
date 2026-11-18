@@ -105,7 +105,8 @@
         "out/**"
       ],
       "env": [
-        "PUBLIC_URL"
+        "PUBLIC_URL",
+        "PUBLIC_VERSION"
       ]
     },
     "@master/icons-review#build": {

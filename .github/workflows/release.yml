@@ -1,0 +1,114 @@
+name: Release
+# Every push to main validates the workspace, releases the @master/icons packages when its commits call for
+# a release, checks the version the registry serves, and delivers icons.master.co.
+# Versions come from the v* tags (v0.0.0 is a baseline, never published) and the commit types; see AGENTS.md.
+on:
+  push:
+    branches: [main]
+  # Reruns the jobs for the head of main, such as after npm publishing access was set up.
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  # Never cancel a release halfway through publishing; the next push waits and releases its commits too.
+  cancel-in-progress: false
+
+jobs:
+  validation:
+    if: ${{ github.ref == 'refs/heads/main' }}
+    uses: ./.github/workflows/ci.yml
+
+  release:
+    needs: validation
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: write # push the version tag and create the GitHub release
+      id-token: write # npm trusted publishing and provenance
+    outputs:
+      released: ${{ steps.outcome.outputs.released }}
+      version: ${{ steps.outcome.outputs.version }}
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0 # versions come from tags and the full history
+      - uses: ./.github/actions/setup
+      - name: Install the publishing npm CLI
+        run: |
+          npm install --global npm@11.21.0
+          test "$(npm --version)" = 11.21.0
+      - name: Plan the release
+        id: plan
+        run: |
+          # Outside the checkout: aronrepo releases only from a clean working tree.
+          plan="$RUNNER_TEMP/plan.json"
+          bun x aronrepo explain --json > "$plan"
+          echo "version=$(jq -r '.version // ""' "$plan")" >> "$GITHUB_OUTPUT"
+          jq -r '"Next release: \(.version // "none") from `\(.head)`\n\n\(.notes // "")"' "$plan" >> "$GITHUB_STEP_SUMMARY"
+      - run: bun run build:icons
+      - name: Require a clean working tree after the build
+        run: git diff --exit-code
+      - run: bun x aronrepo release --branch "$GITHUB_REF_NAME"
+        env:
+          # npm auth is trusted publishing (master-co/icons, release.yml). NPM_TOKEN exists only to publish the
+          # first version, before the packages exist and can trust this workflow; delete it afterwards.
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Record the newest release on main
+        id: outcome
+        env:
+          PLANNED: ${{ steps.plan.outputs.version }}
+        run: |
+          git fetch --tags --force origin
+          tag=$(git describe --tags --abbrev=0 --match 'v[0-9]*' HEAD)
+          version=${tag#v}
+          echo "version=$version" >> "$GITHUB_OUTPUT"
+          echo "released=$([ -n "$PLANNED" ] && [ "$PLANNED" = "$version" ] && echo true || echo false)" >> "$GITHUB_OUTPUT"
+
+  verify-registry:
+    needs: release
+    if: ${{ needs.release.outputs.released == 'true' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v6
+        with:
+          node-version-file: .nvmrc
+      - name: Install the published version into an empty project and check its provenance
+        env:
+          VERSION: ${{ needs.release.outputs.version }}
+        run: node scripts/verify-package.mjs "$VERSION"
+
+  deploy-site:
+    needs: [release, verify-registry]
+    # A release delivers once the registry serves it with provenance; a push that releases nothing delivers
+    # the site with the newest release. A pending release that failed to publish holds the site.
+    if: ${{ always() && needs.release.result == 'success' && (needs.verify-registry.result == 'success' || (needs.release.outputs.released == 'false' && needs.verify-registry.result == 'skipped')) }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write # move pages-stable
+    # Cloudflare Pages builds pages-stable with its Git integration (scripts/build-site-hosted.sh);
+    # this job holds no Cloudflare credential and uploads nothing to Cloudflare. See site/README.md.
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          ref: ${{ github.sha }}
+          fetch-depth: 0
+      - name: Fast-forward pages-stable to this commit
+        run: |
+          set -euo pipefail
+          if git fetch origin pages-stable 2>/dev/null; then
+            if ! git merge-base --is-ancestor FETCH_HEAD "$GITHUB_SHA"; then
+              echo "::error::pages-stable is not an ancestor of $GITHUB_SHA; it only moves forward along main."
+              exit 1
+            fi
+          fi
+          git push origin "$GITHUB_SHA:refs/heads/pages-stable"
+          echo "pages-stable now points at \`$GITHUB_SHA\`; Cloudflare Pages builds it for https://icons.master.co." >> "$GITHUB_STEP_SUMMARY"

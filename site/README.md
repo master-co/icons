@@ -11,7 +11,7 @@ bun run test:site:dev
 bun run test:site:hmr
 ```
 
-`dev` runs through Turbo, prepares the core plus the Svelte and Astro packages used by this site, and watches their sources. `build:icons` builds all six packages. `build:site` automatically prepares its dependencies and writes static output to `site/out`. Commands run inside `site/` also delegate to the same Turbo graph. `PUBLIC_URL` controls the canonical origin and participates in the build cache key; its default is `http://localhost:4321`. This repository does not configure hosting or npm publication.
+`dev` runs through Turbo, prepares the core plus the Svelte and Astro packages used by this site, and watches their sources. `build:icons` builds all six packages. `build:site` automatically prepares its dependencies and writes static output to `site/out`. Commands run inside `site/` also delegate to the same Turbo graph. `PUBLIC_URL` controls the canonical origin and participates in the build cache key; its default is `http://localhost:4321`. The site is hosted at https://icons.master.co; see [Hosting](#hosting).
 
 Turbo caches package exports, shared stroke geometry, public assets, bilingual guides and static output in `.turbo/cache/`. Keys include declared source files, generators, licenses, relevant dependencies and the Node.js version. Cache hits restore generated outputs, including missing files. Generated SVGs and distributions are excluded from their own task inputs. Generated files are owned by the generators; edit their sources, not their output. Icon, generator, license and guide changes trigger serialized Turbo runs. The persistent dev server itself is not cached; ordinary page edits continue through Vite HMR.
 
@@ -25,7 +25,7 @@ To force fresh site assets and upstream builds, run `bun run turbo run prepare-s
 
 `assets/favicon.svg` and `assets/favicon.ico` are copied from the Master project's `site/public/` (identical to `brand/icon/`); preparation copies these tracked sources into the ignored public directory.
 
-The site pins Master Site 0.2.18, Master CSS 2.1.7, Master UI 0.0.11, Astro 7.4.2, Svelte 5.57.2 and Vite 8.3.5. Shared sections own the document shell, navigation, theme, search and locale controls. Product pages own their content and icon explorer. The homepage uses `@master/icons-astro`. The explorer loads individual generated Svelte icon components only for the visible page and renders inline SVG; it does not load SVG images or CSS masks. Custom stroke specimens use a recursive Svelte SVG component with instance-scoped mask IDs. Their geometry and the copy/download panel share cached per-icon definitions. The framework selector generates React, Vue, Svelte, Preact and Astro examples; custom strokes use the same component imports with `strokeWidth`, selecting the shared, precomputed geometry.
+The site pins Master Site 0.3.0, Master CSS 2.1.7, Master UI 0.0.11, Astro 7.4.2, Svelte 5.57.2 and Vite 8.3.5. Shared sections own the document shell, navigation, theme, search and locale controls. Product pages own their content and icon explorer. The homepage uses `@master/icons-astro`. The explorer loads individual generated Svelte icon components only for the visible page and renders inline SVG; it does not load SVG images or CSS masks. Custom stroke specimens use a recursive Svelte SVG component with instance-scoped mask IDs. Their geometry and the copy/download panel share cached per-icon definitions. The framework selector generates React, Vue, Svelte, Preact and Astro examples; custom strokes use the same component imports with `strokeWidth`, selecting the shared, precomputed geometry.
 
 Master Site 0.2.15 includes incremental development updates. Ordinary Astro, Svelte, CSS and MDX edits use HMR; localized frontmatter refreshes its virtual metadata module. Route additions/removals, dynamic params and changes in published locale availability still rebuild the route inventory.
 
@@ -48,3 +48,23 @@ Supply the exact resource IDs reported by the audit. Preparation and production 
 The review workspace remains separate. Its source comparisons, research files and offline payload must not be copied to `site/public` or package archives. Generated public assets are replaced from the current icon package during preparation.
 
 The project `.nvmrc` selects Node 26; CI checks Node 24 and 26.
+
+## Hosting
+
+https://icons.master.co is served by Cloudflare Pages through its Git integration. GitHub holds no Cloudflare credential and never uploads the site.
+
+After a push to `main` releases the packages and the registry serves them, or after a push that releases nothing, the `deploy-site` job of `.github/workflows/release.yml` fast-forwards the `pages-stable` branch to that commit. A pending release that failed to publish holds the site until it ships. Never push to or move `pages-stable` by hand; rerun the failed job instead.
+
+The Pages project is connected to `master-co/icons` with:
+
+| Setting | Value |
+| --- | --- |
+| Production branch | `pages-stable` |
+| Preview deployments | None |
+| Build command | `bun run build:site:cloudflare-pages` |
+| Build output directory | `site/out` |
+| Root directory | (repository root) |
+| Build variables | `BUN_VERSION=1.4.4`, `NODE_VERSION=24` |
+| Custom domain | `icons.master.co` |
+
+`scripts/build-site-hosted.sh` sets `PUBLIC_URL=https://icons.master.co` and `PUBLIC_VERSION` to the newest version npm serves for `@master/icons`, installs the locked dependencies and runs `bun run build:site`. The output has about 10,600 files, below the Pages limit of 20,000; custom stroke weights ship only inside their ZIP sets and are rendered in the browser, so they add no files.

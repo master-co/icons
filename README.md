@@ -2,10 +2,11 @@
 
 微圓、簡約，為 Dashboard、App 與 Web 介面設計的 SVG 圖示。
 
-Master Icons 著重輪廓、比例、留白與小尺寸的細節取捨。目前為 **0.1.0-alpha.0**。本次新增候選已依實際用途重新選圖及重製，公開輸出目前有 **942 個命名圖示、8,478 份 SVG**。重製進度見 [逐顆重製與收錄進度](docs/review/rebuild-01/index.html)。
+Master Icons 著重輪廓、比例、留白與小尺寸的細節取捨。公開輸出目前有 **946 個命名圖示、8,514 份 SVG**。文件與完整圖庫見 [icons.master.co](https://icons.master.co)，重製進度見 [逐顆重製與收錄進度](docs/review/rebuild-01/index.html)。
 
-
-
+```sh
+npm install @master/icons-react   # 或 -vue、-svelte、-preact、-astro；純 SVG／JavaScript 用 @master/icons
+```
 
 ## 設計與輸出
 
@@ -14,9 +15,9 @@ Master Icons 著重輪廓、比例、留白與小尺寸的細節取捨。目前�
 - **單色輪廓**：使用 `currentColor` 配合文字與介面配色，涵蓋導覽、表單、檔案、編輯、媒體、帳戶及常見商務操作。
 - **SVG 與框架元件**：提供 JavaScript、React、Vue、Svelte、Preact、Astro 入口，以及固定尺寸／角型入口，供應用按需匯入。
 
-圖庫仍在 alpha 階段，圖形與 API 可能調整。這些設計取向不代表所有圖示、顯示尺寸或背景都已達到相同完成度；各批已執行的檢查與限制見 [驗證紀錄](docs/validation.md) 及對應批次報告，報告僅涵蓋其記載的版本與範圍。
+這些設計取向不代表所有圖示、顯示尺寸或背景都已達到相同完成度；各批已執行的檢查與限制見 [驗證紀錄](docs/validation.md) 及對應批次報告，報告僅涵蓋其記載的版本與範圍。
 
-「品牌與平台」有 88 個品牌識別、18 個線條版本，共 106 個瀏覽項目。OpenAI 與 ChatGPT 共用 Blossom，兩個名稱皆可搜尋及匯入。18 個社群品牌的線條版直接列在 icons 列表，詳情也提供單色標誌／線條版切換，包含 GitHub、Telegram、WeChat、Discord、YouTube 等。各框架使用 `BrandGithubIcon` 與 `BrandGithubOutlineIcon`，JavaScript 使用 `BrandGithub` 與 `BrandGithubOutline`。原標誌仍為預設。原標誌保持固定幾何；outline 支援 `strokeWidth` 與網站線寬控制，主描邊按實際輸出尺寸校準，品牌角型保持不變。[品牌輪廓審稿](docs/review/brand-outline-craft-05/index.html) · [來源聲明](THIRD_PARTY_NOTICES.md)
+「品牌與平台」有 89 個品牌標誌名稱與 18 個線條版本，共 107 個項目。OpenAI 與 ChatGPT 共用 Blossom，兩個名稱皆可搜尋及匯入。18 個社群品牌的線條版直接列在 icons 列表，詳情也提供單色標誌／線條版切換，包含 GitHub、Telegram、WeChat、Discord、YouTube 等。各框架使用 `BrandGithubIcon` 與 `BrandGithubOutlineIcon`，JavaScript 使用 `BrandGithub` 與 `BrandGithubOutline`。原標誌仍為預設。原標誌保持固定幾何；outline 支援 `strokeWidth` 與網站線寬控制，主描邊按實際輸出尺寸校準，品牌角型保持不變。[品牌輪廓審稿](docs/review/brand-outline-craft-05/index.html) · [來源聲明](THIRD_PARTY_NOTICES.md)
 
 ## 本地開始使用
 
@@ -31,7 +32,7 @@ bun run dev:review       # http://127.0.0.1:4173
 
 網站提供英文與 `/tw` 繁中版，包含搜尋、分類、尺寸與角型預覽、程式碼複製及下載。網站設定與開發方式見 [網站文件](site/README.md)。
 
-`@master/icons` 目前在此 repository 中標記為 private alpha。以下範例供本地 workspace 或套件封裝使用，不表示已發布至 npm。可執行 `bun run check:package` 產生並驗證 核心及各框架的 `work/master-icons*-alpha.tgz`。
+套件發布於 npm：核心 `@master/icons` 與五個框架套件 `@master/icons-{react,vue,svelte,preact,astro}`，版本與發布流程見下方〈版本與發布〉。可執行 `bun run check:package` 在本機產生並驗證核心及各框架的封裝檔。
 
 ## 使用圖示
 
@@ -106,6 +107,12 @@ bun run check:package
 | `docs/` | 設計規範、研究、決策與審查證據 |
 | `scripts/` | 建置協調、驗證與審稿工具 |
 | `dist/` | 生成的審稿與離線輸出，不納入版本控制 |
+
+## 版本與發布
+
+六個套件共用同一版本，版本號來自 `v*` tag 與 commit 類型（[Aronrepo](https://github.com/1aron/aronrepo)，`explicit` 模式）；`package.json` 中的 `version` 只是 `0.0.0` 佔位。`main` 是唯一的發布分支：每次 push 到 `main`，`.github/workflows/release.yml` 依序執行完整 CI、`aronrepo release`（以 npm trusted publishing 附 provenance 發布、建立 tag 與 GitHub release）、驗證 registry 提供的版本與 provenance（`scripts/verify-package.mjs`），最後把 `pages-stable` 分支快轉到該 commit，由 Cloudflare Pages 的 Git 整合建置 [icons.master.co](https://icons.master.co)。GitHub 不持有任何 Cloudflare 憑證。
+
+commit 與 PR 標題須符合 [AGENTS.md](AGENTS.md) 中的政策（`Type(Scope): Summary`），由 commit hook、PR 標題檢查與 CI 把關。只有維護者以 `Bump(Minor)`／`Bump(Major)` 提升次版號與主版號；其他發布類型只發布 patch。發布前可執行 `bun x aronrepo explain` 查看下一個版本與原因。
 
 ## 貢獻與製作方法
 

@@ -13,6 +13,7 @@
     "tests"
   ],
   "scripts": {
+    "prepare": "husky",
     "dev": "node scripts/turbo.mjs run dev --filter=@master/icons-site",
     "dev:review": "node scripts/turbo.mjs run dev --filter=@master/icons-review",
     "build": "node scripts/turbo.mjs run build",
@@ -39,7 +40,10 @@
     "verify:site-browser": "playwright test -c site/playwright.config.ts",
     "verify:site-dev": "playwright test -c site/playwright.dev.config.ts",
     "verify:site-hmr": "node site/scripts/check-dev-updates.mjs",
-    "test:turbo": "node scripts/test-turbo.mjs"
+    "test:turbo": "node scripts/test-turbo.mjs",
+    "check:release": "bun scripts/release-config-check.mjs",
+    "commit-check": "aronrepo check --from HEAD~1",
+    "build:site:cloudflare-pages": "bash scripts/build-site-hosted.sh"
   },
   "devDependencies": {
     "@astrojs/check": "0.9.12",
@@ -49,9 +53,11 @@
     "@types/node": "^24.12.2",
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",
+    "aronrepo": "4.0.2",
     "astro": "7.4.2",
     "esbuild": "^0.28.2",
     "fflate": "^0.8.3",
+    "husky": "9.1.7",
     "pathkit-wasm": "1.0.0",
     "preact": "11.2.0",
     "preact-render-to-string": "6.8.3",
@@ -63,5 +69,9 @@
     "turbo": "2.11.11",
     "typescript": "6.0.3",
     "vue": "3.5.45"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/master-co/icons.git"
   }
 }
