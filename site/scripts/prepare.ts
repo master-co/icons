@@ -1,9 +1,10 @@
-import { readFile, readdir, cp, rm } from 'node:fs/promises'
+import { readFile, readdir, cp, rm, mkdir } from 'node:fs/promises'
 import { fileURLToPath } from 'node:url'
-import { join } from 'node:path'
+import { join, dirname } from 'node:path'
 import {buildStrokes} from '../../scripts/lib/build-strokes.mjs'
 import {contentCache, writeIfChanged} from '../../scripts/lib/content-cache.mjs'
 import {lockGeneration} from '../../scripts/lib/generation-lock.mjs'
+import {generateLlms,llmsOutputs} from './llms.ts'
 
 const started=performance.now()
 const site=fileURLToPath(new URL('../',import.meta.url))
@@ -37,9 +38,10 @@ if(!assets.hit){
 }
 console.log(`Site assets: ${assets.hit?'content cache hit':'copied'}`)
 
+const guideSlugs=(await readdir(join(site,'content/guide'),{withFileTypes:true})).filter(entry=>entry.isDirectory()).map(entry=>entry.name)
 const guides=await contentCache({
- inputs:[...common,join(site,'content'),join(site,'i18n')],
- outputs:[join(site,'.categories/guide.json'),...['en','tw'].map(locale=>join(site,`public/search/${locale}.json`))],
+ inputs:[...common,join(site,'scripts/llms.ts'),join(site,'content'),join(site,'i18n')],
+ outputs:[join(site,'.categories/guide.json'),...['en','tw'].map(locale=>join(site,`public/search/${locale}.json`)),...llmsOutputs(guideSlugs).map(path=>join(site,'public',path))],
  file:join(repo,'work/cache/site-guides.json'),force
 })
 if(!guides.hit){
@@ -50,13 +52,17 @@ if(!guides.hit){
   if(!entry.isDirectory())continue
   const {default:metadata}=await import(new URL(`../content/guide/${entry.name}/metadata.ts`,import.meta.url).href)
   if(!groups.includes(metadata.category))throw new Error(`Guide ${entry.name} has an unknown category: ${metadata.category}`)
-  pages.push(metadata)
+  pages.push({...metadata,slug:entry.name})
  }
  const categories=groups.map(name=>({name,pages:pages.filter(page=>page.category===name).sort((a,b)=>a.order-b.order)}))
  await writeIfChanged(join(site,'.categories/guide.json'),JSON.stringify(categories,null,2)+'\n')
  const {generateSearchPages}=await import('@master/internal-site/utils/search-pages')
  const search=await generateSearchPages({cwd:site,defaultLocale:'en',locales:['en','tw'],dictionariesDir:join(site,'i18n'),write:false})
  for(const locale of ['en','tw'])await writeIfChanged(join(site,`public/search/${locale}.json`),JSON.stringify(search[locale]))
+ // llms.txt and each guide as Markdown for coding agents; see scripts/llms.ts.
+ const dictionary={en:{},tw:JSON.parse(await readFile(join(site,'i18n/tw.json'),'utf8'))} as Record<string,Record<string,string>>
+ await rm(join(site,'public/guide'),{recursive:true,force:true});await rm(join(site,'public/tw/guide'),{recursive:true,force:true})
+ await generateLlms(site,categories as any,async(path,content)=>{await mkdir(dirname(join(site,'public',path)),{recursive:true});await writeIfChanged(join(site,'public',path),content)},(locale,text)=>dictionary[locale][text]??text)
  await guides.commit()
 }
 // Tracked Master brand sources live outside the generated/ignored public tree.
