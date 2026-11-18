@@ -27,7 +27,7 @@ for(const locale of ['', '/tw']){
  test(`${locale||'en'} framework selector copies matching component usage including custom strokes`,async({page})=>{
   const errors:string[]=[],svgRequests:string[]=[]
   page.on('pageerror',error=>errors.push(error.message))
-  page.on('request',request=>{if(/\/(?:icons|strokes)\/.*\.svg(?:\?|$)/.test(request.url()))svgRequests.push(request.url())})
+  page.on('request',request=>{if(/\/icons\/.*\.svg(?:\?|$)/.test(request.url()))svgRequests.push(request.url())})
   await page.goto(`${locale}/icons?q=search&size=64&corner=rounded`)
   const tile=page.locator('.explorer-tile').filter({has:page.locator('.explorer-name',{hasText:/^search$/})})
   await expect(tile.locator('svg')).toHaveAttribute('width','64')

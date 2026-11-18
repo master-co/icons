@@ -30,6 +30,8 @@ export async function buildStrokes({force=false}={}) {
   const license=await readFile(resolve(root,'LICENSE'),'utf8');
   const common={LICENSE:strToU8(license),'THIRD_PARTY_NOTICES.md':strToU8(await readFile(resolve(root,'THIRD_PARTY_NOTICES.md'),'utf8'))};
   for(const name of await readdir(resolve(root,'licenses')))common['licenses/'+name]=strToU8(await readFile(resolve(root,'licenses',name),'utf8'));
+  // One release asset per optical size gathers every corner and custom width: {corner}/stroke-{width}/{name}.svg.
+  const collections=Object.fromEntries(sizes.map(size=>[size,{...common}]));
   for(const width of strokeWidths) {
     const bundles=Object.fromEntries(sizes.filter(s=>strokeWidthsFor(s).includes(width)).flatMap(s=>corners.map(c=>[`${s}-${c}`,{...common}])));
     for(const entry of catalog.icons) {
@@ -49,11 +51,13 @@ export async function buildStrokes({force=false}={}) {
         // files in the browser, so 40k loose SVGs never reach disk or hosting.
         const svg=`<!--\n${notice}\n-->\n${renderSvg({...definition,variants},{size,corner})}\n`;
         bundles[`${size}-${corner}`][entry.name+'.svg']=strToU8(svg);
+        collections[size][`${corner}/stroke-${width}/${entry.name}.svg`]=bundles[`${size}-${corner}`][entry.name+'.svg'];
       }
     }
     for(const [variant,files] of Object.entries(bundles))await put(`downloads/master-icons-${variant}-stroke-${width}.zip`,zipSync(files,{level:6,mtime:new Date(2026,10,16)}));
     console.log(`Generated stroke ${width}: ${catalog.icons.length} × ${Object.keys(bundles).length} masters`);
   }
+  for(const [size,files] of Object.entries(collections))await put(`release/master-icons-${size}-strokes.zip`,zipSync(files,{level:9,mtime:new Date(2026,10,16)}));
   for(const [name,definition] of Object.entries(definitions))await put(`data/${name}.json`,JSON.stringify(definition));
   await put('definitions.json',JSON.stringify(definitions));
   await put('key',cache.key);

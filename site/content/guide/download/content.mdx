@@ -1,0 +1,44 @@
+## Packages \{#packages\}
+
+Install the package for your framework from npm. Each brings the shared `@master/icons` core with it.
+
+| Use | Install | Guide |
+| --- | --- | --- |
+| SVG and JavaScript | `npm install @master/icons` | [SVG and JavaScript](/guide/svg) |
+| React | `npm install @master/icons-react` | [React](/guide/react) |
+| Vue | `npm install @master/icons-vue` | [Vue](/guide/vue) |
+| Svelte | `npm install @master/icons-svelte` | [Svelte](/guide/svelte) |
+| Preact | `npm install @master/icons-preact` | [Preact](/guide/preact) |
+| Astro | `npm install @master/icons-astro` | [Astro](/guide/astro) |
+
+## SVG sets \{#sets\}
+
+Each set is a ZIP archive of every icon drawn for one optical size and corner style, at its native stroke width. Pick the size your interface uses and its corners:
+
+| Size | Sharp | Soft | Rounded |
+| --- | --- | --- | --- |
+| 16 px | [sharp](https://github.com/master-co/icons/releases/latest/download/master-icons-16-sharp.zip) | [soft](https://github.com/master-co/icons/releases/latest/download/master-icons-16-soft.zip) | [rounded](https://github.com/master-co/icons/releases/latest/download/master-icons-16-rounded.zip) |
+| 20 px | [sharp](https://github.com/master-co/icons/releases/latest/download/master-icons-20-sharp.zip) | [soft](https://github.com/master-co/icons/releases/latest/download/master-icons-20-soft.zip) | [rounded](https://github.com/master-co/icons/releases/latest/download/master-icons-20-rounded.zip) |
+| 24 px | [sharp](https://github.com/master-co/icons/releases/latest/download/master-icons-24-sharp.zip) | [soft](https://github.com/master-co/icons/releases/latest/download/master-icons-24-soft.zip) | [rounded](https://github.com/master-co/icons/releases/latest/download/master-icons-24-rounded.zip) |
+
+To use other stroke widths, download the archive for the optical size. It holds a folder for each corner style and width, such as `soft/stroke-2/search.svg`:
+
+- [`master-icons-16-strokes.zip`](https://github.com/master-co/icons/releases/latest/download/master-icons-16-strokes.zip): widths 0.75–1.5 at 16 px, in every corner style
+- [`master-icons-20-strokes.zip`](https://github.com/master-co/icons/releases/latest/download/master-icons-20-strokes.zip): widths 1–2 at 20 px, in every corner style
+- [`master-icons-24-strokes.zip`](https://github.com/master-co/icons/releases/latest/download/master-icons-24-strokes.zip): widths 1.25–2.5 at 24 px, in every corner style
+
+The archives are attached to every [GitHub release](https://github.com/master-co/icons/releases) and these links always serve the newest one. Download single files at any size and width from each icon's details in the [collection](/icons).
+
+## Files from a CDN \{#cdn\}
+
+The `@master/icons` package includes every native SVG file, so any npm CDN serves them by path:
+
+```html
+<img src="https://cdn.jsdelivr.net/npm/@master/icons@1/icons/24/soft/search.svg" width="24" height="24" alt="Search">
+```
+
+The path is `icons/{size}/{corner}/{name}.svg`. An SVG in `<img>` cannot take the text color with `currentColor`; inline the markup, or use a component, when it needs to.
+
+## License \{#license\}
+
+Each archive includes `LICENSE`, `THIRD_PARTY_NOTICES.md` and the `licenses/` folder, and each SVG file begins with its own notice. Keep them when you redistribute the icons. Brand icons remain trademarks of their owners and are for referring to those products. See [license and attribution](/guide/license).

@@ -48,7 +48,9 @@ jobs:
           bun x aronrepo explain --json > "$plan"
           echo "version=$(jq -r '.version // ""' "$plan")" >> "$GITHUB_OUTPUT"
           jq -r '"Next release: \(.version // "none") from `\(.head)`\n\n\(.notes // "")"' "$plan" >> "$GITHUB_STEP_SUMMARY"
+      # The packages, and the twelve download sets aronrepo attaches to the GitHub release (aronrepo.config.js).
       - run: bun run build:icons
+      - run: bun run build:strokes
       - name: Require a clean working tree after the build
         run: git diff --exit-code
       - run: bun x aronrepo release --branch "$GITHUB_REF_NAME"

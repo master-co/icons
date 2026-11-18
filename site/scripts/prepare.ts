@@ -19,18 +19,18 @@ const common=['site/scripts/prepare.ts','scripts/lib/content-cache.mjs','bun.loc
 // The catalog contains every default SVG's content hash; the stroke key covers
 // geometry, metadata, generator code and licenses. Don't rehash the stroke sets.
 const assets=await contentCache({
- inputs:[...common,...['dist/catalog.json','dist/downloads','LICENSE','THIRD_PARTY_NOTICES.md'].map(path=>join(icons,path)),join(strokes,'key')],
- outputs:['data','icons','downloads','catalog.json','THIRD_PARTY_NOTICES.md','LICENSE.txt'].map(path=>join(site,'public',path)),
+ inputs:[...common,...['dist/catalog.json','LICENSE','THIRD_PARTY_NOTICES.md'].map(path=>join(icons,path)),join(strokes,'key')],
+ outputs:['data','icons','catalog.json','THIRD_PARTY_NOTICES.md','LICENSE.txt'].map(path=>join(site,'public',path)),
  file:join(repo,'work/cache/site-assets.json'),force
 })
-// Older checkouts generated a per-file stroke tree; it must never be published.
-await rm(join(site,'public/strokes'),{recursive:true,force:true})
+// Download sets are GitHub release assets and stroke weights render in the browser; older checkouts
+// copied both into public/, and neither may be published again.
+for(const retired of ['strokes','downloads'])await rm(join(site,'public',retired),{recursive:true,force:true})
 if(!assets.hit){
- for(const [target,source] of [['data',join(strokes,'data')],['icons',join(icons,'icons')],['downloads',join(icons,'dist/downloads')]]){
+ for(const [target,source] of [['data',join(strokes,'data')],['icons',join(icons,'icons')]]){
   await rm(join(site,'public',target),{recursive:true,force:true})
   await cp(source,join(site,'public',target),{recursive:true})
  }
- await cp(join(strokes,'downloads'),join(site,'public/downloads'),{recursive:true})
  await writeIfChanged(join(site,'public/catalog.json'),JSON.stringify(catalog)+'\n')
  await writeIfChanged(join(site,'public/THIRD_PARTY_NOTICES.md'),await readFile(join(icons,'THIRD_PARTY_NOTICES.md')))
  await writeIfChanged(join(site,'public/LICENSE.txt'),await readFile(join(icons,'LICENSE')))
@@ -65,7 +65,7 @@ if(!guides.hit){
  await generateLlms(site,categories as any,async(path,content)=>{await mkdir(dirname(join(site,'public',path)),{recursive:true});await writeIfChanged(join(site,'public',path),content)},(locale,text)=>dictionary[locale][text]??text)
  await guides.commit()
 }
-// Tracked Master brand sources live outside the generated/ignored public tree.
-for(const name of ['favicon.svg','favicon.ico'])await writeIfChanged(join(site,'public',name),await readFile(join(site,'assets',name)))
+// Tracked Master brand sources and the Pages redirects live outside the generated/ignored public tree.
+for(const name of ['favicon.svg','favicon.ico','_redirects'])await writeIfChanged(join(site,'public',name),await readFile(join(site,'assets',name)))
 console.log(`Guides: ${guides.hit?'content cache hit':'generated'}`)
 console.log(`Prepared ${catalog.iconCount} icons and bilingual guides in ${((performance.now()-started)/1000).toFixed(2)}s`)

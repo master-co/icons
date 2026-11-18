@@ -8,6 +8,7 @@
  import CatalogIcon from './CatalogIcon.svelte'
  import InlineIcon from './InlineIcon.svelte'
  import {loadDefinition} from './icon-data'
+ import {releaseDownloads} from './downloads'
  import {codeSnippet,formats,formatLabels,type CodeFormat} from './code-snippet'
  import {onMount, tick, type Snippet} from 'svelte'
  import '@master/internal-site/styles/system/sidebar.css'
@@ -57,6 +58,8 @@
  const svg=$derived(artwork?.notice && rawSvg ? `<!--\n${artwork.notice.replaceAll('--','—')}\n-->\n${rawSvg}` : rawSvg)
  const snippet=$derived(artwork?codeSnippet({format,component:artwork.component,size,opticalSize,corner,svg,strokeWidth:stroke}):'')
  // Native masters link to their published files; scaled sizes and custom weights download the rendered SVG.
+ // Download sets are assets of the newest GitHub release; custom weights come as one archive per optical size.
+ const setURL=$derived(`${releaseDownloads}/master-icons-${opticalSize}-${stroke===null?corner:'strokes'}.zip`)
  // Custom weights carry the same notice as the files in their ZIP set.
  const weighted=$derived(artwork&&stroke!==null?`<!--\n${license.trim()}${artwork.notice?`\n\n${artwork.notice.trim()}`:artwork.copyright?`\n${artwork.copyright}`:''}\n-->\n${rawSvg}\n`:svg)
  const download=$derived(artwork&&size<=24&&stroke===null?`/icons/${size}/${corner}/${artwork.name}.svg`:`data:image/svg+xml;charset=utf-8,${encodeURIComponent(weighted)}`)
@@ -152,7 +155,7 @@
   <div class="field"><span id={`${instanceId}-corners`}>{t('Corners')}</span><div class="segmented w-full" role="radiogroup" aria-labelledby={`${instanceId}-corners`}>{#each corners as c}<label class="segmented-item"><input class="segmented-input" type="radio" name="corner" value={c} bind:group={corner}/>{cornerLabel(c)}</label>{/each}</div></div>
   <div class="explorer-actions">
    <div class="field"><span id={`${instanceId}-view`}>{t('View')}</span><div class="segmented w-full" role="group" aria-labelledby={`${instanceId}-view`}><button type="button" class="segmented-item" aria-pressed={view==='library'} onclick={()=>{view='library';page=1}}>{t('Collection')}</button><button type="button" class="segmented-item" aria-pressed={view==='optical'} onclick={()=>{view='optical';page=1}}>{t('Size comparison')}</button></div></div>
-   <a class="btn btn-sm" href={`/downloads/master-icons-${opticalSize}-${corner}${stroke===null?'':`-stroke-${stroke}`}.zip`} download>{t('Download set')}<span aria-hidden="true"> · {opticalSize} px</span></a>
+   <a class="btn btn-sm" href={setURL}>{t('Download set')}<span aria-hidden="true"> · {opticalSize} px</span></a>
   </div>
   <label class="field explorer-category"><span>{t('Category')}</span><select class="select" value={activeCategory} onchange={(event)=>selectCategory(event.currentTarget.value)}><option class="select-option" value="all">{t('All icons')}</option>{#each categories as c}<option class="select-option" value={c.id}>{t(c.label)}</option>{/each}</select></label>
  </div>

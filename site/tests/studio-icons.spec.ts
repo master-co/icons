@@ -1,5 +1,7 @@
 import {expect, test} from '@playwright/test'
 import {readFile} from 'node:fs/promises'
+// A copied SVG leads with only its third-party notice; files carry the full license header. Compare drawings.
+const drawing=(text:string)=>text.slice(text.indexOf('<svg')).trim()
 import studio from '../../packages/icons/src/studio-scope.json' with {type:'json'}
 import workbench from '../../packages/icons/src/workbench-scope.json' with {type:'json'}
 import operations from '../../packages/icons/src/operations-scope.json' with {type:'json'}
@@ -22,7 +24,7 @@ for (const {label, entries} of batches) {
       await expect(dialog.locator('.master-cell svg')).toHaveCount(9)
       const source = await page.request.get(`/icons/16/soft/${name}.svg`)
       expect(source.ok()).toBe(true)
-      expect(await source.text()).toContain(await dialog.locator('textarea').inputValue())
+      expect(await source.text()).toContain(drawing(await dialog.locator('textarea').inputValue()))
       await page.keyboard.press('Escape')
     }
   })
@@ -42,6 +44,6 @@ test('studio and operations synonyms open the same SVG in both explorer language
     await dialog.getByRole('link', {name: button, exact: true}).click()
     const download = await pending
     expect(download.suggestedFilename()).toBe(filename)
-    expect(await readFile((await download.path())!, 'utf8')).toContain(await dialog.locator('textarea').inputValue())
+    expect(await readFile((await download.path())!, 'utf8')).toContain(drawing(await dialog.locator('textarea').inputValue()))
   }
 })

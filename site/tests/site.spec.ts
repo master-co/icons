@@ -75,7 +75,7 @@ test('global search restores the browsing category on desktop and mobile',async(
  const sidebar=page.getByRole('navigation',{name:'Category',exact:true})
  await expect(page).not.toHaveURL(/category=pilot/)
  await expect(sidebar.getByRole('link',{name:'Representative icons',exact:true})).toHaveCount(0)
- const navigation=sidebar.getByRole('link',{name:'Navigation',exact:true})
+ const navigation=sidebar.getByRole('link',{name:'Directions & movement',exact:true})
  await expect(sidebar).toBeVisible()
  await expect(page.getByRole('combobox',{name:'Category',exact:true})).toBeHidden()
  await navigation.focus();await page.keyboard.press('Enter')
@@ -179,7 +179,7 @@ for(const [locale,search] of [['','Search icons'],['/tw','搜尋圖示']]){
   const download=page.waitForEvent('download');await dialog.getByRole('link',{name:locale?'下載 SVG':'Download SVG',exact:true}).click();expect((await download).suggestedFilename()).toBe('search.svg')
   await page.keyboard.press('Escape');await expect(dialog).not.toBeVisible()
   await expect(page.getByTestId('icon-grid').locator('button').filter({has:page.locator('.explorer-name',{hasText:/^search$/})})).toBeFocused()
-  const zip=page.waitForEvent('download');await page.getByRole('link',{name:locale?'下載此組':'Download set',exact:true}).click();expect((await zip).suggestedFilename()).toBe('master-icons-20-rounded.zip')
+  await expect(page.getByRole('link',{name:locale?'下載此組':'Download set',exact:true})).toHaveAttribute('href','https://github.com/master-co/icons/releases/latest/download/master-icons-20-rounded.zip')
   expect(errors).toEqual([])
  })
  test(`${locale||'en'} home and all guide editions`,async({page})=>{
@@ -187,7 +187,7 @@ for(const [locale,search] of [['','Search icons'],['/tw','搜尋圖示']]){
   await expect(page.locator('h1')).toContainText(locale?'量身繪製':'Drawn to measure')
   await page.getByRole('link',{name:locale?'探索圖示':'Explore icons',exact:false}).first().click()
   await expect(page).toHaveURL(new RegExp(`${locale}/icons`))
-  for(const slug of ['getting-started','comparison','svg','react','vue','svelte','preact','astro','optical-sizes','stroke-width','accessibility','license']){
+  for(const slug of ['getting-started','download','comparison','svg','react','vue','svelte','preact','astro','optical-sizes','stroke-width','accessibility','license']){
    const result=await page.goto(`${locale}/guide/${slug}`);expect(result?.status()).toBe(200)
    await expect(page.locator('html')).toHaveAttribute('lang',locale?'zh-TW':'en')
    await expect(page.locator('h1')).toBeVisible()
@@ -224,7 +224,7 @@ test('larger display sizes use valid masters and export the selected dimensions'
  }
  await slider.press('ArrowLeft');await expect(slider).toHaveAttribute('aria-valuetext','48 px')
  await slider.press('End');await expect(slider).toHaveAttribute('aria-valuetext','64 px')
- await expect(page.getByRole('link',{name:'Download set',exact:true})).toHaveAttribute('href','/downloads/master-icons-24-rounded.zip')
+ await expect(page.getByRole('link',{name:'Download set',exact:true})).toHaveAttribute('href','https://github.com/master-co/icons/releases/latest/download/master-icons-24-rounded.zip')
  await page.getByTestId('icon-grid').locator('button').filter({has:page.locator('.explorer-name',{hasText:/^search$/})}).click()
  const dialog=page.locator('dialog.explorer-dialog')
  await expect(dialog.locator('textarea')).toHaveValue(/width="64" height="64" viewBox="0 0 24 24"/)

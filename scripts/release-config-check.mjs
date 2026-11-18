@@ -18,7 +18,11 @@ const runs = release.steps.map(step => step.run ?? '')
 const install = runs.findIndex(run => /^npm install --global npm@/m.test(run))
 const build = runs.findIndex(run => run.includes('bun run build:icons'))
 const publish = runs.findIndex(run => /bun x aronrepo release\b/.test(run))
-assert.ok(install >= 0 && build > install && publish > build, 'Install the OIDC npm CLI and build before publication')
+const strokes = runs.findIndex(run => run.includes('bun run build:strokes'))
+assert.ok(install >= 0 && build > install && strokes > build && publish > strokes, 'Install the OIDC npm CLI and build the packages and download sets before publication')
+const { default: config } = await import('../aronrepo.config.js')
+assert.equal(config.release.assets.length, 12, 'Nine native and three custom-weight download sets are release assets')
+for (const asset of config.release.assets) assert.doesNotMatch(asset.name, /\d+\.\d+\.\d+|\{tag\}/, 'Asset names carry no version, so releases/latest/download links stay stable')
 for (const env of [releaseWorkflow.env, release.env, ...release.steps.map(step => step.env)]) {
   for (const key of Object.keys(env ?? {})) {
     assert.doesNotMatch(key, /^npm_config|^node_auth_token$/i, 'The release must not inject npm config')

@@ -19,9 +19,10 @@ for(const locale of ['', '/tw'])test(`stroke slider exports matching geometry ${
  const svg=await readFile((await (await download).path())!,'utf8')
  expect(svg).toContain(await code.inputValue())
  await dialog.getByRole('button',{name:locale?'關閉':'Close',exact:true}).click()
- const zipDownload=page.waitForEvent('download');await page.getByRole('link',{name:locale?'下載此組':'Download set',exact:true}).click()
- const zip=await zipDownload;expect(zip.suggestedFilename()).toBe('master-icons-16-rounded-stroke-1.5.zip')
- const entries=unzipSync(await readFile((await zip.path())!));expect(strFromU8(entries['bell-off.svg'])).toBe(svg)
+ // Custom weights download as the release asset that gathers every corner and width of the optical size.
+ await expect(page.getByRole('link',{name:locale?'下載此組':'Download set',exact:true})).toHaveAttribute('href','https://github.com/master-co/icons/releases/latest/download/master-icons-16-strokes.zip')
+ const entries=unzipSync(await readFile(new URL('../../work/stroke-assets/release/master-icons-16-strokes.zip',import.meta.url)))
+ expect(strFromU8(entries['rounded/stroke-1.5/bell-off.svg'])).toBe(svg)
  await page.getByRole('button',{name:locale?'重設線寬':'Reset stroke',exact:true}).click()
  await expect(slider).toHaveValue('1.25');await expect(page).not.toHaveURL(/stroke=/)
  await slider.press('Home');await slider.press('ArrowRight');await expect(slider).toHaveValue('1')

@@ -1,5 +1,7 @@
 import {expect, test} from '@playwright/test'
 import scope from '../../packages/icons/src/product-scope.json' with {type:'json'}
+// A copied SVG leads with only its third-party notice; files carry the full license header. Compare drawings.
+const drawing=(text:string)=>text.slice(text.indexOf('<svg')).trim()
 
 test('product controls open from their searchable names and expose all native masters',async({page})=>{
   await page.goto('/icons?size=16')
@@ -10,7 +12,7 @@ test('product controls open from their searchable names and expose all native ma
     await page.getByRole('button',{name:name.replaceAll('-',' '),exact:true}).click()
     const dialog=page.getByRole('dialog')
     await expect(dialog.locator('.master-cell svg')).toHaveCount(9)
-    const code=await dialog.locator('textarea').inputValue()
+    const code=drawing(await dialog.locator('textarea').inputValue())
     const response=await page.request.get('/icons/16/soft/'+name+'.svg')
     expect(response.ok()).toBe(true)
     expect(await response.text()).toContain(code)
