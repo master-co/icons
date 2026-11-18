@@ -13,4 +13,4 @@
 
 測試驗證完整性、公開 API、輸出安全性、打包、授權與使用流程，不為每個座標寫鏡像測試。外觀仍需人工審稿。
 
-製作、精修與審稿使用 [Master Icons skill](skills/master-icons/SKILL.md)。pilot 是審稿分組；不能據此自動新增第三方版權。獨立製作與研究參考、實際引用的差別見 skill 的 authorship reference。
+製作、精修與審稿使用 [Master Icons skill](.agents/skills/icon-craft/SKILL.md)。pilot 是審稿分組；不能據此自動新增第三方版權。獨立製作與研究參考、實際引用的差別見 skill 的 authorship reference。

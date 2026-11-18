@@ -22,7 +22,7 @@ const handoff=`# Master Icons · ${cycle}
 - [逐顆報告](docs/review/ui-v1/index.html)：來源、判斷、前後稿及目視證據；各列標示最近一次實際審查。
 - [精修案例](docs/review/${cycle}/summary.png) · [圖庫並排](docs/review/${cycle}/families.html) · [本輪修正](docs/${cycle}.md) · [驗證與限制](docs/validation.md)。
 - [SVG全套](master-icons-all-svg.zip) · [SVG／React套件](master-icons-alpha.tgz)。仍為private alpha，沒有發布npm或推送遠端。
-- 原生製作碼位於packages/icons/src/，版本化skill位於skills/master-icons/。來源及授權繼續保留。
+- 原生製作碼位於packages/icons/src/，版本化skill位於.agents/skills/icon-craft/。來源及授權繼續保留。
 
 工程結果、Codex目視與使用者最終定案分開記錄；最終定案待確認。Firefox仍未驗證；詳細範圍以驗證報告為準。
 
