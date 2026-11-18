@@ -1,0 +1,1040 @@
+[
+  {
+    "name": "tab-new",
+    "label": "新增分頁",
+    "category": "layout",
+    "categoryLabel": "應用與版面",
+    "keywords": [
+      "new-tab",
+      "open-tab"
+    ]
+  },
+  {
+    "name": "tab-close",
+    "label": "關閉分頁",
+    "category": "layout",
+    "categoryLabel": "應用與版面",
+    "keywords": [
+      "close-tab"
+    ]
+  },
+  {
+    "name": "tab-restore",
+    "label": "重開已關閉分頁",
+    "category": "layout",
+    "categoryLabel": "應用與版面",
+    "keywords": [
+      "reopen-tab",
+      "restore-tab"
+    ]
+  },
+  {
+    "name": "tab-pin",
+    "label": "固定分頁",
+    "category": "layout",
+    "categoryLabel": "應用與版面",
+    "keywords": [
+      "pin-tab"
+    ]
+  },
+  {
+    "name": "tab-search",
+    "label": "搜尋分頁",
+    "category": "layout",
+    "categoryLabel": "應用與版面",
+    "keywords": [
+      "search-tabs",
+      "tab-search-menu"
+    ]
+  },
+  {
+    "name": "window-new",
+    "label": "另開視窗",
+    "category": "layout",
+    "categoryLabel": "應用與版面",
+    "keywords": [
+      "new-window",
+      "open-window"
+    ]
+  },
+  {
+    "name": "window-restore",
+    "label": "還原視窗大小",
+    "category": "layout",
+    "categoryLabel": "應用與版面",
+    "keywords": [
+      "restore-down",
+      "unmaximize"
+    ]
+  },
+  {
+    "name": "window-minimize",
+    "label": "視窗最小化",
+    "category": "layout",
+    "categoryLabel": "應用與版面",
+    "keywords": [
+      "hide-window",
+      "minimize-window"
+    ]
+  },
+  {
+    "name": "monitor-smartphone",
+    "label": "桌機與手機",
+    "category": "connectivity",
+    "categoryLabel": "時間主題與連線",
+    "keywords": [
+      "responsive",
+      "cross-device",
+      "多裝置"
+    ]
+  },
+  {
+    "name": "screen-rotate",
+    "label": "旋轉螢幕",
+    "category": "connectivity",
+    "categoryLabel": "時間主題與連線",
+    "keywords": [
+      "device-rotation",
+      "auto-rotate"
+    ]
+  },
+  {
+    "name": "brightness-auto",
+    "label": "自動亮度",
+    "category": "connectivity",
+    "categoryLabel": "時間主題與連線",
+    "keywords": [
+      "auto-brightness",
+      "ambient-light"
+    ]
+  },
+  {
+    "name": "bluetooth-connected",
+    "label": "藍牙已連線",
+    "category": "connectivity",
+    "categoryLabel": "時間主題與連線",
+    "keywords": [
+      "bluetooth-paired",
+      "配對成功"
+    ]
+  },
+  {
+    "name": "signal-bars",
+    "label": "行動訊號強度",
+    "category": "connectivity",
+    "categoryLabel": "時間主題與連線",
+    "keywords": [
+      "cellular",
+      "reception",
+      "行動網路"
+    ]
+  },
+  {
+    "name": "signal-off",
+    "label": "無行動訊號",
+    "category": "connectivity",
+    "categoryLabel": "時間主題與連線",
+    "keywords": [
+      "no-service",
+      "cellular-off"
+    ]
+  },
+  {
+    "name": "hotspot",
+    "label": "個人熱點",
+    "category": "connectivity",
+    "categoryLabel": "時間主題與連線",
+    "keywords": [
+      "tethering",
+      "portable-hotspot"
+    ]
+  },
+  {
+    "name": "nfc",
+    "label": "近場感應",
+    "category": "connectivity",
+    "categoryLabel": "時間主題與連線",
+    "keywords": [
+      "near-field",
+      "contactless",
+      "感應"
+    ]
+  },
+  {
+    "name": "sim-card",
+    "label": "SIM 卡",
+    "category": "connectivity",
+    "categoryLabel": "時間主題與連線",
+    "keywords": [
+      "sim",
+      "cellular-card",
+      "電信卡"
+    ]
+  },
+  {
+    "name": "record-circle",
+    "label": "開始錄製",
+    "category": "playback",
+    "categoryLabel": "播放與會議",
+    "keywords": [
+      "record",
+      "recording",
+      "錄音"
+    ]
+  },
+  {
+    "name": "eject",
+    "label": "退出媒體",
+    "category": "playback",
+    "categoryLabel": "播放與會議",
+    "keywords": [
+      "eject-media",
+      "unmount"
+    ]
+  },
+  {
+    "name": "play-queue",
+    "label": "播放佇列",
+    "category": "playback",
+    "categoryLabel": "播放與會議",
+    "keywords": [
+      "playlist",
+      "queue",
+      "播放清單"
+    ]
+  },
+  {
+    "name": "queue-next",
+    "label": "插播下一首",
+    "category": "playback",
+    "categoryLabel": "播放與會議",
+    "keywords": [
+      "play-next",
+      "queue-insert"
+    ]
+  },
+  {
+    "name": "ab-repeat",
+    "label": "區段循環",
+    "category": "playback",
+    "categoryLabel": "播放與會議",
+    "keywords": [
+      "loop-region",
+      "repeat-a-b"
+    ]
+  },
+  {
+    "name": "playback-speed",
+    "label": "播放速度",
+    "category": "playback",
+    "categoryLabel": "播放與會議",
+    "keywords": [
+      "speed-control",
+      "playback-rate",
+      "倍速"
+    ]
+  },
+  {
+    "name": "captions-off",
+    "label": "關閉字幕",
+    "category": "playback",
+    "categoryLabel": "播放與會議",
+    "keywords": [
+      "subtitle-off",
+      "captions-disabled"
+    ]
+  },
+  {
+    "name": "screen-share-off",
+    "label": "停止分享螢幕",
+    "category": "playback",
+    "categoryLabel": "播放與會議",
+    "keywords": [
+      "stop-sharing",
+      "unshare-screen"
+    ]
+  },
+  {
+    "name": "passkey",
+    "label": "通行密鑰",
+    "category": "interface",
+    "categoryLabel": "產品介面",
+    "keywords": [
+      "webauthn",
+      "pass-key"
+    ]
+  },
+  {
+    "name": "password-field",
+    "label": "密碼欄位",
+    "category": "interface",
+    "categoryLabel": "產品介面",
+    "keywords": [
+      "password",
+      "masked-input",
+      "密碼輸入"
+    ]
+  },
+  {
+    "name": "one-time-code",
+    "label": "一次性驗證碼",
+    "category": "interface",
+    "categoryLabel": "產品介面",
+    "keywords": [
+      "otp",
+      "2fa",
+      "verification-code"
+    ]
+  },
+  {
+    "name": "incognito",
+    "label": "無痕瀏覽",
+    "category": "interface",
+    "categoryLabel": "產品介面",
+    "keywords": [
+      "private-browsing",
+      "incognito-mode"
+    ]
+  },
+  {
+    "name": "scan-qr-code",
+    "label": "掃描 QR 碼",
+    "category": "interface",
+    "categoryLabel": "產品介面",
+    "keywords": [
+      "scan-qr",
+      "qr-scanner"
+    ]
+  },
+  {
+    "name": "user-switch",
+    "label": "切換使用者",
+    "category": "interface",
+    "categoryLabel": "產品介面",
+    "keywords": [
+      "switch-account",
+      "change-user"
+    ]
+  },
+  {
+    "name": "users-plus",
+    "label": "邀請群組成員",
+    "category": "interface",
+    "categoryLabel": "產品介面",
+    "keywords": [
+      "group-add",
+      "invite-team",
+      "新增成員"
+    ]
+  },
+  {
+    "name": "shield-lock",
+    "label": "安全性鎖定",
+    "category": "interface",
+    "categoryLabel": "產品介面",
+    "keywords": [
+      "protected",
+      "secure-area"
+    ]
+  },
+  {
+    "name": "bell-snooze",
+    "label": "稍後提醒",
+    "category": "interface",
+    "categoryLabel": "產品介面",
+    "keywords": [
+      "snooze-notification",
+      "bell-sleep"
+    ]
+  },
+  {
+    "name": "stroke-cap-butt",
+    "label": "平切端點",
+    "category": "design-tools",
+    "categoryLabel": "畫布編輯工具",
+    "keywords": [
+      "butt-cap",
+      "flat-cap"
+    ]
+  },
+  {
+    "name": "stroke-cap-round",
+    "label": "圓形端點",
+    "category": "design-tools",
+    "categoryLabel": "畫布編輯工具",
+    "keywords": [
+      "round-cap",
+      "linecap-round"
+    ]
+  },
+  {
+    "name": "stroke-cap-square",
+    "label": "方形突出端點",
+    "category": "design-tools",
+    "categoryLabel": "畫布編輯工具",
+    "keywords": [
+      "square-cap",
+      "projecting-cap"
+    ]
+  },
+  {
+    "name": "stroke-join-miter",
+    "label": "尖角接合",
+    "category": "design-tools",
+    "categoryLabel": "畫布編輯工具",
+    "keywords": [
+      "miter-join",
+      "linejoin-miter"
+    ]
+  },
+  {
+    "name": "stroke-join-round",
+    "label": "圓角接合",
+    "category": "design-tools",
+    "categoryLabel": "畫布編輯工具",
+    "keywords": [
+      "round-join",
+      "linejoin-round"
+    ]
+  },
+  {
+    "name": "stroke-join-bevel",
+    "label": "斜切接合",
+    "category": "design-tools",
+    "categoryLabel": "畫布編輯工具",
+    "keywords": [
+      "bevel-join",
+      "linejoin-bevel"
+    ]
+  },
+  {
+    "name": "stroke-double",
+    "label": "雙線描邊",
+    "category": "design-tools",
+    "categoryLabel": "畫布編輯工具",
+    "keywords": [
+      "double-line",
+      "double-stroke"
+    ]
+  },
+  {
+    "name": "stroke-dotted",
+    "label": "點狀描邊",
+    "category": "design-tools",
+    "categoryLabel": "畫布編輯工具",
+    "keywords": [
+      "dotted-line",
+      "dot-pattern"
+    ]
+  },
+  {
+    "name": "arc",
+    "label": "圓弧工具",
+    "category": "design-tools",
+    "categoryLabel": "畫布編輯工具",
+    "keywords": [
+      "circular-arc",
+      "open-arc"
+    ]
+  },
+  {
+    "name": "spiral",
+    "label": "螺旋工具",
+    "category": "design-tools",
+    "categoryLabel": "畫布編輯工具",
+    "keywords": [
+      "coil",
+      "spiral-tool"
+    ]
+  },
+  {
+    "name": "line-segment",
+    "label": "線段工具",
+    "category": "design-tools",
+    "categoryLabel": "畫布編輯工具",
+    "keywords": [
+      "draw-line",
+      "straight-line"
+    ]
+  },
+  {
+    "name": "polyline",
+    "label": "折線工具",
+    "category": "design-tools",
+    "categoryLabel": "畫布編輯工具",
+    "keywords": [
+      "open-path",
+      "polygonal-line"
+    ]
+  },
+  {
+    "name": "right-triangle",
+    "label": "直角三角形",
+    "category": "design-tools",
+    "categoryLabel": "畫布編輯工具",
+    "keywords": [
+      "triangle-right",
+      "set-square"
+    ]
+  },
+  {
+    "name": "parallelogram",
+    "label": "平行四邊形",
+    "category": "design-tools",
+    "categoryLabel": "畫布編輯工具",
+    "keywords": [
+      "flowchart-data",
+      "slanted-box"
+    ]
+  },
+  {
+    "name": "trapezoid",
+    "label": "梯形",
+    "category": "design-tools",
+    "categoryLabel": "畫布編輯工具",
+    "keywords": [
+      "trapezium",
+      "trapezoid-tool"
+    ]
+  },
+  {
+    "name": "semicircle",
+    "label": "半圓形",
+    "category": "design-tools",
+    "categoryLabel": "畫布編輯工具",
+    "keywords": [
+      "half-circle",
+      "half-disc"
+    ]
+  },
+  {
+    "name": "sector",
+    "label": "圓扇形",
+    "category": "design-tools",
+    "categoryLabel": "畫布編輯工具",
+    "keywords": [
+      "pie-sector",
+      "circle-sector"
+    ]
+  },
+  {
+    "name": "selection-add",
+    "label": "擴大選取範圍",
+    "category": "design-tools",
+    "categoryLabel": "畫布編輯工具",
+    "keywords": [
+      "add-to-selection",
+      "select-add"
+    ]
+  },
+  {
+    "name": "selection-subtract",
+    "label": "縮減選取範圍",
+    "category": "design-tools",
+    "categoryLabel": "畫布編輯工具",
+    "keywords": [
+      "subtract-from-selection",
+      "select-remove"
+    ]
+  },
+  {
+    "name": "selection-intersect",
+    "label": "選取交集",
+    "category": "design-tools",
+    "categoryLabel": "畫布編輯工具",
+    "keywords": [
+      "intersect-selection",
+      "select-intersection"
+    ]
+  },
+  {
+    "name": "selection-invert",
+    "label": "反向選取",
+    "category": "design-tools",
+    "categoryLabel": "畫布編輯工具",
+    "keywords": [
+      "invert-selection",
+      "inverse-selection"
+    ]
+  },
+  {
+    "name": "zoom-selection",
+    "label": "縮放至選取範圍",
+    "category": "design-tools",
+    "categoryLabel": "畫布編輯工具",
+    "keywords": [
+      "zoom-to-selection",
+      "fit-selection"
+    ]
+  },
+  {
+    "name": "zoom-actual-size",
+    "label": "以原始大小顯示",
+    "category": "design-tools",
+    "categoryLabel": "畫布編輯工具",
+    "keywords": [
+      "actual-size",
+      "zoom-100",
+      "1-to-1"
+    ]
+  },
+  {
+    "name": "lock-aspect-ratio",
+    "label": "鎖定長寬比",
+    "category": "design-tools",
+    "categoryLabel": "畫布編輯工具",
+    "keywords": [
+      "constrain-proportions",
+      "aspect-lock"
+    ]
+  },
+  {
+    "name": "unlock-aspect-ratio",
+    "label": "解除長寬比鎖定",
+    "category": "design-tools",
+    "categoryLabel": "畫布編輯工具",
+    "keywords": [
+      "unconstrain-proportions",
+      "free-resize"
+    ]
+  },
+  {
+    "name": "exposure",
+    "label": "曝光補償",
+    "category": "design-tools",
+    "categoryLabel": "畫布編輯工具",
+    "keywords": [
+      "exposure-compensation",
+      "ev",
+      "曝光值"
+    ]
+  },
+  {
+    "name": "color-temperature",
+    "label": "色溫",
+    "category": "design-tools",
+    "categoryLabel": "畫布編輯工具",
+    "keywords": [
+      "white-balance",
+      "warmth",
+      "冷暖"
+    ]
+  },
+  {
+    "name": "color-tint",
+    "label": "色調偏移",
+    "category": "design-tools",
+    "categoryLabel": "畫布編輯工具",
+    "keywords": [
+      "tint",
+      "tint-adjustment",
+      "色偏"
+    ]
+  },
+  {
+    "name": "color-curves",
+    "label": "色調曲線",
+    "category": "design-tools",
+    "categoryLabel": "畫布編輯工具",
+    "keywords": [
+      "tone-curve",
+      "rgb-curves"
+    ]
+  },
+  {
+    "name": "color-levels",
+    "label": "色階",
+    "category": "design-tools",
+    "categoryLabel": "畫布編輯工具",
+    "keywords": [
+      "levels",
+      "black-point",
+      "white-point"
+    ]
+  },
+  {
+    "name": "vignette",
+    "label": "暗角",
+    "category": "design-tools",
+    "categoryLabel": "畫布編輯工具",
+    "keywords": [
+      "lens-vignette",
+      "falloff"
+    ]
+  },
+  {
+    "name": "sharpen",
+    "label": "銳利化",
+    "category": "design-tools",
+    "categoryLabel": "畫布編輯工具",
+    "keywords": [
+      "sharpen-image",
+      "sharpness"
+    ]
+  },
+  {
+    "name": "blur",
+    "label": "模糊",
+    "category": "design-tools",
+    "categoryLabel": "畫布編輯工具",
+    "keywords": [
+      "soft-focus",
+      "blur-image"
+    ]
+  },
+  {
+    "name": "straighten",
+    "label": "校正水平",
+    "category": "design-tools",
+    "categoryLabel": "畫布編輯工具",
+    "keywords": [
+      "level-horizon",
+      "deskew",
+      "拉直"
+    ]
+  },
+  {
+    "name": "paste-plain-text",
+    "label": "貼上純文字",
+    "category": "editor",
+    "categoryLabel": "內容編輯",
+    "keywords": [
+      "paste-as-text",
+      "unformatted",
+      "純文字貼上"
+    ]
+  },
+  {
+    "name": "paste-values",
+    "label": "只貼上數值",
+    "category": "editor",
+    "categoryLabel": "內容編輯",
+    "keywords": [
+      "paste-values-only",
+      "paste-numbers"
+    ]
+  },
+  {
+    "name": "paste-formula",
+    "label": "只貼上公式",
+    "category": "editor",
+    "categoryLabel": "內容編輯",
+    "keywords": [
+      "paste-formulas",
+      "formula-paste"
+    ]
+  },
+  {
+    "name": "paste-format",
+    "label": "只貼上格式",
+    "category": "editor",
+    "categoryLabel": "內容編輯",
+    "keywords": [
+      "paste-formatting",
+      "paste-style"
+    ]
+  },
+  {
+    "name": "paste-link",
+    "label": "貼上連結",
+    "category": "editor",
+    "categoryLabel": "內容編輯",
+    "keywords": [
+      "paste-as-link",
+      "linked-paste"
+    ]
+  },
+  {
+    "name": "format-painter",
+    "label": "格式刷",
+    "category": "editor",
+    "categoryLabel": "內容編輯",
+    "keywords": [
+      "paint-format",
+      "clone-format",
+      "複製格式"
+    ]
+  },
+  {
+    "name": "clear-contents",
+    "label": "清除儲存格內容",
+    "category": "editor",
+    "categoryLabel": "內容編輯",
+    "keywords": [
+      "clear-cell",
+      "clear-values"
+    ]
+  },
+  {
+    "name": "clear-highlighting",
+    "label": "清除文字醒目提示",
+    "category": "editor",
+    "categoryLabel": "內容編輯",
+    "keywords": [
+      "remove-highlight",
+      "unhighlight"
+    ]
+  },
+  {
+    "name": "freeze-first-row",
+    "label": "凍結首列",
+    "category": "table-layout",
+    "categoryLabel": "表格結構與面板",
+    "keywords": [
+      "freeze-row",
+      "freeze-top-row"
+    ]
+  },
+  {
+    "name": "freeze-first-column",
+    "label": "凍結首欄",
+    "category": "table-layout",
+    "categoryLabel": "表格結構與面板",
+    "keywords": [
+      "freeze-column",
+      "freeze-left-column"
+    ]
+  },
+  {
+    "name": "freeze-panes",
+    "label": "凍結窗格",
+    "category": "table-layout",
+    "categoryLabel": "表格結構與面板",
+    "keywords": [
+      "freeze-cells",
+      "frozen-panes"
+    ]
+  },
+  {
+    "name": "sort-a-z",
+    "label": "依字母升冪排序",
+    "category": "table-layout",
+    "categoryLabel": "表格結構與面板",
+    "keywords": [
+      "sort-alphabetical-ascending",
+      "ascending-letters"
+    ]
+  },
+  {
+    "name": "sort-z-a",
+    "label": "依字母降冪排序",
+    "category": "table-layout",
+    "categoryLabel": "表格結構與面板",
+    "keywords": [
+      "sort-alphabetical-descending",
+      "descending-letters"
+    ]
+  },
+  {
+    "name": "decimal-increase",
+    "label": "增加小數位數",
+    "category": "table-layout",
+    "categoryLabel": "表格結構與面板",
+    "keywords": [
+      "increase-decimal",
+      "add-decimal-place"
+    ]
+  },
+  {
+    "name": "decimal-decrease",
+    "label": "減少小數位數",
+    "category": "table-layout",
+    "categoryLabel": "表格結構與面板",
+    "keywords": [
+      "decrease-decimal",
+      "remove-decimal-place"
+    ]
+  },
+  {
+    "name": "cell-reference-absolute",
+    "label": "絕對儲存格參照",
+    "category": "table-layout",
+    "categoryLabel": "表格結構與面板",
+    "keywords": [
+      "absolute-reference",
+      "fixed-cell",
+      "dollar-reference"
+    ]
+  },
+  {
+    "name": "cell-reference-relative",
+    "label": "相對儲存格參照",
+    "category": "table-layout",
+    "categoryLabel": "表格結構與面板",
+    "keywords": [
+      "relative-reference",
+      "offset-cell"
+    ]
+  },
+  {
+    "name": "fold-code",
+    "label": "摺疊程式碼",
+    "category": "editor",
+    "categoryLabel": "內容編輯",
+    "keywords": [
+      "fold-region",
+      "collapse-code"
+    ]
+  },
+  {
+    "name": "unfold-code",
+    "label": "展開程式碼",
+    "category": "editor",
+    "categoryLabel": "內容編輯",
+    "keywords": [
+      "unfold-region",
+      "expand-code"
+    ]
+  },
+  {
+    "name": "toggle-line-comment",
+    "label": "切換單行註解",
+    "category": "editor",
+    "categoryLabel": "內容編輯",
+    "keywords": [
+      "comment-line",
+      "slash-slash"
+    ]
+  },
+  {
+    "name": "toggle-block-comment",
+    "label": "切換區塊註解",
+    "category": "editor",
+    "categoryLabel": "內容編輯",
+    "keywords": [
+      "comment-block",
+      "block-comment"
+    ]
+  },
+  {
+    "name": "show-whitespace",
+    "label": "顯示空白字元",
+    "category": "editor",
+    "categoryLabel": "內容編輯",
+    "keywords": [
+      "render-whitespace",
+      "invisible-characters"
+    ]
+  },
+  {
+    "name": "multi-cursor",
+    "label": "多重游標",
+    "category": "editor",
+    "categoryLabel": "內容編輯",
+    "keywords": [
+      "add-cursor",
+      "multiple-carets"
+    ]
+  },
+  {
+    "name": "go-to-line",
+    "label": "跳至行號",
+    "category": "editor",
+    "categoryLabel": "內容編輯",
+    "keywords": [
+      "goto-line",
+      "jump-to-line"
+    ]
+  },
+  {
+    "name": "matching-brackets",
+    "label": "跳至配對括號",
+    "category": "editor",
+    "categoryLabel": "內容編輯",
+    "keywords": [
+      "jump-to-bracket",
+      "bracket-match"
+    ]
+  },
+  {
+    "name": "font-size-increase",
+    "label": "放大字級",
+    "category": "typography",
+    "categoryLabel": "進階文字編輯",
+    "keywords": [
+      "grow-font",
+      "increase-font-size"
+    ]
+  },
+  {
+    "name": "font-size-decrease",
+    "label": "縮小字級",
+    "category": "typography",
+    "categoryLabel": "進階文字編輯",
+    "keywords": [
+      "shrink-font",
+      "decrease-font-size"
+    ]
+  },
+  {
+    "name": "double-underline",
+    "label": "雙底線",
+    "category": "typography",
+    "categoryLabel": "進階文字編輯",
+    "keywords": [
+      "underline-double",
+      "double-rule"
+    ]
+  },
+  {
+    "name": "dotted-underline",
+    "label": "點狀底線",
+    "category": "typography",
+    "categoryLabel": "進階文字編輯",
+    "keywords": [
+      "underline-dotted",
+      "dotted-rule"
+    ]
+  },
+  {
+    "name": "wavy-underline",
+    "label": "波浪底線",
+    "category": "typography",
+    "categoryLabel": "進階文字編輯",
+    "keywords": [
+      "underline-wavy",
+      "spelling-underline"
+    ]
+  },
+  {
+    "name": "overline",
+    "label": "上劃線",
+    "category": "typography",
+    "categoryLabel": "進階文字編輯",
+    "keywords": [
+      "text-overline",
+      "format-overline"
+    ]
+  },
+  {
+    "name": "text-outline",
+    "label": "文字外框",
+    "category": "typography",
+    "categoryLabel": "進階文字編輯",
+    "keywords": [
+      "hollow-text",
+      "outline-text"
+    ]
+  },
+  {
+    "name": "drop-cap",
+    "label": "首字放大",
+    "category": "typography",
+    "categoryLabel": "進階文字編輯",
+    "keywords": [
+      "initial-letter",
+      "dropped-cap"
+    ]
+  },
+  {
+    "name": "vertical-text",
+    "label": "直書排版",
+    "category": "typography",
+    "categoryLabel": "進階文字編輯",
+    "keywords": [
+      "vertical-writing",
+      "writing-mode",
+      "直排"
+    ]
+  }
+]

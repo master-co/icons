@@ -16,8 +16,9 @@ import {discussion} from './writer/discussion.mjs';
 import {mathTools} from './writer/math.mjs';
 import {publishing} from './writer/publishing.mjs';
 import {changes} from './writer/changes.mjs';
+import {workbenchDrawings} from './workbench/index.mjs';
 const writer={...typeTools,...proofing,...blocks,...tables,...borderTools,...images,...discussion,...mathTools,...publishing,...changes};
-export const drawings={...coreDrawings,...additions,...expansion,...atlas,...productDrawings,...interfaceDrawings,...canvasDrawings,...editorDrawings,...writer,...brandDrawings};
+export const drawings={...coreDrawings,...additions,...expansion,...atlas,...productDrawings,...interfaceDrawings,...canvasDrawings,...editorDrawings,...writer,...workbenchDrawings,...brandDrawings};
 
 export function draw(name,g){
   if(!drawings[name])throw new Error(`Missing drawing: ${name}`);

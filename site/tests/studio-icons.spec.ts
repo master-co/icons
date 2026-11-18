@@ -1,10 +1,15 @@
 import {expect, test} from '@playwright/test'
 import {readFile} from 'node:fs/promises'
-import scope from '../../packages/icons/src/studio-scope.json' with {type:'json'}
+import studio from '../../packages/icons/src/studio-scope.json' with {type:'json'}
+import workbench from '../../packages/icons/src/workbench-scope.json' with {type:'json'}
 
-for (const [index, family] of ['interface', 'canvas', 'editor'].entries()) {
-  test(`studio ${family} commands have searchable names and nine downloadable masters`, async ({page}) => {
-    const entries = scope.slice(index * 36, (index + 1) * 36)
+const batches = [
+  ...['interface', 'canvas', 'editor'].map((family, i) => ({label: 'studio ' + family, entries: studio.slice(i * 36, (i + 1) * 36)})),
+  ...['interface', 'canvas', 'editor'].map((family, i) => ({label: 'workbench ' + family, entries: workbench.slice(i * 34, (i + 1) * 34)})),
+]
+
+for (const {label, entries} of batches) {
+  test(`${label} commands have searchable names and nine downloadable masters`, async ({page}) => {
     await page.goto('/icons?size=16')
     await expect(page.locator('astro-island[ssr]')).toHaveCount(0)
     const search = page.getByRole('searchbox', {name: 'Search icons', exact: true})

@@ -1,0 +1,614 @@
+{
+  "tab-new": {
+    "group": "分頁與視窗",
+    "peer": "app-window",
+    "decision": "分頁上緣保留頁籤肩部，加號置於內容中央，能與另開視窗並排。",
+    "sourceObservation": "分頁初稿的階梯形上緣容易讀成資料夾，改用完整視窗包住頁籤分隔線。"
+  },
+  "tab-close": {
+    "group": "分頁與視窗",
+    "peer": "x",
+    "decision": "叉號收在頁籤本體，關閉範圍限定為目前這個分頁。",
+    "sourceObservation": "既有關閉符號可用於單一按鈕，嵌入頁籤後可以指明關閉範圍。"
+  },
+  "tab-restore": {
+    "group": "分頁與視窗",
+    "peer": "undo",
+    "decision": "回轉箭頭收進頁籤，向左轉折讓重新開啟與重新整理有所區別。",
+    "sourceObservation": "來源的迴轉箭頭佔滿畫面，候選縮短箭尾以便容納在分頁內部。"
+  },
+  "tab-pin": {
+    "group": "分頁與視窗",
+    "peer": "pin",
+    "decision": "頁籤右下為圖釘保留寬頂帽，針尖向下露出視窗，與關閉分頁的叉號分開。",
+    "sourceObservation": "初稿斜釘在 16px 容易像叉號，將頂帽放平、延長垂直針尖。"
+  },
+  "tab-search": {
+    "group": "分頁與視窗",
+    "peer": "search",
+    "decision": "放大鏡跨出頁籤下緣，與網址列的一般搜尋區分操作範圍。",
+    "sourceObservation": "放大鏡外露的鏡柄比塞進頁面更容易讀成搜尋。"
+  },
+  "window-new": {
+    "group": "分頁與視窗",
+    "peer": "app-window",
+    "decision": "完整標題列橫跨兩端，與單一突起肩部的新分頁形成對照。",
+    "sourceObservation": "來源中的完整視窗上框保留，加號向下移，與標題列分出兩層。"
+  },
+  "window-restore": {
+    "group": "分頁與視窗",
+    "peer": "minimize",
+    "decision": "前後兩個視窗只留一組完整外框，露出的後框代表還原大小。",
+    "sourceObservation": "後窗只露出兩邊，讓前後錯位在最細描邊時仍然清楚。"
+  },
+  "window-minimize": {
+    "group": "分頁與視窗",
+    "peer": "minus",
+    "decision": "短橫落在視窗底部，與視窗中央的移除符號拉開。",
+    "sourceObservation": "保留視窗底部橫長的最小化符號，標題列避免再塞入控制點。"
+  },
+  "monitor-smartphone": {
+    "group": "裝置與連線",
+    "peer": "monitor",
+    "decision": "大螢幕基座與窄手機並置，在安裝頁同時保留兩種裝置輪廓。",
+    "sourceObservation": "只保留桌機的支腳及手機直框，手機實際遮住桌機右下角。"
+  },
+  "screen-rotate": {
+    "group": "裝置與連線",
+    "peer": "rotate-right",
+    "decision": "將直向手機傾斜，外部彎箭頭指出切換顯示方向的動作。",
+    "sourceObservation": "參考的手機斜置很清楚，旋轉箭頭放到外側，以免和手機底邊重疊。"
+  },
+  "brightness-auto": {
+    "group": "裝置與連線",
+    "peer": "sun",
+    "decision": "以環狀光芒包住字母 A，維持亮度設定與自動模式兩項線索。",
+    "sourceObservation": "光圈的短峰交替形成亮度標記，放大 A 字的開口，避免小圖聚成實點。"
+  },
+  "bluetooth-connected": {
+    "group": "裝置與連線",
+    "peer": "bluetooth",
+    "decision": "沿著藍牙交叉軸兩側各留一點，顯示已配對的連線狀態。",
+    "sourceObservation": "藍牙符號本身有尖角，左右標記用圓點能保持分隔。"
+  },
+  "signal-bars": {
+    "group": "裝置與連線",
+    "peer": "wifi",
+    "decision": "以四條逐高直柱顯示收訊格數，底部共線方便狀態列讀值。",
+    "sourceObservation": "遞增直柱比同心弧更能與 Wi-Fi 讀成兩個不同設定。"
+  },
+  "signal-off": {
+    "group": "裝置與連線",
+    "peer": "wifi-off",
+    "decision": "保留短柱的升高順序，獨立叉號佔據高柱端，表達行動網路無服務。",
+    "sourceObservation": "只保留兩根低柱，高端直接交給叉號，縮小時仍保有斷線訊號。"
+  },
+  "hotspot": {
+    "group": "裝置與連線",
+    "peer": "wifi",
+    "decision": "中央發射點向左右擴散，和朝單一方向開口的 Wi-Fi 區隔。",
+    "sourceObservation": "兩側同時發散的波弧比朝上的 Wi-Fi 傘形更適合表示發射點。"
+  },
+  "nfc": {
+    "group": "裝置與連線",
+    "peer": "cast",
+    "decision": "縮短近端弧、拉長遠端弧，以面向側方的平行波表示近距離感應。",
+    "sourceObservation": "保留側向感應波，四段弧的高度逐步改變以強化方向。"
+  },
+  "sim-card": {
+    "group": "裝置與連線",
+    "peer": "memory-stick",
+    "decision": "直卡外形削去一角，接點只留下能在小尺寸分辨的幾塊。",
+    "sourceObservation": "來源的缺角卡形已足夠，16px 省掉一條微小的接點隔線。"
+  },
+  "record-circle": {
+    "group": "播放與投放",
+    "peer": "circle",
+    "decision": "圓框中央置實點，保留足夠環隙，可與播放及停止並排。",
+    "sourceObservation": "保留環與中心錄製點，在 16px 放大兩者之間的空白。"
+  },
+  "eject": {
+    "group": "播放與投放",
+    "peer": "upload",
+    "decision": "扁三角和下方托線完全分離，形成媒體退出鍵的熟悉輪廓。",
+    "sourceObservation": "退出鍵的底線和三角體要分離，三角略扁可留出這道空隙。"
+  },
+  "play-queue": {
+    "group": "播放與投放",
+    "peer": "list",
+    "decision": "清單末排讓出播放三角，能在播放器裡區分曲目清單與一般列表。",
+    "sourceObservation": "來源常用三角和清單互相重疊，這裡縮短末兩行，保留三角獨立輪廓。"
+  },
+  "queue-next": {
+    "group": "播放與投放",
+    "peer": "skip-forward",
+    "decision": "最上兩行之間插入折返箭頭，表達插隊而非立即跳過目前歌曲。",
+    "sourceObservation": "來源用加號表示加入清單，插播改用折箭頭對齊中間一列。"
+  },
+  "ab-repeat": {
+    "group": "播放與投放",
+    "peer": "repeat",
+    "decision": "將 A、B 分列兩端，以折返路徑連接，標出使用者指定的區間。",
+    "sourceObservation": "A 和 B 的字腹比箭圈更需要空間，只在兩字下方保留回程箭頭。"
+  },
+  "playback-speed": {
+    "group": "播放與投放",
+    "peer": "gauge",
+    "decision": "弧形刻度包住向右三角，讓速度控制保有播放器的視覺語境。",
+    "sourceObservation": "短刻度協助讀出儀表，中央採播放三角，仍可辨認播放器用途。"
+  },
+  "captions-off": {
+    "group": "播放與投放",
+    "peer": "subtitles",
+    "decision": "字幕框和底部字幕線避開斜線，仍能從未遮住的上緣讀出字幕框。",
+    "sourceObservation": "沿用現有字幕字行，以透明切口隔開斜線和內文。"
+  },
+  "screen-share-off": {
+    "group": "播放與投放",
+    "peer": "screen-share",
+    "decision": "螢幕支腳保留，右上叉號取代分享箭頭，區別停止分享與關閉攝影機。",
+    "sourceObservation": "初稿同時疊上斜線和分享箭頭太密，改在原箭頭處單獨放叉號。"
+  },
+  "passkey": {
+    "group": "帳戶與安全",
+    "peer": "key",
+    "decision": "人像和短鑰匙並置，在登入選項中標明個人持有的通行密鑰。",
+    "sourceObservation": "參考的鑰匙和人像需同時看得清，選用直向鑰匙節省橫向空間。"
+  },
+  "password-field": {
+    "group": "帳戶與安全",
+    "peer": "eye-off",
+    "decision": "長輸入框內三個隱碼點等距排列，保留兩端填寫空間。",
+    "sourceObservation": "三個遮蔽點改放進單一完整輸入框，以區隔驗證碼的小框。"
+  },
+  "one-time-code": {
+    "group": "帳戶與安全",
+    "peer": "key-square",
+    "decision": "分開的數字槽各留一筆字元，輸入驗證碼時可與單一密碼框區分。",
+    "sourceObservation": "兩個分離的欄位已足夠表示分格輸入，16px 不再加入第三格。"
+  },
+  "incognito": {
+    "group": "帳戶與安全",
+    "peer": "eye-off",
+    "decision": "低帽沿下並列兩個鏡片，讓無痕視窗具備獨立的人物剪影。",
+    "sourceObservation": "帽沿寬度涵蓋兩個鏡片，鏡橋居中，帽冠保留凹口。"
+  },
+  "scan-qr-code": {
+    "group": "帳戶與安全",
+    "peer": "qr-code",
+    "decision": "掃描框裡只保留定位方塊及一處資料角，表達開啟掃碼器。",
+    "sourceObservation": "參考的四角取景框和靜態碼不同，碼點只留三個定位塊。"
+  },
+  "user-switch": {
+    "group": "帳戶與安全",
+    "peer": "user",
+    "decision": "保留單人頭肩，在右側畫方向相反的箭頭，顯示帳號切換。",
+    "sourceObservation": "保留現有帳戶的頭肩方向，兩支箭頭放在側邊以免壓住頭部。"
+  },
+  "users-plus": {
+    "group": "帳戶與安全",
+    "peer": "user-plus",
+    "decision": "透過後方第二個頭部表示群組，將邀請加號留在右下空白。",
+    "sourceObservation": "第二個人只露出頭部彎線，避免兩副肩線和邀請記號爭位。"
+  },
+  "shield-lock": {
+    "group": "帳戶與安全",
+    "peer": "shield",
+    "decision": "鎖梁與鎖體落在盾牌最寬處，避免尖底壓迫內部空間。",
+    "sourceObservation": "盾底收束處容易夾住鎖體，鎖梁和鎖身均移到中段。"
+  },
+  "bell-snooze": {
+    "group": "帳戶與安全",
+    "peer": "bell-off",
+    "decision": "鐘體靠左留出口，右上方的 Z 表示提醒將稍後恢復。",
+    "sourceObservation": "Z 的斜段與鈴身之間留真空隙，縮排右上角以保住粗線外緣。"
+  },
+  "stroke-cap-butt": {
+    "group": "描邊端點與轉角",
+    "peer": "stroke-width",
+    "decision": "以上下兩個短標記標出路徑端點，描邊在該處平切收束。",
+    "sourceObservation": "上下引線定出端點位置，方口剛好對齊兩標，才讀得出平切。"
+  },
+  "stroke-cap-round": {
+    "group": "描邊端點與轉角",
+    "peer": "stroke-width",
+    "decision": "膠囊形筆端超出基準半個筆寬，曲面與上下邊保持相切。",
+    "sourceObservation": "參考端帽帶有連續圓弧，半圓的起點正好接到兩條直邊。"
+  },
+  "stroke-cap-square": {
+    "group": "描邊端點與轉角",
+    "peer": "stroke-width",
+    "decision": "方端越過基準線，讓其與剛好停在基準的平切端點可並排判讀。",
+    "sourceObservation": "突出端的長度等於名義半筆寬，超出上下標線的距離可和另兩款比較。"
+  },
+  "stroke-join-miter": {
+    "group": "描邊端點與轉角",
+    "peer": "node-corner",
+    "decision": "折線外肩延伸成一個尖峰，內側直角固定供三種接合比較。",
+    "sourceObservation": "初稿雙折線接近向上雙箭頭，改成直角筆畫剖面，外肩清楚凸出。"
+  },
+  "stroke-join-round": {
+    "group": "描邊端點與轉角",
+    "peer": "corner-radius",
+    "decision": "將接合外肩做成連續圓弧，筆畫兩臂與其餘接合款相同。",
+    "sourceObservation": "共用直角筆畫的內凹口，只把外側改成一段四分之一圓弧。"
+  },
+  "stroke-join-bevel": {
+    "group": "描邊端點與轉角",
+    "peer": "node-corner",
+    "decision": "將外側直角削成斜面，讓它與尖角和弧形接合容易區分。",
+    "sourceObservation": "沿用同一個內直角與兩臂寬度，外肩單獨削成斜面。"
+  },
+  "stroke-double": {
+    "group": "描邊端點與轉角",
+    "peer": "stroke-width",
+    "decision": "兩條連續斜線共享方向和長度，雙線筆刷可與單線筆刷對照。",
+    "sourceObservation": "等長斜線更像描邊樣本，可與水平等號及三條線寬樣本區分。"
+  },
+  "stroke-dotted": {
+    "group": "描邊端點與轉角",
+    "peer": "stroke-dashed",
+    "decision": "等距圓點形成完整筆畫樣本，預覽和虛線樣本使用不同節奏。",
+    "sourceObservation": "來源點列常是三點選單，候選改用五點並拉長水平跨度。"
+  },
+  "arc": {
+    "group": "向量形狀",
+    "peer": "bezier-curve",
+    "decision": "開放圓弧兩端落在同一基線，單一弧腹留下可辨的內側空間。",
+    "sourceObservation": "參考有控制點，基本圓弧工具採真正半圓，讓工具形狀本身最清楚。"
+  },
+  "spiral": {
+    "group": "向量形狀",
+    "peer": "spline",
+    "decision": "半徑連續縮小，中心留出小開口，與封閉的同心圓區分。",
+    "sourceObservation": "參考有盤旋及彈簧兩種方向，採平面向心盤旋，中心不閉合。"
+  },
+  "line-segment": {
+    "group": "向量形狀",
+    "peer": "slash",
+    "decision": "兩個端點把斜線限定成有起終點的線段，適合與路徑工具並排。",
+    "sourceObservation": "參考端點使用圓或方控制點，選圓點並讓線段收在其外緣。"
+  },
+  "polyline": {
+    "group": "向量形狀",
+    "peer": "vector-polygon",
+    "decision": "開放折線保留兩個轉折，起點與終點之間留下清楚斷口。",
+    "sourceObservation": "保留折線兩次變向，僅起終點略加重，讓內側彎折保持通透。"
+  },
+  "right-triangle": {
+    "group": "向量形狀",
+    "peer": "triangle",
+    "decision": "保留垂直邊與水平底邊交會的直角，與對稱三角形區分。",
+    "sourceObservation": "候選用垂直邊直接提示直角，16px 無需再疊一個小方框。"
+  },
+  "parallelogram": {
+    "group": "向量形狀",
+    "peer": "diamond",
+    "decision": "上底與下底同寬並水平錯位，適合標示流程圖的輸入輸出。",
+    "sourceObservation": "保留兩組平行對邊，角半徑局限在端點，避免斜邊變成橢圓。"
+  },
+  "trapezoid": {
+    "group": "向量形狀",
+    "peer": "vector-polygon",
+    "decision": "短上底置中、下底展寬，形成與平行四邊形不同的斜邊節奏。",
+    "sourceObservation": "兩條腰拉向長底邊，以輪廓直接表現梯形，省去工具輔助線。"
+  },
+  "semicircle": {
+    "group": "向量形狀",
+    "peer": "ellipse",
+    "decision": "直徑形成完整底邊，弧頂抬高到半徑高度，與開放圓弧並列。",
+    "sourceObservation": "參考半滿圓保留整圓邊界，作為形狀工具則只保留真正的半圓輪廓。"
+  },
+  "sector": {
+    "group": "向量形狀",
+    "peer": "chart-pie",
+    "decision": "保留兩條半徑和一段圓弧，中心尖點表明可設定角度的形狀。",
+    "sourceObservation": "來源圓餅的其餘部分會暗示資料，抽出單一扇面來代表可編輯物件。"
+  },
+  "selection-add": {
+    "group": "選取與縮放",
+    "peer": "selection",
+    "decision": "斷續選框旁保留獨立加號，表示把下一次圈選加入現有選區。",
+    "sourceObservation": "選框本身無須封閉，讓出右下邊緣供加號完整顯示。"
+  },
+  "selection-subtract": {
+    "group": "選取與縮放",
+    "peer": "selection",
+    "decision": "減號沿用加選的徽標位置，讓同工具內的兩個選取模式成對。",
+    "sourceObservation": "水平減號加寬至接近一段框邊，保持右下位置以對應加選。"
+  },
+  "selection-intersect": {
+    "group": "選取與縮放",
+    "peer": "boolean-intersect",
+    "decision": "兩個選區只將重合部分畫為完整邊界，角落短線交代原選區。",
+    "sourceObservation": "中心實框保留交集，外面兩對角標描出選區來源。"
+  },
+  "selection-invert": {
+    "group": "選取與縮放",
+    "peer": "selection",
+    "decision": "選框中央保持空白，四周斜紋指出原選區之外成為新選區。",
+    "sourceObservation": "將斜紋限制在外環兩角，選區中央維持完全空白。"
+  },
+  "zoom-selection": {
+    "group": "選取與縮放",
+    "peer": "zoom-in",
+    "decision": "放大鏡內保留選取角標，操作目標是所選內容的範圍。",
+    "sourceObservation": "初稿鏡片內角標太短，延長兩個對角的水平與垂直臂。"
+  },
+  "zoom-actual-size": {
+    "group": "選取與縮放",
+    "peer": "zoom-in",
+    "decision": "鏡片中置數字一，和帶有加減號的連續縮放選項區分。",
+    "sourceObservation": "放大鏡中的一只保留起筆、豎幹和底足，不讓數字緊貼鏡片。"
+  },
+  "lock-aspect-ratio": {
+    "group": "選取與縮放",
+    "peer": "lock",
+    "decision": "寬幅比例框外配小鎖，避免縮圖時只讀到一般物件鎖定。",
+    "sourceObservation": "寬框與小鎖共享遮擋邊界，保留寬高比例而不增加第二層框。"
+  },
+  "unlock-aspect-ratio": {
+    "group": "選取與縮放",
+    "peer": "unlock",
+    "decision": "打開鎖梁並保留同尺寸比例框，獨立縮放寬高的狀態便於比較。",
+    "sourceObservation": "打開的鎖梁改向左方伸出，與鎖身形成可見開口。"
+  },
+  "exposure": {
+    "group": "影像調整",
+    "peer": "contrast",
+    "decision": "將加減記號分置斜線兩側，對應攝影曝光補償的正負標記。",
+    "sourceObservation": "參考使用斜分方框；移除外框以便放大正負號並降低小尺寸密度。"
+  },
+  "color-temperature": {
+    "group": "影像調整",
+    "peer": "thermometer",
+    "decision": "溫度計旁以小日輪表示暖光，供白平衡調整面板使用。",
+    "sourceObservation": "保留溫度計的球腹，小太陽只留三根外側射線。"
+  },
+  "color-tint": {
+    "group": "影像調整",
+    "peer": "palette",
+    "decision": "用斜分色滴保留兩個調整方向，與一般吸色及色盤區分。",
+    "sourceObservation": "斜分線只跨過水滴最寬處，沒有另一層外框與它爭奪輪廓。"
+  },
+  "color-curves": {
+    "group": "影像調整",
+    "peer": "chart-line",
+    "decision": "在左下座標軸畫出帶拐點的 S 曲線，形狀對應調整面板的曲線編輯器。",
+    "sourceObservation": "保留製圖座標軸，將折線改為兩端平緩、中段較陡的轉移曲線。"
+  },
+  "color-levels": {
+    "group": "影像調整",
+    "peer": "chart-histogram",
+    "decision": "階調分布底下放置分離的三角滑塊，顯示黑白點可以調整。",
+    "sourceObservation": "來源直方圖的細柱容易擁擠，採分布外緣與獨立三角控制柄。"
+  },
+  "vignette": {
+    "group": "影像調整",
+    "peer": "frame",
+    "decision": "方形相片內四角各有一條弧線，凸顯運鏡暗角的周邊分布。",
+    "sourceObservation": "不採灰階漸層，四角內切弧把中央開口壓成鏡頭的形狀。"
+  },
+  "sharpen": {
+    "group": "影像調整",
+    "peer": "triangle",
+    "decision": "直立三角沿中心切分，表現相片編輯器常見的銳度控制。",
+    "sourceObservation": "縱向分界線收在三角形尖端內側，避免粗線突出尖頂。"
+  },
+  "blur": {
+    "group": "影像調整",
+    "peer": "droplet",
+    "decision": "由密到疏的點群形成柔邊圓斑，在單色面板中表達失焦。",
+    "sourceObservation": "點列逐漸變小並錯位，讓模糊邊緣在純色背景下也能成立。"
+  },
+  "straighten": {
+    "group": "影像調整",
+    "peer": "rotate-left",
+    "decision": "水平基準上方放一把傾斜尺，刻度留在尺的一邊表明正在校平。",
+    "sourceObservation": "尺身保有兩個上側刻度，獨立水平線提供比較角度所需的參照。"
+  },
+  "paste-plain-text": {
+    "group": "貼上與格式",
+    "peer": "clipboard-paste",
+    "decision": "夾板中央留給 T，表明貼上結果只保留文字內容。",
+    "sourceObservation": "T 的橫筆和夾板頂扣保持距離，筆幹只佔下半區。"
+  },
+  "paste-values": {
+    "group": "貼上與格式",
+    "peer": "clipboard-paste",
+    "decision": "用帶起筆的數字一與二填入夾板，標示只取儲存格運算結果。",
+    "sourceObservation": "1 和 2 的字面寬度不同，右側的 2 留出完整斜腹。"
+  },
+  "paste-formula": {
+    "group": "貼上與格式",
+    "peer": "function-square",
+    "decision": "彎曲的函數字幹置於夾板內，貼上公式與貼上結果可直接並排。",
+    "sourceObservation": "函數以彎幹和橫槓表現，兩端的回鉤可和單純斜線區分。"
+  },
+  "paste-format": {
+    "group": "貼上與格式",
+    "peer": "clipboard-paste",
+    "decision": "夾板右下露出斜刷頭，將貼入來源樣式與一般貼上區分。",
+    "sourceObservation": "斜刷留出有腹部的筆毛輪廓，使貼上格式和貼上純文字可並排。"
+  },
+  "paste-link": {
+    "group": "貼上與格式",
+    "peer": "link",
+    "decision": "夾板的右下角承接兩節斜鏈，表示貼入的是可追蹤來源的連結。",
+    "sourceObservation": "兩節鏈條從夾板下角伸出，鏈條與板體交會處留出缺口。"
+  },
+  "format-painter": {
+    "group": "貼上與格式",
+    "peer": "paintbrush",
+    "decision": "滾筒右側轉折接到短柄，旁邊保留文字線，清楚指向格式刷取操作。",
+    "sourceObservation": "來源的滾筒輪廓容易理解，縮短把手並在左下加入文字線。"
+  },
+  "clear-contents": {
+    "group": "貼上與格式",
+    "peer": "eraser",
+    "decision": "儲存格邊界保持完整，內文位置的叉號表示保留格子並清空內容。",
+    "sourceObservation": "叉號放在儲存格內並保留外框，和帶有外部叉號的刪表動作區分。"
+  },
+  "clear-highlighting": {
+    "group": "貼上與格式",
+    "peer": "highlighter",
+    "decision": "保留螢光筆斜頭及底下色帶，將取消記號放在未使用的右方空間。",
+    "sourceObservation": "保留現有螢光筆的寬鑿頭，移除記號避開底部色帶。"
+  },
+  "freeze-first-row": {
+    "group": "試算表",
+    "peer": "table-header-row",
+    "decision": "上方整條列帶與下方格線分離，右下雪花表示捲動時保持固定。",
+    "sourceObservation": "列帶只用一條橫線分隔，雪花放在下方讓讀者先看見整列。"
+  },
+  "freeze-first-column": {
+    "group": "試算表",
+    "peer": "table-header-column",
+    "decision": "左方欄帶貫穿上下，雪花沿用首列的位置以便兩項命令並排。",
+    "sourceObservation": "欄帶只用一條豎線分隔，雪花位置與凍結首列一致。"
+  },
+  "freeze-panes": {
+    "group": "試算表",
+    "peer": "table",
+    "decision": "以十字分割標出凍結交點，右下雪花和單列或單欄凍結共用。",
+    "sourceObservation": "窗格交點與雪花分開放置，仍可對照凍結單欄和單列兩顆。"
+  },
+  "sort-a-z": {
+    "group": "試算表",
+    "peer": "sort-ascending",
+    "decision": "將 A 放在 Z 上方，右側單箭頭保持向下，指出清單的閱讀順序。",
+    "sourceObservation": "使用字母 A 和 Z 的上下關係，箭頭靠右有完整長桿。"
+  },
+  "sort-z-a": {
+    "group": "試算表",
+    "peer": "sort-descending",
+    "decision": "交換 Z 與 A 的垂直位置，箭頭保持一致以表達字母順序反轉。",
+    "sourceObservation": "在同一框架內對調兩個字形，方向箭頭避免跟著翻轉。"
+  },
+  "decimal-increase": {
+    "group": "試算表",
+    "peer": "calculator",
+    "decision": "兩個零共用小數點，向外的箭頭表示延長小數顯示精度。",
+    "sourceObservation": "兩個小數零等高，以向右箭頭提示多顯示一位。"
+  },
+  "decimal-decrease": {
+    "group": "試算表",
+    "peer": "calculator",
+    "decision": "小數點後只留一個零，收回的箭頭和增加位數的方向成對。",
+    "sourceObservation": "只留一個小數零，左向箭頭延用另一款的垂直位置。"
+  },
+  "cell-reference-absolute": {
+    "group": "試算表",
+    "peer": "lock",
+    "decision": "儲存格內的錢字符號對應公式中的固定參照，與一般欄位鎖定區分。",
+    "sourceObservation": "初稿的錢字符號框容易讀成紙鈔，補上表頭分界以指明試算表語境。"
+  },
+  "cell-reference-relative": {
+    "group": "試算表",
+    "peer": "table-select-cell",
+    "decision": "從起始格移向外部的折箭頭，顯示參照會隨公式複製而位移。",
+    "sourceObservation": "從左上方格折往右下方，保留欄列兩個方向的位移。"
+  },
+  "fold-code": {
+    "group": "程式碼編輯",
+    "peer": "list-collapse",
+    "decision": "上下箭頭指向中央留白，左右短橫代表摺疊範圍外的程式行。",
+    "sourceObservation": "兩支短箭頭指向中間，兩側橫線定出摺疊後的位置。"
+  },
+  "unfold-code": {
+    "group": "程式碼編輯",
+    "peer": "code-block",
+    "decision": "將上下兩支箭頭朝外展開，程式行保留在與摺疊相同的位置。",
+    "sourceObservation": "保留摺疊線的高度，上下箭頭各自背離中央線。"
+  },
+  "toggle-line-comment": {
+    "group": "程式碼編輯",
+    "peer": "code",
+    "decision": "兩條斜線後接一行文字，單行註解可與區塊註解並列。",
+    "sourceObservation": "兩條斜線後只留單一文字線，避免讀成一個長網址。"
+  },
+  "toggle-block-comment": {
+    "group": "程式碼編輯",
+    "peer": "code-block",
+    "decision": "斜線與星號組成註解起始符，下方兩行內文指出涵蓋範圍。",
+    "sourceObservation": "星號要與斜線分開，第二行文字比第一行短以示區塊。"
+  },
+  "show-whitespace": {
+    "group": "程式碼編輯",
+    "peer": "pilcrow",
+    "decision": "以可見空白點搭配 Tab 的橫箭頭和止線，表達顯示隱藏字元。",
+    "sourceObservation": "可見空白點和 Tab 止線保留橫向間隔，可讀成兩種不可見字元。"
+  },
+  "multi-cursor": {
+    "group": "程式碼編輯",
+    "peer": "text-cursor",
+    "decision": "兩根文字游標垂直錯位，中間保留間距，示意可在兩行同時輸入。",
+    "sourceObservation": "兩個 I 形游標各有自己的上下襯線，高低錯開而不互相遮擋。"
+  },
+  "go-to-line": {
+    "group": "程式碼編輯",
+    "peer": "list-ordered",
+    "decision": "折箭頭對準中間一行的起點，上下兩行固定用來標出目的位置。",
+    "sourceObservation": "折箭頭末端和中間文字行留小空隙，讓目的列清楚。"
+  },
+  "matching-brackets": {
+    "group": "程式碼編輯",
+    "peer": "brackets",
+    "decision": "左右括號間放雙向連接，顯示游標可以在配對定界符之間跳轉。",
+    "sourceObservation": "兩方括號各自朝內張開，中段雙向箭頭縮短以免黏住括號。"
+  },
+  "font-size-increase": {
+    "group": "文字外觀",
+    "peer": "font-size",
+    "decision": "保留大寫 A 的字腹，右側加號放在肩部高度以表示增大字級。",
+    "sourceObservation": "參考另有上箭頭版本，採用加號可與縮小字級的減號成對。"
+  },
+  "font-size-decrease": {
+    "group": "文字外觀",
+    "peer": "font-size",
+    "decision": "沿用放大字級的字形和基線，把減號放在相同側的位置。",
+    "sourceObservation": "減號留在字肩高度，A 字不縮小，讓相鄰命令有穩定字面。"
+  },
+  "double-underline": {
+    "group": "文字外觀",
+    "peer": "underline",
+    "decision": "U 字底部抬高，讓兩條底線在文字下方都保持清楚的空隙。",
+    "sourceObservation": "調高 U 字弧底，保留兩道底線間的空白，防止讀成一條粗線。"
+  },
+  "dotted-underline": {
+    "group": "文字外觀",
+    "peer": "underline",
+    "decision": "在共用 U 字底下放圓點，與雙底線、波浪底線按樣式並列。",
+    "sourceObservation": "將點列放在比 U 字寬的位置，仍能一眼讀出獨立裝飾線。"
+  },
+  "wavy-underline": {
+    "group": "文字外觀",
+    "peer": "underline",
+    "decision": "單一波線沿基線起伏，U 的弧底和波峰之間保留可見通道。",
+    "sourceObservation": "波線在兩側留完整收筆，波峰與字母弧底沒有交叉。"
+  },
+  "overline": {
+    "group": "文字外觀",
+    "peer": "underline",
+    "decision": "橫線放在字頂上方，與下方字母保持一致留白，顯示文字裝飾方向。",
+    "sourceObservation": "上方橫槓與 A 字分離，字面重心略下移以平衡整體。"
+  },
+  "text-outline": {
+    "group": "文字外觀",
+    "peer": "text-color",
+    "decision": "只描出粗 T 的字形輪廓，讓中空筆畫在縮圖裡仍可辨識。",
+    "sourceObservation": "T 的字幹保持足夠寬的中空區，縮圖時不會變成一般粗體字。"
+  },
+  "drop-cap": {
+    "group": "文字外觀",
+    "peer": "case-title",
+    "decision": "大寫首字下沉兩行，文字從右側環繞並在底下接回整行。",
+    "sourceObservation": "首字高度覆蓋右側多行；下方橫跨兩欄的一筆把它們連回段落。"
+  },
+  "vertical-text": {
+    "group": "文字外觀",
+    "peer": "text-direction-rtl",
+    "decision": "上下字形沿同一垂線，右方下箭頭指出直排閱讀方向。",
+    "sourceObservation": "沿用文字方向的箭頭語法，A、B 字面分行，不旋轉整個字。"
+  }
+}
