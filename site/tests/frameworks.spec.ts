@@ -122,7 +122,7 @@ test('the styles bench carries one setting to every icon and its detail',async({
  await expect(bench.locator('.home-ui-layer .window-title')).toHaveText('Poster · Custom')
  await bench.getByRole('radio',{name:'16'}).check()
  await expect(glyph).toHaveAttribute('width','16')
- await expect(bench.locator('.home-bench-value')).toHaveText('1.5')
+ await expect(bench.locator('.home-bench-value')).toHaveText('1.50')
  await expect(bench.locator('.home-bench-detail .home-plate')).toHaveAttribute('aria-label',/inbox icon drawn on its 16 px grid with rounded corners and a 1.5 stroke/)
  const search=await bench.locator('.home-ui-layer [data-slot="search"]').boundingBox()
  await page.mouse.move(search!.x+search!.width/2,search!.y+search!.height/2)

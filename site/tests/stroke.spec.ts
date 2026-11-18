@@ -6,12 +6,19 @@ for(const locale of ['', '/tw'])test(`stroke slider exports matching geometry ${
  await expect(page.locator('astro-island[ssr]')).toHaveCount(0)
  const slider=page.getByRole('slider',{name:locale?'線寬':'Stroke width',exact:true})
  await expect(slider).toHaveValue('1')
+ const readout=page.locator('.explorer-toolbar output').last()
+ await expect(readout).toHaveText('1.00 px')
+ await page.evaluate(()=>document.fonts.ready)
+ const width=(await readout.boundingBox())!.width
  await slider.press('End');await expect(slider).toHaveValue('1.5')
+ await expect(readout).toHaveText('1.50 px')
+ expect((await readout.boundingBox())!.width).toBeCloseTo(width,0)
  await expect(page).toHaveURL(/stroke=1.5/)
  await expect(page.locator('.explorer-icon svg').first()).toHaveAttribute('stroke-width','1.5')
  await page.reload();await expect(slider).toHaveValue('1.5')
  await page.locator('.explorer-tile').first().click()
  const dialog=page.getByRole('dialog'),code=dialog.locator('textarea')
+ await expect(dialog.locator('output')).toHaveText('1.50 px')
  await expect(code).toHaveValue(/stroke-width="1.5"/)
  await expect(code).toHaveValue(/<mask /)
  await expect(dialog.locator('.master-cell svg')).toHaveCount(9)
@@ -26,6 +33,28 @@ for(const locale of ['', '/tw'])test(`stroke slider exports matching geometry ${
  await page.getByRole('button',{name:locale?'重設線寬':'Reset stroke',exact:true}).click()
  await expect(slider).toHaveValue('1.25');await expect(page).not.toHaveURL(/stroke=/)
  await slider.press('Home');await slider.press('ArrowRight');await expect(slider).toHaveValue('1')
+})
+
+test('the homepage stroke value shares the label row on narrow screens',async({page})=>{
+ await page.setViewportSize({width:320,height:844})
+ await page.emulateMedia({reducedMotion:'reduce'})
+ await page.goto('/tw')
+ const group=page.locator('.home-bench-stroke')
+ await group.scrollIntoViewIfNeeded()
+ const slider=group.getByRole('slider',{name:'線寬',exact:true}),readout=group.locator('output')
+ await expect(group).toBeVisible()
+ await expect(page.locator('astro-island[ssr]').filter({has:group})).toHaveCount(0)
+ await slider.press('Home')
+ await expect(readout).toHaveText('0.75')
+ await slider.press('ArrowRight')
+ await expect(readout).toHaveText('1.00')
+ const label=(await group.locator('label').boundingBox())!
+ const value=(await readout.boundingBox())!
+ const track=(await slider.boundingBox())!
+ const trackInset=await slider.evaluate(input=>parseFloat(getComputedStyle(input).paddingRight))
+ expect(Math.abs(label.y+label.height/2-value.y-value.height/2)).toBeLessThan(2)
+ expect(value.x+value.width).toBeCloseTo(track.x+track.width-trackInset,0)
+ expect(track.y+track.height/2).toBeGreaterThan(value.y+value.height)
 })
 test('invalid widths fall back to optical defaults and stroke survives navigation',async({page})=>{
  await page.goto('/icons?stroke=Infinity&size=20')

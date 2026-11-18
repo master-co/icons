@@ -7,6 +7,8 @@ import { renderSvg, escapeXml } from '/dist/runtime.js';
 import { zipSync, strToU8, strFromU8, decompressSync } from 'fflate';
 
 const $=selector=>document.querySelector(selector);
+const formatCount=new Intl.NumberFormat('zh-TW').format;
+const formatStroke=new Intl.NumberFormat('zh-TW',{minimumFractionDigits:2,maximumFractionDigits:2}).format;
 const embedded=globalThis.MASTER_ICONS_PAYLOAD;
 const data=embedded ? JSON.parse(strFromU8(decompressSync(Uint8Array.from(atob(embedded),c=>c.charCodeAt(0))))) : globalThis.MASTER_ICONS_DATA ?? await fetch('/dist/preview/data.json').then(r=>{if(!r.ok)throw new Error('圖示資料載入失敗');return r.json();});
 globalThis.MASTER_ICONS_DATA=data;
@@ -45,10 +47,10 @@ function updateUrl(){
   else write();
 }
 function filtered(pilotOnly=false){const q=state.query.toLocaleLowerCase().trim();return browseEntries().filter(x=>(!pilotOnly||x.pilot)&&(state.category==='all'||state.category==='pilot'&&x.pilot||x.category===state.category)&&(!q||`${x.name} ${x.label} ${x.keywords.join(' ')}`.toLocaleLowerCase().includes(q)));}
-function renderCategories(){const all=[{id:'all',label:'全部圖示',count:browseEntries().length},{id:'pilot',label:'代表圖示',count:browseEntries().filter(x=>x.pilot).length},...catalog.categories.map(c=>({...c,count:browseEntries().filter(x=>x.category===c.id).length}))];$('#categories').innerHTML=all.map(c=>`<button type="button" data-category="${c.id}" aria-pressed="${state.category===c.id}"><span>${c.label}</span><span>${c.count}</span></button>`).join('');}
-function pageItems(list,limit){const pages=Math.max(1,Math.ceil(list.length/limit));state.page=Math.min(state.page,pages);$('#pagination').hidden=!['library','optical','reference'].includes(state.view)||pages===1;$('#page-info').textContent=`第 ${state.page} / ${pages} 頁 · 共 ${list.length.toLocaleString()} 項`;$('#page-previous').disabled=state.page===1;$('#page-next').disabled=state.page===pages;updateUrl();return list.slice((state.page-1)*limit,state.page*limit);}
-function renderLibrary(){const list=filtered();pageItems(list,96);$('#result-count').textContent=`${list.length} 個圖示 · ${state.size}px · ${cornerLabels[state.corner]}`;$('#icon-grid').innerHTML=list.length?pageItems(list,96).map(x=>`<button type="button" class="icon-card" data-icon="${x.name}" aria-label="${x.label}，${x.name}"><span>${glyph(x.name)}</span><span class="icon-name">${x.name}</span></button>`).join(''):'<div class="empty">沒有符合的圖示。試試「通知」、「搜尋」或英文名稱。</div>';}
-function renderOptical(){const list=filtered();pageItems(list,24);$('#optical-count').textContent=`${list.length.toLocaleString()} 個命名圖示 · 每頁 24 項`;$('#optical-grid').innerHTML=list.length?pageItems(list,24).map(x=>`<article class="optical-card"><h3>${x.name}</h3>${catalog.corners.map(c=>`<div class="optical-row"><span>${cornerLabels[c]}</span>${catalog.sizes.map(s=>`<div class="glyph">${glyph(x.name,s,c)}</div>`).join('')}</div>`).join('')}<div class="optical-row optical-labels"><span>PX</span>${catalog.sizes.map(s=>`<span class="glyph">${s}${state.stroke===null?'':` · ${clampStroke(state.stroke,s)}`}</span>`).join('')}</div></article>`).join(''):'<div class="empty">沒有符合的圖示。</div>';}
+function renderCategories(){const all=[{id:'all',label:'全部圖示',count:browseEntries().length},{id:'pilot',label:'代表圖示',count:browseEntries().filter(x=>x.pilot).length},...catalog.categories.map(c=>({...c,count:browseEntries().filter(x=>x.category===c.id).length}))];$('#categories').innerHTML=all.map(c=>`<button type="button" data-category="${c.id}" aria-pressed="${state.category===c.id}"><span>${c.label}</span><span>${formatCount(c.count)}</span></button>`).join('');}
+function pageItems(list,limit){const pages=Math.max(1,Math.ceil(list.length/limit));state.page=Math.min(state.page,pages);$('#pagination').hidden=!['library','optical','reference'].includes(state.view)||pages===1;$('#page-info').textContent=`第 ${formatCount(state.page)} / ${formatCount(pages)} 頁 · 共 ${formatCount(list.length)} 項`;$('#page-previous').disabled=state.page===1;$('#page-next').disabled=state.page===pages;updateUrl();return list.slice((state.page-1)*limit,state.page*limit);}
+function renderLibrary(){const list=filtered();pageItems(list,96);$('#result-count').textContent=`${formatCount(list.length)} 個圖示 · ${state.size} px · ${cornerLabels[state.corner]}`;$('#icon-grid').innerHTML=list.length?pageItems(list,96).map(x=>`<button type="button" class="icon-card" data-icon="${x.name}" aria-label="${x.label}，${x.name}"><span>${glyph(x.name)}</span><span class="icon-name">${x.name}</span></button>`).join(''):'<div class="empty">沒有符合的圖示。試試「通知」、「搜尋」或英文名稱。</div>';}
+function renderOptical(){const list=filtered();pageItems(list,24);$('#optical-count').textContent=`${formatCount(list.length)} 個命名圖示 · 每頁 24 項`;$('#optical-grid').innerHTML=list.length?pageItems(list,24).map(x=>`<article class="optical-card"><h3>${x.name}</h3>${catalog.corners.map(c=>`<div class="optical-row"><span>${cornerLabels[c]}</span>${catalog.sizes.map(s=>`<div class="glyph">${glyph(x.name,s,c)}</div>`).join('')}</div>`).join('')}<div class="optical-row optical-labels"><span>PX</span>${catalog.sizes.map(s=>`<span class="glyph">${s}${state.stroke===null?'':` · ${formatStroke(clampStroke(state.stroke,s))}`}</span>`).join('')}</div></article>`).join(''):'<div class="empty">沒有符合的圖示。</div>';}
 function renderContext(){$('#context-examples').innerHTML=scenarioMarkup(glyph,state.scenario);}
 function sanitizeReference(text){
   if(/^data:image\/png;base64,[A-Za-z0-9+/]+={0,2}$/.test(text)){
@@ -83,13 +85,13 @@ async function renderReference(ticket){
 }
 function render(){
   state.stroke=clampStroke(state.stroke,state.size);
-  const ticket=++revision;updateUrl();renderCategories();$('#concept-count').textContent=cards.length.toLocaleString();$('#pagination').hidden=!['library','optical','reference'].includes(state.view);
+  const ticket=++revision;updateUrl();renderCategories();$('#concept-count').textContent=formatCount(cards.length);$('#pagination').hidden=!['library','optical','reference'].includes(state.view);
   document.querySelectorAll('[data-view]').forEach(tab=>{const active=tab.dataset.view===state.view;tab.setAttribute('aria-selected',String(active));tab.tabIndex=active?0:-1;$('#panel-'+tab.dataset.view).hidden=!active;});
   document.querySelector(`input[name="corner"][value="${state.corner}"]`).checked=true;
   document.querySelector(`input[name="size"][value="${state.size}"]`).checked=true;
   [$('#stroke-width').min,$('#stroke-width').max]=strokeRanges[state.size];
   $('#stroke-width').value=state.stroke??catalog.specifications[state.size].stroke;
-  $('#stroke-output').textContent=`${$('#stroke-width').value} px`;
+  $('#stroke-output').textContent=`${formatStroke($('#stroke-width').valueAsNumber)} px`;
   $('#reset-stroke').disabled=state.stroke===null;
   const zipName=`master-icons-${state.size}-${state.corner}${state.stroke===null?'':`-stroke-${state.stroke}`}.zip`;
   $('#download-set').href=data.inlineDownloads?.[zipName] || `/dist/downloads/${zipName}`;
@@ -109,7 +111,7 @@ function renderDetail(){const entry=meta(state.selected);
   const card = cardsByName.get(entry.styleOf || entry.name);
   $('#artwork-picker').hidden = !card?.outline;
   $('#brand-artwork').value = entry.styleOf ? 'outline' : 'mark';
-  $('#dialog-title').textContent=card?.label ?? entry.label;$('#dialog-name').textContent=entry.name;$('#dialog-category').textContent=entry.categoryLabel;$('#detail-large').innerHTML=glyph(entry.name,state.size,state.corner,state.size*4);$('#detail-sizes').innerHTML=catalog.sizes.map(s=>`<div><span class="glyph">${glyph(entry.name,s)}</span><small>${s}px 原生${state.stroke===null?'':` · 線寬 ${clampStroke(state.stroke,s)}`}</small></div>`).join('');$('#detail-corners').innerHTML=catalog.corners.map(c=>`<div><span class="glyph">${glyph(entry.name,state.size,c)}</span><small>${cornerLabels[c]}</small></div>`).join('');$('#detail-code').textContent=glyph(entry.name).replace(/></g,'>\n<');if(objectUrl)URL.revokeObjectURL(objectUrl);objectUrl=URL.createObjectURL(new Blob([svgWithLicense(entry.name)],{type:'image/svg+xml'}));$('#download-icon').href=objectUrl;$('#download-icon').download=`${entry.name}-${state.size}-${state.corner}.svg`;}
+  $('#dialog-title').textContent=card?.label ?? entry.label;$('#dialog-name').textContent=entry.name;$('#dialog-category').textContent=entry.categoryLabel;$('#detail-large').innerHTML=glyph(entry.name,state.size,state.corner,state.size*4);$('#detail-sizes').innerHTML=catalog.sizes.map(s=>`<div><span class="glyph">${glyph(entry.name,s)}</span><small>${s} px 原生${state.stroke===null?'':` · 線寬 ${formatStroke(clampStroke(state.stroke,s))}`}</small></div>`).join('');$('#detail-corners').innerHTML=catalog.corners.map(c=>`<div><span class="glyph">${glyph(entry.name,state.size,c)}</span><small>${cornerLabels[c]}</small></div>`).join('');$('#detail-code').textContent=glyph(entry.name).replace(/></g,'>\n<');if(objectUrl)URL.revokeObjectURL(objectUrl);objectUrl=URL.createObjectURL(new Blob([svgWithLicense(entry.name)],{type:'image/svg+xml'}));$('#download-icon').href=objectUrl;$('#download-icon').download=`${entry.name}-${state.size}-${state.corner}.svg`;}
 
 async function copy(text){try{await navigator.clipboard.writeText(text);announce('已複製');}catch{$('#detail-code').textContent=text;const range=document.createRange();range.selectNodeContents($('#detail-code'));const sel=getSelection();sel.removeAllRanges();sel.addRange(range);announce('無法直接存取剪貼簿，已選取內容，可手動複製。');}}
 

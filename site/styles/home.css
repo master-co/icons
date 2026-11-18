@@ -518,14 +518,16 @@
   }
 
   .home-bench-stroke {
-    flex: 1 1 11rem;
+    display: grid;
+    grid-template-columns: auto minmax(6rem, 1fr) auto;
+    flex: 1 1 13rem;
     max-width: 20rem;
 
-    & > .slider { flex: 1 1 auto; min-width: 6rem; }
+    & > .slider { min-width: 0; }
   }
 
   .home-bench-value {
-    min-width: 2.25rem;
+    min-inline-size: 4ch;
     font-family: var(--home-mono);
     font-size: .75rem;
     font-variant-numeric: tabular-nums;
@@ -547,12 +549,12 @@
     }
 
     .home-bench-stroke {
-      flex-direction: row;
-      flex-wrap: wrap;
+      grid-template-columns: 1fr auto;
       align-items: center;
       max-width: none;
 
-      & > .home-annotation { width: 100%; }
+      & > output { grid-area: 1 / 2; }
+      & > .slider { grid-column: 1 / -1; }
     }
 
     .home-bench-play {

@@ -49,6 +49,26 @@ test('search, presets, accessible detail, downloads, keyboard and responsive lay
   expect(errors).toEqual([]);
 });
 
+test('review presets share a row and the stroke readout stays aligned on phones',async({page})=>{
+  await page.setViewportSize({width:320,height:844});
+  await page.goto('/');
+  await expect(page.locator('.icon-card').first()).toBeVisible();
+  await page.locator('#theme-toggle').click();
+  const corner=(await page.locator('fieldset:has(input[name="corner"])').boundingBox());
+  const size=(await page.locator('fieldset:has(input[name="size"])').boundingBox());
+  expect(corner.y).toBeCloseTo(size.y,0);
+  expect(size.x).toBeGreaterThan(corner.x+corner.width);
+  const slider=page.getByRole('slider',{name:'線寬',exact:true});
+  const readout=page.locator('#stroke-output');
+  await slider.press('End');
+  await expect(readout).toHaveText('2.50 px');
+  const width=(await readout.boundingBox()).width;
+  await slider.press('ArrowLeft');
+  await expect(readout).toHaveText('2.25 px');
+  expect((await readout.boundingBox()).width).toBeCloseTo(width,0);
+  expect(await page.evaluate(()=>document.documentElement.scrollWidth)).toBe(320);
+});
+
 test('all SVG presets parse and rasterize without clipping at this DPR',async({page},info)=>{
   test.setTimeout(300000);
   await page.goto('/');

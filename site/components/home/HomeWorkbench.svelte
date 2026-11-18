@@ -8,13 +8,13 @@
  import type {VariantKey} from './showcase'
  import {styles,styleClass,type StyleId} from './styles'
 
- let {copy}:{copy:Record<string,string>}=$props()
+ let {copy,locale}:{copy:Record<string,string>;locale:string}=$props()
  const t=(key:string)=>copy[key]??key
  const uid=$props.id()
  const sizes=[16,20,24] as const
  const corners=['sharp','soft','rounded'] as const
  const cornerNames:Record<Corner,string>={sharp:'Sharp',soft:'Soft',rounded:'Rounded'}
- const format=(value:number)=>String(Number(value.toFixed(2)))
+ const formatStroke=new Intl.NumberFormat(locale==='tw'?'zh-TW':'en',{minimumFractionDigits:2,maximumFractionDigits:2}).format
 
  /*
   * One setting, one interface in four styles, and a detail of the icon under inspection. Choosing a style also
@@ -293,11 +293,11 @@
     {/each}
    </div>
   </div>
-  <label class="home-bench-group home-bench-stroke">
-   <span class="home-annotation">{t('Stroke')}</span>
-   <input type="range" class="slider" min={range[0]} max={range.at(-1)} step=".25" value={width} oninput={event=>{take();stroke=Number(event.currentTarget.value)}}>
-   <output class="home-bench-value">{format(width)}</output>
-  </label>
+  <div class="home-bench-group home-bench-stroke">
+   <label class="home-annotation" for={`${uid}-stroke`}>{t('Stroke')}</label>
+   <input type="range" class="slider" id={`${uid}-stroke`} min={range[0]} max={range.at(-1)} step=".25" value={width} oninput={event=>{take();stroke=Number(event.currentTarget.value)}}>
+   <output class="home-bench-value" for={`${uid}-stroke`} aria-hidden="true">{formatStroke(width)}</output>
+  </div>
   {#if motion}
    <button type="button" class="btn btn-quiet btn-sm btn-square home-bench-play" aria-label={playing?t('Pause the styles'):t('Play the styles in turn')} onclick={()=>{playing=!playing}}>
     {#if playing}<PauseIcon size={16} />{:else}<PlayIcon size={16} />{/if}
@@ -357,7 +357,7 @@
    <dl class="home-bench-spec">
     <div><dt>{t('Optical size')}</dt><dd>{size} px</dd></div>
     <div><dt>{t('Corners')}</dt><dd>{t(cornerNames[corner])}</dd></div>
-    <div><dt>{t('Stroke')}</dt><dd>{format(width)}</dd></div>
+    <div><dt>{t('Stroke')}</dt><dd>{formatStroke(width)}</dd></div>
    </dl>
   </aside>
 

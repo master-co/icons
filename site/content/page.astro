@@ -27,7 +27,7 @@ const footerNavGroups=[
 <DocHeader client:load class="home-header" stickable />
 <main class="overflow-clip home-page icons-home">
  <HomeHero {locale} {prefix} {copy} count={catalog.iconCount} />
- <HomeStyles {copy} />
+ <HomeStyles {copy} {locale} />
  <HomeFeatures {locale} {prefix} {copy} count={catalog.iconCount} categories={catalog.categories.length} />
  <HomeClose {locale} {prefix} {copy} />
  <HomeLamp client:idle={{timeout:500}} />

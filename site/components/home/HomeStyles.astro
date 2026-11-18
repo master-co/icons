@@ -10,8 +10,8 @@ import HomeWorkbench from './HomeWorkbench.svelte'
 import workbench from './HomeWorkbench.svelte?raw'
 import {islandCopy} from './island-copy'
 import {scopedStyles} from './theme-scope'
-interface Props {copy:Record<string,string>}
-const {copy}=Astro.props
+interface Props {copy:Record<string,string>;locale:string}
+const {copy,locale}=Astro.props
 const t=(key:string)=>copy[key]??key
 ---
 
@@ -27,6 +27,6 @@ const t=(key:string)=>copy[key]??key
    <h2 id="styles-title" class="home-section-heading">{t('One set of icons. Any interface.')}</h2>
    <p class="home-section-body">{t('A console, a printed page, a soft app and a poster: each takes the size, corners and stroke that suit it. Change the setting and watch it reach every icon.')}</p>
   </header>
-  <HomeWorkbench client:visible copy={islandCopy(workbench,t)} />
+  <HomeWorkbench client:visible copy={islandCopy(workbench,t)} {locale} />
  </div>
 </section>

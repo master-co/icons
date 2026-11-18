@@ -17,6 +17,9 @@
  type Entry=Artwork & {label:string;category:string;keywords:string[];mark?:Artwork;outline?:Artwork;styleOf?:string}
  let {entries,categories,copy,locale,children}:{entries:Entry[];categories:{id:string;label:string}[];copy:Record<string,string>;locale:string;children?:Snippet}=$props()
  const t=(key:string)=>copy[key]??key
+ const numberLocale=locale==='tw'?'zh-TW':'en'
+ const formatCount=new Intl.NumberFormat(numberLocale).format
+ const formatStroke=new Intl.NumberFormat(numberLocale,{minimumFractionDigits:2,maximumFractionDigits:2}).format
  const instanceId=$props.id()
  const sizes=[16,20,24] as const
  const displaySizes=[16,20,24,32,48,64] as const
@@ -53,6 +56,7 @@
  const opticalSize=$derived(getOpticalSize(size))
  const strokeRange=$derived(strokeRanges[opticalSize])
  const nativeStroke=$derived(({16:1.25,20:1.5,24:1.75})[opticalSize])
+ const strokeText=$derived(`${formatStroke(stroke??nativeStroke)} px`)
  const rawSvg=$derived(definition?renderSvg(strokeDefinition(definition,stroke),{size,corner}):'')
  const svg=$derived(artwork?.notice && rawSvg ? `<!--\n${artwork.notice.replaceAll('--','—')}\n-->\n${rawSvg}` : rawSvg)
  const snippet=$derived(artwork?codeSnippet({format,component:artwork.component,size,opticalSize,corner,svg,strokeWidth:stroke}):'')
@@ -140,14 +144,14 @@
   <div class="field">
    <div class="flex items-baseline justify-between">
     <div class="flex items-baseline gap(6)"><label for={`${instanceId}-size`}>{t('Display size')}</label><button type="button" class="field-help" aria-label={t('Display size')} aria-describedby={`${instanceId}-size-hint`} {...{interestfor:`${instanceId}-size-hint`}} popovertarget={`${instanceId}-size-hint`}>?</button></div>
-    <output for={`${instanceId}-size`} aria-hidden="true">{size} px</output>
+    <output class="explorer-number" for={`${instanceId}-size`} aria-hidden="true">{size} px</output>
    </div>
    <input id={`${instanceId}-size`} class="slider" type="range" name="size" min="0" max={displaySizes.length-1} step="1" value={displaySizes.indexOf(size)} aria-valuetext={`${size} px`} aria-describedby={size>24?`${instanceId}-size-hint`:undefined} oninput={(event)=>{size=displaySizes[event.currentTarget.valueAsNumber]??24;stroke=clampStroke(stroke,getOpticalSize(size))}} />
    <div id={`${instanceId}-size-hint`} class="tooltip" popover="hint" role="tooltip">{t('Larger sizes use the 24 px master. ZIP downloads contain the native 24 px SVGs.')}</div>
   </div>
   <div class="field">
-   <div class="flex items-baseline justify-between"><label for={`${instanceId}-stroke`}>{t('Stroke width')}</label><output for={`${instanceId}-stroke`} aria-hidden="true">{stroke??nativeStroke} px</output></div>
-   <input id={`${instanceId}-stroke`} class="slider" type="range" name="stroke" min={strokeRange[0]} max={strokeRange[1]} step="0.25" value={stroke??nativeStroke} aria-valuetext={`${stroke??nativeStroke} px`} aria-describedby={`${instanceId}-stroke-hint`} oninput={(event)=>stroke=event.currentTarget.valueAsNumber} />
+   <div class="flex items-baseline justify-between"><label for={`${instanceId}-stroke`}>{t('Stroke width')}</label><output class="explorer-number" for={`${instanceId}-stroke`} aria-hidden="true">{strokeText}</output></div>
+   <input id={`${instanceId}-stroke`} class="slider" type="range" name="stroke" min={strokeRange[0]} max={strokeRange[1]} step="0.25" value={stroke??nativeStroke} aria-valuetext={strokeText} aria-describedby={`${instanceId}-stroke-hint`} oninput={(event)=>stroke=event.currentTarget.valueAsNumber} />
    <div class="flex items-baseline justify-between gap(8)"><span id={`${instanceId}-stroke-hint`} class="fg-text-muted (font-size:.75rem)">{strokeRange[0]}–{strokeRange[1]} · {t('Native units; scales with display size.')}</span><button type="button" class="link link-quiet (font-size:.75rem) (white-space:nowrap) shrink(0)" disabled={stroke===null} onclick={()=>stroke=null}>{t('Reset stroke')}</button></div>
   </div>
   <div class="field"><span id={`${instanceId}-corners`}>{t('Corners')}</span><div class="segmented w-full" role="radiogroup" aria-labelledby={`${instanceId}-corners`}>{#each corners as c}<label class="segmented-item"><input class="segmented-input" type="radio" name="corner" value={c} bind:group={corner}/>{cornerLabel(c)}</label>{/each}</div></div>
@@ -165,20 +169,24 @@
     <a class="ui-nav-link" href={categoryURL(option.id)} aria-current={activeCategory===option.id?'page':undefined} onclick={(event)=>{
      if(event.metaKey||event.ctrlKey||event.shiftKey||event.altKey)return
      event.preventDefault();selectCategory(option.id)
-    }}><span class="grow(1)">{option.label}</span><span class="fg-text-muted (font-size:.75rem) (font-variant-numeric:tabular-nums) pl(12)" aria-hidden="true">{option.count}</span></a>
+    }}><span class="grow(1)">{option.label}</span><span class="explorer-number fg-text-muted (font-size:.75rem) pl(12)" aria-hidden="true">{formatCount(option.count)}</span></a>
    {/each}
   </nav>
   </div>
  </div>
-  <nav class="explorer-pagination" aria-label={t('Explorer Page')}><button type="button" class="btn btn-sm" disabled={current<=1} onclick={()=>page=current-1}>{t('Explorer Previous')}</button><span>{t('Explorer Page')} {current} {t('of')} {pages}</span><button type="button" class="btn btn-sm" disabled={current>=pages} onclick={()=>page=current+1}>{t('Explorer Next')}</button></nav>
+  <nav class="explorer-pagination" aria-label={t('Explorer Page')}>
+   <button type="button" class="btn btn-sm (justify-self:start)" disabled={current<=1} onclick={()=>page=current-1}>{t('Explorer Previous')}</button>
+   <span>{t('Explorer Page')} <span class="explorer-number explorer-page-index" style:min-inline-size={`${formatCount(pages).length}ch`}>{formatCount(current)}</span> {t('of')} <span class="explorer-number">{formatCount(pages)}</span></span>
+   <button type="button" class="btn btn-sm (justify-self:end)" disabled={current>=pages} onclick={()=>page=current+1}>{t('Explorer Next')}</button>
+  </nav>
  </aside>
  <div class="explorer-main">
  <div class="field">
-  <p aria-live="polite" data-testid="result-count">{filtered.length} {t('icons')}</p>
+  <p class="explorer-result-count" aria-live="polite" data-testid="result-count"><strong class="explorer-number">{formatCount(filtered.length)}</strong> {t('icons')}</p>
  <div class:optical-grid={view==='optical'} class="sheet explorer-grid" style={`--display-size:${size}px`} data-testid="icon-grid">
   {#each visible as entry (entry.name)}
    <button type="button" class="explorer-tile" class:optical-tile={view==='optical'} onclick={(event)=>open(entry,event.currentTarget)} aria-label={label(entry)}>
-    {#if view==='optical'}<span class="optical-row">{#each sizes as s}<span class="optical-cell"><CatalogIcon active={ready} name={entry.name} size={s} {corner} {stroke} /><span class="size-caption">{s}{stroke===null?'':` · ${clampStroke(stroke,s)}`}</span></span>{/each}</span>
+    {#if view==='optical'}<span class="optical-row">{#each sizes as s}<span class="optical-cell"><CatalogIcon active={ready} name={entry.name} size={s} {corner} {stroke} /><span class="size-caption explorer-number">{s}{stroke===null?'':` · ${formatStroke(clampStroke(stroke,s)??stroke)}`}</span></span>{/each}</span>
     {:else}<span class="explorer-cell"><CatalogIcon active={ready} name={entry.name} {size} {corner} {stroke} /></span>{/if}
     <span class="grid gap(2) max-w-full">
      {#if translation(entry)}<span class="fg-text-body (font-size:.75rem)" lang="zh-TW">{translation(entry)}</span>{/if}
@@ -226,8 +234,8 @@
        <label class="field">{t('Corners')}<select class="select" bind:value={corner}>{#each corners as value}<option class="select-option" {value}>{cornerLabel(value)}</option>{/each}</select></label>
       </div>
       <div class="field">
-       <div class="flex justify-between items-center gap(12)"><div class="flex items-center gap(6)"><label for={`${instanceId}-detail-stroke`}>{t('Stroke width')}</label><button type="button" class="field-help" aria-label={t('Stroke width')} aria-describedby={`${instanceId}-detail-stroke-hint`} {...{interestfor:`${instanceId}-detail-stroke-hint`}} popovertarget={`${instanceId}-detail-stroke-hint`}>?</button></div><output for={`${instanceId}-detail-stroke`} aria-hidden="true" class="fg-text-muted (font-size:.75rem)">{stroke??nativeStroke} px</output></div>
-       <input id={`${instanceId}-detail-stroke`} aria-describedby={`${instanceId}-detail-stroke-hint`} class="slider" type="range" min={strokeRange[0]} max={strokeRange[1]} step="0.25" value={stroke??nativeStroke} aria-valuetext={`${stroke??nativeStroke} px`} oninput={event=>stroke=event.currentTarget.valueAsNumber} />
+       <div class="flex justify-between items-baseline gap(12)"><div class="flex items-baseline gap(6)"><label for={`${instanceId}-detail-stroke`}>{t('Stroke width')}</label><button type="button" class="field-help" aria-label={t('Stroke width')} aria-describedby={`${instanceId}-detail-stroke-hint`} {...{interestfor:`${instanceId}-detail-stroke-hint`}} popovertarget={`${instanceId}-detail-stroke-hint`}>?</button></div><output for={`${instanceId}-detail-stroke`} aria-hidden="true" class="explorer-number">{strokeText}</output></div>
+       <input id={`${instanceId}-detail-stroke`} aria-describedby={`${instanceId}-detail-stroke-hint`} class="slider" type="range" min={strokeRange[0]} max={strokeRange[1]} step="0.25" value={stroke??nativeStroke} aria-valuetext={strokeText} oninput={event=>stroke=event.currentTarget.valueAsNumber} />
        <div id={`${instanceId}-detail-stroke-hint`} class="tooltip" popover="hint" role="tooltip">{t('Native units; scales with display size.')}</div>
        <button type="button" class="link link-quiet (justify-self:start) (font-size:.75rem)" disabled={stroke===null} onclick={()=>stroke=null}>{t('Reset stroke')}</button>
       </div>
