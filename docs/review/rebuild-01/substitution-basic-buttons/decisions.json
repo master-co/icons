@@ -1,0 +1,88 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "viewed": [
+    "light.png",
+    "dark.png"
+  ],
+  "sizes": [
+    16,
+    20,
+    24
+  ],
+  "themes": [
+    "light",
+    "dark"
+  ],
+  "dpr": [
+    1
+  ],
+  "corner": "soft",
+  "scope": "Existing alternatives in the actual labeled control context; no geometry changed.",
+  "userApproval": "pending",
+  "evidence": [
+    {
+      "path": "docs/review/rebuild-01/substitution-basic-buttons/light.png",
+      "sha256": "6b5331bea91f95fbd9a10c1042d18caacb19068a448927c16ac38c6e1a09eb1c"
+    },
+    {
+      "path": "docs/review/rebuild-01/substitution-basic-buttons/dark.png",
+      "sha256": "a7c2f4e979f313aadfe23267d27b25ce037be9df1c345c8bba87fc57f7c93493"
+    }
+  ],
+  "items": [
+    {
+      "name": "arrow-big-left",
+      "alternative": "arrow-left",
+      "label": "返回方案",
+      "context": "結帳頁返回方案選擇",
+      "reason": "此候選原本只為補齊寬箭頭方向；目前核實的返回操作已用細箭桿向左箭頭，封閉寬箭身沒有增加必要資訊。投票需要上下兩顆，不構成左右兩顆的收錄理由。",
+      "usageEvidence": [
+        "/Users/aron/haoban/apps/web/src/features/plan-checkout.components/ScriptContent275.svelte:7"
+      ]
+    },
+    {
+      "name": "arrow-big-right",
+      "alternative": "arrow-right",
+      "label": "前往設定",
+      "context": "導覽卡片的下一步行動",
+      "reason": "一般前往與下一步使用既有向右箭頭，文字負責指出目的地；沒有與一般前往並列且需寬箭身區分的獨立命令，不為對稱擴充。",
+      "usageEvidence": [
+        "/Users/aron/haoban/apps/web/src/features/overview-guide.components/ScriptContent546.svelte:57"
+      ]
+    },
+    {
+      "name": "plus-circle",
+      "alternative": "plus",
+      "label": "在此新增區塊",
+      "context": "編輯器區塊旁的新增控制",
+      "reason": "實際新增區塊控制使用 PlusIcon，點擊範圍與圓形外觀由按鈕提供。另把圓框畫入圖形會把控制項外形固化，純加號已完整表達操作。",
+      "replacementScope": "這次核實的新增按鈕；不宣稱所有嵌入內容的圓形加號都等同一般按鈕。",
+      "usageEvidence": [
+        "/Users/aron/haoban/packages/editor/src/block-handles.components/BlockHandles.svelte:777"
+      ]
+    },
+    {
+      "name": "square-minus",
+      "alternative": "minus",
+      "label": "減少數量",
+      "context": "數量步進器 · 減一與加一",
+      "reason": "Master UI Stepper 已將一條減號放入方形按鈕；方框屬於控制項，圖形不需要第二層方框。與數值及加號並列就能表達減少。",
+      "sample": "<div style=\"display:flex;align-items:center;gap:16px\"><button aria-label=\"減少數量\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><path d=\"M3 8L13 8\"/></svg></button><span>3</span><button aria-label=\"增加數量\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><path d=\"M3 8L13 8\"/><path d=\"M8 3L8 13\"/></svg></button></div>",
+      "usageEvidence": [
+        "/Users/aron/master-ui/packages/ui/frameworks/svelte/Stepper.svelte:43"
+      ]
+    },
+    {
+      "name": "square-x",
+      "alternative": "x",
+      "label": "關閉",
+      "context": "對話框標題列的關閉按鈕",
+      "reason": "現有 AppModal 將 XIcon 放入帶關閉標籤的 IconButton。× 已足以表示關閉，額外方框只重複容器外形，並非另一個命令。",
+      "sample": "<div style=\"display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #8886;padding:8px\"><strong>編輯名稱</strong><button aria-label=\"關閉\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><path d=\"M4 4L12 12\"/><path d=\"M4 12L12 4\"/></svg></button></div>",
+      "usageEvidence": [
+        "/Users/aron/haoban/packages/ui/src/components/modal.components/AppModal.svelte:294"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,114 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "skillVersion": "0.5.18",
+  "viewed": [
+    "light.png",
+    "dark.png"
+  ],
+  "sizes": [
+    16,
+    20,
+    24
+  ],
+  "themes": [
+    "light",
+    "dark"
+  ],
+  "dpr": [
+    1
+  ],
+  "corner": "soft for existing icons; text changes and state controls retain natural dimensions",
+  "scope": "Five contextual existing-icon entries and three native-content presentations replace eight candidates. Fixtures illustrate selection scope and state; they do not implement Tiptap. No rejected geometry retrieved.",
+  "userApproval": "pending",
+  "evidence": [
+    {
+      "path": "docs/review/rebuild-01/substitution-revision-actions/light.png",
+      "sha256": "5db814c38ad1e522a1606cc3b7c8fae2a2d3a2fc003c26d4ddafd934bd2d1ba8"
+    },
+    {
+      "path": "docs/review/rebuild-01/substitution-revision-actions/dark.png",
+      "sha256": "757e09560187d3253a2a365df020971b9276bd493c161e151298217bcc2f65da"
+    }
+  ],
+  "items": [
+    {
+      "name": "accept-change",
+      "label": "接受修訂",
+      "alternative": "check",
+      "replacementKind": "contextual-entry",
+      "context": "單項修訂卡 · 與拒絕並排",
+      "reason": "修訂卡已說明處理對象，既有check可表達接受，不需把勾再貼到文件上。單項與全部操作以範圍文字區分。",
+      "replacementScope": "目前選取的修訂；沒有標籤或卡片上下文時，check本身不表達修訂對象。",
+      "searchKeywords": [
+        "accept-suggestion",
+        "approve-change"
+      ],
+      "usageEvidence": [
+        "https://support.google.com/docs/answer/6033474?hl=en",
+        "https://tiptap.dev/docs/tracked-changes/guides/editor-setup"
+      ],
+      "sample": "<style>\n [data-review-demo],[data-tracking-demo],[data-compare-demo]{border:1px solid #8886;padding:12px;border-radius:5px;margin:10px 0}\n [data-review-demo] button:disabled{opacity:.45}\n [data-review-toolbar]{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0}\n [data-review-item]{display:block;padding:8px 0;border-top:1px solid #8884}\n [data-review-item] p{margin:3px 0 3px 23px}\n ins{background:transparent;text-decoration-thickness:1px;text-underline-offset:3px}\n del{text-decoration-thickness:1px}\n [data-compare-demo] label{display:block;margin:8px 0}\n select{font:inherit;color:inherit;background:transparent;padding:3px;border:1px solid #8888;border-radius:3px}\n</style><div data-review-demo data-scope=\"single\">\n <b>目前選取的修訂</b><p data-pending>待處理：2 項</p>\n <div data-review-toolbar><button data-review-action=\"accept\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><path d=\"M3 8L6.3532 11.3532A0.2 0.2 0 0 0 6.6412 11.3479L13 4.5\"/></svg>接受這一項</button><button data-review-action=\"reject\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><path d=\"M4 4L12 12\"/><path d=\"M4 12L12 4\"/></svg>拒絕這一項</button></div>\n <label data-review-item data-kind=\"add\"><input type=\"radio\" name=\"choice-false\" value=\"add\" checked >新增 · 怡君<p><ins>請附上驗收紀錄。</ins></p><small data-outcome>待處理</small></label>\n <label data-review-item data-kind=\"delete\"><input type=\"radio\" name=\"choice-false\" value=\"delete\" >刪除 · 志明<p><del>另寄紙本文件。</del></p><small data-outcome>待處理</small></label>\n <p data-review-result role=\"status\">僅處理選取的這一項</p><button data-review-reset>重設示例</button></div>",
+      "usageEvidenceLimit": "Sources establish review workflows, commands, and text-change rendering. These local fixtures use Master glyphs and do not integrate or reproduce a production editor.",
+      "visualObservation": "單項卡內check與x在16px有清楚不同的長短臂及交叉輪廓，文字明示目前項目；沒有文件框遮擋原本的勾。"
+    },
+    {
+      "name": "reject-change",
+      "label": "拒絕修訂",
+      "alternative": "x",
+      "replacementKind": "contextual-entry",
+      "context": "單項修訂卡 · 與接受並排",
+      "reason": "既有x與勾號形狀清楚相反，搭配拒絕標籤即可；它撤回建議，不等於關閉審閱面板。",
+      "replacementScope": "修訂卡內的拒絕命令。關閉面板若同時存在，須在面板標頭另放控制。",
+      "searchKeywords": [
+        "reject-suggestion",
+        "decline-change"
+      ],
+      "usageEvidence": [
+        "https://support.google.com/docs/answer/6033474?hl=en",
+        "https://tiptap.dev/docs/tracked-changes/guides/editor-setup"
+      ],
+      "sample": "<style>\n [data-review-demo],[data-tracking-demo],[data-compare-demo]{border:1px solid #8886;padding:12px;border-radius:5px;margin:10px 0}\n [data-review-demo] button:disabled{opacity:.45}\n [data-review-toolbar]{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0}\n [data-review-item]{display:block;padding:8px 0;border-top:1px solid #8884}\n [data-review-item] p{margin:3px 0 3px 23px}\n ins{background:transparent;text-decoration-thickness:1px;text-underline-offset:3px}\n del{text-decoration-thickness:1px}\n [data-compare-demo] label{display:block;margin:8px 0}\n select{font:inherit;color:inherit;background:transparent;padding:3px;border:1px solid #8888;border-radius:3px}\n</style><div data-review-demo data-scope=\"single\">\n <b>目前選取的修訂</b><p data-pending>待處理：2 項</p>\n <div data-review-toolbar><button data-review-action=\"accept\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><path d=\"M3 8L6.3532 11.3532A0.2 0.2 0 0 0 6.6412 11.3479L13 4.5\"/></svg>接受這一項</button><button data-review-action=\"reject\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><path d=\"M4 4L12 12\"/><path d=\"M4 12L12 4\"/></svg>拒絕這一項</button></div>\n <label data-review-item data-kind=\"add\"><input type=\"radio\" name=\"choice-false\" value=\"add\" checked >新增 · 怡君<p><ins>請附上驗收紀錄。</ins></p><small data-outcome>待處理</small></label>\n <label data-review-item data-kind=\"delete\"><input type=\"radio\" name=\"choice-false\" value=\"delete\" >刪除 · 志明<p><del>另寄紙本文件。</del></p><small data-outcome>待處理</small></label>\n <p data-review-result role=\"status\">僅處理選取的這一項</p><button data-review-reset>重設示例</button></div>",
+      "usageEvidenceLimit": "Sources establish review workflows, commands, and text-change rendering. These local fixtures use Master glyphs and do not integrate or reproduce a production editor.",
+      "visualObservation": "拒絕與接受並排可辨；拒絕標籤和卡內位置把此命令與面板關閉分開。明暗背景均保持完整交叉。"
+    },
+    {
+      "name": "accept-all-changes",
+      "label": "接受全部修訂",
+      "alternative": "check",
+      "replacementKind": "contextual-entry",
+      "context": "整份文件審閱 · 接受全部",
+      "reason": "接受一項與接受全部使用同一動作；用「全部」和實際待處理數量說清楚範圍，比多畫一個勾或多張文件更明確。",
+      "replacementScope": "具有明確數量與文件範圍的批次命令；不以雙勾代表所有修訂。",
+      "searchKeywords": [
+        "accept-all-suggestions"
+      ],
+      "usageEvidence": [
+        "https://support.google.com/docs/answer/6033474?hl=en",
+        "https://tiptap.dev/docs/tracked-changes/guides/editor-setup"
+      ],
+      "sample": "<style>\n [data-review-demo],[data-tracking-demo],[data-compare-demo]{border:1px solid #8886;padding:12px;border-radius:5px;margin:10px 0}\n [data-review-demo] button:disabled{opacity:.45}\n [data-review-toolbar]{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0}\n [data-review-item]{display:block;padding:8px 0;border-top:1px solid #8884}\n [data-review-item] p{margin:3px 0 3px 23px}\n ins{background:transparent;text-decoration-thickness:1px;text-underline-offset:3px}\n del{text-decoration-thickness:1px}\n [data-compare-demo] label{display:block;margin:8px 0}\n select{font:inherit;color:inherit;background:transparent;padding:3px;border:1px solid #8888;border-radius:3px}\n</style><div data-review-demo data-scope=\"all\">\n <b>整份文件 · 全部修訂</b><p data-pending>待處理：2 項</p>\n <div data-review-toolbar><button data-review-action=\"accept\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><path d=\"M3 8L6.3532 11.3532A0.2 0.2 0 0 0 6.6412 11.3479L13 4.5\"/></svg>接受全部 2 項</button><button data-review-action=\"reject\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><path d=\"M4 4L12 12\"/><path d=\"M4 12L12 4\"/></svg>拒絕全部 2 項</button></div>\n <label data-review-item data-kind=\"add\"><input type=\"checkbox\" name=\"choice-true\" value=\"add\" checked disabled>新增 · 怡君<p><ins>請附上驗收紀錄。</ins></p><small data-outcome>待處理</small></label>\n <label data-review-item data-kind=\"delete\"><input type=\"checkbox\" name=\"choice-true\" value=\"delete\" checked disabled>刪除 · 志明<p><del>另寄紙本文件。</del></p><small data-outcome>待處理</small></label>\n <p data-review-result role=\"status\">將處理文件內的全部修訂</p><button data-review-reset>重設示例</button></div>",
+      "usageEvidenceLimit": "Sources establish review workflows, commands, and text-change rendering. These local fixtures use Master glyphs and do not integrate or reproduce a production editor.",
+      "visualObservation": "與單項相同的勾形維持一致動作，全部2項的標籤及整份文件標頭交代範圍；不靠雙勾或疊紙猜數量。"
+    },
+    {
+      "name": "reject-all-changes",
+      "label": "拒絕全部修訂",
+      "alternative": "x",
+      "replacementKind": "contextual-entry",
+      "context": "整份文件審閱 · 拒絕全部",
+      "reason": "拒絕全部是同一動作套用到文件中的全部修訂，既有x及文字範圍足夠。不把叉號疊成難辨的小圖。",
+      "replacementScope": "具名的整份文件批次命令；與單項拒絕分區，不能只靠兩顆相同圖示讓使用者猜範圍。",
+      "searchKeywords": [
+        "reject-all-suggestions"
+      ],
+      "usageEvidence": [
+        "https://support.google.com/docs/answer/6033474?hl=en",
+        "https://tiptap.dev/docs/tracked-changes/guides/editor-setup"
+      ],
+      "sample": "<style>\n [data-review-demo],[data-tracking-demo],[data-compare-demo]{border:1px solid #8886;padding:12px;border-radius:5px;margin:10px 0}\n [data-review-demo] button:disabled{opacity:.45}\n [data-review-toolbar]{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0}\n [data-review-item]{display:block;padding:8px 0;border-top:1px solid #8884}\n [data-review-item] p{margin:3px 0 3px 23px}\n ins{background:transparent;text-decoration-thickness:1px;text-underline-offset:3px}\n del{text-decoration-thickness:1px}\n [data-compare-demo] label{display:block;margin:8px 0}\n select{font:inherit;color:inherit;background:transparent;padding:3px;border:1px solid #8888;border-radius:3px}\n</style><div data-review-demo data-scope=\"all\">\n <b>整份文件 · 全部修訂</b><p data-pending>待處理：2 項</p>\n <div data-review-toolbar><button data-review-action=\"accept\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><path d=\"M3 8L6.3532 11.3532A0.2 0.2 0 0 0 6.6412 11.3479L13 4.5\"/></svg>接受全部 2 項</button><button data-review-action=\"reject\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><path d=\"M4 4L12 12\"/><path d=\"M4 12L12 4\"/></svg>拒絕全部 2 項</button></div>\n <label data-review-item data-kind=\"add\"><input type=\"checkbox\" name=\"choice-true\" value=\"add\" checked disabled>新增 · 怡君<p><ins>請附上驗收紀錄。</ins></p><small data-outcome>待處理</small></label>\n <label data-review-item data-kind=\"delete\"><input type=\"checkbox\" name=\"choice-true\" value=\"delete\" checked disabled>刪除 · 志明<p><del>另寄紙本文件。</del></p><small data-outcome>待處理</small></label>\n <p data-review-result role=\"status\">將處理文件內的全部修訂</p><button data-review-reset>重設示例</button></div>",
+      "usageEvidenceLimit": "Sources establish review workflows, commands, and text-change rendering. These local fixtures use Master glyphs and do not integrate or reproduce a production editor.",
+      "visualObservation": "整份文件的拒絕全部與單項卡分區，兩項內容均在批次範圍內可見。x保持原母型，不加重複叉號。"
+    }
+  ]
+}

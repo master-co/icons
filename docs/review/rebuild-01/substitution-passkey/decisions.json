@@ -1,0 +1,81 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "skillVersion": "0.5.20",
+  "userApproval": "pending",
+  "previewSizes": [
+    48
+  ],
+  "themes": [
+    "light",
+    "dark"
+  ],
+  "screenshotDpr": [
+    1,
+    2
+  ],
+  "viewed": [
+    "docs/review/rebuild-01/substitution-passkey/light-1x.png",
+    "docs/review/rebuild-01/substitution-passkey/dark-1x.png",
+    "docs/review/rebuild-01/substitution-passkey/light-2x.png",
+    "docs/review/rebuild-01/substitution-passkey/dark-2x.png"
+  ],
+  "additionalViewed": [
+    "work/rebuild-01/passkey-research/canonical.png",
+    "work/rebuild-01/passkey-research/quick-reference.png",
+    "work/rebuild-01/passkey-research/improper-use.png",
+    "work/rebuild-01/passkey-research/custom-icons.png",
+    "work/rebuild-01/passkey-research/dark-detail.png"
+  ],
+  "scope": "Source research and exclusion only; no custom passkey geometry, alias, canonical package asset or authentication flow.",
+  "sources": {
+    "google": "https://developers.google.com/identity/passkeys/ux/user-interface-design",
+    "fido": "https://fidoalliance.org/get-the-passkey-icon/",
+    "guidelines": "https://fidoalliance.org/wp-content/uploads/2023/12/FIDO-Passkey_Icon_Usage_Guidelines-August2022.pdf",
+    "image": "https://developers.google.com/static/identity/passkeys/ux/user-interface-design/images/canonical-passkey-icon.png"
+  },
+  "sourceHash": "72a753ced03c349d42eba4eaa21c372b4043288c363aac674f5c6078b43a56ec",
+  "guidelineHash": "7270f40d722c5e2f9ec03aa52c14546fdde44f3bd25ec1cb37c0ac6ccd1d6f20",
+  "sourcePages": [
+    5,
+    16,
+    19
+  ],
+  "evidence": [
+    {
+      "path": "docs/review/rebuild-01/substitution-passkey/light-1x.png",
+      "sha256": "ea401355d5ee20de5edaa86b0a1e70251ab7cbe40e99dd60b748743192ba0a8a"
+    },
+    {
+      "path": "docs/review/rebuild-01/substitution-passkey/dark-1x.png",
+      "sha256": "f894c908f0c0ccf232f8e3305188b84f4c16bb1ed9e34c6dda8ec12f0ddadae7"
+    },
+    {
+      "path": "docs/review/rebuild-01/substitution-passkey/light-2x.png",
+      "sha256": "0064e7430585c82ff2f4151e2e86f7f86f61847b9e77ecf5e3f55941ee7f778e"
+    },
+    {
+      "path": "docs/review/rebuild-01/substitution-passkey/dark-2x.png",
+      "sha256": "7894437b5c642672a68310077cc764e24479e093783c6fcf8b9617bf68563820"
+    }
+  ],
+  "errors": [],
+  "items": [
+    {
+      "name": "passkey",
+      "replacementKind": "official-asset",
+      "alternative": null,
+      "alternativeLabel": "FIDO 官方識別圖（使用端另行取得）",
+      "reason": "登入、導入提示與帳號設定確有用途；但應保留 FIDO 官方識別。官方指南最小 24px、禁止加描邊／改外框，客製版本另有核准流程，不適合本輪九組原生描邊重畫。排除自訂變體，使用端依官方流程取得素材。",
+      "visualObservation": "已看官方原圖、指南第 5／16／19 頁及明暗 DPR 1／2 審稿頁。原圖以左側人物實心肩部與右側鑰匙構成；鑰匙圓孔、朝右齒面及人物肩部讓位共同形成識別，不能換成庫內的普通 key 或 fingerprint。審稿頁只在白底以 48px 保持原圖展示，深色頁的圖形另裁切檢視確認存在。沒有製作 16px、20px 或角型變體。",
+      "replacementScope": "官方原圖作研究展示；未納入套件，未接受外部協議。不是判定 passkey 冷門或不必要。",
+      "searchAliasDecision": "不新增別名至 key／fingerprint；user-key 家族參考不作等義替代。",
+      "usageEvidence": [
+        "https://developers.google.com/identity/passkeys/ux/user-interface-design",
+        "https://fidoalliance.org/get-the-passkey-icon/",
+        "https://fidoalliance.org/wp-content/uploads/2023/12/FIDO-Passkey_Icon_Usage_Guidelines-August2022.pdf",
+        "https://developers.google.com/static/identity/passkeys/ux/user-interface-design/images/canonical-passkey-icon.png"
+      ]
+    }
+  ]
+}

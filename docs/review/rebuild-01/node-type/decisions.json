@@ -1,0 +1,23 @@
+[
+  {
+    "dashes": false,
+    "dashReason": "節點、路徑和接合關係是確定結構，不是隱藏或暫態輪廓。",
+    "opacity": false,
+    "opacityReason": "節點孔與路徑需同等清楚，不用淡化表示斷開或遮住接縫。",
+    "reviewed": true,
+    "name": "node-corner",
+    "purpose": "向量編輯模式的尖角節點類型，與平滑節點並列；不能用一般三角形代替節點控制。",
+    "recognitionCues": "沿用三個圓形控制節點，兩條直線在中央節點形成折角。",
+    "confusableWith": [
+      "bezier-curve",
+      "vector-polygon",
+      "triangle"
+    ],
+    "sourceObservation": "Inkscape 的 cusp 圖以兩條曲線在菱形節點形成不同切線，是同語意參考；Tabler vector-bezier 只作節點與連線的構造參考，並不是尖角節點圖。Inkscape 原圖含固定藍灰色，審稿保留原色，造型比較以淺底為主。",
+    "reason": "直接參數化既有 bezierCurve，保留三個圓形節點的位置、孔徑及 outside 接縫處理，只將曲線與共線控制桿改為兩條直線。尖角由兩段的方向差表達；可見輪廓只有圓與直線，交點藏在節點後，三角型不刻意創造不同的圓形幾何。",
+    "comparison": "最新稿與來源並列後，保留本庫既有圓形節點，避免另外建立菱形控制點語言。Inkscape 對非共線切線的表達更接近實際貝茲編輯，但本稿與既有 bezier-curve 放在同一選擇器時，直線折角／平滑拱線的差異更直接。16px 三個節點孔仍存在，直線在圈上收口而不穿孔；三尺寸、三角型、明暗 DPR 1／2 和線寬兩端均已查看。",
+    "usageEvidence": [
+      "https://inkscape-manuals.readthedocs.io/en/1.3/node-types.html"
+    ]
+  }
+]

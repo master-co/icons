@@ -1,0 +1,56 @@
+[
+  {
+    "name": "align-objects-left",
+    "purpose": "物件靠左：畫布中的選取物件對齊命令，須和文字段落對齊及單純移動方向分開。",
+    "recognitionCues": "左側完整直線，兩個長短橫框的左緣等距靠齊。",
+    "confusableWith": [
+      "align-left",
+      "square"
+    ],
+    "sourceObservation": "Lucide 使用兩個物件；Tabler 只用一個橫框。本稿保留兩個長短框，讓多物件對齊和一般位置控制分開。",
+    "reason": "六顆使用同一對長短矩形與基準線函式，矩形透過既有 rect 幾何生成；原生尺寸調整框高和間距，角型改實際半徑。中心基準線屬連接關係，裁切內孔而不加入徽標避讓縫。",
+    "comparison": "16px 左側直線與兩框之間的通道清楚，短框內孔在粗線端未閉合。與 Lucide 相比框角較收斂，和 Tabler 相比多保留一個物件而沒有擠壓到基準線；24px 長短框仍為同一套比例。",
+    "dashes": false,
+    "dashReason": "基準線表示明確對齊位置，物件是已選取的實體，不用虛線或淡化改變主次。",
+    "usageEvidence": [
+      "https://help.figma.com/hc/en-us/articles/1500004292221-Select-move-and-order-objects-in-FigJam"
+    ],
+    "reviewed": true
+  },
+  {
+    "name": "align-objects-center-horizontal",
+    "purpose": "物件水平置中：畫布中的選取物件對齊命令，須和文字段落對齊及單純移動方向分開。",
+    "recognitionCues": "直向中心基準線連接兩個長短橫框的中心。",
+    "confusableWith": [
+      "align-center",
+      "square"
+    ],
+    "sourceObservation": "Lucide 將兩框中央切開以顯示連續中心線；Tabler 保留完整單框並讓中心線接在外緣。本稿保留兩個完整框，以內孔裁切讓基準線連接框緣。",
+    "reason": "六顆使用同一對長短矩形與基準線函式，矩形透過既有 rect 幾何生成；原生尺寸調整框高和間距，角型改實際半徑。中心基準線屬連接關係，裁切內孔而不加入徽標避讓縫。",
+    "comparison": "將基準線兩端各延長半個原生單位後，16px 的外露端不再縮成短點。相較 Lucide 中央四個切口，本稿完整框較安靜；與 Tabler 相比仍可看到多物件。粗線端兩個內孔打開，接點沒有侵入內部。",
+    "dashes": false,
+    "dashReason": "基準線表示明確對齊位置，物件是已選取的實體，不用虛線或淡化改變主次。",
+    "usageEvidence": [
+      "https://help.figma.com/hc/en-us/articles/1500004292221-Select-move-and-order-objects-in-FigJam"
+    ],
+    "reviewed": true
+  },
+  {
+    "name": "align-objects-right",
+    "purpose": "物件靠右：畫布中的選取物件對齊命令，須和文字段落對齊及單純移動方向分開。",
+    "recognitionCues": "右側完整直線，兩個長短橫框的右緣等距靠齊。",
+    "confusableWith": [
+      "align-right",
+      "square"
+    ],
+    "sourceObservation": "Lucide 的長短框與右側基準線保持間隔，Tabler 使用單一橫框。本稿與靠左共用物件寬、高及座標關係，只改右緣對齊。",
+    "reason": "六顆使用同一對長短矩形與基準線函式，矩形透過既有 rect 幾何生成；原生尺寸調整框高和間距，角型改實際半徑。中心基準線屬連接關係，裁切內孔而不加入徽標避讓縫。",
+    "comparison": "與靠左並排，兩條基準線及兩個物件的重量一致，切換方向沒有另外調整物件大小。16px 右側留白在粗線時仍開放，rounded 的短框沒有變成實心豆形；與來源相比沒有更密集的線段。",
+    "dashes": false,
+    "dashReason": "基準線表示明確對齊位置，物件是已選取的實體，不用虛線或淡化改變主次。",
+    "usageEvidence": [
+      "https://help.figma.com/hc/en-us/articles/1500004292221-Select-move-and-order-objects-in-FigJam"
+    ],
+    "reviewed": true
+  }
+]

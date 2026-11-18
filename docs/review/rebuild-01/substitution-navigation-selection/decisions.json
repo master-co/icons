@@ -1,0 +1,80 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "skillVersion": "0.5.18",
+  "viewed": [
+    "light.png",
+    "dark.png"
+  ],
+  "existingIconSizes": [
+    16,
+    20,
+    24
+  ],
+  "contentSizing": "Native text and controls keep natural dimensions; not new 16/20/24 icons",
+  "themes": [
+    "light",
+    "dark"
+  ],
+  "dpr": [
+    1
+  ],
+  "corner": "soft for existing glyphs only",
+  "scope": "Six native controls and one existing contextual x replace seven candidates. Local fixtures demonstrate state and scope; no old session geometry retrieved.",
+  "userApproval": "pending",
+  "evidence": [
+    {
+      "path": "docs/review/rebuild-01/substitution-navigation-selection/light.png",
+      "sha256": "62d681516979e99241cc8dd81aa83f47c5be32b5c34009a66e2bd3b0f3c4d50d"
+    },
+    {
+      "path": "docs/review/rebuild-01/substitution-navigation-selection/dark.png",
+      "sha256": "14db46866230a61f20da9dc0e538acdf891847239484085de6c828ec95ddc5d9"
+    }
+  ],
+  "items": [
+    {
+      "name": "select-all",
+      "label": "全選項目",
+      "alternative": null,
+      "alternativeLabel": "本頁全選控制與選取數量",
+      "replacementKind": "native-content",
+      "context": "資料表表頭 · 本頁選取範圍",
+      "reason": "三態核取控制直接呈現全選、部分與未選取；表頭及本頁3筆的文字交代範圍，不需再設一顆全選圖。",
+      "replacementScope": "一般清單與資料表；全選本頁不等於全選所有搜尋結果。文字／畫布的全選命令可用具名選單與快捷鍵，不與框選工具混稱。",
+      "usageEvidence": [
+        "https://www.w3.org/WAI/ARIA/apg/patterns/checkbox/",
+        "/Users/aron/haoban/packages/ui/src/components/record-selection.components/RecordSelectCheckbox.svelte"
+      ],
+      "searchKeywords": [],
+      "nativePreview": "<span>全選本頁 · 已選 1 / 3 筆</span>",
+      "comparisonMarkup": "<div style=\"font-size:16px\"><span>全選本頁 · 已選 1 / 3 筆</span></div>",
+      "sample": "<style>\n.nav-demo{margin-top:12px;padding:12px;border:1px solid #8885;border-radius:5px}\n.nav-demo fieldset{border:0;margin:0;padding:0}.nav-demo label{display:block;margin:7px 0}\n.nav-demo .bar{display:flex;align-items:center;flex-wrap:wrap;gap:8px;margin:10px 0}\n.nav-demo input[type=checkbox]{accent-color:#485e50;width:16px;height:16px;vertical-align:middle;margin-right:6px}\n.nav-demo input[type=search]{font:inherit;color:inherit;background:transparent;border:1px solid #8888;padding:7px;width:100%}\n.nav-demo button:disabled{opacity:.45}.nav-demo button[aria-current]{outline:2px solid currentColor;outline-offset:1px;font-weight:700}\n.nav-demo ol{padding-left:22px}.nav-demo li{margin:6px 0}.nav-demo [aria-current=step]{font-weight:700}\n.nav-demo a{color:inherit}.nav-demo [data-slide]{min-height:90px;border:1px solid #8885;padding:12px}\n.nav-demo dialog{color:inherit;background:#fafaf8;border:1px solid #8889;border-radius:6px;width:340px}\n.dark .nav-demo dialog{background:#232724}.nav-demo dialog::backdrop{background:#0005}\n.nav-demo [hidden]{display:none!important}.nav-demo kbd{border:1px solid #8886;border-radius:3px;padding:1px 4px}\n</style><section class=\"nav-demo\" data-selection-demo>\n <fieldset><legend>本頁 3 筆報價</legend><label><input type=\"checkbox\" data-select-page>全選本頁 3 筆</label>\n <label><input type=\"checkbox\" data-record checked>網站規劃</label><label><input type=\"checkbox\" data-record >視覺設計</label><label><input type=\"checkbox\" data-record >前端開發</label></fieldset>\n <div class=\"bar\"><button data-selection-clear aria-label=\"取消選取\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><path d=\"M4 4L12 12\"/><path d=\"M4 12L12 4\"/></svg></button><output data-selection-count aria-live=\"polite\"></output></div>\n <small>選取範圍是本頁；取消選取不會刪除報價。</small></section>",
+      "searchAliasDecision": "checkbox-checked表示已勾選狀態，並不永久表示全選命令；不把select-all別名加到固定狀態圖示。",
+      "usageEvidenceLimit": "Sources establish the control roles and behavior, not a universal ban on component-picker icons. These are local illustrative fixtures; no production component is imported.",
+      "visualObservation": "本頁3筆的核取控制在部分選取時顯示橫線，與下方已勾選及空白框並排可辨。範圍與1/3數量可讀，不需要在16px多畫一組框。"
+    },
+    {
+      "name": "deselect-all",
+      "label": "清除全部選取",
+      "alternative": "x",
+      "replacementKind": "contextual-entry",
+      "context": "已選項目工具列 · 與數量並列",
+      "reason": "Haoban已選項目工具列使用x取消選取。既有叉號在這個位置足夠，無須把多個核取框與叉號組成一顆。",
+      "replacementScope": "僅限已選項目工具列的取消選取入口，旁邊顯示數量並提供可讀標籤；不表示刪除資料，也不應與另一個關閉面板按鈕混在同一位置。",
+      "searchKeywords": [
+        "clear-selection",
+        "select-none",
+        "取消全選"
+      ],
+      "usageEvidence": [
+        "/Users/aron/haoban/packages/ui/src/components/record-selection.components/SelectionBar.svelte",
+        "https://www.w3.org/WAI/ARIA/apg/patterns/checkbox/"
+      ],
+      "sample": "<style>\n.nav-demo{margin-top:12px;padding:12px;border:1px solid #8885;border-radius:5px}\n.nav-demo fieldset{border:0;margin:0;padding:0}.nav-demo label{display:block;margin:7px 0}\n.nav-demo .bar{display:flex;align-items:center;flex-wrap:wrap;gap:8px;margin:10px 0}\n.nav-demo input[type=checkbox]{accent-color:#485e50;width:16px;height:16px;vertical-align:middle;margin-right:6px}\n.nav-demo input[type=search]{font:inherit;color:inherit;background:transparent;border:1px solid #8888;padding:7px;width:100%}\n.nav-demo button:disabled{opacity:.45}.nav-demo button[aria-current]{outline:2px solid currentColor;outline-offset:1px;font-weight:700}\n.nav-demo ol{padding-left:22px}.nav-demo li{margin:6px 0}.nav-demo [aria-current=step]{font-weight:700}\n.nav-demo a{color:inherit}.nav-demo [data-slide]{min-height:90px;border:1px solid #8885;padding:12px}\n.nav-demo dialog{color:inherit;background:#fafaf8;border:1px solid #8889;border-radius:6px;width:340px}\n.dark .nav-demo dialog{background:#232724}.nav-demo dialog::backdrop{background:#0005}\n.nav-demo [hidden]{display:none!important}.nav-demo kbd{border:1px solid #8886;border-radius:3px;padding:1px 4px}\n</style><section class=\"nav-demo\" data-selection-demo>\n <fieldset><legend>本頁 3 筆報價</legend><label><input type=\"checkbox\" data-select-page>全選本頁 3 筆</label>\n <label><input type=\"checkbox\" data-record checked>網站規劃</label><label><input type=\"checkbox\" data-record checked>視覺設計</label><label><input type=\"checkbox\" data-record checked>前端開發</label></fieldset>\n <div class=\"bar\"><button data-selection-clear aria-label=\"取消選取\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><path d=\"M4 4L12 12\"/><path d=\"M4 12L12 4\"/></svg></button><output data-selection-count aria-live=\"polite\"></output></div>\n <small>選取範圍是本頁；取消選取不會刪除報價。</small></section>",
+      "usageEvidenceLimit": "Haoban provides direct local usage; the fixture reproduces selection scope with Master x, not the production component.",
+      "visualObservation": "既有x在16／20／24的交叉輪廓清楚，放在已選數量左側能對應取消選取；保留可讀標籤，避免誤認為刪除報價。"
+    }
+  ],
+  "searchLimit": "The existing substring search matches select-all inside deselect-all and therefore returns x. select-all is not added as a catalog alias; the behavior is recorded in the browser check rather than misrepresented as a direct semantic replacement."
+}

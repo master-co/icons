@@ -1,0 +1,22 @@
+[
+  {
+    "name": "screen-rotate",
+    "reviewed": true,
+    "purpose": "手機旋轉提示與自動旋轉入口需要同時呈現裝置及轉向，和旋轉內容、最大化視窗分開。",
+    "recognitionCues": "斜向細長手機、兩段對向轉動的單翼圓弧。",
+    "confusableWith": [
+      "rotate-right",
+      "smartphone",
+      "maximize"
+    ],
+    "sourceObservation": "Hugeicons 的小手機配單翼轉弧保留較多空氣；MDI 的手機占滿畫布，邊緣轉弧顯得擠。",
+    "reason": "直接安置 smartphoneShape，不另畫手機。外圍改成兩筆連續單翼轉弧，第二筆由第一筆旋轉 180 度而來；圓弧與 tip 的切線相接。原生 16px 省略手機操作橫線，各角型使用真實手機半徑與箭頭轉角。",
+    "comparison": "最新稿在 16／20／24px 與兩份原稿並列。Hugeicons 的單翼箭頭比完整雙翼更適合這個密度，本稿因此採取相同構造方向，重新安排原生尺寸、共享手機母型並拉開周圍空間。MDI 的手機太滿，本稿保留較小但細長的內框；16px 與 24px 的手機內孔仍清楚，粗線端沒有藉白色遮罩挖出假留白。",
+    "dashes": false,
+    "dashReason": "轉向是明確方向提示；虛線容易變成等待、自動偵測或尚未完成。",
+    "usageEvidence": [
+      "https://support.google.com/pixelphone/answer/6111557?hl=en",
+      "https://support.google.com/pixelphone/answer/6073614?hl=en"
+    ]
+  }
+]

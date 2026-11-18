@@ -1,0 +1,54 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "viewed": [
+    "light.png",
+    "dark.png"
+  ],
+  "items": [
+    {
+      "name": "file-pen",
+      "alternative": "pencil",
+      "label": "建立修訂草稿",
+      "context": "文件詳情 · 狀態管理選單",
+      "reason": "Haoban 文件詳情已交代目前文件，pencil 可直接表示進入修訂；檔案摺角不提供額外辨認資訊。若同一工具列日後並排不同物件的編輯，應先使用明確標籤，而非預先建立物件加筆的全部組合。"
+    },
+    {
+      "name": "file-down",
+      "alternative": "download",
+      "label": "匯出 CSV",
+      "context": "資源列表 · 與新增及篩選並列的匯出按鈕",
+      "reason": "現有下載箭頭足以表達匯出或下載，CSV 標籤交代檔案類型；Haoban 的實際列表工具列也已使用一般下載圖示，不需要另一個文件外框。"
+    },
+    {
+      "name": "file-up",
+      "alternative": "upload",
+      "label": "選擇檔案",
+      "context": "編輯器媒體節點 · 選擇或更換檔案",
+      "reason": "媒體節點和按鈕文字已表達檔案對象，既有 upload 表達由裝置加入；Haoban 同一操作已使用一般上傳圖示。文件外框不增加必要的操作差異。"
+    },
+    {
+      "name": "file-stack",
+      "alternative": "layers",
+      "label": "報價與請款不限份數",
+      "context": "方案權益卡片 · 多份文件的文字說明",
+      "reason": "這個實際使用點要表達不限份數，layers 的重複層片已提供多個物件的線索；文字精確交代報價和請款，不需要重複多個文件摺角。"
+    },
+    {
+      "name": "folder-move",
+      "alternative": "folder-open",
+      "label": "選擇目的資料夾",
+      "context": "移動選取項目對話框 · 目的資料夾選擇入口",
+      "reason": "在移動對話框，folder-open 配合「選擇目的資料夾」可識別目的地選擇器；移動操作由對話框標題及確認鈕交代。此替代針對這個完整情境，不能把 folder-open 當成無標籤的移動命令。",
+      "sample": "<div style=\"border:1px solid #8886;padding:10px\"><b>移動「專案素材」</b><p>目的地：工作區 / 專案</p><div style=\"display:flex;gap:10px\"><button>選擇目的資料夾</button><button>移動至此</button></div></div>"
+    }
+  ],
+  "usageEvidence": [
+    "/Users/aron/haoban/apps/web/src/features/document-view.components/DocumentView.svelte:339",
+    "/Users/aron/haoban/apps/site/src/views/security.ts:89",
+    "/Users/aron/haoban/apps/ui-workbench/src/list-toolbar.stories.components/Demo.svelte:120",
+    "/Users/aron/haoban/packages/editor/src/media.components/MediaNode.svelte:453",
+    "/Users/aron/haoban/apps/web/src/features/plan-settings.components/UnlockedCard.svelte:72",
+    "docs/review/rebuild-01/substitution-file-actions/index.html（目的資料夾選擇器為示意情境）"
+  ]
+}

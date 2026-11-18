@@ -1,0 +1,135 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "skillVersion": "0.5.18",
+  "viewed": [
+    "light.png",
+    "dark.png"
+  ],
+  "sizes": [
+    16,
+    20,
+    24
+  ],
+  "themes": [
+    "light",
+    "dark"
+  ],
+  "dpr": [
+    1
+  ],
+  "corner": "not applicable: actual CSS value previews, not icon drawings",
+  "scope": "Native content previews and labeled controls replace eight candidates. Gradient swatches use square CSS sizes; text previews use font size and natural line height. No icon, alias, framework or application source changed.",
+  "userApproval": "pending",
+  "evidence": [
+    {
+      "path": "docs/review/rebuild-01/substitution-text-effect-values/light.png",
+      "sha256": "9e5ad0c15f8483c4a90cd5497708cdeab4b455613ed2bf15aae9fce5a6e9bf40"
+    },
+    {
+      "path": "docs/review/rebuild-01/substitution-text-effect-values/dark.png",
+      "sha256": "57a020a14ba878129bf7563ca8cdf56deba15a66d1da3d102b37b321815dcf13"
+    }
+  ],
+  "items": [
+    {
+      "name": "double-underline",
+      "label": "雙底線",
+      "alternative": null,
+      "alternativeLabel": "字型效果選項＋文字預覽",
+      "replacementKind": "native-content",
+      "nativePreview": "<span aria-hidden=\"true\" style=\"display:inline-block;padding:6px 3px;font-size:20px;line-height:1.5;text-decoration-line:underline;text-decoration-style:double;text-underline-offset:4px\">Abc</span>",
+      "comparisonMarkup": "<span aria-hidden=\"true\" style=\"display:inline-block;padding:6px 3px;font-size:16px;line-height:1.5;text-decoration-line:underline;text-decoration-style:double;text-underline-offset:4px\">Abc</span><span aria-hidden=\"true\" style=\"display:inline-block;padding:6px 3px;font-size:20px;line-height:1.5;text-decoration-line:underline;text-decoration-style:double;text-underline-offset:4px\">Abc</span><span aria-hidden=\"true\" style=\"display:inline-block;padding:6px 3px;font-size:24px;line-height:1.5;text-decoration-line:underline;text-decoration-style:double;text-underline-offset:4px\">Abc</span>",
+      "context": "字型設定 · 底線樣式選單",
+      "reason": "雙底線是底線樣式的一個值。在底線選單中直接讓範例文字顯示雙線，可與單線及點線比較；equal 不等同雙底線，既有 underline 只作共同入口，不需要再畫一顆 U 加兩條線。",
+      "replacementScope": "使用明確標籤與實際效果預覽；示意中的 16／20／24 是文字字級，不是圖示方框。圖示入口仍可沿用 underline／text；本次不把效果值當成入口圖示的同義詞。",
+      "sample": "<fieldset style=\"margin:0;border:1px solid #8886;border-radius:6px;padding:12px\"><legend>底線樣式</legend><div style=\"display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px\"><label style=\"display:flex;gap:5px;align-items:center\"><input type=\"radio\" name=\"double-underline\" value=\"single-underline\" data-text-style=\"text-decoration:underline;text-underline-offset:4px\" ><span aria-hidden=\"true\" style=\"display:inline-block;padding:6px 3px;font-size:18px;line-height:1.5;text-decoration:underline;text-underline-offset:4px\">Abc</span><span>單底線</span></label><label style=\"display:flex;gap:5px;align-items:center\"><input type=\"radio\" name=\"double-underline\" value=\"double-underline\" data-text-style=\"text-decoration-line:underline;text-decoration-style:double;text-underline-offset:4px\" checked><span aria-hidden=\"true\" style=\"display:inline-block;padding:6px 3px;font-size:18px;line-height:1.5;text-decoration-line:underline;text-decoration-style:double;text-underline-offset:4px\">Abc</span><span>雙底線</span></label><label style=\"display:flex;gap:5px;align-items:center\"><input type=\"radio\" name=\"double-underline\" value=\"dotted-underline\" data-text-style=\"text-decoration-line:underline;text-decoration-style:dotted;text-underline-offset:4px\" ><span aria-hidden=\"true\" style=\"display:inline-block;padding:6px 3px;font-size:18px;line-height:1.5;text-decoration-line:underline;text-decoration-style:dotted;text-underline-offset:4px\">Abc</span><span>點狀底線</span></label><label style=\"display:flex;gap:5px;align-items:center\"><input type=\"radio\" name=\"double-underline\" value=\"wavy-underline\" data-text-style=\"text-decoration-line:underline;text-decoration-style:wavy;text-underline-offset:4px\" ><span aria-hidden=\"true\" style=\"display:inline-block;padding:6px 3px;font-size:18px;line-height:1.5;text-decoration-line:underline;text-decoration-style:wavy;text-underline-offset:4px\">Abc</span><span>波浪底線</span></label></div><div style=\"padding:8px;margin-top:8px;border-top:1px solid #8885\"><small>效果預覽</small><span data-effect-preview aria-hidden=\"true\" style=\"display:inline-block;padding:6px 3px;font-size:24px;line-height:1.5;text-decoration-line:underline;text-decoration-style:double;text-underline-offset:4px\">Abc</span></div></fieldset>",
+      "searchAliasDecision": "No alias: the native text effect is the replacement, not a semantically equivalent drawing.",
+      "usageEvidence": [
+        "https://help.libreoffice.org/latest/en-US/text/shared/01/05020200.html",
+        "https://support.microsoft.com/en-us/word/underline-text-or-spaces"
+      ],
+      "visualObservation": "16字級的兩條底線仍分離，與同選單的單線、點線和波浪線並排時可直接看到效果。標籤保持完整，沒有將圖示 equal 當作雙底線。"
+    },
+    {
+      "name": "dotted-underline",
+      "label": "點狀底線",
+      "alternative": null,
+      "alternativeLabel": "字型效果選項＋文字預覽",
+      "replacementKind": "native-content",
+      "nativePreview": "<span aria-hidden=\"true\" style=\"display:inline-block;padding:6px 3px;font-size:20px;line-height:1.5;text-decoration-line:underline;text-decoration-style:dotted;text-underline-offset:4px\">Abc</span>",
+      "comparisonMarkup": "<span aria-hidden=\"true\" style=\"display:inline-block;padding:6px 3px;font-size:16px;line-height:1.5;text-decoration-line:underline;text-decoration-style:dotted;text-underline-offset:4px\">Abc</span><span aria-hidden=\"true\" style=\"display:inline-block;padding:6px 3px;font-size:20px;line-height:1.5;text-decoration-line:underline;text-decoration-style:dotted;text-underline-offset:4px\">Abc</span><span aria-hidden=\"true\" style=\"display:inline-block;padding:6px 3px;font-size:24px;line-height:1.5;text-decoration-line:underline;text-decoration-style:dotted;text-underline-offset:4px\">Abc</span>",
+      "context": "字型設定 · 底線樣式選單",
+      "reason": "點狀底線應預覽實際文字下方的點列；stroke-dotted 單獨只表示線型，沒有文字裝飾的上下文。底線樣式選單能直接展示選項，不需要把文字和微小圓點再塞進 16px。",
+      "replacementScope": "使用明確標籤與實際效果預覽；示意中的 16／20／24 是文字字級，不是圖示方框。圖示入口仍可沿用 underline／text；本次不把效果值當成入口圖示的同義詞。",
+      "sample": "<fieldset style=\"margin:0;border:1px solid #8886;border-radius:6px;padding:12px\"><legend>底線樣式</legend><div style=\"display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px\"><label style=\"display:flex;gap:5px;align-items:center\"><input type=\"radio\" name=\"dotted-underline\" value=\"single-underline\" data-text-style=\"text-decoration:underline;text-underline-offset:4px\" ><span aria-hidden=\"true\" style=\"display:inline-block;padding:6px 3px;font-size:18px;line-height:1.5;text-decoration:underline;text-underline-offset:4px\">Abc</span><span>單底線</span></label><label style=\"display:flex;gap:5px;align-items:center\"><input type=\"radio\" name=\"dotted-underline\" value=\"double-underline\" data-text-style=\"text-decoration-line:underline;text-decoration-style:double;text-underline-offset:4px\" ><span aria-hidden=\"true\" style=\"display:inline-block;padding:6px 3px;font-size:18px;line-height:1.5;text-decoration-line:underline;text-decoration-style:double;text-underline-offset:4px\">Abc</span><span>雙底線</span></label><label style=\"display:flex;gap:5px;align-items:center\"><input type=\"radio\" name=\"dotted-underline\" value=\"dotted-underline\" data-text-style=\"text-decoration-line:underline;text-decoration-style:dotted;text-underline-offset:4px\" checked><span aria-hidden=\"true\" style=\"display:inline-block;padding:6px 3px;font-size:18px;line-height:1.5;text-decoration-line:underline;text-decoration-style:dotted;text-underline-offset:4px\">Abc</span><span>點狀底線</span></label><label style=\"display:flex;gap:5px;align-items:center\"><input type=\"radio\" name=\"dotted-underline\" value=\"wavy-underline\" data-text-style=\"text-decoration-line:underline;text-decoration-style:wavy;text-underline-offset:4px\" ><span aria-hidden=\"true\" style=\"display:inline-block;padding:6px 3px;font-size:18px;line-height:1.5;text-decoration-line:underline;text-decoration-style:wavy;text-underline-offset:4px\">Abc</span><span>波浪底線</span></label></div><div style=\"padding:8px;margin-top:8px;border-top:1px solid #8885\"><small>效果預覽</small><span data-effect-preview aria-hidden=\"true\" style=\"display:inline-block;padding:6px 3px;font-size:24px;line-height:1.5;text-decoration-line:underline;text-decoration-style:dotted;text-underline-offset:4px\">Abc</span></div></fieldset>",
+      "searchAliasDecision": "No alias: the native text effect is the replacement, not a semantically equivalent drawing.",
+      "usageEvidence": [
+        "https://help.libreoffice.org/latest/en-US/text/shared/01/05020200.html",
+        "https://support.microsoft.com/en-us/word/underline-text-or-spaces"
+      ],
+      "visualObservation": "小字級的底線呈連續點列，24字級較清楚；實際文字及名稱補足細節，和雙線／波浪同頁比較。沒有額外縮成一顆 U 加徽標的圖。"
+    },
+    {
+      "name": "wavy-underline",
+      "label": "波浪底線",
+      "alternative": null,
+      "alternativeLabel": "字型效果選項＋文字預覽",
+      "replacementKind": "native-content",
+      "nativePreview": "<span aria-hidden=\"true\" style=\"display:inline-block;padding:6px 3px;font-size:20px;line-height:1.5;text-decoration-line:underline;text-decoration-style:wavy;text-underline-offset:4px\">Abc</span>",
+      "comparisonMarkup": "<span aria-hidden=\"true\" style=\"display:inline-block;padding:6px 3px;font-size:16px;line-height:1.5;text-decoration-line:underline;text-decoration-style:wavy;text-underline-offset:4px\">Abc</span><span aria-hidden=\"true\" style=\"display:inline-block;padding:6px 3px;font-size:20px;line-height:1.5;text-decoration-line:underline;text-decoration-style:wavy;text-underline-offset:4px\">Abc</span><span aria-hidden=\"true\" style=\"display:inline-block;padding:6px 3px;font-size:24px;line-height:1.5;text-decoration-line:underline;text-decoration-style:wavy;text-underline-offset:4px\">Abc</span>",
+      "context": "字型設定 · 底線樣式選單",
+      "reason": "波浪底線在字型設定中是可選的裝飾樣式，不能將它等同拼字錯誤狀態。直接預覽所選文字上的波形與標籤，並排單線、雙線及點線即可區分；不新增拼字警告式圖示。",
+      "replacementScope": "使用明確標籤與實際效果預覽；示意中的 16／20／24 是文字字級，不是圖示方框。圖示入口仍可沿用 underline／text；本次不把效果值當成入口圖示的同義詞。",
+      "sample": "<fieldset style=\"margin:0;border:1px solid #8886;border-radius:6px;padding:12px\"><legend>底線樣式</legend><div style=\"display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px\"><label style=\"display:flex;gap:5px;align-items:center\"><input type=\"radio\" name=\"wavy-underline\" value=\"single-underline\" data-text-style=\"text-decoration:underline;text-underline-offset:4px\" ><span aria-hidden=\"true\" style=\"display:inline-block;padding:6px 3px;font-size:18px;line-height:1.5;text-decoration:underline;text-underline-offset:4px\">Abc</span><span>單底線</span></label><label style=\"display:flex;gap:5px;align-items:center\"><input type=\"radio\" name=\"wavy-underline\" value=\"double-underline\" data-text-style=\"text-decoration-line:underline;text-decoration-style:double;text-underline-offset:4px\" ><span aria-hidden=\"true\" style=\"display:inline-block;padding:6px 3px;font-size:18px;line-height:1.5;text-decoration-line:underline;text-decoration-style:double;text-underline-offset:4px\">Abc</span><span>雙底線</span></label><label style=\"display:flex;gap:5px;align-items:center\"><input type=\"radio\" name=\"wavy-underline\" value=\"dotted-underline\" data-text-style=\"text-decoration-line:underline;text-decoration-style:dotted;text-underline-offset:4px\" ><span aria-hidden=\"true\" style=\"display:inline-block;padding:6px 3px;font-size:18px;line-height:1.5;text-decoration-line:underline;text-decoration-style:dotted;text-underline-offset:4px\">Abc</span><span>點狀底線</span></label><label style=\"display:flex;gap:5px;align-items:center\"><input type=\"radio\" name=\"wavy-underline\" value=\"wavy-underline\" data-text-style=\"text-decoration-line:underline;text-decoration-style:wavy;text-underline-offset:4px\" checked><span aria-hidden=\"true\" style=\"display:inline-block;padding:6px 3px;font-size:18px;line-height:1.5;text-decoration-line:underline;text-decoration-style:wavy;text-underline-offset:4px\">Abc</span><span>波浪底線</span></label></div><div style=\"padding:8px;margin-top:8px;border-top:1px solid #8885\"><small>效果預覽</small><span data-effect-preview aria-hidden=\"true\" style=\"display:inline-block;padding:6px 3px;font-size:24px;line-height:1.5;text-decoration-line:underline;text-decoration-style:wavy;text-underline-offset:4px\">Abc</span></div></fieldset>",
+      "searchAliasDecision": "No alias: the native text effect is the replacement, not a semantically equivalent drawing.",
+      "usageEvidence": [
+        "https://help.libreoffice.org/latest/en-US/text/shared/01/05020200.html",
+        "https://support.microsoft.com/en-us/word/underline-text-or-spaces"
+      ],
+      "rejectedSearchTerms": {
+        "terms": [
+          "spelling-underline"
+        ],
+        "reason": "A user-selected wavy text decoration is not necessarily a spelling error indicator."
+      },
+      "visualObservation": "波形在三字級皆可見；相鄰三種線型和選取態完整保留。選項是文字裝飾，未用錯誤色或警告圖示暗示拼字問題。"
+    },
+    {
+      "name": "overline",
+      "label": "上劃線",
+      "alternative": null,
+      "alternativeLabel": "字型效果選項＋文字預覽",
+      "replacementKind": "native-content",
+      "nativePreview": "<span aria-hidden=\"true\" style=\"display:inline-block;padding:6px 3px;font-size:20px;line-height:1.5;text-decoration-line:overline;text-decoration-style:solid\">Abc</span>",
+      "comparisonMarkup": "<span aria-hidden=\"true\" style=\"display:inline-block;padding:6px 3px;font-size:16px;line-height:1.5;text-decoration-line:overline;text-decoration-style:solid\">Abc</span><span aria-hidden=\"true\" style=\"display:inline-block;padding:6px 3px;font-size:20px;line-height:1.5;text-decoration-line:overline;text-decoration-style:solid\">Abc</span><span aria-hidden=\"true\" style=\"display:inline-block;padding:6px 3px;font-size:24px;line-height:1.5;text-decoration-line:overline;text-decoration-style:solid\">Abc</span>",
+      "context": "字型設定 · 文字效果選項",
+      "reason": "上劃線不同於底線，也不應改用 arrow-up。字型效果面板可用具名選項與實際上劃線文字預覽呈現；沒有證據需要額外的純圖示工具列按鈕，因此不為上下對稱而新增。",
+      "replacementScope": "使用明確標籤與實際效果預覽；示意中的 16／20／24 是文字字級，不是圖示方框。圖示入口仍可沿用 underline／text；本次不把效果值當成入口圖示的同義詞。",
+      "sample": "<fieldset style=\"margin:0;border:1px solid #8886;border-radius:6px;padding:12px\"><legend>文字效果</legend><div style=\"display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px\"><label style=\"display:flex;gap:5px;align-items:center\"><input type=\"radio\" name=\"overline\" value=\"normal-text\" data-text-style=\"\" ><span aria-hidden=\"true\" style=\"display:inline-block;padding:6px 3px;font-size:18px;line-height:1.5;\">Abc</span><span>一般文字</span></label><label style=\"display:flex;gap:5px;align-items:center\"><input type=\"radio\" name=\"overline\" value=\"overline\" data-text-style=\"text-decoration-line:overline;text-decoration-style:solid\" checked><span aria-hidden=\"true\" style=\"display:inline-block;padding:6px 3px;font-size:18px;line-height:1.5;text-decoration-line:overline;text-decoration-style:solid\">Abc</span><span>上劃線</span></label><label style=\"display:flex;gap:5px;align-items:center\"><input type=\"radio\" name=\"overline\" value=\"text-outline\" data-text-style=\"-webkit-text-stroke:1px currentColor;-webkit-text-fill-color:transparent;font-weight:600\" ><span aria-hidden=\"true\" style=\"display:inline-block;padding:6px 3px;font-size:18px;line-height:1.5;-webkit-text-stroke:1px currentColor;-webkit-text-fill-color:transparent;font-weight:600\">Abc</span><span>文字外框</span></label></div><div style=\"padding:8px;margin-top:8px;border-top:1px solid #8885\"><small>效果預覽</small><span data-effect-preview aria-hidden=\"true\" style=\"display:inline-block;padding:6px 3px;font-size:24px;line-height:1.5;text-decoration-line:overline;text-decoration-style:solid\">Abc</span></div></fieldset>",
+      "searchAliasDecision": "No alias: the native text effect is the replacement, not a semantically equivalent drawing.",
+      "usageEvidence": [
+        "https://help.libreoffice.org/latest/en-US/text/shared/01/05020200.html"
+      ],
+      "visualObservation": "線條位於字頂，和選單中一般文字、外框字樣並列，16字級也沒有和底線混淆。自然文字高度避免將上劃線擠入固定圖示框。"
+    },
+    {
+      "name": "text-outline",
+      "label": "文字外框",
+      "alternative": null,
+      "alternativeLabel": "字型效果選項＋文字預覽",
+      "replacementKind": "native-content",
+      "nativePreview": "<span aria-hidden=\"true\" style=\"display:inline-block;padding:6px 3px;font-size:20px;line-height:1.5;-webkit-text-stroke:1px currentColor;-webkit-text-fill-color:transparent;font-weight:600\">Abc</span>",
+      "comparisonMarkup": "<span aria-hidden=\"true\" style=\"display:inline-block;padding:6px 3px;font-size:16px;line-height:1.5;-webkit-text-stroke:1px currentColor;-webkit-text-fill-color:transparent;font-weight:600\">Abc</span><span aria-hidden=\"true\" style=\"display:inline-block;padding:6px 3px;font-size:20px;line-height:1.5;-webkit-text-stroke:1px currentColor;-webkit-text-fill-color:transparent;font-weight:600\">Abc</span><span aria-hidden=\"true\" style=\"display:inline-block;padding:6px 3px;font-size:24px;line-height:1.5;-webkit-text-stroke:1px currentColor;-webkit-text-fill-color:transparent;font-weight:600\">Abc</span>",
+      "context": "字型設定 · 文字效果選項",
+      "reason": "文字外框需要呈現字形內部留白，單用 square 或 stroke-width 不等義。字型效果面板可直接用所選字體預覽外框，並與一般文字並排；再造固定字母圖示無法比實際文字更準確。",
+      "replacementScope": "使用明確標籤與實際效果預覽；示意中的 16／20／24 是文字字級，不是圖示方框。圖示入口仍可沿用 underline／text；本次不把效果值當成入口圖示的同義詞。",
+      "sample": "<fieldset style=\"margin:0;border:1px solid #8886;border-radius:6px;padding:12px\"><legend>文字效果</legend><div style=\"display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px\"><label style=\"display:flex;gap:5px;align-items:center\"><input type=\"radio\" name=\"text-outline\" value=\"normal-text\" data-text-style=\"\" ><span aria-hidden=\"true\" style=\"display:inline-block;padding:6px 3px;font-size:18px;line-height:1.5;\">Abc</span><span>一般文字</span></label><label style=\"display:flex;gap:5px;align-items:center\"><input type=\"radio\" name=\"text-outline\" value=\"overline\" data-text-style=\"text-decoration-line:overline;text-decoration-style:solid\" ><span aria-hidden=\"true\" style=\"display:inline-block;padding:6px 3px;font-size:18px;line-height:1.5;text-decoration-line:overline;text-decoration-style:solid\">Abc</span><span>上劃線</span></label><label style=\"display:flex;gap:5px;align-items:center\"><input type=\"radio\" name=\"text-outline\" value=\"text-outline\" data-text-style=\"-webkit-text-stroke:1px currentColor;-webkit-text-fill-color:transparent;font-weight:600\" checked><span aria-hidden=\"true\" style=\"display:inline-block;padding:6px 3px;font-size:18px;line-height:1.5;-webkit-text-stroke:1px currentColor;-webkit-text-fill-color:transparent;font-weight:600\">Abc</span><span>文字外框</span></label></div><div style=\"padding:8px;margin-top:8px;border-top:1px solid #8885\"><small>效果預覽</small><span data-effect-preview aria-hidden=\"true\" style=\"display:inline-block;padding:6px 3px;font-size:24px;line-height:1.5;-webkit-text-stroke:1px currentColor;-webkit-text-fill-color:transparent;font-weight:600\">Abc</span></div></fieldset>",
+      "searchAliasDecision": "No alias: the native text effect is the replacement, not a semantically equivalent drawing.",
+      "usageEvidence": [
+        "https://help.libreoffice.org/latest/en-US/text/shared/01/05020200.html"
+      ],
+      "visualObservation": "第一輪預覽的0.7px描邊偏淡，調為1px後，在明暗底的16／20／24字級仍可看出字腔與字外輪廓；這是效果預覽的示例參數，並未改動圖示線寬。"
+    }
+  ]
+}

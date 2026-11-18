@@ -1,0 +1,44 @@
+[
+  {
+    "name": "boolean-union",
+    "purpose": "畫布多選後的聯集命令；合併外形與相減、交集、排除必須有不同結果輪廓。",
+    "recognitionCues": "同一對方形合併後的階梯狀外輪廓，沒有內部分割線。",
+    "confusableWith": [
+      "copy",
+      "layers",
+      "boolean-exclude"
+    ],
+    "sourceObservation": "Tabler 採右上／左下兩方形，輪廓較緊湊；Hugeicons 採左上／右下，轉角曲線更大。Master 共用原 square 的參數化母型，四種運算固定為左上／右下兩個等大方形，聯集由同一對方形直接求外邊界。",
+    "reason": "copy 表示重複建立物件，layers 表示疊放，都不能表達把選取形狀合為單一外輪廓。以直接聯集保留實際方形肩部；微圓與圓角只調整操作物件的角，不另畫不同的外框比例。",
+    "comparison": "與 Tabler 相比，本稿兩個方形的錯位更明顯，能與其餘三個命令共用位置；與 Hugeicons 相比，側邊直線較長，保留 square 家族而不鼓成軟塊。16px 三角型的階梯轉折清楚，最粗線寬下仍有完整中間通道，文字與純圖示工具列中都不會像兩張獨立複本。",
+    "dashes": false,
+    "dashReason": "聯集保留整體外邊界，沒有需要顯示為移除或隱藏的內線。",
+    "opacity": false,
+    "opacityReason": "完整聯集只需一條有效外輪廓；淡線會重新引入已合併的分界。",
+    "usageEvidence": [
+      "https://help.figma.com/hc/en-us/articles/360039957534-Boolean-operations"
+    ],
+    "reviewed": true
+  },
+  {
+    "name": "boolean-subtract",
+    "purpose": "畫布多選後從後方形狀減去前方形狀的命令，需與聯集及保留交集區分。",
+    "recognitionCues": "左上方形留下的 L 形深線，右下方形及被刪除邊界退為淡線。",
+    "confusableWith": [
+      "copy",
+      "boolean-intersect",
+      "boolean-union"
+    ],
+    "sourceObservation": "Lucide 與 Hugeicons 都以完整 L 形表示剩餘部分，以虛線表示被減去的右下物件。Lucide 的方形肩部較清楚，Hugeicons 的轉折更柔。新稿沿用固定的 Master 方形操作物件，直接求差集，將原邊界淡化而非切成許多短線。",
+    "reason": "普通重疊方框不能說明哪塊被減去。深線完整描出 A 減 B；淡線交代原物件位置。初稿淡線在深底與低對比下過弱，改為 40% 不透明度；兩個原物件的描邊先聯集為單一淡線墨形，交疊處不會因重畫變深，且固定輸出維持單層 primitive 格式。 淡線聯集保留幾何引擎的 fill-rule，避免合併描邊後把原物件的透明內部填滿。",
+    "comparison": "來源的虛線語意更直接，但 16px 會產生較多獨立短段；本稿以連續淡線保留外形，深色 L 形仍是主體。加深淡線後，深底與 55% 文字色下仍能看出右下物件；原生三尺寸的 L 形凹口均保留空間。最粗線寬下凹口沒有填成實心角，且與交集的中心小框有明確差異。",
+    "dashes": false,
+    "dashReason": "此稿以淡線表示被移除邊界，避免 16px 外框被拆成過多短線；沒有把淡化當成遮擋補丁。",
+    "opacity": true,
+    "opacityReason": "40% 的原物件邊界表示運算後不保留的部分，100% 線條表示差集結果。",
+    "usageEvidence": [
+      "https://help.figma.com/hc/en-us/articles/360039957534-Boolean-operations"
+    ],
+    "reviewed": true
+  }
+]

@@ -1,0 +1,94 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "viewed": [
+    "light.png",
+    "dark.png"
+  ],
+  "items": [
+    {
+      "name": "priority-none",
+      "alternative": "minus",
+      "context": "任務優先度選單",
+      "reason": "未設定優先度可以用既有短橫線表示空值；與低／中／高柱形及緊急驚嘆號並列，已有不同輪廓，不需另做 priority-none。"
+    },
+    {
+      "name": "priority-urgent",
+      "alternative": "alert-circle",
+      "context": "任務優先度選單",
+      "reason": "緊急優先度可以用既有圓形驚嘆號；在優先度欄中已與一至三段的等級分開，不必另加旗幟或新警示外框。"
+    },
+    {
+      "name": "find-next",
+      "alternative": "arrow-down",
+      "context": "搜尋列 · 3 / 12 · 前一個／下一個結果",
+      "reason": "搜尋結果上下切換由搜尋列及結果計數交代，向下箭頭即可表示下一個符合項目；疊加放大鏡不增加必要資訊。"
+    },
+    {
+      "name": "find-previous",
+      "alternative": "arrow-up",
+      "context": "搜尋列 · 3 / 12 · 前一個／下一個結果",
+      "reason": "與下一個結果的向下箭頭成對，向上箭頭即可表示上一個符合項目；搜尋情境已由輸入框交代，不需另畫搜尋箭頭。"
+    },
+    {
+      "name": "block-move-up",
+      "alternative": "arrow-up",
+      "context": "所選區塊選單 · 上移／下移",
+      "reason": "區塊已被選取，操作選單中的向上箭頭足以表示上移；再加區塊外框只是重複操作對象。"
+    },
+    {
+      "name": "block-move-down",
+      "alternative": "arrow-down",
+      "context": "所選區塊選單 · 上移／下移",
+      "reason": "與上移成對使用既有向下箭頭，選取狀態已交代移動對象；不需要專屬區塊與箭頭複合圖。"
+    },
+    {
+      "name": "table-cell-next",
+      "alternative": "arrow-right",
+      "context": "表格導覽 · 上一格／下一格",
+      "reason": "目前儲存格與表格情境已可見，向右箭頭可表達下一格；另疊表格會增加線條而不增加導覽資訊。"
+    },
+    {
+      "name": "table-cell-previous",
+      "alternative": "arrow-left",
+      "context": "表格導覽 · 上一格／下一格",
+      "reason": "在儲存格導覽中與向右箭頭成對，既有向左箭頭足以表示上一格；不需重複表格外框。"
+    },
+    {
+      "name": "message-pin",
+      "alternative": "pin",
+      "context": "留言選單 · 釘選／複製／刪除",
+      "reason": "留言選單已交代對象，既有 pin 可與 copy、trash 明確區分；對話框加圖釘不帶來新的動作語意。"
+    },
+    {
+      "name": "message-clock",
+      "alternative": "clock",
+      "context": "留言選單 · 稍後處理",
+      "reason": "在留言的稍後處理選單中，時鐘與時間選項已能交代延後動作；不另製對話框加時鐘。"
+    },
+    {
+      "name": "message-reopen",
+      "alternative": "rotate-left",
+      "context": "已解決討論 · 重新開啟",
+      "reason": "已解決討論的選單已有狀態上下文，回轉箭頭足以表達重新開啟；與刪除、釘選的輪廓也不同，不需疊加對話框。"
+    },
+    {
+      "name": "lock-aspect-ratio",
+      "alternative": "lock",
+      "context": "尺寸欄位 · 寬 × 高 · 鎖定比例",
+      "reason": "寬高欄位之間的鎖頭已是比例鎖定的操作位置，lock 與 unlock 足以呈現兩態；加矩形外框重複了尺寸上下文。"
+    },
+    {
+      "name": "unlock-aspect-ratio",
+      "alternative": "unlock",
+      "context": "尺寸欄位 · 寬 × 高 · 解除比例鎖定",
+      "reason": "與 lock 共用既有開閉鎖家族，在寬高欄間可直接辨識解除比例鎖定，不需要另一套矩形與開鎖。"
+    },
+    {
+      "name": "user-search",
+      "alternative": "search",
+      "context": "成員選擇器 · 搜尋成員",
+      "reason": "成員列表與搜尋框已限制查找範圍，既有 search 足以表示搜尋；人像加放大鏡只是重複對象，不需專用圖稿。"
+    }
+  ]
+}

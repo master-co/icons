@@ -1,0 +1,24 @@
+[
+  {
+    "name": "drop-cap",
+    "reviewed": true,
+    "purpose": "段落首字放大的獨立插入命令；與字級、全部大寫在緊湊工具列並排時，既有 text、case-upper、text-color 都無法表達首字跨行與後續段落回到全寬的關係。",
+    "recognitionCues": "大寫 A 跨越右側兩條短文字行，下方一條完整文字行回到段落左緣。",
+    "confusableWith": [
+      "case-upper",
+      "text-color",
+      "text",
+      "heading"
+    ],
+    "sourceObservation": "固定 Lucide text-initial 的兩短行加一長行構圖，比 Hugeicons Free 的四行構圖更能在 16px 保留字腔與行間空白。採 Lucide 的具體構圖並記錄 ISC 改作；Hugeicons Free 僅用於比較。",
+    "reason": "未取回被否決圖稿。直接取用 capitalA 家族函式，再以原生尺寸安排段落線。新稿的 16px A 起點由 2 調至 1.5，讓字腔落在完整像素並改善 DPR1 粗線時的閉塞；全寬文字行同步對齊新左緣。20／24px 維持較舒展比例。先前全部 914 顆原生幾何精確保持不變。",
+    "comparison": "最新稿與固定 Lucide、Hugeicons Free 原稿在 16／20／24、sharp／soft／rounded、明暗及 DPR1／2 並列目視。保留 Lucide 清楚的跨行輪廓，使用共源 A 的字面與橫畫，右側短行保持獨立，底行不貼近字腳。16px 半像素落點修正後，粗線 A 的字腔仍留白；20／24px 的 A 與短行比例平衡，三條段落線不需增加第四行。已看四張完整審稿圖與八張段落內／邊界外實際狀態圖；全部支援線寬的結構、留白與輸出保真檢查無錯誤或低解析度診斷。",
+    "dashes": false,
+    "dashReason": "這是確定的段落排版命令，文字行與首字均使用完整筆畫。",
+    "opacity": false,
+    "opacityReason": "首字與段落行的尺寸關係足以表達命令，不靠淡化文字行區分。",
+    "usageEvidence": [
+      "https://support.microsoft.com/en-us/word/insert-a-drop-cap"
+    ]
+  }
+]

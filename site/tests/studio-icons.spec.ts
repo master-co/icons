@@ -31,7 +31,7 @@ for (const {label, entries} of batches) {
 test('studio and operations synonyms open the same SVG in both explorer languages', async ({page}) => {
   for (const [base, query, label, button, filename] of [
     ['', 'exclusive-or', 'boolean exclude', 'Download SVG', 'boolean-exclude.svg'],
-    ['/tw', '排除重疊', '布林排除', '下載 SVG', 'boolean-exclude.svg'],
+    ['/tw', '排除重疊', '排除重疊', '下載 SVG', 'boolean-exclude.svg'],
     ['', 'high-priority', 'priority high', 'Download SVG', 'priority-high.svg'],
     ['/tw', '高優先度', '高優先', '下載 SVG', 'priority-high.svg'],
   ]) {

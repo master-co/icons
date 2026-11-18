@@ -1,0 +1,63 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "skillVersion": "0.5.18",
+  "viewed": [
+    "light.png",
+    "dark.png",
+    "changed-light.png",
+    "changed-dark.png"
+  ],
+  "sizes": [],
+  "themes": [
+    "light",
+    "dark"
+  ],
+  "dpr": [
+    1
+  ],
+  "corner": "soft for existing glyphs only",
+  "scope": "Account controls with six contextual substitutions and one native role value. Local simulated states only; no old session geometry retrieved.",
+  "userApproval": "pending",
+  "evidence": [
+    {
+      "path": "docs/review/rebuild-01/substitution-account-role/light.png",
+      "sha256": "15b2eda4c180a8276ab77fff0a485b1d1bb98c94b41670d36cf1c39e33023348"
+    },
+    {
+      "path": "docs/review/rebuild-01/substitution-account-role/dark.png",
+      "sha256": "49836798192b7dd86db39ba9b40e7c55d09882f6517726a4a0866423ff056b89"
+    },
+    {
+      "path": "docs/review/rebuild-01/substitution-account-role/changed-light.png",
+      "sha256": "f4c0dbe26334bfcb07199cece078e674cb460fb4129c17266f9af71b49f3036c"
+    },
+    {
+      "path": "docs/review/rebuild-01/substitution-account-role/changed-dark.png",
+      "sha256": "37606d9aa8187989011263b23794c3fd67c01429a17dfae1b5c4d181f7a30b33"
+    }
+  ],
+  "items": [
+    {
+      "name": "user-shield",
+      "label": "管理員",
+      "alternative": null,
+      "alternativeLabel": "實際角色名稱",
+      "replacementKind": "native-content",
+      "context": "成員管理 · 角色與權限",
+      "reason": "管理員、成員、檢視者是具體角色值。文字標籤直接表達權限，盾牌易與安全驗證、受保護帳號混淆，不能當成角色同義詞。",
+      "replacementScope": "角色欄位與角色選單；角色變更不改變帳號啟用狀態。",
+      "sample": "<style>[data-account-demo] button{display:inline-flex;margin:3px 4px 3px 0}[data-account-demo] input,[data-account-demo] select{font:inherit;color:inherit;background:transparent;padding:6px;border:1px solid #8887;max-width:100%}[data-account-demo] input[type=\"checkbox\"]{padding:0}[data-account-demo] ul{list-style:none;padding:0}[data-account-demo] li{padding:7px 0;border-bottom:1px solid #8884}[data-account-demo] .person{display:flex;align-items:center;gap:8px;margin:10px 0}[data-account-demo] .avatar{width:30px;height:30px;display:inline-grid;place-items:center;border:1px solid #8886;border-radius:50%;flex-shrink:0}[data-account-demo] .state{display:inline-flex;align-items:center;gap:6px;border:1px solid #8886;padding:3px 7px;border-radius:4px}[data-account-demo] [aria-current=\"true\"]{box-shadow:inset 0 0 0 1px currentColor}[data-account-demo] small{display:block}.dark [data-account-demo]{color-scheme:dark}</style><div data-account-demo=\"role\"><div class=\"person\"><span class=\"avatar\" aria-hidden=\"true\">吳</span><span>吳美宜<small>mei@example.test</small></span></div><label>工作區角色 <select data-account-role><option value=\"admin\" selected>管理員</option><option value=\"member\">成員</option><option value=\"viewer\">檢視者</option></select></label><p><span class=\"state\" data-role-badge>管理員</span></p><p data-role-description>管理工作區與成員。</p><p>帳號狀態：正常</p><p><small>本地狀態示例，不寄信、不變更任何真實帳號或權限。</small></p></div>",
+      "nativePreview": "<span>管理員　成員　檢視者</span>",
+      "comparisonMarkup": "<span>管理員　成員　檢視者</span>",
+      "searchKeywords": [],
+      "searchAliasDecision": "角色名稱直接顯示，不映射到shield或其他安全圖示。",
+      "usageEvidence": [
+        "/Users/aron/haoban/apps/web/src/features/workspace-members.components/WorkspaceMembers.svelte",
+        "/Users/aron/haoban/apps/web/src/features/workspace-members.components/ScriptContent638.svelte"
+      ],
+      "usageEvidenceLimit": "Primary sources establish the account action, state or role. Local controls simulate UI state only; no invitations, account changes or permission changes are sent.",
+      "visualObservation": "Changing the native role selector updates both the full role badge and its permission explanation. Account status stays normal; no security shield is used as an admin-role surrogate."
+    }
+  ]
+}

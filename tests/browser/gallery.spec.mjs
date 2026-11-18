@@ -11,9 +11,10 @@ test('search, presets, accessible detail, downloads, keyboard and responsive lay
   await page.goto('/');await expect(page.locator('.icon-card')).toHaveCount(Math.min(96,conceptCount));
   await expect(page.locator('#pagination')).toBeVisible();
   await expect(page.locator('#concept-count')).toHaveText(await page.evaluate(count=>count.toLocaleString(),conceptCount));
-  await page.getByRole('searchbox').fill('通知');await expect(page.locator('.icon-card')).toHaveCount(5);
-  await page.getByRole('searchbox').fill('搜尋');await expect(page.locator('.icon-card')).toHaveCount(14);
-  expect(await page.locator('.icon-card').evaluateAll(cards=>cards.map(c=>c.dataset.icon).sort())).toEqual(['brand-google','brand-perplexity','calendar-search','database-search','file-search','folder-search','list-search','mail-search','message-search','search','search-selection','search-x','tab-search','user-search']);
+  await page.getByRole('searchbox').fill('通知');await expect(page.locator('.icon-card')).toHaveCount(4);
+  expect(await page.locator('.icon-card').evaluateAll(cards=>cards.map(c=>c.dataset.icon).sort())).toEqual(['bell','bell-off','bell-ring','bell-snooze']);
+  await page.getByRole('searchbox').fill('搜尋');await expect(page.locator('.icon-card')).toHaveCount(11);
+  expect(await page.locator('.icon-card').evaluateAll(cards=>cards.map(c=>c.dataset.icon).sort())).toEqual(['brand-google','brand-perplexity','calendar-search','database-search','file-search','folder-search','list-search','mail-search','message-search','search','selection']);
   await page.locator('input[name="size"][value="16"]').check();
   await page.locator('input[name="corner"][value="rounded"]').check();
   await page.locator('.icon-card[data-icon="search"]').click();await expect(page.getByRole('dialog')).toBeVisible();

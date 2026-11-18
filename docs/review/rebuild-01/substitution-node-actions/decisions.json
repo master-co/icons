@@ -1,0 +1,36 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "viewed": [
+    "light.png",
+    "dark.png"
+  ],
+  "items": [
+    {
+      "name": "node-add",
+      "alternative": "plus",
+      "label": "新增節點",
+      "context": "向量編輯模式 · 已選取路徑段的節點工具列",
+      "reason": "操作對象已由節點編輯模式交代，加號直接表示新增。與減號、接合及分斷並列時差異完整，不需要再縮一顆節點貼加號。"
+    },
+    {
+      "name": "node-remove",
+      "alternative": "minus",
+      "label": "移除節點",
+      "context": "向量編輯模式 · 已選取節點，和分斷路徑分開",
+      "reason": "減號表示減少所選節點；路徑是否仍連續由操作設定和預覽交代。分斷路徑另有兩個斷開端點的圖形，因此不需要再造節點加減家族。"
+    },
+    {
+      "name": "node-smooth",
+      "alternative": "bezier-curve",
+      "label": "平滑節點",
+      "context": "節點類型選擇器 · 與尖角節點並列",
+      "reason": "既有 bezier-curve 已包含中央節點、共線水平控制桿及平滑曲線，可直接表達平滑節點類型；與新的直線尖角稿並排能辨別，重畫同概念不增加必要資訊。"
+    }
+  ],
+  "usageEvidence": [
+    "https://inkscape-manuals.readthedocs.io/en/1.3/node-operations.html",
+    "https://inkscape-manuals.readthedocs.io/en/1.3/node-types.html",
+    "docs/review/rebuild-01/node-type/index.html"
+  ]
+}

@@ -1,0 +1,44 @@
+[
+  {
+    "name": "boolean-intersect",
+    "purpose": "畫布布林選單中的交集命令，只保留兩個選取物件重疊的部分。",
+    "recognitionCues": "深色中心交集小框，兩個錯位方形的其餘邊界淡化。",
+    "confusableWith": [
+      "copy",
+      "boolean-subtract",
+      "boolean-exclude"
+    ],
+    "sourceObservation": "Lucide 和 Hugeicons 都保留中心交集實線，周圍的被移除區域使用虛線；Hugeicons 的中心較小且更柔。Master 的交集直接由與其餘三顆相同的方形求得，16px 重疊寬 4px，避免中心退成小點。",
+    "reason": "單一 square 沒有兩個物件共同區域的線索，copy 則表示兩個完整物件。中心交集完整描邊，周圍保留 40% 邊界供定位；不在圖內加入額外加號、勾或裝飾節點。 淡線聯集保留幾何引擎的 fill-rule，避免合併描邊後把原物件的透明內部填滿。",
+    "comparison": "與兩份來源相比，連續淡線降低原生 16px 的碎線感，中心框則保持足夠內孔。較高淡線不透明度改善深色背景上的兩個操作物件定位；交集輪廓仍明顯更深。16／20／24px 和線寬兩端均能看到中心空腔，與相減的左上 L 形及排除的兩個開放殘餘形狀不同。",
+    "dashes": false,
+    "dashReason": "與相減共用淡線語言表示移除區域；16px 不額外引入密集虛線。",
+    "opacity": true,
+    "opacityReason": "原方形以 40% 不透明度保留上下文，僅重疊區以完整線條強調。",
+    "usageEvidence": [
+      "https://help.figma.com/hc/en-us/articles/360039957534-Boolean-operations"
+    ],
+    "reviewed": true
+  },
+  {
+    "name": "boolean-exclude",
+    "purpose": "畫布布林選單中的排除重疊命令，保留兩側互不重疊的部分。",
+    "recognitionCues": "兩個相向的 L 形殘餘輪廓，交點附近留有開口，中心重疊區不形成實體連接。",
+    "confusableWith": [
+      "copy",
+      "link",
+      "boolean-intersect"
+    ],
+    "sourceObservation": "Lucide 以兩個相向開放輪廓避免交點四線黏合；Hugeicons 同樣開口但外形更圓。本稿明確改作 Lucide 的開放殘餘構造，重建為這組共用的 Master 方形尺寸，並記錄改作來源與授權。",
+    "reason": "只保留聯集外框會丟失排除交集的語意；直接描出 XOR 的兩條封閉輪廓，兩處交點又會黏成十字。採來源的開口構造，原生間距為 2／2.5／3px，粗線時隨增加的線寬延長開口，維持兩部分分離。",
+    "comparison": "與 Lucide 相比，新稿的外框比例與同批其他三顆一致，最粗線寬另補償開口而不讓端帽貼住另一物件。與 Hugeicons 相比，較長直邊維持方形特徵，避免讀成圓鏈節。三尺寸三角型下都可辨兩塊相向殘餘；在完整布林工具列中可與中心實線框的交集區別。這是設計工具慣用符號，仍應提供命令名稱或 tooltip。",
+    "dashes": false,
+    "dashReason": "此命令以兩個保留輪廓及交點開口表示排除，無需再補虛線原物件。",
+    "opacity": false,
+    "opacityReason": "兩側殘餘同屬保留結果，應使用相同完整線條；淡化其中一側會誤讀為相減。",
+    "usageEvidence": [
+      "https://help.figma.com/hc/en-us/articles/360039957534-Boolean-operations"
+    ],
+    "reviewed": true
+  }
+]

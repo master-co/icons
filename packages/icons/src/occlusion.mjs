@@ -138,11 +138,13 @@ export function joinedArrow(shaft,head,points,g) {
     return [['path',{d:regionPathData(ink),fill:'currentColor',stroke:'none','fill-rule':ink.getFillTypeString()}],head];
   }finally{allowed.delete();wedge.delete();edge.delete();ink.delete();forbidden.delete();}
 }
-export function knockout(background,foreground,g,{silhouettes=[]}={}) {
+// A composite may request a larger optical gap; the default preserves all
+// existing badge clearances. Both baked outlines and live masks use that gap.
+export function knockout(background,foreground,g,{silhouettes=[],gap=clearance(g)}={}) {
   if(g.variableStroke){
     // Nested arrow masks are preserved; expand live strokes, and include solid
     // badge interiors so background lines never show through their holes.
-    const exclusion=[...expanded(foreground,g,clearance(g)),...expanded(silhouettes.map(solid),g,clearance(g))];
+    const exclusion=[...expanded(foreground,g,gap),...expanded(silhouettes.map(solid),g,gap)];
     return [...masked(background,[whiteCanvas(g),group(exclusion,{color:'black'})],g),...foreground];
   }
   const back=paintedRegion(background,g),front=paintedRegion(foreground,g);
@@ -151,7 +153,7 @@ export function knockout(background,foreground,g,{silhouettes=[]}={}) {
     // Solid badges occlude their interior too. A cross or slash remains an open
     // stroke silhouette: never replace its shape with a rectangular bbox.
     for(const node of silhouettes){const p=geometry(node);try{front.op(p,P.PathOp.UNION);}finally{p.delete();}}
-    exclusion=offsetRegion(front,clearance(g));
+    exclusion=offsetRegion(front,gap);
     if(!back.op(exclusion,P.PathOp.DIFFERENCE))throw new Error('Knockout subtraction failed');
     return [['path',{d:regionPathData(back),fill:'currentColor',stroke:'none','fill-rule':back.getFillTypeString()}],...foreground];
   }finally{back.delete();front.delete();exclusion?.delete();}

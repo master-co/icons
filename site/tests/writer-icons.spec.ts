@@ -2,13 +2,13 @@ import {test, expect} from '@playwright/test'
 import {readFile} from 'node:fs/promises'
 
 const commands = [
-  ['toggleHeaderCell', 'table-header-cell', '表頭儲存格'],
-  ['goToPreviousCell', 'table-cell-previous', '上一個儲存格'],
-  ['insertInlineMath', 'inline-math', '行內公式'],
-  ['insertBlockMath', 'block-math', '區塊公式'],
-  ['acceptSuggestion', 'accept-change', '接受修訂'],
-  ['acceptAllSuggestions', 'accept-all-changes', '接受全部修訂'],
-  ['unresolveThread', 'message-reopen', '重新開啟討論'],
+  ['toggleHeaderCell', 'table', '表格'],
+  ['goToPreviousCell', 'arrow-left', '向左'],
+  ['insertInlineMath', 'function-square', '函數'],
+  ['insertBlockMath', 'function-square', '函數'],
+  ['acceptSuggestion', 'check', '確認'],
+  ['acceptAllSuggestions', 'check', '確認'],
+  ['unresolveThread', 'rotate-left', '向左旋轉'],
 ]
 
 for (const locale of ['', '/tw']) {

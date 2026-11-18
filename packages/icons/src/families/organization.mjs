@@ -1,6 +1,20 @@
 import { knockout } from '../occlusion.mjs';
 import { file, folder } from './core.mjs';
 import { figure } from './shared.mjs';
+import {line,weightDelta} from '../geometry.mjs';
+
+const kanbanLanes=[[4.75,12],[12,6],[19.25,9]];
+export function kanbanColumns(g,{enclosed=false}={}) {
+  const f=figure(g),r=Math.min(g.r,g.v(.45,.6,.8)),w=g.s===16?4:3.5;
+  if(!enclosed)return kanbanLanes.flatMap(([x,h])=>[
+    f.line(x-w/2,4,x+w/2,4),f.rect(x-w/2,8,w,h,r),
+  ]);
+  // Inside a folder, remove the repeated headings and collapse narrow card
+  // counters into strokes. Keep the existing long/short/medium lane rhythm.
+  const extra=weightDelta(g),spacing=g.v(3,3.75,4.5);
+  const top=g.v(7,8.75,10.5)+extra*.5,long=g.v(3.5,4.75,6)-extra*g.v(1.5,1.4,1.3);
+  return kanbanLanes.map(([,h],i)=>line(g.c+(i-1)*spacing,top,g.c+(i-1)*spacing,top+long*h/12));
+}
 
 function searchBadge(g){
   const f=figure(g),r=3.1,x=16.5,y=16,t=r/Math.sqrt(2);
@@ -29,12 +43,7 @@ function pin(g,off=false){
   return knockout(pin(g),[f.line(3,3,21,21)],g);
 }
 export const organization={
-  kanban:g=>{
-    const f=figure(g),r=Math.min(g.r,g.v(.45,.6,.8)),w=g.s===16?4:3.5;
-    return [[4.75,12],[12,6],[19.25,9]].flatMap(([x,h])=>[
-      f.line(x-w/2,4,x+w/2,4),f.rect(x-w/2,8,w,h,r),
-    ]);
-  },
+  kanban:g=>kanbanColumns(g),
   'list-tree':g=>{
     const f=figure(g);
     return [f.line(9,4.5,20.5,4.5),f.contour([[4,4.5],[4,19.5],[7.5,19.5]],false,g.r),

@@ -9,6 +9,11 @@ function tag(g, stack = false) {
   const f = figure(g), d = stack ? 2 : 0;
   return [f.contour([[3.5 + d, 3.5], [11 + d, 3.5], [21, 11.5 - d], [11.5 + d, 21 - d], [3.5 + d, 13]], true, g.r), f.dot(7.5 + d, 7.5, g.stroke / 2)];
 }
+export function archiveBox(g,{handle=true}={}) {
+  const f=figure(g);
+  return [f.rect(3,3.5,18,5,Math.min(g.r,1)),f.contour([[5,8.5],[5,20.5],[19,20.5],[19,8.5]],false,g.r),
+    ...(handle?[f.line(9,12.5,15,12.5)]:[])];
+}
 const files = {
   "clipboard-paste": (g) => {
     const f = figure(g);
@@ -33,10 +38,7 @@ const files = {
       [0,g.r*.5,Math.min(g.r,1.5),Math.min(g.r,1.5),g.r,g.r,
         Math.min(g.r,.75),Math.min(g.r,.75),Math.min(g.r,1),0])];
   },
-  archive: (g) => {
-    const f = figure(g);
-    return [f.rect(3, 3.5, 18, 5, Math.min(g.r, 1)), f.contour([[5, 8.5], [5, 20.5], [19, 20.5], [19, 8.5]], false, g.r), f.line(9, 12.5, 15, 12.5)];
-  },
+  archive: g=>archiveBox(g),
   "file-plus": (g) => [...file(g), ...mark(g, "plus", 12, 14.5)],
   "file-check": (g) => [...file(g), ...mark(g, "check", 12, 14.5)],
   "file-x": (g) => [...file(g), ...mark(g, "x", 12, 14.5)],

@@ -1,0 +1,41 @@
+[
+  {
+    "name": "right-triangle",
+    "purpose": "Basic-shape picker: distinguish a right triangle from the existing isosceles triangle and square.",
+    "recognitionCues": "Horizontal and vertical equal-length legs, a 45-degree hypotenuse, no ruler ticks or angle annotation.",
+    "confusableWith": ["triangle", "square", "diamond"],
+    "sourceObservation": "Lucide is wider and more horizontal. Hugeicons rounds the acute vertices substantially, making the body softer but less angular.",
+    "comparison": "Compared the latest drawing at 16/20/24, both themes and DPR 1/2. Equal legs retain an explicit 45-degree slope; the shared Master triangle radius cap avoids the softer wedge appearance of Hugeicons. Lucide's wider body is a reasonable alternative, but the compact equal-leg form sits consistently beside square. All three corner presets and both stroke endpoints retain the large counter. Sharp miter extension remains within the viewBox, verified with padded raster bounds.",
+    "reason": "Reuse the original triangle contour function with different vertices. Do not alias this shape to set-square, which describes a measuring tool.",
+    "dashes": false,
+    "dashReason": "A complete closed shape, not a selection boundary or unfinished construction.",
+    "usageEvidence": ["https://books.libreoffice.org/en/DG262/DG26214-Toolbars.html"],
+    "reviewed": true
+  },
+  {
+    "name": "parallelogram",
+    "purpose": "Basic-shape picker: distinguish a slanted quadrilateral from square, diamond and trapezoid.",
+    "recognitionCues": "Equal horizontal top and bottom edges; both side edges lean in the same direction; one open interior.",
+    "confusableWith": ["square", "diamond", "trapezoid"],
+    "sourceObservation": "Phosphor uses a wider body with a pronounced slant. Hugeicons has large rounded corners that approach a tilted pill-shaped rectangle.",
+    "comparison": "Compared the latest drawing at 16/20/24, both themes and DPR 1/2. The moderate lateral offset retains a clear slant and a height consistent with the Master shape picker. It is less pill-like than Hugeicons. Phosphor's wider shape is valid, while this drawing keeps the existing family envelope. Actual corner radii come from the shared diamond quadrilateral construction. At all native sizes and both stroke endpoints, the single counter remains spacious and the two parallel sides are unambiguous.",
+    "reason": "Extract diamond's quadrilateral contour without changing its output, then supply the parallelogram vertices. No independent imitation of the mother contour.",
+    "dashes": false,
+    "dashReason": "The picker represents the inserted shape itself, without a hidden boundary or selection state.",
+    "usageEvidence": ["https://books.libreoffice.org/en/DG262/DG26214-Toolbars.html"],
+    "reviewed": true
+  },
+  {
+    "name": "trapezoid",
+    "purpose": "Basic-shape picker: distinguish unequal parallel bases and outward-sloping sides from the adjacent parallelogram and rectangle.",
+    "recognitionCues": "Short upper base, broad lower base, symmetric outward sides, one closed outline with no construction line.",
+    "confusableWith": ["square", "parallelogram", "triangle"],
+    "sourceObservation": "Colibre is taller and inverted, with its original fill and orientation retained in the comparison. Hugeicons adds a central construction line, so it is explicitly a family reference rather than a second exact plain-shape command.",
+    "comparison": "Compared the latest drawing at 16/20/24, both themes and DPR 1/2. Colibre's original inverted tall body is coherent; the Master drawing uses a broad lower base and the same horizontal envelope as its sibling shape tools. Hugeicons offers a rounded-body comparison, but its central construction line adds information that the plain-shape control does not need. At every corner preset and both stroke endpoints, the latest drawing keeps a broad counter and clear outward legs, distinct from the same-direction slant of parallelogram.",
+    "reason": "Use the shared diamond quadrilateral contour and plain trapezoid vertices. Do not attach a specific flowchart action meaning or add nodes and dimension marks.",
+    "dashes": false,
+    "dashReason": "A complete shape; no hidden geometry or temporary construction needs a dashed line.",
+    "usageEvidence": ["https://books.libreoffice.org/en/DG262/DG26214-Toolbars.html"],
+    "reviewed": true
+  }
+]

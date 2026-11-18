@@ -1,0 +1,46 @@
+[
+  {
+    "name": "decimal-increase",
+    "reviewed": true,
+    "purpose": "增加選取儲存格的小數顯示位數。與相反命令在純圖示工具列並排；一般方向箭頭、hash 和 calculator 缺少精度與增減線索。完整格式對話框可以改用數字欄位，但不能據此取代緊湊工具列的兩個命令。",
+    "recognitionCues": ".00 上方數字列與下方向右箭頭，表示增加顯示的小數位數。",
+    "confusableWith": [
+      "arrow-right",
+      "hash",
+      "calculator",
+      "tab-stop-decimal"
+    ],
+    "sourceObservation": "Lucide 與 MDI 都採 .00／.0 加左右箭頭。Lucide 的上下分層和較大的字間留白，較符合本庫描邊節奏；MDI 的字與箭頭靠得更緊，實心箭身也較重。採 Lucide 具體構圖並明記 ISC 改作，不宣稱 Office 等產品採相同箭頭方向。",
+    "reason": "從原始用途重新取捨，未取回被否決稿。數字共用 numeral 的新 0 字形分支；箭頭直接呼叫 horizontalArrow，僅安置與鏡射，不另畫箭翼。初稿 20px sharp 粗線端第二個零與箭翼太近，數字列上提 0.5px；細線的小數點設最低直徑，使必要的語意訊號不跟著描邊縮到過淡。既有 numeral 1–6 與全部 912 顆原生輸出保持精確相同。",
+    "comparison": "最新版與固定 Lucide、MDI 原稿在 16／20／24、三角型、明暗 DPR1／2 重比。保留 Lucide 上方零字和下方箭頭的清楚層級，以較舒展的 native 字腔及直接共源箭頭融入本庫。增加版的兩個零各自保留內孔和字間；減少版保留相同首字位置和箭頭長度，不為置中而切換跳位。20px 上移後的數字列與箭翼分離，粗線端亦無相黏；16px 極細 0.75 DPR1 有 12 個二值閾值診斷（零的輪廓灰階被閾值切斷），實際灰階原生圖與 DPR2 已目視，內孔仍可讀，所有高解析度拓撲、間隙探針與輸出保真檢查通過。",
+    "dashes": false,
+    "dashReason": "顯示精度是確定命令，不是範圍或暫態；數字、點與箭頭都用完整筆畫。",
+    "opacity": false,
+    "opacityReason": "兩個命令以零的數量與箭頭方向區分，不淡化任何必要部件。",
+    "usageEvidence": [
+      "https://support.microsoft.com/en-us/excel/round-a-number"
+    ]
+  },
+  {
+    "name": "decimal-decrease",
+    "reviewed": true,
+    "purpose": "減少選取儲存格的小數顯示位數。與相反命令在純圖示工具列並排；一般方向箭頭、hash 和 calculator 缺少精度與增減線索。完整格式對話框可以改用數字欄位，但不能據此取代緊湊工具列的兩個命令。",
+    "recognitionCues": ".0 上方數字列與下方向左箭頭，表示減少顯示的小數位數。",
+    "confusableWith": [
+      "arrow-left",
+      "hash",
+      "calculator",
+      "tab-stop-decimal"
+    ],
+    "sourceObservation": "Lucide 與 MDI 都採 .00／.0 加左右箭頭。Lucide 的上下分層和較大的字間留白，較符合本庫描邊節奏；MDI 的字與箭頭靠得更緊，實心箭身也較重。採 Lucide 具體構圖並明記 ISC 改作，不宣稱 Office 等產品採相同箭頭方向。",
+    "reason": "從原始用途重新取捨，未取回被否決稿。數字共用 numeral 的新 0 字形分支；箭頭直接呼叫 horizontalArrow，僅安置與鏡射，不另畫箭翼。初稿 20px sharp 粗線端第二個零與箭翼太近，數字列上提 0.5px；細線的小數點設最低直徑，使必要的語意訊號不跟著描邊縮到過淡。既有 numeral 1–6 與全部 912 顆原生輸出保持精確相同。",
+    "comparison": "最新版與固定 Lucide、MDI 原稿在 16／20／24、三角型、明暗 DPR1／2 重比。保留 Lucide 上方零字和下方箭頭的清楚層級，以較舒展的 native 字腔及直接共源箭頭融入本庫。增加版的兩個零各自保留內孔和字間；減少版保留相同首字位置和箭頭長度，不為置中而切換跳位。20px 上移後的數字列與箭翼分離，粗線端亦無相黏；16px 極細 0.75 DPR1 有 12 個二值閾值診斷（零的輪廓灰階被閾值切斷），實際灰階原生圖與 DPR2 已目視，內孔仍可讀，所有高解析度拓撲、間隙探針與輸出保真檢查通過。",
+    "dashes": false,
+    "dashReason": "顯示精度是確定命令，不是範圍或暫態；數字、點與箭頭都用完整筆畫。",
+    "opacity": false,
+    "opacityReason": "兩個命令以零的數量與箭頭方向區分，不淡化任何必要部件。",
+    "usageEvidence": [
+      "https://support.microsoft.com/en-us/excel/round-a-number"
+    ]
+  }
+]

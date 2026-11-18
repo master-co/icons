@@ -1,0 +1,6 @@
+{
+  "status": "revised",
+  "origin": "Fresh rebuild candidate; not rejected session geometry",
+  "defect": "At DPR1, the native 16px A counter fills in at default/heavier weights even though high-resolution paths leave room. The b counter remains visible.",
+  "change": "Increase only 16px A width from 5 to 6, shifting the b by one unit to retain inter-letter clearance. Other native sizes remain unchanged."
+}

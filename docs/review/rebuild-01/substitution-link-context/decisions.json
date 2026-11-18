@@ -1,0 +1,78 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "viewed": [
+    "light-1.png",
+    "dark-1.png"
+  ],
+  "sizes": [
+    16,
+    20,
+    24
+  ],
+  "dpr": [
+    1
+  ],
+  "evidence": [
+    {
+      "path": "docs/review/rebuild-01/substitution-link-context/light-1.png",
+      "sha256": "f7edb29f8ef7f1119530914f3b48b07c8ae2400fe828a16652d1f41bc663d7dc"
+    },
+    {
+      "path": "docs/review/rebuild-01/substitution-link-context/dark-1.png",
+      "sha256": "b3650b7386ddb6fcf62949b4fb0b1a40a23745c654aedc79dba0ae6885c3a751"
+    }
+  ],
+  "scope": "Completes the visual context records for previously excluded names. Existing mother icons are reused without geometry changes. No rejected session drawings retrieved; new scenario pages are static visual evidence, not implemented application actions.",
+  "items": [
+    {
+      "name": "link-plus",
+      "alternative": "link",
+      "context": "編輯器選取文字",
+      "label": "插入連結",
+      "reason": "編輯器的插入連結命令已有通行的單鏈節，新增符號重複了命令語意。"
+    },
+    {
+      "name": "link-card",
+      "alternative": "link",
+      "context": "插入選單",
+      "label": "連結卡片",
+      "reason": "Haoban 的插入命令與卡片內容都用普通鏈節，標題和說明已經呈現卡片形式。"
+    },
+    {
+      "name": "paste-link",
+      "alternative": "clipboard-paste",
+      "context": "貼上特殊格式",
+      "label": "貼上網址",
+      "reason": "貼上選單的文字說明貼的是網址，再加鏈節會壓縮剪貼簿內部。"
+    },
+    {
+      "name": "link-lock",
+      "alternative": "lock",
+      "context": "分享連結權限",
+      "label": "僅限受邀者",
+      "reason": "權限列已經指明連結，鎖頭便能標示受限，第二層鏈節沒有增加可用資訊。"
+    },
+    {
+      "name": "link-expire",
+      "alternative": "clock",
+      "context": "分享連結設定",
+      "label": "到期：2026/12/31",
+      "reason": "到期欄位以時間圖示搭配日期，比靠徽標暗示期限明確。"
+    },
+    {
+      "name": "link-copy",
+      "alternative": "copy",
+      "context": "https://example.com/document",
+      "label": "複製連結",
+      "reason": "在分享面板，使用者要辨認的是複製動作，網址已顯示在旁邊。"
+    },
+    {
+      "name": "link-settings",
+      "alternative": "sliders",
+      "context": "分享連結面板",
+      "label": "分享設定",
+      "reason": "分享面板的設定按鈕沿用一般設定或調整，雙滑桿旁不需要再拼鏈節。"
+    }
+  ]
+}

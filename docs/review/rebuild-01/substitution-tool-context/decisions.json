@@ -1,0 +1,92 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "viewed": [
+    "light-1.png",
+    "dark-1.png"
+  ],
+  "sizes": [
+    16,
+    20,
+    24
+  ],
+  "dpr": [
+    1
+  ],
+  "evidence": [
+    {
+      "path": "docs/review/rebuild-01/substitution-tool-context/light-1.png",
+      "sha256": "ee232b7eb782fff34b4d3b4f38cfabdda16e9d0653a3698c5f5d6bb03c335fe1"
+    },
+    {
+      "path": "docs/review/rebuild-01/substitution-tool-context/dark-1.png",
+      "sha256": "68a38189052193f687e7f73fd0386d77864f1af80a8e9af69fd3f30f003485e6"
+    }
+  ],
+  "scope": "Completes the visual context records for previously excluded names. Existing mother icons are reused without geometry changes. No rejected session drawings retrieved; new scenario pages are static visual evidence, not implemented application actions.",
+  "items": [
+    {
+      "name": "field-attachment",
+      "alternative": "paperclip",
+      "context": "欄位類型",
+      "label": "附件",
+      "reason": "表單類型選單的附件用迴紋針已有明確讀法，外加四角沒有必要。"
+    },
+    {
+      "name": "field-rating",
+      "alternative": "star",
+      "context": "欄位類型",
+      "label": "評分",
+      "reason": "評分欄位直接使用星形，尾隨兩點無法傳達額外操作。"
+    },
+    {
+      "name": "workflow-delay",
+      "alternative": "hourglass",
+      "context": "新增流程節點",
+      "label": "等待",
+      "reason": "流程編輯器中的等待節點可沿用沙漏，接線由流程畫布呈現。"
+    },
+    {
+      "name": "workflow-loop",
+      "alternative": "repeat",
+      "context": "新增流程節點",
+      "label": "重複執行",
+      "reason": "循環節點的設定和接線已交代循環範圍，通用重複箭頭足夠。"
+    },
+    {
+      "name": "workflow-stop",
+      "alternative": "stop",
+      "context": "流程執行列",
+      "label": "停止",
+      "reason": "流程執行列的停止動作用方形，額外節點與外圈增加讀圖成本。"
+    },
+    {
+      "name": "workflow-run",
+      "alternative": "play",
+      "context": "流程執行列",
+      "label": "執行",
+      "reason": "流程執行按鈕沿用播放三角，與相鄰停止按鈕能直接配對。"
+    },
+    {
+      "name": "batch-edit",
+      "alternative": "pencil",
+      "context": "已選取 3 項",
+      "label": "編輯",
+      "reason": "多選列已顯示數量，編輯操作可沿用原本的筆形。"
+    },
+    {
+      "name": "batch-delete",
+      "alternative": "trash",
+      "context": "已選取 3 項",
+      "label": "刪除",
+      "reason": "多選數與確認文字呈現刪除範圍，垃圾桶仍是清楚的刪除動作。"
+    },
+    {
+      "name": "batch-download",
+      "alternative": "download",
+      "context": "已選取 3 項",
+      "label": "下載",
+      "reason": "多選清單提供下載目標，命令用原本的下載箭頭即可。"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+[
+  {
+    "name":"priority-low",
+    "purpose":"任務列表與優先度選單中的低優先值；和一般、高優先度同欄顯示時，單一旗幟不能表達級數。",
+    "recognitionCues":"三段遞增直筆共用基線，只有第一段啟用，另外兩段淡化。",
+    "confusableWith":["flag","priority-medium","priority-high"],
+    "sourceObservation":"本項兩份 SVG 均只有構造對照：MDI priority-low 表示降低排序的動作，不是低優先狀態；Lucide signal-low 是訊號等級。優先度採三段刻度的實務另由 Tabler 1.6 Signal 元件說明支持。未找到兩種同語意的固定 SVG 解法，不將構造參考假稱直接對照。",
+    "reason":"一開始第一段在 16px 偏弱，將長度由 3 增至 4，20／24px 同樣加長一單位。三個等級使用同一函式、基線與段距，避免切換時位移；不加旗幟外框。",
+    "comparison":"Lucide 以移除高段表達強度，低段偏在左下；本稿用淡化段保持完整刻度，啟用段加長後在 16px 較容易找到。與 MDI 的回轉箭頭相比，本稿更適合值而非調整命令。淺深背景、DPR 1／2 及線寬兩端均能分辨一段啟用；低對比時淡段更弱，但主段仍清楚。",
+    "dashes":false,
+    "dashReason":"未啟用段是完整刻度，不是未完成進度，採淡化而不拆為虛線。",
+    "opacity":true,
+    "opacityReason":"未啟用的兩段以 25% 不透明度保留完整量尺；主要低優先段維持完整不透明度。",
+    "usageEvidence":["/Users/aron/haoban/apps/web/src/features/calendar-form.components/CalendarForm.svelte:422","https://tabler.io/changelog/admin-template/1.6"],
+    "reviewed":true
+  },
+  {
+    "name":"priority-medium",
+    "purpose":"任務列表與優先度選單中的一般／中優先值；須和低、高兩級在單色介面中分開。",
+    "recognitionCues":"三段遞增直筆中的前兩段啟用，第三段淡化；共用低、高的基線。",
+    "confusableWith":["flag","priority-low","priority-high"],
+    "sourceObservation":"Iconoir 用菱形內兩條短線表示中優先，Lucide signal-medium 用遞增直筆表示訊號級數，後者僅是構造參考。採固定三段的同一家族，使低、中、高按啟用段數增加。",
+    "reason":"現有 flag 需依靠文字或顏色辨認等級；此稿用兩段實筆表示一般優先，與一段及三段有固定視覺差異。三條筆畫共源，不為一般優先另畫一個外殼。",
+    "comparison":"與 Iconoir 的菱形比較，本稿沒有外框搶走級數訊號；與 Lucide 比較，保留淡化第三段使整組尺度相同。原生 16px 的兩段墨線與第三段對比清楚，三條通道在粗線端仍打開；深底未因淡段亮度改變而讀成高優先。",
+    "dashes":false,
+    "dashReason":"第三段是未啟用刻度，完整淡線已能交代，無需虛線。",
+    "opacity":true,
+    "opacityReason":"第三段使用 25% 不透明度，兩段啟用筆畫維持完整不透明度。",
+    "usageEvidence":["/Users/aron/haoban/apps/web/src/features/calendar-form.components/CalendarForm.svelte:422","https://tabler.io/changelog/admin-template/1.6"],
+    "reviewed":true
+  },
+  {
+    "name":"priority-high",
+    "purpose":"任務列表與優先度選單中的高優先值；與緊急警示及較低等級分開。",
+    "recognitionCues":"三段遞增直筆全部啟用；不增加驚嘆號，避免與緊急值混淆。",
+    "confusableWith":["priority-low","priority-medium","alert-circle"],
+    "sourceObservation":"Iconoir 的高優先採菱形驚嘆號，Lucide signal-high 採三段加一個低點，後者只作級數構造參考。本稿保留三條明確階梯，不加入低點，將驚嘆號留給既有緊急值。",
+    "reason":"全部三段啟用，和低／一般共用坐標與形狀；若用單獨 flag，低中高將只剩顏色差異。高與緊急也藉三段和圓形驚嘆號分開，不新增第四個優先外框。",
+    "comparison":"與 Lucide 相比，本稿三段間距更寬且省去最左低點，16px 不會將點讀成第四級；與 Iconoir 相比，沒有把高優先與警告混為一個驚嘆號。三角型的端部處理各自成立，粗線端間距仍足，低對比文字旁三段都可讀。",
+    "dashes":false,
+    "dashReason":"所有段都已啟用，以完整實線表達最高一般級數。",
+    "opacity":false,
+    "opacityReason":"三段均啟用，沒有次要刻度需要淡化。",
+    "usageEvidence":["/Users/aron/haoban/apps/web/src/features/calendar-form.components/CalendarForm.svelte:422","https://tabler.io/changelog/admin-template/1.6"],
+    "reviewed":true
+  }
+]

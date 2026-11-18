@@ -1,0 +1,110 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "viewed": [
+    "light.png",
+    "dark.png"
+  ],
+  "sizes": [
+    16,
+    20,
+    24
+  ],
+  "themes": [
+    "light",
+    "dark"
+  ],
+  "dpr": [
+    1
+  ],
+  "corner": "soft",
+  "scope": "Existing alternatives in the actual labeled control context; no geometry changed.",
+  "userApproval": "pending",
+  "evidence": [
+    {
+      "path": "docs/review/rebuild-01/substitution-block-commands/light.png",
+      "sha256": "5f1f6031cb0d69f93c274b4896bc78626839adacbefed8b2a83badb1e8dd7c64"
+    },
+    {
+      "path": "docs/review/rebuild-01/substitution-block-commands/dark.png",
+      "sha256": "79f4accfd79187ad1d830dc51012e36b4f319e72f3f8c35f573799e31faf8cb4"
+    }
+  ],
+  "items": [
+    {
+      "name": "code-block",
+      "alternative": "code",
+      "label": "程式碼區塊",
+      "context": "新增區塊選單 · 與一般文字及引用並列",
+      "reason": "插入區塊的上下文已交代新增的是完整區塊；code 的角括號與斜線足夠表達程式碼。Haoban 的區塊命令與另一處行內格式工具各自使用 SourceCodeIcon，沒有在同一純圖示選擇器中混用；不為區塊再套外框。",
+      "usageEvidence": [
+        "/Users/aron/haoban/packages/editor/src/commands.svelte.ts:58",
+        "/Users/aron/haoban/packages/editor/src/format-tools.components/FormatTools.svelte:150"
+      ],
+      "replacementScope": "區塊插入選單與行內格式工具分開；若未來在同一控制列提供兩者，需保留「行內程式碼／程式碼區塊」明確標籤。",
+      "sample": "<b>新增區塊</b><div style=\"display:flex;gap:7px;flex-wrap:wrap\"><button><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><path d=\"M13 2.5H6.5A3 3 0 0 0 6.5 8.5H9\"/><path d=\"M9 2.5L9 13.5\"/><path d=\"M12 2.5L12 13.5\"/></svg>一般文字</button><button><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><path d=\"M5.5 4.5L2.6116 7.8698A0.2 0.2 0 0 0 2.6116 8.1302L5.5 11.5\"/><path d=\"M10.5 4.5L13.3884 7.8698A0.2 0.2 0 0 1 13.3884 8.1302L10.5 11.5\"/><path d=\"M9 3L7 13\"/></svg>程式碼區塊</button><button><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><path d=\"M2.7667 3.3333H6.2333Q6.6667 3.3333 6.6667 3.7667V8.6667C6.6667 11.3333 4.6667 12.6667 2.3333 12.6667V10.6667C4 10.6667 4.3333 9.6667 4.3333 8H2.7667Q2.3333 8 2.3333 7.5667V3.7667Q2.3333 3.3333 2.7667 3.3333Z\"/><path d=\"M9.7667 3.3333H13.2333Q13.6667 3.3333 13.6667 3.7667V8.6667C13.6667 11.3333 11.6667 12.6667 9.3333 12.6667V10.6667C11 10.6667 11.3333 9.6667 11.3333 8H9.7667Q9.3333 8 9.3333 7.5667V3.7667Q9.3333 3.3333 9.7667 3.3333Z\"/></svg>引用</button></div><p><small>另一處：選取文字的格式工具</small></p><div style=\"display:flex;gap:7px;flex-wrap:wrap\"><button><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><path d=\"M4.6667 3H8.3333C12.3333 3 12.3333 7.6667 8.3333 7.6667H4.6667M4.6667 3V13H9C13.3333 13 13.3333 7.6667 9 7.6667\"/></svg>粗體</button><button><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><path d=\"M6.6667 3L12.6667 3\"/><path d=\"M3.3333 13L9.3333 13\"/><path d=\"M9.6667 3L6.3333 13\" stroke-linecap=\"butt\"/></svg>斜體</button><button><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><path d=\"M5.5 4.5L2.6116 7.8698A0.2 0.2 0 0 0 2.6116 8.1302L5.5 11.5\"/><path d=\"M10.5 4.5L13.3884 7.8698A0.2 0.2 0 0 1 13.3884 8.1302L10.5 11.5\"/><path d=\"M9 3L7 13\"/></svg>行內程式碼</button></div>"
+    },
+    {
+      "name": "callout",
+      "alternative": "info-circle",
+      "label": "提示區塊",
+      "context": "新增區塊選單 · 提示與引用是不同內容類型",
+      "reason": "info-circle 已傳達提示訊息，與 quote 的引述符號差異明確。區塊內容及類型名稱交代提示用途，不需再加矩形和兩條假文字線；若提示改成警告，使用既有警告圖及類型標籤。",
+      "usageEvidence": [
+        "/Users/aron/haoban/packages/editor/src/commands.svelte.ts:49"
+      ],
+      "replacementScope": "一般提示區塊的新增入口；警告／錯誤類型沿用相應既有狀態圖示。",
+      "sample": "<div style=\"display:flex;gap:7px;flex-wrap:wrap\"><button><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><circle cx=\"8\" cy=\"8\" r=\"6\"/><circle cx=\"8\" cy=\"5\" r=\"0.625\" fill=\"currentColor\" stroke=\"none\"/><path d=\"M8 8L8 11\"/></svg>提示區塊</button><button><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><path d=\"M2.7667 3.3333H6.2333Q6.6667 3.3333 6.6667 3.7667V8.6667C6.6667 11.3333 4.6667 12.6667 2.3333 12.6667V10.6667C4 10.6667 4.3333 9.6667 4.3333 8H2.7667Q2.3333 8 2.3333 7.5667V3.7667Q2.3333 3.3333 2.7667 3.3333Z\"/><path d=\"M9.7667 3.3333H13.2333Q13.6667 3.3333 13.6667 3.7667V8.6667C13.6667 11.3333 11.6667 12.6667 9.3333 12.6667V10.6667C11 10.6667 11.3333 9.6667 11.3333 8H9.7667Q9.3333 8 9.3333 7.5667V3.7667Q9.3333 3.3333 9.7667 3.3333Z\"/></svg>引用</button></div><div style=\"display:flex;gap:9px;padding:10px;margin-top:10px;border:1px solid #8886\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><circle cx=\"8\" cy=\"8\" r=\"6\"/><circle cx=\"8\" cy=\"5\" r=\"0.625\" fill=\"currentColor\" stroke=\"none\"/><path d=\"M8 8L8 11\"/></svg>請先儲存變更，再離開此頁。</div>"
+    },
+    {
+      "name": "toggle-block",
+      "alternative": "chevron-down",
+      "label": "摺疊內容",
+      "context": "新增區塊選單 · 可展開／收合的內容",
+      "reason": "Haoban 已用 ChevronDownIcon 表達摺疊內容；既有折角可沿同一構造旋轉顯示開合狀態。三角方向與標題足以表達 disclosure，若額外畫區塊外框反而與一般面板或清單相近。",
+      "usageEvidence": [
+        "/Users/aron/haoban/packages/editor/src/commands.svelte.ts:148",
+        "/Users/aron/haoban/packages/editor/src/commands.components/StaticNode21.svelte:2"
+      ],
+      "replacementScope": "插入命令配「摺疊內容」標籤；實際收合控制按開合狀態使用 chevron-right／chevron-down。",
+      "sample": "<button><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><path d=\"M6 3.5L10.3586 7.8586A0.2 0.2 0 0 1 10.3586 8.1414L6 12.5\" transform=\"rotate(90 8 8)\"/></svg>摺疊內容</button><div style=\"padding:10px;margin-top:8px;border:1px solid #8886\"><div style=\"display:flex;gap:7px;flex-wrap:wrap\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><path d=\"M6 3.5L10.3586 7.8586A0.2 0.2 0 0 1 10.3586 8.1414L6 12.5\" transform=\"rotate(90 8 8)\"/></svg><b>專案細節</b></div><p style=\"margin-left:25px\">這裡是展開後的內容。</p><div style=\"display:flex;gap:7px;flex-wrap:wrap\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><path d=\"M6 3.5L10.3586 7.8586A0.2 0.2 0 0 1 10.3586 8.1414L6 12.5\"/></svg><b>附件說明</b></div></div>"
+    },
+    {
+      "name": "embed-video",
+      "alternative": "film",
+      "label": "嵌入影片",
+      "context": "新增媒體 · 貼上影片網址的入口",
+      "reason": "film 的片格與齒孔可辨識影片內容，並與 image 的山景、附件及程式碼分開。嵌入方式由「嵌入影片」和網址欄交代，不需要在播放框內再貼連結；既有 video 畫的是攝影機，並非這裡較適合的母型。",
+      "usageEvidence": [
+        "/Users/aron/haoban/packages/editor/src/commands.svelte.ts:111"
+      ],
+      "replacementScope": "此示意限定影片；Haoban 現有嵌入影音還支援音訊，不宣稱 film 能概括所有嵌入類型。",
+      "sample": "<div style=\"display:flex;gap:7px;flex-wrap:wrap\"><button><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><rect x=\"2\" y=\"2.6667\" width=\"12\" height=\"10.6667\" rx=\"1\"/><path d=\"M5.5028 13.3334L4.0417 13.3334Q4.0417 13.3192 4.0423 13.305Q4.043 13.2908 4.0443 13.2767Q4.0455 13.2626 4.0475 13.2485Q4.0494 13.2344 4.052 13.2205Q4.0545 13.2065 4.0577 13.1927Q4.0609 13.1788 4.0648 13.1652Q4.0686 13.1515 4.073 13.138Q4.0774 13.1245 4.0825 13.1112Q4.0875 13.098 4.0932 13.0849Q4.0988 13.0719 4.105 13.0592Q4.1113 13.0464 4.1181 13.0339Q4.1249 13.0215 4.1322 13.0093Q4.1396 12.9972 4.1475 12.9854Q4.1554 12.9736 4.1638 12.9622Q4.1723 12.9507 4.1812 12.9397Q4.1901 12.9287 4.1996 12.9181L9.392 7.0766Q9.6286 6.8105 9.9845 6.8Q10.3403 6.7897 10.592 7.0414L14 10.4494L14 11.9583Q13.9847 11.9583 13.9693 11.9575Q13.954 11.9568 13.9387 11.9553Q13.9235 11.9538 13.9083 11.9515Q13.8931 11.9493 13.8781 11.9463Q13.863 11.9433 13.8481 11.9396Q13.8332 11.9358 13.8186 11.9314Q13.8039 11.9269 13.7894 11.9218Q13.775 11.9166 13.7608 11.9107Q13.7466 11.9049 13.7328 11.8983Q13.7189 11.8917 13.7054 11.8845Q13.6918 11.8773 13.6787 11.8694Q13.6655 11.8615 13.6528 11.853Q13.64 11.8444 13.6277 11.8353Q13.6154 11.8262 13.6035 11.8164Q13.5916 11.8067 13.5803 11.7964Q13.5689 11.7861 13.5581 11.7752L10.0267 8.2439L5.5028 13.3334Z\" fill=\"currentColor\" stroke=\"none\" fill-rule=\"evenodd\"/><circle cx=\"5\" cy=\"5.6667\" r=\"0.9\" fill=\"currentColor\" stroke=\"none\"/></svg>圖片</button><button><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><rect x=\"1.3333\" y=\"2\" width=\"13.3333\" height=\"12\" rx=\"1\"/><path d=\"M5.2917 14L5.2917 8.625L10.7083 8.625L10.7083 14L11.9583 14L11.9583 11.625L14.6666 11.625L14.6666 10.375L11.9583 10.375L11.9583 8.625L14.6666 8.625L14.6666 7.375L11.9583 7.375L11.9583 5.625L14.6666 5.625L14.6666 4.375L11.9583 4.375L11.9583 2L10.7083 2L10.7083 7.375L5.2917 7.375L5.2917 2L4.0417 2L4.0417 4.375L1.3333 4.375L1.3333 5.625L4.0417 5.625L4.0417 7.375L1.3333 7.375L1.3333 8.625L4.0417 8.625L4.0417 10.375L1.3333 10.375L1.3333 11.625L4.0417 11.625L4.0417 14L5.2917 14Z\" fill=\"currentColor\" stroke=\"none\" fill-rule=\"evenodd\"/></svg>嵌入影片</button><button><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><path d=\"M11.3333 5.3333V10A4 4 0 0 1 3.3333 10V4.6667A2.6667 2.6667 0 0 1 8.6667 4.6667V10A1.3333 1.3333 0 0 1 6 10V5.3333\" transform=\"rotate(45 8 8)\"/></svg>附件</button></div><label style=\"display:block;margin:9px 0\">影片網址<div style=\"border:1px solid #8886;padding:7px;margin-top:4px\">https://…</div></label><p><small>支援的服務由輸入欄說明，音訊入口另用對應標籤。</small></p>"
+    },
+    {
+      "name": "horizontal-rule",
+      "alternative": "minus",
+      "label": "分隔線",
+      "context": "新增版面區塊 · 水平分隔線",
+      "reason": "Haoban 的分隔線命令已用 MinusIcon；在新增區塊選單中，單條水平線直接示意結果。刪除及減少數值並不在此控制項中競爭，不需要加上下假文字線來重新命名同一功能。",
+      "usageEvidence": [
+        "/Users/aron/haoban/packages/editor/src/commands.svelte.ts:139",
+        "/Users/aron/haoban/packages/editor/src/commands.components/StaticNode20.svelte:2"
+      ],
+      "replacementScope": "插入分隔線選單；不將 minus 在所有操作情境中解釋為水平分隔線。",
+      "sample": "<button><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><path d=\"M3 8L13 8\"/></svg>分隔線</button><p>上一個主題的內容</p><hr style=\"border:0;border-top:1px solid currentColor;margin:18px 0\"><p>下一個主題的內容</p>"
+    },
+    {
+      "name": "table-of-contents",
+      "alternative": "list-tree",
+      "label": "文章目錄",
+      "context": "新增版面區塊 · 自動整理標題層級",
+      "reason": "既有 list-tree 已畫出主層級、分支與縮排內容，可表達文章目錄的階層，並與普通 list／list-ordered 並列區分。頁碼是可選資料，由目錄內容呈現；不需為這個用途再畫一份帶短線與數字的清單。",
+      "usageEvidence": [
+        "/Users/aron/haoban/packages/editor/src/commands.svelte.ts:168"
+      ],
+      "replacementScope": "有標題層級的文件目錄入口；普通項目與編號清單仍分別用 list／list-ordered。",
+      "sample": "<div style=\"display:flex;gap:7px;flex-wrap:wrap\"><button><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><circle cx=\"3\" cy=\"4\" r=\"0.625\" fill=\"currentColor\" stroke=\"none\"/><path d=\"M6 4L13.5 4\"/><circle cx=\"3\" cy=\"8\" r=\"0.625\" fill=\"currentColor\" stroke=\"none\"/><path d=\"M6 8L13.5 8\"/><circle cx=\"3\" cy=\"12\" r=\"0.625\" fill=\"currentColor\" stroke=\"none\"/><path d=\"M6 12L13.5 12\"/></svg>項目清單</button><button><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><path d=\"M2 3.3333L3 2.6667V6M2 6H4\" stroke-width=\"1\"/><path d=\"M2 9.6667C2 8.3333 4 8.3333 4 9.6667C4 10.6667 2 11 2 12.6667H4\" stroke-width=\"1\"/><path d=\"M6.6667 4.6667L14 4.6667\"/><path d=\"M6.6667 11.3333L14 11.3333\"/></svg>編號清單</button><button><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><path d=\"M6 3L13.6667 3\"/><path d=\"M2.6667 3L2.6667 12A1 1 0 0 0 3.6667 13L5 13\"/><path d=\"M2.6667 8L5 8\"/><path d=\"M7.3333 8L13.6667 8\"/><path d=\"M7.3333 13L13.6667 13\"/></svg>文章目錄</button></div><div style=\"border-left:2px solid #8886;padding-left:12px;margin-top:10px\">專案介紹<div style=\"padding-left:18px\">目標<br>工作範圍</div>時程規劃</div>"
+    }
+  ]
+}

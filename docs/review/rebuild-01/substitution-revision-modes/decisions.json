@@ -1,0 +1,76 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "skillVersion": "0.5.18",
+  "viewed": [
+    "light.png",
+    "dark.png"
+  ],
+  "sizes": [
+    16,
+    20,
+    24
+  ],
+  "themes": [
+    "light",
+    "dark"
+  ],
+  "dpr": [
+    1
+  ],
+  "corner": "soft for existing icons; text changes and state controls retain natural dimensions",
+  "scope": "Five contextual existing-icon entries and three native-content presentations replace eight candidates. Fixtures illustrate selection scope and state; they do not implement Tiptap. No rejected geometry retrieved.",
+  "userApproval": "pending",
+  "evidence": [
+    {
+      "path": "docs/review/rebuild-01/substitution-revision-modes/light.png",
+      "sha256": "17d0421d8ab289cbf839f7263a8ab44994d7477dcb9381d90cc7c024dcc104b8"
+    },
+    {
+      "path": "docs/review/rebuild-01/substitution-revision-modes/dark.png",
+      "sha256": "f8c596ceb6d0955dde77764a68cc83db1d511f875f9252be69c8f9221f52ae0e"
+    }
+  ],
+  "items": [
+    {
+      "name": "track-changes",
+      "label": "追蹤修訂",
+      "alternative": null,
+      "replacementKind": "native-content",
+      "context": "審閱模式開關 · 記錄後續編輯",
+      "reason": "追蹤修訂需要表達開啟或關閉及對後續編輯的影響。具名開關直接呈現狀態；關閉不代表接受或清除既有修訂。不再把鉛筆、文件和歷史符號組成一顆模糊複合圖。",
+      "replacementScope": "控制後續編輯是否記成建議；不是顯示／隱藏既有標記，也不是一般編輯模式圖示。",
+      "searchKeywords": [],
+      "usageEvidence": [
+        "https://tiptap.dev/docs/tracked-changes/guides/editor-setup"
+      ],
+      "sample": "<style>\n [data-review-demo],[data-tracking-demo],[data-compare-demo]{border:1px solid #8886;padding:12px;border-radius:5px;margin:10px 0}\n [data-review-demo] button:disabled{opacity:.45}\n [data-review-toolbar]{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0}\n [data-review-item]{display:block;padding:8px 0;border-top:1px solid #8884}\n [data-review-item] p{margin:3px 0 3px 23px}\n ins{background:transparent;text-decoration-thickness:1px;text-underline-offset:3px}\n del{text-decoration-thickness:1px}\n [data-compare-demo] label{display:block;margin:8px 0}\n select{font:inherit;color:inherit;background:transparent;padding:3px;border:1px solid #8888;border-radius:3px}\n</style><div data-tracking-demo><label><input type=\"checkbox\" data-track-switch checked>追蹤修訂</label><p data-track-status>已開啟：後續編輯會記為建議。</p><p>目前仍有 2 項待審修訂。</p><p><ins>新增的文字</ins>／<del>建議刪除的文字</del></p></div>",
+      "usageEvidenceLimit": "Sources establish review workflows, commands, and text-change rendering. These local fixtures use Master glyphs and do not integrate or reproduce a production editor.",
+      "alternativeLabel": "具名的追蹤修訂開關",
+      "nativePreview": "<label><input type=\"checkbox\" checked disabled>追蹤修訂：已開啟</label>",
+      "comparisonMarkup": "<label style=\"font-size:16px\"><input type=\"checkbox\" checked disabled>追蹤修訂</label>",
+      "searchAliasDecision": "不將track-changes映射到pencil或history；編輯、歷史和記錄後續修訂是不同功能。",
+      "visualObservation": "核取狀態、明確標籤及後續編輯說明共同交代模式；既有兩項修訂獨立顯示，不把關閉追蹤等同清除建議。"
+    },
+    {
+      "name": "compare-documents",
+      "label": "比較文件",
+      "alternative": "git-compare",
+      "replacementKind": "contextual-entry",
+      "context": "版本比較入口 · 選擇原始與修訂文件",
+      "reason": "既有git-compare的兩條相對路徑可作版本比較入口；具名文件選單清楚交代比較兩份內容。它不是並排版面選擇器，不使用layout-columns冒充比較。",
+      "replacementScope": "有「比較文件」標籤及兩個具名版本欄位的入口；若介面同時比較Git分支，按資料種類分區。",
+      "searchKeywords": [
+        "document-comparison",
+        "compare-versions"
+      ],
+      "usageEvidence": [
+        "https://tiptap.dev/docs/compare/getting-started/overview",
+        "https://support.microsoft.com/en-us/word/compare-and-merge-two-versions-of-a-document"
+      ],
+      "sample": "<style>\n [data-review-demo],[data-tracking-demo],[data-compare-demo]{border:1px solid #8886;padding:12px;border-radius:5px;margin:10px 0}\n [data-review-demo] button:disabled{opacity:.45}\n [data-review-toolbar]{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0}\n [data-review-item]{display:block;padding:8px 0;border-top:1px solid #8884}\n [data-review-item] p{margin:3px 0 3px 23px}\n ins{background:transparent;text-decoration-thickness:1px;text-underline-offset:3px}\n del{text-decoration-thickness:1px}\n [data-compare-demo] label{display:block;margin:8px 0}\n select{font:inherit;color:inherit;background:transparent;padding:3px;border:1px solid #8888;border-radius:3px}\n</style><div data-compare-demo><label>原始文件 <select data-version=\"original\"><option value=\"one\">提案 v1</option><option value=\"two\">提案 v2</option></select></label><label>修訂文件 <select data-version=\"revised\"><option value=\"two\">提案 v2</option><option value=\"one\">提案 v1</option></select></label><button data-compare><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><circle cx=\"4\" cy=\"3.6667\" r=\"1.6667\"/><circle cx=\"12\" cy=\"12.3333\" r=\"1.6667\"/><path d=\"M12 10.6667V6.3333Q12 3.6667 9.3333 3.6667H8.3333\"/><path d=\"M4 5.3333V9.6667Q4 12.3333 6.6667 12.3333H7.6667\"/></svg>比較文件</button><p data-comparison-result role=\"status\">交付日期由 <del>週一</del> 改為 <ins>週三</ins>。</p></div>",
+      "usageEvidenceLimit": "Sources establish review workflows, commands, and text-change rendering. These local fixtures use Master glyphs and do not integrate or reproduce a production editor.",
+      "visualObservation": "兩條相對路徑在16px保有各自端點，搭配原始／修訂兩個具名欄位可作比較入口；差異結果用實際文字而非文件小圖表示。"
+    }
+  ]
+}

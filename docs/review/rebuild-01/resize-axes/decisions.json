@@ -1,0 +1,50 @@
+[
+  {
+    "dashes": false,
+    "dashReason": "軸與兩端方向是連續的尺寸關係，不使用虛線切斷。",
+    "opacity": false,
+    "opacityReason": "兩端箭頭同等重要；保持相同筆畫，不使用淡化。",
+    "reviewed": true,
+    "name": "move-horizontal",
+    "purpose": "寬度拖曳與尺寸教學，與高度、兩條斜軸及四向移動同時出現時，指明只有水平軸可變動。",
+    "recognitionCues": "一條水平連續軸，左右各一個向外箭頭。",
+    "confusableWith": [
+      "move",
+      "arrow-left-right",
+      "chevrons-left-right"
+    ],
+    "usageEvidence": [
+      "/Users/aron/master-ui/packages/ui/components/cropper.css:255",
+      "/Users/aron/master-ui/packages/ui/components/cropper.css:290",
+      "https://www.w3.org/TR/css-ui-3/#cursor",
+      "docs/review/rebuild-01/resize-axes/index.html（教學示意，未替換系統游標）"
+    ],
+    "sourceObservation": "Lucide 是直線箭桿加 45 度箭翼，端點較靠畫布邊緣；Hugeicons 的箭翼轉折有較大曲面，軸與翼的視覺重量較柔。兩者都以連續同軸區別交換。",
+    "reason": "直接抽出既有 move 的 moveAxes，共用同軸箭桿、兩端箭頭及 joinedArrow 收口；預設保留原四向圖幾何。獨立軸沒有相鄰垂直箭翼，所以將翼長由 24 格的 3 放大為 4.5；原生尺寸依既有比例及線寬處理，斜向版本只旋轉這個共用母型。",
+    "comparison": "同尺寸回比後保留直線、對稱箭翼，讓尺寸工具與既有 move 一致。比 Lucide 的較長軸稍收內，留出兩端空間；不沿用 Hugeicons 外鼓的轉折曲線。16px 兩翼仍完整，軸中段不擁擠，粗線端接縫不凸出；三角型、明暗 DPR 1／2 已逐張查看。chevrons-left-right 仍可用於無軸的比較滑桿把手，本稿保留連續軸作四種方向教學的共同語言。"
+  },
+  {
+    "dashes": false,
+    "dashReason": "軸與兩端方向是連續的尺寸關係，不使用虛線切斷。",
+    "opacity": false,
+    "opacityReason": "兩端箭頭同等重要；保持相同筆畫，不使用淡化。",
+    "reviewed": true,
+    "name": "move-vertical",
+    "purpose": "高度拖曳與上下邊尺寸教學；與水平尺寸、斜角尺寸和整個物件移動並列。",
+    "recognitionCues": "一條垂直連續軸，上下向外的對稱箭頭。",
+    "confusableWith": [
+      "move",
+      "sort-unsorted",
+      "chevrons-up-down"
+    ],
+    "usageEvidence": [
+      "/Users/aron/master-ui/packages/ui/components/cropper.css:255",
+      "/Users/aron/master-ui/packages/ui/components/cropper.css:290",
+      "https://www.w3.org/TR/css-ui-3/#cursor",
+      "docs/review/rebuild-01/resize-axes/index.html（教學示意，未替換系統游標）"
+    ],
+    "sourceObservation": "Lucide 的上下箭頭直接沿同一垂直軸；Hugeicons 的尖端曲面與較細筆畫形成柔和的長形。兩者都與兩支錯列的排序箭頭不同。",
+    "reason": "直接抽出既有 move 的 moveAxes，共用同軸箭桿、兩端箭頭及 joinedArrow 收口；預設保留原四向圖幾何。獨立軸沒有相鄰垂直箭翼，所以將翼長由 24 格的 3 放大為 4.5；原生尺寸依既有比例及線寬處理，斜向版本只旋轉這個共用母型。",
+    "comparison": "與來源並列後，採本庫直軸及較收斂的轉折半徑，箭頭寬度與水平稿一致，沒有因轉向而縮小。相比 Hugeicons 的柔曲箭翼，本稿在 16px 的方向角更明確；相較 Lucide 的長軸，兩端留白較寬。放進裁切教學時，高度與寬度以及錯列的 sort-unsorted 可分開讀；明暗 DPR 1／2、三尺寸及粗細線端已查看。"
+  }
+]

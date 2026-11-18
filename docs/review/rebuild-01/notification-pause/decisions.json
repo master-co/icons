@@ -1,0 +1,22 @@
+[
+  {
+    "name": "bell-snooze",
+    "reviewed": true,
+    "purpose": "姓名旁或緊湊狀態列需要區分通知暫停與通知關閉。原清單的「稍後提醒」更正為「暫停通知」；重新安排一則提醒仍使用 clock。",
+    "recognitionCues": "與 bell 完全相同的鐘冠、鐘沿和鈴舌，鐘內單一 Z。",
+    "confusableWith": [
+      "bell-off",
+      "clock",
+      "moon"
+    ],
+    "sourceObservation": "Tabler 的鐘內 Z 是簡單、慣用的暫停訊號；MDI 的實心鐘形較重，負形 Z 在小尺寸容易被粗輪廓壓縮。",
+    "reason": "保留 bell(g) 的完整母型，Z 用三段連續筆畫，sharp 收成斜切接點、soft／rounded 使用實際轉角。粗線端微縮 Z，並透過母型參數將 sharp 鈴舌向下補償；原母型的預設幾何不變。沒有加入外置徽標或為擠入符號而重新放大鈴鐺。用途與搜尋詞改為通知暫停，明確排除把 Z 當成重新排程時間。",
+    "comparison": "最新稿在 16／20／24px 明暗背景與 Tabler、MDI 比較。Tabler 的內置單一 Z 比外置小徽標更安定，保留該配置；本稿沿用原有 bell，鈴舌保持分離，沒有 Tabler 額外頂環的密度。相對 MDI 填滿的鐘身，描邊外殼留出可讀的 Z 與四周間隙。三種通知狀態在 16px 並排，暫停 Z 與關閉斜線可分；有時間資訊的詳情另由文字說明。",
+    "dashes": false,
+    "dashReason": "這是已成立的通知暫停狀態，不是未完成或正在等待的載入輪廓。",
+    "usageEvidence": [
+      "https://slack.com/intl/en-gb/help/articles/214908388-Pause-your-Slack-notifications",
+      "https://support.google.com/a/users/answer/9308663?hl=en"
+    ]
+  }
+]

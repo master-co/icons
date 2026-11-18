@@ -1,0 +1,68 @@
+[
+  {
+    "dashes": false,
+    "dashReason": "格線、文字行及新增記號是確定結構，沒有隱藏邊界。",
+    "opacity": true,
+    "opacityReason": "0.4 透明度只用於固定上下界，文字本身保持完整對比；區分容器邊界與被對齊的內容。",
+    "reviewed": true,
+    "name": "cell-align-top",
+    "purpose": "儲存格文字垂直靠上，與水平文字對齊分開控制。",
+    "recognitionCues": "固定的淡色上下界之間，兩條實色文字行移到靠上位置。",
+    "confusableWith": [
+      "align-center",
+      "align-objects-top",
+      "align-objects-center-vertical",
+      "align-objects-bottom"
+    ],
+    "sourceObservation": "MDI 以箭頭配文字線表達垂直位置；Tabler align-box 家族用框與內部條，靠上／靠下版本為直條，置中為橫條。來源可比較位置語意和容器，但不是相同文字構造。",
+    "reason": "直接使用 editor.alignment 的文字行構造，兩行長短順序固定，整塊移動；上下界採 0.4 透明度表達參照邊界，避免被誤讀成四行文字。物件對齊圖的多個直柱不能代替單一儲存格內的文字位置。",
+    "comparison": "最新稿與 MDI、Tabler 並排，去掉動作箭頭與封閉側框，讓實際文字位置成為主要訊號。靠上稿保留兩條文字行及上下淨空；16px 粗線端仍可分開讀取兩行。明暗 DPR 1／2 的淡界線可見，與水平對齊及另外兩個垂直狀態並排時文字行不翻轉、不改變長短順序。",
+    "usageEvidence": [
+      "https://support.microsoft.com/en-us/excel/align-text-in-a-cell-in-excel"
+    ]
+  },
+  {
+    "dashes": false,
+    "dashReason": "格線、文字行及新增記號是確定結構，沒有隱藏邊界。",
+    "opacity": true,
+    "opacityReason": "0.4 透明度只用於固定上下界，文字本身保持完整對比；區分容器邊界與被對齊的內容。",
+    "reviewed": true,
+    "name": "cell-align-middle",
+    "purpose": "儲存格文字垂直置中，與水平文字對齊分開控制。",
+    "recognitionCues": "固定的淡色上下界之間，兩條實色文字行移到置中位置。",
+    "confusableWith": [
+      "align-center",
+      "align-objects-top",
+      "align-objects-center-vertical",
+      "align-objects-bottom"
+    ],
+    "sourceObservation": "MDI 以箭頭配文字線表達垂直位置；Tabler align-box 家族用框與內部條，靠上／靠下版本為直條，置中為橫條。來源可比較位置語意和容器，但不是相同文字構造。",
+    "reason": "直接使用 editor.alignment 的文字行構造，兩行長短順序固定，整塊移動；上下界採 0.4 透明度表達參照邊界，避免被誤讀成四行文字。物件對齊圖的多個直柱不能代替單一儲存格內的文字位置。",
+    "comparison": "最新稿與 MDI、Tabler 並排，去掉動作箭頭與封閉側框，讓實際文字位置成為主要訊號。置中稿保留兩條文字行及上下淨空；16px 粗線端仍可分開讀取兩行。明暗 DPR 1／2 的淡界線可見，與水平對齊及另外兩個垂直狀態並排時文字行不翻轉、不改變長短順序。",
+    "usageEvidence": [
+      "https://support.microsoft.com/en-us/excel/align-text-in-a-cell-in-excel"
+    ]
+  },
+  {
+    "dashes": false,
+    "dashReason": "格線、文字行及新增記號是確定結構，沒有隱藏邊界。",
+    "opacity": true,
+    "opacityReason": "0.4 透明度只用於固定上下界，文字本身保持完整對比；區分容器邊界與被對齊的內容。",
+    "reviewed": true,
+    "name": "cell-align-bottom",
+    "purpose": "儲存格文字垂直靠下，與水平文字對齊分開控制。",
+    "recognitionCues": "固定的淡色上下界之間，兩條實色文字行移到靠下位置。",
+    "confusableWith": [
+      "align-center",
+      "align-objects-top",
+      "align-objects-center-vertical",
+      "align-objects-bottom"
+    ],
+    "sourceObservation": "MDI 以箭頭配文字線表達垂直位置；Tabler align-box 家族用框與內部條，靠上／靠下版本為直條，置中為橫條。來源可比較位置語意和容器，但不是相同文字構造。",
+    "reason": "直接使用 editor.alignment 的文字行構造，兩行長短順序固定，整塊移動；上下界採 0.4 透明度表達參照邊界，避免被誤讀成四行文字。物件對齊圖的多個直柱不能代替單一儲存格內的文字位置。",
+    "comparison": "最新稿與 MDI、Tabler 並排，去掉動作箭頭與封閉側框，讓實際文字位置成為主要訊號。靠下稿保留兩條文字行及上下淨空；16px 粗線端仍可分開讀取兩行。明暗 DPR 1／2 的淡界線可見，與水平對齊及另外兩個垂直狀態並排時文字行不翻轉、不改變長短順序。",
+    "usageEvidence": [
+      "https://support.microsoft.com/en-us/excel/align-text-in-a-cell-in-excel"
+    ]
+  }
+]

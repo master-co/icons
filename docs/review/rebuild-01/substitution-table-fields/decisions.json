@@ -1,0 +1,50 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "viewed": [
+    "light.png",
+    "dark.png"
+  ],
+  "items": [
+    {
+      "name": "table-insert",
+      "alternative": "table",
+      "label": "插入表格",
+      "context": "表格選單與屬性面板 · 插入表格",
+      "reason": "插入選單已有操作情境，table 能識別要插入的物件；加號不提供需要獨立辨認的資訊。",
+      "sample": "<button>插入表格　▾</button><p>3 列 × 4 欄</p>"
+    },
+    {
+      "name": "table-column-width",
+      "alternative": "table",
+      "label": "欄寬",
+      "context": "表格選單與屬性面板 · 欄寬",
+      "reason": "欄寬是含單位的數值屬性；欄位名稱、數值與直接拖曳欄界可表達操作，table 只用來識別設定面板。",
+      "sample": "<button>欄寬　120 px</button>"
+    },
+    {
+      "name": "table-row-height",
+      "alternative": "table",
+      "label": "列高",
+      "context": "表格選單與屬性面板 · 列高",
+      "reason": "列高和欄寬在屬性面板以文字與數值並列；不為數值欄位再組合另一支軸向箭頭。",
+      "sample": "<button>列高　32 px</button>"
+    },
+    {
+      "name": "cell-reference-absolute",
+      "alternative": "table",
+      "label": "絕對參照",
+      "context": "表格選單與屬性面板 · 絕對參照",
+      "reason": "真正需要辨認的是 $A$1 的鎖定軸；直接顯示公式語法可同時表達列欄，鎖頭複合圖不能取代這個精確資訊。",
+      "sample": "<button>絕對參照　<code>$A$1</code></button><p>混合參照：$A1 ／ A$1</p>"
+    },
+    {
+      "name": "cell-reference-relative",
+      "alternative": "table",
+      "label": "相對參照",
+      "context": "表格選單與屬性面板 · 相對參照",
+      "reason": "與絕對及混合參照一起顯示 A1 的實際語法；以 table 識別參照設定入口，模式用文字與公式預覽表示。",
+      "sample": "<button>相對參照　<code>A1</code></button><p>複製公式時依位置調整</p>"
+    }
+  ]
+}

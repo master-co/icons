@@ -1,11 +1,28 @@
 import { coreDrawings } from "./core.mjs";
 import { figure } from "./shared.mjs";
+
+// Shared table frame and explicit cell divisions, on the 24-unit authoring grid.
+// Small table strips can use fewer cells without inventing another frame family.
+export function tableGrid(g,{bounds=[3,4,18,16],dividers=[],radius=g.r}={}) {
+  const f=figure(g);
+  return [f.rect(...bounds,radius),...dividers.map(points=>f.line(...points))];
+}
+
+export function tableStructure(g,{columnHeader=false}={}) {
+  const dividers=[[3,9,21,9],[9,9,9,20],...(g.s===16?[]:[[3,14.5,21,14.5]])];
+  // Transpose the inner grid inside the same frame. Its width and height
+  // remain unchanged, so switching header direction does not rotate the card.
+  const point=(x,y)=>columnHeader?[3+(y-4)*18/16,4+(x-3)*16/18]:[x,y];
+  return tableGrid(g,{dividers:dividers.map(([x1,y1,x2,y2])=>
+    [...point(x1,y1),...point(x2,y2)])});
+}
+
 function sort(g, descending) {
   const f = figure(g), lengths = descending ? [9, 6, 3] : [3, 6, 9];
   return [...lengths.map((w, i) => f.line(3, 6 + i * 6, 3 + w, 6 + i * 6)), ...f.arrow([f.line(18,5,18,19)],descending?[[15,16],[18,19],[21,16]]:[[15,8],[18,5],[21,8]])];
 }
-function axes(g) {
-  return [figure(g).contour([[3.5, 4], [3.5, 20.5], [21, 20.5]], false, Math.min(g.r, 1))];
+export function axes(g,{bottom=20.5}={}) {
+  return [figure(g).contour([[3.5, 4], [3.5, bottom], [21, bottom]], false, Math.min(g.r, 1))];
 }
 function trace(g) {
   return figure(g).contour([[7, 14], [11, 10], [15, 13], [20.5, 6.5]]);
@@ -53,10 +70,7 @@ const analytics = {
     // occupy the same radial interval and remain clear of the rim.
     return [f.path("M4.2 18A9 9 0 1 1 19.8 18"), f.line(12, 13.5, 16.5, 8.5), ...g.s === 16 ? [] : [f.line(5.5, 13.5, 6.5, 13.5), f.line(12, 7, 12, 8)]];
   },
-  table: (g) => {
-    const f = figure(g);
-    return [f.rect(3, 4, 18, 16), f.line(3, 9, 21, 9), f.line(9, 9, 9, 20), ...g.s === 16 ? [] : [f.line(3, 14.5, 21, 14.5)]];
-  },
+  table: (g) => tableStructure(g),
   "sort-ascending": (g) => sort(g, false),
   "sort-descending": (g) => sort(g, true),
   "sort-unsorted": (g) => {

@@ -1,0 +1,120 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "skillVersion": "0.5.18",
+  "viewed": [
+    "light.png",
+    "dark.png"
+  ],
+  "sizes": [
+    16,
+    20,
+    24
+  ],
+  "themes": [
+    "light",
+    "dark"
+  ],
+  "dpr": [
+    1
+  ],
+  "corner": "soft for existing icons; labels and actual values retain natural text layout",
+  "scope": "Eight contextual existing-icon entries and two native-content controls replace ten candidates. No rejected geometry retrieved. Samples establish contextual alternatives, not universal icon equivalence.",
+  "userApproval": "pending",
+  "evidence": [
+    {
+      "path": "docs/review/rebuild-01/substitution-task-relations/light.png",
+      "sha256": "b5fd98de0870f0d34727d04f42fbd9c8ac04a1bea5aaf71f7dd2e91b11ae2849"
+    },
+    {
+      "path": "docs/review/rebuild-01/substitution-task-relations/dark.png",
+      "sha256": "28c4bb96efd922290542e0a25f935bd4c64128015e2cca7d67ebaf86a1ea7e51"
+    }
+  ],
+  "items": [
+    {
+      "name": "subtask",
+      "label": "子任務",
+      "alternative": "list-tree",
+      "replacementKind": "contextual-entry",
+      "context": "任務詳情 · 展開子任務清單",
+      "reason": "list-tree 已有主列、向下連線及縮排列，能表達父子階層；任務上下文已明確，不另加核取方框。",
+      "replacementScope": "子任務區塊入口與階層檢視；新增子任務用 plus，子任務本身仍顯示自己的狀態。",
+      "searchKeywords": [
+        "sub-issue",
+        "child-task",
+        "子工作"
+      ],
+      "usageEvidence": [
+        "https://linear.app/docs/parent-and-sub-issues"
+      ],
+      "sample": "<div style=\"display:flex;align-items:center;gap:8px;margin:8px 0\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><path d=\"M6 3L13.6667 3\"/><path d=\"M2.6667 3L2.6667 12A1 1 0 0 0 3.6667 13L5 13\"/><path d=\"M2.6667 8L5 8\"/><path d=\"M7.3333 8L13.6667 8\"/><path d=\"M7.3333 13L13.6667 13\"/></svg>子任務 · 2</div><div style=\"border-left:1px solid #8888;margin-left:7px;padding-left:18px\"><div style=\"display:flex;align-items:center;gap:8px;margin:8px 0\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><path d=\"M13.9177 7.0097A6 6 0 0 1 13.9177 8.9903\"/><path d=\"M12.8847 11.4842A6 6 0 0 1 11.4842 12.8847\"/><path d=\"M8.9903 13.9177A6 6 0 0 1 7.0097 13.9177\"/><path d=\"M4.5158 12.8847A6 6 0 0 1 3.1153 11.4842\"/><path d=\"M2.0823 8.9903A6 6 0 0 1 2.0823 7.0097\"/><path d=\"M3.1153 4.5158A6 6 0 0 1 4.5158 3.1153\"/><path d=\"M7.0097 2.0823A6 6 0 0 1 8.9903 2.0823\"/><path d=\"M11.4842 3.1153A6 6 0 0 1 12.8847 4.5158\"/></svg>撰寫說明</div><div style=\"display:flex;align-items:center;gap:8px;margin:8px 0\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><circle cx=\"8\" cy=\"8\" r=\"6\"/><path d=\"M5 8L7.1041 9.8703A0.2 0.2 0 0 0 7.3832 9.8573L10.75 6.25\"/></svg>準備素材</div></div><button><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><path d=\"M3 8L13 8\"/><path d=\"M8 3L8 13\"/></svg>新增子任務</button>",
+      "usageEvidenceLimit": "Sources establish the operation or information model; the sample is our substitution demonstration, not a reproduction or claim about those products’ exact icon choice.",
+      "visualObservation": "16px階層連線和縮排列清楚；實際子任務顯示自己的圓形狀態，新增操作使用獨立plus。入口不再重複任務核取框。"
+    },
+    {
+      "name": "task-dependency",
+      "label": "任務相依",
+      "alternative": "link",
+      "replacementKind": "contextual-entry",
+      "context": "任務關係區塊 · 新增相依關係入口",
+      "reason": "關係入口可用現有 link；真正需要分清的是「受阻於」和「阻擋」的方向，這項資訊由關係類型與任務名稱直接呈現，不能靠另一條小鏈節猜測。",
+      "replacementScope": "限於具名任務關係入口，非 URL 連結按鈕。若兩者同頁，需分組及標籤；有向關係仍保留類型文字。",
+      "searchKeywords": [
+        "前置任務"
+      ],
+      "usageEvidence": [
+        "https://linear.app/docs/issue-property"
+      ],
+      "sample": "<button><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><path d=\"M9 4.3333L10 3.3333C11.0125 2.3208 12.6541 2.3208 13.6667 3.3333C14.6792 4.3459 14.6792 5.9875 13.6667 7L11.6667 9C10.6541 10.0125 9.0125 10.0125 8 9\"/><path d=\"M9 4.3333L10 3.3333C11.0125 2.3208 12.6541 2.3208 13.6667 3.3333C14.6792 4.3459 14.6792 5.9875 13.6667 7L11.6667 9C10.6541 10.0125 9.0125 10.0125 8 9\" transform=\"rotate(180 8 8)\"/></svg>新增相依關係</button><fieldset style=\"margin-top:12px\"><legend>任務關係</legend><label>類型 <select aria-label=\"相依關係類型\"><option>受阻於</option><option>阻擋</option></select></label><p>OPS-42 · 完成資料轉移</p></fieldset>",
+      "usageEvidenceLimit": "Sources establish the operation or information model; the sample is our substitution demonstration, not a reproduction or claim about those products’ exact icon choice.",
+      "rejectedSearchTerms": {
+        "terms": [
+          "dependency",
+          "depends-on",
+          "依賴"
+        ],
+        "reason": "程式相依、數學相依等概念不等同一般連結；本輪僅補有任務語境的搜尋詞。"
+      },
+      "visualObservation": "直接使用既有link兩節鏈環，未重畫鏈節。方向由可切換的受阻於／阻擋類型與任務名稱交代；單色和明暗背景都不依賴箭頭或色差猜測。"
+    },
+    {
+      "name": "task-blocked",
+      "label": "任務受阻",
+      "alternative": "flag",
+      "replacementKind": "contextual-entry",
+      "context": "任務關係 · 尚未解除的阻塞項目",
+      "reason": "既有 flag 加上「受阻於」標籤可提示阻塞。小圖只負責提醒，方向及原因由可讀關係提供；不以 ban 誤示禁止執行，也不與暫停狀態混用。",
+      "replacementScope": "有標籤的阻塞關係提示；不能靠旗色或旗形獨自區分受阻與阻擋。任務若另有旗標欄位，須分組而非共用無標籤狀態。",
+      "searchKeywords": [
+        "blocked-task",
+        "受阻",
+        "卡關"
+      ],
+      "usageEvidence": [
+        "https://linear.app/docs/issue-property"
+      ],
+      "sample": "<div style=\"display:flex;align-items:center;gap:8px;margin:8px 0\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><path d=\"M3.3333 2.6667L3.3333 14\"/><path d=\"M3.3333 2.6667C6.6667 0.6667 9.3333 4.6667 12.6667 2.6667V9.3333C9.3333 11.3333 6.6667 7.3333 3.3333 9.3333\" stroke-linecap=\"butt\"/></svg>受阻於 · OPS-42 資料轉移</div><div style=\"display:flex;align-items:center;gap:8px;margin:8px 0\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><path d=\"M3.3333 2.6667L3.3333 14\"/><path d=\"M3.3333 2.6667C6.6667 0.6667 9.3333 4.6667 12.6667 2.6667V9.3333C9.3333 11.3333 6.6667 7.3333 3.3333 9.3333\" stroke-linecap=\"butt\"/></svg>阻擋 · OPS-57 發布版本</div><p><small>兩個方向由文字區分，示例不依賴紅／橙顏色。</small></p>",
+      "usageEvidenceLimit": "Sources establish the operation or information model; the sample is our substitution demonstration, not a reproduction or claim about those products’ exact icon choice.",
+      "visualObservation": "兩種有向關係使用相同flag提示，關係文字清楚區分兩者；這是帶標籤的關係列表，不宣稱旗形可獨自表達方向。沒有用禁止或暫停圖示混同阻塞。"
+    },
+    {
+      "name": "parent-task",
+      "label": "父任務",
+      "alternative": null,
+      "alternativeLabel": "父任務名稱與階層導覽",
+      "replacementKind": "native-content",
+      "context": "子任務詳情 · 返回具名父任務",
+      "reason": "父任務是這筆工作的關係目標，不是一種通用操作。具名父任務連結讓使用者直接知道要去哪裡；不另畫向上的清單，也不把 parent-task 一律等同箭頭向上。",
+      "nativePreview": "<span>父任務 → 網站改版</span>",
+      "comparisonMarkup": "<span>父任務 → 網站改版</span>",
+      "sample": "<div><small>父任務</small><p><a href=\"#parent-example\" style=\"color:inherit\">OPS-12 · 網站改版</a></p><p>目前：撰寫說明</p><div id=\"parent-example\" style=\"border-top:1px solid #8885;padding-top:8px\"><b>OPS-12 · 網站改版</b><p>子任務：撰寫說明、準備素材</p></div></div>",
+      "usageEvidence": [
+        "https://linear.app/docs/parent-and-sub-issues"
+      ],
+      "replacementScope": "實際控制項直接提供所需名稱或值；不新增圖稿，也不將候選名轉成不精確的圖示別名。",
+      "searchAliasDecision": "No icon alias: actual labeled information and controls replace the candidate.",
+      "visualObservation": "具名父任務連結與目前任務標題分開；連結目的地在示例下方可見。移除固定圖示後仍能直接讀出上一層是什麼，不需另造箭頭清單。"
+    }
+  ]
+}

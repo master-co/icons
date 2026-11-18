@@ -1,5 +1,6 @@
 import {exteriorDetails} from '../occlusion.mjs';
 import {analytics} from '../families/analytics.mjs';
+import {figure} from '../families/shared.mjs';
 const axis=g=>analytics['chart-line'](g)[0];
 
 export function chartRadar({g,o,l}){
@@ -23,8 +24,11 @@ export function chartNetwork({g,c,l}){
  for(const ring of rings)links=exteriorDetails(ring,links,g).slice(1);
  return [axis(g),...rings,...links];
 }
+export function histogramBars(g,{baseline=20.5,samples=[[8,16],[12,13],[16,16],[20,18]]}={}){
+ const f=figure(g);return samples.map(([x,y])=>f.line(x,y,x,baseline));
+}
 export function chartHistogram({g,p,l}){
- const bars=[[8,16],[12,13],[16,16],[20,18]].map(([x,y])=>l(x,y,x,20.5));
+ const bars=histogramBars(g);
  return [axis(g),p('M3.5 10C8 10 8 5 12 5S16 10 21 10'),...bars];
 }
 export function chartSankey({p}){return [p('M4 6C10.944 6 13.056 14 20 14'),p('M4 12C10.37 12 13.63 18 20 18'),p('M20 6C12.474 6 11.905 18 4 18')]}

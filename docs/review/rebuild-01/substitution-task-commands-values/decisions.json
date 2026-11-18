@@ -1,0 +1,93 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "skillVersion": "0.5.18",
+  "viewed": [
+    "light.png",
+    "dark.png"
+  ],
+  "sizes": [
+    16,
+    20,
+    24
+  ],
+  "themes": [
+    "light",
+    "dark"
+  ],
+  "dpr": [
+    1
+  ],
+  "corner": "soft for existing icons; labels and actual values retain natural text layout",
+  "scope": "Eight contextual existing-icon entries and two native-content controls replace ten candidates. No rejected geometry retrieved. Samples establish contextual alternatives, not universal icon equivalence.",
+  "userApproval": "pending",
+  "evidence": [
+    {
+      "path": "docs/review/rebuild-01/substitution-task-commands-values/light.png",
+      "sha256": "1fd4d726a3e66b6fbc4d60b56e07490b67a1f590db17602f2c21a463646e7ae6"
+    },
+    {
+      "path": "docs/review/rebuild-01/substitution-task-commands-values/dark.png",
+      "sha256": "0f2d5eb7f6d6254fef458e725968a8e2ef3d21612d922bc5f14c6b306dc03d2f"
+    }
+  ],
+  "items": [
+    {
+      "name": "task-split",
+      "label": "拆分任務",
+      "alternative": "git-branch",
+      "replacementKind": "contextual-entry",
+      "context": "待辦池選單 · 將一筆工作拆為多筆",
+      "reason": "現有分支圖形已表達一個來源產生多個去向。在「拆分任務」命令旁保留標籤，再以表單列出拆分結果，不需要分支上再加任務框。",
+      "replacementScope": "限有任務上下文及明確標籤的拆分命令；不表示 Git 操作，也不默認拆出的工作一定是子任務。",
+      "searchKeywords": [
+        "split-issue",
+        "split-task"
+      ],
+      "usageEvidence": [
+        "https://support.atlassian.com/jira-software-cloud/docs/create-a-work-item-and-a-subtask"
+      ],
+      "sample": "<button><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><circle cx=\"4\" cy=\"3.6667\" r=\"1.6667\"/><circle cx=\"4\" cy=\"12.3333\" r=\"1.6667\"/><circle cx=\"12\" cy=\"3.6667\" r=\"1.6667\"/><path d=\"M4 5.3333L4 10.6667\"/><path d=\"M12 5.3333C12 9.6667 4 7.3333 4 10.6667\"/></svg>拆分任務</button><p>原任務：重整登入流程</p><fieldset><legend>拆分後的工作</legend><p>設計登入畫面</p><p>串接驗證流程</p></fieldset>",
+      "usageEvidenceLimit": "Sources establish the operation or information model; the sample is our substitution demonstration, not a reproduction or claim about those products’ exact icon choice.",
+      "visualObservation": "既有分支與合流圖在16px並排具有不同結點配置；標籤與拆分後兩個任務名稱說明結果，沒有把拆分默認成子任務。"
+    },
+    {
+      "name": "task-merge",
+      "label": "合併任務",
+      "alternative": "git-merge",
+      "replacementKind": "contextual-entry",
+      "context": "任務操作選單 · 合併重複工作",
+      "reason": "既有合流圖形可搭配「合併重複任務」。目標任務及保留內容需要在確認介面交代，圖示不應用額外核取框假裝能說明合併規則。",
+      "replacementScope": "有標籤的任務合併入口；來源產品的保留欄位規則可能不同，示例不宣稱所有內容都會合併。",
+      "searchKeywords": [
+        "merge-issues",
+        "merge-task",
+        "整併任務"
+      ],
+      "usageEvidence": [
+        "https://help.asana.com/s/article/task-actions?language=en_US"
+      ],
+      "sample": "<button><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><circle cx=\"4\" cy=\"3.6667\" r=\"1.6667\"/><circle cx=\"4\" cy=\"12.3333\" r=\"1.6667\"/><circle cx=\"12\" cy=\"10.6667\" r=\"1.6667\"/><path d=\"M4 5.3333L4 10.6667\"/><path d=\"M4 5.3333C4 8.6667 7 10.6667 10.3333 10.6667\"/></svg>合併重複任務</button><p>來源：OPS-48 · 修正登入問題</p><label>保留的任務 <select aria-label=\"合併目標\"><option>OPS-42 · 登入驗證錯誤</option><option>OPS-39 · 登入畫面錯誤</option></select></label>",
+      "usageEvidenceLimit": "Sources establish the operation or information model; the sample is our substitution demonstration, not a reproduction or claim about those products’ exact icon choice.",
+      "visualObservation": "既有合流與分支圖的右側端點高度不同，16／20／24均可分；目標任務選單保留確認需要的具名資訊，圖形無需額外任務方框。"
+    },
+    {
+      "name": "task-estimate",
+      "label": "任務估點",
+      "alternative": null,
+      "alternativeLabel": "具名估算值選擇器",
+      "replacementKind": "native-content",
+      "context": "任務屬性 · 故事點或規模值",
+      "reason": "估點是工作複雜度或規模，不必是工時。顯示「估點」和實際數值，或團隊採用的 XS／S／M 等值，能直接表達資訊；不另畫帶時鐘的任務。",
+      "nativePreview": "<span>估點 3 · 規模 M</span>",
+      "comparisonMarkup": "<span>估點 3 · 規模 M</span>",
+      "sample": "<fieldset><legend>數值尺度示例</legend><label>估點 <select aria-label=\"任務估點\"><option value=\"\">未估算</option><option>0</option><option>1</option><option>2</option><option selected>3</option><option>5</option><option>8</option></select></label></fieldset><fieldset style=\"margin-top:10px\"><legend>另一種團隊尺度示例</legend><label>規模 <select aria-label=\"任務規模\"><option>XS</option><option>S</option><option selected>M</option><option>L</option><option>XL</option></select></label></fieldset><small>產品依團隊設定使用一種尺度；0 和未估算保留不同值。</small>",
+      "usageEvidence": [
+        "https://linear.app/docs/issue-property"
+      ],
+      "replacementScope": "實際控制項直接提供所需名稱或值；不新增圖稿，也不將候選名轉成不精確的圖示別名。",
+      "searchAliasDecision": "No icon alias: actual labeled information and controls replace the candidate.",
+      "visualObservation": "數值與T-shirt兩種尺度分開示例，標籤和目前值在深淺背景均可讀；0和未估算是不同選項，未用鐘面造成工時含義。"
+    }
+  ]
+}

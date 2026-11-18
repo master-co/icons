@@ -1,0 +1,56 @@
+[
+  {
+    "name": "align-objects-top",
+    "purpose": "物件靠上：畫布中的選取物件對齊命令，須和文字段落對齊及單純移動方向分開。",
+    "recognitionCues": "上方基準線，下方長短直框的頂部齊平。",
+    "confusableWith": [
+      "arrow-up",
+      "square"
+    ],
+    "sourceObservation": "Lucide 的長物件在左、短物件在右，Tabler 用單一直框。依兩物件排序重新選擇共源旋轉方向，維持長左短右，不另外重畫直框。",
+    "reason": "六顆使用同一對長短矩形與基準線函式，矩形透過既有 rect 幾何生成；原生尺寸調整框高和間距，角型改實際半徑。中心基準線屬連接關係，裁切內孔而不加入徽標避讓縫。",
+    "comparison": "16px 的頂部兩框和基準線保持間隔，兩框之間沒有細縫黏合。相較 Tabler 多保留一個物件，而比 Lucide 更節制框角；與垂直置中及靠下並排，物件寬度及順序一致。",
+    "dashes": false,
+    "dashReason": "基準線表示明確對齊位置，物件是已選取的實體，不用虛線或淡化改變主次。",
+    "usageEvidence": [
+      "https://help.figma.com/hc/en-us/articles/1500004292221-Select-move-and-order-objects-in-FigJam"
+    ],
+    "reviewed": true
+  },
+  {
+    "name": "align-objects-center-vertical",
+    "purpose": "物件垂直置中：畫布中的選取物件對齊命令，須和文字段落對齊及單純移動方向分開。",
+    "recognitionCues": "水平中心基準線連接長短直框的中點，長框在左。",
+    "confusableWith": [
+      "align-objects-center-horizontal",
+      "square"
+    ],
+    "sourceObservation": "Lucide 用連續橫軸切開兩框；Tabler 以完整單框接橫軸。本稿直接旋轉水平置中的同一幾何，保留完整雙框並裁掉內孔中的基準線。",
+    "reason": "六顆使用同一對長短矩形與基準線函式，矩形透過既有 rect 幾何生成；原生尺寸調整框高和間距，角型改實際半徑。中心基準線屬連接關係，裁切內孔而不加入徽標避讓縫。",
+    "comparison": "旋轉後 16px 的短框內孔仍可見，橫軸左右端及框間段都保留。與 Lucide 的四個開口不同，本稿兩個閉合物件在粗線端仍獨立；相較 Tabler 可表達兩物件，不需再加額外輪廓。",
+    "dashes": false,
+    "dashReason": "基準線表示明確對齊位置，物件是已選取的實體，不用虛線或淡化改變主次。",
+    "usageEvidence": [
+      "https://help.figma.com/hc/en-us/articles/1500004292221-Select-move-and-order-objects-in-FigJam"
+    ],
+    "reviewed": true
+  },
+  {
+    "name": "align-objects-bottom",
+    "purpose": "物件靠下：畫布中的選取物件對齊命令，須和文字段落對齊及單純移動方向分開。",
+    "recognitionCues": "下方基準線，長短直框底部齊平，長框在左。",
+    "confusableWith": [
+      "arrow-down",
+      "square"
+    ],
+    "sourceObservation": "Lucide 的兩框底部對齊且長框在左，Tabler 使用單框。本稿從同一靠左母型旋轉，與靠上保持完全相同的長短物件。",
+    "reason": "六顆使用同一對長短矩形與基準線函式，矩形透過既有 rect 幾何生成；原生尺寸調整框高和間距，角型改實際半徑。中心基準線屬連接關係，裁切內孔而不加入徽標避讓縫。",
+    "comparison": "16px 兩個底部與水平基準線之間的通道未被圓端帽填滿；粗線下短框仍有內孔。和 Lucide 並排，留白與物件排序一致而框角更克制；與靠上並排也沒有兩物件互換左右的跳位。",
+    "dashes": false,
+    "dashReason": "基準線表示明確對齊位置，物件是已選取的實體，不用虛線或淡化改變主次。",
+    "usageEvidence": [
+      "https://help.figma.com/hc/en-us/articles/1500004292221-Select-move-and-order-objects-in-FigJam"
+    ],
+    "reviewed": true
+  }
+]

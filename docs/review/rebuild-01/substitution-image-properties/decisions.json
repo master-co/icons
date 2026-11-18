@@ -1,0 +1,112 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "viewed": [
+    "light.png",
+    "dark.png"
+  ],
+  "sizes": [
+    16,
+    20,
+    24
+  ],
+  "themes": [
+    "light",
+    "dark"
+  ],
+  "dpr": [
+    1
+  ],
+  "corner": "soft",
+  "scope": "Existing alternatives in the actual labeled control context; no geometry changed.",
+  "userApproval": "pending",
+  "evidence": [
+    {
+      "path": "docs/review/rebuild-01/substitution-image-properties/light.png",
+      "sha256": "2c48f3aa1096d75d865f039400664baa9245b84627f3601278c546f926adf5ac"
+    },
+    {
+      "path": "docs/review/rebuild-01/substitution-image-properties/dark.png",
+      "sha256": "55d5c04fbb7bda29a91c37e92062b2897ccdf3f2e2e074e271a82a2a30b3b72f"
+    }
+  ],
+  "items": [
+    {
+      "name": "image-align-left",
+      "alternative": "align-left",
+      "label": "靠左",
+      "context": "圖片已選取 · 圖片設定內的水平對齊控制",
+      "reason": "圖片設定已限定操作對象；既有 align-left 的行端位置能表達「靠左」。三顆並排與選取狀態已能區分位置，不需要在每顆中再塞一幅縮小山景。這是圖片在內容寬度內的位置，並非文字環繞或多物件相對對齊。",
+      "usageEvidence": [
+        "/Users/aron/haoban/packages/editor/src/media.components/MediaNode.svelte:366",
+        "/Users/aron/haoban/packages/editor/src/media.components/MediaNode.svelte:580"
+      ],
+      "replacementScope": "Haoban 原介面是有文字的 select；以下分段按鈕是替代方案示意，不宣稱已修改使用端。",
+      "sample": "<b>圖片設定 · 對齊</b><div style=\"border:1px solid #8886;margin:8px 0;padding:8px;display:flex;justify-content:flex-start\"><div style=\"width:115px;height:60px;border:1px solid #8886;display:grid;place-items:center\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><rect x=\"2\" y=\"2.6667\" width=\"12\" height=\"10.6667\" rx=\"1\"/><path d=\"M5.5028 13.3334L4.0417 13.3334Q4.0417 13.3192 4.0423 13.305Q4.043 13.2908 4.0443 13.2767Q4.0455 13.2626 4.0475 13.2485Q4.0494 13.2344 4.052 13.2205Q4.0545 13.2065 4.0577 13.1927Q4.0609 13.1788 4.0648 13.1652Q4.0686 13.1515 4.073 13.138Q4.0774 13.1245 4.0825 13.1112Q4.0875 13.098 4.0932 13.0849Q4.0988 13.0719 4.105 13.0592Q4.1113 13.0464 4.1181 13.0339Q4.1249 13.0215 4.1322 13.0093Q4.1396 12.9972 4.1475 12.9854Q4.1554 12.9736 4.1638 12.9622Q4.1723 12.9507 4.1812 12.9397Q4.1901 12.9287 4.1996 12.9181L9.392 7.0766Q9.6286 6.8105 9.9845 6.8Q10.3403 6.7897 10.592 7.0414L14 10.4494L14 11.9583Q13.9847 11.9583 13.9693 11.9575Q13.954 11.9568 13.9387 11.9553Q13.9235 11.9538 13.9083 11.9515Q13.8931 11.9493 13.8781 11.9463Q13.863 11.9433 13.8481 11.9396Q13.8332 11.9358 13.8186 11.9314Q13.8039 11.9269 13.7894 11.9218Q13.775 11.9166 13.7608 11.9107Q13.7466 11.9049 13.7328 11.8983Q13.7189 11.8917 13.7054 11.8845Q13.6918 11.8773 13.6787 11.8694Q13.6655 11.8615 13.6528 11.853Q13.64 11.8444 13.6277 11.8353Q13.6154 11.8262 13.6035 11.8164Q13.5916 11.8067 13.5803 11.7964Q13.5689 11.7861 13.5581 11.7752L10.0267 8.2439L5.5028 13.3334Z\" fill=\"currentColor\" stroke=\"none\" fill-rule=\"evenodd\"/><circle cx=\"5\" cy=\"5.6667\" r=\"0.9\" fill=\"currentColor\" stroke=\"none\"/></svg></div></div><div style=\"display:flex;gap:7px;flex-wrap:wrap\"><button aria-pressed=\"true\" style=\"border-color:currentColor;background:#8882\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><path d=\"M2.6667 3.3333L13.3333 3.3333\"/><path d=\"M2.6667 6.3333L9.3333 6.3333\"/><path d=\"M2.6667 9.3333L13.3333 9.3333\"/><path d=\"M2.6667 12.3333L9.3333 12.3333\"/></svg>靠左</button><button><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><path d=\"M2.6667 3.3333L13.3333 3.3333\"/><path d=\"M4.6667 6.3333L11.3333 6.3333\"/><path d=\"M2.6667 9.3333L13.3333 9.3333\"/><path d=\"M4.6667 12.3333L11.3333 12.3333\"/></svg>置中</button><button><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><path d=\"M2.6667 3.3333L13.3333 3.3333\"/><path d=\"M6.6667 6.3333L13.3333 6.3333\"/><path d=\"M2.6667 9.3333L13.3333 9.3333\"/><path d=\"M6.6667 12.3333L13.3333 12.3333\"/></svg>靠右</button></div>"
+    },
+    {
+      "name": "image-align-center",
+      "alternative": "align-center",
+      "label": "置中",
+      "context": "圖片已選取 · 圖片設定內的水平對齊控制",
+      "reason": "圖片設定已限定操作對象；既有 align-center 的行端位置能表達「置中」。三顆並排與選取狀態已能區分位置，不需要在每顆中再塞一幅縮小山景。這是圖片在內容寬度內的位置，並非文字環繞或多物件相對對齊。",
+      "usageEvidence": [
+        "/Users/aron/haoban/packages/editor/src/media.components/MediaNode.svelte:366",
+        "/Users/aron/haoban/packages/editor/src/media.components/MediaNode.svelte:580"
+      ],
+      "replacementScope": "Haoban 原介面是有文字的 select；以下分段按鈕是替代方案示意，不宣稱已修改使用端。",
+      "sample": "<b>圖片設定 · 對齊</b><div style=\"border:1px solid #8886;margin:8px 0;padding:8px;display:flex;justify-content:center\"><div style=\"width:115px;height:60px;border:1px solid #8886;display:grid;place-items:center\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><rect x=\"2\" y=\"2.6667\" width=\"12\" height=\"10.6667\" rx=\"1\"/><path d=\"M5.5028 13.3334L4.0417 13.3334Q4.0417 13.3192 4.0423 13.305Q4.043 13.2908 4.0443 13.2767Q4.0455 13.2626 4.0475 13.2485Q4.0494 13.2344 4.052 13.2205Q4.0545 13.2065 4.0577 13.1927Q4.0609 13.1788 4.0648 13.1652Q4.0686 13.1515 4.073 13.138Q4.0774 13.1245 4.0825 13.1112Q4.0875 13.098 4.0932 13.0849Q4.0988 13.0719 4.105 13.0592Q4.1113 13.0464 4.1181 13.0339Q4.1249 13.0215 4.1322 13.0093Q4.1396 12.9972 4.1475 12.9854Q4.1554 12.9736 4.1638 12.9622Q4.1723 12.9507 4.1812 12.9397Q4.1901 12.9287 4.1996 12.9181L9.392 7.0766Q9.6286 6.8105 9.9845 6.8Q10.3403 6.7897 10.592 7.0414L14 10.4494L14 11.9583Q13.9847 11.9583 13.9693 11.9575Q13.954 11.9568 13.9387 11.9553Q13.9235 11.9538 13.9083 11.9515Q13.8931 11.9493 13.8781 11.9463Q13.863 11.9433 13.8481 11.9396Q13.8332 11.9358 13.8186 11.9314Q13.8039 11.9269 13.7894 11.9218Q13.775 11.9166 13.7608 11.9107Q13.7466 11.9049 13.7328 11.8983Q13.7189 11.8917 13.7054 11.8845Q13.6918 11.8773 13.6787 11.8694Q13.6655 11.8615 13.6528 11.853Q13.64 11.8444 13.6277 11.8353Q13.6154 11.8262 13.6035 11.8164Q13.5916 11.8067 13.5803 11.7964Q13.5689 11.7861 13.5581 11.7752L10.0267 8.2439L5.5028 13.3334Z\" fill=\"currentColor\" stroke=\"none\" fill-rule=\"evenodd\"/><circle cx=\"5\" cy=\"5.6667\" r=\"0.9\" fill=\"currentColor\" stroke=\"none\"/></svg></div></div><div style=\"display:flex;gap:7px;flex-wrap:wrap\"><button><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><path d=\"M2.6667 3.3333L13.3333 3.3333\"/><path d=\"M2.6667 6.3333L9.3333 6.3333\"/><path d=\"M2.6667 9.3333L13.3333 9.3333\"/><path d=\"M2.6667 12.3333L9.3333 12.3333\"/></svg>靠左</button><button aria-pressed=\"true\" style=\"border-color:currentColor;background:#8882\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><path d=\"M2.6667 3.3333L13.3333 3.3333\"/><path d=\"M4.6667 6.3333L11.3333 6.3333\"/><path d=\"M2.6667 9.3333L13.3333 9.3333\"/><path d=\"M4.6667 12.3333L11.3333 12.3333\"/></svg>置中</button><button><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><path d=\"M2.6667 3.3333L13.3333 3.3333\"/><path d=\"M6.6667 6.3333L13.3333 6.3333\"/><path d=\"M2.6667 9.3333L13.3333 9.3333\"/><path d=\"M6.6667 12.3333L13.3333 12.3333\"/></svg>靠右</button></div>"
+    },
+    {
+      "name": "image-align-right",
+      "alternative": "align-right",
+      "label": "靠右",
+      "context": "圖片已選取 · 圖片設定內的水平對齊控制",
+      "reason": "圖片設定已限定操作對象；既有 align-right 的行端位置能表達「靠右」。三顆並排與選取狀態已能區分位置，不需要在每顆中再塞一幅縮小山景。這是圖片在內容寬度內的位置，並非文字環繞或多物件相對對齊。",
+      "usageEvidence": [
+        "/Users/aron/haoban/packages/editor/src/media.components/MediaNode.svelte:366",
+        "/Users/aron/haoban/packages/editor/src/media.components/MediaNode.svelte:580"
+      ],
+      "replacementScope": "Haoban 原介面是有文字的 select；以下分段按鈕是替代方案示意，不宣稱已修改使用端。",
+      "sample": "<b>圖片設定 · 對齊</b><div style=\"border:1px solid #8886;margin:8px 0;padding:8px;display:flex;justify-content:flex-end\"><div style=\"width:115px;height:60px;border:1px solid #8886;display:grid;place-items:center\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><rect x=\"2\" y=\"2.6667\" width=\"12\" height=\"10.6667\" rx=\"1\"/><path d=\"M5.5028 13.3334L4.0417 13.3334Q4.0417 13.3192 4.0423 13.305Q4.043 13.2908 4.0443 13.2767Q4.0455 13.2626 4.0475 13.2485Q4.0494 13.2344 4.052 13.2205Q4.0545 13.2065 4.0577 13.1927Q4.0609 13.1788 4.0648 13.1652Q4.0686 13.1515 4.073 13.138Q4.0774 13.1245 4.0825 13.1112Q4.0875 13.098 4.0932 13.0849Q4.0988 13.0719 4.105 13.0592Q4.1113 13.0464 4.1181 13.0339Q4.1249 13.0215 4.1322 13.0093Q4.1396 12.9972 4.1475 12.9854Q4.1554 12.9736 4.1638 12.9622Q4.1723 12.9507 4.1812 12.9397Q4.1901 12.9287 4.1996 12.9181L9.392 7.0766Q9.6286 6.8105 9.9845 6.8Q10.3403 6.7897 10.592 7.0414L14 10.4494L14 11.9583Q13.9847 11.9583 13.9693 11.9575Q13.954 11.9568 13.9387 11.9553Q13.9235 11.9538 13.9083 11.9515Q13.8931 11.9493 13.8781 11.9463Q13.863 11.9433 13.8481 11.9396Q13.8332 11.9358 13.8186 11.9314Q13.8039 11.9269 13.7894 11.9218Q13.775 11.9166 13.7608 11.9107Q13.7466 11.9049 13.7328 11.8983Q13.7189 11.8917 13.7054 11.8845Q13.6918 11.8773 13.6787 11.8694Q13.6655 11.8615 13.6528 11.853Q13.64 11.8444 13.6277 11.8353Q13.6154 11.8262 13.6035 11.8164Q13.5916 11.8067 13.5803 11.7964Q13.5689 11.7861 13.5581 11.7752L10.0267 8.2439L5.5028 13.3334Z\" fill=\"currentColor\" stroke=\"none\" fill-rule=\"evenodd\"/><circle cx=\"5\" cy=\"5.6667\" r=\"0.9\" fill=\"currentColor\" stroke=\"none\"/></svg></div></div><div style=\"display:flex;gap:7px;flex-wrap:wrap\"><button><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><path d=\"M2.6667 3.3333L13.3333 3.3333\"/><path d=\"M2.6667 6.3333L9.3333 6.3333\"/><path d=\"M2.6667 9.3333L13.3333 9.3333\"/><path d=\"M2.6667 12.3333L9.3333 12.3333\"/></svg>靠左</button><button><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><path d=\"M2.6667 3.3333L13.3333 3.3333\"/><path d=\"M4.6667 6.3333L11.3333 6.3333\"/><path d=\"M2.6667 9.3333L13.3333 9.3333\"/><path d=\"M4.6667 12.3333L11.3333 12.3333\"/></svg>置中</button><button aria-pressed=\"true\" style=\"border-color:currentColor;background:#8882\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><path d=\"M2.6667 3.3333L13.3333 3.3333\"/><path d=\"M6.6667 6.3333L13.3333 6.3333\"/><path d=\"M2.6667 9.3333L13.3333 9.3333\"/><path d=\"M6.6667 12.3333L13.3333 12.3333\"/></svg>靠右</button></div>"
+    },
+    {
+      "name": "image-caption",
+      "alternative": "text",
+      "label": "圖片說明",
+      "context": "圖片設定 · 顯示於圖片下方的說明文字欄位",
+      "reason": "說明的內容需要直接編輯和閱讀；現有欄位不用額外圖示，保留「圖片說明」標籤即可。若另設文字設定入口，才選用 text。與替代文字並列時由標籤及用途說明區分，不把兩顆相近的圖片加文字圖當成必要識別。",
+      "usageEvidence": [
+        "/Users/aron/haoban/packages/editor/src/media.components/MediaNode.svelte:384",
+        "/Users/aron/haoban/packages/editor/src/media.components/MediaNode.svelte:595"
+      ],
+      "replacementScope": "實際欄位不需要圖示；text 僅是另設文字設定入口時的可選圖示，不能用兩個相同純圖示取代兩個欄位。",
+      "sample": "<div style=\"width:115px;height:60px;border:1px solid #8886;display:grid;place-items:center\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><rect x=\"2\" y=\"2.6667\" width=\"12\" height=\"10.6667\" rx=\"1\"/><path d=\"M5.5028 13.3334L4.0417 13.3334Q4.0417 13.3192 4.0423 13.305Q4.043 13.2908 4.0443 13.2767Q4.0455 13.2626 4.0475 13.2485Q4.0494 13.2344 4.052 13.2205Q4.0545 13.2065 4.0577 13.1927Q4.0609 13.1788 4.0648 13.1652Q4.0686 13.1515 4.073 13.138Q4.0774 13.1245 4.0825 13.1112Q4.0875 13.098 4.0932 13.0849Q4.0988 13.0719 4.105 13.0592Q4.1113 13.0464 4.1181 13.0339Q4.1249 13.0215 4.1322 13.0093Q4.1396 12.9972 4.1475 12.9854Q4.1554 12.9736 4.1638 12.9622Q4.1723 12.9507 4.1812 12.9397Q4.1901 12.9287 4.1996 12.9181L9.392 7.0766Q9.6286 6.8105 9.9845 6.8Q10.3403 6.7897 10.592 7.0414L14 10.4494L14 11.9583Q13.9847 11.9583 13.9693 11.9575Q13.954 11.9568 13.9387 11.9553Q13.9235 11.9538 13.9083 11.9515Q13.8931 11.9493 13.8781 11.9463Q13.863 11.9433 13.8481 11.9396Q13.8332 11.9358 13.8186 11.9314Q13.8039 11.9269 13.7894 11.9218Q13.775 11.9166 13.7608 11.9107Q13.7466 11.9049 13.7328 11.8983Q13.7189 11.8917 13.7054 11.8845Q13.6918 11.8773 13.6787 11.8694Q13.6655 11.8615 13.6528 11.853Q13.64 11.8444 13.6277 11.8353Q13.6154 11.8262 13.6035 11.8164Q13.5916 11.8067 13.5803 11.7964Q13.5689 11.7861 13.5581 11.7752L10.0267 8.2439L5.5028 13.3334Z\" fill=\"currentColor\" stroke=\"none\" fill-rule=\"evenodd\"/><circle cx=\"5\" cy=\"5.6667\" r=\"0.9\" fill=\"currentColor\" stroke=\"none\"/></svg></div><label style=\"display:block;margin:9px 0\">圖片說明（顯示於頁面）<div style=\"border:1px solid #8886;padding:7px;margin-top:4px\">完工後的客廳與餐廳</div></label><label style=\"display:block;margin:9px 0\">替代文字（描述圖片內容）<div style=\"border:1px solid #8886;padding:7px;margin-top:4px\">採光明亮的客廳，右側連接木質餐桌</div></label>"
+    },
+    {
+      "name": "image-alt",
+      "alternative": "text",
+      "label": "替代文字",
+      "context": "圖片設定 · 無障礙描述與裝飾圖片選項",
+      "reason": "替代文字是輸入內容，不是另一種圖片格式；現有設定面板以「替代文字」及「裝飾圖片，不需描述」清楚交代行為。實際欄位不需要圖示；若另設入口可選 text，欄位仍需要標籤，不以眼睛、耳朵或圖片上疊字代替無障礙語意。",
+      "usageEvidence": [
+        "/Users/aron/haoban/packages/editor/src/media.components/MediaNode.svelte:381",
+        "/Users/aron/haoban/packages/editor/src/media.components/MediaNode.svelte:536"
+      ],
+      "replacementScope": "實際欄位不需要圖示，text 僅作可選的文字設定入口；替代文字不得與公開圖片說明混用。",
+      "sample": "<label style=\"display:block;margin:9px 0\">替代文字<div style=\"border:1px solid #8886;padding:7px;margin-top:4px\">團隊在會議室討論設計稿</div></label><label><input type=\"checkbox\"> 裝飾圖片，不需描述</label><p><small>替代文字與顯示於頁面的圖片說明是不同欄位。</small></p>"
+    },
+    {
+      "name": "image-replace",
+      "alternative": "upload",
+      "label": "更換圖片",
+      "context": "選取已有圖片 · 從裝置選擇新檔案",
+      "reason": "Haoban 對已存在的媒體直接使用 Upload01Icon 與「更換檔案」；圖片節點已交代對象，upload 表示選擇裝置檔案。媒體庫則保留另外的文字入口，不能把 upload 說成所有替換來源的通用操作。",
+      "usageEvidence": [
+        "/Users/aron/haoban/packages/editor/src/media.components/MediaNode.svelte:446"
+      ],
+      "replacementScope": "從裝置更換圖片的入口；媒體庫選擇另列。",
+      "sample": "<div style=\"width:115px;height:60px;border:1px solid #8886;display:grid;place-items:center\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><rect x=\"2\" y=\"2.6667\" width=\"12\" height=\"10.6667\" rx=\"1\"/><path d=\"M5.5028 13.3334L4.0417 13.3334Q4.0417 13.3192 4.0423 13.305Q4.043 13.2908 4.0443 13.2767Q4.0455 13.2626 4.0475 13.2485Q4.0494 13.2344 4.052 13.2205Q4.0545 13.2065 4.0577 13.1927Q4.0609 13.1788 4.0648 13.1652Q4.0686 13.1515 4.073 13.138Q4.0774 13.1245 4.0825 13.1112Q4.0875 13.098 4.0932 13.0849Q4.0988 13.0719 4.105 13.0592Q4.1113 13.0464 4.1181 13.0339Q4.1249 13.0215 4.1322 13.0093Q4.1396 12.9972 4.1475 12.9854Q4.1554 12.9736 4.1638 12.9622Q4.1723 12.9507 4.1812 12.9397Q4.1901 12.9287 4.1996 12.9181L9.392 7.0766Q9.6286 6.8105 9.9845 6.8Q10.3403 6.7897 10.592 7.0414L14 10.4494L14 11.9583Q13.9847 11.9583 13.9693 11.9575Q13.954 11.9568 13.9387 11.9553Q13.9235 11.9538 13.9083 11.9515Q13.8931 11.9493 13.8781 11.9463Q13.863 11.9433 13.8481 11.9396Q13.8332 11.9358 13.8186 11.9314Q13.8039 11.9269 13.7894 11.9218Q13.775 11.9166 13.7608 11.9107Q13.7466 11.9049 13.7328 11.8983Q13.7189 11.8917 13.7054 11.8845Q13.6918 11.8773 13.6787 11.8694Q13.6655 11.8615 13.6528 11.853Q13.64 11.8444 13.6277 11.8353Q13.6154 11.8262 13.6035 11.8164Q13.5916 11.8067 13.5803 11.7964Q13.5689 11.7861 13.5581 11.7752L10.0267 8.2439L5.5028 13.3334Z\" fill=\"currentColor\" stroke=\"none\" fill-rule=\"evenodd\"/><circle cx=\"5\" cy=\"5.6667\" r=\"0.9\" fill=\"currentColor\" stroke=\"none\"/></svg></div><p>目前圖片：客廳.jpg</p><div style=\"display:flex;gap:7px;flex-wrap:wrap\"><button><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><path d=\"M7.4989 2.1265Q7.4839 2.1466 7.4706 2.1678Q7.4573 2.189 7.4457 2.2112Q7.4342 2.2334 7.4244 2.2564Q7.4147 2.2795 7.4068 2.3032Q7.3989 2.327 7.3929 2.3513Q7.387 2.3756 7.383 2.4004Q7.379 2.4251 7.377 2.45Q7.375 2.475 7.375 2.5L7.375 10Q7.375 10.0153 7.3758 10.0307Q7.3765 10.046 7.378 10.0613Q7.3795 10.0765 7.3818 10.0917Q7.384 10.1069 7.387 10.1219Q7.39 10.137 7.3937 10.1519Q7.3975 10.1668 7.4019 10.1814Q7.4064 10.1961 7.4115 10.2106Q7.4167 10.225 7.4226 10.2392Q7.4285 10.2533 7.435 10.2672Q7.4416 10.2811 7.4488 10.2946Q7.456 10.3082 7.4639 10.3213Q7.4718 10.3345 7.4803 10.3472Q7.4889 10.36 7.498 10.3723Q7.5071 10.3846 7.5169 10.3965Q7.5266 10.4084 7.5369 10.4197Q7.5472 10.4311 7.5581 10.4419Q7.5689 10.4528 7.5803 10.4631Q7.5916 10.4734 7.6035 10.4831Q7.6154 10.4929 7.6277 10.502Q7.64 10.5111 7.6528 10.5197Q7.6655 10.5282 7.6787 10.5361Q7.6918 10.544 7.7054 10.5512Q7.7189 10.5584 7.7328 10.565Q7.7466 10.5715 7.7608 10.5774Q7.775 10.5833 7.7894 10.5885Q7.8039 10.5936 7.8186 10.5981Q7.8332 10.6025 7.8481 10.6063Q7.863 10.61 7.8781 10.613Q7.8931 10.616 7.9083 10.6182Q7.9235 10.6205 7.9387 10.622Q7.954 10.6235 7.9693 10.6242Q7.9847 10.625 8 10.625Q8.0153 10.625 8.0307 10.6242Q8.046 10.6235 8.0613 10.622Q8.0765 10.6205 8.0917 10.6182Q8.1069 10.616 8.1219 10.613Q8.137 10.61 8.1519 10.6063Q8.1668 10.6025 8.1814 10.5981Q8.1961 10.5936 8.2106 10.5885Q8.225 10.5833 8.2392 10.5774Q8.2533 10.5715 8.2672 10.565Q8.2811 10.5584 8.2946 10.5512Q8.3082 10.544 8.3213 10.5361Q8.3345 10.5282 8.3472 10.5197Q8.36 10.5111 8.3723 10.502Q8.3846 10.4929 8.3965 10.4831Q8.4084 10.4734 8.4197 10.4631Q8.4311 10.4528 8.4419 10.4419Q8.4528 10.4311 8.4631 10.4197Q8.4734 10.4084 8.4831 10.3965Q8.4929 10.3846 8.502 10.3723Q8.5111 10.36 8.5197 10.3472Q8.5282 10.3345 8.5361 10.3213Q8.544 10.3082 8.5512 10.2946Q8.5584 10.2811 8.565 10.2672Q8.5715 10.2533 8.5774 10.2392Q8.5833 10.225 8.5885 10.2106Q8.5936 10.1961 8.5981 10.1814Q8.6025 10.1668 8.6063 10.1519Q8.61 10.137 8.613 10.1219Q8.616 10.1069 8.6182 10.0917Q8.6205 10.0765 8.622 10.0613Q8.6235 10.046 8.6242 10.0307Q8.625 10.0153 8.625 10L8.625 2.5Q8.625 2.475 8.623 2.45Q8.621 2.4251 8.617 2.4003Q8.613 2.3756 8.6071 2.3513Q8.6011 2.327 8.5932 2.3032Q8.5853 2.2795 8.5756 2.2564Q8.5658 2.2334 8.5542 2.2112Q8.5427 2.189 8.5294 2.1678Q8.5161 2.1466 8.5011 2.1265Q8.2855 1.9578 8 1.9578Q7.7145 1.9578 7.4989 2.1265Z\" fill=\"currentColor\" stroke=\"none\" fill-rule=\"evenodd\"/><path d=\"M5 5.5L7.8586 2.6414A0.2 0.2 0 0 1 8.1414 2.6414L11 5.5\"/><path d=\"M2.5 10.5L2.5 12.5A1 1 0 0 0 3.5 13.5L12.5 13.5A1 1 0 0 0 13.5 12.5L13.5 10.5\"/></svg>更換圖片</button><button>從媒體庫選擇</button></div>"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+$ node scripts/turbo.mjs run build test test:types type-check i18n:audit check:ui verify:assets
+
+   • turbo 2.11.11
+   • Packages in scope: //, @master/icons, @master/icons-astro, @master/icons-preact, @master/icons-react, @master/icons-review, @master/icons-site, @master/icons-svelte, @master/icons-tests, @master/icons-vue
+   • Running build, test, test:types, type-check, i18n:audit, check:ui, verify:assets in 10 packages
+   • Remote caching disabled
+
+@master/icons:generate: cache miss, executing 945771f75e00136e
+@master/icons-site:i18n:audit: cache miss, executing bcd25db0d781ddd3
+@master/icons-site:check:ui: cache miss, executing 802755b41f52b36f
+@master/icons-site:i18n:audit: $ node --import tsx scripts/i18n.ts audit
+@master/icons-site:check:ui: $ master-ui check --strict
+@master/icons:generate: $ node scripts/build.mjs --incremental --archive-svg
+@master/icons-site:i18n:audit: []
+@master/icons-site:check:ui: styles/site.ts:2:1 error mixed-imports "@master/ui/components/texture.css" is imported on its own, and styles/globals.css imports all of Master UI, so the stylesheet is delivered twice. Take one route: all of '@master/ui' from one stylesheet, or one module import per stylesheet.
+@master/icons-site:check:ui: 
+@master/icons-site:check:ui: 67 files checked: 1 errors, 0 warnings.
+@master/icons-site:check:ui: error: script "check:ui" exited with code 1
+@master/icons:generate: error: script "generate" exited with code 130
+@master/icons-site#check:ui:  ERROR  command (/Users/aron/master-icons/work/rebuild-01/commit-validation/site) /Users/aron/.local/bin/bun run check:ui exited (1)
+
+ Tasks:    1 successful, 3 total
+Cached:    0 cached, 3 total
+  Time:    1.211s 
+Failed:    @master/icons-site#check:ui
+
+ ERROR  run failed: command  exited (1)
+error: script "check" exited with code 1

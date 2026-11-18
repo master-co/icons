@@ -1,0 +1,46 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "viewed": [
+    "light.png",
+    "dark.png"
+  ],
+  "items": [
+    {
+      "name": "paragraph-spacing-before",
+      "alternative": "pilcrow",
+      "label": "段前 8 pt",
+      "context": "段落屬性 · 段前與段後數值欄位",
+      "reason": "段落面板已明列段前、段後與數值單位；共用 pilcrow 標示段落屬性即可。向上箭頭還可能被理解成移動段落或增加間距，不另造附箭頭變體。",
+      "sample": "<div style=\"display:flex;gap:12px\"><button>段前　8 pt</button><button>段後　12 pt</button></div>"
+    },
+    {
+      "name": "paragraph-spacing-after",
+      "alternative": "pilcrow",
+      "label": "段後 12 pt",
+      "context": "段落屬性 · 與行距分開的數值欄位",
+      "reason": "段後間距由欄位名稱與數值直接表達；用 pilcrow 進入段落設定即可。不能換成 line-height 冒充，因為段間距與段內行距是不同屬性。",
+      "sample": "<div style=\"display:flex;gap:12px\"><button>段後　12 pt</button><button>行距　1.5 倍</button></div>"
+    },
+    {
+      "name": "word-count",
+      "alternative": "text",
+      "label": "字數：1,248",
+      "context": "編輯器狀態列 · 文件統計",
+      "reason": "狀態列需要閱讀的是統計值與單位，文字標籤比疊上數字的文字圖更直接；text 可作整個統計面板的入口，不需要為字數另外畫一顆。",
+      "sample": "<div style=\"padding:8px;border-top:1px solid #8886\">字數：1,248　　字元：6,420</div>"
+    },
+    {
+      "name": "character-count",
+      "alternative": "text",
+      "label": "字元：6,420",
+      "context": "文件統計面板 · 字元數及包含空格選項",
+      "reason": "字數、字元數和是否包含空格都需要明確文字定義。兩種統計沿用 text 作面板識別，具體結果由文字與數值呈現，不再創造難分辨的 ABC／123 組合圖。",
+      "sample": "<div style=\"padding:8px;border:1px solid #8886\">字元（含空格）：6,420<br>字元（不含空格）：5,172</div>"
+    }
+  ],
+  "usageEvidence": [
+    "https://support.microsoft.com/en-us/word/adjust-indents-and-spacing",
+    "https://support.microsoft.com/en-us/word/training/show-word-count?ad=us&rs=en-us&ui=en-us"
+  ]
+}

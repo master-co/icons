@@ -1,0 +1,90 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "skillVersion": "0.5.20",
+  "viewed": [
+    "initial-light-1.png",
+    "changed-light-1.png",
+    "initial-light-2.png",
+    "changed-light-2.png",
+    "initial-dark-1.png",
+    "changed-dark-1.png",
+    "initial-dark-2.png",
+    "changed-dark-2.png"
+  ],
+  "previewSizes": [
+    16,
+    20,
+    24
+  ],
+  "themes": [
+    "light",
+    "dark"
+  ],
+  "screenshotDpr": [
+    1,
+    2
+  ],
+  "interactionDpr": [
+    1,
+    2
+  ],
+  "scope": "Labeled Vignette amount/feather and actual native effect previews. Dark/neutral/light corner pixels and unchanged center, keyboard controls, selected presets, independent feather, zero and endpoints verified. Not an icon-only mobile selector; no catalog or search changes.",
+  "userApproval": "pending",
+  "primaryEvidence": "work/rebuild-01/vignette-primary-evidence.json",
+  "evidence": [
+    {
+      "path": "docs/review/rebuild-01/substitution-vignette/initial-light-1.png",
+      "sha256": "892f1a0835816f8b75e2def148620841c5276b751b0a9006f9a583916e7099c5"
+    },
+    {
+      "path": "docs/review/rebuild-01/substitution-vignette/changed-light-1.png",
+      "sha256": "854db93b9f1e6d0402626c40c3234df9607b2cbe7f36d91e1bac1b4af2a0af09"
+    },
+    {
+      "path": "docs/review/rebuild-01/substitution-vignette/initial-light-2.png",
+      "sha256": "6d7f66f1db6785fb7b2e3de185bf6d59bc5884359b049cecb31e6a3df6720a83"
+    },
+    {
+      "path": "docs/review/rebuild-01/substitution-vignette/changed-light-2.png",
+      "sha256": "3d0f0258fe3fd120fa9acb1d24f92029303612c12414b99b8d52ed7217f021f6"
+    },
+    {
+      "path": "docs/review/rebuild-01/substitution-vignette/initial-dark-1.png",
+      "sha256": "0bbd3cf35ebb67742665b10498fa8596580007305847d808fbdf293dcb751573"
+    },
+    {
+      "path": "docs/review/rebuild-01/substitution-vignette/changed-dark-1.png",
+      "sha256": "b2ccfc15217d5579e5809fef3eff782ce7c45f275188cbc60aadd2142136559d"
+    },
+    {
+      "path": "docs/review/rebuild-01/substitution-vignette/initial-dark-2.png",
+      "sha256": "6c55a82753dd48c8e0ef0c52cb15518013d4f0823403953544699d3b2fdfcdb1"
+    },
+    {
+      "path": "docs/review/rebuild-01/substitution-vignette/changed-dark-2.png",
+      "sha256": "2711fe07a3aedb03864b67611b494e104cbd6133ab7da7e52f3f211078ec9f45"
+    }
+  ],
+  "items": [
+    {
+      "name": "vignette",
+      "label": "暗角",
+      "alternative": null,
+      "alternativeLabel": "暗角設定與效果值縮圖",
+      "replacementKind": "native-content",
+      "nativePreview": "<span aria-hidden=\"true\" style=\"display:inline-block;flex-shrink:0;width:24px;height:24px;border:1px solid #8888;border-radius:2px;background:radial-gradient(ellipse,transparent 25%,rgba(0,0,0,0.65) 100%),linear-gradient(160deg,#babebc 45%,#777f7a 46%,#a9b1ac)\"></span>",
+      "comparisonMarkup": "<span aria-hidden=\"true\" style=\"display:inline-block;flex-shrink:0;width:16px;height:16px;border:1px solid #8888;border-radius:2px;background:radial-gradient(ellipse,transparent 25%,rgba(0,0,0,0.65) 100%),linear-gradient(160deg,#babebc 45%,#777f7a 46%,#a9b1ac)\"></span><span aria-hidden=\"true\" style=\"display:inline-block;flex-shrink:0;width:20px;height:20px;border:1px solid #8888;border-radius:2px;background:radial-gradient(ellipse,transparent 25%,rgba(0,0,0,0.65) 100%),linear-gradient(160deg,#babebc 45%,#777f7a 46%,#a9b1ac)\"></span><span aria-hidden=\"true\" style=\"display:inline-block;flex-shrink:0;width:24px;height:24px;border:1px solid #8888;border-radius:2px;background:radial-gradient(ellipse,transparent 25%,rgba(0,0,0,0.65) 100%),linear-gradient(160deg,#babebc 45%,#777f7a 46%,#a9b1ac)\"></span>",
+      "context": "相片效果面板：暗邊／無／亮邊預設、數量與羽化，保留實際效果預覽",
+      "reason": "在已查實的效果面板裡，暗角是可調整的邊緣明暗值。具名滑桿和效果縮圖可同時交代方向、程度及羽化；再畫框內圓或四角陰影，無法比實際預覽提供更多必要資訊。",
+      "replacementScope": "適用於具名效果面板及有縮圖的預設選擇器，保留暗角名稱、數量、羽化與零值。不是宣稱所有純圖示行動工具列皆可直接移除此入口；也不把 brightness 或 contrast 當成暗角同義圖。",
+      "sample": "<style>[data-vignette-demo] .tools{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}[data-vignette-demo] button[aria-pressed=true]{background:#8883;border-color:currentColor}[data-vignette-demo] label{display:flex;align-items:center;gap:12px;margin:12px 0}[data-vignette-demo] output{min-width:3em;font-variant-numeric:tabular-nums}[data-vignette-demo] .preview{height:180px;max-width:340px;background:linear-gradient(160deg,#babebc 45%,#777f7a 46%,#a9b1ac);position:relative;border:1px solid #8888}[data-vignette-demo] .overlay{position:absolute;inset:0}[data-vignette-demo] .tools span{pointer-events:none}</style><div data-vignette-demo><h3>效果 · 暗角</h3><div class=\"tools\"><button data-vignette-preset=\"-65\" aria-pressed=\"true\"><span aria-hidden=\"true\" style=\"display:inline-block;flex-shrink:0;width:20px;height:20px;border:1px solid #8888;border-radius:2px;background:radial-gradient(ellipse,transparent 25%,rgba(0,0,0,0.65) 100%),linear-gradient(160deg,#babebc 45%,#777f7a 46%,#a9b1ac)\"></span>暗邊</button><button data-vignette-preset=\"0\" aria-pressed=\"false\"><span aria-hidden=\"true\" style=\"display:inline-block;flex-shrink:0;width:20px;height:20px;border:1px solid #8888;border-radius:2px;background:radial-gradient(ellipse,transparent 25%,rgba(255,255,255,0) 100%),linear-gradient(160deg,#babebc 45%,#777f7a 46%,#a9b1ac)\"></span>無</button><button data-vignette-preset=\"65\" aria-pressed=\"false\"><span aria-hidden=\"true\" style=\"display:inline-block;flex-shrink:0;width:20px;height:20px;border:1px solid #8888;border-radius:2px;background:radial-gradient(ellipse,transparent 25%,rgba(255,255,255,0.65) 100%),linear-gradient(160deg,#babebc 45%,#777f7a 46%,#a9b1ac)\"></span>亮邊</button></div><label>數量<input data-vignette-amount type=\"range\" min=\"-100\" max=\"100\" value=\"-65\" aria-label=\"暗角數量\"><output data-vignette-value>−65</output></label><label>羽化<input data-vignette-feather type=\"range\" min=\"0\" max=\"100\" value=\"75\" aria-label=\"暗角羽化\"><output data-feather-value>75</output></label><div class=\"preview\" role=\"img\" aria-label=\"暗角效果幾何示意\"><div class=\"overlay\" data-vignette-overlay></div></div><p role=\"status\" data-vignette-status></p><small>縮圖是效果值預覽；示例以幾何色面呈現邊緣明暗，並非新 SVG 圖示。</small></div>",
+      "searchAliasDecision": "沒有等價的單一現有圖示，不新增模糊的 icon 搜尋別名。效果值由控制項內容表達。",
+      "usageEvidence": [
+        "https://helpx.adobe.com/lightroom/web/edit-photos/apply-effects/adjust-effects.html"
+      ],
+      "usageEvidenceLimit": "Adobe documents Vignette as edge lightening/darkening with amount, feather and other parameters. This context demonstrates the named amount/feather controls, not the full Lightroom adjustment algorithm or icon-only mobile selectors.",
+      "visualObservation": "效果值縮圖在 16／20／24 有可見的中心／邊緣差；小尺寸不承擔精確程度辨識，方向與數量由標籤、正負值及大預覽交代。暗邊、無、亮邊三個選項並排，明暗背景均維持文字及選取邊框。已查看八張初始／變更狀態截圖；原生畫面中的負值變暗、正值變亮，中心保持原值，羽化為零呈清楚邊界。這是具名效果面板的替代，不把亮度或對比 icon 充當暗角。"
+    }
+  ]
+}

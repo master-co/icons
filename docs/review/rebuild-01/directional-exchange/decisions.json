@@ -1,0 +1,24 @@
+[
+  {
+    "name": "arrow-left-right",
+    "purpose": "Master UI 漸層反轉及看板搬移命令；需與新增、移除和重新整理區分。",
+    "recognitionCues": "上方向右、下方向左的兩支錯列長箭頭。",
+    "confusableWith": [
+      "sort-unsorted",
+      "chevrons-left-right",
+      "refresh"
+    ],
+    "sourceObservation": "Lucide 與 Tabler 都採上左下右的雙箭頭，Tabler 橫桿更長。本庫 sort-unsorted 已具同一構造，旋轉後採上右下左，也和 Gradient.svelte 現行指向一致。",
+    "reason": "左右折角只適合比較把手，不表達反轉順序；refresh 的環形路徑會混入重新載入。直接旋轉 analytics.sort-unsorted 90 度，共用箭尖、桿長與兩軸間距，避免重畫相似母型。",
+    "comparison": "與 Lucide 相比，本稿兩軸分得較開、箭翼較小，16px 留有安靜的中央空白；與 Tabler 相比，外框寬度接近而筆畫較輕。最粗線寬和深底下仍是兩支獨立箭頭，漸層工具列中與加減號的高度相稱，旋轉母型後沒有另一套接點形狀。",
+    "usageEvidence": [
+      "/Users/aron/master-ui/packages/ui/frameworks/svelte/Gradient.svelte:74",
+      "/Users/aron/master-ui/packages/ui/components/kanban.css:431"
+    ],
+    "dashes": false,
+    "dashReason": "完整箭桿與箭翼表達確定方向，沒有隱藏邊界或未完成狀態。",
+    "opacity": false,
+    "opacityReason": "箭頭與止線均是必要識別，不以漸淡分配層級。",
+    "reviewed": true
+  }
+]

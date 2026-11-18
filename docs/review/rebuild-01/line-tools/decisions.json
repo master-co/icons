@@ -1,0 +1,41 @@
+[
+  {
+    "name": "line-segment",
+    "purpose": "繪圖工具列建立單一直線，與連續折線、曲線及封閉多邊形並列。",
+    "recognitionCues": "兩個等徑圓形端點與一段斜直線；沒有箭頭、坐標軸或封口。",
+    "confusableWith": [
+      "spline",
+      "minus",
+      "pencil"
+    ],
+    "sourceObservation": "Tabler用圓形兩端節點，線段長度與端點相稱；MDI用方錨點且線重較高。圓形端點與現有Master向量家族一致，可保留較清楚的小尺寸內孔。",
+    "comparison": "最新稿與Tabler、MDI在16／20／24並排：沿用Master既有2.25構造半徑的節點，整體較Tabler略張開，與spline的兩端尺度一致；MDI方節點在小尺寸較硬重。直線在共同節點外輪廓收口，三角型預設不把本來圓形的節點改成方形。20px與16／24的支援線寬兩端均已目視。",
+    "reason": "直接共用vectorPolyline與circularNodes，不另畫端點。斜直線和兩端節點在原生尺寸保有清楚長度及內孔，與彎曲母型及多段路徑區分。",
+    "dashes": false,
+    "dashReason": "線段是已存在的連續路徑，虛線會誤讀為選取或尚未完成。",
+    "usageEvidence": [
+      "https://helpx.adobe.com/illustrator/desktop/get-started/learn-the-basics/illustrator-tools-reference.html",
+      "https://help.libreoffice.org/latest/en-US/text/sdraw/main0210.html"
+    ],
+    "reviewed": true
+  },
+  {
+    "name": "polyline",
+    "purpose": "繪製開放的連續直線路徑，和單一直線、平滑曲線及封閉多邊形同列選擇。",
+    "recognitionCues": "四個圓形節點、三段筆直接線、兩次相反轉向與開放端點。",
+    "confusableWith": [
+      "vector-polygon",
+      "node-corner",
+      "chart-line"
+    ],
+    "sourceObservation": "MDI的三個方節點形成單一下凹；Phosphor以四個圓節點向右上分佈，兩次轉向更能和尖角節點命令區分，留白也更舒展。",
+    "comparison": "初稿兩排等高節點使折峰陡且擁擠；最新稿採用Phosphor上升構圖，將內部兩點錯列，保留四個相同母型節點及三段直線。與Phosphor在16／20／24並排後，整體張力和兩端辨識接近，Master的節點依家族尺度較小且中央折返較陡；MDI三節點圖雖簡短，與尖角命令較近。明暗DPR1／2及20px粗細兩端已看過，開放端點、內孔和轉折仍可辨。Phosphor改作關係已寫入provenance與notices。 最後再次並排確認16px微縮外跨後仍保有兩段上升和中央折返，端點孔洞較清楚；三角型均保持圓節點。",
+    "reason": "重排四個節點以打開內部空白，保留中央折返而不畫資料軸。直接取用共同向量路徑函式，封閉母型維持原幾何。 16px兩端向內移至半像素圓心，改善最大線寬下被反鋸齒壓暗的內孔；20／24位置不變。",
+    "dashes": false,
+    "dashReason": "顯示完整的連續折線，沒有隱藏、未完成或選取範圍訊號。",
+    "usageEvidence": [
+      "https://help.libreoffice.org/latest/en-GB/text/simpress/02/10080000.html?DbPAR=IMPRESS"
+    ],
+    "reviewed": true
+  }
+]

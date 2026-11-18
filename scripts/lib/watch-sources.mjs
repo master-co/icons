@@ -19,6 +19,9 @@ export function watchSource(file,changed,recursive=false){
   const target=join(folder,name);
   if(ignored(target))return;
   const next=signature(target);
+  // macOS can report the watched folder's own basename. That resolves to a
+  // nonexistent child, not a source edit. Still report deletion of known files.
+  if(next==='missing'&&!signatures.has(target))return;
   if(signatures.get(target)===next)return;
   signatures.set(target,next);changed();
  });

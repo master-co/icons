@@ -1,0 +1,24 @@
+[
+  {
+    "name": "selection-invert",
+    "reviewed": true,
+    "purpose": "選取面板中的獨立反選按鈕，把目前圖層內選取與未選取的範圍互換。GIMP 的純圖示面板提供可信使用情境；selection 只表示框選，boolean-exclude 是兩個區域的 XOR，contrast 則偏向明暗，均不能完整替代。",
+    "recognitionCues": "同一方框的上／右實線、下／左虛線與對角分界，呈現選取狀態互換的兩半；不加入物件或箭頭徽標。",
+    "confusableWith": [
+      "selection",
+      "boolean-exclude",
+      "contrast"
+    ],
+    "sourceObservation": "Phosphor selection-inverse 用留白的對角半框，MDI select-inverse 是周圍齒狀的大面積填色，GIMP invert 在方框與中央圓之間交換黑白兩半。Phosphor 的構造最適合既有描邊選取家族，依 MIT 明記改作。",
+    "reason": "從現有 selection 函式新增可指定連續邊的參數，上、右補成實線；原母型的預設節點與所有既有變體不變。對角線端點落在左上／右下實際圓角弧的 45 度處，用平切端帽接入框線。沒有另畫一套相似選取框，也沒有取回被否決的 session 稿。",
+    "comparison": "最新稿與三份來源在 16／20／24、sharp／soft／rounded、明暗 DPR1／2 並排。Phosphor 保留較輕的筆畫與圓端點；本稿延續 selection 的平切虛線與同源框角，原生大小可分辨實線三角和開放虛線半邊。MDI 的實心面積較重，GIMP 的正負圓形辨識鮮明但需要黑白填色，本輪不採。粗線端仍保留三角內孔與兩個虛線間隙，對角接縫沒有伸出外框。16px／0.75／DPR1 的二值連通閾值有 12 項診斷；實際灰階細線已目視，DPR2 與高解析度沒有拓撲錯誤。",
+    "dashes": true,
+    "dashReason": "虛線半邊直接沿用 selection 母型，與實線半邊形成反選慣例；每段及間距在原生尺寸檢視。",
+    "opacity": false,
+    "opacityReason": "反選的兩半靠實線／虛線區分，不把未選取半邊淡化到難以辨認。",
+    "usageEvidence": [
+      "https://docs.gimp.org/3.0/en/gimp-selection-invert.html",
+      "https://docs.gimp.org/3.0/en/gimp-selection-dialog.html"
+    ]
+  }
+]

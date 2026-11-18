@@ -1,0 +1,36 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "viewed": [
+    "light.png",
+    "dark.png"
+  ],
+  "items": [
+    {
+      "name": "hard-break",
+      "alternative": "keyboard-return",
+      "label": "插入換行　Shift + Enter",
+      "context": "文字編輯選單 · 插入強制換行",
+      "reason": "既有折返箭頭 keyboard-return 已表達換行；命令標籤及快捷鍵區分軟換行和段落，不另造第二套折返箭頭。"
+    },
+    {
+      "name": "nonbreaking-space",
+      "alternative": "text",
+      "label": "不斷行空格　U+00A0",
+      "context": "插入特殊字元 · 空白字元分類",
+      "reason": "字元選擇器直接呈現名稱及 Unicode 碼位，空白本身不可見。text 可作特殊字元面板入口，不需要以額外括號或底線猜測不斷行含義。",
+      "sample": "<button>不斷行空格　U+00A0</button>"
+    },
+    {
+      "name": "soft-hyphen",
+      "alternative": "minus",
+      "label": "選擇性連字號　U+00AD",
+      "context": "插入特殊字元 · 斷字控制",
+      "reason": "在插入選單中直接列出字元名稱、碼位與斷字範例，比創造一組虛線連字號更清楚；需要小圖提示時可沿用 minus，選擇性行為由標籤交代。",
+      "sample": "<button>選擇性連字號　U+00AD</button><p>僅在需要斷行時顯示連字號</p>"
+    }
+  ],
+  "usageEvidence": [
+    "/Users/aron/haoban/packages/editor/src/adapter.ts:30"
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "viewed": [
+    "light.png",
+    "dark.png"
+  ],
+  "items": [
+    {
+      "name": "mail-forward",
+      "alternative": "forward",
+      "context": "郵件列表的已轉寄標記、閱讀工具列的轉寄命令",
+      "reason": "既有 forward 本身已是轉寄箭頭，既能標示已轉寄，也能放在轉寄命令旁；再加信封不增加狀態或命令辨識，反而壓縮箭頭。"
+    },
+    {
+      "name": "mail-reply",
+      "alternative": "reply",
+      "context": "郵件列表的已回覆標記、閱讀工具列的回覆命令",
+      "reason": "既有 reply 可表示回覆與已回覆，與 reply-all、forward 已形成完整家族；郵件列表交代對象，不用另造信封加回覆箭頭。"
+    },
+    {
+      "name": "mail-attachment",
+      "alternative": "paperclip",
+      "context": "郵件列表附件標記、撰寫工具列的附加檔案",
+      "reason": "迴紋針已能辨認附件，列表或撰寫視窗交代了郵件情境；信封與迴紋針的複合圖不增加必要資訊。"
+    },
+    {
+      "name": "mail-scheduled",
+      "alternative": "clock",
+      "context": "郵件寄送選單 · 排程寄送、日期與時間",
+      "reason": "排程寄送命令旁的時鐘已有清楚時間語意；使用時須保留排程寄送標籤或排程欄位，無須重複加入信封。"
+    },
+    {
+      "name": "mail-important",
+      "alternative": "flag",
+      "context": "郵件列表重要標記、重要郵件篩選",
+      "reason": "既有旗幟可作重要標記，與附件的迴紋針和排程的時鐘輪廓不同；不需信封加驚嘆號的新圖。"
+    },
+    {
+      "name": "task-reopen",
+      "alternative": "rotate-left",
+      "context": "已完成任務選單 · 重新開啟",
+      "reason": "任務完成狀態與重新開啟文字已交代回復目標；回轉箭頭能表達返回前一狀態，不必再加入任務框。"
+    },
+    {
+      "name": "task-recurring",
+      "alternative": "repeat",
+      "context": "任務列表重複標記與重複規則欄位",
+      "reason": "雙箭頭循環已表達週期執行，任務列交代操作對象；與日曆日期、時鐘提醒有不同輪廓，不需要額外勾選方框。"
+    },
+    {
+      "name": "task-delegate",
+      "alternative": "user",
+      "context": "任務詳情 · 指派負責人",
+      "reason": "負責人欄位與成員選擇器已限定對象，user 配合指派文字即可；任務框與人物／箭頭組合會增加歧義，可能被看成新增成員。"
+    },
+    {
+      "name": "filter-save",
+      "alternative": "save",
+      "context": "篩選面板 · 儲存目前條件",
+      "reason": "面板已交代儲存的是篩選條件，既有 save 可與套用、清除區分；不需漏斗加儲存徽標。"
+    },
+    {
+      "name": "filter-add",
+      "alternative": "plus",
+      "context": "篩選面板 · 新增條件",
+      "reason": "在條件列表下方，plus 與新增條件文字已清楚表達新增，漏斗只會重複面板用途。"
+    },
+    {
+      "name": "filter-check",
+      "alternative": "check",
+      "context": "篩選面板 · 套用條件",
+      "reason": "套用按鈕使用 check 即可表示確認目前條件；已套用狀態由篩選按鈕選取態及條件數量呈現，不需要另一個漏斗加勾。"
+    },
+    {
+      "name": "message-reply",
+      "alternative": "reply",
+      "context": "留言的已回覆標記、討論工具列的回覆命令",
+      "reason": "留言上下文已交代對象，reply 可表達回覆或已回覆，並能與 quote、copy 分開；不需要對話框與回覆箭頭的重複組合。"
+    }
+  ]
+}

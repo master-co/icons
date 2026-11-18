@@ -1,0 +1,103 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "skillVersion": "0.5.18",
+  "viewed": [
+    "light.png",
+    "dark.png",
+    "changed-light.png",
+    "changed-dark.png"
+  ],
+  "sizes": [
+    16,
+    20,
+    24
+  ],
+  "themes": [
+    "light",
+    "dark"
+  ],
+  "dpr": [
+    1
+  ],
+  "corner": "soft for existing glyphs only",
+  "scope": "Account controls with six contextual substitutions and one native role value. Local simulated states only; no old session geometry retrieved.",
+  "userApproval": "pending",
+  "evidence": [
+    {
+      "path": "docs/review/rebuild-01/substitution-account-states/light.png",
+      "sha256": "9d9a0efe3d1b7691f43038d8d755f87b813b2df6b48051f88c32fd24f6e2fb3b"
+    },
+    {
+      "path": "docs/review/rebuild-01/substitution-account-states/dark.png",
+      "sha256": "7e90322dd927c502d337cbf0d37c06c5c29920fb0d354e1ee1c32f4fdf024a36"
+    },
+    {
+      "path": "docs/review/rebuild-01/substitution-account-states/changed-light.png",
+      "sha256": "afd43c415b4f69aa8705854e5f21820e6ef91465c13b860b6e18edc4e2dd4ec6"
+    },
+    {
+      "path": "docs/review/rebuild-01/substitution-account-states/changed-dark.png",
+      "sha256": "3372f2eab512f5a0df2db224e29f9f58bd509764d3ff386a0571db853cf160f6"
+    }
+  ],
+  "items": [
+    {
+      "name": "user-lock",
+      "label": "帳號暫時鎖定",
+      "alternative": "lock",
+      "replacementKind": "contextual-entry",
+      "context": "帳號狀態 · 暫時無法登入",
+      "reason": "姓名旁的鎖頭與暫時鎖定文字能表達登入保護。人像已由帳號列交代，再疊鎖頭不增加必要資訊。",
+      "replacementScope": "只指登入暫時鎖定；不泛指角色權限不足、停用或刪除。原候選的「受限帳號」過廣，不加入搜尋詞。",
+      "sample": "<style>[data-account-demo] button{display:inline-flex;margin:3px 4px 3px 0}[data-account-demo] input,[data-account-demo] select{font:inherit;color:inherit;background:transparent;padding:6px;border:1px solid #8887;max-width:100%}[data-account-demo] input[type=\"checkbox\"]{padding:0}[data-account-demo] ul{list-style:none;padding:0}[data-account-demo] li{padding:7px 0;border-bottom:1px solid #8884}[data-account-demo] .person{display:flex;align-items:center;gap:8px;margin:10px 0}[data-account-demo] .avatar{width:30px;height:30px;display:inline-grid;place-items:center;border:1px solid #8886;border-radius:50%;flex-shrink:0}[data-account-demo] .state{display:inline-flex;align-items:center;gap:6px;border:1px solid #8886;padding:3px 7px;border-radius:4px}[data-account-demo] [aria-current=\"true\"]{box-shadow:inset 0 0 0 1px currentColor}[data-account-demo] small{display:block}.dark [data-account-demo]{color-scheme:dark}</style><div data-account-demo=\"locked\"><div class=\"person\"><span class=\"avatar\" aria-hidden=\"true\">林</span><span>林予安<small>yuan@example.test</small></span></div><span class=\"state\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><rect x=\"3\" y=\"7\" width=\"10\" height=\"7\" rx=\"1\"/><path d=\"M5.5 7V4.5A2.5 2.5 0 0 1 10.5 4.5V7\"/><path d=\"M8 9.5L8 11\"/></svg>暫時鎖定</span><p>登入失敗次數過多。請稍後再試，或聯絡管理員。</p><button data-lock-details-open aria-expanded=\"false\">查看原因</button><div data-lock-details hidden><p>這是登入保護造成的暫時鎖定，不代表帳號已刪除，也不是工作區角色不足。</p></div><p><small>本地狀態示例，不寄信、不變更任何真實帳號或權限。</small></p></div>",
+      "searchKeywords": [
+        "account-locked",
+        "帳號暫時鎖定"
+      ],
+      "usageEvidence": [
+        "https://learn.microsoft.com/en-us/entra/identity/authentication/howto-password-smart-lockout"
+      ],
+      "usageEvidenceLimit": "Primary sources establish the account action, state or role. Local controls simulate UI state only; no invitations, account changes or permission changes are sent.",
+      "visualObservation": "The lock remains readable next to the named account and temporary-lock text. Expanded details distinguish sign-in protection from role restrictions or account deletion."
+    },
+    {
+      "name": "user-clock",
+      "label": "待接受邀請",
+      "alternative": "clock",
+      "replacementKind": "contextual-entry",
+      "context": "成員清單 · 邀請尚未接受",
+      "reason": "既有clock配合完整狀態文字，能在成員列持續呈現等待狀態；不需要與人像合併。",
+      "replacementScope": "此處明確指待接受邀請；不表示線上狀態、預約時間或已啟用帳號。",
+      "sample": "<style>[data-account-demo] button{display:inline-flex;margin:3px 4px 3px 0}[data-account-demo] input,[data-account-demo] select{font:inherit;color:inherit;background:transparent;padding:6px;border:1px solid #8887;max-width:100%}[data-account-demo] input[type=\"checkbox\"]{padding:0}[data-account-demo] ul{list-style:none;padding:0}[data-account-demo] li{padding:7px 0;border-bottom:1px solid #8884}[data-account-demo] .person{display:flex;align-items:center;gap:8px;margin:10px 0}[data-account-demo] .avatar{width:30px;height:30px;display:inline-grid;place-items:center;border:1px solid #8886;border-radius:50%;flex-shrink:0}[data-account-demo] .state{display:inline-flex;align-items:center;gap:6px;border:1px solid #8886;padding:3px 7px;border-radius:4px}[data-account-demo] [aria-current=\"true\"]{box-shadow:inset 0 0 0 1px currentColor}[data-account-demo] small{display:block}.dark [data-account-demo]{color-scheme:dark}</style><div data-account-demo=\"pending\"><div class=\"person\"><span class=\"avatar\" aria-hidden=\"true\">吳</span><span>吳美宜<small>mei@example.test</small></span></div><span class=\"state\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><circle cx=\"8\" cy=\"8\" r=\"6\"/><path d=\"M8 4.3333L8 7.8892A0.2 0.2 0 0 0 8.094 8.0588L10.6667 9.6667\"/></svg>待接受邀請</span><p>邀請角色：成員</p><button data-invite-resend><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><rect x=\"2\" y=\"4\" width=\"12\" height=\"8\" rx=\"1\"/><path d=\"M2.5 5L7.8824 8.9144A0.2 0.2 0 0 0 8.1176 8.9144L13.5 5\"/></svg>重新寄送邀請</button><p data-resend-status role=\"status\">尚未接受；不會顯示為已啟用。</p><p><small>本地狀態示例，不寄信、不變更任何真實帳號或權限。</small></p></div>",
+      "searchKeywords": [
+        "invitation-pending",
+        "待接受邀請"
+      ],
+      "usageEvidence": [
+        "/Users/aron/haoban/apps/web/src/features/workspace-members.components/WorkspaceMembers.svelte"
+      ],
+      "usageEvidenceLimit": "Primary sources establish the account action, state or role. Local controls simulate UI state only; no invitations, account changes or permission changes are sent.",
+      "visualObservation": "The clock and complete pending-invitation label remain visible beside the invitee. Resending does not promote the member to active or replace the pending status."
+    },
+    {
+      "name": "user-off",
+      "label": "已停用帳號",
+      "alternative": "ban",
+      "replacementKind": "contextual-entry",
+      "context": "帳號狀態 · 管理員停用",
+      "reason": "既有ban與已停用文字能保留禁止登入的狀態資訊，帳號列本身提供對象。",
+      "replacementScope": "帳號與資料仍保留且可恢復；不得與刪除帳號或移除成員混用。",
+      "sample": "<style>[data-account-demo] button{display:inline-flex;margin:3px 4px 3px 0}[data-account-demo] input,[data-account-demo] select{font:inherit;color:inherit;background:transparent;padding:6px;border:1px solid #8887;max-width:100%}[data-account-demo] input[type=\"checkbox\"]{padding:0}[data-account-demo] ul{list-style:none;padding:0}[data-account-demo] li{padding:7px 0;border-bottom:1px solid #8884}[data-account-demo] .person{display:flex;align-items:center;gap:8px;margin:10px 0}[data-account-demo] .avatar{width:30px;height:30px;display:inline-grid;place-items:center;border:1px solid #8886;border-radius:50%;flex-shrink:0}[data-account-demo] .state{display:inline-flex;align-items:center;gap:6px;border:1px solid #8886;padding:3px 7px;border-radius:4px}[data-account-demo] [aria-current=\"true\"]{box-shadow:inset 0 0 0 1px currentColor}[data-account-demo] small{display:block}.dark [data-account-demo]{color-scheme:dark}</style><div data-account-demo=\"disabled\"><div class=\"person\"><span class=\"avatar\" aria-hidden=\"true\">周</span><span>周凱<small>kai@example.test</small></span></div><div data-disabled-state><span class=\"state\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><circle cx=\"8\" cy=\"8\" r=\"6\"/><path d=\"M3.7573 3.7573L12.2427 12.2427\"/></svg>已停用</span></div><p data-account-access>帳號與資料仍保留；目前無法登入。</p><button data-account-restore>恢復帳號（示例）</button><p data-restore-status role=\"status\">保留資料：12 份文件</p><p><small>本地狀態示例，不寄信、不變更任何真實帳號或權限。</small></p></div>",
+      "searchKeywords": [
+        "account-disabled",
+        "已停用帳號"
+      ],
+      "usageEvidence": [
+        "https://knowledge.workspace.google.com/admin/users/suspend-a-user-temporarily"
+      ],
+      "usageEvidenceLimit": "Primary sources establish the account action, state or role. Local controls simulate UI state only; no invitations, account changes or permission changes are sent.",
+      "visualObservation": "The ban and disabled label distinguish this state from temporary lock and invitation pending. Restoring removes the ban, updates the access description, and retains the document count."
+    }
+  ]
+}

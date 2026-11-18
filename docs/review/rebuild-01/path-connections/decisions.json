@@ -1,0 +1,46 @@
+[
+  {
+    "dashes": false,
+    "dashReason": "節點、路徑和接合關係是確定結構，不是隱藏或暫態輪廓。",
+    "opacity": false,
+    "opacityReason": "節點孔與路徑需同等清楚，不用淡化表示斷開或遮住接縫。",
+    "reviewed": true,
+    "name": "path-join",
+    "purpose": "向量節點工具列中，把兩個選取端點合併為同一節點，與分斷、刪除節點及物件布林聯集分開。",
+    "recognitionCues": "兩條平滑路徑共用一個中央圓形節點，左右路徑在節點處有共同切線。",
+    "confusableWith": [
+      "spline",
+      "path-break",
+      "boolean-union",
+      "link"
+    ],
+    "sourceObservation": "Inkscape node-join 用上下排列的兩端點、方向箭頭及單一節點交代合併過程；Tabler vector-spline 只提供曲線與端點的家族參考，並非接合命令。Inkscape 的彩色原圖未重新著色。",
+    "reason": "節點取用既有 bezierCurve 共用的 circularNodes，路徑交接取用同一 outside 處理，避免重畫另一套節點或讓曲線穿孔。只畫接合後的一個共同節點，與分斷後兩個端點並排辨認；不加上與超連結相同的鏈節。圓與平滑曲線沒有需要改造的幾何轉角，三角型沿用自然曲面。 完稿工具列回比後，將尾端垂直伸展由 y=19/5 調為 20.5/3.5；保持節點直徑與中央間距，避免曲線在原生尺寸看成扁平短線。",
+    "comparison": "Inkscape 的上下轉換圖較能獨立說明操作過程，但同時保留三個節點和箭頭，在 16px 較密。本稿以成對命令的結果狀態區分接合／分斷，保留一個清楚的中央內孔；相較 Tabler 單段弧線，左右彎曲段明確收斂到共同節點。16px 最粗描邊仍不填孔，兩側尾段完整且切線順接；明暗 DPR 1／2 均已查看。 此次伸展後重新查看明暗 DPR 1／2：曲線兩端的垂直走向更清楚，中央共同切線與分斷間隙維持。",
+    "usageEvidence": [
+      "https://inkscape-manuals.readthedocs.io/en/1.3/node-operations.html"
+    ]
+  },
+  {
+    "dashes": false,
+    "dashReason": "節點、路徑和接合關係是確定結構，不是隱藏或暫態輪廓。",
+    "opacity": false,
+    "opacityReason": "節點孔與路徑需同等清楚，不用淡化表示斷開或遮住接縫。",
+    "reviewed": true,
+    "name": "path-break",
+    "purpose": "向量節點工具列中，將一個共用節點分成兩個互不連接的端點；與移除節點、剪下物件並列時維持區分。",
+    "recognitionCues": "兩個分開的圓形端點，各連接一條外彎路徑，中央留有真正透明間距。",
+    "confusableWith": [
+      "path-join",
+      "scissors",
+      "minus",
+      "unlink"
+    ],
+    "sourceObservation": "Inkscape node-break 用上方單一節點和下方分開的兩端點配箭頭交代分斷；Tabler vector-spline 是曲線與節點家族參考，不是分斷命令。原圖配色保持不變。",
+    "reason": "與 path-join 共用 circularNodes 及 outside，端點直徑不因分開而縮小。兩節點的中心距加大到足以保留 16px 粗線端的間隔；把實際可能重疊的端點展開，是示意分斷結果，不宣稱操作一定移動節點。圓與曲面沒有可見轉角，不為三角型硬改曲率。 完稿工具列回比後，將尾端垂直伸展由 y=19/5 調為 20.5/3.5；保持節點直徑與中央間距，避免曲線在原生尺寸看成扁平短線。",
+    "comparison": "與 Inkscape 相比，省略上下前後狀態和箭頭，將空間留給兩個端點孔及中間斷口；與接合稿並排時可直接數出一／兩個節點。Tabler 的單一連續弧線不足以表示斷開，所以保留兩條獨立尾段。16px 明暗背景及線寬兩端均能看出中間空隙，兩段在各自節點上連接、不穿孔；DPR 1／2 均已查看。 此次伸展後重新查看明暗 DPR 1／2：曲線兩端的垂直走向更清楚，中央共同切線與分斷間隙維持。",
+    "usageEvidence": [
+      "https://inkscape-manuals.readthedocs.io/en/1.3/node-operations.html"
+    ]
+  }
+]

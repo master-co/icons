@@ -1,0 +1,2615 @@
+{
+  "scope": 433,
+  "outlineRedrawn": 133,
+  "officialBrandAdaptations": 1,
+  "excluded": 299,
+  "pending": 0,
+  "exactCatalog": 924,
+  "nativeSvg": 8316,
+  "originalNativePreserved": 7110,
+  "reviewedEvidenceReferences": 536,
+  "distinctReviewSheets": 276,
+  "skillFilesIdentical": 9,
+  "skillVersion": "0.5.20",
+  "decisions": [
+    {
+      "name": "folder-kanban",
+      "status": "redrawn-and-reviewed",
+      "alternative": "folder",
+      "evidence": "docs/review/rebuild-01/project-symbols/index.html"
+    },
+    {
+      "name": "archive-restore",
+      "status": "redrawn-and-reviewed",
+      "alternative": "archive",
+      "evidence": "docs/review/rebuild-01/identity-media-actions/index.html"
+    },
+    {
+      "name": "id-card",
+      "status": "redrawn-and-reviewed",
+      "alternative": "contact",
+      "evidence": "docs/review/rebuild-01/identity-media-actions/index.html"
+    },
+    {
+      "name": "image-plus",
+      "status": "redrawn-and-reviewed",
+      "alternative": "image",
+      "evidence": "docs/review/rebuild-01/identity-media-actions/index.html"
+    },
+    {
+      "name": "square-plus",
+      "status": "redrawn-and-reviewed",
+      "alternative": "square",
+      "evidence": "docs/review/rebuild-01/project-symbols/index.html"
+    },
+    {
+      "name": "circle-dashed",
+      "status": "redrawn-and-reviewed",
+      "alternative": "circle",
+      "evidence": "docs/review/rebuild-01/circle-states/index.html"
+    },
+    {
+      "name": "play-circle",
+      "status": "redrawn-and-reviewed",
+      "alternative": "play",
+      "evidence": "docs/review/rebuild-01/circle-states/index.html"
+    },
+    {
+      "name": "pause-circle",
+      "status": "redrawn-and-reviewed",
+      "alternative": "pause",
+      "evidence": "docs/review/rebuild-01/circle-states/index.html"
+    },
+    {
+      "name": "alert-circle",
+      "status": "redrawn-and-reviewed",
+      "alternative": "info-circle",
+      "evidence": "docs/review/rebuild-01/circle-states/index.html"
+    },
+    {
+      "name": "chevrons-up-down",
+      "status": "redrawn-and-reviewed",
+      "alternative": "chevron-down",
+      "evidence": "docs/review/rebuild-01/directional-controls/index.html"
+    },
+    {
+      "name": "chevrons-left-right",
+      "status": "redrawn-and-reviewed",
+      "alternative": "chevrons-right",
+      "evidence": "docs/review/rebuild-01/directional-controls/index.html"
+    },
+    {
+      "name": "arrow-left-right",
+      "status": "redrawn-and-reviewed",
+      "alternative": "sort-unsorted",
+      "evidence": "docs/review/rebuild-01/directional-exchange/index.html"
+    },
+    {
+      "name": "arrow-down-right",
+      "status": "redrawn-and-reviewed",
+      "alternative": "arrow-up-right",
+      "evidence": "docs/review/rebuild-01/directional-controls/index.html"
+    },
+    {
+      "name": "arrow-big-up",
+      "status": "redrawn-and-reviewed",
+      "alternative": "arrow-up",
+      "evidence": "docs/review/rebuild-01/voting/index.html"
+    },
+    {
+      "name": "heading-1",
+      "status": "redrawn-and-reviewed",
+      "alternative": "heading",
+      "evidence": "docs/review/rebuild-01/headings-primary/index.html"
+    },
+    {
+      "name": "heading-2",
+      "status": "redrawn-and-reviewed",
+      "alternative": "heading",
+      "evidence": "docs/review/rebuild-01/headings-primary/index.html"
+    },
+    {
+      "name": "heading-3",
+      "status": "redrawn-and-reviewed",
+      "alternative": "heading",
+      "evidence": "docs/review/rebuild-01/headings-primary/index.html"
+    },
+    {
+      "name": "pilcrow",
+      "status": "redrawn-and-reviewed",
+      "alternative": "text",
+      "evidence": "docs/review/rebuild-01/paragraph-tools/index.html"
+    },
+    {
+      "name": "remove-formatting",
+      "status": "redrawn-and-reviewed",
+      "alternative": "text",
+      "evidence": "docs/review/rebuild-01/paragraph-tools/index.html"
+    },
+    {
+      "name": "hand-click",
+      "status": "redrawn-and-reviewed",
+      "alternative": "hand",
+      "evidence": "docs/review/rebuild-01/click-gesture/index.html"
+    },
+    {
+      "name": "resize",
+      "status": "excluded",
+      "alternative": "move-horizontal",
+      "evidence": "docs/review/rebuild-01/substitution-direction-semantics/index.html"
+    },
+    {
+      "name": "chart-bar-increasing",
+      "status": "redrawn-and-reviewed",
+      "alternative": "chart-bar",
+      "evidence": "docs/review/rebuild-01/numeric-tools/index.html"
+    },
+    {
+      "name": "arrow-up-left",
+      "status": "redrawn-and-reviewed",
+      "alternative": "arrow-left",
+      "evidence": "docs/review/rebuild-01/diagonal-movement/index.html"
+    },
+    {
+      "name": "arrow-down-left",
+      "status": "redrawn-and-reviewed",
+      "alternative": "arrow-left",
+      "evidence": "docs/review/rebuild-01/diagonal-movement/index.html"
+    },
+    {
+      "name": "arrow-big-right",
+      "status": "excluded",
+      "alternative": "arrow-right",
+      "evidence": "docs/review/rebuild-01/substitution-basic-buttons/index.html"
+    },
+    {
+      "name": "arrow-big-down",
+      "status": "redrawn-and-reviewed",
+      "alternative": "arrow-down",
+      "evidence": "docs/review/rebuild-01/voting/index.html"
+    },
+    {
+      "name": "arrow-big-left",
+      "status": "excluded",
+      "alternative": "arrow-left",
+      "evidence": "docs/review/rebuild-01/substitution-basic-buttons/index.html"
+    },
+    {
+      "name": "chevrons-up",
+      "status": "excluded",
+      "alternative": "chevron-up",
+      "evidence": "docs/review/rebuild-01/substitution-direction-semantics/index.html"
+    },
+    {
+      "name": "chevrons-down",
+      "status": "excluded",
+      "alternative": "chevron-down",
+      "evidence": "docs/review/rebuild-01/substitution-direction-semantics/index.html"
+    },
+    {
+      "name": "arrow-up-down",
+      "status": "excluded",
+      "alternative": "sort-unsorted",
+      "evidence": "docs/review/rebuild-01/substitution-direction-semantics/index.html"
+    },
+    {
+      "name": "arrow-left-to-line",
+      "status": "redrawn-and-reviewed",
+      "alternative": "arrow-left",
+      "evidence": "docs/review/rebuild-01/boundary-horizontal/index.html"
+    },
+    {
+      "name": "arrow-right-to-line",
+      "status": "redrawn-and-reviewed",
+      "alternative": "arrow-right",
+      "evidence": "docs/review/rebuild-01/boundary-horizontal/index.html"
+    },
+    {
+      "name": "arrow-up-to-line",
+      "status": "redrawn-and-reviewed",
+      "alternative": "arrow-up",
+      "evidence": "docs/review/rebuild-01/boundary-vertical/index.html"
+    },
+    {
+      "name": "arrow-down-to-line",
+      "status": "redrawn-and-reviewed",
+      "alternative": "arrow-down",
+      "evidence": "docs/review/rebuild-01/boundary-vertical/index.html"
+    },
+    {
+      "name": "arrow-left-circle",
+      "status": "excluded",
+      "alternative": "arrow-left",
+      "evidence": "docs/review/rebuild-01/substitution-notification-navigation/index.html"
+    },
+    {
+      "name": "arrow-right-circle",
+      "status": "excluded",
+      "alternative": "arrow-right",
+      "evidence": "docs/review/rebuild-01/substitution-notification-navigation/index.html"
+    },
+    {
+      "name": "arrow-up-circle",
+      "status": "excluded",
+      "alternative": "arrow-up",
+      "evidence": "docs/review/rebuild-01/substitution-notification-navigation/index.html"
+    },
+    {
+      "name": "arrow-down-circle",
+      "status": "excluded",
+      "alternative": "arrow-down",
+      "evidence": "docs/review/rebuild-01/substitution-notification-navigation/index.html"
+    },
+    {
+      "name": "move-horizontal",
+      "status": "redrawn-and-reviewed",
+      "alternative": "move",
+      "evidence": "docs/review/rebuild-01/resize-axes/index.html"
+    },
+    {
+      "name": "move-vertical",
+      "status": "redrawn-and-reviewed",
+      "alternative": "move",
+      "evidence": "docs/review/rebuild-01/resize-axes/index.html"
+    },
+    {
+      "name": "move-diagonal-up-right",
+      "status": "redrawn-and-reviewed",
+      "alternative": "move",
+      "evidence": "docs/review/rebuild-01/resize-diagonals/index.html"
+    },
+    {
+      "name": "move-diagonal-down-right",
+      "status": "redrawn-and-reviewed",
+      "alternative": "move",
+      "evidence": "docs/review/rebuild-01/resize-diagonals/index.html"
+    },
+    {
+      "name": "plus-circle",
+      "status": "excluded",
+      "alternative": "plus",
+      "evidence": "docs/review/rebuild-01/substitution-basic-buttons/index.html"
+    },
+    {
+      "name": "square-minus",
+      "status": "excluded",
+      "alternative": "minus",
+      "evidence": "docs/review/rebuild-01/substitution-basic-buttons/index.html"
+    },
+    {
+      "name": "square-x",
+      "status": "excluded",
+      "alternative": "x",
+      "evidence": "docs/review/rebuild-01/substitution-basic-buttons/index.html"
+    },
+    {
+      "name": "hash",
+      "status": "redrawn-and-reviewed",
+      "alternative": "grid",
+      "evidence": "docs/review/rebuild-01/numeric-tools/index.html"
+    },
+    {
+      "name": "slash",
+      "status": "excluded",
+      "alternative": null,
+      "evidence": "docs/review/rebuild-01/substitution-line-meanings/index.html"
+    },
+    {
+      "name": "more-horizontal-circle",
+      "status": "excluded",
+      "alternative": "more-horizontal",
+      "evidence": "docs/review/rebuild-01/substitution-notification-navigation/index.html"
+    },
+    {
+      "name": "bell-plus",
+      "status": "excluded",
+      "alternative": "bell",
+      "evidence": "docs/review/rebuild-01/substitution-notification-navigation/index.html"
+    },
+    {
+      "name": "bell-minus",
+      "status": "excluded",
+      "alternative": "bell-off",
+      "evidence": "docs/review/rebuild-01/substitution-notification-navigation/index.html"
+    },
+    {
+      "name": "file-pen",
+      "status": "excluded",
+      "alternative": "pencil",
+      "evidence": "docs/review/rebuild-01/substitution-file-actions/index.html"
+    },
+    {
+      "name": "file-down",
+      "status": "excluded",
+      "alternative": "download",
+      "evidence": "docs/review/rebuild-01/substitution-file-actions/index.html"
+    },
+    {
+      "name": "file-stack",
+      "status": "excluded",
+      "alternative": "layers",
+      "evidence": "docs/review/rebuild-01/substitution-file-actions/index.html"
+    },
+    {
+      "name": "file-up",
+      "status": "excluded",
+      "alternative": "upload",
+      "evidence": "docs/review/rebuild-01/substitution-file-actions/index.html"
+    },
+    {
+      "name": "folder-copy",
+      "status": "excluded",
+      "alternative": "copy",
+      "evidence": "docs/review/rebuild-01/substitution-object-context/index.html"
+    },
+    {
+      "name": "folder-move",
+      "status": "excluded",
+      "alternative": "folder-open",
+      "evidence": "docs/review/rebuild-01/substitution-file-actions/index.html"
+    },
+    {
+      "name": "link-plus",
+      "status": "excluded",
+      "alternative": "link",
+      "evidence": "docs/review/rebuild-01/substitution-link-context/index.html"
+    },
+    {
+      "name": "search-x",
+      "status": "excluded",
+      "alternative": "search",
+      "evidence": "docs/review/rebuild-01/substitution-notification-navigation/index.html"
+    },
+    {
+      "name": "align-objects-left",
+      "status": "redrawn-and-reviewed",
+      "alternative": "align-left",
+      "evidence": "docs/review/rebuild-01/object-alignment-horizontal/index.html"
+    },
+    {
+      "name": "align-objects-center-horizontal",
+      "status": "redrawn-and-reviewed",
+      "alternative": "align-center",
+      "evidence": "docs/review/rebuild-01/object-alignment-horizontal/index.html"
+    },
+    {
+      "name": "align-objects-right",
+      "status": "redrawn-and-reviewed",
+      "alternative": "align-right",
+      "evidence": "docs/review/rebuild-01/object-alignment-horizontal/index.html"
+    },
+    {
+      "name": "align-objects-top",
+      "status": "redrawn-and-reviewed",
+      "alternative": "arrow-up",
+      "evidence": "docs/review/rebuild-01/object-alignment-vertical/index.html"
+    },
+    {
+      "name": "align-objects-center-vertical",
+      "status": "redrawn-and-reviewed",
+      "alternative": "align-objects-center-horizontal",
+      "evidence": "docs/review/rebuild-01/object-alignment-vertical/index.html"
+    },
+    {
+      "name": "align-objects-bottom",
+      "status": "redrawn-and-reviewed",
+      "alternative": "arrow-down",
+      "evidence": "docs/review/rebuild-01/object-alignment-vertical/index.html"
+    },
+    {
+      "name": "bring-forward",
+      "status": "excluded",
+      "alternative": "arrow-up",
+      "evidence": "docs/review/rebuild-01/substitution-layer-order/index.html"
+    },
+    {
+      "name": "send-backward",
+      "status": "excluded",
+      "alternative": "arrow-down",
+      "evidence": "docs/review/rebuild-01/substitution-layer-order/index.html"
+    },
+    {
+      "name": "bring-to-front",
+      "status": "excluded",
+      "alternative": "arrow-up-to-line",
+      "evidence": "docs/review/rebuild-01/substitution-layer-order/index.html"
+    },
+    {
+      "name": "send-to-back",
+      "status": "excluded",
+      "alternative": "arrow-down-to-line",
+      "evidence": "docs/review/rebuild-01/substitution-layer-order/index.html"
+    },
+    {
+      "name": "group",
+      "status": "redrawn-and-reviewed",
+      "alternative": "selection",
+      "evidence": "docs/review/rebuild-01/grouping/index.html"
+    },
+    {
+      "name": "ungroup",
+      "status": "redrawn-and-reviewed",
+      "alternative": "copy",
+      "evidence": "docs/review/rebuild-01/grouping/index.html"
+    },
+    {
+      "name": "boolean-union",
+      "status": "redrawn-and-reviewed",
+      "alternative": "copy",
+      "evidence": "docs/review/rebuild-01/boolean-combine/index.html"
+    },
+    {
+      "name": "boolean-subtract",
+      "status": "redrawn-and-reviewed",
+      "alternative": "copy",
+      "evidence": "docs/review/rebuild-01/boolean-combine/index.html"
+    },
+    {
+      "name": "boolean-intersect",
+      "status": "redrawn-and-reviewed",
+      "alternative": "copy",
+      "evidence": "docs/review/rebuild-01/boolean-overlap/index.html"
+    },
+    {
+      "name": "boolean-exclude",
+      "status": "redrawn-and-reviewed",
+      "alternative": "copy",
+      "evidence": "docs/review/rebuild-01/boolean-overlap/index.html"
+    },
+    {
+      "name": "flip-horizontal",
+      "status": "redrawn-and-reviewed",
+      "alternative": "rotate-left",
+      "evidence": "docs/review/rebuild-01/mirroring/index.html"
+    },
+    {
+      "name": "flip-vertical",
+      "status": "redrawn-and-reviewed",
+      "alternative": "rotate-left",
+      "evidence": "docs/review/rebuild-01/mirroring/index.html"
+    },
+    {
+      "name": "node-add",
+      "status": "excluded",
+      "alternative": "plus",
+      "evidence": "docs/review/rebuild-01/substitution-node-actions/index.html"
+    },
+    {
+      "name": "node-remove",
+      "status": "excluded",
+      "alternative": "minus",
+      "evidence": "docs/review/rebuild-01/substitution-node-actions/index.html"
+    },
+    {
+      "name": "path-join",
+      "status": "redrawn-and-reviewed",
+      "alternative": "spline",
+      "evidence": "docs/review/rebuild-01/path-connections/index.html"
+    },
+    {
+      "name": "path-break",
+      "status": "redrawn-and-reviewed",
+      "alternative": "path-join",
+      "evidence": "docs/review/rebuild-01/path-connections/index.html"
+    },
+    {
+      "name": "node-corner",
+      "status": "redrawn-and-reviewed",
+      "alternative": "bezier-curve",
+      "evidence": "docs/review/rebuild-01/node-type/index.html"
+    },
+    {
+      "name": "node-smooth",
+      "status": "excluded",
+      "alternative": "bezier-curve",
+      "evidence": "docs/review/rebuild-01/substitution-node-actions/index.html"
+    },
+    {
+      "name": "gradient-linear",
+      "status": "excluded",
+      "alternative": null,
+      "evidence": "docs/review/rebuild-01/substitution-gradient-values/index.html"
+    },
+    {
+      "name": "gradient-radial",
+      "status": "excluded",
+      "alternative": null,
+      "evidence": "docs/review/rebuild-01/substitution-gradient-values/index.html"
+    },
+    {
+      "name": "gradient-conic",
+      "status": "excluded",
+      "alternative": null,
+      "evidence": "docs/review/rebuild-01/substitution-gradient-values/index.html"
+    },
+    {
+      "name": "swatches",
+      "status": "excluded",
+      "alternative": "palette",
+      "evidence": "docs/review/rebuild-01/substitution-color-fields/index.html"
+    },
+    {
+      "name": "stroke-color",
+      "status": "excluded",
+      "alternative": null,
+      "evidence": "docs/review/rebuild-01/substitution-color-fields/index.html"
+    },
+    {
+      "name": "stroke-width",
+      "status": "redrawn-and-reviewed",
+      "alternative": "menu",
+      "evidence": "docs/review/rebuild-01/stroke-properties/index.html"
+    },
+    {
+      "name": "stroke-dashed",
+      "status": "redrawn-and-reviewed",
+      "alternative": "minus",
+      "evidence": "docs/review/rebuild-01/stroke-patterns/index.html"
+    },
+    {
+      "name": "corner-radius",
+      "status": "redrawn-and-reviewed",
+      "alternative": "stroke-join-round",
+      "evidence": "docs/review/rebuild-01/stroke-properties/index.html"
+    },
+    {
+      "name": "layer-mask",
+      "status": "redrawn-and-reviewed",
+      "alternative": "image",
+      "evidence": "docs/review/rebuild-01/layer-mask/index.html"
+    },
+    {
+      "name": "frame-plus",
+      "status": "excluded",
+      "alternative": "frame",
+      "evidence": "docs/review/rebuild-01/substitution-contextual/index.html"
+    },
+    {
+      "name": "guides",
+      "status": "excluded",
+      "alternative": null,
+      "evidence": "docs/review/rebuild-01/substitution-canvas-aids/index.html"
+    },
+    {
+      "name": "snap-to-grid",
+      "status": "excluded",
+      "alternative": "magnet",
+      "evidence": "docs/review/rebuild-01/substitution-canvas-aids/index.html"
+    },
+    {
+      "name": "text-color",
+      "status": "redrawn-and-reviewed",
+      "alternative": "text",
+      "evidence": "docs/review/rebuild-01/text-color/index.html"
+    },
+    {
+      "name": "font-size",
+      "status": "excluded",
+      "alternative": "text",
+      "evidence": "docs/review/rebuild-01/substitution-font-fields/index.html"
+    },
+    {
+      "name": "line-height",
+      "status": "redrawn-and-reviewed",
+      "alternative": "letter-spacing",
+      "evidence": "docs/review/rebuild-01/text-spacing/index.html"
+    },
+    {
+      "name": "letter-spacing",
+      "status": "redrawn-and-reviewed",
+      "alternative": "line-height",
+      "evidence": "docs/review/rebuild-01/text-spacing/index.html"
+    },
+    {
+      "name": "font-family",
+      "status": "excluded",
+      "alternative": "text",
+      "evidence": "docs/review/rebuild-01/substitution-font-fields/index.html"
+    },
+    {
+      "name": "ligature",
+      "status": "excluded",
+      "alternative": null,
+      "evidence": "docs/review/rebuild-01/substitution-typography-values/index.html"
+    },
+    {
+      "name": "case-upper",
+      "status": "redrawn-and-reviewed",
+      "alternative": "case-lower",
+      "evidence": "docs/review/rebuild-01/letter-case-uniform/index.html"
+    },
+    {
+      "name": "case-lower",
+      "status": "redrawn-and-reviewed",
+      "alternative": "case-upper",
+      "evidence": "docs/review/rebuild-01/letter-case-uniform/index.html"
+    },
+    {
+      "name": "case-title",
+      "status": "redrawn-and-reviewed",
+      "alternative": "small-caps",
+      "evidence": "docs/review/rebuild-01/letter-case-mixed/index.html"
+    },
+    {
+      "name": "small-caps",
+      "status": "redrawn-and-reviewed",
+      "alternative": "case-title",
+      "evidence": "docs/review/rebuild-01/letter-case-mixed/index.html"
+    },
+    {
+      "name": "text-direction-ltr",
+      "status": "redrawn-and-reviewed",
+      "alternative": "pilcrow",
+      "evidence": "docs/review/rebuild-01/writing-direction/index.html"
+    },
+    {
+      "name": "text-direction-rtl",
+      "status": "redrawn-and-reviewed",
+      "alternative": "pilcrow",
+      "evidence": "docs/review/rebuild-01/writing-direction/index.html"
+    },
+    {
+      "name": "paragraph-spacing-before",
+      "status": "excluded",
+      "alternative": "pilcrow",
+      "evidence": "docs/review/rebuild-01/substitution-paragraph-fields/index.html"
+    },
+    {
+      "name": "paragraph-spacing-after",
+      "status": "excluded",
+      "alternative": "pilcrow",
+      "evidence": "docs/review/rebuild-01/substitution-paragraph-fields/index.html"
+    },
+    {
+      "name": "code-block",
+      "status": "excluded",
+      "alternative": "code",
+      "evidence": "docs/review/rebuild-01/substitution-block-commands/index.html"
+    },
+    {
+      "name": "table-of-contents",
+      "status": "excluded",
+      "alternative": "list-tree",
+      "evidence": "docs/review/rebuild-01/substitution-block-commands/index.html"
+    },
+    {
+      "name": "horizontal-rule",
+      "status": "excluded",
+      "alternative": "minus",
+      "evidence": "docs/review/rebuild-01/substitution-block-commands/index.html"
+    },
+    {
+      "name": "page-break",
+      "status": "redrawn-and-reviewed",
+      "alternative": "file",
+      "evidence": "docs/review/rebuild-01/document-break/index.html"
+    },
+    {
+      "name": "section-break",
+      "status": "excluded",
+      "alternative": null,
+      "evidence": "docs/review/rebuild-01/substitution-section-types/index.html"
+    },
+    {
+      "name": "footnote",
+      "status": "redrawn-and-reviewed",
+      "alternative": "superscript",
+      "evidence": "docs/review/rebuild-01/footnote/index.html"
+    },
+    {
+      "name": "link-card",
+      "status": "excluded",
+      "alternative": "link",
+      "evidence": "docs/review/rebuild-01/substitution-link-context/index.html"
+    },
+    {
+      "name": "callout",
+      "status": "excluded",
+      "alternative": "info-circle",
+      "evidence": "docs/review/rebuild-01/substitution-block-commands/index.html"
+    },
+    {
+      "name": "toggle-block",
+      "status": "excluded",
+      "alternative": "chevron-down",
+      "evidence": "docs/review/rebuild-01/substitution-block-commands/index.html"
+    },
+    {
+      "name": "embed-video",
+      "status": "excluded",
+      "alternative": "film",
+      "evidence": "docs/review/rebuild-01/substitution-block-commands/index.html"
+    },
+    {
+      "name": "layout-columns-3",
+      "status": "redrawn-and-reviewed",
+      "alternative": "layout-columns",
+      "evidence": "docs/review/rebuild-01/multi-column/index.html"
+    },
+    {
+      "name": "layout-columns-4",
+      "status": "redrawn-and-reviewed",
+      "alternative": "layout-columns",
+      "evidence": "docs/review/rebuild-01/multi-column/index.html"
+    },
+    {
+      "name": "table-header-row",
+      "status": "excluded",
+      "alternative": "table",
+      "evidence": "docs/review/rebuild-01/substitution-table-selection/index.html"
+    },
+    {
+      "name": "table-header-column",
+      "status": "redrawn-and-reviewed",
+      "alternative": "table",
+      "evidence": "docs/review/rebuild-01/table-header/index.html"
+    },
+    {
+      "name": "table-select-cell",
+      "status": "excluded",
+      "alternative": "table",
+      "evidence": "docs/review/rebuild-01/substitution-table-selection/index.html"
+    },
+    {
+      "name": "table-select-row",
+      "status": "excluded",
+      "alternative": "table",
+      "evidence": "docs/review/rebuild-01/substitution-table-selection/index.html"
+    },
+    {
+      "name": "table-select-column",
+      "status": "excluded",
+      "alternative": "table",
+      "evidence": "docs/review/rebuild-01/substitution-table-selection/index.html"
+    },
+    {
+      "name": "table-delete",
+      "status": "excluded",
+      "alternative": "trash",
+      "evidence": "docs/review/rebuild-01/substitution-contextual/index.html"
+    },
+    {
+      "name": "table-row-insert-above",
+      "status": "redrawn-and-reviewed",
+      "alternative": "table-row-add",
+      "evidence": "docs/review/rebuild-01/table-insertion/index.html"
+    },
+    {
+      "name": "table-column-insert-left",
+      "status": "redrawn-and-reviewed",
+      "alternative": "table-column-add",
+      "evidence": "docs/review/rebuild-01/table-insertion/index.html"
+    },
+    {
+      "name": "page-header",
+      "status": "excluded",
+      "alternative": "panel-top",
+      "evidence": "docs/review/rebuild-01/substitution-page-commands/index.html"
+    },
+    {
+      "name": "page-footer",
+      "status": "excluded",
+      "alternative": "panel-bottom",
+      "evidence": "docs/review/rebuild-01/substitution-page-commands/index.html"
+    },
+    {
+      "name": "heading-4",
+      "status": "redrawn-and-reviewed",
+      "alternative": "heading",
+      "evidence": "docs/review/rebuild-01/headings-secondary/index.html"
+    },
+    {
+      "name": "heading-5",
+      "status": "redrawn-and-reviewed",
+      "alternative": "heading",
+      "evidence": "docs/review/rebuild-01/headings-secondary/index.html"
+    },
+    {
+      "name": "heading-6",
+      "status": "redrawn-and-reviewed",
+      "alternative": "heading",
+      "evidence": "docs/review/rebuild-01/headings-secondary/index.html"
+    },
+    {
+      "name": "hard-break",
+      "status": "excluded",
+      "alternative": "keyboard-return",
+      "evidence": "docs/review/rebuild-01/substitution-character-insertion/index.html"
+    },
+    {
+      "name": "nonbreaking-space",
+      "status": "excluded",
+      "alternative": "text",
+      "evidence": "docs/review/rebuild-01/substitution-character-insertion/index.html"
+    },
+    {
+      "name": "soft-hyphen",
+      "status": "excluded",
+      "alternative": "minus",
+      "evidence": "docs/review/rebuild-01/substitution-character-insertion/index.html"
+    },
+    {
+      "name": "tab-stop-left",
+      "status": "redrawn-and-reviewed",
+      "alternative": "align-left",
+      "evidence": "docs/review/rebuild-01/tab-stops-horizontal/index.html"
+    },
+    {
+      "name": "tab-stop-right",
+      "status": "redrawn-and-reviewed",
+      "alternative": "align-left",
+      "evidence": "docs/review/rebuild-01/tab-stops-horizontal/index.html"
+    },
+    {
+      "name": "tab-stop-center",
+      "status": "redrawn-and-reviewed",
+      "alternative": "align-left",
+      "evidence": "docs/review/rebuild-01/tab-stops-centered/index.html"
+    },
+    {
+      "name": "tab-stop-decimal",
+      "status": "redrawn-and-reviewed",
+      "alternative": "align-left",
+      "evidence": "docs/review/rebuild-01/tab-stops-centered/index.html"
+    },
+    {
+      "name": "find-next",
+      "status": "excluded",
+      "alternative": "arrow-down",
+      "evidence": "docs/review/rebuild-01/substitution-controls/index.html"
+    },
+    {
+      "name": "find-previous",
+      "status": "excluded",
+      "alternative": "arrow-up",
+      "evidence": "docs/review/rebuild-01/substitution-controls/index.html"
+    },
+    {
+      "name": "replace",
+      "status": "redrawn-and-reviewed",
+      "alternative": "repeat",
+      "evidence": "docs/review/rebuild-01/replacement/index.html"
+    },
+    {
+      "name": "replace-all",
+      "status": "redrawn-and-reviewed",
+      "alternative": "replace",
+      "evidence": "docs/review/rebuild-01/replacement/index.html"
+    },
+    {
+      "name": "match-whole-word",
+      "status": "redrawn-and-reviewed",
+      "alternative": "case-lower",
+      "evidence": "docs/review/rebuild-01/text-search/index.html"
+    },
+    {
+      "name": "search-selection",
+      "status": "excluded",
+      "alternative": "selection",
+      "evidence": "docs/review/rebuild-01/substitution-search-options/index.html"
+    },
+    {
+      "name": "spell-check",
+      "status": "redrawn-and-reviewed",
+      "alternative": "check",
+      "evidence": "docs/review/rebuild-01/text-search/index.html"
+    },
+    {
+      "name": "spell-check-off",
+      "status": "excluded",
+      "alternative": "spell-check",
+      "evidence": "docs/review/rebuild-01/substitution-search-options/index.html"
+    },
+    {
+      "name": "word-count",
+      "status": "excluded",
+      "alternative": "text",
+      "evidence": "docs/review/rebuild-01/substitution-paragraph-fields/index.html"
+    },
+    {
+      "name": "character-count",
+      "status": "excluded",
+      "alternative": "text",
+      "evidence": "docs/review/rebuild-01/substitution-paragraph-fields/index.html"
+    },
+    {
+      "name": "list-alpha",
+      "status": "excluded",
+      "alternative": "list-ordered",
+      "evidence": "docs/review/rebuild-01/substitution-list-formatting/index.html"
+    },
+    {
+      "name": "list-roman",
+      "status": "excluded",
+      "alternative": "list-ordered",
+      "evidence": "docs/review/rebuild-01/substitution-list-formatting/index.html"
+    },
+    {
+      "name": "list-restart",
+      "status": "excluded",
+      "alternative": "list-ordered",
+      "evidence": "docs/review/rebuild-01/substitution-list-formatting/index.html"
+    },
+    {
+      "name": "list-continue",
+      "status": "excluded",
+      "alternative": "list-ordered",
+      "evidence": "docs/review/rebuild-01/substitution-list-formatting/index.html"
+    },
+    {
+      "name": "block-copy",
+      "status": "excluded",
+      "alternative": "copy",
+      "evidence": "docs/review/rebuild-01/substitution-object-context/index.html"
+    },
+    {
+      "name": "block-delete",
+      "status": "excluded",
+      "alternative": "trash",
+      "evidence": "docs/review/rebuild-01/substitution-object-context/index.html"
+    },
+    {
+      "name": "block-insert-above",
+      "status": "excluded",
+      "alternative": "plus",
+      "evidence": "docs/review/rebuild-01/substitution-block-insertion/index.html"
+    },
+    {
+      "name": "block-insert-below",
+      "status": "excluded",
+      "alternative": "plus",
+      "evidence": "docs/review/rebuild-01/substitution-block-insertion/index.html"
+    },
+    {
+      "name": "block-move-up",
+      "status": "excluded",
+      "alternative": "arrow-up",
+      "evidence": "docs/review/rebuild-01/substitution-controls/index.html"
+    },
+    {
+      "name": "block-move-down",
+      "status": "excluded",
+      "alternative": "arrow-down",
+      "evidence": "docs/review/rebuild-01/substitution-controls/index.html"
+    },
+    {
+      "name": "table-header-cell",
+      "status": "excluded",
+      "alternative": "table",
+      "evidence": "docs/review/rebuild-01/substitution-table-selection/index.html"
+    },
+    {
+      "name": "table-cell-next",
+      "status": "excluded",
+      "alternative": "arrow-right",
+      "evidence": "docs/review/rebuild-01/substitution-controls/index.html"
+    },
+    {
+      "name": "table-cell-previous",
+      "status": "excluded",
+      "alternative": "arrow-left",
+      "evidence": "docs/review/rebuild-01/substitution-controls/index.html"
+    },
+    {
+      "name": "cell-align-top",
+      "status": "redrawn-and-reviewed",
+      "alternative": "align-center",
+      "evidence": "docs/review/rebuild-01/cell-alignment/index.html"
+    },
+    {
+      "name": "cell-align-middle",
+      "status": "redrawn-and-reviewed",
+      "alternative": "align-center",
+      "evidence": "docs/review/rebuild-01/cell-alignment/index.html"
+    },
+    {
+      "name": "cell-align-bottom",
+      "status": "redrawn-and-reviewed",
+      "alternative": "align-center",
+      "evidence": "docs/review/rebuild-01/cell-alignment/index.html"
+    },
+    {
+      "name": "table-column-width",
+      "status": "excluded",
+      "alternative": "table",
+      "evidence": "docs/review/rebuild-01/substitution-table-fields/index.html"
+    },
+    {
+      "name": "table-row-height",
+      "status": "excluded",
+      "alternative": "table",
+      "evidence": "docs/review/rebuild-01/substitution-table-fields/index.html"
+    },
+    {
+      "name": "table-transpose",
+      "status": "redrawn-and-reviewed",
+      "alternative": "table",
+      "evidence": "docs/review/rebuild-01/table-transpose/index.html"
+    },
+    {
+      "name": "table-insert",
+      "status": "excluded",
+      "alternative": "table",
+      "evidence": "docs/review/rebuild-01/substitution-table-fields/index.html"
+    },
+    {
+      "name": "border-all",
+      "status": "redrawn-and-reviewed",
+      "alternative": "grid",
+      "evidence": "docs/review/rebuild-01/cell-border-basics/index.html"
+    },
+    {
+      "name": "border-none",
+      "status": "redrawn-and-reviewed",
+      "alternative": "selection",
+      "evidence": "docs/review/rebuild-01/cell-border-basics/index.html"
+    },
+    {
+      "name": "border-outer",
+      "status": "redrawn-and-reviewed",
+      "alternative": "square",
+      "evidence": "docs/review/rebuild-01/cell-border-regions/index.html"
+    },
+    {
+      "name": "border-inner",
+      "status": "redrawn-and-reviewed",
+      "alternative": "plus",
+      "evidence": "docs/review/rebuild-01/cell-border-regions/index.html"
+    },
+    {
+      "name": "border-horizontal",
+      "status": "redrawn-and-reviewed",
+      "alternative": "minus",
+      "evidence": "docs/review/rebuild-01/cell-border-regions/index.html"
+    },
+    {
+      "name": "border-vertical",
+      "status": "redrawn-and-reviewed",
+      "alternative": "layout-columns",
+      "evidence": "docs/review/rebuild-01/cell-border-regions/index.html"
+    },
+    {
+      "name": "border-top",
+      "status": "redrawn-and-reviewed",
+      "alternative": "border-none",
+      "evidence": "docs/review/rebuild-01/cell-border-edges/index.html"
+    },
+    {
+      "name": "border-bottom",
+      "status": "redrawn-and-reviewed",
+      "alternative": "border-none",
+      "evidence": "docs/review/rebuild-01/cell-border-edges/index.html"
+    },
+    {
+      "name": "border-left",
+      "status": "redrawn-and-reviewed",
+      "alternative": "border-none",
+      "evidence": "docs/review/rebuild-01/cell-border-edges/index.html"
+    },
+    {
+      "name": "border-right",
+      "status": "redrawn-and-reviewed",
+      "alternative": "border-none",
+      "evidence": "docs/review/rebuild-01/cell-border-edges/index.html"
+    },
+    {
+      "name": "image-align-left",
+      "status": "excluded",
+      "alternative": "align-left",
+      "evidence": "docs/review/rebuild-01/substitution-image-properties/index.html"
+    },
+    {
+      "name": "image-align-center",
+      "status": "excluded",
+      "alternative": "align-center",
+      "evidence": "docs/review/rebuild-01/substitution-image-properties/index.html"
+    },
+    {
+      "name": "image-align-right",
+      "status": "excluded",
+      "alternative": "align-right",
+      "evidence": "docs/review/rebuild-01/substitution-image-properties/index.html"
+    },
+    {
+      "name": "image-wrap-left",
+      "status": "redrawn-and-reviewed",
+      "alternative": "align-left",
+      "evidence": "docs/review/rebuild-01/image-flow/index.html"
+    },
+    {
+      "name": "image-wrap-right",
+      "status": "redrawn-and-reviewed",
+      "alternative": "align-right",
+      "evidence": "docs/review/rebuild-01/image-flow/index.html"
+    },
+    {
+      "name": "image-inline",
+      "status": "redrawn-and-reviewed",
+      "alternative": "image",
+      "evidence": "docs/review/rebuild-01/image-flow/index.html"
+    },
+    {
+      "name": "image-caption",
+      "status": "excluded",
+      "alternative": "text",
+      "evidence": "docs/review/rebuild-01/substitution-image-properties/index.html"
+    },
+    {
+      "name": "image-alt",
+      "status": "excluded",
+      "alternative": "text",
+      "evidence": "docs/review/rebuild-01/substitution-image-properties/index.html"
+    },
+    {
+      "name": "image-replace",
+      "status": "excluded",
+      "alternative": "upload",
+      "evidence": "docs/review/rebuild-01/substitution-image-properties/index.html"
+    },
+    {
+      "name": "image-off",
+      "status": "excluded",
+      "alternative": null,
+      "evidence": "docs/review/rebuild-01/substitution-content-visibility/index.html"
+    },
+    {
+      "name": "message-reply",
+      "status": "excluded",
+      "alternative": "reply",
+      "evidence": "docs/review/rebuild-01/substitution-actions/index.html"
+    },
+    {
+      "name": "message-quote",
+      "status": "excluded",
+      "alternative": "quote",
+      "evidence": "docs/review/rebuild-01/substitution-content-visibility/index.html"
+    },
+    {
+      "name": "message-pin",
+      "status": "excluded",
+      "alternative": "pin",
+      "evidence": "docs/review/rebuild-01/substitution-controls/index.html"
+    },
+    {
+      "name": "message-pen",
+      "status": "excluded",
+      "alternative": "pencil",
+      "evidence": "docs/review/rebuild-01/substitution-object-context/index.html"
+    },
+    {
+      "name": "message-x",
+      "status": "excluded",
+      "alternative": "trash",
+      "evidence": "docs/review/rebuild-01/substitution-object-context/index.html"
+    },
+    {
+      "name": "message-off",
+      "status": "excluded",
+      "alternative": null,
+      "evidence": "docs/review/rebuild-01/substitution-content-visibility/index.html"
+    },
+    {
+      "name": "message-clock",
+      "status": "excluded",
+      "alternative": "clock",
+      "evidence": "docs/review/rebuild-01/substitution-controls/index.html"
+    },
+    {
+      "name": "message-reopen",
+      "status": "excluded",
+      "alternative": "rotate-left",
+      "evidence": "docs/review/rebuild-01/substitution-controls/index.html"
+    },
+    {
+      "name": "thread-next",
+      "status": "excluded",
+      "alternative": "chevron-right",
+      "evidence": "docs/review/rebuild-01/substitution-object-context/index.html"
+    },
+    {
+      "name": "thread-previous",
+      "status": "excluded",
+      "alternative": "chevron-left",
+      "evidence": "docs/review/rebuild-01/substitution-object-context/index.html"
+    },
+    {
+      "name": "inline-math",
+      "status": "excluded",
+      "alternative": "function-square",
+      "evidence": "docs/review/rebuild-01/substitution-math-placement/index.html"
+    },
+    {
+      "name": "block-math",
+      "status": "excluded",
+      "alternative": "function-square",
+      "evidence": "docs/review/rebuild-01/substitution-math-placement/index.html"
+    },
+    {
+      "name": "integral",
+      "status": "excluded",
+      "alternative": null,
+      "evidence": "docs/review/rebuild-01/substitution-math-operators/index.html"
+    },
+    {
+      "name": "product-symbol",
+      "status": "excluded",
+      "alternative": null,
+      "evidence": "docs/review/rebuild-01/substitution-math-operators/index.html"
+    },
+    {
+      "name": "matrix",
+      "status": "excluded",
+      "alternative": null,
+      "evidence": "docs/review/rebuild-01/substitution-math-operators/index.html"
+    },
+    {
+      "name": "nth-root",
+      "status": "excluded",
+      "alternative": null,
+      "evidence": "docs/review/rebuild-01/substitution-math-operators/index.html"
+    },
+    {
+      "name": "factorial",
+      "status": "excluded",
+      "alternative": null,
+      "evidence": "docs/review/rebuild-01/substitution-math-operators/index.html"
+    },
+    {
+      "name": "less-than-or-equal",
+      "status": "excluded",
+      "alternative": null,
+      "evidence": "docs/review/rebuild-01/substitution-math-relations/index.html"
+    },
+    {
+      "name": "greater-than-or-equal",
+      "status": "excluded",
+      "alternative": null,
+      "evidence": "docs/review/rebuild-01/substitution-math-relations/index.html"
+    },
+    {
+      "name": "approximately-equal",
+      "status": "excluded",
+      "alternative": null,
+      "evidence": "docs/review/rebuild-01/substitution-math-relations/index.html"
+    },
+    {
+      "name": "page-number",
+      "status": "excluded",
+      "alternative": "hash",
+      "evidence": "docs/review/rebuild-01/substitution-page-commands/index.html"
+    },
+    {
+      "name": "page-margins",
+      "status": "excluded",
+      "alternative": null,
+      "evidence": "docs/review/rebuild-01/substitution-page-layout-values/index.html"
+    },
+    {
+      "name": "page-orientation-portrait",
+      "status": "excluded",
+      "alternative": null,
+      "evidence": "docs/review/rebuild-01/substitution-page-layout-values/index.html"
+    },
+    {
+      "name": "page-orientation-landscape",
+      "status": "excluded",
+      "alternative": null,
+      "evidence": "docs/review/rebuild-01/substitution-page-layout-values/index.html"
+    },
+    {
+      "name": "facing-pages",
+      "status": "excluded",
+      "alternative": null,
+      "evidence": "docs/review/rebuild-01/substitution-page-layout-values/index.html"
+    },
+    {
+      "name": "page-add",
+      "status": "excluded",
+      "alternative": "plus",
+      "evidence": "docs/review/rebuild-01/substitution-contextual/index.html"
+    },
+    {
+      "name": "page-duplicate",
+      "status": "excluded",
+      "alternative": "copy",
+      "evidence": "docs/review/rebuild-01/substitution-object-context/index.html"
+    },
+    {
+      "name": "fit-page-width",
+      "status": "excluded",
+      "alternative": null,
+      "evidence": "docs/review/rebuild-01/substitution-page-zoom-values/index.html"
+    },
+    {
+      "name": "fit-page-height",
+      "status": "excluded",
+      "alternative": null,
+      "evidence": "docs/review/rebuild-01/substitution-page-zoom-values/index.html"
+    },
+    {
+      "name": "print-preview",
+      "status": "excluded",
+      "alternative": "eye",
+      "evidence": "docs/review/rebuild-01/substitution-page-commands/index.html"
+    },
+    {
+      "name": "suggestion-insert",
+      "status": "excluded",
+      "alternative": null,
+      "evidence": "docs/review/rebuild-01/substitution-revision-content/index.html"
+    },
+    {
+      "name": "suggestion-delete",
+      "status": "excluded",
+      "alternative": null,
+      "evidence": "docs/review/rebuild-01/substitution-revision-content/index.html"
+    },
+    {
+      "name": "accept-change",
+      "status": "excluded",
+      "alternative": "check",
+      "evidence": "docs/review/rebuild-01/substitution-revision-actions/index.html"
+    },
+    {
+      "name": "reject-change",
+      "status": "excluded",
+      "alternative": "x",
+      "evidence": "docs/review/rebuild-01/substitution-revision-actions/index.html"
+    },
+    {
+      "name": "accept-all-changes",
+      "status": "excluded",
+      "alternative": "check",
+      "evidence": "docs/review/rebuild-01/substitution-revision-actions/index.html"
+    },
+    {
+      "name": "reject-all-changes",
+      "status": "excluded",
+      "alternative": "x",
+      "evidence": "docs/review/rebuild-01/substitution-revision-actions/index.html"
+    },
+    {
+      "name": "compare-documents",
+      "status": "excluded",
+      "alternative": "git-compare",
+      "evidence": "docs/review/rebuild-01/substitution-revision-modes/index.html"
+    },
+    {
+      "name": "version-restore",
+      "status": "excluded",
+      "alternative": "rotate-left",
+      "evidence": "docs/review/rebuild-01/substitution-object-context/index.html"
+    },
+    {
+      "name": "version-save",
+      "status": "excluded",
+      "alternative": "save",
+      "evidence": "docs/review/rebuild-01/substitution-object-context/index.html"
+    },
+    {
+      "name": "track-changes",
+      "status": "excluded",
+      "alternative": null,
+      "evidence": "docs/review/rebuild-01/substitution-revision-modes/index.html"
+    },
+    {
+      "name": "tab-new",
+      "status": "excluded",
+      "alternative": "plus",
+      "evidence": "docs/review/rebuild-01/substitution-navigation-context/index.html"
+    },
+    {
+      "name": "tab-close",
+      "status": "excluded",
+      "alternative": "x",
+      "evidence": "docs/review/rebuild-01/substitution-navigation-context/index.html"
+    },
+    {
+      "name": "tab-restore",
+      "status": "excluded",
+      "alternative": "undo",
+      "evidence": "docs/review/rebuild-01/substitution-window-controls/index.html"
+    },
+    {
+      "name": "tab-pin",
+      "status": "excluded",
+      "alternative": "pin",
+      "evidence": "docs/review/rebuild-01/substitution-navigation-context/index.html"
+    },
+    {
+      "name": "tab-search",
+      "status": "excluded",
+      "alternative": "search",
+      "evidence": "docs/review/rebuild-01/substitution-navigation-context/index.html"
+    },
+    {
+      "name": "window-new",
+      "status": "excluded",
+      "alternative": "app-window",
+      "evidence": "docs/review/rebuild-01/substitution-window-controls/index.html"
+    },
+    {
+      "name": "window-restore",
+      "status": "excluded",
+      "alternative": "copy",
+      "evidence": "docs/review/rebuild-01/substitution-window-controls/index.html"
+    },
+    {
+      "name": "window-minimize",
+      "status": "excluded",
+      "alternative": "minus",
+      "evidence": "docs/review/rebuild-01/substitution-window-controls/index.html"
+    },
+    {
+      "name": "monitor-smartphone",
+      "status": "redrawn-and-reviewed",
+      "alternative": "monitor",
+      "evidence": "docs/review/rebuild-01/cross-device/index.html"
+    },
+    {
+      "name": "screen-rotate",
+      "status": "redrawn-and-reviewed",
+      "alternative": "rotate-right",
+      "evidence": "docs/review/rebuild-01/screen-rotation/index.html"
+    },
+    {
+      "name": "brightness-auto",
+      "status": "excluded",
+      "alternative": null,
+      "evidence": "docs/review/rebuild-01/substitution-device-settings/index.html"
+    },
+    {
+      "name": "bluetooth-connected",
+      "status": "excluded",
+      "alternative": "bluetooth",
+      "evidence": "docs/review/rebuild-01/substitution-device-settings/index.html"
+    },
+    {
+      "name": "signal-bars",
+      "status": "redrawn-and-reviewed",
+      "alternative": "chart-bar",
+      "evidence": "docs/review/rebuild-01/cellular-signal/index.html"
+    },
+    {
+      "name": "signal-off",
+      "status": "excluded",
+      "alternative": null,
+      "evidence": "docs/review/rebuild-01/substitution-cellular-status/index.html"
+    },
+    {
+      "name": "hotspot",
+      "status": "redrawn-and-reviewed",
+      "alternative": "wifi",
+      "evidence": "docs/review/rebuild-01/device-connectivity/index.html"
+    },
+    {
+      "name": "nfc",
+      "status": "excluded",
+      "alternative": null,
+      "evidence": "docs/review/rebuild-01/substitution-device-settings/index.html"
+    },
+    {
+      "name": "sim-card",
+      "status": "redrawn-and-reviewed",
+      "alternative": "file",
+      "evidence": "docs/review/rebuild-01/device-connectivity/index.html"
+    },
+    {
+      "name": "record-circle",
+      "status": "excluded",
+      "alternative": "circle",
+      "evidence": "docs/review/rebuild-01/substitution-media-controls/index.html"
+    },
+    {
+      "name": "eject",
+      "status": "redrawn-and-reviewed",
+      "alternative": "stop",
+      "evidence": "docs/review/rebuild-01/media-eject/index.html"
+    },
+    {
+      "name": "play-queue",
+      "status": "excluded",
+      "alternative": "list-ordered",
+      "evidence": "docs/review/rebuild-01/substitution-media-queue/index.html"
+    },
+    {
+      "name": "queue-next",
+      "status": "excluded",
+      "alternative": "list-plus",
+      "evidence": "docs/review/rebuild-01/substitution-media-queue/index.html"
+    },
+    {
+      "name": "ab-repeat",
+      "status": "excluded",
+      "alternative": null,
+      "evidence": "docs/review/rebuild-01/substitution-media-values/index.html"
+    },
+    {
+      "name": "playback-speed",
+      "status": "excluded",
+      "alternative": null,
+      "evidence": "docs/review/rebuild-01/substitution-media-values/index.html"
+    },
+    {
+      "name": "captions-off",
+      "status": "excluded",
+      "alternative": "subtitles",
+      "evidence": "docs/review/rebuild-01/substitution-media-controls/index.html"
+    },
+    {
+      "name": "screen-share-off",
+      "status": "excluded",
+      "alternative": "stop",
+      "evidence": "docs/review/rebuild-01/substitution-media-controls/index.html"
+    },
+    {
+      "name": "passkey",
+      "status": "excluded",
+      "alternative": null,
+      "evidence": "docs/review/rebuild-01/substitution-passkey/index.html"
+    },
+    {
+      "name": "password-field",
+      "status": "excluded",
+      "alternative": null,
+      "evidence": "docs/review/rebuild-01/substitution-security-fields/index.html"
+    },
+    {
+      "name": "one-time-code",
+      "status": "excluded",
+      "alternative": null,
+      "evidence": "docs/review/rebuild-01/substitution-security-fields/index.html"
+    },
+    {
+      "name": "incognito",
+      "status": "redrawn-and-reviewed",
+      "alternative": "glasses",
+      "evidence": "docs/review/rebuild-01/private-browsing/index.html"
+    },
+    {
+      "name": "scan-qr-code",
+      "status": "excluded",
+      "alternative": "scan",
+      "evidence": "docs/review/rebuild-01/substitution-security-actions/index.html"
+    },
+    {
+      "name": "user-switch",
+      "status": "excluded",
+      "alternative": "arrow-left-right",
+      "evidence": "docs/review/rebuild-01/substitution-account-actions/index.html"
+    },
+    {
+      "name": "users-plus",
+      "status": "excluded",
+      "alternative": "user-plus",
+      "evidence": "docs/review/rebuild-01/substitution-account-actions/index.html"
+    },
+    {
+      "name": "shield-lock",
+      "status": "excluded",
+      "alternative": "lock",
+      "evidence": "docs/review/rebuild-01/substitution-security-actions/index.html"
+    },
+    {
+      "name": "bell-snooze",
+      "status": "redrawn-and-reviewed",
+      "alternative": "bell-off",
+      "evidence": "docs/review/rebuild-01/notification-pause/index.html"
+    },
+    {
+      "name": "stroke-cap-butt",
+      "status": "redrawn-and-reviewed",
+      "alternative": "stroke-cap-square",
+      "evidence": "docs/review/rebuild-01/stroke-caps/index.html"
+    },
+    {
+      "name": "stroke-cap-round",
+      "status": "redrawn-and-reviewed",
+      "alternative": "stroke-cap-butt",
+      "evidence": "docs/review/rebuild-01/stroke-caps/index.html"
+    },
+    {
+      "name": "stroke-cap-square",
+      "status": "redrawn-and-reviewed",
+      "alternative": "stroke-cap-butt",
+      "evidence": "docs/review/rebuild-01/stroke-caps/index.html"
+    },
+    {
+      "name": "stroke-join-miter",
+      "status": "redrawn-and-reviewed",
+      "alternative": "stroke-join-round",
+      "evidence": "docs/review/rebuild-01/stroke-joins/index.html"
+    },
+    {
+      "name": "stroke-join-round",
+      "status": "redrawn-and-reviewed",
+      "alternative": "stroke-join-miter",
+      "evidence": "docs/review/rebuild-01/stroke-joins/index.html"
+    },
+    {
+      "name": "stroke-join-bevel",
+      "status": "redrawn-and-reviewed",
+      "alternative": "stroke-join-miter",
+      "evidence": "docs/review/rebuild-01/stroke-joins/index.html"
+    },
+    {
+      "name": "stroke-double",
+      "status": "excluded",
+      "alternative": "equal",
+      "evidence": "docs/review/rebuild-01/substitution-line-styles/index.html"
+    },
+    {
+      "name": "stroke-dotted",
+      "status": "redrawn-and-reviewed",
+      "alternative": "more-horizontal",
+      "evidence": "docs/review/rebuild-01/stroke-patterns/index.html"
+    },
+    {
+      "name": "arc",
+      "status": "excluded",
+      "alternative": "spline",
+      "evidence": "docs/review/rebuild-01/substitution-line-meanings/index.html"
+    },
+    {
+      "name": "spiral",
+      "status": "redrawn-and-reviewed",
+      "alternative": "bezier-curve",
+      "evidence": "docs/review/rebuild-01/spiral/index.html"
+    },
+    {
+      "name": "line-segment",
+      "status": "redrawn-and-reviewed",
+      "alternative": "spline",
+      "evidence": "docs/review/rebuild-01/line-tools/index.html"
+    },
+    {
+      "name": "polyline",
+      "status": "redrawn-and-reviewed",
+      "alternative": "vector-polygon",
+      "evidence": "docs/review/rebuild-01/line-tools/index.html"
+    },
+    {
+      "name": "right-triangle",
+      "status": "redrawn-and-reviewed",
+      "alternative": "triangle",
+      "evidence": "docs/review/rebuild-01/polygon-tools/index.html"
+    },
+    {
+      "name": "parallelogram",
+      "status": "redrawn-and-reviewed",
+      "alternative": "square",
+      "evidence": "docs/review/rebuild-01/polygon-tools/index.html"
+    },
+    {
+      "name": "trapezoid",
+      "status": "redrawn-and-reviewed",
+      "alternative": "square",
+      "evidence": "docs/review/rebuild-01/polygon-tools/index.html"
+    },
+    {
+      "name": "semicircle",
+      "status": "excluded",
+      "alternative": null,
+      "evidence": "docs/review/rebuild-01/substitution-ellipse-angle/index.html"
+    },
+    {
+      "name": "sector",
+      "status": "redrawn-and-reviewed",
+      "alternative": "circle",
+      "evidence": "docs/review/rebuild-01/sector/index.html"
+    },
+    {
+      "name": "selection-add",
+      "status": "excluded",
+      "alternative": "boolean-union",
+      "evidence": "docs/review/rebuild-01/substitution-selection-modes/index.html"
+    },
+    {
+      "name": "selection-subtract",
+      "status": "excluded",
+      "alternative": "boolean-subtract",
+      "evidence": "docs/review/rebuild-01/substitution-selection-modes/index.html"
+    },
+    {
+      "name": "selection-intersect",
+      "status": "excluded",
+      "alternative": "boolean-intersect",
+      "evidence": "docs/review/rebuild-01/substitution-selection-modes/index.html"
+    },
+    {
+      "name": "selection-invert",
+      "status": "redrawn-and-reviewed",
+      "alternative": "selection",
+      "evidence": "docs/review/rebuild-01/selection-invert/index.html"
+    },
+    {
+      "name": "zoom-selection",
+      "status": "excluded",
+      "alternative": "focus",
+      "evidence": "docs/review/rebuild-01/substitution-zoom-controls/index.html"
+    },
+    {
+      "name": "zoom-actual-size",
+      "status": "excluded",
+      "alternative": null,
+      "evidence": "docs/review/rebuild-01/substitution-zoom-controls/index.html"
+    },
+    {
+      "name": "lock-aspect-ratio",
+      "status": "excluded",
+      "alternative": "lock",
+      "evidence": "docs/review/rebuild-01/substitution-controls/index.html"
+    },
+    {
+      "name": "unlock-aspect-ratio",
+      "status": "excluded",
+      "alternative": "unlock",
+      "evidence": "docs/review/rebuild-01/substitution-controls/index.html"
+    },
+    {
+      "name": "exposure",
+      "status": "excluded",
+      "alternative": "plus-minus",
+      "evidence": "docs/review/rebuild-01/substitution-exposure-controls/index.html"
+    },
+    {
+      "name": "color-temperature",
+      "status": "excluded",
+      "alternative": null,
+      "evidence": "docs/review/rebuild-01/substitution-white-balance/index.html"
+    },
+    {
+      "name": "color-tint",
+      "status": "excluded",
+      "alternative": null,
+      "evidence": "docs/review/rebuild-01/substitution-white-balance/index.html"
+    },
+    {
+      "name": "color-curves",
+      "status": "redrawn-and-reviewed",
+      "alternative": "chart-spline",
+      "evidence": "docs/review/rebuild-01/tone-tools/index.html"
+    },
+    {
+      "name": "color-levels",
+      "status": "redrawn-and-reviewed",
+      "alternative": "chart-histogram",
+      "evidence": "docs/review/rebuild-01/tone-tools/index.html"
+    },
+    {
+      "name": "vignette",
+      "status": "excluded",
+      "alternative": null,
+      "evidence": "docs/review/rebuild-01/substitution-vignette/index.html"
+    },
+    {
+      "name": "sharpen",
+      "status": "excluded",
+      "alternative": "triangle",
+      "evidence": "docs/review/rebuild-01/substitution-retouch-tools/index.html"
+    },
+    {
+      "name": "blur",
+      "status": "excluded",
+      "alternative": "droplet",
+      "evidence": "docs/review/rebuild-01/substitution-retouch-tools/index.html"
+    },
+    {
+      "name": "straighten",
+      "status": "excluded",
+      "alternative": "ruler",
+      "evidence": "docs/review/rebuild-01/substitution-straighten/index.html"
+    },
+    {
+      "name": "paste-plain-text",
+      "status": "excluded",
+      "alternative": "clipboard-paste",
+      "evidence": "docs/review/rebuild-01/substitution-paste-modes/index.html"
+    },
+    {
+      "name": "paste-values",
+      "status": "excluded",
+      "alternative": "clipboard-paste",
+      "evidence": "docs/review/rebuild-01/substitution-paste-modes/index.html"
+    },
+    {
+      "name": "paste-formula",
+      "status": "excluded",
+      "alternative": "clipboard-paste",
+      "evidence": "docs/review/rebuild-01/substitution-paste-modes/index.html"
+    },
+    {
+      "name": "paste-format",
+      "status": "excluded",
+      "alternative": "clipboard-paste",
+      "evidence": "docs/review/rebuild-01/substitution-paste-modes/index.html"
+    },
+    {
+      "name": "paste-link",
+      "status": "excluded",
+      "alternative": "clipboard-paste",
+      "evidence": "docs/review/rebuild-01/substitution-link-context/index.html"
+    },
+    {
+      "name": "format-painter",
+      "status": "excluded",
+      "alternative": "paint-roller",
+      "evidence": "docs/review/rebuild-01/substitution-clear-format-tools/index.html"
+    },
+    {
+      "name": "clear-contents",
+      "status": "excluded",
+      "alternative": "eraser",
+      "evidence": "docs/review/rebuild-01/substitution-clear-format-tools/index.html"
+    },
+    {
+      "name": "clear-highlighting",
+      "status": "excluded",
+      "alternative": "eraser",
+      "evidence": "docs/review/rebuild-01/substitution-clear-format-tools/index.html"
+    },
+    {
+      "name": "freeze-first-row",
+      "status": "excluded",
+      "alternative": "panel-top",
+      "evidence": "docs/review/rebuild-01/substitution-data-freezing/index.html"
+    },
+    {
+      "name": "freeze-first-column",
+      "status": "excluded",
+      "alternative": "panel-left",
+      "evidence": "docs/review/rebuild-01/substitution-data-freezing/index.html"
+    },
+    {
+      "name": "freeze-panes",
+      "status": "excluded",
+      "alternative": "panels-top-left",
+      "evidence": "docs/review/rebuild-01/substitution-data-freezing/index.html"
+    },
+    {
+      "name": "sort-a-z",
+      "status": "excluded",
+      "alternative": "sort-ascending",
+      "evidence": "docs/review/rebuild-01/substitution-text-sorting/index.html"
+    },
+    {
+      "name": "sort-z-a",
+      "status": "excluded",
+      "alternative": "sort-descending",
+      "evidence": "docs/review/rebuild-01/substitution-text-sorting/index.html"
+    },
+    {
+      "name": "decimal-increase",
+      "status": "redrawn-and-reviewed",
+      "alternative": "arrow-right",
+      "evidence": "docs/review/rebuild-01/decimal-places/index.html"
+    },
+    {
+      "name": "decimal-decrease",
+      "status": "redrawn-and-reviewed",
+      "alternative": "arrow-left",
+      "evidence": "docs/review/rebuild-01/decimal-places/index.html"
+    },
+    {
+      "name": "cell-reference-absolute",
+      "status": "excluded",
+      "alternative": "table",
+      "evidence": "docs/review/rebuild-01/substitution-table-fields/index.html"
+    },
+    {
+      "name": "cell-reference-relative",
+      "status": "excluded",
+      "alternative": "table",
+      "evidence": "docs/review/rebuild-01/substitution-table-fields/index.html"
+    },
+    {
+      "name": "fold-code",
+      "status": "excluded",
+      "alternative": "chevron-down",
+      "evidence": "docs/review/rebuild-01/substitution-code-navigation/index.html"
+    },
+    {
+      "name": "unfold-code",
+      "status": "excluded",
+      "alternative": "chevron-right",
+      "evidence": "docs/review/rebuild-01/substitution-code-navigation/index.html"
+    },
+    {
+      "name": "toggle-line-comment",
+      "status": "excluded",
+      "alternative": null,
+      "evidence": "docs/review/rebuild-01/substitution-code-editing/index.html"
+    },
+    {
+      "name": "toggle-block-comment",
+      "status": "excluded",
+      "alternative": null,
+      "evidence": "docs/review/rebuild-01/substitution-code-editing/index.html"
+    },
+    {
+      "name": "show-whitespace",
+      "status": "excluded",
+      "alternative": null,
+      "evidence": "docs/review/rebuild-01/substitution-code-editing/index.html"
+    },
+    {
+      "name": "multi-cursor",
+      "status": "excluded",
+      "alternative": null,
+      "evidence": "docs/review/rebuild-01/substitution-code-editing/index.html"
+    },
+    {
+      "name": "go-to-line",
+      "status": "excluded",
+      "alternative": null,
+      "evidence": "docs/review/rebuild-01/substitution-code-navigation/index.html"
+    },
+    {
+      "name": "matching-brackets",
+      "status": "excluded",
+      "alternative": null,
+      "evidence": "docs/review/rebuild-01/substitution-code-navigation/index.html"
+    },
+    {
+      "name": "font-size-increase",
+      "status": "excluded",
+      "alternative": "plus",
+      "evidence": "docs/review/rebuild-01/substitution-typography-values/index.html"
+    },
+    {
+      "name": "font-size-decrease",
+      "status": "excluded",
+      "alternative": "minus",
+      "evidence": "docs/review/rebuild-01/substitution-typography-values/index.html"
+    },
+    {
+      "name": "double-underline",
+      "status": "excluded",
+      "alternative": null,
+      "evidence": "docs/review/rebuild-01/substitution-text-effect-values/index.html"
+    },
+    {
+      "name": "dotted-underline",
+      "status": "excluded",
+      "alternative": null,
+      "evidence": "docs/review/rebuild-01/substitution-text-effect-values/index.html"
+    },
+    {
+      "name": "wavy-underline",
+      "status": "excluded",
+      "alternative": null,
+      "evidence": "docs/review/rebuild-01/substitution-text-effect-values/index.html"
+    },
+    {
+      "name": "overline",
+      "status": "excluded",
+      "alternative": null,
+      "evidence": "docs/review/rebuild-01/substitution-text-effect-values/index.html"
+    },
+    {
+      "name": "text-outline",
+      "status": "excluded",
+      "alternative": null,
+      "evidence": "docs/review/rebuild-01/substitution-text-effect-values/index.html"
+    },
+    {
+      "name": "drop-cap",
+      "status": "redrawn-and-reviewed",
+      "alternative": "case-upper",
+      "evidence": "docs/review/rebuild-01/drop-cap/index.html"
+    },
+    {
+      "name": "vertical-text",
+      "status": "excluded",
+      "alternative": null,
+      "evidence": "docs/review/rebuild-01/substitution-writing-layout/index.html"
+    },
+    {
+      "name": "priority-none",
+      "status": "excluded",
+      "alternative": "minus",
+      "evidence": "docs/review/rebuild-01/substitution-controls/index.html"
+    },
+    {
+      "name": "priority-low",
+      "status": "redrawn-and-reviewed",
+      "alternative": "flag",
+      "evidence": "docs/review/rebuild-01/task-priorities/index.html"
+    },
+    {
+      "name": "priority-medium",
+      "status": "redrawn-and-reviewed",
+      "alternative": "flag",
+      "evidence": "docs/review/rebuild-01/task-priorities/index.html"
+    },
+    {
+      "name": "priority-high",
+      "status": "redrawn-and-reviewed",
+      "alternative": "priority-low",
+      "evidence": "docs/review/rebuild-01/task-priorities/index.html"
+    },
+    {
+      "name": "priority-urgent",
+      "status": "excluded",
+      "alternative": "alert-circle",
+      "evidence": "docs/review/rebuild-01/substitution-controls/index.html"
+    },
+    {
+      "name": "milestone",
+      "status": "excluded",
+      "alternative": "diamond",
+      "evidence": "docs/review/rebuild-01/substitution-task-planning/index.html"
+    },
+    {
+      "name": "milestone-complete",
+      "status": "redrawn-and-reviewed",
+      "alternative": "diamond",
+      "evidence": "docs/review/rebuild-01/milestone-state/index.html"
+    },
+    {
+      "name": "sprint",
+      "status": "excluded",
+      "alternative": "calendar-range",
+      "evidence": "docs/review/rebuild-01/substitution-task-planning/index.html"
+    },
+    {
+      "name": "backlog",
+      "status": "excluded",
+      "alternative": "list",
+      "evidence": "docs/review/rebuild-01/substitution-task-planning/index.html"
+    },
+    {
+      "name": "subtask",
+      "status": "excluded",
+      "alternative": "list-tree",
+      "evidence": "docs/review/rebuild-01/substitution-task-relations/index.html"
+    },
+    {
+      "name": "task-dependency",
+      "status": "excluded",
+      "alternative": "link",
+      "evidence": "docs/review/rebuild-01/substitution-task-relations/index.html"
+    },
+    {
+      "name": "task-blocked",
+      "status": "excluded",
+      "alternative": "flag",
+      "evidence": "docs/review/rebuild-01/substitution-task-relations/index.html"
+    },
+    {
+      "name": "parent-task",
+      "status": "excluded",
+      "alternative": null,
+      "evidence": "docs/review/rebuild-01/substitution-task-relations/index.html"
+    },
+    {
+      "name": "task-split",
+      "status": "excluded",
+      "alternative": "git-branch",
+      "evidence": "docs/review/rebuild-01/substitution-task-commands-values/index.html"
+    },
+    {
+      "name": "task-merge",
+      "status": "excluded",
+      "alternative": "git-merge",
+      "evidence": "docs/review/rebuild-01/substitution-task-commands-values/index.html"
+    },
+    {
+      "name": "task-recurring",
+      "status": "excluded",
+      "alternative": "repeat",
+      "evidence": "docs/review/rebuild-01/substitution-actions/index.html"
+    },
+    {
+      "name": "task-template",
+      "status": "excluded",
+      "alternative": "layout-template",
+      "evidence": "docs/review/rebuild-01/substitution-navigation-context/index.html"
+    },
+    {
+      "name": "task-reopen",
+      "status": "excluded",
+      "alternative": "rotate-left",
+      "evidence": "docs/review/rebuild-01/substitution-actions/index.html"
+    },
+    {
+      "name": "task-delegate",
+      "status": "excluded",
+      "alternative": "user",
+      "evidence": "docs/review/rebuild-01/substitution-actions/index.html"
+    },
+    {
+      "name": "task-estimate",
+      "status": "excluded",
+      "alternative": null,
+      "evidence": "docs/review/rebuild-01/substitution-task-commands-values/index.html"
+    },
+    {
+      "name": "calendar-today",
+      "status": "excluded",
+      "alternative": null,
+      "evidence": "docs/review/rebuild-01/substitution-calendar-view-values/index.html"
+    },
+    {
+      "name": "calendar-day-view",
+      "status": "excluded",
+      "alternative": null,
+      "evidence": "docs/review/rebuild-01/substitution-calendar-view-values/index.html"
+    },
+    {
+      "name": "calendar-week",
+      "status": "excluded",
+      "alternative": null,
+      "evidence": "docs/review/rebuild-01/substitution-calendar-view-values/index.html"
+    },
+    {
+      "name": "calendar-agenda",
+      "status": "excluded",
+      "alternative": null,
+      "evidence": "docs/review/rebuild-01/substitution-calendar-view-values/index.html"
+    },
+    {
+      "name": "calendar-previous",
+      "status": "excluded",
+      "alternative": "chevron-left",
+      "evidence": "docs/review/rebuild-01/substitution-navigation-context/index.html"
+    },
+    {
+      "name": "calendar-next",
+      "status": "excluded",
+      "alternative": "chevron-right",
+      "evidence": "docs/review/rebuild-01/substitution-navigation-context/index.html"
+    },
+    {
+      "name": "calendar-start",
+      "status": "excluded",
+      "alternative": "calendar",
+      "evidence": "docs/review/rebuild-01/substitution-navigation-context/index.html"
+    },
+    {
+      "name": "calendar-end",
+      "status": "excluded",
+      "alternative": "calendar",
+      "evidence": "docs/review/rebuild-01/substitution-navigation-context/index.html"
+    },
+    {
+      "name": "calendar-alert",
+      "status": "excluded",
+      "alternative": "alert-circle",
+      "evidence": "docs/review/rebuild-01/substitution-calendar-date-actions/index.html"
+    },
+    {
+      "name": "calendar-reschedule",
+      "status": "excluded",
+      "alternative": "calendar",
+      "evidence": "docs/review/rebuild-01/substitution-calendar-date-actions/index.html"
+    },
+    {
+      "name": "inbox-in",
+      "status": "excluded",
+      "alternative": "inbox",
+      "evidence": "docs/review/rebuild-01/substitution-inbox-semantics/index.html"
+    },
+    {
+      "name": "inbox-out",
+      "status": "excluded",
+      "alternative": null,
+      "evidence": "docs/review/rebuild-01/substitution-inbox-semantics/index.html"
+    },
+    {
+      "name": "inbox-unread",
+      "status": "excluded",
+      "alternative": "inbox",
+      "evidence": "docs/review/rebuild-01/substitution-inbox-semantics/index.html"
+    },
+    {
+      "name": "inbox-done",
+      "status": "excluded",
+      "alternative": "check-circle",
+      "evidence": "docs/review/rebuild-01/substitution-inbox-semantics/index.html"
+    },
+    {
+      "name": "mail-unread",
+      "status": "excluded",
+      "alternative": "mail",
+      "evidence": "docs/review/rebuild-01/substitution-contextual/index.html"
+    },
+    {
+      "name": "mail-forward",
+      "status": "excluded",
+      "alternative": "forward",
+      "evidence": "docs/review/rebuild-01/substitution-actions/index.html"
+    },
+    {
+      "name": "mail-reply",
+      "status": "excluded",
+      "alternative": "reply",
+      "evidence": "docs/review/rebuild-01/substitution-actions/index.html"
+    },
+    {
+      "name": "mail-scheduled",
+      "status": "excluded",
+      "alternative": "clock",
+      "evidence": "docs/review/rebuild-01/substitution-actions/index.html"
+    },
+    {
+      "name": "mail-attachment",
+      "status": "excluded",
+      "alternative": "paperclip",
+      "evidence": "docs/review/rebuild-01/substitution-actions/index.html"
+    },
+    {
+      "name": "mail-important",
+      "status": "excluded",
+      "alternative": "flag",
+      "evidence": "docs/review/rebuild-01/substitution-actions/index.html"
+    },
+    {
+      "name": "filter-add",
+      "status": "excluded",
+      "alternative": "plus",
+      "evidence": "docs/review/rebuild-01/substitution-actions/index.html"
+    },
+    {
+      "name": "filter-save",
+      "status": "excluded",
+      "alternative": "save",
+      "evidence": "docs/review/rebuild-01/substitution-actions/index.html"
+    },
+    {
+      "name": "filter-check",
+      "status": "excluded",
+      "alternative": "check",
+      "evidence": "docs/review/rebuild-01/substitution-actions/index.html"
+    },
+    {
+      "name": "list-filter",
+      "status": "excluded",
+      "alternative": "filter",
+      "evidence": "docs/review/rebuild-01/substitution-data-commands/index.html"
+    },
+    {
+      "name": "group-by",
+      "status": "excluded",
+      "alternative": null,
+      "evidence": "docs/review/rebuild-01/substitution-data-values/index.html"
+    },
+    {
+      "name": "ungroup-rows",
+      "status": "excluded",
+      "alternative": null,
+      "evidence": "docs/review/rebuild-01/substitution-data-values/index.html"
+    },
+    {
+      "name": "density-compact",
+      "status": "excluded",
+      "alternative": null,
+      "evidence": "docs/review/rebuild-01/substitution-data-values/index.html"
+    },
+    {
+      "name": "density-comfortable",
+      "status": "excluded",
+      "alternative": null,
+      "evidence": "docs/review/rebuild-01/substitution-data-values/index.html"
+    },
+    {
+      "name": "columns-settings",
+      "status": "excluded",
+      "alternative": "layout-columns",
+      "evidence": "docs/review/rebuild-01/substitution-data-commands/index.html"
+    },
+    {
+      "name": "sort-multiple",
+      "status": "excluded",
+      "alternative": "sort-unsorted",
+      "evidence": "docs/review/rebuild-01/substitution-data-commands/index.html"
+    },
+    {
+      "name": "user-lock",
+      "status": "excluded",
+      "alternative": "lock",
+      "evidence": "docs/review/rebuild-01/substitution-account-states/index.html"
+    },
+    {
+      "name": "user-shield",
+      "status": "excluded",
+      "alternative": null,
+      "evidence": "docs/review/rebuild-01/substitution-account-role/index.html"
+    },
+    {
+      "name": "user-clock",
+      "status": "excluded",
+      "alternative": "clock",
+      "evidence": "docs/review/rebuild-01/substitution-account-states/index.html"
+    },
+    {
+      "name": "user-off",
+      "status": "excluded",
+      "alternative": "ban",
+      "evidence": "docs/review/rebuild-01/substitution-account-states/index.html"
+    },
+    {
+      "name": "users-minus",
+      "status": "excluded",
+      "alternative": "user-minus",
+      "evidence": "docs/review/rebuild-01/substitution-account-actions/index.html"
+    },
+    {
+      "name": "user-search",
+      "status": "excluded",
+      "alternative": "search",
+      "evidence": "docs/review/rebuild-01/substitution-controls/index.html"
+    },
+    {
+      "name": "link-lock",
+      "status": "excluded",
+      "alternative": "lock",
+      "evidence": "docs/review/rebuild-01/substitution-link-context/index.html"
+    },
+    {
+      "name": "link-expire",
+      "status": "excluded",
+      "alternative": "clock",
+      "evidence": "docs/review/rebuild-01/substitution-link-context/index.html"
+    },
+    {
+      "name": "link-copy",
+      "status": "excluded",
+      "alternative": "copy",
+      "evidence": "docs/review/rebuild-01/substitution-link-context/index.html"
+    },
+    {
+      "name": "link-settings",
+      "status": "excluded",
+      "alternative": "sliders",
+      "evidence": "docs/review/rebuild-01/substitution-link-context/index.html"
+    },
+    {
+      "name": "field-text",
+      "status": "excluded",
+      "alternative": "text-cursor",
+      "evidence": "docs/review/rebuild-01/substitution-form-types/index.html"
+    },
+    {
+      "name": "field-number",
+      "status": "excluded",
+      "alternative": "hash",
+      "evidence": "docs/review/rebuild-01/substitution-form-types/index.html"
+    },
+    {
+      "name": "field-dropdown",
+      "status": "excluded",
+      "alternative": "chevrons-up-down",
+      "evidence": "docs/review/rebuild-01/substitution-form-types/index.html"
+    },
+    {
+      "name": "field-multiselect",
+      "status": "excluded",
+      "alternative": "list-checks",
+      "evidence": "docs/review/rebuild-01/substitution-form-types/index.html"
+    },
+    {
+      "name": "signature",
+      "status": "redrawn-and-reviewed",
+      "alternative": "pencil",
+      "evidence": "docs/review/rebuild-01/signature/index.html"
+    },
+    {
+      "name": "form-section",
+      "status": "excluded",
+      "alternative": "heading",
+      "evidence": "docs/review/rebuild-01/substitution-form-types/index.html"
+    },
+    {
+      "name": "field-required",
+      "status": "excluded",
+      "alternative": "asterisk",
+      "evidence": "docs/review/rebuild-01/substitution-form-types/index.html"
+    },
+    {
+      "name": "field-attachment",
+      "status": "excluded",
+      "alternative": "paperclip",
+      "evidence": "docs/review/rebuild-01/substitution-tool-context/index.html"
+    },
+    {
+      "name": "field-rating",
+      "status": "excluded",
+      "alternative": "star",
+      "evidence": "docs/review/rebuild-01/substitution-tool-context/index.html"
+    },
+    {
+      "name": "field-textarea",
+      "status": "excluded",
+      "alternative": "text",
+      "evidence": "docs/review/rebuild-01/substitution-form-types/index.html"
+    },
+    {
+      "name": "trash-restore",
+      "status": "excluded",
+      "alternative": "rotate-left",
+      "evidence": "docs/review/rebuild-01/substitution-contextual/index.html"
+    },
+    {
+      "name": "trash-empty",
+      "status": "excluded",
+      "alternative": "trash",
+      "evidence": "docs/review/rebuild-01/substitution-contextual/index.html"
+    },
+    {
+      "name": "file-shortcut",
+      "status": "excluded",
+      "alternative": "link",
+      "evidence": "docs/review/rebuild-01/substitution-file-shortcuts/index.html"
+    },
+    {
+      "name": "file-shared",
+      "status": "excluded",
+      "alternative": "users",
+      "evidence": "docs/review/rebuild-01/substitution-file-sharing/index.html"
+    },
+    {
+      "name": "file-history",
+      "status": "excluded",
+      "alternative": "history",
+      "evidence": "docs/review/rebuild-01/substitution-contextual/index.html"
+    },
+    {
+      "name": "file-sync",
+      "status": "excluded",
+      "alternative": "refresh",
+      "evidence": "docs/review/rebuild-01/substitution-file-states/index.html"
+    },
+    {
+      "name": "folder-shared",
+      "status": "excluded",
+      "alternative": "users",
+      "evidence": "docs/review/rebuild-01/substitution-file-sharing/index.html"
+    },
+    {
+      "name": "folder-shortcut",
+      "status": "excluded",
+      "alternative": "link",
+      "evidence": "docs/review/rebuild-01/substitution-file-shortcuts/index.html"
+    },
+    {
+      "name": "folder-favorite",
+      "status": "excluded",
+      "alternative": "star",
+      "evidence": "docs/review/rebuild-01/substitution-file-states/index.html"
+    },
+    {
+      "name": "file-offline",
+      "status": "excluded",
+      "alternative": "check-circle",
+      "evidence": "docs/review/rebuild-01/substitution-file-states/index.html"
+    },
+    {
+      "name": "automation-trigger",
+      "status": "excluded",
+      "alternative": "zap",
+      "evidence": "docs/review/rebuild-01/substitution-automation-controls/index.html"
+    },
+    {
+      "name": "workflow-condition",
+      "status": "excluded",
+      "alternative": "diamond",
+      "evidence": "docs/review/rebuild-01/substitution-automation-controls/index.html"
+    },
+    {
+      "name": "workflow-parallel",
+      "status": "redrawn-and-reviewed",
+      "alternative": "arrow-right",
+      "evidence": "docs/review/rebuild-01/workflow-directions/index.html"
+    },
+    {
+      "name": "workflow-join",
+      "status": "redrawn-and-reviewed",
+      "alternative": "arrow-right",
+      "evidence": "docs/review/rebuild-01/workflow-directions/index.html"
+    },
+    {
+      "name": "workflow-delay",
+      "status": "excluded",
+      "alternative": "hourglass",
+      "evidence": "docs/review/rebuild-01/substitution-tool-context/index.html"
+    },
+    {
+      "name": "workflow-loop",
+      "status": "excluded",
+      "alternative": "repeat",
+      "evidence": "docs/review/rebuild-01/substitution-tool-context/index.html"
+    },
+    {
+      "name": "workflow-stop",
+      "status": "excluded",
+      "alternative": "stop",
+      "evidence": "docs/review/rebuild-01/substitution-tool-context/index.html"
+    },
+    {
+      "name": "workflow-run",
+      "status": "excluded",
+      "alternative": "play",
+      "evidence": "docs/review/rebuild-01/substitution-tool-context/index.html"
+    },
+    {
+      "name": "workflow-disabled",
+      "status": "excluded",
+      "alternative": null,
+      "evidence": "docs/review/rebuild-01/substitution-automation-controls/index.html"
+    },
+    {
+      "name": "workflow-log",
+      "status": "excluded",
+      "alternative": "history",
+      "evidence": "docs/review/rebuild-01/substitution-contextual/index.html"
+    },
+    {
+      "name": "select-all",
+      "status": "excluded",
+      "alternative": null,
+      "evidence": "docs/review/rebuild-01/substitution-navigation-selection/index.html"
+    },
+    {
+      "name": "deselect-all",
+      "status": "excluded",
+      "alternative": "x",
+      "evidence": "docs/review/rebuild-01/substitution-navigation-selection/index.html"
+    },
+    {
+      "name": "batch-edit",
+      "status": "excluded",
+      "alternative": "pencil",
+      "evidence": "docs/review/rebuild-01/substitution-tool-context/index.html"
+    },
+    {
+      "name": "batch-delete",
+      "status": "excluded",
+      "alternative": "trash",
+      "evidence": "docs/review/rebuild-01/substitution-tool-context/index.html"
+    },
+    {
+      "name": "batch-download",
+      "status": "excluded",
+      "alternative": "download",
+      "evidence": "docs/review/rebuild-01/substitution-tool-context/index.html"
+    },
+    {
+      "name": "breadcrumb",
+      "status": "excluded",
+      "alternative": null,
+      "evidence": "docs/review/rebuild-01/substitution-navigation-location/index.html"
+    },
+    {
+      "name": "pagination",
+      "status": "excluded",
+      "alternative": null,
+      "evidence": "docs/review/rebuild-01/substitution-navigation-location/index.html"
+    },
+    {
+      "name": "stepper",
+      "status": "excluded",
+      "alternative": null,
+      "evidence": "docs/review/rebuild-01/substitution-navigation-location/index.html"
+    },
+    {
+      "name": "carousel",
+      "status": "excluded",
+      "alternative": null,
+      "evidence": "docs/review/rebuild-01/substitution-navigation-entry/index.html"
+    },
+    {
+      "name": "command-palette",
+      "status": "excluded",
+      "alternative": null,
+      "evidence": "docs/review/rebuild-01/substitution-navigation-entry/index.html"
+    },
+    {
+      "name": "brand-html5",
+      "status": "redrawn-and-reviewed",
+      "alternative": "file-code",
+      "evidence": "docs/review/rebuild-01/html5/index.html"
+    }
+  ],
+  "errors": []
+}

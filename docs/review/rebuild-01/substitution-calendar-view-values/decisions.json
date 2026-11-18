@@ -1,0 +1,112 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "skillVersion": "0.5.18",
+  "viewed": [
+    "light.png",
+    "dark.png"
+  ],
+  "sizes": [
+    16,
+    20,
+    24
+  ],
+  "themes": [
+    "light",
+    "dark"
+  ],
+  "dpr": [
+    1
+  ],
+  "corner": "soft for existing icons; native controls and calendar content use natural dimensions",
+  "scope": "Two contextual existing-icon entries and four native-content controls replace six candidates. No rejected geometry retrieved. Calendar data is a fixed review fixture, not an application change.",
+  "userApproval": "pending",
+  "evidence": [
+    {
+      "path": "docs/review/rebuild-01/substitution-calendar-view-values/light.png",
+      "sha256": "83447b5230d5139addfab9bc3f9609ba6410bd4cd6f2a848c7450660b41399e5"
+    },
+    {
+      "path": "docs/review/rebuild-01/substitution-calendar-view-values/dark.png",
+      "sha256": "019f2ef7f110fdde6093a80cba73eee13793cbfad32d36dd07bb15e2eb44f07c"
+    }
+  ],
+  "items": [
+    {
+      "name": "calendar-today",
+      "label": "回到今天",
+      "alternative": null,
+      "alternativeLabel": "具名「今天」按鈕",
+      "replacementKind": "native-content",
+      "nativePreview": "<span>今天</span>",
+      "comparisonMarkup": "<span style=\"border:1px solid #8887;padding:4px 10px\">今天</span>",
+      "context": "行事曆日期導覽 · 回到目前日期",
+      "reason": "「今天」是跳到目前日期的命令，具名按鈕已清楚且符合常見桌面行事曆。固定日期的日曆圖不能代表每天改變的今天，不另外新增靶心或回轉箭頭。",
+      "replacementScope": "此替代是桌面具名導覽按鈕；行動介面若要顯示當日數字，應由控制項帶入日期，不以固定SVG假裝動態日期。",
+      "searchAliasDecision": "No icon alias: native calendar controls and content replace the candidate.",
+      "usageEvidence": [
+        "https://support.google.com/calendar/answer/6110849?co=GENIE.Platform%3DDesktop&hl=en",
+        "https://fullcalendar.io/docs/headerToolbar"
+      ],
+      "sample": "<fieldset data-calendar><legend>行事曆檢視</legend><div style=\"display:flex;gap:6px;align-items:center;flex-wrap:wrap\"><button aria-label=\"前一段期間\" data-calendar-step=\"-1\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><path d=\"M6 3.5L10.3586 7.8586A0.2 0.2 0 0 1 10.3586 8.1414L6 12.5\" transform=\"rotate(180 8 8)\"/></svg></button><button data-calendar-today>今天</button><button aria-label=\"後一段期間\" data-calendar-step=\"1\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><path d=\"M6 3.5L10.3586 7.8586A0.2 0.2 0 0 1 10.3586 8.1414L6 12.5\"/></svg></button><label>檢視 <select aria-label=\"行事曆檢視\" data-calendar-view><option value=\"day\" selected>日</option><option value=\"week\" >週</option><option value=\"agenda\" >議程</option></select></label></div><p><label>日期 <input aria-label=\"檢視日期\" type=\"date\" data-calendar-date value=\"2026-11-25\"></label></p><div data-calendar-preview><table data-calendar-mode=\"day\" style=\"border-collapse:collapse;width:100%;table-layout:fixed;font-size:11px;margin-top:10px\"><thead><tr><th style=\"width:38px\"></th><th data-calendar-day style=\"border:1px solid #8885;padding:4px 0\">11/25</th></tr></thead><tbody><tr><th style=\"font-weight:400\">09:00</th><td style=\"border:1px solid #8885;height:44px;padding:3px;vertical-align:top;overflow-wrap:anywhere\"></td></tr><tr><th style=\"font-weight:400\">10:00</th><td style=\"border:1px solid #8885;height:44px;padding:3px;vertical-align:top;overflow-wrap:anywhere\"></td></tr></tbody></table></div><small>審稿示例今天固定為 2026/11/18；內容預覽可切換。</small></fieldset>",
+      "visualObservation": "今天按鈕與前後箭頭並列，動作名稱不依賴固定日數或靶心符號。示例初始11/25，按下可回到固定的示例今天11/18。"
+    },
+    {
+      "name": "calendar-day-view",
+      "label": "日檢視",
+      "alternative": null,
+      "alternativeLabel": "檢視選單與實際行事曆內容",
+      "replacementKind": "native-content",
+      "nativePreview": "<span>日</span>",
+      "comparisonMarkup": "<span style=\"border:1px solid #8887;padding:4px 10px\">日</span>",
+      "context": "行事曆檢視選單 · 日／週／議程並列",
+      "reason": "日、週、議程是同一檢視選擇器的值。用具名選項及真正的時間格線或議程清單直接展示差異，不把細格線塞進日曆框內形成另一套微縮符號。",
+      "replacementScope": "適用具名檢視選擇器；不將週檢視與任意日期區間視為同義。議程顯示帶日期和時間的活動列表。",
+      "searchAliasDecision": "No icon alias: native calendar controls and content replace the candidate.",
+      "usageEvidence": [
+        "https://support.google.com/calendar/answer/6110849?co=GENIE.Platform%3DDesktop&hl=en",
+        "https://fullcalendar.io/docs/headerToolbar"
+      ],
+      "sample": "<fieldset data-calendar><legend>行事曆檢視</legend><div style=\"display:flex;gap:6px;align-items:center;flex-wrap:wrap\"><button aria-label=\"前一段期間\" data-calendar-step=\"-1\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><path d=\"M6 3.5L10.3586 7.8586A0.2 0.2 0 0 1 10.3586 8.1414L6 12.5\" transform=\"rotate(180 8 8)\"/></svg></button><button data-calendar-today>今天</button><button aria-label=\"後一段期間\" data-calendar-step=\"1\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><path d=\"M6 3.5L10.3586 7.8586A0.2 0.2 0 0 1 10.3586 8.1414L6 12.5\"/></svg></button><label>檢視 <select aria-label=\"行事曆檢視\" data-calendar-view><option value=\"day\" selected>日</option><option value=\"week\" >週</option><option value=\"agenda\" >議程</option></select></label></div><p><label>日期 <input aria-label=\"檢視日期\" type=\"date\" data-calendar-date value=\"2026-11-18\"></label></p><div data-calendar-preview><table data-calendar-mode=\"day\" style=\"border-collapse:collapse;width:100%;table-layout:fixed;font-size:11px;margin-top:10px\"><thead><tr><th style=\"width:38px\"></th><th data-calendar-day style=\"border:1px solid #8885;padding:4px 0\">11/18</th></tr></thead><tbody><tr><th style=\"font-weight:400\">09:00</th><td style=\"border:1px solid #8885;height:44px;padding:3px;vertical-align:top;overflow-wrap:anywhere\">設計討論</td></tr><tr><th style=\"font-weight:400\">10:00</th><td style=\"border:1px solid #8885;height:44px;padding:3px;vertical-align:top;overflow-wrap:anywhere\"></td></tr></tbody></table></div><small>審稿示例今天固定為 2026/11/18；內容預覽可切換。</small></fieldset>",
+      "visualObservation": "日檢視只顯示單一日期的時間格線；文字選單標出目前值，活動名稱保持可讀，不縮進16px日曆框。"
+    },
+    {
+      "name": "calendar-week",
+      "label": "週檢視",
+      "alternative": null,
+      "alternativeLabel": "檢視選單與實際行事曆內容",
+      "replacementKind": "native-content",
+      "nativePreview": "<span>週</span>",
+      "comparisonMarkup": "<span style=\"border:1px solid #8887;padding:4px 10px\">週</span>",
+      "context": "行事曆檢視選單 · 日／週／議程並列",
+      "reason": "日、週、議程是同一檢視選擇器的值。用具名選項及真正的時間格線或議程清單直接展示差異，不把細格線塞進日曆框內形成另一套微縮符號。",
+      "replacementScope": "適用具名檢視選擇器；不將週檢視與任意日期區間視為同義。議程顯示帶日期和時間的活動列表。",
+      "searchAliasDecision": "No icon alias: native calendar controls and content replace the candidate.",
+      "usageEvidence": [
+        "https://support.google.com/calendar/answer/6110849?co=GENIE.Platform%3DDesktop&hl=en",
+        "https://fullcalendar.io/docs/headerToolbar"
+      ],
+      "sample": "<fieldset data-calendar><legend>行事曆檢視</legend><div style=\"display:flex;gap:6px;align-items:center;flex-wrap:wrap\"><button aria-label=\"前一段期間\" data-calendar-step=\"-1\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><path d=\"M6 3.5L10.3586 7.8586A0.2 0.2 0 0 1 10.3586 8.1414L6 12.5\" transform=\"rotate(180 8 8)\"/></svg></button><button data-calendar-today>今天</button><button aria-label=\"後一段期間\" data-calendar-step=\"1\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><path d=\"M6 3.5L10.3586 7.8586A0.2 0.2 0 0 1 10.3586 8.1414L6 12.5\"/></svg></button><label>檢視 <select aria-label=\"行事曆檢視\" data-calendar-view><option value=\"day\" >日</option><option value=\"week\" selected>週</option><option value=\"agenda\" >議程</option></select></label></div><p><label>日期 <input aria-label=\"檢視日期\" type=\"date\" data-calendar-date value=\"2026-11-18\"></label></p><div data-calendar-preview><table data-calendar-mode=\"week\" style=\"border-collapse:collapse;width:100%;table-layout:fixed;font-size:11px;margin-top:10px\"><thead><tr><th style=\"width:38px\"></th><th data-calendar-day style=\"border:1px solid #8885;padding:4px 0\">11/16</th><th data-calendar-day style=\"border:1px solid #8885;padding:4px 0\">11/17</th><th data-calendar-day style=\"border:1px solid #8885;padding:4px 0\">11/18</th><th data-calendar-day style=\"border:1px solid #8885;padding:4px 0\">11/19</th><th data-calendar-day style=\"border:1px solid #8885;padding:4px 0\">11/20</th><th data-calendar-day style=\"border:1px solid #8885;padding:4px 0\">11/21</th><th data-calendar-day style=\"border:1px solid #8885;padding:4px 0\">11/22</th></tr></thead><tbody><tr><th style=\"font-weight:400\">09:00</th><td style=\"border:1px solid #8885;height:44px;padding:3px;vertical-align:top;overflow-wrap:anywhere\"></td><td style=\"border:1px solid #8885;height:44px;padding:3px;vertical-align:top;overflow-wrap:anywhere\"></td><td style=\"border:1px solid #8885;height:44px;padding:3px;vertical-align:top;overflow-wrap:anywhere\">設計討論</td><td style=\"border:1px solid #8885;height:44px;padding:3px;vertical-align:top;overflow-wrap:anywhere\"></td><td style=\"border:1px solid #8885;height:44px;padding:3px;vertical-align:top;overflow-wrap:anywhere\">交付審查</td><td style=\"border:1px solid #8885;height:44px;padding:3px;vertical-align:top;overflow-wrap:anywhere\"></td><td style=\"border:1px solid #8885;height:44px;padding:3px;vertical-align:top;overflow-wrap:anywhere\"></td></tr><tr><th style=\"font-weight:400\">10:00</th><td style=\"border:1px solid #8885;height:44px;padding:3px;vertical-align:top;overflow-wrap:anywhere\"></td><td style=\"border:1px solid #8885;height:44px;padding:3px;vertical-align:top;overflow-wrap:anywhere\"></td><td style=\"border:1px solid #8885;height:44px;padding:3px;vertical-align:top;overflow-wrap:anywhere\"></td><td style=\"border:1px solid #8885;height:44px;padding:3px;vertical-align:top;overflow-wrap:anywhere\">需求訪談</td><td style=\"border:1px solid #8885;height:44px;padding:3px;vertical-align:top;overflow-wrap:anywhere\"></td><td style=\"border:1px solid #8885;height:44px;padding:3px;vertical-align:top;overflow-wrap:anywhere\"></td><td style=\"border:1px solid #8885;height:44px;padding:3px;vertical-align:top;overflow-wrap:anywhere\"></td></tr></tbody></table></div><small>審稿示例今天固定為 2026/11/18；內容預覽可切換。</small></fieldset>",
+      "visualObservation": "七個日期列與活動所在日直接呈現週的範圍，並以日期標頭避免和任意區間混淆；明暗底下各日分界清楚。"
+    },
+    {
+      "name": "calendar-agenda",
+      "label": "議程清單",
+      "alternative": null,
+      "alternativeLabel": "檢視選單與實際行事曆內容",
+      "replacementKind": "native-content",
+      "nativePreview": "<span>議程</span>",
+      "comparisonMarkup": "<span style=\"border:1px solid #8887;padding:4px 10px\">議程</span>",
+      "context": "行事曆檢視選單 · 日／週／議程並列",
+      "reason": "日、週、議程是同一檢視選擇器的值。用具名選項及真正的時間格線或議程清單直接展示差異，不把細格線塞進日曆框內形成另一套微縮符號。",
+      "replacementScope": "適用具名檢視選擇器；不將週檢視與任意日期區間視為同義。議程顯示帶日期和時間的活動列表。",
+      "searchAliasDecision": "No icon alias: native calendar controls and content replace the candidate.",
+      "usageEvidence": [
+        "https://support.google.com/calendar/answer/6110849?co=GENIE.Platform%3DDesktop&hl=en",
+        "https://fullcalendar.io/docs/headerToolbar"
+      ],
+      "sample": "<fieldset data-calendar><legend>行事曆檢視</legend><div style=\"display:flex;gap:6px;align-items:center;flex-wrap:wrap\"><button aria-label=\"前一段期間\" data-calendar-step=\"-1\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><path d=\"M6 3.5L10.3586 7.8586A0.2 0.2 0 0 1 10.3586 8.1414L6 12.5\" transform=\"rotate(180 8 8)\"/></svg></button><button data-calendar-today>今天</button><button aria-label=\"後一段期間\" data-calendar-step=\"1\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><path d=\"M6 3.5L10.3586 7.8586A0.2 0.2 0 0 1 10.3586 8.1414L6 12.5\"/></svg></button><label>檢視 <select aria-label=\"行事曆檢視\" data-calendar-view><option value=\"day\" >日</option><option value=\"week\" >週</option><option value=\"agenda\" selected>議程</option></select></label></div><p><label>日期 <input aria-label=\"檢視日期\" type=\"date\" data-calendar-date value=\"2026-11-18\"></label></p><div data-calendar-preview><ol data-calendar-mode=\"agenda\" style=\"padding-left:20px\"><li>11/18 09:00 · 設計討論</li><li>11/19 10:00 · 需求訪談</li><li>11/20 09:00 · 交付審查</li></ol></div><small>審稿示例今天固定為 2026/11/18；內容預覽可切換。</small></fieldset>",
+      "visualObservation": "議程以日期、時間及活動名稱形成列表，和日／週時間格線有明確排版差異；選單文字提供切換入口，無需專用日曆加清單圖。"
+    }
+  ]
+}

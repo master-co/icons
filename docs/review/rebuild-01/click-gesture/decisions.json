@@ -1,0 +1,18 @@
+[
+  {
+    "name": "hand-click",
+    "reviewed": true,
+    "purpose": "在互動教學中表達一次點按，與移入指標、平移手掌和輸入游標並列。",
+    "recognitionCues": "伸出的食指、彎曲的其餘手指、共用的拇指及閉合掌緣，外側兩筆點按訊號。",
+    "confusableWith": ["hand", "mouse-pointer", "text-cursor"],
+    "sourceObservation": "Tabler 的放射短線直接指向點按，閉合掌緣也穩定，但三個彎曲指節在16px較密。Phosphor 以較少外露指節保持清楚，長指與開放腕部較輕；其接觸圓弧佔據上方空間。採用Tabler的伸指／放射訊號構造並如實記錄改作，Phosphor作密度與輪廓比較。",
+    "reason": "從既有hand抽出共用handSilhouette，原有手掌的拇指、掌緣及收掌曲線完全不變，只改手指姿態。彎曲指節簡化為兩個外露起伏，縮短內部指縫；16及20px分別安排食指寬度。初稿細線的斜訊號偏弱，三筆訊號在粗線端擠壓拇指空間；已改成向外分離的兩筆斜訊號，調整像素相位，並按square端帽的完整包絡保留畫布邊界。人體曲線在所有角型維持自然曲率，不為sharp拉成折線。",
+    "comparison": "最新稿重新與兩份固定來源在16／20／24px並列：比Tabler減少一列擁擠指節與兩側水平短線，指掌的內部空間更舒展；比Phosphor保留自家閉合掌緣及拇指的承接，與既有hand放在一起維持家族形態。食指仍高於彎曲手指，兩個放射訊號在原生細線端可見、粗線端不黏手。已查看明暗DPR1／2、三角型、三尺寸線寬兩端，以及母型→伸指→加入點按訊號的16px並排。",
+    "dashes": false,
+    "dashReason": "兩筆放射短線是離散的接觸訊號，不是虛線路徑；掌緣維持連續實線。",
+    "opacity": false,
+    "opacityReason": "手勢及接觸訊號都是必要資訊，不以淡化掩飾密度或相接問題。",
+    "usageEvidence": ["/Users/aron/master/packages/internal-site/src/docs-shell/components/InteractingIndicator.astro:10"],
+    "usageEvidenceLimit": "用於區分互動示例所需的手勢；一般具名按鈕不需要再加入點擊手勢作裝飾。"
+  }
+]

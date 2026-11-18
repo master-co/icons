@@ -1,0 +1,44 @@
+[
+  {
+    "dashes": true,
+    "dashReason": "只保留 selection 的四個連續角片段，表示共同選取範圍；省略中段短線以保留內部空間。",
+    "opacity": false,
+    "opacityReason": "兩個物件或兩側鏡像均需完整辨認，不使用淡化。",
+    "reviewed": true,
+    "name": "group",
+    "purpose": "多選畫布物件後合成可一起操作的群組，與選取、複製、解除群組並列。",
+    "recognitionCues": "共同四角邊界內的兩個錯列矩形；內部物件仍然分離。",
+    "confusableWith": [
+      "selection",
+      "copy",
+      "ungroup"
+    ],
+    "sourceObservation": "Lucide 的四角邊界能交代共同範圍，但內部兩矩形的相鄰橫邊較密；MDI 的點狀邊界提供另一種群組框解法，在小尺寸更零碎。",
+    "reason": "初次新稿使用兩個並排方塊，易形成眼睛般的輪廓，已改成錯列矩形。直接取用 selection 母型的四角，新增緊湊參數省略中段虛線、略向外安置；兩矩形以同一函式構造，拉開上下間距，不採重疊筆畫。 修正共同圓角上限使 soft／rounded 相同的問題，改為各原生尺寸獨立的兩組半徑。",
+    "comparison": "最新稿與 Lucide、MDI 並列後，保留 Lucide 的共同邊界結構，將中間兩物件分開，讓細窄接縫不再承擔分組語意。16px 最粗線寬下兩個內孔仍存在，四角與內物件各自分離。相較 MDI 點框較安靜；相比 Lucide 角型較小，與既有 selection 的微圓語言一致。明暗 DPR 1／2 的三角型均已查看。 最新 rounded 比 soft 有較圓的實際矩形輪廓，16px 最粗線寬仍保留兩個內孔，已重看四張明暗 DPR 圖。",
+    "usageEvidence": [
+      "https://help.figma.com/hc/en-us/articles/1500004292221-Select-move-and-order-objects-in-FigJam"
+    ]
+  },
+  {
+    "dashes": false,
+    "dashReason": "物件輪廓與鏡射軸是確定結構，沒有隱藏邊界。",
+    "opacity": false,
+    "opacityReason": "兩個物件或兩側鏡像均需完整辨認，不使用淡化。",
+    "reviewed": true,
+    "name": "ungroup",
+    "purpose": "解除畫布群組，將內容恢復為可獨立選取的物件。",
+    "recognitionCues": "兩個錯列且不相接的矩形，沒有共同外框。",
+    "confusableWith": [
+      "copy",
+      "selection",
+      "group"
+    ],
+    "sourceObservation": "Lucide 與 Hugeicons 都以兩個分開的橫矩形表達解除群組；Hugeicons 圓角較大，Lucide 外形更方正。兩者都沒有取消或刪除記號。",
+    "reason": "與 group 共用矩形構造，移除共同四角後增加單體佔幅，使純圖示工具列仍有足夠重量；與 copy 的遮擋重疊明確不同。未新增 ×、斷鏈或箭頭去猜測解除語意。 修正共同圓角上限使 soft／rounded 相同的問題，改為各原生尺寸獨立的兩組半徑。",
+    "comparison": "最新稿保留來源錯列矩形的熟悉輪廓，較 Hugeicons 減小圓角，避免小物件變成膠囊。16px 兩物件的垂直間距清楚，24px 的兩個相同內孔沒有一大一小；與 group、copy 及 selection 並排時分別為分開、共同邊界、重疊及空框。三尺寸、三角型和明暗 DPR 1／2 均已查看。 最新 rounded 比 soft 有較圓的實際矩形輪廓，16px 最粗線寬仍保留兩個內孔，已重看四張明暗 DPR 圖。",
+    "usageEvidence": [
+      "https://help.figma.com/hc/en-us/articles/1500004292221-Select-move-and-order-objects-in-FigJam"
+    ]
+  }
+]

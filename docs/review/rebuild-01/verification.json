@@ -1,0 +1,5360 @@
+{
+  "status": "completed-ai-review",
+  "date": "2026-11-18",
+  "scope": 433,
+  "redrawnAndVisuallyReviewed": 134,
+  "excluded": 299,
+  "pendingSelection": 0,
+  "catalog": 924,
+  "nativeSvg": 8316,
+  "original790NativeGeometry": "exactly preserved",
+  "reviewedBatches": [
+    "circle-states",
+    "directional-controls",
+    "project-symbols",
+    "headings-primary",
+    "headings-secondary",
+    "paragraph-tools",
+    "task-priorities",
+    "object-alignment-horizontal",
+    "object-alignment-vertical",
+    "identity-media-actions",
+    "boolean-combine",
+    "boolean-overlap",
+    "diagonal-movement",
+    "boundary-horizontal",
+    "boundary-vertical",
+    "directional-exchange",
+    "letter-case-uniform",
+    "letter-case-mixed",
+    "text-spacing",
+    "writing-direction",
+    "multi-column",
+    "table-header",
+    "table-insertion",
+    "cell-alignment",
+    "grouping",
+    "mirroring",
+    "node-type",
+    "path-connections",
+    "resize-axes",
+    "resize-diagonals",
+    "voting",
+    "numeric-tools",
+    "stroke-caps",
+    "stroke-joins",
+    "stroke-properties",
+    "stroke-patterns",
+    "text-color",
+    "cell-border-basics",
+    "cell-border-regions",
+    "cell-border-edges",
+    "milestone-state",
+    "cross-device",
+    "click-gesture",
+    "line-tools",
+    "polygon-tools",
+    "media-eject",
+    "text-search",
+    "replacement",
+    "cellular-signal",
+    "layer-mask",
+    "private-browsing",
+    "document-break",
+    "tab-stops-horizontal",
+    "tab-stops-centered",
+    "device-connectivity",
+    "screen-rotation",
+    "notification-pause",
+    "image-flow",
+    "footnote",
+    "selection-invert",
+    "decimal-places",
+    "drop-cap",
+    "spiral",
+    "sector",
+    "tone-tools",
+    "table-transpose",
+    "signature",
+    "workflow-directions",
+    "html5"
+  ],
+  "visualCoverage": {
+    "sizes": [
+      16,
+      20,
+      24
+    ],
+    "corners": [
+      "sharp",
+      "soft",
+      "rounded"
+    ],
+    "themes": [
+      "light",
+      "dark"
+    ],
+    "dpr": [
+      1,
+      2
+    ]
+  },
+  "checks": {
+    "searchMatrix": {
+      "queries": 406,
+      "errors": [],
+      "evidence": "docs/review/rebuild-01/checks/final-search-matrix.json"
+    },
+    "validationSnapshot": {
+      "purpose": "Stable validation of this rebuild while the user confirmed another conversation is actively changing the shared workspace.",
+      "root": "/Users/aron/master-icons/work/rebuild-01/validation",
+      "scope": {
+        "original": 790,
+        "retained": 134,
+        "excluded": 299,
+        "validatedCatalog": 924
+      },
+      "excludedConcurrentAddition": [
+        "brand-wechat-outline"
+      ],
+      "snapshotOnlyAdjustments": [
+        "Omit the concurrent brand-wechat-outline entry from brands.json.",
+        "Set brand export test totals to 89/88 unique geometries and omit the concurrent WeChat outline assertion.",
+        "Complete the copied dependency on collection-cards.mjs after its concurrent creation."
+      ],
+      "sharedWorkspace": "Concurrent brand artwork and application changes are preserved; validation of those additions belongs to the other task.",
+      "draftPolicy": "Snapshot contains current fresh rebuild and original baseline only; no rejected session drawings retrieved.",
+      "integrationFixes": [
+        "unfold-more resolves to chevrons-up-down",
+        "Brand browser tests use canonical OpenAI card for ChatGPT and count unique displayed brands",
+        "JSON-derived icon page mapping has an explicit type annotation"
+      ]
+    },
+    "workspaceScope": {
+      "validatedScopeNames": 924,
+      "retained": 134,
+      "excluded": 299,
+      "workspaceCatalog": 925,
+      "outsideScope": [
+        "brand-wechat-outline"
+      ],
+      "preservedConcurrentWork": true,
+      "limitations": "Concurrent additions are preserved, but not covered by this rebuild validation.",
+      "errors": []
+    },
+    "scope": {
+      "scope": 433,
+      "outlineRedrawn": 133,
+      "officialBrandAdaptations": 1,
+      "excluded": 299,
+      "pending": 0,
+      "exactCatalog": 924,
+      "nativeSvg": 8316,
+      "originalNativePreserved": 7110,
+      "reviewedEvidenceReferences": 536,
+      "distinctReviewSheets": 276,
+      "skillFilesIdentical": 9,
+      "skillVersion": "0.5.20",
+      "errors": [],
+      "evidence": "docs/review/rebuild-01/checks/final-scope-audit.json"
+    },
+    "currentVisualEvidence": {
+      "count": 134,
+      "outline": 133,
+      "brands": 1,
+      "errors": [],
+      "evidence": "docs/review/rebuild-01/checks/checkpoint-134-review-hashes.json"
+    },
+    "buildAndTests": {
+      "status": "passed",
+      "tasks": 17,
+      "unitTests": 60,
+      "scope": "Full build, geometry/public API/framework tests, all type checks, site UI contracts and translations, asset/notice/reference/ZIP validation.",
+      "evidence": "docs/review/rebuild-01/checks/final-check.log"
+    },
+    "reproducibility": {
+      "status": "passed",
+      "outputs": 140713,
+      "timezones": [
+        "UTC",
+        "Asia/Taipei"
+      ],
+      "evidence": "docs/review/rebuild-01/checks/final-reproducible.log"
+    },
+    "packagedConsumers": {
+      "status": "passed",
+      "packages": 6,
+      "fixture": "/Users/aron/master-icons/work/rebuild-01/validation/work/package-consumer-8X9Daz",
+      "evidence": "docs/review/rebuild-01/checks/final-package.log",
+      "html5": {
+        "fixture": "/Users/aron/master-icons/work/rebuild-01/validation/work/package-consumer-8X9Daz",
+        "packedSvgCount": 9,
+        "componentRenders": 90,
+        "frameworks": [
+          "react",
+          "vue",
+          "preact",
+          "svelte",
+          "astro"
+        ],
+        "variants": 9,
+        "searchKeywords": 5,
+        "errors": []
+      }
+    },
+    "browsers": {
+      "status": "passed",
+      "engines": [
+        "Chromium",
+        "Firefox",
+        "WebKit"
+      ],
+      "reviewTests": 27,
+      "siteTests": 123,
+      "frameworkTests": 4,
+      "evidence": [
+        "docs/review/rebuild-01/checks/final-review-browser.log",
+        "docs/review/rebuild-01/checks/final-site-browser.log",
+        "docs/review/rebuild-01/checks/final-framework-browser.log"
+      ],
+      "scope": "Review all-reference pagination, all-preset raster checks, native downloads, navigation and local contexts; site bilingual search, nine masters/downloads, keyboard and responsive flows; framework runtime identity and mask behavior."
+    },
+    "html5": {
+      "previousNames": 923,
+      "previousNativeVariants": 8307,
+      "officialPathCoordinates": "exact; concatenated without geometric redrawing",
+      "cornerAndStrokeRasterChecks": 45,
+      "errors": [],
+      "attribution": "W3C · CC-BY-3.0",
+      "review": "docs/review/rebuild-01/html5/index.html",
+      "browser": {
+        "browser": "chromium",
+        "nativeDownloads": 9,
+        "searches": 5,
+        "scope": "Nine native SVG download variants with correct viewBox, W3C attribution and CC-BY-3.0 license link; five bilingual searches. Brand silhouette remains unchanged by corner controls.",
+        "errors": []
+      }
+    },
+    "skill": {
+      "version": "0.5.20",
+      "filesIdentical": 9,
+      "repositoryAndInstalledValid": true,
+      "evidence": "docs/review/rebuild-01/checks/final-skill-validation.log"
+    },
+    "diffWhitespace": {
+      "status": "passed",
+      "evidence": "docs/review/rebuild-01/checks/final-diff-check.log"
+    },
+    "delivery": {
+      "inventory": 433,
+      "retained": 134,
+      "excluded": 299,
+      "localLinks": 721,
+      "filterAndSearch": "passed",
+      "errors": [],
+      "evidence": "docs/review/rebuild-01/checks/delivery-browser.json"
+    }
+  },
+  "remaining": "No implementation or verification tasks remain for this rebuild scope. Full checks ran in the documented isolated snapshot because another conversation is actively modifying the shared workspace. Concurrent additions are preserved but not covered. These are AI-reviewed candidates; maintainer aesthetic approval is not implied.",
+  "reviewer": "Codex (AI)",
+  "userApproval": "pending",
+  "skillVersion": "0.5.20",
+  "designMode": "fresh-start-without-session-drafts",
+  "latestSelectionReview": {
+    "scope": 35,
+    "kind": "Backfilled existing exclusion context evidence without changing selection or geometry",
+    "batches": [
+      "substitution-link-context",
+      "substitution-object-context",
+      "substitution-navigation-context",
+      "substitution-tool-context"
+    ],
+    "viewed": "16/20/24 soft on light/dark at DPR1; no rejected drawings displayed."
+  },
+  "latestDrawingReview": {
+    "batch": "html5",
+    "source": "Fresh W3C official source; original shield coordinates preserved, wordmark and tone layers omitted, native optical placement. No rejected drafts retrieved.",
+    "evidence": "docs/review/rebuild-01/html5/decisions.json"
+  },
+  "historicalBatchChecks": {
+    "assets": "passed: SVG hashes, geometry, notices, source references and 9 ZIPs",
+    "strokeRaster": {
+      "count": 4725,
+      "errors": [],
+      "evidence": "work/rebuild-01/checkpoint-105-strokes.json",
+      "scope": "Checkpoint 105 drawings unchanged; later signal-bars, layer-mask, incognito, page-break and tab stops covered by cellularStructure, maskStructure, incognitoStructure, pageBreakStructure and tabStopStructure at every supported stroke width. Checkpoint 115 hotspot and sim-card covered by deviceStructure at every supported width. Checkpoint 117 screen-rotate and bell-snooze covered by rotationNotificationStructure at every supported width. Checkpoint 120 image-flow covered by imageFlowStructure at every supported width. Checkpoint 121 footnote covered by footnoteStructure at every supported width. Checkpoint 122 selection-invert covered by selectionInvertStructure at every supported width. Checkpoint 124 decimalPlacesStructure covers both decimal controls at every supported width. Checkpoint 125 dropCapStructure covers the drop-cap control at every supported width. Checkpoint 126 spiralStructure covers the spiral at every supported width. Checkpoint 127 sectorStructure covers sector at every supported width. Checkpoint 129 toneToolsStructure covers both tone tools at every supported width. Checkpoint 130 transposeStructure covers table-transpose at every supported width. Checkpoint 131 signatureStructure covers signature at every supported width. Checkpoint 133 workflowStructure covers both workflow icons at every supported width."
+    },
+    "geometryTests": {
+      "passed": 12,
+      "failed": 0,
+      "suites": [
+        "contours",
+        "expansion-geometry"
+      ]
+    },
+    "browser": {
+      "browser": "chromium",
+      "surface": "standalone review",
+      "newIconDetailsAndDownloads": 105,
+      "substitutionSearches": 189,
+      "nativeContentReplacements": 45,
+      "synonymSearches": 182,
+      "errors": [],
+      "evidence": "work/rebuild-01/checkpoint-105-browser.json",
+      "scope": "Checkpoint 105 base browser coverage retained. Later account/file substitutions, checkpoint 106 cellular additions and checkpoint 107 mask/canvas-aid changes are separately covered by their named reports. Checkpoint 107 selection 254 adds six automation alias searches, 20 local state checks and four inspected screenshots; no new geometry. Checkpoint 108 securityBrowser covers new incognito details/downloads, four icon aliases, seven contextual replacement searches and 20 local control-state checks. Checkpoint 109 documentBrowser covers page-break details/downloads, four icon aliases, six contextual replacement searches and 20 local section/block state checks. Checkpoint 113 tabStopBrowser covers 36 native downloads, 18 searches, 144 ruler-position alignment assertions, 20 typography-control checks, actual ligature shaping differences, and PNG references in both standalone and served preview modes. Checkpoint 115 deviceBrowser covers 18 native downloads, 10 searches and 34 explicit device-state assertions. Checkpoint 117 rotationNotificationBrowser covers 18 native downloads, eight searches and 46 explicit orientation/notification-state assertions. Checkpoint 117 selection 270 adds three quote aliases, 106 local content-state assertions and four inspected screenshots; no new geometry. Checkpoint 117 selection 274 covers inbox navigation, unread versus triaged state and outgoing-queue independence; 12 current alias searches and eight inspected screenshots cover both content and inbox selection batches. Checkpoint 120 imageFlowBrowser covers 27 native downloads, six searches and 144 layout/control assertions, including actual image/text baseline positions. Checkpoint 120 selection 282 adds 136 code-control assertions, six alias searches and eight inspected screenshots covering gutter folding, language-dependent comments, whitespace layout preservation, multiple actual carets and code navigation. Checkpoint 121 footnoteBrowser covers nine downloads, two searches and 72 local reference/note and superscript assertions. Checkpoint 121 selection 284 covers selected/all-object bounds fitting, numeric 100% zoom, independent selection and unchanged model dimensions at DPR1/2, plus four focus alias searches. Checkpoint 121 selection 287 covers selection-tool Boolean modes with overlapping, contained, disjoint and whole-canvas input, persistent mode state, keyboard radio navigation, independent inversion, and twelve substitution searches. Checkpoint 122 selectionInvertBrowser covers nine downloads, three searches and independent selection/pixel inversion at both themes and DPR1/2. Checkpoint 122 selection 289 covers text-column direction glyphs, current aria-sort versus next-action labels, explicit locale/numeric string settings, typed numeric/date order, stable ties and whole-row preservation; ten substitution searches. Checkpoint 124 decimalPlacesBrowser covers 18 downloads, six searches and display-only decimal formatting at both themes and DPR1/2. Checkpoint 125 dropCapBrowser covers nine downloads, five searches and paragraph/margin initial layout at both themes and DPR1/2. Checkpoint 126 spiralBrowser covers nine downloads, four searches and independent spiral turns/growth at both themes and DPR1/2. Checkpoint 127 sectorBrowser covers nine downloads, four searches and 92 state checks at both themes and DPR1/2. Checkpoint 129 toneToolsBrowser covers 18 downloads, eight searches and 124 state checks in both themes and DPR1/2. Checkpoint 130 transposeBrowser covers nine downloads, five searches and 60 state checks in both themes and DPR1/2. Checkpoint 131 signatureBrowser covers nine downloads with source notices and five bilingual searches. Checkpoint 133 workflowBrowser covers eighteen downloads, ten bilingual searches and 44 local demo state checks."
+    },
+    "diffWhitespace": "passed",
+    "frameworkBuild": "passed: React, Preact, Vue, Svelte, Astro",
+    "alignmentCounters": {
+      "variants": 90,
+      "hollowCenterProbes": 180,
+      "errors": []
+    },
+    "actionSeparation": {
+      "variants": 135,
+      "expectedComponents": {
+        "id-card": "frame/shoulders, head, two text lines",
+        "archive-restore": "archive box and arrow",
+        "image-plus": "frame/landscape, sun dot, plus"
+      },
+      "errors": []
+    },
+    "exactCatalogUnion": "passed: original 790 + reviewed 133; no unreviewed additions",
+    "booleanSeparation": {
+      "variants": 180,
+      "hollowCenterProbes": 90,
+      "operandInteriorProbes": 180,
+      "errors": []
+    },
+    "freshStartIntegrity": {
+      "originalNativeVariants": 7110,
+      "exactCatalogNames": 923,
+      "rejectedSessionNamesInActiveBeforeReferences": 0,
+      "evidence": "work/rebuild-01/checkpoint-133-integrity.json"
+    },
+    "skillInstallSync": "passed: all 9 repository and installed skill files identical at 0.5.19; both quick_validate passed",
+    "directionalSeparation": {
+      "variants": 315,
+      "errors": []
+    },
+    "typographyCounters": {
+      "variants": 270,
+      "errors": [],
+      "smallestHoleInNativePixelsSquared": 0.5625
+    },
+    "reviewedGeometryAndScreenshotHashes": {
+      "count": 133,
+      "errors": [],
+      "evidence": "work/rebuild-01/checkpoint-133-review-hashes.json"
+    },
+    "writingAndColumnStructure": {
+      "variants": 270,
+      "errors": [],
+      "shaftProbes": 180,
+      "columnInteriorProbes": 315,
+      "smallestHoleInNativePixelsSquared": 10.0625
+    },
+    "tableStructure": {
+      "variants": 270,
+      "errors": [],
+      "smallestHoleInNativePixelsSquared": 6.90625
+    },
+    "canvasTransformStructure": {
+      "variants": 360,
+      "errors": [],
+      "smallestHoleInNativePixelsSquared": 3.515625
+    },
+    "canvasTransformCorners": {
+      "distinctCornerChecks": 12,
+      "ignoredAttributes": [
+        "stroke-linecap",
+        "stroke-linejoin"
+      ],
+      "errors": []
+    },
+    "types": "passed: type-check workflow, 11 successful tasks including build dependencies",
+    "vectorNodeStructure": {
+      "variants": 270,
+      "errors": [],
+      "nodeInteriorProbes": 540,
+      "tailProbes": 540,
+      "smallestHoleInNativePixelsSquared": 1.734375
+    },
+    "editorContextSubstitution": {
+      "unchangedNamedDrawings": 853,
+      "unchangedNativeVariants": 7677,
+      "screenshotHashes": 4,
+      "browser": "chromium",
+      "substitutionSearches": 125,
+      "newlyReviewedSubstitutions": 12,
+      "errors": []
+    },
+    "assetsEvidence": "work/rebuild-01/checkpoint-133-validate.log",
+    "typesEvidence": "work/rebuild-01/checkpoint-133-types.log",
+    "resizeArrowStructure": {
+      "variants": 360,
+      "errors": [],
+      "shaftProbes": 1080,
+      "wingProbes": 1440
+    },
+    "resizeArrowCorners": {
+      "distinctCornerChecks": 12,
+      "ignoredAttributes": [
+        "stroke-linecap",
+        "stroke-linejoin"
+      ],
+      "errors": []
+    },
+    "votingStructure": {
+      "variants": 180,
+      "errors": [],
+      "stemInteriorProbes": 1620,
+      "outlineProbes": 360,
+      "smallestHoleInNativePixelsSquared": 35.03125
+    },
+    "votingCorners": {
+      "distinctCornerChecks": 6,
+      "ignoredAttributes": [
+        "stroke-linecap",
+        "stroke-linejoin"
+      ],
+      "errors": []
+    },
+    "numericStructure": {
+      "variants": 180,
+      "errors": [],
+      "counterProbes": 1080,
+      "gapProbes": 180,
+      "intersectionProbes": 360,
+      "smallestHoleInNativePixelsSquared": 4.5
+    },
+    "strokeStyleStructure": {
+      "variants": 540,
+      "errors": [],
+      "semanticProbes": 2160,
+      "smallestHoleInNativePixelsSquared": null
+    },
+    "packagedConsumers": {
+      "status": "passed",
+      "packages": 6,
+      "fixture": "/Users/aron/master-icons/work/package-consumer-fBHV7L",
+      "evidence": "work/rebuild-01/checkpoint-133-package.log"
+    },
+    "reproducibility": {
+      "status": "passed",
+      "byteIdenticalOutputs": 132764,
+      "timezones": [
+        "UTC",
+        "Asia/Taipei"
+      ],
+      "evidence": "work/rebuild-01/checkpoint-81-reproducible.log",
+      "scope": "Checkpoint 81 only; not rerun for checkpoint 133."
+    },
+    "packedStrokeNotices": {
+      "packedSvgCount": 54,
+      "frameworkExports": 30,
+      "packageNotices": 6,
+      "licensedGeometryPackages": 1,
+      "errors": [],
+      "scope": "checkpoint 77; six cap/join diagrams only"
+    },
+    "strokePropertiesStructure": {
+      "variants": 180,
+      "errors": [],
+      "thicknessChecks": 90,
+      "curveProbes": 630,
+      "minimumBarGap": 2.25
+    },
+    "packedStrokeProperties": {
+      "packedSvgCount": 18,
+      "frameworkExports": 10,
+      "packageNotices": 6,
+      "licensedGeometryPackages": 1,
+      "errors": []
+    },
+    "pasteSelection": {
+      "unchangedNamedDrawings": 869,
+      "unchangedNativeVariants": 7821,
+      "screenshotHashes": 4,
+      "browser": "chromium",
+      "substitutionSearches": 147,
+      "synonymSearches": 8,
+      "newlyReviewedSubstitutions": 7,
+      "rejectedMisleadingKeyword": "paste-numbers",
+      "errors": []
+    },
+    "strokePatternStructure": {
+      "variants": 180,
+      "errors": [],
+      "componentChecks": 360,
+      "minimumGap": 1,
+      "minimumNativeDotPeak": 102
+    },
+    "packedStrokePatterns": {
+      "names": [
+        "stroke-dashed",
+        "stroke-dotted"
+      ],
+      "packedSvgCount": 18,
+      "frameworkExports": 10,
+      "packageNotices": 6,
+      "licensedGeometryPackages": 1,
+      "errors": [],
+      "evidence": "work/rebuild-01/checkpoint-81-packed-adapted-drawings.json"
+    },
+    "mathSelection": {
+      "unchangedNamedDrawings": 871,
+      "unchangedNativeVariants": 7839,
+      "screenshotHashes": 6,
+      "browser": "chromium",
+      "substitutionSearches": 150,
+      "synonymSearches": 4,
+      "nativeContentReplacements": 8,
+      "newlyReviewedExclusions": 10,
+      "rejectedMisleadingKeyword": "asymp",
+      "errors": [],
+      "evidence": "work/rebuild-01/checkpoint-81-selection-158-checks.json"
+    },
+    "styleValueSelection": {
+      "unchangedNamedDrawings": 871,
+      "unchangedNativeVariants": 7839,
+      "catalogAndAliases": "byte-identical",
+      "newlyReviewedExclusions": 8,
+      "nativeContentReplacements": 16,
+      "screenshotHashes": 4,
+      "interactiveStates": 54,
+      "themes": [
+        "light",
+        "dark"
+      ],
+      "browser": "chromium",
+      "errors": [],
+      "evidence": "work/rebuild-01/checkpoint-81-selection-166-checks.json"
+    },
+    "textColorStructure": {
+      "variants": 90,
+      "errors": [],
+      "smallestCounterInNativePixelsSquared": 5.28125,
+      "minRuleGap": 1.375,
+      "nativeSeparationChecks": 90
+    },
+    "colorSelection": {
+      "newlyReviewedExclusions": 2,
+      "existingIconSubstitutions": 1,
+      "nativeContentReplacements": 1,
+      "screenshotHashes": 2,
+      "visibleLabeledButtons": 6,
+      "errors": []
+    },
+    "packedTextColor": {
+      "name": "text-color",
+      "packedSvgCount": 9,
+      "keywordsVerified": 4,
+      "errors": [],
+      "evidence": "work/rebuild-01/checkpoint-82-packed-text-color.json"
+    },
+    "browserEvidence": "work/rebuild-01/checkpoint-101-browser.json",
+    "cellBorderStructure": {
+      "variants": 900,
+      "errors": [],
+      "componentChecks": 1800,
+      "edgeProbes": 5400,
+      "smallestCellInNativePixelsSquared": 15.609375
+    },
+    "packedCellBorders": {
+      "names": [
+        "border-all",
+        "border-none"
+      ],
+      "packedSvgCount": 18,
+      "frameworkExports": 10,
+      "packageNotices": 6,
+      "licensedGeometryPackages": 1,
+      "errors": [],
+      "evidence": "work/rebuild-01/checkpoint-84-packed-adapted-drawings.json"
+    },
+    "packedCellBorderOptions": {
+      "names": [
+        "border-outer",
+        "border-inner",
+        "border-horizontal",
+        "border-vertical",
+        "border-top",
+        "border-bottom",
+        "border-left",
+        "border-right"
+      ],
+      "packedSvgCount": 72,
+      "frameworkExports": 40,
+      "packageNotices": 6,
+      "licensedGeometryPackages": 1,
+      "errors": [],
+      "evidence": "work/rebuild-01/checkpoint-92-packed-adapted-drawings.json"
+    },
+    "pageSelection": {
+      "unchangedNamedDrawings": 882,
+      "unchangedNativeVariants": 7938,
+      "newlyReviewedExclusions": 10,
+      "contextualIconReplacements": 4,
+      "nativeContentReplacements": 6,
+      "screenshotHashes": 6,
+      "interactiveStates": 56,
+      "themes": [
+        "light",
+        "dark"
+      ],
+      "rejectedSearchTerms": [
+        "pagination for page-number",
+        "proof for print-preview"
+      ],
+      "errors": [],
+      "evidence": "work/rebuild-01/checkpoint-92-selection-178-checks.json"
+    },
+    "packedPageSelection": {
+      "namedDrawings": 882,
+      "contextualAliasesVerified": 4,
+      "nativeReplacementsNotAliased": 6,
+      "errors": [],
+      "evidence": "work/rebuild-01/checkpoint-92-selection-178-packed-catalog.json"
+    },
+    "taskSelection": {
+      "unchangedNamedDrawings": 882,
+      "unchangedNativeVariants": 7938,
+      "newlyReviewedExclusions": 10,
+      "contextualIconReplacements": 8,
+      "nativeContentReplacements": 2,
+      "screenshotHashes": 6,
+      "interactiveStates": 34,
+      "themes": [
+        "light",
+        "dark"
+      ],
+      "errors": [],
+      "evidence": "work/rebuild-01/checkpoint-92-selection-188-checks.json"
+    },
+    "packedTaskSelection": {
+      "namedDrawings": 882,
+      "contextualAliasesVerified": 8,
+      "nativeReplacementsNotAliased": 2,
+      "rejectedBroadTermsNotMigrated": 6,
+      "fixture": "work/package-consumer-hdfRGu/node_modules/@master/icons/dist/catalog.json",
+      "errors": [],
+      "evidence": "work/rebuild-01/checkpoint-92-selection-188-packed-catalog.json"
+    },
+    "milestoneStructure": {
+      "unchangedNamedDrawings": 882,
+      "unchangedNativeVariants": 7938,
+      "sharedDiamondEnclosures": 45,
+      "variants": 90,
+      "rasterComponentChecks": 270,
+      "errors": [],
+      "evidence": "work/rebuild-01/checkpoint-93-milestone-structure.json"
+    },
+    "calendarSelection": {
+      "newlyReviewedExclusions": 6,
+      "contextualIconReplacements": 2,
+      "nativeContentReplacements": 4,
+      "screenshotHashes": 4,
+      "interactiveStates": 60,
+      "themes": [
+        "light",
+        "dark"
+      ],
+      "errors": [],
+      "evidence": "work/rebuild-01/checkpoint-93-calendar-selection.json"
+    },
+    "packedMilestone": {
+      "fixture": "/Users/aron/master-icons/work/package-consumer-xwpe6S",
+      "packedSvgCount": 9,
+      "componentRenders": 90,
+      "frameworks": [
+        "react",
+        "vue",
+        "preact",
+        "svelte",
+        "astro"
+      ],
+      "variants": 9,
+      "contextualAliases": 2,
+      "nativeReplacementsNotAliased": 4,
+      "errors": [],
+      "evidence": "work/rebuild-01/checkpoint-93-packed-milestone.json"
+    },
+    "crossDeviceStructure": {
+      "unchangedNamedDrawings": 883,
+      "unchangedNativeVariants": 7947,
+      "variants": 99,
+      "componentChecks": 297,
+      "phoneCounterChecks": 297,
+      "errors": [],
+      "evidence": "work/rebuild-01/checkpoint-94-cross-device-structure.json"
+    },
+    "windowSelection": {
+      "newlyReviewedExclusions": 4,
+      "contextualIconReplacements": 4,
+      "screenshotHashes": 2,
+      "captionLabels": 24,
+      "themes": [
+        "light",
+        "dark"
+      ],
+      "scope": "Static control labels and state comparisons only; not window-management behavior.",
+      "errors": [],
+      "evidence": "work/rebuild-01/checkpoint-94-window-selection.json"
+    },
+    "packedCrossDevice": {
+      "fixture": "/Users/aron/master-icons/work/package-consumer-tsROXK",
+      "packedSvgCount": 9,
+      "componentRenders": 90,
+      "frameworks": [
+        "react",
+        "vue",
+        "preact",
+        "svelte",
+        "astro"
+      ],
+      "variants": 9,
+      "contextualAliases": 4,
+      "nativeReplacementsNotAliased": 0,
+      "errors": [],
+      "evidence": "work/rebuild-01/checkpoint-94-packed-cross-device.json"
+    },
+    "revisionSelection": {
+      "unchangedNamedDrawings": 884,
+      "unchangedNativeVariants": 7956,
+      "newlyReviewedExclusions": 8,
+      "contextualIconReplacements": 5,
+      "nativeContentReplacements": 3,
+      "screenshotHashes": 6,
+      "interactiveStates": 68,
+      "themes": [
+        "light",
+        "dark"
+      ],
+      "scope": "Local review fixtures, not a Tiptap integration test.",
+      "errors": [],
+      "evidence": "work/rebuild-01/checkpoint-94-selection-206-checks.json"
+    },
+    "revisionSearch": {
+      "browser": "chromium",
+      "surface": "standalone review",
+      "searches": 21,
+      "contextualReplacements": 5,
+      "nativeReplacementsWithoutAliases": 3,
+      "scope": "Eight newly excluded revision candidates only; geometry and previous downloads unchanged.",
+      "errors": [],
+      "evidence": "work/rebuild-01/checkpoint-94-selection-206-browser.json"
+    },
+    "packedRevisionSelection": {
+      "namedDrawings": 884,
+      "contextualAliasesVerified": 5,
+      "nativeReplacementsNotAliased": 3,
+      "catalog": "byte-equivalent parsed content to generated core catalog",
+      "archive": "work/rebuild-01/checkpoint-94-selection-206-core.tgz",
+      "errors": [],
+      "evidence": "work/rebuild-01/checkpoint-94-selection-206-packed-catalog.json"
+    },
+    "typesScope": "Checkpoint 133: test:types passed; current generated icon/framework types, Astro and Svelte checks; 8 tasks passed. Site and preview source types were not changed by this batch.",
+    "clickGestureStructure": {
+      "unchangedNamedDrawings": 884,
+      "unchangedNativeVariants": 7956,
+      "variants": 99,
+      "componentChecks": 297,
+      "counterProbes": 1188,
+      "boundsChecks": 99,
+      "errors": [],
+      "coarseHoleDiagnostics": 43,
+      "coarseHoleExplanation": "Background thresholding at DPR1/2 can produce tiny isolated pixels or open a subpixel curved edge. These diagnostics are retained separately. At native DPRs, the hand and two rays stay separate and four anatomical probes remain majority transparent; 8x probes are fully transparent and the hand has one connected cavity. Native screenshots were separately inspected.",
+      "evidence": "work/rebuild-01/checkpoint-95-click-structure.json"
+    },
+    "packedClickGesture": {
+      "fixture": "/Users/aron/master-icons/work/package-consumer-Xjx2bT",
+      "packedSvgCount": 9,
+      "componentRenders": 90,
+      "frameworks": [
+        "react",
+        "vue",
+        "preact",
+        "svelte",
+        "astro"
+      ],
+      "variants": 9,
+      "searchKeywords": 5,
+      "errors": [],
+      "evidence": "work/rebuild-01/checkpoint-95-packed-click.json"
+    },
+    "packedClickNotices": {
+      "names": [
+        "hand-click"
+      ],
+      "packedSvgCount": 9,
+      "frameworkExports": 5,
+      "packageNotices": 6,
+      "licensedGeometryPackages": 1,
+      "errors": [],
+      "evidence": "work/rebuild-01/checkpoint-95-packed-adapted-drawings.json"
+    },
+    "navigationSelection": {
+      "newlyExcluded": 7,
+      "nativeContentReplacements": 6,
+      "contextualIconReplacements": 1,
+      "unchangedNativeIcons": 885,
+      "unchangedNativeSvg": 7965,
+      "screenshotHashes": 8,
+      "interactiveStates": 56,
+      "searches": 11,
+      "browser": "chromium",
+      "themes": [
+        "light",
+        "dark"
+      ],
+      "substringSearchLimit": "select-all also finds x because it is a substring of deselect-all; select-all is not a catalog alias. Search ranking was not changed.",
+      "scope": "Local selection and navigation fixtures only; no production routing, record loading, command execution, or project creation.",
+      "errors": [],
+      "evidence": "work/rebuild-01/checkpoint-95-selection-213.json"
+    },
+    "packedNavigationSelection": {
+      "archive": "work/rebuild-01/checkpoint-95-selection-213-core.tgz",
+      "catalogExact": true,
+      "icons": 885,
+      "contextualTerms": 5,
+      "nativeControlsWithoutAliases": 6,
+      "errors": [],
+      "evidence": "work/rebuild-01/checkpoint-95-selection-213-packed-catalog.json"
+    },
+    "packagedConsumersScope": "Checkpoint 133: six packed consumers; 180 generic/fixed workflow renders across five frameworks, eighteen native SVGs, ten keywords and exact 923-name packed catalog.",
+    "lineToolStructure": {
+      "unchangedNamedDrawings": 885,
+      "unchangedNativeVariants": 7965,
+      "variants": 198,
+      "topologyChecks": 594,
+      "counterProbes": 1782,
+      "boundsChecks": 198,
+      "errors": [],
+      "coarseDiagnosticCount": 12,
+      "topologyScope": "Strict topology at 8x; native DPR1/2 node-center transparency probes. Threshold-based coarse pixel connectivity diagnostics are retained in the evidence, not claimed as perfect native topology.",
+      "evidence": "work/rebuild-01/checkpoint-97-line-structure.json"
+    },
+    "lineMeaningSelection": {
+      "items": 2,
+      "contextualIconReplacements": 1,
+      "nativeContentReplacements": 1,
+      "screenshotHashes": 2,
+      "controlChecks": 6,
+      "themes": [
+        "light",
+        "dark"
+      ],
+      "scope": "Static tool entry and text prompt verification; not an interactive drawing/editor implementation.",
+      "errors": [],
+      "evidence": "work/rebuild-01/checkpoint-97-line-selection.json"
+    },
+    "packedLineTools": {
+      "fixture": "/Users/aron/master-icons/work/package-consumer-4W7fXd",
+      "packedSvgCount": 18,
+      "componentRenders": 180,
+      "frameworks": [
+        "react",
+        "vue",
+        "preact",
+        "svelte",
+        "astro"
+      ],
+      "variants": 9,
+      "searchKeywords": 13,
+      "errors": [],
+      "evidence": "work/rebuild-01/checkpoint-97-packed-line-tools.json"
+    },
+    "packedPolylineNotices": {
+      "names": [
+        "polyline"
+      ],
+      "packedSvgCount": 9,
+      "frameworkExports": 5,
+      "packageNotices": 6,
+      "licensedGeometryPackages": 1,
+      "errors": [],
+      "evidence": "work/rebuild-01/checkpoint-97-packed-adapted-drawings.json"
+    },
+    "polygonStructure": {
+      "unchangedNamedDrawings": 887,
+      "unchangedNativeVariants": 7983,
+      "variants": 297,
+      "topologyChecks": 891,
+      "counterProbes": 891,
+      "boundsChecks": 297,
+      "coarseDiagnostics": [],
+      "errors": [],
+      "evidence": "work/rebuild-01/checkpoint-100-polygon-structure.json"
+    },
+    "packedPolygonTools": {
+      "fixture": "/Users/aron/master-icons/work/package-consumer-ZhVWg1",
+      "packedSvgCount": 27,
+      "componentRenders": 270,
+      "frameworks": [
+        "react",
+        "vue",
+        "preact",
+        "svelte",
+        "astro"
+      ],
+      "variants": 9,
+      "searchKeywords": 6,
+      "errors": [],
+      "evidence": "work/rebuild-01/checkpoint-100-packed-polygon-tools.json"
+    },
+    "dataControlSelection": {
+      "newlyExcluded": 10,
+      "contextualIconReplacements": 6,
+      "nativeContentReplacements": 4,
+      "unchangedNamedDrawings": 890,
+      "unchangedNativeSvg": 8010,
+      "screenshotHashes": 8,
+      "interactiveStates": 78,
+      "searches": 27,
+      "browser": "chromium",
+      "themes": [
+        "light",
+        "dark"
+      ],
+      "scope": "Local data control fixtures and current catalog searches; no external app integration.",
+      "rejectedSearchTerms": [
+        "freeze-cells"
+      ],
+      "errors": [],
+      "evidence": "work/rebuild-01/checkpoint-100-selection-225.json"
+    },
+    "packedDataControlSelection": {
+      "namedDrawings": 890,
+      "exactCurrentCatalog": true,
+      "contextualReplacements": 6,
+      "nativeReplacementsNotAliased": 4,
+      "keywords": 22,
+      "errors": [],
+      "evidence": "work/rebuild-01/checkpoint-100-selection-225-packed-catalog.json"
+    },
+    "ejectStructure": {
+      "unchangedNamedDrawings": 890,
+      "unchangedNativeVariants": 8010,
+      "variants": 99,
+      "topologyChecks": 297,
+      "counterProbes": 297,
+      "boundsChecks": 99,
+      "gapProbes": 297,
+      "coarseDiagnostics": [],
+      "errors": [],
+      "evidence": "work/rebuild-01/checkpoint-101-eject-structure.json"
+    },
+    "packedEject": {
+      "fixture": "/Users/aron/master-icons/work/package-consumer-ntZjcy",
+      "packedSvgCount": 9,
+      "componentRenders": 90,
+      "frameworks": [
+        "react",
+        "vue",
+        "preact",
+        "svelte",
+        "astro"
+      ],
+      "variants": 9,
+      "searchKeywords": 2,
+      "errors": [],
+      "evidence": "work/rebuild-01/checkpoint-101-packed-eject.json",
+      "exactCurrentCatalog": true
+    },
+    "mediaSelection": {
+      "newlyExcluded": 7,
+      "contextualIconReplacements": 5,
+      "nativeContentReplacements": 2,
+      "unchangedNamedDrawings": 891,
+      "unchangedNativeSvg": 8019,
+      "screenshotHashes": 10,
+      "interactiveStates": 52,
+      "searches": 23,
+      "browser": "chromium",
+      "themes": [
+        "light",
+        "dark"
+      ],
+      "scope": "Simulated recording/sharing/caption states, queue ordering and playback setting values only; no real media session.",
+      "errors": [],
+      "evidence": "work/rebuild-01/checkpoint-101-selection-232.json"
+    },
+    "textSearchStructure": {
+      "unchangedNamedDrawings": 891,
+      "unchangedNativeVariants": 8019,
+      "variants": 198,
+      "topologyChecks": 594,
+      "counterProbes": 891,
+      "boundsChecks": 198,
+      "gapProbes": 0,
+      "coarseDiagnostics": [],
+      "errors": [],
+      "evidence": "work/rebuild-01/checkpoint-103-text-search-structure.json"
+    },
+    "packedTextSearch": {
+      "fixture": "/Users/aron/master-icons/work/package-consumer-rZ0l7J",
+      "packedSvgCount": 18,
+      "componentRenders": 180,
+      "frameworks": [
+        "react",
+        "vue",
+        "preact",
+        "svelte",
+        "astro"
+      ],
+      "variants": 9,
+      "searchKeywords": 3,
+      "errors": [],
+      "exactCurrentCatalog": true,
+      "evidence": "work/rebuild-01/checkpoint-103-packed-text-search.json"
+    },
+    "replacementStructure": {
+      "unchangedNamedDrawings": 893,
+      "unchangedNativeVariants": 8037,
+      "variants": 198,
+      "topologyChecks": 594,
+      "counterProbes": 594,
+      "boundsChecks": 198,
+      "gapProbes": 0,
+      "coarseDiagnostics": [
+        {
+          "name": "replace",
+          "size": 16,
+          "corner": "rounded",
+          "width": 0.75,
+          "mode": "variable-source",
+          "scale": 1,
+          "ink": 8,
+          "holeAreas": []
+        },
+        {
+          "name": "replace",
+          "size": 16,
+          "corner": "rounded",
+          "width": 0.75,
+          "mode": "generated",
+          "scale": 1,
+          "ink": 8,
+          "holeAreas": []
+        },
+        {
+          "name": "replace-all",
+          "size": 16,
+          "corner": "rounded",
+          "width": 0.75,
+          "mode": "variable-source",
+          "scale": 1,
+          "ink": 10,
+          "holeAreas": []
+        },
+        {
+          "name": "replace-all",
+          "size": 16,
+          "corner": "rounded",
+          "width": 0.75,
+          "mode": "generated",
+          "scale": 1,
+          "ink": 10,
+          "holeAreas": []
+        }
+      ],
+      "errors": [],
+      "evidence": "work/rebuild-01/checkpoint-105-replacement-structure.json",
+      "topologyScope": "Strict component/hole topology at 8x; counter transparency at DPR1/2/8. Four threshold diagnostics remain only at 16px rounded 0.75px: native gray antialiasing was inspected separately rather than claimed as perfect binary connectivity."
+    },
+    "packedReplacement": {
+      "fixture": "/Users/aron/master-icons/work/package-consumer-VTRc35",
+      "packedSvgCount": 18,
+      "componentRenders": 180,
+      "frameworks": [
+        "react",
+        "vue",
+        "preact",
+        "svelte",
+        "astro"
+      ],
+      "variants": 9,
+      "searchKeywords": 7,
+      "errors": [],
+      "exactCurrentCatalog": true,
+      "evidence": "work/rebuild-01/checkpoint-105-packed-replacement.json"
+    },
+    "searchOptionSelection": {
+      "newlyExcluded": 2,
+      "contextualIconReplacements": 2,
+      "interactiveStates": 82,
+      "keywords": 6,
+      "screenshotHashes": 4,
+      "browser": "chromium",
+      "themes": [
+        "light",
+        "dark"
+      ],
+      "scope": "Local text search/replacement and simulated spelling cues only; no production editor or spelling engine.",
+      "errors": [],
+      "evidence": "work/rebuild-01/checkpoint-105-selection-234.json"
+    },
+    "packedReplacementNotices": {
+      "names": [
+        "replace",
+        "replace-all"
+      ],
+      "packedSvgCount": 18,
+      "frameworkExports": 10,
+      "packageNotices": 6,
+      "licensedGeometryPackages": 1,
+      "errors": [],
+      "evidence": "work/rebuild-01/checkpoint-105-packed-adapted-drawings.json"
+    },
+    "accountSelection": {
+      "newlyExcluded": 7,
+      "contextualIconReplacements": 6,
+      "nativeContentReplacements": 1,
+      "keywords": 18,
+      "screenshotHashes": 12,
+      "nativeGeometryUnchanged": 895,
+      "nativeSvgUnchanged": 8055,
+      "browser": "chromium",
+      "themes": [
+        "light",
+        "dark"
+      ],
+      "scope": "Local account and role state simulations; no real account or permission mutation.",
+      "errors": [],
+      "evidence": "work/rebuild-01/checkpoint-105-selection-241.json"
+    },
+    "accountSearch": {
+      "surface": "standalone review",
+      "accountSearches": 18,
+      "nativeRoleExactNameAbsent": true,
+      "errors": [],
+      "evidence": "work/rebuild-01/checkpoint-105-selection-241-browser.json"
+    },
+    "accountPackedCatalog": {
+      "package": "@master/icons",
+      "archive": "work/rebuild-01/checkpoint-105-selection-241-core.tgz",
+      "exactCurrentCatalog": true,
+      "catalogNames": 895,
+      "errors": [],
+      "evidence": "work/rebuild-01/checkpoint-105-selection-241-packed.json"
+    },
+    "fileStateSelection": {
+      "newlyExcluded": 7,
+      "contextualPersistentStateReplacements": 7,
+      "stateChecks": 28,
+      "browserSearches": 21,
+      "screenshotHashes": 12,
+      "nativeGeometryUnchanged": 895,
+      "nativeSvgUnchanged": 8055,
+      "browser": "chromium",
+      "themes": [
+        "light",
+        "dark"
+      ],
+      "scope": "Existing glyphs in persistent list/grid states. Local previews only; no file or permission operations.",
+      "errors": [],
+      "evidence": "work/rebuild-01/checkpoint-105-selection-248.json"
+    },
+    "fileStatePackedCatalog": {
+      "package": "@master/icons",
+      "archive": "work/rebuild-01/checkpoint-105-selection-248-core.tgz",
+      "exactCurrentCatalog": true,
+      "catalogNames": 895,
+      "errors": [],
+      "evidence": "work/rebuild-01/checkpoint-105-selection-248-packed.json"
+    },
+    "cellularStructure": {
+      "unchangedNamedDrawings": 895,
+      "unchangedNativeVariants": 8055,
+      "variants": 99,
+      "topologyChecks": 297,
+      "boundsChecks": 99,
+      "errors": [],
+      "evidence": "work/rebuild-01/checkpoint-106-cellular-structure.json"
+    },
+    "cellularBrowser": {
+      "browser": "chromium",
+      "newIcon": "signal-bars",
+      "nativeDownloads": 9,
+      "searches": 4,
+      "nativeContentExclusion": "signal-off",
+      "nativeContentScreenshotHashes": 2,
+      "licenseInDownloads": true,
+      "errors": [],
+      "evidence": "work/rebuild-01/checkpoint-106-browser.json"
+    },
+    "packedCellular": {
+      "fixture": "/Users/aron/master-icons/work/package-consumer-XYxyNE",
+      "packedSvgCount": 9,
+      "componentRenders": 90,
+      "frameworks": [
+        "react",
+        "vue",
+        "preact",
+        "svelte",
+        "astro"
+      ],
+      "variants": 9,
+      "searchKeywords": 4,
+      "errors": [],
+      "evidence": "work/rebuild-01/checkpoint-106-packed-cellular.json"
+    },
+    "packedCellularNotices": {
+      "names": [
+        "signal-bars"
+      ],
+      "packedSvgCount": 9,
+      "frameworkExports": 5,
+      "packageNotices": 6,
+      "licensedGeometryPackages": 1,
+      "errors": [],
+      "evidence": "work/rebuild-01/checkpoint-106-packed-adapted-drawings.json"
+    },
+    "maskStructure": {
+      "unchangedNamedDrawings": 896,
+      "unchangedNativeVariants": 8064,
+      "variants": 99,
+      "topologyChecks": 297,
+      "counterProbes": 297,
+      "boundsChecks": 99,
+      "gapProbes": 0,
+      "coarseDiagnostics": [
+        {
+          "name": "layer-mask",
+          "size": 16,
+          "corner": "rounded",
+          "width": 0.75,
+          "mode": "variable-source",
+          "scale": 1,
+          "ink": 5,
+          "holeAreas": [
+            12
+          ]
+        },
+        {
+          "name": "layer-mask",
+          "size": 16,
+          "corner": "rounded",
+          "width": 0.75,
+          "mode": "generated",
+          "scale": 1,
+          "ink": 5,
+          "holeAreas": [
+            12
+          ]
+        }
+      ],
+      "errors": [],
+      "evidence": "work/rebuild-01/checkpoint-107-mask-structure.json",
+      "topologyScope": "Strict two-component/two-hole topology at 8x; central aperture checked at DPR1/2/8. Two native threshold diagnostics occur for 16px rounded at 0.75px in source/generated rows. Original gray antialiasing, native view and enlarged diagnostic were visually inspected; no perfect binary-connectivity claim."
+    },
+    "maskBrowser": {
+      "browser": "chromium",
+      "newIcon": "layer-mask",
+      "nativeDownloads": 9,
+      "searches": 7,
+      "independentControlChecks": 12,
+      "nativeContentExclusion": "guides",
+      "contextualReplacement": "snap-to-grid → magnet",
+      "screenshotHashes": 4,
+      "errors": [],
+      "evidence": "work/rebuild-01/checkpoint-107-browser.json"
+    },
+    "packedMask": {
+      "fixture": "/Users/aron/master-icons/work/package-consumer-TLUDUH",
+      "packedSvgCount": 9,
+      "componentRenders": 90,
+      "frameworks": [
+        "react",
+        "vue",
+        "preact",
+        "svelte",
+        "astro"
+      ],
+      "variants": 9,
+      "searchKeywords": 4,
+      "errors": [],
+      "evidence": "work/rebuild-01/checkpoint-107-packed-mask.json"
+    },
+    "automationSelection": {
+      "newlyExcluded": 3,
+      "contextualReplacements": 2,
+      "nativeContentReplacements": 1,
+      "stateChecks": 20,
+      "browserSearches": 6,
+      "screenshotHashes": 4,
+      "nativeGeometryUnchanged": 897,
+      "nativeSvgUnchanged": 8073,
+      "browser": "chromium",
+      "themes": [
+        "light",
+        "dark"
+      ],
+      "scope": "Local event filtering, mutually exclusive condition branches, and persistent enable state independent of an existing run. Parallel/join remain pending. No external workflows executed.",
+      "errors": [],
+      "evidence": "work/rebuild-01/checkpoint-107-selection-254.json"
+    },
+    "automationPackedCatalog": {
+      "package": "work/rebuild-01/checkpoint-107-selection-254-core.tgz",
+      "catalogNames": 897,
+      "catalogExact": true,
+      "keywords": 6,
+      "nativeContentAliasAbsent": "workflow-disabled",
+      "errors": [],
+      "evidence": "work/rebuild-01/checkpoint-107-selection-254-packed.json"
+    },
+    "incognitoStructure": {
+      "unchangedNamedDrawings": 897,
+      "unchangedNativeVariants": 8073,
+      "variants": 99,
+      "topologyChecks": 297,
+      "counterProbes": 891,
+      "boundsChecks": 99,
+      "gapProbes": 297,
+      "coarseDiagnostics": [
+        {
+          "name": "incognito",
+          "size": 16,
+          "corner": "rounded",
+          "width": 0.75,
+          "mode": "variable-source",
+          "scale": 1,
+          "ink": 2,
+          "holeAreas": [
+            8,
+            8
+          ]
+        },
+        {
+          "name": "incognito",
+          "size": 16,
+          "corner": "rounded",
+          "width": 0.75,
+          "mode": "generated",
+          "scale": 1,
+          "ink": 2,
+          "holeAreas": [
+            8,
+            8
+          ]
+        }
+      ],
+      "errors": [],
+      "evidence": "work/rebuild-01/checkpoint-108-incognito-structure.json",
+      "topologyScope": "Strict two-component/three-counter topology at 8x; all three internal apertures and hat-to-spectacles corridor checked at DPR1/2/8. Two native threshold diagnostics occur for 16px rounded at 0.75px in source/generated rows: the thin antialiased crown does not close at the binary threshold. Native gray rendering and enlarged diagnostic were visually inspected; no perfect binary-connectivity claim.",
+      "diagnostic": "work/rebuild-01/incognito-detail.png"
+    },
+    "securityBrowser": {
+      "browser": "chromium",
+      "newIcon": "incognito",
+      "nativeDownloads": 9,
+      "searches": 11,
+      "localStateChecks": 20,
+      "screenshotHashes": 8,
+      "nativeContentExclusions": [
+        "password-field",
+        "one-time-code"
+      ],
+      "contextualReplacements": [
+        "scan-qr-code → scan",
+        "shield-lock → lock"
+      ],
+      "errors": [],
+      "evidence": "work/rebuild-01/checkpoint-108-browser.json"
+    },
+    "packedIncognito": {
+      "fixture": "/Users/aron/master-icons/work/package-consumer-A2sAXY",
+      "packedSvgCount": 9,
+      "componentRenders": 90,
+      "frameworks": [
+        "react",
+        "vue",
+        "preact",
+        "svelte",
+        "astro"
+      ],
+      "variants": 9,
+      "searchKeywords": 4,
+      "errors": [],
+      "evidence": "work/rebuild-01/checkpoint-108-packed-incognito.json"
+    },
+    "incognitoLicensedPackages": {
+      "names": [
+        "incognito"
+      ],
+      "packedSvgCount": 9,
+      "frameworkExports": 5,
+      "packageNotices": 6,
+      "licensedGeometryPackages": 1,
+      "errors": [],
+      "evidence": "work/rebuild-01/checkpoint-108-packed-adapted-drawings.json"
+    },
+    "skillCanonicalSymbols": {
+      "version": "0.5.20",
+      "identicalFiles": 9,
+      "hostValidation": "passed",
+      "repoValidation": "passed",
+      "scope": "Narrow authorship rule for canonical functional symbols; no invocation, external-action, or approval policy changed.",
+      "evidence": "work/rebuild-01/checkpoint-108-skill.json"
+    },
+    "pageBreakStructure": {
+      "unchangedNamedDrawings": 898,
+      "unchangedNativeVariants": 8082,
+      "variants": 99,
+      "topologyChecks": 297,
+      "gapProbes": 1188,
+      "boundsChecks": 99,
+      "fidelityChecks": 135,
+      "coarseDiagnostics": [],
+      "errors": [],
+      "evidence": "work/rebuild-01/checkpoint-109-page-break-structure.json",
+      "topologyScope": "Five components: upper folded page, lower page and three break segments. Checked at DPR1/2/8 for every supported width; no coarse-threshold diagnostics. Four whitespace probes per raster, padded bounds and source/generated raster equality. All 898 preceding native drawings unchanged after extracting fileParts."
+    },
+    "documentBrowser": {
+      "browser": "chromium",
+      "newIcon": "page-break",
+      "nativeDownloads": 9,
+      "searches": 10,
+      "localStateChecks": 20,
+      "screenshotHashes": 8,
+      "nativeContentExclusions": [
+        "section-break"
+      ],
+      "contextualReplacements": [
+        "block-insert-above → plus",
+        "block-insert-below → plus"
+      ],
+      "errors": [],
+      "evidence": "work/rebuild-01/checkpoint-109-browser.json"
+    },
+    "packedPageBreak": {
+      "fixture": "/Users/aron/master-icons/work/package-consumer-80PObA",
+      "packedSvgCount": 9,
+      "componentRenders": 90,
+      "frameworks": [
+        "react",
+        "vue",
+        "preact",
+        "svelte",
+        "astro"
+      ],
+      "variants": 9,
+      "searchKeywords": 4,
+      "errors": [],
+      "evidence": "work/rebuild-01/checkpoint-109-packed-page-break.json"
+    },
+    "pageBreakLicensedPackages": {
+      "names": [
+        "page-break"
+      ],
+      "packedSvgCount": 9,
+      "frameworkExports": 5,
+      "packageNotices": 6,
+      "licensedGeometryPackages": 1,
+      "errors": [],
+      "evidence": "work/rebuild-01/checkpoint-109-packed-adapted-drawings.json"
+    },
+    "tabStopStructure": {
+      "unchangedNamedDrawings": 899,
+      "unchangedNativeVariants": 8091,
+      "variants": 396,
+      "topologyChecks": 1188,
+      "boundsChecks": 396,
+      "sourceFidelity": 540,
+      "mirrorChecks": 27,
+      "dotGapChecks": 99,
+      "coarseDiagnostics": [],
+      "mirrorDiagnostics": [
+        {
+          "name": "tab-stop-right",
+          "kind": "right",
+          "size": 16,
+          "corner": "soft",
+          "width": 1.25,
+          "mode": "native-source",
+          "scale": 1,
+          "maxAlphaDifference": 1,
+          "note": "Exact mirrored source path; renderer antialiasing is not required to be bitwise symmetric."
+        },
+        {
+          "name": "tab-stop-right",
+          "kind": "right",
+          "size": 16,
+          "corner": "soft",
+          "width": 1.25,
+          "mode": "native-source",
+          "scale": 2,
+          "maxAlphaDifference": 4,
+          "note": "Exact mirrored source path; renderer antialiasing is not required to be bitwise symmetric."
+        },
+        {
+          "name": "tab-stop-right",
+          "kind": "right",
+          "size": 16,
+          "corner": "soft",
+          "width": 1.25,
+          "mode": "native-source",
+          "scale": 8,
+          "maxAlphaDifference": 10,
+          "note": "Exact mirrored source path; renderer antialiasing is not required to be bitwise symmetric."
+        },
+        {
+          "name": "tab-stop-right",
+          "kind": "right",
+          "size": 16,
+          "corner": "rounded",
+          "width": 1.25,
+          "mode": "native-source",
+          "scale": 2,
+          "maxAlphaDifference": 1,
+          "note": "Exact mirrored source path; renderer antialiasing is not required to be bitwise symmetric."
+        },
+        {
+          "name": "tab-stop-right",
+          "kind": "right",
+          "size": 16,
+          "corner": "rounded",
+          "width": 1.25,
+          "mode": "native-source",
+          "scale": 8,
+          "maxAlphaDifference": 10,
+          "note": "Exact mirrored source path; renderer antialiasing is not required to be bitwise symmetric."
+        },
+        {
+          "name": "tab-stop-right",
+          "kind": "right",
+          "size": 20,
+          "corner": "soft",
+          "width": 1.5,
+          "mode": "native-source",
+          "scale": 1,
+          "maxAlphaDifference": 1,
+          "note": "Exact mirrored source path; renderer antialiasing is not required to be bitwise symmetric."
+        },
+        {
+          "name": "tab-stop-right",
+          "kind": "right",
+          "size": 20,
+          "corner": "soft",
+          "width": 1.5,
+          "mode": "native-source",
+          "scale": 2,
+          "maxAlphaDifference": 7,
+          "note": "Exact mirrored source path; renderer antialiasing is not required to be bitwise symmetric."
+        },
+        {
+          "name": "tab-stop-right",
+          "kind": "right",
+          "size": 20,
+          "corner": "soft",
+          "width": 1.5,
+          "mode": "native-source",
+          "scale": 8,
+          "maxAlphaDifference": 14,
+          "note": "Exact mirrored source path; renderer antialiasing is not required to be bitwise symmetric."
+        },
+        {
+          "name": "tab-stop-right",
+          "kind": "right",
+          "size": 20,
+          "corner": "rounded",
+          "width": 1.5,
+          "mode": "native-source",
+          "scale": 1,
+          "maxAlphaDifference": 7,
+          "note": "Exact mirrored source path; renderer antialiasing is not required to be bitwise symmetric."
+        },
+        {
+          "name": "tab-stop-right",
+          "kind": "right",
+          "size": 20,
+          "corner": "rounded",
+          "width": 1.5,
+          "mode": "native-source",
+          "scale": 2,
+          "maxAlphaDifference": 10,
+          "note": "Exact mirrored source path; renderer antialiasing is not required to be bitwise symmetric."
+        },
+        {
+          "name": "tab-stop-right",
+          "kind": "right",
+          "size": 20,
+          "corner": "rounded",
+          "width": 1.5,
+          "mode": "native-source",
+          "scale": 8,
+          "maxAlphaDifference": 14,
+          "note": "Exact mirrored source path; renderer antialiasing is not required to be bitwise symmetric."
+        },
+        {
+          "name": "tab-stop-right",
+          "kind": "right",
+          "size": 24,
+          "corner": "soft",
+          "width": 1.75,
+          "mode": "native-source",
+          "scale": 1,
+          "maxAlphaDifference": 2,
+          "note": "Exact mirrored source path; renderer antialiasing is not required to be bitwise symmetric."
+        },
+        {
+          "name": "tab-stop-right",
+          "kind": "right",
+          "size": 24,
+          "corner": "soft",
+          "width": 1.75,
+          "mode": "native-source",
+          "scale": 2,
+          "maxAlphaDifference": 4,
+          "note": "Exact mirrored source path; renderer antialiasing is not required to be bitwise symmetric."
+        },
+        {
+          "name": "tab-stop-right",
+          "kind": "right",
+          "size": 24,
+          "corner": "soft",
+          "width": 1.75,
+          "mode": "native-source",
+          "scale": 8,
+          "maxAlphaDifference": 10,
+          "note": "Exact mirrored source path; renderer antialiasing is not required to be bitwise symmetric."
+        },
+        {
+          "name": "tab-stop-right",
+          "kind": "right",
+          "size": 24,
+          "corner": "rounded",
+          "width": 1.75,
+          "mode": "native-source",
+          "scale": 1,
+          "maxAlphaDifference": 4,
+          "note": "Exact mirrored source path; renderer antialiasing is not required to be bitwise symmetric."
+        },
+        {
+          "name": "tab-stop-right",
+          "kind": "right",
+          "size": 24,
+          "corner": "rounded",
+          "width": 1.75,
+          "mode": "native-source",
+          "scale": 2,
+          "maxAlphaDifference": 4,
+          "note": "Exact mirrored source path; renderer antialiasing is not required to be bitwise symmetric."
+        },
+        {
+          "name": "tab-stop-right",
+          "kind": "right",
+          "size": 24,
+          "corner": "rounded",
+          "width": 1.75,
+          "mode": "native-source",
+          "scale": 8,
+          "maxAlphaDifference": 9,
+          "note": "Exact mirrored source path; renderer antialiasing is not required to be bitwise symmetric."
+        }
+      ],
+      "errors": [],
+      "evidence": "work/rebuild-01/checkpoint-113-tab-stops-structure.json",
+      "topologyScope": "One connected marker; decimal additionally has one separate dot. All supported widths at DPR1/2/8, padded bounds, decimal gap and exact source/generated raster equality. Left/right source geometry is exactly mirrored and center/decimal share the exact tee body. Renderer antialiasing differences under reflection are recorded as diagnostics, not a bitwise-pixel symmetry guarantee. All preceding 899 native drawings remain unchanged."
+    },
+    "tabStopBrowser": {
+      "browser": "chromium",
+      "names": [
+        "tab-stop-left",
+        "tab-stop-right",
+        "tab-stop-center",
+        "tab-stop-decimal"
+      ],
+      "nativeDownloads": 36,
+      "searches": 18,
+      "rulerAlignmentChecks": 144,
+      "typographyStateChecks": 20,
+      "ligatureRenders": 4,
+      "referenceChecks": 16,
+      "referenceModes": [
+        "standalone embedded PNG",
+        "served binary PNG"
+      ],
+      "evidence": "work/rebuild-01/checkpoint-113-browser.json",
+      "errors": []
+    },
+    "packedTabStops": {
+      "fixture": "/Users/aron/master-icons/work/package-consumer-QUu5tC",
+      "packedSvgCount": 36,
+      "componentRenders": 360,
+      "frameworks": [
+        "react",
+        "vue",
+        "preact",
+        "svelte",
+        "astro"
+      ],
+      "variants": 9,
+      "searchKeywords": 12,
+      "errors": [],
+      "evidence": "work/rebuild-01/checkpoint-113-packed-tab-stops.json"
+    },
+    "referenceRasterSupport": {
+      "status": "passed",
+      "scope": "Original PNG reference buttons remain raster assets with upstream version, checksum and notices. Standalone embeds base64; served mode fetches binary PNG. SVG references retain fill none where explicit and inherit currentColor when fill was omitted. Review-report, review-craft and review-ui-batch share referenceMarkup for raster/vector markup.",
+      "browserEvidence": "work/rebuild-01/checkpoint-113-browser.json",
+      "utilitySmoke": "work/ui-v1/review/tab-stop-reference-smoke",
+      "limitation": "Utility smoke used tab-stop-decimal only; historical full-report generation was not repeated.",
+      "utilityEvidence": "work/rebuild-01/checkpoint-113-reference-markup.json"
+    },
+    "deviceStructure": {
+      "unchangedNamedDrawings": 903,
+      "unchangedNativeVariants": 8127,
+      "variants": 198,
+      "topologyChecks": 594,
+      "gapProbes": 693,
+      "boundsChecks": 198,
+      "fidelityChecks": 270,
+      "coarseDiagnostics": [
+        {
+          "name": "hotspot",
+          "size": 16,
+          "corner": "sharp",
+          "width": 1.25,
+          "mode": "native-source",
+          "expectedComponents": 3,
+          "scale": 1,
+          "components": 2,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "hotspot",
+          "size": 16,
+          "corner": "sharp",
+          "width": 0.75,
+          "mode": "variable-source",
+          "expectedComponents": 3,
+          "scale": 1,
+          "components": 6,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "hotspot",
+          "size": 16,
+          "corner": "sharp",
+          "width": 0.75,
+          "mode": "generated",
+          "expectedComponents": 3,
+          "scale": 1,
+          "components": 6,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "hotspot",
+          "size": 16,
+          "corner": "sharp",
+          "width": 1.25,
+          "mode": "variable-source",
+          "expectedComponents": 3,
+          "scale": 1,
+          "components": 2,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "hotspot",
+          "size": 16,
+          "corner": "sharp",
+          "width": 1.25,
+          "mode": "generated",
+          "expectedComponents": 3,
+          "scale": 1,
+          "components": 2,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "hotspot",
+          "size": 16,
+          "corner": "sharp",
+          "width": 1.5,
+          "mode": "variable-source",
+          "expectedComponents": 3,
+          "scale": 1,
+          "components": 2,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "hotspot",
+          "size": 16,
+          "corner": "sharp",
+          "width": 1.5,
+          "mode": "generated",
+          "expectedComponents": 3,
+          "scale": 1,
+          "components": 2,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "hotspot",
+          "size": 16,
+          "corner": "soft",
+          "width": 1.25,
+          "mode": "native-source",
+          "expectedComponents": 3,
+          "scale": 1,
+          "components": 2,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "hotspot",
+          "size": 16,
+          "corner": "soft",
+          "width": 0.75,
+          "mode": "variable-source",
+          "expectedComponents": 3,
+          "scale": 1,
+          "components": 6,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "hotspot",
+          "size": 16,
+          "corner": "soft",
+          "width": 0.75,
+          "mode": "generated",
+          "expectedComponents": 3,
+          "scale": 1,
+          "components": 6,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "hotspot",
+          "size": 16,
+          "corner": "soft",
+          "width": 1.25,
+          "mode": "variable-source",
+          "expectedComponents": 3,
+          "scale": 1,
+          "components": 2,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "hotspot",
+          "size": 16,
+          "corner": "soft",
+          "width": 1.25,
+          "mode": "generated",
+          "expectedComponents": 3,
+          "scale": 1,
+          "components": 2,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "hotspot",
+          "size": 16,
+          "corner": "soft",
+          "width": 1.5,
+          "mode": "variable-source",
+          "expectedComponents": 3,
+          "scale": 1,
+          "components": 2,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "hotspot",
+          "size": 16,
+          "corner": "soft",
+          "width": 1.5,
+          "mode": "generated",
+          "expectedComponents": 3,
+          "scale": 1,
+          "components": 2,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "hotspot",
+          "size": 16,
+          "corner": "rounded",
+          "width": 1.25,
+          "mode": "native-source",
+          "expectedComponents": 3,
+          "scale": 1,
+          "components": 2,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "hotspot",
+          "size": 16,
+          "corner": "rounded",
+          "width": 0.75,
+          "mode": "variable-source",
+          "expectedComponents": 3,
+          "scale": 1,
+          "components": 6,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "hotspot",
+          "size": 16,
+          "corner": "rounded",
+          "width": 0.75,
+          "mode": "generated",
+          "expectedComponents": 3,
+          "scale": 1,
+          "components": 6,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "hotspot",
+          "size": 16,
+          "corner": "rounded",
+          "width": 1.25,
+          "mode": "variable-source",
+          "expectedComponents": 3,
+          "scale": 1,
+          "components": 2,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "hotspot",
+          "size": 16,
+          "corner": "rounded",
+          "width": 1.25,
+          "mode": "generated",
+          "expectedComponents": 3,
+          "scale": 1,
+          "components": 2,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "hotspot",
+          "size": 16,
+          "corner": "rounded",
+          "width": 1.5,
+          "mode": "variable-source",
+          "expectedComponents": 3,
+          "scale": 1,
+          "components": 2,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "hotspot",
+          "size": 16,
+          "corner": "rounded",
+          "width": 1.5,
+          "mode": "generated",
+          "expectedComponents": 3,
+          "scale": 1,
+          "components": 2,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "hotspot",
+          "size": 20,
+          "corner": "sharp",
+          "width": 1.75,
+          "mode": "variable-source",
+          "expectedComponents": 3,
+          "scale": 1,
+          "components": 2,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "hotspot",
+          "size": 20,
+          "corner": "sharp",
+          "width": 1.75,
+          "mode": "generated",
+          "expectedComponents": 3,
+          "scale": 1,
+          "components": 2,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "hotspot",
+          "size": 20,
+          "corner": "sharp",
+          "width": 2,
+          "mode": "variable-source",
+          "expectedComponents": 3,
+          "scale": 1,
+          "components": 2,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "hotspot",
+          "size": 20,
+          "corner": "sharp",
+          "width": 2,
+          "mode": "generated",
+          "expectedComponents": 3,
+          "scale": 1,
+          "components": 2,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "hotspot",
+          "size": 20,
+          "corner": "soft",
+          "width": 1.75,
+          "mode": "variable-source",
+          "expectedComponents": 3,
+          "scale": 1,
+          "components": 2,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "hotspot",
+          "size": 20,
+          "corner": "soft",
+          "width": 1.75,
+          "mode": "generated",
+          "expectedComponents": 3,
+          "scale": 1,
+          "components": 2,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "hotspot",
+          "size": 20,
+          "corner": "soft",
+          "width": 2,
+          "mode": "variable-source",
+          "expectedComponents": 3,
+          "scale": 1,
+          "components": 2,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "hotspot",
+          "size": 20,
+          "corner": "soft",
+          "width": 2,
+          "mode": "generated",
+          "expectedComponents": 3,
+          "scale": 1,
+          "components": 2,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "hotspot",
+          "size": 20,
+          "corner": "rounded",
+          "width": 1.75,
+          "mode": "variable-source",
+          "expectedComponents": 3,
+          "scale": 1,
+          "components": 2,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "hotspot",
+          "size": 20,
+          "corner": "rounded",
+          "width": 1.75,
+          "mode": "generated",
+          "expectedComponents": 3,
+          "scale": 1,
+          "components": 2,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "hotspot",
+          "size": 20,
+          "corner": "rounded",
+          "width": 2,
+          "mode": "variable-source",
+          "expectedComponents": 3,
+          "scale": 1,
+          "components": 2,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "hotspot",
+          "size": 20,
+          "corner": "rounded",
+          "width": 2,
+          "mode": "generated",
+          "expectedComponents": 3,
+          "scale": 1,
+          "components": 2,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "hotspot",
+          "size": 24,
+          "corner": "sharp",
+          "width": 2.25,
+          "mode": "variable-source",
+          "expectedComponents": 3,
+          "scale": 1,
+          "components": 2,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "hotspot",
+          "size": 24,
+          "corner": "sharp",
+          "width": 2.25,
+          "mode": "generated",
+          "expectedComponents": 3,
+          "scale": 1,
+          "components": 2,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "hotspot",
+          "size": 24,
+          "corner": "sharp",
+          "width": 2.5,
+          "mode": "variable-source",
+          "expectedComponents": 3,
+          "scale": 1,
+          "components": 2,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "hotspot",
+          "size": 24,
+          "corner": "sharp",
+          "width": 2.5,
+          "mode": "generated",
+          "expectedComponents": 3,
+          "scale": 1,
+          "components": 2,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "hotspot",
+          "size": 24,
+          "corner": "soft",
+          "width": 2.25,
+          "mode": "variable-source",
+          "expectedComponents": 3,
+          "scale": 1,
+          "components": 2,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "hotspot",
+          "size": 24,
+          "corner": "soft",
+          "width": 2.25,
+          "mode": "generated",
+          "expectedComponents": 3,
+          "scale": 1,
+          "components": 2,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "hotspot",
+          "size": 24,
+          "corner": "soft",
+          "width": 2.5,
+          "mode": "variable-source",
+          "expectedComponents": 3,
+          "scale": 1,
+          "components": 2,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "hotspot",
+          "size": 24,
+          "corner": "soft",
+          "width": 2.5,
+          "mode": "generated",
+          "expectedComponents": 3,
+          "scale": 1,
+          "components": 2,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "hotspot",
+          "size": 24,
+          "corner": "rounded",
+          "width": 2.25,
+          "mode": "variable-source",
+          "expectedComponents": 3,
+          "scale": 1,
+          "components": 2,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "hotspot",
+          "size": 24,
+          "corner": "rounded",
+          "width": 2.25,
+          "mode": "generated",
+          "expectedComponents": 3,
+          "scale": 1,
+          "components": 2,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "hotspot",
+          "size": 24,
+          "corner": "rounded",
+          "width": 2.5,
+          "mode": "variable-source",
+          "expectedComponents": 3,
+          "scale": 1,
+          "components": 2,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "hotspot",
+          "size": 24,
+          "corner": "rounded",
+          "width": 2.5,
+          "mode": "generated",
+          "expectedComponents": 3,
+          "scale": 1,
+          "components": 2,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "sim-card",
+          "size": 16,
+          "corner": "soft",
+          "width": 0.75,
+          "mode": "variable-source",
+          "expectedComponents": 7,
+          "scale": 1,
+          "components": 8,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "sim-card",
+          "size": 16,
+          "corner": "soft",
+          "width": 0.75,
+          "mode": "generated",
+          "expectedComponents": 7,
+          "scale": 1,
+          "components": 8,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "sim-card",
+          "size": 16,
+          "corner": "rounded",
+          "width": 0.75,
+          "mode": "variable-source",
+          "expectedComponents": 7,
+          "scale": 1,
+          "components": 11,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "sim-card",
+          "size": 16,
+          "corner": "rounded",
+          "width": 0.75,
+          "mode": "generated",
+          "expectedComponents": 7,
+          "scale": 1,
+          "components": 11,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "sim-card",
+          "size": 16,
+          "corner": "rounded",
+          "width": 1.5,
+          "mode": "variable-source",
+          "expectedComponents": 7,
+          "scale": 1,
+          "components": 5,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "sim-card",
+          "size": 16,
+          "corner": "rounded",
+          "width": 1.5,
+          "mode": "generated",
+          "expectedComponents": 7,
+          "scale": 1,
+          "components": 5,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "sim-card",
+          "size": 20,
+          "corner": "sharp",
+          "width": 1.75,
+          "mode": "variable-source",
+          "expectedComponents": 7,
+          "scale": 1,
+          "components": 3,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "sim-card",
+          "size": 20,
+          "corner": "sharp",
+          "width": 1.75,
+          "mode": "generated",
+          "expectedComponents": 7,
+          "scale": 1,
+          "components": 3,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "sim-card",
+          "size": 20,
+          "corner": "sharp",
+          "width": 2,
+          "mode": "variable-source",
+          "expectedComponents": 7,
+          "scale": 1,
+          "components": 2,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "sim-card",
+          "size": 20,
+          "corner": "sharp",
+          "width": 2,
+          "mode": "generated",
+          "expectedComponents": 7,
+          "scale": 1,
+          "components": 2,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "sim-card",
+          "size": 20,
+          "corner": "soft",
+          "width": 1.75,
+          "mode": "variable-source",
+          "expectedComponents": 7,
+          "scale": 1,
+          "components": 3,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "sim-card",
+          "size": 20,
+          "corner": "soft",
+          "width": 1.75,
+          "mode": "generated",
+          "expectedComponents": 7,
+          "scale": 1,
+          "components": 3,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "sim-card",
+          "size": 20,
+          "corner": "soft",
+          "width": 2,
+          "mode": "variable-source",
+          "expectedComponents": 7,
+          "scale": 1,
+          "components": 2,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "sim-card",
+          "size": 20,
+          "corner": "soft",
+          "width": 2,
+          "mode": "generated",
+          "expectedComponents": 7,
+          "scale": 1,
+          "components": 2,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "sim-card",
+          "size": 20,
+          "corner": "rounded",
+          "width": 1.5,
+          "mode": "native-source",
+          "expectedComponents": 7,
+          "scale": 1,
+          "components": 6,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "sim-card",
+          "size": 20,
+          "corner": "rounded",
+          "width": 1.5,
+          "mode": "variable-source",
+          "expectedComponents": 7,
+          "scale": 1,
+          "components": 6,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "sim-card",
+          "size": 20,
+          "corner": "rounded",
+          "width": 1.5,
+          "mode": "generated",
+          "expectedComponents": 7,
+          "scale": 1,
+          "components": 6,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "sim-card",
+          "size": 20,
+          "corner": "rounded",
+          "width": 1.75,
+          "mode": "variable-source",
+          "expectedComponents": 7,
+          "scale": 1,
+          "components": 3,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "sim-card",
+          "size": 20,
+          "corner": "rounded",
+          "width": 1.75,
+          "mode": "generated",
+          "expectedComponents": 7,
+          "scale": 1,
+          "components": 3,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "sim-card",
+          "size": 20,
+          "corner": "rounded",
+          "width": 2,
+          "mode": "variable-source",
+          "expectedComponents": 7,
+          "scale": 1,
+          "components": 2,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "sim-card",
+          "size": 20,
+          "corner": "rounded",
+          "width": 2,
+          "mode": "generated",
+          "expectedComponents": 7,
+          "scale": 1,
+          "components": 2,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "sim-card",
+          "size": 24,
+          "corner": "rounded",
+          "width": 2.5,
+          "mode": "variable-source",
+          "expectedComponents": 7,
+          "scale": 1,
+          "components": 5,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "sim-card",
+          "size": 24,
+          "corner": "rounded",
+          "width": 2.5,
+          "mode": "generated",
+          "expectedComponents": 7,
+          "scale": 1,
+          "components": 5,
+          "defect": "unexpected merging or disconnected ink"
+        }
+      ],
+      "errors": [],
+      "evidence": "work/rebuild-01/checkpoint-115-device-structure.json",
+      "scope": "All supported widths: padded bounds, exact source/generated raster equality, strict high-resolution topology and gap probes. SIM directly shares fileParts.shell. Native DPR1 threshold connectivity diagnostics remain recorded rather than suppressed; final native gray rasters and both themes/DPRs were inspected. No DPR2 or high-resolution topology errors. All preceding 903 native drawings remain unchanged.",
+      "viewedDiagnostic": {
+        "path": "work/rebuild-01/device-raster-diagnostic.png",
+        "sha256": "60f1a45a7d775c42a1315af52083639ed27b12a81b2959dbcf888deb2e89cd63"
+      }
+    },
+    "deviceBrowser": {
+      "browser": "chromium",
+      "nativeDownloads": 18,
+      "searches": 10,
+      "stateChecks": 34,
+      "scope": "Local device-state demonstrations; no hardware/network access. Brightness/NFC use native named controls, Bluetooth uses persistent state and device name.",
+      "errors": [],
+      "evidence": "work/rebuild-01/checkpoint-115-browser.json"
+    },
+    "packedDevices": {
+      "fixture": "/Users/aron/master-icons/work/package-consumer-zkDOKf",
+      "packedSvgCount": 18,
+      "componentRenders": 180,
+      "frameworks": [
+        "react",
+        "vue",
+        "preact",
+        "svelte",
+        "astro"
+      ],
+      "variants": 9,
+      "searchKeywords": 8,
+      "errors": [],
+      "evidence": "work/rebuild-01/checkpoint-115-packed-devices.json"
+    },
+    "packedDeviceAttribution": {
+      "names": [
+        "hotspot"
+      ],
+      "packedSvgCount": 9,
+      "frameworkExports": 5,
+      "packageNotices": 6,
+      "licensedGeometryPackages": 1,
+      "errors": [],
+      "evidence": "work/rebuild-01/checkpoint-115-packed-adapted-drawings.json"
+    },
+    "rotationNotificationStructure": {
+      "unchangedNamedDrawings": 905,
+      "unchangedNativeVariants": 8145,
+      "variants": 198,
+      "topologyChecks": 594,
+      "gapProbes": 594,
+      "boundsChecks": 198,
+      "fidelityChecks": 270,
+      "coarseDiagnostics": [
+        {
+          "name": "screen-rotate",
+          "size": 16,
+          "corner": "sharp",
+          "width": 0.75,
+          "mode": "variable-source",
+          "expectedComponents": 3,
+          "scale": 1,
+          "components": 5,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "screen-rotate",
+          "size": 16,
+          "corner": "sharp",
+          "width": 0.75,
+          "mode": "generated",
+          "expectedComponents": 3,
+          "scale": 1,
+          "components": 5,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "screen-rotate",
+          "size": 16,
+          "corner": "sharp",
+          "width": 1.5,
+          "mode": "variable-source",
+          "expectedComponents": 3,
+          "scale": 1,
+          "components": 1,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "screen-rotate",
+          "size": 16,
+          "corner": "sharp",
+          "width": 1.5,
+          "mode": "generated",
+          "expectedComponents": 3,
+          "scale": 1,
+          "components": 1,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "screen-rotate",
+          "size": 16,
+          "corner": "soft",
+          "width": 0.75,
+          "mode": "variable-source",
+          "expectedComponents": 3,
+          "scale": 1,
+          "components": 5,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "screen-rotate",
+          "size": 16,
+          "corner": "soft",
+          "width": 0.75,
+          "mode": "generated",
+          "expectedComponents": 3,
+          "scale": 1,
+          "components": 5,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "screen-rotate",
+          "size": 16,
+          "corner": "rounded",
+          "width": 0.75,
+          "mode": "variable-source",
+          "expectedComponents": 3,
+          "scale": 1,
+          "components": 4,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "screen-rotate",
+          "size": 16,
+          "corner": "rounded",
+          "width": 0.75,
+          "mode": "generated",
+          "expectedComponents": 3,
+          "scale": 1,
+          "components": 4,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "screen-rotate",
+          "size": 20,
+          "corner": "sharp",
+          "width": 2,
+          "mode": "variable-source",
+          "expectedComponents": 3,
+          "scale": 1,
+          "components": 1,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "screen-rotate",
+          "size": 20,
+          "corner": "sharp",
+          "width": 2,
+          "mode": "generated",
+          "expectedComponents": 3,
+          "scale": 1,
+          "components": 1,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "screen-rotate",
+          "size": 20,
+          "corner": "soft",
+          "width": 2,
+          "mode": "variable-source",
+          "expectedComponents": 3,
+          "scale": 1,
+          "components": 1,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "screen-rotate",
+          "size": 20,
+          "corner": "soft",
+          "width": 2,
+          "mode": "generated",
+          "expectedComponents": 3,
+          "scale": 1,
+          "components": 1,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "screen-rotate",
+          "size": 20,
+          "corner": "rounded",
+          "width": 2,
+          "mode": "variable-source",
+          "expectedComponents": 3,
+          "scale": 1,
+          "components": 1,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "screen-rotate",
+          "size": 20,
+          "corner": "rounded",
+          "width": 2,
+          "mode": "generated",
+          "expectedComponents": 3,
+          "scale": 1,
+          "components": 1,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "screen-rotate",
+          "size": 24,
+          "corner": "sharp",
+          "width": 2.5,
+          "mode": "variable-source",
+          "expectedComponents": 3,
+          "scale": 1,
+          "components": 1,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "screen-rotate",
+          "size": 24,
+          "corner": "sharp",
+          "width": 2.5,
+          "mode": "generated",
+          "expectedComponents": 3,
+          "scale": 1,
+          "components": 1,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "screen-rotate",
+          "size": 24,
+          "corner": "soft",
+          "width": 2.5,
+          "mode": "variable-source",
+          "expectedComponents": 3,
+          "scale": 1,
+          "components": 1,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "screen-rotate",
+          "size": 24,
+          "corner": "soft",
+          "width": 2.5,
+          "mode": "generated",
+          "expectedComponents": 3,
+          "scale": 1,
+          "components": 1,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "screen-rotate",
+          "size": 24,
+          "corner": "rounded",
+          "width": 2.25,
+          "mode": "variable-source",
+          "expectedComponents": 3,
+          "scale": 1,
+          "components": 1,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "screen-rotate",
+          "size": 24,
+          "corner": "rounded",
+          "width": 2.25,
+          "mode": "generated",
+          "expectedComponents": 3,
+          "scale": 1,
+          "components": 1,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "screen-rotate",
+          "size": 24,
+          "corner": "rounded",
+          "width": 2.5,
+          "mode": "variable-source",
+          "expectedComponents": 3,
+          "scale": 1,
+          "components": 1,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "screen-rotate",
+          "size": 24,
+          "corner": "rounded",
+          "width": 2.5,
+          "mode": "generated",
+          "expectedComponents": 3,
+          "scale": 1,
+          "components": 1,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "bell-snooze",
+          "size": 16,
+          "corner": "sharp",
+          "width": 1.25,
+          "mode": "native-source",
+          "expectedComponents": 3,
+          "scale": 1,
+          "components": 1,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "bell-snooze",
+          "size": 16,
+          "corner": "sharp",
+          "width": 1.25,
+          "mode": "variable-source",
+          "expectedComponents": 3,
+          "scale": 1,
+          "components": 1,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "bell-snooze",
+          "size": 16,
+          "corner": "sharp",
+          "width": 1.25,
+          "mode": "generated",
+          "expectedComponents": 3,
+          "scale": 1,
+          "components": 1,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "bell-snooze",
+          "size": 16,
+          "corner": "sharp",
+          "width": 1.5,
+          "mode": "variable-source",
+          "expectedComponents": 3,
+          "scale": 1,
+          "components": 1,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "bell-snooze",
+          "size": 16,
+          "corner": "sharp",
+          "width": 1.5,
+          "mode": "generated",
+          "expectedComponents": 3,
+          "scale": 1,
+          "components": 1,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "bell-snooze",
+          "size": 16,
+          "corner": "soft",
+          "width": 1.25,
+          "mode": "native-source",
+          "expectedComponents": 3,
+          "scale": 1,
+          "components": 1,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "bell-snooze",
+          "size": 16,
+          "corner": "soft",
+          "width": 0.75,
+          "mode": "variable-source",
+          "expectedComponents": 3,
+          "scale": 1,
+          "components": 4,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "bell-snooze",
+          "size": 16,
+          "corner": "soft",
+          "width": 0.75,
+          "mode": "generated",
+          "expectedComponents": 3,
+          "scale": 1,
+          "components": 4,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "bell-snooze",
+          "size": 16,
+          "corner": "soft",
+          "width": 1.25,
+          "mode": "variable-source",
+          "expectedComponents": 3,
+          "scale": 1,
+          "components": 1,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "bell-snooze",
+          "size": 16,
+          "corner": "soft",
+          "width": 1.25,
+          "mode": "generated",
+          "expectedComponents": 3,
+          "scale": 1,
+          "components": 1,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "bell-snooze",
+          "size": 16,
+          "corner": "soft",
+          "width": 1.5,
+          "mode": "variable-source",
+          "expectedComponents": 3,
+          "scale": 1,
+          "components": 1,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "bell-snooze",
+          "size": 16,
+          "corner": "soft",
+          "width": 1.5,
+          "mode": "generated",
+          "expectedComponents": 3,
+          "scale": 1,
+          "components": 1,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "bell-snooze",
+          "size": 16,
+          "corner": "rounded",
+          "width": 1.25,
+          "mode": "native-source",
+          "expectedComponents": 3,
+          "scale": 1,
+          "components": 1,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "bell-snooze",
+          "size": 16,
+          "corner": "rounded",
+          "width": 0.75,
+          "mode": "variable-source",
+          "expectedComponents": 3,
+          "scale": 1,
+          "components": 4,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "bell-snooze",
+          "size": 16,
+          "corner": "rounded",
+          "width": 0.75,
+          "mode": "generated",
+          "expectedComponents": 3,
+          "scale": 1,
+          "components": 4,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "bell-snooze",
+          "size": 16,
+          "corner": "rounded",
+          "width": 1.25,
+          "mode": "variable-source",
+          "expectedComponents": 3,
+          "scale": 1,
+          "components": 1,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "bell-snooze",
+          "size": 16,
+          "corner": "rounded",
+          "width": 1.25,
+          "mode": "generated",
+          "expectedComponents": 3,
+          "scale": 1,
+          "components": 1,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "bell-snooze",
+          "size": 16,
+          "corner": "rounded",
+          "width": 1.5,
+          "mode": "variable-source",
+          "expectedComponents": 3,
+          "scale": 1,
+          "components": 1,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "bell-snooze",
+          "size": 16,
+          "corner": "rounded",
+          "width": 1.5,
+          "mode": "generated",
+          "expectedComponents": 3,
+          "scale": 1,
+          "components": 1,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "bell-snooze",
+          "size": 20,
+          "corner": "sharp",
+          "width": 1.5,
+          "mode": "native-source",
+          "expectedComponents": 3,
+          "scale": 1,
+          "components": 2,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "bell-snooze",
+          "size": 20,
+          "corner": "sharp",
+          "width": 1.5,
+          "mode": "variable-source",
+          "expectedComponents": 3,
+          "scale": 1,
+          "components": 2,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "bell-snooze",
+          "size": 20,
+          "corner": "sharp",
+          "width": 1.5,
+          "mode": "generated",
+          "expectedComponents": 3,
+          "scale": 1,
+          "components": 2,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "bell-snooze",
+          "size": 20,
+          "corner": "sharp",
+          "width": 1.75,
+          "mode": "variable-source",
+          "expectedComponents": 3,
+          "scale": 1,
+          "components": 2,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "bell-snooze",
+          "size": 20,
+          "corner": "sharp",
+          "width": 1.75,
+          "mode": "generated",
+          "expectedComponents": 3,
+          "scale": 1,
+          "components": 2,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "bell-snooze",
+          "size": 20,
+          "corner": "sharp",
+          "width": 2,
+          "mode": "variable-source",
+          "expectedComponents": 3,
+          "scale": 1,
+          "components": 2,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "bell-snooze",
+          "size": 20,
+          "corner": "sharp",
+          "width": 2,
+          "mode": "generated",
+          "expectedComponents": 3,
+          "scale": 1,
+          "components": 2,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "bell-snooze",
+          "size": 20,
+          "corner": "soft",
+          "width": 1.5,
+          "mode": "native-source",
+          "expectedComponents": 3,
+          "scale": 1,
+          "components": 2,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "bell-snooze",
+          "size": 20,
+          "corner": "soft",
+          "width": 1.5,
+          "mode": "variable-source",
+          "expectedComponents": 3,
+          "scale": 1,
+          "components": 2,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "bell-snooze",
+          "size": 20,
+          "corner": "soft",
+          "width": 1.5,
+          "mode": "generated",
+          "expectedComponents": 3,
+          "scale": 1,
+          "components": 2,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "bell-snooze",
+          "size": 20,
+          "corner": "soft",
+          "width": 2,
+          "mode": "variable-source",
+          "expectedComponents": 3,
+          "scale": 1,
+          "components": 1,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "bell-snooze",
+          "size": 20,
+          "corner": "soft",
+          "width": 2,
+          "mode": "generated",
+          "expectedComponents": 3,
+          "scale": 1,
+          "components": 1,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "bell-snooze",
+          "size": 20,
+          "corner": "rounded",
+          "width": 1.5,
+          "mode": "native-source",
+          "expectedComponents": 3,
+          "scale": 1,
+          "components": 2,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "bell-snooze",
+          "size": 20,
+          "corner": "rounded",
+          "width": 1.5,
+          "mode": "variable-source",
+          "expectedComponents": 3,
+          "scale": 1,
+          "components": 2,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "bell-snooze",
+          "size": 20,
+          "corner": "rounded",
+          "width": 1.5,
+          "mode": "generated",
+          "expectedComponents": 3,
+          "scale": 1,
+          "components": 2,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "bell-snooze",
+          "size": 20,
+          "corner": "rounded",
+          "width": 2,
+          "mode": "variable-source",
+          "expectedComponents": 3,
+          "scale": 1,
+          "components": 1,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "bell-snooze",
+          "size": 20,
+          "corner": "rounded",
+          "width": 2,
+          "mode": "generated",
+          "expectedComponents": 3,
+          "scale": 1,
+          "components": 1,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "bell-snooze",
+          "size": 24,
+          "corner": "sharp",
+          "width": 1.75,
+          "mode": "native-source",
+          "expectedComponents": 3,
+          "scale": 1,
+          "components": 2,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "bell-snooze",
+          "size": 24,
+          "corner": "sharp",
+          "width": 1.75,
+          "mode": "variable-source",
+          "expectedComponents": 3,
+          "scale": 1,
+          "components": 2,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "bell-snooze",
+          "size": 24,
+          "corner": "sharp",
+          "width": 1.75,
+          "mode": "generated",
+          "expectedComponents": 3,
+          "scale": 1,
+          "components": 2,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "bell-snooze",
+          "size": 24,
+          "corner": "sharp",
+          "width": 2,
+          "mode": "variable-source",
+          "expectedComponents": 3,
+          "scale": 1,
+          "components": 2,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "bell-snooze",
+          "size": 24,
+          "corner": "sharp",
+          "width": 2,
+          "mode": "generated",
+          "expectedComponents": 3,
+          "scale": 1,
+          "components": 2,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "bell-snooze",
+          "size": 24,
+          "corner": "sharp",
+          "width": 2.25,
+          "mode": "variable-source",
+          "expectedComponents": 3,
+          "scale": 1,
+          "components": 2,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "bell-snooze",
+          "size": 24,
+          "corner": "sharp",
+          "width": 2.25,
+          "mode": "generated",
+          "expectedComponents": 3,
+          "scale": 1,
+          "components": 2,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "bell-snooze",
+          "size": 24,
+          "corner": "sharp",
+          "width": 2.5,
+          "mode": "variable-source",
+          "expectedComponents": 3,
+          "scale": 1,
+          "components": 2,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "bell-snooze",
+          "size": 24,
+          "corner": "sharp",
+          "width": 2.5,
+          "mode": "generated",
+          "expectedComponents": 3,
+          "scale": 1,
+          "components": 2,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "bell-snooze",
+          "size": 24,
+          "corner": "soft",
+          "width": 2.5,
+          "mode": "variable-source",
+          "expectedComponents": 3,
+          "scale": 1,
+          "components": 1,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "bell-snooze",
+          "size": 24,
+          "corner": "soft",
+          "width": 2.5,
+          "mode": "generated",
+          "expectedComponents": 3,
+          "scale": 1,
+          "components": 1,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "bell-snooze",
+          "size": 24,
+          "corner": "rounded",
+          "width": 2.5,
+          "mode": "variable-source",
+          "expectedComponents": 3,
+          "scale": 1,
+          "components": 1,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "bell-snooze",
+          "size": 24,
+          "corner": "rounded",
+          "width": 2.5,
+          "mode": "generated",
+          "expectedComponents": 3,
+          "scale": 1,
+          "components": 1,
+          "defect": "unexpected merging or disconnected ink"
+        }
+      ],
+      "errors": [],
+      "evidence": "work/rebuild-01/checkpoint-117-rotation-notification-structure.json",
+      "scope": "All supported widths: padded bounds, exact source/generated raster equality, strict high-resolution topology and gap probes. Screen reuses smartphoneShape; bell reuses bell with default geometry unchanged and optical clapper offset only in heavier sharp composites. Native DPR1 threshold connectivity diagnostics remain recorded rather than suppressed; final native gray rasters and both themes/DPRs were inspected. No DPR2 or high-resolution topology errors. All preceding 905 native drawings remain unchanged.",
+      "viewedDiagnostic": {
+        "path": "work/rebuild-01/rotation-notification-raster.png",
+        "sha256": "ad5d03eb63c7078cc55d8d4b1c8aaafc232e13028da74b17750e8ea05fc873ea"
+      }
+    },
+    "rotationNotificationBrowser": {
+      "browser": "chromium",
+      "nativeDownloads": 18,
+      "searches": 8,
+      "stateChecks": 46,
+      "evidence": "work/rebuild-01/checkpoint-117-browser.json",
+      "scope": "Local orientation, auto-rotate, temporary/permanent notification states and independent reminder action. No operating-system or messaging calls.",
+      "errors": []
+    },
+    "packedRotationNotification": {
+      "fixture": "/Users/aron/master-icons/work/package-consumer-ZeN6Vm",
+      "packedSvgCount": 18,
+      "componentRenders": 180,
+      "frameworks": [
+        "react",
+        "vue",
+        "preact",
+        "svelte",
+        "astro"
+      ],
+      "variants": 9,
+      "searchKeywords": 8,
+      "errors": [],
+      "evidence": "work/rebuild-01/checkpoint-117-packed-rotation-notification.json"
+    },
+    "packedRotationNotificationAttribution": {
+      "names": [
+        "screen-rotate",
+        "bell-snooze"
+      ],
+      "packedSvgCount": 18,
+      "frameworkExports": 10,
+      "packageNotices": 6,
+      "licensedGeometryPackages": 1,
+      "errors": [],
+      "evidence": "work/rebuild-01/checkpoint-117-packed-adapted-drawings.json"
+    },
+    "contentVisibilitySelection": {
+      "browser": "chromium",
+      "stateChecks": 106,
+      "searches": 3,
+      "catalogNames": 907,
+      "excludedVariants": 3,
+      "scope": "Quote/reply/copy and independent content visibility, image loading and commenting permission. Local state only.",
+      "errors": [],
+      "evidence": "work/rebuild-01/checkpoint-117-selection-270.json"
+    },
+    "contentVisibilityPackedCatalog": {
+      "package": "work/rebuild-01/checkpoint-117-selection-270-core.tgz",
+      "sha256": "ccd1d663e435b48b99df56a0c531267c61bea8462284a8a2ab9054c9e0df9b40",
+      "catalogNames": 907,
+      "catalogExact": true,
+      "keywords": 3,
+      "nativeContentAliasesAbsent": [
+        "image-off",
+        "message-off"
+      ],
+      "errors": [],
+      "evidence": "work/rebuild-01/checkpoint-117-selection-270-packed.json"
+    },
+    "inboxSelection": {
+      "browser": "chromium",
+      "themes": [
+        "light",
+        "dark"
+      ],
+      "stateChecks": 58,
+      "searches": 12,
+      "screenshotHashes": 8,
+      "unchangedNativeDrawings": 907,
+      "unchangedNativeSvg": 8163,
+      "scope": "Inbox move and archive, independent outgoing queue, unread filtering, read versus triaged states, restoring archived notification. Content-visibility aliases are included in current preview verification. Local state only.",
+      "errors": [],
+      "evidence": "work/rebuild-01/checkpoint-117-selection-274.json"
+    },
+    "inboxPackedCatalog": {
+      "package": "work/rebuild-01/checkpoint-117-selection-274-core.tgz",
+      "sha256": "dae440922c6176f366f93f627ce7b0762e757be2486f731cd520326bea83efcb",
+      "catalogNames": 907,
+      "catalogExact": true,
+      "keywords": 12,
+      "excluded": 7,
+      "nativeContentAliasesAbsent": [
+        "image-off",
+        "message-off",
+        "inbox-out"
+      ],
+      "errors": [],
+      "evidence": "work/rebuild-01/checkpoint-117-selection-274-packed.json"
+    },
+    "imageFlowStructure": {
+      "unchangedNamedDrawings": 907,
+      "unchangedNativeVariants": 8163,
+      "variants": 297,
+      "topologyChecks": 891,
+      "gapProbes": 891,
+      "boundsChecks": 297,
+      "fidelityChecks": 405,
+      "coarseDiagnostics": [],
+      "errors": [],
+      "evidence": "work/rebuild-01/checkpoint-120-image-flow-structure.json",
+      "scope": "All supported widths: padded bounds, exact source/generated raster equality, strict topology and negative-space probes at DPR 1/2 and high resolution. Shared imageFrame geometry, exact horizontal reflection for right wrap, and unchanged preceding 907 native drawings. No coarse topology diagnostics or strict errors."
+    },
+    "imageFlowBrowser": {
+      "browser": "chromium",
+      "nativeDownloads": 27,
+      "searches": 6,
+      "stateChecks": 144,
+      "themes": [
+        "light",
+        "dark"
+      ],
+      "dpr": [
+        1,
+        2
+      ],
+      "evidence": "work/rebuild-01/checkpoint-120-browser.json",
+      "scope": "Local float-left/right and inline image layout, independent paragraph text alignment, and actual first-character/image positions. Does not claim Tiptap built-in floating UI support.",
+      "errors": []
+    },
+    "packedImageFlow": {
+      "fixture": "/Users/aron/master-icons/work/package-consumer-ywlJk0",
+      "packedSvgCount": 27,
+      "componentRenders": 270,
+      "frameworks": [
+        "react",
+        "vue",
+        "preact",
+        "svelte",
+        "astro"
+      ],
+      "variants": 9,
+      "searchKeywords": 6,
+      "errors": [],
+      "evidence": "work/rebuild-01/checkpoint-120-packed-image-flow.json"
+    },
+    "packedImageFlowAttribution": {
+      "names": [
+        "image-wrap-left",
+        "image-wrap-right",
+        "image-inline"
+      ],
+      "packedSvgCount": 27,
+      "frameworkExports": 15,
+      "packageNotices": 6,
+      "licensedGeometryPackages": 1,
+      "errors": [],
+      "evidence": "work/rebuild-01/checkpoint-120-packed-adapted-drawings.json"
+    },
+    "codeSelection": {
+      "browser": "chromium",
+      "themes": [
+        "light",
+        "dark"
+      ],
+      "stateChecks": 136,
+      "searches": 6,
+      "screenshotHashes": 8,
+      "unchangedNativeDrawings": 910,
+      "unchangedNativeSvg": 8190,
+      "scope": "Fold/unfold state and preservation; language-dependent comment round trips; unavailable Python block comment; actual whitespace marker width and original source; multiple insertion points and return to primary cursor; valid/invalid line targets; nested bracket navigation. Local fixed samples only.",
+      "errors": [],
+      "evidence": "work/rebuild-01/checkpoint-120-selection-282.json"
+    },
+    "codePackedCatalog": {
+      "package": "work/rebuild-01/checkpoint-120-selection-282-core.tgz",
+      "sha256": "d9984bb68762d5c0e7ab9fbb01873a8a6a33bf75bb1f7c22812b6765b16a8f62",
+      "catalogNames": 910,
+      "catalogExact": true,
+      "keywords": 6,
+      "excluded": 8,
+      "nativeContentAliasesAbsent": [
+        "go-to-line",
+        "matching-brackets",
+        "toggle-line-comment",
+        "toggle-block-comment",
+        "show-whitespace",
+        "multi-cursor"
+      ],
+      "errors": [],
+      "evidence": "work/rebuild-01/checkpoint-120-selection-282-packed.json"
+    },
+    "footnoteStructure": {
+      "unchangedNamedDrawings": 910,
+      "unchangedNativeVariants": 8190,
+      "variants": 99,
+      "topologyChecks": 297,
+      "gapProbes": 297,
+      "boundsChecks": 99,
+      "fidelityChecks": 135,
+      "coarseDiagnostics": [
+        {
+          "name": "footnote",
+          "size": 16,
+          "corner": "sharp",
+          "width": 0.75,
+          "mode": "variable-source",
+          "expectedComponents": 3,
+          "scale": 1,
+          "holes": 1,
+          "defect": "A or b counter collapsed or disconnected"
+        },
+        {
+          "name": "footnote",
+          "size": 16,
+          "corner": "sharp",
+          "width": 0.75,
+          "mode": "variable-source",
+          "expectedComponents": 3,
+          "scale": 1,
+          "components": 4,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "footnote",
+          "size": 16,
+          "corner": "sharp",
+          "width": 0.75,
+          "mode": "generated",
+          "expectedComponents": 3,
+          "scale": 1,
+          "holes": 1,
+          "defect": "A or b counter collapsed or disconnected"
+        },
+        {
+          "name": "footnote",
+          "size": 16,
+          "corner": "sharp",
+          "width": 0.75,
+          "mode": "generated",
+          "expectedComponents": 3,
+          "scale": 1,
+          "components": 4,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "footnote",
+          "size": 16,
+          "corner": "soft",
+          "width": 0.75,
+          "mode": "variable-source",
+          "expectedComponents": 3,
+          "scale": 1,
+          "holes": 1,
+          "defect": "A or b counter collapsed or disconnected"
+        },
+        {
+          "name": "footnote",
+          "size": 16,
+          "corner": "soft",
+          "width": 0.75,
+          "mode": "variable-source",
+          "expectedComponents": 3,
+          "scale": 1,
+          "components": 4,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "footnote",
+          "size": 16,
+          "corner": "soft",
+          "width": 0.75,
+          "mode": "generated",
+          "expectedComponents": 3,
+          "scale": 1,
+          "holes": 1,
+          "defect": "A or b counter collapsed or disconnected"
+        },
+        {
+          "name": "footnote",
+          "size": 16,
+          "corner": "soft",
+          "width": 0.75,
+          "mode": "generated",
+          "expectedComponents": 3,
+          "scale": 1,
+          "components": 4,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "footnote",
+          "size": 16,
+          "corner": "rounded",
+          "width": 0.75,
+          "mode": "variable-source",
+          "expectedComponents": 3,
+          "scale": 1,
+          "holes": 1,
+          "defect": "A or b counter collapsed or disconnected"
+        },
+        {
+          "name": "footnote",
+          "size": 16,
+          "corner": "rounded",
+          "width": 0.75,
+          "mode": "variable-source",
+          "expectedComponents": 3,
+          "scale": 1,
+          "components": 4,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "footnote",
+          "size": 16,
+          "corner": "rounded",
+          "width": 0.75,
+          "mode": "generated",
+          "expectedComponents": 3,
+          "scale": 1,
+          "holes": 1,
+          "defect": "A or b counter collapsed or disconnected"
+        },
+        {
+          "name": "footnote",
+          "size": 16,
+          "corner": "rounded",
+          "width": 0.75,
+          "mode": "generated",
+          "expectedComponents": 3,
+          "scale": 1,
+          "components": 4,
+          "defect": "unexpected merging or disconnected ink"
+        }
+      ],
+      "errors": [],
+      "evidence": "work/rebuild-01/checkpoint-121-footnote-structure.json",
+      "scope": "Shared capitalA, lowerB and heading numeral 1. All supported widths checked for bounds, negative-space probes, source/generated fidelity and high-resolution topology. Twelve threshold diagnostics remain at 16px / 0.75 stroke / DPR1 only; native gray rasters were inspected. Default and maximum-width A counter was widened and rechecked. All preceding 910 native drawings unchanged."
+    },
+    "footnoteBrowser": {
+      "browser": "chromium",
+      "nativeDownloads": 9,
+      "searches": 2,
+      "stateChecks": 72,
+      "themes": [
+        "light",
+        "dark"
+      ],
+      "dpr": [
+        1,
+        2
+      ],
+      "evidence": "work/rebuild-01/checkpoint-121-browser.json",
+      "scope": "Local footnote reference/note pairing, note text preservation, focus navigation, removal and independent superscript formatting. No production document changed.",
+      "errors": []
+    },
+    "packedFootnote": {
+      "fixture": "/Users/aron/master-icons/work/package-consumer-V4BP4r",
+      "packedSvgCount": 9,
+      "componentRenders": 90,
+      "frameworks": [
+        "react",
+        "vue",
+        "preact",
+        "svelte",
+        "astro"
+      ],
+      "variants": 9,
+      "searchKeywords": 2,
+      "errors": [],
+      "evidence": "work/rebuild-01/checkpoint-121-packed-footnote.json"
+    },
+    "packedFootnoteAttribution": {
+      "names": [
+        "footnote"
+      ],
+      "packedSvgCount": 9,
+      "frameworkExports": 5,
+      "packageNotices": 6,
+      "licensedGeometryPackages": 1,
+      "errors": [],
+      "evidence": "work/rebuild-01/checkpoint-121-packed-adapted-drawings.json"
+    },
+    "zoomSelection": {
+      "browser": "chromium",
+      "themes": [
+        "light",
+        "dark"
+      ],
+      "dpr": [
+        1,
+        2
+      ],
+      "stateChecks": 192,
+      "searches": 4,
+      "screenshotHashes": 4,
+      "unchangedNativeDrawings": 911,
+      "unchangedNativeSvg": 8199,
+      "scope": "Actual selected/all-object bounds fitting, centered result, independent selection, preserved object dimensions, numeric zoom, 100% CSS pixel size at DPR1/2 and empty-selection disabled state. Local two-object sample.",
+      "errors": [],
+      "evidence": "work/rebuild-01/checkpoint-121-selection-284.json"
+    },
+    "zoomPackedCatalog": {
+      "package": "work/rebuild-01/checkpoint-121-selection-284-core.tgz",
+      "sha256": "2dcdd78c35b7de8e0ff24e5476674b39daf840d2a673d81f6716a2135ce2c93a",
+      "catalogNames": 911,
+      "catalogExact": true,
+      "keywords": 4,
+      "excluded": 2,
+      "nativeContentAliasesAbsent": [
+        "zoom-actual-size"
+      ],
+      "errors": [],
+      "evidence": "work/rebuild-01/checkpoint-121-selection-284-packed.json"
+    },
+    "selectionModes": {
+      "browser": "chromium",
+      "themes": [
+        "light",
+        "dark"
+      ],
+      "stateChecks": 714,
+      "searches": 12,
+      "screenshotHashes": 4,
+      "unchangedNativeDrawings": 911,
+      "unchangedNativeSvg": 8199,
+      "scope": "Binary-mask replace/union/difference/intersection with overlapping, contained, disjoint and whole-canvas input. Mode changes preserve selection; output cells match masks. Inversion and keyboard radio controls checked independently. Invert remains pending; no production image editing or feathered-mask claim.",
+      "errors": [],
+      "evidence": "work/rebuild-01/checkpoint-121-selection-287.json"
+    },
+    "selectionModesPackedCatalog": {
+      "package": "work/rebuild-01/checkpoint-121-selection-287-core.tgz",
+      "sha256": "d2a2b573dab1b9fcedf7ec7a32bd2c3526114af00d3b538ccbc09bd040368af1",
+      "catalogNames": 911,
+      "catalogExact": true,
+      "keywords": 12,
+      "excluded": 3,
+      "nativeContentAliasesAbsent": [],
+      "errors": [],
+      "evidence": "work/rebuild-01/checkpoint-121-selection-287-packed.json"
+    },
+    "selectionInvertStructure": {
+      "unchangedNamedDrawings": 911,
+      "unchangedNativeVariants": 8199,
+      "variants": 99,
+      "topologyChecks": 297,
+      "gapProbes": 396,
+      "boundsChecks": 99,
+      "fidelityChecks": 135,
+      "coarseDiagnostics": [
+        {
+          "name": "selection-invert",
+          "size": 16,
+          "corner": "sharp",
+          "width": 0.75,
+          "mode": "variable-source",
+          "expectedComponents": 4,
+          "scale": 1,
+          "holes": 0,
+          "defect": "closed upper triangle counter collapsed or unexpected extra hole"
+        },
+        {
+          "name": "selection-invert",
+          "size": 16,
+          "corner": "sharp",
+          "width": 0.75,
+          "mode": "variable-source",
+          "expectedComponents": 4,
+          "scale": 1,
+          "components": 7,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "selection-invert",
+          "size": 16,
+          "corner": "sharp",
+          "width": 0.75,
+          "mode": "generated",
+          "expectedComponents": 4,
+          "scale": 1,
+          "holes": 0,
+          "defect": "closed upper triangle counter collapsed or unexpected extra hole"
+        },
+        {
+          "name": "selection-invert",
+          "size": 16,
+          "corner": "sharp",
+          "width": 0.75,
+          "mode": "generated",
+          "expectedComponents": 4,
+          "scale": 1,
+          "components": 7,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "selection-invert",
+          "size": 16,
+          "corner": "soft",
+          "width": 0.75,
+          "mode": "variable-source",
+          "expectedComponents": 4,
+          "scale": 1,
+          "holes": 0,
+          "defect": "closed upper triangle counter collapsed or unexpected extra hole"
+        },
+        {
+          "name": "selection-invert",
+          "size": 16,
+          "corner": "soft",
+          "width": 0.75,
+          "mode": "variable-source",
+          "expectedComponents": 4,
+          "scale": 1,
+          "components": 7,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "selection-invert",
+          "size": 16,
+          "corner": "soft",
+          "width": 0.75,
+          "mode": "generated",
+          "expectedComponents": 4,
+          "scale": 1,
+          "holes": 0,
+          "defect": "closed upper triangle counter collapsed or unexpected extra hole"
+        },
+        {
+          "name": "selection-invert",
+          "size": 16,
+          "corner": "soft",
+          "width": 0.75,
+          "mode": "generated",
+          "expectedComponents": 4,
+          "scale": 1,
+          "components": 7,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "selection-invert",
+          "size": 16,
+          "corner": "rounded",
+          "width": 0.75,
+          "mode": "variable-source",
+          "expectedComponents": 4,
+          "scale": 1,
+          "holes": 0,
+          "defect": "closed upper triangle counter collapsed or unexpected extra hole"
+        },
+        {
+          "name": "selection-invert",
+          "size": 16,
+          "corner": "rounded",
+          "width": 0.75,
+          "mode": "variable-source",
+          "expectedComponents": 4,
+          "scale": 1,
+          "components": 7,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "selection-invert",
+          "size": 16,
+          "corner": "rounded",
+          "width": 0.75,
+          "mode": "generated",
+          "expectedComponents": 4,
+          "scale": 1,
+          "holes": 0,
+          "defect": "closed upper triangle counter collapsed or unexpected extra hole"
+        },
+        {
+          "name": "selection-invert",
+          "size": 16,
+          "corner": "rounded",
+          "width": 0.75,
+          "mode": "generated",
+          "expectedComponents": 4,
+          "scale": 1,
+          "components": 7,
+          "defect": "unexpected merging or disconnected ink"
+        }
+      ],
+      "errors": [],
+      "evidence": "work/rebuild-01/checkpoint-122-selection-invert-structure.json",
+      "scope": "Direct selection mother reuse, with continuous top/right parameters and native diagonal arc endpoints. All supported widths checked for bounds, negative-space probes, source/generated fidelity and high-resolution topology. Twelve binary-threshold diagnostics remain at 16px / 0.75 stroke / DPR1; native gray rasters inspected. Default/max widths and DPR2 have no topology diagnostics. All preceding 911 native drawings unchanged."
+    },
+    "selectionInvertBrowser": {
+      "browser": "chromium",
+      "nativeDownloads": 9,
+      "searches": 3,
+      "stateChecks": 68,
+      "themes": [
+        "light",
+        "dark"
+      ],
+      "dpr": [
+        1,
+        2
+      ],
+      "evidence": "work/rebuild-01/checkpoint-122-browser.json",
+      "scope": "Local binary-mask inversion, double-inversion identity, empty/full complements and union complement, independent grayscale pixel inversion and unchanged selection mode. No production image changed.",
+      "errors": []
+    },
+    "packedSelectionInvert": {
+      "fixture": "/Users/aron/master-icons/work/package-consumer-nRe03G",
+      "packedSvgCount": 9,
+      "componentRenders": 90,
+      "frameworks": [
+        "react",
+        "vue",
+        "preact",
+        "svelte",
+        "astro"
+      ],
+      "variants": 9,
+      "searchKeywords": 3,
+      "errors": [],
+      "evidence": "work/rebuild-01/checkpoint-122-packed-selection-invert.json"
+    },
+    "packedSelectionInvertAttribution": {
+      "names": [
+        "selection-invert"
+      ],
+      "packedSvgCount": 9,
+      "frameworkExports": 5,
+      "packageNotices": 6,
+      "licensedGeometryPackages": 1,
+      "errors": [],
+      "evidence": "work/rebuild-01/checkpoint-122-packed-adapted-drawings.json"
+    },
+    "textSortingSelection": {
+      "browser": "chromium",
+      "themes": [
+        "light",
+        "dark"
+      ],
+      "stateChecks": 88,
+      "searches": 10,
+      "screenshotHashes": 4,
+      "unchangedNativeDrawings": 912,
+      "unchangedNativeSvg": 8208,
+      "scope": "Direction glyphs and aria-sort state, explicit English/Swedish/Traditional Chinese comparison, lexical versus numeric strings, stable ties, typed number/date ordering, whole-row preservation and clearing sort. Local sample only.",
+      "errors": [],
+      "evidence": "work/rebuild-01/checkpoint-122-selection-289.json"
+    },
+    "textSortingPackedCatalog": {
+      "package": "work/rebuild-01/checkpoint-122-selection-289-core.tgz",
+      "sha256": "1e47ca1648c9c8d43e942d0700a38befb9c0b1956c92875d524c6f035efd99ca",
+      "catalogNames": 912,
+      "catalogExact": true,
+      "keywords": 10,
+      "excluded": 2,
+      "nativeContentAliasesAbsent": [],
+      "errors": [],
+      "evidence": "work/rebuild-01/checkpoint-122-selection-289-packed.json"
+    },
+    "decimalPlacesStructure": {
+      "unchangedNamedDrawings": 912,
+      "unchangedNativeVariants": 8208,
+      "variants": 198,
+      "topologyChecks": 594,
+      "gapProbes": 594,
+      "boundsChecks": 198,
+      "fidelityChecks": 270,
+      "coarseDiagnostics": [
+        {
+          "name": "decimal-increase",
+          "size": 16,
+          "corner": "sharp",
+          "width": 0.75,
+          "mode": "variable-source",
+          "expectedComponents": 4,
+          "expectedHoles": 2,
+          "shaft": [
+            10.25,
+            12.5
+          ],
+          "scale": 1,
+          "holes": 0,
+          "defect": "numeral counter collapsed or unexpected extra hole"
+        },
+        {
+          "name": "decimal-increase",
+          "size": 16,
+          "corner": "sharp",
+          "width": 0.75,
+          "mode": "generated",
+          "expectedComponents": 4,
+          "expectedHoles": 2,
+          "shaft": [
+            10.25,
+            12.5
+          ],
+          "scale": 1,
+          "holes": 0,
+          "defect": "numeral counter collapsed or unexpected extra hole"
+        },
+        {
+          "name": "decimal-increase",
+          "size": 16,
+          "corner": "soft",
+          "width": 0.75,
+          "mode": "variable-source",
+          "expectedComponents": 4,
+          "expectedHoles": 2,
+          "shaft": [
+            10.25,
+            12.5
+          ],
+          "scale": 1,
+          "holes": 0,
+          "defect": "numeral counter collapsed or unexpected extra hole"
+        },
+        {
+          "name": "decimal-increase",
+          "size": 16,
+          "corner": "soft",
+          "width": 0.75,
+          "mode": "generated",
+          "expectedComponents": 4,
+          "expectedHoles": 2,
+          "shaft": [
+            10.25,
+            12.5
+          ],
+          "scale": 1,
+          "holes": 0,
+          "defect": "numeral counter collapsed or unexpected extra hole"
+        },
+        {
+          "name": "decimal-increase",
+          "size": 16,
+          "corner": "rounded",
+          "width": 0.75,
+          "mode": "variable-source",
+          "expectedComponents": 4,
+          "expectedHoles": 2,
+          "shaft": [
+            10.25,
+            12.5
+          ],
+          "scale": 1,
+          "holes": 0,
+          "defect": "numeral counter collapsed or unexpected extra hole"
+        },
+        {
+          "name": "decimal-increase",
+          "size": 16,
+          "corner": "rounded",
+          "width": 0.75,
+          "mode": "generated",
+          "expectedComponents": 4,
+          "expectedHoles": 2,
+          "shaft": [
+            10.25,
+            12.5
+          ],
+          "scale": 1,
+          "holes": 0,
+          "defect": "numeral counter collapsed or unexpected extra hole"
+        },
+        {
+          "name": "decimal-decrease",
+          "size": 16,
+          "corner": "sharp",
+          "width": 0.75,
+          "mode": "variable-source",
+          "expectedComponents": 3,
+          "expectedHoles": 1,
+          "shaft": [
+            10.25,
+            12.5
+          ],
+          "scale": 1,
+          "holes": 0,
+          "defect": "numeral counter collapsed or unexpected extra hole"
+        },
+        {
+          "name": "decimal-decrease",
+          "size": 16,
+          "corner": "sharp",
+          "width": 0.75,
+          "mode": "generated",
+          "expectedComponents": 3,
+          "expectedHoles": 1,
+          "shaft": [
+            10.25,
+            12.5
+          ],
+          "scale": 1,
+          "holes": 0,
+          "defect": "numeral counter collapsed or unexpected extra hole"
+        },
+        {
+          "name": "decimal-decrease",
+          "size": 16,
+          "corner": "soft",
+          "width": 0.75,
+          "mode": "variable-source",
+          "expectedComponents": 3,
+          "expectedHoles": 1,
+          "shaft": [
+            10.25,
+            12.5
+          ],
+          "scale": 1,
+          "holes": 0,
+          "defect": "numeral counter collapsed or unexpected extra hole"
+        },
+        {
+          "name": "decimal-decrease",
+          "size": 16,
+          "corner": "soft",
+          "width": 0.75,
+          "mode": "generated",
+          "expectedComponents": 3,
+          "expectedHoles": 1,
+          "shaft": [
+            10.25,
+            12.5
+          ],
+          "scale": 1,
+          "holes": 0,
+          "defect": "numeral counter collapsed or unexpected extra hole"
+        },
+        {
+          "name": "decimal-decrease",
+          "size": 16,
+          "corner": "rounded",
+          "width": 0.75,
+          "mode": "variable-source",
+          "expectedComponents": 3,
+          "expectedHoles": 1,
+          "shaft": [
+            10.25,
+            12.5
+          ],
+          "scale": 1,
+          "holes": 0,
+          "defect": "numeral counter collapsed or unexpected extra hole"
+        },
+        {
+          "name": "decimal-decrease",
+          "size": 16,
+          "corner": "rounded",
+          "width": 0.75,
+          "mode": "generated",
+          "expectedComponents": 3,
+          "expectedHoles": 1,
+          "shaft": [
+            10.25,
+            12.5
+          ],
+          "scale": 1,
+          "holes": 0,
+          "defect": "numeral counter collapsed or unexpected extra hole"
+        }
+      ],
+      "errors": [],
+      "evidence": "work/rebuild-01/checkpoint-124-decimal-places-structure.json",
+      "scope": "Shared numeral zero and horizontalArrow mothers. Native 20px numeral baseline raised 0.5px to clear the sharp maximum-width arrow wing; dot minimum diameter preserves the precision cue at thin widths. Every supported width checks bounds, zero counters, spacing probes, arrow shaft presence and source/generated raster fidelity. Twelve binary-threshold diagnostics at 16px / 0.75 / DPR1 reflect antialiased zero contours; native gray and DPR2 inspected. All preceding 912 native drawings unchanged."
+    },
+    "decimalPlacesBrowser": {
+      "browser": "chromium",
+      "nativeDownloads": 18,
+      "searches": 6,
+      "stateChecks": 76,
+      "themes": [
+        "light",
+        "dark"
+      ],
+      "dpr": [
+        1,
+        2
+      ],
+      "evidence": "work/rebuild-01/checkpoint-124-browser.json",
+      "scope": "Selected-cell display precision, untouched unselected cell, raw values and sum, 0/4-place boundaries, empty selection, mixed precision, English/German formatting and reset.",
+      "errors": []
+    },
+    "packedDecimalPlaces": {
+      "fixture": "/Users/aron/master-icons/work/package-consumer-0PZbaq",
+      "packedSvgCount": 18,
+      "componentRenders": 180,
+      "frameworks": [
+        "react",
+        "vue",
+        "preact",
+        "svelte",
+        "astro"
+      ],
+      "variants": 9,
+      "searchKeywords": 6,
+      "errors": [],
+      "evidence": "work/rebuild-01/checkpoint-124-packed-decimal-places.json"
+    },
+    "packedDecimalPlacesAttribution": {
+      "names": [
+        "decimal-increase",
+        "decimal-decrease"
+      ],
+      "packedSvgCount": 18,
+      "frameworkExports": 10,
+      "packageNotices": 6,
+      "licensedGeometryPackages": 1,
+      "errors": [],
+      "evidence": "work/rebuild-01/checkpoint-124-packed-adapted-drawings.json"
+    },
+    "writingLayoutSubstitution": {
+      "stateChecks": 52,
+      "themes": [
+        "light",
+        "dark"
+      ],
+      "dpr": [
+        1,
+        2
+      ],
+      "evidence": "work/rebuild-01/checkpoint-124-selection-290-writing-layout.json",
+      "errors": [],
+      "scope": "Native checkbox, keyboard toggle/reset, actual horizontal/vertical character positions, leftward new columns and unchanged text. Public catalog, aliases, geometry and packages remain checkpoint 124."
+    },
+    "dropCapStructure": {
+      "unchangedNamedDrawings": 914,
+      "unchangedNativeVariants": 8226,
+      "variants": 99,
+      "topologyChecks": 297,
+      "gapProbes": 297,
+      "boundsChecks": 99,
+      "fidelityChecks": 135,
+      "coarseDiagnostics": [],
+      "errors": [],
+      "evidence": "work/rebuild-01/checkpoint-125-drop-cap-structure.json",
+      "scope": "Direct capitalA mother; 16px initial shifted left 0.5px to preserve its native pixel counter, full paragraph line shares that left edge. All supported widths check four components, one counter, gap probes, bounds and source/generated raster fidelity. No coarse diagnostics remain. All preceding 914 native drawings unchanged."
+    },
+    "dropCapBrowser": {
+      "browser": "chromium",
+      "nativeDownloads": 9,
+      "searches": 5,
+      "stateChecks": 80,
+      "themes": [
+        "light",
+        "dark"
+      ],
+      "dpr": [
+        1,
+        2
+      ],
+      "evidence": "work/rebuild-01/checkpoint-125-browser.json",
+      "scope": "Drop-cap position is independent from font size and case. First two lines wrap beside the initial, later lines return to paragraph start; margin initial stays outside. Text preserved, keyboard close/focus and reset checked.",
+      "errors": []
+    },
+    "packedDropCap": {
+      "fixture": "/Users/aron/master-icons/work/package-consumer-6CJoOF",
+      "packedSvgCount": 9,
+      "componentRenders": 90,
+      "frameworks": [
+        "react",
+        "vue",
+        "preact",
+        "svelte",
+        "astro"
+      ],
+      "variants": 9,
+      "searchKeywords": 5,
+      "errors": [],
+      "evidence": "work/rebuild-01/checkpoint-125-packed-drop-cap.json"
+    },
+    "packedDropCapAttribution": {
+      "names": [
+        "drop-cap"
+      ],
+      "packedSvgCount": 9,
+      "frameworkExports": 5,
+      "packageNotices": 6,
+      "licensedGeometryPackages": 1,
+      "errors": [],
+      "evidence": "work/rebuild-01/checkpoint-125-packed-adapted-drawings.json"
+    },
+    "whiteBalanceSubstitution": {
+      "stateChecks": 136,
+      "themes": [
+        "light",
+        "dark"
+      ],
+      "dpr": [
+        1,
+        2
+      ],
+      "evidence": "work/rebuild-01/checkpoint-125-selection-292-white-balance.json",
+      "scope": "Two labeled independent axes, numerical output, correct directional color cues, keyboard increment and reset. Simple RGB illustration, not a RAW processor. No public icon geometry or aliases changed.",
+      "errors": []
+    },
+    "spiralStructure": {
+      "unchangedNamedDrawings": 915,
+      "unchangedNativeVariants": 8235,
+      "variants": 99,
+      "topologyChecks": 297,
+      "gapProbes": 495,
+      "boundsChecks": 99,
+      "fidelityChecks": 135,
+      "coarseDiagnostics": [
+        {
+          "name": "spiral",
+          "size": 16,
+          "corner": "sharp",
+          "width": 0.75,
+          "mode": "variable-source",
+          "expectedComponents": 1,
+          "expectedHoles": 0,
+          "inkProbes": [
+            [
+              7.3,
+              9.6
+            ],
+            [
+              6.419828105560293,
+              6.575077075224041
+            ],
+            [
+              9.916295090390225,
+              11.316295090390225
+            ],
+            [
+              2.5882143841924385,
+              6.748314494938039
+            ],
+            [
+              13.8,
+              8.7
+            ]
+          ],
+          "scale": 1,
+          "components": 4,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "spiral",
+          "size": 16,
+          "corner": "sharp",
+          "width": 0.75,
+          "mode": "generated",
+          "expectedComponents": 1,
+          "expectedHoles": 0,
+          "inkProbes": [
+            [
+              7.3,
+              9.6
+            ],
+            [
+              6.419828105560293,
+              6.575077075224041
+            ],
+            [
+              9.916295090390225,
+              11.316295090390225
+            ],
+            [
+              2.5882143841924385,
+              6.748314494938039
+            ],
+            [
+              13.8,
+              8.7
+            ]
+          ],
+          "scale": 1,
+          "components": 4,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "spiral",
+          "size": 16,
+          "corner": "soft",
+          "width": 0.75,
+          "mode": "variable-source",
+          "expectedComponents": 1,
+          "expectedHoles": 0,
+          "inkProbes": [
+            [
+              7.3,
+              9.6
+            ],
+            [
+              6.419828105560293,
+              6.575077075224041
+            ],
+            [
+              9.916295090390225,
+              11.316295090390225
+            ],
+            [
+              2.5882143841924385,
+              6.748314494938039
+            ],
+            [
+              13.8,
+              8.7
+            ]
+          ],
+          "scale": 1,
+          "components": 4,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "spiral",
+          "size": 16,
+          "corner": "soft",
+          "width": 0.75,
+          "mode": "generated",
+          "expectedComponents": 1,
+          "expectedHoles": 0,
+          "inkProbes": [
+            [
+              7.3,
+              9.6
+            ],
+            [
+              6.419828105560293,
+              6.575077075224041
+            ],
+            [
+              9.916295090390225,
+              11.316295090390225
+            ],
+            [
+              2.5882143841924385,
+              6.748314494938039
+            ],
+            [
+              13.8,
+              8.7
+            ]
+          ],
+          "scale": 1,
+          "components": 4,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "spiral",
+          "size": 16,
+          "corner": "rounded",
+          "width": 0.75,
+          "mode": "variable-source",
+          "expectedComponents": 1,
+          "expectedHoles": 0,
+          "inkProbes": [
+            [
+              7.3,
+              9.6
+            ],
+            [
+              6.419828105560293,
+              6.575077075224041
+            ],
+            [
+              9.916295090390225,
+              11.316295090390225
+            ],
+            [
+              2.5882143841924385,
+              6.748314494938039
+            ],
+            [
+              13.8,
+              8.7
+            ]
+          ],
+          "scale": 1,
+          "components": 4,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "spiral",
+          "size": 16,
+          "corner": "rounded",
+          "width": 0.75,
+          "mode": "generated",
+          "expectedComponents": 1,
+          "expectedHoles": 0,
+          "inkProbes": [
+            [
+              7.3,
+              9.6
+            ],
+            [
+              6.419828105560293,
+              6.575077075224041
+            ],
+            [
+              9.916295090390225,
+              11.316295090390225
+            ],
+            [
+              2.5882143841924385,
+              6.748314494938039
+            ],
+            [
+              13.8,
+              8.7
+            ]
+          ],
+          "scale": 1,
+          "components": 4,
+          "defect": "unexpected merging or disconnected ink"
+        }
+      ],
+      "errors": [],
+      "evidence": "work/rebuild-01/checkpoint-126-spiral-structure.json",
+      "scope": "Open Archimedean spiral: tangent-continuous eighth-turn cubic segments, 1.75 turns and native size parameters. All supported widths check one open component, no closed channels, five inter-turn gap probes, bounds and source/generated raster fidelity. Six thin-width (16px/0.75/DPR1) binary-threshold component diagnostics remain; native grayscale and DPR2 inspected. No coarse closure diagnostics remain at any supported width. All preceding 915 native drawings unchanged."
+    },
+    "spiralBrowser": {
+      "browser": "chromium",
+      "nativeDownloads": 9,
+      "searches": 4,
+      "stateChecks": 72,
+      "themes": [
+        "light",
+        "dark"
+      ],
+      "dpr": [
+        1,
+        2
+      ],
+      "evidence": "work/rebuild-01/checkpoint-126-browser.json",
+      "scope": "Dedicated spiral tool beside circle and Bezier; turns and radial growth independently change a continuous open preview. Tool-switch preservation, numerical bounds, keyboard increment and reset checked.",
+      "errors": []
+    },
+    "packedSpiral": {
+      "fixture": "/Users/aron/master-icons/work/package-consumer-u2E5d0",
+      "packedSvgCount": 9,
+      "componentRenders": 90,
+      "frameworks": [
+        "react",
+        "vue",
+        "preact",
+        "svelte",
+        "astro"
+      ],
+      "variants": 9,
+      "searchKeywords": 4,
+      "errors": [],
+      "evidence": "work/rebuild-01/checkpoint-126-packed-spiral.json"
+    },
+    "ellipseAngleSubstitution": {
+      "stateChecks": 64,
+      "themes": [
+        "light",
+        "dark"
+      ],
+      "dpr": [
+        1,
+        2
+      ],
+      "evidence": "work/rebuild-01/checkpoint-126-selection-293-ellipse-angle.json",
+      "scope": "Parameterized ellipse with 180° semicircle preset, independent angles, arc/chord/sector closures, full circle, keyboard open and input bounds. Native shape content; no public icon geometry or alias changes.",
+      "errors": []
+    },
+    "sectorStructure": {
+      "unchangedNamedDrawings": 916,
+      "unchangedNativeVariants": 8244,
+      "variants": 99,
+      "topologyChecks": 297,
+      "gapProbes": 297,
+      "boundsChecks": 99,
+      "fidelityChecks": 135,
+      "coarseDiagnostics": [],
+      "errors": [],
+      "evidence": "work/rebuild-01/checkpoint-127-sector-structure.json",
+      "scope": "Direct circle/ring mother reuse; exact preservation of all preceding 916 drawings / 8244 native variants. Three-quarter outer arc and two radial boundaries with tangent fillets for soft/rounded. All supported widths checked for closed-outline topology, open quadrant and interior gaps, ink bounds and source/generated raster fidelity. No coarse diagnostics."
+    },
+    "sectorBrowser": {
+      "browser": "chromium",
+      "nativeDownloads": 9,
+      "searches": 4,
+      "stateChecks": 92,
+      "themes": [
+        "light",
+        "dark"
+      ],
+      "dpr": [
+        1,
+        2
+      ],
+      "evidence": "work/rebuild-01/checkpoint-127-browser.json",
+      "scope": "Sector tool retains radius closure; chord joins endpoints and arc stays open. Angle preservation, full-circle transition, keyboard selection, half-circle preset and visible pressed states checked.",
+      "errors": []
+    },
+    "packedSector": {
+      "fixture": "/Users/aron/master-icons/work/package-consumer-YBbOtn",
+      "packedSvgCount": 9,
+      "componentRenders": 90,
+      "frameworks": [
+        "react",
+        "vue",
+        "preact",
+        "svelte",
+        "astro"
+      ],
+      "variants": 9,
+      "searchKeywords": 4,
+      "errors": [],
+      "evidence": "work/rebuild-01/checkpoint-127-packed-sector.json"
+    },
+    "exposureControlsSubstitution": {
+      "stateChecks": 84,
+      "themes": [
+        "light",
+        "dark"
+      ],
+      "dpr": [
+        1,
+        2
+      ],
+      "evidence": "work/rebuild-01/checkpoint-127-selection-294-exposure-controls.json",
+      "scope": "Existing plus-minus at a camera exposure-compensation entry, signed EV output, third-stop keyboard increments, endpoints, mode selection and independent ISO/white-balance values. Reset changes only compensation. No metering simulation or public icon/alias changes.",
+      "errors": []
+    },
+    "toneToolsStructure": {
+      "unchangedNamedDrawings": 917,
+      "unchangedNativeVariants": 8253,
+      "variants": 198,
+      "topologyChecks": 594,
+      "gapProbes": 792,
+      "boundsChecks": 198,
+      "fidelityChecks": 270,
+      "coarseDiagnostics": [
+        {
+          "name": "color-levels",
+          "size": 16,
+          "corner": "soft",
+          "width": 0.75,
+          "mode": "variable-source",
+          "expectedComponents": 4,
+          "expectedHoles": 0,
+          "inkProbes": [
+            [
+              4,
+              14.07
+            ],
+            [
+              8,
+              14.07
+            ],
+            [
+              12.5,
+              14.07
+            ]
+          ],
+          "scale": 1,
+          "components": 5,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "color-levels",
+          "size": 16,
+          "corner": "soft",
+          "width": 0.75,
+          "mode": "generated",
+          "expectedComponents": 4,
+          "expectedHoles": 0,
+          "inkProbes": [
+            [
+              4,
+              14.07
+            ],
+            [
+              8,
+              14.07
+            ],
+            [
+              12.5,
+              14.07
+            ]
+          ],
+          "scale": 1,
+          "components": 5,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "color-levels",
+          "size": 16,
+          "corner": "rounded",
+          "width": 0.75,
+          "mode": "variable-source",
+          "expectedComponents": 4,
+          "expectedHoles": 0,
+          "inkProbes": [
+            [
+              4,
+              14.07
+            ],
+            [
+              8,
+              14.07
+            ],
+            [
+              12.5,
+              14.07
+            ]
+          ],
+          "scale": 1,
+          "components": 5,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "color-levels",
+          "size": 16,
+          "corner": "rounded",
+          "width": 0.75,
+          "mode": "generated",
+          "expectedComponents": 4,
+          "expectedHoles": 0,
+          "inkProbes": [
+            [
+              4,
+              14.07
+            ],
+            [
+              8,
+              14.07
+            ],
+            [
+              12.5,
+              14.07
+            ]
+          ],
+          "scale": 1,
+          "components": 5,
+          "defect": "unexpected merging or disconnected ink"
+        }
+      ],
+      "errors": [],
+      "evidence": "work/rebuild-01/checkpoint-129-tone-tools-structure.json",
+      "scope": "Direct axis, histogram-bar and triangle mother reuse; exact preservation of all preceding 917 drawings / 8253 native variants. All supported widths checked for bounds, connectivity, separate control handles and source/generated raster fidelity. Four coarse binary-threshold diagnostics at 16px/0.75/soft and rounded: native grayscale axis corner remains continuous; pixel sheet inspected.",
+      "pixelEvidence": "docs/review/rebuild-01/tone-tools/native-diagnostic.png"
+    },
+    "toneToolsBrowser": {
+      "browser": "chromium",
+      "nativeDownloads": 18,
+      "searches": 8,
+      "stateChecks": 124,
+      "themes": [
+        "light",
+        "dark"
+      ],
+      "dpr": [
+        1,
+        2
+      ],
+      "evidence": "work/rebuild-01/checkpoint-129-browser.json",
+      "scope": "Independent curve and level adjustments, black/white clipping and gamma mapping, per-tool persistence/reset, read-only histogram, keyboard controls, range clamping, pressed states and generated preview downloads/search.",
+      "errors": []
+    },
+    "packedToneTools": {
+      "fixture": "/Users/aron/master-icons/work/package-consumer-1H01jz",
+      "packedSvgCount": 18,
+      "componentRenders": 180,
+      "frameworks": [
+        "react",
+        "vue",
+        "preact",
+        "svelte",
+        "astro"
+      ],
+      "variants": 9,
+      "searchKeywords": 8,
+      "errors": [],
+      "evidence": "work/rebuild-01/checkpoint-129-packed-tone-tools.json"
+    },
+    "straightenSubstitution": {
+      "stateChecks": 52,
+      "themes": [
+        "light",
+        "dark"
+      ],
+      "dpr": [
+        1,
+        2
+      ],
+      "evidence": "work/rebuild-01/checkpoint-129-selection-295-straighten.json",
+      "scope": "Existing ruler measures a reference line; align applies the measured correction. Horizontal/vertical alignment, repeat application, separate quarter-turn, pointer-drawn line, zero-length guard, keyboard activation and reset verified. Demo is geometric line art without photo resampling or auto-cropping; public drawings and aliases unchanged.",
+      "errors": []
+    },
+    "retouchToolsSubstitution": {
+      "stateChecks": 80,
+      "themes": [
+        "light",
+        "dark"
+      ],
+      "dpr": [
+        1,
+        2
+      ],
+      "evidence": "work/rebuild-01/checkpoint-129-selection-297-retouch-tools.json",
+      "scope": "Existing droplet/triangle in a retouch-brush palette. Independent selection, local blur versus sharpening, untouched outer pixels, zero/full strength, pointer/keyboard application and reset verified on generated grayscale texture. No product geometry or search aliases changed.",
+      "errors": []
+    },
+    "vignetteSubstitution": {
+      "stateChecks": 56,
+      "themes": [
+        "light",
+        "dark"
+      ],
+      "dpr": [
+        1,
+        2
+      ],
+      "evidence": "work/rebuild-01/checkpoint-129-selection-298-vignette.json",
+      "scope": "Labeled Vignette amount/feather and actual native effect previews. Dark/neutral/light corner pixels and unchanged center, keyboard controls, selected presets, independent feather, zero and endpoints verified. Not an icon-only mobile selector; no catalog or search changes.",
+      "errors": []
+    },
+    "transposeStructure": {
+      "unchangedNamedDrawings": 919,
+      "unchangedNativeVariants": 8271,
+      "variants": 99,
+      "topologyChecks": 297,
+      "gapProbes": 693,
+      "boundsChecks": 99,
+      "fidelityChecks": 135,
+      "coarseDiagnostics": [
+        {
+          "name": "table-transpose",
+          "size": 16,
+          "corner": "sharp",
+          "width": 0.75,
+          "mode": "variable-source",
+          "expectedComponents": 3,
+          "expectedHoles": 4,
+          "inkProbes": [],
+          "scale": 1,
+          "components": 5,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "table-transpose",
+          "size": 16,
+          "corner": "sharp",
+          "width": 0.75,
+          "mode": "generated",
+          "expectedComponents": 3,
+          "expectedHoles": 4,
+          "inkProbes": [],
+          "scale": 1,
+          "components": 5,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "table-transpose",
+          "size": 16,
+          "corner": "soft",
+          "width": 0.75,
+          "mode": "variable-source",
+          "expectedComponents": 3,
+          "expectedHoles": 4,
+          "inkProbes": [],
+          "scale": 1,
+          "components": 5,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "table-transpose",
+          "size": 16,
+          "corner": "soft",
+          "width": 0.75,
+          "mode": "generated",
+          "expectedComponents": 3,
+          "expectedHoles": 4,
+          "inkProbes": [],
+          "scale": 1,
+          "components": 5,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "table-transpose",
+          "size": 16,
+          "corner": "rounded",
+          "width": 0.75,
+          "mode": "variable-source",
+          "expectedComponents": 3,
+          "expectedHoles": 4,
+          "inkProbes": [],
+          "scale": 1,
+          "components": 5,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "table-transpose",
+          "size": 16,
+          "corner": "rounded",
+          "width": 0.75,
+          "mode": "generated",
+          "expectedComponents": 3,
+          "expectedHoles": 4,
+          "inkProbes": [],
+          "scale": 1,
+          "components": 5,
+          "defect": "unexpected merging or disconnected ink"
+        }
+      ],
+      "errors": [],
+      "evidence": "work/rebuild-01/checkpoint-130-transpose-structure.json",
+      "scope": "Direct tableGrid and returnArrow reuse; all preceding 919 drawings / 8271 native variants exactly preserved. 99 source/generated samples across all supported widths: bounds, four cell holes, arrow/cell separation and 135 raster fidelity checks. Six coarse threshold diagnostics only at 16px/0.75: thin grayscale arrow shaft remains continuous; diagnostic inspected.",
+      "pixelEvidence": [
+        "docs/review/rebuild-01/table-transpose/native-diagnostic.png",
+        "docs/review/rebuild-01/table-transpose/thin-diagnostic.png"
+      ]
+    },
+    "transposeBrowser": {
+      "browser": "chromium",
+      "nativeDownloads": 9,
+      "searches": 5,
+      "stateChecks": 60,
+      "themes": [
+        "light",
+        "dark"
+      ],
+      "dpr": [
+        1,
+        2
+      ],
+      "evidence": "work/rebuild-01/checkpoint-130-browser.json",
+      "scope": "Every transposed cell index, double transpose restores input, reverse rows preserves dimensions, normal vs transposed paste, repeat paste from unchanged source, separate contexts, keyboard actions/reset, nine downloads and bilingual search.",
+      "errors": []
+    },
+    "packedTranspose": {
+      "fixture": "/Users/aron/master-icons/work/package-consumer-3UZGZT",
+      "packedSvgCount": 9,
+      "componentRenders": 90,
+      "frameworks": [
+        "react",
+        "vue",
+        "preact",
+        "svelte",
+        "astro"
+      ],
+      "variants": 9,
+      "searchKeywords": 5,
+      "errors": [],
+      "evidence": "work/rebuild-01/checkpoint-130-packed-transpose.json"
+    },
+    "passkeySelection": {
+      "scope": "Source research and exclusion only; no custom passkey geometry, alias, canonical package asset or authentication flow.",
+      "sources": {
+        "google": "https://developers.google.com/identity/passkeys/ux/user-interface-design",
+        "fido": "https://fidoalliance.org/get-the-passkey-icon/",
+        "guidelines": "https://fidoalliance.org/wp-content/uploads/2023/12/FIDO-Passkey_Icon_Usage_Guidelines-August2022.pdf",
+        "image": "https://developers.google.com/static/identity/passkeys/ux/user-interface-design/images/canonical-passkey-icon.png"
+      },
+      "sourceHash": "72a753ced03c349d42eba4eaa21c372b4043288c363aac674f5c6078b43a56ec",
+      "guidelineHash": "7270f40d722c5e2f9ec03aa52c14546fdde44f3bd25ec1cb37c0ac6ccd1d6f20",
+      "sourcePages": [
+        5,
+        16,
+        19
+      ],
+      "evidence": [
+        {
+          "path": "docs/review/rebuild-01/substitution-passkey/light-1x.png",
+          "sha256": "ea401355d5ee20de5edaa86b0a1e70251ab7cbe40e99dd60b748743192ba0a8a"
+        },
+        {
+          "path": "docs/review/rebuild-01/substitution-passkey/dark-1x.png",
+          "sha256": "f894c908f0c0ccf232f8e3305188b84f4c16bb1ed9e34c6dda8ec12f0ddadae7"
+        },
+        {
+          "path": "docs/review/rebuild-01/substitution-passkey/light-2x.png",
+          "sha256": "0064e7430585c82ff2f4151e2e86f7f86f61847b9e77ecf5e3f55941ee7f778e"
+        },
+        {
+          "path": "docs/review/rebuild-01/substitution-passkey/dark-2x.png",
+          "sha256": "7894437b5c642672a68310077cc764e24479e093783c6fcf8b9617bf68563820"
+        }
+      ],
+      "errors": []
+    },
+    "signatureStructure": {
+      "unchangedNamedDrawings": 920,
+      "unchangedNativeVariants": 8280,
+      "variants": 99,
+      "topologyChecks": 297,
+      "gapProbes": 99,
+      "boundsChecks": 99,
+      "fidelityChecks": 135,
+      "coarseDiagnostics": [
+        {
+          "name": "signature",
+          "size": 16,
+          "corner": "sharp",
+          "width": 0.75,
+          "mode": "variable-source",
+          "expectedComponents": 1,
+          "expectedHoles": 1,
+          "inkProbes": [],
+          "scale": 1,
+          "holes": 0,
+          "defect": "unexpected closed channel"
+        },
+        {
+          "name": "signature",
+          "size": 16,
+          "corner": "sharp",
+          "width": 0.75,
+          "mode": "variable-source",
+          "expectedComponents": 1,
+          "expectedHoles": 1,
+          "inkProbes": [],
+          "scale": 1,
+          "components": 2,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "signature",
+          "size": 16,
+          "corner": "sharp",
+          "width": 0.75,
+          "mode": "generated",
+          "expectedComponents": 1,
+          "expectedHoles": 1,
+          "inkProbes": [],
+          "scale": 1,
+          "holes": 0,
+          "defect": "unexpected closed channel"
+        },
+        {
+          "name": "signature",
+          "size": 16,
+          "corner": "sharp",
+          "width": 0.75,
+          "mode": "generated",
+          "expectedComponents": 1,
+          "expectedHoles": 1,
+          "inkProbes": [],
+          "scale": 1,
+          "components": 2,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "signature",
+          "size": 16,
+          "corner": "soft",
+          "width": 0.75,
+          "mode": "variable-source",
+          "expectedComponents": 1,
+          "expectedHoles": 1,
+          "inkProbes": [],
+          "scale": 1,
+          "holes": 0,
+          "defect": "unexpected closed channel"
+        },
+        {
+          "name": "signature",
+          "size": 16,
+          "corner": "soft",
+          "width": 0.75,
+          "mode": "variable-source",
+          "expectedComponents": 1,
+          "expectedHoles": 1,
+          "inkProbes": [],
+          "scale": 1,
+          "components": 2,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "signature",
+          "size": 16,
+          "corner": "soft",
+          "width": 0.75,
+          "mode": "generated",
+          "expectedComponents": 1,
+          "expectedHoles": 1,
+          "inkProbes": [],
+          "scale": 1,
+          "holes": 0,
+          "defect": "unexpected closed channel"
+        },
+        {
+          "name": "signature",
+          "size": 16,
+          "corner": "soft",
+          "width": 0.75,
+          "mode": "generated",
+          "expectedComponents": 1,
+          "expectedHoles": 1,
+          "inkProbes": [],
+          "scale": 1,
+          "components": 2,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "signature",
+          "size": 16,
+          "corner": "rounded",
+          "width": 0.75,
+          "mode": "variable-source",
+          "expectedComponents": 1,
+          "expectedHoles": 1,
+          "inkProbes": [],
+          "scale": 1,
+          "holes": 0,
+          "defect": "unexpected closed channel"
+        },
+        {
+          "name": "signature",
+          "size": 16,
+          "corner": "rounded",
+          "width": 0.75,
+          "mode": "variable-source",
+          "expectedComponents": 1,
+          "expectedHoles": 1,
+          "inkProbes": [],
+          "scale": 1,
+          "components": 2,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "signature",
+          "size": 16,
+          "corner": "rounded",
+          "width": 0.75,
+          "mode": "generated",
+          "expectedComponents": 1,
+          "expectedHoles": 1,
+          "inkProbes": [],
+          "scale": 1,
+          "holes": 0,
+          "defect": "unexpected closed channel"
+        },
+        {
+          "name": "signature",
+          "size": 16,
+          "corner": "rounded",
+          "width": 0.75,
+          "mode": "generated",
+          "expectedComponents": 1,
+          "expectedHoles": 1,
+          "inkProbes": [],
+          "scale": 1,
+          "components": 2,
+          "defect": "unexpected merging or disconnected ink"
+        }
+      ],
+      "errors": [],
+      "evidence": "work/rebuild-01/checkpoint-131-signature-structure.json",
+      "scope": "Continuous handwriting curve adapted from fixed Tabler source. All preceding 920 drawings / 8280 native variants exactly preserved. 99 source/generated samples across supported widths: bounds, loop hole and 135 raster fidelity checks. Twelve coarse diagnostics at 16px/0.75 only: threshold 96 drops thin gray loop pixels; grayscale remains continuous and was visually inspected.",
+      "pixelEvidence": [
+        "docs/review/rebuild-01/signature/native-diagnostic.png"
+      ]
+    },
+    "signatureBrowser": {
+      "browser": "chromium",
+      "nativeDownloads": 9,
+      "searches": 5,
+      "scope": "Nine native SVG download variants with correct viewBox and MIT attribution; five bilingual search terms. Static PDF toolbar is visual context only, not an implemented signing workflow.",
+      "errors": [],
+      "evidence": "work/rebuild-01/checkpoint-131-browser.json"
+    },
+    "packedSignature": {
+      "fixture": "/Users/aron/master-icons/work/package-consumer-wIz0BM",
+      "packedSvgCount": 9,
+      "componentRenders": 90,
+      "frameworks": [
+        "react",
+        "vue",
+        "preact",
+        "svelte",
+        "astro"
+      ],
+      "variants": 9,
+      "searchKeywords": 5,
+      "errors": [],
+      "evidence": "work/rebuild-01/checkpoint-131-packed-signature.json"
+    },
+    "workflowStructure": {
+      "unchangedNamedDrawings": 921,
+      "unchangedNativeVariants": 8289,
+      "variants": 198,
+      "topologyChecks": 594,
+      "gapProbes": 198,
+      "boundsChecks": 198,
+      "fidelityChecks": 270,
+      "coarseDiagnostics": [
+        {
+          "name": "workflow-join",
+          "size": 16,
+          "corner": "sharp",
+          "width": 0.75,
+          "mode": "variable-source",
+          "expectedComponents": 1,
+          "expectedHoles": 0,
+          "inkProbes": [
+            [
+              9,
+              8
+            ]
+          ],
+          "scale": 1,
+          "components": 2,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "workflow-join",
+          "size": 16,
+          "corner": "sharp",
+          "width": 0.75,
+          "mode": "generated",
+          "expectedComponents": 1,
+          "expectedHoles": 0,
+          "inkProbes": [
+            [
+              9,
+              8
+            ]
+          ],
+          "scale": 1,
+          "components": 2,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "workflow-join",
+          "size": 16,
+          "corner": "soft",
+          "width": 0.75,
+          "mode": "variable-source",
+          "expectedComponents": 1,
+          "expectedHoles": 0,
+          "inkProbes": [
+            [
+              9,
+              8
+            ]
+          ],
+          "scale": 1,
+          "components": 2,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "workflow-join",
+          "size": 16,
+          "corner": "soft",
+          "width": 0.75,
+          "mode": "generated",
+          "expectedComponents": 1,
+          "expectedHoles": 0,
+          "inkProbes": [
+            [
+              9,
+              8
+            ]
+          ],
+          "scale": 1,
+          "components": 2,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "workflow-join",
+          "size": 16,
+          "corner": "rounded",
+          "width": 0.75,
+          "mode": "variable-source",
+          "expectedComponents": 1,
+          "expectedHoles": 0,
+          "inkProbes": [
+            [
+              9,
+              8
+            ]
+          ],
+          "scale": 1,
+          "components": 2,
+          "defect": "unexpected merging or disconnected ink"
+        },
+        {
+          "name": "workflow-join",
+          "size": 16,
+          "corner": "rounded",
+          "width": 0.75,
+          "mode": "generated",
+          "expectedComponents": 1,
+          "expectedHoles": 0,
+          "inkProbes": [
+            [
+              9,
+              8
+            ]
+          ],
+          "scale": 1,
+          "components": 2,
+          "defect": "unexpected merging or disconnected ink"
+        }
+      ],
+      "errors": [],
+      "evidence": "work/rebuild-01/checkpoint-133-workflow-structure.json",
+      "scope": "Both workflow drawings directly reuse horizontalArrow; default mother output unchanged. All preceding 921 drawings / 8289 native variants exactly preserved. 198 source/generated samples across supported widths: bounds, topology, gaps and 270 raster fidelity checks. Six coarse diagnostics at workflow-join 16px/0.75 only: threshold 96 drops thin gray curve pixels; grayscale remains continuous and was visually inspected. Parallel heavy arrowheads separated after moving lanes apart at 20/24px.",
+      "pixelEvidence": [
+        "docs/review/rebuild-01/workflow-directions/critical-diagnostic.png"
+      ]
+    },
+    "workflowBrowser": {
+      "browser": "chromium",
+      "nativeDownloads": 18,
+      "searches": 10,
+      "stateChecks": 44,
+      "themes": [
+        "light",
+        "dark"
+      ],
+      "dpr": [
+        1,
+        2
+      ],
+      "evidence": "work/rebuild-01/checkpoint-133-browser.json",
+      "scope": "Sequential/parallel layout, keyboard selection, waiting for both inputs in either completion order, empty output until complete, deterministic append result and reset; 18 native SVG downloads and 10 bilingual searches. Local demonstration only.",
+      "errors": []
+    },
+    "packedWorkflow": {
+      "fixture": "/Users/aron/master-icons/work/package-consumer-fBHV7L",
+      "packedSvgCount": 18,
+      "componentRenders": 180,
+      "frameworks": [
+        "react",
+        "vue",
+        "preact",
+        "svelte",
+        "astro"
+      ],
+      "variants": 9,
+      "searchKeywords": 10,
+      "errors": [],
+      "evidence": "work/rebuild-01/checkpoint-133-packed-workflow.json"
+    }
+  },
+  "outlineRedrawn": 133,
+  "officialBrandAdaptations": 1,
+  "completionRequirements": "docs/review/rebuild-01/checks/completion-requirements.json",
+  "delivery": {
+    "gallery": "docs/review/rebuild-01/final-gallery.html",
+    "screenshots": [
+      {
+        "path": "docs/review/rebuild-01/final-gallery-light.png",
+        "sha256": "995fcd94da56160b64ab6633add7df8fc95a224f80c2f58fdb965b08c26673de"
+      },
+      {
+        "path": "docs/review/rebuild-01/final-gallery-dark.png",
+        "sha256": "715452d14038448b433b7aabee93dbd17d4cddc6224bcf2ccba5aad8ce430d0f"
+      }
+    ],
+    "decisions": "docs/review/rebuild-01/index.html"
+  },
+  "commitValidation": {
+    "scope": "Exact staged sources, excluding concurrent brand, site and stroke-tool work.",
+    "tasksPassed": 15,
+    "unitTestsPassed": 60,
+    "retainedNativeAndCustomStrokeDefinitionsExact": 134,
+    "originalNativeVariantsPreserved": 7110,
+    "checks": [
+      "docs/review/rebuild-01/checks/commit-icon-check.log",
+      "docs/review/rebuild-01/checks/commit-geometry-check.json"
+    ],
+    "fullCheckLimitation": {
+      "evidence": "docs/review/rebuild-01/checks/commit-full-check.log",
+      "existingFailure": "Master UI styles are imported both globally and as a texture module in the pre-existing website. The concurrent site fix is intentionally not included in this commit."
+    }
+  }
+}

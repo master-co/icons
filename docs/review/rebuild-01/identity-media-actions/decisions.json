@@ -1,0 +1,60 @@
+[
+  {
+    "name": "id-card",
+    "purpose": "人物資料與身份文件分類；橫卡輪廓、肖像與資料列能區分單純帳號頭像及通訊錄。",
+    "recognitionCues": "橫式卡片、左側圓頭肩弧、右側兩條資料線；沒有通訊錄的裝訂環。",
+    "confusableWith": [
+      "contact",
+      "user",
+      "credit-card"
+    ],
+    "sourceObservation": "Lucide 以大肖像接到卡片下緣，Tabler 用較直立的卡片及一條底部資料線。新稿沿用 contact 的圓頭與對稱肩弧函式，肩線延伸至卡片下緣，採兩條右側資料線。",
+    "reason": "contact 的裝訂環表示聯絡簿，user 只有人物，兩者皆無證件與資料的共同線索。肖像共用 contactPortrait，原 contact 原生輸出保持完全一致。16px 大於 1.5 的線寬將微小空心頭改為實心頭，避免頭孔閉合及頭肩黏合；肩線按卡片內側收口。",
+    "comparison": "與 Lucide 比較，肖像較小而右側資料區留白較多；與 Tabler 比較，橫式卡片和肩弧保留了完整人物線索。16px 三角型下頭肩可分；最粗線寬的頭部簡化後，與上框及肩線有明確分隔。20／24px 保留空心頭。明暗 DPR 1／2 的框底接縫均沒有穿出卡片。",
+    "dashes": false,
+    "dashReason": "卡片是完整證件；虛線會帶出掃描或未完成狀態，與這裡的分類用途不同。",
+    "usageEvidence": [
+      "/Users/aron/haoban/apps/web/src/features/workspace-navigation.svelte.ts:92"
+    ],
+    "reviewed": true
+  },
+  {
+    "name": "archive-restore",
+    "purpose": "封存項目的取消封存操作，與 archive 同時呈現時保留相同對象但區分進入與退出封存。",
+    "recognitionCues": "與 archive 完全共源的盒蓋與盒身，以內部向上箭頭取代把手。",
+    "confusableWith": [
+      "archive",
+      "arrow-up",
+      "rotate-left"
+    ],
+    "sourceObservation": "Hugeicons 的箭頭穿過盒底開口、筆畫較柔；Tabler 將向上箭頭置於完整盒身內，較容易與封存盒並列。新稿採完整盒身方案，盒體直接呼叫 archiveBox，箭頭呼叫原 arrow-up 同源的 horizontalArrow 再旋轉。",
+    "reason": "單用 rotate-left 會混同編輯復原或重新開啟，arrow-up 則失去封存對象。保留既有盒蓋／盒身，取消把手，容納置中的向上箭頭；粗線模式下縮短箭桿並將箭尖略下移，避免盒蓋與箭頭幾乎相接。",
+    "comparison": "與 Hugeicons 相比，完整盒底在 16px 更明確保留 archive 母型；與 Tabler 相比，沿用本庫較直的盒蓋及稍長的箭桿。三角型與線寬兩端檢查後，箭尖和盒蓋、箭尾和盒底均保有空隙；與 archive 並排時外殼沒有跳位。這裡不採穿出口沿構造，因為需要切斷盒蓋而削弱既有封存輪廓。",
+    "dashes": false,
+    "dashReason": "箭頭表示明確的還原命令，盒體表示封存容器，均不需要暫態虛線。",
+    "usageEvidence": [
+      "/Users/aron/haoban/apps/web/src/features/list-selection.svelte.ts:183"
+    ],
+    "reviewed": true
+  },
+  {
+    "name": "image-plus",
+    "purpose": "圖片內容區與編輯器空白圖片節點的插入控制；在圖片相關工具中區分新增與既有圖片。",
+    "recognitionCues": "image 的原框、日點與右側山峰；右上獨立加號表示加入。",
+    "confusableWith": [
+      "image",
+      "images",
+      "plus"
+    ],
+    "sourceObservation": "Lucide 的加號在右上，Tabler 在右下並留有兩段山景。原 image 的山峰及下坡佔右下，因此將共源加號放右上，保留完整山景；不像 Tabler 另改山峰排列。",
+    "reason": "已標明圖片的選單可用 plus，但編輯器插入區需要同時提示媒體類型與建立操作。直接使用 media.image 與 core.plus，按加號描邊外緣扣掉後方框線並保留透明淨空，沒有另造圖片母型。 部件分離檢查發現 16px sharp 的右上角會留下微小孤島，將加號上移 0.25px，使避讓區完整涵蓋框角。",
+    "comparison": "與 Lucide 同為右上加號構造，保留本庫較寬的框、實心日點與單一山峰，16px 內部更簡潔；Tabler 右下加號會佔去本庫原山景的收筆位置，因此不採。明暗、三角型與線寬兩端均可分出加號與圖片框，沒有用背景色覆蓋，也沒有多餘細碎框線。 最新位置重新檢查後，保留右上加號的平衡，且去掉原生 sharp 尖角殘留。",
+    "dashes": false,
+    "dashReason": "加號已表示新增，無須再用虛線框添加未完成或拖放區語意。",
+    "usageEvidence": [
+      "/Users/aron/haoban/packages/editor/src/media.components/MediaNode.svelte:412",
+      "/Users/aron/haoban/apps/web/src/features/content-images.components/ContentImages.svelte:221"
+    ],
+    "reviewed": true
+  }
+]

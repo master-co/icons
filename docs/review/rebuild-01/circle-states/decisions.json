@@ -1,0 +1,54 @@
+[
+  {
+    "name":"circle-dashed",
+    "purpose":"看板未開始狀態，與圓形進行中及完成狀態並列。",
+    "recognitionCues":"八段均勻圓弧、對稱缺口、與 circle 共用的半徑。",
+    "confusableWith":["circle","loader","check-circle"],
+    "sourceObservation":"Lucide 的八段置於軸線及對角線上，節奏穩定；Tabler 的段落偏轉，像分段轉環。選擇對稱位置，16px 縮短每段弧角，讓端帽後的缺口仍可見。外徑直接來自原有 circle，沒有為了來源的大圓另開母型。",
+    "reason":"保留未開始狀態的中空與不完整邊界，八段長度相同且無漸淡，不引入 loader 的領頭缺口。16px 比 24px 留更大的角向間隔，粗線下仍可分辨各段。",
+    "comparison":"明暗 DPR 1／2 原生並列中，Lucide 的大圓較醒目；Master 選擇與既有 check-circle 同徑，在三態看板中不跳位。短段與間隔在 16px soft／rounded 清楚，sharp 粗線端仍有八個缺口。",
+    "dashes":true,
+    "dashReason":"未開始狀態需要不完整的圓界；以八段獨立弧線控制端帽後的可見間隔。",
+    "usageEvidence":["/Users/aron/haoban/apps/web/src/features/calendar-client.components/CalendarClient.svelte:456"],
+    "reviewed":true
+  },
+  {
+    "name":"play-circle",
+    "purpose":"看板進行中狀態與有圓形外殼的播放控制。",
+    "recognitionCues":"既有圓框內的右向空心三角；三角比例與 play 共源。",
+    "confusableWith":["play","check-circle","circle"],
+    "sourceObservation":"Lucide 與 Tabler 使用短而圓的內三角，周圍留白較多；Master 的 play 母型較挺拔。本稿縮放同一組三角頂點但保留原生線寬，用較小角半徑保住內孔，在 16px 略提高符號相對尺寸。",
+    "reason":"直接抽出既有 playSymbol，原獨立 play 維持原幾何。圓內版本僅調整安置、比例與小角半徑，並和 check-circle 在真實看板文字旁確認共同外徑及視覺重量。",
+    "comparison":"來源的短三角更柔和，本稿較大的內部三角和 check-circle 的勾號重量接近；16px sharp 不碰外圈，rounded 仍保有三角內孔。粗線端的三角尖與外圈之間仍有可見通道。",
+    "dashes":false,
+    "dashReason":"進行中的確定狀態使用完整外圈與完整播放符號，不需要虛線。",
+    "usageEvidence":["/Users/aron/haoban/apps/web/src/features/calendar-client.components/CalendarClient.svelte:462"],
+    "reviewed":true
+  },
+    {
+    "name":"pause-circle",
+    "purpose":"圓形播放控制成對的暫停操作與暫停狀態。",
+    "recognitionCues":"與 play-circle 同徑的圓框、左右兩條平行短直線。",
+    "confusableWith":["pause","play-circle","stop"],
+    "sourceObservation":"Lucide 與 Tabler 都以短直線避免框內再套細框，留白比兩個空心長條清楚。沿用原有 pause 的雙軸構造，在共同 pauseSymbol 提供 enclosed 模式，省略容不下的內孔。",
+    "reason":"第一次原生比較時直線偏長，回修至 16px 長 5、20px 長 6.4、24px 長 7.6；直線上下空白增加，兩線的重量能和播放三角並列。獨立 pause 仍由同一函式輸出原空心長條。",
+    "comparison":"兩份來源較短且更疏，本稿縮短後保留清楚的雙軸，16px 與播放／完成同列不顯得像格柵。明暗、三角型及粗線端都可看到兩線之間和外圈四周的空間。",
+    "dashes":false,
+    "dashReason":"暫停符號及外圈需呈現明確狀態，完整實線已足夠。",
+    "usageEvidence":["/Users/aron/haoban/apps/web/src/features/ops-pages/reports-revenue.components/Page.svelte:52"],
+    "reviewed":true
+  },
+  {
+    "name":"alert-circle",
+    "purpose":"與資訊、成功並列的通知錯誤／注意狀態。",
+    "recognitionCues":"同徑外圈與直立驚嘆號，圓點位於豎線之下。",
+    "confusableWith":["info-circle","check-circle","alert-triangle"],
+    "sourceObservation":"Hugeicons 的細豎線及點間距較克制，Tabler 較厚。Master 直接旋轉 info-circle 的完整幾何，得到與資訊狀態相同的外圈、點徑及線長；不另畫一套近似驚嘆號。",
+    "reason":"通知系統確實用圓形資訊／成功／錯誤並列。alert-triangle 適合獨立警告，這裡保留共同圓形，並以 info-circle 的 180 度旋轉維持家族共源。",
+    "comparison":"三尺寸下線與點分離清楚，與 info-circle、check-circle 的外緣及線重一致。比 Hugeicons 粗但符合原有圖庫；24px 粗線端仍有點距，16px 的文字旁可區分資訊與警示。",
+    "dashes":false,
+    "dashReason":"通知警示需要穩定、完整的形狀，虛線會混入未完成狀態。",
+    "usageEvidence":["/Users/aron/haoban/packages/ui/src/components/feedback.svelte.ts:20"],
+    "reviewed":true
+  }
+]

@@ -1,0 +1,25 @@
+{
+  "purpose": "Stable validation of this rebuild while the user confirmed another conversation is actively changing the shared workspace.",
+  "root": "/Users/aron/master-icons/work/rebuild-01/validation",
+  "scope": {
+    "original": 790,
+    "retained": 134,
+    "excluded": 299,
+    "validatedCatalog": 924
+  },
+  "excludedConcurrentAddition": [
+    "brand-wechat-outline"
+  ],
+  "snapshotOnlyAdjustments": [
+    "Omit the concurrent brand-wechat-outline entry from brands.json.",
+    "Set brand export test totals to 89/88 unique geometries and omit the concurrent WeChat outline assertion.",
+    "Complete the copied dependency on collection-cards.mjs after its concurrent creation."
+  ],
+  "sharedWorkspace": "Concurrent brand artwork and application changes are preserved; validation of those additions belongs to the other task.",
+  "draftPolicy": "Snapshot contains current fresh rebuild and original baseline only; no rejected session drawings retrieved.",
+  "integrationFixes": [
+    "unfold-more resolves to chevrons-up-down",
+    "Brand browser tests use canonical OpenAI card for ChatGPT and count unique displayed brands",
+    "JSON-derived icon page mapping has an explicit type annotation"
+  ]
+}

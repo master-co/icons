@@ -1,0 +1,42 @@
+[
+  {
+    "name": "arrow-left-to-line",
+    "purpose": "順序編輯中直接移到第一欄；與向左移動一項的命令並列。",
+    "recognitionCues": "朝左的箭頭與其前方獨立止線。",
+    "confusableWith": [
+      "arrow-left",
+      "align-objects-left"
+    ],
+    "sourceObservation": "Lucide 箭尖靠止線較近，整體緊湊；Hugeicons 箭桿與止線之間較疏。本稿使用 core.horizontalArrow 縮短箭桿，止線維持完整高度，並為 sharp 最粗線寬保留箭尖外緣空隙。",
+    "reason": "單箭頭會與移動一項相同；物件對齊圖表示幾何對齊，並非項目順序。共用一個 rightBoundary 構造旋轉產生四向，16／20／24 的箭尖至止線中心距為 3.5／4.5／5.5，扣除描邊後仍可分離。",
+    "comparison": "相較 Lucide，止線與箭尖的留白較明顯，16px 粗線時不黏成接點；相較 Hugeicons，箭桿稍短而箭翼較寬，與本庫單箭頭同語氣。三尺寸與深淺背景中，止線一直是完整直線，左向與相反方向的外接範圍對稱；不靠淡色才能看出終點。",
+    "usageEvidence": [
+      "docs/review/rebuild-01/boundary-horizontal/index.html"
+    ],
+    "dashes": false,
+    "dashReason": "完整箭桿與箭翼表達確定方向，沒有隱藏邊界或未完成狀態。",
+    "opacity": false,
+    "opacityReason": "箭頭與止線均是必要識別，不以漸淡分配層級。",
+    "reviewed": true
+  },
+  {
+    "name": "arrow-right-to-line",
+    "purpose": "順序編輯中直接移到最後一欄；與向右移動一項的命令並列。",
+    "recognitionCues": "朝右的箭頭與其前方獨立止線。",
+    "confusableWith": [
+      "arrow-right",
+      "align-objects-right"
+    ],
+    "sourceObservation": "Lucide 箭尖靠止線較近，整體緊湊；Hugeicons 箭桿與止線之間較疏。本稿使用 core.horizontalArrow 縮短箭桿，止線維持完整高度，並為 sharp 最粗線寬保留箭尖外緣空隙。",
+    "reason": "單箭頭會與移動一項相同；物件對齊圖表示幾何對齊，並非項目順序。共用一個 rightBoundary 構造旋轉產生四向，16／20／24 的箭尖至止線中心距為 3.5／4.5／5.5，扣除描邊後仍可分離。",
+    "comparison": "相較 Lucide，止線與箭尖的留白較明顯，16px 粗線時不黏成接點；相較 Hugeicons，箭桿稍短而箭翼較寬，與本庫單箭頭同語氣。三尺寸與深淺背景中，止線一直是完整直線，右向與相反方向的外接範圍對稱；不靠淡色才能看出終點。",
+    "usageEvidence": [
+      "docs/review/rebuild-01/boundary-horizontal/index.html"
+    ],
+    "dashes": false,
+    "dashReason": "完整箭桿與箭翼表達確定方向，沒有隱藏邊界或未完成狀態。",
+    "opacity": false,
+    "opacityReason": "箭頭與止線均是必要識別，不以漸淡分配層級。",
+    "reviewed": true
+  }
+]

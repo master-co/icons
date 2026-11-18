@@ -1,0 +1,80 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "skillVersion": "0.5.19",
+  "viewed": [
+    "light.png",
+    "dark.png",
+    "changed-light.png",
+    "changed-dark.png"
+  ],
+  "sizes": [],
+  "themes": [
+    "light",
+    "dark"
+  ],
+  "dpr": [
+    1
+  ],
+  "corner": "soft for existing glyphs only",
+  "scope": "Local input fields and contextual scan/access controls. No rejected session geometry retrieved, authentication performed, camera opened or permissions changed.",
+  "userApproval": "pending",
+  "evidence": [
+    {
+      "path": "docs/review/rebuild-01/substitution-security-fields/light.png",
+      "sha256": "1da497ecb05aa58b4ee3a4aff521d282cdaded02f8bba1ea3b4c21b3093d09ea"
+    },
+    {
+      "path": "docs/review/rebuild-01/substitution-security-fields/dark.png",
+      "sha256": "790115eef98004e69d74a6b261df4506f7da124ce0820975aa5027d9db3cad7a"
+    },
+    {
+      "path": "docs/review/rebuild-01/substitution-security-fields/changed-light.png",
+      "sha256": "c94e80e7aa441810a43810374b5d30c89c2ff14a7ff9bbc75a8bef67c05c2ca6"
+    },
+    {
+      "path": "docs/review/rebuild-01/substitution-security-fields/changed-dark.png",
+      "sha256": "5ce152e7e82ba25ed35564f89c16ad68ef2b0efa4ac497493cf71638d9709aa9"
+    }
+  ],
+  "items": [
+    {
+      "name": "password-field",
+      "label": "密碼欄位",
+      "alternative": null,
+      "alternativeLabel": "具名密碼輸入欄位",
+      "replacementKind": "native-content",
+      "context": "登入表單 · 密碼及顯示／隱藏控制",
+      "reason": "密碼欄位本身以標籤、遮蔽字元及輸入語意呈現。顯示／隱藏可直接沿用eye與eye-off，另畫方框加星號會重複實際欄位。",
+      "replacementScope": "登入與帳號設定表單。若是表單建構器的純圖示欄位類型選擇器，仍須另評估，不把真實輸入框當成16px圖示。",
+      "sample": "<style>[data-security] label{display:block;margin:8px 0}[data-security] .row{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin:8px 0}[data-security] input,[data-security] select{font:inherit;color:inherit;background:transparent;border:1px solid #8888;padding:7px;max-width:220px}[data-security] .panel{border:1px solid #8887;border-radius:5px;padding:12px;margin:10px 0}[data-security] output{display:block;margin:10px 0}.dark [data-security]{color-scheme:dark}</style><div data-security=\"password\"><label>密碼<input style=\"display:block;margin-top:7px\" type=\"password\" autocomplete=\"current-password\" data-password value=\"sample-only\"></label><button type=\"button\" data-password-show aria-pressed=\"false\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><path d=\"M1.6667 8C3.3333 5 5.3333 3.6667 8 3.6667C10.6667 3.6667 12.6667 5 14.3333 8C12.6667 11 10.6667 12.3333 8 12.3333C5.3333 12.3333 3.3333 11 1.6667 8Z\"/><circle cx=\"8\" cy=\"8\" r=\"2\"/></svg>顯示密碼</button><template data-password-eye><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><path d=\"M1.6667 8C3.3333 5 5.3333 3.6667 8 3.6667C10.6667 3.6667 12.6667 5 14.3333 8C12.6667 11 10.6667 12.3333 8 12.3333C5.3333 12.3333 3.3333 11 1.6667 8Z\"/><circle cx=\"8\" cy=\"8\" r=\"2\"/></svg></template><template data-password-eye-off><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><path d=\"M10.5614 12.506Q9.3813 12.9583 8 12.9583Q5.7978 12.9583 4.1069 11.8085Q2.4365 10.6726 1.1203 8.3035Q1.1155 8.2949 1.111 8.286Q1.1065 8.2773 1.1022 8.2683Q1.098 8.2594 1.094 8.2503Q1.09 8.2412 1.0864 8.232Q1.0827 8.2228 1.0793 8.2135Q1.0759 8.2042 1.0728 8.1948Q1.0697 8.1854 1.067 8.1759Q1.0642 8.1664 1.0617 8.1568Q1.0592 8.1472 1.057 8.1375Q1.0548 8.1279 1.053 8.1181Q1.0511 8.1084 1.0495 8.0986Q1.048 8.0888 1.0467 8.079Q1.0455 8.0692 1.0445 8.0593Q1.0436 8.0495 1.043 8.0396Q1.0423 8.0297 1.042 8.0198Q1.0417 8.0099 1.0417 8Q1.0417 7.9901 1.042 7.9802Q1.0423 7.9703 1.043 7.9604Q1.0436 7.9505 1.0445 7.9407Q1.0455 7.9308 1.0467 7.921Q1.048 7.9112 1.0495 7.9014Q1.0511 7.8916 1.053 7.8819Q1.0548 7.8721 1.057 7.8625Q1.0592 7.8528 1.0617 7.8432Q1.0642 7.8336 1.067 7.8241Q1.0697 7.8146 1.0728 7.8052Q1.0759 7.7958 1.0793 7.7865Q1.0827 7.7772 1.0864 7.768Q1.09 7.7588 1.094 7.7497Q1.098 7.7406 1.1022 7.7317Q1.1065 7.7227 1.111 7.714Q1.1155 7.7051 1.1203 7.6965Q2.0209 6.0755 3.0873 5.0318L3.971 5.9156Q3.1295 6.7356 2.3864 8Q3.4895 9.8771 4.8098 10.7748Q6.1825 11.7083 8 11.7083Q8.8308 11.7083 9.5687 11.5132L10.5614 12.506ZM12.9127 10.9682Q13.9791 9.9245 14.8797 8.3035Q14.8845 8.2949 14.889 8.286Q14.8935 8.2773 14.8978 8.2683Q14.902 8.2594 14.906 8.2503Q14.91 8.2412 14.9136 8.232Q14.9173 8.2228 14.9207 8.2135Q14.9241 8.2042 14.9272 8.1948Q14.9303 8.1854 14.933 8.1759Q14.9358 8.1664 14.9383 8.1568Q14.9408 8.1472 14.943 8.1375Q14.9452 8.1279 14.947 8.1181Q14.9489 8.1084 14.9505 8.0986Q14.952 8.0888 14.9533 8.079Q14.9545 8.0692 14.9555 8.0593Q14.9564 8.0495 14.957 8.0396Q14.9577 8.0297 14.958 8.0198Q14.9583 8.0099 14.9583 8Q14.9583 7.9901 14.958 7.9802Q14.9577 7.9703 14.957 7.9604Q14.9564 7.9505 14.9555 7.9407Q14.9545 7.9308 14.9533 7.921Q14.952 7.9112 14.9505 7.9014Q14.9489 7.8916 14.947 7.8819Q14.9452 7.8721 14.943 7.8625Q14.9408 7.8528 14.9383 7.8432Q14.9358 7.8336 14.933 7.8241Q14.9303 7.8146 14.9272 7.8052Q14.9241 7.7958 14.9207 7.7865Q14.9173 7.7772 14.9136 7.768Q14.91 7.7588 14.906 7.7497Q14.902 7.7406 14.8978 7.7317Q14.8935 7.7227 14.889 7.714Q14.8845 7.7051 14.8797 7.6965Q13.5635 5.3274 11.8931 4.1915Q10.2022 3.0417 8 3.0417Q6.6187 3.0417 5.4386 3.494L6.4313 4.4868Q7.1692 4.2917 8 4.2917Q9.8175 4.2917 11.1903 5.2252Q12.5105 6.1229 13.6136 8Q12.8705 9.2644 12.029 10.0844L12.9127 10.9682ZM10.5537 8.6092Q10.625 8.3114 10.625 8Q10.625 7.4993 10.4407 7.0338Q10.2406 6.5283 9.8562 6.1438Q9.4717 5.7594 8.9663 5.5593Q8.5007 5.375 8 5.375Q7.6886 5.375 7.3908 5.4463L8.9723 7.0277L10.5537 8.6092ZM7.0277 8.9723L5.4463 7.3908Q5.375 7.6886 5.375 8Q5.375 8.5007 5.5593 8.9663Q5.7594 9.4717 6.1438 9.8562Q6.5283 10.2406 7.0338 10.4407Q7.4993 10.625 8 10.625Q8.3114 10.625 8.6092 10.5537L7.0277 8.9723Z\" fill=\"currentColor\" stroke=\"none\" fill-rule=\"evenodd\"/><path d=\"M2.3333 2.3333L13.6667 13.6667\"/></svg></template><p>欄位顯示遮蔽字元；顯示／隱藏是獨立控制。</p></div>",
+      "nativePreview": "<span>密碼　••••••••</span>",
+      "comparisonMarkup": "<span>密碼　••••••••</span>",
+      "searchKeywords": [],
+      "searchAliasDecision": "密碼欄位不是顯示密碼命令，不把password-field加入eye或lock。",
+      "usageEvidence": [
+        "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input/password"
+      ],
+      "visualObservation": "遮蔽字元與明文顯示切換後，標籤和欄位值保持一致，eye／eye-off只承擔顯示動作。"
+    },
+    {
+      "name": "one-time-code",
+      "label": "一次性驗證碼",
+      "alternative": null,
+      "alternativeLabel": "具名驗證碼輸入欄位",
+      "replacementKind": "native-content",
+      "context": "驗證步驟 · 六位數字輸入",
+      "reason": "實際碼值、位數提示與輸入狀態直接承擔驗證碼資訊。2FA是認證流程種類，不能把帶2FA字樣的圖示當作一次性碼本身；也不用鎖頭暗示尚未完成的驗證已通過。",
+      "replacementScope": "驗證碼輸入步驟；認證方式選擇器中的簡訊、電子郵件與驗證器來源另由各自標籤／圖示區分。",
+      "sample": "<style>[data-security] label{display:block;margin:8px 0}[data-security] .row{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin:8px 0}[data-security] input,[data-security] select{font:inherit;color:inherit;background:transparent;border:1px solid #8888;padding:7px;max-width:220px}[data-security] .panel{border:1px solid #8887;border-radius:5px;padding:12px;margin:10px 0}[data-security] output{display:block;margin:10px 0}.dark [data-security]{color-scheme:dark}</style><div data-security=\"otp\"><label>一次性驗證碼<input style=\"display:block;margin-top:7px;letter-spacing:.25em\" type=\"text\" autocomplete=\"one-time-code\" inputmode=\"numeric\" pattern=\"[0-9]{6}\" maxlength=\"6\" data-otp value=\"123456\"></label><button type=\"button\" data-otp-check>檢查格式</button><output data-otp-result>輸入六位數字</output><small>只檢查輸入格式，不代表驗證成功。</small></div>",
+      "nativePreview": "<span>驗證碼　123456</span>",
+      "comparisonMarkup": "<span>驗證碼　123456</span>",
+      "searchKeywords": [],
+      "searchAliasDecision": "不把one-time-code或2fa加入shield-check、key或lock；格式正確不等於身分驗證成功。",
+      "usageEvidence": [
+        "https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/autocomplete"
+      ],
+      "visualObservation": "真實六位數字輸入框比縮小的假欄格直接；三位輸入顯示格式提示，沒有把格式正確標示成驗證通過。"
+    }
+  ]
+}

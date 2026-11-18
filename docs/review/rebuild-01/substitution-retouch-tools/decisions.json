@@ -1,0 +1,109 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "skillVersion": "0.5.20",
+  "viewed": [
+    "initial-light-1.png",
+    "changed-light-1.png",
+    "initial-light-2.png",
+    "changed-light-2.png",
+    "initial-dark-1.png",
+    "changed-dark-1.png",
+    "initial-dark-2.png",
+    "changed-dark-2.png"
+  ],
+  "sizes": [
+    16,
+    20,
+    24
+  ],
+  "themes": [
+    "light",
+    "dark"
+  ],
+  "screenshotDpr": [
+    1,
+    2
+  ],
+  "interactionDpr": [
+    1,
+    2
+  ],
+  "scope": "Existing droplet/triangle in a retouch-brush palette. Independent selection, local blur versus sharpening, untouched outer pixels, zero/full strength, pointer/keyboard application and reset verified on generated grayscale texture. No product geometry or search aliases changed.",
+  "userApproval": "pending",
+  "primaryEvidence": "work/rebuild-01/retouch-tools-primary-evidence.json",
+  "evidence": [
+    {
+      "path": "docs/review/rebuild-01/substitution-retouch-tools/initial-light-1.png",
+      "sha256": "fc8a837ac6c2a019fe83b9f15da868288ac3b7079878a763962287c371e676f0"
+    },
+    {
+      "path": "docs/review/rebuild-01/substitution-retouch-tools/changed-light-1.png",
+      "sha256": "5b4b2230bec601b99cb0480524eaae0d8b8ad9383393cc83f6a19555e2c5c54b"
+    },
+    {
+      "path": "docs/review/rebuild-01/substitution-retouch-tools/initial-light-2.png",
+      "sha256": "d967d52cc38a882ceabef014a0a62c30e2bf75ec74a56f688dd2dde5213e5b39"
+    },
+    {
+      "path": "docs/review/rebuild-01/substitution-retouch-tools/changed-light-2.png",
+      "sha256": "d8f93383106dff2f06c9ad1ef574089ed69ba65fb220b18d7f96551fce0a3f9f"
+    },
+    {
+      "path": "docs/review/rebuild-01/substitution-retouch-tools/initial-dark-1.png",
+      "sha256": "aacd8b75c108857bf4a83fd878c83eaa5c298b8c8f2ae28faa8ceb0278a2f5e3"
+    },
+    {
+      "path": "docs/review/rebuild-01/substitution-retouch-tools/changed-dark-1.png",
+      "sha256": "e2dc2e2580c913ce463101e50a32f7db9fc07eeebda90b344ebcc8db57c40e8f"
+    },
+    {
+      "path": "docs/review/rebuild-01/substitution-retouch-tools/initial-dark-2.png",
+      "sha256": "3fd5aa53883a903bafd367c33e5af6e2096da62cd41c0e5968ea0da9c9a29c59"
+    },
+    {
+      "path": "docs/review/rebuild-01/substitution-retouch-tools/changed-dark-2.png",
+      "sha256": "e754f5140480b19795127a3234d88655f61eff5e2f89f8ba0002ecbc76eeae6f"
+    }
+  ],
+  "items": [
+    {
+      "name": "blur",
+      "label": "模糊",
+      "alternative": "droplet",
+      "reason": "局部模糊筆刷已有水滴這個實務工具符號。現有 droplet 保留上尖下圓的輪廓，可與相鄰三角形銳利化工具分辨；另畫散點或霧化方框沒有增加此入口的必要差異。",
+      "sourceShape": "Adobe 的 Blur tool 原始 18×16 PNG 是單一白色水滴，位於深色工具按鈕內；已實際查看。",
+      "url": "https://helpx.adobe.com/photoshop/using/tool-techniques/blur-tool.html",
+      "alternativeLabel": "既有 droplet 與工具名稱",
+      "replacementKind": "existing-icon",
+      "context": "局部修圖筆刷工具列：模糊與銳利化並列，選取後共用強度與筆刷操作",
+      "replacementScope": "限定在明確的局部修圖工具列，保留工具名稱／輔助標籤、選取狀態與強度。描邊符合本庫方向；不複製 Adobe 實心造型。不是把水滴解釋為所有景深、運動模糊或隱私遮蔽，也不是把三角形普遍當作銳利化。",
+      "sample": "<style>[data-retouch-demo] .tools{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}[data-retouch-demo] button[aria-pressed=true]{background:#8883;border-color:currentColor}[data-retouch-demo] label{display:flex;gap:10px;align-items:center;margin:12px 0}[data-retouch-demo] canvas{width:100%;max-width:384px;height:auto;image-rendering:pixelated;border:1px solid #8888;cursor:crosshair}[data-retouch-demo] input{max-width:160px}</style><div data-retouch-demo data-initial-tool=\"blur\"><div class=\"tools\"><button data-retouch-tool=\"blur\" aria-label=\"模糊\" title=\"模糊\" aria-pressed=\"true\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><path d=\"M8 2C6.6667 4.6667 3.3333 6.6667 3.3333 10A4.6667 4.6667 0 0 0 12.6667 10C12.6667 6.6667 9.3333 4.6667 8 2Z\"/></svg>模糊</button><button data-retouch-tool=\"sharpen\" aria-label=\"銳利化\" title=\"銳利化\" aria-pressed=\"false\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><path d=\"M8.4775 2.8357L14.1965 12.8438A0.55 0.55 0 0 1 13.719 13.6667L2.281 13.6667A0.55 0.55 0 0 1 1.8035 12.8438L7.5225 2.8357A0.55 0.55 0 0 1 8.4775 2.8357Z\"/></svg>銳利化</button></div><label>強度<input type=\"range\" min=\"0\" max=\"100\" value=\"60\" data-retouch-strength aria-label=\"強度\"><output data-retouch-value>60%</output></label><canvas data-retouch-preview width=\"96\" height=\"56\" aria-label=\"局部修圖灰階紋理示意\"></canvas><div class=\"tools\"><button data-retouch-apply>在中心套用一筆</button><button data-retouch-reset>重設示例</button></div><p data-retouch-status role=\"status\"></p><p><small>點選紋理可在局部套用。這是生成的灰階紋理與簡單卷積示意，並非 Photoshop 的演算法或相片。</small></p></div>",
+      "searchAliasDecision": "本輪不改公開別名。用途映射與適用情境留在審查頁，避免將抽象形狀的所有使用點等同於修圖工具。",
+      "usageEvidence": [
+        "https://helpx.adobe.com/photoshop/using/tool-techniques/blur-tool.html"
+      ],
+      "usageEvidenceLimit": "Official documentation and original tool imagery establish the brush-tool entry and familiar silhouette. The local grayscale texture demo is an illustrative convolution, not a reproduction of Adobe pixels or algorithms.",
+      "visualObservation": "原有 droplet 在 16／20／24 保留尖頂、弧腹和開放內孔；單色描邊的水滴與相鄰三角形在明暗底均可分辨。Adobe 實際 Blur 工具原圖為水滴，替代沒有另造語意。工具列選取、強度與名稱保持可見；本地示例的局部模糊降低紋理邊緣差，區域外不變。 八張初始／變更狀態截圖及 Adobe 工具原圖均已實際查看。"
+    },
+    {
+      "name": "sharpen",
+      "label": "銳利化",
+      "alternative": "triangle",
+      "reason": "局部銳利化工具慣用直立三角形，與模糊水滴並列。現有 triangle 已有相同的必要剪影；不用為銳利化另造三角加線或尖角徽標。",
+      "sourceShape": "Adobe 的 Sharpen tool 教學 hero 內，選取的工具是直立實心三角形；已查看完整原圖，沒有從檔名推定圖形。",
+      "url": "https://helpx.adobe.com/photoshop/using/tool-techniques/sharpen-tool.html",
+      "alternativeLabel": "既有 triangle 與工具名稱",
+      "replacementKind": "existing-icon",
+      "context": "局部修圖筆刷工具列：模糊與銳利化並列，選取後共用強度與筆刷操作",
+      "replacementScope": "限定在明確的局部修圖工具列，保留工具名稱／輔助標籤、選取狀態與強度。描邊符合本庫方向；不複製 Adobe 實心造型。不是把水滴解釋為所有景深、運動模糊或隱私遮蔽，也不是把三角形普遍當作銳利化。",
+      "sample": "<style>[data-retouch-demo] .tools{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}[data-retouch-demo] button[aria-pressed=true]{background:#8883;border-color:currentColor}[data-retouch-demo] label{display:flex;gap:10px;align-items:center;margin:12px 0}[data-retouch-demo] canvas{width:100%;max-width:384px;height:auto;image-rendering:pixelated;border:1px solid #8888;cursor:crosshair}[data-retouch-demo] input{max-width:160px}</style><div data-retouch-demo data-initial-tool=\"sharpen\"><div class=\"tools\"><button data-retouch-tool=\"blur\" aria-label=\"模糊\" title=\"模糊\" aria-pressed=\"false\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><path d=\"M8 2C6.6667 4.6667 3.3333 6.6667 3.3333 10A4.6667 4.6667 0 0 0 12.6667 10C12.6667 6.6667 9.3333 4.6667 8 2Z\"/></svg>模糊</button><button data-retouch-tool=\"sharpen\" aria-label=\"銳利化\" title=\"銳利化\" aria-pressed=\"true\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><path d=\"M8.4775 2.8357L14.1965 12.8438A0.55 0.55 0 0 1 13.719 13.6667L2.281 13.6667A0.55 0.55 0 0 1 1.8035 12.8438L7.5225 2.8357A0.55 0.55 0 0 1 8.4775 2.8357Z\"/></svg>銳利化</button></div><label>強度<input type=\"range\" min=\"0\" max=\"100\" value=\"60\" data-retouch-strength aria-label=\"強度\"><output data-retouch-value>60%</output></label><canvas data-retouch-preview width=\"96\" height=\"56\" aria-label=\"局部修圖灰階紋理示意\"></canvas><div class=\"tools\"><button data-retouch-apply>在中心套用一筆</button><button data-retouch-reset>重設示例</button></div><p data-retouch-status role=\"status\"></p><p><small>點選紋理可在局部套用。這是生成的灰階紋理與簡單卷積示意，並非 Photoshop 的演算法或相片。</small></p></div>",
+      "searchAliasDecision": "本輪不改公開別名。用途映射與適用情境留在審查頁，避免將抽象形狀的所有使用點等同於修圖工具。",
+      "usageEvidence": [
+        "https://helpx.adobe.com/photoshop/using/tool-techniques/sharpen-tool.html"
+      ],
+      "usageEvidenceLimit": "Official documentation and original tool imagery establish the brush-tool entry and familiar silhouette. The local grayscale texture demo is an illustrative convolution, not a reproduction of Adobe pixels or algorithms.",
+      "visualObservation": "原有 triangle 的尖頂與兩側直邊，和水滴的圓腹形成清楚差異。Adobe Sharpen 教學原圖亦是直立三角形；本庫描邊沿用現有母型，不改作 Adobe 的實心三角。局部銳利化示例提高紋理邊緣差，切換入口本身不更動圖像。 八張初始／變更狀態截圖及 Adobe 工具原圖均已實際查看。"
+    }
+  ]
+}

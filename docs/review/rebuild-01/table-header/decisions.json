@@ -1,0 +1,22 @@
+[
+  {
+    "dashes": false,
+    "dashReason": "格線、文字行及新增記號是確定結構，沒有隱藏邊界。",
+    "opacity": false,
+    "opacityReason": "表格輪廓和加號均需同等清楚，不使用淡化。",
+    "reviewed": true,
+    "name": "table-header-column",
+    "purpose": "表格工具列獨立切換表頭欄，與表頭列並排。",
+    "recognitionCues": "完整左側表頭帶，右側格線分區；沿用既有橫表格外框。",
+    "confusableWith": [
+      "table",
+      "layout-columns"
+    ],
+    "sourceObservation": "Tabler table-column 以斜線標示欄位，Lucide table 僅提供格線及外框的家族參考；兩者都不是這顆的精確表頭欄來源。",
+    "reason": "既有 table 的完整上方帶可表達表頭列，但不能指出左側表頭欄。抽出 tableStructure 共用外框與分界規則，僅轉置內部格線；16px 保留三個空腔，20／24px 保留五個，避免密集小格。",
+    "comparison": "與 Tabler、Lucide 並列後，省略斜線填紋讓完整左側帶直接構成表頭；外框比正方形參考稍扁，與既有 table 並排不跳位。16px 左帶與右側兩格保持分離；三角型、明暗 DPR 1／2 與線寬兩端均已查看，分界在框上收口。",
+    "usageEvidence": [
+      "/Users/aron/haoban/packages/editor/src/editor.components/EditorInstance.svelte:1778"
+    ]
+  }
+]

@@ -1,0 +1,27 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "viewed": [
+    "light.png",
+    "dark.png"
+  ],
+  "items": [
+    {
+      "name": "font-family",
+      "alternative": "text",
+      "label": "字型：Inter ▾",
+      "context": "文字工具列 · 字型名稱選擇器",
+      "reason": "欄位直接顯示目前字型名稱，旁邊有下拉箭頭；既有 text 足以標示文字屬性，不需要為字型清單再畫一種 Aa。使用端也可只顯示字型名稱。"
+    },
+    {
+      "name": "font-size",
+      "alternative": "text",
+      "label": "字級：16 px ▾",
+      "context": "文字工具列 · 字級數值欄位",
+      "reason": "數字、單位和字級標籤已交代調整對象；沿用 text 與數值即可。再畫大小不同的 AA 會與小型大寫控制衝突，而單純字級選擇器不需第二組字形圖稿。"
+    }
+  ],
+  "usageEvidence": [
+    "https://help.figma.com/hc/en-us/articles/360039956634-Explore-text-properties"
+  ]
+}

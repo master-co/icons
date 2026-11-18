@@ -1,0 +1,15 @@
+[
+  {
+    "name": "eject",
+    "purpose": "磁碟或光碟名稱旁的退出控制；媒體工具列中與停止播放並列。",
+    "recognitionCues": "向上的封閉三角形、獨立水平底線；沒有箭桿，也不是停止播放的方形。",
+    "confusableWith": ["stop", "triangle", "arrow-up-to-line"],
+    "sourceObservation": "Lucide以較寬的軟角三角形搭配空心底條；Iconoir採較窄的三角形與單一橫線。後者的小尺寸層次更安靜，前者的底條內孔在16px顯得密集。",
+    "comparison": "最新稿與兩份固定來源在16／20／24、明暗、DPR 1／2並排。保留Iconoir所示的單一底線構造，三角形共用既有Master triangle輪廓而不搬用來源路徑。16單位寬的底邊與底線同軸，較Iconoir展開、又比Lucide空心底條少一個微小空腔。三角形和底線在所有角型及支援線寬兩端仍有可見間隔；rounded保留尖頂方向，沒有變成膠囊。20px亦已單獨比較線寬兩端。",
+    "reason": "退出媒體是有慣用圖形的獨立命令；stop和向上箭頭都會遺失退出／卸載語意。沿用triangle參數化母型並使用結構性橫線，不另畫近似三角輪廓。",
+    "dashes": false,
+    "dashReason": "這是完整操作符號，不表達未完成、選取邊界或隱藏構造。",
+    "usageEvidence": ["https://support.apple.com/en-mn/guide/mac-help/mchl2f6b0645/mac", "https://support.apple.com/en-lamr/guide/mac-help/mchl027f1d66/mac"],
+    "reviewed": true
+  }
+]

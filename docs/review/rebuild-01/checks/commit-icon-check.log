@@ -1,0 +1,329 @@
+
+   • turbo 2.11.11
+   • Packages in scope: //, @master/icons, @master/icons-astro, @master/icons-preact, @master/icons-react, @master/icons-review, @master/icons-site, @master/icons-svelte, @master/icons-tests, @master/icons-vue
+   • Running build, test, test:types, verify:assets in 10 packages
+   • Remote caching disabled
+
+@master/icons-site:i18n:audit: cache hit, replaying logs bcd25db0d781ddd3
+@master/icons-site:i18n:audit: $ node --import tsx scripts/i18n.ts audit
+@master/icons-site:i18n:audit: []
+@master/icons:generate: cache hit, replaying logs f6f88ab4d943a3ca
+@master/icons:generate: $ node scripts/build.mjs --incremental --archive-svg
+@master/icons:generate: Waiting for another icon generator…
+@master/icons:generate: Built @master/icons: 924 icons × 3 sizes × 3 corners = 8316 SVGs and shared geometry.
+@master/icons:generate: Icons: generated in 5.56s
+@master/icons:build: cache bypass, force executing 5ad1b1783368c44c
+@master/icons:build: $ node scripts/sync-svg.mjs
+@master/icons:build: SVGs: synchronized 8316 files in 1.21s
+@master/icons-astro:build: cache hit, replaying logs 3f9abba551d42794
+@master/icons-astro:build: $ node ../../scripts/build-frameworks.mjs astro --incremental
+@master/icons-astro:build: Built @master/icons-astro: 924 icons × 10 entries in 8.19s
+@master/icons-svelte:build: cache hit, replaying logs 7263fe96f9b0de29
+@master/icons-svelte:build: $ node ../../scripts/build-frameworks.mjs svelte --incremental
+@master/icons-svelte:build: Built @master/icons-svelte: 924 icons × 10 entries in 8.21s
+@master/icons-preact:build: cache hit, replaying logs 2194387fb2e6b454
+@master/icons-preact:build: $ node ../../scripts/build-frameworks.mjs preact --incremental
+@master/icons-preact:build: Built @master/icons-preact: 924 icons × 10 entries in 8.16s
+@master/icons-vue:build: cache hit, replaying logs acf81a218152e554
+@master/icons-vue:build: $ node ../../scripts/build-frameworks.mjs vue --incremental
+@master/icons-vue:build: Built @master/icons-vue: 924 icons × 10 entries in 8.16s
+@master/icons-react:build: cache hit, replaying logs 183dd6b25df8b180
+@master/icons-react:build: $ node ../../scripts/build-frameworks.mjs react --incremental
+@master/icons-react:build: Built @master/icons-react: 924 icons × 10 entries in 8.19s
+@master/icons-tests:test: cache miss, executing 2cda17ee9aa1dda9
+@master/icons-tests:test:types: cache miss, executing bdf2d8f52748954f
+@master/icons-tests:test:types: $ bun run --cwd ../packages/icons test:types
+@master/icons-tests:test: $ bun run --cwd ../packages/icons test
+@master/icons-tests:test: $ cd ../.. && node --test packages/icons/tests/*.test.mjs
+@master/icons-tests:test:types: $ tsc -p tests/tsconfig.json && bun run test:types:native
+//:build:strokes: cache hit, replaying logs 79c52b6dfac1a5eb
+//:build:strokes: $ node scripts/build-strokes.mjs
+//:build:strokes: Generated stroke 0.75: 924 × 3 masters
+//:build:strokes: Generated stroke 1: 924 × 6 masters
+//:build:strokes: Generated stroke 1.25: 924 × 9 masters
+//:build:strokes: Generated stroke 1.5: 924 × 9 masters
+//:build:strokes: Generated stroke 1.75: 924 × 6 masters
+//:build:strokes: Generated stroke 2: 924 × 6 masters
+//:build:strokes: Generated stroke 2.25: 924 × 3 masters
+//:build:strokes: Generated stroke 2.5: 924 × 3 masters
+//:build:strokes: Strokes: generated in 13.26s
+@master/icons-site:prepare-site: cache miss, executing 88d97b3dc0144aaa
+@master/icons-site:prepare-site: $ node scripts/task.mjs prepare-site
+@master/icons-tests:test: ✔ Atlas variable strokes retain masked details and resolvable mask definitions (284.63325ms)
+@master/icons-tests:test: ✔ hospital ground caps stay inside the canvas at maximum supported strokes (0.923292ms)
+@master/icons-review:build: cache hit, replaying logs f7180a0b42f8c42e
+@master/icons-review:build: $ node ../scripts/build-review.mjs
+//:verify:assets: cache miss, executing 57c3955be6db85a9
+//:verify:assets: $ node scripts/validate.mjs
+@master/icons-tests:test: ✔ requested additions are exported and only the explicit ChatGPT identity alias shares geometry (1.947334ms)
+@master/icons-tests:test: ✔ 89 brand exports retain their pinned source contours and discoverable metadata (23.313ms)
+@master/icons-tests:test: ✔ brand silhouettes preserve identity under corner, stroke and RTL controls (10.781334ms)
+@master/icons-tests:test: ✔ single SVGs, catalog and all nine downloadable archives preserve brand provenance (329.959708ms)
+@master/icons-tests:test: ✔ new brand artwork terms and trace provenance survive single-file exports (0.873542ms)
+@master/icons-tests:test: ✔ content cache ignores touches but detects equal-size edits, renames and removals (130.217666ms)
+@master/icons-tests:test: ✔ missing nested outputs and forced/failed builds invalidate completion (14.986792ms)
+@master/icons-tests:test: ✔ a save during generation cannot commit a stale result (6.185084ms)
+@master/icons-tests:test: ✔ unchanged generated metadata keeps its mtime for HMR (10.552875ms)
+@master/icons-tests:test: ✔ symmetric objects retain symmetric painted contours at their closing seams (108.310167ms)
+@master/icons-tests:test: ✔ structural details preserve their enclosing silhouette (67.901167ms)
+@master/icons-tests:test: ✔ radial chart partitions preserve both the outer ring and donut hole (22.343167ms)
+@master/icons-tests:test: ✔ exterior attachments connect to the shell without entering its cavity (64.410083ms)
+@master/icons-tests:test: ✔ folded map and front coin keep internal seams inside their own shell (26.580833ms)
+@master/icons-tests:test: ✔ compass needle leaves a visible gap from the ring in every corner preset (2.353625ms)
+@master/icons-tests:test: ✔ adjacent list-collapse arrows remain distinct instead of forming a zigzag (2.866ms)
+@master/icons-tests:test: ✔ contour regressions reject the actual pre-Craft-05 defects (13.944208ms)
+@master/icons-tests:test: ✔ structural seams do not paint outside the actual package and drive shells (35.324625ms)
+@master/icons-tests:test: ✔ database state drawings retain empty upper compartments after Boolean operations (52.51425ms)
+@master/icons-tests:test: ✔ circular foreground badges leave no background fragments inside their loops (35.642167ms)
+@master/icons-tests:test: ✔ clipboard pen sharp miter and all new service badges stay within the native canvas (93.632708ms)
+@master/icons-tests:test: ✔ strokeWidth validates increments and clamps to the selected optical master (0.656083ms)
+@master/icons-tests:test: ✔ react: custom widths match independently drawn geometry across optical sizes and fixed entries (1466.727417ms)
+@master/icons-tests:test:types: $ astro-check --root . --tsconfig tests/native/tsconfig.json && node scripts/check-svelte.mjs
+@master/icons-tests:test:types: Getting diagnostics for Astro files in /Users/aron/master-icons/work/rebuild-01/commit-validation/packages/icons...
+@master/icons-tests:test: ✔ vue: custom widths match independently drawn geometry across optical sizes and fixed entries (974.961709ms)
+//:verify:assets: Validated 744 base concepts / 924 named drawings, 8316 SVG hashes, geometry, notices, 48 historical + 1680 current pinned references, and 9 licensed ZIPs.
+@master/icons-tests:test: ✔ svelte: custom widths match independently drawn geometry across optical sizes and fixed entries (2410.373833ms)
+@master/icons-tests:test: ✔ preact: custom widths match independently drawn geometry across optical sizes and fixed entries (712.978708ms)
+@master/icons-tests:test: ✔ astro: custom widths match independently drawn geometry across optical sizes and fixed entries (1216.136542ms)
+@master/icons-tests:test: ✔ vue: public entry, all fixed masters, SSR geometry, accessibility and isolation (651.493958ms)
+@master/icons-tests:test: ✔ preact: public entry, all fixed masters, SSR geometry, accessibility and isolation (438.140375ms)
+@master/icons-tests:test: ✔ svelte: public entry, all fixed masters, SSR geometry, accessibility and isolation (1278.191333ms)
+@master/icons-tests:test: ✔ astro: public entry, all fixed masters, SSR geometry, accessibility and isolation (562.051167ms)
+@master/icons-tests:test: ✔ generators serialize shared outputs and recover an interrupted owner (426.45325ms)
+@master/icons-tests:test: ✔ keyboard return trims only the tip and keeps its return route and connected shaft (49.398166ms)
+@master/icons-tests:test: ✔ languages crossbar and briefcase seam stay inside their structural shells (9.6745ms)
+@master/icons-tests:test: ✔ wrench jaw, shoulders and handle share a genuine reflection axis (16.949292ms)
+@master/icons-tests:test: ✔ occluded ink stays outside the foreground clearance, including solid badge interiors (134.345167ms)
+@master/icons-tests:test: ✔ all four phone cuts follow parallel offset boundaries, instead of rounded path endpoints (6.938542ms)
+@master/icons-tests:test: ✔ per-stroke dashes and opacity survive React serialization (3.620917ms)
+@master/icons-tests:test: ✔ optical selection has explicit boundaries and rejects invalid input (0.866084ms)
+@master/icons-tests:test: ✔ dense small masters remove detail and corner profiles alter actual geometry (0.196834ms)
+@master/icons-tests:test: ✔ SVG escaping, decorative defaults, and opt-in directional policy (0.387167ms)
+@master/icons-tests:test: ✔ React exports match SVG geometry, preserve a11y and consume design props (4.296959ms)
+@master/icons-tests:test: ✔ static React imports tree shake unrelated icons and unused optical masters (133.717334ms)
+@master/icons-tests:test: ✔ all named React exports match authored SVG for every optical and corner master (539.677958ms)
+@master/icons-tests:test: ✔ RTL changes only the approved navigation set, preserving geometry transforms (45.973625ms)
+@master/icons-tests:test: ✔ original 48 names and all unreviewed masters remain compatible (11.499458ms)
+@master/icons-tests:test: ✔ real semantic paint effects survive SVG and React across all sizes (0.423916ms)
+@master/icons-tests:test: ✔ the saved 280 baseline preserves the 210 drawings before organization (7.078458ms)
+@master/icons-tests:test: ✔ the saved 280 baseline preserves all 220 pre-productivity definitions (7.381834ms)
+@master/icons-tests:test: ✔ only explicitly reviewed refinements differ from the complete baseline (98.890875ms)
+@master/icons-tests:test: ✔ craft-03 refinements preserve an explicit independent and root review history (193.673875ms)
+@master/icons-tests:test: ✔ semantic perforations retain flat ends independently of frame corner styles (1.044084ms)
+@master/icons-tests:test: ✔ every productivity drawing appears in a labelled product scenario (14.200334ms)
+@master/icons-tests:test: ✔ every expansion drawing is used in a labelled interface scenario (0.95975ms)
+@master/icons-tests:test: ✔ craft-04 changes exactly its explicit reviewed set and retains all 392 names (19.206375ms)
+@master/icons-tests:test: ✔ craft-05 preserves its immutable baseline, final masters and individual review history (64.093708ms)
+@master/icons-tests:test: ✔ committed-craft-01 changes exactly its reviewed scope and matches current masters and evidence (167.131833ms)
+@master/icons-tests:test: ✔ source watching ignores Turbo logs and survives atomic editor saves (344.723791ms)
+@master/icons-tests:test: ℹ tests 60
+@master/icons-tests:test: ℹ suites 0
+@master/icons-tests:test: ℹ pass 60
+@master/icons-tests:test: ℹ fail 0
+@master/icons-tests:test: ℹ cancelled 0
+@master/icons-tests:test: ℹ skipped 0
+@master/icons-tests:test: ℹ todo 0
+@master/icons-tests:test: ℹ duration_ms 7884.327917
+@master/icons-site:prepare-site: Site assets: copied
+@master/icons-site:prepare-site: Guides: generated
+@master/icons-site:prepare-site: Prepared 924 icons and bilingual guides in 13.20s
+@master/icons-site:build: cache miss, executing a75e78995ee1a0e7
+@master/icons-site:build: $ node scripts/task.mjs build
+@master/icons-site:build: 22:57:12 [types] Generated 571ms
+@master/icons-site:build: 22:57:12 [build] output: "static"
+@master/icons-site:build: 22:57:12 [build] mode: "static"
+@master/icons-site:build: 22:57:12 [build] directory: /Users/aron/master-icons/work/rebuild-01/commit-validation/site/out/
+@master/icons-site:build: 22:57:12 [build] Collecting build info...
+@master/icons-site:build: 22:57:12 [build] ✓ Completed in 640ms.
+@master/icons-site:build: 22:57:12 [build] Building static entrypoints...
+@master/icons-site:build: 22:57:18 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] site.css:4347:395 'target-current' is not recognized as a valid pseudo-class. Did you mean '::target-current' (pseudo-element) or is this a typo?
+@master/icons-site:build: 22:57:18 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] site.css:4347:497 'target-current' is not recognized as a valid pseudo-class. Did you mean '::target-current' (pseudo-element) or is this a typo?
+@master/icons-site:build: 22:57:18 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] site.css:4347:796 'target-current' is not recognized as a valid pseudo-class. Did you mean '::target-current' (pseudo-element) or is this a typo?
+@master/icons-site:build: 22:57:18 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] site.css:4347:1120 'target-current' is not recognized as a valid pseudo-class. Did you mean '::target-current' (pseudo-element) or is this a typo?
+@master/icons-site:build: 22:57:18 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] site.css:4347:1238 'target-current' is not recognized as a valid pseudo-class. Did you mean '::target-current' (pseudo-element) or is this a typo?
+@master/icons-site:build: 22:57:18 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] site.css:4353:27 'target-current' is not recognized as a valid pseudo-class. Did you mean '::target-current' (pseudo-element) or is this a typo?
+@master/icons-site:build: 22:57:18 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] site.css:4381:29 'target-current' is not recognized as a valid pseudo-class. Did you mean '::target-current' (pseudo-element) or is this a typo?
+@master/icons-site:build: 22:57:18 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] site.css:4387:19 'target-current' is not recognized as a valid pseudo-class. Did you mean '::target-current' (pseudo-element) or is this a typo?
+@master/icons-site:build: 22:57:18 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] site.css:4391:19 'target-current' is not recognized as a valid pseudo-class. Did you mean '::target-current' (pseudo-element) or is this a typo?
+@master/icons-site:build: 22:57:18 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] site.css:9455:45 'view-transition-group-children' is not recognized as a valid pseudo-element. Did you mean ':view-transition-group-children' (pseudo-class) or is this a typo?
+@master/icons-site:build: 22:57:18 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] site.css:11908:1724 'scroll-marker-group' is not recognized as a valid pseudo-element. Did you mean ':scroll-marker-group' (pseudo-class) or is this a typo?
+@master/icons-site:build: 22:57:18 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] site.css:11908:1968 'scroll-marker-group' is not recognized as a valid pseudo-element. Did you mean ':scroll-marker-group' (pseudo-class) or is this a typo?
+@master/icons-site:build: 22:57:18 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] site.css:11908:2088 'scroll-button' is not recognized as a valid pseudo-element. Did you mean ':scroll-button' (pseudo-class) or is this a typo?
+@master/icons-site:build: 22:57:18 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] site.css:11908:2127 'scroll-button' is not recognized as a valid pseudo-element. Did you mean ':scroll-button' (pseudo-class) or is this a typo?
+@master/icons-site:build: 22:57:18 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] site.css:11908:2785 'scroll-button' is not recognized as a valid pseudo-element. Did you mean ':scroll-button' (pseudo-class) or is this a typo?
+@master/icons-site:build: 22:57:18 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] site.css:11908:2966 'scroll-button' is not recognized as a valid pseudo-element. Did you mean ':scroll-button' (pseudo-class) or is this a typo?
+@master/icons-site:build: 22:57:18 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] site.css:11908:3137 'scroll-button' is not recognized as a valid pseudo-element. Did you mean ':scroll-button' (pseudo-class) or is this a typo?
+@master/icons-site:build: 22:57:18 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] site.css:11908:3277 'scroll-button' is not recognized as a valid pseudo-element. Did you mean ':scroll-button' (pseudo-class) or is this a typo?
+@master/icons-site:build: 22:57:18 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] site.css:11908:3426 'scroll-button' is not recognized as a valid pseudo-element. Did you mean ':scroll-button' (pseudo-class) or is this a typo?
+@master/icons-site:build: 22:57:18 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] site.css:11908:3471 'scroll-button' is not recognized as a valid pseudo-element. Did you mean ':scroll-button' (pseudo-class) or is this a typo?
+@master/icons-site:build: 22:57:18 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] site.css:11908:3590 'scroll-button' is not recognized as a valid pseudo-element. Did you mean ':scroll-button' (pseudo-class) or is this a typo?
+@master/icons-site:build: 22:57:18 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] site.css:11908:3651 'scroll-button' is not recognized as a valid pseudo-element. Did you mean ':scroll-button' (pseudo-class) or is this a typo?
+@master/icons-site:build: 22:57:18 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] site.css:11908:3870 'scroll-button' is not recognized as a valid pseudo-element. Did you mean ':scroll-button' (pseudo-class) or is this a typo?
+@master/icons-site:build: 22:57:18 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] site.css:11908:3923 'scroll-button' is not recognized as a valid pseudo-element. Did you mean ':scroll-button' (pseudo-class) or is this a typo?
+@master/icons-site:build: 22:57:18 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] site.css:11908:4180 'scroll-marker-group' is not recognized as a valid pseudo-element. Did you mean ':scroll-marker-group' (pseudo-class) or is this a typo?
+@master/icons-site:build: 22:57:18 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] site.css:11908:4405 'scroll-marker-group' is not recognized as a valid pseudo-element. Did you mean ':scroll-marker-group' (pseudo-class) or is this a typo?
+@master/icons-site:build: 22:57:18 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] site.css:11908:4561 'scroll-marker-group' is not recognized as a valid pseudo-element. Did you mean ':scroll-marker-group' (pseudo-class) or is this a typo?
+@master/icons-site:build: 22:57:18 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] site.css:11908:4717 'scroll-marker-group' is not recognized as a valid pseudo-element. Did you mean ':scroll-marker-group' (pseudo-class) or is this a typo?
+@master/icons-site:build: 22:57:18 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] site.css:11908:4865 'scroll-button' is not recognized as a valid pseudo-element. Did you mean ':scroll-button' (pseudo-class) or is this a typo?
+@master/icons-site:build: 22:57:18 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] site.css:11908:4921 'scroll-button' is not recognized as a valid pseudo-element. Did you mean ':scroll-button' (pseudo-class) or is this a typo?
+@master/icons-site:build: 22:57:18 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] site.css:11908:5578 'scroll-button' is not recognized as a valid pseudo-element. Did you mean ':scroll-button' (pseudo-class) or is this a typo?
+@master/icons-site:build: 22:57:18 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] site.css:11908:5777 'scroll-button' is not recognized as a valid pseudo-element. Did you mean ':scroll-button' (pseudo-class) or is this a typo?
+@master/icons-site:build: 22:57:18 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] site.css:11908:6015 'scroll-button' is not recognized as a valid pseudo-element. Did you mean ':scroll-button' (pseudo-class) or is this a typo?
+@master/icons-site:build: 22:57:18 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] site.css:11908:6077 'scroll-button' is not recognized as a valid pseudo-element. Did you mean ':scroll-button' (pseudo-class) or is this a typo?
+@master/icons-site:build: 22:57:18 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] site.css:11908:6213 'scroll-button' is not recognized as a valid pseudo-element. Did you mean ':scroll-button' (pseudo-class) or is this a typo?
+@master/icons-site:build: 22:57:18 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] site.css:11908:6291 'scroll-button' is not recognized as a valid pseudo-element. Did you mean ':scroll-button' (pseudo-class) or is this a typo?
+@master/icons-site:build: 22:57:18 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] site.css:11908:6527 'scroll-button' is not recognized as a valid pseudo-element. Did you mean ':scroll-button' (pseudo-class) or is this a typo?
+@master/icons-site:build: 22:57:18 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] site.css:11908:6597 'scroll-button' is not recognized as a valid pseudo-element. Did you mean ':scroll-button' (pseudo-class) or is this a typo?
+@master/icons-site:build: 22:57:18 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] site.css:11908:6758 'scroll-button' is not recognized as a valid pseudo-element. Did you mean ':scroll-button' (pseudo-class) or is this a typo?
+@master/icons-site:build: 22:57:18 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] site.css:11908:6823 'scroll-button' is not recognized as a valid pseudo-element. Did you mean ':scroll-button' (pseudo-class) or is this a typo?
+@master/icons-site:build: 22:57:18 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] site.css:11908:6886 'scroll-button' is not recognized as a valid pseudo-element. Did you mean ':scroll-button' (pseudo-class) or is this a typo?
+@master/icons-site:build: 22:57:18 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] site.css:11908:6943 'scroll-button' is not recognized as a valid pseudo-element. Did you mean ':scroll-button' (pseudo-class) or is this a typo?
+@master/icons-site:build: 22:57:18 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] site.css:11908:7171 'scroll-button' is not recognized as a valid pseudo-element. Did you mean ':scroll-button' (pseudo-class) or is this a typo?
+@master/icons-site:build: 22:57:18 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] site.css:11908:7249 'scroll-button' is not recognized as a valid pseudo-element. Did you mean ':scroll-button' (pseudo-class) or is this a typo?
+@master/icons-site:build: 22:57:18 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] site.css:11908:7297 'scroll-button' is not recognized as a valid pseudo-element. Did you mean ':scroll-button' (pseudo-class) or is this a typo?
+@master/icons-site:build: 22:57:18 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] site.css:11908:7417 'scroll-button' is not recognized as a valid pseudo-element. Did you mean ':scroll-button' (pseudo-class) or is this a typo?
+@master/icons-site:build: 22:57:18 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] site.css:11908:7456 'scroll-button' is not recognized as a valid pseudo-element. Did you mean ':scroll-button' (pseudo-class) or is this a typo?
+@master/icons-site:build: 22:57:18 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] site.css:11908:7493 'scroll-button' is not recognized as a valid pseudo-element. Did you mean ':scroll-button' (pseudo-class) or is this a typo?
+@master/icons-site:build: 22:57:18 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] site.css:11908:7531 'scroll-button' is not recognized as a valid pseudo-element. Did you mean ':scroll-button' (pseudo-class) or is this a typo?
+@master/icons-site:build: 22:57:18 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] site.css:12064:9 'scroll-marker' is not recognized as a valid pseudo-element. Did you mean ':scroll-marker' (pseudo-class) or is this a typo?
+@master/icons-site:build: 22:57:18 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] site.css:12087:11 'scroll-marker' is not recognized as a valid pseudo-element. Did you mean ':scroll-marker' (pseudo-class) or is this a typo?
+@master/icons-site:build: 22:57:18 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] site.css:12092:9 'scroll-marker' is not recognized as a valid pseudo-element. Did you mean ':scroll-marker' (pseudo-class) or is this a typo?
+@master/icons-site:build: 22:57:18 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] site.css:12092:24 'target-current' is not recognized as a valid pseudo-class. Did you mean '::target-current' (pseudo-element) or is this a typo?
+@master/icons-site:build: 22:57:18 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] site.css:12098:28 'scroll-marker' is not recognized as a valid pseudo-element. Did you mean ':scroll-marker' (pseudo-class) or is this a typo?
+@master/icons-site:build: 22:57:18 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] site.css:12098:43 'target-current' is not recognized as a valid pseudo-class. Did you mean '::target-current' (pseudo-element) or is this a typo?
+@master/icons-site:build: 22:57:18 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] site.css:12103:9 'scroll-marker' is not recognized as a valid pseudo-element. Did you mean ':scroll-marker' (pseudo-class) or is this a typo?
+@master/icons-site:build: 22:57:18 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] site.css:12109:11 'scroll-marker' is not recognized as a valid pseudo-element. Did you mean ':scroll-marker' (pseudo-class) or is this a typo?
+@master/icons-site:build: 22:57:18 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] site.css:12115:13 'scroll-marker' is not recognized as a valid pseudo-element. Did you mean ':scroll-marker' (pseudo-class) or is this a typo?
+@master/icons-site:build: 22:57:18 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] site.css:12120:11 'scroll-marker' is not recognized as a valid pseudo-element. Did you mean ':scroll-marker' (pseudo-class) or is this a typo?
+@master/icons-site:build: 22:57:18 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] site.css:12120:26 'target-current' is not recognized as a valid pseudo-class. Did you mean '::target-current' (pseudo-element) or is this a typo?
+@master/icons-site:build: 22:57:18 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] site.css:12124:11 'scroll-marker' is not recognized as a valid pseudo-element. Did you mean ':scroll-marker' (pseudo-class) or is this a typo?
+@master/icons-site:build: 22:57:18 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] _astro/site.tPfrKYw5.css:4347:395 'target-current' is not recognized as a valid pseudo-class. Did you mean '::target-current' (pseudo-element) or is this a typo?
+@master/icons-site:build: 22:57:18 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] _astro/site.tPfrKYw5.css:4347:497 'target-current' is not recognized as a valid pseudo-class. Did you mean '::target-current' (pseudo-element) or is this a typo?
+@master/icons-site:build: 22:57:18 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] _astro/site.tPfrKYw5.css:4347:796 'target-current' is not recognized as a valid pseudo-class. Did you mean '::target-current' (pseudo-element) or is this a typo?
+@master/icons-site:build: 22:57:18 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] _astro/site.tPfrKYw5.css:4347:1120 'target-current' is not recognized as a valid pseudo-class. Did you mean '::target-current' (pseudo-element) or is this a typo?
+@master/icons-site:build: 22:57:18 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] _astro/site.tPfrKYw5.css:4347:1238 'target-current' is not recognized as a valid pseudo-class. Did you mean '::target-current' (pseudo-element) or is this a typo?
+@master/icons-site:build: 22:57:18 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] _astro/site.tPfrKYw5.css:4353:27 'target-current' is not recognized as a valid pseudo-class. Did you mean '::target-current' (pseudo-element) or is this a typo?
+@master/icons-site:build: 22:57:18 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] _astro/site.tPfrKYw5.css:4381:29 'target-current' is not recognized as a valid pseudo-class. Did you mean '::target-current' (pseudo-element) or is this a typo?
+@master/icons-site:build: 22:57:18 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] _astro/site.tPfrKYw5.css:4387:19 'target-current' is not recognized as a valid pseudo-class. Did you mean '::target-current' (pseudo-element) or is this a typo?
+@master/icons-site:build: 22:57:18 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] _astro/site.tPfrKYw5.css:4391:19 'target-current' is not recognized as a valid pseudo-class. Did you mean '::target-current' (pseudo-element) or is this a typo?
+@master/icons-site:build: 22:57:18 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] _astro/site.tPfrKYw5.css:9455:45 'view-transition-group-children' is not recognized as a valid pseudo-element. Did you mean ':view-transition-group-children' (pseudo-class) or is this a typo?
+@master/icons-site:build: 22:57:18 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] _astro/site.tPfrKYw5.css:11908:1724 'scroll-marker-group' is not recognized as a valid pseudo-element. Did you mean ':scroll-marker-group' (pseudo-class) or is this a typo?
+@master/icons-site:build: 22:57:18 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] _astro/site.tPfrKYw5.css:11908:1968 'scroll-marker-group' is not recognized as a valid pseudo-element. Did you mean ':scroll-marker-group' (pseudo-class) or is this a typo?
+@master/icons-site:build: 22:57:18 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] _astro/site.tPfrKYw5.css:11908:2088 'scroll-button' is not recognized as a valid pseudo-element. Did you mean ':scroll-button' (pseudo-class) or is this a typo?
+@master/icons-site:build: 22:57:18 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] _astro/site.tPfrKYw5.css:11908:2127 'scroll-button' is not recognized as a valid pseudo-element. Did you mean ':scroll-button' (pseudo-class) or is this a typo?
+@master/icons-site:build: 22:57:18 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] _astro/site.tPfrKYw5.css:11908:2785 'scroll-button' is not recognized as a valid pseudo-element. Did you mean ':scroll-button' (pseudo-class) or is this a typo?
+@master/icons-site:build: 22:57:18 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] _astro/site.tPfrKYw5.css:11908:2966 'scroll-button' is not recognized as a valid pseudo-element. Did you mean ':scroll-button' (pseudo-class) or is this a typo?
+@master/icons-site:build: 22:57:18 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] _astro/site.tPfrKYw5.css:11908:3137 'scroll-button' is not recognized as a valid pseudo-element. Did you mean ':scroll-button' (pseudo-class) or is this a typo?
+@master/icons-site:build: 22:57:18 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] _astro/site.tPfrKYw5.css:11908:3277 'scroll-button' is not recognized as a valid pseudo-element. Did you mean ':scroll-button' (pseudo-class) or is this a typo?
+@master/icons-site:build: 22:57:18 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] _astro/site.tPfrKYw5.css:11908:3426 'scroll-button' is not recognized as a valid pseudo-element. Did you mean ':scroll-button' (pseudo-class) or is this a typo?
+@master/icons-site:build: 22:57:18 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] _astro/site.tPfrKYw5.css:11908:3471 'scroll-button' is not recognized as a valid pseudo-element. Did you mean ':scroll-button' (pseudo-class) or is this a typo?
+@master/icons-site:build: 22:57:18 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] _astro/site.tPfrKYw5.css:11908:3590 'scroll-button' is not recognized as a valid pseudo-element. Did you mean ':scroll-button' (pseudo-class) or is this a typo?
+@master/icons-site:build: 22:57:18 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] _astro/site.tPfrKYw5.css:11908:3651 'scroll-button' is not recognized as a valid pseudo-element. Did you mean ':scroll-button' (pseudo-class) or is this a typo?
+@master/icons-site:build: 22:57:18 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] _astro/site.tPfrKYw5.css:11908:3870 'scroll-button' is not recognized as a valid pseudo-element. Did you mean ':scroll-button' (pseudo-class) or is this a typo?
+@master/icons-site:build: 22:57:18 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] _astro/site.tPfrKYw5.css:11908:3923 'scroll-button' is not recognized as a valid pseudo-element. Did you mean ':scroll-button' (pseudo-class) or is this a typo?
+@master/icons-site:build: 22:57:18 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] _astro/site.tPfrKYw5.css:11908:4180 'scroll-marker-group' is not recognized as a valid pseudo-element. Did you mean ':scroll-marker-group' (pseudo-class) or is this a typo?
+@master/icons-site:build: 22:57:18 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] _astro/site.tPfrKYw5.css:11908:4405 'scroll-marker-group' is not recognized as a valid pseudo-element. Did you mean ':scroll-marker-group' (pseudo-class) or is this a typo?
+@master/icons-site:build: 22:57:18 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] _astro/site.tPfrKYw5.css:11908:4561 'scroll-marker-group' is not recognized as a valid pseudo-element. Did you mean ':scroll-marker-group' (pseudo-class) or is this a typo?
+@master/icons-site:build: 22:57:18 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] _astro/site.tPfrKYw5.css:11908:4717 'scroll-marker-group' is not recognized as a valid pseudo-element. Did you mean ':scroll-marker-group' (pseudo-class) or is this a typo?
+@master/icons-site:build: 22:57:18 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] _astro/site.tPfrKYw5.css:11908:4865 'scroll-button' is not recognized as a valid pseudo-element. Did you mean ':scroll-button' (pseudo-class) or is this a typo?
+@master/icons-site:build: 22:57:18 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] _astro/site.tPfrKYw5.css:11908:4921 'scroll-button' is not recognized as a valid pseudo-element. Did you mean ':scroll-button' (pseudo-class) or is this a typo?
+@master/icons-site:build: 22:57:18 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] _astro/site.tPfrKYw5.css:11908:5578 'scroll-button' is not recognized as a valid pseudo-element. Did you mean ':scroll-button' (pseudo-class) or is this a typo?
+@master/icons-site:build: 22:57:18 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] _astro/site.tPfrKYw5.css:11908:5777 'scroll-button' is not recognized as a valid pseudo-element. Did you mean ':scroll-button' (pseudo-class) or is this a typo?
+@master/icons-site:build: 22:57:18 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] _astro/site.tPfrKYw5.css:11908:6015 'scroll-button' is not recognized as a valid pseudo-element. Did you mean ':scroll-button' (pseudo-class) or is this a typo?
+@master/icons-site:build: 22:57:18 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] _astro/site.tPfrKYw5.css:11908:6077 'scroll-button' is not recognized as a valid pseudo-element. Did you mean ':scroll-button' (pseudo-class) or is this a typo?
+@master/icons-site:build: 22:57:18 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] _astro/site.tPfrKYw5.css:11908:6213 'scroll-button' is not recognized as a valid pseudo-element. Did you mean ':scroll-button' (pseudo-class) or is this a typo?
+@master/icons-site:build: 22:57:18 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] _astro/site.tPfrKYw5.css:11908:6291 'scroll-button' is not recognized as a valid pseudo-element. Did you mean ':scroll-button' (pseudo-class) or is this a typo?
+@master/icons-site:build: 22:57:18 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] _astro/site.tPfrKYw5.css:11908:6527 'scroll-button' is not recognized as a valid pseudo-element. Did you mean ':scroll-button' (pseudo-class) or is this a typo?
+@master/icons-site:build: 22:57:18 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] _astro/site.tPfrKYw5.css:11908:6597 'scroll-button' is not recognized as a valid pseudo-element. Did you mean ':scroll-button' (pseudo-class) or is this a typo?
+@master/icons-site:build: 22:57:18 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] _astro/site.tPfrKYw5.css:11908:6758 'scroll-button' is not recognized as a valid pseudo-element. Did you mean ':scroll-button' (pseudo-class) or is this a typo?
+@master/icons-site:build: 22:57:18 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] _astro/site.tPfrKYw5.css:11908:6823 'scroll-button' is not recognized as a valid pseudo-element. Did you mean ':scroll-button' (pseudo-class) or is this a typo?
+@master/icons-site:build: 22:57:18 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] _astro/site.tPfrKYw5.css:11908:6886 'scroll-button' is not recognized as a valid pseudo-element. Did you mean ':scroll-button' (pseudo-class) or is this a typo?
+@master/icons-site:build: 22:57:18 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] _astro/site.tPfrKYw5.css:11908:6943 'scroll-button' is not recognized as a valid pseudo-element. Did you mean ':scroll-button' (pseudo-class) or is this a typo?
+@master/icons-site:build: 22:57:18 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] _astro/site.tPfrKYw5.css:11908:7171 'scroll-button' is not recognized as a valid pseudo-element. Did you mean ':scroll-button' (pseudo-class) or is this a typo?
+@master/icons-site:build: 22:57:18 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] _astro/site.tPfrKYw5.css:11908:7249 'scroll-button' is not recognized as a valid pseudo-element. Did you mean ':scroll-button' (pseudo-class) or is this a typo?
+@master/icons-site:build: 22:57:18 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] _astro/site.tPfrKYw5.css:11908:7297 'scroll-button' is not recognized as a valid pseudo-element. Did you mean ':scroll-button' (pseudo-class) or is this a typo?
+@master/icons-site:build: 22:57:18 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] _astro/site.tPfrKYw5.css:11908:7417 'scroll-button' is not recognized as a valid pseudo-element. Did you mean ':scroll-button' (pseudo-class) or is this a typo?
+@master/icons-site:build: 22:57:18 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] _astro/site.tPfrKYw5.css:11908:7456 'scroll-button' is not recognized as a valid pseudo-element. Did you mean ':scroll-button' (pseudo-class) or is this a typo?
+@master/icons-site:build: 22:57:18 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] _astro/site.tPfrKYw5.css:11908:7493 'scroll-button' is not recognized as a valid pseudo-element. Did you mean ':scroll-button' (pseudo-class) or is this a typo?
+@master/icons-site:build: 22:57:18 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] _astro/site.tPfrKYw5.css:11908:7531 'scroll-button' is not recognized as a valid pseudo-element. Did you mean ':scroll-button' (pseudo-class) or is this a typo?
+@master/icons-site:build: 22:57:18 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] _astro/site.tPfrKYw5.css:12064:9 'scroll-marker' is not recognized as a valid pseudo-element. Did you mean ':scroll-marker' (pseudo-class) or is this a typo?
+@master/icons-site:build: 22:57:18 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] _astro/site.tPfrKYw5.css:12087:11 'scroll-marker' is not recognized as a valid pseudo-element. Did you mean ':scroll-marker' (pseudo-class) or is this a typo?
+@master/icons-site:build: 22:57:18 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] _astro/site.tPfrKYw5.css:12092:9 'scroll-marker' is not recognized as a valid pseudo-element. Did you mean ':scroll-marker' (pseudo-class) or is this a typo?
+@master/icons-site:build: 22:57:18 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] _astro/site.tPfrKYw5.css:12092:24 'target-current' is not recognized as a valid pseudo-class. Did you mean '::target-current' (pseudo-element) or is this a typo?
+@master/icons-site:build: 22:57:18 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] _astro/site.tPfrKYw5.css:12098:28 'scroll-marker' is not recognized as a valid pseudo-element. Did you mean ':scroll-marker' (pseudo-class) or is this a typo?
+@master/icons-site:build: 22:57:18 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] _astro/site.tPfrKYw5.css:12098:43 'target-current' is not recognized as a valid pseudo-class. Did you mean '::target-current' (pseudo-element) or is this a typo?
+@master/icons-site:build: 22:57:18 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] _astro/site.tPfrKYw5.css:12103:9 'scroll-marker' is not recognized as a valid pseudo-element. Did you mean ':scroll-marker' (pseudo-class) or is this a typo?
+@master/icons-site:build: 22:57:18 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] _astro/site.tPfrKYw5.css:12109:11 'scroll-marker' is not recognized as a valid pseudo-element. Did you mean ':scroll-marker' (pseudo-class) or is this a typo?
+@master/icons-site:build: 22:57:18 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] _astro/site.tPfrKYw5.css:12115:13 'scroll-marker' is not recognized as a valid pseudo-element. Did you mean ':scroll-marker' (pseudo-class) or is this a typo?
+@master/icons-site:build: 22:57:18 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] _astro/site.tPfrKYw5.css:12120:11 'scroll-marker' is not recognized as a valid pseudo-element. Did you mean ':scroll-marker' (pseudo-class) or is this a typo?
+@master/icons-site:build: 22:57:18 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] _astro/site.tPfrKYw5.css:12120:26 'target-current' is not recognized as a valid pseudo-class. Did you mean '::target-current' (pseudo-element) or is this a typo?
+@master/icons-site:build: 22:57:18 [WARN] [vite] [plugin master-css:style-entry:build] [lightningcss minify] _astro/site.tPfrKYw5.css:12124:11 'scroll-marker' is not recognized as a valid pseudo-element. Did you mean ':scroll-marker' (pseudo-class) or is this a typo?
+@master/icons-site:build: 22:57:18 [vite] ✓ built in 5.84s
+@master/icons-tests:test:types: Result (9244 files): 
+@master/icons-tests:test:types: - 0 errors
+@master/icons-tests:test:types: - 0 warnings
+@master/icons-tests:test:types: - 0 hints
+@master/icons-tests:test:types: 
+@master/icons-tests:test:types: Svelte icons: 925 generated components and native consumers
+@master/icons-site:build: 22:57:25 [WARN] [vite] [plugin builtin:vite-reporter] 
+@master/icons-site:build: (!) Some chunks are larger than 500 kB after minification. Consider:
+@master/icons-site:build: - Using dynamic import() to code-split the application
+@master/icons-site:build: - Use build.rolldownOptions.output.codeSplitting to improve chunking: https://rolldown.rs/reference/OutputOptions.codeSplitting
+@master/icons-site:build: - Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+@master/icons-site:build: 22:57:25 [vite] ✓ built in 7.30s
+@master/icons-site:build: 22:57:26 [build] Rearranging server assets...
+@master/icons-site:build: 
+@master/icons-site:build:  generating static routes 
+@master/icons-site:build: 22:57:26   ├─ /guide/accessibility.html (+306ms) 
+@master/icons-site:build: 22:57:26   ├─ /tw/guide/accessibility.html (+63ms) 
+@master/icons-site:build: 22:57:26   ├─ /guide/astro.html (+103ms) 
+@master/icons-site:build: 22:57:26   ├─ /tw/guide/astro.html (+65ms) 
+@master/icons-site:build: 22:57:26   ├─ /guide/getting-started.html (+90ms) 
+@master/icons-site:build: 22:57:26   ├─ /tw/guide/getting-started.html (+66ms) 
+@master/icons-site:build: 22:57:26   ├─ /guide/license.html (+67ms) 
+@master/icons-site:build: 22:57:26   ├─ /tw/guide/license.html (+63ms) 
+@master/icons-site:build: 22:57:26   ├─ /guide/optical-sizes.html (+66ms) 
+@master/icons-site:build: 22:57:26   ├─ /tw/guide/optical-sizes.html (+61ms) 
+@master/icons-site:build: 22:57:26   ├─ /guide/preact.html (+69ms) 
+@master/icons-site:build: 22:57:27   ├─ /tw/guide/preact.html (+62ms) 
+@master/icons-site:build: 22:57:27   ├─ /guide/react.html (+64ms) 
+@master/icons-site:build: 22:57:27   ├─ /tw/guide/react.html (+65ms) 
+@master/icons-site:build: 22:57:27   ├─ /guide/svelte.html (+119ms) 
+@master/icons-site:build: 22:57:27   ├─ /tw/guide/svelte.html (+68ms) 
+@master/icons-site:build: 22:57:27   ├─ /guide/svg.html (+81ms) 
+@master/icons-site:build: 22:57:27   ├─ /tw/guide/svg.html (+67ms) 
+@master/icons-site:build: 22:57:27   ├─ /guide/vue.html (+103ms) 
+@master/icons-site:build: 22:57:27   ├─ /tw/guide/vue.html (+64ms) 
+@master/icons-site:build: 22:57:27   ├─ /icons.html (+55ms) 
+@master/icons-site:build: 22:57:27   ├─ /tw/icons.html (+50ms) 
+@master/icons-site:build: 22:57:27   ├─ /index.html (+42ms) 
+@master/icons-site:build: 22:57:27   ├─ /tw.html (+42ms) 
+@master/icons-site:build: 22:57:27 ✓ Completed in 1.95s.
+@master/icons-site:build: 
+@master/icons-site:build: 22:57:27 [build] ✓ Completed in 15.23s.
+@master/icons-tests:test:types: Loading svelte-check in workspace: /Users/aron/master-icons/work/rebuild-01/commit-validation/packages/icons/
+@master/icons-tests:test:types: Getting Svelte diagnostics...
+@master/icons-tests:test:types: 
+@master/icons-tests:test:types: svelte-check found 0 errors and 0 warnings
+@master/icons-tests:test:types: Svelte 16: 2772 generated components
+@master/icons-site:build: 22:57:28 [build] 24 page(s) built in 15.96s
+@master/icons-site:build: 22:57:28 [build] Complete!
+@master/icons-tests:test:types: Loading svelte-check in workspace: /Users/aron/master-icons/work/rebuild-01/commit-validation/packages/icons/
+@master/icons-tests:test:types: Getting Svelte diagnostics...
+@master/icons-tests:test:types: 
+@master/icons-tests:test:types: svelte-check found 0 errors and 0 warnings
+@master/icons-tests:test:types: Svelte 20: 2772 generated components
+@master/icons-tests:test:types: Loading svelte-check in workspace: /Users/aron/master-icons/work/rebuild-01/commit-validation/packages/icons/
+@master/icons-tests:test:types: Getting Svelte diagnostics...
+@master/icons-tests:test:types: 
+@master/icons-tests:test:types: svelte-check found 0 errors and 0 warnings
+@master/icons-tests:test:types: Svelte 24: 2772 generated components
+@master/icons-tests:test:types: Loading svelte-check in workspace: /Users/aron/master-icons/work/rebuild-01/commit-validation/packages/icons/
+@master/icons-tests:test:types: Getting Svelte diagnostics...
+@master/icons-tests:test:types: 
+@master/icons-tests:test:types: svelte-check found 0 errors and 0 warnings
+
+ Tasks:    15 successful, 15 total
+Cached:    9 cached, 15 total
+  Time:    54.451s 
+

@@ -1,0 +1,28 @@
+[
+  {
+    "name":"folder-kanban",
+    "purpose":"專案導覽、進行中專案與沒有自訂圖像的工作區預設圖。",
+    "recognitionCues":"既有資料夾肩部與輪廓，內部等距而長短不同的三欄。",
+    "confusableWith":["folder","kanban","folder-tree"],
+    "sourceObservation":"Lucide 的資料夾內三欄留白明確；Hugeicons 在肩部多一段內線，圓框更柔。Master 直接沿用 folder 的完整外殼，不增加接縫；內欄由既有 kanban 的長／短／中排列簡化為三條筆畫。",
+    "reason":"實際導覽要區分一般資料夾與專案，看板單圖則少了容器語意。框內取消看板的三條標題線及空心卡片，只保留共源的欄位節奏；粗線模式下欄頂略下移、柱長縮短，增加上下淨空。",
+    "comparison":"原生 16px 的肩部與三欄都可辨，三欄不貼住兩側。兩份來源將最高欄放右，本稿維持原有 kanban 的最高欄在左；欄位節奏同樣成立。粗線端回修後，欄頂與框、長欄與底邊都有間隔，rounded 的資料夾仍保留肩部。",
+    "dashes":false,
+    "dashReason":"資料夾是已建立的專案容器，欄位表示看板構造，均使用完整實線。",
+    "usageEvidence":["/Users/aron/haoban/apps/web/src/features/workspace-navigation.svelte.ts:70"],
+    "reviewed":true
+  },
+  {
+    "name":"square-plus",
+    "purpose":"iOS 加入主畫面安裝步驟中的系統圖形提示，以及需要方框加號的新增控制。",
+    "recognitionCues":"既有 square 外框與置中的等長加號。",
+    "confusableWith":["square","plus","app-window"],
+    "sourceObservation":"Lucide 的加號相對大，Tabler 的加號較短。Master 取用原有 square 與 plus，內置加號的半長分別為 2.5／3.25／4，讓四端和外框保持均勻留白，三角型由既有外框決定。",
+    "reason":"安裝說明需要讓人對照系統選單的方框加號，單獨 plus 會少掉識別外框。兩個部件直接共用原有母型，只縮短內部加號的原生臂長，不新增裝飾或第二種方框。",
+    "comparison":"與 Lucide、Tabler 並排時，加號大小較接近 Lucide，外框比例則延續本庫 square。16px sharp、soft、rounded 的四個空腔清楚；線寬兩端均未碰框，文字步驟旁能保留方框加號的輪廓。",
+    "dashes":false,
+    "dashReason":"方框加號是明確新增命令，虛線框會另帶選取或預留區語意。",
+    "usageEvidence":["/Users/aron/haoban/apps/web/src/features/app-install.components/StaticNode231.svelte:2","/Users/aron/haoban/apps/web/src/features/app-install.svelte.ts:115"],
+    "reviewed":true
+  }
+]

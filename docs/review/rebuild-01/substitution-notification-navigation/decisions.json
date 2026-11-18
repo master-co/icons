@@ -1,0 +1,66 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "viewed": [
+    "light.png",
+    "dark.png"
+  ],
+  "items": [
+    {
+      "name": "arrow-left-circle",
+      "alternative": "arrow-left",
+      "context": "輪播控制 · 上一張",
+      "reason": "圓形由按鈕外觀表達，arrow-left 已完整表示上一張；把外圈寫進圖稿會和按鈕邊框重複，也壓縮箭頭。",
+      "label": "上一張"
+    },
+    {
+      "name": "arrow-right-circle",
+      "alternative": "arrow-right",
+      "context": "輪播控制 · 下一張",
+      "reason": "與上一張並列時，左右方向已是必要差異；圓形點擊範圍由介面處理，無須另一套圓框方向圖。",
+      "label": "下一張"
+    },
+    {
+      "name": "arrow-up-circle",
+      "alternative": "arrow-up",
+      "context": "浮動按鈕 · 回到頁首",
+      "reason": "浮動圓形按鈕與回到頁首標籤已交代用途，arrow-up 可清楚指出捲動方向；不需要把同一外圈再刻進 SVG。",
+      "label": "回到頁首"
+    },
+    {
+      "name": "arrow-down-circle",
+      "alternative": "arrow-down",
+      "context": "長頁導覽 · 跳至下方內容",
+      "reason": "在圓形導覽按鈕內向下箭頭已成立，外圈只重複控制項外觀；下載另用既有 download，不混用這顆表示取回檔案。",
+      "label": "跳至下方內容"
+    },
+    {
+      "name": "more-horizontal-circle",
+      "alternative": "more-horizontal",
+      "context": "工具列 · 更多選項",
+      "reason": "三點已是更多選單識別；外圓是按鈕樣式，無須為有框與無框按鈕各造一個命名圖稿。",
+      "label": "更多選項"
+    },
+    {
+      "name": "bell-plus",
+      "alternative": "bell",
+      "context": "討論串通知選單 · 開啟通知",
+      "reason": "通知開關可用 bell／bell-off 搭配選取狀態與標籤；加號沒有新增必要狀態，且可能混成新增提醒。",
+      "label": "開啟通知"
+    },
+    {
+      "name": "bell-minus",
+      "alternative": "bell-off",
+      "context": "討論串通知選單 · 停止接收通知",
+      "reason": "現有 bell-off 已明確表示停止通知，減號反而可能被理解成降低頻率；不另造第二種關閉通知圖。",
+      "label": "關閉通知"
+    },
+    {
+      "name": "search-x",
+      "alternative": "search",
+      "context": "搜尋結果頁 · 沒有符合條件的結果",
+      "reason": "結果數與空狀態文字交代零筆結果，search 保留查找語意；疊加 × 容易與清除查詢或取消搜尋混淆。",
+      "label": "沒有結果"
+    }
+  ]
+}

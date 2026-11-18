@@ -1,0 +1,59 @@
+[
+  {
+    "name": "heading-4",
+    "purpose": "編輯器的標題 4 層級命令；與其他層級並列時需要以數字區分，通用 heading 無法表達層級。",
+    "recognitionCues": "共用既有 heading 的 H 構造；開口上部、水平橫梁及向下伸出的右幹。",
+    "confusableWith": [
+      "heading",
+      "bold",
+      "text"
+    ],
+    "sourceObservation": "Lucide 採開口的直左幹，Tabler 採帶三角內孔的斜左幹。採開口構造避免 16px 粗線下三角孔填死，角型只改左下的轉折半徑。",
+    "reason": "從空白重新配置原生字面；H 透過 headingStem 共源，數字使用獨立的 16／20／24 字面範圍。開口上部、水平橫梁及向下伸出的右幹。",
+    "comparison": "4 的開口與右側下伸筆畫在三個尺寸都可辨，與 Lucide 的構造一致，沒有 Tabler 的微小三角孔。最粗線端橫梁交點仍是字形交接；與 1、3 並排時不混淆，H 的高度和基線不跳動。",
+    "dashes": false,
+    "dashReason": "完整字形表示固定標題層級，沒有隱藏或未完成邊界。",
+    "usageEvidence": [
+      "/Users/aron/haoban/packages/editor/src/commands.svelte.ts:27"
+    ],
+    "reviewed": true
+  },
+  {
+    "name": "heading-5",
+    "purpose": "編輯器的標題 5 層級命令；與其他層級並列時需要以數字區分，通用 heading 無法表達層級。",
+    "recognitionCues": "共用既有 heading 的 H 構造；水平頂部與直肩接下弧，和 3 的雙圓肩區分。",
+    "confusableWith": [
+      "heading",
+      "bold",
+      "text"
+    ],
+    "sourceObservation": "Lucide 的 5 以直肩和下部圓腹構成，Tabler 則較接近傳統字形比例。延續直肩構造，對上角使用本庫角型，腹部曲線保留完整張力。",
+    "reason": "從空白重新配置原生字面；H 透過 headingStem 共源，數字使用獨立的 16／20／24 字面範圍。水平頂部與直肩接下弧，和 3 的雙圓肩區分。",
+    "comparison": "5 的直立上肩使其在 16px 與 3 分開；下弧向左的收筆沒有碰到肩部。與兩份來源比較，字腹留白充足，24px 的腹部不扁塌。rounded 只柔化上角，仍保留 5 的方肩輪廓。",
+    "dashes": false,
+    "dashReason": "完整字形表示固定標題層級，沒有隱藏或未完成邊界。",
+    "usageEvidence": [
+      "/Users/aron/haoban/packages/editor/src/commands.svelte.ts:27"
+    ],
+    "reviewed": true
+  },
+  {
+    "name": "heading-6",
+    "purpose": "編輯器的標題 6 層級命令；與其他層級並列時需要以數字區分，通用 heading 無法表達層級。",
+    "recognitionCues": "共用既有 heading 的 H 構造；向左下彎的上部與完整下環，保持單一內孔。",
+    "confusableWith": [
+      "heading",
+      "bold",
+      "text"
+    ],
+    "sourceObservation": "Lucide、Tabler 的 6 都用上部斜彎帶入下環。將上部曲線接入環的左側，環的上下曲率對稱，避免另加橫向接縫。",
+    "reason": "從空白重新配置原生字面；H 透過 headingStem 共源，數字使用獨立的 16／20／24 字面範圍。向左下彎的上部與完整下環，保持單一內孔。",
+    "comparison": "6 的上部斜彎與下環在 16px 粗線端仍有區分，下環內孔未閉合。與來源並排，本稿環高較充分，24px 的圓腹沒有四角感；深底與低對比文字旁也能辨認，和 5 的開口下腹不同。",
+    "dashes": false,
+    "dashReason": "完整字形表示固定標題層級，沒有隱藏或未完成邊界。",
+    "usageEvidence": [
+      "/Users/aron/haoban/packages/editor/src/commands.svelte.ts:27"
+    ],
+    "reviewed": true
+  }
+]

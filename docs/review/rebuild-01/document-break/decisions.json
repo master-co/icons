@@ -1,0 +1,17 @@
+[
+  {
+    "name": "page-break",
+    "reviewed": true,
+    "purpose": "文件編輯器插入分頁：讓游標後內容從下一頁開始。需要與插入換行、建立新文件及段落分隔線區分；keyboard-return、file-plus及minus各自會指向不同命令，因此保留分頁專用輪廓。",
+    "recognitionCues": "既有折角紙頁被水平留白分成上下兩段，三筆短線標出分頁邊界。",
+    "confusableWith": ["file", "file-plus", "keyboard-return", "minus"],
+    "sourceObservation": "Tabler page-break以折角文件、斷開的兩側紙邊及三筆短線表達分頁；Material Design Icons format-page-break用實心輪廓與四段短線表達同一邊界。後者短線更密，本庫16px採三段以保留間隙。",
+    "comparison": "最新稿與兩份固定來源在16／20／24及明暗DPR1／2並列。沿用既有file較窄的紙頁比例，沒有另畫一套接近Tabler的外殼；折角與上下圓角和母型完全共源。中段留白穿過兩側，讓上下紙頁與三筆短線保持分離；相較Material的四段排列，三段的間距在16px及粗線端較清楚。24px粗線折角依母型增加尺寸，沒有把紙頁割成兩個獨立文件。Sharp切口平整，soft／rounded保留真正外殼圓角，三個尺寸的分頁線都居中且向紙邊外延伸。",
+    "reason": "改作Tabler的折角文件加三段分頁線構造，透過fileParts直接取用現有file外殼及折角，再從已描邊輪廓扣除水平分頁帶；沒有重新描一個相似的文件。折角維持母型的內部裁切與變動線寬補償。",
+    "dashes": true,
+    "dashReason": "三段水平線是文件編輯中的分頁邊界；使用明確段長與間距，不對紙頁外殼加虛線。",
+    "opacity": false,
+    "opacityReason": "上下紙頁與分頁線共同承擔語意，靠留白分離，不靠淡化藏住交接。",
+    "usageEvidence": ["https://support.microsoft.com/en-us/word/insert-a-page-break-in-word"]
+  }
+]

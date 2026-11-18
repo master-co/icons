@@ -1,0 +1,18 @@
+[
+  {
+    "name": "monitor-smartphone",
+    "reviewed": true,
+    "purpose": "在跨裝置支援說明中，同時顯示桌機與手機兩種裝置；有標籤的安裝按鈕仍可用 app-window。",
+    "recognitionCues": "橫向螢幕、支架與底足，配上前景直立手機；兩個裝置各自保有空腔及清楚外緣。",
+    "confusableWith": ["monitor", "smartphone", "app-window"],
+    "sourceObservation": "Lucide 以緊湊螢幕搭配短直立手機，省略手機內線；Hugeicons Free 的螢幕較寬、轉角更柔和。兩份來源都清楚分離前後裝置，作為原生尺寸的比例及間距比較。",
+    "reason": "從既有 monitor、smartphone 抽出參數化共用母型，原型預設幾何不變。手機省略小尺寸操作橫線，保留直立比例及母型角型。原生16px初稿交界偏擠，修正螢幕橫向位置、寬度和手機底緣像素相位，並增加真正透明的等距避讓；未取用被撤銷的 session 圖稿。",
+    "comparison": "最新稿與兩份來源在16／20／24px重新並列：保留自家螢幕較明確的支架和底足，手機不以額外底線擠壓內孔。提煉來源圓角與留白的優點後，soft及rounded手機與螢幕的曲度更協調；16px細線端沒有鬆散角點，粗線端交界仍分開。已實際查看三角型、明暗背景、DPR1／2及線寬兩端，並看過母型、安置部件與組合圖的16px並排。",
+    "dashes": false,
+    "dashReason": "兩種裝置是確定的支援範圍，沒有待建立、選取或隱藏邊界，使用實線。",
+    "opacity": false,
+    "opacityReason": "前後關係由遮擋和真透明間距表達，不需淡化後方螢幕。",
+    "usageEvidence": ["/Users/aron/haoban/apps/web/src/features/app-install.components/ScriptContent237.svelte", "/Users/aron/haoban/apps/web/src/features/app-install.svelte.ts"],
+    "usageEvidenceLimit": "現有安裝按鈕具有標籤，可以使用 app-window；本顆保留的是跨裝置支援摘要所需的雙裝置語意，不宣稱所有安裝入口都需要複合圖。"
+  }
+]

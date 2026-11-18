@@ -1,6 +1,15 @@
 import {enclosedDetails} from '../occlusion.mjs';
 import { figure, mark } from "./shared.mjs";
 import { person } from "./core.mjs";
+// Compact portraits share their construction with the existing address book.
+export function contactPortrait(g,{
+  x=12.5,y=8,radius=2,left=9,right=16,bottom=17,rise=1,control=12.5,solidHead=false,
+}={}) {
+  const f=figure(g);
+  const head=f.circle(x,y,radius);
+  if(solidHead)Object.assign(head[1],{fill:'currentColor',stroke:'none'});
+  return [head,f.path(`M${left} ${bottom}V${bottom-rise}C${left} ${control} ${right} ${control} ${right} ${bottom-rise}V${bottom}`)];
+}
 function shield(g) {
   const f = figure(g), k = g.corner === "sharp" ? 0 : g.corner === "soft" ? 0.4 : 0.8;
   // Sharp joins use the neighboring nondegenerate tangents. A zero-length
@@ -15,7 +24,7 @@ const identity = {
   contact: (g) => {
     const f = figure(g);
     // Keep the portrait's head separate from its shoulders at native 16px.
-    return [f.rect(5, 3, 15, 18), f.line(3, 7, 6.5, 7), f.line(3, 17, 6.5, 17), f.circle(12.5, 8, 2), f.path("M9 17V16C9 12.5 16 12.5 16 16V17")];
+    return [f.rect(5, 3, 15, 18), f.line(3, 7, 6.5, 7), f.line(3, 17, 6.5, 17), ...contactPortrait(g)];
   },
   "user-plus": (g) => userState(g, "plus"),
   "user-minus": (g) => userState(g, "minus"),

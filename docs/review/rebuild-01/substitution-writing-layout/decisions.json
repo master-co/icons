@@ -1,0 +1,69 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "skillVersion": "0.5.20",
+  "viewed": [
+    "light.png",
+    "dark.png",
+    "changed-light.png",
+    "changed-dark.png"
+  ],
+  "fontSizes": [
+    16,
+    20,
+    24
+  ],
+  "themes": [
+    "light",
+    "dark"
+  ],
+  "screenshotDpr": [
+    1
+  ],
+  "interactionDpr": [
+    1,
+    2
+  ],
+  "scope": "Native labeled document setting and real writing-mode preview; no icon geometry or search aliases added. Not an unconditional substitute for a pure-icon toolbar.",
+  "userApproval": "pending",
+  "primaryEvidence": "work/rebuild-01/writing-layout-primary-evidence.json",
+  "evidence": [
+    {
+      "path": "docs/review/rebuild-01/substitution-writing-layout/light.png",
+      "sha256": "ff5f13b8d5304a9a9018b306a87ffa972856831ca4eca79ee3ef24bbe70ffe41"
+    },
+    {
+      "path": "docs/review/rebuild-01/substitution-writing-layout/dark.png",
+      "sha256": "5d41010b6b2c6bdb97e2c0ec3b95888d138c400d3a9f6a8f29f2f462312d797d"
+    },
+    {
+      "path": "docs/review/rebuild-01/substitution-writing-layout/changed-light.png",
+      "sha256": "af7701a7d497268593b5e499cdc6252f64b579cb864e15ee04172223990c8d59"
+    },
+    {
+      "path": "docs/review/rebuild-01/substitution-writing-layout/changed-dark.png",
+      "sha256": "7b14a3b445c95dbd505b35236558d7397592e0cbeaa775574db22848f745b0ad"
+    }
+  ],
+  "items": [
+    {
+      "name": "vertical-text",
+      "label": "直書排版",
+      "alternative": null,
+      "alternativeLabel": "具名直書設定與文字排版預覽",
+      "replacementKind": "native-content",
+      "context": "中文／日文等文件設定與文字框格式面板",
+      "reason": "直書是文字流向、字元朝向及換欄方向的設定，不等同旋轉文字框或 LTR／RTL 字詞方向。具名勾選項與實際直書預覽能直接顯示目前狀態，不需要泛化成一顆容易被解讀為旋轉的字母箭頭。",
+      "replacementScope": "適用於文件／文字框的格式面板與有標籤的設定選單；不是聲稱既有方向箭頭足以替代所有純圖示工具列。若另有受限工具列需要區分多種文字流向，應連同具體選項重新驗證。",
+      "nativePreview": "<span lang=\"zh-Hant\" style=\"writing-mode:vertical-rl;font-size:18px;height:4em\">直書排版</span>",
+      "comparisonMarkup": "<span lang=\"zh-Hant\" style=\"display:inline-block;writing-mode:vertical-rl;font-size:16px;line-height:1.5;height:4em\">直書文字</span><span lang=\"zh-Hant\" style=\"display:inline-block;writing-mode:vertical-rl;font-size:20px;line-height:1.5;height:4em\">直書文字</span><span lang=\"zh-Hant\" style=\"display:inline-block;writing-mode:vertical-rl;font-size:24px;line-height:1.5;height:4em\">直書文字</span>",
+      "sample": "<style>[data-writing-layout] label{display:flex;align-items:center;gap:8px;margin:12px 0}[data-writing-layout] .paper{width:320px;height:190px;box-sizing:border-box;border:1px solid #8887;padding:14px;overflow:auto;margin-top:16px}[data-writing-copy]{font:18px/1.65 serif;margin:0;width:100%;height:100%;text-orientation:mixed;writing-mode:horizontal-tb;direction:ltr}[data-writing-layout] [role=status]{font-size:12px}</style><div data-writing-layout><label><input type=\"checkbox\" data-writing-vertical>直書排版（由上往下，從右換欄）</label><div class=\"paper\"><p lang=\"zh-Hant\" data-writing-copy>山風吹過樹梢，光線落在紙上。文字沿著頁面展開，讓閱讀的節奏與留白相互呼應。這是一段直書排版示例，用來檢查字元朝向與換欄位置。</p></div><p role=\"status\" data-writing-status>目前：橫排</p><button data-writing-reset>重設排版</button><p>此設定改變文字流向，中文字保持正向；不把整個文字框旋轉 90°。字串順序與標點不因切換而改寫。</p></div>",
+      "searchAliasDecision": "不把 vertical-text、vertical-writing、writing-mode 或直排加入 text-direction-ltr／rtl、rotate 等圖示；這些不是同義命令。",
+      "usageEvidence": [
+        "https://support.apple.com/guide/pages/use-vertical-text-tanc8021e516/15.4/mac/1.0"
+      ],
+      "usageEvidenceLimit": "Apple documents a labeled Vertical Text checkbox, top-to-bottom text and new columns to the left. Local native CSS preview demonstrates those distinctions; does not reproduce all Pages language or layout behavior.",
+      "visualObservation": "同一段中文在具名勾選項切換後，字元朝下延續、後續欄移到左邊；中文字形維持正向。16／20／24 字級的原生直書文字沒有冒充固定尺寸 SVG；明暗頁面中，勾選狀態與結果預覽都清楚。"
+    }
+  ]
+}

@@ -1,0 +1,119 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "skillVersion": "0.5.18",
+  "viewed": [
+    "light.png",
+    "dark.png"
+  ],
+  "sizes": [
+    16,
+    20,
+    24
+  ],
+  "themes": [
+    "light",
+    "dark"
+  ],
+  "dpr": [
+    1
+  ],
+  "corner": "soft for existing icons; actual page previews keep natural aspect ratios",
+  "scope": "Four contextual existing-icon entries and six labeled native controls replace ten candidates. No rejected geometry retrieved and no application implementation changed.",
+  "userApproval": "pending",
+  "evidence": [
+    {
+      "path": "docs/review/rebuild-01/substitution-page-commands/light.png",
+      "sha256": "3757bcf8ebe577351cba51ebe6aace6584790a4aae2267af1619fd5bcee350bc"
+    },
+    {
+      "path": "docs/review/rebuild-01/substitution-page-commands/dark.png",
+      "sha256": "932db6ac8f3e1bfe605399232e800ab7060008ec8077d9cfdeb8189fd89197cd"
+    }
+  ],
+  "items": [
+    {
+      "name": "page-header",
+      "label": "頁首",
+      "alternative": "panel-top",
+      "replacementKind": "contextual-entry",
+      "context": "文件插入工具列 · 頁首與頁尾並排",
+      "reason": "目前 panel-top／panel-bottom 已以相反位置的橫分界區分頂部與底部區域。在文件工具列加上「頁首／頁尾」標籤即可表達這兩個命令；不需要為紙張比例再畫一套框。",
+      "replacementScope": "限定文件區域命令；這不是宣稱面板和文件頁首在所有介面中同義。若同一工具列也有開關應用頂部面板，須依分組與標籤區分。",
+      "searchKeywords": [
+        "document-header",
+        "頁眉"
+      ],
+      "usageEvidence": [
+        "https://support.microsoft.com/en-gb/word/edit-your-existing-headers-and-footers-in-word"
+      ],
+      "sample": "<div style=\"display:flex;gap:10px\"><button><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><rect x=\"2\" y=\"2.6667\" width=\"12\" height=\"10.6667\" rx=\"1\"/><path d=\"M2 6.6667L14 6.6667\"/></svg>頁首</button><button><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><rect x=\"2\" y=\"2.6667\" width=\"12\" height=\"10.6667\" rx=\"1\"/><path d=\"M2 9.3333L14 9.3333\"/></svg>頁尾</button></div><div style=\"width:126px;height:178px;border:1px solid #8888;margin-top:12px;padding:10px;display:flex;flex-direction:column;gap:10px\"><div style=\"height:25px;outline:1px solid currentColor;\">專案報告</div><div style=\"flex:1\"><div style=\"height:100%;background:repeating-linear-gradient(transparent 0 7px,#8887 7px 8px)\"></div></div><div style=\"height:25px;text-align:right;opacity:.5;\">1</div></div>",
+      "visualObservation": "上下分區圖示在16px並排仍能分辨分界位置；文件內容預覽標出上方區域，文字標籤明確指向頁首。沒有添加文件折角或另一個框。"
+    },
+    {
+      "name": "page-footer",
+      "label": "頁尾",
+      "alternative": "panel-bottom",
+      "replacementKind": "contextual-entry",
+      "context": "文件插入工具列 · 頁首與頁尾並排",
+      "reason": "目前 panel-top／panel-bottom 已以相反位置的橫分界區分頂部與底部區域。在文件工具列加上「頁首／頁尾」標籤即可表達這兩個命令；不需要為紙張比例再畫一套框。",
+      "replacementScope": "限定文件區域命令；這不是宣稱面板和文件頁首在所有介面中同義。若同一工具列也有開關應用頂部面板，須依分組與標籤區分。",
+      "searchKeywords": [
+        "document-footer",
+        "頁腳"
+      ],
+      "usageEvidence": [
+        "https://support.microsoft.com/en-gb/word/edit-your-existing-headers-and-footers-in-word"
+      ],
+      "sample": "<div style=\"display:flex;gap:10px\"><button><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><rect x=\"2\" y=\"2.6667\" width=\"12\" height=\"10.6667\" rx=\"1\"/><path d=\"M2 6.6667L14 6.6667\"/></svg>頁首</button><button><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><rect x=\"2\" y=\"2.6667\" width=\"12\" height=\"10.6667\" rx=\"1\"/><path d=\"M2 9.3333L14 9.3333\"/></svg>頁尾</button></div><div style=\"width:126px;height:178px;border:1px solid #8888;margin-top:12px;padding:10px;display:flex;flex-direction:column;gap:10px\"><div style=\"height:25px;opacity:.5;\">專案報告</div><div style=\"flex:1\"><div style=\"height:100%;background:repeating-linear-gradient(transparent 0 7px,#8887 7px 8px)\"></div></div><div style=\"height:25px;text-align:right;outline:1px solid currentColor;\">1</div></div>",
+      "visualObservation": "底部橫分界與頁首的上分界在16／20／24均可辨；示例頁面框出頁尾區域，避免只靠圖示猜測面板或文件含義。"
+    },
+    {
+      "name": "page-number",
+      "label": "頁碼",
+      "alternative": "hash",
+      "replacementKind": "contextual-entry",
+      "context": "文件插入選單 · 頁碼入口與位置／格式設定",
+      "reason": "頁碼入口可沿用 hash 搭配「頁碼」。真正要區分的是頁首／頁尾位置和 1、i、I 等編號格式，應在設定中直接展示文字值，不再把 # 塞進紙張框。",
+      "replacementScope": "hash 僅作有標籤的頁碼命令入口；不是以一般數值圖示代替頁碼位置預覽，也不把網站分頁導覽當成文件頁碼。",
+      "searchKeywords": [
+        "頁次",
+        "insert-page-number"
+      ],
+      "rejectedSearchTerms": {
+        "terms": [
+          "pagination"
+        ],
+        "reason": "網站分頁控制和插入文件頁碼是不同用途。"
+      },
+      "usageEvidence": [
+        "https://support.microsoft.com/en-us/word/add-page-numbers-to-a-header-or-footer-in-word"
+      ],
+      "sample": "<button><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><path d=\"M2.5 5.75L13.5 5.75\"/><path d=\"M2.5 10.25L13.5 10.25\"/><path d=\"M6.5 2.5L4.5 13.5\"/><path d=\"M11.5 2.5L9.5 13.5\"/></svg>頁碼</button><fieldset style=\"margin-top:12px\"><legend>頁碼格式</legend><label>位置 <select aria-label=\"頁碼位置\"><option>頁尾</option><option>頁首</option></select></label> <label>編號 <select aria-label=\"頁碼編號\"><option>1, 2, 3</option><option>i, ii, iii</option><option>I, II, III</option></select></label></fieldset>",
+      "visualObservation": "hash 的三個原生尺寸與「頁碼」標籤清楚；位置和編號格式用各自選單呈現，沒有把頁碼插入與網站翻頁混同。"
+    },
+    {
+      "name": "print-preview",
+      "label": "預覽列印",
+      "alternative": "eye",
+      "replacementKind": "contextual-entry",
+      "context": "文件輸出工具列 · 預覽與送印為不同命令",
+      "reason": "eye 與「預覽列印」標籤可表達查看輸出；實際送印用 print。兩者並排已有不同輪廓，不需要文件、放大鏡和印表機的複合圖。",
+      "replacementScope": "此替代用於有文件輸出上下文及標籤的預覽入口；印刷打樣、校色或校樣簽核有額外業務意義，不能當作 eye 的同義詞。",
+      "searchKeywords": [
+        "預覽輸出"
+      ],
+      "rejectedSearchTerms": {
+        "terms": [
+          "proof"
+        ],
+        "reason": "proof 可能指印刷打樣或校樣簽核，不等同一般預覽。"
+      },
+      "usageEvidence": [
+        "https://help.libreoffice.org/latest/en-US/text/swriter/guide/print_preview.html"
+      ],
+      "sample": "<div style=\"display:flex;gap:10px\"><button><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><path d=\"M1.6667 8C3.3333 5 5.3333 3.6667 8 3.6667C10.6667 3.6667 12.6667 5 14.3333 8C12.6667 11 10.6667 12.3333 8 12.3333C5.3333 12.3333 3.3333 11 1.6667 8Z\"/><circle cx=\"8\" cy=\"8\" r=\"2\"/></svg>預覽列印</button><button><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><path d=\"M4.6667 5.6667L4.6667 3A1 1 0 0 1 5.6667 2L10.3333 2A1 1 0 0 1 11.3333 3L11.3333 5.6667\"/><path d=\"M4.6667 11.3333L3 11.3333A1 1 0 0 1 2 10.3333L2 6.6667A1 1 0 0 1 3 5.6667L13 5.6667A1 1 0 0 1 14 6.6667L14 10.3333A1 1 0 0 1 13 11.3333L11.3333 11.3333\"/><rect x=\"4.6667\" y=\"9.3333\" width=\"6.6667\" height=\"4.6667\" rx=\"1\"/></svg>列印</button></div><div style=\"display:flex;gap:12px;margin-top:12px\"><div  style=\"flex:none;width:70px;height:99px;border:1px solid currentColor;padding:8px\"><div style=\"height:100%;background:repeating-linear-gradient(transparent 0 7px,#8887 7px 8px)\"></div></div><p>專案報告<br>第 1 頁，共 8 頁<br>A4 · 直向</p></div>",
+      "visualObservation": "eye 與 print 的輪廓在16px並排可辨，兩個動作各有標籤；頁面縮圖和頁數、紙張說明提供預覽上下文。明暗兩底均無需複合徽標。"
+    }
+  ]
+}

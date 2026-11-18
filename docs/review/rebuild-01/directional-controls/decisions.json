@@ -1,0 +1,41 @@
+[
+  {
+    "name":"chevrons-up-down",
+    "purpose":"數字步進器或雙向選擇器中的同軸上／下方向提示。",
+    "recognitionCues":"同軸、朝外、沒有箭桿的兩個折角。",
+    "confusableWith":["chevron-down","sort-unsorted","chevrons-left-right"],
+    "sourceObservation":"Lucide 使用較開闊的 45 度折角；Tabler selector 的翼短，形狀更收斂。Master 從原有 chevron 抽出共用函式，以原生尺寸改安置，保留清楚的 45 度翼和中央空白。",
+    "reason":"實際數字步進器需要一上一下兩個方向；sort-unsorted 的兩條長箭桿在小控制項中會顯得複雜。採共用 chevron 的原生安置，16px 兩折角的外端與內間距均獨立確認，角半徑取既有 g.tip。",
+    "comparison":"與 Lucide、Tabler 並排後，Master 的翼長介於兩者之間，soft 微圓保留清楚折點，rounded 沒有退成小括號。16px 粗線端的上下兩段仍分離；步進器文字旁不搶數字的視覺重量。",
+    "dashes":false,
+    "dashReason":"雙向提示需要完整的折角，虛線會削弱方向辨識。",
+    "usageEvidence":["/Users/aron/master-ui/packages/ui/components/input.css:145"],
+    "reviewed":true
+  },
+  {
+    "name":"chevrons-left-right",
+    "purpose":"Compare 滑桿把手的左右拖曳提示。",
+    "recognitionCues":"向外分開的兩個同軸折角，中間保留把手的空間。",
+    "confusableWith":["chevrons-right","chevron-right","move"],
+    "sourceObservation":"Lucide 的折角明確、間隙穩定；Hugeicons 在尖端改用曲線，輪廓更柔，但縮小時方向較弱。Master 依原有 chevron 的幾何角型保留折點，與上下選擇器共用兩段的安置及翼長。",
+    "reason":"Compare 把手需要向兩側拖曳的提示；move 表示四向移動，chevrons-right 代表同方向前進。以共用 chevron 母型旋轉出左右朝外的兩段，沒有增加箭桿或中央分隔線。",
+    "comparison":"在 16／20／24 明暗原生並列中，Master 比 Hugeicons 的曲線更明確，和 Lucide 的直折接近，圓角保持本庫微圓尺度。左右端點及中央間隙對稱，粗線端也沒有變成閉合菱形。",
+    "dashes":false,
+    "dashReason":"拖曳方向用兩個完整折角表達，不需要虛線輪廓。",
+    "usageEvidence":["/Users/aron/master-ui/packages/ui/components/compare.css:124"],
+    "reviewed":true
+  },
+  {
+    "name":"arrow-down-right",
+    "purpose":"統計數值旁的右下下降方向，與既有右上箭頭成對。",
+    "recognitionCues":"右下方向的直箭桿與直角箭翼。",
+    "confusableWith":["arrow-up-right","arrow-down","trending-down"],
+    "sourceObservation":"Lucide、Tabler 的箭翼比 Master 既有 arrow-up-right 短，輪廓更集中。本項直接取用原有箭頭並旋轉，維持既有統計成對使用時的翼長、箭桿及 joinedArrow 接點。",
+    "reason":"下降統計已與右上箭頭成對使用，單獨 arrow-down 或折線 trending-down 會變換圖形語言。旋轉共同母型而不重畫，原生與粗線檢查都保留箭翼收口和穩定端點。",
+    "comparison":"Master 的大翼比兩份來源更舒展，這裡保持與既有右上母型一致。明暗原生三尺寸下，箭桿與箭翼沒有突出毛刺；上下兩個統計方向切換時外框及視重一致。",
+    "dashes":false,
+    "dashReason":"數值趨向以完整箭頭表達，虛線會引入預測或未定意義。",
+    "usageEvidence":["/Users/aron/haoban/apps/web/src/features/ops/stat.components/OpsStat.svelte:31"],
+    "reviewed":true
+  }
+]

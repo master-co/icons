@@ -10,7 +10,10 @@ The 12 pilot subjects are documented as study/redraw work after Hugeicons Free: 
 
 The bell-plus, bell-minus and folder-move controls reuse the bell and folder pilot silhouettes, and carry their Hugeicons Free notice.
 
-The ten calendar controls in operations-01 reuse the pilot calendar frame. The folder-shared, folder-shortcut and folder-favorite controls reuse the folder silhouette. Each carries the Hugeicons Free MIT notice. See `packages/icons/src/provenance.mjs` for the pinned source and modifications.
+The eight calendar controls in operations-01 reuse the pilot calendar frame. The folder-shared, folder-shortcut and folder-favorite controls reuse the folder silhouette. Each carries the Hugeicons Free MIT notice. See `packages/icons/src/provenance.mjs` for the pinned source and modifications.
+
+The session craft review reuses the Hugeicons-derived user, search, bell, folder and star masters in the toolbar, account and sharing variants listed in `packages/icons/src/provenance.mjs`. Each retains the Hugeicons Free MIT notice in `licenses/hugeicons-MIT.txt`.
+
 
 Upstream repository: https://github.com/hugeicons/hugeicons
 
@@ -511,3 +514,141 @@ The HTML5 shield uses the monochrome Simple Icons artwork at revision
 in `references/product-ui-01/simpleicons-html5.svg`. HTML5 Logo by W3C, licensed under [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/). The vector uses monochrome paint and native-size scaling. [W3C attribution and artwork terms](https://www.w3.org/html/logo/faq.html).
 
 The resize icon adapts the shared-corner and projected-boundary construction from Tabler resize. The SVGs and bundles include the Tabler MIT license.
+
+## Fresh rebuild — Boolean exclusion
+
+`boolean-exclude` adapts the opposing open remnants in Lucide's `icons/squares-exclude.svg`, pinned at `55782beff3a0133df79c417eb68f96e8f19e2404`. Copyright (c) 2026 Lucide Icons and Contributors; ISC and inherited Feather notices in `licenses/lucide.txt`. Master reconstructs the form from its shared square operands, with native sizes, corner profiles and stroke-dependent openings. The full source license accompanies individual SVGs, archives and framework packages. The remaining three Boolean icons are constructed from Master square geometry; their pinned upstream SVGs are comparison references.
+
+## Fresh rebuild — Text spacing
+
+`line-height` and `letter-spacing` adapt Lucide’s letter-between-rules construction from their same-named SVGs at commit `55782beff3a0133df79c417eb68f96e8f19e2404`. Copyright (c) 2026 Lucide Icons and Contributors; ISC and inherited Feather notices in `licenses/lucide.txt`. The Master capital A is shared with the case family; rule placement, optical dimensions and corner treatment are rebuilt for native sizes. The complete source notice is included with SVGs, archives and framework packages.
+
+## Fresh rebuild — Writing direction
+
+`text-direction-ltr` and `text-direction-rtl` adapt Tabler’s paragraph-over-arrow layout, rebuilt from Master’s shared pilcrow and arrow geometry with compact native dimensions and spacing. Only the arrow reverses; the paragraph symbol is not mirrored.
+
+- Tabler: `tabler/tabler-icons`, commit `4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35`, `icons/outline/text-direction-ltr.svg` and `icons/outline/text-direction-rtl.svg`. Copyright (c) 2020-2026 Paweł Kuna. MIT; complete notice in `licenses/tabler.txt`, included in generated SVGs and ZIPs.
+
+## Fresh rebuild: grouping and mirroring
+
+`group` and `ungroup` adapt Lucide's enclosing-corners / separated-objects construction, rebuilt with the Master selection mother and shared rectangle geometry. The diagonally offset objects have separate counters and native-size clearance. Lucide commit `55782beff3a0133df79c417eb68f96e8f19e2404`, `icons/group.svg` and `icons/ungroup.svg`; Copyright (c) 2026 Lucide Icons and Contributors. ISC; complete license in `licenses/lucide.txt`.
+
+`flip-horizontal` and `flip-vertical` adapt Tabler's mirrored right triangles and central axis. The shared Master triangle mother supplies native outlines, wider counters and local corner radii. Tabler commit `4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35`, `icons/outline/flip-horizontal.svg` and `icons/outline/flip-vertical.svg`; Copyright (c) 2020-2026 Paweł Kuna. MIT; complete license in `licenses/tabler.txt`.
+
+## Fresh rebuild: cusp-node control
+
+`node-corner` uses the shared Master `bezier-curve` mother and retains its Phosphor attribution. The three anchors and native spacing are unchanged; two straight incident segments replace the smooth curve and tangent handle. Phosphor commit `2b75f3ad12b420c9504ef05df8d2564a28f8500e`, `assets/regular/bezier-curve.svg`; Copyright (c) 2023 Phosphor Icons. MIT; full notice in `licenses/phosphor.txt`.
+
+Research-only SVGs under `references/rebuild-01/inkscape-*.svg` come from the Inkscape Beginners' Guide 1.3, by Elisa de Castro Guerra and Inkscape documentation contributors, commit `6ec2dffbe50a48d28f2d3f3b3ae324ab4a2968eb`. They are reproduced unchanged for comparison under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/), as stated in the [guide's attribution page](https://inkscape-manuals.readthedocs.io/en/1.3/about.html). These source illustrations are not shipped as Master icon geometry. Per-file upstream paths and hashes are recorded in `references/rebuild-01/manifest.json`.
+
+## Stroke setting diagrams · rebuild-01
+
+The six `stroke-cap-butt`, `stroke-cap-round`, `stroke-cap-square`, `stroke-join-miter`, `stroke-join-round`, and `stroke-join-bevel` drawings adapt Lucide’s open-envelope and dashed-centerline construction. Their shared native geometry, guide spacing, endpoint markers and local corner treatment were reconstructed for Master. Copyright (c) 2026 Lucide Icons and Contributors; ISC and inherited notices in `licenses/lucide.txt`. Pinned source paths and modifications are recorded in `packages/icons/src/rebuild-provenance.json`.
+
+## Stroke properties · rebuild-01
+
+`stroke-width` adapts Bootstrap Icons `border-width` at commit `829d2bc2b87543c7d781c815ca4f0feee8cf9e45`. Copyright (c) 2019-2024 The Bootstrap Authors; MIT, complete license in `licenses/bootstrap-MIT.txt`. Native insets, spacing, strip thickness and corner profiles were rebuilt.
+
+`corner-radius` adapts Tabler `radius-top-left` at commit `4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35`. Copyright (c) 2020-2026 Paweł Kuna; MIT, complete license in `licenses/tabler.txt`. Native circular radius, insets and straight lengths were rebuilt; the radius remains geometric in every corner preset.
+
+Both source SVGs and the two Material Design Icons comparisons are preserved in `references/rebuild-01/manifest.json`; comparison assets are separate from published drawings.
+
+## Line-style specimens · rebuild-01
+
+`stroke-dashed` and `stroke-dotted` adapt Tabler `line-dashed` and `line-dotted` at commit `4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35`. Copyright (c) 2020-2026 Paweł Kuna; MIT, complete license in `licenses/tabler.txt`. Both are rebuilt from the shared Master horizontal-rule centreline, with native segment/gap choices (two dashes at 16px, three at 20/24px). Dashes use flat caps; dots use explicit filled circles with an optical minimum diameter for thin strokes.
+
+Hugeicons `dashed-line-01` is a same-purpose comparison. Material Design Icons `format-line-style` is a family/structure comparison for its dotted row, not a separate dotted-line command. Pinned originals are listed in `references/rebuild-01/manifest.json`.
+
+## Cell border baseline states · rebuild-01
+
+`border-all` and `border-none` adapt Tabler’s full-grid and dotted-guide conventions from commit `4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35` (MIT; Copyright (c) 2020-2026 Paweł Kuna). They reuse the Master square frame at each native size. Dividers have flat caps at frame intersections; the no-border state uses explicit circles with optical minimum diameters and evenly spaced guide points across all corner presets. Material Design Icons equivalents are comparison-only. Source paths and hashes are recorded in `references/rebuild-01/manifest.json`.
+
+## Cell border placement options · rebuild-01
+
+`border-outer`, `border-inner`, `border-horizontal`, and `border-vertical` adapt Tabler's selected borders and dotted guides from commit `4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35` (MIT; Copyright (c) 2020-2026 Paweł Kuna). `border-top`, `border-bottom`, `border-left`, and `border-right` adapt Iconoir's single-edge diagram with perimeter and centre guides from commit `39834e3f193bc0cca2c36bebb6a650471977433d` (MIT; Copyright (c) 2021 Luca Burgio). All use the shared Master cell bounds and explicit circular guides with native optical diameter floors. The outer frame comes directly from the existing Master square. Other references remain comparison-only; paths, roles and hashes are in `references/rebuild-01/manifest.json`.
+
+## Click gesture · rebuild-01
+
+`hand-click` adapts Tabler's raised index and radial click cues from `icons/outline/hand-click.svg` at commit `4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35` (MIT; Copyright (c) 2020-2026 Paweł Kuna; full license in `licenses/tabler.txt`). The lower palm and thumb directly share the existing Master hand geometry; the finger pose, folded crowns and optical ray spacing are reconstructed for native sizes. Phosphor's `hand-tap` is a density and silhouette comparison only.
+
+## Open polyline · rebuild-01
+
+`polyline` adapts the rising four-node arrangement in Phosphor's `assets/regular/line-segments.svg` at commit `2b75f3ad12b420c9504ef05df8d2564a28f8500e` (MIT; Copyright (c) 2023 Phosphor Icons; full license in `licenses/phosphor.txt`). Node sizes, point placement, native weights and transparent line-to-node joins were rebuilt with the existing Master vector-path construction. Material Design Icons `vector-polyline` is a three-node, square-anchor comparison only. `line-segment` uses the shared Master circular nodes and a straight edge; its Tabler and Material Design Icons references are comparison-only.
+
+## Polygon tool comparisons · rebuild-01
+
+The research-only Colibre trapezoid SVG is from LibreOffice 26.2.0.3, commit `afbbd0df0edb6d40b450b0337ac646b0913a760c`, `icon-themes/colibre_svg/cmd/sc_basicshapes.trapezoid.svg`. The Colibre theme's `COPYING-ICONS` dedicates these icons under CC0 (Andreas Kainz, 2018; Rizal Muttaqin, 2020–2022). That notice is preserved in `references/rebuild-01/libreoffice-colibre-COPYING-ICONS.txt`. It is an unchanged comparison asset, not a shipped Master path. The Master polygon tools use the existing triangle and quadrilateral contour construction; pinned Lucide, Hugeicons and Phosphor comparisons are recorded in the reference manifest.
+
+## Text replacement · rebuild-01
+
+`replace` and `replace-all` adapt Lucide's outgoing corner outline, bent arrow and single/multiple replacement token arrangement from `icons/replace.svg` and `icons/replace-all.svg` at commit `55782beff3a0133df79c417eb68f96e8f19e2404`. Copyright (c) 2026 Lucide Icons and Contributors; ISC, full license in `licenses/lucide.txt`. They are rebuilt with the shared Master selection corners, keyboard-return arrow and square mothers. Native token dimensions, corner profiles, flat-ended outline fragments, arrow clearance and exposed repeated edges were adjusted. Material Design Icons `find-replace` and Hugeicons `replace-all` are comparison-only references. Source paths, hashes and roles are recorded in `references/rebuild-01/manifest.json`.
+
+## Cellular signal · rebuild-01
+
+`signal-bars` adapts Tabler's four ascending antenna strokes from `icons/outline/antenna-bars-5.svg` at commit `4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35`. Copyright (c) 2020-2026 Paweł Kuna; MIT, full license in `licenses/tabler.txt`. Native widths, heights and baseline positions were rebuilt for 16/20/24. The isolated straight strokes share geometry across corner presets and use the system's square or round caps. Material Design Icons `signal-cellular-3` is a comparison-only filled silhouette. Source paths, hashes and roles are recorded in `references/rebuild-01/manifest.json`.
+
+## Private browsing · rebuild-01
+
+`incognito` adapts the hat-over-round-spectacles arrangement from Hugeicons Free `icons/incognito.svg` at commit `834e28d965946c1ee60d080027fe9dae4adc58d0` (MIT; Copyright (c) 2025 Hugeicons; full license in `licenses/hugeicons-MIT.txt`). The crown, single shared brim, native proportions and spacing are reconstructed; spectacle rings and bridge joins directly reuse the existing Master glasses mother. Material Design Icons `incognito` is a filled-silhouette comparison only.
+
+## Page break · rebuild-01
+
+`page-break` adapts the folded-page split and three horizontal break segments from Tabler `icons/outline/page-break.svg` at commit `4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35` (MIT; Copyright (c) 2020-2026 Paweł Kuna; full license in `licenses/tabler.txt`). Boundary and fold directly reuse the Master file mother; native break placement, ink clearance and dash spacing are rebuilt. Material Design Icons `format-page-break` is a filled-silhouette comparison only.
+
+## Ruler tab-stop comparison assets · rebuild-01
+
+The unmodified Scribus tabulator SVGs in `references/rebuild-01/scribus-tabulator-*.svg` are Copyright (C) 2023 Martin Reininger, GPL-2.0-or-later; the icon notice and complete license are retained in `scribus-icons-COPYING` and `scribus-COPYING` in that directory. Fixed source: https://github.com/scribusproject/scribus/tree/57d17b7a5e14703f197d053ade7caa8844116ad9/resources/iconsets/1_7_0 .
+
+The unmodified ONLYOFFICE tab-stop help PNGs are Copyright (C) 2009-2026 Ascensio System SIA, CC BY-SA 4.0 for non-code content. The complete upstream notice is retained in `references/rebuild-01/onlyoffice-LICENSE`; license: https://creativecommons.org/licenses/by-sa/4.0/ . Fixed source: https://github.com/ONLYOFFICE/web-apps/tree/f79972a400c3a696490094961772d1f86fac1b82/apps/documenteditor/main/resources/help/images/src/icons . They remain comparison assets, displayed with their original button background. No raster tracing or source-path conversion is used in the Master drawings. Master uses the conventional L, reverse-L, inverted-T and decimal-dot notation with a shared native-coordinate marker constructor. The ONLYOFFICE center marker is a family comparison for decimal, not an exact decimal source. Comparison assets are not shipped in icon packages.
+
+## Personal hotspot · rebuild-01
+
+`hotspot` adapts the two open-bottom wavefronts and central emitter arrangement from Hugeicons Free `icons/hotspot.svg` at commit `834e28d965946c1ee60d080027fe9dae4adc58d0` (MIT; Copyright (c) 2025 Hugeicons; complete license: `licenses/hugeicons-MIT.txt`). Native circular radii, a shared angular opening and a filled emitter point replace the original control-point paths and central ring. Tabler `access-point` remains comparison-only. `sim-card` independently reuses the Master `fileParts` cut-corner shell and newly constructs a six-contact grid; Tabler `device-sim` and Material Design Icons `sim` are comparison-only.
+
+## Screen rotation and notification pause · rebuild-01
+
+`screen-rotate` adapts the diagonal device and opposed turn-arrow arrangement from Hugeicons Free `icons/screen-rotation.svg`, commit `834e28d965946c1ee60d080027fe9dae4adc58d0` (MIT; Copyright (c) 2025 Hugeicons; full license: `licenses/hugeicons-MIT.txt`). The phone directly reuses the Master smartphone mother; native circular arcs, inward single wings and actual tip fillets replace the source paths.
+
+`bell-snooze` adapts the interior Z convention from Tabler `icons/outline/bell-z.svg`, commit `4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35` (MIT; Copyright (c) 2020-2026 Paweł Kuna; full license: `licenses/tabler.txt`). The Master bell constructor is shared with unchanged native defaults; this composite uses an optional clapper drop at heavier sharp widths. Native Z placement, clipped sharp joins and true soft/rounded fillets are reconstructed. Material Design Icons references remain comparison-only.
+
+## Image flow controls · rebuild-01
+
+`image-wrap-left`, `image-wrap-right` and `image-inline` adapt the framed-object and text-line family from Tabler `float-left` / `float-right`, commit `4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35` (MIT; Copyright (c) 2020-2026 Paweł Kuna; full license: `licenses/tabler.txt`). Frame geometry directly shares the Master `imageFrame` mother; native bounds, spacing and radii are reconstructed. The inline variant places text on the frame baseline with full lines above and below. Material Design Icons and ONLYOFFICE are comparison-only sources, not redistributed drawing geometry.
+
+Image-flow comparison only: ONLYOFFICE `apps/documenteditor/mobile/resources/icons/ios/icon-wrap-inline.svg`, commit `f79972a400c3a696490094961772d1f86fac1b82`, Copyright (C) 2009-2026 Ascensio System SIA, CC BY-SA 4.0 (license: `references/rebuild-01/onlyoffice-LICENSE`). It is retained unchanged as a fixed reference and shown in review sheets, not used in the distributed Master icon geometry.
+
+## Footnote command · rebuild-01
+
+`footnote` adapts the Ab¹ composition of Microsoft Fluent UI System Icons `text-footnote`, commit `4e8620a7c6ba5fba3f3f3f6908dd06b3a9332be6` (MIT; Copyright (c) 2020 Microsoft Corporation; full license: `licenses/fluent-MIT.txt`). Geometry directly shares the Master capital A, lowercase b and numeral 1; native proportions, placement, stroke and corner profiles are rebuilt. ONLYOFFICE `icon-footnote` (CC BY-SA 4.0) and LibreOffice Colibre `insertfootnote` (CC0) are comparison-only references, with original artwork retained only in the reference review.
+
+## Selection inversion · rebuild-01
+
+`selection-invert` adapts the Phosphor Icons `selection-inverse` solid/dashed half-frame and diagonal motif, commit `2b75f3ad12b420c9504ef05df8d2564a28f8500e` (MIT; Copyright (c) 2023 Phosphor Icons; `licenses/phosphor.txt`). The geometry directly shares the Master selection mother, with native corners, dash layout and diagonal joins. MDI `select-inverse` (Apache-2.0) is comparison-only. GIMP `gimp-invert` color artwork, by Klaus Staedtler / GIMP team, commit `dba1b6d3d5e0703c5337c9ec32805ac017dc1270`, is comparison-only under CC BY-SA 4.0; see `references/rebuild-01/gimp-icons-COPYING.txt`, https://www.gimp.org/ and https://creativecommons.org/licenses/by-sa/4.0/. The GIMP artwork is displayed unmodified in source comparisons and is not included in the icon packages.
+
+## Decimal display controls · rebuild-01
+
+`decimal-increase` and `decimal-decrease` adapt the Lucide `decimals-arrow-right` / `decimals-arrow-left` motif, commit `55782beff3a0133df79c417eb68f96e8f19e2404` (ISC; Copyright (c) 2026 Lucide Icons and Contributors; `licenses/lucide.txt`). Native dimensions, numeral geometry and arrow joins use shared Master helpers. Material Design Icons decimal controls, commit `2424e748e0cc63ab7b9c095a099b9fe239b737c0` (Apache-2.0), are comparison-only.
+
+## Drop cap command · rebuild-01
+
+`drop-cap` adapts the Lucide `text-initial` composition, commit `55782beff3a0133df79c417eb68f96e8f19e2404` (ISC; Copyright (c) 2026 Lucide Icons and Contributors; `licenses/lucide.txt`). The initial directly shares the Master capitalA helper; dimensions, corner treatment and paragraph spacing use native optical masters. Hugeicons Free `text-initial`, commit `834e28d965946c1ee60d080027fe9dae4adc58d0` (MIT), is comparison-only.
+
+## Sector comparison sources · rebuild-01
+
+The unchanged LibreOffice Colibre `sc_circlepie.svg` and related `sc_circlecut.svg` are research-only assets from commit `afbbd0df0edb6d40b450b0337ac646b0913a760c` (CC0-1.0; Andreas Kainz, 2018; Rizal Muttaqin, 2020–2022). The theme notice is preserved in `references/rebuild-01/libreoffice-colibre-COPYING-ICONS.txt`. The Inkscape Beginners' Guide `draw-ellipse-segment.svg` is covered by the research-only guide attribution above (Elisa de Castro Guerra and Inkscape documentation contributors, CC BY-SA 4.0, commit `6ec2dffbe50a48d28f2d3f3b3ae324ab4a2968eb`). Originals retain their colors and viewBoxes. Neither source path is shipped as Master geometry: the new sector derives its circle directly from the Master ring mother and constructs tangent corner fillets.
+
+## Tone-tool comparison sources · rebuild-01
+
+Unmodified GIMP color references `gimp-tool-curves.svg` and `gimp-tool-levels.svg` are by Klaus Staedtler / GIMP team (https://www.gimp.org/), from `GNOME/gimp-data` commit `dba1b6d3d5e0703c5337c9ec32805ac017dc1270`, `icons/Default/scalable/`, under CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/; `references/rebuild-01/gimp-icons-COPYING.txt`). Unmodified KDE Breeze references `adjustcurves.svg` and `adjustlevels.svg` are Copyright (C) 2014 Uri Herrera and contributors, from `KDE/breeze-icons` commit `7e5fae7934ff14d73702c074da2926b9b4c08dbc`, `icons/actions/22/`, under LGPL-3.0-or-later with the artwork clarification preserved in `references/rebuild-01/breeze-COPYING-ICONS.txt`. These four references are research comparisons only, not product geometry. Master tone tools use the existing chart axis, histogram bars and triangle mothers plus a newly authored cubic response curve.
+
+## Table-transpose comparison sources · rebuild-01
+
+Unmodified LibreOffice Colibre `lc_pastetransposed.svg`, commit `afbbd0df0edb6d40b450b0337ac646b0913a760c`, `icon-themes/colibre_svg/cmd/`, is Copyright (C) 2018 Andreas Kainz and Copyright (c) 2020–2022 Rizal Muttaqin, released under CC0-1.0 (`references/rebuild-01/libreoffice-colibre-COPYING-ICONS.txt`). Unmodified Microsoft Fluent UI System Icons `table-switch`, commit `4e8620a7c6ba5fba3f3f3f6908dd06b3a9332be6`, is Copyright (c) 2020 Microsoft Corporation, MIT (`licenses/fluent-MIT.txt`). These are comparison assets; the latter is a table/switch construction reference, not a verified product transpose command. Master uses the existing table frame/divisions and bent-arrow geometry with newly placed perpendicular two-cell strips. No source SVG paths are copied. The row/column exchange convention was also checked against the published Power Query Transpose command.
+
+## Signature · rebuild-01
+
+`signature` is a fresh adapted redraw of Tabler Icons `icons/outline/signature.svg`, commit `4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35`, Copyright (c) 2020-2026 Paweł Kuna, MIT (`licenses/tabler.txt`). Master redraws the initial loop and trailing shoulders, widens the loop, and smooths the handwritten turns. This is recorded as an adaptation despite newly authored path coordinates. The fixed Lucide `signature` at commit `55782beff3a0133df79c417eb68f96e8f19e2404` is comparison-only. No rejected session drawing was retrieved.
+
+## HTML5 · fresh brand integration
+
+HTML5 Logo by [W3C](https://www.w3.org/), [CC-BY-3.0](https://creativecommons.org/licenses/by/3.0/). Official source: https://www.w3.org/html/logo/downloads/HTML5_1Color_Black.svg (retrieved 2026-11-18; checksum in `packages/icons/src/brands.json`). Full license: `licenses/html5-CC-BY-3.0.txt`. Master omits the wordmark and numeral shading, combines the original shield paths in one opaque currentColor silhouette, and uniformly scales/centers it for small sizes. The original shield and numeral boundaries are retained. The mark is not a W3C conformance or validation badge. No affiliation or endorsement is implied. No rejected session geometry was retrieved.

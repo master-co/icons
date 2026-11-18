@@ -1,0 +1,27 @@
+[
+  {
+    "name": "table-transpose",
+    "reviewed": true,
+    "purpose": "資料整理工具列的列欄轉置及試算表的轉置貼上。一般 table 只表示表格；水平／垂直交換箭頭無法區別改變軸向與反轉資料順序，而 clipboard 無法區別原方向貼上與轉置貼上。這些入口確實並列，保留專用圖形。",
+    "recognitionCues": "橫向與直向的兩格儲存格、兩端分別指向列與欄的彎箭頭。四個格內空白與箭頭內側通道保持開放。",
+    "confusableWith": [
+      "table",
+      "sort-unsorted",
+      "arrow-left-right",
+      "rotate-right",
+      "clipboard"
+    ],
+    "sourceObservation": "Colibre Paste Transposed 的垂直／水平格條直接交代列欄方向，剪貼簿外框補充貼上語境，24px 原稿的多重內框到 16px 顯得密。Fluent table-switch 的共享格線與彎箭頭較整體，但保留完整九宮格；此來源只核實為表格切換構造參考，不冒稱實際產品的轉置命令。Power Query 的實際工具截圖也使用分開的列、欄格條與彎箭頭。",
+    "reason": "表格框與分界抽出既有 tableGrid 母型，保留原 table 與 table-header-column 的所有原生幾何；箭頭直接擴充既有 returnArrow 的第二端，原鍵盤回車預設不變。本次第一稿的箭翼與大轉彎太近，粗線時內側像小環；縮小彎折半徑並向左上移，打開內側。兩組格條再分別向左下／右上移半單位，拉開斜角間隙。小框角型獨立限縮，soft 與 rounded 仍有實際半徑差異。沒有取回退回的 session 圖稿。",
+    "comparison": "最後一稿已與兩份固定原稿在 16／20／24、三種角型、明暗與 DPR1／2 重新並排。Colibre 用格條表達軸向比完整格表更直接，Master 保留這項慣用結構並省去剪貼簿外層，使轉置及轉置貼上共用同一圖形；Fluent 的彎箭頭提供交換線索，但不保留其完整九宮格及遮擋外框。精修後箭頭內側不再像封閉小環，兩組格條的斜角留白在粗線端更穩定，四個孔保持可見，沒有加入淡化或裝飾線。已查看四張最新來源並列圖、四張操作後明暗 DPR 截圖、本次新稿 A/B、原生像素及最細線診斷。99 組來源／輸出樣本的邊界與幾何檢查無錯誤；135 次光柵比對一致。六筆低解析二值化診斷限於 16px／0.75 的箭桿：灰階線條連續，但門檻 96 會捨棄淡灰相接像素，並非內孔消失或輸出斷線。此為 Codex 目視候選，未代表維護者定案。",
+    "dashes": false,
+    "dashReason": "表格與交換方向都是實際可見結構，不表示選取範圍、隱藏邊界或未完成狀態。",
+    "opacity": false,
+    "opacityReason": "四個儲存格內孔與箭頭間隙由幾何留白分開，不需要透明度區分前後層次。",
+    "usageEvidence": [
+      "https://support.microsoft.com/en-us/excel/transpose-rotate-data-from-rows-to-columns-or-vice-versa",
+      "https://learn.microsoft.com/en-us/power-query/transpose-table",
+      "https://help.libreoffice.org/latest/en-US/text/shared/guide/pasting.html"
+    ]
+  }
+]

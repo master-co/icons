@@ -1,0 +1,90 @@
+[
+  {
+    "name": "border-top",
+    "reviewed": true,
+    "purpose": "表格框線選擇器中的上框線；需要與其他位置並列，單用 border-none 會遺失套用位置或誤示其他框線。",
+    "recognitionCues": "上方連續實線，其餘三邊導引點及一個中心點。",
+    "confusableWith": [
+      "border-none",
+      "border-all",
+      "border-outer"
+    ],
+    "sourceObservation": "完稿回比時 Iconoir 較少的內點更能突出頂邊，故採其十二點構造。16px頂線與下方第一列點分開，上方重量有意表達選定邊；相較 Tabler 完整內部格線更疏朗。三尺寸與明暗背景下仍能看出完整作用範圍。",
+    "reason": "來源回比後選用 Iconoir 的十二點單邊構造；保留共同框線範圍，以真正圓形保護sharp預設下的點狀導引。",
+    "comparison": "完稿回比時 Iconoir 較少的內點更能突出頂邊，故採其十二點構造。16px頂線與下方第一列點分開，上方重量有意表達選定邊；相較 Tabler 完整內部格線更疏朗。三尺寸與明暗背景下仍能看出完整作用範圍。 已檢視三種尺寸、三個角型、明暗DPR1／2與支援線寬兩端；工程檢查與目視結果分開記錄。",
+    "dashes": true,
+    "dashReason": "點線表達未套用的邊界導引，實線表達目前指定的框線位置。",
+    "opacity": false,
+    "opacityReason": "以線與點區分層級即可，避免低對比背景下導引消失。",
+    "usageEvidence": [
+      "https://support.microsoft.com/en-us/excel/apply-or-remove-cell-borders-on-a-worksheet",
+      "https://help.libreoffice.org/latest/en-US/text/shared/guide/border_table.html"
+    ]
+  },
+  {
+    "name": "border-bottom",
+    "reviewed": true,
+    "purpose": "表格框線選擇器中的下框線；需要與其他位置並列，單用 border-none 會遺失套用位置或誤示其他框線。",
+    "recognitionCues": "底部連續實線，其他三邊與中心使用導引點。",
+    "confusableWith": [
+      "border-none",
+      "border-all",
+      "border-outer"
+    ],
+    "sourceObservation": "採 Iconoir 的外周加中心點，避免 Tabler 內部點列使底線上方顯得過密。最新稿16px底線與最近的導引點有清楚間隔；20與24的底線長度與上框線相同，不為視覺置中移動真正的底邊位置。",
+    "reason": "來源回比後選用 Iconoir 的十二點單邊構造；保留共同框線範圍，以真正圓形保護sharp預設下的點狀導引。",
+    "comparison": "採 Iconoir 的外周加中心點，避免 Tabler 內部點列使底線上方顯得過密。最新稿16px底線與最近的導引點有清楚間隔；20與24的底線長度與上框線相同，不為視覺置中移動真正的底邊位置。 已檢視三種尺寸、三個角型、明暗DPR1／2與支援線寬兩端；工程檢查與目視結果分開記錄。",
+    "dashes": true,
+    "dashReason": "點線表達未套用的邊界導引，實線表達目前指定的框線位置。",
+    "opacity": false,
+    "opacityReason": "以線與點區分層級即可，避免低對比背景下導引消失。",
+    "usageEvidence": [
+      "https://support.microsoft.com/en-us/excel/apply-or-remove-cell-borders-on-a-worksheet",
+      "https://help.libreoffice.org/latest/en-US/text/shared/guide/border_table.html"
+    ]
+  },
+  {
+    "name": "border-left",
+    "reviewed": true,
+    "purpose": "表格框線選擇器中的左框線；需要與其他位置並列，單用 border-none 會遺失套用位置或誤示其他框線。",
+    "recognitionCues": "左側連續實線，其他三邊導引與中央定位點。",
+    "confusableWith": [
+      "border-none",
+      "border-all",
+      "border-outer"
+    ],
+    "sourceObservation": "Iconoir 簡化內部導引後，左側實線比 Tabler 的密集格線更容易讀到。最新稿採十二點結構，16px左線與右側點陣分離，中心點不拉近線身；與右框線並列時保持同一範圍及對稱重量。",
+    "reason": "來源回比後選用 Iconoir 的十二點單邊構造；保留共同框線範圍，以真正圓形保護sharp預設下的點狀導引。",
+    "comparison": "Iconoir 簡化內部導引後，左側實線比 Tabler 的密集格線更容易讀到。最新稿採十二點結構，16px左線與右側點陣分離，中心點不拉近線身；與右框線並列時保持同一範圍及對稱重量。 已檢視三種尺寸、三個角型、明暗DPR1／2與支援線寬兩端；工程檢查與目視結果分開記錄。",
+    "dashes": true,
+    "dashReason": "點線表達未套用的邊界導引，實線表達目前指定的框線位置。",
+    "opacity": false,
+    "opacityReason": "以線與點區分層級即可，避免低對比背景下導引消失。",
+    "usageEvidence": [
+      "https://support.microsoft.com/en-us/excel/apply-or-remove-cell-borders-on-a-worksheet",
+      "https://help.libreoffice.org/latest/en-US/text/shared/guide/border_table.html"
+    ]
+  },
+  {
+    "name": "border-right",
+    "reviewed": true,
+    "purpose": "表格框線選擇器中的右框線；需要與其他位置並列，單用 border-none 會遺失套用位置或誤示其他框線。",
+    "recognitionCues": "右側連續實線，其他三邊導引與中央定位點。",
+    "confusableWith": [
+      "border-none",
+      "border-all",
+      "border-outer"
+    ],
+    "sourceObservation": "沿用 Iconoir 的稀疏單邊結構，刪去不參與此命令的四個內分隔點。最新稿16px右線沒有被鄰點接成短橫筆，24px點陣仍輕於實線；與左框線的並列確認長度、點距及邊界一致，不把右邊位置往中心移。",
+    "reason": "來源回比後選用 Iconoir 的十二點單邊構造；保留共同框線範圍，以真正圓形保護sharp預設下的點狀導引。",
+    "comparison": "沿用 Iconoir 的稀疏單邊結構，刪去不參與此命令的四個內分隔點。最新稿16px右線沒有被鄰點接成短橫筆，24px點陣仍輕於實線；與左框線的並列確認長度、點距及邊界一致，不把右邊位置往中心移。 已檢視三種尺寸、三個角型、明暗DPR1／2與支援線寬兩端；工程檢查與目視結果分開記錄。",
+    "dashes": true,
+    "dashReason": "點線表達未套用的邊界導引，實線表達目前指定的框線位置。",
+    "opacity": false,
+    "opacityReason": "以線與點區分層級即可，避免低對比背景下導引消失。",
+    "usageEvidence": [
+      "https://support.microsoft.com/en-us/excel/apply-or-remove-cell-borders-on-a-worksheet",
+      "https://help.libreoffice.org/latest/en-US/text/shared/guide/border_table.html"
+    ]
+  }
+]

@@ -1,0 +1,90 @@
+[
+  {
+    "name": "border-outer",
+    "reviewed": true,
+    "purpose": "表格框線選擇器中的外框線；需要與其他位置並列，單用 square 會遺失套用位置或誤示其他框線。",
+    "recognitionCues": "外周連續框線，中央五點提示未套用的內部分隔。",
+    "confusableWith": [
+      "square",
+      "border-all",
+      "border-inner"
+    ],
+    "sourceObservation": "Tabler 的微圓框與五個圓點較柔和；MDI 方框和方點更重。最新稿直接使用 square 的框形與原生半徑，保留 Tabler 的疏密關係。16px中央十字點仍與框邊分開，24px未因空間增加補上多餘細節；粗線時框內留白仍充分。",
+    "reason": "直接重用 square 框形及共同格線位置；五個內點表示尚未套用的內線。",
+    "comparison": "Tabler 的微圓框與五個圓點較柔和；MDI 方框和方點更重。最新稿直接使用 square 的框形與原生半徑，保留 Tabler 的疏密關係。16px中央十字點仍與框邊分開，24px未因空間增加補上多餘細節；粗線時框內留白仍充分。 已檢視三種尺寸、三個角型、明暗DPR1／2與支援線寬兩端；工程檢查與目視結果分開記錄。",
+    "dashes": true,
+    "dashReason": "點線表達未套用的邊界導引，實線表達目前指定的框線位置。",
+    "opacity": false,
+    "opacityReason": "以線與點區分層級即可，避免低對比背景下導引消失。",
+    "usageEvidence": [
+      "https://support.microsoft.com/en-us/excel/apply-or-remove-cell-borders-on-a-worksheet",
+      "https://help.libreoffice.org/latest/en-US/text/shared/guide/border_table.html"
+    ]
+  },
+  {
+    "name": "border-inner",
+    "reviewed": true,
+    "purpose": "表格框線選擇器中的內框線；需要與其他位置並列，單用 plus 會遺失套用位置或誤示其他框線。",
+    "recognitionCues": "中央十字實線，外周僅有導引點。",
+    "confusableWith": [
+      "plus",
+      "border-all",
+      "border-outer"
+    ],
+    "sourceObservation": "Tabler 的圓點讓外框維持次要，MDI 較重的方點容易與中間十字爭重。最新稿沿用前者的點線關係，與完整框線版共用中心軸和範圍；16px中央相交沒有額外墨塊，外圍導引與端點分開。",
+    "reason": "共享格線軸與圓點母型，只將所選邊轉為實線，省去實線上的重疊導引點。",
+    "comparison": "Tabler 的圓點讓外框維持次要，MDI 較重的方點容易與中間十字爭重。最新稿沿用前者的點線關係，與完整框線版共用中心軸和範圍；16px中央相交沒有額外墨塊，外圍導引與端點分開。 已檢視三種尺寸、三個角型、明暗DPR1／2與支援線寬兩端；工程檢查與目視結果分開記錄。",
+    "dashes": true,
+    "dashReason": "點線表達未套用的邊界導引，實線表達目前指定的框線位置。",
+    "opacity": false,
+    "opacityReason": "以線與點區分層級即可，避免低對比背景下導引消失。",
+    "usageEvidence": [
+      "https://support.microsoft.com/en-us/excel/apply-or-remove-cell-borders-on-a-worksheet",
+      "https://help.libreoffice.org/latest/en-US/text/shared/guide/border_table.html"
+    ]
+  },
+  {
+    "name": "border-horizontal",
+    "reviewed": true,
+    "purpose": "表格框線選擇器中的內水平框線；需要與其他位置並列，單用 minus 會遺失套用位置或誤示其他框線。",
+    "recognitionCues": "中央水平實線，外框和垂直分隔保留點狀導引。",
+    "confusableWith": [
+      "minus",
+      "border-all",
+      "border-outer"
+    ],
+    "sourceObservation": "Hugeicons 的長虛線圓框與中央垂直短線在小尺寸像另一個十字，Tabler 的點陣更清楚地突出水平實線。最新稿採點陣，16px水平線兩側留白能與上下點列區分；20與24保留相同軸線節奏，沒有把次要導引加長。",
+    "reason": "共享格線軸與圓點母型，只將所選邊轉為實線，省去實線上的重疊導引點。",
+    "comparison": "Hugeicons 的長虛線圓框與中央垂直短線在小尺寸像另一個十字，Tabler 的點陣更清楚地突出水平實線。最新稿採點陣，16px水平線兩側留白能與上下點列區分；20與24保留相同軸線節奏，沒有把次要導引加長。 已檢視三種尺寸、三個角型、明暗DPR1／2與支援線寬兩端；工程檢查與目視結果分開記錄。",
+    "dashes": true,
+    "dashReason": "點線表達未套用的邊界導引，實線表達目前指定的框線位置。",
+    "opacity": false,
+    "opacityReason": "以線與點區分層級即可，避免低對比背景下導引消失。",
+    "usageEvidence": [
+      "https://support.microsoft.com/en-us/excel/apply-or-remove-cell-borders-on-a-worksheet",
+      "https://help.libreoffice.org/latest/en-US/text/shared/guide/border_table.html"
+    ]
+  },
+  {
+    "name": "border-vertical",
+    "reviewed": true,
+    "purpose": "表格框線選擇器中的內垂直框線；需要與其他位置並列，單用 layout-columns 會遺失套用位置或誤示其他框線。",
+    "recognitionCues": "中央垂直實線，外框與水平分隔使用點狀導引。",
+    "confusableWith": [
+      "layout-columns",
+      "border-all",
+      "border-outer"
+    ],
+    "sourceObservation": "與 Hugeicons 的虛線圓框相比，Tabler 點狀導引較不干擾中央垂直線。最新稿沿用此層級，與水平版共用中心和點距；16px左右點列不黏在線身上，24px長線未顯得偏移。layout-columns 的外框會錯誤暗示外邊也被套用。",
+    "reason": "共享格線軸與圓點母型，只將所選邊轉為實線，省去實線上的重疊導引點。",
+    "comparison": "與 Hugeicons 的虛線圓框相比，Tabler 點狀導引較不干擾中央垂直線。最新稿沿用此層級，與水平版共用中心和點距；16px左右點列不黏在線身上，24px長線未顯得偏移。layout-columns 的外框會錯誤暗示外邊也被套用。 已檢視三種尺寸、三個角型、明暗DPR1／2與支援線寬兩端；工程檢查與目視結果分開記錄。",
+    "dashes": true,
+    "dashReason": "點線表達未套用的邊界導引，實線表達目前指定的框線位置。",
+    "opacity": false,
+    "opacityReason": "以線與點區分層級即可，避免低對比背景下導引消失。",
+    "usageEvidence": [
+      "https://support.microsoft.com/en-us/excel/apply-or-remove-cell-borders-on-a-worksheet",
+      "https://help.libreoffice.org/latest/en-US/text/shared/guide/border_table.html"
+    ]
+  }
+]

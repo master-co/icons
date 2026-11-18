@@ -1,0 +1,68 @@
+[
+  {
+    "reviewed": true,
+    "recognitionCues": "圖片外框與相鄰文字行；圖形表達版面關係，不描繪圖片內容。",
+    "dashes": false,
+    "dashReason": "文字行與圖片邊界均為確定的排版內容，不是選取框或隱藏邊界。",
+    "opacity": false,
+    "opacityReason": "所有文字行都參與環繞關係，單色完整筆畫即可辨認，不需弱化其中一側。",
+    "usageEvidence": [
+      "https://helpcenter.onlyoffice.com/docs/userguides/document-editor/operations-on-objects/change-wrapping-style",
+      "https://tiptap.dev/docs/editor/extensions/nodes/image"
+    ],
+    "name": "image-wrap-left",
+    "purpose": "圖片排版工具列的置左環繞，與置右環繞、行內圖片同時並排。align-left 只表示文字靠左，沒有物件旁的短行和物件下方恢復整行的資訊。",
+    "confusableWith": [
+      "align-left",
+      "image",
+      "image-inline"
+    ],
+    "sourceObservation": "Tabler 以一個空心物件框和四行文字保持結構清楚。MDI 增加最上方整行且使用實心物件，小尺寸較密；本稿採 Tabler 的框加側行配置。",
+    "reason": "直接參數化 imageFrame 的位置、寬高與實際角半徑；16px 留出 5.5×5 的物件框，右側兩行與下方兩行按原生尺寸安排。省略山景是排版控制的光學簡化，沒有重畫另一個圖片母型。",
+    "comparison": "最新 16／20／24px 明暗稿與 Tabler、MDI 並列。Tabler 的四行結構比 MDI 多一行的版本安靜，沿用該配置；本稿的框稍寬，內孔在 16px 粗線端仍清楚，兩條右側短行與物件外緣沒有黏連。較大的下方行距讓文字重新回到整行的節奏可讀。"
+  },
+  {
+    "reviewed": true,
+    "recognitionCues": "圖片外框與相鄰文字行；圖形表達版面關係，不描繪圖片內容。",
+    "dashes": false,
+    "dashReason": "文字行與圖片邊界均為確定的排版內容，不是選取框或隱藏邊界。",
+    "opacity": false,
+    "opacityReason": "所有文字行都參與環繞關係，單色完整筆畫即可辨認，不需弱化其中一側。",
+    "usageEvidence": [
+      "https://helpcenter.onlyoffice.com/docs/userguides/document-editor/operations-on-objects/change-wrapping-style",
+      "https://tiptap.dev/docs/editor/extensions/nodes/image"
+    ],
+    "name": "image-wrap-right",
+    "purpose": "與置左環繞並排的置右環繞命令，讓文字在圖片左側流動。align-right 會誤指段落右對齊，無法取代這個控制。",
+    "confusableWith": [
+      "align-right",
+      "image-wrap-left",
+      "image"
+    ],
+    "sourceObservation": "Tabler 的左右版本保持同樣物件框與文字行數；MDI 的實心框較緊密。這裡需要方向一致的同家族，而非新增角度或箭頭。",
+    "reason": "完整鏡射置左版本，共用所有尺寸、角型、內孔與行距。只有物件與側行換邊，沒有改動下方整行的起終點，也沒有因右向而重新計算一組近似座標。",
+    "comparison": "最新稿與固定 Tabler、MDI 原稿同尺寸回比，保留 Tabler 的四行配置。左右兩顆在 16px 並排，框與短行交換方向後重量相同；在 24px 粗線端，外框和左側短行的間隙仍完整。MDI 的頂行增加密度，未採用。"
+  },
+  {
+    "reviewed": true,
+    "recognitionCues": "圖片外框與相鄰文字行；圖形表達版面關係，不描繪圖片內容。",
+    "dashes": false,
+    "dashReason": "文字行與圖片邊界均為確定的排版內容，不是選取框或隱藏邊界。",
+    "opacity": false,
+    "opacityReason": "所有文字行都參與環繞關係，單色完整筆畫即可辨認，不需弱化其中一側。",
+    "usageEvidence": [
+      "https://helpcenter.onlyoffice.com/docs/userguides/document-editor/operations-on-objects/change-wrapping-style",
+      "https://tiptap.dev/docs/editor/extensions/nodes/image"
+    ],
+    "name": "image-inline",
+    "purpose": "圖片排版工具列的行內圖片命令，圖片像字元參與文字行；與左右浮動環繞必須在純圖示控制中區分。一般 image 只表示圖片，不能傳達基線或流動方式。",
+    "confusableWith": [
+      "image",
+      "image-wrap-left",
+      "align-justify"
+    ],
+    "sourceObservation": "MDI 與 ONLYOFFICE 的行內控制都讓物件底端對齊相鄰文字行，前後保持整行；ONLYOFFICE 用狗形示例，保留原色、主要在淺底比較。Tabler float-left 只是本組改作的家族來源，不是同語意原稿。",
+    "reason": "延續共源物件框與線條家族，將物件移到段落中間行，右側只留與框底相同基線的文字線，上下各一條整行。和兩條側行的浮動版本形成可見結構差異；沒有將「不浮動」誤畫成文字只在上下的區塊。",
+    "comparison": "最新稿在 16／20／24 與 MDI、ONLYOFFICE 的確切行內示例比較，基線關係一致。MDI 的三角形與 ONLYOFFICE 的動物形較具象，本稿保留共用矩形，讓排版而非圖像內容主導。16px 右側基線仍能與上方的浮動側行區分，24px 的上下留白不因加粗消失。ONLYOFFICE 深底的原色灰線對比有限，沒有用其深底可讀性作勝負依據。"
+  }
+]

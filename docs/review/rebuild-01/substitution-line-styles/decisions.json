@@ -1,0 +1,49 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "skillVersion": "0.5.17",
+  "viewed": [
+    "light.png",
+    "dark.png"
+  ],
+  "sizes": [
+    16,
+    20,
+    24
+  ],
+  "themes": [
+    "light",
+    "dark"
+  ],
+  "dpr": [
+    1
+  ],
+  "corner": "soft",
+  "scope": "Existing equal drawing in a labeled border-style selector. No withdrawn drawing was retrieved.",
+  "userApproval": "pending",
+  "evidence": [
+    {
+      "path": "docs/review/rebuild-01/substitution-line-styles/light.png",
+      "sha256": "a075da709a6bb7bf671b0999fd1648afd25b1b0b6a9a52e9db351b9d35926025"
+    },
+    {
+      "path": "docs/review/rebuild-01/substitution-line-styles/dark.png",
+      "sha256": "38db059605eb8024d8df012b900c6baf2e558c1eb2a7c491b38e8c8853d1c106"
+    }
+  ],
+  "items": [
+    {
+      "name": "stroke-double",
+      "label": "雙線",
+      "alternative": "equal",
+      "context": "邊框樣式選單 · 與實線、虛線及點線並列",
+      "reason": "既有 equal 已是等長、平行、分離的兩條橫線；在明確標示邊框樣式的選單中，搭配「雙線」即可表示雙線值。再建立同樣的雙橫線只會重複命名及幾何。",
+      "replacementScope": "限於有雙線標籤的線型選單；equal 仍保留原本等於的數學名稱。若要預覽不同雙線間距或粗細，應由實際邊框樣式繪製預覽，不新增每種比例的圖示。",
+      "sample": "<div style=\"border:1px solid #8886;border-radius:6px;padding:10px\"><b>儲存格邊框樣式</b><div style=\"display:flex;gap:8px;flex-wrap:wrap;margin:10px 0\"><button><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><path d=\"M3 8L13 8\"/></svg>實線</button><button><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><path d=\"M3 8L6.75 8\" stroke-linecap=\"butt\"/><path d=\"M9.25 8L13 8\" stroke-linecap=\"butt\"/></svg>虛線</button><button><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><circle cx=\"3\" cy=\"8\" r=\"0.75\" fill=\"currentColor\" stroke=\"none\"/><circle cx=\"5.5\" cy=\"8\" r=\"0.75\" fill=\"currentColor\" stroke=\"none\"/><circle cx=\"8\" cy=\"8\" r=\"0.75\" fill=\"currentColor\" stroke=\"none\"/><circle cx=\"10.5\" cy=\"8\" r=\"0.75\" fill=\"currentColor\" stroke=\"none\"/><circle cx=\"13\" cy=\"8\" r=\"0.75\" fill=\"currentColor\" stroke=\"none\"/></svg>點線</button><button aria-pressed=\"true\" style=\"background:#8882;border-color:currentColor\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><path d=\"M3.3333 6L12.6667 6\"/><path d=\"M3.3333 10L12.6667 10\"/></svg>雙線</button></div><div style=\"padding:10px;width:160px;border-bottom:4px double currentColor\">合計　1,250</div></div>",
+      "usageEvidence": [
+        "https://help.libreoffice.org/latest/en-US/text/sbasic/guide/calc_borders.html",
+        "https://help.libreoffice.org/latest/en-GB/text/scalc/guide/borders.html"
+      ]
+    }
+  ]
+}

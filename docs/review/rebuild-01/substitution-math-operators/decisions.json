@@ -1,0 +1,126 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "skillVersion": "0.5.17",
+  "viewed": [
+    "light.png",
+    "dark.png"
+  ],
+  "sizes": [
+    16,
+    20,
+    24
+  ],
+  "themes": [
+    "light",
+    "dark"
+  ],
+  "dpr": [
+    1
+  ],
+  "corner": "not applicable to native mathematical typography",
+  "scope": "Existing formula entry and actual MathML formula specimens in labeled controls. Mathematical font sizes preserve natural formula height, not 16/20/24px icon boxes. No drawing changed.",
+  "userApproval": "pending",
+  "evidence": [
+    {
+      "path": "docs/review/rebuild-01/substitution-math-operators/light.png",
+      "sha256": "30b4bf9db5d22576499a3ae53ed2f4fad4029476e59c713199721d02d898424c"
+    },
+    {
+      "path": "docs/review/rebuild-01/substitution-math-operators/dark.png",
+      "sha256": "80bc3e2694a4361bcd4ce6fef9488c5ac0343121da96d3492fff869561da6126"
+    }
+  ],
+  "items": [
+    {
+      "name": "integral",
+      "label": "積分",
+      "alternative": null,
+      "alternativeLabel": "直接顯示數學字形／範本",
+      "replacementKind": "native-math",
+      "nativeMarkup": "<mo>∫</mo><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo><mspace width=\"0.2em\"/><mi>d</mi><mi>x</mi>",
+      "context": "公式編輯器 · 運算符與結構範本選擇面板",
+      "reason": "以積分號、被積函數和微分項直接預覽插入的內容；一般 sigma 圖示會把積分與求和混淆，沒有合適的等義圖示。公式編輯器本來就具備數學字形渲染，無需另畫較不完整的積分圖。",
+      "replacementScope": "僅以公式／字元選擇器為本次收錄情境；實際選項使用數學排版及可讀標籤，沒有等義的既有圖示替代，也不新增誤導性搜尋別名。此頁是 Master 替代方案示意，並非來源產品截圖。",
+      "searchKeywords": [],
+      "sample": "<div style=\"border:1px solid #8886;border-radius:6px;padding:10px\"><b>插入公式內容</b><button aria-label=\"積分\" style=\"margin:10px 0;min-height:56px;gap:18px\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" style=\"font-size:18px\"><mo>∫</mo><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo><mspace width=\"0.2em\"/><mi>d</mi><mi>x</mi></math><span>積分</span></button><small>預覽即插入內容；支援鍵盤選取與文字名稱。</small></div>",
+      "usageEvidence": [
+        "https://help.libreoffice.org/latest/en-US/text/smath/01/03090000.html",
+        "https://katex.org/docs/supported"
+      ],
+      "visualObservation": "16 字級的積分曲線、函數與 dx 保持分開；20／24 隨數學字體一致放大，不需要用 sigma 代稱。"
+    },
+    {
+      "name": "product-symbol",
+      "label": "連乘",
+      "alternative": null,
+      "alternativeLabel": "直接顯示數學字形／範本",
+      "replacementKind": "native-math",
+      "nativeMarkup": "<munderover><mo>∏</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><msub><mi>a</mi><mi>i</mi></msub>",
+      "context": "公式編輯器 · 運算符與結構範本選擇面板",
+      "reason": "連乘與求和須保留 Π／Σ 的差異。範本直接顯示運算符、上下限與因子，既有 sigma 不能代替；把運算符交給數學排版比另一顆描邊字形更符合此控制項。",
+      "replacementScope": "僅以公式／字元選擇器為本次收錄情境；實際選項使用數學排版及可讀標籤，沒有等義的既有圖示替代，也不新增誤導性搜尋別名。此頁是 Master 替代方案示意，並非來源產品截圖。",
+      "searchKeywords": [],
+      "sample": "<div style=\"border:1px solid #8886;border-radius:6px;padding:10px\"><b>插入公式內容</b><button aria-label=\"連乘\" style=\"margin:10px 0;min-height:56px;gap:18px\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" style=\"font-size:18px\"><munderover><mo>∏</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><msub><mi>a</mi><mi>i</mi></msub></math><span>連乘</span></button><small>預覽即插入內容；支援鍵盤選取與文字名稱。</small></div>",
+      "usageEvidence": [
+        "https://help.libreoffice.org/latest/en-US/text/smath/01/03090000.html",
+        "https://katex.org/docs/supported"
+      ],
+      "visualObservation": "連乘號和上下限均可見；小字級保留自然高度，沒有將界限塞進 16px 圖示框。與積分、矩陣同頁比較時輪廓不同。"
+    },
+    {
+      "name": "matrix",
+      "label": "矩陣",
+      "alternative": null,
+      "alternativeLabel": "直接顯示數學字形／範本",
+      "replacementKind": "native-math",
+      "nativeMarkup": "<mrow><mo>[</mo><mtable rowspacing=\"0.15em\" columnspacing=\"0.4em\"><mtr><mtd><mi>a</mi></mtd><mtd><mi>b</mi></mtd></mtr><mtr><mtd><mi>c</mi></mtd><mtd><mi>d</mi></mtd></mtr></mtable><mo>]</mo></mrow>",
+      "context": "公式編輯器 · 運算符與結構範本選擇面板",
+      "reason": "矩陣選項應顯示真正的行列與括號；table 表示資料表，brackets 缺少矩陣結構。公式範本可隨所選行列數更新，固定 2×2 的圖示反而無法預覽其他尺寸。",
+      "replacementScope": "僅以公式／字元選擇器為本次收錄情境；實際選項使用數學排版及可讀標籤，沒有等義的既有圖示替代，也不新增誤導性搜尋別名。此頁是 Master 替代方案示意，並非來源產品截圖。",
+      "searchKeywords": [],
+      "sample": "<div style=\"border:1px solid #8886;border-radius:6px;padding:10px\"><b>插入公式內容</b><button aria-label=\"矩陣\" style=\"margin:10px 0;min-height:56px;gap:18px\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" style=\"font-size:18px\"><mrow><mo>[</mo><mtable rowspacing=\"0.15em\" columnspacing=\"0.4em\"><mtr><mtd><mi>a</mi></mtd><mtd><mi>b</mi></mtd></mtr><mtr><mtd><mi>c</mi></mtd><mtd><mi>d</mi></mtd></mtr></mtable><mo>]</mo></mrow></math><span>矩陣</span></button><small>預覽即插入內容；支援鍵盤選取與文字名稱。</small></div>",
+      "usageEvidence": [
+        "https://help.libreoffice.org/latest/en-US/text/smath/01/03090000.html",
+        "https://katex.org/docs/supported"
+      ],
+      "visualObservation": "兩行兩列及左右括號在三字級可見；使用自然公式高度，沒有把 2×2 壓成四個實心點。"
+    },
+    {
+      "name": "nth-root",
+      "label": "高次方根",
+      "alternative": null,
+      "alternativeLabel": "直接顯示數學字形／範本",
+      "replacementKind": "native-math",
+      "nativeMarkup": "<mroot><mi>x</mi><mi>n</mi></mroot>",
+      "context": "公式編輯器 · 運算符與結構範本選擇面板",
+      "reason": "次方根的 n 必須位於根號左上方，不能用一般平方根或鉤號代替。直接使用帶指數位置的數學範本，能在同一面板與平方根並列且保留實際輸入結構。",
+      "replacementScope": "僅以公式／字元選擇器為本次收錄情境；實際選項使用數學排版及可讀標籤，沒有等義的既有圖示替代，也不新增誤導性搜尋別名。此頁是 Master 替代方案示意，並非來源產品截圖。",
+      "searchKeywords": [],
+      "sample": "<div style=\"border:1px solid #8886;border-radius:6px;padding:10px\"><b>插入公式內容</b><button aria-label=\"高次方根\" style=\"margin:10px 0;min-height:56px;gap:18px\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" style=\"font-size:18px\"><mroot><mi>x</mi><mi>n</mi></mroot></math><span>高次方根</span></button><small>預覽即插入內容；支援鍵盤選取與文字名稱。</small></div>",
+      "usageEvidence": [
+        "https://help.libreoffice.org/latest/en-US/text/smath/01/03090000.html",
+        "https://katex.org/docs/supported"
+      ],
+      "visualObservation": "n 位於根號左上，和根內 x 明確分開；16 字級仍能辨識，沒有誤用普通勾號。"
+    },
+    {
+      "name": "factorial",
+      "label": "階乘",
+      "alternative": null,
+      "alternativeLabel": "直接顯示數學字形／範本",
+      "replacementKind": "native-math",
+      "nativeMarkup": "<mi>n</mi><mo>!</mo>",
+      "context": "公式編輯器 · 運算符與結構範本選擇面板",
+      "reason": "階乘需要運算元與驚嘆號的數學關係；alert-circle 或單獨驚嘆號會誤導成警告。範本直接顯示 n!，沿用公式字體，不為字元面板造一顆警告變體。",
+      "replacementScope": "僅以公式／字元選擇器為本次收錄情境；實際選項使用數學排版及可讀標籤，沒有等義的既有圖示替代，也不新增誤導性搜尋別名。此頁是 Master 替代方案示意，並非來源產品截圖。",
+      "searchKeywords": [],
+      "sample": "<div style=\"border:1px solid #8886;border-radius:6px;padding:10px\"><b>插入公式內容</b><button aria-label=\"階乘\" style=\"margin:10px 0;min-height:56px;gap:18px\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" style=\"font-size:18px\"><mi>n</mi><mo>!</mo></math><span>階乘</span></button><small>預覽即插入內容；支援鍵盤選取與文字名稱。</small></div>",
+      "usageEvidence": [
+        "https://help.libreoffice.org/latest/en-US/text/smath/01/03090000.html",
+        "https://katex.org/docs/supported"
+      ],
+      "visualObservation": "n 與 ! 的基線關係清楚，原生三字級均是運算式，不像獨立警告符號。"
+    }
+  ]
+}

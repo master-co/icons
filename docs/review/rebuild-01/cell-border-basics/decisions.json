@@ -1,0 +1,28 @@
+[
+  {
+    "name": "border-all",
+    "reviewed": true,
+    "purpose": "儲存格選單中的所有框線。grid 是分離區塊，table 有表頭，均不能精確表示四格完整框線。",
+    "recognitionCues": "連續外框與中央十字形成四個等大的儲存格。",
+    "confusableWith": ["grid", "table", "square", "border-none"],
+    "sourceObservation": "Tabler 使用微圓外框與中央十字，MDI 使用較重的方角格線。採用 Tabler 的構造，以既有 square 母型改作。",
+    "reason": "直接共用 square 的原生尺寸與實際圓角。中央分界以平切端帽止於外框中心線，避免接點突出。",
+    "comparison": "最新稿與來源在16、20、24px重新並列，保留 Tabler 均衡的四個空腔；相較 MDI 較厚的方角，新稿使用家族既有描邊與留白。明暗DPR1與2、線寬兩端均已檢視，接點沒有突出外框，四格沒有消失。rounded只改外框曲率，中央構造維持穩定。",
+    "dashes": false,
+    "dashReason": "所有框線是實際套用的完整邊界。",
+    "usageEvidence": ["https://support.microsoft.com/en-us/excel/apply-or-remove-cell-borders-on-a-worksheet"]
+  },
+  {
+    "name": "border-none",
+    "reviewed": true,
+    "purpose": "儲存格選單中的無框線；保留作用範圍，與刪除內容、刪除表格及選取範圍分開。",
+    "recognitionCues": "21個等距圓點構成二乘二格線，沒有實線邊界。",
+    "confusableWith": ["selection", "trash", "border-all"],
+    "sourceObservation": "Tabler 用圓端極短線形成21個點，MDI用方點。沿用 Tabler 點陣構造，改為真正圓形，避免受到端帽預設影響。",
+    "reason": "最初讓角點跟隨圓角內縮，導致16px角點擁擠；加大角點反而加重黏合。改成等距點陣，保留母型邊界與格線位置。圓點沒有折角，三個角型共用幾何。",
+    "comparison": "最新稿重新與兩份來源並列後，等距圓點比沿圓角內縮的排列更安靜，16px仍保留四個空白儲存格。相較 Tabler 極短描邊，真正圓形在sharp仍能保持圓點；相較 MDI方點，圓點符合本庫的導引語氣。明暗DPR1與2、三種尺寸及線寬兩端已重新檢視，點陣沒有連成框線，薄線使用光學點徑下限維持辨識。",
+    "dashes": true,
+    "dashReason": "點線表示沒有套用框線的格線導引，與完整框線形成必要區別。",
+    "usageEvidence": ["https://support.microsoft.com/en-us/excel/apply-or-remove-cell-borders-on-a-worksheet", "https://help.libreoffice.org/latest/en-US/text/shared/guide/border_table.html?DbPAR=BASE&System=WIN"]
+  }
+]

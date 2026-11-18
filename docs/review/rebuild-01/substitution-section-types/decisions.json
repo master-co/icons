@@ -1,0 +1,62 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "skillVersion": "0.5.20",
+  "viewed": [
+    "light.png",
+    "dark.png",
+    "changed-light.png",
+    "changed-dark.png"
+  ],
+  "sizes": [],
+  "themes": [
+    "light",
+    "dark"
+  ],
+  "dpr": [
+    1
+  ],
+  "corner": "soft for existing glyphs only",
+  "scope": "Local section-type preview and named block insertion controls. No rejected session geometry retrieved; no production document or Haoban source changed.",
+  "userApproval": "pending",
+  "evidence": [
+    {
+      "path": "docs/review/rebuild-01/substitution-section-types/light.png",
+      "sha256": "f30d6c0f6a4093d9482de335a157cddf68269e9525b0ef9d47b8e3d28baaeaff"
+    },
+    {
+      "path": "docs/review/rebuild-01/substitution-section-types/dark.png",
+      "sha256": "e3871fec9525e1b66fc5622e2cdf615324a5a171643c08b39682ba9b44b165c8"
+    },
+    {
+      "path": "docs/review/rebuild-01/substitution-section-types/changed-light.png",
+      "sha256": "21ff9e15442ab92351a8be972175c0da16ab573892a3a46410c8ba2479bf0167"
+    },
+    {
+      "path": "docs/review/rebuild-01/substitution-section-types/changed-dark.png",
+      "sha256": "7cce18cef01dfec8af77e64c8d370ea144b1d6281dc13b1b0b1ad3871d778599"
+    }
+  ],
+  "items": [
+    {
+      "name": "section-break",
+      "label": "分節",
+      "alternative": null,
+      "alternativeLabel": "具名分節類型選單",
+      "replacementKind": "native-content",
+      "context": "文件版面 · 接續本頁、下一頁與奇偶頁分節",
+      "reason": "分節建立可獨立格式化的文件區域，不一定換頁。完整類型選單直接區分接續本頁、下一頁及奇偶頁；分頁圖或通用分隔線都不足以交代這些差異。",
+      "replacementScope": "版面選單與分節設定。若另有單一「分節」工具列入口，仍需保留選單名稱；不能讓page-break表示所有分節類型。",
+      "sample": "<style>[data-document-demo] label{display:block;margin:8px 0}[data-document-demo] select{font:inherit;color:inherit;background:transparent;border:1px solid #8888;padding:5px}[data-document-demo] .papers{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}[data-document-demo] .paper{width:142px;min-height:180px;border:1px solid #8888;padding:10px;position:relative;padding-bottom:25px}[data-document-demo] .paper footer{position:absolute;bottom:5px;right:10px;font-size:11px;opacity:.7}[data-document-demo] .section{font-size:11px;margin:9px 0}[data-document-demo] .section p{margin:4px 0}[data-document-demo] .section-two{border-top:1px dashed #8888;padding-top:5px}[data-document-demo] .columns{column-count:2;column-gap:8px}[data-document-demo] .row{display:flex;align-items:center;gap:8px;flex-wrap:wrap}[data-document-demo] .blocks{margin-top:12px}[data-document-demo] .block{padding:8px;border:1px solid #8886;margin:7px 0}[data-document-demo] .selected{border:2px solid currentColor}.dark [data-document-demo]{color-scheme:dark}</style><div data-document-demo=\"section\"><label>分節位置 <select data-section-kind><option value=\"continuous\">接續本頁</option><option value=\"next\">下一頁</option><option value=\"even\">下一個偶數頁</option><option value=\"odd\">下一個奇數頁</option></select></label><label>新節欄數 <select data-section-columns><option value=\"2\">二欄</option><option value=\"1\">一欄</option></select></label><div class=\"papers\" data-section-pages></div><p data-section-summary></p><small>目前游標在第3頁中段。示例只呈現新節位置與欄數，不是完整排版引擎。</small></div>",
+      "nativePreview": "<span>分節：接續本頁／下一頁／奇偶頁</span>",
+      "comparisonMarkup": "<span>分節：接續本頁／下一頁／奇偶頁</span>",
+      "searchKeywords": [],
+      "searchAliasDecision": "不把section-break加入page-break、minus或pilcrow；分節不是分頁、分隔線或段落標記。",
+      "usageEvidence": [
+        "https://support.microsoft.com/en-us/word/insert-a-section-break"
+      ],
+      "usageEvidenceLimit": "The local preview demonstrates independent section columns and page starts from current page 3. It is not a production pagination engine.",
+      "visualObservation": "接續本頁時兩節同在第3頁，選下一個奇數頁後新增空白第4頁並從第5頁開始；第二節欄數與第一節獨立，具名類型保留分頁圖無法交代的差異。"
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+[
+  {
+    "reviewed": true,
+    "dashes": true,
+    "dashReason": "短線是路徑中心軸的工程示意，和外緣輪廓必須分開閱讀；逐段設定原生長度及平切端帽，避免預設圓帽吃掉間隙。",
+    "opacity": false,
+    "opacityReason": "中心軸是判別端點延伸和接合的必要資訊，不淡化；使用主線寬的 0.8 倍維持輔助層級。",
+    "usageEvidence": [
+      "https://inkscape-manuals.readthedocs.io/en/1.3/strokes.html",
+      "https://www.w3.org/TR/2018/CR-SVG2-20180807/painting.html#StrokeLinecapProperty",
+      "https://www.w3.org/TR/2018/CR-SVG2-20180807/painting.html#StrokeLinejoinProperty"
+    ],
+    "name": "stroke-join-miter",
+    "purpose": "筆畫接合的尖角選項，和圓角、斜切同時並列。",
+    "recognitionCues": "外側兩條直線延伸到明確的角點，內側保留路徑轉角的虛線示意。",
+    "confusableWith": [
+      "stroke-join-round",
+      "stroke-join-bevel"
+    ],
+    "sourceObservation": "Lucide 以外側直角加內側虛線顯示接合；Tabler 畫封閉 L 形，沒有中心軸，較接近完整筆畫片段。",
+    "reason": "採用並記錄 Lucide 的開放外緣與內側虛線路徑構造，三顆直接共用 join 函式與同一中心軸。回修時把中心軸轉角向左下移，放大外緣圓弧及斜切跨度，以提高 16px 的曲線／直線差別；所有外框起訖位置保持一致。圖庫角型只處理局部微圓，不把參數本身的尖角、圓角及斜切合併。",
+    "comparison": "最新稿保留來源的外側角點，沒有套用全域框角半徑而變成大圓角。局部微圓最大 0.55px，與本組圓角的 6.25／8／9.75px 語意半徑明顯不同。16px 的兩條外邊與內軸沒有擁擠成封閉 L；相較 Tabler 較厚實的完整輪廓，本稿強調參數示意，與端點組語言一致。三尺寸、三角型、明暗 DPR 1／2 與支援線寬兩端已查看。"
+  },
+  {
+    "reviewed": true,
+    "dashes": true,
+    "dashReason": "短線是路徑中心軸的工程示意，和外緣輪廓必須分開閱讀；逐段設定原生長度及平切端帽，避免預設圓帽吃掉間隙。",
+    "opacity": false,
+    "opacityReason": "中心軸是判別端點延伸和接合的必要資訊，不淡化；使用主線寬的 0.8 倍維持輔助層級。",
+    "usageEvidence": [
+      "https://inkscape-manuals.readthedocs.io/en/1.3/strokes.html",
+      "https://www.w3.org/TR/2018/CR-SVG2-20180807/painting.html#StrokeLinecapProperty",
+      "https://www.w3.org/TR/2018/CR-SVG2-20180807/painting.html#StrokeLinejoinProperty"
+    ],
+    "name": "stroke-join-round",
+    "purpose": "筆畫接合的圓角選項，與尖角及斜切同列，表示外緣用圓弧連接。",
+    "recognitionCues": "外側四分之一圓弧與兩端直線相切，內側中心軸位置不變。",
+    "confusableWith": [
+      "stroke-join-miter",
+      "stroke-join-bevel"
+    ],
+    "sourceObservation": "Lucide 的大圓弧佔據外角主要面積，和內側虛線轉角分離；Tabler 同樣保留大圓弧，但用完整厚 L 形的內緣填出構造。",
+    "reason": "採用並記錄 Lucide 的開放外緣與內側虛線路徑構造，三顆直接共用 join 函式與同一中心軸。回修時把中心軸轉角向左下移，放大外緣圓弧及斜切跨度，以提高 16px 的曲線／直線差別；所有外框起訖位置保持一致。圖庫角型只處理局部微圓，不把參數本身的尖角、圓角及斜切合併。",
+    "comparison": "與兩份來源並列後放大本稿圓弧跨度，原生 16px 不再只像普通微圓直角。四分之一圓的中心精確落在內側路徑轉角，水平及垂直兩端連續相切；與斜切稿並排時，弧中段的外鼓和直斜面的內縮可分辨。沒有因 sharp 而破壞語意圓弧，三種角型只影響內軸局部轉折及端帽。最新明暗 DPR 1／2、三尺寸及粗細線端已查看。"
+  },
+  {
+    "reviewed": true,
+    "dashes": true,
+    "dashReason": "短線是路徑中心軸的工程示意，和外緣輪廓必須分開閱讀；逐段設定原生長度及平切端帽，避免預設圓帽吃掉間隙。",
+    "opacity": false,
+    "opacityReason": "中心軸是判別端點延伸和接合的必要資訊，不淡化；使用主線寬的 0.8 倍維持輔助層級。",
+    "usageEvidence": [
+      "https://inkscape-manuals.readthedocs.io/en/1.3/strokes.html",
+      "https://www.w3.org/TR/2018/CR-SVG2-20180807/painting.html#StrokeLinecapProperty",
+      "https://www.w3.org/TR/2018/CR-SVG2-20180807/painting.html#StrokeLinejoinProperty"
+    ],
+    "name": "stroke-join-bevel",
+    "purpose": "筆畫接合的斜切選項，與尖角及圓角同列，表示切掉外角形成一段直斜面。",
+    "recognitionCues": "外角是一段夠長的直斜面，兩端接回水平、垂直邊，內側路徑轉角仍保持原位。",
+    "confusableWith": [
+      "stroke-join-miter",
+      "stroke-join-round"
+    ],
+    "sourceObservation": "Lucide 和 Tabler 都用一段長直斜線區分圓弧；Tabler 的封閉內緣形成較重 L 形，Lucide 的虛線使斜面較突出。",
+    "reason": "採用並記錄 Lucide 的開放外緣與內側虛線路徑構造，三顆直接共用 join 函式與同一中心軸。回修時把中心軸轉角向左下移，放大外緣圓弧及斜切跨度，以提高 16px 的曲線／直線差別；所有外框起訖位置保持一致。圖庫角型只處理局部微圓，不把參數本身的尖角、圓角及斜切合併。",
+    "comparison": "最新稿保留清楚直斜面，回修後切除區域比首輪大，16px 和圓角並排不再只有極小的曲率差。兩個斜面接點只加局部微圓，中央直線段仍是主形，未把它處理成近似圓弧。相較來源，外緣收在本庫共同邊界，內側虛線用平切收筆保留空隙；三尺寸、三角型、明暗 DPR 1／2 和線寬兩端已查看。"
+  }
+]

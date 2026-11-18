@@ -1,0 +1,89 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "skillVersion": "0.5.20",
+  "viewed": [
+    "light.png",
+    "dark.png",
+    "changed-light.png",
+    "changed-dark.png"
+  ],
+  "sizes": [
+    16,
+    20,
+    24
+  ],
+  "themes": [
+    "light",
+    "dark"
+  ],
+  "dpr": [
+    1
+  ],
+  "corner": "soft for existing glyphs only",
+  "scope": "Existing focus in a canvas zoom toolbar, independent all-object fit and native numeric 100% control. No rejected geometry retrieved.",
+  "primaryEvidence": "work/rebuild-01/zoom-primary-evidence.json",
+  "userApproval": "pending",
+  "evidence": [
+    {
+      "path": "docs/review/rebuild-01/substitution-zoom-controls/light.png",
+      "sha256": "6d61154fa72eb583221965c16f55b2e2c488d4df522e22e142602375858db664"
+    },
+    {
+      "path": "docs/review/rebuild-01/substitution-zoom-controls/dark.png",
+      "sha256": "d2fdec17f9c56bb099a184e36e15edd9ff4ae19793d163ec7a284f963812fbf0"
+    },
+    {
+      "path": "docs/review/rebuild-01/substitution-zoom-controls/changed-light.png",
+      "sha256": "eb69531a0cb192cd59549223e02187717f4f40d68cd35250a762f49626ce84fd"
+    },
+    {
+      "path": "docs/review/rebuild-01/substitution-zoom-controls/changed-dark.png",
+      "sha256": "b78508ab904d2c9c54978e42d580999453d48eeb23654f156d8d3f19ce85f030"
+    }
+  ],
+  "items": [
+    {
+      "name": "zoom-selection",
+      "label": "縮放至選取範圍",
+      "alternative": "focus",
+      "replacementKind": "contextual-action",
+      "context": "畫布縮放工具列 · 與顯示全部、百分比及縮放步進並列",
+      "reason": "既有 focus 的四角與中央目標可在縮放工具列表示聚焦選取物件；maximize 的四角表示顯示全部，百分比則保留縮放結果。不必再把放大鏡與選取框組成另一顆密集變體。",
+      "replacementScope": "已具有選取狀態的畫布檢視控制。未選取時停用；不將 focus 宣稱為相機對焦、鍵盤焦點與選取縮放在所有情境下的同義命令。",
+      "sample": "<style>\n[data-zoom-demo] .tools{display:flex;align-items:center;gap:7px;margin:12px 0;flex-wrap:wrap}\n[data-zoom-demo] button{min-height:34px;justify-content:center}[data-zoom-demo] button:disabled{opacity:.35}\n[data-zoom-demo] button[aria-pressed=\"true\"]{box-shadow:inset 0 0 0 1px currentColor}\n[data-zoom-demo] select{font:inherit;color:inherit;background:transparent;padding:4px}\n[data-zoom-demo] .viewport{width:340px;height:190px;position:relative;overflow:hidden;border:1px solid #8887;margin:12px 0}\n[data-zoom-demo] .world{position:absolute;transform-origin:0 0}\n[data-zoom-demo] .shape{position:absolute;border:1px solid currentColor;display:flex;align-items:center;justify-content:center;background:#8882;font-size:12px}\n[data-zoom-demo] .shape[data-selected=\"true\"]{outline:1px dashed currentColor;outline-offset:4px}\n[data-zoom-demo] output{font-variant-numeric:tabular-nums;min-width:45px;text-align:right}\n.dark [data-zoom-demo]{color-scheme:dark}\n</style><div data-zoom-demo=\"selection\"><div class=\"tools\">\n<button data-zoom-action=\"out\" aria-label=\"縮小\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><circle cx=\"7\" cy=\"7\" r=\"4.5\"/><path d=\"M10.182 10.182L14 14\"/><path d=\"M5 7L9 7\"/></svg></button>\n<button data-zoom-action=\"in\" aria-label=\"放大\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><circle cx=\"7\" cy=\"7\" r=\"4.5\"/><path d=\"M10.182 10.182L14 14\"/><path d=\"M5 7L9 7\"/><path d=\"M7 5L7 9\"/></svg></button>\n<output data-zoom-percent aria-live=\"polite\">50%</output>\n<button data-zoom-action=\"actual\" aria-label=\"原尺寸 100%\" aria-pressed=\"false\">100%</button>\n<button data-zoom-action=\"all\" aria-label=\"顯示全部物件\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><path d=\"M2.6667 6L2.6667 3.6667A1 1 0 0 1 3.6667 2.6667L6 2.6667\"/><path d=\"M10 2.6667L12.3333 2.6667A1 1 0 0 1 13.3333 3.6667L13.3333 6\"/><path d=\"M13.3333 10L13.3333 12.3333A1 1 0 0 1 12.3333 13.3333L10 13.3333\"/><path d=\"M6 13.3333L3.6667 13.3333A1 1 0 0 1 2.6667 12.3333L2.6667 10\"/></svg></button>\n<button data-zoom-action=\"selection\" aria-label=\"縮放至選取範圍\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><path d=\"M2.6667 5.3333L2.6667 3.6667A1 1 0 0 1 3.6667 2.6667L5.3333 2.6667\"/><path d=\"M10.6667 2.6667L12.3333 2.6667A1 1 0 0 1 13.3333 3.6667L13.3333 5.3333\"/><path d=\"M13.3333 10.6667L13.3333 12.3333A1 1 0 0 1 12.3333 13.3333L10.6667 13.3333\"/><path d=\"M5.3333 13.3333L3.6667 13.3333A1 1 0 0 1 2.6667 12.3333L2.6667 10.6667\"/><circle cx=\"8\" cy=\"8\" r=\"2\"/></svg></button></div>\n<label>選取 <select data-zoom-selection><option value=\"a\">卡片 A</option><option value=\"b\" selected>卡片 B</option><option value=\"both\">A 與 B</option><option value=\"none\">無</option></select></label>\n<div class=\"viewport\" role=\"img\" aria-label=\"物件畫布\"><div class=\"world\"><div class=\"shape\" data-object=\"a\" style=\"left:60px;top:40px;width:100px;height:60px\">A</div><div class=\"shape\" data-object=\"b\" style=\"left:360px;top:160px;width:80px;height:50px\">B</div></div></div>\n<div data-zoom-status>檢視 50% · 選取 B</div><small>縮放只改變檢視；物件原始尺寸與選取狀態保留。100% 表示 1 畫布單位對應 1 CSS px，與螢幕 DPR 分開。</small></div>",
+      "searchKeywords": [
+        "zoom-to-selection",
+        "fit-selection",
+        "縮放至選取範圍"
+      ],
+      "usageEvidence": [
+        "https://help.figma.com/hc/en-us/articles/360041065034-Adjust-your-zoom-and-view-options",
+        "https://wiki.inkscape.org/wiki/index.php?title=Zoom_Toolbar&oldid=86918"
+      ],
+      "usageEvidenceLimit": "Primary documentation establishes selection-fit and percentage controls. Demo is a local two-object canvas, not a reproduction of Figma or Inkscape. Existing focus is a contextual design choice, not a claim that either product uses this exact glyph. No rejected geometry retrieved.",
+      "visualObservation": "16px 的 focus 中央目標可和只有四角的 maximize 區分；按下後 B 置中並擴至 296%，仍保留原始 80×50 尺寸及選取。深淺背景的目標圈都未黏合。"
+    },
+    {
+      "name": "zoom-actual-size",
+      "label": "以原始大小顯示",
+      "alternative": null,
+      "alternativeLabel": "100% 原生文字控制",
+      "replacementKind": "native-content",
+      "context": "畫布縮放工具列 · 固定倍率與目前縮放百分比",
+      "reason": "100% 本身就是確切目標，並可與目前的 50%、125% 等值直接比較。畫成放大鏡加 1:1 會縮小必要資訊，也容易與滿版混淆；保留原生數值按鈕。",
+      "replacementScope": "能容納短數值標籤的工具列與縮放選單；不是將長字串塞入 16px 方格。100% 按產品的畫布座標定義，不能宣稱在 DPR2 螢幕等於一個實體像素。",
+      "sample": "<style>\n[data-zoom-demo] .tools{display:flex;align-items:center;gap:7px;margin:12px 0;flex-wrap:wrap}\n[data-zoom-demo] button{min-height:34px;justify-content:center}[data-zoom-demo] button:disabled{opacity:.35}\n[data-zoom-demo] button[aria-pressed=\"true\"]{box-shadow:inset 0 0 0 1px currentColor}\n[data-zoom-demo] select{font:inherit;color:inherit;background:transparent;padding:4px}\n[data-zoom-demo] .viewport{width:340px;height:190px;position:relative;overflow:hidden;border:1px solid #8887;margin:12px 0}\n[data-zoom-demo] .world{position:absolute;transform-origin:0 0}\n[data-zoom-demo] .shape{position:absolute;border:1px solid currentColor;display:flex;align-items:center;justify-content:center;background:#8882;font-size:12px}\n[data-zoom-demo] .shape[data-selected=\"true\"]{outline:1px dashed currentColor;outline-offset:4px}\n[data-zoom-demo] output{font-variant-numeric:tabular-nums;min-width:45px;text-align:right}\n.dark [data-zoom-demo]{color-scheme:dark}\n</style><div data-zoom-demo=\"actual\"><div class=\"tools\">\n<button data-zoom-action=\"out\" aria-label=\"縮小\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><circle cx=\"7\" cy=\"7\" r=\"4.5\"/><path d=\"M10.182 10.182L14 14\"/><path d=\"M5 7L9 7\"/></svg></button>\n<button data-zoom-action=\"in\" aria-label=\"放大\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><circle cx=\"7\" cy=\"7\" r=\"4.5\"/><path d=\"M10.182 10.182L14 14\"/><path d=\"M5 7L9 7\"/><path d=\"M7 5L7 9\"/></svg></button>\n<output data-zoom-percent aria-live=\"polite\">50%</output>\n<button data-zoom-action=\"actual\" aria-label=\"原尺寸 100%\" aria-pressed=\"false\">100%</button>\n<button data-zoom-action=\"all\" aria-label=\"顯示全部物件\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><path d=\"M2.6667 6L2.6667 3.6667A1 1 0 0 1 3.6667 2.6667L6 2.6667\"/><path d=\"M10 2.6667L12.3333 2.6667A1 1 0 0 1 13.3333 3.6667L13.3333 6\"/><path d=\"M13.3333 10L13.3333 12.3333A1 1 0 0 1 12.3333 13.3333L10 13.3333\"/><path d=\"M6 13.3333L3.6667 13.3333A1 1 0 0 1 2.6667 12.3333L2.6667 10\"/></svg></button>\n<button data-zoom-action=\"selection\" aria-label=\"縮放至選取範圍\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><path d=\"M2.6667 5.3333L2.6667 3.6667A1 1 0 0 1 3.6667 2.6667L5.3333 2.6667\"/><path d=\"M10.6667 2.6667L12.3333 2.6667A1 1 0 0 1 13.3333 3.6667L13.3333 5.3333\"/><path d=\"M13.3333 10.6667L13.3333 12.3333A1 1 0 0 1 12.3333 13.3333L10.6667 13.3333\"/><path d=\"M5.3333 13.3333L3.6667 13.3333A1 1 0 0 1 2.6667 12.3333L2.6667 10.6667\"/><circle cx=\"8\" cy=\"8\" r=\"2\"/></svg></button></div>\n<label>選取 <select data-zoom-selection><option value=\"a\">卡片 A</option><option value=\"b\" selected>卡片 B</option><option value=\"both\">A 與 B</option><option value=\"none\">無</option></select></label>\n<div class=\"viewport\" role=\"img\" aria-label=\"物件畫布\"><div class=\"world\"><div class=\"shape\" data-object=\"a\" style=\"left:60px;top:40px;width:100px;height:60px\">A</div><div class=\"shape\" data-object=\"b\" style=\"left:360px;top:160px;width:80px;height:50px\">B</div></div></div>\n<div data-zoom-status>檢視 50% · 選取 B</div><small>縮放只改變檢視；物件原始尺寸與選取狀態保留。100% 表示 1 畫布單位對應 1 CSS px，與螢幕 DPR 分開。</small></div>",
+      "nativePreview": "<span>100%</span>",
+      "comparisonMarkup": "<span style=\"font-size:16px;font-variant-numeric:tabular-nums\">100%</span><span style=\"font-size:20px;font-variant-numeric:tabular-nums\">100%</span><span style=\"font-size:24px;font-variant-numeric:tabular-nums\">100%</span>",
+      "searchKeywords": [],
+      "searchAliasDecision": "zoom-actual-size 不等於 maximize、focus 或 percent；不補誤導別名。",
+      "usageEvidence": [
+        "https://help.figma.com/hc/en-us/articles/360041065034-Adjust-your-zoom-and-view-options",
+        "https://wiki.inkscape.org/wiki/index.php?title=Zoom_Toolbar&oldid=86918"
+      ],
+      "usageEvidenceLimit": "Primary documentation establishes selection-fit and percentage controls. Demo is a local two-object canvas, not a reproduction of Figma or Inkscape. Existing focus is a contextual design choice, not a claim that either product uses this exact glyph. No rejected geometry retrieved.",
+      "visualObservation": "原生 100% 按鈕不壓縮到圖示方格，和目前倍率並排。點擊後數值從 50% 回到 100%，選取 B 與物件尺寸不變，並以按鈕狀態表示已達目標。"
+    }
+  ]
+}

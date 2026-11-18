@@ -1,0 +1,44 @@
+[
+  {
+    "name": "line-height",
+    "purpose": "文字屬性中的行高數值欄位，與字級及字距欄位並列。",
+    "recognitionCues": "A 上下兩條水平界線，表示文字的垂直間距。",
+    "confusableWith": [
+      "letter-spacing",
+      "text",
+      "align-left"
+    ],
+    "sourceObservation": "Lucide 以 A 夾在水平線間，Tabler 以三行文字旁的垂直雙箭頭；Lucide 構造較疏，在狹窄數值欄位更安靜。",
+    "reason": "採用並重新繪製 Lucide 的字母夾線布局，已記錄 ISC 改作來源；A 改用本家族共用字形，三個原生尺寸各自配置。單用 text 無法和字級區分，align-left 則會誤指段落對齊。",
+    "comparison": "與 Lucide 相比，本稿上下界線及 A 之間留有較充分空白；與 Tabler 相比，省下雙箭頭帶來的密集接點，與字距形成方向一致的一對。16px 最粗線寬時 A 的橫畫下移，內孔仍見透明；上下規則線沒有與 A 頂或腳黏合。",
+    "usageEvidence": [
+      "https://help.figma.com/hc/en-us/articles/360039956634-Explore-text-properties"
+    ],
+    "dashes": false,
+    "dashReason": "字形及間距界線表達確定屬性，不是隱藏邊界或暫態。",
+    "opacity": false,
+    "opacityReason": "兩字與規則線均是必要識別，不以淡化隱藏字形或接點問題。",
+    "reviewed": true
+  },
+  {
+    "name": "letter-spacing",
+    "purpose": "文字屬性中的字距數值欄位，與字級及行高欄位並列。",
+    "recognitionCues": "A 左右兩條垂直界線，表示文字的水平間距。",
+    "confusableWith": [
+      "line-height",
+      "text",
+      "case-upper"
+    ],
+    "sourceObservation": "Lucide 以 A 夾在垂直線間，Tabler 以 AV 和橫向雙箭頭；前者能與行高共用清楚的方向語法。",
+    "reason": "採用並重新繪製 Lucide 的字母夾線布局，已記錄 ISC 改作來源。A 與大小寫共源，規則線位置按原生尺寸配置，避免另畫 AV 導致家族字形分岔。",
+    "comparison": "最新稿相較 Lucide 的中央 A 稍高，兩側空白仍清楚；Tabler 的 AV 加雙箭頭較密，本稿保持三個分離構造。16px 深淺底及最粗線寬下，A 的外腿沒有貼上左右界線；與行高並排可直接用規則線方向區別。",
+    "usageEvidence": [
+      "https://help.figma.com/hc/en-us/articles/360039956634-Explore-text-properties"
+    ],
+    "dashes": false,
+    "dashReason": "字形及間距界線表達確定屬性，不是隱藏邊界或暫態。",
+    "opacity": false,
+    "opacityReason": "兩字與規則線均是必要識別，不以淡化隱藏字形或接點問題。",
+    "reviewed": true
+  }
+]

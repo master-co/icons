@@ -1,0 +1,102 @@
+{
+  "objective": "Reset all session icon changes except skill updates, then individually reselect and redraw without rejected drafts; exclude unnecessary practical UI variants.",
+  "requirements": [
+    {
+      "id": "reset",
+      "requirement": "All 433 prior session additions removed before fresh design; never retrieve their old geometry.",
+      "evidence": [
+        "docs/review/rebuild-01/checks/fresh-reset-verification.json",
+        "docs/review/rebuild-01/checks/reset-verification.json",
+        "docs/review/rebuild-01/checks/checkpoint-134-integrity.json",
+        "skills/master-icons/SKILL.md"
+      ]
+    },
+    {
+      "id": "scope",
+      "requirement": "Every original session candidate has a concrete inclusion or exclusion decision; no pending names.",
+      "evidence": [
+        "docs/review/rebuild-01/inventory.json",
+        "docs/review/rebuild-01/checks/final-scope-audit.json"
+      ]
+    },
+    {
+      "id": "craft",
+      "requirement": "Retained outline drawings individually compared with fixed sources and existing mothers at native sizes, corners and light/dark DPR1/2; source and geometry hashes match visual evidence.",
+      "evidence": [
+        "docs/refinement-ledger.json",
+        "docs/review/rebuild-01/checks/checkpoint-134-review-hashes.json",
+        "docs/review/rebuild-01/final-gallery.html"
+      ]
+    },
+    {
+      "id": "brand",
+      "requirement": "HTML5 uses fresh official source with attribution, preserved contours, optical placement and visual review.",
+      "evidence": [
+        "packages/icons/src/brands.json",
+        "docs/review/rebuild-01/html5/decisions.json",
+        "docs/review/rebuild-01/checks/checkpoint-134-brand-structure.json"
+      ]
+    },
+    {
+      "id": "exclusions",
+      "requirement": "Unnecessary variants including link-card, paste-link, link-lock absent from public names and native SVGs; contextual alternatives documented.",
+      "evidence": [
+        "docs/review/rebuild-01/checks/final-scope-audit.json",
+        "docs/review/rebuild-01/substitution-link-context/index.html"
+      ]
+    },
+    {
+      "id": "preservation",
+      "requirement": "Original 790 native drawings and unrelated committed craft remain intact.",
+      "evidence": [
+        "docs/review/rebuild-01/checks/checkpoint-134-integrity.json",
+        "docs/review/rebuild-01/checks/final-check.log"
+      ]
+    },
+    {
+      "id": "skill",
+      "requirement": "Prevent over-specific variants, independent redraws of existing mothers and rejected-draft reuse; repository and installed skill agree and validate.",
+      "evidence": [
+        "skills/master-icons/SKILL.md",
+        "skills/master-icons/references/review.md",
+        "docs/review/rebuild-01/checks/final-scope-audit.json"
+      ]
+    },
+    {
+      "id": "public-output",
+      "requirement": "Catalog, bilingual search, native SVGs, downloads and all five framework outputs pass current checks with applicable licenses.",
+      "evidence": [
+        "docs/review/rebuild-01/checks/final-check.log",
+        "docs/review/rebuild-01/checks/final-package.log",
+        "docs/review/rebuild-01/checks/checkpoint-134-packed-html5.json",
+        "docs/review/rebuild-01/checks/final-site-browser.log",
+        "docs/review/rebuild-01/checks/final-framework-browser.log"
+      ]
+    },
+    {
+      "id": "reproducibility",
+      "requirement": "Current complete output is byte-identical across timezone rebuilds.",
+      "evidence": [
+        "docs/review/rebuild-01/checks/final-reproducible.log"
+      ]
+    },
+    {
+      "id": "browser",
+      "requirement": "Current review and site flows pass Chromium, Firefox and WebKit; all references render including PNG originals.",
+      "evidence": [
+        "docs/review/rebuild-01/checks/final-review-browser.log",
+        "docs/review/rebuild-01/checks/final-site-browser.log"
+      ]
+    },
+    {
+      "id": "delivery",
+      "requirement": "Provide current screenshots, per-icon review links, decisions and limitations without resurrecting rejected drafts.",
+      "evidence": [
+        "docs/review/rebuild-01/index.html",
+        "docs/review/rebuild-01/final-gallery-light.png",
+        "docs/review/rebuild-01/final-gallery-dark.png",
+        "docs/review/rebuild-01/substitution-link-context/light-1.png"
+      ]
+    }
+  ]
+}

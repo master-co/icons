@@ -1,0 +1,96 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "skillVersion": "0.5.18",
+  "viewed": [
+    "light.png",
+    "dark.png"
+  ],
+  "existingIconSizes": [
+    16
+  ],
+  "contentSizing": "Native text and controls keep natural dimensions; not new 16/20/24 icons",
+  "themes": [
+    "light",
+    "dark"
+  ],
+  "dpr": [
+    1
+  ],
+  "corner": "soft for existing glyphs only",
+  "scope": "Six native controls and one existing contextual x replace seven candidates. Local fixtures demonstrate state and scope; no old session geometry retrieved.",
+  "userApproval": "pending",
+  "evidence": [
+    {
+      "path": "docs/review/rebuild-01/substitution-navigation-location/light.png",
+      "sha256": "a70680cf81d0aca264e23696dea9b89bdbec716733076c016aac7a9734c09737"
+    },
+    {
+      "path": "docs/review/rebuild-01/substitution-navigation-location/dark.png",
+      "sha256": "52bc419c291b0deda93af464c89527db9c55e41220d8de56ed611398029dddb8"
+    }
+  ],
+  "items": [
+    {
+      "name": "breadcrumb",
+      "label": "階層路徑",
+      "alternative": null,
+      "alternativeLabel": "具名祖先路徑",
+      "replacementKind": "native-content",
+      "context": "頁面頂端 · 回到父層",
+      "reason": "階層路徑的資訊是實際祖先名稱與目前位置，既有chevron-right只作分隔。把多個節點縮成固定小圖會失去真正可點擊的目的地。",
+      "replacementScope": "目前頁面的階層導覽。元件插入器若未來需要辨認「麵包屑元件」，應另有實際使用證據再評估，不能用元件存在倒推專用圖。",
+      "usageEvidence": [
+        "https://www.w3.org/WAI/ARIA/apg/patterns/breadcrumb/",
+        "/Users/aron/master-ui/packages/ui/components/breadcrumb.css"
+      ],
+      "searchKeywords": [],
+      "nativePreview": "<span>工作區 › 品牌專案 › <b>視覺設計</b></span>",
+      "comparisonMarkup": "<div style=\"font-size:16px\"><span>工作區 › 品牌專案 › <b>視覺設計</b></span></div>",
+      "sample": "<style>\n.nav-demo{margin-top:12px;padding:12px;border:1px solid #8885;border-radius:5px}\n.nav-demo fieldset{border:0;margin:0;padding:0}.nav-demo label{display:block;margin:7px 0}\n.nav-demo .bar{display:flex;align-items:center;flex-wrap:wrap;gap:8px;margin:10px 0}\n.nav-demo input[type=checkbox]{accent-color:#485e50;width:16px;height:16px;vertical-align:middle;margin-right:6px}\n.nav-demo input[type=search]{font:inherit;color:inherit;background:transparent;border:1px solid #8888;padding:7px;width:100%}\n.nav-demo button:disabled{opacity:.45}.nav-demo button[aria-current]{outline:2px solid currentColor;outline-offset:1px;font-weight:700}\n.nav-demo ol{padding-left:22px}.nav-demo li{margin:6px 0}.nav-demo [aria-current=step]{font-weight:700}\n.nav-demo a{color:inherit}.nav-demo [data-slide]{min-height:90px;border:1px solid #8885;padding:12px}\n.nav-demo dialog{color:inherit;background:#fafaf8;border:1px solid #8889;border-radius:6px;width:340px}\n.dark .nav-demo dialog{background:#232724}.nav-demo dialog::backdrop{background:#0005}\n.nav-demo [hidden]{display:none!important}.nav-demo kbd{border:1px solid #8886;border-radius:3px;padding:1px 4px}\n</style><section class=\"nav-demo\" data-breadcrumb-demo>\n <nav aria-label=\"目前位置\"><div class=\"bar\" data-breadcrumb-path></div></nav><b data-page-title></b>\n <p data-page-description></p><button data-breadcrumb-reset>回到視覺設計範例</button>\n <template data-breadcrumb-chevron><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><path d=\"M6 3.5L10.3586 7.8586A0.2 0.2 0 0 1 10.3586 8.1414L6 12.5\"/></svg></template></section>",
+      "searchAliasDecision": "不把整個控制項名稱映射到單一分隔符、按鍵符號或狀態圖示。",
+      "usageEvidenceLimit": "Sources establish the control roles and behavior, not a universal ban on component-picker icons. These are local illustrative fixtures; no production component is imported.",
+      "visualObservation": "工作區、品牌專案、視覺設計保留真正的文字層級，兩個16px折角有留白。父層有連結樣式，目前頁不偽裝成可再前往的按鈕。"
+    },
+    {
+      "name": "pagination",
+      "label": "分頁導覽",
+      "alternative": null,
+      "alternativeLabel": "頁碼與目前頁",
+      "replacementKind": "native-content",
+      "context": "資料表底部 · 在三頁中切換",
+      "reason": "頁碼、目前頁及資料範圍直接說明位置；上一頁與下一頁沿用左右折角。另畫一張迷你分頁列無法取代頁碼，也沒有新增導航能力。",
+      "replacementScope": "資料內容的分頁控制，不用來表達表單流程進度；若作元件庫入口，先用具名元件清單。",
+      "usageEvidence": [
+        "https://www.carbondesignsystem.com/building-blocks/core/components/pagination/guidelines"
+      ],
+      "searchKeywords": [],
+      "nativePreview": "<span>1　<b>[2]</b>　3</span>",
+      "comparisonMarkup": "<div style=\"font-size:16px\"><span>1　<b>[2]</b>　3</span></div>",
+      "sample": "<style>\n.nav-demo{margin-top:12px;padding:12px;border:1px solid #8885;border-radius:5px}\n.nav-demo fieldset{border:0;margin:0;padding:0}.nav-demo label{display:block;margin:7px 0}\n.nav-demo .bar{display:flex;align-items:center;flex-wrap:wrap;gap:8px;margin:10px 0}\n.nav-demo input[type=checkbox]{accent-color:#485e50;width:16px;height:16px;vertical-align:middle;margin-right:6px}\n.nav-demo input[type=search]{font:inherit;color:inherit;background:transparent;border:1px solid #8888;padding:7px;width:100%}\n.nav-demo button:disabled{opacity:.45}.nav-demo button[aria-current]{outline:2px solid currentColor;outline-offset:1px;font-weight:700}\n.nav-demo ol{padding-left:22px}.nav-demo li{margin:6px 0}.nav-demo [aria-current=step]{font-weight:700}\n.nav-demo a{color:inherit}.nav-demo [data-slide]{min-height:90px;border:1px solid #8885;padding:12px}\n.nav-demo dialog{color:inherit;background:#fafaf8;border:1px solid #8889;border-radius:6px;width:340px}\n.dark .nav-demo dialog{background:#232724}.nav-demo dialog::backdrop{background:#0005}\n.nav-demo [hidden]{display:none!important}.nav-demo kbd{border:1px solid #8886;border-radius:3px;padding:1px 4px}\n</style><section class=\"nav-demo\" data-pagination-demo data-page=\"2\">\n <p data-page-records></p><nav class=\"bar\" aria-label=\"報價分頁\">\n <button data-page-delta=\"-1\" aria-label=\"上一頁\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><path d=\"M6 3.5L10.3586 7.8586A0.2 0.2 0 0 1 10.3586 8.1414L6 12.5\" transform=\"rotate(180 8 8)\"/></svg></button>\n <button data-page-value=\"1\" aria-label=\"第 1 頁\">1</button><button data-page-value=\"2\" aria-label=\"第 2 頁\">2</button><button data-page-value=\"3\" aria-label=\"第 3 頁\">3</button>\n <button data-page-delta=\"1\" aria-label=\"下一頁\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><path d=\"M6 3.5L10.3586 7.8586A0.2 0.2 0 0 1 10.3586 8.1414L6 12.5\"/></svg></button></nav><output data-page-range aria-live=\"polite\"></output></section>",
+      "searchAliasDecision": "不把整個控制項名稱映射到單一分隔符、按鍵符號或狀態圖示。",
+      "usageEvidenceLimit": "Sources establish the control roles and behavior, not a universal ban on component-picker icons. These are local illustrative fixtures; no production component is imported.",
+      "visualObservation": "2以外框及粗字顯示目前頁，1與3仍可選；兩端折角與頁碼有間距。頁碼與3–4/6資料範圍直接對應。"
+    },
+    {
+      "name": "stepper",
+      "label": "步驟導覽",
+      "alternative": null,
+      "alternativeLabel": "具名步驟與完成狀態",
+      "replacementKind": "native-content",
+      "context": "多步驟設定 · 命名、成員、確認",
+      "reason": "步驟需要目前階段、已完成與未開始的實際資訊。名稱、序號及狀態直接表達，不把三個圓點和短線硬縮成通用流程圖。",
+      "replacementScope": "線性多步驟表單的導覽狀態；不等於任務優先度、工作流程節點或數值增減器。",
+      "usageEvidence": [
+        "https://www.carbondesignsystem.com/building-blocks/core/components/progress-indicator/guidelines"
+      ],
+      "searchKeywords": [],
+      "nativePreview": "<span>1 命名 → <b>2 成員</b> → 3 確認</span>",
+      "comparisonMarkup": "<div style=\"font-size:16px\"><span>1 命名 → <b>2 成員</b> → 3 確認</span></div>",
+      "sample": "<style>\n.nav-demo{margin-top:12px;padding:12px;border:1px solid #8885;border-radius:5px}\n.nav-demo fieldset{border:0;margin:0;padding:0}.nav-demo label{display:block;margin:7px 0}\n.nav-demo .bar{display:flex;align-items:center;flex-wrap:wrap;gap:8px;margin:10px 0}\n.nav-demo input[type=checkbox]{accent-color:#485e50;width:16px;height:16px;vertical-align:middle;margin-right:6px}\n.nav-demo input[type=search]{font:inherit;color:inherit;background:transparent;border:1px solid #8888;padding:7px;width:100%}\n.nav-demo button:disabled{opacity:.45}.nav-demo button[aria-current]{outline:2px solid currentColor;outline-offset:1px;font-weight:700}\n.nav-demo ol{padding-left:22px}.nav-demo li{margin:6px 0}.nav-demo [aria-current=step]{font-weight:700}\n.nav-demo a{color:inherit}.nav-demo [data-slide]{min-height:90px;border:1px solid #8885;padding:12px}\n.nav-demo dialog{color:inherit;background:#fafaf8;border:1px solid #8889;border-radius:6px;width:340px}\n.dark .nav-demo dialog{background:#232724}.nav-demo dialog::backdrop{background:#0005}\n.nav-demo [hidden]{display:none!important}.nav-demo kbd{border:1px solid #8886;border-radius:3px;padding:1px 4px}\n</style><section class=\"nav-demo\" data-stepper-demo data-step=\"1\">\n <ol aria-label=\"建立專案的步驟\"><li data-step-item=\"0\"><span>命名專案</span> <small data-step-state></small></li><li data-step-item=\"1\"><span>設定成員</span> <small data-step-state></small></li><li data-step-item=\"2\"><span>確認建立</span> <small data-step-state></small></li></ol>\n <p data-step-content></p><div class=\"bar\"><button data-step-delta=\"-1\">上一步</button><button data-step-delta=\"1\">下一步</button></div>\n <small>此處示範導覽狀態；沒有提交或建立專案。</small></section>",
+      "searchAliasDecision": "不把整個控制項名稱映射到單一分隔符、按鍵符號或狀態圖示。",
+      "usageEvidenceLimit": "Sources establish the control roles and behavior, not a universal ban on component-picker icons. These are local illustrative fixtures; no production component is imported.",
+      "visualObservation": "三個具名步驟同時可讀，目前階段以粗字及「目前步驟」表示，已完成和未開始有明確文字，不依賴顏色或三顆微型節點。"
+    }
+  ]
+}

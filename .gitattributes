@@ -1,0 +1,4 @@
+# Preserve pinned upstream artwork and license checksums byte for byte.
+references/rebuild-01/** -text -whitespace
+# Verification logs retain exact tool output.
+docs/review/rebuild-01/checks/*.log -whitespace

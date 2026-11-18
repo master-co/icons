@@ -1,0 +1,42 @@
+[WebServer] (node:56219) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 27 tests using 2 workers
+
+(node:56222) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:56221) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 [chromium-1x] › tests/browser/gallery.spec.mjs:9:1 › search, presets, accessible detail, downloads, keyboard and responsive layouts (1.2s)
+  ✓   3 [chromium-1x] › tests/browser/gallery.spec.mjs:51:1 › all SVG presets parse and rasterize without clipping at this DPR (3.7s)
+  ✓   4 [chromium-1x] › tests/browser/gallery.spec.mjs:81:1 › standalone review works without a server and retains comparison / ZIP export (1.1s)
+  ✓   5 [chromium-1x] › tests/browser/gallery.spec.mjs:90:1 › adapted redraw downloads preserve upstream notices in valid SVG and ZIP files (1.6s)
+(node:56264) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   2 [chromium-1x] › tests/browser/scenarios.spec.mjs:10:1 › all contexts render in light/dark and desktop/mobile; controls and navigation work (9.9s)
+  ✓   6 [firefox-1x] › tests/browser/gallery.spec.mjs:9:1 › search, presets, accessible detail, downloads, keyboard and responsive layouts (2.6s)
+  ✓   8 [firefox-1x] › tests/browser/gallery.spec.mjs:51:1 › all SVG presets parse and rasterize without clipping at this DPR (4.9s)
+  ✓   9 [firefox-1x] › tests/browser/gallery.spec.mjs:81:1 › standalone review works without a server and retains comparison / ZIP export (1.3s)
+  ✓   7 [chromium-1x] › tests/browser/scenarios.spec.mjs:41:1 › reference pagination covers new drawings, before masters and offline source originals (9.1s)
+  ✓  10 [firefox-1x] › tests/browser/gallery.spec.mjs:90:1 › adapted redraw downloads preserve upstream notices in valid SVG and ZIP files (2.0s)
+  ✓  11 [chromium-1x] › tests/browser/scenarios.spec.mjs:64:1 › organization scope search, layout and pin controls work offline (943ms)
+  ✓  13 [chromium-1x] › tests/browser/scenarios.spec.mjs:77:1 › new productivity controls work in the delivered offline workspace (1.2s)
+  ✓  14 [chromium-1x] › tests/browser/scenarios.spec.mjs:95:1 › expansion tools manipulate local table, mail, media and order states offline (1.5s)
+(node:56350) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  15 [webkit-1x] › tests/browser/gallery.spec.mjs:9:1 › search, presets, accessible detail, downloads, keyboard and responsive layouts (1.4s)
+  ✓  12 [firefox-1x] › tests/browser/scenarios.spec.mjs:10:1 › all contexts render in light/dark and desktop/mobile; controls and navigation work (6.0s)
+  ✓  16 [webkit-1x] › tests/browser/gallery.spec.mjs:51:1 › all SVG presets parse and rasterize without clipping at this DPR (11.1s)
+  ✓  18 [webkit-1x] › tests/browser/gallery.spec.mjs:81:1 › standalone review works without a server and retains comparison / ZIP export (1.2s)
+  ✓  17 [firefox-1x] › tests/browser/scenarios.spec.mjs:41:1 › reference pagination covers new drawings, before masters and offline source originals (12.8s)
+  ✓  19 [webkit-1x] › tests/browser/gallery.spec.mjs:90:1 › adapted redraw downloads preserve upstream notices in valid SVG and ZIP files (2.0s)
+  ✓  20 [firefox-1x] › tests/browser/scenarios.spec.mjs:64:1 › organization scope search, layout and pin controls work offline (1.1s)
+  ✓  22 [firefox-1x] › tests/browser/scenarios.spec.mjs:77:1 › new productivity controls work in the delivered offline workspace (1.6s)
+  ✓  21 [webkit-1x] › tests/browser/scenarios.spec.mjs:10:1 › all contexts render in light/dark and desktop/mobile; controls and navigation work (3.8s)
+  ✓  23 [firefox-1x] › tests/browser/scenarios.spec.mjs:95:1 › expansion tools manipulate local table, mail, media and order states offline (2.0s)
+  ✓  24 [webkit-1x] › tests/browser/scenarios.spec.mjs:41:1 › reference pagination covers new drawings, before masters and offline source originals (9.9s)
+  ✓  25 [webkit-1x] › tests/browser/scenarios.spec.mjs:64:1 › organization scope search, layout and pin controls work offline (1.2s)
+  ✓  26 [webkit-1x] › tests/browser/scenarios.spec.mjs:77:1 › new productivity controls work in the delivered offline workspace (1.5s)
+  ✓  27 [webkit-1x] › tests/browser/scenarios.spec.mjs:95:1 › expansion tools manipulate local table, mail, media and order states offline (1.7s)
+
+  27 passed (57.7s)

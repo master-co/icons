@@ -1,0 +1,72 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "skillVersion": "0.5.17",
+  "viewed": [
+    "light.png",
+    "dark.png"
+  ],
+  "sizes": [
+    16,
+    20,
+    24
+  ],
+  "themes": [
+    "light",
+    "dark"
+  ],
+  "dpr": [
+    1
+  ],
+  "corner": "soft",
+  "scope": "Existing formula entry and actual MathML formula specimens in labeled controls. Mathematical font sizes preserve natural formula height, not 16/20/24px icon boxes. No drawing changed.",
+  "userApproval": "pending",
+  "evidence": [
+    {
+      "path": "docs/review/rebuild-01/substitution-math-placement/light.png",
+      "sha256": "b9a41f03f7e74ad54d4b5bff1cabb999034ad7ea0297e99872402b6c41a2936e"
+    },
+    {
+      "path": "docs/review/rebuild-01/substitution-math-placement/dark.png",
+      "sha256": "2a4645d707cb82eeb8bab7af3f5c9564229b745a699609831ea9a6462a336821"
+    }
+  ],
+  "items": [
+    {
+      "name": "inline-math",
+      "label": "行內公式",
+      "alternative": "function-square",
+      "replacementKind": "contextual-entry",
+      "context": "文字編輯器 · 插入公式對話框中的位置選項",
+      "reason": "行內與區塊是公式在文件中的排版模式，不是兩種不同數學運算。既有 function-square 配「插入公式」可作共同入口，再以行內選項與句內預覽呈現結果；無需縮小字形並塞入兩條文字線。",
+      "replacementScope": "function-square 僅作公式入口，不單靠它區分兩個模式；模式控制必須保留文字標籤與選取狀態。若產品確實只能使用兩顆無標籤按鈕，這個替代不成立，須另提供使用證據重新評估。",
+      "searchKeywords": [
+        "行內數學",
+        "latex-inline"
+      ],
+      "sample": "<div style=\"border:1px solid #8886;border-radius:6px;padding:10px\"><div style=\"display:flex;align-items:center;gap:8px\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><rect x=\"2\" y=\"2\" width=\"12\" height=\"12\" rx=\"1\"/><path d=\"M5.6667 11.3333C7 11.3333 7.6 10.7333 7.8 9.4L8.2 6.6C8.4 5.2667 9 4.6667 10.3333 4.6667\"/><path d=\"M6 7.6667L10 7.6667\"/></svg><b>插入公式</b></div><div role=\"radiogroup\" aria-label=\"公式位置\" style=\"display:flex;gap:12px;margin:10px 0\"><label><input type=\"radio\" name=\"placement-true\" checked>行內公式</label><label><input type=\"radio\" name=\"placement-true\" >獨立區塊</label></div><div style=\"padding:10px;border:1px solid #8885\">當 <math xmlns=\"http://www.w3.org/1998/Math/MathML\" style=\"font-size:18px\"><mi>x</mi><mo>=</mo><mn>2</mn></math> 時，可代入原式計算。</div></div>",
+      "usageEvidence": [
+        "https://tiptap.dev/docs/editor/extensions/nodes/mathematics"
+      ],
+      "visualObservation": "既有 function-square 的三個光學尺寸均保持原稿。行內選項旁的公式與句子同列，與右卡區塊預覽對照可直接看出排版差異。"
+    },
+    {
+      "name": "block-math",
+      "label": "區塊公式",
+      "alternative": "function-square",
+      "replacementKind": "contextual-entry",
+      "context": "文字編輯器 · 插入公式對話框中的位置選項",
+      "reason": "區塊公式需要讓使用者看出另起一行的結果。共同公式入口加上「獨立區塊」選項與實際段落預覽，比在函數外再加一個框更清楚；不應將兩個相同圖示作成沒有標籤的模式切換。",
+      "replacementScope": "function-square 僅作公式入口，不單靠它區分兩個模式；模式控制必須保留文字標籤與選取狀態。若產品確實只能使用兩顆無標籤按鈕，這個替代不成立，須另提供使用證據重新評估。",
+      "searchKeywords": [
+        "數學區塊",
+        "display-math"
+      ],
+      "sample": "<div style=\"border:1px solid #8886;border-radius:6px;padding:10px\"><div style=\"display:flex;align-items:center;gap:8px\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><rect x=\"2\" y=\"2\" width=\"12\" height=\"12\" rx=\"1\"/><path d=\"M5.6667 11.3333C7 11.3333 7.6 10.7333 7.8 9.4L8.2 6.6C8.4 5.2667 9 4.6667 10.3333 4.6667\"/><path d=\"M6 7.6667L10 7.6667\"/></svg><b>插入公式</b></div><div role=\"radiogroup\" aria-label=\"公式位置\" style=\"display:flex;gap:12px;margin:10px 0\"><label><input type=\"radio\" name=\"placement-false\" >行內公式</label><label><input type=\"radio\" name=\"placement-false\" checked>獨立區塊</label></div><div style=\"padding:10px;border:1px solid #8885\">將數值代入下式：<div style=\"text-align:center;margin:12px 0\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" style=\"font-size:18px\"><mi>y</mi><mo>=</mo><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mn>1</mn></math></div>再繼續說明計算結果。</div></div>",
+      "usageEvidence": [
+        "https://tiptap.dev/docs/editor/extensions/nodes/mathematics"
+      ],
+      "visualObservation": "共同入口維持原稿；區塊選項預覽讓公式另起一行並居中，前後仍有段落文字，沒有以同形無標籤按鈕混充兩種模式。"
+    }
+  ]
+}

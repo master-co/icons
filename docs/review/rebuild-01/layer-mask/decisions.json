@@ -1,0 +1,17 @@
+[
+  {
+    "name": "layer-mask",
+    "reviewed": true,
+    "purpose": "圖層面板的新增／編輯遮色片。它控制局部可見範圍，與整層顯示eye、新增圖層及刪除並列，不能只用layers或image替代。",
+    "recognitionCues": "圖片矩形外框與居中的圓形孔，沒有相機肩部、風景內線、斜切線或醫療口罩的繫帶。",
+    "confusableWith": ["image", "eye", "camera", "medical-mask"],
+    "sourceObservation": "Iconoir mask-square以方框包住斜分的圓形，分界能說明遮罩但在16px有較窄的兩半內孔。Hugeicons layer-mask-01使用圓形斜界和三筆斜線，填入部分的構造更強，但容易接近半明暗效果。兩份固定原稿作遮罩家族與構造比較，並非完全相同的新增圖層遮色片命令。",
+    "comparison": "最新稿與兩份來源在16／20／24重新並列。選用常見圖層遮色片的矩形圓孔慣例，沒有搬入來源的斜界或排線；中央內孔完整，框與圓間在粗線端保留通道。Iconoir的大內圓比最新稿更強，但相對壓縮框邊留白；本稿採較小內圓以保留16px閱讀。Hugeicons的斜線更有遮蔽方向，這項命令不需要指定遮蔽哪半邊，故不採用。明暗DPR1／2均檢視，圖層工具列中與相機肩部、整層可見性眼形保持差別。",
+    "reason": "外框直接取自imageFrame，內圓由circle所用ring提供原生半徑參數。16／20／24各自留出圓孔與框邊空隙；sharp、soft、rounded沿用圖片外框的真實圓角，圓形不隨角型變形。",
+    "dashes": false,
+    "dashReason": "遮色片本身不是目前選取範圍，虛線會與框選工具混淆。",
+    "opacity": false,
+    "opacityReason": "功能入口不表示特定遮色片濃度；中央圓孔和外框完整描邊即可，無須暗示半透明參數。",
+    "usageEvidence": ["https://helpx.adobe.com/photoshop/desktop/create-masks/layer-masks/add-layer-masks.html", "https://helpx.adobe.com/sk/photoshop/how-to/combining-images-basics.html"]
+  }
+]

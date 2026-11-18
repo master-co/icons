@@ -1,0 +1,52 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "skillVersion": "0.5.19",
+  "viewed": [
+    "light.png",
+    "dark.png"
+  ],
+  "sizes": [],
+  "themes": [
+    "light",
+    "dark"
+  ],
+  "dpr": [
+    1
+  ],
+  "scope": "Native cellular status text; no new SVG and no live device measurement.",
+  "userApproval": "pending",
+  "evidence": [
+    {
+      "path": "docs/review/rebuild-01/substitution-cellular-status/light.png",
+      "sha256": "896603ba967e1627d65eb914f5fb7b4bef26a40adbda25b12b4dddbb30bc13ae"
+    },
+    {
+      "path": "docs/review/rebuild-01/substitution-cellular-status/dark.png",
+      "sha256": "501114dd70b6fbe9204af8e4dec2198637cfd412d89ebd066362700983f9d185"
+    }
+  ],
+  "items": [
+    {
+      "name": "signal-off",
+      "label": "無行動訊號",
+      "alternative": null,
+      "alternativeLabel": "實際行動網路狀態",
+      "replacementKind": "native-content",
+      "context": "行動網路狀態列 · 無服務與搜尋中",
+      "reason": "無服務、搜尋中和使用者關閉行動網路是不同狀態。用完整狀態文字直接呈現原因，避免在強度柱上加斜線後把它們混為一談；也不借用Wi-Fi斷線圖示。",
+      "replacementScope": "具備狀態文字位置的裝置狀態列或連線設定。若產品必須在無文字位置呈現無服務，應另評估明確的無服務符號，不把此文字方案宣稱為單圖示替代。",
+      "sample": "<div style=\"border:1px solid #8886;border-radius:5px;padding:12px\"><header style=\"display:flex;justify-content:space-between\"><span>09:41</span><span style=\"display:inline-flex;align-items:center;gap:7px\">無服務 <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><path d=\"M1.6667 5.6667Q8 0.3333 14.3333 5.6667\"/><path d=\"M3.6667 8Q8 4.3333 12.3333 8\"/><path d=\"M5.6667 10.3333Q8 8.3333 10.3333 10.3333\"/><circle cx=\"8\" cy=\"12.6667\" r=\"0.625\" fill=\"currentColor\" stroke=\"none\"/></svg> <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><rect x=\"1.3333\" y=\"4.3333\" width=\"11.3333\" height=\"7.3333\" rx=\"1\"/><path d=\"M14.6667 6.6667L14.6667 9.3333\"/></svg></span></header><p>行動方案：主要門號</p><p>行動網路：無服務</p><p>Wi-Fi：已連線至工作室</p></div><div style=\"margin-top:10px;border:1px solid #8886;border-radius:5px;padding:12px\"><p>另一種狀態：搜尋中</p><p>正在尋找可用的行動網路。</p></div><p>狀態文字反映裝置回報；不根據 Wi-Fi 圖示推論行動網路是否可用。</p>",
+      "nativePreview": "<span>無服務　搜尋中</span>",
+      "comparisonMarkup": "<span>無服務　搜尋中</span>",
+      "searchKeywords": [],
+      "searchAliasDecision": "沒有等義的單一圖示；不將無服務或signal-off映射到wifi-off、airplane或signal-bars。",
+      "usageEvidence": [
+        "https://support.apple.com/en-us/120000",
+        "https://support.apple.com/en-ca/guide/iphone/iphef7bb57dc/ios"
+      ],
+      "usageEvidenceLimit": "Apple documents text for these status-bar conditions. This is a local state preview, not a device connectivity measurement.",
+      "visualObservation": "Full No Service and Searching labels remain distinct in light and dark status rows; Wi-Fi stays independently visible. No crossed-out signal, airplane or Wi-Fi-disconnected glyph is substituted for the actual cellular state."
+    }
+  ]
+}

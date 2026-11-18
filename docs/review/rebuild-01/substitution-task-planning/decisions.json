@@ -1,0 +1,107 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "skillVersion": "0.5.18",
+  "viewed": [
+    "light.png",
+    "dark.png"
+  ],
+  "sizes": [
+    16,
+    20,
+    24
+  ],
+  "themes": [
+    "light",
+    "dark"
+  ],
+  "dpr": [
+    1
+  ],
+  "corner": "soft for existing icons; labels and actual values retain natural text layout",
+  "scope": "Eight contextual existing-icon entries and two native-content controls replace ten candidates. No rejected geometry retrieved. Samples establish contextual alternatives, not universal icon equivalence.",
+  "userApproval": "pending",
+  "evidence": [
+    {
+      "path": "docs/review/rebuild-01/substitution-task-planning/light.png",
+      "sha256": "9aab278941d9b44252549e320c05ed62a2fd3cb9b52fe934925fbfd02a9416b1"
+    },
+    {
+      "path": "docs/review/rebuild-01/substitution-task-planning/dark.png",
+      "sha256": "740a359859383873f822519f7b26e24043442c7ff8652c9098df3b675f9084de"
+    }
+  ],
+  "items": [
+    {
+      "name": "milestone",
+      "label": "里程碑",
+      "alternative": "diamond",
+      "replacementKind": "contextual-entry",
+      "context": "專案時間軸 · 里程碑類型標記",
+      "reason": "菱形已是里程碑的慣用標記；現有 diamond 保留四角及開放內孔，無需另畫旗桿或路標。",
+      "replacementScope": "此處是里程碑類型，不表示已完成；完成與未完成的合併狀態另行評估。",
+      "searchKeywords": [
+        "project-milestone",
+        "階段目標"
+      ],
+      "usageEvidence": [
+        "https://help.asana.com/s/article/different-types-of-tasks?language=en_US"
+      ],
+      "sample": "<div style=\"display:flex;align-items:center;gap:8px;margin:8px 0\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><path d=\"M8.4596 2.1263L13.8737 7.5404A0.65 0.65 0 0 1 13.8737 8.4596L8.4596 13.8737A0.65 0.65 0 0 1 7.5404 13.8737L2.1263 8.4596A0.65 0.65 0 0 1 2.1263 7.5404L7.5404 2.1263A0.65 0.65 0 0 1 8.4596 2.1263Z\"/></svg>設計定案 · 11/20</div><div style=\"display:flex;align-items:center;gap:8px;margin:8px 0\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><path d=\"M8.4596 2.1263L13.8737 7.5404A0.65 0.65 0 0 1 13.8737 8.4596L8.4596 13.8737A0.65 0.65 0 0 1 7.5404 13.8737L2.1263 8.4596A0.65 0.65 0 0 1 2.1263 7.5404L7.5404 2.1263A0.65 0.65 0 0 1 8.4596 2.1263Z\"/></svg>正式上線 · 12/01</div>",
+      "usageEvidenceLimit": "Sources establish the operation or information model; the sample is our substitution demonstration, not a reproduction or claim about those products’ exact icon choice.",
+      "rejectedSearchTerms": {
+        "terms": [
+          "checkpoint"
+        ],
+        "reason": "泛稱檢查點也可能是儲存快照或檢查站，不直接作里程碑的搜尋同義詞。"
+      },
+      "visualObservation": "既有菱形在16／20／24都保有四個方向及完整內孔，和日期文字並列已形成里程碑標記；此次未用其表達完成狀態。"
+    },
+    {
+      "name": "sprint",
+      "label": "衝刺週期",
+      "alternative": "calendar-range",
+      "replacementKind": "contextual-entry",
+      "context": "團隊導覽 · 有起訖日期的衝刺週期",
+      "reason": "衝刺週期入口已有名稱與日期範圍；calendar-range 表達時間區間，無需在循環箭頭內再加任務或跑步者。",
+      "replacementScope": "限定有標籤的時間週期入口；不代表重跑命令、循環執行狀態或衝刺燃盡圖。",
+      "searchKeywords": [
+        "sprint-cycle",
+        "衝刺週期"
+      ],
+      "usageEvidence": [
+        "https://linear.app/docs/use-cycles"
+      ],
+      "sample": "<button><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><rect x=\"2.5\" y=\"3.5\" width=\"11\" height=\"10.5\" rx=\"1\"/><path d=\"M2.5 6.5L13.5 6.5\"/><path d=\"M5.5 2L5.5 4.5\"/><path d=\"M10.5 2L10.5 4.5\"/><circle cx=\"5\" cy=\"9.3333\" r=\"0.625\" fill=\"currentColor\" stroke=\"none\"/><path d=\"M7.6667 9.3333L11 9.3333\"/><path d=\"M5 12L8.3333 12\"/><circle cx=\"11\" cy=\"12\" r=\"0.625\" fill=\"currentColor\" stroke=\"none\"/></svg>目前衝刺</button><p>第 12 期 · 11/16–11/29</p><small>週期設定與任務進度在進入後顯示。</small>",
+      "usageEvidenceLimit": "Sources establish the operation or information model; the sample is our substitution demonstration, not a reproduction or claim about those products’ exact icon choice.",
+      "rejectedSearchTerms": {
+        "terms": [
+          "iteration",
+          "迭代"
+        ],
+        "reason": "一般迭代不必具備日期區間，不直接映射 calendar-range。"
+      },
+      "visualObservation": "日期區間圖保有日曆頂部與範圍橫線，16px搭配「目前衝刺」可用；實際第幾期及起訖日期由文字交代，未加循環箭頭。"
+    },
+    {
+      "name": "backlog",
+      "label": "待辦池",
+      "alternative": "list",
+      "replacementKind": "contextual-entry",
+      "context": "任務導覽 · 待排程工作列表",
+      "reason": "待辦池是任務清單的一個具名視圖。list 搭配「待辦池」與數量即可，不使用 inbox 暗示新訊息，也不使用 archive 暗示已歸檔。",
+      "replacementScope": "有標籤的待排程清單入口；若產品要求無文字側欄，不能宣稱 list 能獨自區分全部任務清單。",
+      "searchKeywords": [
+        "product-backlog",
+        "待排程",
+        "需求池"
+      ],
+      "usageEvidence": [
+        "https://linear.app/docs/default-team-pages"
+      ],
+      "sample": "<nav style=\"display:grid;gap:8px\"><button><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><circle cx=\"3\" cy=\"4\" r=\"0.625\" fill=\"currentColor\" stroke=\"none\"/><path d=\"M6 4L13.5 4\"/><circle cx=\"3\" cy=\"8\" r=\"0.625\" fill=\"currentColor\" stroke=\"none\"/><path d=\"M6 8L13.5 8\"/><circle cx=\"3\" cy=\"12\" r=\"0.625\" fill=\"currentColor\" stroke=\"none\"/><path d=\"M6 12L13.5 12\"/></svg>待辦池 · 24</button><button><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><path d=\"M1.8333 2.6667L4.5 2.6667\"/><rect x=\"1.8333\" y=\"5.3333\" width=\"2.6667\" height=\"8\" rx=\"0.45\"/><path d=\"M6.6667 2.6667L9.3333 2.6667\"/><rect x=\"6.6667\" y=\"5.3333\" width=\"2.6667\" height=\"4\" rx=\"0.45\"/><path d=\"M11.5 2.6667L14.1667 2.6667\"/><rect x=\"11.5\" y=\"5.3333\" width=\"2.6667\" height=\"6\" rx=\"0.45\"/></svg>工作看板</button><button><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><rect x=\"2.5\" y=\"3.5\" width=\"11\" height=\"10.5\" rx=\"1\"/><path d=\"M2.5 6.5L13.5 6.5\"/><path d=\"M5.5 2L5.5 4.5\"/><path d=\"M10.5 2L10.5 4.5\"/><circle cx=\"5\" cy=\"9.3333\" r=\"0.625\" fill=\"currentColor\" stroke=\"none\"/><path d=\"M7.6667 9.3333L11 9.3333\"/><path d=\"M5 12L8.3333 12\"/><circle cx=\"11\" cy=\"12\" r=\"0.625\" fill=\"currentColor\" stroke=\"none\"/></svg>目前衝刺</button><button><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><rect x=\"2\" y=\"2.3333\" width=\"12\" height=\"3.3333\" rx=\"1\"/><path d=\"M3.3333 5.6667L3.3333 12.6667A1 1 0 0 0 4.3333 13.6667L11.6667 13.6667A1 1 0 0 0 12.6667 12.6667L12.6667 5.6667\"/><path d=\"M6 8.3333L10 8.3333\"/></svg>封存</button></nav>",
+      "usageEvidenceLimit": "Sources establish the operation or information model; the sample is our substitution demonstration, not a reproduction or claim about those products’ exact icon choice.",
+      "visualObservation": "16px清單、看板、日曆、封存四個輪廓並排可辨；待辦池有名稱和數量，不以信箱或封存盒代替未排程工作。"
+    }
+  ]
+}

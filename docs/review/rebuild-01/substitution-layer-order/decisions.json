@@ -1,0 +1,41 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "viewed": [
+    "light.png",
+    "dark.png"
+  ],
+  "items": [
+    {
+      "name": "bring-forward",
+      "alternative": "arrow-up",
+      "label": "上移一層",
+      "context": "圖層面板 · 順序控制，與畫布 X／Y 位置分開",
+      "reason": "在明確的圖層排序面板，上箭頭已表示把選取圖層往前移一個位置；與移到最前的止線箭頭並列時不會混淆，不再疊加三片縮小物件。"
+    },
+    {
+      "name": "send-backward",
+      "alternative": "arrow-down",
+      "label": "下移一層",
+      "context": "圖層面板 · 順序控制，與畫布 X／Y 位置分開",
+      "reason": "圖層清單由上到下對應由前到後，下箭頭能表達降低一層；不需要為同一排序動作另外創造圖層專用箭頭。"
+    },
+    {
+      "name": "bring-to-front",
+      "alternative": "arrow-up-to-line",
+      "label": "移到最前",
+      "context": "圖層面板 · 順序控制，與畫布 X／Y 位置分開",
+      "reason": "頂端止線明確表示移到清單最前端，能與單步上箭頭區分；圖層面板及標籤交代對象，無須再畫疊片。"
+    },
+    {
+      "name": "send-to-back",
+      "alternative": "arrow-down-to-line",
+      "label": "移到最後",
+      "context": "圖層面板 · 順序控制，與畫布 X／Y 位置分開",
+      "reason": "底端止線明確表示移到最後一層，能與單步下箭頭區分；此替代適用於圖層順序控制，不拿來表示畫布的下移座標。"
+    }
+  ],
+  "usageEvidence": [
+    "https://help.figma.com/hc/en-us/articles/1500004292221-Select-move-and-order-objects-in-FigJam"
+  ]
+}

@@ -1,0 +1,24 @@
+[
+  {
+    "name": "sector",
+    "reviewed": true,
+    "purpose": "圓形繪圖工具的扇形入口／閉合模式：圓弧兩端連到圓心。完整圓、弦形與開放弧線是相鄰但不同的構造；chart-pie 的完整外圈及內部分割不能代替單一扇形輪廓。",
+    "recognitionCues": "三分之四圓弧與兩條徑向邊界，右上象限留空；不是完整圓內加分割線。",
+    "confusableWith": [
+      "circle",
+      "chart-pie",
+      "spline"
+    ],
+    "sourceObservation": "LibreOffice Colibre circlepie 是三分之四圓的獨立扇形，垂直與水平邊界使缺口清楚。Inkscape draw-ellipse-segment 採斜向邊界及較小角度，藍色描邊與淡藍填色強化形狀。兩份固定原稿保留原色及 viewBox，僅供比較；Colibre 深底的深色外線對比不足，因此外線工藝主要在淺底比較，未將它改色假裝原稿。",
+    "reason": "沒有取回被否決稿。直接調用既有 ring 母型取得圓心及半徑，以三分之四圓弧連至圓心。soft／rounded 的外角用同時相切於圓弧和徑向邊界的圓弧，內凹角另作相切收口，並非只換 linejoin。916 顆前序圖示的 8244 份原生幾何全部精確保留。",
+    "comparison": "最新版與兩份來源重新在 16／20／24、明暗、DPR1／2 並排。沿用 Colibre 清楚的直角缺口構造，但輪廓由本庫 circle 母型推導；Inkscape 的斜向切口在 16px 增加尖角密度，這裡不採。原生圖的圓弧視重與 circle 一致，soft 小圓角保留兩條徑向邊界，rounded 三處收口沒有凸點或斷縫，粗線缺口仍開放。四張完整審稿與四張 90 度情境截圖均已查看。99 組尺寸／角型／線寬測試、297 拓撲、297 留白探點及 135 份來源對輸出光柵核對通過，無低解析度診斷；此為 Codex 候選審查，未代替維護者定案。",
+    "dashes": false,
+    "dashReason": "扇形邊界是實際繪製的封閉輪廓，不是選取範圍或隱藏線。",
+    "opacity": false,
+    "opacityReason": "圓弧與徑向邊界同屬一個形狀，沒有需要弱化的次要層次。",
+    "usageEvidence": [
+      "https://help.libreoffice.org/latest/en-US/text/sdraw/guide/draw_sector.html",
+      "https://inkscape-manuals.readthedocs.io/en/1.3/circles-ellipses-and-arcs.html"
+    ]
+  }
+]

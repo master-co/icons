@@ -1,0 +1,28 @@
+[
+  {
+    "name": "pilcrow",
+    "purpose": "段落命令與顯示段落標記；在 H1–H6 旁需要可辨認的段落符號。",
+    "recognitionCues": "半圓字腹、相接的左直幹及獨立右直幹，構成慣用的 ¶。",
+    "confusableWith": ["text", "heading", "align-left"],
+    "sourceObservation": "Lucide 與 Tabler 的結構相同，都是半圓左腹與雙直幹；兩份不是兩種不同解法。本稿沿用這個慣用字形，以原生座標增加兩幹間距，並與本庫 H 的字高對齊。",
+    "reason": "text 代表文字工具，align-left 表示對齊，都不能單獨表達段落命令。保留半圓字腹，雙幹原生間隔為 3／3.75／4.5；不添加襯線或另一層框。",
+    "comparison": "原生 16px 的字腹內孔與兩幹間通道在粗線端仍清楚。和形狀相同的 Lucide、Tabler 並排，本稿雙幹更疏，字腹沒有被橫向拉扁；24px 曲線連接水平頂線及底線都平順，深底的粗筆也未將字腹填死。",
+    "dashes": false,
+    "dashReason": "這是固定段落字形，虛線會破壞辨認，不表達未完成狀態。",
+    "usageEvidence": ["/Users/aron/haoban/packages/editor/src/commands.svelte.ts:19"],
+    "reviewed": true
+  },
+  {
+    "name": "remove-formatting",
+    "purpose": "清除選取文字的格式；和粗體、斜體、刪除線並列的文字操作。",
+    "recognitionCues": "帶短肩和底足的斜 T，以及右下方獨立的清除記號。",
+    "confusableWith": ["text", "x", "eraser"],
+    "sourceObservation": "Lucide 和 Tabler 均用斜 T 加右下叉號，Lucide 的頂蓋較寬。由本庫 textSymbol 共用短肩、主幹與底足的構造，清除版改斜幹並留出右下空間；叉號直接取用 core cross。",
+    "reason": "單獨 eraser 可用於畫布擦除，純圖示文字工具列需要明確指向文字格式。T 與叉號各自共源，沒有重畫相近母型；兩部件本身不相交，因此不需要遮擋挖空。",
+    "comparison": "與兩份來源比較，16px 的頂蓋和斜幹同樣明確，右下叉號保持獨立而非貼住底足。24px 的短肩、主幹與底足比例平衡，線寬兩端及深底都未形成黏連；rounded 只柔化頂蓋拐角，沒有讓字形變成曲線符號。",
+    "dashes": false,
+    "dashReason": "文字與清除記號均為主要識別筆畫，不需要隱藏邊界或虛線狀態。",
+    "usageEvidence": ["/Users/aron/haoban/packages/editor/src/format-tools.components/FormatTools.svelte:194"],
+    "reviewed": true
+  }
+]

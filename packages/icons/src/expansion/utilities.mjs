@@ -1,6 +1,18 @@
 import {enclosedDetails} from '../occlusion.mjs';
 import {figure,rotate} from '../families/shared.mjs';
 
+// Shared bent arrow; coordinates use the same 24-unit construction grid as
+// keyboard-return. Keep the existing key geometry as the default.
+export function returnArrow(g,{direction='left',left=8,right=17,top=8.5,bottom=12.5,wing=g.s===16?2.5:2.75,radius=g.r/2,bothEnds=false}={}){
+  const f=figure(g);
+  const shaft=direction==='down'?[[right,top],[left,top],[left,bottom]]:[[right,top],[right,bottom],[left,bottom]];
+  const head=direction==='down'?[[left-wing,bottom-wing],[left,bottom],[left+wing,bottom-wing]]:[[left+wing,bottom-wing],[left,bottom],[left+wing,bottom+wing]];
+  const result=f.arrow([f.contour(shaft,false,radius)],head);
+  if(!bothEnds)return result;
+  const startHead=direction==='down'?[[right-wing,top-wing],[right,top],[right-wing,top+wing]]:[[right-wing,top+wing],[right,top],[right+wing,top+wing]];
+  return f.arrow(result,startHead);
+}
+
 export const utilities={
   power:g=>{
     const f=figure(g);
@@ -51,8 +63,7 @@ export const utilities={
   'keyboard-return':g=>{
     const f=figure(g);
     // Reserve a visible channel under the arrow, including sharp end caps.
-    const wing=g.s===16?2.5:2.75;
-    return [f.rect(3,5,18,14),...f.arrow([f.contour([[17,8.5],[17,12.5],[8,12.5]],false,g.r/2)],[[8+wing,12.5-wing],[8,12.5],[8+wing,12.5+wing]])];
+    return [f.rect(3,5,18,14),...returnArrow(g)];
   },
   locate:g=>{
     const f=figure(g);

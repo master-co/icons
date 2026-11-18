@@ -1,0 +1,25 @@
+[
+  {
+    "name": "signature",
+    "reviewed": true,
+    "purpose": "PDF 標註與填寫工具列的插入簽名入口。Adobe 與 Apple Preview 都把簽名入口與文字、標註工具分開；一般 pencil 表示自由繪寫，pen-tool 表示向量路徑，不能在同一工具列保留簽名的識別。",
+    "recognitionCues": "一筆連續的手寫首字迴圈、交叉下筆與兩段逐步降低的肩部；整體平展，沒有筆頭或文件徽標。",
+    "confusableWith": [
+      "pencil",
+      "pen-tool",
+      "spline",
+      "text"
+    ],
+    "sourceObservation": "Tabler 的左側上迴圈與平展尾筆比較直接，沒有多餘外框；原稿第二肩部轉折較尖。Lucide 用下迴圈、較高的鉤筆及基線，筆跡與底線在小尺寸更密。Apple 官方工具按鈕另以手寫圖加選單折角，確認這是簽名選取入口，不將折角混入圖稿。",
+    "reason": "從固定 Tabler 原稿重新改作筆跡，明記 MIT 來源。新候選 A 高而窄、C 加基線；選定平展的 B，放寬首字迴圈、修順兩個肩部轉折及收筆。省略基線，讓簽名工具可對應插入、選擇簽名，實際簽名內容由文件呈現。這是新手寫母型，沒有重畫既有鉛筆或鋼筆。結構全部為手寫曲線，三種角型共用，不為 sharp 生造折角。沒有取回被退回的 session 稿件。",
+    "comparison": "最新稿已與 Lucide／Tabler 固定原稿在 16／20／24、明暗、DPR1／2 重新比較。保留 Tabler 較平展的筆勢，擴大迴圈並拉開首字與兩個尾肩的高低；較 Lucide 少一條基線和密集的底部交叉。原生預設及粗線端的迴圈仍開放；細線端筆跡連續但墨色較淡。已查看四張最新來源及操作情境截圖、本輪全新 A/C 與選定稿並排、灰階／二值化像素診斷。99 組來源／輸出樣本高解析拓撲、邊界與孔內探針無錯誤，135 次光柵比對一致；12 筆低解析診斷均為 16px／0.75、三角型及來源／輸出重複計數，門檻 96 丟失淡灰迴圈像素，灰階實圖仍連續。這是 AI 目視候選，不代表維護者定案。",
+    "dashes": false,
+    "dashReason": "簽名筆跡是連續書寫，不表示選取、待處理或隱藏邊界。",
+    "opacity": false,
+    "opacityReason": "同一筆跡不需要前後層級；以曲線及間距維持辨識，不以淡化隱藏交叉。",
+    "usageEvidence": [
+      "https://helpx.adobe.com/reader/desktop/sign-pdfs.html",
+      "https://support.apple.com/guide/preview/fill-out-and-sign-pdf-forms-prvw35725/mac"
+    ]
+  }
+]

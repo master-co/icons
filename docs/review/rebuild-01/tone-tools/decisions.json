@@ -1,0 +1,49 @@
+[
+  {
+    "reviewed": true,
+    "dashes": false,
+    "dashReason": "曲線、座標軸與控制點都是可見操作結構，不表示隱藏、選取或未完成狀態。",
+    "opacity": false,
+    "opacityReason": "單色工具列必須保留控制點和分布的辨識，不靠弱化墨線來分開部件。",
+    "usageEvidence": [
+      "https://docs.gimp.org/3.0/en/gimp-tool-curves.html",
+      "https://docs.gimp.org/3.0/en/gimp-tool-levels.html",
+      "https://helpx.adobe.com/photoshop/desktop/adjust-color/color-corrections/apply-color-adjustments-with-adjustments-panel.html"
+    ],
+    "name": "color-curves",
+    "purpose": "相片編輯器的曲線調整入口與調整圖層種類。它映射輸入到輸出色調，須與色階、直方圖檢視分辨；一般 sliders 不足以識別這些並排入口。",
+    "recognitionCues": "同家族座標軸內的一條平滑 S 形回應曲線，中央控制點略粗於曲線，表示可編輯色調映射。",
+    "confusableWith": [
+      "chart-spline",
+      "color-levels",
+      "chart-histogram",
+      "sliders"
+    ],
+    "sourceObservation": "GIMP 原稿以單向凸曲線、灰方框和底部灰階條呈現色調映射，線與框的關係安靜清楚。Breeze adjustcurves 是帶半透明填面的角形走勢，同為工具入口但更接近資料面積圖；保留兩份固定原圖的色彩、比例和描邊供比較，不將其改成 Master 線稿。",
+    "reason": "直接取用原有 analytics.axes，重新構造具有水平起收筆的三次曲線。新畫第一稿的節點太接近線寬，第二稿只提高控制點尺寸，使 16px 仍有可操作點線索。沒有取回被退回的 session 幾何。與相鄰 chart-spline 的上下波動資料線分開。",
+    "comparison": "第二稿已與 GIMP、Breeze 原稿在 16／20／24、明暗、DPR1／2 重新比較。GIMP 的單線回應比 Breeze 的填面更貼近此功能；Master 保留單線和開放軸框，以 S 形及一個控制點交代可編輯映射，未搬用來源 path。16px 的點現在仍讀作曲線上的節點，24px 不喧賓奪主；起收筆平緩，曲線與軸框保持空白。四張全頁、四張操作情境及本次新稿 A/B 均已查看。Breeze 固定深色在深底對比不足，因此輪廓工藝主要於淺底比較。這是 Codex 目視候選，未代表維護者定案。"
+  },
+  {
+    "reviewed": true,
+    "dashes": false,
+    "dashReason": "曲線、座標軸與控制點都是可見操作結構，不表示隱藏、選取或未完成狀態。",
+    "opacity": false,
+    "opacityReason": "單色工具列必須保留控制點和分布的辨識，不靠弱化墨線來分開部件。",
+    "usageEvidence": [
+      "https://docs.gimp.org/3.0/en/gimp-tool-curves.html",
+      "https://docs.gimp.org/3.0/en/gimp-tool-levels.html",
+      "https://helpx.adobe.com/photoshop/desktop/adjust-color/color-corrections/apply-color-adjustments-with-adjustments-panel.html"
+    ],
+    "name": "color-levels",
+    "purpose": "相片編輯器的色階調整入口與調整圖層種類，以黑點、中間調、白點控制輸入色階；與僅檢視分布的直方圖及編輯回應曲線的入口並排。",
+    "recognitionCues": "高低不同的分布柱，共用一條軸底；下方三個向上控制標記，與分布保持可見空隙。",
+    "confusableWith": [
+      "chart-histogram",
+      "color-curves",
+      "sliders"
+    ],
+    "sourceObservation": "GIMP levels 用分布剪影和黑／中／白三個標記，控制標記是比一般直方圖更有價值的必要差異。Breeze adjustlevels 用三根滑桿，清楚表示參數但容易與通用設定混同。比較原稿保留原色；GIMP 的細灰階、彩色和框內細節不全搬到 16px 單色圖示。",
+    "reason": "共源 axes 及 histogramBars，把原直方圖的柱條抽成可參數化母型，沒有改動原有幾何；三個實心控制柄由現有 triangle 母型生成小尺度角型。第二稿將控制標記提高並加寬，改善第一稿像三個小點的問題，仍保留與底軸的白色通道。前序 917 顆／8253 份原生幾何精確不變。",
+    "comparison": "第二稿與兩份固定來源於全部原生尺寸、角型、明暗及 DPR1／2 重新並排。GIMP 的三個底部標記直接傳達色階控制，比 Breeze 三滑桿更有專屬線索；Master 用四根分布柱和三個小控制柄保留這項優點，省去灰階條和顏色，圖稿由既有母型構成。16px 三點仍分開，20／24px 可讀作三角控制柄，支援粗線端的柱間及軸下間隙仍開放。198 組測試及 270 次來源／輸出光柵核對沒有結構錯誤。最細 16px soft／rounded 的來源與輸出共四筆二值化警示，定位於軸框左下角；另看原生灰階和最近鄰像素圖確認連續淡灰收口，三個控制柄未黏合，未為門檻分數改壞母型。四張完整審稿、四張情境與新稿 A/B 已查看；這是 Codex 目視候選，未代表維護者定案。"
+  }
+]

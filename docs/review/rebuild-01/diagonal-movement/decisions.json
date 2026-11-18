@@ -1,0 +1,44 @@
+[
+  {
+    "name": "arrow-up-left",
+    "purpose": "畫布方向控制中向左上移動；與水平、垂直及另一個斜向命令並列。",
+    "recognitionCues": "指向左上的單一斜箭桿及垂直／水平雙翼。",
+    "confusableWith": [
+      "arrow-left",
+      "arrow-up",
+      "arrow-up-right"
+    ],
+    "sourceObservation": "Lucide 與 Tabler 都用直角箭翼，Tabler 的斜桿略長；兩者的頭部緊湊。本稿直接取本庫 arrow-up-right 母型旋轉，不重建另一套箭尖或接縫。",
+    "reason": "水平或垂直箭頭無法在方向盤中表示一次斜向移動。以原 arrow-up-right 旋轉 -90 度，共用原生尺寸、箭翼比例與 joinedArrow 收口；沒有為補方向另調視重。",
+    "comparison": "16px 並排時，本稿箭翼較兩份來源長，和原有右上、右下保持同一輪廓尺度；來源的緊湊箭頭適合較短標記，本庫則保留較清晰的直角方向。20／24px 斜桿與箭翼交點連續，sharp 粗線端沒有突出接縫，左右方向切換不跳位。",
+    "usageEvidence": [
+      "docs/review/rebuild-01/diagonal-movement/index.html"
+    ],
+    "dashes": false,
+    "dashReason": "完整箭桿與箭翼表達確定方向，沒有隱藏邊界或未完成狀態。",
+    "opacity": false,
+    "opacityReason": "箭頭與止線均是必要識別，不以漸淡分配層級。",
+    "reviewed": true
+  },
+  {
+    "name": "arrow-down-left",
+    "purpose": "畫布方向控制中向左下移動；與水平、垂直及另一個斜向命令並列。",
+    "recognitionCues": "指向左下的單一斜箭桿及垂直／水平雙翼。",
+    "confusableWith": [
+      "arrow-left",
+      "arrow-down",
+      "arrow-up-right"
+    ],
+    "sourceObservation": "Lucide 與 Tabler 都用直角箭翼，Tabler 的斜桿略長；兩者的頭部緊湊。本稿直接取本庫 arrow-up-right 母型旋轉，不重建另一套箭尖或接縫。",
+    "reason": "水平或垂直箭頭無法在方向盤中表示一次斜向移動。以原 arrow-up-right 旋轉 180 度，共用原生尺寸、箭翼比例與 joinedArrow 收口；沒有為補方向另調視重。",
+    "comparison": "16px 並排時，本稿箭翼較兩份來源長，和原有右上、右下保持同一輪廓尺度；來源的緊湊箭頭適合較短標記，本庫則保留較清晰的直角方向。20／24px 斜桿與箭翼交點連續，sharp 粗線端沒有突出接縫，左右方向切換不跳位。",
+    "usageEvidence": [
+      "docs/review/rebuild-01/diagonal-movement/index.html"
+    ],
+    "dashes": false,
+    "dashReason": "完整箭桿與箭翼表達確定方向，沒有隱藏邊界或未完成狀態。",
+    "opacity": false,
+    "opacityReason": "箭頭與止線均是必要識別，不以漸淡分配層級。",
+    "reviewed": true
+  }
+]

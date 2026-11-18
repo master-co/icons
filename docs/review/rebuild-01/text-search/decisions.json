@@ -1,0 +1,40 @@
+[
+  {
+    "name": "match-whole-word",
+    "reviewed": true,
+    "purpose": "搜尋列中與區分大小寫、正規表示式並列的整字比對開關；一般文字或搜尋圖示無法指出只接受完整單字的條件。",
+    "recognitionCues": "共用小寫字腹的 a 與帶上伸筆的 b，底部開口向上的邊界括線。",
+    "confusableWith": [
+      "case-lower",
+      "case-title",
+      "search"
+    ],
+    "sourceObservation": "Lucide 的小寫 ab 比 Hugeicons 的小型大寫 AB 更能保留單一、寬敞的字腔；Hugeicons 的上收括線清楚，但字本體在 16px 偏小。兩份均為同語意參考。",
+    "reason": "直接沿用 lowerA 字腹，將同一字腹鏡射並延長左幹形成 b。三個原生尺寸分別配置字寬與底部間距，括線半徑受端段長度限制，避免圓角吃掉邊界端點。未複製來源路徑或加入放大鏡。 精修時將16px字母上移0.5px、括線底部下移0.5px，解除粗線端字腳與括線側端的近接。",
+    "comparison": "最新稿於明暗背景、DPR 1／2 的 16／20／24px 與兩份來源並列檢查。保留 Lucide 清楚的小寫結構，但用現有字形母型及較鬆的字距；相較 Hugeicons，單腔 b 在 16px 不會擠成上下兩個暗點。底線與字母在粗線端仍分開，兩個字腹各自開放；括線 sharp 保留直角，soft／rounded 用實際弧線轉折。沒有靠淡化主輪廓拉開層次。",
+    "dashes": false,
+    "dashReason": "這是單字的完整邊界，不是暫存選取範圍；使用連續括線。",
+    "usageEvidence": [
+      "https://code.visualstudio.com/docs/editing/codebasics#_find-and-replace"
+    ]
+  },
+  {
+    "name": "spell-check",
+    "reviewed": true,
+    "purpose": "文字工具列的拼字檢查入口；與確認變更並列時，一般 check 會遺失文字校對對象。",
+    "recognitionCues": "左上 A 字形與右下獨立勾號；不表示文件已儲存或所有內容已確認。",
+    "confusableWith": [
+      "check",
+      "check-circle",
+      "text-color"
+    ],
+    "sourceObservation": "Material Design Icons 的 A 與勾號分量充足，但實心粗形更重；Lucide 的兩筆組合較輕巧，字形與勾之間留有斜向通道。兩份均為拼字檢查，而不是檢查關閉。",
+    "reason": "沿用 capitalA 和 enclosedCheck 的實際繪製函式，僅配置字面尺寸與勾號位置。字形右下腳完整保留，勾號無需切斷字母或使用背景色遮蓋；16px 的 A 頂部、橫槓及勾彎折都有各自留白。 精修時將24px字高縮短0.25px、勾號下移0.5px，使sharp粗線端的方帽外緣仍與字腳分離。",
+    "comparison": "最新稿與兩份固定來源並列後，採用較接近 Lucide 的輕巧主次配置，但 A 的完整兩腳與既有大小寫工具共源，勾號角度亦與 check-circle 內勾一致。Material 的勾號更粗重；本稿以一致描邊和較寬的獨立勾維持重量。16／20／24px、明暗底、DPR 1／2 及線寬兩端均看過，字母孔洞與兩部件之間的通道沒有黏合；這是操作入口，不作校對結果保證。",
+    "dashes": false,
+    "dashReason": "字母與檢查記號需要完整筆畫，沒有暫存、隱藏邊界或進度語意。",
+    "usageEvidence": [
+      "https://support.mozilla.org/en-US/kb/how-do-i-use-firefox-spell-checker"
+    ]
+  }
+]

@@ -1,0 +1,44 @@
+[
+  {
+    "dashes": false,
+    "dashReason": "物件輪廓與鏡射軸是確定結構，沒有隱藏邊界。",
+    "opacity": false,
+    "opacityReason": "兩個物件或兩側鏡像均需完整辨認，不使用淡化。",
+    "reviewed": true,
+    "name": "flip-horizontal",
+    "purpose": "圖片與形狀工具列的水平鏡射，與另一軸翻轉及旋轉並列。",
+    "recognitionCues": "同一垂直中軸兩側相反手性的直角三角形。",
+    "confusableWith": [
+      "rotate-left",
+      "rotate-right",
+      "flip-vertical"
+    ],
+    "sourceObservation": "Tabler 用直角三角形及連續軸線，反射後的斜邊方向明確；Hugeicons 用圓潤的對稱三角形及斷開軸線，曲線較柔和，但手性線索較弱。",
+    "reason": "採 Tabler 的鏡射直角結構，透過既有 triangle 函式的頂點參數產生兩側輪廓，保留原有角型工藝；加寬三角內孔，並保留軸邊的獨立間距。垂直版本整體旋轉同一母圖，不另外重畫一組線。",
+    "comparison": "最新稿與 Tabler、Hugeicons 並列後，較 Tabler 的細窄三角形留出較寬內孔，微圓端角沿用本庫 triangle；連續中軸不與兩側外輪廓接觸。16px 的線寬兩端仍有兩個三角孔，水平／垂直版本的軸長與重量一致。Hugeicons 的曲面較軟，但此處保留直角和相反斜邊，明確交代鏡射；三尺寸三角型及明暗 DPR 1／2 均已查看。",
+    "usageEvidence": [
+      "https://help.figma.com/hc/en-us/articles/1500006206242-Resize-rotate-and-flip-objects-in-FigJam"
+    ]
+  },
+  {
+    "dashes": false,
+    "dashReason": "物件輪廓與鏡射軸是確定結構，沒有隱藏邊界。",
+    "opacity": false,
+    "opacityReason": "兩個物件或兩側鏡像均需完整辨認，不使用淡化。",
+    "reviewed": true,
+    "name": "flip-vertical",
+    "purpose": "圖片與形狀工具列的垂直鏡射，與另一軸翻轉及旋轉並列。",
+    "recognitionCues": "同一水平中軸兩側相反手性的直角三角形。",
+    "confusableWith": [
+      "rotate-left",
+      "rotate-right",
+      "flip-horizontal"
+    ],
+    "sourceObservation": "Tabler 用直角三角形及連續軸線，反射後的斜邊方向明確；Hugeicons 用圓潤的對稱三角形及斷開軸線，曲線較柔和，但手性線索較弱。",
+    "reason": "採 Tabler 的鏡射直角結構，透過既有 triangle 函式的頂點參數產生兩側輪廓，保留原有角型工藝；加寬三角內孔，並保留軸邊的獨立間距。垂直版本整體旋轉同一母圖，不另外重畫一組線。",
+    "comparison": "最新稿與 Tabler、Hugeicons 並列後，較 Tabler 的細窄三角形留出較寬內孔，微圓端角沿用本庫 triangle；連續中軸不與兩側外輪廓接觸。16px 的線寬兩端仍有兩個三角孔，水平／垂直版本的軸長與重量一致。Hugeicons 的曲面較軟，但此處保留直角和相反斜邊，明確交代鏡射；三尺寸三角型及明暗 DPR 1／2 均已查看。",
+    "usageEvidence": [
+      "https://help.figma.com/hc/en-us/articles/1500006206242-Resize-rotate-and-flip-objects-in-FigJam"
+    ]
+  }
+]

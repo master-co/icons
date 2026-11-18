@@ -1,0 +1,46 @@
+[
+  {
+    "name": "stroke-width",
+    "reviewed": true,
+    "purpose": "形狀筆畫屬性的線寬數值欄位；在精簡屬性面板中，與圓角、尺寸及筆畫接合並列。",
+    "recognitionCues": "三條等長橫線、由粗到細的厚度階梯、各列完整分離。",
+    "confusableWith": [
+      "menu",
+      "line-height",
+      "sliders"
+    ],
+    "sourceObservation": "Material Design Icons 用四條遞減粗線，資訊密度較高；Bootstrap 以三條與較寬留白建立同一粗細訊號。採用後者構造，縮入 Master 的原生光學邊界。",
+    "reason": "menu 的三線等粗，只能表示選單或一般清單；line-height 有字形及行距語意，不能表達筆畫厚度。重建三條實心線段、原生列距與角型，厚度隨公開線寬參數一起調整。實心條是筆畫粗細的示意，不新增 filled 樣式。",
+    "comparison": "最新稿在 16px 比 Material Design Icons 四列保有更大的垂直留白，薄線仍清楚；與 Bootstrap 相比縮小水平佔幅，讓厚線不壓過相鄰屬性圖。16／20／24 的三段粗細維持遞減，最粗支援線寬下也各自分離；sharp 用平角，soft／rounded 用實際條角半徑而非全域 linejoin。兩種 DPR 與明暗背景下，數值欄旁可區分於等粗三線的 menu。",
+    "dashes": false,
+    "dashReason": "三條完整筆畫的粗細就是資訊；切成虛線會改變為線型設定。",
+    "opacity": false,
+    "opacityReason": "薄線維持完整顏色，靠幾何厚度表達差別，不用透明度模擬較細線寬。",
+    "usageEvidence": [
+      "https://help.figma.com/hc/en-us/articles/360049283914-Apply-and-adjust-stroke-properties",
+      "https://inkscape-manuals.readthedocs.io/en/1.3/strokes.html"
+    ]
+  },
+  {
+    "name": "corner-radius",
+    "reviewed": true,
+    "purpose": "矩形與畫框的圓角半徑數值欄位，和線寬及筆畫接合控制並列。",
+    "recognitionCues": "單一左上圓角、與圓弧相切的水平和垂直直線、無中心軸的連續輪廓。",
+    "confusableWith": [
+      "stroke-join-round",
+      "square",
+      "node-corner"
+    ],
+    "sourceObservation": "Tabler 的單角能直接放在半徑欄位旁；Material Design Icons 使用四角斷開的框表示整體圓角。選擇單角構造，避免與一般框線、選取範圍相似。",
+    "reason": "square 表示形狀本身，不指出可調的圓角；stroke-join-round 表示兩筆畫交會的外緣接合，有路徑中心軸，和形狀的幾何半徑不同。採 Tabler 單角構造重建原生半徑及直線長度，所有角型均保留語意所需的圓弧。",
+    "comparison": "最新稿比 Tabler 原稿略放大圓弧與整體佔幅，保留兩端直線，16px 仍是轉角而非四分之一圓形碎片；與 Material Design Icons 相比只有一個轉角，更適合作為數值欄位前綴。sharp 也保留真正圓弧，三角型只影響端帽；兩個相切點沒有折痕。三尺寸、線寬兩端與明暗 DPR 1／2 下均與帶虛線中心軸的 stroke-join-round 區分。",
+    "dashes": false,
+    "dashReason": "只表示幾何圓角，不表示未選區域或路徑軸，完整圓弧已足夠。",
+    "opacity": false,
+    "opacityReason": "單一輪廓沒有次要部件，無需透明度分層。",
+    "usageEvidence": [
+      "https://help.figma.com/hc/en-us/articles/360050986854-Adjust-corner-radius-and-smoothing",
+      "https://help.figma.com/hc/en-us/articles/360039832014-Design-prototype-and-explore-layer-properties-in-the-right-sidebar"
+    ]
+  }
+]

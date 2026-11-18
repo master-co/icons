@@ -3,6 +3,7 @@ import {media} from '../families/media.mjs';
 import {commerce} from '../families/commerce.mjs';
 import {layout} from '../families/layout.mjs';
 import {knockout} from '../occlusion.mjs';
+import {triangle} from './composition-location.mjs';
 
 function music(g){
   const f=figure(g),solid=d=>{const [tag,a]=f.path(d);return [tag,{...a,fill:'currentColor',stroke:'none'}];};
@@ -30,6 +31,10 @@ function shuffle(g){
 }
 
 export const playback={
+  // Media ejection is an upright triangle over a bar, not an upward arrow.
+  // Share the existing triangle contour; a single bar avoids a tiny second
+  // counter at 16px and retains the same stroke weight as the upper outline.
+  eject:g=>[...triangle(g,{points:[[12,4.5],[20,14.5],[4,14.5]]}),figure(g).line(4,19.5,20,19.5)],
   music,
   'audio-waveform':g=>{const f=figure(g);return [f.path('M 3 12 H 4 C 4.55 12 5 11.55 5 11 V 7 C 5 4.3 9 4.3 9 7 V 17 C 9 19.7 13 19.7 13 17 V 5 C 13 2.3 17 2.3 17 5 V 15 C 17 17.7 21 17.7 21 15 V 12')];},
   subtitles:g=>{const f=figure(g);return [f.rect(3,4.5,18,15),

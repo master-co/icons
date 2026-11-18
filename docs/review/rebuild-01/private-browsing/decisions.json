@@ -1,0 +1,17 @@
+[
+  {
+    "name": "incognito",
+    "reviewed": true,
+    "purpose": "一般、訪客與無痕視窗的模式切換及持續狀態標記。app-window無法區分視窗模式，user容易表示訪客，lock則混同存取／連線安全，因此保留帽子加眼鏡的通用無痕輪廓。",
+    "recognitionCues": "有淺凹頂的帽冠、單一水平帽沿、兩個相連的圓鏡框。",
+    "confusableWith": ["glasses", "user", "app-window", "lock"],
+    "sourceObservation": "Hugeicons以寬而起伏的帽冠、圓鏡框及弧形鼻橋形成無痕輪廓；帽冠底線與帽沿重合，不直接搬入這個重複描邊。Material Design Icons以實心帽冠和較細鏡框形成上下視重差，是同語意的實心比較，不能把其實心重量當成描邊方案的標準。",
+    "comparison": "新稿重新與兩份固定來源並列檢視16／20／24及明暗DPR1／2。帽冠較Hugeicons收窄，淺凹頂保留帽子的特徵，直斜肩降低來源較飽滿的起伏感；帽沿只有一條，沒有加粗的重疊底線。兩個圓鏡框保留既有glasses的輪廓與鼻橋接法，16px以2.25px鏡框半徑保住內孔，24px為3.25px。Material的實心帽頂更有重量，但本庫描邊模式下不採實心；本稿帽沿、凹頂與雙孔已能與一般視窗、訪客及鎖頭區分。粗線端帽子與眼鏡仍分離，鏡孔沒有填死；三種角型改變帽冠轉折而不把鏡框拉方。",
+    "reason": "改作Hugeicons的帽子／鏡框配置，重建窄帽冠、單筆帽沿及原生間距。眼鏡透過roundSpectacleParts共用既有glasses幾何；帽冠腳使用平切端帽與帽沿相接，避免伸出帽沿下方。",
+    "dashes": false,
+    "dashReason": "這是瀏覽模式標記，並非暫時選取或未完成連線，虛線會削弱帽沿和鏡框。",
+    "opacity": false,
+    "opacityReason": "帽子與眼鏡共同承擔模式辨識，不以淡化其中一部來處理空間。",
+    "usageEvidence": ["https://support.google.com/chrome/answer/95464/browse-in-private-computer?hl=en-GB"]
+  }
+]

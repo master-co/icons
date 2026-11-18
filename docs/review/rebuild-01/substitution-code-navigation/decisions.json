@@ -1,0 +1,128 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "skillVersion": "0.5.20",
+  "viewed": [
+    "light.png",
+    "dark.png",
+    "changed-light.png",
+    "changed-dark.png"
+  ],
+  "sizes": [
+    16,
+    20,
+    24
+  ],
+  "themes": [
+    "light",
+    "dark"
+  ],
+  "dpr": [
+    1
+  ],
+  "corner": "soft for existing glyphs only",
+  "scope": "Code editor gutter state, language-dependent comment commands, actual text markers/carets, and explicit navigation commands. Local fixed samples only; no rejected session geometry retrieved or production editor changed.",
+  "primaryEvidence": "work/rebuild-01/code-controls-primary-evidence.json",
+  "userApproval": "pending",
+  "evidence": [
+    {
+      "path": "docs/review/rebuild-01/substitution-code-navigation/light.png",
+      "sha256": "039dbefec0dca883a83aaaaa2fd0be4e98cedd7e413dacc3887af93a56cc5712"
+    },
+    {
+      "path": "docs/review/rebuild-01/substitution-code-navigation/dark.png",
+      "sha256": "923ca2da1682d526c4f1bd365ee673aac3264ace8f662dc17744263cdac0e7dc"
+    },
+    {
+      "path": "docs/review/rebuild-01/substitution-code-navigation/changed-light.png",
+      "sha256": "0fc669aa88dcf11ece58d3e5802f8c1bbfa65e2f85452ba9cd25e98732288424"
+    },
+    {
+      "path": "docs/review/rebuild-01/substitution-code-navigation/changed-dark.png",
+      "sha256": "afc97b3fd0cdd25a91cb549b7a3ffa865873ee15d86c88ecc59534e03da41b02"
+    }
+  ],
+  "items": [
+    {
+      "name": "fold-code",
+      "label": "摺疊程式碼",
+      "alternative": "chevron-down",
+      "replacementKind": "contextual-state",
+      "context": "編輯器行號旁 · 已展開區塊的摺疊控制",
+      "reason": "區塊位置已由行號與程式內容交代。既有向下折角表示目前已展開，按下後切換成向右折角；不需要再畫內縮箭頭與程式碼橫線。",
+      "replacementScope": "行號旁的展開／摺疊切換，圖形表示目前狀態，aria-label 表示下一步動作；不把這個方向當成所有工具列 Fold 命令的通用方向。",
+      "sample": "<fieldset data-code-demo=\"fold\" style=\"border:1px solid #8886;padding:12px;min-width:0\"><legend>本地操作示例</legend><p>行號旁控制目前區塊</p><div style=\"display:flex;align-items:center;gap:8px\"><span>1</span><button data-fold-toggle aria-label=\"摺疊函式\" aria-expanded=\"true\"><span data-expanded-icon><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><path d=\"M6 3.5L10.3586 7.8586A0.2 0.2 0 0 1 10.3586 8.1414L6 12.5\" transform=\"rotate(90 8 8)\"/></svg></span><span data-collapsed-icon hidden><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><path d=\"M6 3.5L10.3586 7.8586A0.2 0.2 0 0 1 10.3586 8.1414L6 12.5\"/></svg></span></button><code>function total() {</code><span data-fold-ellipsis hidden>…</span></div><pre data-fold-body style=\"white-space:pre-wrap;font:14px/1.7 ui-monospace,monospace;border:1px solid #8885;padding:10px;min-height:70px\">2   const amount = 100;\n3   return amount;</pre><code>4 }</code><p data-fold-status></p></fieldset>",
+      "searchKeywords": [
+        "fold-region",
+        "程式碼摺疊"
+      ],
+      "usageEvidence": [
+        "https://code.visualstudio.com/docs/editing/codebasics",
+        "https://github.com/microsoft/vscode/blob/36e8c0289a5f29eae15a933263220d9895302ff6/src/vs/editor/contrib/folding/browser/foldingDecorations.ts"
+      ],
+      "usageEvidenceLimit": "Primary docs/source establish actual code-editor commands and state. This is a limited local sample, not a screenshot or full implementation of VS Code. No rejected geometry used.",
+      "visualObservation": "16px 向下折角位於第一行旁，收起後原兩行內容仍在，顯示向右折角與省略號；動作標籤同步改為展開。"
+    },
+    {
+      "name": "unfold-code",
+      "label": "展開程式碼",
+      "alternative": "chevron-right",
+      "replacementKind": "contextual-state",
+      "context": "編輯器行號旁 · 已摺疊區塊的展開控制",
+      "reason": "向右折角與省略記號已表示區塊收起；按下可展開同一段內容，無須另畫外張箭頭。程式碼內容仍保留，不把收起等同移除。",
+      "replacementScope": "LTR 行號旁的摺疊狀態與展開操作，與向下折角成對；RTL 依使用端方向設定處理。",
+      "sample": "<fieldset data-code-demo=\"unfold\" style=\"border:1px solid #8886;padding:12px;min-width:0\"><legend>本地操作示例</legend><p>行號旁控制目前區塊</p><div style=\"display:flex;align-items:center;gap:8px\"><span>1</span><button data-fold-toggle aria-label=\"摺疊函式\" aria-expanded=\"true\"><span data-expanded-icon><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><path d=\"M6 3.5L10.3586 7.8586A0.2 0.2 0 0 1 10.3586 8.1414L6 12.5\" transform=\"rotate(90 8 8)\"/></svg></span><span data-collapsed-icon hidden><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><path d=\"M6 3.5L10.3586 7.8586A0.2 0.2 0 0 1 10.3586 8.1414L6 12.5\"/></svg></span></button><code>function total() {</code><span data-fold-ellipsis hidden>…</span></div><pre data-fold-body style=\"white-space:pre-wrap;font:14px/1.7 ui-monospace,monospace;border:1px solid #8885;padding:10px;min-height:70px\">2   const amount = 100;\n3   return amount;</pre><code>4 }</code><p data-fold-status></p></fieldset>",
+      "searchKeywords": [
+        "unfold-region",
+        "程式碼展開"
+      ],
+      "usageEvidence": [
+        "https://code.visualstudio.com/docs/editing/codebasics",
+        "https://github.com/microsoft/vscode/blob/36e8c0289a5f29eae15a933263220d9895302ff6/src/vs/editor/contrib/folding/browser/foldingDecorations.ts"
+      ],
+      "usageEvidenceLimit": "Primary docs/source establish actual code-editor commands and state. This is a limited local sample, not a screenshot or full implementation of VS Code. No rejected geometry used.",
+      "visualObservation": "初始收起狀態的向右折角與省略號清楚，展開後恢復相同文字和行號，不另加程式碼圖案。"
+    },
+    {
+      "name": "go-to-line",
+      "label": "跳至行號",
+      "alternative": null,
+      "alternativeLabel": "行號輸入與目前位置",
+      "replacementKind": "native-content",
+      "context": "導覽命令 · 指定行號與持續可見的行列位置",
+      "reason": "跳轉需要使用者輸入確切行號；目前位置本身就是有效入口與回饋。單獨的 hash 或帶箭頭的清單無法表達實際目標，不新增一個只會打開同一輸入框的專用圖示。",
+      "replacementScope": "具名跳行命令與行號輸入框，保留目前行／欄狀態；不宣稱原生數值欄位可以直接塞入只能容納單顆圖示的位置。",
+      "sample": "<fieldset data-code-demo=\"line\" style=\"border:1px solid #8886;padding:12px;min-width:0\"><legend>本地操作示例</legend><p>跳至行號</p><form data-line-form><label>行號 <input data-line-number type=\"number\" min=\"1\" max=\"4\" value=\"1\" style=\"width:70px\"></label><button type=\"submit\">前往</button></form><pre data-line-code style=\"white-space:pre-wrap;font:14px/1.7 ui-monospace,monospace;border:1px solid #8885;padding:10px;min-height:70px\"></pre><p data-line-status role=\"status\"></p></fieldset>",
+      "nativePreview": "<span>跳至行號　12:1</span>",
+      "comparisonMarkup": "<span style=\"font:16px/1.6 ui-monospace,monospace\">12:1</span><span style=\"font:20px/1.6 ui-monospace,monospace\">12:1</span><span style=\"font:24px/1.6 ui-monospace,monospace\">12:1</span>",
+      "searchKeywords": [],
+      "searchAliasDecision": "go-to-line 不等於 hash、list 或 arrow-down，不補誤導別名。",
+      "usageEvidence": [
+        "https://code.visualstudio.com/docs/reference/default-keybindings"
+      ],
+      "usageEvidenceLimit": "Primary docs/source establish actual code-editor commands and state. This is a limited local sample, not a screenshot or full implementation of VS Code. No rejected geometry used.",
+      "visualObservation": "行號欄位輸入 3 後，第三行高亮且狀態列顯示第 3 行、第 1 欄，具體目標與結果可核對。"
+    },
+    {
+      "name": "matching-brackets",
+      "label": "跳至配對括號",
+      "alternative": null,
+      "alternativeLabel": "具名命令與實際括號配對",
+      "replacementKind": "native-content",
+      "context": "程式碼導覽 · 配對高亮與游標跳轉",
+      "reason": "配對發生在實際文字中，必須保留哪一層、哪一對括號與游標位置。通用 brackets 表示符號種類，不能表達跳轉或目前配對；具名命令配合原文高亮較精確。",
+      "replacementScope": "有文字的導覽命令與程式碼內成對高亮；不把配對檢查、括號輸入與跳轉合成同一個語意。",
+      "sample": "<fieldset data-code-demo=\"brackets\" style=\"border:1px solid #8886;padding:12px;min-width:0\"><legend>本地操作示例</legend><button data-bracket-jump>跳至配對括號</button><p>在第一層括號之間跳轉，保留配對範圍。</p><pre data-bracket-code style=\"white-space:pre-wrap;font:14px/1.7 ui-monospace,monospace;border:1px solid #8885;padding:10px;min-height:70px\"></pre><p data-bracket-status role=\"status\"></p></fieldset>",
+      "nativePreview": "<span>跳至配對括號　( … )</span>",
+      "comparisonMarkup": "<span style=\"font:16px/1.6 ui-monospace,monospace\">( … )</span><span style=\"font:20px/1.6 ui-monospace,monospace\">( … )</span><span style=\"font:24px/1.6 ui-monospace,monospace\">( … )</span>",
+      "searchKeywords": [],
+      "searchAliasDecision": "不新增到 brackets 或 braces；那兩顆不代表配對導覽。",
+      "usageEvidence": [
+        "https://code.visualstudio.com/docs/editing/editingevolved",
+        "https://code.visualstudio.com/api/language-extensions/language-configuration-guide"
+      ],
+      "usageEvidenceLimit": "Primary docs/source establish actual code-editor commands and state. This is a limited local sample, not a screenshot or full implementation of VS Code. No rejected geometry used.",
+      "visualObservation": "外層成對括號持續高亮，跳轉只移動游標到外層另一端；內層括號沒有被誤標成目標。"
+    }
+  ]
+}

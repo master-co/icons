@@ -1,0 +1,18 @@
+$ node scripts/check-reproducible.mjs
+Built @master/icons: 924 icons × 3 sizes × 3 corners = 8316 SVGs and shared geometry.
+Icons: generated in 8.45s
+Built @master/icons-react: 924 icons × 10 entries in 4.50s
+Built @master/icons-vue: 924 icons × 10 entries in 4.27s
+Built @master/icons-svelte: 924 icons × 10 entries in 3.73s
+Built @master/icons-preact: 924 icons × 10 entries in 3.80s
+Built @master/icons-astro: 924 icons × 10 entries in 3.74s
+Strokes: content cache hit (111ms)
+Built @master/icons: 924 icons × 3 sizes × 3 corners = 8316 SVGs and shared geometry.
+Icons: generated in 7.46s
+Built @master/icons-react: 924 icons × 10 entries in 3.67s
+Built @master/icons-vue: 924 icons × 10 entries in 3.65s
+Built @master/icons-svelte: 924 icons × 10 entries in 3.76s
+Built @master/icons-preact: 924 icons × 10 entries in 3.64s
+Built @master/icons-astro: 924 icons × 10 entries in 3.50s
+Strokes: content cache hit (114ms)
+Reproducible: 140713 outputs match byte-for-byte across UTC and Asia/Taipei builds.

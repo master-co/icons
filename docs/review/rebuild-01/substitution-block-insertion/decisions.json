@@ -1,0 +1,88 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "skillVersion": "0.5.20",
+  "viewed": [
+    "light.png",
+    "dark.png",
+    "changed-light.png",
+    "changed-dark.png"
+  ],
+  "sizes": [
+    16,
+    20,
+    24
+  ],
+  "themes": [
+    "light",
+    "dark"
+  ],
+  "dpr": [
+    1
+  ],
+  "corner": "soft for existing glyphs only",
+  "scope": "Local section-type preview and named block insertion controls. No rejected session geometry retrieved; no production document or Haoban source changed.",
+  "userApproval": "pending",
+  "evidence": [
+    {
+      "path": "docs/review/rebuild-01/substitution-block-insertion/light.png",
+      "sha256": "6d6f51f73d0714eca69bcdd56b7ddae8b01693db0e9729eaf941809bb4d2ebdc"
+    },
+    {
+      "path": "docs/review/rebuild-01/substitution-block-insertion/dark.png",
+      "sha256": "b37579430ad4a668025cae5d930224357d6bf81a45959b98c29c3d7ab7f16493"
+    },
+    {
+      "path": "docs/review/rebuild-01/substitution-block-insertion/changed-light.png",
+      "sha256": "cf3a15faa0bdd269b91c3082c25504f30c301e0905a8323fd0fc7531cb4a594c"
+    },
+    {
+      "path": "docs/review/rebuild-01/substitution-block-insertion/changed-dark.png",
+      "sha256": "39dcf6222f9815e96f5118b5e5977fb0114fe6cf54e4a2703a7b1b30657d68ff"
+    }
+  ],
+  "items": [
+    {
+      "name": "block-insert-above",
+      "label": "在上方新增區塊",
+      "alternative": "plus",
+      "replacementKind": "contextual-entry",
+      "context": "編輯器區塊選單 · 同一選取區塊前後插入",
+      "reason": "新增動作用既有plus，插入位置由具名命令及實際區塊順序交代。Haoban已有共用加號的上下方插入操作，不需再加小區塊或方向徽標。",
+      "replacementScope": "具名區塊選單，或加號直接放在對應插入位置。若兩個無文字按鈕並排且沒有位置關係，相同plus不足以區分上下方。",
+      "sample": "<style>[data-document-demo] label{display:block;margin:8px 0}[data-document-demo] select{font:inherit;color:inherit;background:transparent;border:1px solid #8888;padding:5px}[data-document-demo] .papers{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}[data-document-demo] .paper{width:142px;min-height:180px;border:1px solid #8888;padding:10px;position:relative;padding-bottom:25px}[data-document-demo] .paper footer{position:absolute;bottom:5px;right:10px;font-size:11px;opacity:.7}[data-document-demo] .section{font-size:11px;margin:9px 0}[data-document-demo] .section p{margin:4px 0}[data-document-demo] .section-two{border-top:1px dashed #8888;padding-top:5px}[data-document-demo] .columns{column-count:2;column-gap:8px}[data-document-demo] .row{display:flex;align-items:center;gap:8px;flex-wrap:wrap}[data-document-demo] .blocks{margin-top:12px}[data-document-demo] .block{padding:8px;border:1px solid #8886;margin:7px 0}[data-document-demo] .selected{border:2px solid currentColor}.dark [data-document-demo]{color-scheme:dark}</style><div data-document-demo=\"blocks\"><div class=\"row\"><button data-block-direction=\"above\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><path d=\"M3 8L13 8\"/><path d=\"M8 3L8 13\"/></svg>在上方新增</button><button data-block-direction=\"below\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><path d=\"M3 8L13 8\"/><path d=\"M8 3L8 13\"/></svg>在下方新增</button></div><div class=\"blocks\"><div class=\"block\">前一段內容</div><div class=\"block selected\" data-selected-block>目前選取的區塊</div><div class=\"block\">後一段內容</div></div><p data-block-result>插入位置以目前選取區塊為準</p><small>本地順序示例；相同plus搭配明確的上方／下方命令。</small></div>",
+      "searchKeywords": [
+        "insert-block-before",
+        "在上方新增區塊"
+      ],
+      "usageEvidence": [
+        "/Users/aron/haoban/packages/editor/src/block-handles.components/BlockHandles.svelte:781",
+        "/Users/aron/haoban/packages/editor/src/editor.components/EditorInstance.svelte:1601",
+        "https://tiptap.dev/docs/editor/extensions/menus"
+      ],
+      "usageEvidenceLimit": "Haoban uses one plus control: normal click inserts below, Alt/Option click inserts above. This review exposes both as named commands to compare semantics; it does not change Haoban or run Tiptap.",
+      "visualObservation": "相同加號搭配上方命令，新增段落實際插入選取區塊之前；選取邊框及既有段落順序保持，無須額外的區塊加箭頭圖。"
+    },
+    {
+      "name": "block-insert-below",
+      "label": "在下方新增區塊",
+      "alternative": "plus",
+      "replacementKind": "contextual-entry",
+      "context": "編輯器區塊選單 · 同一選取區塊前後插入",
+      "reason": "新增動作用既有plus，插入位置由具名命令及實際區塊順序交代。Haoban已有共用加號的上下方插入操作，不需再加小區塊或方向徽標。",
+      "replacementScope": "具名區塊選單，或加號直接放在對應插入位置。若兩個無文字按鈕並排且沒有位置關係，相同plus不足以區分上下方。",
+      "sample": "<style>[data-document-demo] label{display:block;margin:8px 0}[data-document-demo] select{font:inherit;color:inherit;background:transparent;border:1px solid #8888;padding:5px}[data-document-demo] .papers{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}[data-document-demo] .paper{width:142px;min-height:180px;border:1px solid #8888;padding:10px;position:relative;padding-bottom:25px}[data-document-demo] .paper footer{position:absolute;bottom:5px;right:10px;font-size:11px;opacity:.7}[data-document-demo] .section{font-size:11px;margin:9px 0}[data-document-demo] .section p{margin:4px 0}[data-document-demo] .section-two{border-top:1px dashed #8888;padding-top:5px}[data-document-demo] .columns{column-count:2;column-gap:8px}[data-document-demo] .row{display:flex;align-items:center;gap:8px;flex-wrap:wrap}[data-document-demo] .blocks{margin-top:12px}[data-document-demo] .block{padding:8px;border:1px solid #8886;margin:7px 0}[data-document-demo] .selected{border:2px solid currentColor}.dark [data-document-demo]{color-scheme:dark}</style><div data-document-demo=\"blocks\"><div class=\"row\"><button data-block-direction=\"above\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><path d=\"M3 8L13 8\"/><path d=\"M8 3L8 13\"/></svg>在上方新增</button><button data-block-direction=\"below\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><path d=\"M3 8L13 8\"/><path d=\"M8 3L8 13\"/></svg>在下方新增</button></div><div class=\"blocks\"><div class=\"block\">前一段內容</div><div class=\"block selected\" data-selected-block>目前選取的區塊</div><div class=\"block\">後一段內容</div></div><p data-block-result>插入位置以目前選取區塊為準</p><small>本地順序示例；相同plus搭配明確的上方／下方命令。</small></div>",
+      "searchKeywords": [
+        "insert-block-after",
+        "在下方新增區塊"
+      ],
+      "usageEvidence": [
+        "/Users/aron/haoban/packages/editor/src/block-handles.components/BlockHandles.svelte:781",
+        "/Users/aron/haoban/packages/editor/src/editor.components/EditorInstance.svelte:1601",
+        "https://tiptap.dev/docs/editor/extensions/menus"
+      ],
+      "usageEvidenceLimit": "Haoban uses one plus control: normal click inserts below, Alt/Option click inserts above. This review exposes both as named commands to compare semantics; it does not change Haoban or run Tiptap.",
+      "visualObservation": "相同加號搭配下方命令，新增段落實際插入選取區塊之後；上下命令並列仍靠完整名稱辨識，沒有聲稱無標籤加號足以區分方向。"
+    }
+  ]
+}

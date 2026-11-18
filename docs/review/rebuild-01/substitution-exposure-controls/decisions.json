@@ -1,0 +1,89 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "skillVersion": "0.5.20",
+  "viewed": [
+    "initial-light-1.png",
+    "changed-light-1.png",
+    "initial-light-2.png",
+    "changed-light-2.png",
+    "initial-dark-1.png",
+    "changed-dark-1.png",
+    "initial-dark-2.png",
+    "changed-dark-2.png"
+  ],
+  "sizes": [
+    16,
+    20,
+    24
+  ],
+  "themes": [
+    "light",
+    "dark"
+  ],
+  "screenshotDpr": [
+    1,
+    2
+  ],
+  "interactionDpr": [
+    1,
+    2
+  ],
+  "scope": "Camera exposure compensation with an existing plus-minus symbol and persistent signed EV values. Not an alias for all brightness, contrast, exposure or HDR controls. No public geometry or search aliases changed.",
+  "userApproval": "pending",
+  "primaryEvidence": "work/rebuild-01/exposure-controls-primary-evidence.json",
+  "evidence": [
+    {
+      "path": "docs/review/rebuild-01/substitution-exposure-controls/initial-light-1.png",
+      "sha256": "782d840fb7d4c70dbf30cada01d3d6b501d48e98884a2ec628e8decc1cc28ab4"
+    },
+    {
+      "path": "docs/review/rebuild-01/substitution-exposure-controls/changed-light-1.png",
+      "sha256": "746e68721aa353a3709e8704277609712b72c85710c7353b32593e08259ed4bd"
+    },
+    {
+      "path": "docs/review/rebuild-01/substitution-exposure-controls/initial-light-2.png",
+      "sha256": "fa46ab11bc5b220abf87681ab9c93c51016a9037014f5b746bb40c9abfed69d0"
+    },
+    {
+      "path": "docs/review/rebuild-01/substitution-exposure-controls/changed-light-2.png",
+      "sha256": "b948c8087021d2d2af8c126429601f8b2bb094f96559bc2529238714758841d7"
+    },
+    {
+      "path": "docs/review/rebuild-01/substitution-exposure-controls/initial-dark-1.png",
+      "sha256": "d2e802651006be3923e616ab02a54525a51662637b7f1fb621ee51ce8092c886"
+    },
+    {
+      "path": "docs/review/rebuild-01/substitution-exposure-controls/changed-dark-1.png",
+      "sha256": "57ac1846c9ebef3aebf6950398086acfe9b7d53f0d7da2c05655b0dccf67314f"
+    },
+    {
+      "path": "docs/review/rebuild-01/substitution-exposure-controls/initial-dark-2.png",
+      "sha256": "e71aec44885ee0fe4d76d7b347d930472b0e17f9819cc12d622663740310b75d"
+    },
+    {
+      "path": "docs/review/rebuild-01/substitution-exposure-controls/changed-dark-2.png",
+      "sha256": "b48ba5a68b903f827d83d4c65f5a972d48e8c97b99487cc2f087cfdbb27fe29a"
+    }
+  ],
+  "items": [
+    {
+      "name": "exposure",
+      "label": "曝光補償",
+      "alternative": "plus-minus",
+      "alternativeLabel": "既有正負號與 EV 數值",
+      "replacementKind": "existing-icon",
+      "context": "相機曝光補償入口，與 ISO、白平衡並列",
+      "reason": "曝光補償的必要線索是正負方向與 EV 值，現有 plus-minus 已能提供這個慣用符號。再加方框、對角線與另一組加減符號沒有增加本情境的命令差異。",
+      "replacementScope": "適用於明確的拍攝設定與曝光補償控制，保留名稱、EV 單位及數值；不是宣稱正負號等於所有亮度、曝光、對比或 HDR 調整。相機實體按鍵的精確圖案由各廠商定義，本庫不複製廠商按鍵外框。",
+      "sample": "<style>[data-exposure-demo] .tools{display:flex;gap:8px;margin:12px 0;flex-wrap:wrap}[data-exposure-demo] button[aria-pressed=true]{border-color:currentColor;background:#8882}[data-exposure-demo] fieldset{margin:12px 0;padding:12px;border:1px solid #8887}[data-exposure-demo] label{display:flex;align-items:center;gap:8px;flex-wrap:wrap}[data-exposure-demo] input[type=range]{width:180px;max-width:100%}[data-exposure-demo] input[type=number]{width:88px;color:#202622;background:#fafaf8}[data-exposure-demo] output{font-variant-numeric:tabular-nums;min-width:5em}[data-exposure-demo] .scale{display:flex;justify-content:space-between;width:180px;max-width:100%}</style><div data-exposure-demo><p>拍攝設定 · A 光圈優先</p><div class=\"tools\"><button data-photo-tab=\"ev\" aria-label=\"曝光補償\" aria-pressed=\"true\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><path d=\"M3.3333 6L12.6667 6\"/><path d=\"M8 2L8 10\"/><path d=\"M3.3333 14L12.6667 14\"/></svg><span data-ev-button>±0 EV</span></button><button data-photo-tab=\"iso\" aria-label=\"ISO 感光度\" aria-pressed=\"false\">ISO <span data-iso-button>400</span></button><button data-photo-tab=\"wb\" aria-label=\"白平衡\" aria-pressed=\"false\">WB <span data-wb-button>自動</span></button></div><fieldset data-photo-panel=\"ev\"><legend>曝光補償</legend><label><input data-ev type=\"range\" min=\"-9\" max=\"9\" step=\"1\" value=\"0\" aria-label=\"曝光補償\"><output data-ev-value>±0 EV</output></label><div class=\"scale\"><span>−3 EV</span><span>+3 EV</span></div><p>每格 ⅓ EV；負值降低曝光，正值提高曝光。</p><button data-ev-reset><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><path d=\"M3.2866 8.5869Q3.4158 9.5912 3.9465 10.4535Q4.5381 11.415 5.5014 12.0036Q6.4648 12.5922 7.5903 12.68Q8.5997 12.7588 9.5523 12.4156Q10.5049 12.0723 11.2322 11.3679Q12.0431 10.5824 12.4096 9.5147Q12.7762 8.4469 12.6186 7.329Q12.4773 6.3264 11.9364 5.4705Q11.3954 4.6146 10.5504 4.0568Q9.6083 3.4348 8.4865 3.3076Q7.3648 3.1805 6.3073 3.5759Q5.359 3.9305 4.6402 4.6437L2.7671 6.4499Q2.7496 6.4668 2.7309 6.4823Q2.7121 6.4977 2.6922 6.5117Q2.6723 6.5257 2.6513 6.538Q2.6304 6.5504 2.6085 6.5611Q2.5867 6.5718 2.5641 6.5808Q2.5415 6.5898 2.5183 6.597Q2.495 6.6042 2.4713 6.6096Q2.4476 6.6149 2.4235 6.6185Q2.1518 6.5852 1.9499 6.3834Q1.7481 6.1815 1.7148 5.9098Q1.7186 5.8843 1.7244 5.8592Q1.7302 5.8341 1.738 5.8096Q1.7458 5.7851 1.7557 5.7613Q1.7655 5.7375 1.7773 5.7146Q1.789 5.6917 1.8026 5.6698Q1.8162 5.648 1.8316 5.6273Q1.8469 5.6066 1.8639 5.5873Q1.8809 5.568 1.8995 5.5501L3.7598 3.7563Q4.6694 2.8539 5.8695 2.4051Q7.2077 1.9047 8.6273 2.0656Q10.0469 2.2265 11.2391 3.0136Q12.3084 3.7195 12.993 4.8027Q13.6776 5.8858 13.8564 7.1546Q14.0557 8.5693 13.5919 9.9205Q13.128 11.2718 12.1018 12.2658Q11.1815 13.1572 9.976 13.5916Q8.7705 14.0259 7.4931 13.9262Q6.0688 13.8152 4.8497 13.0702Q3.6306 12.3253 2.8819 11.1086Q2.2104 10.0173 2.0468 8.7465Q2.0429 8.7159 2.042 8.6852Q2.1872 8.7009 2.3333 8.7009Q2.3935 8.7009 2.4537 8.6982Q2.5139 8.6956 2.5739 8.6902Q2.6339 8.6848 2.6936 8.6768Q2.7533 8.6687 2.8126 8.658Q2.8719 8.6473 2.9307 8.634Q2.9894 8.6207 3.0475 8.6047Q3.1056 8.5888 3.163 8.5703Q3.2203 8.5518 3.2767 8.5307Q3.2829 8.5586 3.2866 8.5869Z\" fill=\"currentColor\" stroke=\"none\" fill-rule=\"evenodd\"/><path d=\"M2.3333 2.3333L2.3333 5.8A0.2 0.2 0 0 0 2.5333 6L6 6\"/></svg>歸零</button></fieldset><fieldset data-photo-panel=\"iso\" hidden><legend>ISO 感光度</legend><label>ISO<input data-iso type=\"number\" min=\"100\" max=\"6400\" step=\"100\" value=\"400\" aria-label=\"ISO\"></label></fieldset><fieldset data-photo-panel=\"wb\" hidden><legend>白平衡</legend><div class=\"tools\"><button data-wb=\"auto\" aria-pressed=\"true\">自動</button><button data-wb=\"daylight\" aria-pressed=\"false\">日光</button></div></fieldset><p role=\"status\" data-exposure-status>曝光補償 ±0 EV · ISO 400 · 白平衡 自動</p></div>",
+      "searchAliasDecision": "本輪不新增 exposure 等廣義搜尋別名；它涵蓋曝光量與後製調整，不能一律視為正負號的同義詞。曝光補償的用途對應留在本審查紀錄。",
+      "usageEvidence": [
+        "https://onlinemanual.nikonimglib.com/z7_z6/en/06_shooting_controls_03.html",
+        "https://onlinemanual.nikonimglib.com/zfc/en/06-03.html"
+      ],
+      "usageEvidenceLimit": "Nikon documents a dedicated compensation control, signed EV values, third-stop increments and zero restoration. The local camera-settings demo tests that workflow with existing symbols; it does not simulate camera metering or claim to reproduce Nikon firmware.",
+      "visualObservation": "既有 plus-minus 在 16／20／24 保留清楚的加號與下方減號，與 ISO／WB 文字入口並列時形態不同。拍攝設定中的 EV 單位、正負值、⅓ EV 步進和歸零行為使用途明確。明暗及 DPR1／2 的八張初始／變更畫面均已查看；正負方向與目前值不依賴色彩。沒有新增外框或重畫正負號。"
+    }
+  ]
+}

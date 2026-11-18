@@ -1,3 +1,4 @@
+import {weightDelta} from '../geometry.mjs';
 import { knockout, joinedArrow, enclosedDetails } from '../occlusion.mjs';
 import { path, line, circle, rect, contour, n } from '../geometry.mjs';
 
@@ -5,15 +6,64 @@ import { path, line, circle, rect, contour, n } from '../geometry.mjs';
 // optical edits below. Only trivial, low-density symbols share proportional forms.
 const dot=(x,y,g)=>circle(x,y,g.stroke/2,{fill:'currentColor',stroke:'none'});
 const arrow=(shaft,points,g)=>joinedArrow(shaft,contour(points,g.tip),points,g);
-const horizontal=g=>{
-  const {s,c,v,tip}=g, a=v(2.5,3,3.5), b=s-a, h=v(3.5,4.5,5.5);
-  return arrow([line(a,c,b,c)],[[c,c-h],[b,c],[c,c+h]],g);
-};
-const rotated=(nodes,angle,c)=>nodes.map(([tag,attrs])=>[tag,{...attrs,transform:`rotate(${angle} ${c} ${c})`}]);
-function file(g,text=false){
-  const {s,v,r}=g, l=v(3.5,4.5,5.5), rr=s-l, t=v(2,2.5,3), b=s-t, f=v(3,3.5,4.5);
+export function horizontalArrow(g,{
+  start=g.v(2.5,3,3.5),end=g.s-start,wing=g.c,half=g.v(3.5,4.5,5.5),
+  y=g.c,shafts,
+}={}) {
+  return arrow(shafts??[line(start,y,end,y)],[[wing,y-half],[end,y],[wing,y+half]],g);
+}
+const horizontal=g=>horizontalArrow(g);
+const rotated=(nodes,angle,c)=>nodes.map(([tag,attrs,children])=>[tag,{...attrs,transform:`rotate(${angle} ${c} ${c})`},...(children?[children]:[])]);
+// A shared centreline for solid, dashed and dotted line-style specimens.
+// Its default preserves the original minus drawing exactly.
+export function horizontalRule(g,{pattern='solid'}={}) {
+  const {s,c,v}=g,start=v(3,4,4.5),end=s-start,span=end-start;
+  if(pattern==='solid')return [line(start,c,end,c)];
+  if(pattern==='dotted'){
+    // Tiny circles lose much more apparent ink than a straight stroke at DPR 1.
+    const diameter=Math.max(g.stroke,v(1.5,1.75,2));
+    return Array.from({length:5},(_,i)=>circle(start+span*i/4,c,diameter/2,{fill:'currentColor',stroke:'none'}));
+  }
+  if(pattern==='dashed'){
+    const count=g.s===16?2:3,length=v(3.75,2.75,3.5),gap=(span-count*length)/(count-1);
+    return Array.from({length:count},(_,i)=>{
+      const x=start+i*(length+gap),node=line(x,c,x+length,c);
+      return [node[0],{...node[1],'stroke-linecap':'butt'}];
+    });
+  }
+  throw new Error('Unknown horizontal rule pattern');
+}
+export function chevron(g,{
+  wing=g.v(6,7.5,9),tip=g.v(10.5,13,15.5),
+  top=g.v(3.5,4.5,5.5),bottom=g.v(12.5,15.5,18.5),
+}={}) {
+  return [contour([[wing,top],[tip,g.c],[wing,bottom]],g.tip)];
+}
+export function plus(g,{x=g.c,y=g.c,half=g.v(5,6,7.5)}={}) {
+  return [line(x-half,y,x+half,y),line(x,y-half,x,y+half)];
+}
+export function cross(g,{x=g.c,y=g.c,half=g.v(4,5,6)}={}) {
+  return [line(x-half,y-half,x+half,y+half),line(x-half,y+half,x+half,y-half)];
+}
+export function square(g,{
+  x=g.v(2.5,3,3.5),y=x,side=g.s-2*x,radius=g.r,exposedRight,
+}={}) {
+  if(exposedRight!==undefined)return [contour([[x+side-exposedRight,y],[x+side,y],[x+side,y+side],[x+side-exposedRight,y+side]],radius)];
+  return [rect(x,y,side,side,radius)];
+}
+export function chartBars(g,{tops=[g.v(8,10,12),g.v(3,4,4.5),g.v(6,7.5,9)]}={}) {
+  const {c,v,r}=g,b=v(14,17.5,21),w=v(2.5,3,3.5),gap=v(2.25,2.5,3);
+  return tops.map((t,i)=>rect(c-w*1.5-gap+i*(w+gap),t,w,b-t,Math.min(r,0.75)));
+}
+export function fileParts(g){
+  const {s,v,r}=g, l=v(3.5,4.5,5.5), rr=s-l, t=v(2,2.5,3), b=s-t, f=v(3,3.5,4.5)+weightDelta(g)*v(2.4,1.6,1.2);
   const shell=contour([[l,t],[rr-f,t],[rr,t+f],[rr,b],[l,b]],r,true);
   const fold=contour([[rr-f,t],[rr-f,t+f],[rr,t+f]],Math.min(r,0.6));
+  if(weightDelta(g))fold[1]['stroke-width']=g.stroke-weightDelta(g)*.8;
+  return {shell,fold};
+}
+function file(g,text=false){
+  const {s,v}=g,l=v(3.5,4.5,5.5),rr=s-l,{shell,fold}=fileParts(g);
   const result=enclosedDetails(shell,[fold],g);
   if(text) for(const y of (s===16?[10.5]:s===20?[11,14.5]:[12.5,17])) result.push(line(l+v(2.5,3,3.5),y,rr-v(2.5,3,3.5),y));
   return result;
@@ -24,15 +74,15 @@ function folder(g,plus=false){
   if(plus){const y=v(9,11.5,14), half=v(1.5,2,2.5);result.push(line(c-half,y,c+half,y),line(c,y-half,c,y+half));}
   return result;
 }
-function bell(g,off=false){
-  if(off){const a=g.v(2.5,3,3.5);return knockout(bell(g),[line(a,a,g.s-a,g.s-a)],g);}
+function bell(g,off=false,{clapperDrop=0}={}){
+  if(off){const a=g.v(2.5,3,3.5);return knockout(bell(g,false,{clapperDrop}),[line(a,a,g.s-a,g.s-a)],g);}
   const {s,c,v,r}=g;
   const side=v(4.25,5.25,6.25), right=s-side;
   const top=v(2.5,3,3.5), dome=v(6,7.5,9), waist=v(8.25,10.25,12.25);
   const rim=v(11.75,14.75,17.75), edge=v(2.75,3.25,3.75), k=Math.min(r,v(.5,.65,.8));
   const crown=`M${side} ${dome}C${side} ${top+v(1.75,2.25,2.75)} ${c-v(2,2.5,3)} ${top} ${c} ${top}C${c+v(2,2.5,3)} ${top} ${right} ${top+v(1.75,2.25,2.75)} ${right} ${dome}`;
   const out=[path(`${crown}V${waist}C${right} ${waist+v(1.5,2,2.5)} ${s-edge-v(.5,.75,1)} ${rim-v(1,1.25,1.5)} ${s-edge} ${rim-k}Q${s-edge+k/2} ${rim} ${s-edge-k} ${rim}H${edge+k}Q${edge-k/2} ${rim} ${edge} ${rim-k}C${edge+v(.5,.75,1)} ${rim-v(1,1.25,1.5)} ${side} ${waist+v(1.5,2,2.5)} ${side} ${waist}Z`)];
-  out.push(path(`M${c-v(1.15,1.4,1.75)} ${v(14,17.5,20.75)}Q${c} ${v(15,18.75,22.25)} ${c+v(1.15,1.4,1.75)} ${v(14,17.5,20.75)}`));
+  out.push(path(`M${c-v(1.15,1.4,1.75)} ${v(14,17.5,20.75)+clapperDrop}Q${c} ${v(15,18.75,22.25)+clapperDrop} ${c+v(1.15,1.4,1.75)} ${v(14,17.5,20.75)+clapperDrop}`));
   return out;
 }
 function person(g,group=false){
@@ -57,21 +107,28 @@ function lock(g,open=false){
     : `M${c-half} ${y}V${top+half}A${half} ${half} 0 0 1 ${c+half} ${top+half}V${y}`),
     line(c,y+v(2.5,3,4),c,y+v(4,5,6))];
 }
-function ring(g){return circle(g.c,g.c,g.v(6,7.5,9));}
+export function ring(g,{radius=g.v(6,7.5,9)}={}){return circle(g.c,g.c,radius);}
+
+// Shared enclosed tick. Its default preserves the original circle check;
+// tighter containers can reduce the vertices without scaling stroke weight.
+export function enclosedCheck(g,{scale=1,offsetX=0,offsetY=0}={}){
+  const points=[[g.v(5,6,7.5),g.c],[g.v(7.25,9,11),g.v(10,12.5,15)],[g.v(10.75,13.75,17),g.v(6.25,7.75,9)]];
+  return contour(scale===1&&!offsetX&&!offsetY?points:points.map(([x,y])=>[g.c+(x-g.c)*scale+offsetX,g.c+(y-g.c)*scale+offsetY]),g.tip*scale);
+}
 
 export const coreDrawings={
   'arrow-right':g=>horizontal(g),
   'arrow-up':g=>rotated(horizontal(g),-90,g.c),
-  'chevron-right':g=>[contour([[g.v(6,7.5,9),g.v(3.5,4.5,5.5)],[g.v(10.5,13,15.5),g.c],[g.v(6,7.5,9),g.v(12.5,15.5,18.5)]],g.tip)],
+  'chevron-right':g=>chevron(g),
   'chevron-down':g=>rotated(coreDrawings['chevron-right'](g),90,g.c),
   'arrow-up-right':g=>{const {s,v,tip}=g,a=v(4,5,6),b=s-a;return arrow([line(a,b,b,a)],[[a,a],[b,a],[b,b]],g);},
   'undo':g=>{const {s,c,v,tip}=g,x=v(3,4,4.5),y=v(6,7.5,9),b=v(13,16,19);return arrow([path(`M${x} ${y}H${c+v(1.5,2,2.5)}A${v(3.5,4.25,5)} ${v(3.5,4.25,5)} 0 0 1 ${c+v(1.5,2,2.5)} ${b}H${v(6,7,8)}`)],[[x+v(3,3.5,4.5),y-v(3,3.5,4.5)],[x,y],[x+v(3,3.5,4.5),y+v(3,3.5,4.5)]],g).reverse();},
   'download':g=>{const {s,c,v,r,tip}=g,l=v(2.5,3,3.5),b=v(13.5,17,20.5),y=v(9,11,13),h=v(3,3.5,4.5);return [...arrow([line(c,v(2,2.5,3),c,y)],[[c-h,y-h],[c,y],[c+h,y-h]],g),contour([[l,b-v(3,3.5,4)],[l,b],[s-l,b],[s-l,b-v(3,3.5,4)]],r)];},
   'upload':g=>{const {s,c,v,r,tip}=g,l=v(2.5,3,3.5),b=v(13.5,17,20.5),y=v(2.5,3,3.5),h=v(3,3.5,4.5);return [...arrow([line(c,y,c,v(10,12,14.5))],[[c-h,y+h],[c,y],[c+h,y+h]],g),contour([[l,b-v(3,3.5,4)],[l,b],[s-l,b],[s-l,b-v(3,3.5,4)]],r)];},
-  'plus':g=>[line(g.v(3,4,4.5),g.c,g.v(13,16,19.5),g.c),line(g.c,g.v(3,4,4.5),g.c,g.v(13,16,19.5))],
-  'minus':g=>[line(g.v(3,4,4.5),g.c,g.v(13,16,19.5),g.c)],
+  'plus':g=>plus(g),
+  'minus':g=>horizontalRule(g),
   'check':g=>[contour([[g.v(3,3.5,4),g.v(8,10,12)],[g.v(6.5,8,9.5),g.v(11.5,14.5,17)],[g.v(13,16.5,20),g.v(4.5,5.5,7)]],g.tip)],
-  'x':g=>{const a=g.v(4,5,6),b=g.s-a;return [line(a,a,b,b),line(a,b,b,a)];},
+  'x':g=>cross(g),
   'search':g=>{const {v}=g,c=v(7,8.75,10.5),r=v(4.5,5.75,7),q=c+r/Math.sqrt(2);return [circle(c,c,r),line(q,q,v(14,17.5,21),v(14,17.5,21))];},
   'filter':g=>{const {s,c,v,r}=g,l=v(2.5,3,3.5),t=v(3,4,4.5),neck=v(8.5,10.5,12.5),h=v(1.25,1.5,2);return [contour([[l,t],[s-l,t],[c+h,neck],[c+h,v(12,15,18)],[c-h,v(13,16.5,20)],[c-h,neck]],Math.min(r,1),true)];},
   'more-horizontal':g=>[g.v(3.5,4.5,5.5),g.c,g.v(12.5,15.5,18.5)].map(x=>circle(x,g.c,g.v(1.05,1.25,1.5),{fill:'currentColor',stroke:'none'})),
@@ -92,18 +149,18 @@ export const coreDrawings={
   'message':g=>{const {s,c,v,r}=g,l=v(2.5,3,3.5),t=v(2.5,3.5,4),rr=s-l,b=v(11,13.5,16);return [contour([[l,t],[rr,t],[rr,b],[c-v(0.5,1,1.5),b],[l,v(14,17,20.5)]],r,true)];},
   'bell':g=>bell(g),'bell-off':g=>bell(g,true),'lock':g=>lock(g),'unlock':g=>lock(g,true),
   'circle':g=>[ring(g)],
-  'square':g=>{const l=g.v(2.5,3,3.5);return [rect(l,l,g.s-2*l,g.s-2*l,g.r)];},
+  'square':g=>square(g),
   'star':g=>{const {c,v,tip}=g,ro=v(5.75,7.25,8.75),ri=v(2.75,3.5,4.25);const points=Array.from({length:10},(_,i)=>{const a=-Math.PI/2+i*Math.PI/5,r=i%2?ri:ro;return [c+Math.cos(a)*r,c+0.4+Math.sin(a)*r];});return [contour(points,tip,true)];},
   'heart':g=>{const {s,c,v,tip}=g,l=v(2,2.5,3),t=v(3.25,4,4.75),y=v(6.5,8,9.5),b=v(13.75,17,20.5),k=tip*0.65;return [path(`${k?`M${c+k} ${b-k}Q${c} ${b} ${c-k} ${b-k}`:`M${c} ${b}`}C${c-v(2,3,3.5)} ${b-v(1.5,2,2.5)} ${l} ${v(9,11,13)} ${l} ${y}C${l} ${t-v(1,1.25,1.5)} ${c-v(2,2.5,3)} ${t-v(1,1.25,1.5)} ${c} ${t+v(1,1.5,2)}C${c+v(2,2.5,3)} ${t-v(1,1.25,1.5)} ${s-l} ${t-v(1,1.25,1.5)} ${s-l} ${y}C${s-l} ${v(9,11,13)} ${c+v(2,3,3.5)} ${b-v(1.5,2,2.5)} ${c+k} ${b-k}Z`)];},
   'info-circle':g=>[ring(g),dot(g.c,g.v(5,6,7),g),line(g.c,g.v(8,10,12),g.c,g.v(11,14,17))],
-  'check-circle':g=>[ring(g),contour([[g.v(5,6,7.5),g.c],[g.v(7.25,9,11),g.v(10,12.5,15)],[g.v(10.75,13.75,17),g.v(6.25,7.75,9)]],g.tip)],
+  'check-circle':g=>[ring(g),enclosedCheck(g)],
   'alert-triangle':g=>{const {s,c,v,r}=g;return [contour([[c,v(2.25,3,3.5)],[v(14.25,17.5,21),v(13.5,17,20.5)],[v(1.75,2.5,3),v(13.5,17,20.5)]],Math.min(r,1.1),true),line(c,v(6.5,8,9),c,v(9,11.5,14)),dot(c,v(11.5,14.5,17.5),g)];},
   'loader':g=>{const {c,v}=g,r=v(5.5,7,8.5);return [path(`M${c+r} ${c}A${r} ${r} 0 1 1 ${c} ${c-r}`)];},
   'home':g=>{const {s,c,v,r}=g,l=v(3,4,4.5),rr=s-l,t=v(2.25,2.75,3.5),roof=v(6.5,8,9.5),b=v(14,17.5,21),half=v(1.5,2,2.5),door=v(10,12.5,15);return [contour([[l,b],[l,roof],[c,t],[rr,roof],[rr,b]],r,true),contour([[c-half,b],[c-half,door],[c+half,door],[c+half,b]],Math.min(r,1))];},
   'settings':g=>{const {c,v,corner}=g,outer=v(5.75,7.25,8.75),inner=v(4.5,5.5,6.75),spread=v(12,10,10),points=[];for(let i=0;i<6;i++){for(const [offset,r] of [[-24,inner],[-spread,outer],[spread,outer],[24,inner]]){const a=(i*60-90+offset)*Math.PI/180;points.push([c+Math.cos(a)*r,c+Math.sin(a)*r]);}}return [contour(points,corner==='sharp'?0:corner==='soft'?v(0.3,0.4,0.5):v(0.65,0.8,1),true),circle(c,c,v(1.65,2.25,2.75))];},
   'grid':g=>{const {s,v,r}=g,l=v(2.5,3,3.5),gap=v(3,3.5,4),w=(s-2*l-gap)/2;return [[l,l],[l+w+gap,l],[l,l+w+gap],[l+w+gap,l+w+gap]].map(([x,y])=>rect(x,y,w,w,Math.min(r,w*0.28)));},
   'list':g=>{const {s,v}=g,ys=[v(4,5,6),g.c,v(12,15,18)];return ys.flatMap(y=>[dot(v(3,3.5,4),y,g),line(v(6,7.5,9),y,v(13.5,17,20.5),y)]);},
-  'chart-bar':g=>{const {s,c,v,r}=g,b=v(14,17.5,21),w=v(2.5,3,3.5),gap=v(2.25,2.5,3);return [v(8,10,12),v(3,4,4.5),v(6,7.5,9)].map((t,i)=>rect(c-w*1.5-gap+i*(w+gap),t,w,b-t,Math.min(r,0.75)));},
+  'chart-bar':g=>chartBars(g),
   'database':g=>{const {s,c,v}=g,l=v(3,3.5,4),rr=s-l,top=v(4,4.5,5),rx=c-l,ry=v(1.75,2.25,2.5),bottom=v(12,15.5,19);const out=[['ellipse',{cx:c,cy:top,rx,ry}],path(`M${l} ${top}V${bottom}A${rx} ${ry} 0 0 0 ${rr} ${bottom}V${top}`)];if(s!==16)out.push(path(`M${l} ${v(8,10,12)}A${rx} ${ry} 0 0 0 ${rr} ${v(8,10,12)}`));return out;},
   'code':g=>{const {s,c,v,tip}=g,l=v(2.5,3,3.5),mid=v(5.5,6.5,7.5),t=v(4.5,5.5,6.5),b=s-t;return [contour([[mid,t],[l,c],[mid,b]],tip),contour([[s-mid,t],[s-l,c],[s-mid,b]],tip),line(v(9,11.5,14),v(3,3.5,4),v(7,8.5,10),v(13,16.5,20))];},
   'terminal':g=>{const {s,c,v,r,tip}=g,l=v(2,2.5,3),t=v(3,4,4.5),b=s-t;return [rect(l,t,s-2*l,b-t,r),contour([[v(4.5,5.5,6.5),v(6,7.5,9)],[v(6.5,8,9.5),c],[v(4.5,5.5,6.5),v(10,12.5,15)]],tip),line(v(9,11,13),v(10,12.5,15),v(11.5,14.5,17.5),v(10,12.5,15))];},

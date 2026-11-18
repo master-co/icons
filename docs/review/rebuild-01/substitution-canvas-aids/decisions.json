@@ -1,0 +1,87 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "skillVersion": "0.5.19",
+  "viewed": [
+    "light.png",
+    "dark.png",
+    "changed-light.png",
+    "changed-dark.png"
+  ],
+  "sizes": [
+    16,
+    20,
+    24
+  ],
+  "corner": "soft for existing magnet only",
+  "themes": [
+    "light",
+    "dark"
+  ],
+  "dpr": [
+    1
+  ],
+  "scope": "Named display-aid toggles and existing magnet in a local coordinate-snapping demonstration; no production editor integration.",
+  "userApproval": "pending",
+  "evidence": [
+    {
+      "path": "docs/review/rebuild-01/substitution-canvas-aids/light.png",
+      "sha256": "bfe2568319941e3e5d01ba89cae0727571dc917c3996a33e106e4d5fb19dc936"
+    },
+    {
+      "path": "docs/review/rebuild-01/substitution-canvas-aids/dark.png",
+      "sha256": "5cffe7a172f65caab67bb4992771174b5e230e53c1e302a6369820368904a8cf"
+    },
+    {
+      "path": "docs/review/rebuild-01/substitution-canvas-aids/changed-light.png",
+      "sha256": "68bea2c74b837b0d44510c64106b0ce76a788075c2a7f91c728c1a48d9996829"
+    },
+    {
+      "path": "docs/review/rebuild-01/substitution-canvas-aids/changed-dark.png",
+      "sha256": "fc53a667f1f2ff974168eedb5b09172d7c561669cb16836f5a7975f7cc6fdc7e"
+    }
+  ],
+  "items": [
+    {
+      "name": "guides",
+      "label": "參考線",
+      "alternative": null,
+      "alternativeLabel": "具名參考線開關",
+      "replacementKind": "native-content",
+      "context": "畫布顯示選單 · 尺規、格線、參考線分開",
+      "reason": "參考線的顯示由具名勾選項及畫布上的實際線條交代。ruler表示尺規，grid表示規則格線，兩者都不能當作參考線的等義圖示。此選單不需要另一顆方框加虛線。",
+      "replacementScope": "有名稱與勾選狀態的顯示選單。若產品必須以純圖示在工具列並列尺規、格線、參考線，須另評估各自圖形，不能只重用ruler。",
+      "sample": "<style>[data-canvas-aids] label{display:inline-flex;align-items:center;gap:5px;margin:4px 12px 4px 0}[data-canvas-aids] button{display:inline-flex;margin:8px 0}[data-canvas-aids] button[aria-pressed=\"true\"]{box-shadow:inset 0 0 0 1px currentColor}[data-canvas-aids] .stage{position:relative;width:240px;height:150px;border:1px solid #8888;margin-top:10px;overflow:hidden}[data-canvas-aids] .grid{position:absolute;inset:0;background-image:linear-gradient(to right,#8883 1px,transparent 1px),linear-gradient(to bottom,#8883 1px,transparent 1px);background-size:20px 20px}[data-canvas-aids] .guides{position:absolute;inset:0;pointer-events:none}[data-canvas-aids] .guides:before{content:\"\";position:absolute;left:80px;top:0;bottom:0;border-left:1px dashed currentColor}[data-canvas-aids] .guides:after{content:\"\";position:absolute;top:60px;left:0;right:0;border-top:1px dashed currentColor}[data-canvas-aids] .object{position:absolute;width:30px;height:30px;border:2px solid currentColor;left:47px;top:73px;background:#fafaf8}.dark [data-canvas-aids] .object{background:#232724}[data-canvas-aids] .ruler{font:10px monospace;position:relative;width:240px;height:16px}[data-canvas-aids] .ruler span{position:absolute;top:0}[data-canvas-aids] label:has([data-object-x]){display:flex}.dark [data-canvas-aids]{color-scheme:dark}</style><div data-canvas-aids><fieldset><legend>顯示</legend><label><input type=\"checkbox\" data-aid=\"ruler\" checked>尺規</label><label><input type=\"checkbox\" data-aid=\"grid\" checked>格線</label><label><input type=\"checkbox\" data-aid=\"guides\" checked>參考線</label></fieldset><button data-snap-toggle aria-pressed=\"false\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><path d=\"M3.3333 2.2333Q3.3333 2 3.5667 2H5.7667Q6 2 6 2.2333V9.3333C6 12 10 12 10 9.3333V2.2333Q10 2 10.2333 2H12.4333Q12.6667 2 12.6667 2.2333V9.3333C12.6667 15.5333 3.3333 15.5333 3.3333 9.3333Z\"/><path d=\"M3.3333 4.6667L6 4.6667\"/><path d=\"M10 4.6667L12.6667 4.6667\"/></svg>貼齊格線</button><span data-snap-state>　未啟用</span><label>物件 X <input data-object-x type=\"range\" min=\"0\" max=\"180\" value=\"47\"></label><div class=\"ruler\" data-aid-content=\"ruler\"><span style=\"left:0px\">0</span><span style=\"left:40px\">40</span><span style=\"left:80px\">80</span><span style=\"left:120px\">120</span><span style=\"left:160px\">160</span><span style=\"left:200px\">200</span></div><div class=\"stage\"><div class=\"grid\" data-aid-content=\"grid\"></div><div class=\"guides\" data-aid-content=\"guides\"></div><div class=\"object\"></div></div><p data-object-position>X 47 · Y 73</p><small>本地畫布示例。顯示格線與貼齊格線是不同設定；貼齊會將位置取整到20px間距。</small></div>",
+      "nativePreview": "<span>☑ 參考線　☑ 格線　☑ 尺規</span>",
+      "comparisonMarkup": "<span>☑ 參考線　☑ 格線　☑ 尺規</span>",
+      "searchKeywords": [],
+      "searchAliasDecision": "參考線與尺規並非同義，不把guides加入ruler或grid搜尋詞。",
+      "usageEvidence": [
+        "https://helpx.adobe.com/acrobat/using/grids-guides-measurements-pdfs.html",
+        "https://helpx.adobe.com/photoshop/desktop/use-grids-measurement-guides/alignment-grids-guides/overview-of-guides-grids-and-smart-guides.html"
+      ],
+      "usageEvidenceLimit": "Primary documentation distinguishes display aids from snapping behavior. This local preview demonstrates independent toggles and 20px coordinate snapping; it does not integrate a design editor.",
+      "visualObservation": "Named ruler, grid and guide checkboxes remain distinct. Hiding guides removes only the two dashed canvas references; grid and ruler stay visible. The same controls were inspected in both themes."
+    },
+    {
+      "name": "snap-to-grid",
+      "label": "貼齊格線",
+      "alternative": "magnet",
+      "replacementKind": "contextual-entry",
+      "context": "畫布吸附設定 · 貼齊格線開關",
+      "reason": "既有magnet表達吸附，完整名稱指定吸附對象是格線。啟用狀態與物件位置結果共同顯示是否正在貼齊，不需把磁鐵與小格線疊成另一個圖示。",
+      "replacementScope": "具名貼齊格線控制；若同時提供貼齊參考線、物件或像素，必須保留各自名稱與狀態。顯示格線不會自動啟用吸附。",
+      "sample": "<style>[data-canvas-aids] label{display:inline-flex;align-items:center;gap:5px;margin:4px 12px 4px 0}[data-canvas-aids] button{display:inline-flex;margin:8px 0}[data-canvas-aids] button[aria-pressed=\"true\"]{box-shadow:inset 0 0 0 1px currentColor}[data-canvas-aids] .stage{position:relative;width:240px;height:150px;border:1px solid #8888;margin-top:10px;overflow:hidden}[data-canvas-aids] .grid{position:absolute;inset:0;background-image:linear-gradient(to right,#8883 1px,transparent 1px),linear-gradient(to bottom,#8883 1px,transparent 1px);background-size:20px 20px}[data-canvas-aids] .guides{position:absolute;inset:0;pointer-events:none}[data-canvas-aids] .guides:before{content:\"\";position:absolute;left:80px;top:0;bottom:0;border-left:1px dashed currentColor}[data-canvas-aids] .guides:after{content:\"\";position:absolute;top:60px;left:0;right:0;border-top:1px dashed currentColor}[data-canvas-aids] .object{position:absolute;width:30px;height:30px;border:2px solid currentColor;left:47px;top:73px;background:#fafaf8}.dark [data-canvas-aids] .object{background:#232724}[data-canvas-aids] .ruler{font:10px monospace;position:relative;width:240px;height:16px}[data-canvas-aids] .ruler span{position:absolute;top:0}[data-canvas-aids] label:has([data-object-x]){display:flex}.dark [data-canvas-aids]{color-scheme:dark}</style><div data-canvas-aids><fieldset><legend>顯示</legend><label><input type=\"checkbox\" data-aid=\"ruler\" checked>尺規</label><label><input type=\"checkbox\" data-aid=\"grid\" checked>格線</label><label><input type=\"checkbox\" data-aid=\"guides\" checked>參考線</label></fieldset><button data-snap-toggle aria-pressed=\"false\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><path d=\"M3.3333 2.2333Q3.3333 2 3.5667 2H5.7667Q6 2 6 2.2333V9.3333C6 12 10 12 10 9.3333V2.2333Q10 2 10.2333 2H12.4333Q12.6667 2 12.6667 2.2333V9.3333C12.6667 15.5333 3.3333 15.5333 3.3333 9.3333Z\"/><path d=\"M3.3333 4.6667L6 4.6667\"/><path d=\"M10 4.6667L12.6667 4.6667\"/></svg>貼齊格線</button><span data-snap-state>　未啟用</span><label>物件 X <input data-object-x type=\"range\" min=\"0\" max=\"180\" value=\"47\"></label><div class=\"ruler\" data-aid-content=\"ruler\"><span style=\"left:0px\">0</span><span style=\"left:40px\">40</span><span style=\"left:80px\">80</span><span style=\"left:120px\">120</span><span style=\"left:160px\">160</span><span style=\"left:200px\">200</span></div><div class=\"stage\"><div class=\"grid\" data-aid-content=\"grid\"></div><div class=\"guides\" data-aid-content=\"guides\"></div><div class=\"object\"></div></div><p data-object-position>X 47 · Y 73</p><small>本地畫布示例。顯示格線與貼齊格線是不同設定；貼齊會將位置取整到20px間距。</small></div>",
+      "searchKeywords": [
+        "grid-snapping",
+        "貼齊格線"
+      ],
+      "usageEvidence": [
+        "https://helpx.adobe.com/acrobat/using/grids-guides-measurements-pdfs.html",
+        "https://helpx.adobe.com/photoshop/desktop/use-grids-measurement-guides/alignment-grids-guides/overview-of-guides-grids-and-smart-guides.html"
+      ],
+      "usageEvidenceLimit": "Primary documentation distinguishes display aids from snapping behavior. This local preview demonstrates independent toggles and 20px coordinate snapping; it does not integrate a design editor.",
+      "visualObservation": "The existing magnet remains readable at 16/20/24 beside the full command. Enabling the pressed state snaps the object from X47/Y73 to X40/Y80, independently of guide visibility; grid display is not an activation signal."
+    }
+  ]
+}

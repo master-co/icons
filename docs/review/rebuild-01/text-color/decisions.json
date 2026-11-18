@@ -1,0 +1,17 @@
+[
+  {
+    "name":"text-color",
+    "reviewed":true,
+    "purpose":"在文字格式工具列中，將文字顏色命令與背景標記、底線及一般文字設定分開。Haoban 的合併色彩入口仍可沿用其實際字色預覽；本圖提供需要獨立字色命令時的單色輪廓。",
+    "recognitionCues":"有字腔與橫筆的大寫 A，下方是一條更寬、與字腳分離的色彩指示線。",
+    "confusableWith":["text","highlighter","underline","case-upper"],
+    "sourceObservation":"Tabler 以窄身圓拱 A 配底線，16px較緊湊；Hugeicons 用較高、較寬的弧肩 A 和較長底線，字形在小尺寸較充分。兩者是同語意比較來源。新稿使用已重製並審查的 capitalA 母型，沒有移植來源的圓拱或曲肩路徑。",
+    "reason":"第一稿字形偏矮、底部空白過大，增加 A 的高寬後改善整體比例。粗線端的方端帽使字腳靠近底線，故底線下移半像素，並只在超出原生線寬時略縮字高；維持共源橫筆收口及字腔補償，不重畫另一套 A。",
+    "comparison":"最新稿在16px比 Tabler 圓拱字形更接近工具列慣用的尖頂大寫 A，字腔與底線可分開。吸收 Hugeicons 字形較充分的比例，但保留既有 capitalA 的直斜腿和小端角；20／24也調整字高，而不是只放大16。明暗DPR1／2重新並列後，字形與色條重量平衡；支援粗線端仍保留一個字腔及兩個分開部件，和螢光筆並排時可區分字色與背景標記。沒有用加粗底線或彩色內容掩飾間隙。",
+    "dashes":false,
+    "dashReason":"字形與色彩指示線都是確定的命令構造，不需要虛線。",
+    "opacity":false,
+    "opacityReason":"A 與底線共同定義命令，維持完整單色墨量；目前選取色應由使用端顯示。",
+    "usageEvidence":["https://support.microsoft.com/en-us/word/change-the-font-color-in-a-word-document","https://support.microsoft.com/en-us/word/apply-or-remove-highlighting","/Users/aron/haoban/packages/editor/src/format-tools.components/FormatTools.svelte:78"]
+  }
+]

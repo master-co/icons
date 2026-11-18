@@ -1,0 +1,125 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "skillVersion": "0.5.20",
+  "viewed": [
+    "light.png",
+    "dark.png",
+    "changed-light.png",
+    "changed-dark.png"
+  ],
+  "sizes": [
+    16,
+    20,
+    24
+  ],
+  "themes": [
+    "light",
+    "dark"
+  ],
+  "dpr": [
+    1
+  ],
+  "corner": "soft for existing glyphs only",
+  "scope": "Contextual inbox commands and persistent unread/triage state. Outgoing queue remains separate from moving received mail. No rejected session geometry retrieved; no production document or editor changed.",
+  "userApproval": "pending",
+  "evidence": [
+    {
+      "path": "docs/review/rebuild-01/substitution-inbox-semantics/light.png",
+      "sha256": "56997cb832ab3d042f92430bbee11fa5179f05a9163c5522491b4a63ef1fa3bd"
+    },
+    {
+      "path": "docs/review/rebuild-01/substitution-inbox-semantics/dark.png",
+      "sha256": "76d70c83f14377a75ee341af8c7a1a50a0267cb94887684601c8a05c11536e61"
+    },
+    {
+      "path": "docs/review/rebuild-01/substitution-inbox-semantics/changed-light.png",
+      "sha256": "8c6f1665361f865e3cd78911ae41b7d1fd06802ba2d112b824e20d5028d3243e"
+    },
+    {
+      "path": "docs/review/rebuild-01/substitution-inbox-semantics/changed-dark.png",
+      "sha256": "1f4ecf821a80db682ca7be33965f332b9edc375472d459c5611e3c01d2a85dc1"
+    }
+  ],
+  "items": [
+    {
+      "name": "inbox-in",
+      "label": "移回收件匣",
+      "alternative": "inbox",
+      "replacementKind": "contextual-entry",
+      "context": "郵件工具列 · 移回收件匣與封存",
+      "reason": "收件匣母型已能表達明確目的地；完整動詞與封存按鈕區分移入、移出，不需再在凹槽中塞入下載方向箭頭。",
+      "replacementScope": "具名移回收件匣命令；不把 inbox 單獨當成下載或匯入檔案。",
+      "sample": "<fieldset data-inbox-demo=\"move\" style=\"border:1px solid #8886;border-radius:5px;padding:12px;min-width:0\"><legend>本地操作示例</legend><header><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><rect x=\"2\" y=\"4\" width=\"12\" height=\"8\" rx=\"1\"/><path d=\"M2.5 5L7.8824 8.9144A0.2 0.2 0 0 0 8.1176 8.9144L13.5 5\"/></svg> 報價回覆</header><p data-mail-location>位置：所有郵件（已封存）</p><div style=\"display:flex;gap:8px;flex-wrap:wrap\"><button data-inbox-move=\"in\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><path d=\"M2.1056 7.7889L4.0569 3.8861A1 1 0 0 1 4.9513 3.3333L11.0487 3.3333A1 1 0 0 1 11.9431 3.8861L13.8944 7.7889A1 1 0 0 1 14 8.2361L14 12.3333A1 1 0 0 1 13 13.3333L3 13.3333A1 1 0 0 1 2 12.3333L2 8.2361A1 1 0 0 1 2.1056 7.7889Z\"/><path d=\"M2.3125 7.375L2.1056 7.7889Q2.0926 7.8148 2.0812 7.8415Q2.0697 7.8681 2.0599 7.8953Q2.05 7.9226 2.0417 7.9504Q2.0334 7.9781 2.0268 8.0064Q2.0201 8.0346 2.0151 8.0631Q2.0101 8.0917 2.0067 8.1205Q2.0034 8.1492 2.0017 8.1782Q2 8.2071 2 8.2361L2 8.625L4.7153 8.625Q4.8218 8.625 4.9124 8.681Q5.003 8.737 5.0507 8.8323L5.4979 9.7267Q5.7043 10.1396 6.097 10.3823Q6.4897 10.625 6.9513 10.625L9.0487 10.625Q9.5103 10.625 9.903 10.3823Q10.2957 10.1396 10.5021 9.7267L10.9493 8.8323Q10.997 8.737 11.0876 8.681Q11.1782 8.625 11.2847 8.625L14 8.625L14 8.2361Q14 8.2071 13.9983 8.1782Q13.9966 8.1493 13.9933 8.1205Q13.9899 8.0917 13.9849 8.0631Q13.9799 8.0346 13.9733 8.0064Q13.9666 7.9782 13.9583 7.9504Q13.95 7.9226 13.9401 7.8954Q13.9302 7.8681 13.9188 7.8415Q13.9074 7.8148 13.8944 7.7889L13.6875 7.375L11.2847 7.375Q10.8231 7.375 10.4304 7.6177Q10.0377 7.8604 9.8313 8.2733L9.3841 9.1677Q9.3364 9.263 9.2458 9.319Q9.1552 9.375 9.0487 9.375L6.9513 9.375Q6.8448 9.375 6.7542 9.319Q6.6636 9.263 6.6159 9.1677L6.1687 8.2733Q5.9623 7.8604 5.5696 7.6177Q5.1769 7.375 4.7153 7.375L2.3125 7.375Z\" fill=\"currentColor\" stroke=\"none\" fill-rule=\"evenodd\"/></svg>移回收件匣</button><button data-inbox-move=\"archive\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><rect x=\"2\" y=\"2.3333\" width=\"12\" height=\"3.3333\" rx=\"1\"/><path d=\"M3.3333 5.6667L3.3333 12.6667A1 1 0 0 0 4.3333 13.6667L11.6667 13.6667A1 1 0 0 0 12.6667 12.6667L12.6667 5.6667\"/><path d=\"M6 8.3333L10 8.3333\"/></svg>封存</button></div><p data-mail-preserved>原郵件內容仍保留</p></fieldset>",
+      "searchKeywords": [
+        "move-to-inbox",
+        "移回收件匣"
+      ],
+      "usageEvidence": [
+        "https://support.google.com/mail/answer/6576?hl=en"
+      ],
+      "usageEvidenceLimit": "Primary sources establish moving, outgoing-queue and inbox-triage distinctions. These local controls are not screenshots of those products and do not send, move or archive real messages.",
+      "visualObservation": "移回收件匣與封存採不同既有母型，旁有完整動詞，位置變動後原郵件內容保留。"
+    },
+    {
+      "name": "inbox-out",
+      "label": "移出收件匣／待寄匣",
+      "alternative": null,
+      "alternativeLabel": "明確命令與具名待寄匣",
+      "replacementKind": "native-content",
+      "context": "封存操作與待寄郵件佇列分開",
+      "reason": "原候選將「移出收件匣」和 outbox 合在一起，實際是兩個概念。整理收到的郵件使用 archive；尚未寄出的郵件放在具名待寄匣，以 mail 和狀態文字呈現，寄出按鈕另用 send。",
+      "replacementScope": "具名郵件命令與待寄匣清單；不以 send 表示已寄出或待寄中，也不將 archive 當成 outbox。",
+      "sample": "<fieldset data-inbox-demo=\"outbox\" style=\"border:1px solid #8886;border-radius:5px;padding:12px;min-width:0\"><legend>本地操作示例</legend><p>收到的郵件：</p><button data-outbox-archive><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><rect x=\"2\" y=\"2.3333\" width=\"12\" height=\"3.3333\" rx=\"1\"/><path d=\"M3.3333 5.6667L3.3333 12.6667A1 1 0 0 0 4.3333 13.6667L11.6667 13.6667A1 1 0 0 0 12.6667 12.6667L12.6667 5.6667\"/><path d=\"M6 8.3333L10 8.3333\"/></svg>封存（移出收件匣）</button><p data-outbox-archive-status>收到的郵件仍在收件匣</p><div style=\"border-top:1px solid #8886;padding-top:10px\"><header><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><rect x=\"2\" y=\"4\" width=\"12\" height=\"8\" rx=\"1\"/><path d=\"M2.5 5L7.8824 8.9144A0.2 0.2 0 0 0 8.1176 8.9144L13.5 5\"/></svg> 待寄匣 <span data-outbox-count>1</span></header><p data-outbox-item>提案通知 · 等待寄出</p><button data-outbox-send><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><path d=\"M2.4363 6.497L13.5764 2.1648A0.2 0.2 0 0 1 13.8352 2.4236L9.503 13.5637A0.2 0.2 0 0 1 9.1353 13.5758L7.0308 9.0659A0.2 0.2 0 0 0 6.9341 8.9692L2.4242 6.8647A0.2 0.2 0 0 1 2.4363 6.497Z\"/><path d=\"M13.4374 3.4465L13.8352 2.4236Q13.8378 2.4169 13.8399 2.41Q13.842 2.403 13.8437 2.396Q13.8453 2.389 13.8464 2.3818Q13.8475 2.3747 13.8481 2.3675Q13.8487 2.3603 13.8487 2.3531Q13.8488 2.3458 13.8483 2.3386Q13.8479 2.3314 13.8469 2.3243Q13.8459 2.3171 13.8444 2.31Q13.843 2.303 13.841 2.296Q13.839 2.2891 13.8365 2.2823Q13.834 2.2755 13.831 2.2689Q13.828 2.2623 13.8246 2.256Q13.8212 2.2496 13.8173 2.2435Q13.8134 2.2375 13.809 2.2317Q13.8047 2.2259 13.8 2.2204Q13.7953 2.2149 13.7902 2.2098Q13.7851 2.2047 13.7796 2.2Q13.7741 2.1953 13.7683 2.191Q13.7625 2.1866 13.7565 2.1827Q13.7504 2.1788 13.744 2.1754Q13.7377 2.172 13.7311 2.169Q13.7245 2.166 13.7177 2.1635Q13.7109 2.161 13.704 2.159Q13.697 2.157 13.69 2.1555Q13.6829 2.1541 13.6758 2.1531Q13.6686 2.1521 13.6614 2.1517Q13.6542 2.1512 13.6469 2.1513Q13.6397 2.1513 13.6325 2.1519Q13.6253 2.1525 13.6182 2.1536Q13.611 2.1547 13.604 2.1563Q13.597 2.1579 13.59 2.1601Q13.5831 2.1622 13.5764 2.1648L12.5535 2.5626L6.5581 8.5581Q6.5388 8.5773 6.5213 8.5982Q6.5037 8.6191 6.4881 8.6414Q6.4725 8.6638 6.4588 8.6874Q6.4452 8.711 6.4336 8.7357L6.9341 8.9692Q6.942 8.9729 6.9496 8.9772Q6.9571 8.9816 6.9643 8.9866Q6.9714 8.9916 6.9781 8.9972Q6.9848 9.0029 6.991 9.009Q6.9971 9.0152 7.0027 9.0219Q7.0084 9.0286 7.0134 9.0357Q7.0184 9.0429 7.0228 9.0504Q7.0271 9.058 7.0308 9.0659L7.2643 9.5664Q7.289 9.5548 7.3126 9.5412Q7.3362 9.5275 7.3586 9.5119Q7.3809 9.4963 7.4018 9.4787Q7.4227 9.4612 7.4419 9.4419L13.4374 3.4465Z\" fill=\"currentColor\" stroke=\"none\" fill-rule=\"evenodd\"/></svg>寄出待寄郵件</button><p data-outbox-status>尚未寄出</p></div></fieldset>",
+      "nativePreview": "<span>封存　／　待寄匣 · 等待寄出</span>",
+      "comparisonMarkup": "<span>封存　／　待寄匣 · 等待寄出</span>",
+      "searchKeywords": [],
+      "searchAliasDecision": "inbox-out 的兩種原意不對應同一顆，不新增到 archive、inbox 或 send。",
+      "usageEvidence": [
+        "https://support.google.com/mail/answer/6576?hl=en",
+        "https://support.mozilla.org/en-US/kb/glossary-terms-including-types-accounts"
+      ],
+      "usageEvidenceLimit": "Primary sources establish moving, outgoing-queue and inbox-triage distinctions. These local controls are not screenshots of those products and do not send, move or archive real messages.",
+      "visualObservation": "封存收到的郵件不改變待寄數量；待寄匣持續顯示等待寄出，send 只出現在實際寄出按鈕。"
+    },
+    {
+      "name": "inbox-unread",
+      "label": "未讀收件匣",
+      "alternative": "inbox",
+      "replacementKind": "contextual-state",
+      "context": "收件匣導覽 · 持續顯示未讀數量與篩選",
+      "reason": "未讀是可變狀態，既有 inbox 保留物件身份，旁邊的未讀數量和篩選值表達實際資訊。內置圓點只說明有狀態，不能取代數量，也不應把已讀混同已處理。",
+      "replacementScope": "持續有未讀數字或文字的導覽列與清單；不宣稱無標籤、單圖示狀態欄也能直接替代。",
+      "sample": "<fieldset data-inbox-demo=\"unread\" style=\"border:1px solid #8886;border-radius:5px;padding:12px;min-width:0\"><legend>本地操作示例</legend><header><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><path d=\"M2.1056 7.7889L4.0569 3.8861A1 1 0 0 1 4.9513 3.3333L11.0487 3.3333A1 1 0 0 1 11.9431 3.8861L13.8944 7.7889A1 1 0 0 1 14 8.2361L14 12.3333A1 1 0 0 1 13 13.3333L3 13.3333A1 1 0 0 1 2 12.3333L2 8.2361A1 1 0 0 1 2.1056 7.7889Z\"/><path d=\"M2.3125 7.375L2.1056 7.7889Q2.0926 7.8148 2.0812 7.8415Q2.0697 7.8681 2.0599 7.8953Q2.05 7.9226 2.0417 7.9504Q2.0334 7.9781 2.0268 8.0064Q2.0201 8.0346 2.0151 8.0631Q2.0101 8.0917 2.0067 8.1205Q2.0034 8.1492 2.0017 8.1782Q2 8.2071 2 8.2361L2 8.625L4.7153 8.625Q4.8218 8.625 4.9124 8.681Q5.003 8.737 5.0507 8.8323L5.4979 9.7267Q5.7043 10.1396 6.097 10.3823Q6.4897 10.625 6.9513 10.625L9.0487 10.625Q9.5103 10.625 9.903 10.3823Q10.2957 10.1396 10.5021 9.7267L10.9493 8.8323Q10.997 8.737 11.0876 8.681Q11.1782 8.625 11.2847 8.625L14 8.625L14 8.2361Q14 8.2071 13.9983 8.1782Q13.9966 8.1493 13.9933 8.1205Q13.9899 8.0917 13.9849 8.0631Q13.9799 8.0346 13.9733 8.0064Q13.9666 7.9782 13.9583 7.9504Q13.95 7.9226 13.9401 7.8954Q13.9302 7.8681 13.9188 7.8415Q13.9074 7.8148 13.8944 7.7889L13.6875 7.375L11.2847 7.375Q10.8231 7.375 10.4304 7.6177Q10.0377 7.8604 9.8313 8.2733L9.3841 9.1677Q9.3364 9.263 9.2458 9.319Q9.1552 9.375 9.0487 9.375L6.9513 9.375Q6.8448 9.375 6.7542 9.319Q6.6636 9.263 6.6159 9.1677L6.1687 8.2733Q5.9623 7.8604 5.5696 7.6177Q5.1769 7.375 4.7153 7.375L2.3125 7.375Z\" fill=\"currentColor\" stroke=\"none\" fill-rule=\"evenodd\"/></svg>收件匣 <strong data-unread-count>2 封未讀</strong></header><p>篩選：<select data-inbox-filter><option value=\"all\">全部</option><option value=\"unread\">未讀</option></select></p><div data-unread-item=\"0\" style=\"padding:8px 0;border-top:1px solid #8886\"><span><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><rect x=\"2\" y=\"4\" width=\"12\" height=\"8\" rx=\"1\"/><path d=\"M2.5 5L7.8824 8.9144A0.2 0.2 0 0 0 8.1176 8.9144L13.5 5\"/></svg> 報價回覆</span><p data-unread-state>未讀</p><button data-read-toggle>標為已讀</button></div><div data-unread-item=\"1\" style=\"padding:8px 0;border-top:1px solid #8886\"><span><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><rect x=\"2\" y=\"4\" width=\"12\" height=\"8\" rx=\"1\"/><path d=\"M2.5 5L7.8824 8.9144A0.2 0.2 0 0 0 8.1176 8.9144L13.5 5\"/></svg> 確認交期</span><p data-unread-state>未讀</p><button data-read-toggle>標為已讀</button></div><p data-no-unread hidden>目前沒有未讀郵件</p><p>未讀為零不代表已完成後續工作。</p></fieldset>",
+      "searchKeywords": [
+        "unread-inbox",
+        "未讀收件匣"
+      ],
+      "usageEvidence": [
+        "https://help.asana.com/s/article/stay-informed-with-your-asana-inbox",
+        "https://linear.app/docs/inbox"
+      ],
+      "usageEvidenceLimit": "Primary sources establish moving, outgoing-queue and inbox-triage distinctions. These local controls are not screenshots of those products and do not send, move or archive real messages.",
+      "visualObservation": "未讀數量隨閱讀狀態變動，未讀篩選僅隱藏已讀列，還原全部視圖後仍保留原郵件。"
+    },
+    {
+      "name": "inbox-done",
+      "label": "收件匣已處理",
+      "alternative": "check-circle",
+      "replacementKind": "contextual-state",
+      "context": "通知收件匣 · 全部整理完畢的空狀態",
+      "reason": "收件匣標題已建立上下文，整理完畢可使用 check-circle 與具體狀態文字。是否完成依待處理清單判斷，讀完通知不會顯示完成；清完通知也不等於完成通知所連結的任務。",
+      "replacementScope": "具名收件匣中的整理完成空狀態，保留原通知的封存與還原；不把未讀數零或相關任務完成當成等價條件。",
+      "sample": "<fieldset data-inbox-demo=\"done\" style=\"border:1px solid #8886;border-radius:5px;padding:12px;min-width:0\"><legend>本地操作示例</legend><header><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><path d=\"M2.1056 7.7889L4.0569 3.8861A1 1 0 0 1 4.9513 3.3333L11.0487 3.3333A1 1 0 0 1 11.9431 3.8861L13.8944 7.7889A1 1 0 0 1 14 8.2361L14 12.3333A1 1 0 0 1 13 13.3333L3 13.3333A1 1 0 0 1 2 12.3333L2 8.2361A1 1 0 0 1 2.1056 7.7889Z\"/><path d=\"M2.3125 7.375L2.1056 7.7889Q2.0926 7.8148 2.0812 7.8415Q2.0697 7.8681 2.0599 7.8953Q2.05 7.9226 2.0417 7.9504Q2.0334 7.9781 2.0268 8.0064Q2.0201 8.0346 2.0151 8.0631Q2.0101 8.0917 2.0067 8.1205Q2.0034 8.1492 2.0017 8.1782Q2 8.2071 2 8.2361L2 8.625L4.7153 8.625Q4.8218 8.625 4.9124 8.681Q5.003 8.737 5.0507 8.8323L5.4979 9.7267Q5.7043 10.1396 6.097 10.3823Q6.4897 10.625 6.9513 10.625L9.0487 10.625Q9.5103 10.625 9.903 10.3823Q10.2957 10.1396 10.5021 9.7267L10.9493 8.8323Q10.997 8.737 11.0876 8.681Q11.1782 8.625 11.2847 8.625L14 8.625L14 8.2361Q14 8.2071 13.9983 8.1782Q13.9966 8.1493 13.9933 8.1205Q13.9899 8.0917 13.9849 8.0631Q13.9799 8.0346 13.9733 8.0064Q13.9666 7.9782 13.9583 7.9504Q13.95 7.9226 13.9401 7.8954Q13.9302 7.8681 13.9188 7.8415Q13.9074 7.8148 13.8944 7.7889L13.6875 7.375L11.2847 7.375Q10.8231 7.375 10.4304 7.6177Q10.0377 7.8604 9.8313 8.2733L9.3841 9.1677Q9.3364 9.263 9.2458 9.319Q9.1552 9.375 9.0487 9.375L6.9513 9.375Q6.8448 9.375 6.7542 9.319Q6.6636 9.263 6.6159 9.1677L6.1687 8.2733Q5.9623 7.8604 5.5696 7.6177Q5.1769 7.375 4.7153 7.375L2.3125 7.375Z\" fill=\"currentColor\" stroke=\"none\" fill-rule=\"evenodd\"/></svg> 通知收件匣</header><p data-triage-count>2 則待處理 · 2 則未讀</p><div data-triage-items><div data-triage-item=\"0\" style=\"padding:8px 0;border-top:1px solid #8886\"><p>確認提案 <span data-triage-state>未讀</span></p><div style=\"display:flex;gap:8px;flex-wrap:wrap\"><button data-triage-read>標為已讀</button><button data-triage-archive><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><rect x=\"2\" y=\"2.3333\" width=\"12\" height=\"3.3333\" rx=\"1\"/><path d=\"M3.3333 5.6667L3.3333 12.6667A1 1 0 0 0 4.3333 13.6667L11.6667 13.6667A1 1 0 0 0 12.6667 12.6667L12.6667 5.6667\"/><path d=\"M6 8.3333L10 8.3333\"/></svg>已處理，封存通知</button></div></div><div data-triage-item=\"1\" style=\"padding:8px 0;border-top:1px solid #8886\"><p>安排會議 <span data-triage-state>未讀</span></p><div style=\"display:flex;gap:8px;flex-wrap:wrap\"><button data-triage-read>標為已讀</button><button data-triage-archive><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><rect x=\"2\" y=\"2.3333\" width=\"12\" height=\"3.3333\" rx=\"1\"/><path d=\"M3.3333 5.6667L3.3333 12.6667A1 1 0 0 0 4.3333 13.6667L11.6667 13.6667A1 1 0 0 0 12.6667 12.6667L12.6667 5.6667\"/><path d=\"M6 8.3333L10 8.3333\"/></svg>已處理，封存通知</button></div></div></div><div data-triage-complete hidden><p><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.75\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"M7.5 12L10.8594 14.8795A0.2 0.2 0 0 0 11.131 14.869L17 9\"/></svg> 收件匣已處理完畢</p><p>原通知仍在封存紀錄中；不表示關聯任務已完成。</p></div><button data-triage-restore>還原一則通知</button></fieldset>",
+      "searchKeywords": [
+        "triage-done",
+        "收件匣已處理"
+      ],
+      "usageEvidence": [
+        "https://help.asana.com/s/article/stay-informed-with-your-asana-inbox"
+      ],
+      "usageEvidenceLimit": "Primary sources establish moving, outgoing-queue and inbox-triage distinctions. These local controls are not screenshots of those products and do not send, move or archive real messages.",
+      "visualObservation": "完成狀態位於收件匣標題下，以 check-circle 與文字呈現；只有待處理通知歸零才出現，還原通知會撤回完成狀態。"
+    }
+  ]
+}

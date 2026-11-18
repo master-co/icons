@@ -1,0 +1,90 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "skillVersion": "0.5.17",
+  "viewed": [
+    "light.png",
+    "dark.png"
+  ],
+  "sizes": [
+    16,
+    20,
+    24
+  ],
+  "themes": [
+    "light",
+    "dark"
+  ],
+  "dpr": [
+    1
+  ],
+  "corner": "not applicable to native mathematical typography",
+  "scope": "Existing formula entry and actual MathML formula specimens in labeled controls. Mathematical font sizes preserve natural formula height, not 16/20/24px icon boxes. No drawing changed.",
+  "userApproval": "pending",
+  "evidence": [
+    {
+      "path": "docs/review/rebuild-01/substitution-math-relations/light.png",
+      "sha256": "5b02ca6947545606e4718e35d790db63b3492f1ca453f69dd87678fc8dea65d1"
+    },
+    {
+      "path": "docs/review/rebuild-01/substitution-math-relations/dark.png",
+      "sha256": "3c3d608dc3f3c58e792fd1c903d340846af2c96dda09c96d99379300d39a1e55"
+    }
+  ],
+  "items": [
+    {
+      "name": "less-than-or-equal",
+      "label": "小於等於",
+      "alternative": null,
+      "alternativeLabel": "直接顯示數學字形／範本",
+      "replacementKind": "native-math",
+      "nativeMarkup": "<mi>a</mi><mo>≤</mo><mi>b</mi>",
+      "context": "公式編輯器 · 關係運算符選擇面板",
+      "reason": "小於等於不可由 chevron-left 或 equal 單獨替代。關係選擇器直接呈現 ≤ 及兩側運算元，和 <、=、≥ 並列時可準確辨別，不另建一套手繪數學字形。",
+      "replacementScope": "僅以公式／字元選擇器為本次收錄情境；實際選項使用數學排版及可讀標籤，沒有等義的既有圖示替代，也不新增誤導性搜尋別名。此頁是 Master 替代方案示意，並非來源產品截圖。",
+      "searchKeywords": [],
+      "sample": "<div style=\"border:1px solid #8886;border-radius:6px;padding:10px\"><b>插入公式內容</b><button aria-label=\"小於等於\" style=\"margin:10px 0;min-height:56px;gap:18px\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" style=\"font-size:18px\"><mi>a</mi><mo>≤</mo><mi>b</mi></math><span>小於等於</span></button><small>預覽即插入內容；支援鍵盤選取與文字名稱。</small></div>",
+      "usageEvidence": [
+        "https://help.libreoffice.org/latest/en-US/text/smath/01/03090000.html",
+        "https://katex.org/docs/supported"
+      ],
+      "visualObservation": "三字級的方向與下方等線可見；同頁與 ≥、≈ 比較不會看成普通導覽箭頭。"
+    },
+    {
+      "name": "greater-than-or-equal",
+      "label": "大於等於",
+      "alternative": null,
+      "alternativeLabel": "直接顯示數學字形／範本",
+      "replacementKind": "native-math",
+      "nativeMarkup": "<mi>a</mi><mo>≥</mo><mi>b</mi>",
+      "context": "公式編輯器 · 關係運算符選擇面板",
+      "reason": "大於等於的方向與等號兩項資訊缺一不可；chevron-right 並非替代。直接顯示 ≥ 的數學字形，保留與 ≤ 同字體、同基線的關係，不再新增方向箭頭式變體。",
+      "replacementScope": "僅以公式／字元選擇器為本次收錄情境；實際選項使用數學排版及可讀標籤，沒有等義的既有圖示替代，也不新增誤導性搜尋別名。此頁是 Master 替代方案示意，並非來源產品截圖。",
+      "searchKeywords": [],
+      "sample": "<div style=\"border:1px solid #8886;border-radius:6px;padding:10px\"><b>插入公式內容</b><button aria-label=\"大於等於\" style=\"margin:10px 0;min-height:56px;gap:18px\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" style=\"font-size:18px\"><mi>a</mi><mo>≥</mo><mi>b</mi></math><span>大於等於</span></button><small>預覽即插入內容；支援鍵盤選取與文字名稱。</small></div>",
+      "usageEvidence": [
+        "https://help.libreoffice.org/latest/en-US/text/smath/01/03090000.html",
+        "https://katex.org/docs/supported"
+      ],
+      "visualObservation": "向右的關係符號與等線保留；明暗背景均能與 ≤ 對照，沒有藉更換文字補救錯誤圖形。"
+    },
+    {
+      "name": "approximately-equal",
+      "label": "約等於",
+      "alternative": null,
+      "alternativeLabel": "直接顯示數學字形／範本",
+      "replacementKind": "native-math",
+      "nativeMarkup": "<mi>a</mi><mo>≈</mo><mi>b</mi>",
+      "context": "公式編輯器 · 關係運算符選擇面板",
+      "reason": "約等於和等於是不同關係，不能改用 equal。選擇器直接顯示 ≈，比另畫兩條波浪線更能沿用公式內的字形；不把 asymp 當作 approx 的完全同義詞。",
+      "replacementScope": "僅以公式／字元選擇器為本次收錄情境；實際選項使用數學排版及可讀標籤，沒有等義的既有圖示替代，也不新增誤導性搜尋別名。此頁是 Master 替代方案示意，並非來源產品截圖。",
+      "searchKeywords": [],
+      "sample": "<div style=\"border:1px solid #8886;border-radius:6px;padding:10px\"><b>插入公式內容</b><button aria-label=\"約等於\" style=\"margin:10px 0;min-height:56px;gap:18px\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" style=\"font-size:18px\"><mi>a</mi><mo>≈</mo><mi>b</mi></math><span>約等於</span></button><small>預覽即插入內容；支援鍵盤選取與文字名稱。</small></div>",
+      "usageEvidence": [
+        "https://help.libreoffice.org/latest/en-US/text/smath/01/03090000.html",
+        "https://katex.org/docs/supported"
+      ],
+      "visualObservation": "兩條波形及兩側字母在三字級可辨；未用直等號當替代，亦未將 asymp 導入搜尋。"
+    }
+  ]
+}

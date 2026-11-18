@@ -1,0 +1,84 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "skillVersion": "0.5.19",
+  "viewed": [
+    "light.png",
+    "dark.png",
+    "changed-light.png",
+    "changed-dark.png"
+  ],
+  "sizes": [
+    16,
+    20,
+    24
+  ],
+  "themes": [
+    "light",
+    "dark"
+  ],
+  "dpr": [
+    1
+  ],
+  "corner": "soft for existing glyphs only",
+  "scope": "Seven contextual persistent-state substitutions using existing full-sized glyphs beside file/folder identities. List and grid layouts; no old session geometry retrieved.",
+  "userApproval": "pending",
+  "evidence": [
+    {
+      "path": "docs/review/rebuild-01/substitution-file-sharing/light.png",
+      "sha256": "5de7e3f3e8c4cfcb6f00f3b43964ed05ee6c2ee853be382b86e34a3d918f79ab"
+    },
+    {
+      "path": "docs/review/rebuild-01/substitution-file-sharing/dark.png",
+      "sha256": "cae998018e7539c47a76f6759f9d999b2f3c30159e31942ad13adcd7495b2c96"
+    },
+    {
+      "path": "docs/review/rebuild-01/substitution-file-sharing/changed-light.png",
+      "sha256": "2a7fb027a9235dff172d012e8a06c96998bd02647cc808795d3da1bf0c0b5ff5"
+    },
+    {
+      "path": "docs/review/rebuild-01/substitution-file-sharing/changed-dark.png",
+      "sha256": "1a04c43febd62f2733ed50010d519922148fb56cf7505f0351c95e30b9143fe3"
+    }
+  ],
+  "items": [
+    {
+      "name": "file-shared",
+      "label": "共享檔案",
+      "alternative": "users",
+      "replacementKind": "contextual-entry",
+      "context": "檔案清單與方格 · 持續可見的共享狀態",
+      "reason": "檔案類型由主圖示保留，users在獨立狀態位置顯示共享資訊。此配置可同時呈現可離線狀態，不需把人像塞入每種檔案圖形。",
+      "replacementScope": "必須搭配檔案名稱與持續可見的共享標記；不能只留下分享動作按鈕或滑過才出現的提示。",
+      "sample": "<style>[data-file-demo]{margin:12px 0}[data-file-demo] select{font:inherit;color:inherit;background:transparent;padding:5px;border:1px solid #8886}[data-file-demo] label{display:inline-flex;gap:6px;align-items:center;margin:4px 8px 8px 0}[data-file-demo] .items{display:grid;gap:8px}[data-file-demo] .item{border:1px solid #8885;border-radius:5px;padding:10px}[data-file-demo] .identity{display:flex;gap:8px;align-items:center}[data-file-demo] .identity svg{flex-shrink:0}[data-file-demo] .states{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}[data-file-demo] .badge{display:inline-flex;gap:5px;align-items:center;font-size:12px;border:1px solid #8884;padding:3px 5px;border-radius:4px}[data-file-demo] .badge[hidden]{display:none}[data-file-demo] .items[data-view=\"grid\"]{grid-template-columns:1fr 1fr}[data-file-demo] .items[data-view=\"grid\"] .identity{display:grid;gap:7px}[data-file-demo] small{display:block;margin-top:8px}.dark [data-file-demo]{color-scheme:dark}</style><div data-file-demo=\"sharing\"><label>檢視 <select data-file-view><option value=\"list\">清單</option><option value=\"grid\">方格</option></select></label><div class=\"items\" data-view=\"list\"><div class=\"item\" ><div class=\"identity\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><path d=\"M4.5 2L9.0858 2A1 1 0 0 1 9.7929 2.2929L12.2071 4.7071A1 1 0 0 1 12.5 5.4142L12.5 13A1 1 0 0 1 11.5 14L4.5 14A1 1 0 0 1 3.5 13L3.5 3A1 1 0 0 1 4.5 2Z\"/><path d=\"M10.125 2.625L10.125 4.375L11.875 4.375L12.2071 4.7071Q12.2245 4.7245 12.2409 4.7427Q12.2574 4.7608 12.273 4.7798Q12.2886 4.7988 12.3032 4.8185Q12.3178 4.8382 12.3315 4.8586Q12.3451 4.879 12.3577 4.9001Q12.3703 4.9212 12.3819 4.9428Q12.3935 4.9645 12.404 4.9867Q12.4145 5.0088 12.4239 5.0315Q12.4333 5.0542 12.4415 5.0773Q12.4498 5.1004 12.4569 5.1239Q12.4641 5.1474 12.47 5.1712Q12.476 5.195 12.4808 5.2191Q12.4856 5.2432 12.4892 5.2675Q12.4928 5.2918 12.4952 5.3162Q12.4976 5.3406 12.4988 5.3651Q12.5 5.3897 12.5 5.4142L12.5 5.625L10.1 5.625Q9.8663 5.625 9.6491 5.539Q9.4132 5.4456 9.2338 5.2662Q9.0544 5.0868 8.961 4.8509Q8.875 4.6337 8.875 4.4L8.875 2L9.0858 2Q9.1103 2 9.1349 2.0012Q9.1594 2.0024 9.1838 2.0048Q9.2082 2.0072 9.2325 2.0108Q9.2568 2.0144 9.2809 2.0192Q9.305 2.024 9.3288 2.03Q9.3526 2.0359 9.3761 2.0431Q9.3996 2.0502 9.4227 2.0585Q9.4458 2.0667 9.4685 2.0761Q9.4912 2.0855 9.5133 2.096Q9.5355 2.1065 9.5572 2.1181Q9.5788 2.1297 9.5999 2.1423Q9.621 2.1549 9.6414 2.1685Q9.6618 2.1822 9.6815 2.1968Q9.7012 2.2114 9.7202 2.227Q9.7392 2.2426 9.7574 2.2591Q9.7755 2.2755 9.7929 2.2929L10.125 2.625Z\" fill=\"currentColor\" stroke=\"none\" fill-rule=\"evenodd\"/><path d=\"M6 10.5L10 10.5\"/></svg><span>需求文件.md</span></div><div class=\"states\"><span class=\"badge\" ><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><circle cx=\"6.25\" cy=\"4.5\" r=\"2\"/><path d=\"M2.25 13.75V12.5C2.25 10.7 3.85 9.5 5.35 9.5H7.15C8.65 9.5 10.25 10.7 10.25 12.5V13.75\"/><path d=\"M11.1 2.6C13.8 2.6 13.8 6.6 11.1 6.6\"/><path d=\"M12 9.5C13.5 9.75 14.25 11.25 14.25 12.5V13.75\"/></svg>已共享 · 3 人</span><span class=\"badge\" ><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><circle cx=\"8\" cy=\"8\" r=\"6\"/><path d=\"M5 8L7.1041 9.8703A0.2 0.2 0 0 0 7.3832 9.8573L10.75 6.25\"/></svg>可離線</span></div></div><div class=\"item\" ><div class=\"identity\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><path d=\"M4.5 2L9.0858 2A1 1 0 0 1 9.7929 2.2929L12.2071 4.7071A1 1 0 0 1 12.5 5.4142L12.5 13A1 1 0 0 1 11.5 14L4.5 14A1 1 0 0 1 3.5 13L3.5 3A1 1 0 0 1 4.5 2Z\"/><path d=\"M10.125 2.625L10.125 4.375L11.875 4.375L12.2071 4.7071Q12.2245 4.7245 12.2409 4.7427Q12.2574 4.7608 12.273 4.7798Q12.2886 4.7988 12.3032 4.8185Q12.3178 4.8382 12.3315 4.8586Q12.3451 4.879 12.3577 4.9001Q12.3703 4.9212 12.3819 4.9428Q12.3935 4.9645 12.404 4.9867Q12.4145 5.0088 12.4239 5.0315Q12.4333 5.0542 12.4415 5.0773Q12.4498 5.1004 12.4569 5.1239Q12.4641 5.1474 12.47 5.1712Q12.476 5.195 12.4808 5.2191Q12.4856 5.2432 12.4892 5.2675Q12.4928 5.2918 12.4952 5.3162Q12.4976 5.3406 12.4988 5.3651Q12.5 5.3897 12.5 5.4142L12.5 5.625L10.1 5.625Q9.8663 5.625 9.6491 5.539Q9.4132 5.4456 9.2338 5.2662Q9.0544 5.0868 8.961 4.8509Q8.875 4.6337 8.875 4.4L8.875 2L9.0858 2Q9.1103 2 9.1349 2.0012Q9.1594 2.0024 9.1838 2.0048Q9.2082 2.0072 9.2325 2.0108Q9.2568 2.0144 9.2809 2.0192Q9.305 2.024 9.3288 2.03Q9.3526 2.0359 9.3761 2.0431Q9.3996 2.0502 9.4227 2.0585Q9.4458 2.0667 9.4685 2.0761Q9.4912 2.0855 9.5133 2.096Q9.5355 2.1065 9.5572 2.1181Q9.5788 2.1297 9.5999 2.1423Q9.621 2.1549 9.6414 2.1685Q9.6618 2.1822 9.6815 2.1968Q9.7012 2.2114 9.7202 2.227Q9.7392 2.2426 9.7574 2.2591Q9.7755 2.2755 9.7929 2.2929L10.125 2.625Z\" fill=\"currentColor\" stroke=\"none\" fill-rule=\"evenodd\"/><path d=\"M6 10.5L10 10.5\"/></svg><span>個人筆記.md</span></div><div class=\"states\"><span class=\"badge\">僅限自己</span><span class=\"badge\" ><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><path d=\"M4.3333 12.3333H11.6667C15.6667 12.3333 15.6667 6.3333 11.6667 6.3333H11.4C10.8667 4.3333 9.5333 3 7.3333 3C4.9333 3 3 4.9333 3 7.3333C0.8 8.1333 1.6667 12.3333 4.3333 12.3333Z\"/></svg>僅限線上</span></div></div></div><p>共享與儲存狀態分開顯示；檔案類型或資料夾外形保持不變。</p><small>本地狀態預覽，不讀寫實際檔案或權限。</small></div>",
+      "searchKeywords": [
+        "shared-file",
+        "共享檔案"
+      ],
+      "usageEvidence": [
+        "https://support.microsoft.com/en-gb/onedrive/what-do-the-onedrive-icons-mean?nochrome=true"
+      ],
+      "usageEvidenceLimit": "Primary sources establish persistent item states. The review uses existing Master glyphs beside file/folder identities in list and grid layouts; it is not an implementation of Google Drive or OneDrive.",
+      "visualObservation": "The unmodified file-text outline retains the file type while users remains independently readable at 16/20/24. Shared and offline badges coexist in list and grid layouts on both backgrounds."
+    },
+    {
+      "name": "folder-shared",
+      "label": "共享資料夾",
+      "alternative": "users",
+      "replacementKind": "contextual-entry",
+      "context": "資料夾清單與方格 · 持續可見的共享狀態",
+      "reason": "沿用folder表達容器，在其旁以users標示共享。共享、離線與收藏能各自存在，不必發明資料夾的多重徽標組合。",
+      "replacementScope": "替代成立於有獨立狀態位置的清單或方格；若介面只允許單一16px圖示且禁止任何狀態位置，不能聲稱users單獨保留了資料夾語意。",
+      "sample": "<style>[data-file-demo]{margin:12px 0}[data-file-demo] select{font:inherit;color:inherit;background:transparent;padding:5px;border:1px solid #8886}[data-file-demo] label{display:inline-flex;gap:6px;align-items:center;margin:4px 8px 8px 0}[data-file-demo] .items{display:grid;gap:8px}[data-file-demo] .item{border:1px solid #8885;border-radius:5px;padding:10px}[data-file-demo] .identity{display:flex;gap:8px;align-items:center}[data-file-demo] .identity svg{flex-shrink:0}[data-file-demo] .states{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}[data-file-demo] .badge{display:inline-flex;gap:5px;align-items:center;font-size:12px;border:1px solid #8884;padding:3px 5px;border-radius:4px}[data-file-demo] .badge[hidden]{display:none}[data-file-demo] .items[data-view=\"grid\"]{grid-template-columns:1fr 1fr}[data-file-demo] .items[data-view=\"grid\"] .identity{display:grid;gap:7px}[data-file-demo] small{display:block;margin-top:8px}.dark [data-file-demo]{color-scheme:dark}</style><div data-file-demo=\"sharing\"><label>檢視 <select data-file-view><option value=\"list\">清單</option><option value=\"grid\">方格</option></select></label><div class=\"items\" data-view=\"list\"><div class=\"item\" ><div class=\"identity\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><path d=\"M2 12L2 4A1 1 0 0 1 3 3L6.5858 3A1 1 0 0 1 7.2929 3.2929L8.2071 4.2071A1 1 0 0 0 8.9142 4.5L13 4.5A1 1 0 0 1 14 5.5L14 12A1 1 0 0 1 13 13L3 13A1 1 0 0 1 2 12Z\"/></svg><span>設計素材</span></div><div class=\"states\"><span class=\"badge\" ><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><circle cx=\"6.25\" cy=\"4.5\" r=\"2\"/><path d=\"M2.25 13.75V12.5C2.25 10.7 3.85 9.5 5.35 9.5H7.15C8.65 9.5 10.25 10.7 10.25 12.5V13.75\"/><path d=\"M11.1 2.6C13.8 2.6 13.8 6.6 11.1 6.6\"/><path d=\"M12 9.5C13.5 9.75 14.25 11.25 14.25 12.5V13.75\"/></svg>已共享 · 3 人</span><span class=\"badge\" ><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><circle cx=\"8\" cy=\"8\" r=\"6\"/><path d=\"M5 8L7.1041 9.8703A0.2 0.2 0 0 0 7.3832 9.8573L10.75 6.25\"/></svg>可離線</span></div></div><div class=\"item\" ><div class=\"identity\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><path d=\"M2 12L2 4A1 1 0 0 1 3 3L6.5858 3A1 1 0 0 1 7.2929 3.2929L8.2071 4.2071A1 1 0 0 0 8.9142 4.5L13 4.5A1 1 0 0 1 14 5.5L14 12A1 1 0 0 1 13 13L3 13A1 1 0 0 1 2 12Z\"/></svg><span>個人草稿</span></div><div class=\"states\"><span class=\"badge\">僅限自己</span><span class=\"badge\" ><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><path d=\"M4.3333 12.3333H11.6667C15.6667 12.3333 15.6667 6.3333 11.6667 6.3333H11.4C10.8667 4.3333 9.5333 3 7.3333 3C4.9333 3 3 4.9333 3 7.3333C0.8 8.1333 1.6667 12.3333 4.3333 12.3333Z\"/></svg>僅限線上</span></div></div></div><p>共享與儲存狀態分開顯示；檔案類型或資料夾外形保持不變。</p><small>本地狀態預覽，不讀寫實際檔案或權限。</small></div>",
+      "searchKeywords": [
+        "shared-folder",
+        "共享資料夾"
+      ],
+      "usageEvidence": [
+        "https://support.microsoft.com/en-gb/onedrive/what-do-the-onedrive-icons-mean?nochrome=true"
+      ],
+      "usageEvidenceLimit": "Primary sources establish persistent item states. The review uses existing Master glyphs beside file/folder identities in list and grid layouts; it is not an implementation of Google Drive or OneDrive.",
+      "visualObservation": "The existing folder silhouette retains its shoulder and full interior. Separate people and availability badges remain visible in both layouts, without merging the folder with multiple state marks. Single-glyph-only tree slots are outside this substitution claim."
+    }
+  ]
+}

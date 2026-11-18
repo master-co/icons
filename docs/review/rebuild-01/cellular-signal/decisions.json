@@ -1,0 +1,23 @@
+[
+  {
+    "name": "signal-bars",
+    "reviewed": true,
+    "purpose": "行動網路狀態列與連線設定的訊號辨識。和Wi-Fi、藍牙並列時，需要不同的通訊輪廓；既有統計柱圖採三個封閉柱體，不適合作為行動天線強度符號。",
+    "recognitionCues": "四支彼此獨立、等距且逐級升高的直筆，共用水平底部；沒有座標軸、封閉柱孔、外框或額外徽標。",
+    "confusableWith": [
+      "chart-bar",
+      "chart-bar-increasing",
+      "wifi"
+    ],
+    "sourceObservation": "Tabler antenna-bars-5以四支短到長的線段表達通訊訊號，窄版面但辨識直接。Material Design Icons signal-cellular-3使用三塊寬實心柱，較重且適合系統狀態剪影；兩者同語意、不同筆畫密度。",
+    "comparison": "最新稿在16／20／24與兩份原始來源並排。保留Tabler簡單四筆的構造，放寬原生橫向間距、增加圖形高度，讓16px最粗線寬仍有明確通道；24px不採MDI的大面積實心柱，以配合相鄰Wi-Fi與藍牙的描邊重量。兩種軟角使用相同直筆幾何與圓端，sharp使用系統方端，沒有可再雕刻的轉角。明暗DPR1／2均看過，無需新增內孔或裝飾。",
+    "reason": "四筆的高度階差、共同底部與擴大的橫向間距維持安靜的訊號階梯；最短筆不是零長度圓點。用途是固定通訊圖示，沒有把四筆當成實際裝置量測值或新增強度API。",
+    "dashes": false,
+    "dashReason": "實線階梯表達穩定訊號輪廓，虛線會誤導為正在搜尋或待連線。",
+    "opacity": false,
+    "opacityReason": "這是固定圖示而非多級即時訊號控制，不用淡化部分筆畫暗示未實作的強度級別。",
+    "usageEvidence": [
+      "https://support.apple.com/en-ca/guide/iphone/iphef7bb57dc/ios"
+    ]
+  }
+]

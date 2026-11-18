@@ -1,0 +1,1116 @@
+{
+  "circle-dashed": {
+    "use": "看板未開始狀態；和圓中播放、圓中勾並排。實線 circle 無法表達尚未成立的狀態，loader 的不對稱缺口則暗示處理中。",
+    "family": [
+      "circle",
+      "loader",
+      "check-circle"
+    ]
+  },
+  "play-circle": {
+    "use": "看板進行中狀態及圓形播放控制；共用圓框，避免單獨 play 與其他圓形狀態並排時失去家族關係。三角形取自既有 play 的共同幾何。",
+    "family": [
+      "play",
+      "circle",
+      "check-circle"
+    ]
+  },
+  "pause-circle": {
+    "use": "與圓形播放控制成對的暫停狀態。既有 pause 的雙軸保留，小圓中的次要空心內孔簡化為直線，避免細孔塌陷。",
+    "family": [
+      "pause",
+      "circle",
+      "play-circle"
+    ]
+  },
+  "alert-circle": {
+    "use": "通知的錯誤／注意狀態；和 info-circle、check-circle 保持相同外圈。驚嘆號由 info-circle 整顆旋轉而來，點徑、線長及內距共源。",
+    "family": [
+      "info-circle",
+      "check-circle",
+      "alert-triangle"
+    ]
+  },
+  "chevrons-up-down": {
+    "use": "同軸的上／下方向提示，實際用於數字步進器；sort-unsorted 的兩支長箭頭表示排序，方向與結構不同。",
+    "family": [
+      "chevron-down",
+      "chevron-right",
+      "sort-unsorted"
+    ]
+  },
+  "chevrons-left-right": {
+    "use": "Compare 滑桿的左右拖曳把手；折角提示可向兩側拖動，不需要箭桿。與上下選擇器共用同一組安置參數和 chevron 母型。",
+    "family": [
+      "chevron-right",
+      "chevrons-right",
+      "move"
+    ]
+  },
+  "arrow-down-right": {
+    "use": "統計的下降方向，與既有 arrow-up-right 成對。沿用其完整箭桿、翼長與結點，只旋轉 90 度。",
+    "family": [
+      "arrow-up-right",
+      "arrow-down",
+      "trending-down"
+    ]
+  },
+  "folder-kanban": {
+    "use": "專案導覽與預設工作區圖。沿用 folder 外框，內部沿用 kanban 三欄的長短順序；小尺寸省略欄名與細小空心卡片，留下三條等距欄線。",
+    "family": [
+      "folder",
+      "kanban",
+      "folder-tree"
+    ]
+  },
+  "square-plus": {
+    "use": "iOS 加入主畫面步驟需要可對照系統選單的方框加號。外框直接用 square，加號直接用 plus 母型的內置尺寸。",
+    "family": [
+      "square",
+      "plus",
+      "app-window"
+    ]
+  },
+  "heading-1": {
+    "use": "編輯器第 1 級標題命令。與其他層級共用 H 的頂線與基線，數字必須在 16px 保持獨立可讀。通用 heading 無法單獨交代層級。",
+    "family": [
+      "heading",
+      "bold",
+      "text"
+    ]
+  },
+  "heading-2": {
+    "use": "編輯器第 2 級標題命令。與其他層級共用 H 的頂線與基線，數字必須在 16px 保持獨立可讀。通用 heading 無法單獨交代層級。",
+    "family": [
+      "heading",
+      "bold",
+      "text"
+    ]
+  },
+  "heading-3": {
+    "use": "編輯器第 3 級標題命令。與其他層級共用 H 的頂線與基線，數字必須在 16px 保持獨立可讀。通用 heading 無法單獨交代層級。",
+    "family": [
+      "heading",
+      "bold",
+      "text"
+    ]
+  },
+  "heading-4": {
+    "use": "編輯器第 4 級標題命令。Haoban 提供一至六級，層級圖示需要對應數字；共用 H 與數字字面，較小層級也保持相同的可讀大小。",
+    "family": [
+      "heading",
+      "heading-1",
+      "heading-3"
+    ]
+  },
+  "heading-5": {
+    "use": "編輯器第 5 級標題命令。Haoban 提供一至六級，層級圖示需要對應數字；共用 H 與數字字面，較小層級也保持相同的可讀大小。",
+    "family": [
+      "heading",
+      "heading-1",
+      "heading-3"
+    ]
+  },
+  "heading-6": {
+    "use": "編輯器第 6 級標題命令。Haoban 提供一至六級，層級圖示需要對應數字；共用 H 與數字字面，較小層級也保持相同的可讀大小。",
+    "family": [
+      "heading",
+      "heading-1",
+      "heading-3"
+    ]
+  },
+  "pilcrow": {
+    "use": "段落命令，與 H1–H6 並列。¶ 的半圓字腹與雙直幹辨認段落，不以一般 T 代替。",
+    "family": [
+      "text",
+      "heading",
+      "align-left"
+    ]
+  },
+  "remove-formatting": {
+    "use": "清除選取文字的格式。共用 text 的 T 構造與 x，縮短字面並傾斜字幹，讓清除記號保有獨立留白；eraser 也用於畫布擦除，單獨使用會失去文字範圍。",
+    "family": [
+      "text",
+      "x",
+      "eraser"
+    ]
+  },
+  "priority-low": {
+    "use": "任務的低優先度。三個等級並列時，以啟用筆畫數區分；固定位置及淡化的未啟用段保留尺度。單一旗幟需依賴顏色或文字才看得出等級。",
+    "family": [
+      "flag",
+      "minus",
+      "alert-circle"
+    ]
+  },
+  "priority-medium": {
+    "use": "任務的一般優先度。三個等級並列時，以啟用筆畫數區分；固定位置及淡化的未啟用段保留尺度。單一旗幟需依賴顏色或文字才看得出等級。",
+    "family": [
+      "flag",
+      "minus",
+      "alert-circle"
+    ]
+  },
+  "priority-high": {
+    "use": "任務的高優先度。三個等級並列時，以啟用筆畫數區分；固定位置及淡化的未啟用段保留尺度。單一旗幟需依賴顏色或文字才看得出等級。",
+    "family": [
+      "flag",
+      "minus",
+      "alert-circle"
+    ]
+  },
+  "align-objects-left": {
+    "use": "物件靠左。畫布上已選取的兩個物件，以側邊或中心基準線對齊。兩個長短矩形與文字行線分開，六顆共用物件尺寸、基準線及實際圓角。",
+    "family": [
+      "align-left",
+      "align-center",
+      "align-right",
+      "square"
+    ]
+  },
+  "align-objects-center-horizontal": {
+    "use": "物件水平置中。畫布上已選取的兩個物件，以側邊或中心基準線對齊。兩個長短矩形與文字行線分開，六顆共用物件尺寸、基準線及實際圓角。",
+    "family": [
+      "align-left",
+      "align-center",
+      "align-right",
+      "square"
+    ]
+  },
+  "align-objects-right": {
+    "use": "物件靠右。畫布上已選取的兩個物件，以側邊或中心基準線對齊。兩個長短矩形與文字行線分開，六顆共用物件尺寸、基準線及實際圓角。",
+    "family": [
+      "align-left",
+      "align-center",
+      "align-right",
+      "square"
+    ]
+  },
+  "align-objects-top": {
+    "use": "物件靠上。畫布上已選取的兩個物件，以側邊或中心基準線對齊。兩個長短矩形與文字行線分開，六顆共用物件尺寸、基準線及實際圓角。",
+    "family": [
+      "align-left",
+      "align-center",
+      "align-right",
+      "square"
+    ]
+  },
+  "align-objects-center-vertical": {
+    "use": "物件垂直置中。畫布上已選取的兩個物件，以側邊或中心基準線對齊。兩個長短矩形與文字行線分開，六顆共用物件尺寸、基準線及實際圓角。",
+    "family": [
+      "align-left",
+      "align-center",
+      "align-right",
+      "square"
+    ]
+  },
+  "align-objects-bottom": {
+    "use": "物件靠下。畫布上已選取的兩個物件，以側邊或中心基準線對齊。兩個長短矩形與文字行線分開，六顆共用物件尺寸、基準線及實際圓角。",
+    "family": [
+      "align-left",
+      "align-center",
+      "align-right",
+      "square"
+    ]
+  },
+  "id-card": {
+    "use": "人物資料分類與身份資訊：橫卡、共源肖像及資料線；區分帳號頭像與通訊錄。",
+    "family": [
+      "contact",
+      "user",
+      "credit-card"
+    ]
+  },
+  "archive-restore": {
+    "use": "封存列表的取消封存命令：同一盒體以向上箭頭區分封存；共用 arrow-up 的箭翼／箭桿接點。",
+    "family": [
+      "archive",
+      "arrow-up",
+      "rotate-left"
+    ]
+  },
+  "image-plus": {
+    "use": "編輯器插入圖片與空白節點的加入控制：保留 image 山景，右上加號表示新增。",
+    "family": [
+      "image",
+      "images",
+      "plus"
+    ]
+  },
+  "boolean-union": {
+    "use": "合併兩個形狀，保留整體外邊界；不帶內部交集線。",
+    "family": [
+      "square",
+      "copy",
+      "layers"
+    ]
+  },
+  "boolean-subtract": {
+    "use": "從後方形狀減去前方形狀；深線是留下的 L 形，淡線保留原操作物件位置。",
+    "family": [
+      "square",
+      "copy",
+      "layers"
+    ]
+  },
+  "boolean-intersect": {
+    "use": "只留下兩個形狀共同的區域；中心交集為深線，原物件邊界退到淡線。",
+    "family": [
+      "square",
+      "copy",
+      "layers"
+    ]
+  },
+  "boolean-exclude": {
+    "use": "留下兩個互不重疊的部分；交點附近留開口，讓兩個殘餘物件不連成同一塊。",
+    "family": [
+      "square",
+      "copy",
+      "layers"
+    ]
+  },
+  "arrow-up-left": {
+    "use": "畫布方向控制的斜向移動；與水平、垂直及反方向命令並列。",
+    "family": [
+      "arrow-up-right",
+      "arrow-down-right",
+      "arrow-left"
+    ]
+  },
+  "arrow-down-left": {
+    "use": "畫布方向控制的斜向移動；與水平、垂直及反方向命令並列。",
+    "family": [
+      "arrow-up-right",
+      "arrow-down-right",
+      "arrow-left"
+    ]
+  },
+  "arrow-left-to-line": {
+    "use": "順序編輯器中直接移到邊界；與只移動一格的箭頭並列。",
+    "family": [
+      "arrow-left",
+      "arrow-right",
+      "align-objects-left"
+    ]
+  },
+  "arrow-right-to-line": {
+    "use": "順序編輯器中直接移到邊界；與只移動一格的箭頭並列。",
+    "family": [
+      "arrow-left",
+      "arrow-right",
+      "align-objects-left"
+    ]
+  },
+  "arrow-up-to-line": {
+    "use": "順序編輯器中直接移到邊界；與只移動一格的箭頭並列。",
+    "family": [
+      "arrow-left",
+      "arrow-right",
+      "align-objects-left"
+    ]
+  },
+  "arrow-down-to-line": {
+    "use": "順序編輯器中直接移到邊界；與只移動一格的箭頭並列。",
+    "family": [
+      "arrow-left",
+      "arrow-right",
+      "align-objects-left"
+    ]
+  },
+  "arrow-left-right": {
+    "use": "漸層反轉與看板搬移；保留兩支錯列、方向相反的完整箭頭。",
+    "family": [
+      "sort-unsorted",
+      "chevrons-left-right",
+      "refresh"
+    ]
+  },
+  "case-upper": {
+    "use": "全部大寫；在文字大小寫選擇器中與其他三種狀態並列，以字形和高度表示差別。",
+    "family": [
+      "text",
+      "heading",
+      "bold"
+    ]
+  },
+  "case-lower": {
+    "use": "全部小寫；在文字大小寫選擇器中與其他三種狀態並列，以字形和高度表示差別。",
+    "family": [
+      "text",
+      "heading",
+      "bold"
+    ]
+  },
+  "case-title": {
+    "use": "字首大寫；在文字大小寫選擇器中與其他三種狀態並列，以字形和高度表示差別。",
+    "family": [
+      "text",
+      "heading",
+      "bold"
+    ]
+  },
+  "small-caps": {
+    "use": "小型大寫；在文字大小寫選擇器中與其他三種狀態並列，以字形和高度表示差別。",
+    "family": [
+      "text",
+      "heading",
+      "bold"
+    ]
+  },
+  "line-height": {
+    "use": "行高數值輸入；和字級、另一方向的間距並列，依規則線方向辨認。",
+    "family": [
+      "text",
+      "case-upper",
+      "align-left"
+    ]
+  },
+  "letter-spacing": {
+    "use": "字距數值輸入；和字級、另一方向的間距並列，依規則線方向辨認。",
+    "family": [
+      "text",
+      "case-upper",
+      "align-left"
+    ]
+  },
+  "text-direction-ltr": {
+    "use": "設定段落閱讀方向，與靠左、靠右對齊分開；¶ 保持字形，僅箭頭改變指向。",
+    "family": [
+      "pilcrow",
+      "arrow-right",
+      "align-left",
+      "indent-increase"
+    ]
+  },
+  "text-direction-rtl": {
+    "use": "設定段落閱讀方向，與靠左、靠右對齊分開；¶ 保持字形，僅箭頭改變指向。",
+    "family": [
+      "pilcrow",
+      "arrow-right",
+      "align-left",
+      "indent-increase"
+    ]
+  },
+  "layout-columns-3": {
+    "use": "版面選擇器直接預覽欄數；二欄圖無法表示三欄／四欄。共用 layout-columns 外框，以分界線保留欄內空白。",
+    "family": [
+      "layout-columns",
+      "panel-left",
+      "table"
+    ]
+  },
+  "layout-columns-4": {
+    "use": "版面選擇器直接預覽欄數；二欄圖無法表示三欄／四欄。共用 layout-columns 外框，以分界線保留欄內空白。",
+    "family": [
+      "layout-columns",
+      "panel-left",
+      "table"
+    ]
+  },
+  "table-header-column": {
+    "use": "表頭設在第一欄，與既有 table 的第一列表頭並列；共用外框，只轉置框內分界。",
+    "family": [
+      "table",
+      "panel-left",
+      "table-cells-split"
+    ]
+  },
+  "table-row-insert-above": {
+    "use": "指定新增列／欄的位置；直接旋轉 table-row-add 母型，和原有下方插列、右側插欄保持相同盒體與加號。",
+    "family": [
+      "table-row-add",
+      "table-column-add",
+      "plus"
+    ]
+  },
+  "table-column-insert-left": {
+    "use": "指定新增列／欄的位置；直接旋轉 table-row-add 母型，和原有下方插列、右側插欄保持相同盒體與加號。",
+    "family": [
+      "table-row-add",
+      "table-column-add",
+      "plus"
+    ]
+  },
+  "cell-align-top": {
+    "use": "儲存格文字的垂直位置；與水平對齊控制並列。淡線固定表示儲存格上下界，深色文字行移到對應位置。",
+    "family": [
+      "align-center",
+      "align-left",
+      "align-objects-top"
+    ]
+  },
+  "cell-align-middle": {
+    "use": "儲存格文字的垂直位置；與水平對齊控制並列。淡線固定表示儲存格上下界，深色文字行移到對應位置。",
+    "family": [
+      "align-center",
+      "align-left",
+      "align-objects-top"
+    ]
+  },
+  "cell-align-bottom": {
+    "use": "儲存格文字的垂直位置；與水平對齊控制並列。淡線固定表示儲存格上下界，深色文字行移到對應位置。",
+    "family": [
+      "align-center",
+      "align-left",
+      "align-objects-top"
+    ]
+  },
+  "group": {
+    "use": "畫布多選工具列的群組操作；共同選取邊界內保留兩個分開物件，與單純選取、複製及解除群組區分。",
+    "family": [
+      "selection",
+      "square",
+      "copy",
+      "ungroup"
+    ]
+  },
+  "ungroup": {
+    "use": "畫布群組的解除操作；移除共同邊界並將物件分開，不能用刪除或取消選取表示。",
+    "family": [
+      "selection",
+      "square",
+      "copy",
+      "group"
+    ]
+  },
+  "flip-horizontal": {
+    "use": "圖片與形狀工具列的水平鏡射；同一垂直軸兩側保留相反手性的直角三角形，和旋轉分開。",
+    "family": [
+      "triangle",
+      "rotate-left",
+      "flip-vertical"
+    ]
+  },
+  "flip-vertical": {
+    "use": "圖片與形狀工具列的垂直鏡射；沿水平軸上下反射，與水平翻轉並列。",
+    "family": [
+      "triangle",
+      "rotate-left",
+      "flip-horizontal"
+    ]
+  },
+  "node-corner": {
+    "use": "向量節點類型選擇器：尖角／平滑並列；沿用 bezier-curve 的三個節點，只把兩段曲線改成折線。",
+    "family": [
+      "bezier-curve",
+      "vector-polygon",
+      "triangle"
+    ]
+  },
+  "path-join": {
+    "use": "合併兩個選取端點成為共用節點；與分斷節點、布林聯集和建立超連結區分。",
+    "family": [
+      "spline",
+      "bezier-curve",
+      "boolean-union",
+      "path-break"
+    ]
+  },
+  "path-break": {
+    "use": "將共用節點分成兩個不連接的端點；與刪除節點及剪下物件分開。圖形展開兩端以顯示斷開狀態。",
+    "family": [
+      "spline",
+      "scissors",
+      "minus",
+      "path-join"
+    ]
+  },
+  "move-horizontal": {
+    "use": "水平尺寸提示、寬度拖曳及側邊調整。共用一條軸與兩端箭頭，不表示兩個項目交換；四向 move 會多暗示上下移動。",
+    "family": [
+      "move",
+      "arrow-left-right",
+      "sort-unsorted",
+      "chevrons-left-right"
+    ]
+  },
+  "move-vertical": {
+    "use": "垂直尺寸提示、高度拖曳及上下邊調整；與水平軸及兩條斜軸在同一裁切教學中區分。sort-unsorted 的兩條錯列箭頭表示排序／交換，不能充當同軸伸縮。",
+    "family": [
+      "move",
+      "arrow-left-right",
+      "sort-unsorted",
+      "chevrons-left-right"
+    ]
+  },
+  "move-diagonal-up-right": {
+    "use": "裁切框右上／左下角的同軸伸縮提示。保留一條連續斜軸和兩端箭頭，與右下／左上角的另一條斜軸區分。",
+    "family": [
+      "move",
+      "arrow-left-right",
+      "sort-unsorted",
+      "chevrons-left-right"
+    ]
+  },
+  "move-diagonal-down-right": {
+    "use": "裁切框右下／左上角的同軸伸縮提示；與右上／左下方向不同，不以四向 move 或單向 arrow-down-right 代替。",
+    "family": [
+      "move",
+      "arrow-left-right",
+      "sort-unsorted",
+      "chevrons-left-right"
+    ]
+  },
+  "arrow-big-up": {
+    "use": "文章評分的向上投票；與向下投票和數量並列。封閉寬箭身與一般導覽細箭頭區分。僅製作描邊，使用端的實心選取態不納入本輪。",
+    "family": [
+      "arrow-up",
+      "arrow-down",
+      "thumbs-up",
+      "arrow-big-down"
+    ]
+  },
+  "arrow-big-down": {
+    "use": "文章評分的向下投票；直接旋轉向上投票母型，保持箭身、肩部、內孔和視覺重量一致。",
+    "family": [
+      "arrow-down",
+      "arrow-up",
+      "thumbs-down",
+      "arrow-big-up"
+    ]
+  },
+  "chart-bar-increasing": {
+    "use": "報表導覽中的報價成效；與收款組合圖、客戶圓餅圖、專案一般長條圖並列。沿用既有直柱母型，僅將柱頂改為逐柱升高。",
+    "family": [
+      "chart-bar",
+      "chart-combo",
+      "chart-pie",
+      "trending-up"
+    ]
+  },
+  "hash": {
+    "use": "資料表欄位類型中的數值，與文字、日期、勾選類型並列。使用井字號本身，不為數值欄位再加一層輸入框。",
+    "family": [
+      "text-cursor",
+      "text",
+      "calendar",
+      "checkbox-checked"
+    ]
+  },
+  "stroke-cap-butt": {
+    "use": "筆畫樣式面板的端點選擇：平切、圓頭與方頭三值並列。虛線表示中心軸，端點與外緣的關係是必要資訊。",
+    "family": [
+      "stroke-cap-round",
+      "stroke-cap-square"
+    ]
+  },
+  "stroke-cap-round": {
+    "use": "筆畫樣式面板的端點選擇：平切、圓頭與方頭三值並列。虛線表示中心軸，端點與外緣的關係是必要資訊。",
+    "family": [
+      "stroke-cap-butt",
+      "stroke-cap-square"
+    ]
+  },
+  "stroke-cap-square": {
+    "use": "筆畫樣式面板的端點選擇：平切、圓頭與方頭三值並列。虛線表示中心軸，端點與外緣的關係是必要資訊。",
+    "family": [
+      "stroke-cap-butt",
+      "stroke-cap-round"
+    ]
+  },
+  "stroke-join-miter": {
+    "use": "筆畫樣式面板的接合選擇：尖角、圓角與斜切三值並列。內側虛線表示同一路徑，外緣轉角表示實際接合差別。",
+    "family": [
+      "stroke-join-round",
+      "stroke-join-bevel"
+    ]
+  },
+  "stroke-join-round": {
+    "use": "筆畫樣式面板的接合選擇：尖角、圓角與斜切三值並列。內側虛線表示同一路徑，外緣轉角表示實際接合差別。",
+    "family": [
+      "stroke-join-miter",
+      "stroke-join-bevel"
+    ]
+  },
+  "stroke-join-bevel": {
+    "use": "筆畫樣式面板的接合選擇：尖角、圓角與斜切三值並列。內側虛線表示同一路徑，外緣轉角表示實際接合差別。",
+    "family": [
+      "stroke-join-miter",
+      "stroke-join-round"
+    ]
+  },
+  "stroke-width": {
+    "use": "筆畫屬性數值欄位，與尺寸、圓角和線條樣式並列。三筆由粗到細直接表達筆畫厚度；不是文字行高或字重。",
+    "family": [
+      "menu",
+      "line-height",
+      "sliders"
+    ]
+  },
+  "corner-radius": {
+    "use": "形狀屬性的圓角半徑數值欄。用單一連續轉角表達形狀曲率；與帶中心軸的筆畫接合示意分開。",
+    "family": [
+      "square",
+      "stroke-join-round",
+      "node-corner"
+    ]
+  },
+  "stroke-dashed": {
+    "use": "線型選擇器中的虛線值，與實線及點線並列。16px 用兩段較長短線，20／24px 保留三段；與 minus 共用同一水平中心線。",
+    "family": [
+      "minus",
+      "stroke-dotted",
+      "more-horizontal"
+    ]
+  },
+  "stroke-dotted": {
+    "use": "線型選擇器中的點線值。五個等距圓點與更多選單的三個大圓點分開。Tabler 是同語意來源；Material Design Icons 是線型家族參考，只比較最下列五個方點的間距與密度。",
+    "family": [
+      "minus",
+      "stroke-dashed",
+      "more-horizontal"
+    ]
+  },
+  "text-color": {
+    "use": "文字顏色命令與螢光標記並列的工具列。直接共用大小寫及字距家族的 capitalA，底部獨立橫線表示顏色；目前色值由使用端另外顯示，不新增圖示內的可變色參數。",
+    "family": [
+      "case-upper",
+      "letter-spacing",
+      "text",
+      "highlighter"
+    ]
+  },
+  "border-all": {
+    "use": "儲存格框線選單中的所有框線；共用 square 外框，兩條置中分隔線平切收在框上，與 grid 四個分離區塊不同。",
+    "family": [
+      "square",
+      "grid",
+      "table",
+      "border-none"
+    ]
+  },
+  "border-none": {
+    "use": "清除所選儲存格框線，但保留21個格線導引點，提示操作範圍仍存在。導引點採等距格線，不隨圓角向內擠；圓點不受端帽預設影響。",
+    "family": [
+      "square",
+      "border-all",
+      "selection",
+      "trash"
+    ]
+  },
+  "border-outer": {
+    "use": "外框線：框線選擇器中的位置預設，實線表示套用邊，圓點保留其他格線位置。",
+    "family": [
+      "square",
+      "border-all",
+      "border-none"
+    ]
+  },
+  "border-inner": {
+    "use": "內框線：框線選擇器中的位置預設，實線表示套用邊，圓點保留其他格線位置。",
+    "family": [
+      "plus",
+      "border-all",
+      "border-none"
+    ]
+  },
+  "border-horizontal": {
+    "use": "內水平框線：框線選擇器中的位置預設，實線表示套用邊，圓點保留其他格線位置。",
+    "family": [
+      "minus",
+      "border-all",
+      "border-none"
+    ]
+  },
+  "border-vertical": {
+    "use": "內垂直框線：框線選擇器中的位置預設，實線表示套用邊，圓點保留其他格線位置。",
+    "family": [
+      "minus",
+      "border-all",
+      "border-none"
+    ]
+  },
+  "border-top": {
+    "use": "上框線：框線選擇器中的位置預設，實線表示套用邊，圓點保留其他格線位置。",
+    "family": [
+      "minus",
+      "border-all",
+      "border-none"
+    ]
+  },
+  "border-bottom": {
+    "use": "下框線：框線選擇器中的位置預設，實線表示套用邊，圓點保留其他格線位置。",
+    "family": [
+      "minus",
+      "border-all",
+      "border-none"
+    ]
+  },
+  "border-left": {
+    "use": "左框線：框線選擇器中的位置預設，實線表示套用邊，圓點保留其他格線位置。",
+    "family": [
+      "minus",
+      "border-all",
+      "border-none"
+    ]
+  },
+  "border-right": {
+    "use": "右框線：框線選擇器中的位置預設，實線表示套用邊，圓點保留其他格線位置。",
+    "family": [
+      "minus",
+      "border-all",
+      "border-none"
+    ]
+  },
+  "milestone-complete": {
+    "use": "時間軸上同時表達里程碑類型與完成狀態；直接共用 diamond 和 check-circle 的內勾。兩份外部來源僅分別比較菱形框與框內勾，不是同語意成品。",
+    "family": [
+      "diamond",
+      "check-circle",
+      "check"
+    ]
+  },
+  "monitor-smartphone": {
+    "use": "跨裝置支援提示：桌機螢幕與手機必須同時可辨。安裝入口有文字時仍可用 app-window；需要一眼表達兩種裝置時，才使用這顆複合圖。",
+    "family": [
+      "monitor",
+      "smartphone",
+      "app-window"
+    ]
+  },
+  "hand-click": {
+    "use": "互動教學中的點按提示；需要與移動指標、平移畫布及鍵盤輸入區分。手指的觸點和放射線共同表達點按，不作所有可點擊按鈕的裝飾。",
+    "family": [
+      "hand",
+      "mouse-pointer",
+      "text-cursor"
+    ]
+  },
+  "line-segment": {
+    "use": "繪圖工具列的單一直線入口；與連續折線、平滑曲線、封閉多邊形並列。減號表示刪減或縮放，pencil表示自由手繪，無法清楚表達固定兩端的線段。",
+    "family": [
+      "spline",
+      "vector-polygon",
+      "polyline"
+    ]
+  },
+  "polyline": {
+    "use": "逐點建立連續直線路徑。閉合vector-polygon多了封口，chart-line多了資料座標軸，node-corner是修改既有節點性質；這顆用開放的多段直線和四個節點表達繪製結果。",
+    "family": [
+      "vector-polygon",
+      "node-corner",
+      "line-segment"
+    ]
+  },
+  "right-triangle": {
+    "use": "基本圖形選擇器：等腰三角形與直角三角形並列，兩個垂直邊必須直接可見。既有triangle沒有直角；pencil-ruler是尺規工具，不是這個圖形。",
+    "family": [
+      "triangle",
+      "square",
+      "diamond"
+    ]
+  },
+  "parallelogram": {
+    "use": "基本圖形選擇器：上下兩邊水平、兩側同向斜移。square無法區分斜四邊形；diamond呈菱形方位，不能替代這個橫向外形。",
+    "family": [
+      "square",
+      "diamond",
+      "trapezoid"
+    ]
+  },
+  "trapezoid": {
+    "use": "基本圖形選擇器：一對平行底邊長短不同，兩腰向外展開。和兩腰同方向斜移的parallelogram並列，不附施工線或節點。",
+    "family": [
+      "square",
+      "parallelogram",
+      "triangle"
+    ]
+  },
+  "eject": {
+    "use": "磁碟或光碟名稱旁的退出控制，以及媒體工具列中的退出媒體。stop只停止播放，arrow-up-to-line表示移到上邊界；兩者不能替代卸載／退出。上方三角形共用triangle母型，下方為結構性橫線。",
+    "family": [
+      "triangle",
+      "play",
+      "stop",
+      "arrow-up-to-line"
+    ]
+  },
+  "match-whole-word": {
+    "use": "搜尋列與區分大小寫、正規表示式並列的整字比對開關。text或case-lower沒有單字邊界資訊。以既有小寫字腹加括線界定完整單字，不另畫放大鏡。",
+    "family": [
+      "case-lower",
+      "case-title",
+      "search"
+    ]
+  },
+  "spell-check": {
+    "use": "文字編輯器的拼字檢查入口，與文字顏色及確認變更並列。共用capitalA與enclosedCheck，避免一般check被誤認成確認整份編輯。",
+    "family": [
+      "text-color",
+      "case-upper",
+      "check-circle",
+      "check"
+    ]
+  },
+  "replace": {
+    "use": "搜尋取代列中的「取代目前項目」。箭頭指向實線新項目，角框表示被取代的原項目；與全部取代並列，不借用表示循環的repeat或雙向交換箭頭。",
+    "family": [
+      "replace-all",
+      "repeat",
+      "arrow-left-right",
+      "keyboard-return",
+      "selection"
+    ]
+  },
+  "replace-all": {
+    "use": "搜尋取代列中的「全部取代」。與單次取代共用全部主體幾何，額外的兩個露邊表示多個項目；介面仍需說明搜尋範圍與匹配數。",
+    "family": [
+      "replace",
+      "layers",
+      "selection"
+    ]
+  },
+  "signal-bars": {
+    "use": "行動網路狀態列與連線設定入口。四筆逐級升高的直線表示訊號階梯，沒有統計圖基線；與Wi-Fi、藍牙並列時保留行動通訊的輪廓。這顆是固定圖示，不新增即時強度參數。無服務及搜尋中由明確狀態文字表示。",
+    "family": [
+      "wifi",
+      "bluetooth",
+      "chart-bar",
+      "chart-bar-increasing"
+    ]
+  },
+  "layer-mask": {
+    "use": "圖層面板的新增／編輯遮色片。圖片框內的圓孔代表局部可見範圍，與整層可見性eye、圖層容器layers、圖片內容image並列。直接共用imageFrame與ring幾何；來源為遮罩家族的斜分圓／方框構造比較，不假稱完全相同的操作圖。",
+    "family": [
+      "image",
+      "circle",
+      "layers",
+      "eye",
+      "camera"
+    ]
+  },
+  "incognito": {
+    "use": "瀏覽器一般／訪客／無痕視窗的切換與持續模式標記。帽冠、帽沿和雙圓鏡框組成既有的無痕輪廓；app-window與user只說明視窗／訪客，lock則代表存取或連線安全，不能代替此模式。眼鏡鏡框與鼻橋共用原有glasses母型，帽頂保留淺凹口、帽沿只畫一筆。",
+    "family": [
+      "glasses",
+      "app-window",
+      "user",
+      "lock"
+    ]
+  },
+  "page-break": {
+    "use": "文件編輯器的插入分頁命令：後續內容移至下一頁。與換行keyboard-return、新增文件file-plus不同；不以此圖代替分節類型。直接沿用file母型與摺角，橫向留白穿過兩側紙邊，三筆短線表示編輯用的分頁邊界。",
+    "family": [
+      "file",
+      "file-plus",
+      "keyboard-return",
+      "minus"
+    ]
+  },
+  "tab-stop-left": {
+    "use": "尺規的靠左定位點類型與位置標記。文字以該點作為起點向右延伸，與整段落對齊不同。L／反L／倒T為慣用尺規符號，沒有加入文字假線或箭頭。",
+    "family": [
+      "align-left",
+      "align-center",
+      "align-right",
+      "indent-increase"
+    ]
+  },
+  "tab-stop-right": {
+    "use": "尺規的靠右定位點類型與位置標記。文字以該點作為終點向左延伸，與整段落對齊不同。L／反L／倒T為慣用尺規符號，沒有加入文字假線或箭頭。",
+    "family": [
+      "align-left",
+      "align-center",
+      "align-right",
+      "indent-increase"
+    ]
+  },
+  "tab-stop-center": {
+    "use": "尺規的置中定位點類型與位置標記。文字以該點作為中心向兩側延伸，與整段落對齊不同。L／反L／倒T為慣用尺規符號，沒有加入文字假線或箭頭。",
+    "family": [
+      "align-left",
+      "align-center",
+      "align-right",
+      "indent-increase"
+    ]
+  },
+  "tab-stop-decimal": {
+    "use": "尺規的小數點定位點類型與位置標記。文字以該點作為小數分隔符號的錨點，與整段落對齊不同。L／反L／倒T為慣用尺規符號，沒有加入文字假線或箭頭。ONLYOFFICE只比較置中定位點的共同構造，不是小數定位點原稿。",
+    "family": [
+      "align-left",
+      "align-center",
+      "align-right",
+      "indent-increase"
+    ]
+  },
+  "hotspot": {
+    "use": "網路設定內的個人熱點與持續分享狀態。Wi-Fi 表達加入無線網路，這裡需要區分由本機提供連線；採中央發射點與兩道向外開展的波紋，沒有再加入手機、箭頭或加號。此固定圖形代表功能種類，啟用狀態仍由開關與文字呈現。",
+    "family": [
+      "wifi",
+      "signal-bars",
+      "bluetooth",
+      "podcast"
+    ]
+  },
+  "sim-card": {
+    "use": "雙 SIM 的行動網路設定、實體 SIM 與 eSIM 管理入口。以缺角卡片和六個接點說明 SIM 載體；直接共用 fileParts 的外殼，省略紙張摺線。file、credit-card、cpu 分別是文件、付款卡和處理器，與 SIM 的外形和功能不同。eSIM 類型仍以明確文字標示，不宣稱卡片圖能分辨虛擬載體。",
+    "family": [
+      "file",
+      "credit-card",
+      "cpu",
+      "smartphone"
+    ]
+  },
+  "screen-rotate": {
+    "use": "手機旋轉提示與自動旋轉控制。單用 rotate-right 容易與內容旋轉或復原混淆，smartphone 又沒有方向變化線索。直接安置 smartphoneShape 的細長外殼並轉向；省略小型操作橫線，周圍兩段弧箭頭表達轉向。自動旋轉是否開啟仍由按鈕狀態與標籤說明。",
+    "family": [
+      "smartphone",
+      "rotate-right",
+      "rotate-left",
+      "maximize"
+    ]
+  },
+  "bell-snooze": {
+    "use": "個人名稱旁的通知暫停狀態，以及指定暫停時間的入口。與完全關閉通知和重新排定一則提醒分開：前者是 bell-off，後者仍可使用 clock。此圖直接沿用 bell 的鐘冠與鈴舌，只在鐘內加入 Z，沒有重畫較寬的新鈴鐺。",
+    "family": [
+      "bell",
+      "bell-off",
+      "clock",
+      "moon"
+    ]
+  },
+  "image-wrap-left": {
+    "use": "圖片在左、文字沿右側環繞。與段落靠左不同，短行必須出現在物件右側，物件下方恢復整行。直接使用 imageFrame 母型，縮小後省略山景與太陽；這是排版邊界，不是另一種圖片插入圖示。",
+    "family": [
+      "image",
+      "align-left",
+      "align-right",
+      "align-justify"
+    ]
+  },
+  "image-wrap-right": {
+    "use": "圖片在右、文字沿左側環繞。與置左版本共用一份幾何並水平鏡射；不是將文字改為靠右對齊。",
+    "family": [
+      "image",
+      "align-left",
+      "align-right",
+      "align-justify"
+    ]
+  },
+  "image-inline": {
+    "use": "圖片像字元一樣位於文字行內，右側文字與圖片底端同一基線，上下保留完整文字行。不是上下環繞，也不把一般 image 當成行內狀態。此控制與左右浮動並排。",
+    "family": [
+      "image",
+      "align-left",
+      "align-right",
+      "align-justify"
+    ]
+  },
+  "footnote": {
+    "use": "插入註腳會建立正文引用標記與頁底註記，與只改字形位置的 superscript 並列。採成熟 Ab¹ 命令構造；A、b、1 直接取自現有字形母型，省去文件外框以保留 16px 內孔。",
+    "family": [
+      "superscript",
+      "subscript",
+      "case-title",
+      "heading-1",
+      "file-text"
+    ]
+  },
+  "selection-invert": {
+    "use": "選取面板中的反選按鈕，將目前圖層的選取範圍取補集，與新選取、布林模式及色彩反相分開。實線與虛線半邊共用 selection 母型，採 Phosphor 的對角分界構造。",
+    "family": [
+      "selection",
+      "boolean-exclude",
+      "contrast"
+    ]
+  },
+  "decimal-increase": {
+    "use": "增加小數位數：試算表工具列與相反命令並排，只改選取儲存格顯示精度，不改原始數值。一般箭頭無法表達小數位數；hash 只表示數值欄位。",
+    "family": [
+      "arrow-left",
+      "arrow-right",
+      "hash",
+      "tab-stop-decimal"
+    ]
+  },
+  "decimal-decrease": {
+    "use": "減少小數位數：試算表工具列與相反命令並排，只改選取儲存格顯示精度，不改原始數值。一般箭頭無法表達小數位數；hash 只表示數值欄位。",
+    "family": [
+      "arrow-left",
+      "arrow-right",
+      "hash",
+      "tab-stop-decimal"
+    ]
+  },
+  "drop-cap": {
+    "use": "段落首字放大命令，開啟首字下沉／置於邊界的選項；與字級、全部大寫及一般段落文字工具區分。大寫 A 跨越兩條旁側文字行，下方回到完整行寬。",
+    "family": [
+      "case-upper",
+      "text-color",
+      "text",
+      "heading"
+    ]
+  },
+  "spiral": {
+    "use": "繪圖工具列的平面螺旋工具，與圓形及貝茲曲線並排。螺旋有連續向外增長的半徑與圈數；一般圓形、曲線或旋轉箭頭會遺失這種構造。以接近兩圈及開放內端保留原生尺寸的迴繞通道。",
+    "family": [
+      "circle",
+      "bezier-curve",
+      "rotate-right"
+    ]
+  },
+  "sector": {
+    "use": "圓形繪圖工具的扇形入口／閉合模式：保留圓弧，兩端連到圓心。與完整圓、只連接兩端的弦形、開放圓弧區分。chart-pie 的完整外圈和內部分割代表圓餅圖，不能當作單一扇形的輪廓。",
+    "family": [
+      "circle",
+      "chart-pie",
+      "spline"
+    ]
+  },
+  "color-curves": {
+    "use": "色調曲線調整入口與圖層類型；曲線將輸入色調映射到輸出色調。與色階的黑／中／白點、僅檢視直方圖不同。",
+    "family": [
+      "chart-spline",
+      "chart-histogram",
+      "sliders"
+    ]
+  },
+  "color-levels": {
+    "use": "色階調整入口與圖層類型；分布柱下方的三個控制標記對應黑點、中間調與白點，區別僅查看分布的直方圖。",
+    "family": [
+      "chart-histogram",
+      "color-curves",
+      "sliders"
+    ]
+  },
+  "table-transpose": {
+    "use": "試算表與資料整理中的列欄轉置：每列變成對應欄，保持各值的對應關係。與反轉列順序、貼上原方向、一般交換及旋轉物件不同。",
+    "family": [
+      "table",
+      "table-header-column",
+      "sort-unsorted",
+      "arrow-left-right",
+      "keyboard-return"
+    ]
+  },
+  "signature": {
+    "use": "PDF 標註工具列中的插入簽名。與一般畫筆／文字／標記並列；不是指任何可編輯操作，也不是憑證驗證或法律效力狀態。使用一筆連續的手寫迴圈與漸低的收筆。",
+    "family": [
+      "pencil",
+      "pen-tool",
+      "spline",
+      "text",
+      "highlighter"
+    ]
+  },
+  "workflow-parallel": {
+    "use": "流程編輯器中新增平行分支／平行步驟的命令，兩條同向箭頭與一般新增步驟、條件分支和交換順序不同。圖形說明並行方向；分支數、等待條件及執行狀態由流程連線與標籤呈現。",
+    "family": [
+      "arrow-right",
+      "arrow-left-right",
+      "git-fork",
+      "git-merge",
+      "workflow"
+    ]
+  },
+  "workflow-join": {
+    "use": "流程節點清單中的匯合資料流命令：兩條輸入匯成一條輸出。不同於圖形群組、表格合併或 Git 提交合併；等待所有輸入、合併欄位或串接資料的規則由節點設定呈現。",
+    "family": [
+      "arrow-right",
+      "arrow-left-right",
+      "git-fork",
+      "git-merge",
+      "workflow"
+    ]
+  }
+}

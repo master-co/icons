@@ -1,0 +1,96 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "skillVersion": "0.5.18",
+  "viewed": [
+    "light.png",
+    "dark.png"
+  ],
+  "sizes": [
+    16,
+    20,
+    24
+  ],
+  "themes": [
+    "light",
+    "dark"
+  ],
+  "dpr": [
+    1
+  ],
+  "corner": "not applicable: actual CSS value previews, not icon drawings",
+  "scope": "Native content previews and labeled controls replace eight candidates. Gradient swatches use square CSS sizes; text previews use font size and natural line height. No icon, alias, framework or application source changed.",
+  "userApproval": "pending",
+  "evidence": [
+    {
+      "path": "docs/review/rebuild-01/substitution-gradient-values/light.png",
+      "sha256": "1d8c6c2e59d846e241a48cc15b96013db92027b4c5d41bcd029b7063b6d30151"
+    },
+    {
+      "path": "docs/review/rebuild-01/substitution-gradient-values/dark.png",
+      "sha256": "e566c66f74cd0c4887b50be799283fe3a147a8e3cb19a2e1b3825553e79e6443"
+    }
+  ],
+  "items": [
+    {
+      "name": "gradient-linear",
+      "label": "線性漸層",
+      "alternative": null,
+      "alternativeLabel": "實際漸層縮圖＋文字選項",
+      "replacementKind": "native-content",
+      "nativePreview": "<span aria-hidden=\"true\" style=\"display:inline-block;width:24px;height:24px;border:1px solid #8888;border-radius:3px;background:linear-gradient(90deg,#293a32,#e5e9d7)\"></span>",
+      "comparisonMarkup": "<span aria-hidden=\"true\" style=\"display:inline-block;width:16px;height:16px;border:1px solid #8888;border-radius:3px;background:linear-gradient(90deg,#293a32,#e5e9d7)\"></span><span aria-hidden=\"true\" style=\"display:inline-block;width:20px;height:20px;border:1px solid #8888;border-radius:3px;background:linear-gradient(90deg,#293a32,#e5e9d7)\"></span><span aria-hidden=\"true\" style=\"display:inline-block;width:24px;height:24px;border:1px solid #8888;border-radius:3px;background:linear-gradient(90deg,#293a32,#e5e9d7)\"></span>",
+      "context": "Master UI Gradient · 三種填色類型的分段選項與即時預覽",
+      "reason": "直線方向的過渡可由真實縮圖直接顯示。palette 只能表示色彩入口，move-horizontal 則會誤導成尺寸操作；現有 Master UI 以文字分段選項配合即時預覽即可區分，不需要另畫一支帶色標的軸。",
+      "replacementScope": "保留文字選項、選取狀態及實際色值預覽；單色輸出仍可讀名稱。縮圖是控制項內容，不是新增漸層 SVG，也不把圖示套件擴成彩色樣式。未修改 Master UI 原始碼。",
+      "sample": "<fieldset style=\"margin:0;border:1px solid #8886;border-radius:6px;padding:12px\"><legend>漸層類型</legend><div style=\"display:flex;gap:10px;flex-wrap:wrap\"><label style=\"display:flex;gap:6px;align-items:center\"><input type=\"radio\" name=\"gradient-linear\" value=\"gradient-linear\" data-gradient-css=\"linear-gradient(90deg,#293a32,#e5e9d7)\" checked><span aria-hidden=\"true\" style=\"display:inline-block;width:20px;height:20px;border:1px solid #8888;border-radius:3px;background:linear-gradient(90deg,#293a32,#e5e9d7)\"></span>線性</label><label style=\"display:flex;gap:6px;align-items:center\"><input type=\"radio\" name=\"gradient-linear\" value=\"gradient-radial\" data-gradient-css=\"radial-gradient(circle at center,#e5e9d7,#293a32)\" ><span aria-hidden=\"true\" style=\"display:inline-block;width:20px;height:20px;border:1px solid #8888;border-radius:3px;background:radial-gradient(circle at center,#e5e9d7,#293a32)\"></span>放射</label><label style=\"display:flex;gap:6px;align-items:center\"><input type=\"radio\" name=\"gradient-linear\" value=\"gradient-conic\" data-gradient-css=\"conic-gradient(from 0deg,#e5e9d7,#293a32,#e5e9d7)\" ><span aria-hidden=\"true\" style=\"display:inline-block;width:20px;height:20px;border:1px solid #8888;border-radius:3px;background:conic-gradient(from 0deg,#e5e9d7,#293a32,#e5e9d7)\"></span>角向</label></div><div data-gradient-preview=\"gradient-linear\" style=\"height:74px;margin-top:14px;border:1px solid #8886;border-radius:4px;background:linear-gradient(90deg,#293a32,#e5e9d7)\"></div><small>與畫布相同的漸層值 · 可切換上方選項</small></fieldset>",
+      "searchAliasDecision": "No equivalent existing icon. The actual gradient value and label replace the candidate; no icon search alias is added.",
+      "usageEvidence": [
+        "/Users/aron/master-ui/packages/ui/frameworks/svelte/Gradient.svelte:106",
+        "https://help.figma.com/hc/en-us/articles/34208860210199-Use-gradients-as-a-fill-or-stroke"
+      ],
+      "sourceCaution": "Checked external Tabler gradienter source: its metadata identifies a spirit level, not a colour-gradient tool. Name similarity does not establish a same-purpose reference.",
+      "visualObservation": "16／20／24px 縮圖都是由暗至明的直線過渡；同一選單內與中心放射、角向匯合可分開。明暗背景保留邊框及文字，不依賴縮圖獨自傳遞名稱。"
+    },
+    {
+      "name": "gradient-radial",
+      "label": "放射漸層",
+      "alternative": null,
+      "alternativeLabel": "實際漸層縮圖＋文字選項",
+      "replacementKind": "native-content",
+      "nativePreview": "<span aria-hidden=\"true\" style=\"display:inline-block;width:24px;height:24px;border:1px solid #8888;border-radius:3px;background:radial-gradient(circle at center,#e5e9d7,#293a32)\"></span>",
+      "comparisonMarkup": "<span aria-hidden=\"true\" style=\"display:inline-block;width:16px;height:16px;border:1px solid #8888;border-radius:3px;background:radial-gradient(circle at center,#e5e9d7,#293a32)\"></span><span aria-hidden=\"true\" style=\"display:inline-block;width:20px;height:20px;border:1px solid #8888;border-radius:3px;background:radial-gradient(circle at center,#e5e9d7,#293a32)\"></span><span aria-hidden=\"true\" style=\"display:inline-block;width:24px;height:24px;border:1px solid #8888;border-radius:3px;background:radial-gradient(circle at center,#e5e9d7,#293a32)\"></span>",
+      "context": "Master UI Gradient · 三種填色類型的分段選項與即時預覽",
+      "reason": "徑向變化與中心位置應由實際預覽表達；circle 或 target 不會告訴使用者這是漸層。既有控制項已用「放射」文字及中心欄位交代行為，不另造同心圓變體。",
+      "replacementScope": "保留文字選項、選取狀態及實際色值預覽；單色輸出仍可讀名稱。縮圖是控制項內容，不是新增漸層 SVG，也不把圖示套件擴成彩色樣式。未修改 Master UI 原始碼。",
+      "sample": "<fieldset style=\"margin:0;border:1px solid #8886;border-radius:6px;padding:12px\"><legend>漸層類型</legend><div style=\"display:flex;gap:10px;flex-wrap:wrap\"><label style=\"display:flex;gap:6px;align-items:center\"><input type=\"radio\" name=\"gradient-radial\" value=\"gradient-linear\" data-gradient-css=\"linear-gradient(90deg,#293a32,#e5e9d7)\" ><span aria-hidden=\"true\" style=\"display:inline-block;width:20px;height:20px;border:1px solid #8888;border-radius:3px;background:linear-gradient(90deg,#293a32,#e5e9d7)\"></span>線性</label><label style=\"display:flex;gap:6px;align-items:center\"><input type=\"radio\" name=\"gradient-radial\" value=\"gradient-radial\" data-gradient-css=\"radial-gradient(circle at center,#e5e9d7,#293a32)\" checked><span aria-hidden=\"true\" style=\"display:inline-block;width:20px;height:20px;border:1px solid #8888;border-radius:3px;background:radial-gradient(circle at center,#e5e9d7,#293a32)\"></span>放射</label><label style=\"display:flex;gap:6px;align-items:center\"><input type=\"radio\" name=\"gradient-radial\" value=\"gradient-conic\" data-gradient-css=\"conic-gradient(from 0deg,#e5e9d7,#293a32,#e5e9d7)\" ><span aria-hidden=\"true\" style=\"display:inline-block;width:20px;height:20px;border:1px solid #8888;border-radius:3px;background:conic-gradient(from 0deg,#e5e9d7,#293a32,#e5e9d7)\"></span>角向</label></div><div data-gradient-preview=\"gradient-radial\" style=\"height:74px;margin-top:14px;border:1px solid #8886;border-radius:4px;background:radial-gradient(circle at center,#e5e9d7,#293a32)\"></div><small>與畫布相同的漸層值 · 可切換上方選項</small></fieldset>",
+      "searchAliasDecision": "No equivalent existing icon. The actual gradient value and label replace the candidate; no icon search alias is added.",
+      "usageEvidence": [
+        "/Users/aron/master-ui/packages/ui/frameworks/svelte/Gradient.svelte:106",
+        "https://help.figma.com/hc/en-us/articles/34208860210199-Use-gradients-as-a-fill-or-stroke"
+      ],
+      "sourceCaution": "Checked external Tabler gradienter source: its metadata identifies a spirit level, not a colour-gradient tool. Name similarity does not establish a same-purpose reference.",
+      "visualObservation": "小縮圖保留中央亮區與向外變暗的關係；三選項並排仍有完整標籤。較寬預覽區保留相同 radial-gradient 值，顯示的是實際效果而非 target 圖示。"
+    },
+    {
+      "name": "gradient-conic",
+      "label": "角向漸層",
+      "alternative": null,
+      "alternativeLabel": "實際漸層縮圖＋文字選項",
+      "replacementKind": "native-content",
+      "nativePreview": "<span aria-hidden=\"true\" style=\"display:inline-block;width:24px;height:24px;border:1px solid #8888;border-radius:3px;background:conic-gradient(from 0deg,#e5e9d7,#293a32,#e5e9d7)\"></span>",
+      "comparisonMarkup": "<span aria-hidden=\"true\" style=\"display:inline-block;width:16px;height:16px;border:1px solid #8888;border-radius:3px;background:conic-gradient(from 0deg,#e5e9d7,#293a32,#e5e9d7)\"></span><span aria-hidden=\"true\" style=\"display:inline-block;width:20px;height:20px;border:1px solid #8888;border-radius:3px;background:conic-gradient(from 0deg,#e5e9d7,#293a32,#e5e9d7)\"></span><span aria-hidden=\"true\" style=\"display:inline-block;width:24px;height:24px;border:1px solid #8888;border-radius:3px;background:conic-gradient(from 0deg,#e5e9d7,#293a32,#e5e9d7)\"></span>",
+      "context": "Master UI Gradient · 三種填色類型的分段選項與即時預覽",
+      "reason": "沿角度變化的漸層和旋轉物件是不同動作；rotate-right 不能代替。實際角向縮圖加標籤，比一段扇形或指針更能預告結果，現有分段選項沒有必須用獨立單色圖示的限制。",
+      "replacementScope": "保留文字選項、選取狀態及實際色值預覽；單色輸出仍可讀名稱。縮圖是控制項內容，不是新增漸層 SVG，也不把圖示套件擴成彩色樣式。未修改 Master UI 原始碼。",
+      "sample": "<fieldset style=\"margin:0;border:1px solid #8886;border-radius:6px;padding:12px\"><legend>漸層類型</legend><div style=\"display:flex;gap:10px;flex-wrap:wrap\"><label style=\"display:flex;gap:6px;align-items:center\"><input type=\"radio\" name=\"gradient-conic\" value=\"gradient-linear\" data-gradient-css=\"linear-gradient(90deg,#293a32,#e5e9d7)\" ><span aria-hidden=\"true\" style=\"display:inline-block;width:20px;height:20px;border:1px solid #8888;border-radius:3px;background:linear-gradient(90deg,#293a32,#e5e9d7)\"></span>線性</label><label style=\"display:flex;gap:6px;align-items:center\"><input type=\"radio\" name=\"gradient-conic\" value=\"gradient-radial\" data-gradient-css=\"radial-gradient(circle at center,#e5e9d7,#293a32)\" ><span aria-hidden=\"true\" style=\"display:inline-block;width:20px;height:20px;border:1px solid #8888;border-radius:3px;background:radial-gradient(circle at center,#e5e9d7,#293a32)\"></span>放射</label><label style=\"display:flex;gap:6px;align-items:center\"><input type=\"radio\" name=\"gradient-conic\" value=\"gradient-conic\" data-gradient-css=\"conic-gradient(from 0deg,#e5e9d7,#293a32,#e5e9d7)\" checked><span aria-hidden=\"true\" style=\"display:inline-block;width:20px;height:20px;border:1px solid #8888;border-radius:3px;background:conic-gradient(from 0deg,#e5e9d7,#293a32,#e5e9d7)\"></span>角向</label></div><div data-gradient-preview=\"gradient-conic\" style=\"height:74px;margin-top:14px;border:1px solid #8886;border-radius:4px;background:conic-gradient(from 0deg,#e5e9d7,#293a32,#e5e9d7)\"></div><small>與畫布相同的漸層值 · 可切換上方選項</small></fieldset>",
+      "searchAliasDecision": "No equivalent existing icon. The actual gradient value and label replace the candidate; no icon search alias is added.",
+      "usageEvidence": [
+        "/Users/aron/master-ui/packages/ui/frameworks/svelte/Gradient.svelte:106",
+        "https://help.figma.com/hc/en-us/articles/34208860210199-Use-gradients-as-a-fill-or-stroke"
+      ],
+      "sourceCaution": "Checked external Tabler gradienter source: its metadata identifies a spirit level, not a colour-gradient tool. Name similarity does not establish a same-purpose reference.",
+      "visualObservation": "角向縮圖有繞中心的明暗過渡與匯合點，和徑向亮心不同；三個原生縮圖尺寸皆可配文字辨識，沒有以旋轉箭頭偷換語意。"
+    }
+  ]
+}

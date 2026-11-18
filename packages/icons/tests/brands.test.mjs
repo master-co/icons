@@ -3,8 +3,7 @@ import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
 import {createHash} from 'node:crypto';
 import {unzipSync,strFromU8} from 'fflate';
-import brands from '../src/brands.json' with {type:'json'};
-import {brandCatalog} from '../src/brands.mjs';
+import {brands,brandCatalog,brandEnvelopes} from '../src/brands.mjs';
 import {catalog} from '../src/catalog.mjs';
 import {draw} from '../src/drawings.mjs';
 import {context} from '../src/geometry.mjs';
@@ -12,24 +11,30 @@ import {renderSvg} from '../src/runtime.mjs';
 const defs=JSON.parse(await readFile('packages/icons/dist/definitions.json'));
 
 test('requested additions are exported and only the explicit ChatGPT identity alias shares geometry',()=>{
- const names=['openai','chatgpt','microsoft','linkedin','slack','cursor','supabase','vite',"vue-js","javascript","bun","github-copilot","hugging-face","aws","firebase","postgresql","microsoft-teams","outlook","google-meet","canva","dribbble","wordpress","dcard","shopee","html5"].map(n=>'brand-'+n);
+ const names=['openai','chatgpt','microsoft','linkedin','slack','cursor','supabase','vite',"vue-js","javascript","bun","github-copilot","hugging-face","aws","firebase","postgresql","microsoft-teams","outlook","google-meet","canva","dribbble","wordpress","dcard","shopee"].map(n=>'brand-'+n);
  for(const name of names)assert.ok(defs[name],name);
  assert.deepEqual(defs['brand-chatgpt'].variants,defs['brand-openai'].variants);
  assert.equal(catalog.find(b=>b.name==='brand-chatgpt').concept,'brand-openai');
+ assert.equal(new Set(brandCatalog.map(b=>b.aliasOf || b.styleOf || b.name)).size,88);
  assert.equal(new Set(brands.map(b=>JSON.stringify(defs[b.name].variants))).size,88);
  for(const b of brands.slice(64))for(const size of [16,20,24]){
-  assert.ok(b.optical[size].extent>0 && b.optical[size].extent<=size-2,b.name+': native whitespace');
+  const extent=b.optical?.[size]?.extent??brandEnvelopes[b.profile][[16,20,24].indexOf(size)];
+  assert.ok(extent>0 && extent<=size-2,b.name+': native whitespace');
  }
 });
 
-test('89 named brands retain their pinned source contours and discoverable metadata',async()=>{
+test('89 brand exports retain their pinned source contours and discoverable metadata',async()=>{
  assert.equal(brands.length,89);
  assert.equal(new Set(brands.map(b=>b.name)).size,89);
  assert.ok(brands.some(b=>b.name==='brand-master'));
  for(const b of brands){
   const original=await readFile(b.source.localPath);
   assert.equal(createHash('sha256').update(original).digest('hex'),b.source.sha256,b.name);
-  for(const path of b.paths)assert.ok(original.toString().includes(`d="${path}"`),b.name+': contour is from preserved source');
+  if(b.name==='brand-html5'){
+   const paths=[...original.toString().matchAll(/<path\b[^>]*\bd="([^"]+)"/g)].map(m=>m[1].replace(/\s+/g,' '));
+   assert.equal(paths.length,6,'Official source has four wordmark paths and two shield paths');
+   assert.deepEqual(b.paths,[paths.slice(4).join(' ')],'HTML5 only joins original shield paths without redrawing');
+  }else for(const path of b.paths)assert.ok(original.toString().includes(`d="${path}"`),b.name+': contour is from preserved source');
   if(b.source.originalPath)assert.equal(createHash('sha256').update(await readFile(b.source.originalPath)).digest('hex'),b.source.originalSha256,b.name+': original raster');
   const entry=brandCatalog.find(e=>e.name===b.name);
   assert.equal(entry.direction,'fixed');assert.equal(entry.category,'brands');
@@ -62,6 +67,7 @@ test('single SVGs, catalog and all nine downloadable archives preserve brand pro
   const zip=unzipSync(await readFile(`packages/icons/dist/downloads/master-icons-${size}-${corner}.zip`));
   assert.ok(zip['licenses/simple-icons-CC0.txt']);assert.ok(zip['licenses/simple-icons-DISCLAIMER.md']);assert.ok(zip['licenses/openai-brand.txt']);assert.ok(zip['licenses/brand-additions.txt']);
   for(const b of brands){
+   if(b.source.licenseFile)assert.equal(strFromU8(zip[b.source.licenseFile]),await readFile(b.source.licenseFile,'utf8'),b.name+': exact brand license in ZIP');
    const svg=await readFile(`packages/icons/icons/${size}/${corner}/${b.name}.svg`,'utf8');
    assert.equal(strFromU8(zip[b.name+'.svg']),svg);
    assert.ok(svg.includes(b.source.reference));assert.match(svg,/does not grant trademark rights/);

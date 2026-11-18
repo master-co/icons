@@ -1,160 +1,111 @@
 [
   {
-    "name": "folder-kanban",
-    "label": "專案資料夾",
-    "category": "content",
-    "categoryLabel": "檔案與內容",
-    "keywords": [
-      "project",
-      "workspace",
-      "工作區",
-      "專案",
-      "看板"
-    ]
-  },
-  {
-    "name": "archive-restore",
-    "label": "還原封存",
-    "category": "files",
-    "categoryLabel": "檔案與整理",
-    "keywords": [
-      "unarchive",
-      "restore",
-      "解除封存"
-    ]
-  },
-  {
-    "name": "id-card",
-    "label": "身分證件",
-    "category": "identity",
-    "categoryLabel": "帳戶與權限",
-    "keywords": [
-      "identity",
-      "identification",
-      "證件",
-      "識別證",
-      "身份證"
-    ]
-  },
-  {
-    "name": "image-plus",
-    "label": "新增圖片",
-    "category": "media",
-    "categoryLabel": "圖片與媒體",
-    "keywords": [
-      "add-photo",
-      "insert-image",
-      "選擇圖片",
-      "加入圖片"
-    ]
-  },
-  {
-    "name": "square-plus",
-    "label": "方框加號",
-    "category": "status",
-    "categoryLabel": "形狀與狀態",
-    "keywords": [
-      "plus-square",
-      "add-to-home-screen",
-      "加入主畫面"
-    ]
-  },
-  {
     "name": "circle-dashed",
     "label": "虛線圓",
     "category": "status",
-    "categoryLabel": "形狀與狀態",
-    "keywords": [
-      "pending",
-      "open",
-      "neutral",
-      "未開始",
-      "待處理"
-    ]
+    "categoryLabel": "形狀與狀態"
   },
   {
     "name": "play-circle",
     "label": "圓形播放",
     "category": "media",
-    "categoryLabel": "圖片與媒體",
-    "keywords": [
-      "circle-play",
-      "resume",
-      "啟用排程",
-      "進行中"
-    ]
+    "categoryLabel": "圖片與媒體"
   },
   {
     "name": "pause-circle",
     "label": "圓形暫停",
     "category": "media",
-    "categoryLabel": "圖片與媒體",
-    "keywords": [
-      "circle-pause",
-      "suspend",
-      "停用排程"
-    ]
+    "categoryLabel": "圖片與媒體"
   },
   {
     "name": "alert-circle",
     "label": "圓形警示",
     "category": "status",
-    "categoryLabel": "形狀與狀態",
-    "keywords": [
-      "circle-alert",
-      "warning",
-      "error",
-      "錯誤",
-      "警告"
-    ]
+    "categoryLabel": "形狀與狀態"
   },
   {
     "name": "chevrons-up-down",
     "label": "上下折角",
     "category": "navigation",
-    "categoryLabel": "方向與移動",
-    "keywords": [
-      "unfold-more",
-      "unfoldmore",
-      "select",
-      "下拉",
-      "選擇"
-    ]
+    "categoryLabel": "方向與移動"
   },
   {
     "name": "chevrons-left-right",
     "label": "左右折角",
     "category": "navigation",
-    "categoryLabel": "方向與移動",
-    "keywords": [
-      "compare",
-      "handle",
-      "比較把手"
-    ]
-  },
-  {
-    "name": "arrow-left-right",
-    "label": "左右交換",
-    "category": "navigation",
-    "categoryLabel": "方向與移動",
-    "keywords": [
-      "swap",
-      "reverse",
-      "exchange",
-      "反轉",
-      "交換"
-    ]
+    "categoryLabel": "方向與移動"
   },
   {
     "name": "arrow-down-right",
     "label": "右下箭頭",
     "category": "navigation",
-    "categoryLabel": "方向與移動",
-    "keywords": [
-      "arrowdownright01",
-      "decrease",
-      "下降"
-    ]
+    "categoryLabel": "方向與移動"
+  },
+  {
+    "name": "folder-kanban",
+    "label": "專案資料夾",
+    "category": "content",
+    "categoryLabel": "檔案與內容"
+  },
+  {
+    "name": "square-plus",
+    "label": "方框加號",
+    "category": "status",
+    "categoryLabel": "形狀與狀態"
+  },
+  {
+    "name": "heading-1",
+    "label": "一級標題",
+    "category": "editor",
+    "categoryLabel": "內容編輯"
+  },
+  {
+    "name": "heading-2",
+    "label": "二級標題",
+    "category": "editor",
+    "categoryLabel": "內容編輯"
+  },
+  {
+    "name": "heading-3",
+    "label": "三級標題",
+    "category": "editor",
+    "categoryLabel": "內容編輯"
+  },
+  {
+    "name": "pilcrow",
+    "label": "段落符號",
+    "category": "editor",
+    "categoryLabel": "內容編輯"
+  },
+  {
+    "name": "remove-formatting",
+    "label": "清除文字格式",
+    "category": "editor",
+    "categoryLabel": "內容編輯"
+  },
+  {
+    "name": "id-card",
+    "label": "身份證件",
+    "category": "communication",
+    "categoryLabel": "人物與通訊"
+  },
+  {
+    "name": "archive-restore",
+    "label": "取消封存",
+    "category": "content",
+    "categoryLabel": "檔案與內容"
+  },
+  {
+    "name": "image-plus",
+    "label": "加入圖片",
+    "category": "media",
+    "categoryLabel": "圖片與媒體"
+  },
+  {
+    "name": "arrow-left-right",
+    "label": "左右交換",
+    "category": "navigation",
+    "categoryLabel": "方向與移動"
   },
   {
     "name": "arrow-big-up",
@@ -168,56 +119,15 @@
     ]
   },
   {
-    "name": "heading-1",
-    "label": "一級標題",
-    "category": "editor",
-    "categoryLabel": "內容編輯",
+    "name": "chart-bar-increasing",
+    "label": "遞增長條圖",
+    "category": "interface",
+    "categoryLabel": "產品介面",
     "keywords": [
-      "h1",
-      "heading01",
-      "heading-01"
-    ]
-  },
-  {
-    "name": "heading-2",
-    "label": "二級標題",
-    "category": "editor",
-    "categoryLabel": "內容編輯",
-    "keywords": [
-      "h2",
-      "heading02",
-      "heading-02"
-    ]
-  },
-  {
-    "name": "heading-3",
-    "label": "三級標題",
-    "category": "editor",
-    "categoryLabel": "內容編輯",
-    "keywords": [
-      "h3",
-      "heading03",
-      "heading-03"
-    ]
-  },
-  {
-    "name": "pilcrow",
-    "label": "段落符號",
-    "category": "editor",
-    "categoryLabel": "內容編輯",
-    "keywords": [
-      "paragraph",
-      "段落"
-    ]
-  },
-  {
-    "name": "remove-formatting",
-    "label": "清除文字格式",
-    "category": "editor",
-    "categoryLabel": "內容編輯",
-    "keywords": [
-      "clear-formatting",
-      "清除格式"
+      "chart-column-increasing",
+      "chartcolumnincreasing",
+      "報價成效",
+      "成長"
     ]
   },
   {
@@ -232,27 +142,231 @@
     ]
   },
   {
-    "name": "resize",
-    "label": "調整尺寸",
-    "category": "layout",
-    "categoryLabel": "應用與版面",
-    "keywords": [
-      "scale",
-      "resizing",
-      "縮放",
-      "調整大小"
-    ]
+    "name": "line-segment",
+    "label": "線段工具",
+    "category": "design-tools",
+    "categoryLabel": "畫布編輯工具"
   },
   {
-    "name": "chart-bar-increasing",
-    "label": "遞增長條圖",
+    "name": "polyline",
+    "label": "折線工具",
+    "category": "design-tools",
+    "categoryLabel": "畫布編輯工具"
+  },
+  {
+    "name": "right-triangle",
+    "label": "直角三角形",
+    "category": "design-tools",
+    "categoryLabel": "畫布編輯工具"
+  },
+  {
+    "name": "parallelogram",
+    "label": "平行四邊形",
+    "category": "design-tools",
+    "categoryLabel": "畫布編輯工具"
+  },
+  {
+    "name": "trapezoid",
+    "label": "梯形",
+    "category": "design-tools",
+    "categoryLabel": "畫布編輯工具"
+  },
+  {
+    "name": "eject",
+    "label": "退出媒體",
+    "category": "playback",
+    "categoryLabel": "播放與會議"
+  },
+  {
+    "name": "match-whole-word",
+    "label": "全字匹配",
+    "category": "editor",
+    "categoryLabel": "內容編輯"
+  },
+  {
+    "name": "spell-check",
+    "label": "拼字檢查",
+    "category": "editor",
+    "categoryLabel": "內容編輯"
+  },
+  {
+    "name": "replace",
+    "label": "取代一處",
+    "category": "editor",
+    "categoryLabel": "內容編輯"
+  },
+  {
+    "name": "replace-all",
+    "label": "全部取代",
+    "category": "editor",
+    "categoryLabel": "內容編輯"
+  },
+  {
+    "name": "signal-bars",
+    "label": "行動訊號強度",
+    "category": "connectivity",
+    "categoryLabel": "時間主題與連線"
+  },
+  {
+    "name": "layer-mask",
+    "label": "圖層遮色片",
+    "category": "design-tools",
+    "categoryLabel": "畫布編輯工具"
+  },
+  {
+    "name": "incognito",
+    "label": "無痕瀏覽",
     "category": "interface",
-    "categoryLabel": "產品介面",
-    "keywords": [
-      "chart-column-increasing",
-      "chartcolumnincreasing",
-      "報價成效",
-      "成長"
-    ]
+    "categoryLabel": "產品介面"
+  },
+  {
+    "name": "page-break",
+    "label": "分頁符號",
+    "category": "editor",
+    "categoryLabel": "內容編輯"
+  },
+  {
+    "name": "tab-stop-left",
+    "label": "靠左定位點",
+    "category": "typography",
+    "categoryLabel": "進階文字編輯"
+  },
+  {
+    "name": "tab-stop-right",
+    "label": "靠右定位點",
+    "category": "typography",
+    "categoryLabel": "進階文字編輯"
+  },
+  {
+    "name": "tab-stop-center",
+    "label": "置中定位點",
+    "category": "typography",
+    "categoryLabel": "進階文字編輯"
+  },
+  {
+    "name": "tab-stop-decimal",
+    "label": "小數點定位",
+    "category": "typography",
+    "categoryLabel": "進階文字編輯"
+  },
+  {
+    "name": "hotspot",
+    "label": "個人熱點",
+    "category": "connectivity",
+    "categoryLabel": "時間主題與連線"
+  },
+  {
+    "name": "sim-card",
+    "label": "SIM 卡",
+    "category": "connectivity",
+    "categoryLabel": "時間主題與連線"
+  },
+  {
+    "name": "screen-rotate",
+    "label": "旋轉螢幕",
+    "category": "connectivity",
+    "categoryLabel": "時間主題與連線"
+  },
+  {
+    "name": "bell-snooze",
+    "label": "暫停通知",
+    "category": "interface",
+    "categoryLabel": "產品介面"
+  },
+  {
+    "name": "image-wrap-left",
+    "label": "圖片置左並環繞",
+    "category": "editor",
+    "categoryLabel": "內容編輯"
+  },
+  {
+    "name": "image-wrap-right",
+    "label": "圖片置右並環繞",
+    "category": "editor",
+    "categoryLabel": "內容編輯"
+  },
+  {
+    "name": "image-inline",
+    "label": "行內圖片",
+    "category": "editor",
+    "categoryLabel": "內容編輯"
+  },
+  {
+    "name": "footnote",
+    "label": "註腳",
+    "category": "editor",
+    "categoryLabel": "內容編輯"
+  },
+  {
+    "name": "selection-invert",
+    "label": "反向選取",
+    "category": "design-tools",
+    "categoryLabel": "畫布編輯工具"
+  },
+  {
+    "name": "decimal-increase",
+    "label": "增加小數位數",
+    "category": "table-layout",
+    "categoryLabel": "表格結構與面板"
+  },
+  {
+    "name": "decimal-decrease",
+    "label": "減少小數位數",
+    "category": "table-layout",
+    "categoryLabel": "表格結構與面板"
+  },
+  {
+    "name": "drop-cap",
+    "label": "首字放大",
+    "category": "typography",
+    "categoryLabel": "進階文字編輯"
+  },
+  {
+    "name": "spiral",
+    "label": "螺旋工具",
+    "category": "design-tools",
+    "categoryLabel": "畫布編輯工具"
+  },
+  {
+    "name": "sector",
+    "label": "圓扇形",
+    "category": "design-tools",
+    "categoryLabel": "畫布編輯工具"
+  },
+  {
+    "name": "color-curves",
+    "label": "色調曲線",
+    "category": "design-tools",
+    "categoryLabel": "畫布編輯工具"
+  },
+  {
+    "name": "color-levels",
+    "label": "色階",
+    "category": "design-tools",
+    "categoryLabel": "畫布編輯工具"
+  },
+  {
+    "name": "table-transpose",
+    "label": "表格轉置",
+    "category": "table-layout",
+    "categoryLabel": "表格結構與面板"
+  },
+  {
+    "name": "signature",
+    "label": "簽名",
+    "category": "forms",
+    "categoryLabel": "表單與回饋"
+  },
+  {
+    "name": "workflow-parallel",
+    "label": "平行分支",
+    "category": "systems",
+    "categoryLabel": "系統與工作流程"
+  },
+  {
+    "name": "workflow-join",
+    "label": "匯合流程",
+    "category": "systems",
+    "categoryLabel": "系統與工作流程"
   }
 ]

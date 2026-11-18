@@ -31,10 +31,14 @@ export function shoe({g,p,l,small}){
  return enclosedDetails(body,[l(2.5,18,21.5,18),l(8,12,11,9),...small?[]:[l(12,14,15,11)]],g);
 }
 
+export function roundSpectacleParts({g,c,p},{leftX=6,rightX=18,y=15,radius=4}={}){
+ const left=c(leftX,y,radius),right=c(rightX,y,radius),start=leftX+radius,end=rightX-radius,arc=(end-start)/2;
+ const bridge=exteriorDetails(left,[p(`M${start} ${y}A${arc} ${arc} 0 0 1 ${end} ${y}`)],g).slice(1);
+ return {left,right,bridge:exteriorDetails(right,bridge,g).slice(1)};
+}
 export function glasses({g,c,p}){
- const left=c(6,15,4),right=c(18,15,4);
- const bridge=exteriorDetails(left,[p('M10 15A2 2 0 0 1 14 15')],g).slice(1);
- return [...exteriorDetails(left,[p('M2.5 13L5.2 6.5C5.7 5.3 6.5 5 8 5')],g),...exteriorDetails(right,[p('M21.5 13L18.8 6.5C18.3 5.3 17.5 5 16 5')],g),...exteriorDetails(right,bridge,g).slice(1)];
+ const {left,right,bridge}=roundSpectacleParts({g,c,p});
+ return [...exteriorDetails(left,[p('M2.5 13L5.2 6.5C5.7 5.3 6.5 5 8 5')],g),...exteriorDetails(right,[p('M21.5 13L18.8 6.5C18.3 5.3 17.5 5 16 5')],g),...bridge];
 }
 export function sunglasses({g,p,l,o}){
  const left=p('M2 12H10V16C10 21 2 21 2 16Z'),right=p('M14 12H22V16C22 21 14 21 14 16Z');

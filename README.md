@@ -2,11 +2,9 @@
 
 微圓、簡約，為 Dashboard、App 與 Web 介面設計的 SVG 圖示。
 
-Master Icons 著重輪廓、比例、留白與小尺寸的細節取捨。目前為 **0.1.0-alpha.0**，包含 **1,223 個命名圖示、798 個基本概念**；介面圖示提供 16 / 20 / 24 三種光學尺寸，以及 sharp / soft / rounded 三種角型；品牌圖示按尺寸調整留白、共用角型圖稿，共 **11,007 份 SVG**。方向與狀態版本計入命名數，搜尋別名不另計數。
+Master Icons 著重輪廓、比例、留白與小尺寸的細節取捨。目前為 **0.1.0-alpha.0**。本次新增候選已依實際用途重新選圖及重製，包含 **924 個命名圖示、8,316 份 SVG**。重製紀錄見 [逐顆重製與收錄紀錄](docs/review/rebuild-01/index.html)。
 
-[產品介面新增圖示與原生尺寸審稿](docs/review/product-ui-01/index.html) · [使用端替代對照](docs/review/product-ui-01/substitutions.md)
 
-[任務與操作介面 100 顆逐顆審稿](docs/review/operations-01/index.html) · [原生圖示總覽](docs/review/operations-01/overview.png)
 
 ## 設計與輸出
 

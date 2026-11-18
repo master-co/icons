@@ -1,0 +1,22 @@
+[
+  {
+    "name": "milestone-complete",
+    "reviewed": true,
+    "purpose": "在時間軸單一標記中同時表達里程碑類型與完成狀態，與未完成菱形及一般任務完成圓圈並列。",
+    "recognitionCues": "與 diamond 完全共源的菱形輪廓，內部使用 check-circle 共源短勾。",
+    "confusableWith": ["diamond", "check-circle", "check"],
+    "sourceObservation": "Lucide diamond 的圓角較大，框內留白寬；本稿維持既有菱形的較緊角型，避免未完成／完成切換時輪廓跳動。Tabler circle-check 的短勾保有安靜的四周留白，作為內勾密度比較。兩者只是分別比較外框與完成記號的構造參考，並非同語意成品。",
+    "reason": "直接取用 diamond 繪製函式，並把既有 check-circle 內勾抽成可縮放及定位的共用母型，預設幾何不變。首次原生像素檢查發現右上端貼近邊界，於是重新平衡內勾位置及長度；粗線端再減少臂長，不改外框，不以挖斷輪廓補救。",
+    "comparison": "最新稿與兩份來源重新並看後，菱形外框比 Lucide 更收斂，符合本庫原型；內勾保持 Tabler 參考所顯示的短臂和清楚空腔。16px小勾仍有長短臂之別，重心略往左下平衡右上長臂；24px粗線端四周保有通道，不貼框。三尺寸、三角型與明暗DPR1／2皆已實際查看，並與未完成菱形、一般完成圓圈並排確認差異。",
+    "dashes": false,
+    "dashReason": "完成里程碑具有確定類型和狀態，外框與勾均維持實線；虛線會誤示尚未完成。",
+    "opacity": false,
+    "opacityReason": "完成狀態由內勾表達，不依賴漸淡或顏色。",
+    "usageEvidence": [
+      "https://help.asana.com/s/article/different-types-of-tasks?language=en_US",
+      "https://help.asana.com/s/article/plan-and-execute-projects-with-timeline",
+      "https://help.asana.com/s/article/project-progress-and-status-updates?language=en_US"
+    ],
+    "usageEvidenceLimit": "Sources establish milestone type and completion in project/timeline workflows. This single outline marker is our design, not a claim that Asana uses these exact paths. Two pinned external SVGs are structural references only."
+  }
+]

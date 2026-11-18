@@ -1,0 +1,44 @@
+[
+  {
+    "dashes": false,
+    "dashReason": "格線、文字行及新增記號是確定結構，沒有隱藏邊界。",
+    "opacity": false,
+    "opacityReason": "表格輪廓和加號均需同等清楚，不使用淡化。",
+    "reviewed": true,
+    "name": "table-row-insert-above",
+    "purpose": "表格工具列的向上插入列命令，與其他三個插入位置並列。",
+    "recognitionCues": "一條表格列／欄輪廓，加號位於要插入的一側。",
+    "confusableWith": [
+      "table-row-add",
+      "plus",
+      "table"
+    ],
+    "sourceObservation": "Tabler 與 MDI 的同語意參考都以加號的位置交代插入側；MDI 的分格較密，Tabler 的描邊留白較多。",
+    "reason": "直接旋轉既有 table-row-add 的實際繪製結果 180 度，共用框、加號、角型和光學尺寸，不再重新組一套近似輪廓。",
+    "comparison": "最新稿與兩份來源並列後，保持既有母型單一狹長框的簡潔度，加號完整獨立於框外。16px 最粗描邊下兩個部件仍分離，四個插入位置並排時框長、加號尺度一致；三尺寸、三角型及明暗 DPR 1／2 均已查看。",
+    "usageEvidence": [
+      "/Users/aron/haoban/packages/editor/src/editor.components/EditorInstance.svelte:1778"
+    ]
+  },
+  {
+    "dashes": false,
+    "dashReason": "格線、文字行及新增記號是確定結構，沒有隱藏邊界。",
+    "opacity": false,
+    "opacityReason": "表格輪廓和加號均需同等清楚，不使用淡化。",
+    "reviewed": true,
+    "name": "table-column-insert-left",
+    "purpose": "表格工具列的向左插入欄命令，與其他三個插入位置並列。",
+    "recognitionCues": "一條表格列／欄輪廓，加號位於要插入的一側。",
+    "confusableWith": [
+      "table-column-add",
+      "plus",
+      "table"
+    ],
+    "sourceObservation": "Tabler 與 MDI 的同語意參考都以加號的位置交代插入側；MDI 的分格較密，Tabler 的描邊留白較多。",
+    "reason": "直接旋轉既有 table-row-add 的實際繪製結果 90 度，共用框、加號、角型和光學尺寸，不再重新組一套近似輪廓。",
+    "comparison": "最新稿與兩份來源並列後，保持既有母型單一狹長框的簡潔度，加號完整獨立於框外。16px 最粗描邊下兩個部件仍分離，四個插入位置並排時框長、加號尺度一致；三尺寸、三角型及明暗 DPR 1／2 均已查看。",
+    "usageEvidence": [
+      "/Users/aron/haoban/packages/editor/src/editor.components/EditorInstance.svelte:1778"
+    ]
+  }
+]

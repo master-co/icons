@@ -1,0 +1,59 @@
+[
+  {
+    "name": "heading-1",
+    "purpose": "編輯器的標題 1 層級命令；與其他層級並列時需要以數字區分，通用 heading 無法表達層級。",
+    "recognitionCues": "共用既有 heading 的 H 構造；斜起筆與直立主幹，省略底部襯線。",
+    "confusableWith": [
+      "heading",
+      "bold",
+      "text"
+    ],
+    "sourceObservation": "Lucide 使用無襯線 H 與短斜起筆；Tabler 的 H 與數字都有襯線。沿用本庫無襯線 heading，1 的斜肩只佔數字字面的上部。",
+    "reason": "從空白重新配置原生字面；H 透過 headingStem 共源，數字使用獨立的 16／20／24 字面範圍。斜起筆與直立主幹，省略底部襯線。",
+    "comparison": "1 的起筆不與 H 右幹相碰，沒有多餘底座。與來源並看，Lucide 的數字較短小，本稿提高數字字高以增加 16px 可讀性；Tabler 的襯線沒有移入本庫。線寬兩端仍保留 H 與數字的間隔。",
+    "dashes": false,
+    "dashReason": "完整字形表示固定標題層級，沒有隱藏或未完成邊界。",
+    "usageEvidence": [
+      "/Users/aron/haoban/packages/editor/src/commands.svelte.ts:27"
+    ],
+    "reviewed": true
+  },
+  {
+    "name": "heading-2",
+    "purpose": "編輯器的標題 2 層級命令；與其他層級並列時需要以數字區分，通用 heading 無法表達層級。",
+    "recognitionCues": "共用既有 heading 的 H 構造；圓肩、斜腹與水平足，和 3 的雙弧區分。",
+    "confusableWith": [
+      "heading",
+      "bold",
+      "text"
+    ],
+    "sourceObservation": "Lucide、Tabler 都以彎肩與斜腹帶到底線；Tabler 的底線較平直。以兩段曲線連接圓肩與斜腹，底部保留明確水平足。",
+    "reason": "從空白重新配置原生字面；H 透過 headingStem 共源，數字使用獨立的 16／20／24 字面範圍。圓肩、斜腹與水平足，和 3 的雙弧區分。",
+    "comparison": "2 的上肩飽滿而不形成微小內孔，斜腹與水平足在 16px 仍分明。與來源並排，本稿數字較高，和 H 的空隙足夠；24px 沒有尖銳的肩部折點，粗線下也不讀成 3。",
+    "dashes": false,
+    "dashReason": "完整字形表示固定標題層級，沒有隱藏或未完成邊界。",
+    "usageEvidence": [
+      "/Users/aron/haoban/packages/editor/src/commands.svelte.ts:27"
+    ],
+    "reviewed": true
+  },
+  {
+    "name": "heading-3",
+    "purpose": "編輯器的標題 3 層級命令；與其他層級並列時需要以數字區分，通用 heading 無法表達層級。",
+    "recognitionCues": "共用既有 heading 的 H 構造；上下雙弧與內收腰部，保持兩個向左開口。",
+    "confusableWith": [
+      "heading",
+      "bold",
+      "text"
+    ],
+    "sourceObservation": "Lucide 的雙弧上小下大；Tabler 的中腰較尖。本稿採上下弧在中腰回折的連續字形，腰部不增加橫槓或封閉小孔。",
+    "reason": "從空白重新配置原生字面；H 透過 headingStem 共源，數字使用獨立的 16／20／24 字面範圍。上下雙弧與內收腰部，保持兩個向左開口。",
+    "comparison": "3 的雙弧在 16px 都保留向左開口，下弧略飽滿但不垂落。與來源比較，中腰沒有額外粗塊；細線端仍清楚是兩段弧，粗線端與 H 的間隙未消失。",
+    "dashes": false,
+    "dashReason": "完整字形表示固定標題層級，沒有隱藏或未完成邊界。",
+    "usageEvidence": [
+      "/Users/aron/haoban/packages/editor/src/commands.svelte.ts:27"
+    ],
+    "reviewed": true
+  }
+]

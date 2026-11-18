@@ -1,0 +1,99 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "viewed": [
+    "light-1.png",
+    "dark-1.png"
+  ],
+  "sizes": [
+    16,
+    20,
+    24
+  ],
+  "dpr": [
+    1
+  ],
+  "evidence": [
+    {
+      "path": "docs/review/rebuild-01/substitution-object-context/light-1.png",
+      "sha256": "815753e173a724888f955941910e3cb0412dc5095185a093a2b0a686d5518054"
+    },
+    {
+      "path": "docs/review/rebuild-01/substitution-object-context/dark-1.png",
+      "sha256": "be0ad00a5fef1f9d3a4cb6bb2eeffa676340e76944cfe1dc9dbab83175ded7a4"
+    }
+  ],
+  "scope": "Completes the visual context records for previously excluded names. Existing mother icons are reused without geometry changes. No rejected session drawings retrieved; new scenario pages are static visual evidence, not implemented application actions.",
+  "items": [
+    {
+      "name": "folder-copy",
+      "alternative": "copy",
+      "context": "已選取資料夾「設計稿」",
+      "label": "複製",
+      "reason": "檔案總管已選取資料夾，複製命令以通用 copy 表示，資料夾輪廓不增加操作資訊。"
+    },
+    {
+      "name": "block-copy",
+      "alternative": "copy",
+      "context": "段落區塊選單",
+      "label": "複製區塊",
+      "reason": "區塊把手選單已限定目標，複製區塊與複製其他物件的動作一致。"
+    },
+    {
+      "name": "block-delete",
+      "alternative": "trash",
+      "context": "段落區塊選單",
+      "label": "刪除區塊",
+      "reason": "區塊的選取範圍或操作選單已指定刪除對象；使用 trash 表示刪除即可，不需要額外的小區塊外框。"
+    },
+    {
+      "name": "message-pen",
+      "alternative": "pencil",
+      "context": "留言操作選單",
+      "label": "編輯",
+      "reason": "留言的操作選單或編輯按鈕已指定對象；既有 pencil 表示編輯，不必再用訊息框疊一支小筆。"
+    },
+    {
+      "name": "message-x",
+      "alternative": "trash",
+      "context": "留言操作選單",
+      "label": "刪除留言",
+      "reason": "此候選的原用途是刪除留言；trash 比訊息框加 x 更能區分刪除內容與關閉對話窗，物件由留言選單交代。"
+    },
+    {
+      "name": "thread-next",
+      "alternative": "chevron-right",
+      "context": "討論 · 2 / 8",
+      "label": "下一則",
+      "reason": "討論檢視器內的下一則導覽，主要辨識是向後一項移動；現有右折角已足夠，訊息外框不帶來必要新資訊。"
+    },
+    {
+      "name": "thread-previous",
+      "alternative": "chevron-left",
+      "context": "討論 · 2 / 8",
+      "label": "上一則",
+      "reason": "討論檢視器內的上一則導覽，主要辨識是向前一項移動；現有左折角已足夠，訊息外框只重複所在情境。"
+    },
+    {
+      "name": "page-duplicate",
+      "alternative": "copy",
+      "context": "頁面「產品規格」選單",
+      "label": "建立副本",
+      "reason": "頁面清單的更多選單已限定頁面，重疊頁腳只會重複目標類型。"
+    },
+    {
+      "name": "version-restore",
+      "alternative": "rotate-left",
+      "context": "版本歷史 · 2026/11/17",
+      "label": "還原此版本",
+      "reason": "版本歷史中將文件恢復為所選版本，使用 rotate-left 表示回轉還原即可；版本目標由歷史列表交代，不再疊文件或時鐘。"
+    },
+    {
+      "name": "version-save",
+      "alternative": "save",
+      "context": "版本歷史",
+      "label": "儲存目前版本",
+      "reason": "版本面板內的保存版本或建立快照已有標籤及所在情境；既有 save 能表達保存，額外的版本框或文件徽標沒有必要資訊。"
+    }
+  ]
+}

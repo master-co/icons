@@ -1,0 +1,58 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "viewed": [
+    "light.png",
+    "dark.png"
+  ],
+  "items": [
+    {
+      "name": "mail-unread",
+      "alternative": "mail",
+      "context": "收件匣列表 · 未讀郵件與已讀郵件",
+      "reason": "封口信封已能表示未讀信件，可與既有 mail-open 的開口信封區分；未讀強調由粗體、圓點或狀態欄處理，不需要另一顆信封加圓點。"
+    },
+    {
+      "name": "table-delete",
+      "alternative": "trash",
+      "context": "選取表格的操作選單 · 刪除整張表格",
+      "reason": "選取狀態與選單已限定操作對象，trash 配合刪除表格標籤即可；表格的刪列、刪欄則仍用各自有方向的命令，無須再造表格加垃圾桶。"
+    },
+    {
+      "name": "page-add",
+      "alternative": "plus",
+      "context": "文件側欄 · 頁面清單末端的新增頁面按鈕",
+      "reason": "頁面清單已交代新增對象，plus 可清楚表示建立新項目；使用在一般檔案工具列時也已有 file-plus，不需要另一套頁面加號。"
+    },
+    {
+      "name": "frame-plus",
+      "alternative": "frame",
+      "context": "設計工具列 · 新增畫板／Frame 工具",
+      "reason": "frame 本身就是建立畫板工具的識別，點選後在畫布拖曳建立；加號沒有增加工具模式資訊，反而讓四條邊線更密。"
+    },
+    {
+      "name": "trash-empty",
+      "alternative": "trash",
+      "context": "垃圾桶頁面 · 清空垃圾桶",
+      "reason": "垃圾桶頁面與清空文字已交代整批永久移除的範圍；既有 trash 能表示刪除，不需要另一種空桶或清空徽標。操作仍應由介面文字說明結果。"
+    },
+    {
+      "name": "trash-restore",
+      "alternative": "rotate-left",
+      "context": "垃圾桶中的已刪除項目 · 還原",
+      "reason": "目前項目在垃圾桶的狀態已交代來源，回轉箭頭可表示恢復；與永久刪除的 trash 有明確輪廓差異，不需垃圾桶再疊還原箭頭。"
+    },
+    {
+      "name": "file-history",
+      "alternative": "history",
+      "context": "文件操作選單 · 版本紀錄",
+      "reason": "文件已開啟，history 可表示查看歷次異動；額外檔案外框只重複目前對象，並壓縮歷史箭頭與時鐘。"
+    },
+    {
+      "name": "workflow-log",
+      "alternative": "history",
+      "context": "工作流程詳情 · 執行紀錄",
+      "reason": "工作流程詳情已限定紀錄對象，history 配合執行紀錄標籤即可；不用把流程節點與清單線混成專用變體。"
+    }
+  ]
+}

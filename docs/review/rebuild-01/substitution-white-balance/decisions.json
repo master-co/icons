@@ -1,0 +1,88 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "skillVersion": "0.5.20",
+  "viewed": [
+    "light.png",
+    "dark.png",
+    "changed-light.png",
+    "changed-dark.png"
+  ],
+  "fontSizes": [
+    16,
+    20,
+    24
+  ],
+  "themes": [
+    "light",
+    "dark"
+  ],
+  "screenshotDpr": [
+    1
+  ],
+  "interactionDpr": [
+    1,
+    2
+  ],
+  "scope": "Labeled white-balance adjustment panel; not an unconditional substitute for icon-only mobile tool selectors. Native controls and simple RGB illustration; no public geometry or aliases changed.",
+  "userApproval": "pending",
+  "primaryEvidence": "work/rebuild-01/white-balance-primary-evidence.json",
+  "evidence": [
+    {
+      "path": "docs/review/rebuild-01/substitution-white-balance/light.png",
+      "sha256": "f83560af6a030feaa8440e71997b5c5aa25577dff7aa6db33fa455b6835ac796"
+    },
+    {
+      "path": "docs/review/rebuild-01/substitution-white-balance/dark.png",
+      "sha256": "5586e8478aad31ffa22a13dfe4b008db1b29be9f78e0a360f8db8152ef1a0a77"
+    },
+    {
+      "path": "docs/review/rebuild-01/substitution-white-balance/changed-light.png",
+      "sha256": "d0d3678d0e19671393c9cf7803fd5bed6a954343d4810edf436c11d99584333c"
+    },
+    {
+      "path": "docs/review/rebuild-01/substitution-white-balance/changed-dark.png",
+      "sha256": "98955985d71eebaf6cece730567b18c3c06da1aa9d8fccd8f16df8bbf3257791"
+    }
+  ],
+  "items": [
+    {
+      "name": "color-temperature",
+      "label": "色溫",
+      "alternative": null,
+      "alternativeLabel": "具名滑桿、數值與兩端方向",
+      "replacementKind": "native-content",
+      "context": "照片白平衡與局部色彩調整面板",
+      "reason": "色溫是連續調整值。具名滑桿、目前數值及偏冷藍／偏暖黃的端點標籤已能完整表達設定。既有 thermometer 只提供一般物件或色彩線索；沒有必要把它改畫成另一個含義不明的複合符號。",
+      "replacementScope": "適用於可顯示名稱與數值的編輯面板；未聲稱能取代手機純圖示調整輪盤。若有具體受限工具列需求，需連同同列命令另行評估。",
+      "nativePreview": "<span>色溫 <output>0</output> · 偏冷藍／偏暖黃</span>",
+      "comparisonMarkup": "<span style=\"font-size:16px;margin-right:12px\">色溫 <output>0</output></span><span style=\"font-size:20px;margin-right:12px\">色溫 <output>0</output></span><span style=\"font-size:24px;margin-right:12px\">色溫 <output>0</output></span>",
+      "sample": "<style>[data-white-balance] label{display:grid;grid-template-columns:44px 1fr 38px;align-items:center;gap:8px;margin:12px 0}[data-white-balance] input{min-width:60px;width:100%}[data-white-balance] output{text-align:right;font-variant-numeric:tabular-nums}[data-white-balance] .ends{display:flex;justify-content:space-between;font-size:12px}[data-white-balance] .swatches{display:flex;height:64px;gap:2px;margin:12px 0}[data-white-balance] .swatches span{flex:1}[data-white-balance] .explanation{font-size:12px}</style><div data-white-balance><label>色溫<input aria-label=\"色溫\" data-temperature type=\"range\" min=\"-100\" max=\"100\" step=\"1\" value=\"0\"><output data-temperature-value>0</output></label><div class=\"ends\"><span>偏冷（藍）</span><span>偏暖（黃）</span></div><label>色調<input aria-label=\"色調\" data-tint type=\"range\" min=\"-100\" max=\"100\" step=\"1\" value=\"0\"><output data-tint-value>0</output></label><div class=\"ends\"><span>偏綠</span><span>偏洋紅</span></div><p>中性色塊變化預覽</p><div class=\"swatches\" aria-label=\"色塊預覽\"><span data-gray=\"60\"></span><span data-gray=\"105\"></span><span data-gray=\"150\"></span><span data-gray=\"195\"></span></div><p class=\"explanation\">色溫與色調分開調整；0 為此範例的中性位置。</p><button data-white-reset>重設白平衡</button><p role=\"status\" data-white-status></p></div>",
+      "searchAliasDecision": "不將 color-temperature 加入 thermometer 的搜尋同義詞；具體白平衡參數與通用物件並非同義。",
+      "usageEvidence": [
+        "https://helpx.adobe.com/lightroom/desktop/edit-photos/edit-photos.html"
+      ],
+      "usageEvidenceLimit": "Adobe documents Temp and Tint as separate local-adjustment sliders. This native control demo uses simple RGB swatches to show independent axes, not a reproduction of Lightroom or a camera-accurate RAW white-balance algorithm.",
+      "visualObservation": "明暗背景中的兩條滑桿各有名稱、數值與方向端點。色溫改變冷暖、色調改變綠／洋紅，互不覆寫；色塊示意會依兩者一起更新。文字以 16／20／24 字級比較，不冒充固定尺寸圖示。已目視初始與變更狀態共四張截圖。"
+    },
+    {
+      "name": "color-tint",
+      "label": "色調",
+      "alternative": null,
+      "alternativeLabel": "具名滑桿、數值與兩端方向",
+      "replacementKind": "native-content",
+      "context": "照片白平衡與局部色彩調整面板",
+      "reason": "色調是連續調整值。具名滑桿、目前數值及偏綠／偏洋紅的端點標籤已能完整表達設定。既有 palette 只提供一般物件或色彩線索；沒有必要把它改畫成另一個含義不明的複合符號。",
+      "replacementScope": "適用於可顯示名稱與數值的編輯面板；未聲稱能取代手機純圖示調整輪盤。若有具體受限工具列需求，需連同同列命令另行評估。",
+      "nativePreview": "<span>色調 <output>0</output> · 偏綠／偏洋紅</span>",
+      "comparisonMarkup": "<span style=\"font-size:16px;margin-right:12px\">色調 <output>0</output></span><span style=\"font-size:20px;margin-right:12px\">色調 <output>0</output></span><span style=\"font-size:24px;margin-right:12px\">色調 <output>0</output></span>",
+      "sample": "<style>[data-white-balance] label{display:grid;grid-template-columns:44px 1fr 38px;align-items:center;gap:8px;margin:12px 0}[data-white-balance] input{min-width:60px;width:100%}[data-white-balance] output{text-align:right;font-variant-numeric:tabular-nums}[data-white-balance] .ends{display:flex;justify-content:space-between;font-size:12px}[data-white-balance] .swatches{display:flex;height:64px;gap:2px;margin:12px 0}[data-white-balance] .swatches span{flex:1}[data-white-balance] .explanation{font-size:12px}</style><div data-white-balance><label>色溫<input aria-label=\"色溫\" data-temperature type=\"range\" min=\"-100\" max=\"100\" step=\"1\" value=\"0\"><output data-temperature-value>0</output></label><div class=\"ends\"><span>偏冷（藍）</span><span>偏暖（黃）</span></div><label>色調<input aria-label=\"色調\" data-tint type=\"range\" min=\"-100\" max=\"100\" step=\"1\" value=\"0\"><output data-tint-value>0</output></label><div class=\"ends\"><span>偏綠</span><span>偏洋紅</span></div><p>中性色塊變化預覽</p><div class=\"swatches\" aria-label=\"色塊預覽\"><span data-gray=\"60\"></span><span data-gray=\"105\"></span><span data-gray=\"150\"></span><span data-gray=\"195\"></span></div><p class=\"explanation\">色溫與色調分開調整；0 為此範例的中性位置。</p><button data-white-reset>重設白平衡</button><p role=\"status\" data-white-status></p></div>",
+      "searchAliasDecision": "不將 color-tint 加入 palette 的搜尋同義詞；具體白平衡參數與通用物件並非同義。",
+      "usageEvidence": [
+        "https://helpx.adobe.com/lightroom/desktop/edit-photos/edit-photos.html"
+      ],
+      "usageEvidenceLimit": "Adobe documents Temp and Tint as separate local-adjustment sliders. This native control demo uses simple RGB swatches to show independent axes, not a reproduction of Lightroom or a camera-accurate RAW white-balance algorithm.",
+      "visualObservation": "明暗背景中的兩條滑桿各有名稱、數值與方向端點。色溫改變冷暖、色調改變綠／洋紅，互不覆寫；色塊示意會依兩者一起更新。文字以 16／20／24 字級比較，不冒充固定尺寸圖示。已目視初始與變更狀態共四張截圖。"
+    }
+  ]
+}

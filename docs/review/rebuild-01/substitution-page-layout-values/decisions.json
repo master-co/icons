@@ -1,0 +1,108 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "skillVersion": "0.5.18",
+  "viewed": [
+    "light.png",
+    "dark.png"
+  ],
+  "sizes": [
+    16,
+    20,
+    24
+  ],
+  "themes": [
+    "light",
+    "dark"
+  ],
+  "dpr": [
+    1
+  ],
+  "corner": "soft for existing icons; actual page previews keep natural aspect ratios",
+  "scope": "Four contextual existing-icon entries and six labeled native controls replace ten candidates. No rejected geometry retrieved and no application implementation changed.",
+  "userApproval": "pending",
+  "evidence": [
+    {
+      "path": "docs/review/rebuild-01/substitution-page-layout-values/light.png",
+      "sha256": "8fdaffc9403726ddec36d2c0a8e38111d9f9ee88e0d08a898955e0a25f6e194b"
+    },
+    {
+      "path": "docs/review/rebuild-01/substitution-page-layout-values/dark.png",
+      "sha256": "fe338b42b55fc5815fd1a4006d7e883a23cbfc9237d640e3743d7990456541e0"
+    }
+  ],
+  "items": [
+    {
+      "name": "page-orientation-portrait",
+      "label": "直向紙張",
+      "alternative": null,
+      "alternativeLabel": "文字選項與實際版面預覽",
+      "replacementKind": "native-content",
+      "nativePreview": "<div  style=\"flex:none;width:16px;height:22.627416997969522px;border:1px solid currentColor;padding:3px\"><div style=\"height:100%;background:repeating-linear-gradient(transparent 0 7px,#8887 7px 8px)\"></div></div><div  style=\"flex:none;width:20px;height:28.284271247461902px;border:1px solid currentColor;padding:3px\"><div style=\"height:100%;background:repeating-linear-gradient(transparent 0 7px,#8887 7px 8px)\"></div></div><div  style=\"flex:none;width:24px;height:33.941125496954285px;border:1px solid currentColor;padding:3px\"><div style=\"height:100%;background:repeating-linear-gradient(transparent 0 7px,#8887 7px 8px)\"></div></div>",
+      "comparisonMarkup": "<div  style=\"flex:none;width:16px;height:22.627416997969522px;border:1px solid currentColor;padding:3px\"><div style=\"height:100%;background:repeating-linear-gradient(transparent 0 7px,#8887 7px 8px)\"></div></div><div  style=\"flex:none;width:20px;height:28.284271247461902px;border:1px solid currentColor;padding:3px\"><div style=\"height:100%;background:repeating-linear-gradient(transparent 0 7px,#8887 7px 8px)\"></div></div><div  style=\"flex:none;width:24px;height:33.941125496954285px;border:1px solid currentColor;padding:3px\"><div style=\"height:100%;background:repeating-linear-gradient(transparent 0 7px,#8887 7px 8px)\"></div></div>",
+      "context": "紙張設定 · 同一欄位的兩個方向值",
+      "reason": "紙張方向是尺寸設定值。直接顯示「直向／橫向」與紙張寬高比例，比重新做一顆帶箭頭的文件圖更準確；不將此值混同螢幕旋轉或直向文字。",
+      "replacementScope": "以可讀標籤、目前值及內容預覽表達；不新增固定SVG圖示，也不將候選名強配到近似圖示。",
+      "searchAliasDecision": "No icon alias: native labeled controls and actual layout preview replace this candidate.",
+      "sample": "<fieldset><legend>紙張方向</legend><label style=\"margin-right:12px\"><input type=\"radio\" name=\"page-orientation-portrait\" data-paper-orientation value=\"portrait\" checked>直向</label><label style=\"margin-right:12px\"><input type=\"radio\" name=\"page-orientation-portrait\" data-paper-orientation value=\"landscape\" >橫向</label><div style=\"height:150px;display:flex;align-items:center;justify-content:center\"><div data-orientation-preview style=\"flex:none;width:90px;height:127px;border:1px solid currentColor;padding:10px\"><div style=\"height:100%;background:repeating-linear-gradient(transparent 0 7px,#8887 7px 8px)\"></div></div></div><small>紙張縮圖使用真實比例，並非固定尺寸圖示。</small></fieldset>",
+      "usageEvidence": [
+        "https://help.libreoffice.org/latest/en-US/text/shared/01/05040200.html"
+      ],
+      "visualObservation": "直向紙張的長短邊比例在小縮圖中仍明確，單選控制與較大的內容預覽直接顯示結果；文字內容方向沒有跟著圖框旋轉。"
+    },
+    {
+      "name": "page-orientation-landscape",
+      "label": "橫向紙張",
+      "alternative": null,
+      "alternativeLabel": "文字選項與實際版面預覽",
+      "replacementKind": "native-content",
+      "nativePreview": "<div  style=\"flex:none;width:22.627416997969522px;height:16px;border:1px solid currentColor;padding:3px\"><div style=\"height:100%;background:repeating-linear-gradient(transparent 0 7px,#8887 7px 8px)\"></div></div><div  style=\"flex:none;width:28.284271247461902px;height:20px;border:1px solid currentColor;padding:3px\"><div style=\"height:100%;background:repeating-linear-gradient(transparent 0 7px,#8887 7px 8px)\"></div></div><div  style=\"flex:none;width:33.941125496954285px;height:24px;border:1px solid currentColor;padding:3px\"><div style=\"height:100%;background:repeating-linear-gradient(transparent 0 7px,#8887 7px 8px)\"></div></div>",
+      "comparisonMarkup": "<div  style=\"flex:none;width:22.627416997969522px;height:16px;border:1px solid currentColor;padding:3px\"><div style=\"height:100%;background:repeating-linear-gradient(transparent 0 7px,#8887 7px 8px)\"></div></div><div  style=\"flex:none;width:28.284271247461902px;height:20px;border:1px solid currentColor;padding:3px\"><div style=\"height:100%;background:repeating-linear-gradient(transparent 0 7px,#8887 7px 8px)\"></div></div><div  style=\"flex:none;width:33.941125496954285px;height:24px;border:1px solid currentColor;padding:3px\"><div style=\"height:100%;background:repeating-linear-gradient(transparent 0 7px,#8887 7px 8px)\"></div></div>",
+      "context": "紙張設定 · 同一欄位的兩個方向值",
+      "reason": "紙張方向是尺寸設定值。直接顯示「直向／橫向」與紙張寬高比例，比重新做一顆帶箭頭的文件圖更準確；不將此值混同螢幕旋轉或直向文字。",
+      "replacementScope": "以可讀標籤、目前值及內容預覽表達；不新增固定SVG圖示，也不將候選名強配到近似圖示。",
+      "searchAliasDecision": "No icon alias: native labeled controls and actual layout preview replace this candidate.",
+      "sample": "<fieldset><legend>紙張方向</legend><label style=\"margin-right:12px\"><input type=\"radio\" name=\"page-orientation-landscape\" data-paper-orientation value=\"portrait\" >直向</label><label style=\"margin-right:12px\"><input type=\"radio\" name=\"page-orientation-landscape\" data-paper-orientation value=\"landscape\" checked>橫向</label><div style=\"height:150px;display:flex;align-items:center;justify-content:center\"><div data-orientation-preview style=\"flex:none;width:127px;height:90px;border:1px solid currentColor;padding:10px\"><div style=\"height:100%;background:repeating-linear-gradient(transparent 0 7px,#8887 7px 8px)\"></div></div></div><small>紙張縮圖使用真實比例，並非固定尺寸圖示。</small></fieldset>",
+      "usageEvidence": [
+        "https://help.libreoffice.org/latest/en-US/text/shared/01/05040200.html"
+      ],
+      "visualObservation": "橫向選項和直向並排，預覽保留寬頁及水平文字線，沒有將橫向紙張畫成手機旋轉。縮圖以實際比例呈現而非硬塞正方圖框。"
+    },
+    {
+      "name": "page-margins",
+      "label": "頁面邊界",
+      "alternative": null,
+      "alternativeLabel": "文字選項與實際版面預覽",
+      "replacementKind": "native-content",
+      "nativePreview": "<div  style=\"flex:none;width:30px;height:42px;border:1px solid currentColor;padding:6px\"><div style=\"height:100%;background:repeating-linear-gradient(transparent 0 7px,#8887 7px 8px)\"></div></div>",
+      "comparisonMarkup": "<div  style=\"flex:none;width:30px;height:42px;border:1px solid currentColor;padding:6px\"><div style=\"height:100%;background:repeating-linear-gradient(transparent 0 7px,#8887 7px 8px)\"></div></div>",
+      "context": "頁面設定 · 四邊距離及內容範圍",
+      "reason": "邊界設定需要上、下、左、右的實際距離。ruler 或 maximize 都無法替代四個數值；既然同一面板可展示輸入欄位和留白預覽，不需要再造一張內外套框圖。",
+      "replacementScope": "以可讀標籤、目前值及內容預覽表達；不新增固定SVG圖示，也不將候選名強配到近似圖示。",
+      "searchAliasDecision": "No icon alias: native labeled controls and actual layout preview replace this candidate.",
+      "sample": "<fieldset><legend>頁面邊界（mm）</legend><div style=\"display:grid;grid-template-columns:1fr 1fr;gap:6px\"><label>上 <input aria-label=\"上邊界\" type=\"number\" min=\"0\" max=\"60\" value=\"25\" data-margin-side=\"top\" style=\"width:64px\"></label><label>下 <input aria-label=\"下邊界\" type=\"number\" min=\"0\" max=\"60\" value=\"25\" data-margin-side=\"bottom\" style=\"width:64px\"></label><label>左 <input aria-label=\"左邊界\" type=\"number\" min=\"0\" max=\"60\" value=\"25\" data-margin-side=\"left\" style=\"width:64px\"></label><label>右 <input aria-label=\"右邊界\" type=\"number\" min=\"0\" max=\"60\" value=\"25\" data-margin-side=\"right\" style=\"width:64px\"></label></div><div style=\"margin:12px auto;width:126px\"><div data-margin-preview style=\"flex:none;width:126px;height:178px;border:1px solid currentColor;padding:15px\"><div style=\"height:100%;background:repeating-linear-gradient(transparent 0 7px,#8887 7px 8px)\"></div></div></div></fieldset>",
+      "usageEvidence": [
+        "https://help.libreoffice.org/latest/en-US/text/shared/01/05040200.html"
+      ],
+      "visualObservation": "四個具名數值欄位與紙內留白同頁展示，深淺背景可讀。邊距值能直接核對，細小內外框不必獨自傳遞四個方向及數值。"
+    },
+    {
+      "name": "facing-pages",
+      "label": "對頁檢視",
+      "alternative": null,
+      "alternativeLabel": "文字選項與實際版面預覽",
+      "replacementKind": "native-content",
+      "nativePreview": "<span>單頁 ／ 對頁</span>",
+      "comparisonMarkup": "<span>單頁 ／ 對頁</span>",
+      "context": "檢視設定 · 單頁與對頁",
+      "reason": "對頁是閱讀視圖的值。以單頁／對頁單選控制與實際兩頁排列比較，即可和單頁區分；book-open 容易被讀成開啟書籍，不強行指派近似圖示。",
+      "replacementScope": "以可讀標籤、目前值及內容預覽表達；不新增固定SVG圖示，也不將候選名強配到近似圖示。",
+      "searchAliasDecision": "No icon alias: native labeled controls and actual layout preview replace this candidate.",
+      "sample": "<fieldset><legend>頁面檢視</legend><label style=\"margin-right:12px\"><input type=\"radio\" name=\"facing-pages\" data-page-layout value=\"single\" >單頁</label><label style=\"margin-right:12px\"><input type=\"radio\" name=\"facing-pages\" data-page-layout value=\"facing\" checked>對頁</label><div style=\"display:flex;justify-content:center;gap:5px;margin-top:14px\"><div  style=\"flex:none;width:70px;height:99px;border:1px solid currentColor;padding:8px\"><div style=\"height:100%;background:repeating-linear-gradient(transparent 0 7px,#8887 7px 8px)\"></div></div><div data-second-page style=\"flex:none;width:70px;height:99px;border:1px solid currentColor;padding:8px\"><div style=\"height:100%;background:repeating-linear-gradient(transparent 0 7px,#8887 7px 8px)\"></div></div></div><small>預覽顯示閱讀排列；不改動紙張方向或裝訂邊界。</small></fieldset>",
+      "usageEvidence": [
+        "https://help.libreoffice.org/latest/en-US/text/shared/01/03010000.html"
+      ],
+      "visualObservation": "單頁／對頁選項保留明確選取狀態；對頁示例的兩張紙並排且留有頁間隙。未以書本圖暗示另開閱讀工具，也未把對頁視圖等同鏡像邊界。"
+    }
+  ]
+}

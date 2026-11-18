@@ -29,5 +29,11 @@ test('source watching ignores Turbo logs and survives atomic editor saves',async
   const previous=fileChanges;
   await writeFile(source,'third save');
   await waitFor(()=>fileChanges>previous);
+  const beforeDeletion=fileChanges;
+  await rm(source);
+  await waitFor(()=>fileChanges>beforeDeletion);
+  const beforeRecreation=fileChanges;
+  await writeFile(source,'recreated');
+  await waitFor(()=>fileChanges>beforeRecreation);
  }finally{directory.close();file.close();await rm(folder,{recursive:true,force:true});}
 });

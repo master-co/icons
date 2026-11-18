@@ -1,0 +1,74 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "skillVersion": "0.5.18",
+  "viewed": [
+    "light.png",
+    "dark.png"
+  ],
+  "sizes": [
+    16,
+    20,
+    24
+  ],
+  "themes": [
+    "light",
+    "dark"
+  ],
+  "dpr": [
+    1
+  ],
+  "corner": "soft for existing icons; actual page previews keep natural aspect ratios",
+  "scope": "Four contextual existing-icon entries and six labeled native controls replace ten candidates. No rejected geometry retrieved and no application implementation changed.",
+  "userApproval": "pending",
+  "evidence": [
+    {
+      "path": "docs/review/rebuild-01/substitution-page-zoom-values/light.png",
+      "sha256": "2854d6c4df1e2cb0366d1389badd369aeebc1310225fb000249c242863d20bd2"
+    },
+    {
+      "path": "docs/review/rebuild-01/substitution-page-zoom-values/dark.png",
+      "sha256": "69e24b966d4ead74f41e5e2d6509339cf491daf6d0524fbd4fd1f290f13a9d19"
+    }
+  ],
+  "items": [
+    {
+      "name": "fit-page-width",
+      "label": "符合頁寬",
+      "alternative": null,
+      "alternativeLabel": "文字選項與實際版面預覽",
+      "replacementKind": "native-content",
+      "nativePreview": "<span>符合頁寬</span>",
+      "comparisonMarkup": "<span>符合頁寬</span>",
+      "context": "文件檢視 · 縮放選單中的適配方式",
+      "reason": "符合頁寬與符合頁高是縮放方式，並非調整紙張尺寸。move-horizontal／move-vertical 會混淆尺寸拖曳；用具名選項及目前縮放結果即可區分，不以箭頭和頁框再組合一套圖。",
+      "replacementScope": "以可讀標籤、目前值及內容預覽表達；不新增固定SVG圖示，也不將候選名強配到近似圖示。",
+      "searchAliasDecision": "No icon alias: native labeled controls and actual layout preview replace this candidate.",
+      "sample": "<fieldset><legend>縮放方式</legend><label>符合 <select aria-label=\"縮放方式\" data-fit-mode><option value=\"width\" selected>頁寬</option><option value=\"height\" >頁高</option></select></label><div data-fit-viewport style=\"width:160px;height:140px;overflow:hidden;border:1px solid #8888;margin-top:12px;background:#8882\"><div data-fit-paper style=\"flex:none;width:158px;height:111.7228714274745px;border:1px solid currentColor;padding:12px\"><div style=\"height:100%;background:repeating-linear-gradient(transparent 0 7px,#8887 7px 8px)\"></div></div></div><small>同一橫向頁面；符合頁高時寬度可超出視窗，不等同整頁適配。</small></fieldset>",
+      "usageEvidence": [
+        "https://help.libreoffice.org/latest/en-US/text/shared/01/03010000.html"
+      ],
+      "visualObservation": "頁寬模式讓紙張完整寬度落入視窗，底部保留剩餘空間；選單文字交代這是縮放方式，沒有和改變紙張寬度混淆。"
+    },
+    {
+      "name": "fit-page-height",
+      "label": "符合頁高",
+      "alternative": null,
+      "alternativeLabel": "文字選項與實際版面預覽",
+      "replacementKind": "native-content",
+      "nativePreview": "<span>符合頁高</span>",
+      "comparisonMarkup": "<span>符合頁高</span>",
+      "context": "文件檢視 · 縮放選單中的適配方式",
+      "reason": "符合頁寬與符合頁高是縮放方式，並非調整紙張尺寸。move-horizontal／move-vertical 會混淆尺寸拖曳；用具名選項及目前縮放結果即可區分，不以箭頭和頁框再組合一套圖。",
+      "replacementScope": "以可讀標籤、目前值及內容預覽表達；不新增固定SVG圖示，也不將候選名強配到近似圖示。",
+      "searchAliasDecision": "No icon alias: native labeled controls and actual layout preview replace this candidate.",
+      "sample": "<fieldset><legend>縮放方式</legend><label>符合 <select aria-label=\"縮放方式\" data-fit-mode><option value=\"width\" >頁寬</option><option value=\"height\" selected>頁高</option></select></label><div data-fit-viewport style=\"width:160px;height:140px;overflow:hidden;border:1px solid #8888;margin-top:12px;background:#8882\"><div data-fit-paper style=\"flex:none;width:195.16147160748713px;height:138px;border:1px solid currentColor;padding:12px\"><div style=\"height:100%;background:repeating-linear-gradient(transparent 0 7px,#8887 7px 8px)\"></div></div></div><small>同一橫向頁面；符合頁高時寬度可超出視窗，不等同整頁適配。</small></fieldset>",
+      "usageEvidence": [
+        "https://help.libreoffice.org/latest/en-US/text/shared/01/03010000.html",
+        "https://pdfobject.com/examples/pdf-open-params.html"
+      ],
+      "visualObservation": "頁高模式填滿視窗高度，橫向紙張右緣超出示例視窗；這個可見差異確認沒有將頁高偷換成整頁適配。",
+      "usageEvidenceLimit": "LibreOffice documents fit-width and whole-page controls, not a separate height-only toolbar command. The height-only behavior is supported by PDF FitV; the labeled selector here is a design demonstration, not a copied LibreOffice UI."
+    }
+  ]
+}

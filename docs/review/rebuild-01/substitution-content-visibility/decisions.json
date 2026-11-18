@@ -1,0 +1,106 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "skillVersion": "0.5.20",
+  "viewed": [
+    "light.png",
+    "dark.png",
+    "changed-light.png",
+    "changed-dark.png"
+  ],
+  "sizes": [
+    16,
+    20,
+    24
+  ],
+  "themes": [
+    "light",
+    "dark"
+  ],
+  "dpr": [
+    1
+  ],
+  "corner": "soft for existing glyphs only",
+  "scope": "Contextual quote command and independent visibility/permission settings. No rejected session geometry retrieved; no production document or editor changed.",
+  "userApproval": "pending",
+  "evidence": [
+    {
+      "path": "docs/review/rebuild-01/substitution-content-visibility/light.png",
+      "sha256": "52796ae22c5a4d33658b86512a425f9c68ff49154ecdece385a680d3e52b0819"
+    },
+    {
+      "path": "docs/review/rebuild-01/substitution-content-visibility/dark.png",
+      "sha256": "bc7d2d93b33cdbb6e53a4608453480c6a59182644c2cd50811e6337ea2a5cd4b"
+    },
+    {
+      "path": "docs/review/rebuild-01/substitution-content-visibility/changed-light.png",
+      "sha256": "801cc6178770642d78e62a631569d22cdd197cfab77f1ee0b5e3d7a7ab890934"
+    },
+    {
+      "path": "docs/review/rebuild-01/substitution-content-visibility/changed-dark.png",
+      "sha256": "1a7c4413e737c8af00732b431691a01ecf553f6322af64c60a83e57a7e7d4098"
+    }
+  ],
+  "items": [
+    {
+      "name": "message-quote",
+      "label": "引用留言",
+      "alternative": "quote",
+      "replacementKind": "contextual-entry",
+      "context": "訊息操作列 · 與回覆、複製並排",
+      "reason": "引用的核心動作是將原文帶入引文，不需要再套氣泡。既有 quote 與 reply、copy 輪廓不同；引用後保留作者和原文，避免把回覆對象誤當引文。",
+      "replacementScope": "有訊息上下文的引用命令，以及可見的引用內容與作者；不將 quote 單獨當成「這是留言而非文章」的物件類型狀態。",
+      "sample": "<fieldset data-content-demo=\"quote\" style=\"border:1px solid #8886;border-radius:5px;padding:12px;min-width:0\"><legend>本地操作示例</legend><div data-original-message><strong>阿青</strong><p data-message-text>提案的主色改用深綠。</p></div><div style=\"display:flex;gap:8px;flex-wrap:wrap\"><button data-message-action=\"quote\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><path d=\"M2.7667 3.3333H6.2333Q6.6667 3.3333 6.6667 3.7667V8.6667C6.6667 11.3333 4.6667 12.6667 2.3333 12.6667V10.6667C4 10.6667 4.3333 9.6667 4.3333 8H2.7667Q2.3333 8 2.3333 7.5667V3.7667Q2.3333 3.3333 2.7667 3.3333Z\"/><path d=\"M9.7667 3.3333H13.2333Q13.6667 3.3333 13.6667 3.7667V8.6667C13.6667 11.3333 11.6667 12.6667 9.3333 12.6667V10.6667C11 10.6667 11.3333 9.6667 11.3333 8H9.7667Q9.3333 8 9.3333 7.5667V3.7667Q9.3333 3.3333 9.7667 3.3333Z\"/></svg>引用</button><button data-message-action=\"reply\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><path d=\"M6 3.3333L2.8081 6.5253A0.2 0.2 0 0 0 2.8081 6.8081L6 10\"/><path d=\"M2.2932 7.1678Q2.3133 7.1828 2.3345 7.1961Q2.3557 7.2094 2.3779 7.221Q2.4001 7.2325 2.4231 7.2423Q2.4462 7.252 2.4699 7.2599Q2.4937 7.2678 2.518 7.2737Q2.5423 7.2797 2.567 7.2837Q2.5918 7.2877 2.6167 7.2897Q2.6417 7.2917 2.6667 7.2917L9.3333 7.2917Q11.0744 7.2917 11.8914 8.1086Q12.7083 8.9256 12.7083 10.6667L12.7083 12Q12.7083 12.0153 12.709 12.0307Q12.7098 12.046 12.7113 12.0613Q12.7128 12.0765 12.7151 12.0917Q12.7173 12.1069 12.7203 12.1219Q12.7233 12.137 12.727 12.1519Q12.7308 12.1668 12.7352 12.1814Q12.7397 12.1961 12.7448 12.2106Q12.75 12.225 12.7559 12.2392Q12.7617 12.2533 12.7683 12.2672Q12.7749 12.2811 12.7821 12.2946Q12.7893 12.3082 12.7972 12.3213Q12.8051 12.3345 12.8136 12.3472Q12.8222 12.36 12.8313 12.3723Q12.8404 12.3846 12.8502 12.3965Q12.8599 12.4084 12.8702 12.4197Q12.8805 12.4311 12.8914 12.4419Q12.9022 12.4528 12.9136 12.4631Q12.9249 12.4734 12.9368 12.4831Q12.9487 12.4929 12.961 12.502Q12.9733 12.5111 12.9861 12.5197Q12.9988 12.5282 13.012 12.5361Q13.0251 12.544 13.0387 12.5512Q13.0522 12.5584 13.0661 12.565Q13.08 12.5715 13.0941 12.5774Q13.1083 12.5833 13.1227 12.5885Q13.1372 12.5936 13.1519 12.5981Q13.1665 12.6025 13.1814 12.6063Q13.1963 12.61 13.2114 12.613Q13.2264 12.616 13.2416 12.6182Q13.2568 12.6205 13.272 12.622Q13.2873 12.6235 13.3026 12.6242Q13.318 12.625 13.3333 12.625Q13.3486 12.625 13.364 12.6242Q13.3793 12.6235 13.3946 12.622Q13.4098 12.6205 13.425 12.6182Q13.4402 12.616 13.4552 12.613Q13.4703 12.61 13.4852 12.6063Q13.5 12.6025 13.5147 12.5981Q13.5294 12.5936 13.5439 12.5885Q13.5583 12.5833 13.5725 12.5774Q13.5867 12.5715 13.6005 12.565Q13.6144 12.5584 13.6279 12.5512Q13.6415 12.544 13.6546 12.5361Q13.6678 12.5282 13.6805 12.5197Q13.6933 12.5111 13.7056 12.502Q13.7179 12.4929 13.7298 12.4831Q13.7417 12.4734 13.753 12.4631Q13.7644 12.4528 13.7752 12.4419Q13.7861 12.4311 13.7964 12.4197Q13.8067 12.4084 13.8164 12.3965Q13.8262 12.3846 13.8353 12.3723Q13.8444 12.36 13.853 12.3472Q13.8615 12.3345 13.8694 12.3213Q13.8773 12.3082 13.8845 12.2946Q13.8917 12.2811 13.8983 12.2672Q13.9049 12.2533 13.9107 12.2392Q13.9166 12.225 13.9218 12.2106Q13.9269 12.1961 13.9314 12.1814Q13.9358 12.1668 13.9396 12.1519Q13.9433 12.137 13.9463 12.1219Q13.9493 12.1069 13.9515 12.0917Q13.9538 12.0765 13.9553 12.0613Q13.9568 12.046 13.9575 12.0307Q13.9583 12.0153 13.9583 12L13.9583 10.6667Q13.9583 8.4078 12.7752 7.2248Q11.5922 6.0417 9.3333 6.0417L2.6667 6.0417Q2.6417 6.0417 2.6167 6.0437Q2.5918 6.0457 2.567 6.0497Q2.5423 6.0537 2.518 6.0596Q2.4937 6.0656 2.47 6.0735Q2.4462 6.0814 2.4231 6.0911Q2.4001 6.1009 2.3779 6.1124Q2.3557 6.124 2.3345 6.1373Q2.3133 6.1506 2.2932 6.1656Q2.1245 6.3812 2.1245 6.6667Q2.1245 6.9522 2.2932 7.1678Z\" fill=\"currentColor\" stroke=\"none\" fill-rule=\"evenodd\"/></svg>回覆</button><button data-message-action=\"copy\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><path d=\"M3 1.375L9 1.375Q9.31 1.375 9.5982 1.4891Q9.9111 1.613 10.149 1.851Q10.387 2.0889 10.5109 2.4018Q10.625 2.69 10.625 3L10.625 4.125L9.375 4.125L9.375 3Q9.375 2.8447 9.2652 2.7348Q9.1553 2.625 9 2.625L3 2.625Q2.8447 2.625 2.7348 2.7348Q2.625 2.8447 2.625 3L2.625 9Q2.625 9.1553 2.7348 9.2652Q2.8447 9.375 3 9.375L4.125 9.375L4.125 10.625L3 10.625Q2.69 10.625 2.4018 10.5109Q2.0889 10.387 1.851 10.149Q1.613 9.9111 1.4891 9.5982Q1.375 9.31 1.375 9L1.375 3Q1.375 2.69 1.4891 2.4018Q1.613 2.0889 1.851 1.851Q2.0889 1.613 2.4018 1.4891Q2.69 1.375 3 1.375Z\" fill=\"currentColor\" stroke=\"none\" fill-rule=\"evenodd\"/><rect x=\"5.5\" y=\"5.5\" width=\"8.5\" height=\"8.5\" rx=\"1\"/></svg>複製</button></div><p data-action-status>尚未選擇操作</p><div data-compose style=\"border:1px solid #8886;padding:8px;min-height:54px\"><div data-reply-target hidden>回覆阿青</div><blockquote data-quoted-message hidden style=\"border-left:2px solid;padding-left:10px;margin:4px 0\"><cite>阿青</cite><p>提案的主色改用深綠。</p></blockquote><label>草稿 <input data-draft aria-label=\"回覆草稿\" style=\"max-width:100%\"></label></div><p><small>複製僅模擬於本頁，不寫入系統剪貼簿。</small></p></fieldset>",
+      "searchKeywords": [
+        "quoted-comment",
+        "引述留言"
+      ],
+      "usageEvidence": [
+        "https://slack.com/help/articles/202288908-Format-your-messages-in-Slack"
+      ],
+      "usageEvidenceLimit": "Primary documentation establishes the operations, not this exact UI. Local demonstration uses existing Master glyphs and simulated state, without writing documents, clipboard or messages.",
+      "visualObservation": "引用、回覆、複製在 16px 並排，各自保留不同母型；引用後有原文和作者，回覆只建立對象，複製不改寫草稿。"
+    },
+    {
+      "name": "image-off",
+      "label": "隱藏圖片",
+      "alternative": null,
+      "alternativeLabel": "圖片顯示開關與狀態文字",
+      "replacementKind": "native-content",
+      "context": "圖片屬性 · 顯示狀態與載入狀態分開",
+      "reason": "隱藏是物件顯示設定，與尚未允許下載、載入失敗不同。具名顯示開關與持續可見的檔名、狀態已能表達本次需求；不以同一個斜線圖片混稱所有不可見情況。",
+      "replacementScope": "圖片屬性面板和具有檔名與狀態文字的列；不替代只容一個圖示的失效縮圖，也不宣稱一般 image 本身就表示隱藏。",
+      "sample": "<fieldset data-content-demo=\"image\" style=\"border:1px solid #8886;border-radius:5px;padding:12px;min-width:0\"><legend>本地操作示例</legend><header><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><rect x=\"2\" y=\"2.6667\" width=\"12\" height=\"10.6667\" rx=\"1\"/><path d=\"M5.5028 13.3334L4.0417 13.3334Q4.0417 13.3192 4.0423 13.305Q4.043 13.2908 4.0443 13.2767Q4.0455 13.2626 4.0475 13.2485Q4.0494 13.2344 4.052 13.2205Q4.0545 13.2065 4.0577 13.1927Q4.0609 13.1788 4.0648 13.1652Q4.0686 13.1515 4.073 13.138Q4.0774 13.1245 4.0825 13.1112Q4.0875 13.098 4.0932 13.0849Q4.0988 13.0719 4.105 13.0592Q4.1113 13.0464 4.1181 13.0339Q4.1249 13.0215 4.1322 13.0093Q4.1396 12.9972 4.1475 12.9854Q4.1554 12.9736 4.1638 12.9622Q4.1723 12.9507 4.1812 12.9397Q4.1901 12.9287 4.1996 12.9181L9.392 7.0766Q9.6286 6.8105 9.9845 6.8Q10.3403 6.7897 10.592 7.0414L14 10.4494L14 11.9583Q13.9847 11.9583 13.9693 11.9575Q13.954 11.9568 13.9387 11.9553Q13.9235 11.9538 13.9083 11.9515Q13.8931 11.9493 13.8781 11.9463Q13.863 11.9433 13.8481 11.9396Q13.8332 11.9358 13.8186 11.9314Q13.8039 11.9269 13.7894 11.9218Q13.775 11.9166 13.7608 11.9107Q13.7466 11.9049 13.7328 11.8983Q13.7189 11.8917 13.7054 11.8845Q13.6918 11.8773 13.6787 11.8694Q13.6655 11.8615 13.6528 11.853Q13.64 11.8444 13.6277 11.8353Q13.6154 11.8262 13.6035 11.8164Q13.5916 11.8067 13.5803 11.7964Q13.5689 11.7861 13.5581 11.7752L10.0267 8.2439L5.5028 13.3334Z\" fill=\"currentColor\" stroke=\"none\" fill-rule=\"evenodd\"/><circle cx=\"5\" cy=\"5.6667\" r=\"0.9\" fill=\"currentColor\" stroke=\"none\"/></svg> 提案封面.png</header><p><label><input data-image-visible type=\"checkbox\" checked>在文件中顯示這張圖片</label></p><p data-image-status>圖片顯示中</p><div data-image-preview role=\"img\" aria-label=\"本地圖片示意\" style=\"border:1px solid #8887;padding:18px;text-align:center\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.75\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><rect x=\"3\" y=\"4\" width=\"18\" height=\"16\" rx=\"1.5\"/><path d=\"M8.1707 20L6.125 20Q6.125 19.9802 6.1259 19.9603Q6.1268 19.9405 6.1286 19.9206Q6.1304 19.9008 6.1331 19.8811Q6.1358 19.8614 6.1394 19.8419Q6.143 19.8223 6.1475 19.803Q6.1519 19.7836 6.1573 19.7645Q6.1626 19.7453 6.1688 19.7266Q6.1751 19.7077 6.1821 19.6891Q6.1892 19.6705 6.1971 19.6522Q6.205 19.6341 6.2137 19.6161Q6.2224 19.5983 6.2319 19.5808Q6.2415 19.5634 6.2518 19.5464Q6.2621 19.5294 6.2731 19.513Q6.2842 19.4964 6.296 19.4805Q6.3078 19.4644 6.3203 19.4489Q6.3328 19.4336 6.346 19.4187L14.2051 10.5772Q14.3462 10.4185 14.5369 10.3254Q14.7453 10.2236 14.9772 10.2169Q15.209 10.2101 15.423 10.2995Q15.6188 10.3813 15.7688 10.5314L21 15.7625L21 17.875Q20.9786 17.875 20.957 17.8739Q20.9356 17.873 20.9142 17.8708Q20.8928 17.8687 20.8716 17.8655Q20.8503 17.8623 20.8292 17.8581Q20.8083 17.8541 20.7873 17.8487Q20.7666 17.8436 20.7459 17.8373Q20.7255 17.8311 20.7052 17.8239Q20.685 17.8166 20.6652 17.8084Q20.6453 17.8002 20.6259 17.7909Q20.6064 17.7819 20.5875 17.7717Q20.5686 17.7616 20.5502 17.7505Q20.5317 17.7395 20.5139 17.7275Q20.4959 17.7156 20.4788 17.7028Q20.4616 17.69 20.4448 17.6764Q20.4283 17.6628 20.4123 17.6483Q20.3964 17.6339 20.3813 17.6187L15.0375 12.2749L8.1707 20Z\" fill=\"currentColor\" stroke=\"none\" fill-rule=\"evenodd\"/><circle cx=\"7.5\" cy=\"8.5\" r=\"1.25\" fill=\"currentColor\" stroke=\"none\"/></svg> 封面圖片</div><p data-image-hidden hidden>圖片已隱藏 · 提案封面.png</p><p>外部圖片載入：<select data-image-loading aria-label=\"外部圖片載入\"><option value=\"ready\">可顯示</option><option value=\"blocked\">等待允許載入</option><option value=\"failed\">載入失敗</option></select></p><p data-image-load-status>外部圖片可顯示</p></fieldset>",
+      "nativePreview": "<span>☑ 顯示圖片　／　圖片已隱藏</span>",
+      "comparisonMarkup": "<span>☑ 顯示圖片　／　圖片已隱藏</span>",
+      "searchKeywords": [],
+      "searchAliasDecision": "不把 image-off 或 image-disabled 加到 image，避免將顯示／載入狀態抹平。",
+      "usageEvidence": [
+        "https://support.google.com/mail/answer/145919?hl=en"
+      ],
+      "usageEvidenceLimit": "Primary documentation establishes the operations, not this exact UI. Local demonstration uses existing Master glyphs and simulated state, without writing documents, clipboard or messages.",
+      "visualObservation": "顯示開關關閉後檔名與隱藏狀態仍可見；未允許載入與載入失敗另列，不把一般圖片圖示當作狀態。"
+    },
+    {
+      "name": "message-off",
+      "label": "隱藏留言",
+      "alternative": null,
+      "alternativeLabel": "留言顯示與新增權限",
+      "replacementKind": "native-content",
+      "context": "文件留言 · 面板顯示與新增權限並列",
+      "reason": "原候選混合 hide-comments 與 disable-comments，兩者行為不同。具名面板開關控制可見性，獨立權限選單控制能否新增；已有留言仍保留，不需要另造一顆語意不確定的斜線氣泡。",
+      "replacementScope": "具名留言設定、側欄和權限控制；不以眼睛或斜線氣泡單獨承擔「隱藏」「禁止新增」「已鎖定討論」三個概念。",
+      "sample": "<fieldset data-content-demo=\"comments\" style=\"border:1px solid #8886;border-radius:5px;padding:12px;min-width:0\"><legend>本地操作示例</legend><header><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><path d=\"M3.5 2.5L12.5 2.5A1 1 0 0 1 13.5 3.5L13.5 10A1 1 0 0 1 12.5 11L7.777 11A1 1 0 0 0 7.2625 11.1425L4.0145 13.0913A1 1 0 0 1 2.5 12.2338L2.5 3.5A1 1 0 0 1 3.5 2.5Z\"/></svg> 文件留言</header><p><label><input data-comments-visible type=\"checkbox\" checked>顯示留言面板</label></p><p data-comments-visibility>留言面板顯示中</p><label>新增留言 <select data-comment-permission><option value=\"on\">允許</option><option value=\"off\">關閉</option></select></label><p data-comments-permission>允許新增留言</p><div data-comments-panel style=\"border-top:1px solid #8886;margin-top:12px;padding-top:10px\"><p data-comment-existing><strong>小林：</strong>請確認標題。</p><label>新留言 <input data-new-comment aria-label=\"新留言\" style=\"width:160px\"></label></div><p><small>關閉新增權限不刪除已有留言；隱藏面板不變更權限。</small></p></fieldset>",
+      "nativePreview": "<span>☑ 顯示留言　／　新增留言：允許</span>",
+      "comparisonMarkup": "<span>☑ 顯示留言　／　新增留言：允許</span>",
+      "searchKeywords": [],
+      "searchAliasDecision": "不把 disable-comments 當成 eye-off 的同義詞；不新增 message-off 到 message。",
+      "usageEvidence": [
+        "https://support.google.com/docs/answer/65129?hl=en",
+        "https://support.google.com/youtube/answer/9483359?hl=en"
+      ],
+      "usageEvidenceLimit": "Primary documentation establishes the operations, not this exact UI. Local demonstration uses existing Master glyphs and simulated state, without writing documents, clipboard or messages.",
+      "visualObservation": "隱藏面板與新增權限可獨立切換，關閉新增後既有留言仍存在；四種組合在明暗頁均可分辨。"
+    }
+  ]
+}

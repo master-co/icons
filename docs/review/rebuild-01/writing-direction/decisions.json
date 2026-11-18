@@ -1,0 +1,44 @@
+[
+  {
+    "dashes": false,
+    "dashReason": "段落字形、方向箭頭與版面分界均是確定結構，不是暫態或隱藏邊界。",
+    "opacity": false,
+    "opacityReason": "各部件均有辨識用途，不靠漸淡掩蓋接點或密度。",
+    "reviewed": true,
+    "name": "text-direction-ltr",
+    "purpose": "雙向文字編輯器設定段落由左至右的閱讀順序，與段落對齊及縮排分開。",
+    "recognitionCues": "保持正向的 ¶ 加下方由左至右長箭頭。",
+    "confusableWith": [
+      "pilcrow",
+      "align-left",
+      "indent-increase"
+    ],
+    "sourceObservation": "Tabler 與 MDI 均用段落符號及下方方向箭頭；MDI 的實心字腹較重，Tabler 的描邊字形可維持較多空白。兩份來源都不鏡射 ¶。",
+    "reason": "對齊圖示只表示段落的位置，不能交代混合語言的閱讀順序。採 Tabler 的上下布局，使用共用 paragraphSymbol 的緊湊模式與 horizontalArrow；段落保留半圓字腹及雙幹，只有箭頭轉向。修正安置程式漏帶子節點的問題，讓自訂線寬分支的箭桿完整保留。",
+    "comparison": "最新稿與 Tabler、MDI 並排後，字腹開孔比實心 MDI 輕，兩直幹間距較 Tabler 寬；16px 的段落與箭頭上下分離，沒有把腳接到箭桿。右向箭尖留在 ¶ 的右下方，長桿仍能獨立讀成移動方向。三尺寸、三角型與線寬兩端的明暗 DPR 1／2 均已查看；最粗線寬仍保留字腹孔及連續箭桿。",
+    "usageEvidence": [
+      "https://support.microsoft.com/en-us/office/languages/using-right-to-left-languages-in-office"
+    ]
+  },
+  {
+    "dashes": false,
+    "dashReason": "段落字形、方向箭頭與版面分界均是確定結構，不是暫態或隱藏邊界。",
+    "opacity": false,
+    "opacityReason": "各部件均有辨識用途，不靠漸淡掩蓋接點或密度。",
+    "reviewed": true,
+    "name": "text-direction-rtl",
+    "purpose": "雙向文字編輯器設定段落由右至左的閱讀順序，與段落對齊及縮排分開。",
+    "recognitionCues": "保持正向的 ¶ 加下方由右至左長箭頭。",
+    "confusableWith": [
+      "pilcrow",
+      "align-right",
+      "indent-decrease"
+    ],
+    "sourceObservation": "Tabler 與 MDI 均用段落符號及下方方向箭頭；MDI 的實心字腹較重，Tabler 的描邊字形可維持較多空白。兩份來源都不鏡射 ¶。",
+    "reason": "對齊圖示只表示段落的位置，不能交代混合語言的閱讀順序。採 Tabler 的上下布局，使用共用 paragraphSymbol 的緊湊模式與 horizontalArrow；段落保留半圓字腹及雙幹，只有箭頭轉向。修正安置程式漏帶子節點的問題，讓自訂線寬分支的箭桿完整保留。",
+    "comparison": "最新稿與 Tabler、MDI 並排後，字腹開孔比實心 MDI 輕，兩直幹間距較 Tabler 寬；16px 的段落與箭頭上下分離，沒有把腳接到箭桿。箭頭轉向左側，但 ¶ 的半圓字腹仍在左上，和右向稿並排時字形沒有翻面。三尺寸、三角型與線寬兩端的明暗 DPR 1／2 均已查看；最粗線寬仍保留字腹孔及連續箭桿。",
+    "usageEvidence": [
+      "https://support.microsoft.com/en-us/office/languages/using-right-to-left-languages-in-office"
+    ]
+  }
+]

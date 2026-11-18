@@ -1,0 +1,117 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "skillVersion": "0.5.18",
+  "viewed": [
+    "light.png",
+    "dark.png"
+  ],
+  "sizes": [],
+  "contentSizing": "Native controls and actual data rows; not a new SVG family",
+  "themes": [
+    "light",
+    "dark"
+  ],
+  "dpr": [
+    1
+  ],
+  "corner": "soft for existing glyphs only",
+  "scope": "Six contextual icon substitutions and four native-content replacements. Local in-memory control examples; no old session geometry retrieved.",
+  "userApproval": "pending",
+  "evidence": [
+    {
+      "path": "docs/review/rebuild-01/substitution-data-values/light.png",
+      "sha256": "b0b4966535daeca81e8ffca0a64b5eb0caf955cd766c2db3b8aefc98ed2a7acf"
+    },
+    {
+      "path": "docs/review/rebuild-01/substitution-data-values/dark.png",
+      "sha256": "184f06ce31daa6a081e864064e527f6748827fa31cdbda467fe32fda1b0785c7"
+    }
+  ],
+  "items": [
+    {
+      "name": "group-by",
+      "label": "依欄位分組",
+      "alternative": null,
+      "alternativeLabel": "具名選項與實際資料預覽",
+      "replacementKind": "native-content",
+      "context": "資料表／時間軸 · 分組方式選單",
+      "reason": "已有具名欄位的分組選單能直接顯示依專案或依負責人。畫布物件group的框選語意不等同資料分組；此處沿用實際選項與分組標題，不另造模糊的分支圖。",
+      "replacementScope": "有分組方式欄位與資料標題的列表；若需要獨立入口，可另用既有list-tree配完整標籤，這不是將group-by列為list-tree的同義詞。",
+      "nativePreview": "<span>依欄位分組</span>",
+      "comparisonMarkup": "<span>依欄位分組</span>",
+      "sample": "<style>\narticle:has([data-data-demo]){min-width:0}\n[data-data-demo] {margin:12px 0;min-width:0}\n[data-data-demo] select,[data-data-demo] input{font:inherit;color:inherit;background:transparent}\n[data-data-demo] fieldset{border:1px solid #8886;border-radius:4px;margin:10px 0;padding:9px;min-width:0}\n[data-data-demo] label{display:inline-flex;align-items:center;gap:5px;margin:4px 8px 4px 0}\n[data-data-demo] table{border-collapse:collapse;width:100%;font-size:12px}\n[data-data-demo] th,[data-data-demo] td{padding:var(--cell-pad,5px) 6px;text-align:left;border-bottom:1px solid #8884}\n[data-data-demo] th{font-weight:600}\n[data-data-demo] [data-group-title]{background:#8882}\n[data-data-demo] [data-result]{margin-top:10px}\n[data-data-demo] [hidden]{display:none!important}\n[data-data-demo] button[aria-pressed=true]{border-color:currentColor;font-weight:650}\n[data-freeze-scroll]{height:137px;width:100%;overflow:auto;border:1px solid #8887;margin:10px 0;isolation:isolate;background:var(--paper,#fafaf8)}\n[data-freeze-scroll] table{width:600px;table-layout:fixed;border-collapse:separate;border-spacing:0;font-size:12px}\n[data-freeze-scroll] td{width:75px;min-width:75px;height:32px;padding:0 6px;box-sizing:border-box;border:0;border-right:1px solid #8884;border-bottom:1px solid #8884;background:var(--paper,#fafaf8)}\n[data-freeze-scroll] td[data-frozen]{font-weight:650}\n.dark{--paper:#232724}\n.dark [data-data-demo]{color-scheme:dark}\n</style><div data-data-demo=\"grouping\"><label>分組方式 <select data-group><option value=\"project\" selected>依專案</option><option value=\"owner\">依負責人</option><option value=\"none\" >不分組</option></select></label><div data-result></div><p><small>本地操作示例；不接入產品資料。</small></p></div>",
+      "searchKeywords": [],
+      "searchAliasDecision": "原生選項與內容預覽，不映射到另一顆圖示。",
+      "usageEvidence": [
+        "/Users/aron/haoban/apps/web/src/features/calendar-client.components/CalendarClient.svelte:992",
+        "https://mui.com/x/react-data-grid/row-grouping/"
+      ],
+      "usageEvidenceLimit": "Sources establish control semantics. These local fixtures use existing Master glyphs and small in-memory examples; they do not integrate with Haoban, MUI or Excel.",
+      "visualObservation": "依專案選項與品牌／網站群組標題一一對應；具名群組列的底色及文字在明暗底均清楚，不靠分支圖猜分組依據。"
+    },
+    {
+      "name": "ungroup-rows",
+      "label": "取消列分組",
+      "alternative": null,
+      "alternativeLabel": "具名選項與實際資料預覽",
+      "replacementKind": "native-content",
+      "context": "分組方式選單 · 不分組",
+      "reason": "取消列分組是同一分組欄位的「不分組」值。直接顯示平坦資料列即可和依專案的分組標題區分；不改用畫布ungroup或拆分儲存格圖。",
+      "replacementScope": "取消這個列表的全部分組條件；若只移除一個分組條件，該條件旁可用既有x並保留條件名稱。",
+      "nativePreview": "<span>取消列分組</span>",
+      "comparisonMarkup": "<span>取消列分組</span>",
+      "sample": "<style>\narticle:has([data-data-demo]){min-width:0}\n[data-data-demo] {margin:12px 0;min-width:0}\n[data-data-demo] select,[data-data-demo] input{font:inherit;color:inherit;background:transparent}\n[data-data-demo] fieldset{border:1px solid #8886;border-radius:4px;margin:10px 0;padding:9px;min-width:0}\n[data-data-demo] label{display:inline-flex;align-items:center;gap:5px;margin:4px 8px 4px 0}\n[data-data-demo] table{border-collapse:collapse;width:100%;font-size:12px}\n[data-data-demo] th,[data-data-demo] td{padding:var(--cell-pad,5px) 6px;text-align:left;border-bottom:1px solid #8884}\n[data-data-demo] th{font-weight:600}\n[data-data-demo] [data-group-title]{background:#8882}\n[data-data-demo] [data-result]{margin-top:10px}\n[data-data-demo] [hidden]{display:none!important}\n[data-data-demo] button[aria-pressed=true]{border-color:currentColor;font-weight:650}\n[data-freeze-scroll]{height:137px;width:100%;overflow:auto;border:1px solid #8887;margin:10px 0;isolation:isolate;background:var(--paper,#fafaf8)}\n[data-freeze-scroll] table{width:600px;table-layout:fixed;border-collapse:separate;border-spacing:0;font-size:12px}\n[data-freeze-scroll] td{width:75px;min-width:75px;height:32px;padding:0 6px;box-sizing:border-box;border:0;border-right:1px solid #8884;border-bottom:1px solid #8884;background:var(--paper,#fafaf8)}\n[data-freeze-scroll] td[data-frozen]{font-weight:650}\n.dark{--paper:#232724}\n.dark [data-data-demo]{color-scheme:dark}\n</style><div data-data-demo=\"ungrouping\"><label>分組方式 <select data-group><option value=\"project\" >依專案</option><option value=\"owner\">依負責人</option><option value=\"none\" selected>不分組</option></select></label><div data-result></div><p><small>本地操作示例；不接入產品資料。</small></p></div>",
+      "searchKeywords": [],
+      "searchAliasDecision": "原生選項與內容預覽，不映射到另一顆圖示。",
+      "usageEvidence": [
+        "/Users/aron/haoban/apps/web/src/features/calendar-client.components/CalendarClient.svelte:995",
+        "https://mui.com/x/react-data-grid/components/toolbar/"
+      ],
+      "usageEvidenceLimit": "Sources establish control semantics. These local fixtures use existing Master glyphs and small in-memory examples; they do not integrate with Haoban, MUI or Excel.",
+      "visualObservation": "不分組選項下，四筆資料直接連續排列，與有群組標題的相鄰示例可辨；畫布群組與拆儲存格圖均未借用。"
+    },
+    {
+      "name": "density-compact",
+      "label": "緊密列高",
+      "alternative": null,
+      "alternativeLabel": "具名選項與實際資料預覽",
+      "replacementKind": "native-content",
+      "context": "外觀設定 · 同一列高欄位的值",
+      "reason": "緊密與寬鬆是顯示密度設定值。用單選項與真正的資料列間距顯示結果，沒有必要再做一顆模擬細線排列的圖。",
+      "replacementScope": "具名外觀設定與資料預覽。這項取捨不宣稱其他產品的純圖示密度控制沒有用途；此處選用可直接看見結果的控制方式。",
+      "nativePreview": "<span>緊密列高</span>",
+      "comparisonMarkup": "<span>緊密列高</span>",
+      "sample": "<style>\narticle:has([data-data-demo]){min-width:0}\n[data-data-demo] {margin:12px 0;min-width:0}\n[data-data-demo] select,[data-data-demo] input{font:inherit;color:inherit;background:transparent}\n[data-data-demo] fieldset{border:1px solid #8886;border-radius:4px;margin:10px 0;padding:9px;min-width:0}\n[data-data-demo] label{display:inline-flex;align-items:center;gap:5px;margin:4px 8px 4px 0}\n[data-data-demo] table{border-collapse:collapse;width:100%;font-size:12px}\n[data-data-demo] th,[data-data-demo] td{padding:var(--cell-pad,5px) 6px;text-align:left;border-bottom:1px solid #8884}\n[data-data-demo] th{font-weight:600}\n[data-data-demo] [data-group-title]{background:#8882}\n[data-data-demo] [data-result]{margin-top:10px}\n[data-data-demo] [hidden]{display:none!important}\n[data-data-demo] button[aria-pressed=true]{border-color:currentColor;font-weight:650}\n[data-freeze-scroll]{height:137px;width:100%;overflow:auto;border:1px solid #8887;margin:10px 0;isolation:isolate;background:var(--paper,#fafaf8)}\n[data-freeze-scroll] table{width:600px;table-layout:fixed;border-collapse:separate;border-spacing:0;font-size:12px}\n[data-freeze-scroll] td{width:75px;min-width:75px;height:32px;padding:0 6px;box-sizing:border-box;border:0;border-right:1px solid #8884;border-bottom:1px solid #8884;background:var(--paper,#fafaf8)}\n[data-freeze-scroll] td[data-frozen]{font-weight:650}\n.dark{--paper:#232724}\n.dark [data-data-demo]{color-scheme:dark}\n</style><div data-data-demo=\"compact\" style=\"--cell-pad:3px\"><fieldset><legend>列高</legend><label><input type=\"radio\" name=\"density-compact\" data-density value=\"compact\" checked>緊密</label><label><input type=\"radio\" name=\"density-compact\" data-density value=\"comfortable\" >寬鬆</label></fieldset><div data-result></div><p><small>本地操作示例；不接入產品資料。</small></p></div>",
+      "searchKeywords": [],
+      "searchAliasDecision": "原生選項與內容預覽，不映射到另一顆圖示。",
+      "usageEvidence": [
+        "https://mui.com/x/react-data-grid/components/toolbar/",
+        "https://v6.mui.com/x/react-data-grid/accessibility/"
+      ],
+      "usageEvidenceLimit": "Sources establish control semantics. These local fixtures use existing Master glyphs and small in-memory examples; they do not integrate with Haoban, MUI or Excel.",
+      "visualObservation": "同樣四筆資料在緊密狀態縮短上下留白，字級與欄位不變；緊密單選鈕與資料結果同時可讀。"
+    },
+    {
+      "name": "density-comfortable",
+      "label": "寬鬆列高",
+      "alternative": null,
+      "alternativeLabel": "具名選項與實際資料預覽",
+      "replacementKind": "native-content",
+      "context": "外觀設定 · 與緊密並列的值",
+      "reason": "寬鬆列高用較大的真實上下留白呈現，和緊密共用同一組選項。line-height表達文字行距，不能當成表格列高的完全同義圖。",
+      "replacementScope": "只改資料表內容密度，不改字級、段落行距或列數；選項名稱與實際預覽一起使用。",
+      "nativePreview": "<span>寬鬆列高</span>",
+      "comparisonMarkup": "<span>寬鬆列高</span>",
+      "sample": "<style>\narticle:has([data-data-demo]){min-width:0}\n[data-data-demo] {margin:12px 0;min-width:0}\n[data-data-demo] select,[data-data-demo] input{font:inherit;color:inherit;background:transparent}\n[data-data-demo] fieldset{border:1px solid #8886;border-radius:4px;margin:10px 0;padding:9px;min-width:0}\n[data-data-demo] label{display:inline-flex;align-items:center;gap:5px;margin:4px 8px 4px 0}\n[data-data-demo] table{border-collapse:collapse;width:100%;font-size:12px}\n[data-data-demo] th,[data-data-demo] td{padding:var(--cell-pad,5px) 6px;text-align:left;border-bottom:1px solid #8884}\n[data-data-demo] th{font-weight:600}\n[data-data-demo] [data-group-title]{background:#8882}\n[data-data-demo] [data-result]{margin-top:10px}\n[data-data-demo] [hidden]{display:none!important}\n[data-data-demo] button[aria-pressed=true]{border-color:currentColor;font-weight:650}\n[data-freeze-scroll]{height:137px;width:100%;overflow:auto;border:1px solid #8887;margin:10px 0;isolation:isolate;background:var(--paper,#fafaf8)}\n[data-freeze-scroll] table{width:600px;table-layout:fixed;border-collapse:separate;border-spacing:0;font-size:12px}\n[data-freeze-scroll] td{width:75px;min-width:75px;height:32px;padding:0 6px;box-sizing:border-box;border:0;border-right:1px solid #8884;border-bottom:1px solid #8884;background:var(--paper,#fafaf8)}\n[data-freeze-scroll] td[data-frozen]{font-weight:650}\n.dark{--paper:#232724}\n.dark [data-data-demo]{color-scheme:dark}\n</style><div data-data-demo=\"comfortable\" style=\"--cell-pad:11px\"><fieldset><legend>列高</legend><label><input type=\"radio\" name=\"density-comfortable\" data-density value=\"compact\" >緊密</label><label><input type=\"radio\" name=\"density-comfortable\" data-density value=\"comfortable\" checked>寬鬆</label></fieldset><div data-result></div><p><small>本地操作示例；不接入產品資料。</small></p></div>",
+      "searchKeywords": [],
+      "searchAliasDecision": "原生選項與內容預覽，不映射到另一顆圖示。",
+      "usageEvidence": [
+        "https://mui.com/x/react-data-grid/components/toolbar/",
+        "https://v6.mui.com/x/react-data-grid/accessibility/"
+      ],
+      "usageEvidenceLimit": "Sources establish control semantics. These local fixtures use existing Master glyphs and small in-memory examples; they do not integrate with Haoban, MUI or Excel.",
+      "visualObservation": "寬鬆狀態保留相同資料及字級，改變實際列高；兩種設定並排比較，不把文字行距當表格列高。"
+    }
+  ]
+}

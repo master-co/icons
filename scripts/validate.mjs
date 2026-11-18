@@ -144,6 +144,11 @@ for(const name of await readdir('dist/downloads')){
   assert.ok(zip.LICENSE && zip['THIRD_PARTY_NOTICES.md']);
   assert.ok(zip['licenses/lucide.txt']);
   assert.ok(zip['licenses/simple-icons-CC0.txt'] && zip['licenses/simple-icons-DISCLAIMER.md'] && zip['licenses/brand-additions.txt']);
+  for(const entry of brandCatalog.filter(entry=>entry.source.licenseFile)){
+    const path=entry.source.licenseFile;
+    assert.ok(zip[path],entry.name+': missing bundled brand license');
+    assert.equal(sha(zip[path]),sha(await readFile(path)),entry.name+': stale bundled brand license');
+  }
   for(const [name,ref] of Object.entries(adaptedSources)){
     assert.ok(zip[ref.licenseFile],name+': missing bundled license');
     assert.ok(strFromU8(zip[name+'.svg']).includes(strFromU8(zip[ref.licenseFile]).trim().replace(/--/g,'—')),name+': missing SVG source notice');

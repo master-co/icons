@@ -1,0 +1,83 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "skillVersion": "0.5.19",
+  "viewed": [
+    "light.png",
+    "dark.png",
+    "changed-light.png",
+    "changed-dark.png"
+  ],
+  "sizes": [
+    16,
+    20,
+    24
+  ],
+  "themes": [
+    "light",
+    "dark"
+  ],
+  "dpr": [
+    1
+  ],
+  "corner": "soft for existing glyphs only",
+  "scope": "Local input fields and contextual scan/access controls. No rejected session geometry retrieved, authentication performed, camera opened or permissions changed.",
+  "userApproval": "pending",
+  "evidence": [
+    {
+      "path": "docs/review/rebuild-01/substitution-security-actions/light.png",
+      "sha256": "f0b94f3d23c5a8817850b6e89c717017c1a2f5c3cee940112c1c5b06e650631e"
+    },
+    {
+      "path": "docs/review/rebuild-01/substitution-security-actions/dark.png",
+      "sha256": "980c5eabb1f54b919c5acbfd583f63113010f0d6471a0cc71afba89f635cc25d"
+    },
+    {
+      "path": "docs/review/rebuild-01/substitution-security-actions/changed-light.png",
+      "sha256": "a49ca28cc38fe612b53b116a8405e697c6e6e5bdc80bfef851d14bb3d9e2851a"
+    },
+    {
+      "path": "docs/review/rebuild-01/substitution-security-actions/changed-dark.png",
+      "sha256": "6c74898bf8bb680356f215aac07168df39e3fdf7cc0354aa41b3ac69b42f0e59"
+    }
+  ],
+  "items": [
+    {
+      "name": "scan-qr-code",
+      "label": "掃描 QR 碼",
+      "alternative": "scan",
+      "replacementKind": "contextual-entry",
+      "context": "掃描／出示 QR 碼的相鄰入口",
+      "reason": "掃描動作沿用取景框scan，出示自己的QR碼則用qr-code，兩者在同一列保留不同形狀。完整名稱限定掃描目標，不需再把微小QR碼塞進取景框。",
+      "replacementScope": "具名的掃描入口。若純圖示工具列要並排掃描文件、條碼與QR碼，通用scan不足以獨立區分，須再按該介面評估。",
+      "sample": "<style>[data-security] label{display:block;margin:8px 0}[data-security] .row{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin:8px 0}[data-security] input,[data-security] select{font:inherit;color:inherit;background:transparent;border:1px solid #8888;padding:7px;max-width:220px}[data-security] .panel{border:1px solid #8887;border-radius:5px;padding:12px;margin:10px 0}[data-security] output{display:block;margin:10px 0}.dark [data-security]{color-scheme:dark}</style><div data-security=\"scan\"><div class=\"row\"><button data-qr-open><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><path d=\"M2.6667 5.3333L2.6667 3.6667A1 1 0 0 1 3.6667 2.6667L5.3333 2.6667\"/><path d=\"M10.6667 2.6667L12.3333 2.6667A1 1 0 0 1 13.3333 3.6667L13.3333 5.3333\"/><path d=\"M13.3333 10.6667L13.3333 12.3333A1 1 0 0 1 12.3333 13.3333L10.6667 13.3333\"/><path d=\"M5.3333 13.3333L3.6667 13.3333A1 1 0 0 1 2.6667 12.3333L2.6667 10.6667\"/><path d=\"M2.6667 8L13.3333 8\"/></svg>掃描 QR 碼</button><button data-qr-own><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><rect x=\"2\" y=\"2\" width=\"4\" height=\"4\" rx=\"0\" stroke-linejoin=\"miter\"/><rect x=\"10\" y=\"2\" width=\"4\" height=\"4\" rx=\"0\" stroke-linejoin=\"miter\"/><rect x=\"2\" y=\"10\" width=\"4\" height=\"4\" rx=\"0\" stroke-linejoin=\"miter\"/><path d=\"M9.3333 9.3333L11.3333 9.3333L11.3333 11.3333L14 11.3333L14 14\" stroke-linecap=\"butt\" stroke-linejoin=\"miter\"/><rect x=\"9\" y=\"13\" width=\"1.3333\" height=\"1.3333\" rx=\"0\" fill=\"currentColor\" stroke=\"none\"/><rect x=\"13\" y=\"8.3333\" width=\"1.3333\" height=\"1.3333\" rx=\"0\" fill=\"currentColor\" stroke=\"none\"/></svg>我的 QR 碼</button></div><div class=\"panel\" data-qr-panel hidden><strong data-qr-title></strong><p data-qr-detail></p><button data-qr-close>關閉</button></div><small>示範掃描入口與出示碼入口的區別；不開啟攝影機，也不產生可用識別碼。</small></div>",
+      "searchKeywords": [
+        "scan-qr",
+        "qr-scanner",
+        "掃描 QR 碼"
+      ],
+      "usageEvidence": [
+        "https://support.google.com/camerafromgoogle/answer/12033278?hl=en"
+      ],
+      "usageEvidenceLimit": "Google documents camera/QR scanning modes. The scan-versus-qr-code pairing here is a local design judgment, not a claim that Google uses these exact glyphs.",
+      "visualObservation": "16px取景框與QR碼輪廓在同一操作列可分辨；具名入口分別說明讀取其他裝置的碼與出示自己的碼。"
+    },
+    {
+      "name": "shield-lock",
+      "label": "受限存取",
+      "alternative": "lock",
+      "replacementKind": "contextual-entry",
+      "context": "檔案詳情 · 持續存取狀態",
+      "reason": "受限存取可直接用lock；安全性設定導覽可用shield。把鎖塞進盾牌不會補出角色、權限或範圍，這些必要資訊仍由設定文字交代。",
+      "replacementScope": "已明示受限對象與存取範圍的位置。泛稱安全並不足以判定授權狀態；不把lock當成所有安全機制都已啟用。",
+      "sample": "<style>[data-security] label{display:block;margin:8px 0}[data-security] .row{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin:8px 0}[data-security] input,[data-security] select{font:inherit;color:inherit;background:transparent;border:1px solid #8888;padding:7px;max-width:220px}[data-security] .panel{border:1px solid #8887;border-radius:5px;padding:12px;margin:10px 0}[data-security] output{display:block;margin:10px 0}.dark [data-security]{color-scheme:dark}</style><div data-security=\"restricted\"><div class=\"panel\"><b>年度預算.pdf</b><p><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><path d=\"M4.5 2L9.0858 2A1 1 0 0 1 9.7929 2.2929L12.2071 4.7071A1 1 0 0 1 12.5 5.4142L12.5 13A1 1 0 0 1 11.5 14L4.5 14A1 1 0 0 1 3.5 13L3.5 3A1 1 0 0 1 4.5 2Z\"/><path d=\"M10.125 2.625L10.125 4.375L11.875 4.375L12.2071 4.7071Q12.2245 4.7245 12.2409 4.7427Q12.2574 4.7608 12.273 4.7798Q12.2886 4.7988 12.3032 4.8185Q12.3178 4.8382 12.3315 4.8586Q12.3451 4.879 12.3577 4.9001Q12.3703 4.9212 12.3819 4.9428Q12.3935 4.9645 12.404 4.9867Q12.4145 5.0088 12.4239 5.0315Q12.4333 5.0542 12.4415 5.0773Q12.4498 5.1004 12.4569 5.1239Q12.4641 5.1474 12.47 5.1712Q12.476 5.195 12.4808 5.2191Q12.4856 5.2432 12.4892 5.2675Q12.4928 5.2918 12.4952 5.3162Q12.4976 5.3406 12.4988 5.3651Q12.5 5.3897 12.5 5.4142L12.5 5.625L10.1 5.625Q9.8663 5.625 9.6491 5.539Q9.4132 5.4456 9.2338 5.2662Q9.0544 5.0868 8.961 4.8509Q8.875 4.6337 8.875 4.4L8.875 2L9.0858 2Q9.1103 2 9.1349 2.0012Q9.1594 2.0024 9.1838 2.0048Q9.2082 2.0072 9.2325 2.0108Q9.2568 2.0144 9.2809 2.0192Q9.305 2.024 9.3288 2.03Q9.3526 2.0359 9.3761 2.0431Q9.3996 2.0502 9.4227 2.0585Q9.4458 2.0667 9.4685 2.0761Q9.4912 2.0855 9.5133 2.096Q9.5355 2.1065 9.5572 2.1181Q9.5788 2.1297 9.5999 2.1423Q9.621 2.1549 9.6414 2.1685Q9.6618 2.1822 9.6815 2.1968Q9.7012 2.2114 9.7202 2.227Q9.7392 2.2426 9.7574 2.2591Q9.7755 2.2755 9.7929 2.2929L10.125 2.625Z\" fill=\"currentColor\" stroke=\"none\" fill-rule=\"evenodd\"/></svg> 文件</p><label>存取範圍 <select data-security-access><option value=\"private\">僅受邀成員</option><option value=\"public\">知道連結的任何人</option></select></label><p data-security-state><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><rect x=\"3\" y=\"7\" width=\"10\" height=\"7\" rx=\"1\"/><path d=\"M5.5 7V4.5A2.5 2.5 0 0 1 10.5 4.5V7\"/><path d=\"M8 9.5L8 11\"/></svg> 受限存取</p></div><template data-security-lock><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><rect x=\"3\" y=\"7\" width=\"10\" height=\"7\" rx=\"1\"/><path d=\"M5.5 7V4.5A2.5 2.5 0 0 1 10.5 4.5V7\"/><path d=\"M8 9.5L8 11\"/></svg></template><template data-security-open><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><circle cx=\"8\" cy=\"8\" r=\"6\"/><path d=\"M8.972 2.0793Q8.731 2.0397 8.4876 2.0198Q8.2442 2 8 2Q7.7558 2 7.5124 2.0198Q7.269 2.0397 7.028 2.0793Q5.979 3.1941 5.3673 4.5565Q4.7554 5.9193 4.6479 7.375L2.0326 7.375Q2 7.6866 2 8Q2 8.3134 2.0326 8.625L4.6479 8.625Q4.7554 10.0807 5.3673 11.4435Q5.979 12.8059 7.028 13.9207Q7.269 13.9603 7.5124 13.9802Q7.7558 14 8 14Q8.2442 14 8.4876 13.9802Q8.731 13.9603 8.972 13.9207Q10.021 12.8059 10.6327 11.4435Q11.2446 10.0807 11.3521 8.625L13.9674 8.625Q14 8.3134 14 8Q14 7.6866 13.9674 7.375L11.3521 7.375Q11.2446 5.9193 10.6327 4.5565Q10.021 3.1941 8.972 2.0793ZM9.4923 5.0685Q9.9942 6.1861 10.098 7.375L5.902 7.375Q6.0058 6.1861 6.5077 5.0685Q7.0505 3.8594 8 2.8711Q8.9495 3.8594 9.4923 5.0685ZM6.5077 10.9315Q6.0058 9.8139 5.902 8.625L10.098 8.625Q9.9942 9.8139 9.4923 10.9315Q8.9495 12.1406 8 13.1289Q7.0505 12.1406 6.5077 10.9315Z\" fill=\"currentColor\" stroke=\"none\" fill-rule=\"evenodd\"/></svg></template><p>「安全性設定」導覽另用 <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><path d=\"M7.7333 2.1333Q8 2 8.2667 2.1333C9.6667 3.2 11.6667 3.8 13.0667 4Q13.3333 4 13.3333 4.2667V7.3333C13.3333 10.6667 11.3333 13 8.2667 13.92Q8 14 7.7333 13.92C4.6667 13 2.6667 10.6667 2.6667 7.3333V4.2667Q2.6667 4 2.9333 4C4.3333 3.8 6.3333 3.2 7.7333 2.1333Z\"/></svg> 防護圖示。</p><small>本地狀態示例，不會更改任何檔案權限。</small></div>",
+      "searchKeywords": [
+        "restricted-access",
+        "受限存取"
+      ],
+      "usageEvidence": [],
+      "usageEvidenceLimit": "No concrete product requirement for a shield-plus-lock composite was supplied. The local permission-state example establishes a conditional replacement, not a universal meaning for the vague original 安全性鎖定 label.",
+      "visualObservation": "lock在文件存取範圍旁持續顯示受限，切換至連結存取後變更狀態；安全性導覽的shield另列，不用盾牌加鎖暗示未知安全能力。"
+    }
+  ]
+}

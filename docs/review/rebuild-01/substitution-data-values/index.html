@@ -1,0 +1,121 @@
+<!doctype html><meta charset="utf-8"><style>*{box-sizing:border-box}body{font:13px/1.6 system-ui;margin:0;padding:20px;color:#26302a;background:#fafaf8}h1{font-size:20px}h2{font-size:14px;margin:0 0 10px}main{display:grid;grid-template-columns:1fr 1fr;gap:14px}article{border:1px solid #8885;border-radius:6px;padding:14px}header{display:flex;align-items:center;gap:18px}small{opacity:.7}p{margin:10px 0}button{font:inherit;color:inherit;background:none;border:1px solid #8886;border-radius:5px;display:flex;align-items:center;gap:7px;padding:6px 9px}.dark{background:#232724;color:#eff2ee}</style><h1>收錄判斷 · 既有圖示與內容預覽</h1><p>不取回被撤銷的變體圖稿。圖示與色塊以 16／20／24px 顯示；文字及公式使用相同數值的字級、保留自然高度，不是固定尺寸圖示。</p><main><article><h2>group-by → 具名選項與實際資料預覽</h2><header><span>依欄位分組</span></header><p><small>資料表／時間軸 · 分組方式選單</small></p><style>
+article:has([data-data-demo]){min-width:0}
+[data-data-demo] {margin:12px 0;min-width:0}
+[data-data-demo] select,[data-data-demo] input{font:inherit;color:inherit;background:transparent}
+[data-data-demo] fieldset{border:1px solid #8886;border-radius:4px;margin:10px 0;padding:9px;min-width:0}
+[data-data-demo] label{display:inline-flex;align-items:center;gap:5px;margin:4px 8px 4px 0}
+[data-data-demo] table{border-collapse:collapse;width:100%;font-size:12px}
+[data-data-demo] th,[data-data-demo] td{padding:var(--cell-pad,5px) 6px;text-align:left;border-bottom:1px solid #8884}
+[data-data-demo] th{font-weight:600}
+[data-data-demo] [data-group-title]{background:#8882}
+[data-data-demo] [data-result]{margin-top:10px}
+[data-data-demo] [hidden]{display:none!important}
+[data-data-demo] button[aria-pressed=true]{border-color:currentColor;font-weight:650}
+[data-freeze-scroll]{height:137px;width:100%;overflow:auto;border:1px solid #8887;margin:10px 0;isolation:isolate;background:var(--paper,#fafaf8)}
+[data-freeze-scroll] table{width:600px;table-layout:fixed;border-collapse:separate;border-spacing:0;font-size:12px}
+[data-freeze-scroll] td{width:75px;min-width:75px;height:32px;padding:0 6px;box-sizing:border-box;border:0;border-right:1px solid #8884;border-bottom:1px solid #8884;background:var(--paper,#fafaf8)}
+[data-freeze-scroll] td[data-frozen]{font-weight:650}
+.dark{--paper:#232724}
+.dark [data-data-demo]{color-scheme:dark}
+</style><div data-data-demo="grouping"><label>分組方式 <select data-group><option value="project" selected>依專案</option><option value="owner">依負責人</option><option value="none" >不分組</option></select></label><div data-result></div><p><small>本地操作示例；不接入產品資料。</small></p></div><p>已有具名欄位的分組選單能直接顯示依專案或依負責人。畫布物件group的框選語意不等同資料分組；此處沿用實際選項與分組標題，不另造模糊的分支圖。</p><p><small>適用範圍：有分組方式欄位與資料標題的列表；若需要獨立入口，可另用既有list-tree配完整標籤，這不是將group-by列為list-tree的同義詞。</small></p></article><article><h2>ungroup-rows → 具名選項與實際資料預覽</h2><header><span>取消列分組</span></header><p><small>分組方式選單 · 不分組</small></p><style>
+article:has([data-data-demo]){min-width:0}
+[data-data-demo] {margin:12px 0;min-width:0}
+[data-data-demo] select,[data-data-demo] input{font:inherit;color:inherit;background:transparent}
+[data-data-demo] fieldset{border:1px solid #8886;border-radius:4px;margin:10px 0;padding:9px;min-width:0}
+[data-data-demo] label{display:inline-flex;align-items:center;gap:5px;margin:4px 8px 4px 0}
+[data-data-demo] table{border-collapse:collapse;width:100%;font-size:12px}
+[data-data-demo] th,[data-data-demo] td{padding:var(--cell-pad,5px) 6px;text-align:left;border-bottom:1px solid #8884}
+[data-data-demo] th{font-weight:600}
+[data-data-demo] [data-group-title]{background:#8882}
+[data-data-demo] [data-result]{margin-top:10px}
+[data-data-demo] [hidden]{display:none!important}
+[data-data-demo] button[aria-pressed=true]{border-color:currentColor;font-weight:650}
+[data-freeze-scroll]{height:137px;width:100%;overflow:auto;border:1px solid #8887;margin:10px 0;isolation:isolate;background:var(--paper,#fafaf8)}
+[data-freeze-scroll] table{width:600px;table-layout:fixed;border-collapse:separate;border-spacing:0;font-size:12px}
+[data-freeze-scroll] td{width:75px;min-width:75px;height:32px;padding:0 6px;box-sizing:border-box;border:0;border-right:1px solid #8884;border-bottom:1px solid #8884;background:var(--paper,#fafaf8)}
+[data-freeze-scroll] td[data-frozen]{font-weight:650}
+.dark{--paper:#232724}
+.dark [data-data-demo]{color-scheme:dark}
+</style><div data-data-demo="ungrouping"><label>分組方式 <select data-group><option value="project" >依專案</option><option value="owner">依負責人</option><option value="none" selected>不分組</option></select></label><div data-result></div><p><small>本地操作示例；不接入產品資料。</small></p></div><p>取消列分組是同一分組欄位的「不分組」值。直接顯示平坦資料列即可和依專案的分組標題區分；不改用畫布ungroup或拆分儲存格圖。</p><p><small>適用範圍：取消這個列表的全部分組條件；若只移除一個分組條件，該條件旁可用既有x並保留條件名稱。</small></p></article><article><h2>density-compact → 具名選項與實際資料預覽</h2><header><span>緊密列高</span></header><p><small>外觀設定 · 同一列高欄位的值</small></p><style>
+article:has([data-data-demo]){min-width:0}
+[data-data-demo] {margin:12px 0;min-width:0}
+[data-data-demo] select,[data-data-demo] input{font:inherit;color:inherit;background:transparent}
+[data-data-demo] fieldset{border:1px solid #8886;border-radius:4px;margin:10px 0;padding:9px;min-width:0}
+[data-data-demo] label{display:inline-flex;align-items:center;gap:5px;margin:4px 8px 4px 0}
+[data-data-demo] table{border-collapse:collapse;width:100%;font-size:12px}
+[data-data-demo] th,[data-data-demo] td{padding:var(--cell-pad,5px) 6px;text-align:left;border-bottom:1px solid #8884}
+[data-data-demo] th{font-weight:600}
+[data-data-demo] [data-group-title]{background:#8882}
+[data-data-demo] [data-result]{margin-top:10px}
+[data-data-demo] [hidden]{display:none!important}
+[data-data-demo] button[aria-pressed=true]{border-color:currentColor;font-weight:650}
+[data-freeze-scroll]{height:137px;width:100%;overflow:auto;border:1px solid #8887;margin:10px 0;isolation:isolate;background:var(--paper,#fafaf8)}
+[data-freeze-scroll] table{width:600px;table-layout:fixed;border-collapse:separate;border-spacing:0;font-size:12px}
+[data-freeze-scroll] td{width:75px;min-width:75px;height:32px;padding:0 6px;box-sizing:border-box;border:0;border-right:1px solid #8884;border-bottom:1px solid #8884;background:var(--paper,#fafaf8)}
+[data-freeze-scroll] td[data-frozen]{font-weight:650}
+.dark{--paper:#232724}
+.dark [data-data-demo]{color-scheme:dark}
+</style><div data-data-demo="compact" style="--cell-pad:3px"><fieldset><legend>列高</legend><label><input type="radio" name="density-compact" data-density value="compact" checked>緊密</label><label><input type="radio" name="density-compact" data-density value="comfortable" >寬鬆</label></fieldset><div data-result></div><p><small>本地操作示例；不接入產品資料。</small></p></div><p>緊密與寬鬆是顯示密度設定值。用單選項與真正的資料列間距顯示結果，沒有必要再做一顆模擬細線排列的圖。</p><p><small>適用範圍：具名外觀設定與資料預覽。這項取捨不宣稱其他產品的純圖示密度控制沒有用途；此處選用可直接看見結果的控制方式。</small></p></article><article><h2>density-comfortable → 具名選項與實際資料預覽</h2><header><span>寬鬆列高</span></header><p><small>外觀設定 · 與緊密並列的值</small></p><style>
+article:has([data-data-demo]){min-width:0}
+[data-data-demo] {margin:12px 0;min-width:0}
+[data-data-demo] select,[data-data-demo] input{font:inherit;color:inherit;background:transparent}
+[data-data-demo] fieldset{border:1px solid #8886;border-radius:4px;margin:10px 0;padding:9px;min-width:0}
+[data-data-demo] label{display:inline-flex;align-items:center;gap:5px;margin:4px 8px 4px 0}
+[data-data-demo] table{border-collapse:collapse;width:100%;font-size:12px}
+[data-data-demo] th,[data-data-demo] td{padding:var(--cell-pad,5px) 6px;text-align:left;border-bottom:1px solid #8884}
+[data-data-demo] th{font-weight:600}
+[data-data-demo] [data-group-title]{background:#8882}
+[data-data-demo] [data-result]{margin-top:10px}
+[data-data-demo] [hidden]{display:none!important}
+[data-data-demo] button[aria-pressed=true]{border-color:currentColor;font-weight:650}
+[data-freeze-scroll]{height:137px;width:100%;overflow:auto;border:1px solid #8887;margin:10px 0;isolation:isolate;background:var(--paper,#fafaf8)}
+[data-freeze-scroll] table{width:600px;table-layout:fixed;border-collapse:separate;border-spacing:0;font-size:12px}
+[data-freeze-scroll] td{width:75px;min-width:75px;height:32px;padding:0 6px;box-sizing:border-box;border:0;border-right:1px solid #8884;border-bottom:1px solid #8884;background:var(--paper,#fafaf8)}
+[data-freeze-scroll] td[data-frozen]{font-weight:650}
+.dark{--paper:#232724}
+.dark [data-data-demo]{color-scheme:dark}
+</style><div data-data-demo="comfortable" style="--cell-pad:11px"><fieldset><legend>列高</legend><label><input type="radio" name="density-comfortable" data-density value="compact" >緊密</label><label><input type="radio" name="density-comfortable" data-density value="comfortable" checked>寬鬆</label></fieldset><div data-result></div><p><small>本地操作示例；不接入產品資料。</small></p></div><p>寬鬆列高用較大的真實上下留白呈現，和緊密共用同一組選項。line-height表達文字行距，不能當成表格列高的完全同義圖。</p><p><small>適用範圍：只改資料表內容密度，不改字級、段落行距或列數；選項名稱與實際預覽一起使用。</small></p></article></main><script>function freezeCells(mode){
+ const top=mode==='row'?1:mode==='panes'?2:0,left=mode==='column'?1:mode==='panes'?2:0;
+ return '<table aria-label="試算表內容"><tbody>'+Array.from({length:8},(_,y)=>'<tr>'+Array.from({length:8},(_,x)=>{
+  const frozenY=y<top,frozenX=x<left,style=(frozenY||frozenX?'position:sticky;z-index:'+(frozenY&&frozenX?3:2)+';':'')+(frozenY?'top:'+y*32+'px;':'')+(frozenX?'left:'+x*75+'px;':'')+(frozenY&&y===top-1?'border-bottom:2px solid currentColor;':'')+(frozenX&&x===left-1?'border-right:2px solid currentColor;':'');
+  return '<td data-cell="'+String.fromCharCode(65+x)+(y+1)+'" '+(frozenX||frozenY?'data-frozen ':'')+'style="'+style+'">'+String.fromCharCode(65+x)+(y+1)+'</td>';
+ }).join('')+'</tr>').join('')+'</tbody></table>';
+}
+function initializeDataControls(rows){
+ function render(root){
+  const kind=root.dataset.dataDemo;
+  if(kind==='freeze'){
+   const mode=root.dataset.freezeMode;
+   root.querySelector('[data-freeze-scroll]').innerHTML=freezeCells(mode);
+   root.querySelector('[data-freeze-status]').textContent={row:'固定：第 1 列',column:'固定：A 欄',panes:'固定：第 1–2 列、A–B 欄',none:'未凍結列或欄'}[mode];
+   for(const b of root.querySelectorAll('[data-freeze-value]'))b.setAttribute('aria-pressed',String(b.dataset.freezeValue===mode));
+   return;
+  }
+  let visible=[...rows];
+  const filter=root.querySelector('[data-filter]');if(filter&&filter.value!=='all')visible=visible.filter(r=>r.status===filter.value);
+  const fields=[...root.querySelectorAll('[data-sort-field]')].map(x=>x.dataset.sortField);
+  if(fields.length){
+   visible.sort((a,b)=>{for(const f of fields){const direction=root.querySelector('[data-sort-direction="'+f+'"]').value==='asc'?1:-1;const cmp=typeof a[f]==='number'?a[f]-b[f]:a[f].localeCompare(b[f],'zh-Hant');if(cmp)return cmp*direction;}return 0;});
+   root.querySelector('[data-sort-summary]').textContent=fields.map((f,i)=>(i+1)+'. '+({project:'專案',amount:'金額'})[f]+' '+(root.querySelector('[data-sort-direction="'+f+'"]').value==='asc'?'升冪':'降冪')).join(' → ');
+  }
+  const density=root.querySelector('[data-density]:checked');if(density)root.style.setProperty('--cell-pad',density.value==='compact'?'3px':'11px');
+  let columns=kind==='columns'?['id',...[...root.querySelectorAll('[data-column]:checked')].map(x=>x.dataset.column)]:['id','project','owner','amount'];
+  const labels={id:'編號',project:'專案',owner:'負責人',amount:'金額',status:'狀態'};
+  if(kind==='filter')columns=['id','project','status'];
+  const group=root.querySelector('[data-group]')?.value||'none';
+  let body='';
+  const append=row=>{body+='<tr data-record="'+row.id+'">'+columns.map(f=>'<td data-field="'+f+'">'+row[f]+'</td>').join('')+'</tr>';};
+  if(group!=='none')for(const value of [...new Set(visible.map(r=>r[group]))]){body+='<tr data-group-title><th colspan="'+columns.length+'">'+value+'</th></tr>';visible.filter(r=>r[group]===value).forEach(append);}else visible.forEach(append);
+  root.querySelector('[data-result]').innerHTML='<table><thead><tr>'+columns.map(f=>'<th data-field="'+f+'" scope="col">'+labels[f]+'</th>').join('')+'</tr></thead><tbody>'+body+'</tbody></table><p data-result-count>'+visible.length+' 筆</p>';
+ }
+ for(const root of document.querySelectorAll('[data-data-demo]'))render(root);
+ document.addEventListener('change',e=>{const root=e.target.closest('[data-data-demo]');if(root)render(root);});
+ document.addEventListener('click',e=>{
+  const root=e.target.closest('[data-data-demo]');if(!root)return;
+  const panel=e.target.closest('[data-panel-toggle]');if(panel){const target=root.querySelector('[data-panel="'+panel.dataset.panelToggle+'"]');target.hidden=!target.hidden;panel.setAttribute('aria-expanded',String(!target.hidden));}
+  if(e.target.closest('[data-swap-sort]')){const fields=root.querySelector('[data-sort-fields]');fields.append(fields.firstElementChild);render(root);}
+  const freeze=e.target.closest('[data-freeze-value]');if(freeze){root.dataset.freezeMode=freeze.dataset.freezeValue;render(root);}
+  if(e.target.closest('[data-scroll-demo]')){const scroller=root.querySelector('[data-freeze-scroll]');scroller.scrollLeft=110;scroller.scrollTop=90;}
+ });
+}
+initializeDataControls([{"id":"Q01","project":"品牌","owner":"小林","status":"處理中","amount":300},{"id":"Q02","project":"網站","owner":"小陳","status":"已完成","amount":500},{"id":"Q03","project":"品牌","owner":"小陳","status":"已完成","amount":700},{"id":"Q04","project":"網站","owner":"小林","status":"處理中","amount":200}]);</script><script>function pageControls(e){const t=e.target,f=t.closest('fieldset');if(!f)return;if(t.hasAttribute('data-paper-orientation')){const p=f.querySelector('[data-orientation-preview]');p.style.width=(t.value==='portrait'?90:127)+'px';p.style.height=(t.value==='portrait'?127:90)+'px';}if(t.hasAttribute('data-margin-side'))f.querySelector('[data-margin-preview]').style['padding'+t.dataset.marginSide[0].toUpperCase()+t.dataset.marginSide.slice(1)]=(Math.max(0,Math.min(60,Number(t.value)))*.6)+'px';if(t.hasAttribute('data-page-layout'))f.querySelector('[data-second-page]').hidden=t.value==='single';if(t.hasAttribute('data-fit-mode')){const p=f.querySelector('[data-fit-paper]');p.style.width=(t.value==='width'?158:138*Math.SQRT2)+'px';p.style.height=(t.value==='width'?158/Math.SQRT2:138)+'px';}}document.addEventListener('change',pageControls);document.addEventListener('input',pageControls);document.addEventListener('change',e=>{const t=e.target,f=t.closest('fieldset');if(!f)return;if(t.hasAttribute('data-gradient-css'))f.querySelector('[data-gradient-preview]').style.background=t.dataset.gradientCss;if(t.hasAttribute('data-text-style'))f.querySelector('[data-effect-preview]').style.cssText='display:inline-block;padding:6px 3px;font-size:24px;line-height:1.5;'+t.dataset.textStyle;});</script>

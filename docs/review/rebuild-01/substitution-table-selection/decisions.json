@@ -1,0 +1,50 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "viewed": [
+    "light.png",
+    "dark.png"
+  ],
+  "items": [
+    {
+      "name": "table-header-row",
+      "alternative": "table",
+      "label": "表頭列",
+      "context": "表格選單與屬性面板 · 表頭列",
+      "reason": "既有 table 的上方本來就是一整條表頭帶，能與新的表頭欄並排；再新增同構圖只會重複。",
+      "sample": "<button>✓ 表頭列</button><p>表頭欄可獨立切換</p>"
+    },
+    {
+      "name": "table-select-cell",
+      "alternative": "table",
+      "label": "選取儲存格",
+      "context": "表格選單與屬性面板 · 選取儲存格",
+      "reason": "選取範圍由實際儲存格高亮呈現；表格選單以文字指出儲存格，不用小型格線內的另一個框猜測。",
+      "sample": "<button>選取儲存格</button>"
+    },
+    {
+      "name": "table-select-row",
+      "alternative": "table",
+      "label": "選取整列",
+      "context": "表格選單與屬性面板 · 選取整列",
+      "reason": "實際整列的背景高亮及列索引已表達範圍；選單中的完整名稱比在 16px 表格疊加選取標記清楚。",
+      "sample": "<button>選取整列</button>"
+    },
+    {
+      "name": "table-select-column",
+      "alternative": "table",
+      "label": "選取整欄",
+      "context": "表格選單與屬性面板 · 選取整欄",
+      "reason": "欄標頭和整欄高亮可直接表達選取範圍；在有文字的表格選單使用既有 table 作分類入口即可。",
+      "sample": "<button>選取整欄</button>"
+    },
+    {
+      "name": "table-header-cell",
+      "alternative": "table",
+      "label": "設為表頭儲存格",
+      "context": "表格選單與屬性面板 · 設為表頭儲存格",
+      "reason": "針對目前選取的儲存格切換屬性，核取狀態與完整名稱足以表達；不為單格狀態另造 H 或表頭徽標。",
+      "sample": "<button>✓ 設為表頭儲存格</button>"
+    }
+  ]
+}

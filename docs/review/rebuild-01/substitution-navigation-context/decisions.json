@@ -1,0 +1,92 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "viewed": [
+    "light-1.png",
+    "dark-1.png"
+  ],
+  "sizes": [
+    16,
+    20,
+    24
+  ],
+  "dpr": [
+    1
+  ],
+  "evidence": [
+    {
+      "path": "docs/review/rebuild-01/substitution-navigation-context/light-1.png",
+      "sha256": "7cff5dd36f07b8c8af5a9f433ee4412a22f8863735df93ea308070266537be73"
+    },
+    {
+      "path": "docs/review/rebuild-01/substitution-navigation-context/dark-1.png",
+      "sha256": "ceb60403580df42b93aa8a0b0573f637f5bb67e7d48a72aea70c0b9721482382"
+    }
+  ],
+  "scope": "Completes the visual context records for previously excluded names. Existing mother icons are reused without geometry changes. No rejected session drawings retrieved; new scenario pages are static visual evidence, not implemented application actions.",
+  "items": [
+    {
+      "name": "tab-new",
+      "alternative": "plus",
+      "context": "編輯器分頁列",
+      "label": "新增分頁",
+      "reason": "分頁列中的新增控制由加號直接表達；分頁列位置已提供物件資訊，額外加分頁外框只讓小尺寸變密。"
+    },
+    {
+      "name": "tab-close",
+      "alternative": "x",
+      "context": "index.html 分頁",
+      "label": "關閉分頁",
+      "reason": "分頁本身的關閉按鈕直接用 x；再畫一個分頁與 x 會重複操作物件，也削弱常見關閉符號的清楚程度。"
+    },
+    {
+      "name": "tab-pin",
+      "alternative": "pin",
+      "context": "index.html 分頁選單",
+      "label": "固定分頁",
+      "reason": "固定分頁的選單已有分頁上下文，釘選狀態也用同一圖釘辨識。"
+    },
+    {
+      "name": "tab-search",
+      "alternative": "search",
+      "context": "所有分頁",
+      "label": "搜尋分頁",
+      "reason": "分頁搜尋的面板標題及輸入框提示已限定範圍，原放大鏡即可。"
+    },
+    {
+      "name": "task-template",
+      "alternative": "layout-template",
+      "context": "建立任務",
+      "label": "選擇範本",
+      "reason": "建立任務的範本選單已有任務上下文，可沿用通用範本圖。"
+    },
+    {
+      "name": "calendar-previous",
+      "alternative": "chevron-left",
+      "context": "2026 年 11 月",
+      "label": "上個月",
+      "reason": "日曆的標題和日期已交代物件，上一期導覽使用單一左折角即可；Haoban 實際的上一段日期控制也直接使用 ChevronLeftIcon。"
+    },
+    {
+      "name": "calendar-next",
+      "alternative": "chevron-right",
+      "context": "2026 年 11 月",
+      "label": "下個月",
+      "reason": "日曆的標題和日期已交代物件，下一期導覽使用單一右折角即可；Haoban 實際的下一段日期控制直接使用 ChevronRightIcon，不需再加小日曆。"
+    },
+    {
+      "name": "calendar-start",
+      "alternative": "calendar",
+      "context": "開始日期",
+      "label": "2026/11/18",
+      "reason": "開始日期欄位已標示用途，日曆內的小點與橫線難以獨立表達開始。"
+    },
+    {
+      "name": "calendar-end",
+      "alternative": "calendar",
+      "context": "結束日期",
+      "label": "2026/11/25",
+      "reason": "結束日期使用相同日期選擇器，欄位標籤和實際日期更容易辨認。"
+    }
+  ]
+}

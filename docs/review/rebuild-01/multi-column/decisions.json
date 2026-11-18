@@ -1,0 +1,44 @@
+[
+  {
+    "dashes": false,
+    "dashReason": "段落字形、方向箭頭與版面分界均是確定結構，不是暫態或隱藏邊界。",
+    "opacity": false,
+    "opacityReason": "各部件均有辨識用途，不靠漸淡掩蓋接點或密度。",
+    "reviewed": true,
+    "name": "layout-columns-3",
+    "purpose": "編輯器版面選擇器的三欄命令，與二欄、四欄並列。",
+    "recognitionCues": "共同外框內兩條等距分界，形成三個開放內孔。",
+    "confusableWith": [
+      "layout-columns",
+      "layout-columns-4",
+      "table"
+    ],
+    "sourceObservation": "Lucide 與 Tabler 的三欄均採單一框與兩條分界；Lucide 外框更接近正方形，Tabler 為較扁的框。本庫既有二欄也採同一種共享分界。",
+    "reason": "沿用 layout-columns 實際繪製函式提供的外框，不重畫近似框形。內分界採平切端帽，在框的中心線收口；不重複畫每欄的兩側邊。既有二欄在純圖示選擇器無法指出三欄數量。",
+    "comparison": "最新稿與兩份來源並列，整體採與既有二欄一致的較扁外框；三個內孔保持等距，16px 最粗線寬仍可逐欄數出。rounded 的框角與 straight 分界分工清楚，接點沒有凸出上、下框。三欄與二欄切換時佔幅不跳動。",
+    "usageEvidence": [
+      "/Users/aron/haoban/packages/editor/src/commands.svelte.ts:155"
+    ]
+  },
+  {
+    "dashes": false,
+    "dashReason": "段落字形、方向箭頭與版面分界均是確定結構，不是暫態或隱藏邊界。",
+    "opacity": false,
+    "opacityReason": "各部件均有辨識用途，不靠漸淡掩蓋接點或密度。",
+    "reviewed": true,
+    "name": "layout-columns-4",
+    "purpose": "編輯器版面選擇器的四欄命令，與二欄、三欄並列。",
+    "recognitionCues": "同一外框內三條等距分界，留下四條縱向空腔。",
+    "confusableWith": [
+      "layout-columns",
+      "layout-columns-3",
+      "table"
+    ],
+    "sourceObservation": "Lucide columns-4 是同語意四欄參考，Tabler columns 是二欄文字排版，僅作欄式結構參考，不能稱為第二份四欄圖。Lucide 用共用分界避免重複筆畫。",
+    "reason": "與三欄共用同一函式及 layout-columns 外框，只由欄數決定分界位置。16px 可用內寬 12px，四欄各 3px 中心距，不以多個空心小矩形消耗兩倍線寬。純圖示選擇器需要四欄輪廓，不能拿二欄圖加名稱冒充。",
+    "comparison": "與 Lucide 相比，既有母型的框身稍矮、重量較輕；四條孔在 16px 深淺底及粗線端仍連續，不混成實心條塊。Tabler 文字行線可表達多欄排版，但無法預覽四欄，因此保留幾何分區。與三欄並排時外框、圓角及上下基線完全一致。",
+    "usageEvidence": [
+      "/Users/aron/haoban/packages/editor/src/commands.svelte.ts:155"
+    ]
+  }
+]

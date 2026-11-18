@@ -1,0 +1,44 @@
+[
+  {
+    "name": "case-title",
+    "purpose": "文字大小寫選擇器的字首大寫，與全部小寫及小型大寫並列。",
+    "recognitionCues": "大寫 A 後接圓腹小寫 a，兩字同基線。",
+    "confusableWith": [
+      "small-caps",
+      "case-lower",
+      "text"
+    ],
+    "sourceObservation": "Lucide case-sensitive 與 MDI format-letter-case 都提供 Aa 字形結構；用途並非精確的字首大寫命令，僅作家族構造參考。",
+    "reason": "直接組合本家族 capitalA 與 lowerA；第二字的圓腹是和 small-caps 區分的必要線索，不另造一套 A。",
+    "comparison": "Lucide 的 Aa 輪廓較厚，MDI 的 a 有不同字體筆形；本稿以等重描邊與既有工具列協調。16px 的第二字仍有圓腹，和 small-caps 的尖頂小 A 可直接分辨；大寫橫畫粗線補償後，內孔和小寫字腹都保持透明。",
+    "usageEvidence": [
+      "https://help.figma.com/hc/en-us/articles/360039956634-Explore-text-properties"
+    ],
+    "dashes": false,
+    "dashReason": "字形及間距界線表達確定屬性，不是隱藏邊界或暫態。",
+    "opacity": false,
+    "opacityReason": "兩字與規則線均是必要識別，不以淡化隱藏字形或接點問題。",
+    "reviewed": true
+  },
+  {
+    "name": "small-caps",
+    "purpose": "文字大小寫選擇器的小型大寫，需與字首大寫分開。",
+    "recognitionCues": "首字大 A、次字較矮但仍有尖頂及橫畫的大寫 A。",
+    "confusableWith": [
+      "case-title",
+      "case-upper",
+      "text"
+    ],
+    "sourceObservation": "Lucide 與 Hugeicons 的 a-large-small 是大小字母構造參考，不是精確的小型大寫命令；兩份來源的小 A 都有明確尖頂。",
+    "reason": "小 A 共用 capitalA，16px 高度取 6、寬度 4.5；調高並收窄第二字，修正矮寬字形近似折角的問題。相同描邊重量讓它保持小型大寫，沒有縮小整顆 SVG 而變細。",
+    "comparison": "最新稿與兩份來源並排後，較窄的小 A 保留尖頂、雙腿與橫畫，不像扁三角；16px 與 Aa 並列時，尖頂和圓腹有明顯差異。粗線補償讓小字內孔仍開放，DPR 1／2 明暗檢視均保留兩個分離字形。",
+    "usageEvidence": [
+      "https://help.figma.com/hc/en-us/articles/360039956634-Explore-text-properties"
+    ],
+    "dashes": false,
+    "dashReason": "字形及間距界線表達確定屬性，不是隱藏邊界或暫態。",
+    "opacity": false,
+    "opacityReason": "兩字與規則線均是必要識別，不以淡化隱藏字形或接點問題。",
+    "reviewed": true
+  }
+]

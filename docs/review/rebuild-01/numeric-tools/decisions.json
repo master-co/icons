@@ -1,0 +1,46 @@
+[
+  {
+    "dashes": false,
+    "dashReason": "數值類型與遞增數據都是完整訊號，不表示待完成或隱藏邊界。",
+    "opacity": false,
+    "opacityReason": "各柱和各筆具有同等辨識用途，不以淡化制造層級。",
+    "reviewed": true,
+    "name": "chart-bar-increasing",
+    "purpose": "Haoban 報價成效導覽，與收款組合圖、客戶圓餅圖及專案一般長條圖同時並列。",
+    "recognitionCues": "三根同寬空心直柱、同一底線、從左至右逐柱升高。",
+    "confusableWith": [
+      "chart-bar",
+      "chart-combo",
+      "trending-up"
+    ],
+    "usageEvidence": [
+      "/Users/aron/haoban/apps/web/src/features/workspace-navigation.svelte.ts:75"
+    ],
+    "sourceObservation": "Lucide 和 Hugeicons 都用三條遞增細柱加左下座標軸，Lucide 軸角小且柱較粗，Hugeicons 軸角圓弧更大。兩者的上升節奏清楚，但與本庫既有空心直柱的構造不同。",
+    "reason": "抽出既有 chart-bar 的 chartBars 函式，預設輸出原幾何；新稿只傳入遞增排序的三個柱頂。維持原生柱寬、間距、底線及圓角上限，沒有為變體另畫柱體或加一條裝飾趨勢線。",
+    "comparison": "最新稿在三尺寸與兩份來源並排後，保留共源空心柱，避免新增圖獨自改成座標軸加細直線。來源有清楚座標線，本稿靠完整矩形直接表示柱狀數據，與 chart-combo 的座標語言仍能區分。原生 16px 三個內孔及柱間隙都可辨，粗線端也未黏成一排實心線；底線不跳動。sharp 與微圓柱角、明暗 DPR 1／2 已查看。soft／rounded 沿用母型的 0.75px 半徑上限，不為變體另增一種過圓柱頭。"
+  },
+  {
+    "dashes": false,
+    "dashReason": "數值類型與遞增數據都是完整訊號，不表示待完成或隱藏邊界。",
+    "opacity": false,
+    "opacityReason": "各柱和各筆具有同等辨識用途，不以淡化制造層級。",
+    "reviewed": true,
+    "name": "hash",
+    "purpose": "資料表新增欄位的數值類型，和文字、日期、布林選項並列；數值欄標頭亦可使用同一符號。",
+    "recognitionCues": "兩條水平線穿過兩條右傾直線，中央保留一個清楚空腔。",
+    "confusableWith": [
+      "grid",
+      "text",
+      "list-ordered",
+      "asterisk"
+    ],
+    "usageEvidence": [
+      "https://baserow.io/user-docs/adding-a-field",
+      "docs/review/rebuild-01/numeric-tools/index.html（可重現的類型選擇與標頭示意；來源文件證明類型需求，不宣稱其使用本圖形）"
+    ],
+    "sourceObservation": "Lucide 的斜直線接近垂直，圖面較窄長；Tabler 的傾角較大、橫線較短，整體更緊湊。兩者都以四條連續筆畫形成中央空腔，不給交叉點額外圓框。",
+    "reason": "原庫沒有井字號母型。以原生四筆直線建立符號，16px 的水平線距為 4.5px，斜直線間距 5px；20／24 各自設定橫線距與傾移量，維持中央內孔及四端伸出比例。交叉是筆畫相連，無需挖空或把交點改成圓角矩形。",
+    "comparison": "最新稿與來源比較，採介於兩者之間的傾角及較開闊的中央空腔；比 Lucide 窄長稿更接近方形，比 Tabler 緊縮橫線略展開，與本庫文字工具重量較接近。16px 粗線中央仍開通，四條突出端沒有縮成格線；在數值、文字與日期選項並列時，符號輪廓獨立。三尺寸、明暗 DPR 1／2 及線寬兩端已查看。四筆直線沒有轉折角，不為 sharp／soft／rounded 人造不同折點；端帽遵循既有預設。"
+  }
+]

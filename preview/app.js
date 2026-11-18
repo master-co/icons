@@ -45,9 +45,15 @@ function renderLibrary(){const list=filtered();pageItems(list,96);$('#result-cou
 function renderOptical(){const list=filtered();pageItems(list,24);$('#optical-count').textContent=`${list.length.toLocaleString()} 個命名圖示 · 每頁 24 項`;$('#optical-grid').innerHTML=list.length?pageItems(list,24).map(x=>`<article class="optical-card"><h3>${x.name}</h3>${catalog.corners.map(c=>`<div class="optical-row"><span>${cornerLabels[c]}</span>${catalog.sizes.map(s=>`<div class="glyph">${glyph(x.name,s,c)}</div>`).join('')}</div>`).join('')}<div class="optical-row optical-labels"><span>PX</span><span class="glyph">16</span><span class="glyph">20</span><span class="glyph">24</span></div></article>`).join(''):'<div class="empty">沒有符合的圖示。</div>';}
 function renderContext(){$('#context-examples').innerHTML=scenarioMarkup(glyph,state.scenario);}
 function sanitizeReference(text){
+  if(/^data:image\/png;base64,[A-Za-z0-9+/]+={0,2}$/.test(text)){
+    const image=document.createElement('img');image.src=text;image.width=image.height=state.size;
+    image.alt='';image.setAttribute('aria-hidden','true');image.style.objectFit='contain';
+    return image.outerHTML;
+  }
   const doc=new DOMParser().parseFromString(text,'image/svg+xml');
   const svg=doc.documentElement;
   if(svg.localName!=='svg'||doc.querySelector('parsererror'))throw new Error('Invalid reference SVG');
+  if(!svg.hasAttribute('fill'))svg.setAttribute('fill','currentColor');
   const tags=new Set(['svg','g','path','rect','circle','ellipse','line','polyline','polygon']);
   const attributes=new Set(['xmlns','viewBox','d','x','y','width','height','rx','ry','r','cx','cy','x1','x2','y1','y2','points','fill','stroke','stroke-width','stroke-linecap','stroke-linejoin','stroke-miterlimit','fill-rule','clip-rule','opacity','transform']);
   for(const node of [svg,...svg.querySelectorAll('*')]){
@@ -63,7 +69,7 @@ async function renderReference(ticket){
   $('#reference-table').innerHTML='<div class="empty">載入固定版本的參考圖稿…</div>';
   try{
     const refs=list.flatMap(icon=>references.references.filter(r=>r.name===icon.name));
-    await Promise.all(refs.map(async ref=>{if(!referenceCache.has(ref.localPath)){const r=await fetch('/dist/'+ref.localPath);if(!r.ok)throw new Error('來源圖稿讀取失敗');referenceCache.set(ref.localPath,await r.text());}}));
+    await Promise.all(refs.map(async ref=>{if(!referenceCache.has(ref.localPath)){const r=await fetch('/dist/'+ref.localPath);if(!r.ok)throw new Error('來源圖稿讀取失敗');referenceCache.set(ref.localPath,ref.mediaType==='image/png'?'data:image/png;base64,'+btoa(Array.from(new Uint8Array(await r.arrayBuffer()),b=>String.fromCharCode(b)).join('')):await r.text());}}));
     if(ticket!==revision)return;
     const cell=ref=>`<td><a href="${ref.url}" target="_blank" rel="noopener">${sanitizeReference(referenceCache.get(ref.localPath))}<small>${ref.library}<br>${ref.sourceName}<br>${ref.match==='exact'?'同語意':'構造參考'}</small></a></td>`;
     $('#reference-table').innerHTML=list.length?`<table class="reference-table"><thead><tr><th>圖示 / ${state.size}px</th><th>來源 A</th><th>來源 B</th><th>本期修改前</th><th>Master</th></tr></thead><tbody>${list.map(icon=>`<tr><th scope="row">${icon.name}</th>${references.references.filter(r=>r.name===icon.name).map(cell).join('')}${icon.category==='brands'?'<td><small>保留品牌識別輪廓</small></td>':''}<td>${data.before?.[icon.name]?renderSvg(data.before[icon.name],{size:state.size,corner:state.corner}):'<small>本期新增<br>無舊稿</small>'}</td><td>${glyph(icon.name)}</td></tr>`).join('')}</tbody></table>`:'<div class="empty">沒有符合的圖示。</div>';

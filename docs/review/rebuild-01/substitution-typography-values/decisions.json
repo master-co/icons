@@ -1,0 +1,106 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "skillVersion": "0.5.20",
+  "viewed": [
+    "light.png",
+    "dark.png",
+    "changed-light.png",
+    "changed-dark.png"
+  ],
+  "sizes": [
+    16,
+    20,
+    24
+  ],
+  "themes": [
+    "light",
+    "dark"
+  ],
+  "dpr": [
+    1
+  ],
+  "corner": "soft for existing glyphs only",
+  "scope": "Native typography settings and actual text previews. No rejected session geometry retrieved; no production document or editor changed.",
+  "userApproval": "pending",
+  "evidence": [
+    {
+      "path": "docs/review/rebuild-01/substitution-typography-values/light.png",
+      "sha256": "6615f2a36cd23da71f5205155aee53c9cb073d517cad58c31d317fcfbeb4086f"
+    },
+    {
+      "path": "docs/review/rebuild-01/substitution-typography-values/dark.png",
+      "sha256": "cb10a4b8199a3017db3b73b15057cf175ee92e148a07cc2fd4047d3fa77b4909"
+    },
+    {
+      "path": "docs/review/rebuild-01/substitution-typography-values/changed-light.png",
+      "sha256": "c23a852f0482891ffb9a7f6a5969234ce7faa648402f6f4619d5a9d1db195c2a"
+    },
+    {
+      "path": "docs/review/rebuild-01/substitution-typography-values/changed-dark.png",
+      "sha256": "c46c63b810dc0f15297c80d62cdf8ff27ed94663f17eabf87f8aedcf4e6b75ee"
+    }
+  ],
+  "items": [
+    {
+      "name": "ligature",
+      "label": "連字",
+      "alternative": null,
+      "alternativeLabel": "標準連字開關與實際字樣",
+      "replacementKind": "native-content",
+      "context": "字型功能面板 · 標準連字",
+      "reason": "連字效果取決於目前字型支援的字形組合；具名開關配實際文字預覽能直接顯示結果。固定fi圖稿無法交代不同字型的連字樣式，也不需要另外設計一個字型無關的仿字形。",
+      "replacementScope": "字型細節與OpenType設定面板。完整標籤區分標準連字、特殊連字與其他字型功能；這裡不將標準與特殊連字合成同一開關。",
+      "sample": "<style>[data-type-value] .row{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:12px 0}[data-type-value] input[type=number]{width:60px;font:inherit;color:inherit;background:transparent;border:1px solid #8887;padding:6px}[data-type-value] label{display:flex;align-items:center;gap:8px}[data-type-value] .specimen{font-family:Times,serif;font-size:24px;display:inline-block;padding:12px 0;min-height:50px}[data-type-value] small{display:block;opacity:.75}.dark [data-type-value]{color-scheme:dark}</style><div data-type-value=\"ligature\"><label><input type=\"checkbox\" data-ligature checked>標準連字</label><span class=\"specimen\" data-ligature-sample style=\"font-variant-ligatures:common-ligatures\">office affine file</span><p data-ligature-result>已啟用標準連字</p><small>使用實際字型的 OpenType 功能；字串內容保持不變。字型需支援相應連字，這裡以 Times 示範。</small></div>",
+      "nativePreview": "<span style=\"font-family:Times,serif;font-variant-ligatures:common-ligatures\">fi · ffi</span>",
+      "comparisonMarkup": "<span style=\"font-family:Times,serif;font-variant-ligatures:common-ligatures;font-size:24px\">fi · ffi</span>",
+      "searchKeywords": [],
+      "searchAliasDecision": "不把ligature加入type、text-cursor或link，這些圖示不表示字型的連字功能。",
+      "usageEvidence": [
+        "https://help.figma.com/hc/en-us/articles/4913951097367-Use-OpenType-features",
+        "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/font-variant-ligatures"
+      ],
+      "usageEvidenceLimit": "Sources establish font-dependent OpenType features and CSS control. The local checkbox/sample is a design demonstration, not a screenshot or reproduction of Figma.",
+      "visualObservation": "標準連字開關保留完整名稱，Times實際字樣在開關前後改變字形連接，字串內容不變；固定fi字形無須成為另一個SVG。"
+    },
+    {
+      "name": "font-size-increase",
+      "label": "放大字級",
+      "alternative": "plus",
+      "replacementKind": "contextual-entry",
+      "context": "字型面板 · 字級數值欄位旁的增減控制",
+      "reason": "字級欄位名稱、單位與當前數值已界定操作對象，旁邊的既有加減號即可表達增減。文字樣本實際改變大小，不需再把A字母或方向箭頭和加減號複合。",
+      "replacementScope": "加減按鈕直接與具名字級欄位成組。若孤立在同時含縮放、增減圖層等命令的無標籤工具列，不能以此證明單獨加減號已足夠。",
+      "sample": "<style>[data-type-value] .row{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:12px 0}[data-type-value] input[type=number]{width:60px;font:inherit;color:inherit;background:transparent;border:1px solid #8887;padding:6px}[data-type-value] label{display:flex;align-items:center;gap:8px}[data-type-value] .specimen{font-family:Times,serif;font-size:24px;display:inline-block;padding:12px 0;min-height:50px}[data-type-value] small{display:block;opacity:.75}.dark [data-type-value]{color-scheme:dark}</style><div data-type-value=\"size\"><div class=\"row\"><label>字級 <input type=\"number\" min=\"8\" max=\"48\" value=\"16\" data-type-size>px</label><button aria-label=\"縮小字級\" data-type-step=\"-1\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><path d=\"M3 8L13 8\"/></svg></button><button aria-label=\"放大字級\" data-type-step=\"1\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><path d=\"M3 8L13 8\"/><path d=\"M8 3L8 13\"/></svg></button></div><span data-type-sample style=\"display:block;min-height:64px;font-size:16px;padding:8px 0\">文字排版 Typography</span><p data-type-result>16 px</p><small>加減號只調整這個具名字級欄位；不改畫面縮放比例。</small></div>",
+      "searchKeywords": [
+        "increase-font-size",
+        "放大字級"
+      ],
+      "usageEvidence": [
+        "https://help.figma.com/hc/en-us/articles/360039956634-Explore-text-properties"
+      ],
+      "usageEvidenceLimit": "Source establishes the font-size property panel; the plus/minus stepper is a local contextual alternative, not a claim about the exact Figma glyphs.",
+      "visualObservation": "字級欄位與加號保持同組，16px樣本增為24px後直接顯示結果；沒有以加號宣稱孤立工具列也能分辨縮放和字級。"
+    },
+    {
+      "name": "font-size-decrease",
+      "label": "縮小字級",
+      "alternative": "minus",
+      "replacementKind": "contextual-entry",
+      "context": "字型面板 · 字級數值欄位旁的增減控制",
+      "reason": "字級欄位名稱、單位與當前數值已界定操作對象，旁邊的既有加減號即可表達增減。文字樣本實際改變大小，不需再把A字母或方向箭頭和加減號複合。",
+      "replacementScope": "加減按鈕直接與具名字級欄位成組。若孤立在同時含縮放、增減圖層等命令的無標籤工具列，不能以此證明單獨加減號已足夠。",
+      "sample": "<style>[data-type-value] .row{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:12px 0}[data-type-value] input[type=number]{width:60px;font:inherit;color:inherit;background:transparent;border:1px solid #8887;padding:6px}[data-type-value] label{display:flex;align-items:center;gap:8px}[data-type-value] .specimen{font-family:Times,serif;font-size:24px;display:inline-block;padding:12px 0;min-height:50px}[data-type-value] small{display:block;opacity:.75}.dark [data-type-value]{color-scheme:dark}</style><div data-type-value=\"size\"><div class=\"row\"><label>字級 <input type=\"number\" min=\"8\" max=\"48\" value=\"16\" data-type-size>px</label><button aria-label=\"縮小字級\" data-type-step=\"-1\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><path d=\"M3 8L13 8\"/></svg></button><button aria-label=\"放大字級\" data-type-step=\"1\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><path d=\"M3 8L13 8\"/><path d=\"M8 3L8 13\"/></svg></button></div><span data-type-sample style=\"display:block;min-height:64px;font-size:16px;padding:8px 0\">文字排版 Typography</span><p data-type-result>16 px</p><small>加減號只調整這個具名字級欄位；不改畫面縮放比例。</small></div>",
+      "searchKeywords": [
+        "decrease-font-size",
+        "縮小字級"
+      ],
+      "usageEvidence": [
+        "https://help.figma.com/hc/en-us/articles/360039956634-Explore-text-properties"
+      ],
+      "usageEvidenceLimit": "Source establishes the font-size property panel; the plus/minus stepper is a local contextual alternative, not a claim about the exact Figma glyphs.",
+      "visualObservation": "減號與同一字級欄位相鄰，樣本可縮至12px；欄位名稱與px單位讓操作對象明確，不需文字加減複合圖。"
+    }
+  ],
+  "sizeScope": "plus/minus at 16/20/24; actual Times ligature specimen at 24px; font-size samples initially 16px then 24/12px."
+}

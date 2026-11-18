@@ -1,0 +1,69 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "skillVersion": "0.5.20",
+  "viewed": [
+    "light.png",
+    "dark.png",
+    "changed-light.png",
+    "changed-dark.png"
+  ],
+  "fontSizes": [
+    16,
+    20,
+    24
+  ],
+  "themes": [
+    "light",
+    "dark"
+  ],
+  "screenshotDpr": [
+    1
+  ],
+  "interactionDpr": [
+    1,
+    2
+  ],
+  "scope": "Parameterized ellipse tool with actual result preview and a named 180-degree preset. No claim that circle is an unconditional substitute in a shape thumbnail palette. Sector remains pending.",
+  "userApproval": "pending",
+  "primaryEvidence": "work/rebuild-01/ellipse-angle-primary-evidence.json",
+  "evidence": [
+    {
+      "path": "docs/review/rebuild-01/substitution-ellipse-angle/light.png",
+      "sha256": "b36bdaadaa160a5073629c993e2322ba5be87496a3885b06e86fc9af45badb51"
+    },
+    {
+      "path": "docs/review/rebuild-01/substitution-ellipse-angle/dark.png",
+      "sha256": "1dbcf990611c7141061eb7e8e1465fdaca110c07d51a76b92c0e688f0cac2209"
+    },
+    {
+      "path": "docs/review/rebuild-01/substitution-ellipse-angle/changed-light.png",
+      "sha256": "b6bb808d49f178764b6a7a930fecfa68c93476b1bde9c4e9cc86580eb14f37e5"
+    },
+    {
+      "path": "docs/review/rebuild-01/substitution-ellipse-angle/changed-dark.png",
+      "sha256": "33105f41b5ef0a8459869a07735750d20ffed52880477a7c828a9653f85beb86"
+    }
+  ],
+  "items": [
+    {
+      "name": "semicircle",
+      "label": "半圓",
+      "alternative": null,
+      "alternativeLabel": "橢圓工具的角度設定與實際形狀預覽",
+      "replacementKind": "native-content",
+      "context": "向量繪圖的橢圓形狀設定",
+      "reason": "半圓是圓形角度為 180° 的結果，不是另一套繪圖操作。既有 circle 可保留具名橢圓入口，角度欄位和實際形狀預覽表達精確結果；不能用 circle-half 那種完整圓內分左右半部的符號冒充半圓。",
+      "replacementScope": "適用於已有開始／結束角與閉合方式的橢圓工具，半圓可作具名角度預設。若產品另有直接插入多種基本形狀的純圖示面板，應展示實際形狀範本，不能把完整圓當作半圓本身。此輪不新增半圓操作圖示。",
+      "nativePreview": "<span>半圓 · 180°</span>",
+      "comparisonMarkup": "<span style=\"font-size:16px;margin-right:12px\">180°</span><span style=\"font-size:20px;margin-right:12px\">180°</span><span style=\"font-size:24px;margin-right:12px\">180°</span>",
+      "sample": "<style>[data-ellipse-demo] .row{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin:12px 0}[data-ellipse-demo] label{display:flex;align-items:center;gap:8px}[data-ellipse-demo] input{width:88px}[data-ellipse-demo] .canvas{width:280px;height:200px;display:grid;place-items:center;border:1px solid #8887;margin:12px 0}[data-ellipse-demo] .canvas svg{width:180px;height:180px;fill:none;stroke:currentColor;stroke-width:1.5}</style><div data-ellipse-demo><button data-ellipse-open aria-expanded=\"true\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><circle cx=\"8\" cy=\"8\" r=\"6\"/></svg> 橢圓形狀</button><fieldset data-ellipse-fields><legend>形狀設定</legend><div class=\"row\"><label>開始角<input aria-label=\"開始角\" data-angle-start type=\"number\" min=\"0\" max=\"360\" value=\"180\">°</label><label>結束角<input aria-label=\"結束角\" data-angle-end type=\"number\" min=\"0\" max=\"360\" value=\"360\">°</label></div><label>閉合方式<select aria-label=\"閉合方式\" data-angle-mode><option value=\"chord\">端點連線（弦）</option><option value=\"sector\">連至圓心（扇形）</option><option value=\"arc\">不閉合（圓弧）</option></select></label><div class=\"row\"><button data-angle-half>半圓 · 180°</button><button data-angle-whole>完整圓</button></div></fieldset><div class=\"canvas\"><svg viewBox=\"0 0 100 100\" aria-label=\"形狀預覽\"><path data-angle-preview></path></svg></div><p role=\"status\" data-angle-status></p></div>",
+      "searchAliasDecision": "不把 semicircle、半圓、circle-half 加到 circle 或 chart-pie 的搜尋別名；它們不是同一個圖形。",
+      "usageEvidence": [
+        "https://inkscape-manuals.readthedocs.io/en/latest/circles-ellipses-and-arcs.html"
+      ],
+      "usageEvidenceLimit": "Inkscape documents Start/End angle fields, open arc, segment/pie and chord closure. The local 180° preset illustrates that parameterized workflow; it is not claimed as an exact Inkscape preset button.",
+      "visualObservation": "明暗背景中，180° 預設呈現真正的半圓邊界；改成 90° 後，弦形與扇形的封口不同。既有 circle 留在具名橢圓入口，結果由實際形狀預覽與角度數值表達，不把整個圓或半填色圓冒充半圓。四張初始／變更狀態截圖已目視。"
+    }
+  ]
+}

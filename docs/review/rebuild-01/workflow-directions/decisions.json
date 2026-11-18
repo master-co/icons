@@ -1,0 +1,50 @@
+[
+  {
+    "reviewed": true,
+    "confusableWith": [
+      "arrow-right",
+      "arrow-left-right",
+      "git-fork",
+      "git-merge",
+      "workflow"
+    ],
+    "dashes": false,
+    "dashReason": "路徑為確定的方向與匯合結構，不表示隱藏、選取或未完成。",
+    "opacity": false,
+    "opacityReason": "兩條路徑同等重要，以留白分開，不以淡化掩飾擁擠。",
+    "name": "workflow-parallel",
+    "purpose": "流程編輯器的新增平行分支命令。Power Automate 實際選單把新增步驟與新增平行分支並列；單一箭頭或通用加號不能保留這個區別。",
+    "recognitionCues": "兩支分離、同向、同長的箭頭；與交換順序的反向箭頭及含提交圓點的 Git 分支分開。",
+    "sourceObservation": "Power Automate 官方選單採兩支向右箭頭。固定 Tabler arrows-right 為同向雙箭頭家族參考；Lucide arrow-right 為單箭頭母型參考，兩者均不假稱專用平行流程圖示。Tabler 的粗箭翼較集中，最新稿拉開上下通道。",
+    "reason": "直接共用現有 horizontalArrow 與箭翼接縫處理，僅參數化箭桿高度與位置。新試稿在 20／24px 粗線端出現箭翼近乎相黏，將上下列各向外移 0.5 原生像素；16px 維持先成立的間距。未取回被否決的 session 幾何。",
+    "comparison": "已查看最新明暗、DPR1／2 的來源並排及操作狀態八張截圖，並對照本輪新試稿的 A/B。16／20／24 的兩支箭頭均保持獨立；20／24 粗線端箭翼之間有可見通道，沒有原試稿的短直線感。與 Tabler 同向雙箭頭相比留白更充足，與既有 arrow-right 同源而非另造箭頭輪廓。全部支援線寬的高解析拓撲及輸出比對通過，平行圖粗線低解析合併警示已消除。這是 AI 目視候選，仍待維護者定案。",
+    "usageEvidence": [
+      "https://learn.microsoft.com/en-us/power-automate/parallel-modern-approvals",
+      "https://learn.microsoft.com/en-us/power-automate/guidance/coding-guidelines/implement-parallel-execution"
+    ]
+  },
+  {
+    "reviewed": true,
+    "confusableWith": [
+      "arrow-right",
+      "arrow-left-right",
+      "git-fork",
+      "git-merge",
+      "workflow"
+    ],
+    "dashes": false,
+    "dashReason": "路徑為確定的方向與匯合結構，不表示隱藏、選取或未完成。",
+    "opacity": false,
+    "opacityReason": "兩條路徑同等重要，以留白分開，不以淡化掩飾擁擠。",
+    "name": "workflow-join",
+    "purpose": "流程節點清單中匯合資料流的入口。n8n Merge 具兩個輸入和一個輸出，與通用 workflow、圖形群組及 Git 提交合併不同；等待條件和資料合併模式仍以設定文字表達。",
+    "recognitionCues": "兩條輸入曲線平順接到單一輸出箭頭；不帶提交圓點、不添加等待徽標。",
+    "sourceObservation": "固定 Tabler arrows-join 的水平匯合直接而緊湊；Lucide merge 向上輸出，分支與主幹轉折更直。n8n 實際節點資產為不對稱兩路匯合，僅作使用證據，沒有複製。新稿採平衡輸入，和同批平行方向一致。",
+    "reason": "兩條參數化曲線在中心以相同切線匯合，再交由既有 horizontalArrow 生成輸出箭翼與接縫。輸入與平行圖共用上下高度，避免兩個命令切換時跳位。結構交接保持連通，不誤用徽標挖空。未取回被否決的 session 幾何。",
+    "comparison": "已查看最新明暗、DPR1／2 來源及操作狀態八張截圖，16／20／24 三角型的匯合口、箭翼和內部留白均成立。相較 Tabler 保留平展構造並放寬輸入間距；較 Lucide 的直折以連續曲線承接輸出。灰階診斷確認 16px／0.75 的曲線仍連續，六筆低解析警示是三角型及來源／輸出重複計數，門檻 96 丟失淡灰像素；高解析拓撲無錯誤。兩種輸入完成順序都先等待再輸出，模式由文字明示，圖形不承諾每個引擎的等待規則。這是 AI 目視候選，仍待維護者定案。",
+    "usageEvidence": [
+      "https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.merge/",
+      "https://learn.microsoft.com/en-us/azure/logic-apps/logic-apps-control-flow-branches"
+    ]
+  }
+]

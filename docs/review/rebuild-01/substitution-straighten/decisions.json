@@ -1,0 +1,90 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "skillVersion": "0.5.20",
+  "viewed": [
+    "initial-light-1.png",
+    "changed-light-1.png",
+    "initial-light-2.png",
+    "changed-light-2.png",
+    "initial-dark-1.png",
+    "changed-dark-1.png",
+    "initial-dark-2.png",
+    "changed-dark-2.png"
+  ],
+  "sizes": [
+    16,
+    20,
+    24
+  ],
+  "themes": [
+    "light",
+    "dark"
+  ],
+  "screenshotDpr": [
+    1,
+    2
+  ],
+  "interactionDpr": [
+    1,
+    2
+  ],
+  "scope": "Existing ruler measures a reference line; align applies the measured correction. Horizontal/vertical alignment, repeat application, separate quarter-turn, pointer-drawn line, zero-length guard, keyboard activation and reset verified. Demo is geometric line art without photo resampling or auto-cropping; public drawings and aliases unchanged.",
+  "userApproval": "pending",
+  "primaryEvidence": "work/rebuild-01/straighten-primary-evidence.json",
+  "evidence": [
+    {
+      "path": "docs/review/rebuild-01/substitution-straighten/initial-light-1.png",
+      "sha256": "1020d9e0e6b66982ad6109b1a1c8e8354d514c357f3aaa87233dd9436489eda8"
+    },
+    {
+      "path": "docs/review/rebuild-01/substitution-straighten/changed-light-1.png",
+      "sha256": "a0339d3e108bbbf8cb4fd3581e476ff29aa72c442784f15ad2aa9b386c2099bc"
+    },
+    {
+      "path": "docs/review/rebuild-01/substitution-straighten/initial-light-2.png",
+      "sha256": "44aaa9d31171565072db71dbdafd0cc37e247e45d7d29cc9d98d97b3e219b53a"
+    },
+    {
+      "path": "docs/review/rebuild-01/substitution-straighten/changed-light-2.png",
+      "sha256": "a7dad1fe7cc25cd4a8acb1e638dfc76d701629f76acbab32fff475056ed34b48"
+    },
+    {
+      "path": "docs/review/rebuild-01/substitution-straighten/initial-dark-1.png",
+      "sha256": "6d7dd515979f40414dcaae9b47cb3a1559173cc643230234c8c7965f2486d751"
+    },
+    {
+      "path": "docs/review/rebuild-01/substitution-straighten/changed-dark-1.png",
+      "sha256": "aeed6258b5ecf4b299c5c1e13a6bbf43825eab6c9b1281633630c8c9eaa85be1"
+    },
+    {
+      "path": "docs/review/rebuild-01/substitution-straighten/initial-dark-2.png",
+      "sha256": "52426c05a88a8bf701aaf86f620c7cafbd6b30bd21366d0845388cb3e66a04d0"
+    },
+    {
+      "path": "docs/review/rebuild-01/substitution-straighten/changed-dark-2.png",
+      "sha256": "f025ae61225122eb70bdd1134df29a79613b31a4076a3f3c15103f0bd414d6a2"
+    }
+  ],
+  "items": [
+    {
+      "name": "straighten",
+      "label": "校正水平",
+      "alternative": "ruler",
+      "alternativeLabel": "既有尺規與依參考線校正命令",
+      "replacementKind": "existing-icon",
+      "context": "圖像量測工具列：以尺規畫參考線，選水平／垂直後校正；與固定旋轉 90° 命令分開",
+      "reason": "校正依據是使用者畫出的參考線。既有 ruler 表示這個量測工具；依參考線校正是其具名操作，不必替同一尺規再畫斜框或水平線複合圖。",
+      "replacementScope": "適用於尺規畫參考線後執行校正的圖像工具流程；方向與結果角度持續可見。不是用 rotate-left 代替任意校正，也不聲稱 ruler 可獨自表示自動偵測水平、鏡頭畸變或透視校正。裁切工具內的獨立校正入口可用 ruler 搭配明確標籤。",
+      "sample": "<style>[data-straighten-demo] .tools{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}[data-straighten-demo] button[aria-pressed=true]{background:#8883;border-color:currentColor}[data-straighten-demo] .canvas{display:block;width:100%;max-width:400px;aspect-ratio:2/1;border:1px solid #8888;touch-action:none;cursor:crosshair}[data-straighten-demo] .scene{fill:none;stroke:currentColor;stroke-width:2}[data-straighten-demo] .reference{stroke:#c46e19;stroke-width:2;stroke-dasharray:5 4}[data-straighten-demo] label{display:inline-flex;gap:8px;align-items:center}[data-straighten-demo] select{background:#fafaf8;color:#202622;padding:4px}</style><div data-straighten-demo><div class=\"tools\"><button data-ruler-tool aria-pressed=\"true\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><rect x=\"5.6667\" y=\"1.6667\" width=\"4.6667\" height=\"12.6667\" rx=\"0.7\" transform=\"rotate(-45 8 8)\"/><path d=\"M10.3333 4.6667L8.5 4.6667\" transform=\"rotate(-45 8 8)\"/><path d=\"M10.3333 8L9.1667 8\" transform=\"rotate(-45 8 8)\"/><path d=\"M10.3333 11.3333L8.5 11.3333\" transform=\"rotate(-45 8 8)\"/></svg>尺規</button><button data-rotate-quarter><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><path d=\"M3.2866 8.5869Q3.4158 9.5912 3.9465 10.4535Q4.5381 11.415 5.5014 12.0036Q6.4648 12.5922 7.5903 12.68Q8.5997 12.7588 9.5523 12.4156Q10.5049 12.0723 11.2322 11.3679Q12.0431 10.5824 12.4096 9.5147Q12.7762 8.4469 12.6186 7.329Q12.4773 6.3264 11.9364 5.4705Q11.3954 4.6146 10.5504 4.0568Q9.6083 3.4348 8.4865 3.3076Q7.3648 3.1805 6.3073 3.5759Q5.359 3.9305 4.6402 4.6437L2.7671 6.4499Q2.7496 6.4668 2.7309 6.4823Q2.7121 6.4977 2.6922 6.5117Q2.6723 6.5257 2.6513 6.538Q2.6304 6.5504 2.6085 6.5611Q2.5867 6.5718 2.5641 6.5808Q2.5415 6.5898 2.5183 6.597Q2.495 6.6042 2.4713 6.6096Q2.4476 6.6149 2.4235 6.6185Q2.1518 6.5852 1.9499 6.3834Q1.7481 6.1815 1.7148 5.9098Q1.7186 5.8843 1.7244 5.8592Q1.7302 5.8341 1.738 5.8096Q1.7458 5.7851 1.7557 5.7613Q1.7655 5.7375 1.7773 5.7146Q1.789 5.6917 1.8026 5.6698Q1.8162 5.648 1.8316 5.6273Q1.8469 5.6066 1.8639 5.5873Q1.8809 5.568 1.8995 5.5501L3.7598 3.7563Q4.6694 2.8539 5.8695 2.4051Q7.2077 1.9047 8.6273 2.0656Q10.0469 2.2265 11.2391 3.0136Q12.3084 3.7195 12.993 4.8027Q13.6776 5.8858 13.8564 7.1546Q14.0557 8.5693 13.5919 9.9205Q13.128 11.2718 12.1018 12.2658Q11.1815 13.1572 9.976 13.5916Q8.7705 14.0259 7.4931 13.9262Q6.0688 13.8152 4.8497 13.0702Q3.6306 12.3253 2.8819 11.1086Q2.2104 10.0173 2.0468 8.7465Q2.0429 8.7159 2.042 8.6852Q2.1872 8.7009 2.3333 8.7009Q2.3935 8.7009 2.4537 8.6982Q2.5139 8.6956 2.5739 8.6902Q2.6339 8.6848 2.6936 8.6768Q2.7533 8.6687 2.8126 8.658Q2.8719 8.6473 2.9307 8.634Q2.9894 8.6207 3.0475 8.6047Q3.1056 8.5888 3.163 8.5703Q3.2203 8.5518 3.2767 8.5307Q3.2829 8.5586 3.2866 8.5869Z\" fill=\"currentColor\" stroke=\"none\" fill-rule=\"evenodd\"/><path d=\"M2.3333 2.3333L2.3333 5.8A0.2 0.2 0 0 0 2.5333 6L6 6\"/></svg>旋轉 90°</button></div><p>沿著應為水平或垂直的邊緣拖曳參考線。</p><svg class=\"canvas\" data-straighten-canvas viewBox=\"0 0 400 200\" aria-label=\"校正水平幾何示意\"><g data-straighten-scene class=\"scene\"><path d=\"M40 120L360 80M130 109V60L230 47V97M155 105V79L180 75V102M210 99V72\"/><path d=\"M15 150L385 104\" opacity=\".4\"/></g><line data-straighten-reference class=\"reference\" x1=\"40\" y1=\"120\" x2=\"360\" y2=\"80\"/></svg><div class=\"tools\"><label>對齊方向<select data-straighten-target aria-label=\"對齊方向\"><option value=\"0\">水平</option><option value=\"90\">垂直</option></select></label><button data-straighten-apply>依參考線校正</button><button data-straighten-reset>重設</button></div><p data-straighten-status role=\"status\"></p><p><small>可拖曳參考線；此示例旋轉幾何線稿，沒有自動裁切或處理相片。</small></p></div>",
+      "searchAliasDecision": "不把所有 deskew／透視校正泛化成 ruler；這次用途對應留在審查紀錄，公開搜尋詞不變。",
+      "usageEvidence": [
+        "https://helpx.adobe.com/photoshop/desktop/crop-resize-transform/resize-adjust-resolution/crop-and-straighten-images.html",
+        "https://helpx.adobe.com/photoshop/desktop/use-grids-measurement-guides/measure-scale/measure-and-position-with-the-ruler-tool.html",
+        "https://helpx.adobe.com/photoshop/desktop/crop-resize-transform/crop-straighten/straighten-tilted-photos.html"
+      ],
+      "usageEvidenceLimit": "Adobe documents both ruler-reference straightening and a separate Crop-options entry. This local demo verifies the ruler-reference workflow with geometric line art; it does not reproduce auto-cropping or photo resampling.",
+      "visualObservation": "既有 ruler 的長條與刻度在 16／20／24 可與 rotate-left 的回轉箭頭分辨。尺規入口、參考線、水平／垂直目標與依參考線校正按鈕共同交代操作；測得角度與套用旋轉持續可見。四組明暗／DPR1、2 的初始及校正後畫面均已查看，參考線校正後水平，固定 90° 旋轉是另一個命令。保留原尺規幾何，不增加傾斜外框或第二套刻度；此替代不涵蓋自動水平偵測、鏡頭與透視校正。"
+    }
+  ]
+}

@@ -7,7 +7,8 @@ import { gzipSync, strToU8 } from 'fflate';
 const data = JSON.parse(await readFile('dist/preview/data.json', 'utf8'));
 data.thirdPartyNotices = await readFile('THIRD_PARTY_NOTICES.md','utf8');
 data.upstreamLicenses = Object.fromEntries(await Promise.all((await readdir('licenses')).sort().map(async name=>[name,await readFile('licenses/'+name,'utf8')])));
-data.inlineReferences = Object.fromEntries(await Promise.all(data.references.references.map(async ref => [ref.localPath, await readFile(ref.localPath, 'utf8')])));
+data.inlineReferences = Object.fromEntries(await Promise.all(data.references.references.map(async ref => [ref.localPath,
+  ref.mediaType==='image/png' ? 'data:image/png;base64,'+(await readFile(ref.localPath)).toString('base64') : await readFile(ref.localPath, 'utf8')])));
 const bundle = await build({entryPoints:['preview/app.js'],bundle:true,write:false,format:'esm',minify:true,plugins:[{name:'local-runtime',setup(builder){builder.onResolve({filter:/^\/dist\/runtime\.js$/},()=>({path:process.cwd()+'/packages/icons/src/runtime.mjs'}));}}]});
 const css = await readFile('preview/style.css','utf8');
 delete data.catalog.inventory;

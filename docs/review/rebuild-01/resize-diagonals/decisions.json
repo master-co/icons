@@ -1,0 +1,52 @@
+[
+  {
+    "dashes": false,
+    "dashReason": "軸與兩端方向是連續的尺寸關係，不使用虛線切斷。",
+    "opacity": false,
+    "opacityReason": "兩端箭頭同等重要；保持相同筆畫，不使用淡化。",
+    "reviewed": true,
+    "name": "move-diagonal-up-right",
+    "purpose": "右上／左下角伸縮的教學提示；與另一條斜軸及整個範圍的移動區分。",
+    "recognitionCues": "由左下連向右上的單一斜軸，兩端直角箭翼向外。",
+    "confusableWith": [
+      "move",
+      "arrow-up-right",
+      "move-diagonal-down-right",
+      "maximize"
+    ],
+    "usageEvidence": [
+      "/Users/aron/master-ui/packages/ui/components/cropper.css:255",
+      "/Users/aron/master-ui/packages/ui/components/cropper.css:290",
+      "https://www.w3.org/TR/css-ui-3/#cursor",
+      "docs/review/rebuild-01/resize-axes/index.html（教學示意，未替換系統游標）"
+    ],
+    "sourceObservation": "Lucide 以直角兩端箭翼與完整斜軸表達，Hugeicons 的箭翼靠邊且尖端曲面較長。本稿關注共同的連續斜軸與兩端方向，不採用外部座標。",
+    "reason": "直接抽出既有 move 的 moveAxes，共用同軸箭桿、兩端箭頭及 joinedArrow 收口；預設保留原四向圖幾何。獨立軸沒有相鄰垂直箭翼，所以將翼長由 24 格的 3 放大為 4.5；原生尺寸依既有比例及線寬處理，斜向版本只旋轉這個共用母型。",
+    "comparison": "最新稿和來源原生並列後保留母型旋轉得到的直角翼，較 Hugeicons 的長曲轉折更貼近本庫箭頭語言；Lucide 的軸跨度略大，本稿收在既有 move 的共同長度中，維持四種方向相同的筆畫與中心。16px 不會把兩個箭頭看成一個單向外連符號，兩端與中央均連通；明暗 DPR 1／2、線寬兩端與三角型都已查看。"
+  },
+  {
+    "dashes": false,
+    "dashReason": "軸與兩端方向是連續的尺寸關係，不使用虛線切斷。",
+    "opacity": false,
+    "opacityReason": "兩端箭頭同等重要；保持相同筆畫，不使用淡化。",
+    "reviewed": true,
+    "name": "move-diagonal-down-right",
+    "purpose": "右下／左上角伸縮的教學提示；在同一裁切框上與右上／左下角明確區分。",
+    "recognitionCues": "由左上連向右下的單一斜軸，兩端直角箭翼向外。",
+    "confusableWith": [
+      "move",
+      "arrow-down-right",
+      "move-diagonal-up-right",
+      "maximize"
+    ],
+    "usageEvidence": [
+      "/Users/aron/master-ui/packages/ui/components/cropper.css:255",
+      "/Users/aron/master-ui/packages/ui/components/cropper.css:290",
+      "https://www.w3.org/TR/css-ui-3/#cursor",
+      "docs/review/rebuild-01/resize-axes/index.html（教學示意，未替換系統游標）"
+    ],
+    "sourceObservation": "Lucide 使用連續斜軸，Tabler arrows-diagonal-2 在中央分開兩支箭桿，較強調向兩角擴張；因此兩者是相近伸縮語意，但中央連接關係不同。",
+    "reason": "直接抽出既有 move 的 moveAxes，共用同軸箭桿、兩端箭頭及 joinedArrow 收口；預設保留原四向圖幾何。獨立軸沒有相鄰垂直箭翼，所以將翼長由 24 格的 3 放大為 4.5；原生尺寸依既有比例及線寬處理，斜向版本只旋轉這個共用母型。",
+    "comparison": "回比後採與另一條斜軸完全同源的連續軸，沒有套用 Tabler 的中央斷口，避免和本組的一軸語言不一致。與 Lucide 相比留白略寬，與水平稿比沒有額外變細或移位。16px 斜向反轉後端點對稱、箭翼不與中央軸形成意外缺口，三角型及粗細線端於明暗 DPR 1／2 均已查看。"
+  }
+]

@@ -1,5 +1,19 @@
 import { figure } from './shared.mjs';
 import { exteriorDetails } from '../occlusion.mjs';
+import {contour,line} from '../geometry.mjs';
+
+export function textSymbol(g,{clearing=false}={}) {
+  const f=figure(g);
+  if(!clearing)return [f.contour([[4.5,7],[4.5,4],[19.5,4],[19.5,7]],false,g.tip),
+    f.line(12,4,12,20),f.line(8.5,20,15.5,20)];
+  // Preserve the T's bracketed cap and foot. A slanted stem leaves a separate
+  // lower-right area for the clear mark, with native stroke weight throughout.
+  const left=g.v(2.5,3,3.5),right=g.v(12.5,16,19.5),top=g.v(2.5,3,3.5);
+  const shoulder=top+g.v(1.5,2,2.5),bottom=g.v(13,16.5,20);
+  return [contour([[left,shoulder],[left,top],[right,top],[right,shoulder]],g.tip),
+    line(g.v(8,10,12),top,g.v(5,6.25,7.5),bottom),
+    line(g.v(3,4,5),bottom,g.v(7,9,11),bottom)];
+}
 
 function indent(g,increase) {
   const f=figure(g),tip=increase?7.5:3.5,tail=increase?3.5:7.5;
@@ -18,11 +32,7 @@ function script(g,raised) {
     f.path(`M16 ${y+1.5}C16 ${y-.5} 21 ${y-.5} 21 ${y+2}C21 ${y+3.5} 17 ${y+5} 16 ${y+6.5}H21`)];
 }
 export const typography = {
-  text(g) {
-    const f=figure(g);
-    return [f.contour([[4.5,7],[4.5,4],[19.5,4],[19.5,7]],false,g.tip),
-      f.line(12,4,12,20),f.line(8.5,20,15.5,20)];
-  },
+  text:g=>textSymbol(g),
   'wrap-text'(g) {
     const f=figure(g);
     return [f.line(3,5,21,5),...f.arrow([f.path('M3 11H17A3.5 3.5 0 0 1 17 18H11')],[[14,15],[11,18],[14,21]]),f.line(3,18,6,18)];

@@ -1,0 +1,50 @@
+[
+  {
+    "reviewed": true,
+    "confusableWith": [
+      "align-left",
+      "align-center",
+      "align-right",
+      "indent-increase"
+    ],
+    "dashes": false,
+    "dashReason": "定位點是持續的錨點符號，主體保持完整；示例中的虛線僅為尺規輔助線，不屬於圖示。",
+    "opacity": false,
+    "opacityReason": "標記與小數點使用同一完整墨色，不以淡化掩飾間距或分層。",
+    "usageEvidence": [
+      "https://support.microsoft.com/en-gb/word/using-the-ruler-in-word",
+      "https://help.libreoffice.org/latest/en-US/text/shared/01/05030300.html",
+      "https://helpcenter.onlyoffice.com/docs/userguides/document_editor/SetTabStops.aspx"
+    ],
+    "name": "tab-stop-left",
+    "purpose": "尺規類型選擇及位置標記：文字從指定點向右延伸。段落靠左只控制整段對齊，不能表達這個可移動的定位點。",
+    "recognitionCues": "直立邊落在文字起點，基腳向右延伸的L。",
+    "sourceObservation": "Scribus的L為厚實直角輪廓；ONLYOFFICE文件中的按鈕也使用L，但圖內有按鈕邊框、灰底及較短腳。兩者是實際定位點原稿，保留PNG原本背景，不把背景描進Master圖示。",
+    "comparison": "16與24px並看後以等長立邊與基腳保留慣用L，20px位於兩者之間。比Scribus更細，與本庫相鄰的段落工具線寬一致；比ONLYOFFICE來源中的小L更充分使用畫布，沒有連同按鈕框變成方框圖。Soft與rounded在L彎處使用不同的真圓弧，粗線仍維持均勻彎部。與右定位點並列時基腳高度相同，尺規中立邊落在文字起點。",
+    "reason": "以共享tabStopParts原生座標建立L，基腳與立邊連成單一路徑；彎部使用實際半徑。通用尺規符號的幾何重建，沒有移植或追描來源path。"
+  },
+  {
+    "reviewed": true,
+    "confusableWith": [
+      "align-left",
+      "align-center",
+      "align-right",
+      "indent-increase"
+    ],
+    "dashes": false,
+    "dashReason": "定位點是持續的錨點符號，主體保持完整；示例中的虛線僅為尺規輔助線，不屬於圖示。",
+    "opacity": false,
+    "opacityReason": "標記與小數點使用同一完整墨色，不以淡化掩飾間距或分層。",
+    "usageEvidence": [
+      "https://support.microsoft.com/en-gb/word/using-the-ruler-in-word",
+      "https://help.libreoffice.org/latest/en-US/text/shared/01/05030300.html",
+      "https://helpcenter.onlyoffice.com/docs/userguides/document_editor/SetTabStops.aspx"
+    ],
+    "name": "tab-stop-right",
+    "purpose": "尺規類型選擇及位置標記：文字終點停在指定點並向左延伸。段落靠右與向右縮排均不提供這個錨點語意。",
+    "recognitionCues": "直立邊落在文字終點，基腳向左延伸的反L。",
+    "sourceObservation": "Scribus與ONLYOFFICE都以反L對應文字終點；前者標記較粗，後者保留按鈕邊框。左右兩圖應為同一標記的鏡像，不因方向改變腳長或彎曲程度。",
+    "comparison": "最新稿在16／20／24與來源及左定位點並排，立邊與基腳高度一致，只有方向翻轉。Soft、rounded的彎部也完整鏡像，不是另外估座標畫一個近似形；16px兩個方向各自有清楚開口。來源的厚實直角較硬，本稿依本庫線寬與局部半徑維持較輕的尺規標記。實際示例改為靠右後，三個長度不同的數字都以末端對齊同一錨點。",
+    "reason": "直接鏡像tabStopParts的左定位點路徑，沒有另畫右向輪廓；透明開口與視覺範圍成對一致。"
+  }
+]

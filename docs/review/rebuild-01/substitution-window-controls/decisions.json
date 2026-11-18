@@ -1,0 +1,118 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "skillVersion": "0.5.18",
+  "viewed": [
+    "light.png",
+    "dark.png"
+  ],
+  "sizes": [
+    16,
+    20,
+    24
+  ],
+  "themes": [
+    "light",
+    "dark"
+  ],
+  "dpr": [
+    1
+  ],
+  "corner": "soft",
+  "scope": "Four contextual substitutions using existing glyphs; static command and caption-control comparisons. No rejected geometry retrieved.",
+  "userApproval": "pending",
+  "evidence": [
+    {
+      "path": "docs/review/rebuild-01/substitution-window-controls/light.png",
+      "sha256": "124711784256a3ed95e0d028e9d458a04b3e407f0b5178293c4d06c938c83441"
+    },
+    {
+      "path": "docs/review/rebuild-01/substitution-window-controls/dark.png",
+      "sha256": "40266878cb72e8b42b9ecf3ad08b15fb789ec905dc37a91f7d523531ed0fc735"
+    }
+  ],
+  "items": [
+    {
+      "name": "tab-restore",
+      "label": "重開已關閉分頁",
+      "alternative": "undo",
+      "replacementKind": "contextual-entry",
+      "context": "瀏覽器分頁選單 · 撤回剛才的關閉動作",
+      "reason": "重開已關閉分頁是撤回關閉動作。undo 搭配完整命令名稱即可，與 history 的歷史紀錄入口分開；不再加分頁框和回轉箭頭。",
+      "replacementScope": "有文字的分頁選單；不是回上一頁，也不等同開啟歷史清單。若同一工具列亦有編輯復原，需分組及標籤。",
+      "searchKeywords": [
+        "reopen-tab",
+        "restore-tab"
+      ],
+      "usageEvidence": [
+        "https://support.google.com/chrome/answer/157179?hl=en"
+      ],
+      "sample": "<div style=\"display:grid;gap:8px\"><button><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><path d=\"M6 3L3.1414 5.8586A0.2 0.2 0 0 0 3.1414 6.1414L6 9\"/><path d=\"M2.6265 6.5011Q2.6466 6.5161 2.6678 6.5294Q2.689 6.5427 2.7112 6.5543Q2.7334 6.5658 2.7564 6.5756Q2.7795 6.5853 2.8032 6.5932Q2.827 6.6011 2.8513 6.6071Q2.8756 6.613 2.9003 6.617Q2.9251 6.621 2.95 6.623Q2.975 6.625 3 6.625L9.5 6.625Q10.0484 6.625 10.5583 6.8269Q11.1119 7.046 11.5329 7.4671Q11.954 7.8881 12.1731 8.4417Q12.375 8.9516 12.375 9.5Q12.375 10.0484 12.1731 10.5583Q11.954 11.1119 11.5329 11.5329Q11.1119 11.954 10.5583 12.1731Q10.0484 12.375 9.5 12.375L6 12.375Q5.9847 12.375 5.9693 12.3758Q5.954 12.3765 5.9387 12.378Q5.9235 12.3795 5.9083 12.3818Q5.8931 12.384 5.8781 12.387Q5.863 12.39 5.8481 12.3937Q5.8332 12.3975 5.8186 12.4019Q5.8039 12.4064 5.7894 12.4115Q5.775 12.4167 5.7608 12.4226Q5.7466 12.4285 5.7328 12.435Q5.7189 12.4416 5.7054 12.4488Q5.6918 12.456 5.6787 12.4639Q5.6655 12.4718 5.6528 12.4803Q5.64 12.4889 5.6277 12.498Q5.6154 12.5071 5.6035 12.5169Q5.5916 12.5266 5.5803 12.5369Q5.5689 12.5472 5.5581 12.5581Q5.5472 12.5689 5.5369 12.5803Q5.5266 12.5916 5.5169 12.6035Q5.5071 12.6154 5.498 12.6277Q5.4889 12.64 5.4803 12.6528Q5.4718 12.6655 5.4639 12.6787Q5.456 12.6918 5.4488 12.7054Q5.4416 12.7189 5.435 12.7328Q5.4285 12.7466 5.4226 12.7608Q5.4167 12.775 5.4115 12.7894Q5.4064 12.8039 5.4019 12.8186Q5.3975 12.8332 5.3937 12.8481Q5.39 12.863 5.387 12.8781Q5.384 12.8931 5.3818 12.9083Q5.3795 12.9235 5.378 12.9387Q5.3765 12.954 5.3758 12.9693Q5.375 12.9847 5.375 13Q5.375 13.0153 5.3758 13.0307Q5.3765 13.046 5.378 13.0613Q5.3795 13.0765 5.3818 13.0917Q5.384 13.1069 5.387 13.1219Q5.39 13.137 5.3937 13.1519Q5.3975 13.1668 5.4019 13.1814Q5.4064 13.1961 5.4115 13.2105Q5.4167 13.225 5.4226 13.2392Q5.4285 13.2533 5.435 13.2672Q5.4416 13.2811 5.4488 13.2946Q5.456 13.3082 5.4639 13.3213Q5.4718 13.3345 5.4803 13.3472Q5.4889 13.36 5.498 13.3723Q5.5071 13.3846 5.5169 13.3965Q5.5266 13.4084 5.5369 13.4197Q5.5472 13.4311 5.5581 13.4419Q5.5689 13.4528 5.5803 13.4631Q5.5916 13.4734 5.6035 13.4831Q5.6154 13.4929 5.6277 13.502Q5.64 13.5111 5.6528 13.5197Q5.6655 13.5282 5.6787 13.5361Q5.6918 13.544 5.7054 13.5512Q5.7189 13.5584 5.7328 13.565Q5.7466 13.5715 5.7608 13.5774Q5.775 13.5833 5.7894 13.5885Q5.8039 13.5936 5.8186 13.5981Q5.8332 13.6025 5.8481 13.6063Q5.863 13.61 5.8781 13.613Q5.8931 13.616 5.9083 13.6182Q5.9235 13.6205 5.9387 13.622Q5.954 13.6235 5.9693 13.6242Q5.9847 13.625 6 13.625L9.5 13.625Q10.2868 13.625 11.0184 13.3354Q11.8127 13.0209 12.4168 12.4168Q13.0209 11.8127 13.3354 11.0184Q13.625 10.2868 13.625 9.5Q13.625 8.7132 13.3354 7.9816Q13.0209 7.1873 12.4168 6.5832Q11.8127 5.9791 11.0184 5.6646Q10.2868 5.375 9.5 5.375L3 5.375Q2.975 5.375 2.95 5.377Q2.9251 5.379 2.9004 5.383Q2.8756 5.387 2.8513 5.3929Q2.827 5.3989 2.8032 5.4068Q2.7795 5.4147 2.7564 5.4244Q2.7334 5.4342 2.7112 5.4457Q2.689 5.4573 2.6678 5.4706Q2.6466 5.4839 2.6265 5.4989Q2.4578 5.7145 2.4578 6Q2.4578 6.2855 2.6265 6.5011Z\" fill=\"currentColor\" stroke=\"none\" fill-rule=\"evenodd\"/></svg>重開已關閉分頁</button><button><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><path d=\"M3.2866 8.5869Q3.4158 9.5912 3.9465 10.4535Q4.5381 11.415 5.5014 12.0036Q6.4648 12.5922 7.5903 12.68Q8.5997 12.7588 9.5523 12.4156Q10.5049 12.0723 11.2322 11.3679Q12.0431 10.5824 12.4096 9.5147Q12.7762 8.4469 12.6186 7.329Q12.4773 6.3264 11.9364 5.4705Q11.3954 4.6146 10.5504 4.0568Q9.6083 3.4348 8.4865 3.3076Q7.3648 3.1805 6.3073 3.5759Q5.359 3.9305 4.6402 4.6437L2.7671 6.4499Q2.7496 6.4668 2.7309 6.4823Q2.7121 6.4977 2.6922 6.5117Q2.6723 6.5257 2.6513 6.538Q2.6304 6.5504 2.6085 6.5611Q2.5867 6.5718 2.5641 6.5808Q2.5415 6.5898 2.5183 6.597Q2.495 6.6042 2.4713 6.6096Q2.4476 6.6149 2.4235 6.6185Q2.1518 6.5852 1.9499 6.3834Q1.7481 6.1815 1.7148 5.9098Q1.7186 5.8843 1.7244 5.8592Q1.7302 5.8341 1.738 5.8096Q1.7458 5.7851 1.7557 5.7613Q1.7655 5.7375 1.7773 5.7146Q1.789 5.6917 1.8026 5.6698Q1.8162 5.648 1.8316 5.6273Q1.8469 5.6066 1.8639 5.5873Q1.8809 5.568 1.8995 5.5501L3.7598 3.7563Q4.6694 2.8539 5.8695 2.4051Q7.2077 1.9047 8.6273 2.0656Q10.0469 2.2265 11.2391 3.0136Q12.3084 3.7195 12.993 4.8027Q13.6776 5.8858 13.8564 7.1546Q14.0557 8.5693 13.5919 9.9205Q13.128 11.2718 12.1018 12.2658Q11.1815 13.1572 9.976 13.5916Q8.7705 14.0259 7.4931 13.9262Q6.0688 13.8152 4.8497 13.0702Q3.6306 12.3253 2.8819 11.1086Q2.2104 10.0173 2.0468 8.7465Q2.0429 8.7159 2.042 8.6852Q2.1872 8.7009 2.3333 8.7009Q2.3935 8.7009 2.4537 8.6982Q2.5139 8.6956 2.5739 8.6902Q2.6339 8.6848 2.6936 8.6768Q2.7533 8.6687 2.8126 8.658Q2.8719 8.6473 2.9307 8.634Q2.9894 8.6207 3.0475 8.6047Q3.1056 8.5888 3.163 8.5703Q3.2203 8.5518 3.2767 8.5307Q3.2829 8.5586 3.2866 8.5869Z\" fill=\"currentColor\" stroke=\"none\" fill-rule=\"evenodd\"/><path d=\"M2.3333 2.3333L2.3333 5.8A0.2 0.2 0 0 0 2.5333 6L6 6\"/><path d=\"M8 4.6667L8 7.893A0.2 0.2 0 0 0 8.0891 8.0594L10 9.3333\"/></svg>歷史紀錄</button></div><p>最近關閉：產品需求</p>",
+      "usageEvidenceLimit": "Sources establish the commands and caption-control distinctions. These samples use existing Master glyphs and are not replicas of the exact OS or browser assets.",
+      "visualObservation": "undo與history在同一具名選單中有清楚不同輪廓；重開分頁的完整命令名稱消除與編輯復原的歧義。"
+    },
+    {
+      "name": "window-new",
+      "label": "另開視窗",
+      "alternative": "app-window",
+      "replacementKind": "contextual-entry",
+      "context": "瀏覽器或應用選單 · 新增獨立視窗",
+      "reason": "app-window 已表達應用視窗；「另開視窗」標籤交代新增動作。在同一選單中，新分頁可用 plus，不必把加號再次疊進視窗外殼。",
+      "replacementScope": "具名的新視窗命令；外部連結另開頁面可用 external-link，不能把每個新視窗都理解為開啟外部網址。",
+      "searchKeywords": [
+        "new-window",
+        "open-window"
+      ],
+      "usageEvidence": [
+        "https://support.google.com/chrome/answer/157179?hl=en"
+      ],
+      "sample": "<div style=\"display:grid;gap:8px\"><button><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><rect x=\"2\" y=\"2.6667\" width=\"12\" height=\"10.6667\" rx=\"1\"/><path d=\"M2 6L14 6\"/><circle cx=\"4.3333\" cy=\"4.3333\" r=\"0.55\" fill=\"currentColor\" stroke=\"none\"/></svg>另開視窗</button><button><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><path d=\"M3 8L13 8\"/><path d=\"M8 3L8 13\"/></svg>新增分頁</button></div>",
+      "usageEvidenceLimit": "Sources establish the commands and caption-control distinctions. These samples use existing Master glyphs and are not replicas of the exact OS or browser assets.",
+      "visualObservation": "app-window與新增分頁的plus並排，窗框與單一加號在16px仍清楚區分。新增意圖由完整標籤交代。"
+    },
+    {
+      "name": "window-minimize",
+      "label": "視窗最小化",
+      "alternative": "minus",
+      "replacementKind": "contextual-entry",
+      "context": "自訂浮動視窗標題列 · 最小化／最大化或還原／關閉",
+      "reason": "既有 minus 的水平短線已符合最小化辨識。與 square、copy、x 放在標題列可直接區分，不使用四角內縮的 minimize 混淆退出全螢幕。",
+      "replacementScope": "自訂視窗標題列或具名最小化選單；原生系統標題列沿用平台控制。隱藏整個應用與縮至工作列是不同命令。",
+      "searchKeywords": [
+        "minimize-window"
+      ],
+      "usageEvidence": [
+        "https://learn.microsoft.com/en-us/windows/apps/design/basics/titlebar-design",
+        "https://support.google.com/chrome/answer/157179?hl=en"
+      ],
+      "sample": "<div style=\"margin-top:12px;border:1px solid #8887;border-radius:5px;overflow:hidden;width:100%\"><div style=\"display:flex;align-items:center;gap:6px;padding:5px;border-bottom:1px solid #8885\"><span style=\"flex:1\">專案報告</span><button aria-label=\"最小化\" style=\"padding:6px;border:0\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><path d=\"M3 8L13 8\"/></svg></button><button aria-label=\"還原視窗大小\" style=\"padding:6px;border:0\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><path d=\"M3 1.375L9 1.375Q9.31 1.375 9.5982 1.4891Q9.9111 1.613 10.149 1.851Q10.387 2.0889 10.5109 2.4018Q10.625 2.69 10.625 3L10.625 4.125L9.375 4.125L9.375 3Q9.375 2.8447 9.2652 2.7348Q9.1553 2.625 9 2.625L3 2.625Q2.8447 2.625 2.7348 2.7348Q2.625 2.8447 2.625 3L2.625 9Q2.625 9.1553 2.7348 9.2652Q2.8447 9.375 3 9.375L4.125 9.375L4.125 10.625L3 10.625Q2.69 10.625 2.4018 10.5109Q2.0889 10.387 1.851 10.149Q1.613 9.9111 1.4891 9.5982Q1.375 9.31 1.375 9L1.375 3Q1.375 2.69 1.4891 2.4018Q1.613 2.0889 1.851 1.851Q2.0889 1.613 2.4018 1.4891Q2.69 1.375 3 1.375Z\" fill=\"currentColor\" stroke=\"none\" fill-rule=\"evenodd\"/><rect x=\"5.5\" y=\"5.5\" width=\"8.5\" height=\"8.5\" rx=\"1\"/></svg></button><button aria-label=\"關閉\" style=\"padding:6px;border:0\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><path d=\"M4 4L12 12\"/><path d=\"M4 12L12 4\"/></svg></button></div><p style=\"padding:0 12px\">已最大化</p></div><div style=\"margin-top:12px;border:1px solid #8887;border-radius:5px;overflow:hidden;width:85%\"><div style=\"display:flex;align-items:center;gap:6px;padding:5px;border-bottom:1px solid #8885\"><span style=\"flex:1\">專案報告</span><button aria-label=\"最小化\" style=\"padding:6px;border:0\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><path d=\"M3 8L13 8\"/></svg></button><button aria-label=\"最大化\" style=\"padding:6px;border:0\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><rect x=\"2.5\" y=\"2.5\" width=\"11\" height=\"11\" rx=\"1\"/></svg></button><button aria-label=\"關閉\" style=\"padding:6px;border:0\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><path d=\"M4 4L12 12\"/><path d=\"M4 12L12 4\"/></svg></button></div><p style=\"padding:0 12px\">一般大小</p></div>",
+      "usageEvidenceLimit": "Sources establish the commands and caption-control distinctions. These samples use existing Master glyphs and are not replicas of the exact OS or browser assets.",
+      "rejectedSearchTerms": {
+        "terms": [
+          "hide-window"
+        ],
+        "reason": "隱藏應用和最小化視窗有不同系統行為，不直接合併同義詞。"
+      },
+      "visualObservation": "minus在標題列中維持清楚的水平短線，與copy／square及x均不混淆；明暗背景下比例與間距一致。"
+    },
+    {
+      "name": "window-restore",
+      "label": "還原視窗大小",
+      "alternative": "copy",
+      "replacementKind": "contextual-entry",
+      "context": "自訂浮動視窗標題列 · 從最大化回到一般大小",
+      "reason": "還原大小的辨識是兩個錯位方框；既有 copy 已有這個輪廓。放在最小化與關閉之間時，上下文指向視窗狀態，不需重新設計另一顆重疊視窗。",
+      "replacementScope": "限定視窗標題列或具名還原大小命令，不把一般資料復原都當作copy。剪貼簿複製若同時出現，應放在文件操作區。",
+      "searchKeywords": [
+        "restore-down",
+        "unmaximize"
+      ],
+      "usageEvidence": [
+        "https://learn.microsoft.com/en-us/windows/apps/design/basics/titlebar-design"
+      ],
+      "sample": "<div style=\"margin-top:12px;border:1px solid #8887;border-radius:5px;overflow:hidden;width:100%\"><div style=\"display:flex;align-items:center;gap:6px;padding:5px;border-bottom:1px solid #8885\"><span style=\"flex:1\">專案報告</span><button aria-label=\"最小化\" style=\"padding:6px;border:0\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><path d=\"M3 8L13 8\"/></svg></button><button aria-label=\"還原視窗大小\" style=\"padding:6px;border:0\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><path d=\"M3 1.375L9 1.375Q9.31 1.375 9.5982 1.4891Q9.9111 1.613 10.149 1.851Q10.387 2.0889 10.5109 2.4018Q10.625 2.69 10.625 3L10.625 4.125L9.375 4.125L9.375 3Q9.375 2.8447 9.2652 2.7348Q9.1553 2.625 9 2.625L3 2.625Q2.8447 2.625 2.7348 2.7348Q2.625 2.8447 2.625 3L2.625 9Q2.625 9.1553 2.7348 9.2652Q2.8447 9.375 3 9.375L4.125 9.375L4.125 10.625L3 10.625Q2.69 10.625 2.4018 10.5109Q2.0889 10.387 1.851 10.149Q1.613 9.9111 1.4891 9.5982Q1.375 9.31 1.375 9L1.375 3Q1.375 2.69 1.4891 2.4018Q1.613 2.0889 1.851 1.851Q2.0889 1.613 2.4018 1.4891Q2.69 1.375 3 1.375Z\" fill=\"currentColor\" stroke=\"none\" fill-rule=\"evenodd\"/><rect x=\"5.5\" y=\"5.5\" width=\"8.5\" height=\"8.5\" rx=\"1\"/></svg></button><button aria-label=\"關閉\" style=\"padding:6px;border:0\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><path d=\"M4 4L12 12\"/><path d=\"M4 12L12 4\"/></svg></button></div><p style=\"padding:0 12px\">已最大化</p></div><div style=\"margin-top:12px;border:1px solid #8887;border-radius:5px;overflow:hidden;width:85%\"><div style=\"display:flex;align-items:center;gap:6px;padding:5px;border-bottom:1px solid #8885\"><span style=\"flex:1\">專案報告</span><button aria-label=\"最小化\" style=\"padding:6px;border:0\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><path d=\"M3 8L13 8\"/></svg></button><button aria-label=\"最大化\" style=\"padding:6px;border:0\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><rect x=\"2.5\" y=\"2.5\" width=\"11\" height=\"11\" rx=\"1\"/></svg></button><button aria-label=\"關閉\" style=\"padding:6px;border:0\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><path d=\"M4 4L12 12\"/><path d=\"M4 12L12 4\"/></svg></button></div><p style=\"padding:0 12px\">一般大小</p></div>",
+      "usageEvidenceLimit": "Sources establish the commands and caption-control distinctions. These samples use existing Master glyphs and are not replicas of the exact OS or browser assets.",
+      "visualObservation": "copy的兩個錯位框放在標題列中能表達還原大小；一般大小狀態改為單一square，兩狀態可直接對照。這是靜態比較，不是視窗管理功能測試。"
+    }
+  ]
+}

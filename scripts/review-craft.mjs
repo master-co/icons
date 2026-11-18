@@ -1,3 +1,4 @@
+import {referenceMarkup} from './lib/review-data.mjs';
 // Compact, source-preserving inspection sheets. Rendering never approves an icon.
 import {readFile,writeFile,mkdir} from 'node:fs/promises';
 import {chromium} from '@playwright/test';
@@ -19,7 +20,7 @@ for(const batch of batches.filter(b=>!only||b.id===only)){
   for(const size of[16,20,24]){def.variants[size]={};for(const c of['sharp','soft','rounded'])def.variants[size][c]={nodes:draw(name,context(size,c)),strokeWidth:context(size,c).stroke};}
   let sources='';
   for(const r of refs.filter(r=>r.name===name)){
-   const svg=(await readFile(r.localPath,'utf8')).replace(/<!--[\s\S]*?-->/g,'').replace(/(stroke|fill)="#[a-fA-F0-9]+"/g,'$1="currentColor"');
+   const svg=await referenceMarkup(r);
    sources+=`<div><small>${r.library}<br>${r.sourceName}<br>${r.match}</small><span class="source" style="width:16px;height:16px">${svg}</span><span class="source">${svg}</span></div>`;
   }
   const matrix=dark=>`<section class="matrix ${dark?'dark':''}">${['sharp','soft','rounded'].map(c=>`<div><small>${c}</small>${[16,20,24].map(size=>renderSvg(def,{size,corner:c})).join('')}${c==='soft'?`<span class="diagnostic">${renderSvg(def,{size:48,opticalSize:24})}</span>`:''}</div>`).join('')}<div class="low">${renderSvg(def,{size:16})}專案 Project · 55%</div></section>`;

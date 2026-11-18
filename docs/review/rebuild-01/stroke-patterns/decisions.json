@@ -1,0 +1,46 @@
+[
+  {
+    "name": "stroke-dashed",
+    "reviewed": true,
+    "purpose": "線條與邊框樣式選擇器中的虛線，與實線、點線及更多設定並列。",
+    "recognitionCues": "共線的平切短段；16px 為兩段，20／24px 為三段；段間保留完整空白。",
+    "confusableWith": [
+      "minus",
+      "stroke-dotted",
+      "more-horizontal"
+    ],
+    "sourceObservation": "Tabler 以三段圓頭短線表示虛線，Hugeicons 用四段較細的圓頭線；兩者在16px都容易近似點列。保留 Tabler 的短段重複構造，但用平切端帽並依原生尺寸減少段數。",
+    "reason": "把既有 minus 抽成共源 horizontalRule，保留原實線完全一致。第一輪三段在16px太短，改為兩段3.75px長線，中間2.5px間隔；20／24保留三段。平切端帽讓段長不被圓頭吃掉，也不會在粗線端退化成三個圓點。",
+    "comparison": "最新稿在16px已可看出兩條短線，和 Tabler 的三粒短膠囊、Hugeicons 的四段細點相比更能和更多選單的三圓點分開。20／24仍有三段節奏，所有尺寸與母型中心軸相同。明暗DPR1／2及支援線寬兩端檢視後，間隙保持連續，沒有靠透明度製造虛線；角型不改變這個平切線型的語意。",
+    "dashes": true,
+    "dashReason": "虛線本身就是選項的值，使用實際分開的線段並設平切端帽。",
+    "opacity": false,
+    "opacityReason": "每段同等重要，完全不透明；不使用淡化模擬短段。",
+    "usageEvidence": [
+      "https://help.figma.com/hc/en-us/articles/360049283914-Apply-and-adjust-stroke-properties",
+      "https://inkscape-manuals.readthedocs.io/en/1.3/strokes.html"
+    ]
+  },
+  {
+    "name": "stroke-dotted",
+    "reviewed": true,
+    "purpose": "線型選擇器的點線值，需和虛線、實線及更多設定按鈕分開。",
+    "recognitionCues": "五個等距的小圓點，同一水平軸；點數多於更多選單的三點，點徑也較小。",
+    "confusableWith": [
+      "more-horizontal",
+      "stroke-dashed",
+      "minus"
+    ],
+    "sourceObservation": "Tabler line-dotted 是同語意的五圓點；Material Design Icons format-line-style 只作線型家族參考，最下列為五個方點，不能當作單一點線命令的同語意來源。比較重點是點徑、間距及方圓差別。",
+    "reason": "沿用 horizontalRule 的起訖與中心軸。第一輪點徑完全隨線寬縮小，DPR1細線端過淡，改設16／20／24的1.5／1.75／2px點徑下限，粗線端再隨主線寬增加；圓點沒有孔，也不因 sharp 改成方形。",
+    "comparison": "回修後原生16px細線端能維持五點，不再淡到像一小條灰霧。與 Tabler 相比略加大16px點徑，同時保留每點之間的空白；與 Material Design Icons 方點列相比，圓點更能區分平切的虛線。20／24和粗線端仍分成五個獨立部件，明暗DPR1／2皆可和三個較大圓點的 more-horizontal 並列。圓點的光學尺寸下限是局部補償，不表示全庫線寬改變。",
+    "dashes": true,
+    "dashReason": "點列就是線型內容，以五個實心圓直接表達，不用極短線段的端帽偶然撐出圓點。",
+    "opacity": false,
+    "opacityReason": "細線端的可見度以點徑補償，不能再用淡化削弱必要點列。",
+    "usageEvidence": [
+      "https://help.figma.com/hc/en-us/articles/360049283914-Apply-and-adjust-stroke-properties",
+      "https://inkscape-manuals.readthedocs.io/en/1.3/strokes.html"
+    ]
+  }
+]

@@ -1,0 +1,105 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "skillVersion": "0.5.20",
+  "viewed": [
+    "light.png",
+    "dark.png",
+    "changed-light.png",
+    "changed-dark.png"
+  ],
+  "sizes": [
+    16,
+    20,
+    24
+  ],
+  "themes": [
+    "light",
+    "dark"
+  ],
+  "dpr": [
+    1
+  ],
+  "corner": "soft for existing glyphs only",
+  "scope": "Native device settings and explicit persistent connection status. No rejected session geometry retrieved; no production document or editor changed.",
+  "userApproval": "pending",
+  "evidence": [
+    {
+      "path": "docs/review/rebuild-01/substitution-device-settings/light.png",
+      "sha256": "b9d9dda25af0118e05b754e217782262d59ebf0a7cd7d61bc30e68f6cc6d353f"
+    },
+    {
+      "path": "docs/review/rebuild-01/substitution-device-settings/dark.png",
+      "sha256": "ee183a9af90f1f16c408853dbf9739d0ba28b1975346b45cd93bb657c6b907fa"
+    },
+    {
+      "path": "docs/review/rebuild-01/substitution-device-settings/changed-light.png",
+      "sha256": "633468bb6e7841a736237678256e4679396cb30563da7ffa961b1a3e1e7baf13"
+    },
+    {
+      "path": "docs/review/rebuild-01/substitution-device-settings/changed-dark.png",
+      "sha256": "1f4989e0bb976666a449662e5be3c923c586b0fe15453a09a3323d8ecb728878"
+    }
+  ],
+  "items": [
+    {
+      "name": "brightness-auto",
+      "label": "自動亮度",
+      "alternative": null,
+      "alternativeLabel": "自動亮度開關",
+      "replacementKind": "native-content",
+      "context": "顯示設定 · 亮度滑桿旁",
+      "reason": "自動調整是亮度設定的模式；具名開關直接顯示是否啟用，不需在太陽中塞入 A。原有 sun 仍可標示亮度欄位，但本身不代表自動模式。",
+      "replacementScope": "具有完整自動亮度標籤與開關狀態的設定面板；不宣稱 sun 單獨可以表示自動亮度。",
+      "sample": "<fieldset data-device-demo=\"brightness\" style=\"border:1px solid #8886;border-radius:5px;padding:14px;min-width:0\"><legend>本地控制項示例</legend><label style=\"display:flex;align-items:center;gap:8px\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><circle cx=\"8\" cy=\"8\" r=\"3\"/><path d=\"M13.3333 8L14.6667 8\"/><path d=\"M11.7712 11.7712L12.714 12.714\"/><path d=\"M8 13.3333L8 14.6667\"/><path d=\"M4.2288 11.7712L3.286 12.714\"/><path d=\"M2.6667 8L1.3333 8\"/><path d=\"M4.2288 4.2288L3.286 3.286\"/><path d=\"M8 2.6667L8 1.3333\"/><path d=\"M11.7712 4.2288L12.714 3.286\"/></svg>亮度 <input data-brightness type=\"range\" min=\"0\" max=\"100\" value=\"60\" aria-label=\"亮度\"><output data-brightness-value>60%</output></label><p><label><input data-auto-brightness type=\"checkbox\" checked>自動調整亮度</label></p><p data-auto-state>自動調整已開啟 · 仍可手動調整</p></fieldset>",
+      "nativePreview": "<span>☑ 自動調整亮度</span>",
+      "comparisonMarkup": "<span>☑ 自動調整亮度</span>",
+      "searchKeywords": [],
+      "searchAliasDecision": "不把 brightness-auto 加入 sun，避免把自動模式當成一般亮度。",
+      "usageEvidence": [
+        "https://support.google.com/pixelphone/answer/6111557?hl=en"
+      ],
+      "usageEvidenceLimit": "Primary sources establish the setting or distinction. This is a local control demonstration, not an operating-system screenshot. It makes no hardware, sensor, network or payment calls.",
+      "visualObservation": "自動亮度與亮度滑桿分開，開關切換時顯示明確模式文字；手動滑桿保持可用，沒有把一般太陽圖當成自動狀態。"
+    },
+    {
+      "name": "bluetooth-connected",
+      "label": "藍牙已連線",
+      "alternative": "bluetooth",
+      "replacementKind": "contextual-state",
+      "context": "裝置設定 · 連線狀態與裝置清單",
+      "reason": "既有 bluetooth 表示連線種類；同列持續顯示「尚未連線」或「已連線·耳機」才表達實際狀態。不能以開關打開或圖示變亮當成連線成功，也不需新增兩個小點或勾號。",
+      "replacementScope": "持續顯示連線狀態和對象名稱的設定列或清單；單一狀態列圖示、沒有文字空間的版面不在替代驗證範圍。",
+      "sample": "<fieldset data-device-demo=\"bluetooth\" style=\"border:1px solid #8886;border-radius:5px;padding:14px;min-width:0\"><legend>本地控制項示例</legend><label style=\"display:flex;align-items:center;gap:8px\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><path d=\"M4.3333 4.3333L11.1769 10.851A0.2 0.2 0 0 1 11.1727 11.1445L8.3338 13.6996A0.2 0.2 0 0 1 8 13.5509L8 2.4491A0.2 0.2 0 0 1 8.3338 2.3004L11.1727 4.8555A0.2 0.2 0 0 1 11.1769 5.149L4.3333 11.6667\"/></svg>藍牙 <input data-bluetooth-enabled type=\"checkbox\" checked></label><p data-bluetooth-status>已開啟 · 尚未連線</p><div style=\"display:flex;align-items:center;justify-content:space-between;gap:10px\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><path d=\"M2.3333 8.6667V7.3333A5.6667 5.6667 0 0 1 13.6667 7.3333V8.6667\"/><rect x=\"2.3333\" y=\"8.6667\" width=\"3\" height=\"4.6667\" rx=\"1\"/><rect x=\"10.6667\" y=\"8.6667\" width=\"3\" height=\"4.6667\" rx=\"1\"/></svg> 耳機 <button data-bluetooth-connect>連線</button></div></fieldset>",
+      "searchKeywords": [
+        "藍牙已連線"
+      ],
+      "usageEvidence": [
+        "https://support.apple.com/en-us/102412"
+      ],
+      "usageEvidenceLimit": "Primary sources establish the setting or distinction. This is a local control demonstration, not an operating-system screenshot. It makes no hardware, sensor, network or payment calls.",
+      "visualObservation": "同一個藍牙母型在尚未連線和已連線時保持一致，實際狀態與耳機名稱持續可見；開啟開關本身不被當成已連線。"
+    },
+    {
+      "name": "nfc",
+      "label": "NFC",
+      "alternative": null,
+      "alternativeLabel": "NFC 具名開關",
+      "replacementKind": "native-content",
+      "context": "連線偏好 · 使用 NFC",
+      "reason": "設定內的 NFC 名稱與開關已能直接辨認功能；不另造類似 N-Mark 的標誌，也不以付款、錢包或通用無線波紋冒充 NFC。官方接觸點標誌屬另一個品牌使用需求，不因圖庫有近似圖形就採用。",
+      "replacementScope": "具名 NFC 設定與選單入口；不替代硬體感應位置上的官方 NFC 標誌，也不聲稱其他無線連線圖示等同 NFC。",
+      "sample": "<fieldset data-device-demo=\"nfc\" style=\"border:1px solid #8886;border-radius:5px;padding:14px;min-width:0\"><legend>本地控制項示例</legend><label><input data-nfc-enabled type=\"checkbox\" checked>使用 NFC</label><p data-nfc-status>NFC 已開啟</p><p>近距離感應功能</p></fieldset>",
+      "nativePreview": "<span>☑ 使用 NFC</span>",
+      "comparisonMarkup": "<span>☑ 使用 NFC</span>",
+      "searchKeywords": [],
+      "searchAliasDecision": "不建立到 wallet、wifi 或 hotspot 的近義搜尋，這些是不同功能。",
+      "usageEvidence": [
+        "https://support.google.com/pixelphone/answer/7475639?hl=en",
+        "https://nfc-forum.org/build/branding/"
+      ],
+      "usageEvidenceLimit": "Primary sources establish the setting or distinction. This is a local control demonstration, not an operating-system screenshot. It makes no hardware, sensor, network or payment calls.",
+      "visualObservation": "具名 NFC 開關在明暗背景可讀，關閉後狀態文字同步；沒有新增 N-Mark 仿圖，也沒有誤導到付款或 Wi-Fi 搜尋。"
+    }
+  ]
+}

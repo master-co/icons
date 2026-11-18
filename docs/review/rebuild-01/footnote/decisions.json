@@ -1,0 +1,31 @@
+[
+  {
+    "name": "footnote",
+    "reviewed": true,
+    "purpose": "在文件編輯工具列插入註腳，與上標字形命令同時並排。註腳建立正文引用及頁底註文；上標只改字形位置，不能共用同一圖形來表示兩個命令。",
+    "recognitionCues": "一般文字 Ab 加上高位數字 1；A 與 b 共用字面基線，數字明顯抬高，與現有 x² 上標控制拉開輪廓。",
+    "confusableWith": [
+      "superscript",
+      "case-title",
+      "file-text"
+    ],
+    "sourceObservation": "Fluent 與 ONLYOFFICE 的確切 footnote 原稿都採 Ab¹，LibreOffice 則用帶 1 與底部註文的文件。Ab¹ 在小尺寸保有文字引用慣例，文件式在 16px 需要承擔外框、摺角、數字及三條文字線；採 Fluent 的構造並依 MIT 標示改作。",
+    "reason": "直接重用 capitalA、lowerB 和 heading numeral 的 1，沒有另外畫近似字形。第一份全新候選在 DPR1 的 16px A 內孔糊合，將該尺寸 A 由 5 加寬到 6，b 同步右移以保留間距；20／24px 保留原比例。候選與實際缺陷保存在 footnote/candidate-01，不包含被撤銷的 session 舊稿。",
+    "comparison": "最新稿在原生 16／20／24、三角型及明暗 DPR1／2 重新並列。Fluent 的字母與引用標記輪廓簡潔，ONLYOFFICE 的彩色數字更突出；本稿保持單色，採同樣 Ab¹ 組合並使用自家共源字形。加寬後的 16px A 在預設與粗線端有可見內孔，b 的環腔與數字分開；放大的原生 raster 也確認修正。LibreOffice 文件型較密，不採其框線。固定深色／彩色來源保留原色，因此以淺底作來源美感回比，不以其深底對比弱作勝負依據。16px 最細 0.75 線寬仍有二值閾值連通診斷，實際灰階線條可辨；DPR2 和高解析度結構沒有錯誤。",
+    "dashes": false,
+    "dashReason": "字形與引用數字都是真實的文字訊號，不是隱藏邊界或選取框。",
+    "opacity": false,
+    "opacityReason": "主字與引用標記都需要保持可讀，靠字級和位置區別，不淡化數字。",
+    "usageEvidence": [
+      "https://help.libreoffice.org/latest/en-US/text/swriter/01/04030000.html",
+      "https://help.libreoffice.org/latest/en-US/text/swriter/guide/footnote_usage.html"
+    ],
+    "refinementHistory": [
+      {
+        "candidate": "docs/review/rebuild-01/footnote/candidate-01",
+        "finding": "16px A counter raster collapse at native/heavier weights",
+        "change": "16px A widened; b shifted to preserve spacing; 20/24 unchanged"
+      }
+    ]
+  }
+]

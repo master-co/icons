@@ -48,7 +48,9 @@ test('reference pagination covers new drawings, before masters and offline sourc
    const entries=catalog.slice(index*12,(index+1)*12),rows=entries.length;
    await expect(page.locator('.reference-table tbody tr')).toHaveCount(rows);
    // Only actual saved masters are shown in the before column.
-   await expect(page.locator('.reference-table tbody svg')).toHaveCount(entries.reduce((count,e)=>count+(e.category==='brands'?1:references.filter(r=>r.name===e.name).length)+(before[e.name]?2:1),0));
+   await expect(page.locator('.reference-table tbody svg, .reference-table tbody img')).toHaveCount(entries.reduce((count,e)=>count+(e.category==='brands'?1:references.filter(r=>r.name===e.name).length)+(before[e.name]?2:1),0));
+   await expect(page.locator('.reference-table tbody img')).toHaveCount(entries.flatMap(e=>references.filter(r=>r.name===e.name&&r.mediaType==='image/png')).length);
+   await expect.poll(()=>page.locator('.reference-table tbody img').evaluateAll(images=>images.every(image=>image.complete&&image.naturalWidth>0))).toBe(true);
    await expect(page.locator('#page-info')).toContainText(`第 ${index+1} / ${pages}`);
    compared+=rows;
    if(index<pages-1)await page.locator('#page-next').click();

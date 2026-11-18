@@ -1,0 +1,81 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "skillVersion": "0.5.18",
+  "viewed": [
+    "light.png",
+    "dark.png"
+  ],
+  "sizes": [
+    16,
+    20,
+    24
+  ],
+  "themes": [
+    "light",
+    "dark"
+  ],
+  "dpr": [
+    1
+  ],
+  "corner": "soft for existing icons; native controls and calendar content use natural dimensions",
+  "scope": "Two contextual existing-icon entries and four native-content controls replace six candidates. No rejected geometry retrieved. Calendar data is a fixed review fixture, not an application change.",
+  "userApproval": "pending",
+  "evidence": [
+    {
+      "path": "docs/review/rebuild-01/substitution-calendar-date-actions/light.png",
+      "sha256": "f5a719cdf78af9e5c6751324378eb30aca102670469a51c80e16c4c1de821610"
+    },
+    {
+      "path": "docs/review/rebuild-01/substitution-calendar-date-actions/dark.png",
+      "sha256": "520c38ddfc4a64015d42155ffd06e977b06a86b3ba6c802dcf19b654a0e1fab3"
+    }
+  ],
+  "items": [
+    {
+      "name": "calendar-alert",
+      "label": "日期逾期",
+      "alternative": "alert-circle",
+      "replacementKind": "contextual-entry",
+      "context": "任務到期提醒 · 與未逾期日期並列",
+      "reason": "逾期提示需要引起注意，但不需要重畫日曆。alert-circle 搭配「已逾期」和具體日期保留提醒語意；不只換成紅色，也不以時鐘混淆排定時間。",
+      "replacementScope": "有日期與狀態文字的到期提醒；一般行事曆通知、取消活動與無日期任務不是此狀態。",
+      "searchKeywords": [
+        "due-alert",
+        "past-due",
+        "已逾期"
+      ],
+      "rejectedSearchTerms": {
+        "terms": [
+          "過期"
+        ],
+        "reason": "憑證過期、食品過期等不是任務日期逾期的直接同義情境。"
+      },
+      "usageEvidence": [
+        "https://www.todoist.com/help/todoist/features/schedule-a-date-and-time-for-your-todoist-tasks-q7VobO"
+      ],
+      "usageEvidenceLimit": "Todoist documents overdue grouping and rescheduling; use of alert-circle is our contextual alternative, not a claim about Todoist’s icon.",
+      "sample": "<p style=\"display:flex;gap:8px;align-items:center\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><circle cx=\"8\" cy=\"8\" r=\"6\" transform=\"rotate(180 8 8)\"/><circle cx=\"8\" cy=\"5\" r=\"0.625\" fill=\"currentColor\" stroke=\"none\" transform=\"rotate(180 8 8)\"/><path d=\"M8 8L8 11\" transform=\"rotate(180 8 8)\"/></svg>已逾期 · 11/16</p><p>提交報價單</p><p style=\"display:flex;gap:8px;align-items:center\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><rect x=\"2.5\" y=\"3.5\" width=\"11\" height=\"10.5\" rx=\"1\"/><path d=\"M2.5 6.5L13.5 6.5\"/><path d=\"M5.5 2L5.5 4.5\"/><path d=\"M10.5 2L10.5 4.5\"/><circle cx=\"6\" cy=\"9.5\" r=\"0.625\" fill=\"currentColor\" stroke=\"none\"/><circle cx=\"10\" cy=\"9.5\" r=\"0.625\" fill=\"currentColor\" stroke=\"none\"/><circle cx=\"6\" cy=\"12\" r=\"0.625\" fill=\"currentColor\" stroke=\"none\"/></svg>預定 · 11/20</p><p>專案討論</p>",
+      "visualObservation": "alert-circle與既有calendar在16px並列輪廓不同，逾期文字和實際日期補足狀態；單色示例沒有依賴紅色或鐘面。"
+    },
+    {
+      "name": "calendar-reschedule",
+      "label": "改期",
+      "alternative": "calendar",
+      "replacementKind": "contextual-entry",
+      "context": "任務日期編輯 · 開啟日期選擇器",
+      "reason": "改期仍是選擇新的日期。沿用 calendar 搭配「改期」與日期輸入即可；不再疊上換向箭頭，避免與週期或同步混淆。",
+      "replacementScope": "有標籤的改期入口；不表示自動順延全部日期、改變週期規則或改時區。",
+      "searchKeywords": [
+        "reschedule",
+        "change-date",
+        "改排"
+      ],
+      "usageEvidence": [
+        "https://www.todoist.com/help/todoist/features/schedule-a-date-and-time-for-your-todoist-tasks-q7VobO"
+      ],
+      "sample": "<button data-open-reschedule><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><rect x=\"2.5\" y=\"3.5\" width=\"11\" height=\"10.5\" rx=\"1\"/><path d=\"M2.5 6.5L13.5 6.5\"/><path d=\"M5.5 2L5.5 4.5\"/><path d=\"M10.5 2L10.5 4.5\"/><circle cx=\"6\" cy=\"9.5\" r=\"0.625\" fill=\"currentColor\" stroke=\"none\"/><circle cx=\"10\" cy=\"9.5\" r=\"0.625\" fill=\"currentColor\" stroke=\"none\"/><circle cx=\"6\" cy=\"12\" r=\"0.625\" fill=\"currentColor\" stroke=\"none\"/></svg>改期</button><fieldset style=\"margin-top:12px\"><legend>提交報價單</legend><p>原日期：2026/11/16</p><label>新日期 <input aria-label=\"新日期\" type=\"date\" value=\"2026-11-20\"></label></fieldset>",
+      "visualObservation": "原生日曆母型與改期標籤清楚，新日期欄位直接顯示修改值。未將循環或同步箭頭疊上日曆，避免新增不必要語意。"
+    }
+  ]
+}

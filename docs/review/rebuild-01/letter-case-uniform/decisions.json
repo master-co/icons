@@ -1,0 +1,44 @@
+[
+  {
+    "name": "case-upper",
+    "purpose": "文字大小寫四態選擇器的全部大寫，需與小寫、字首大寫及小型大寫並列。",
+    "recognitionCues": "等高、同基線的兩個大寫 A。",
+    "confusableWith": [
+      "case-lower",
+      "small-caps",
+      "text"
+    ],
+    "sourceObservation": "Lucide 與 Hugeicons 以 AB 表示全部大寫；前者較厚重，後者較舒展。兩者保留大寫高度與基線關係。",
+    "reason": "通用 text 只能指文字，無法區分四態。以共用 capitalA 的兩個等高字形表達全部大寫；不同狀態保持同一字母，讓改變集中在大小寫。",
+    "comparison": "最新稿與兩份 AB 來源同尺寸並排：AA 少了 B 的雙層孔，但保留等高大寫的完整輪廓；本稿字身較窄而字間空白清楚。粗線 A 橫畫略下移，16px 深淺底仍保有三角內孔，橫畫平切端收在斜腿中，不形成外凸接點。",
+    "usageEvidence": [
+      "https://help.figma.com/hc/en-us/articles/360039956634-Explore-text-properties"
+    ],
+    "dashes": false,
+    "dashReason": "字形及間距界線表達確定屬性，不是隱藏邊界或暫態。",
+    "opacity": false,
+    "opacityReason": "兩字與規則線均是必要識別，不以淡化隱藏字形或接點問題。",
+    "reviewed": true
+  },
+  {
+    "name": "case-lower",
+    "purpose": "文字大小寫四態選擇器的全部小寫，與全部大寫及字首大寫並列。",
+    "recognitionCues": "同高的小寫 aa、圓形字腹和右側直幹。",
+    "confusableWith": [
+      "case-upper",
+      "case-title",
+      "text"
+    ],
+    "sourceObservation": "Lucide 與 Hugeicons 用 ab，b 的升部使輪廓高低不同；本稿用兩個 a，讓全小寫狀態保持一致的 x-height。",
+    "reason": "沿用共同 lowerA 字腹與直幹，和 case-title 的第二字完全共源。小寫沿大寫基線，不為視覺置中抬高。",
+    "comparison": "與兩份來源相比，aa 的整體較低、節奏更均勻，和 AA 並排可直接看到字面高度改變。16px 小寫的圓腹仍是封閉開孔，右幹與字腹切線承接，粗線端不變成相黏的兩個圓圈；深色背景下兩字間隔仍清楚。",
+    "usageEvidence": [
+      "https://help.figma.com/hc/en-us/articles/360039956634-Explore-text-properties"
+    ],
+    "dashes": false,
+    "dashReason": "字形及間距界線表達確定屬性，不是隱藏邊界或暫態。",
+    "opacity": false,
+    "opacityReason": "兩字與規則線均是必要識別，不以淡化隱藏字形或接點問題。",
+    "reviewed": true
+  }
+]

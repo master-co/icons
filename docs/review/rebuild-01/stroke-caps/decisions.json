@@ -1,0 +1,68 @@
+[
+  {
+    "reviewed": true,
+    "dashes": true,
+    "dashReason": "短線是路徑中心軸的工程示意，和外緣輪廓必須分開閱讀；逐段設定原生長度及平切端帽，避免預設圓帽吃掉間隙。",
+    "opacity": false,
+    "opacityReason": "中心軸是判別端點延伸和接合的必要資訊，不淡化；使用主線寬的 0.8 倍維持輔助層級。",
+    "usageEvidence": [
+      "https://inkscape-manuals.readthedocs.io/en/1.3/strokes.html",
+      "https://www.w3.org/TR/2018/CR-SVG2-20180807/painting.html#StrokeLinecapProperty",
+      "https://www.w3.org/TR/2018/CR-SVG2-20180807/painting.html#StrokeLinejoinProperty"
+    ],
+    "name": "stroke-cap-butt",
+    "purpose": "筆畫端點的平切設定，與圓頭、方頭在同一選擇器並列。",
+    "recognitionCues": "平直端面，虛線中心軸延伸到端面；沒有超出路徑端點的部分。",
+    "confusableWith": [
+      "stroke-cap-square",
+      "stroke-cap-round"
+    ],
+    "sourceObservation": "Lucide 用向右的開放外緣及延伸到端面的虛線；Tabler 的方向相反，並在端面放一個空心節點。後者小孔與外緣在 16px 靠得較近。",
+    "reason": "採用並記錄 Lucide 的開放外緣加虛線中心軸構造，三顆使用同一 cap 函式。首輪端點外緣偏扁，回修為原生 16／20／24 的 9／11／13px 上下距離，並重新分配短線與端點。平切到外緣終止，圓頭及方頭則保留半個示意筆畫寬的延伸；局部微圓不改變三個端點值。",
+    "comparison": "最新稿回比兩份來源後，保留 Lucide 的中心軸到端面關係，沒有加入 Tabler 的端點空心圈。加高外緣後，16px 不再壓成狹長的框，中心軸和上下邊分得開；四段平切短線仍能讀作輔助軸，最後一段與端面相接，不露出牆外。與方頭並排，中心軸是否到端面是明確差異。三尺寸、三角型、明暗 DPR 1／2 及線寬兩端已查看。"
+  },
+  {
+    "reviewed": true,
+    "dashes": true,
+    "dashReason": "短線是路徑中心軸的工程示意，和外緣輪廓必須分開閱讀；逐段設定原生長度及平切端帽，避免預設圓帽吃掉間隙。",
+    "opacity": false,
+    "opacityReason": "中心軸是判別端點延伸和接合的必要資訊，不淡化；使用主線寬的 0.8 倍維持輔助層級。",
+    "usageEvidence": [
+      "https://inkscape-manuals.readthedocs.io/en/1.3/strokes.html",
+      "https://www.w3.org/TR/2018/CR-SVG2-20180807/painting.html#StrokeLinecapProperty",
+      "https://www.w3.org/TR/2018/CR-SVG2-20180807/painting.html#StrokeLinejoinProperty"
+    ],
+    "name": "stroke-cap-round",
+    "purpose": "筆畫端點的圓頭設定，在與平切、方頭同列的控制項中選擇半圓端面。",
+    "recognitionCues": "向外延伸的半圓端面；路徑端點留在半圓圓心，和端面保持距離。",
+    "confusableWith": [
+      "stroke-cap-butt",
+      "stroke-cap-square"
+    ],
+    "sourceObservation": "Lucide 的半圓外緣與水平線切向相接，中心軸到圓心止；Tabler 用較重的空心節點和實線軸強調路徑末端。",
+    "reason": "採用並記錄 Lucide 的開放外緣加虛線中心軸構造，三顆使用同一 cap 函式。首輪端點外緣偏扁，回修為原生 16／20／24 的 9／11／13px 上下距離，並重新分配短線與端點。平切到外緣終止，圓頭及方頭則保留半個示意筆畫寬的延伸；局部微圓不改變三個端點值。",
+    "comparison": "回修後的半圓較首輪飽滿，與 Lucide 的成熟半圓構造一致，並保持本庫較收斂的原生外框。16px 使用必要的實心小端點，省掉 Tabler 空心節點的微孔；端點與半圓留白清楚，曲線與上下直線連續相切。與方頭共用同一末端位置，差別僅在外緣形狀。這條天然半圓不因 sharp 改成折角，也不為三種預設人造不同半徑；三尺寸、明暗 DPR 1／2 及線寬兩端已查看。"
+  },
+  {
+    "reviewed": true,
+    "dashes": true,
+    "dashReason": "短線是路徑中心軸的工程示意，和外緣輪廓必須分開閱讀；逐段設定原生長度及平切端帽，避免預設圓帽吃掉間隙。",
+    "opacity": false,
+    "opacityReason": "中心軸是判別端點延伸和接合的必要資訊，不淡化；使用主線寬的 0.8 倍維持輔助層級。",
+    "usageEvidence": [
+      "https://inkscape-manuals.readthedocs.io/en/1.3/strokes.html",
+      "https://www.w3.org/TR/2018/CR-SVG2-20180807/painting.html#StrokeLinecapProperty",
+      "https://www.w3.org/TR/2018/CR-SVG2-20180807/painting.html#StrokeLinejoinProperty"
+    ],
+    "name": "stroke-cap-square",
+    "purpose": "筆畫端點的方形突出設定，與平切端點區分是否延伸半個筆畫寬。",
+    "recognitionCues": "平直方頭，中心軸的端點停在端面之前，兩者之間有可見延伸區。",
+    "confusableWith": [
+      "stroke-cap-butt",
+      "stroke-cap-round"
+    ],
+    "sourceObservation": "Lucide 用和 butt 相同的外框，但中心軸提前停止；Tabler 用內部節點表示相同關係。單獨畫一個方框，無法說明方頭與平切的差異。",
+    "reason": "採用並記錄 Lucide 的開放外緣加虛線中心軸構造，三顆使用同一 cap 函式。首輪端點外緣偏扁，回修為原生 16／20／24 的 9／11／13px 上下距離，並重新分配短線與端點。平切到外緣終止，圓頭及方頭則保留半個示意筆畫寬的延伸；局部微圓不改變三個端點值。",
+    "comparison": "最新稿以共源平直外緣和與圓頭共源的端點位置完成，沒有另畫另一種寬度的框。回比後將端點前的短線壓成兩段，端點後留出完整空腔，16px 和粗線端仍能區分停止處與端面；相比 Tabler 的封閉節點，省下空心圈密度。與平切同列時不靠框寬差異，而靠軸是否延伸至端面辨識。三尺寸、三角型、明暗 DPR 1／2 已查看。"
+  }
+]

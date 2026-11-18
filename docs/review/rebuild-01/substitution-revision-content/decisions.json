@@ -1,0 +1,78 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "skillVersion": "0.5.18",
+  "viewed": [
+    "light.png",
+    "dark.png"
+  ],
+  "sizes": [
+    16,
+    20,
+    24
+  ],
+  "themes": [
+    "light",
+    "dark"
+  ],
+  "dpr": [
+    1
+  ],
+  "corner": "soft for existing icons; text changes and state controls retain natural dimensions",
+  "scope": "Five contextual existing-icon entries and three native-content presentations replace eight candidates. Fixtures illustrate selection scope and state; they do not implement Tiptap. No rejected geometry retrieved.",
+  "userApproval": "pending",
+  "evidence": [
+    {
+      "path": "docs/review/rebuild-01/substitution-revision-content/light.png",
+      "sha256": "ba42c05f1274941d2c9ddca0bdb91aa7a6bd81b2b0d3ad169f11d4cd4bb3513f"
+    },
+    {
+      "path": "docs/review/rebuild-01/substitution-revision-content/dark.png",
+      "sha256": "b7f88acd62e52187cf01e1457a316755fd94f62008f25d0f8b6bd39945d0bfe2"
+    }
+  ],
+  "items": [
+    {
+      "name": "suggestion-insert",
+      "label": "建議新增文字",
+      "alternative": null,
+      "replacementKind": "native-content",
+      "context": "修訂側欄與文件內容 · 新增建議",
+      "reason": "新增建議由實際新增文字、底線和「新增」類型直接表達。固定的小字加號圖不提供額外內容資訊，也容易和一般插入命令混淆。",
+      "replacementScope": "呈現待審修訂的狀態與內容，不是新增節點或套用底線格式的命令。",
+      "searchKeywords": [],
+      "usageEvidence": [
+        "https://tiptap.dev/docs/tracked-changes/guides/editor-setup",
+        "https://tiptap.dev/docs/tracked-changes/guides/suggestion-list"
+      ],
+      "sample": "<style>\n [data-review-demo],[data-tracking-demo],[data-compare-demo]{border:1px solid #8886;padding:12px;border-radius:5px;margin:10px 0}\n [data-review-demo] button:disabled{opacity:.45}\n [data-review-toolbar]{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0}\n [data-review-item]{display:block;padding:8px 0;border-top:1px solid #8884}\n [data-review-item] p{margin:3px 0 3px 23px}\n ins{background:transparent;text-decoration-thickness:1px;text-underline-offset:3px}\n del{text-decoration-thickness:1px}\n [data-compare-demo] label{display:block;margin:8px 0}\n select{font:inherit;color:inherit;background:transparent;padding:3px;border:1px solid #8888;border-radius:3px}\n</style><b>新增 · 怡君</b><p>請附上 <ins>驗收紀錄</ins>。</p><p><small>新增內容仍待審閱；底線僅標示此處的修訂。</small></p>",
+      "usageEvidenceLimit": "Sources establish review workflows, commands, and text-change rendering. These local fixtures use Master glyphs and do not integrate or reproduce a production editor.",
+      "alternativeLabel": "實際新增文字與底線",
+      "nativePreview": "<span>新增：<ins>驗收紀錄</ins></span>",
+      "comparisonMarkup": "<span style=\"font-size:16px\"><ins>新增</ins></span><span style=\"font-size:20px\"><ins>新增</ins></span><span style=\"font-size:24px\"><ins>新增</ins></span>",
+      "searchAliasDecision": "不把待審內容狀態映射到underline、strikethrough、plus或minus圖示；沒有獨立固定圖形。",
+      "visualObservation": "實際新增文字以底線及新增類型顯示，16／20／24文字級數均可讀，單色也不依賴綠色提示。沒有把underline格式工具改稱新增建議。"
+    },
+    {
+      "name": "suggestion-delete",
+      "label": "建議刪除文字",
+      "alternative": null,
+      "replacementKind": "native-content",
+      "context": "修訂側欄與文件內容 · 刪除建議",
+      "reason": "直接把建議移除的實際文字畫刪除線，並保留「刪除」類型及作者。刪除線格式工具改變文字樣式，與待審刪除不是同一個命令，不應綁成同義圖示。",
+      "replacementScope": "呈現尚未接受的刪除建議；接受後移除文字，拒絕則保留原文。",
+      "searchKeywords": [],
+      "usageEvidence": [
+        "https://tiptap.dev/docs/tracked-changes/guides/editor-setup",
+        "https://tiptap.dev/docs/tracked-changes/guides/suggestion-list"
+      ],
+      "sample": "<style>\n [data-review-demo],[data-tracking-demo],[data-compare-demo]{border:1px solid #8886;padding:12px;border-radius:5px;margin:10px 0}\n [data-review-demo] button:disabled{opacity:.45}\n [data-review-toolbar]{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0}\n [data-review-item]{display:block;padding:8px 0;border-top:1px solid #8884}\n [data-review-item] p{margin:3px 0 3px 23px}\n ins{background:transparent;text-decoration-thickness:1px;text-underline-offset:3px}\n del{text-decoration-thickness:1px}\n [data-compare-demo] label{display:block;margin:8px 0}\n select{font:inherit;color:inherit;background:transparent;padding:3px;border:1px solid #8888;border-radius:3px}\n</style><b>刪除 · 志明</b><p><del>另寄紙本文件。</del></p><p><small>被劃去的文字仍在文件裡等待決定。</small></p>",
+      "usageEvidenceLimit": "Sources establish review workflows, commands, and text-change rendering. These local fixtures use Master glyphs and do not integrate or reproduce a production editor.",
+      "alternativeLabel": "實際刪除文字與刪除線",
+      "nativePreview": "<span>刪除：<del>另寄紙本</del></span>",
+      "comparisonMarkup": "<span style=\"font-size:16px\"><del>刪除</del></span><span style=\"font-size:20px\"><del>刪除</del></span><span style=\"font-size:24px\"><del>刪除</del></span>",
+      "searchAliasDecision": "不把待審內容狀態映射到underline、strikethrough、plus或minus圖示；沒有獨立固定圖形。",
+      "visualObservation": "被建議刪除的文字仍可讀，刪除線穿過字面；和新增底線在同一審閱卡中位置不同，明暗底均可區分。"
+    }
+  ]
+}

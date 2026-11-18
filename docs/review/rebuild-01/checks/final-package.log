@@ -1,0 +1,44 @@
+$ node scripts/check-package.mjs
+
+   • turbo 2.11.11
+   • Packages in scope: @master/icons, @master/icons-astro, @master/icons-preact, @master/icons-react, @master/icons-svelte, @master/icons-vue
+   • Running build in 6 packages
+   • Remote caching disabled
+
+@master/icons:generate: cache hit, replaying logs 90d2419ee20947a4
+@master/icons:generate: $ node scripts/build.mjs --incremental --archive-svg
+@master/icons:generate: Built @master/icons: 924 icons × 3 sizes × 3 corners = 8316 SVGs and shared geometry.
+@master/icons:generate: Icons: generated in 6.66s
+@master/icons:build: cache bypass, force executing b04a440ebd52cc94
+@master/icons:build: $ node scripts/sync-svg.mjs
+@master/icons:build: SVGs: synchronized 8316 files in 0.44s
+@master/icons-preact:build: cache hit, replaying logs 5b11ca356282f338
+@master/icons-preact:build: $ node ../../scripts/build-frameworks.mjs preact --incremental
+@master/icons-preact:build: Built @master/icons-preact: 924 icons × 10 entries in 4.51s
+@master/icons-vue:build: cache hit, replaying logs 5ca8b97c01a86558
+@master/icons-vue:build: $ node ../../scripts/build-frameworks.mjs vue --incremental
+@master/icons-vue:build: Built @master/icons-vue: 924 icons × 10 entries in 4.33s
+@master/icons-react:build: cache hit, replaying logs c1372e8f2a0041bf
+@master/icons-react:build: $ node ../../scripts/build-frameworks.mjs react --incremental
+@master/icons-react:build: Built @master/icons-react: 924 icons × 10 entries in 4.33s
+@master/icons-svelte:build: cache hit, replaying logs 6dccfa0b1004c6c6
+@master/icons-astro:build: cache hit, replaying logs 3b99cd831b21f9f5
+@master/icons-astro:build: $ node ../../scripts/build-frameworks.mjs astro --incremental
+@master/icons-astro:build: Built @master/icons-astro: 924 icons × 10 entries in 4.51s
+@master/icons-svelte:build: $ node ../../scripts/build-frameworks.mjs svelte --incremental
+@master/icons-svelte:build: Built @master/icons-svelte: 924 icons × 10 entries in 4.33s
+
+ Tasks:    7 successful, 7 total
+Cached:    6 cached, 7 total
+  Time:    8.706s 
+
+@master/icons: 26836 files, 23.64 MB compressed / 152.98 MB unpacked
+@master/icons-react: 18506 files, 0.64 MB compressed / 4.99 MB unpacked
+@master/icons-vue: 18506 files, 0.64 MB compressed / 4.24 MB unpacked
+@master/icons-svelte: 18506 files, 0.60 MB compressed / 5.64 MB unpacked
+@master/icons-preact: 18506 files, 0.60 MB compressed / 4.34 MB unpacked
+@master/icons-astro: 18506 files, 0.60 MB compressed / 4.99 MB unpacked
+Packed consumer: data, runtime, dynamic/static React, SVG subpath and notices passed.
+Packed Vue, Preact, Svelte and Astro: generic/fixed SSR and real Astro + Svelte consumer build passed.
+Isolated offline installation: only the core and requested Svelte adapter installed.
+All 6 packages validated; framework dependency isolation and packed consumers passed. Fixture: /Users/aron/master-icons/work/rebuild-01/validation/work/package-consumer-8X9Daz

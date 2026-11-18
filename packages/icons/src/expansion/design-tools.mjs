@@ -7,11 +7,16 @@ function scissors(g){
     f.line(6+d,6+d,20,20),f.line(6+d,18-d,20,4)];
 }
 
+// Shared thumb and palm; a gesture may change the finger pose without
+// redrawing the hand's lower contour. The default preserves the open palm.
+export function handSilhouette(g,fingers='M 8 13 V 5.5 C 8 3.5 11 3.5 11 5.5 V 3.8 C 11 1.7 14 1.7 14 3.8 V 5 C 14 3 17 3 17 5 V 7.7 C 17 5.7 20 5.7 20 7.7'){
+  return figure(g).path(fingers+' V 13 C 20 18.5 17.3 21 13.2 21 C 9.7 21 8.2 19.4 6.5 17.2 L 3.8 13.7 C 2.3 11.7 4.6 9.8 6.2 11.3 Z');
+}
 function hand(g){
   const f=figure(g);
   // Finger crowns describe anatomy, including in sharp. The thumb flows into
   // the palm without a detached crease or a densely hatched knuckle row.
-  return [f.path('M 8 13 V 5.5 C 8 3.5 11 3.5 11 5.5 V 3.8 C 11 1.7 14 1.7 14 3.8 V 5 C 14 3 17 3 17 5 V 7.7 C 17 5.7 20 5.7 20 7.7 V 13 C 20 18.5 17.3 21 13.2 21 C 9.7 21 8.2 19.4 6.5 17.2 L 3.8 13.7 C 2.3 11.7 4.6 9.8 6.2 11.3 Z'),
+  return [handSilhouette(g),
     f.line(11,5.5,11,10),f.line(14,5,14,10),f.line(17,7.7,17,11)];
 }
 
@@ -22,14 +27,19 @@ function lasso(g){
     f.path('M 6 16.4 C 6 18.6 7.1 20.1 9 21')],g);
 }
 
-function selection(g){
+export function selection(g,{cornersOnly=false,inset=3,box,cornerLength=4,continuousEdges=[]}={}){
   const f=figure(g),r=Math.min(g.r,g.v(.65,.85,1));
-  const corners=[[[3,7],[3,3],[7,3]],[[17,3],[21,3],[21,7]],
-    [[21,17],[21,21],[17,21]],[[7,21],[3,21],[3,17]]];
+  const [x,y,w,h]=box||[inset,inset,24-2*inset,24-2*inset],rgt=x+w,btm=y+h,k=cornerLength;
+  const corners=[[[x,y+k],[x,y],[x+k,y]],[[rgt-k,y],[rgt,y],[rgt,y+k]],
+    [[rgt,btm-k],[rgt,btm],[rgt-k,btm]],[[x+k,btm],[x,btm],[x,btm-k]]];
   // Explicit corner pieces keep the four corners continuous at every size;
   // separate flat-ended middle dashes avoid phase drift around a rounded rect.
   return [...corners.map(p=>{const [tag,a]=f.contour(p,false,r);return [tag,{...a,'stroke-linecap':'butt'}];}),
-    ...[[10.5,3,13.5,3],[21,10.5,21,13.5],[13.5,21,10.5,21],[3,13.5,3,10.5]]
+    ...(cornersOnly?[]:[
+      continuousEdges.includes('top')?[x+k,y,rgt-k,y]:[10.5,3,13.5,3],
+      continuousEdges.includes('right')?[rgt,y+k,rgt,btm-k]:[21,10.5,21,13.5],
+      continuousEdges.includes('bottom')?[rgt-k,btm,x+k,btm]:[13.5,21,10.5,21],
+      continuousEdges.includes('left')?[x,btm-k,x,y+k]:[3,13.5,3,10.5]])
       .map(p=>{const [tag,a]=f.line(...p);return [tag,{...a,'stroke-linecap':'butt'}];})];
 }
 

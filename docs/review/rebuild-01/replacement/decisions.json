@@ -1,0 +1,40 @@
+[
+  {
+    "name": "replace",
+    "reviewed": true,
+    "purpose": "搜尋取代列中只處理目前匹配的命令，與全部取代相鄰。repeat表示循環，arrow-left-right表示互換，都無法指出單向替換一個搜尋結果。",
+    "recognitionCues": "右上斷開的原項目角框、左上朝下折返箭頭、左下實線替代項目。",
+    "confusableWith": [
+      "repeat",
+      "arrow-left-right",
+      "replace-all"
+    ],
+    "sourceObservation": "Material Design Icons以放大鏡加循環箭頭表達查找替換，但與重新搜尋／重新整理相近；Lucide的原項目、箭頭、新項目結構可與全部取代共用。採用Lucide的構造安排並如實記錄改作。",
+    "reason": "從既有selection、keyboard-return折返箭頭與square實際函式抽參數，排列原項目及新項目。角框沿用平切片段，實線方框在三種角型下使用實際半徑；沒有取回本session被撤銷的圖稿。 精修時延長折返箭頭的垂直段，將替代項目列下移0.5px；粗線端不再把轉彎與箭翼之間的開口渲染成封閉白點。",
+    "comparison": "最新稿於16／20／24px、明暗底與DPR 1／2對照兩份來源。採用Lucide較明確的單向物件替換結構，箭頭與下方方框保留垂直通道，避免Material循環外輪廓帶來刷新語意。相較Lucide圓端角框，本稿平切片段與既有selection一致，短橫段不額外長成圓點；微圓方框的內孔在粗線端仍清楚。16px工具列可與全部取代依下方物件數區分。 16px的0.75px極細rounded在二值化像素診斷有局部斷點，原生灰階截圖與DPR2另行檢視，未以門檻連通數宣稱像素完美。",
+    "dashes": true,
+    "dashReason": "四個分離角片表示被替換的原項目輪廓，與實線新項目區分；明確片段避免繞框dash相位漂移。",
+    "usageEvidence": [
+      "https://code.visualstudio.com/docs/editing/codebasics#_find-and-replace"
+    ]
+  },
+  {
+    "name": "replace-all",
+    "reviewed": true,
+    "purpose": "搜尋取代列中處理目前搜尋範圍全部匹配的命令；與單次取代並列時需要額外的多項目訊號。",
+    "recognitionCues": "完整沿用單次取代的角框、折返箭頭與新項目，右下再顯示兩個等高的方框露邊。",
+    "confusableWith": [
+      "replace",
+      "layers",
+      "repeat"
+    ],
+    "sourceObservation": "Lucide以短露邊保留多個替換項目，密度較低；Hugeicons同樣構造使用較長的圓肩，24px柔和，但16px較接近三個並列圓括號。採Lucide安排並共用Master方框。",
+    "reason": "兩個露邊由同一square母型的exposedRight參數產生，共用主方框高度與半徑。保留右側間隔，不增加封閉小內孔；單次與全部取代切換時主體完全不位移。 精修時延長折返箭頭的垂直段，將替代項目列下移0.5px；粗線端不再把轉彎與箭翼之間的開口渲染成封閉白點。",
+    "comparison": "最新稿與Lucide、Hugeicons固定原稿並排看過16／20／24px、明暗底、DPR 1／2及線寬兩端。Lucide短露邊更適合緊密工具列，本稿保留此優點並以相同方框母型定義垂直段與轉角；相較Hugeicons較鼓的肩部，露邊較直且等高。三個下方項目彼此分開，角框不與右側露邊相連；rounded改變實際方框曲線，不只換join。此圖只區分整批動作，匹配數及範圍仍由介面交代。 16px的0.75px極細rounded在二值化像素診斷有局部斷點，原生灰階截圖與DPR2另行檢視，未以門檻連通數宣稱像素完美。",
+    "dashes": true,
+    "dashReason": "原項目使用分離角框，替換後項目使用連續輪廓；多項目露邊不是虛線或進度訊號。",
+    "usageEvidence": [
+      "https://code.visualstudio.com/docs/editing/codebasics#_find-and-replace"
+    ]
+  }
+]

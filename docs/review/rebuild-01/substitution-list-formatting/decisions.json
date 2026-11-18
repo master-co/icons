@@ -1,0 +1,46 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "viewed": [
+    "light.png",
+    "dark.png"
+  ],
+  "items": [
+    {
+      "name": "list-alpha",
+      "alternative": "list-ordered",
+      "label": "A. B. C.　字母編號",
+      "context": "編號格式選擇器 · 數字、字母與羅馬數字預覽",
+      "reason": "工具列用 list-ordered 進入編號選單；選單內直接用字型排出 A／B／C 預覽，才能反映實際格式、大小寫與標點，不另把特定三個字母刻成圖示。",
+      "sample": "<div style=\"display:flex;gap:12px\"><button>1. 2. 3.</button><button>A. B. C.</button><button>I. II. III.</button></div>"
+    },
+    {
+      "name": "list-roman",
+      "alternative": "list-ordered",
+      "label": "I. II. III.　羅馬數字",
+      "context": "編號格式選擇器 · 羅馬數字格式",
+      "reason": "同一編號選單中，真實 I／II／III 預覽比三條極短字元與行線的複合圖更準確；list-ordered 保留列表入口語意，格式不獨立成圖。",
+      "sample": "<div style=\"display:flex;gap:12px\"><button>I. II. III.</button><button>i. ii. iii.</button></div>"
+    },
+    {
+      "name": "list-restart",
+      "alternative": "list-ordered",
+      "label": "重新從 1 編號",
+      "context": "已選取編號清單 · 起始值選單",
+      "reason": "選單標籤與起始值已指出操作，list-ordered 足以識別編號設定。疊回轉箭頭會混入復原或重新整理，不能帶來必要資訊。",
+      "sample": "<div style=\"display:flex;gap:12px\"><button>重新從 1 編號</button><button>接續前一清單</button></div>"
+    },
+    {
+      "name": "list-continue",
+      "alternative": "list-ordered",
+      "label": "接續前一清單",
+      "context": "已選取編號清單 · 與重新編號並列",
+      "reason": "接續的起點取決於前一清單，應以明確文字描述；單一箭頭或數字無法說清楚接續哪一組。沿用 list-ordered 作入口，選單以文字區分兩個命令。",
+      "sample": "<div style=\"display:flex;gap:12px\"><button>接續前一清單</button><button>設定起始值…</button></div>"
+    }
+  ],
+  "usageEvidence": [
+    "https://support.microsoft.com/en-au/word/define-new-bullets-numbers-and-multilevel-lists",
+    "https://support.microsoft.com/en-gb/word/change-the-numbering-in-a-numbered-list"
+  ]
+}

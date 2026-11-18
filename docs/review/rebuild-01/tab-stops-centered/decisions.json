@@ -1,0 +1,50 @@
+[
+  {
+    "reviewed": true,
+    "confusableWith": [
+      "align-left",
+      "align-center",
+      "align-right",
+      "indent-increase"
+    ],
+    "dashes": false,
+    "dashReason": "定位點是持續的錨點符號，主體保持完整；示例中的虛線僅為尺規輔助線，不屬於圖示。",
+    "opacity": false,
+    "opacityReason": "標記與小數點使用同一完整墨色，不以淡化掩飾間距或分層。",
+    "usageEvidence": [
+      "https://support.microsoft.com/en-gb/word/using-the-ruler-in-word",
+      "https://help.libreoffice.org/latest/en-US/text/shared/01/05030300.html",
+      "https://helpcenter.onlyoffice.com/docs/userguides/document_editor/SetTabStops.aspx"
+    ],
+    "name": "tab-stop-center",
+    "purpose": "尺規置中定位：每行文字以指定點為中心向兩邊延伸。整段落置中不能替代尺規上的可移動中點。",
+    "recognitionCues": "對稱水平基腳與中央直立桿構成倒T。",
+    "sourceObservation": "Scribus與ONLYOFFICE使用倒T表示中點；Scribus採厚直角，ONLYOFFICE是較小的按鈕圖。與左右定位點相比，兩側等長基腳是必要差異，不能以加號取代。",
+    "comparison": "16px仍可看出直立桿落在基腳中央，兩側負空間平衡；24px沒有把桿身加長成上下穿出的十字。與Scribus比較保留倒T比例而使用本庫線寬；與ONLYOFFICE比較去除按鈕外框，使基腳充分展開。單一墨線邊界讓T接點沒有端帽突出，soft與rounded的內側接點都有真實小圓弧。明暗與粗細線端都維持連通，和左右L共用頂高及基腳高度。",
+    "reason": "tabStopParts以同一原生座標建立單一倒T墨線邊界，內側接點及端部半徑分別處理；不以兩筆重疊端帽冒充接合。"
+  },
+  {
+    "reviewed": true,
+    "confusableWith": [
+      "align-left",
+      "align-center",
+      "align-right",
+      "indent-increase"
+    ],
+    "dashes": false,
+    "dashReason": "定位點是持續的錨點符號，主體保持完整；示例中的虛線僅為尺規輔助線，不屬於圖示。",
+    "opacity": false,
+    "opacityReason": "標記與小數點使用同一完整墨色，不以淡化掩飾間距或分層。",
+    "usageEvidence": [
+      "https://support.microsoft.com/en-gb/word/using-the-ruler-in-word",
+      "https://help.libreoffice.org/latest/en-US/text/shared/01/05030300.html",
+      "https://helpcenter.onlyoffice.com/docs/userguides/document_editor/SetTabStops.aspx"
+    ],
+    "name": "tab-stop-decimal",
+    "purpose": "尺規小數定位：不同長度的數字以小數分隔符號對齊，不能由置中定位或段落置中替代。",
+    "recognitionCues": "與置中定位共源的倒T，右上空間有一個獨立小點。",
+    "sourceObservation": "Scribus tabulator-dot是同語意標記，在倒T右側加方點。ONLYOFFICE來源僅為center定位點，是共同倒T的家族參考，不假稱第二份小數定位點原稿。Word與LibreOffice使用說明確認小數定位是獨立類型。",
+    "comparison": "新稿與Scribus並排後保留慣用右側點位，但改用單一圓點，避免小方點在不同角型中產生視重跳動。16px點與桿身、基腳均有間隙，粗線端也不黏合；24px圓點不隨主體等比膨大到像額外按鈕。倒T主體直接與置中版共源，切換時不跳位。尺規示例使用12.50、1234.5與9.005，實際以小數點中心對齊，清楚呈現與一般置中的差異。",
+    "reason": "直接取用同一倒T主體並在右上配置原生點徑；點徑只在粗線端小幅補償，保留分離通道。採通用小數定位符號，沒有追描Scribus的方點輪廓。"
+  }
+]

@@ -1,0 +1,131 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "skillVersion": "0.5.20",
+  "viewed": [
+    "light.png",
+    "dark.png",
+    "changed-light.png",
+    "changed-dark.png"
+  ],
+  "sizes": [
+    16,
+    20,
+    24
+  ],
+  "themes": [
+    "light",
+    "dark"
+  ],
+  "dpr": [
+    1
+  ],
+  "corner": "soft for existing glyphs only",
+  "scope": "Code editor gutter state, language-dependent comment commands, actual text markers/carets, and explicit navigation commands. Local fixed samples only; no rejected session geometry retrieved or production editor changed.",
+  "primaryEvidence": "work/rebuild-01/code-controls-primary-evidence.json",
+  "userApproval": "pending",
+  "evidence": [
+    {
+      "path": "docs/review/rebuild-01/substitution-code-editing/light.png",
+      "sha256": "0837c310bb260b63b90ac3348fff4db3d05983e359c0d25969b241a4aa5c51d9"
+    },
+    {
+      "path": "docs/review/rebuild-01/substitution-code-editing/dark.png",
+      "sha256": "7adbeb5aff80397825d954c77cb347bdffd244ff78140d352da96e2230fdbbcd"
+    },
+    {
+      "path": "docs/review/rebuild-01/substitution-code-editing/changed-light.png",
+      "sha256": "3ab95f55d16d444ccd06e7efc0eeab5310aeefb88222854bb334db3c04a3adcd"
+    },
+    {
+      "path": "docs/review/rebuild-01/substitution-code-editing/changed-dark.png",
+      "sha256": "e633ae4ce244c0881336c18422e258a7b62896b5ab2f572db84b47424d353210"
+    }
+  ],
+  "items": [
+    {
+      "name": "toggle-line-comment",
+      "label": "切換行註解",
+      "alternative": null,
+      "alternativeLabel": "具名命令與語言原生註解",
+      "replacementKind": "native-content",
+      "context": "編輯命令 · 對選取的各行加入／移除註解",
+      "reason": "行註解符號由語言決定，JavaScript 的 // 與 Python 的 # 並不相同。命令文字可跨語言，原文直接顯示變更；固定雙斜線圖示不值得再成為一顆通用圖。",
+      "replacementScope": "編輯選單／命令面板及選取內容；不宣稱所有語言都支援行註解或都使用 //。",
+      "sample": "<fieldset data-code-demo=\"line-comment\" style=\"border:1px solid #8886;padding:12px;min-width:0\"><legend>本地操作示例</legend><label>語言 <select data-code-language><option value=\"js\">JavaScript</option><option value=\"python\">Python</option></select></label><p>選取以下兩行：</p><pre data-comment-code style=\"white-space:pre-wrap;font:14px/1.7 ui-monospace,monospace;border:1px solid #8885;padding:10px;min-height:70px\"></pre><button data-comment-toggle></button><p data-comment-status role=\"status\"></p></fieldset>",
+      "nativePreview": "<span>切換行註解　// ／ #</span>",
+      "comparisonMarkup": "<span style=\"font:16px/1.6 ui-monospace,monospace\">//　#</span><span style=\"font:20px/1.6 ui-monospace,monospace\">//　#</span><span style=\"font:24px/1.6 ui-monospace,monospace\">//　#</span>",
+      "searchKeywords": [],
+      "searchAliasDecision": "註解不是 message 聊天，亦不是單獨 slash 或 hash；不補同義詞。",
+      "usageEvidence": [
+        "https://code.visualstudio.com/api/language-extensions/language-configuration-guide",
+        "https://code.visualstudio.com/docs/reference/default-keybindings"
+      ],
+      "usageEvidenceLimit": "Primary docs/source establish actual code-editor commands and state. This is a limited local sample, not a screenshot or full implementation of VS Code. No rejected geometry used.",
+      "visualObservation": "JavaScript 與 Python 以各自的 //、# 顯示實際行註解，命令名稱保持相同；還原後保留原文。"
+    },
+    {
+      "name": "toggle-block-comment",
+      "label": "切換區塊註解",
+      "alternative": null,
+      "alternativeLabel": "具名命令與成對註解界符",
+      "replacementKind": "native-content",
+      "context": "編輯命令 · 以語言支援的界符包住選取範圍",
+      "reason": "區塊註解與逐行註解不是同一操作，使用具名命令並直接呈現成對界符。語言不支援時停用，不用看似註解的字串替代，也不將 /* */ 固定成跨語言符號。",
+      "replacementScope": "具名編輯命令與選取範圍預覽；此示例只實作 JavaScript 區塊註解，Python 設定停用。",
+      "sample": "<fieldset data-code-demo=\"block-comment\" style=\"border:1px solid #8886;padding:12px;min-width:0\"><legend>本地操作示例</legend><label>語言 <select data-code-language><option value=\"js\">JavaScript</option><option value=\"python\">Python</option></select></label><p>選取以下兩行：</p><pre data-comment-code style=\"white-space:pre-wrap;font:14px/1.7 ui-monospace,monospace;border:1px solid #8885;padding:10px;min-height:70px\"></pre><button data-comment-toggle></button><p data-comment-status role=\"status\"></p></fieldset>",
+      "nativePreview": "<span>切換區塊註解　/* … */</span>",
+      "comparisonMarkup": "<span style=\"font:16px/1.6 ui-monospace,monospace\">/* */</span><span style=\"font:20px/1.6 ui-monospace,monospace\">/* */</span><span style=\"font:24px/1.6 ui-monospace,monospace\">/* */</span>",
+      "searchKeywords": [],
+      "searchAliasDecision": "不映射到 code、brackets 或 message，避免混淆語法、配對與留言。",
+      "usageEvidence": [
+        "https://code.visualstudio.com/api/language-extensions/language-configuration-guide",
+        "https://code.visualstudio.com/docs/reference/default-keybindings"
+      ],
+      "usageEvidenceLimit": "Primary docs/source establish actual code-editor commands and state. This is a limited local sample, not a screenshot or full implementation of VS Code. No rejected geometry used.",
+      "visualObservation": "上下界符包住兩行選取內容，和各行前綴的行註解分開；不支援的語言設定有明確停用原因。"
+    },
+    {
+      "name": "show-whitespace",
+      "label": "顯示空白字元",
+      "alternative": null,
+      "alternativeLabel": "勾選狀態與原文空白記號",
+      "replacementKind": "native-content",
+      "context": "檢視設定 · 空格與 Tab 的實際顯示",
+      "reason": "是否顯示是布林設定，空格與 Tab 的位置和數量應出現在原文中。pilcrow 只表示段落，不能代替所有空白；勾選項與原文記號已完整表達，不額外製作混合字元圖。",
+      "replacementScope": "具名檢視設定和文字中的可見空白，保留原始字串、Tab 欄寬及連續空格；未驗證無標籤的純圖示切換欄。",
+      "sample": "<fieldset data-code-demo=\"whitespace\" style=\"border:1px solid #8886;padding:12px;min-width:0\"><legend>本地操作示例</legend><label><input type=\"checkbox\" data-whitespace> 顯示空白字元</label><p><code>·</code> 空格　<code>→</code> Tab；保留原本欄寬</p><pre data-whitespace-code style=\"white-space:pre-wrap;font:14px/1.7 ui-monospace,monospace;border:1px solid #8885;padding:10px;min-height:70px\"></pre><p data-whitespace-status>原文字不變 · 包含 1 個 Tab 與 2 個空格</p></fieldset>",
+      "nativePreview": "<span>☑ 顯示空白字元　· →</span>",
+      "comparisonMarkup": "<span style=\"font:16px/1.6 ui-monospace,monospace\">· →</span><span style=\"font:20px/1.6 ui-monospace,monospace\">· →</span><span style=\"font:24px/1.6 ui-monospace,monospace\">· →</span>",
+      "searchKeywords": [],
+      "searchAliasDecision": "不新增到 pilcrow 或 eye，避免段落符號與通用可見性混同空白設定。",
+      "usageEvidence": [
+        "https://code.visualstudio.com/docs/editing/codebasics",
+        "https://code.visualstudio.com/docs/reference/default-settings"
+      ],
+      "usageEvidenceLimit": "Primary docs/source establish actual code-editor commands and state. This is a limited local sample, not a screenshot or full implementation of VS Code. No rejected geometry used.",
+      "visualObservation": "勾選後 Tab 箭頭與兩個空格點出現在原文位置，取消後文字復原，設定狀態持續可見。"
+    },
+    {
+      "name": "multi-cursor",
+      "label": "多重游標",
+      "alternative": null,
+      "alternativeLabel": "新增游標命令、實際插入點與數量",
+      "replacementKind": "native-content",
+      "context": "選取命令 · 新增下一行游標與多點輸入",
+      "reason": "多重游標不是單一開關；新增上／下方游標、選取相同字詞和保留主游標是不同命令。具名操作及原文內的多個插入點提供精確回饋，複製幾條 I 形線無法說明新增方式或數量。",
+      "replacementScope": "選取選單／快捷操作與原文中的持續可見游標，顯示游標數；不以單顆 text-cursor 宣稱已有多重狀態。",
+      "sample": "<fieldset data-code-demo=\"cursors\" style=\"border:1px solid #8886;padding:12px;min-width:0\"><legend>本地操作示例</legend><div style=\"display:flex;gap:8px;flex-wrap:wrap\"><button data-cursor-add>在下一行新增游標</button><button data-cursor-reset>保留第一個游標</button></div><pre data-cursor-code style=\"white-space:pre-wrap;font:14px/1.7 ui-monospace,monospace;border:1px solid #8885;padding:10px;min-height:70px\"></pre><label>輸入到所有游標 <input data-cursor-input size=\"12\" value=\" = 1;\"></label><button data-cursor-insert>插入文字</button><p data-cursor-status role=\"status\"></p></fieldset>",
+      "nativePreview": "<span>在下一行新增游標　3 個游標</span>",
+      "comparisonMarkup": "<span>在下一行新增游標</span><span>3 個游標</span>",
+      "searchKeywords": [],
+      "searchAliasDecision": "不新增到 text-cursor；一般文字游標不足以表示多重選取。",
+      "usageEvidence": [
+        "https://code.visualstudio.com/docs/editing/codebasics",
+        "https://code.visualstudio.com/docs/reference/default-keybindings"
+      ],
+      "usageEvidenceLimit": "Primary docs/source establish actual code-editor commands and state. This is a limited local sample, not a screenshot or full implementation of VS Code. No rejected geometry used.",
+      "visualObservation": "新增後三個實際插入點及 3 個游標文字同時可見；一次插入後三行都更新，保留第一個游標則回到單點。"
+    }
+  ]
+}

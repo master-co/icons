@@ -1,0 +1,87 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "skillVersion": "0.5.18",
+  "viewed": [
+    "light.png",
+    "dark.png",
+    "command-light.png",
+    "command-dark.png"
+  ],
+  "existingIconSizes": [
+    16
+  ],
+  "contentSizing": "Native text and controls keep natural dimensions; not new 16/20/24 icons",
+  "themes": [
+    "light",
+    "dark"
+  ],
+  "dpr": [
+    1
+  ],
+  "corner": "soft for existing glyphs only",
+  "scope": "Six native controls and one existing contextual x replace seven candidates. Local fixtures demonstrate state and scope; no old session geometry retrieved.",
+  "userApproval": "pending",
+  "evidence": [
+    {
+      "path": "docs/review/rebuild-01/substitution-navigation-entry/light.png",
+      "sha256": "1d7b2c4444162ea598f117bc000922846c1c4b71af1e09d26c26f57295f401ca"
+    },
+    {
+      "path": "docs/review/rebuild-01/substitution-navigation-entry/dark.png",
+      "sha256": "8b895e9a6fd356804e1906ad588839c4cdc7d94b8068303e900f24b7ea3e1f0d"
+    },
+    {
+      "path": "docs/review/rebuild-01/substitution-navigation-entry/command-light.png",
+      "sha256": "dc101e30fd6f4823c9af2eb2555231d872bc29e8805bc6d9c1ddf05ca11b44dc"
+    },
+    {
+      "path": "docs/review/rebuild-01/substitution-navigation-entry/command-dark.png",
+      "sha256": "728caf27c1550539abd03b1cb7f68e99e973a45dd69f775e10f7db4c394b9982"
+    }
+  ],
+  "items": [
+    {
+      "name": "carousel",
+      "label": "輪播檢視",
+      "alternative": null,
+      "alternativeLabel": "內容、上一則／下一則與位置",
+      "replacementKind": "native-content",
+      "context": "功能介紹 · 三則內容手動輪替",
+      "reason": "輪播需要看到內容與目前位置，切換按鈕可沿用左右折角；另外三張疊卡的小圖不會交代目前哪一則。",
+      "replacementScope": "實際瀏覽輪播內容。這不是「插入輪播元件」的專用工具圖；本批沒有需要其純圖示入口的使用證據。",
+      "usageEvidence": [
+        "https://www.w3.org/WAI/ARIA/apg/patterns/carousel/",
+        "/Users/aron/master-ui/packages/ui/components/carousel.css"
+      ],
+      "searchKeywords": [],
+      "nativePreview": "<span>〈　內容 1 / 3　〉</span>",
+      "comparisonMarkup": "<div style=\"font-size:16px\"><span>〈　內容 1 / 3　〉</span></div>",
+      "sample": "<style>\n.nav-demo{margin-top:12px;padding:12px;border:1px solid #8885;border-radius:5px}\n.nav-demo fieldset{border:0;margin:0;padding:0}.nav-demo label{display:block;margin:7px 0}\n.nav-demo .bar{display:flex;align-items:center;flex-wrap:wrap;gap:8px;margin:10px 0}\n.nav-demo input[type=checkbox]{accent-color:#485e50;width:16px;height:16px;vertical-align:middle;margin-right:6px}\n.nav-demo input[type=search]{font:inherit;color:inherit;background:transparent;border:1px solid #8888;padding:7px;width:100%}\n.nav-demo button:disabled{opacity:.45}.nav-demo button[aria-current]{outline:2px solid currentColor;outline-offset:1px;font-weight:700}\n.nav-demo ol{padding-left:22px}.nav-demo li{margin:6px 0}.nav-demo [aria-current=step]{font-weight:700}\n.nav-demo a{color:inherit}.nav-demo [data-slide]{min-height:90px;border:1px solid #8885;padding:12px}\n.nav-demo dialog{color:inherit;background:#fafaf8;border:1px solid #8889;border-radius:6px;width:340px}\n.dark .nav-demo dialog{background:#232724}.nav-demo dialog::backdrop{background:#0005}\n.nav-demo [hidden]{display:none!important}.nav-demo kbd{border:1px solid #8886;border-radius:3px;padding:1px 4px}\n</style><section class=\"nav-demo\" data-carousel-demo data-slide-index=\"0\" role=\"region\" aria-roledescription=\"carousel\" aria-label=\"功能介紹\">\n <div aria-live=\"polite\"><div data-slide role=\"group\" aria-roledescription=\"slide\" aria-label=\"1 / 3\">整理專案：把相關任務放在一起。</div><div data-slide role=\"group\" aria-roledescription=\"slide\" aria-label=\"2 / 3\">追蹤進度：顯示目前待辦與完成項目。</div><div data-slide role=\"group\" aria-roledescription=\"slide\" aria-label=\"3 / 3\">分享成果：與團隊共同檢視交付內容。</div></div>\n <div class=\"bar\"><button data-slide-delta=\"-1\" aria-label=\"上一則\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><path d=\"M6 3.5L10.3586 7.8586A0.2 0.2 0 0 1 10.3586 8.1414L6 12.5\" transform=\"rotate(180 8 8)\"/></svg></button><output data-slide-position></output><button data-slide-delta=\"1\" aria-label=\"下一則\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><path d=\"M6 3.5L10.3586 7.8586A0.2 0.2 0 0 1 10.3586 8.1414L6 12.5\"/></svg></button></div><small>手動切換，沒有自動播放。</small></section>",
+      "searchAliasDecision": "不把整個控制項名稱映射到單一分隔符、按鍵符號或狀態圖示。",
+      "usageEvidenceLimit": "Sources establish the control roles and behavior, not a universal ban on component-picker icons. These are local illustrative fixtures; no production component is imported.",
+      "visualObservation": "內容卡與1/3位置保留真實資訊，16px前後折角在按鈕內有充分空間；手動切換不需要播放器或疊卡圖示。"
+    },
+    {
+      "name": "command-palette",
+      "label": "指令面板",
+      "alternative": null,
+      "alternativeLabel": "具名命令搜尋入口與快捷鍵",
+      "replacementKind": "native-content",
+      "context": "全域工具 · 搜尋可執行指令",
+      "reason": "指令面板的核心是命令搜尋與選擇。具名入口和快捷鍵已明確；command是macOS修飾鍵，terminal是終端機，兩者都不應直接改稱跨平台指令面板。",
+      "replacementScope": "應用程式內的命令搜尋入口；與一般內容搜尋並列時明確寫「搜尋指令」。F1僅為此本地範例的可用快捷鍵。",
+      "usageEvidence": [
+        "https://code.visualstudio.com/docs/editing/getting-started/userinterface#_command-palette"
+      ],
+      "searchKeywords": [],
+      "nativePreview": "<span>搜尋指令 <kbd>F1</kbd></span>",
+      "comparisonMarkup": "<div style=\"font-size:16px\"><span>搜尋指令 <kbd>F1</kbd></span></div>",
+      "sample": "<style>\n.nav-demo{margin-top:12px;padding:12px;border:1px solid #8885;border-radius:5px}\n.nav-demo fieldset{border:0;margin:0;padding:0}.nav-demo label{display:block;margin:7px 0}\n.nav-demo .bar{display:flex;align-items:center;flex-wrap:wrap;gap:8px;margin:10px 0}\n.nav-demo input[type=checkbox]{accent-color:#485e50;width:16px;height:16px;vertical-align:middle;margin-right:6px}\n.nav-demo input[type=search]{font:inherit;color:inherit;background:transparent;border:1px solid #8888;padding:7px;width:100%}\n.nav-demo button:disabled{opacity:.45}.nav-demo button[aria-current]{outline:2px solid currentColor;outline-offset:1px;font-weight:700}\n.nav-demo ol{padding-left:22px}.nav-demo li{margin:6px 0}.nav-demo [aria-current=step]{font-weight:700}\n.nav-demo a{color:inherit}.nav-demo [data-slide]{min-height:90px;border:1px solid #8885;padding:12px}\n.nav-demo dialog{color:inherit;background:#fafaf8;border:1px solid #8889;border-radius:6px;width:340px}\n.dark .nav-demo dialog{background:#232724}.nav-demo dialog::backdrop{background:#0005}\n.nav-demo [hidden]{display:none!important}.nav-demo kbd{border:1px solid #8886;border-radius:3px;padding:1px 4px}\n</style><section class=\"nav-demo\" data-command-demo>\n <button data-command-open>搜尋指令 <kbd>F1</kbd></button><p>工作區內的操作入口</p>\n <dialog aria-label=\"搜尋指令\"><label>搜尋指令<input type=\"search\" data-command-query placeholder=\"輸入指令名稱\"></label><div data-command-results>\n <button data-command-value=\"新增專案\" style=\"margin:8px 0\">新增專案</button><button data-command-value=\"切換主題\" style=\"margin:8px 0\">切換主題</button><button data-command-value=\"開啟設定\" style=\"margin:8px 0\">開啟設定</button></div>\n <p data-command-empty hidden>沒有符合的指令</p><button data-command-close>關閉</button></dialog>\n <output data-command-status aria-live=\"polite\">尚未選擇指令</output><p><small>本地範例只回報選擇結果，不執行應用程式操作。</small></p></section>",
+      "searchAliasDecision": "不把command-palette、quick-actions或command-menu加入command、terminal或通用search；入口可直接顯示功能名稱與真實快捷鍵。",
+      "usageEvidenceLimit": "Sources establish the control roles and behavior, not a universal ban on component-picker icons. These are local illustrative fixtures; no production component is imported.",
+      "visualObservation": "搜尋指令入口和F1清楚可讀；開啟後實際搜尋欄與篩出的設定命令在明暗底均清楚。沒有把macOS command鍵或終端機符號冒充命令搜尋。"
+    }
+  ],
+  "fixtureRefinement": "Keyboard check found native search-field Escape clearing before dialog dismissal; explicit Escape closes the demo dialog and restores trigger focus. All four screenshots remain byte-identical to the viewed evidence."
+}

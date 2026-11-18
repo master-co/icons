@@ -1,0 +1,81 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "viewed": [
+    "light.png",
+    "dark.png"
+  ],
+  "sizes": [
+    16,
+    20,
+    24
+  ],
+  "corners": [
+    "soft"
+  ],
+  "dpr": [
+    1
+  ],
+  "evidence": [
+    {
+      "path": "docs/review/rebuild-01/substitution-direction-semantics/light.png",
+      "sha256": "4a4fc76f4def2351f64a439f998f63296f37503ddb79174a3d776b47d94b8174"
+    },
+    {
+      "path": "docs/review/rebuild-01/substitution-direction-semantics/dark.png",
+      "sha256": "c620b639185d9276ac702f4b04b826f5a61b4307495128f824574e3c81a25d32"
+    }
+  ],
+  "items": [
+    {
+      "name": "arrow-up-down",
+      "alternative": "sort-unsorted",
+      "label": "排序",
+      "context": "資料列表工具列 · 相反方向的兩條垂直箭頭",
+      "reason": "候選要求的是左右錯列、各有箭桿的上下箭頭；既有 sort-unsorted 的繪製函式已具備這個構造。名稱比較偏排序不代表缺圖，補上搜尋詞即可；同軸伸縮另用 move-vertical。",
+      "usageEvidence": [
+        "packages/icons/src/families/analytics.mjs:68"
+      ]
+    },
+    {
+      "name": "chevrons-up",
+      "alternative": "chevron-up",
+      "label": "收合內容",
+      "context": "已展開的摺疊面板 · 收合觸發鈕",
+      "reason": "目前候選用途是向上收合，單一向上折角已表示關閉展開內容。Master UI accordion 以同一折角翻轉表示開合，沒有第二層收合或加速動作需要雙折角；不為方向家族齊全另畫一顆。",
+      "usageEvidence": [
+        "/Users/aron/master-ui/packages/ui/components/accordion.css:56"
+      ]
+    },
+    {
+      "name": "chevrons-down",
+      "alternative": "chevron-down",
+      "label": "展開內容",
+      "context": "已收合的摺疊面板 · 展開觸發鈕",
+      "reason": "單一向下折角已是現有展開內容的訊號，與向上收合成對即可。候選沒有提出同時並列且需要雙折角區分的另一個命令，因此沿用既有圖示。",
+      "usageEvidence": [
+        "/Users/aron/master-ui/packages/ui/components/accordion.css:56"
+      ]
+    },
+    {
+      "name": "resize",
+      "alternative": "move-horizontal",
+      "label": "調整預覽寬度",
+      "context": "Master CSS 版面教學 · 用滑桿或方向鍵改變檢視區寬度",
+      "reason": "這個實際提示要求調整檢視區寬度，新的同軸水平箭頭已準確指出拖曳方向。額外畫一大一小的邊界會引入另一套泛用縮放圖；若是裁切角落則選相應斜軸，不把水平圖當作所有 resize 的通用對應。",
+      "replacementScope": "只對應已核實的寬度教學；角落尺寸、最大化及整個物件移動需各用相應圖示。",
+      "usageEvidence": [
+        "/Users/aron/master-css/site/content/guide/layout-system/content.tw.mdx:17",
+        "/Users/aron/master/packages/internal-site/src/docs-shell/components/InteractingIndicator.astro:10"
+      ]
+    }
+  ],
+  "newlyExcludedNames": [
+    "chevrons-up",
+    "chevrons-down",
+    "resize"
+  ],
+  "previouslyExcludedNames": [
+    "arrow-up-down"
+  ]
+}

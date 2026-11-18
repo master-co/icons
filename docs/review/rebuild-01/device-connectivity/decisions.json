@@ -1,0 +1,40 @@
+[
+  {
+    "name": "hotspot",
+    "reviewed": true,
+    "purpose": "在連線設定中區分加入 Wi-Fi 與提供個人熱點。單用 wifi 會把兩種相鄰功能畫成同一圖形。",
+    "recognitionCues": "中央發射點、兩道同心波紋、共同向下開口。",
+    "confusableWith": [
+      "wifi",
+      "podcast",
+      "signal-bars"
+    ],
+    "sourceObservation": "Hugeicons 的包覆弧讓發射源與加入網路的扇形清楚不同；Tabler 的左右短弧較輕，但上下方向缺少連續輪廓。",
+    "reason": "沿用 Hugeicons 的波紋配置並如實記錄改作；以共心圓弧與一致開口重建三種原生尺寸。中央實點避免 16px 微小內孔，並提高點徑使其不因灰階覆蓋變淡，波紋不靠不透明遮罩或手機外框補語意。",
+    "comparison": "最新稿在 16／20／24px 明暗背景與 Hugeicons、Tabler 並列。Hugeicons 的完整弧更能統整發射源，保留該優點；其小圓內孔在 16px 較緊，改成光學實點。Tabler 的左右短弧較空，但本稿的同心包覆與 Wi-Fi 的扇形差異較明確。16px 粗線端的兩道波紋仍有連續可見留白，沒有將最大線寬的墨量當成新的實心樣式。",
+    "dashes": false,
+    "dashReason": "連續波紋表示訊號擴散；虛線容易被理解為尚未連線或搜尋中。",
+    "usageEvidence": [
+      "https://support.google.com/pixelphone/answer/2819583?hl=en"
+    ]
+  },
+  {
+    "name": "sim-card",
+    "reviewed": true,
+    "purpose": "行動網路與 SIM 管理入口需要與一般文件、付款卡、處理器區分；雙 SIM 名稱與實體／eSIM 類型仍由文字表達。",
+    "recognitionCues": "缺角卡片外殼、下半部三欄兩列接點、沒有紙張摺線。",
+    "confusableWith": [
+      "file",
+      "credit-card",
+      "cpu"
+    ],
+    "sourceObservation": "MDI 的接點集中在下半部，三欄結構更像晶片；Tabler 外殼易讀，但內部長線與散點的密度不均。",
+    "reason": "直接使用 fileParts.shell，省略 fold；六個實接點重排成三欄兩列，縮小時保留接點之間與殼邊的通道。sharp／soft／rounded 改變實際外殼與接點半徑。",
+    "comparison": "最新稿在 16／20／24px 與 MDI、Tabler 原稿並列。MDI 的三欄接點更能帶出 SIM 的物性，因此採取三欄兩列的接點排列，沒有把紙張摺線或第二個晶片框塞進小卡片。Tabler 的內部一長線加散點較不均，本稿採三欄兩列保持安定節奏，16／20px 中央接點較寬、兩側較窄，以原生座標保留垂直通道；下方接點與外殼在原生 16px 及粗線端仍可分離。缺角外殼與既有 file 共源，不是另一套近似母型。",
+    "dashes": false,
+    "dashReason": "這是實體卡片與接點的輪廓，沒有隱藏邊界或未完成狀態。",
+    "usageEvidence": [
+      "https://support.google.com/pixelphone/answer/9449293?hl=en"
+    ]
+  }
+]

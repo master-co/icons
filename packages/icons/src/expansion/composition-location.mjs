@@ -1,3 +1,4 @@
+import {weightDelta} from '../geometry.mjs';
 import {figure,rotate} from '../families/shared.mjs';
 import {knockout} from '../occlusion.mjs';
 
@@ -18,9 +19,17 @@ function mapPinned(g){
   return knockout([plane],[pin,f.circle(12,8.3,1.9)],g,{silhouettes:[pin]});
 }
 
+export function triangle(g,{points=[[12,3],[22-(weightDelta(g)?.5:0),20.5],[2+(weightDelta(g)?.5:0),20.5]]}={}) {
+  const f=figure(g);
+  return [f.contour(points,true,Math.min(g.r*.55,g.v(.8,1,1.2)))];
+}
+export function quadrilateral(g,points){
+ return [figure(g).contour(points,true,g.r*.65)];
+}
+
 export const compositionLocation={
-  triangle:g=>{const f=figure(g);return [f.contour([[12,3],[22,20.5],[2,20.5]],true,Math.min(g.r*.55,g.v(.8,1,1.2)))];},
-  diamond:g=>{const f=figure(g);return [f.contour([[12,2.5],[21.5,12],[12,21.5],[2.5,12]],true,g.r*.65)];},
+  triangle:g=>triangle(g),
+  diamond:g=>quadrilateral(g,[[12,2.5],[21.5,12],[12,21.5],[2.5,12]]),
   hexagon:g=>{const f=figure(g);return [f.contour([[12,2.5],[20.25,7.25],[20.25,16.75],[12,21.5],[3.75,16.75],[3.75,7.25]],true,g.r*.8)];},
   contrast:g=>{const f=figure(g),[tag,a]=f.path('M 12 6.5 A 5.5 5.5 0 0 1 12 17.5 Z');return [f.circle(12,12,9),[tag,{...a,fill:'currentColor',stroke:'none'}]];},
   blend:g=>{const f=figure(g);return [f.circle(14.75,9.25,6.75),f.circle(9.25,14.75,6.75)];},

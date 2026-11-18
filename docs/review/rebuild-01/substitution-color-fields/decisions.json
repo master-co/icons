@@ -1,0 +1,75 @@
+{
+  "reviewer": "Codex (AI)",
+  "date": "2026-11-18",
+  "skillVersion": "0.5.18",
+  "viewed": [
+    "light.png",
+    "dark.png"
+  ],
+  "sizes": [
+    16,
+    20,
+    24
+  ],
+  "themes": [
+    "light",
+    "dark"
+  ],
+  "dpr": [
+    1
+  ],
+  "corner": "soft for existing palette; native value swatches have no icon corner preset",
+  "scope": "One existing palette entry and one actual value control replace two candidates. No old drawings retrieved.",
+  "userApproval": "pending",
+  "evidence": [
+    {
+      "path": "docs/review/rebuild-01/substitution-color-fields/light.png",
+      "sha256": "e883b24dc2f813d2a5aaa0a0ba3237af3976294a300e0cd72d9fc601c7aef0ea"
+    },
+    {
+      "path": "docs/review/rebuild-01/substitution-color-fields/dark.png",
+      "sha256": "980dfd5953881eba01998a0894b810a4305b6e012f91950a359767be83a260a3"
+    }
+  ],
+  "items": [
+    {
+      "name": "stroke-color",
+      "label": "描邊顏色",
+      "alternative": null,
+      "alternativeLabel": "描邊欄位＋實際色票",
+      "replacementKind": "native-content",
+      "nativePreview": "<span aria-hidden=\"true\" style=\"display:inline-block;width:24px;height:24px;flex:none;background:#325F4B;border:1px solid #8888;border-radius:3px\"></span>",
+      "comparisonMarkup": "<span aria-hidden=\"true\" style=\"display:inline-block;width:16px;height:16px;flex:none;background:#325F4B;border:1px solid #8888;border-radius:3px\"></span><span aria-hidden=\"true\" style=\"display:inline-block;width:20px;height:20px;flex:none;background:#325F4B;border:1px solid #8888;border-radius:3px\"></span><span aria-hidden=\"true\" style=\"display:inline-block;width:24px;height:24px;flex:none;background:#325F4B;border:1px solid #8888;border-radius:3px\"></span>",
+      "context": "形狀屬性面板 · 填色與描邊分開的色彩欄位",
+      "reason": "描邊章節已限定修改對象，色票及色碼直接顯示目前值；pencil 只表示編輯，不等同描邊顏色。重新組合筆尖、線段和色條並沒有增加必要資訊，因此保留具名色彩欄位，不建立專用圖稿。",
+      "replacementScope": "用於有「填色／描邊」標題的屬性面板，保留文字及色碼以免只靠顏色辨認；不將色票值誤當成一般 stroke 圖示。此為審查示意，不修改 Master UI。",
+      "sample": "<div style=\"border:1px solid #8886;border-radius:6px;padding:12px\"><b>形狀屬性</b><div style=\"display:flex;gap:10px;align-items:center;margin-top:12px\"><span>填色</span><span aria-hidden=\"true\" style=\"display:inline-block;width:20px;height:20px;flex:none;background:#DFE8E1;border:1px solid #8888;border-radius:3px\"></span><code>#DFE8E1</code></div><div style=\"display:flex;gap:10px;align-items:center;margin-top:12px\"><span>描邊</span><span aria-hidden=\"true\" style=\"display:inline-block;width:20px;height:20px;flex:none;background:#325F4B;border:1px solid #8888;border-radius:3px\"></span><code>#325F4B</code></div><p style=\"display:flex;align-items:center;gap:8px\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><rect x=\"2.5\" y=\"2.625\" width=\"11\" height=\"2.75\" rx=\"0.2\" fill=\"currentColor\" stroke=\"none\"/><rect x=\"2.5\" y=\"8.125\" width=\"11\" height=\"1.75\" rx=\"0.2\" fill=\"currentColor\" stroke=\"none\"/><rect x=\"2.5\" y=\"12.5625\" width=\"11\" height=\"0.875\" rx=\"0.2\" fill=\"currentColor\" stroke=\"none\"/></svg>線寬　2px</p></div>",
+      "searchAliasDecision": "No icon alias: labeled value control replaces the candidate. Existing pencil does not mean stroke colour.",
+      "usageEvidence": [
+        "/Users/aron/master-ui/packages/ui/frameworks/svelte/ColorPicker.svelte:29",
+        "https://help.figma.com/hc/en-us/articles/360041003774-Update-fills-using-the-color-picker"
+      ],
+      "visualObservation": "填色與描邊以兩列標籤、色塊及色碼並列；明暗底均能辨識目前值，16／20／24色塊保留邊框。線寬保留獨立控制，不將筆畫顏色與粗細混合。"
+    },
+    {
+      "name": "swatches",
+      "label": "色票",
+      "alternative": "palette",
+      "replacementKind": "contextual-entry",
+      "context": "色彩選擇器 · 開啟預設色票，與滴管取色分開",
+      "reason": "既有 palette 已用完整調色盤與多個色點表達選色集合，可作「色票」入口；具體色票應顯示真實顏色與名稱，不需再畫一把色卡扇。相鄰的 pipette 保留「從畫面取色」動作，兩者輪廓清楚不同。",
+      "replacementScope": "palette 作色票集合入口，色票項目仍顯示實際值及名稱；不宣稱調色盤能單獨分辨本機色票、團隊色票與品牌色，這些分類由標籤呈現。",
+      "sample": "<div style=\"border:1px solid #8886;border-radius:6px;padding:12px\"><div style=\"display:flex;gap:8px\"><button><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><path d=\"M8 2C11.6667 2 14 4.5333 14 7.3333C14 9.3333 12.6667 10 11 9.6667C9.3333 9.3333 9 10.6667 10 11.6667C11 12.6667 10 14 8 14A6 6 0 0 1 8 2Z\"/><circle cx=\"4.6667\" cy=\"6\" r=\"0.625\" fill=\"currentColor\" stroke=\"none\"/><circle cx=\"8\" cy=\"4.3333\" r=\"0.625\" fill=\"currentColor\" stroke=\"none\"/><circle cx=\"11.3333\" cy=\"6\" r=\"0.625\" fill=\"currentColor\" stroke=\"none\"/></svg>色票</button><button><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" color=\"currentColor\" stroke-width=\"1.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-miterlimit=\"3\" focusable=\"false\" aria-hidden=\"true\"><path d=\"M6 5.3333V3.3333C6 0.6667 10 0.6667 10 3.3333V5.3333H11.1333Q11.3333 5.3333 11.3333 5.5333V7.1333Q11.3333 7.3333 11.1333 7.3333H4.8667Q4.6667 7.3333 4.6667 7.1333V5.5333Q4.6667 5.3333 4.8667 5.3333Z\" transform=\"rotate(45 8 8)\"/><path d=\"M6.6667 7.3333L6.6667 11.6136A0.2 0.2 0 0 0 6.6931 11.7128L7.8264 13.6961A0.2 0.2 0 0 0 8.1736 13.6961L9.3069 11.7128A0.2 0.2 0 0 0 9.3333 11.6136L9.3333 7.3333\" transform=\"rotate(45 8 8)\"/></svg>從畫面取色</button></div><div style=\"display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px\"><button aria-label=\"深綠 #325F4B\"><span aria-hidden=\"true\" style=\"display:inline-block;width:20px;height:20px;flex:none;background:#325F4B;border:1px solid #8888;border-radius:3px\"></span>深綠</button><button aria-label=\"藍色 #5278A4\"><span aria-hidden=\"true\" style=\"display:inline-block;width:20px;height:20px;flex:none;background:#5278A4;border:1px solid #8888;border-radius:3px\"></span>藍色</button><button aria-label=\"紫色 #8A6298\"><span aria-hidden=\"true\" style=\"display:inline-block;width:20px;height:20px;flex:none;background:#8A6298;border:1px solid #8888;border-radius:3px\"></span>紫色</button><button aria-label=\"橘色 #BA7A45\"><span aria-hidden=\"true\" style=\"display:inline-block;width:20px;height:20px;flex:none;background:#BA7A45;border:1px solid #8888;border-radius:3px\"></span>橘色</button></div></div>",
+      "searchKeywords": [
+        "color-swatches",
+        "預設色",
+        "顏色樣本"
+      ],
+      "usageEvidence": [
+        "/Users/aron/master-ui/packages/ui/frameworks/svelte/ColorPicker.svelte:66",
+        "https://help.figma.com/hc/en-us/articles/360041003774-Update-fills-using-the-color-picker"
+      ],
+      "visualObservation": "palette 的三個原生尺寸保留調色盤外輪廓與色點，16px入口和旁邊的 pipette 可辨；實際四個色票各有顏色名稱，不要求入口圖示呈現所有色票分類。"
+    }
+  ]
+}

@@ -1382,31 +1382,76 @@
     },
     {
       "name": "brand-html5",
-      "variantsSha256": "78f8df00b4fd1e61308a11080037bb7ab45cebb7967d0fa7d02f1b5864a97a7d",
-      "sourceSha256": "dfd65fdd7e4f997c6b163e48793de5ad18c4c99e191807a61752ea702f123d1d",
-      "sheet": 6,
+      "variantsSha256": "6ec52a977ef951f25d1a991797fc28fafb8969db03c04207c5b4864b03c05528",
+      "sourceSha256": "3d656371d0e133b5dbc91580aba17d339ab3383994d8f06cb2c590e4aee91dd1",
+      "sheet": "rebuild-01/html5",
       "label": "HTML5",
-      "profile": "standard",
-      "optical": {
-        "16": {
-          "extent": 14,
-          "dx": 0,
-          "dy": 0
+      "profile": "airy",
+      "status": "visually-reviewed-candidate",
+      "reviewer": "Codex (AI)",
+      "date": "2026-11-18",
+      "sizes": [
+        14,
+        16,
+        20,
+        24
+      ],
+      "corners": [
+        "sharp",
+        "soft",
+        "rounded"
+      ],
+      "themes": [
+        "light",
+        "dark"
+      ],
+      "dpr": [
+        1,
+        2
+      ],
+      "evidence": [
+        {
+          "path": "docs/review/rebuild-01/html5/light-1.png",
+          "sha256": "9882c38526a6125bcfd6efb55108236bc833ba1647d2ceb58723af30fb7ac765"
         },
-        "20": {
-          "extent": 17,
-          "dx": 0,
-          "dy": 0
+        {
+          "path": "docs/review/rebuild-01/html5/dark-1.png",
+          "sha256": "c37a84ed394d6e3557a65eca0d2d68f9fbe73a2794202715efa03df46e751cda"
         },
-        "24": {
-          "extent": 20,
-          "dx": 0,
-          "dy": 0
+        {
+          "path": "docs/review/rebuild-01/html5/light-2.png",
+          "sha256": "f328d6e1287068b08eb64107565a0a8b17622dc7f9432ca12e3bf6c7ca1dcd51"
+        },
+        {
+          "path": "docs/review/rebuild-01/html5/dark-2.png",
+          "sha256": "a79aa05b7673fc843fc5216a0fd5be1040ad2dada0ab578295e56d519bd479b2"
         }
+      ],
+      "purpose": "HTML 技術識別與程式碼頁籤。Master CSS LintExplorer 實際使用 14px HTML5 標誌；file-code 適合一般程式檔案，但不能保留語言識別。",
+      "observation": "從 W3C 官方單色 SVG 重新取得資產；省略 HTML 字標與數字淡色覆片，將兩段盾牌輪廓併為同一 opaque path，不重畫盾牌或數字。三種佔幅並排後選 airy 14/17.5/21，14/16px 的 5 橫腹與下緣開口較清楚。三角型及線寬控制均不改變品牌輪廓。未取回任何被退回的 session 圖稿。",
+      "sourceComparison": "已查看官方完整單色稿、官方彩色盾牌與本輪三種佔幅候選；最新 14/16/20/24px 明暗、DPR1/2 四張截圖與來源局部截圖已目視。盾牌側邊收束和底尖保留官方比例；去除小尺寸不可讀的字標，數字轉為透明負空間。16px 與 JavaScript/TypeScript 並排，HTML5 細長外形仍有足夠佔幅；14px 頁籤能保留 5 的主要構造。僅固定兩份 W3C 官方資產，不以其他圖庫的描邊變體替代品牌原稿。這是 AI 目視候選，非維護者定案。",
+      "effects": "No dashes, gradients or opacity added. Original tonal layers flattened and numeral shading omitted for one-color output; modifications attributed under CC-BY-3.0.",
+      "source": {
+        "kind": "brand-adaptation",
+        "library": "W3C HTML5 identity",
+        "author": "W3C",
+        "license": "CC-BY-3.0",
+        "reference": "https://www.w3.org/html/logo/downloads/HTML5_1Color_Black.svg",
+        "official": "https://www.w3.org/html/logo/",
+        "guidelines": "https://www.w3.org/html/logo/faq.html",
+        "retrieved": "2026-11-18",
+        "localPath": "references/rebuild-01/w3c-html5-black.svg",
+        "sha256": "3d656371d0e133b5dbc91580aba17d339ab3383994d8f06cb2c590e4aee91dd1",
+        "licenseFile": "licenses/html5-CC-BY-3.0.txt",
+        "notice": "HTML5 Logo by W3C (https://www.w3.org/). Licensed under Creative Commons Attribution 3.0 Unported: https://creativecommons.org/licenses/by/3.0/. Modified by Master: wordmark and tonal overlays omitted; shield paths joined into one monochrome silhouette, uniformly scaled and centered. No affiliation or endorsement is implied.",
+        "modifications": "Official shield path coordinates retained. Omit wordmark and 20% numeral shading; unify 80%/100% shield tones as currentColor in one path; preserve original negative-space numeral. Native optical envelopes 14/17.5/21 at 16/20/24; no corner or stroke deformation."
       },
-      "observation": "保留固定版本 Simple Icons 的單色盾牌和反白 5。比較 14px 檔案頁籤及三個原生尺寸後，採 14／17／20 的佔幅維持字腔。",
-      "effects": "單色保留 5 的反白，依各尺寸調整佔幅。",
-      "status": "visually-reviewed-candidate"
+      "usageEvidence": [
+        "/Users/aron/master-css/site/content/components/LintExplorer.svelte:622",
+        "https://www.w3.org/html/logo/",
+        "https://www.w3.org/html/logo/faq.html"
+      ],
+      "userApproval": "pending"
     }
   ],
   "additionsReview": {
