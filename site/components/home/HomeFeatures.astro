@@ -1,5 +1,4 @@
 ---
-import '@master/internal-site/home/bento.css'
 import '@master/ui/components/code.css'
 import {Settings} from '@master/icons/data/settings'
 import {Calendar} from '@master/icons/data/calendar'
@@ -98,43 +97,42 @@ const specimens=['Home','Search','Bell','Calendar','Folder','Camera','Heart','St
    <p class="home-section-body">{t('Three sizes by three corner styles, and a correction for every stroke. Choose the setting; the drawing that fits it is already made.')}</p>
   </header>
 
-  <div class="home-bento-grid icons-bento">
-   <article class="home-bento-card icons-bento-sizes">
-    <header class="home-bento-card-header"><div class="home-bento-card-copy">
-     <h3 class="home-bento-card-title">{t('Three sizes, three drawings')}</h3>
-     <p class="home-bento-card-body">{t('16, 20 and 24 px each have a drawing of their own. A small master drops detail instead of shrinking it.')}</p>
-    </div></header>
-    <div class="home-bento-visual icons-figure">
+  {/* One tray, as on the Master UI homepage: a caption row, then raised sheets, each a data sheet with its drawing. */}
+  <figure class="icons-library" aria-labelledby="features-title">
+   <figcaption class="icons-library-bar">
+    <span class="home-annotation">{t('Drawn from the package')}</span>
+    <span class="icons-library-status home-annotation"><span class="icons-library-dot" aria-hidden="true"></span><span>{t('Every figure is the icons’ own geometry, rendered when this page was built')}</span></span>
+   </figcaption>
+   <div class="icons-library-grid">
+   <article class="icons-sheet icons-sheet-sizes">
+    <p class="icons-sheet-meta home-annotation"><span>01</span><span>16 · 20 · 24</span></p>
+    <h3 class="icons-sheet-title">{t('Three sizes, three drawings')}</h3>
+    <p class="icons-sheet-body">{t('16, 20 and 24 px each have a drawing of their own. A small master drops detail instead of shrinking it.')}</p>
+    <div class="icons-sheet-figure">
      <svg class="icons-plot" viewBox={`0 0 ${sizeFigure.width} 244`} role="img" aria-label={t('The settings icon drawn at 16, 20 and 24 px on its pixel grid.')} set:html={sizeFigure.svg} />
     </div>
    </article>
-
-   <article class="home-bento-card icons-bento-corners">
-    <header class="home-bento-card-header"><div class="home-bento-card-copy">
-     <h3 class="home-bento-card-title">{t('Corners change the geometry')}</h3>
-     <p class="home-bento-card-body">{t('Sharp, soft and rounded redraw the outline and the room inside it, not only the line joins.')}</p>
-    </div></header>
-    <div class="home-bento-visual icons-figure">
+   <article class="icons-sheet icons-sheet-corners">
+    <p class="icons-sheet-meta home-annotation"><span>02</span><span>sharp · soft · rounded</span></p>
+    <h3 class="icons-sheet-title">{t('Corners change the geometry')}</h3>
+    <p class="icons-sheet-body">{t('Sharp, soft and rounded redraw the outline and the room inside it, not only the line joins.')}</p>
+    <div class="icons-sheet-figure">
      <svg class="icons-plot" viewBox={`0 0 ${cornerFigure.width} 172`} role="img" aria-label={t('The upper-left corner of the calendar icon with sharp, soft and rounded corners.')} set:html={cornerFigure.svg} />
     </div>
    </article>
-
-   <article class="home-bento-card icons-bento-strokes">
-    <header class="home-bento-card-header"><div class="home-bento-card-copy">
-     <h3 class="home-bento-card-title">{t('Strokes in quarter steps')}</h3>
-     <p class="home-bento-card-body">{t('From 0.75 to 2.5 units. Heavier widths take corrected geometry, so small counters stay open.')}</p>
-    </div></header>
-    <div class="home-bento-visual icons-figure">
+   <article class="icons-sheet icons-sheet-strokes">
+    <p class="icons-sheet-meta home-annotation"><span>03</span><span>0.75 – 2.5</span></p>
+    <h3 class="icons-sheet-title">{t('Strokes in quarter steps')}</h3>
+    <p class="icons-sheet-body">{t('From 0.75 to 2.5 units. Heavier widths take corrected geometry, so small counters stay open.')}</p>
+    <div class="icons-sheet-figure">
      <svg class="icons-plot" viewBox={`0 0 ${strokeFigure.width} 142`} role="img" aria-label={t('The sparkles icon at every stroke width from 1.25 to 2.5.')} set:html={strokeFigure.svg} />
     </div>
    </article>
-
-   <article class="home-bento-card icons-bento-code">
-    <header class="home-bento-card-header"><div class="home-bento-card-copy">
-     <h3 class="home-bento-card-title">{t('One geometry, six packages')}</h3>
-     <p class="home-bento-card-body">{t('Plain SVG, React, Vue, Svelte, Preact and Astro. Install only your framework’s adapter; a fixed entry ships one master.')}</p>
-    </div></header>
-    <div class="home-bento-visual icons-code">
+   <article class="icons-sheet icons-sheet-code">
+    <p class="icons-sheet-meta home-annotation"><span>04</span><span>SVG · React · Vue · Svelte · Preact · Astro</span></p>
+    <h3 class="icons-sheet-title">{t('One geometry, six packages')}</h3>
+    <p class="icons-sheet-body">{t('Plain SVG, React, Vue, Svelte, Preact and Astro. Install only your framework’s adapter; a fixed entry ships one master.')}</p>
+    <div class="icons-sheet-code">
      <ul class="icons-frameworks" aria-label={t('Packages')}>
       {['icons','icons-react','icons-vue','icons-svelte','icons-preact','icons-astro'].map(name=><li>@master/{name}</li>)}
      </ul>
@@ -147,27 +145,24 @@ const specimens=['Home','Search','Bell','Calendar','Folder','Camera','Heart','St
 <span class="icons-code-k">import</span> {'{'} SearchIcon {'}'} <span class="icons-code-k">from</span> <span class="icons-code-s">'@master/icons-svelte/20/soft'</span></code></pre>
     </div>
    </article>
-
-   <article class="home-bento-card icons-bento-catalog">
-    <header class="home-bento-card-header"><div class="home-bento-card-copy">
-     <h3 class="home-bento-card-title">{t('{count} icons in {categories} categories').replace('{count}',number).replace('{categories}',String(categories))}</h3>
-     <p class="home-bento-card-body">{t('Interface, editing, media, commerce and more, each reviewed at its native size.')}</p>
-    </div></header>
-    <div class="home-bento-visual icons-specimens" aria-hidden="true">
+   <article class="icons-sheet icons-sheet-catalog">
+    <p class="icons-sheet-meta home-annotation"><span>05</span><span>{number} · {categories}</span></p>
+    <h3 class="icons-sheet-title">{t('{count} icons in {categories} categories').replace('{count}',number).replace('{categories}',String(categories))}</h3>
+    <p class="icons-sheet-body">{t('Interface, editing, media, commerce and more, each reviewed at its native size.')}</p>
+    <div class="icons-specimens" aria-hidden="true">
      {specimens.map(Icon=><span class="icons-specimen"><Icon size={20} /></span>)}
     </div>
    </article>
-
-   <article class="home-bento-card icons-bento-direction">
-    <header class="home-bento-card-header"><div class="home-bento-card-copy">
-     <h3 class="home-bento-card-title">{t('Accessible and direction-aware')}</h3>
-     <p class="home-bento-card-body">{t('Icons stay decorative until labeled. Directional icons mirror for right-to-left layouts; the rest keep their orientation.')}</p>
-    </div></header>
-    <div class="home-bento-visual icons-figure">
+   <article class="icons-sheet icons-sheet-direction">
+    <p class="icons-sheet-meta home-annotation"><span>06</span><span>ltr · rtl</span></p>
+    <h3 class="icons-sheet-title">{t('Accessible and direction-aware')}</h3>
+    <p class="icons-sheet-body">{t('Icons stay decorative until labeled. Directional icons mirror for right-to-left layouts; the rest keep their orientation.')}</p>
+    <div class="icons-sheet-figure">
      <svg class="icons-plot" viewBox="0 0 400 200" role="img" aria-label={t('The undo icon, left to right and mirrored for right to left.')} set:html={directionFigure} />
     </div>
    </article>
-  </div>
+   </div>
+  </figure>
   <a class="home-section-link icons-features-link" href={`${prefix}/guide/optical-sizes`}>{t('Read about sizes and corners')}<ArrowRightIcon size={16} /></a>
  </div>
 </section>
