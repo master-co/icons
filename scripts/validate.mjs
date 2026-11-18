@@ -23,7 +23,8 @@ const productScope=await json('packages/icons/src/product-scope.json');
 const studioScope=await json('packages/icons/src/studio-scope.json');
 const writerScope=await json('packages/icons/src/writer-scope.json');
 const workbenchScope=await json('packages/icons/src/workbench-scope.json');
-const scope=[...await json('packages/icons/src/ui-scope.json'),...await json('packages/icons/src/organization-scope.json'),...await json('packages/icons/src/productivity-scope.json'),...expansionScope,...atlasScope,...productScope,...studioScope,...writerScope,...workbenchScope,...brandCatalog];
+const operationsScope=await json('packages/icons/src/operations-scope.json');
+const scope=[...await json('packages/icons/src/ui-scope.json'),...await json('packages/icons/src/organization-scope.json'),...await json('packages/icons/src/productivity-scope.json'),...expansionScope,...atlasScope,...productScope,...studioScope,...writerScope,...workbenchScope,...operationsScope,...brandCatalog];
 assert.deepEqual(catalog.map(x=>x.name).sort(),[...coreNames,...scope.map(x=>x.name)].sort(),'Exact original + approved UI scope');
 assert.equal(manifest.conceptCount,conceptCount);
 const names=new Set(catalog.map(x=>x.name));
@@ -114,7 +115,7 @@ for(const record of ledger.icons){
   assert.equal(record.visualReview.variantsSha256,sha(JSON.stringify(nativeVariants(definitions[record.name].variants))),record.name+': geometry changed since review');
   if(record.change.kind==='new'){
     assert.equal(record.change.before,null,record.name+': new drawings must not fabricate a previous master');
-    assert.ok([...expansionScope,...atlasScope,...productScope,...studioScope,...writerScope,...workbenchScope].some(r=>r.name===record.name),record.name+': not in approved new scope');
+    assert.ok([...expansionScope,...atlasScope,...productScope,...studioScope,...writerScope,...workbenchScope,...operationsScope].some(r=>r.name===record.name),record.name+': not in approved new scope');
     assert.ok(!(record.name in expansionBaseline),record.name+': existing drawing misclassified as new');
   }else{
     const path=record.change.before.path;

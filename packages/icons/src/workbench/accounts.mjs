@@ -4,6 +4,10 @@ import {knockout} from '../occlusion.mjs';
 function portrait(f) {
   return [f.circle(8.4,7.1,3.3),f.path('M2.8 20V18.5C2.8 12.1 13.9 12.1 13.9 18.5V20')];
 }
+export function teamPortrait(g) {
+  const f=figure(g);
+  return [...portrait(f),f.path('M14.3 4.3C19 3.3 20.1 10.3 15.3 10.8')];
+}
 export const accounts={
   passkey(g) {
     const f=figure(g);
@@ -34,10 +38,7 @@ export const accounts={
     return [...portrait(f),...f.arrow([f.line(14.8,7.7,21.1,7.7)],[[18.8,5.3],[21.1,7.7],[18.8,10.1]]),
       ...f.arrow([f.line(21,14.4,15.1,14.4)],[[17.4,12.1],[15.1,14.4],[17.4,16.7]])];
   },
-  'users-plus'(g) {
-    const f=figure(g);
-    return [...portrait(f),f.path('M14.3 4.3C19 3.3 20.1 10.3 15.3 10.8'),...mark(g,'plus',18.8,16.5)];
-  },
+  'users-plus':g=>[...teamPortrait(g),...mark(g,'plus',18.8,16.5)],
   'shield-lock'(g) {
     const f=figure(g);
     return [f.path('M12 2.9C14.3 4.8 17.3 5.7 20.2 6V11.5C20.2 16.4 16.9 19.8 12 21.5C7.1 19.8 3.8 16.4 3.8 11.5V6C6.7 5.7 9.7 4.8 12 2.9Z'),

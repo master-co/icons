@@ -1,0 +1,602 @@
+{
+  "priority-none": {
+    "group": "優先度與規劃",
+    "peer": "flag",
+    "decision": "保留一支旗桿與兩段未閉合的旗邊，表示此欄位還沒有等級。",
+    "sourceObservation": "斜線旗容易被解讀為停用，所以未指定狀態採局部開口。"
+  },
+  "priority-low": {
+    "group": "優先度與規劃",
+    "peer": "flag",
+    "decision": "把三角小旗降到桿的下半段，向下的旗尖讓低順位可在單色辨認。",
+    "sourceObservation": "向下的參考輪廓提供低順位的方向感，另用掛旗位置強化。"
+  },
+  "priority-medium": {
+    "group": "優先度與規劃",
+    "peer": "flag",
+    "decision": "將旗面置於桿的中段並水平出尖，作為低與高兩種斜勢的中點。",
+    "sourceObservation": "中順位不加第二支符號，保持三級只需讀取同一旗尖。"
+  },
+  "priority-high": {
+    "group": "優先度與規劃",
+    "peer": "flag",
+    "decision": "旗面升到桿頂、旗尖斜向右上，保留一段明顯長於低順位的桿腳。",
+    "sourceObservation": "箭尖向上的優先度參考轉化成旗面斜勢，可直接和中順位比較。"
+  },
+  "priority-urgent": {
+    "group": "優先度與規劃",
+    "peer": "alert-triangle",
+    "decision": "將驚嘆號置於較寬的燕尾旗面，符號與外形都能把緊急和高優先區分。",
+    "sourceObservation": "緊急旗與警告都有驚嘆號，在列表中靠旗腳識別欄位。"
+  },
+  "milestone": {
+    "group": "優先度與規劃",
+    "peer": "flag",
+    "decision": "時間線中央置一顆完整菱形，水平線在兩翼延伸，指出單一專案節點。",
+    "sourceObservation": "路標也常用 milestone 命名，專案時程選擇甘特圖常見的菱形。"
+  },
+  "milestone-complete": {
+    "group": "優先度與規劃",
+    "peer": "check-circle",
+    "decision": "保留里程碑的菱形與時間軸，勾號收在菱形內側標示此階段已交付。",
+    "sourceObservation": "參考原稿只有節點，達成時在內部放勾並稍加寬。"
+  },
+  "sprint": {
+    "group": "優先度與規劃",
+    "peer": "repeat",
+    "decision": "傾斜的奔跑人形搭配一道短速度線，表達有時間限制的一輪衝刺。",
+    "sourceObservation": "跑者保留肘、膝兩處折向，縮小後仍能識別動勢。"
+  },
+  "backlog": {
+    "group": "優先度與規劃",
+    "peer": "inbox",
+    "decision": "多張尚未排入時程的工作卡露出上緣，下方托盤接住整疊工作。",
+    "sourceObservation": "托盤及疊層各說明一半，兩者合起來表示還在排隊的工作。"
+  },
+  "subtask": {
+    "group": "優先度與規劃",
+    "peer": "list-tree",
+    "decision": "從左上主層折向右下方框，末端只有一張子卡，方便用於單筆層級欄。",
+    "sourceObservation": "折向下一層的箭頭簡化為單一卡片終點。"
+  },
+  "task-dependency": {
+    "group": "任務關係與操作",
+    "peer": "workflow",
+    "decision": "上下兩條錯開的排程橫條以折箭相連，能沿箭頭讀出誰是前置任務。",
+    "sourceObservation": "一般連線節點可能表示系統架構，改作有長度的任務條。"
+  },
+  "task-blocked": {
+    "group": "任務關係與操作",
+    "peer": "ban",
+    "decision": "橫向路障保留兩腳和兩道斜紋，表示工作遭到阻擋，與權限禁止的斜線圓框分開。",
+    "sourceObservation": "在任務受阻和日期逾期並列時，路障比第二個驚嘆號更容易分辨。"
+  },
+  "parent-task": {
+    "group": "任務關係與操作",
+    "peer": "list-tree",
+    "decision": "一張較寬的頂層卡置中，底部一分為二，對照只畫單一子卡的子任務。",
+    "sourceObservation": "樹狀結構保留一對子節點，讓視線先回到較寬的母卡。"
+  },
+  "task-split": {
+    "group": "任務關係與操作",
+    "peer": "git-branch",
+    "decision": "由同一張卡向右分出兩條路徑，兩個出口都是箭尖，表示將一項拆開。",
+    "sourceObservation": "分岔的兩端都有箭尖，和靜態的父子階層區分。"
+  },
+  "task-merge": {
+    "group": "任務關係與操作",
+    "peer": "git-merge",
+    "decision": "兩個入口匯入右側單卡，收束方向與拆分相反，結果只保留一份。",
+    "sourceObservation": "匯入線的兩個起點有圓點，最後只留一張卡片。"
+  },
+  "task-recurring": {
+    "group": "任務關係與操作",
+    "peer": "calendar-recurring",
+    "decision": "勾選框外有單支循環箭頭，保留工作可勾選與週期重建兩項線索。",
+    "sourceObservation": "循環箭頭保留一側，將中間負空間讓給勾選框。"
+  },
+  "task-template": {
+    "group": "任務關係與操作",
+    "peer": "layout-template",
+    "decision": "折角母卡內放方形核取框和短橫線，將可複用任務與版面範本區分。",
+    "sourceObservation": "範本採用紙頁摺角，核取框提示這是可重用的任務內容。"
+  },
+  "task-reopen": {
+    "group": "任務關係與操作",
+    "peer": "undo",
+    "decision": "回轉箭頭在任務框右上角向左折返，表示重新開啟一張曾經結案的任務。",
+    "sourceObservation": "獨立的回轉箭頭可用於復原，重新開案另保留工作框。"
+  },
+  "task-delegate": {
+    "group": "任務關係與操作",
+    "peer": "user-switch",
+    "decision": "頭肩旁的單向箭頭交到另一端，區分委派給他人與雙向切換帳號。",
+    "sourceObservation": "人像搭配單向交接的箭頭，避免帳號切換常用的雙向提示。"
+  },
+  "task-estimate": {
+    "group": "任務關係與操作",
+    "peer": "calculator",
+    "decision": "兩張估點卡錯位，最前方的菱形點數用來辨認故事點估算。",
+    "sourceObservation": "借用估點牌的疊影，將撲克牌的花色簡化成一點。"
+  },
+  "calendar-today": {
+    "group": "日期與排程",
+    "peer": "calendar-days",
+    "decision": "日曆下半部以單一日期焦點標示今天，避免複製一般月曆的小格。",
+    "sourceObservation": "日曆裡單一焦點在小尺寸比日期數字更穩定。"
+  },
+  "calendar-day-view": {
+    "group": "日期與排程",
+    "peer": "calendar",
+    "decision": "日期頁內畫一根時間軸和兩段行程，表示單日垂直展開的時程。",
+    "sourceObservation": "單日檢視需要顯示時間序列，和今天的定位點保持差別。"
+  },
+  "calendar-week": {
+    "group": "日期與排程",
+    "peer": "calendar-range",
+    "decision": "裝訂橫線下保留三個直欄，預覽週行程橫向並列的關係。",
+    "sourceObservation": "以三直欄表示週行程，縮小時仍看得到每欄的白底。"
+  },
+  "calendar-agenda": {
+    "group": "日期與排程",
+    "peer": "list",
+    "decision": "日曆的兩行活動各帶一個時間點，與有直向日欄的週檢視對照。",
+    "sourceObservation": "用直向點列呈現議程，在檢視切換器中辨別週曆。"
+  },
+  "calendar-previous": {
+    "group": "日期與排程",
+    "peer": "chevron-left",
+    "decision": "日曆內的左向箭頭定位到前一段期間，和通用的上一頁區分。",
+    "sourceObservation": "和通用左箭頭共用方向語意，保留曆頁限定操作範圍。"
+  },
+  "calendar-next": {
+    "group": "日期與排程",
+    "peer": "chevron-right",
+    "decision": "沿用上一期日曆的裝訂位置，在相同水平軸上翻轉內部箭頭。",
+    "sourceObservation": "前一期與後一期的箭桿置中，切換時曆框保持原位。"
+  },
+  "calendar-start": {
+    "group": "日期與排程",
+    "peer": "calendar-range",
+    "decision": "以左側起點和向右伸出的短線標記起日，組成日期區間的左端。",
+    "sourceObservation": "開始日期取區間起點作實心圓，避免像上一期箭頭。"
+  },
+  "calendar-end": {
+    "group": "日期與排程",
+    "peer": "calendar-range",
+    "decision": "把區間線的實心端點放在右側，與開始日期同列時可讀出起訖。",
+    "sourceObservation": "截止日期和逾期提醒常相鄰，右端點與驚嘆號可分開。"
+  },
+  "calendar-alert": {
+    "group": "日期與排程",
+    "peer": "calendar-clock",
+    "decision": "日曆下方留給獨立驚嘆號，和精確時間用的小時鐘保持區別。",
+    "sourceObservation": "單一驚嘆號在窄曆頁內仍有足夠點距。"
+  },
+  "calendar-reschedule": {
+    "group": "日期與排程",
+    "peer": "calendar-recurring",
+    "decision": "單支彎箭頭由下半頁轉到右側，表示將這次行程挪往別日。",
+    "sourceObservation": "雙循環箭頭適合週期行程，單次改期用一支轉彎箭頭。"
+  },
+  "inbox-in": {
+    "group": "收件與郵件",
+    "peer": "inbox",
+    "decision": "向下箭頭停在開放的托盤上方，保留下緣中央的收件凹槽。",
+    "sourceObservation": "直箭頭停在托盤凹口上方，兩者在最小尺寸保有間距。"
+  },
+  "inbox-out": {
+    "group": "收件與郵件",
+    "peer": "inbox",
+    "decision": "同一個收件托盤上方換成向上箭頭，突出項目離開的位置。",
+    "sourceObservation": "上行箭頭沿用移入款的托盤與中軸，便於兩個動作並排。"
+  },
+  "inbox-unread": {
+    "group": "收件與郵件",
+    "peer": "inbox",
+    "decision": "在托盤右上方放未讀圓點，仍保有下緣凹槽與完整的開口。",
+    "sourceObservation": "保留托盤開口，使未讀的點不至於看成封套上的郵戳。"
+  },
+  "inbox-done": {
+    "group": "收件與郵件",
+    "peer": "clipboard-check",
+    "decision": "用一枚寬勾佔據托盤上方的空白，收件處理與核對剪貼簿各有輪廓。",
+    "sourceObservation": "完成勾直接懸在盤口上，可用於整個收件匣已清零。"
+  },
+  "mail-unread": {
+    "group": "收件與郵件",
+    "peer": "mail",
+    "decision": "未讀點落在信封右上角，信封的封舌仍能與收件托盤辨別。",
+    "sourceObservation": "右上角圓點與信封輪廓隔開，小尺寸仍能看出未讀。"
+  },
+  "mail-forward": {
+    "group": "收件與郵件",
+    "peer": "forward",
+    "decision": "信封末端放向右彎箭，表示這一封郵件的轉寄狀態。",
+    "sourceObservation": "轉寄採右向曲柄，方向可以和回信狀態直接對照。"
+  },
+  "mail-reply": {
+    "group": "收件與郵件",
+    "peer": "reply",
+    "decision": "與轉寄共用信封，翻轉彎箭以表示對原寄件者送回回覆。",
+    "sourceObservation": "共用信封與右下狀態區，只翻轉彎箭本身。"
+  },
+  "mail-scheduled": {
+    "group": "收件與郵件",
+    "peer": "clock",
+    "decision": "右下角保留圓形鐘面與兩根指針，和已寄出或等待回覆的信封不同。",
+    "sourceObservation": "時鐘省去外部刻度，留出時針和分針之間的白底。"
+  },
+  "mail-attachment": {
+    "group": "收件與郵件",
+    "peer": "paperclip",
+    "decision": "迴紋針斜掛在信封右側，封舌與夾子的內孔分別保留空間。",
+    "sourceObservation": "迴紋針保留一端回折，與時鐘和方向箭頭有不同輪廓。"
+  },
+  "mail-important": {
+    "group": "收件與郵件",
+    "peer": "mail-check",
+    "decision": "右側驚嘆號凸出信封，與已讀勾記或未讀圓點呈現不同的處理順序。",
+    "sourceObservation": "狹長驚嘆號保留足夠點距，和圓形未讀標記分開。"
+  },
+  "filter-add": {
+    "group": "篩選與檢視",
+    "peer": "filter",
+    "decision": "加號移到漏斗右下方，保留錐身與頸部來指明操作對象。",
+    "sourceObservation": "加號讓出漏斗尖端，保留條件和新增兩個線索。"
+  },
+  "filter-save": {
+    "group": "篩選與檢視",
+    "peer": "bookmark",
+    "decision": "漏斗旁放帶凹尾的小書籤，用在儲存目前篩選條件的操作。",
+    "sourceObservation": "儲存條件使用書籤的凹尾，可區別於標為最愛的星號。"
+  },
+  "filter-check": {
+    "group": "篩選與檢視",
+    "peer": "filter",
+    "decision": "保留漏斗右側的完成勾，和新增條件或清除條件按鈕並列。",
+    "sourceObservation": "將勾號放在漏斗外側，和圓框完成狀態區分。"
+  },
+  "list-filter": {
+    "group": "篩選與檢視",
+    "peer": "list-search",
+    "decision": "上長下短的清單旁接小漏斗，適合放在只影響本清單的工具列。",
+    "sourceObservation": "橫列與漏斗都可辨認，對照同一工具列中的清單搜尋。"
+  },
+  "group-by": {
+    "group": "篩選與檢視",
+    "peer": "group",
+    "decision": "標題列下方以一根分支線連接兩筆內縮資料；同一列工具裡，可與只改列距的密度設定區分。",
+    "sourceObservation": "沿用階層線的構造，用短橫資料列取代子節點；和取消分組並排時可看到上下兩列的共同來源。"
+  },
+  "ungroup-rows": {
+    "group": "篩選與檢視",
+    "peer": "ungroup",
+    "decision": "把原先相連的括線拆成兩個獨立起點，表明各列回到同一層級。",
+    "sourceObservation": "上下兩個獨立折角，表示每列回到自己的層級。"
+  },
+  "density-compact": {
+    "group": "篩選與檢視",
+    "peer": "layout-rows",
+    "decision": "上下邊界內安排四條短列，將同一片清單可見的筆數提高。",
+    "sourceObservation": "列高控制使用定高邊界，讓橫線數量成為密度線索。"
+  },
+  "density-comfortable": {
+    "group": "篩選與檢視",
+    "peer": "layout-rows",
+    "decision": "邊界高度和緊密款一致，內部只留兩列，放大行間的呼吸空間。",
+    "sourceObservation": "維持與緊密列高同一範圍，兩列之間可留下完整間隔。"
+  },
+  "columns-settings": {
+    "group": "篩選與檢視",
+    "peer": "table-column-width",
+    "decision": "直欄框旁放兩道調整滑點，顯示可以選擇欄位而非只拖動欄寬。",
+    "sourceObservation": "小齒輪細節在 16px 太多，欄框旁改用兩個調整桿。"
+  },
+  "sort-multiple": {
+    "group": "篩選與檢視",
+    "peer": "sort-unsorted",
+    "decision": "長短兩支排序箭頭錯開起點，配上一二層級的橫槓，區分單欄排序。",
+    "sourceObservation": "長短不同的排序箭頭加上順序橫槓，呈現多欄排序。"
+  },
+  "user-lock": {
+    "group": "成員與分享權限",
+    "peer": "lock",
+    "decision": "在人像肩側留出鎖梁和鎖體，和資料夾或文件的加密權限區分。",
+    "sourceObservation": "肩部與鎖體錯開，鎖梁在原生大小仍有開口。"
+  },
+  "user-shield": {
+    "group": "成員與分享權限",
+    "peer": "shield",
+    "decision": "人像配一面尖底小盾，角色欄與一般個人資料能直接並排。",
+    "sourceObservation": "保留盾牌尖底，使管理員角色和帳號鎖定容易分開。"
+  },
+  "user-clock": {
+    "group": "成員與分享權限",
+    "peer": "user-plus",
+    "decision": "時鐘位於肩側，表示邀請已送出且仍待對方加入。",
+    "sourceObservation": "時鐘占據人像右肩的狀態位置，和待邀請加號區別。"
+  },
+  "user-off": {
+    "group": "成員與分享權限",
+    "peer": "user-x",
+    "decision": "斜線切過完整頭肩，表示帳號留存但停用，與刪除使用者對照。",
+    "sourceObservation": "停用採跨人像的斜線，和右側叉號的移除命令分開。"
+  },
+  "users-minus": {
+    "group": "成員與分享權限",
+    "peer": "user-minus",
+    "decision": "主像後還有第二個頭部，右側減號只針對這個群組的會籍。",
+    "sourceObservation": "直接沿用群組新增的雙人像，同一工具列只切換加減。"
+  },
+  "user-search": {
+    "group": "成員與分享權限",
+    "peer": "search",
+    "decision": "肩側的放大鏡避開人像頭部，搜尋範圍清楚限定在成員清單。",
+    "sourceObservation": "放大鏡把手沿右下伸出，避開肩膀的弧線。"
+  },
+  "link-lock": {
+    "group": "成員與分享權限",
+    "peer": "link",
+    "decision": "斜鏈保持一個完整的環，側邊掛鎖表示分享網址有存取限制。",
+    "sourceObservation": "保留交扣鏈節，鎖定標記位於同一列的狀態區。"
+  },
+  "link-expire": {
+    "group": "成員與分享權限",
+    "peer": "clock",
+    "decision": "鏈節旁放置小時鐘，使到期連結與長期受限連結能分開辨識。",
+    "sourceObservation": "一般鏈節不帶時間訊息，時鐘和鎖共用位置以便對照。"
+  },
+  "link-copy": {
+    "group": "成員與分享權限",
+    "peer": "copy",
+    "decision": "前方鏈節與後方複本露邊並置，純圖示動作列可區分複製文字與網址。",
+    "sourceObservation": "複本露出右、下兩邊，和單純鏈節有不同外廓。"
+  },
+  "link-settings": {
+    "group": "成員與分享權限",
+    "peer": "sliders",
+    "decision": "在鏈節右側放調節桿，指向分享條件，與變更整個工作區設定分開。",
+    "sourceObservation": "以兩道滑桿代替有細齒的齒輪，便於辨認參數調整。"
+  },
+  "field-text": {
+    "group": "表單欄位",
+    "peer": "text-cursor",
+    "decision": "長輸入框內只留單根游標，使單行答案與段落題有不同外形。",
+    "sourceObservation": "游標保留在欄位左側，和右側有折角的單選欄位成對。"
+  },
+  "field-number": {
+    "group": "表單欄位",
+    "peer": "hash",
+    "decision": "窄數碼旁分置增減折角，表現可逐級調整的數字輸入控制項。",
+    "sourceObservation": "數字只畫一位，右側空間保留給可遞增遞減的兩個方向。"
+  },
+  "field-dropdown": {
+    "group": "表單欄位",
+    "peer": "chevrons-up-down",
+    "decision": "在長欄位框右端置向下折角，與只有上下排序的通用折角區分。",
+    "sourceObservation": "把箭尖限制在框內，避免看成獨立展開命令。"
+  },
+  "field-multiselect": {
+    "group": "表單欄位",
+    "peer": "list-checks",
+    "decision": "兩張錯位的選項籤各露出一邊，前籤保留移除叉號，用於選擇多個值的欄位。",
+    "sourceObservation": "已選值用錯位籤和移除叉號表達，選單仍有足夠白底。"
+  },
+  "signature": {
+    "group": "表單欄位",
+    "peer": "pen-tool",
+    "decision": "連續手寫筆跡在末端拉出收筆，下方基線標出簽署的位置。",
+    "sourceObservation": "簽名需要連續筆跡，獨立基線提示這是簽署欄。"
+  },
+  "form-section": {
+    "group": "表單欄位",
+    "peer": "section-break",
+    "decision": "上方區段標題與下方兩個欄位共享一個表單邊界，表示分組區段。",
+    "sourceObservation": "區段標頭橫跨整個框，下面才出現題目列。"
+  },
+  "field-required": {
+    "group": "表單欄位",
+    "peer": "asterisk",
+    "decision": "星號伸出欄位框的右上角，在欄位清單中表示此題不可留白。",
+    "sourceObservation": "星號放在欄框邊緣，避免和欄內密碼遮罩混淆。"
+  },
+  "field-attachment": {
+    "group": "表單欄位",
+    "peer": "paperclip",
+    "decision": "四個投放區角標包住迴紋針；縮到欄位選單大小時，仍能區別上傳動作和附件題型。",
+    "sourceObservation": "上傳箭頭容易和一般上傳命令重複，改用帶投放區的迴紋針。"
+  },
+  "field-rating": {
+    "group": "表單欄位",
+    "peer": "star",
+    "decision": "一顆完整評分星配兩個後續刻點，表示有多個選值的星等量表。",
+    "sourceObservation": "以後續刻點暗示量表長度，保留首星可用的描邊空間。"
+  },
+  "field-textarea": {
+    "group": "表單欄位",
+    "peer": "text",
+    "decision": "方框裡有兩道長度不同的文字線，右下保留多行欄的拖曳角。",
+    "sourceObservation": "保留一個右下拖曳角，單行和多行可在題型選單相辨。"
+  },
+  "trash-restore": {
+    "group": "檔案與回收",
+    "peer": "archive-restore",
+    "decision": "垃圾桶上方翻出回轉箭頭，區分還原已刪除物件與解除封存。",
+    "sourceObservation": "在桶口上方用彎箭頭指回，與封存還原的盒體明顯不同。"
+  },
+  "trash-empty": {
+    "group": "檔案與回收",
+    "peer": "trash",
+    "decision": "掀起桶蓋並將叉號留在桶內，提示一次清空整個回收區。",
+    "sourceObservation": "掀蓋動作特別用於清空，避開逐筆移除資料的疊件剪影。"
+  },
+  "file-shortcut": {
+    "group": "檔案與回收",
+    "peer": "external-link",
+    "decision": "文件摺角保持可見，左下角的轉向箭頭指示此項目連到原始檔。",
+    "sourceObservation": "在紙頁左下交疊捷徑彎箭，和右上角的摺頁分開。"
+  },
+  "file-shared": {
+    "group": "檔案與回收",
+    "peer": "share",
+    "decision": "文件邊界旁保留頭肩，方便在權限清單辨認單檔共用。",
+    "sourceObservation": "將人像挪到外輪廓上，避免文件內的肖像被看成證件。"
+  },
+  "file-history": {
+    "group": "檔案與回收",
+    "peer": "history",
+    "decision": "摺角頁旁的回轉時針提示可查閱此檔案以往的版本。",
+    "sourceObservation": "歷程用帶折返的鐘面，與預約動作的一般鐘面區分。"
+  },
+  "file-sync": {
+    "group": "檔案與回收",
+    "peer": "cloud-sync",
+    "decision": "文件右下有兩個交錯方向的彎折，對應此單檔正在同步。",
+    "sourceObservation": "相對的箭頭各有短箭翼，保持摺角能讀成單一文件。"
+  },
+  "folder-shared": {
+    "group": "檔案與回收",
+    "peer": "folder",
+    "decision": "資料夾肩部維持左高右低，右側人像指示整個目錄已分享。",
+    "sourceObservation": "共享用和文件相同的人像，檔案總管中改看外殼辨物件。"
+  },
+  "folder-shortcut": {
+    "group": "檔案與回收",
+    "peer": "folder-move",
+    "decision": "沿用檔案捷徑的轉角箭頭，外殼換成可辨識的資料夾肩部。",
+    "sourceObservation": "捷徑指標與文件款同向，資料夾保留左肩輪廓。"
+  },
+  "folder-favorite": {
+    "group": "檔案與回收",
+    "peer": "bookmark",
+    "decision": "在夾身右側安排一顆五角星，常用目錄可與已釘選項目並排。",
+    "sourceObservation": "星號與資料夾外框交疊，粗筆畫時仍需讓星尖留在畫布內。"
+  },
+  "file-offline": {
+    "group": "檔案與回收",
+    "peer": "cloud-check",
+    "decision": "文件旁的勾號落在存放托盤上方，表示本機已有可離線讀取的副本。",
+    "sourceObservation": "下載參考是傳輸動作，此款以托盤勾號表示離線副本已備妥。"
+  },
+  "automation-trigger": {
+    "group": "流程自動化",
+    "peer": "zap",
+    "decision": "閃電前端接到出口端子，提示這是啟動下一步的事件來源。",
+    "sourceObservation": "閃電帶單一輸出端，使流程起點有明確接線位置。"
+  },
+  "workflow-condition": {
+    "group": "流程自動化",
+    "peer": "diamond",
+    "decision": "判斷菱形伸出兩條分支，各自保留出口，便於和單純圖形工具區分。",
+    "sourceObservation": "條件分支採菱形本體與兩個出口，和版本分支線分開。"
+  },
+  "workflow-parallel": {
+    "group": "流程自動化",
+    "peer": "git-fork",
+    "decision": "一個上游端點經過橫向分配線，輸出到兩個同一高度的節點。",
+    "sourceObservation": "兩個下游箭頭共用同步橫槓，垂直結構和單一分岔可區分。"
+  },
+  "workflow-join": {
+    "group": "流程自動化",
+    "peer": "git-merge",
+    "decision": "兩個等高的輸入端先經橫向同步線，再由中央單箭頭送出匯合結果。",
+    "sourceObservation": "輸入端口有兩個，最後一支下行箭頭提示等待匯合。"
+  },
+  "workflow-delay": {
+    "group": "流程自動化",
+    "peer": "hourglass",
+    "decision": "沙漏兩側都有連接端，放在流程圖裡能表示經過等待才繼續。",
+    "sourceObservation": "保留沙漏腰部，接線沿上下邊緣繞出，縮小仍見流向。"
+  },
+  "workflow-loop": {
+    "group": "流程自動化",
+    "peer": "repeat",
+    "decision": "箭頭從步驟方塊的出口繞回入口，表示重複執行這一段動作。",
+    "sourceObservation": "重複箭頭只包一個動作框，便於和全局刷新區分。"
+  },
+  "workflow-stop": {
+    "group": "流程自動化",
+    "peer": "stop",
+    "decision": "進線終止於雙層終點，凸顯此處沒有後續輸出步驟。",
+    "sourceObservation": "終止符號採深色圓心與外環，側邊進線標示這是流程節點。"
+  },
+  "workflow-run": {
+    "group": "流程自動化",
+    "peer": "play",
+    "decision": "起始節點拉出短連線指向播放三角，和單純媒體播放區分。",
+    "sourceObservation": "單一端點接往空心播放三角，和播放器按鈕有不同輪廓。"
+  },
+  "workflow-disabled": {
+    "group": "流程自動化",
+    "peer": "toggle-off",
+    "decision": "兩個相連步驟被一道斜線截過，表示保留規則但暫停執行。",
+    "sourceObservation": "斜線跨過工作流的兩端，保留節點關係可供辨認。"
+  },
+  "workflow-log": {
+    "group": "流程自動化",
+    "peer": "list",
+    "decision": "時間軸串起節點，每一步旁保留對應的紀錄線，指向逐步執行結果。",
+    "sourceObservation": "以三個步驟對三筆紀錄，保留縱向時間軸。"
+  },
+  "select-all": {
+    "group": "批次操作與導覽",
+    "peer": "selection",
+    "decision": "勾號置於四個開放角標之中，表示選取命令套用至整批項目。",
+    "sourceObservation": "四個開角圍住勾號，和單選框及畫布框選可相辨。"
+  },
+  "deselect-all": {
+    "group": "批次操作與導覽",
+    "peer": "selection-subtract",
+    "decision": "沿用全選角標，中央以一道橫線表示整批清除，與縮小選區區分。",
+    "sourceObservation": "沿用全選的開角，只把中央動作改為短橫線。"
+  },
+  "batch-edit": {
+    "group": "批次操作與導覽",
+    "peer": "pencil",
+    "decision": "前後兩份記錄共用右下鉛筆，表示同時修改目前選取的多筆資料。",
+    "sourceObservation": "前後件露邊和鉛筆同時可見，避免誤為只編輯目前一筆。"
+  },
+  "batch-delete": {
+    "group": "批次操作與導覽",
+    "peer": "trash",
+    "decision": "疊放記錄旁有叉號，顯示作用範圍是這些資料而非清空回收桶。",
+    "sourceObservation": "移除記號附在資料堆疊上，與刪除目前檔案的桶形區隔。"
+  },
+  "batch-download": {
+    "group": "批次操作與導覽",
+    "peer": "download",
+    "decision": "選取堆疊右下伸出下載箭頭，對照只下載目前檔案的動作。",
+    "sourceObservation": "堆疊右下的箭頭清楚越出邊界，保留下載方向。"
+  },
+  "breadcrumb": {
+    "group": "批次操作與導覽",
+    "peer": "chevron-right",
+    "decision": "兩段短路徑名之間露出單一向右折角，形成一列可回溯的階層。",
+    "sourceObservation": "只使用一個路徑分隔符，兩旁短線代表相鄰的路徑名稱。"
+  },
+  "pagination": {
+    "group": "批次操作與導覽",
+    "peer": "more-horizontal",
+    "decision": "中間的數字一夾在前後兩個方向鍵之間，表明可逐頁切換。",
+    "sourceObservation": "換用可讀的頁碼一，輪播的選取卡框不會和它雷同。"
+  },
+  "stepper": {
+    "group": "批次操作與導覽",
+    "peer": "workflow",
+    "decision": "三個等距站點在同一水平軸上，以圓心標出目前步驟。",
+    "sourceObservation": "中心站點實心，兩旁空心站點和連線保持等高。"
+  },
+  "carousel": {
+    "group": "批次操作與導覽",
+    "peer": "images",
+    "decision": "完整當前卡位於中心，只從左右各露出鄰卡一邊，表達橫向瀏覽。",
+    "sourceObservation": "中央卡完整呈現，兩側局部預覽正是輪播的瀏覽方式。"
+  },
+  "command-palette": {
+    "group": "批次操作與導覽",
+    "peer": "command",
+    "decision": "面板內放命令提示折角和短輸入線，下方顯示可選的命令項目。",
+    "sourceObservation": "比對空白視窗後補上提示符和結果列，區別一般終端與指令面板。"
+  }
+}

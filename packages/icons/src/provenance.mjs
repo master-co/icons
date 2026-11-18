@@ -11,6 +11,19 @@ export const preservedNotices = Object.freeze(Object.fromEntries([
 import atlasSources from './atlas-provenance.json' with {type:'json'};
 const hugeCommit='834e28d965946c1ee60d080027fe9dae4adc58d0';
 const pilotVariants=Object.fromEntries([
+  ['calendar-today','calendar-03','Retained the calendar outline and redrew the today detail for three optical sizes.'],
+  ['calendar-day-view','calendar-03','Retained the calendar outline and redrew the day view detail for three optical sizes.'],
+  ['calendar-week','calendar-03','Retained the calendar outline and redrew the week detail for three optical sizes.'],
+  ['calendar-agenda','calendar-03','Retained the calendar outline and redrew the agenda detail for three optical sizes.'],
+  ['calendar-previous','calendar-03','Retained the calendar outline and redrew the previous detail for three optical sizes.'],
+  ['calendar-next','calendar-03','Retained the calendar outline and redrew the next detail for three optical sizes.'],
+  ['calendar-start','calendar-03','Retained the calendar outline and redrew the start detail for three optical sizes.'],
+  ['calendar-end','calendar-03','Retained the calendar outline and redrew the end detail for three optical sizes.'],
+  ['calendar-alert','calendar-03','Retained the calendar outline and redrew the alert detail for three optical sizes.'],
+  ['calendar-reschedule','calendar-03','Retained the calendar outline and redrew the reschedule detail for three optical sizes.'],
+  ['folder-shared','folder-01','Retained the folder outline and redrew the shared detail for three optical sizes.'],
+  ['folder-shortcut','folder-01','Retained the folder outline and redrew the shortcut detail for three optical sizes.'],
+  ['folder-favorite','folder-01','Retained the folder outline and redrew the favorite detail for three optical sizes.'],
   ['bell-plus','notification-03','Added a plus with optical clearance at the crown.'],
   ['bell-minus','notification-03','Added a minus with optical clearance at the crown.'],
   ['folder-move','folder-01','Placed a directional arrow beneath the folder shoulder.'],

@@ -10,6 +10,8 @@ The 12 pilot subjects are documented as study/redraw work after Hugeicons Free: 
 
 The bell-plus, bell-minus and folder-move controls reuse the bell and folder pilot silhouettes, and carry their Hugeicons Free notice.
 
+The ten calendar controls in operations-01 reuse the pilot calendar frame. The folder-shared, folder-shortcut and folder-favorite controls reuse the folder silhouette. Each carries the Hugeicons Free MIT notice. See `packages/icons/src/provenance.mjs` for the pinned source and modifications.
+
 Upstream repository: https://github.com/hugeicons/hugeicons
 
 Pinned commit: `834e28d965946c1ee60d080027fe9dae4adc58d0`.

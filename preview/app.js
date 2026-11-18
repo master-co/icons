@@ -20,7 +20,24 @@ const referenceCache=new Map(Object.entries(data.inlineReferences || {}));
 const meta=name=>iconByName.get(name);
 
 function announce(message){const t=$('#toast');t.textContent=message;t.classList.add('visible');clearTimeout(toastTimer);toastTimer=setTimeout(()=>t.classList.remove('visible'),2200);}
-function updateUrl(){if(location.protocol==='file:')return;const q=new URLSearchParams({corner:state.corner,size:String(state.size),view:state.view});if(state.category!=='all')q.set('category',state.category);if(state.query)q.set('q',state.query);if(state.page>1)q.set('page',state.page);if(state.view==='context')q.set('scenario',state.scenario);const search='?'+q;if(location.search!==search)history.replaceState(null,'',search);}
+// Coalesce rapid page changes so WebKit's History API rate limit cannot
+// interrupt rendering while someone pages through the full reference set.
+let lastUrlWrite=-Infinity,urlTimer;
+function updateUrl(){
+  if(location.protocol==='file:')return;
+  const q=new URLSearchParams({corner:state.corner,size:String(state.size),view:state.view});
+  if(state.category!=='all')q.set('category',state.category);
+  if(state.query)q.set('q',state.query);
+  if(state.page>1)q.set('page',state.page);
+  if(state.view==='context')q.set('scenario',state.scenario);
+  const search='?'+q;
+  clearTimeout(urlTimer);
+  if(location.search===search)return;
+  const write=()=>{history.replaceState(null,'',search);lastUrlWrite=performance.now();};
+  const wait=350-(performance.now()-lastUrlWrite);
+  if(wait>0)urlTimer=setTimeout(write,wait);
+  else write();
+}
 function filtered(pilotOnly=false){const q=state.query.toLocaleLowerCase().trim();return catalog.icons.filter(x=>(!pilotOnly||x.pilot)&&(state.category==='all'||state.category==='pilot'&&x.pilot||x.category===state.category)&&(!q||`${x.name} ${x.label} ${x.keywords.join(' ')}`.toLocaleLowerCase().includes(q)));}
 function renderCategories(){const all=[{id:'all',label:'全部圖示',count:catalog.icons.length},{id:'pilot',label:'代表圖示',count:catalog.icons.filter(x=>x.pilot).length},...catalog.categories.map(c=>({...c,count:catalog.icons.filter(x=>x.category===c.id).length}))];$('#categories').innerHTML=all.map(c=>`<button type="button" data-category="${c.id}" aria-pressed="${state.category===c.id}"><span>${c.label}</span><span>${c.count}</span></button>`).join('');}
 function pageItems(list,limit){const pages=Math.max(1,Math.ceil(list.length/limit));state.page=Math.min(state.page,pages);$('#pagination').hidden=!['library','optical','reference'].includes(state.view)||pages===1;$('#page-info').textContent=`第 ${state.page} / ${pages} 頁 · 共 ${list.length.toLocaleString()} 項`;$('#page-previous').disabled=state.page===1;$('#page-next').disabled=state.page===pages;updateUrl();return list.slice((state.page-1)*limit,state.page*limit);}

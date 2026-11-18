@@ -1,0 +1,1126 @@
+[
+  {
+    "name": "priority-none",
+    "label": "未設優先度",
+    "category": "organization",
+    "categoryLabel": "專案與文件組織",
+    "keywords": [
+      "no-priority",
+      "unprioritized",
+      "未指定",
+      "無優先",
+      "task-priority-none"
+    ]
+  },
+  {
+    "name": "priority-low",
+    "label": "低優先",
+    "category": "organization",
+    "categoryLabel": "專案與文件組織",
+    "keywords": [
+      "low-priority",
+      "low",
+      "低優先級",
+      "低優先度",
+      "task-priority-low"
+    ]
+  },
+  {
+    "name": "priority-medium",
+    "label": "中優先",
+    "category": "organization",
+    "categoryLabel": "專案與文件組織",
+    "keywords": [
+      "medium-priority",
+      "normal-priority",
+      "中優先級",
+      "一般優先",
+      "task-priority-medium",
+      "中優先度"
+    ]
+  },
+  {
+    "name": "priority-high",
+    "label": "高優先",
+    "category": "organization",
+    "categoryLabel": "專案與文件組織",
+    "keywords": [
+      "high-priority",
+      "high",
+      "高優先級",
+      "高優先度",
+      "task-priority-high"
+    ]
+  },
+  {
+    "name": "priority-urgent",
+    "label": "緊急優先",
+    "category": "organization",
+    "categoryLabel": "專案與文件組織",
+    "keywords": [
+      "urgent-priority",
+      "critical",
+      "緊急",
+      "最高優先",
+      "task-priority-urgent"
+    ]
+  },
+  {
+    "name": "milestone",
+    "label": "里程碑",
+    "category": "organization",
+    "categoryLabel": "專案與文件組織",
+    "keywords": [
+      "project-milestone",
+      "checkpoint",
+      "階段目標"
+    ]
+  },
+  {
+    "name": "milestone-complete",
+    "label": "已達里程碑",
+    "category": "organization",
+    "categoryLabel": "專案與文件組織",
+    "keywords": [
+      "milestone-done",
+      "milestone-achieved",
+      "達標"
+    ]
+  },
+  {
+    "name": "sprint",
+    "label": "衝刺週期",
+    "category": "organization",
+    "categoryLabel": "專案與文件組織",
+    "keywords": [
+      "iteration",
+      "sprint-cycle",
+      "迭代",
+      "開發週期"
+    ]
+  },
+  {
+    "name": "backlog",
+    "label": "待辦池",
+    "category": "organization",
+    "categoryLabel": "專案與文件組織",
+    "keywords": [
+      "product-backlog",
+      "work-queue",
+      "待排程",
+      "需求池"
+    ]
+  },
+  {
+    "name": "subtask",
+    "label": "子任務",
+    "category": "organization",
+    "categoryLabel": "專案與文件組織",
+    "keywords": [
+      "sub-issue",
+      "child-task",
+      "子工作"
+    ]
+  },
+  {
+    "name": "task-dependency",
+    "label": "任務相依",
+    "category": "organization",
+    "categoryLabel": "專案與文件組織",
+    "keywords": [
+      "depends-on",
+      "dependency",
+      "前置任務",
+      "依賴"
+    ]
+  },
+  {
+    "name": "task-blocked",
+    "label": "任務受阻",
+    "category": "organization",
+    "categoryLabel": "專案與文件組織",
+    "keywords": [
+      "blocked-task",
+      "blocker",
+      "受阻",
+      "卡關"
+    ]
+  },
+  {
+    "name": "parent-task",
+    "label": "父任務",
+    "category": "organization",
+    "categoryLabel": "專案與文件組織",
+    "keywords": [
+      "parent-issue",
+      "parent-item",
+      "上層任務"
+    ]
+  },
+  {
+    "name": "task-split",
+    "label": "拆分任務",
+    "category": "organization",
+    "categoryLabel": "專案與文件組織",
+    "keywords": [
+      "split-issue",
+      "split-task",
+      "分拆"
+    ]
+  },
+  {
+    "name": "task-merge",
+    "label": "合併任務",
+    "category": "organization",
+    "categoryLabel": "專案與文件組織",
+    "keywords": [
+      "merge-issues",
+      "merge-task",
+      "整併任務"
+    ]
+  },
+  {
+    "name": "task-recurring",
+    "label": "循環任務",
+    "category": "organization",
+    "categoryLabel": "專案與文件組織",
+    "keywords": [
+      "repeat-task",
+      "recurring-task",
+      "週期任務"
+    ]
+  },
+  {
+    "name": "task-template",
+    "label": "任務範本",
+    "category": "organization",
+    "categoryLabel": "專案與文件組織",
+    "keywords": [
+      "issue-template",
+      "task-preset",
+      "任務模板"
+    ]
+  },
+  {
+    "name": "task-reopen",
+    "label": "重開任務",
+    "category": "organization",
+    "categoryLabel": "專案與文件組織",
+    "keywords": [
+      "reopen-issue",
+      "reopen-task",
+      "重新開啟"
+    ]
+  },
+  {
+    "name": "task-delegate",
+    "label": "委派任務",
+    "category": "organization",
+    "categoryLabel": "專案與文件組織",
+    "keywords": [
+      "assign-task",
+      "delegate",
+      "指派",
+      "負責人"
+    ]
+  },
+  {
+    "name": "task-estimate",
+    "label": "任務估點",
+    "category": "organization",
+    "categoryLabel": "專案與文件組織",
+    "keywords": [
+      "story-points",
+      "estimate",
+      "effort",
+      "工時估算",
+      "故事點"
+    ]
+  },
+  {
+    "name": "calendar-today",
+    "label": "回到今天",
+    "category": "scheduling",
+    "categoryLabel": "排程與剪貼簿",
+    "keywords": [
+      "go-to-today",
+      "today",
+      "今日"
+    ]
+  },
+  {
+    "name": "calendar-day-view",
+    "label": "日檢視",
+    "category": "scheduling",
+    "categoryLabel": "排程與剪貼簿",
+    "keywords": [
+      "day-view",
+      "daily-view",
+      "每日檢視"
+    ]
+  },
+  {
+    "name": "calendar-week",
+    "label": "週檢視",
+    "category": "scheduling",
+    "categoryLabel": "排程與剪貼簿",
+    "keywords": [
+      "week-view",
+      "weekly-view",
+      "每週檢視"
+    ]
+  },
+  {
+    "name": "calendar-agenda",
+    "label": "議程清單",
+    "category": "scheduling",
+    "categoryLabel": "排程與剪貼簿",
+    "keywords": [
+      "agenda-view",
+      "schedule-list",
+      "活動清單"
+    ]
+  },
+  {
+    "name": "calendar-previous",
+    "label": "上一期日曆",
+    "category": "scheduling",
+    "categoryLabel": "排程與剪貼簿",
+    "keywords": [
+      "previous-period",
+      "previous-month",
+      "上個月",
+      "上週"
+    ]
+  },
+  {
+    "name": "calendar-next",
+    "label": "下一期日曆",
+    "category": "scheduling",
+    "categoryLabel": "排程與剪貼簿",
+    "keywords": [
+      "next-period",
+      "next-month",
+      "下個月",
+      "下週"
+    ]
+  },
+  {
+    "name": "calendar-start",
+    "label": "開始日期",
+    "category": "scheduling",
+    "categoryLabel": "排程與剪貼簿",
+    "keywords": [
+      "start-date",
+      "begins-on",
+      "起日"
+    ]
+  },
+  {
+    "name": "calendar-end",
+    "label": "截止日期",
+    "category": "scheduling",
+    "categoryLabel": "排程與剪貼簿",
+    "keywords": [
+      "due-date",
+      "deadline",
+      "end-date",
+      "到期日",
+      "迄日"
+    ]
+  },
+  {
+    "name": "calendar-alert",
+    "label": "日期逾期",
+    "category": "scheduling",
+    "categoryLabel": "排程與剪貼簿",
+    "keywords": [
+      "overdue",
+      "due-alert",
+      "past-due",
+      "過期"
+    ]
+  },
+  {
+    "name": "calendar-reschedule",
+    "label": "改期",
+    "category": "scheduling",
+    "categoryLabel": "排程與剪貼簿",
+    "keywords": [
+      "reschedule",
+      "change-date",
+      "改排"
+    ]
+  },
+  {
+    "name": "inbox-in",
+    "label": "移入收件匣",
+    "category": "inbox-actions",
+    "categoryLabel": "郵件與回覆",
+    "keywords": [
+      "inbox-arrow-down",
+      "move-to-inbox",
+      "收件"
+    ]
+  },
+  {
+    "name": "inbox-out",
+    "label": "移出收件匣",
+    "category": "inbox-actions",
+    "categoryLabel": "郵件與回覆",
+    "keywords": [
+      "outbox",
+      "inbox-arrow-up",
+      "寄件匣"
+    ]
+  },
+  {
+    "name": "inbox-unread",
+    "label": "未讀收件匣",
+    "category": "inbox-actions",
+    "categoryLabel": "郵件與回覆",
+    "keywords": [
+      "unread-inbox",
+      "inbox-dot",
+      "未處理"
+    ]
+  },
+  {
+    "name": "inbox-done",
+    "label": "收件匣已處理",
+    "category": "inbox-actions",
+    "categoryLabel": "郵件與回覆",
+    "keywords": [
+      "inbox-check",
+      "triage-done",
+      "處理完畢"
+    ]
+  },
+  {
+    "name": "mail-unread",
+    "label": "未讀郵件",
+    "category": "inbox-actions",
+    "categoryLabel": "郵件與回覆",
+    "keywords": [
+      "unread-mail",
+      "mark-unread",
+      "標為未讀"
+    ]
+  },
+  {
+    "name": "mail-forward",
+    "label": "已轉寄郵件",
+    "category": "inbox-actions",
+    "categoryLabel": "郵件與回覆",
+    "keywords": [
+      "forwarded-message",
+      "forwarded-mail",
+      "轉寄信"
+    ]
+  },
+  {
+    "name": "mail-reply",
+    "label": "已回覆郵件",
+    "category": "inbox-actions",
+    "categoryLabel": "郵件與回覆",
+    "keywords": [
+      "replied-message",
+      "replied-mail",
+      "回信"
+    ]
+  },
+  {
+    "name": "mail-scheduled",
+    "label": "預約寄信",
+    "category": "inbox-actions",
+    "categoryLabel": "郵件與回覆",
+    "keywords": [
+      "send-later",
+      "scheduled-mail",
+      "延後寄送"
+    ]
+  },
+  {
+    "name": "mail-attachment",
+    "label": "郵件附件",
+    "category": "inbox-actions",
+    "categoryLabel": "郵件與回覆",
+    "keywords": [
+      "email-attachment",
+      "has-attachment",
+      "夾帶檔案"
+    ]
+  },
+  {
+    "name": "mail-important",
+    "label": "重要郵件",
+    "category": "inbox-actions",
+    "categoryLabel": "郵件與回覆",
+    "keywords": [
+      "important-mail",
+      "flagged-message",
+      "重要信件"
+    ]
+  },
+  {
+    "name": "filter-add",
+    "label": "新增篩選條件",
+    "category": "analytics",
+    "categoryLabel": "表格與分析",
+    "keywords": [
+      "add-filter",
+      "new-condition",
+      "增加條件"
+    ]
+  },
+  {
+    "name": "filter-save",
+    "label": "儲存篩選檢視",
+    "category": "analytics",
+    "categoryLabel": "表格與分析",
+    "keywords": [
+      "saved-filter",
+      "save-view",
+      "收藏條件"
+    ]
+  },
+  {
+    "name": "filter-check",
+    "label": "已套用篩選",
+    "category": "analytics",
+    "categoryLabel": "表格與分析",
+    "keywords": [
+      "active-filter",
+      "filter-applied",
+      "已啟用條件"
+    ]
+  },
+  {
+    "name": "list-filter",
+    "label": "篩選清單",
+    "category": "analytics",
+    "categoryLabel": "表格與分析",
+    "keywords": [
+      "filter-list",
+      "narrow-list",
+      "清單篩選"
+    ]
+  },
+  {
+    "name": "group-by",
+    "label": "依欄位分組",
+    "category": "analytics",
+    "categoryLabel": "表格與分析",
+    "keywords": [
+      "group-rows",
+      "group-by-field",
+      "群組依據"
+    ]
+  },
+  {
+    "name": "ungroup-rows",
+    "label": "取消列分組",
+    "category": "analytics",
+    "categoryLabel": "表格與分析",
+    "keywords": [
+      "ungroup-list",
+      "flatten-groups",
+      "展平群組"
+    ]
+  },
+  {
+    "name": "density-compact",
+    "label": "緊密列高",
+    "category": "analytics",
+    "categoryLabel": "表格與分析",
+    "keywords": [
+      "compact-density",
+      "dense-rows",
+      "緊湊密度"
+    ]
+  },
+  {
+    "name": "density-comfortable",
+    "label": "寬鬆列高",
+    "category": "analytics",
+    "categoryLabel": "表格與分析",
+    "keywords": [
+      "comfortable-density",
+      "spacious-rows",
+      "寬鬆密度"
+    ]
+  },
+  {
+    "name": "columns-settings",
+    "label": "自訂顯示欄位",
+    "category": "analytics",
+    "categoryLabel": "表格與分析",
+    "keywords": [
+      "manage-columns",
+      "column-chooser",
+      "欄位設定"
+    ]
+  },
+  {
+    "name": "sort-multiple",
+    "label": "多層排序",
+    "category": "analytics",
+    "categoryLabel": "表格與分析",
+    "keywords": [
+      "multi-sort",
+      "sort-by-multiple",
+      "多欄排序"
+    ]
+  },
+  {
+    "name": "user-lock",
+    "label": "受限帳號",
+    "category": "identity",
+    "categoryLabel": "帳戶與權限",
+    "keywords": [
+      "locked-account",
+      "account-lock",
+      "帳號鎖定"
+    ]
+  },
+  {
+    "name": "user-shield",
+    "label": "管理員",
+    "category": "identity",
+    "categoryLabel": "帳戶與權限",
+    "keywords": [
+      "administrator",
+      "admin-role",
+      "系統管理員"
+    ]
+  },
+  {
+    "name": "user-clock",
+    "label": "待啟用成員",
+    "category": "identity",
+    "categoryLabel": "帳戶與權限",
+    "keywords": [
+      "pending-user",
+      "pending-invitation",
+      "邀請中"
+    ]
+  },
+  {
+    "name": "user-off",
+    "label": "停用帳號",
+    "category": "identity",
+    "categoryLabel": "帳戶與權限",
+    "keywords": [
+      "inactive-user",
+      "disabled-account",
+      "已停權"
+    ]
+  },
+  {
+    "name": "users-minus",
+    "label": "移除群組成員",
+    "category": "identity",
+    "categoryLabel": "帳戶與權限",
+    "keywords": [
+      "remove-team-member",
+      "group-remove",
+      "移出群組"
+    ]
+  },
+  {
+    "name": "user-search",
+    "label": "尋找成員",
+    "category": "identity",
+    "categoryLabel": "帳戶與權限",
+    "keywords": [
+      "find-person",
+      "account-search",
+      "成員搜尋"
+    ]
+  },
+  {
+    "name": "link-lock",
+    "label": "受限分享連結",
+    "category": "identity",
+    "categoryLabel": "帳戶與權限",
+    "keywords": [
+      "protected-link",
+      "restricted-link",
+      "連結密碼"
+    ]
+  },
+  {
+    "name": "link-expire",
+    "label": "分享連結期限",
+    "category": "identity",
+    "categoryLabel": "帳戶與權限",
+    "keywords": [
+      "expiring-link",
+      "link-expiry",
+      "連結到期"
+    ]
+  },
+  {
+    "name": "link-copy",
+    "label": "複製分享連結",
+    "category": "identity",
+    "categoryLabel": "帳戶與權限",
+    "keywords": [
+      "copy-link",
+      "copy-url",
+      "複製網址"
+    ]
+  },
+  {
+    "name": "link-settings",
+    "label": "分享連結設定",
+    "category": "identity",
+    "categoryLabel": "帳戶與權限",
+    "keywords": [
+      "link-options",
+      "sharing-settings",
+      "連結選項"
+    ]
+  },
+  {
+    "name": "field-text",
+    "label": "單行文字欄位",
+    "category": "forms",
+    "categoryLabel": "表單與回饋",
+    "keywords": [
+      "short-answer",
+      "text-input",
+      "短答"
+    ]
+  },
+  {
+    "name": "field-number",
+    "label": "數值欄位",
+    "category": "forms",
+    "categoryLabel": "表單與回饋",
+    "keywords": [
+      "number-input",
+      "numeric-field",
+      "數字輸入"
+    ]
+  },
+  {
+    "name": "field-dropdown",
+    "label": "下拉欄位",
+    "category": "forms",
+    "categoryLabel": "表單與回饋",
+    "keywords": [
+      "select-field",
+      "dropdown-field",
+      "下拉選項"
+    ]
+  },
+  {
+    "name": "field-multiselect",
+    "label": "多選欄位",
+    "category": "forms",
+    "categoryLabel": "表單與回饋",
+    "keywords": [
+      "multi-select",
+      "multiple-select",
+      "多重選取"
+    ]
+  },
+  {
+    "name": "signature",
+    "label": "簽名",
+    "category": "forms",
+    "categoryLabel": "表單與回饋",
+    "keywords": [
+      "sign-here",
+      "autograph",
+      "手寫簽名"
+    ]
+  },
+  {
+    "name": "form-section",
+    "label": "表單區段",
+    "category": "forms",
+    "categoryLabel": "表單與回饋",
+    "keywords": [
+      "form-section-break",
+      "section-header",
+      "問卷分段"
+    ]
+  },
+  {
+    "name": "field-required",
+    "label": "必填欄位",
+    "category": "forms",
+    "categoryLabel": "表單與回饋",
+    "keywords": [
+      "required-field",
+      "mandatory-input",
+      "必填題"
+    ]
+  },
+  {
+    "name": "field-attachment",
+    "label": "檔案上傳欄位",
+    "category": "forms",
+    "categoryLabel": "表單與回饋",
+    "keywords": [
+      "file-upload-field",
+      "attachment-field",
+      "附檔題"
+    ]
+  },
+  {
+    "name": "field-rating",
+    "label": "評分欄位",
+    "category": "forms",
+    "categoryLabel": "表單與回饋",
+    "keywords": [
+      "rating-field",
+      "star-rating",
+      "星等評分"
+    ]
+  },
+  {
+    "name": "field-textarea",
+    "label": "多行文字欄位",
+    "category": "forms",
+    "categoryLabel": "表單與回饋",
+    "keywords": [
+      "textarea",
+      "long-answer",
+      "paragraph-field",
+      "長答題"
+    ]
+  },
+  {
+    "name": "trash-restore",
+    "label": "還原垃圾桶項目",
+    "category": "files",
+    "categoryLabel": "檔案與整理",
+    "keywords": [
+      "undelete",
+      "restore-from-trash",
+      "從垃圾桶還原"
+    ]
+  },
+  {
+    "name": "trash-empty",
+    "label": "清空垃圾桶",
+    "category": "files",
+    "categoryLabel": "檔案與整理",
+    "keywords": [
+      "empty-trash",
+      "delete-forever",
+      "永久刪除"
+    ]
+  },
+  {
+    "name": "file-shortcut",
+    "label": "檔案捷徑",
+    "category": "files",
+    "categoryLabel": "檔案與整理",
+    "keywords": [
+      "file-alias",
+      "shortcut-file",
+      "檔案替身"
+    ]
+  },
+  {
+    "name": "file-shared",
+    "label": "共享檔案",
+    "category": "files",
+    "categoryLabel": "檔案與整理",
+    "keywords": [
+      "shared-file",
+      "document-shared",
+      "共用文件"
+    ]
+  },
+  {
+    "name": "file-history",
+    "label": "檔案歷程",
+    "category": "files",
+    "categoryLabel": "檔案與整理",
+    "keywords": [
+      "file-versions",
+      "version-history",
+      "檔案版本"
+    ]
+  },
+  {
+    "name": "file-sync",
+    "label": "檔案同步",
+    "category": "files",
+    "categoryLabel": "檔案與整理",
+    "keywords": [
+      "sync-file",
+      "document-sync",
+      "同步檔案"
+    ]
+  },
+  {
+    "name": "folder-shared",
+    "label": "共享資料夾",
+    "category": "files",
+    "categoryLabel": "檔案與整理",
+    "keywords": [
+      "shared-folder",
+      "folder-collaboration",
+      "共用資料夾"
+    ]
+  },
+  {
+    "name": "folder-shortcut",
+    "label": "資料夾捷徑",
+    "category": "files",
+    "categoryLabel": "檔案與整理",
+    "keywords": [
+      "folder-alias",
+      "shortcut-folder",
+      "目錄替身"
+    ]
+  },
+  {
+    "name": "folder-favorite",
+    "label": "常用資料夾",
+    "category": "files",
+    "categoryLabel": "檔案與整理",
+    "keywords": [
+      "starred-folder",
+      "favorite-folder",
+      "星號目錄"
+    ]
+  },
+  {
+    "name": "file-offline",
+    "label": "可離線使用的檔案",
+    "category": "files",
+    "categoryLabel": "檔案與整理",
+    "keywords": [
+      "available-offline",
+      "local-copy",
+      "離線副本"
+    ]
+  },
+  {
+    "name": "automation-trigger",
+    "label": "自動化觸發條件",
+    "category": "systems",
+    "categoryLabel": "系統與工作流程",
+    "keywords": [
+      "event-trigger",
+      "automation-start",
+      "觸發事件"
+    ]
+  },
+  {
+    "name": "workflow-condition",
+    "label": "流程判斷",
+    "category": "systems",
+    "categoryLabel": "系統與工作流程",
+    "keywords": [
+      "if-else",
+      "condition-node",
+      "條件分支"
+    ]
+  },
+  {
+    "name": "workflow-parallel",
+    "label": "平行分支",
+    "category": "systems",
+    "categoryLabel": "系統與工作流程",
+    "keywords": [
+      "parallel-split",
+      "fork-flow",
+      "平行執行"
+    ]
+  },
+  {
+    "name": "workflow-join",
+    "label": "匯合流程",
+    "category": "systems",
+    "categoryLabel": "系統與工作流程",
+    "keywords": [
+      "join-flow",
+      "synchronize-branches",
+      "分支匯合"
+    ]
+  },
+  {
+    "name": "workflow-delay",
+    "label": "延遲流程步驟",
+    "category": "systems",
+    "categoryLabel": "系統與工作流程",
+    "keywords": [
+      "delay-step",
+      "wait-step",
+      "等待步驟"
+    ]
+  },
+  {
+    "name": "workflow-loop",
+    "label": "重複流程步驟",
+    "category": "systems",
+    "categoryLabel": "系統與工作流程",
+    "keywords": [
+      "for-each",
+      "loop-step",
+      "逐項執行"
+    ]
+  },
+  {
+    "name": "workflow-stop",
+    "label": "結束流程",
+    "category": "systems",
+    "categoryLabel": "系統與工作流程",
+    "keywords": [
+      "end-node",
+      "terminate-flow",
+      "終止節點"
+    ]
+  },
+  {
+    "name": "workflow-run",
+    "label": "執行流程",
+    "category": "systems",
+    "categoryLabel": "系統與工作流程",
+    "keywords": [
+      "run-workflow",
+      "execute-flow",
+      "手動執行"
+    ]
+  },
+  {
+    "name": "workflow-disabled",
+    "label": "停用自動化",
+    "category": "systems",
+    "categoryLabel": "系統與工作流程",
+    "keywords": [
+      "disable-workflow",
+      "inactive-rule",
+      "已停用流程"
+    ]
+  },
+  {
+    "name": "workflow-log",
+    "label": "流程執行紀錄",
+    "category": "systems",
+    "categoryLabel": "系統與工作流程",
+    "keywords": [
+      "run-history",
+      "execution-log",
+      "執行記錄"
+    ]
+  },
+  {
+    "name": "select-all",
+    "label": "全選項目",
+    "category": "actions",
+    "categoryLabel": "基本操作",
+    "keywords": [
+      "select-everything",
+      "mark-all",
+      "全部選取"
+    ]
+  },
+  {
+    "name": "deselect-all",
+    "label": "清除全部選取",
+    "category": "actions",
+    "categoryLabel": "基本操作",
+    "keywords": [
+      "clear-selection",
+      "select-none",
+      "取消全選"
+    ]
+  },
+  {
+    "name": "batch-edit",
+    "label": "批次編輯",
+    "category": "actions",
+    "categoryLabel": "基本操作",
+    "keywords": [
+      "bulk-edit",
+      "edit-multiple",
+      "大量編輯"
+    ]
+  },
+  {
+    "name": "batch-delete",
+    "label": "批次刪除",
+    "category": "actions",
+    "categoryLabel": "基本操作",
+    "keywords": [
+      "bulk-delete",
+      "delete-multiple",
+      "大量刪除"
+    ]
+  },
+  {
+    "name": "batch-download",
+    "label": "批次下載",
+    "category": "actions",
+    "categoryLabel": "基本操作",
+    "keywords": [
+      "bulk-download",
+      "download-selected",
+      "大量下載"
+    ]
+  },
+  {
+    "name": "breadcrumb",
+    "label": "階層路徑",
+    "category": "actions",
+    "categoryLabel": "基本操作",
+    "keywords": [
+      "breadcrumbs",
+      "hierarchy-path",
+      "麵包屑"
+    ]
+  },
+  {
+    "name": "pagination",
+    "label": "分頁導覽",
+    "category": "actions",
+    "categoryLabel": "基本操作",
+    "keywords": [
+      "page-navigation",
+      "pager",
+      "頁碼導覽"
+    ]
+  },
+  {
+    "name": "stepper",
+    "label": "步驟導覽",
+    "category": "actions",
+    "categoryLabel": "基本操作",
+    "keywords": [
+      "step-indicator",
+      "wizard-steps",
+      "進度步驟"
+    ]
+  },
+  {
+    "name": "carousel",
+    "label": "輪播檢視",
+    "category": "actions",
+    "categoryLabel": "基本操作",
+    "keywords": [
+      "slideshow",
+      "content-slider",
+      "圖片輪播"
+    ]
+  },
+  {
+    "name": "command-palette",
+    "label": "指令面板",
+    "category": "actions",
+    "categoryLabel": "基本操作",
+    "keywords": [
+      "quick-actions",
+      "command-menu",
+      "快速命令"
+    ]
+  }
+]

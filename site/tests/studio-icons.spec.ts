@@ -2,8 +2,10 @@ import {expect, test} from '@playwright/test'
 import {readFile} from 'node:fs/promises'
 import studio from '../../packages/icons/src/studio-scope.json' with {type:'json'}
 import workbench from '../../packages/icons/src/workbench-scope.json' with {type:'json'}
+import operations from '../../packages/icons/src/operations-scope.json' with {type:'json'}
 
 const batches = [
+  ...['tasks', 'schedules and inbox', 'views and access', 'forms and files', 'workflows and controls'].map((family, i) => ({label: 'operations ' + family, entries: operations.slice(i * 20, (i + 1) * 20)})),
   ...['interface', 'canvas', 'editor'].map((family, i) => ({label: 'studio ' + family, entries: studio.slice(i * 36, (i + 1) * 36)})),
   ...['interface', 'canvas', 'editor'].map((family, i) => ({label: 'workbench ' + family, entries: workbench.slice(i * 34, (i + 1) * 34)})),
 ]
@@ -26,10 +28,12 @@ for (const {label, entries} of batches) {
   })
 }
 
-test('studio synonyms open the same SVG in both explorer languages', async ({page}) => {
-  for (const [base, query, label, button] of [
-    ['', 'exclusive-or', 'boolean exclude', 'Download SVG'],
-    ['/tw', '排除重疊', '布林排除', '下載 SVG'],
+test('studio and operations synonyms open the same SVG in both explorer languages', async ({page}) => {
+  for (const [base, query, label, button, filename] of [
+    ['', 'exclusive-or', 'boolean exclude', 'Download SVG', 'boolean-exclude.svg'],
+    ['/tw', '排除重疊', '布林排除', '下載 SVG', 'boolean-exclude.svg'],
+    ['', 'high-priority', 'priority high', 'Download SVG', 'priority-high.svg'],
+    ['/tw', '高優先度', '高優先', '下載 SVG', 'priority-high.svg'],
   ]) {
     await page.goto(`${base}/icons?size=16&q=${encodeURIComponent(query)}`)
     await page.getByRole('button', {name: label, exact: true}).click()
@@ -37,7 +41,7 @@ test('studio synonyms open the same SVG in both explorer languages', async ({pag
     const pending = page.waitForEvent('download')
     await dialog.getByRole('link', {name: button, exact: true}).click()
     const download = await pending
-    expect(download.suggestedFilename()).toBe('boolean-exclude.svg')
+    expect(download.suggestedFilename()).toBe(filename)
     expect(await readFile((await download.path())!, 'utf8')).toContain(await dialog.locator('textarea').inputValue())
   }
 })
