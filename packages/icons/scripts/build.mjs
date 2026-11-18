@@ -67,7 +67,12 @@ for(const entry of catalog){
     const {strokes,...master}=variants[size][corner];return [corner,master];
   }))]))};
   const dataName=entry.component.replace(/Icon$/,'');
-  await put(`dist/data/${entry.name}.js`,`export const ${dataName} = ${JSON.stringify(definition)};\n`);
+  // The dynamic definition assembles the nine fixed masters instead of repeating
+  // their geometry, which would double the published package.
+  const masters=sizes.flatMap(size=>corners.map(corner=>({size,corner,binding:`m${size}${corner}`})));
+  const assembled=`{name:${JSON.stringify(entry.name)},direction:${JSON.stringify(entry.direction)},variants:{${sizes.map(size=>`${JSON.stringify(String(size))}:{${corners.map(corner=>`${JSON.stringify(corner)}:v(m${size}${corner})`).join(',')}}`).join(',')}}}`;
+  await put(`dist/data/${entry.name}.js`,masters.map(({size,corner,binding})=>`import { master as ${binding} } from './${size}/${corner}/${entry.name}.js';`).join('\n')+
+    `\nconst v = ({ size, opticalSize, corner, ...master }) => master;\nexport const ${dataName} = /* @__PURE__ */ (() => (${assembled}))();\n`);
   await put(`dist/data/${entry.name}.d.ts`,`import type { IconDefinition } from '../runtime.js';\nexport const ${dataName}: IconDefinition;\n`);
   for(const size of sizes)for(const corner of corners){
     const svg=renderSvg(definition,{size,opticalSize:size,corner});
@@ -92,7 +97,7 @@ const provenance=catalog.map(entry=>{
   if(preservedNotices[entry.name]&&!ref)throw new Error(`Missing preserved source: ${entry.name}`);
   return {...entry,source:ref?{kind:'study-redraw',copyright:preservedNotices[entry.name],reference:ref.url,license:'MIT',author:'Hugeicons',commit:ref.commit,modifications:'Reconstructed native-size geometry, three corner profiles, optical spacing and detail reductions; not an automatic path conversion.'}:{kind:'authored',author:'Master and contributors'},variants:9};
 });
-const result={schemaVersion:1,version:'0.1.0-alpha.0',status:'visual-review-required',conceptCount,iconCount:catalog.length,sizes,corners,specifications,pilot,categories,icons:provenance,inventory};
+const result={schemaVersion:1,conceptCount,iconCount:catalog.length,sizes,corners,specifications,pilot,categories,icons:provenance,inventory};
 await put('dist/catalog.json',JSON.stringify(result,null,2)+'\n');
 await put('dist/definitions.json',JSON.stringify(definitions)+'\n');
 for(const [key,files] of Object.entries(bundles)) await put(`dist/downloads/master-icons-${key}.zip`,zipSync(files,{level:9,mtime:new Date(2026,10,16)}));
