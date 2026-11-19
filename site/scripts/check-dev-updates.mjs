@@ -58,7 +58,9 @@ try {
   await visit('/icons')
   times.coldIconsMs = Math.round(performance.now() - start)
   await expect(page.locator('.explorer-icon svg')).toHaveCount(96)
-  const visibleModules=iconModules.filter(url=>!/(?:\/data\/16\/soft\/)(?:x|copy|download|check)\.js(?:\?|$)/.test(url))
+  // The explorer's four controls use fixed icons backed by shared native geometry.
+  const controls = /\/data\/(?:native\/)?16\/soft\/(?:x|copy|download|check)\.js(?:\?|$)/
+  const visibleModules = iconModules.filter(url => !controls.test(url))
   assert.ok(new Set(visibleModules.filter(url => url.includes('/data/') && url.endsWith('.json'))).size <= 96, 'Explorer must load only visible definitions')
   assert.equal(visibleModules.filter(url => url.includes('/packages/icons/dist/data/')).length, 0, 'Grid icons draw from definitions, never per-icon modules')
   // Let first-use dependency discovery settle before testing edits.
