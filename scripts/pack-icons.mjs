@@ -11,13 +11,20 @@ export async function packIcons(){
   const packages=[];
   for(const name of ['icons',...['react','vue','svelte','preact','astro'].map(framework=>'icons-'+framework)]){
     const folder=resolve(root,'packages',name);
-    const manifest=JSON.parse(await readFile(resolve(folder,'package.json'),'utf8'));
+    const manifestPath=resolve(folder,'package.json');
+    const manifestSource=await readFile(manifestPath,'utf8');
+    const manifest=JSON.parse(manifestSource);
     const archive=resolve(root,`work/master-${name}-alpha.tgz`);
-    execFileSync('bun',['pm','pack','--ignore-scripts','--filename',archive],{cwd:folder,stdio:['ignore','ignore','pipe'],maxBuffer:8*1024*1024});
+    try {
+      execFileSync('bun',['pm','pack','--filename',archive],{cwd:folder,stdio:['ignore','ignore','pipe'],maxBuffer:8*1024*1024});
+    } finally {
+      // A failed pack can exit before postpack. Restore the workspace bytes.
+      if(await readFile(manifestPath,'utf8')!==manifestSource)await writeFile(manifestPath,manifestSource);
+    }
     const entries=execFileSync('tar',['-tzf',archive],{encoding:'utf8',maxBuffer:8*1024*1024}).trim().split('\n').filter(path=>!path.endsWith('/'));
     let unpackedBytes=0;
     for(const entry of entries)unpackedBytes+=(await stat(resolve(folder,entry.replace(/^package\//,'')))).size;
-    const packedSource=execFileSync('tar',['-xOf',archive,'package/package.json'],{encoding:'utf8'});
+    const packedSource=execFileSync('tar',['-xOf',archive,'package/package.json'],{encoding:'utf8',maxBuffer:8*1024*1024});
     const packed=JSON.parse(packedSource);
     unpackedBytes+=Buffer.byteLength(packedSource)-(await stat(resolve(folder,'package.json'))).size;
     const result={name:manifest.name,archive,files:entries.length,compressedBytes:(await stat(archive)).size,unpackedBytes,manifest:packed,entries};

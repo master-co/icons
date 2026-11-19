@@ -42,6 +42,14 @@ All frameworks use the same drawings and expose the same icon names. Install onl
 
 Each framework package also has all nine fixed variants at `@master/icons-{framework}/{16|20|24}/{sharp|soft|rounded}`. A generic icon includes nine optical size and corner combinations with their supported stroke widths; a fixed icon includes only its selected size and corner with the supported widths. Both forms tree-shake unused icons.
 
+All five packages expose individual native-stroke icons at `@master/icons-{framework}/native/{16|20|24}/{sharp|soft|rounded}/{name}`.
+
+```js
+import SearchIcon from '@master/icons-svelte/native/16/soft/search';
+```
+
+Each native leaf exports its component as default and loads one original drawing. It accepts a display `size` and the adapter's SVG props. Use a fixed or dynamic entry to select a custom `strokeWidth`.
+
 ### Vue
 
 ```vue

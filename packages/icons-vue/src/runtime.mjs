@@ -6,9 +6,12 @@ import { iconPresentation, scopeNodes } from '@master/icons/presentation';
 const scopes = new WeakMap();
 const elements = nodes => nodes.map(([tag, attrs, children]) => h(tag, attrs, children ? elements(children) : undefined));
 function drawVue(master, directionPolicy, props) {
+  return nativeIconElement(resolveStroke(master, props.strokeWidth ?? props['stroke-width']), directionPolicy, props);
+}
+
+export function nativeIconElement(master, directionPolicy, props = {}) {
   const instance = getCurrentInstance();
   if (!scopes.has(instance)) scopes.set(instance, useId());
-  master = resolveStroke(master, props.strokeWidth ?? props['stroke-width']);
   const { attributes, transform } = iconPresentation(master, directionPolicy, props);
   const nodes = elements(scopeNodes(master.nodes, scopes.get(instance)));
   return h('svg', attributes, transform ? [h('g', { transform }, nodes)] : nodes);

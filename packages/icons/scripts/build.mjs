@@ -80,8 +80,12 @@ for(const entry of catalog){
     if(!archiveSvg)await put(`icons/${size}/${corner}/${entry.name}.svg`,notice+svg+'\n');
     bundles[`${size}-${corner}`][`${entry.name}.svg`]=strToU8(notice+svg+'\n');
     inventory.push({name:entry.name,opticalSize:size,corner,path:`icons/${size}/${corner}/${entry.name}.svg`,sha256:hash(notice+svg+'\n')});
-    const master={...variants[size][corner],opticalSize:size,corner,size};
-    await put(`dist/data/${size}/${corner}/${entry.name}.js`,`export const master = ${JSON.stringify(master)};\n`);
+    const {strokes,...native}=variants[size][corner];
+    const nativePath=`native/${size}/${corner}/${entry.name}`;
+    await put(`dist/data/${nativePath}.js`,`export const master = ${JSON.stringify({...native,opticalSize:size,corner,size})};\n`);
+    await put(`dist/data/${nativePath}.d.ts`,`import type { ResolvedIcon } from '../../../../runtime.js';\nexport const master: Omit<ResolvedIcon, 'strokes'>;\n`);
+    const head=`import { master as native } from '../../${nativePath}.js';\n`;
+    await put(`dist/data/${size}/${corner}/${entry.name}.js`,head+`export const master = { ...native, strokes: ${JSON.stringify(strokes)} };\n`);
     await put(`dist/data/${size}/${corner}/${entry.name}.d.ts`,`import type { ResolvedIcon } from '../../../runtime.js';\nexport const master: ResolvedIcon;\n`);
   }
 }

@@ -36,6 +36,14 @@ export function SearchExamples() {
 
 A dynamic entry carries all nine drawings of each icon; a fixed entry carries only the selected size and corner. Bundlers that tree-shake remove unused icons. Every framework has its own `@master/icons-*` package that depends only on the shared core and its framework peer. See the [package documentation](packages/icons/README.md).
 
+For a single original drawing at its native stroke width, use the default export from a `native` entry:
+
+```js
+import SearchIcon from '@master/icons-react/native/16/soft/search';
+```
+
+The same path works in Vue, Svelte, Preact and Astro. Use the dynamic or fixed entry when you need to select a stroke width.
+
 To render SVG markup directly:
 
 ```js

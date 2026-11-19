@@ -7,3 +7,5 @@ export interface IconProps extends Omit<SVGAttributes<SVGSVGElement>, 'children'
 export type StaticIconProps = Omit<IconProps, 'corner' | 'opticalSize'>;
 export type IconComponent = Component<IconProps, {}, 'ref'>;
 export type StaticIconComponent = Component<StaticIconProps, {}, 'ref'>;
+export type NativeIconProps = Omit<StaticIconProps, 'strokeWidth' | 'stroke-width'>;
+export type NativeIconComponent = Component<NativeIconProps, {}, 'ref'>;

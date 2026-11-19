@@ -4,7 +4,8 @@ import { tmpdir } from 'node:os';
 import { resolve } from 'node:path';
 import assert from 'node:assert/strict';
 import { catalog } from '../packages/icons/src/catalog.mjs';
-import { checkPackedFrameworks } from '../packages/icons/tests/helpers/packed-frameworks.mjs';
+import { checkPackedFrameworks, checkPackedNativeFrameworks, frameworkNames } from '../packages/icons/tests/helpers/packed-frameworks.mjs';
+import { sizes, corners } from '../packages/icons/src/geometry.mjs';
 import { packIcons } from './pack-icons.mjs';
 
 await mkdir('work',{recursive:true});
@@ -23,6 +24,18 @@ for(const pkg of packages){
   assert.deepEqual(pkg.manifest.dependencies,{'@master/icons':packages[0].manifest.version},'Packed dependencies must use the matching version, not workspace paths');
   assert.deepEqual(Object.keys(pkg.manifest.peerDependencies),[framework]);
   assert.equal(pkg.entries.filter(path=>path.endsWith('.svg')).length,0,'Adapters share geometry from core');
+  const files = new Set(pkg.entries);
+  const nativePaths = sizes.flatMap(size => corners.flatMap(corner =>
+    catalog.map(({ name }) => `./native/${size}/${corner}/${name}`)));
+  const nativeExports = Object.keys(pkg.manifest.exports).filter(path => path.startsWith('./native/'));
+  assert.deepEqual(nativeExports.sort(), nativePaths.sort());
+  assert.deepEqual(pkg.entries.filter(path => path.startsWith('package/dist/native/') && path.endsWith('.d.ts')), []);
+  for (const path of nativePaths) {
+    const entry = pkg.manifest.exports[path];
+    assert.equal(entry.types, './dist/native.d.ts');
+    assert.ok(files.has('package/' + entry.types.slice(2)));
+    assert.ok(files.has('package/' + entry.import.slice(2)));
+  }
   for(const other of ['react','vue','svelte','preact','astro'].filter(name=>name!==framework))assert.ok(!pkg.entries.some(path=>path.endsWith('.'+other)),`Unexpected ${other} in ${pkg.name}`);
  }
  execFileSync('tar',['-xzf',pkg.archive,'-C',consumer]);
@@ -94,3 +107,33 @@ try{
  console.log('Isolated installation: only the packed core and the requested Svelte adapter installed.');
 }finally{await rm(installed,{recursive:true,force:true});}
 console.log(`All ${packages.length} packages validated; framework dependency isolation and packed consumers passed. Fixture: ${consumer}`);
+
+const nativeConsumer = await mkdtemp(resolve(tmpdir(), 'master-icons-native-install-'));
+try {
+  const dependencies = Object.fromEntries(packages.map(({ name, archive }) => [name, 'file:' + archive]));
+  for (const name of [...frameworkNames, 'react-dom', '@types/react']) {
+    const projectManifest = JSON.parse(await readFile(resolve('node_modules', name, 'package.json'), 'utf8'));
+    dependencies[name] = projectManifest.version;
+  }
+  await writeFile(resolve(nativeConsumer, 'package.json'), JSON.stringify({
+    private: true,
+    type: 'module',
+    dependencies,
+    overrides: { '@master/icons': dependencies['@master/icons'] },
+  }));
+  execFileSync('bun', ['install', '--ignore-scripts'], {
+    cwd: nativeConsumer, stdio: ['ignore', 'pipe', 'pipe'],
+  });
+  for (const { name, manifest } of packages) {
+    const installed = JSON.parse(await readFile(resolve(nativeConsumer, 'node_modules', name, 'package.json'), 'utf8'));
+    assert.deepEqual(installed, manifest, `${name} must be installed from its packed archive`);
+  }
+  const svg = '16/soft/search.svg';
+  assert.deepEqual(
+    await readFile(resolve(nativeConsumer, 'node_modules/@master/icons/icons', svg)),
+    await readFile(resolve('packages/icons/icons', svg)),
+  );
+  await checkPackedNativeFrameworks(nativeConsumer);
+} finally {
+  await rm(nativeConsumer, { recursive: true, force: true });
+}

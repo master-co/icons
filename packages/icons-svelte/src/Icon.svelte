@@ -1,6 +1,6 @@
 <svelte:options namespace="svg" />
 <script lang="ts">
-  import {resolveStroke, type IconDefinition, type ResolvedIcon, type IconNode} from '@master/icons/runtime';
+  import type { IconDefinition, ResolvedIcon, IconNode } from '@master/icons/runtime';
   import type { IconProps } from './types.js';
   import { iconPresentation, scopeNodes } from '@master/icons/presentation';
 
@@ -8,9 +8,8 @@
     master, directionPolicy, ref = $bindable(undefined), ...props
   }: IconProps & { master: ResolvedIcon; directionPolicy: IconDefinition['direction'] } = $props();
   const scope = $props.id();
-  const selected = $derived(resolveStroke(master, props.strokeWidth ?? props['stroke-width'] as number | undefined));
-  const presentation = $derived(iconPresentation(selected, directionPolicy, props));
-  const nodes = $derived(scopeNodes(selected.nodes, scope));
+  const presentation = $derived(iconPresentation(master, directionPolicy, props));
+  const nodes = $derived(scopeNodes(master.nodes, scope));
 </script>
 
 {#snippet elements(items: readonly IconNode[])}

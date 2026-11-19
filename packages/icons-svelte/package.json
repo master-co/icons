@@ -104,7 +104,8 @@
   },
   "scripts": {
     "build": "node ../../scripts/build-frameworks.mjs svelte --incremental",
-    "prepack": "bun run build"
+    "prepack": "bun run build && node ../../scripts/framework-package-exports.mjs add",
+    "postpack": "node ../../scripts/framework-package-exports.mjs remove"
   },
   "publishConfig": {
     "access": "public",

@@ -4,3 +4,5 @@ export interface IconProps extends Omit<SVGAttributes, 'color' | 'direction' | '
 export type StaticIconProps = Omit<IconProps, 'corner' | 'opticalSize'>;
 export type IconComponent = FunctionalComponent<IconProps>;
 export type StaticIconComponent = FunctionalComponent<StaticIconProps>;
+export type NativeIconProps = Omit<StaticIconProps, 'strokeWidth' | 'stroke-width'>;
+export type NativeIconComponent = FunctionalComponent<NativeIconProps>;

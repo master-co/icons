@@ -24,60 +24,75 @@ if(cache?.hit){console.log(`${manifest.name}: content cache hit (${Math.round(pe
 if(!cache){await rm(cacheFile,{force:true});if(!process.argv.includes('--incremental'))await rm(resolve(root,'dist'),{recursive:true,force:true});}
 const emitted=new Set();
 const put=async(path,body)=>{emitted.add(path);await writeIfChanged(resolve(root,'dist',path),body);};
-const native=framework==='svelte'||framework==='astro';
-const extension=native?framework:'js';
+const sourceComponent=framework==='svelte'||framework==='astro';
+const extension=sourceComponent?framework:'js';
 await put('types.d.ts',await readFile(resolve(root,'src/types.d.ts'),'utf8'));
-if(native)await put(`Icon.${extension}`,await readFile(resolve(root,`src/Icon.${extension}`),'utf8'));
+// Astro's types.d.ts uses an extensionless import for its SVG attribute
+// namespace. Load the public declaration directly for NodeNext consumers.
+const nativeTypeImports=framework==='astro'?"import 'astro/astro-jsx';\n":'';
+await put('native.d.ts',nativeTypeImports+`import type { NativeIconComponent } from './types.js';\nexport type { NativeIconProps, NativeIconComponent } from './types.js';\ndeclare const icon: NativeIconComponent;\nexport default icon;\n`);
+if(sourceComponent)await put(`Icon.${extension}`,await readFile(resolve(root,`src/Icon.${extension}`),'utf8'));
 else await put('runtime.js',await readFile(resolve(root,'src/runtime.mjs'),'utf8'));
-for(const group of [null,...sizes.flatMap(size=>corners.map(corner=>({size,corner})))]){
+const fixedGroups=sizes.flatMap(size=>corners.map(corner=>({size,corner})));
+for(const group of [null,...fixedGroups,...fixedGroups.map(group=>({...group,nativeOnly:true}))]){
   const fixed=group!==null;
-  const folder=fixed?`${group.size}/${group.corner}`:'icons';
-  const base=fixed?'../../':'../';
+  const nativeOnly=group?.nativeOnly===true;
+  const fixedPath=fixed?`${group.size}/${group.corner}`:'';
+  const folder=nativeOnly?`native/${fixedPath}`:fixed?fixedPath:'icons';
+  const base=nativeOnly?'../../../':fixed?'../../':'../';
   const componentType=fixed?'StaticIconComponent':'IconComponent';
-  const propsType=fixed?'StaticIconProps':'IconProps';
+  const propsType=nativeOnly?'NativeIconProps':fixed?'StaticIconProps':'IconProps';
   for(const entry of catalog){
     const dataName=fixed?'master':entry.component.replace(/Icon$/,'');
     const dataImport=`import { ${dataName} } from '@master/icons/data/${fixed?folder+'/':''}${entry.name}';`;
     const direction=JSON.stringify(entry.direction);
+    const runtimeImport=nativeOnly?'':fixed?'import { resolveStroke } from \'@master/icons/runtime\';':'import { resolveIcon } from \'@master/icons/runtime\';';
+    const resolvedMaster=props=>nativeOnly
+      ? 'master'
+      : fixed
+        ? `resolveStroke(master, ${props}.strokeWidth ?? ${props}['stroke-width'] as number | undefined)`
+        : `resolveIcon(${dataName}, { ...${props}, strokeWidth: ${props}.strokeWidth ?? ${props}['stroke-width'] as number | undefined })`;
     let source;
-    if(!native){
-      const render=fixed?'staticIconElement':'iconElement';
+    if(!sourceComponent){
+      const render=nativeOnly?'nativeIconElement':fixed?'staticIconElement':'iconElement';
       const args=fixed?`master, ${direction}, props`:`${dataName}, props`;
       source=`${dataImport}\nimport { ${render} } from '${base}runtime.js';\n`;
-      if(framework==='react')source+=`import { forwardRef, useId } from 'react';\nexport const ${entry.component} = /* @__PURE__ */ forwardRef(function ${entry.component}(props, ref) { return ${render}(${fixed?`master, ${direction}`:dataName}, {...props, ref}, useId()); });\n`;
-      else source+=`${framework==='preact'?"import { useId } from 'preact/hooks';\n":''}export function ${entry.component}(props) { return ${render}(${args}${framework==='preact'?', useId()':''}); }\n${framework==='vue'?`${entry.component}.inheritAttrs = false;\n`:''}`;
+      const exportNamed=nativeOnly?'':'export ';
+      if(framework==='react')source+=`import { forwardRef, useId } from 'react';\n${exportNamed}const ${entry.component} = /* @__PURE__ */ forwardRef(function ${entry.component}(props, ref) { return ${render}(${fixed?`master, ${direction}`:dataName}, {...props, ref}, useId()); });\n`;
+      else source+=`${framework==='preact'?"import { useId } from 'preact/hooks';\n":''}${exportNamed}function ${entry.component}(props) { return ${render}(${args}${framework==='preact'?', useId()':''}); }\n${framework==='vue'?`${entry.component}.inheritAttrs = false;\n`:''}`;
+      if(nativeOnly)source+=`export default ${entry.component};\n`;
     }else if(framework==='svelte'){
       source=`${fixed?'':`<script module>\n${dataImport}\n</script>\n`}
 <script lang="ts">
-  ${fixed?dataImport:"import { resolveIcon } from '@master/icons/runtime';"}
+  ${fixed?dataImport:''}
+  ${runtimeImport}
   import Icon from '${base}Icon.svelte';
   import type { ${propsType} } from '${base}types.js';
   let { ref = $bindable(undefined), ...props }: ${propsType} = $props();
-  ${fixed?'':`const master = $derived(resolveIcon(${dataName}, props));`}
 </script>
 
-<Icon {...props} {master} directionPolicy={${direction}} bind:ref />
+<Icon {...props} master={${resolvedMaster('props')}} directionPolicy={${direction}} bind:ref />
 `;
     }else{
       source=`---
 ${dataImport}
-${fixed?'':"import { resolveIcon } from '@master/icons/runtime';"}
+${runtimeImport}
 import Icon from '${base}Icon.astro';
 import type { ${propsType} } from '${base}types.js';
 type Props = ${propsType};
-${fixed?'':`const master = resolveIcon(${dataName}, Astro.props);`}
 ---
 
-<Icon {...Astro.props} {master} directionPolicy={${direction}}><slot /></Icon>
+<Icon {...Astro.props} master={${resolvedMaster('Astro.props')}} directionPolicy={${direction}}><slot /></Icon>
 `;
     }
     await put(`${folder}/${entry.name}.${extension}`,source);
-    await put(`${folder}/${entry.name}${native?'.'+extension:''}.d.ts`,
-      `import type { ${componentType} } from '${base}types.js';\n${native?'declare const':'export const'} ${entry.component}: ${componentType};\n${native?`export default ${entry.component};\n`:''}`);
+    if(!nativeOnly)await put(`${folder}/${entry.name}${sourceComponent?'.'+extension:''}.d.ts`,
+      `import type { ${componentType} } from '${base}types.js';\n${sourceComponent?'declare const':'export const'} ${entry.component}: ${componentType};\n${sourceComponent?`export default ${entry.component};\n`:''}`);
   }
+  if(nativeOnly)continue;
   const indexFolder=fixed?folder+'/':'';
   const prefix=fixed?'./':'./icons/';
-  await put(`${indexFolder}index.${native?'ts':'js'}`,catalog.map(entry=>`export { ${native?'default as ':''}${entry.component} } from '${prefix}${entry.name}.${extension}';`).join('\n')+'\n');
+  await put(`${indexFolder}index.${sourceComponent?'ts':'js'}`,catalog.map(entry=>`export { ${sourceComponent?'default as ':''}${entry.component} } from '${prefix}${entry.name}.${extension}';`).join('\n')+'\n');
   const typesPath=fixed?'../../types.js':'./types.js';
   await put(`${indexFolder}index.d.ts`,`import type { ${componentType} } from '${typesPath}';\nexport type { ${propsType}, ${componentType} } from '${typesPath}';\n`+catalog.map(entry=>`export const ${entry.component}: ${componentType};`).join('\n')+'\n');
 }
@@ -89,4 +104,4 @@ for(const entry of await readdir(resolve(root,'dist'),{recursive:true,withFileTy
 }
 for(const file of ['LICENSE','THIRD_PARTY_NOTICES.md'])await cp(resolve(repo,file),resolve(root,file));
 await cache?.commit();
-console.log(`Built ${manifest.name}: ${catalog.length} icons × 10 entries in ${((performance.now()-started)/1000).toFixed(2)}s`);
+console.log(`Built ${manifest.name}: ${catalog.length} icons × 19 entries in ${((performance.now()-started)/1000).toFixed(2)}s`);

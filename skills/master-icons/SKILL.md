@@ -41,16 +41,17 @@ Install only these names, with the project's package manager; never a package wi
 
 ## Entries
 
-Both kinds of entry export the same names. Framework components end in `Icon` (`SearchIcon`); the core exports geometry by plain name (`Search`) with `renderSvg`.
+Dynamic and fixed entries export framework components by name (`SearchIcon`). The core exports geometry by plain name (`Search`) with `renderSvg`.
 
 - **Dynamic** (`@master/icons-react`): each icon carries all nine drawings and accepts `size`, `corner` and `strokeWidth`.
-- **Fixed** (`@master/icons-react/20/soft`): each icon carries one drawing and ships less. Prefer it when the app uses one size and corner everywhere.
+- **Fixed** (`@master/icons-react/20/soft`): each icon carries one size and corner with its supported stroke widths.
+- **Native** (`@master/icons-react/native/20/soft/search`): a default export for one original drawing. Prefer this leaf when the app uses the original stroke. Choose a fixed or dynamic import to set `strokeWidth`.
 
 ```tsx
 import { SearchIcon } from '@master/icons-react';
 <SearchIcon size={20} label="Search" />
 
-import { SearchIcon as Search20 } from '@master/icons-react/20/soft';
+import Search20 from '@master/icons-react/native/20/soft/search';
 <button aria-label="Search"><Search20 /></button>
 ```
 

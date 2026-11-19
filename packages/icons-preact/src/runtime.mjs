@@ -4,7 +4,10 @@ import { iconPresentation, scopeNodes } from '@master/icons/presentation';
 
 const elements = nodes => nodes.map(([tag, attrs, children], key) => h(tag, { ...attrs, key }, children ? elements(children) : undefined));
 function drawPreact(master, directionPolicy, props, scope) {
-  master = resolveStroke(master, props.strokeWidth ?? props['stroke-width']);
+  return nativeIconElement(resolveStroke(master, props.strokeWidth ?? props['stroke-width']), directionPolicy, props, scope);
+}
+
+export function nativeIconElement(master, directionPolicy, props = {}, scope) {
   const { attributes, transform } = iconPresentation(master, directionPolicy, props);
   const nodes = elements(scopeNodes(master.nodes, scope));
   return h('svg', attributes, transform ? h('g', { transform }, nodes) : nodes);
