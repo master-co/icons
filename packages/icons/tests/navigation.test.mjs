@@ -17,10 +17,10 @@ test('navigation-01 preserves every previous drawing outside its exact reviewed 
   assert.deepEqual(scope.added.toSorted(),['chevrons-down','chevrons-up']);
   assert.deepEqual(scope.modified.toSorted(),['chevrons-left','chevrons-right']);
   const followup=await json('docs/review/navigation-big-01/change-scope.json');
-  assert.deepEqual(Object.keys(defs).sort(),[...Object.keys(before),...scope.added,...followup.added].sort());
-  assert.deepEqual(Object.keys(before).filter(n=>JSON.stringify(before[n].variants)!==JSON.stringify(defs[n].variants)).sort(),scope.modified.toSorted());
+  assert.deepEqual(Object.keys(defs).sort(),[...Object.keys(before),...scope.added,...followup.added,'bars'].sort());
+  assert.deepEqual(Object.keys(before).filter(n=>JSON.stringify(before[n].variants)!==JSON.stringify(defs[n].variants)).sort(),[...scope.modified,'menu'].sort());
   assert.equal(Object.keys(before).length,scope.previousCount);
-  assert.equal(Object.keys(defs).length,scope.currentCount+followup.added.length);
+  assert.equal(Object.keys(defs).length,scope.currentCount+followup.added.length+1);
   const evidence=new Set();
   for(const item of review.items){
     assert.equal(hash(JSON.stringify(defs[item.name].variants)),item.visualReview.variantsSha256,item.name);
@@ -61,8 +61,11 @@ test('wide arrows preserve the previous inventory and expose four reviewed physi
   const scope=await json(`${root}/change-scope.json`),raw=await readFile(scope.baselineInventory),before=JSON.parse(raw);
   assert.equal(hash(raw),scope.baselineSha256);
   assert.deepEqual(scope.added.toSorted(),['arrow-big-left','arrow-big-right']);
-  assert.deepEqual(Object.keys(defs).sort(),[...Object.keys(before),...scope.added].sort());
-  for(const [name,sha] of Object.entries(before))assert.equal(hash(JSON.stringify(defs[name].variants)),sha,name);
+  assert.deepEqual(Object.keys(defs).sort(),[...Object.keys(before),...scope.added,'bars'].sort());
+  for(const [name,sha] of Object.entries(before)){
+    const currentName=name==='menu'?'bars':name;
+    assert.equal(hash(JSON.stringify(defs[currentName].variants)),sha,currentName);
+  }
   const saved=await json(`${root}/01-wide-arrows-final/definitions.json`);
   const decisions=await json(`${root}/decisions.json`);
   const evidence=new Set();
@@ -80,5 +83,17 @@ test('wide arrows preserve the previous inventory and expose four reviewed physi
     assert.equal(wide.category,'navigation');
     assert.ok(wide.keywords.includes(`block-arrow-${direction}`));
     assert.ok(!ordinary.keywords.includes(`arrow-big-${direction}`));
+  }
+});
+
+test('menu exposes two independent horizontal paths at every native size',()=>{
+  assert.equal(catalog.find(entry=>entry.name==='bars').concept,'menu');
+  for(const size of [16,20,24])for(const corner of ['sharp','soft','rounded']){
+    const paths=defs.menu.variants[size][corner].nodes;
+    assert.equal(paths.length,2);
+    for(const [tag,{d}] of paths){
+      assert.equal(tag,'path');
+      assert.match(d,/^M[\d.]+ ([\d.]+)L[\d.]+ \1$/);
+    }
   }
 });

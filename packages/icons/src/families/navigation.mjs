@@ -1,4 +1,5 @@
 import { knockout } from '../occlusion.mjs';
+import { line } from '../geometry.mjs';
 import { chevron, coreDrawings } from "./core.mjs";
 import { figure, rotate } from "./shared.mjs";
 const mirror = (nodes, g) => nodes.map(([tag, a]) => [tag, { ...a, transform: `translate(${g.s} 0) scale(-1 1)` }]);
@@ -31,6 +32,11 @@ const navigation = {
   "chevrons-up": (g) => rotate(doubleChevron(g), -90, g),
   "chevrons-down": (g) => rotate(doubleChevron(g), 90, g),
   menu: (g) => {
+    const inset = g.v(3, 3.5, 4);
+    const offset = g.v(2.5, 3, 3.5);
+    return [g.c - offset, g.c + offset].map(y => line(inset, y, g.s - inset, y));
+  },
+  bars: (g) => {
     const f = figure(g);
     return [6, 12, 18].map((y) => f.line(4, y, 20, y));
   },

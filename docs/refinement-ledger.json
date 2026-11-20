@@ -1,12 +1,12 @@
 {
   "schemaVersion": 2,
-  "date": "2026-11-19",
+  "date": "2026-11-20",
   "scope": "Craft 05 retained review plus individually reviewed Atlas additions",
-  "namedDrawings": 839,
+  "namedDrawings": 840,
   "baseConcepts": 645,
   "statusMeaning": "工程檢查與 Codex 目視紀錄獨立；visually-reviewed-candidate 不等於使用者最終定案。",
   "userApproval": "pending",
-  "reviewCycle": "craft-05 + atlas-craft-01 + atlas-craft-02 + atlas-craft-03 + atlas-craft-04 + atlas-craft-06 soup form refinement + atlas-craft-05 + atlas-craft-07 + atlas-craft-08 + atlas-craft-09 + atlas-craft-10 + atlas-craft-11 + atlas-craft-12 sports simplicity refinement + atlas-craft-13 + atlas-craft-14 + atlas-craft-15 + atlas-craft-16 + atlas-craft-17 + atlas-craft-18 + atlas-craft-19 + atlas-craft-20 + atlas-craft-21 + atlas-craft-22 + atlas-craft-23 + atlas-craft-24 + atlas-craft-25 + atlas-craft-26 + atlas-craft-27 + atlas-craft-28 + atlas-craft-29 + atlas-craft-30 trumpet viewport correction + navigation-01",
+  "reviewCycle": "craft-05 + atlas-craft-01 + atlas-craft-02 + atlas-craft-03 + atlas-craft-04 + atlas-craft-06 soup form refinement + atlas-craft-05 + atlas-craft-07 + atlas-craft-08 + atlas-craft-09 + atlas-craft-10 + atlas-craft-11 + atlas-craft-12 sports simplicity refinement + atlas-craft-13 + atlas-craft-14 + atlas-craft-15 + atlas-craft-16 + atlas-craft-17 + atlas-craft-18 + atlas-craft-19 + atlas-craft-20 + atlas-craft-21 + atlas-craft-22 + atlas-craft-23 + atlas-craft-24 + atlas-craft-25 + atlas-craft-26 + atlas-craft-27 + atlas-craft-28 + atlas-craft-29 + atlas-craft-30 trumpet viewport correction + navigation-01 + menu-01",
   "baselineCommit": "5413d054",
   "reviewedNames": [
     "arrow-right",
@@ -6482,12 +6482,13 @@
     {
       "name": "menu",
       "concept": "menu",
-      "purpose": "導覽與操作：選單",
-      "recognitionCues": "採三條等長線，與項目清單區分",
+      "purpose": "開啟行動導覽選單。",
+      "recognitionCues": "兩條等長橫線對稱置中，各自保留獨立路徑，可在按鈕內收合成關閉符號。",
       "confusableWith": [
-        "list"
+        "equal",
+        "bars"
       ],
-      "sourceObservation": "Lucide 是三線，Tabler 原稿為兩線；Master 採三線慣例，線間空隙足夠，不需要強制跟隨來源線數。",
+      "sourceObservation": "Tabler 兩條等長線的節奏適合行動導覽，Lucide 三線在較重的按鈕旁更醒目。Master 的兩線在三個原生尺寸保持對稱，留白與線長各自以原生網格校正。與等號相比，外側更寬且兩線分隔較大。",
       "references": [
         {
           "name": "menu",
@@ -6533,54 +6534,59 @@
         }
       },
       "change": {
-        "kind": "retained",
-        "reason": "保留：三條等長線與等間距形成穩定整體，16px明暗及低對比仍有三層，不與清單點線混淆。",
+        "kind": "modified",
+        "reason": "行動選單需要兩條可分別旋轉的線。減為兩線後調整間距，讓圖形在 16px 仍易於辨認。",
         "before": {
           "path": "references/craft-05/master-before.json",
           "variantsSha256": "8e771db03367b781bca454190653ec2b9c910104a5ffd281a0295dfc3b2e16c0"
         }
       },
       "visualReview": {
-        "status": "retained-after-visual-review",
-        "reviewer": "root",
-        "date": "2026-11-16",
-        "skillVersion": "0.5.4",
-        "batch": "craft-05-07",
-        "variantsSha256": "8e771db03367b781bca454190653ec2b9c910104a5ffd281a0295dfc3b2e16c0",
+        "status": "visually-reviewed-candidate",
+        "reviewer": "Codex (AI)",
+        "date": "2026-11-20",
+        "skillVersion": "0.5.20",
+        "batch": "menu-01",
+        "variantsSha256": "e16a1be53d7ce276b9499c69ec4702716be4884d3841b06d4e5eacc318c8befd",
         "checks": [
           "16/20/24",
           "sharp/soft/rounded",
           "light/dark",
-          "55-percent-foreground",
-          "adjacent-text",
-          "two-pinned-source-comparisons",
-          "true-before-after",
-          "painted-contour-and-cavity",
-          "semantic-effect-decision"
+          "DPR 1/2",
+          "low-contrast text",
+          "pinned-source re-comparison"
         ],
         "evidence": [
           {
-            "path": "docs/review/craft-05/batch-07/comparison.png",
-            "sha256": "484b2270be8d2ac399b301c4469a6a8ee34f4e5d79e603ad896ee3a8efbb3ccc"
+            "path": "docs/review/menu-01/comparison.png",
+            "sha256": "0d8d0b7aba17de7d6601f6ef8fcbe0620fcc53ad0bbd474b26bd6c3fd94fa50d"
           },
           {
-            "path": "docs/review/craft-05/batch-07/native.png",
-            "sha256": "5a6daed667b0a87b97dcbba58a0d7a7bbd8b07460f7e30d0b2665184bc899712"
+            "path": "docs/review/menu-01/comparison-dark.png",
+            "sha256": "def0f04608e89410ea5c7e38236ed69bc92fd509a4dac7abdfdb72d3ad81540e"
           },
           {
-            "path": "docs/review/craft-05/batch-07/native-dark.png",
-            "sha256": "6024eacf84a2a02e0eb96248c7341a87f62cd913e5a62396f18618e42fa75849"
+            "path": "docs/review/menu-01/native.png",
+            "sha256": "e595f63e84e27f508e34c600a193f388d9b4a6d106246a1ed8d28932a20952eb"
           },
           {
-            "path": "docs/review/craft-05/batch-07/diagnostic.png",
-            "sha256": "0b7121f39fc27b6241585cb003c9185a031a757f779f00b120686b00c42e3892"
+            "path": "docs/review/menu-01/native-dark.png",
+            "sha256": "a90fee40d7f9b3d935e0b12fbf8c95fed70cd12d71ec4fc368a37593e113f115"
+          },
+          {
+            "path": "docs/review/menu-01/native-light-2x.png",
+            "sha256": "ef40c87bba2d8224fb8fa82bf199b67329cc1720a5d4da575c492afdf3efa635"
+          },
+          {
+            "path": "docs/review/menu-01/native-dark-2x.png",
+            "sha256": "c25f910e15747e94fd1fba0970fa88a38d0df63b9f200939196d8779064ac788"
           }
         ]
       },
       "status": "visually-reviewed-candidate",
       "userApproval": "pending",
       "beforeHash": "8e771db03367b781bca454190653ec2b9c910104a5ffd281a0295dfc3b2e16c0",
-      "afterHash": "8e771db03367b781bca454190653ec2b9c910104a5ffd281a0295dfc3b2e16c0"
+      "afterHash": "e16a1be53d7ce276b9499c69ec4702716be4884d3841b06d4e5eacc318c8befd"
     },
     {
       "name": "more-vertical",
@@ -94400,6 +94406,112 @@
       "remainingIssues": [],
       "beforeHash": null,
       "afterHash": "e7cbc34ec4e7475a89c50a74795213b98b4aea2a66f8321072c2fc32db5b9427"
+    },
+    {
+      "name": "bars",
+      "concept": "menu",
+      "purpose": "三線選單圖示，用於開啟導覽。",
+      "recognitionCues": "三條等長橫線等距排列，沒有清單的項目標記。",
+      "confusableWith": [
+        "menu",
+        "list"
+      ],
+      "sourceObservation": "Lucide 的三線結構與既有 Master 圖稿相同，Tabler 的兩線提供同語意對照。原 Master 的三線間隔在亮暗底與 16px 低對比狀態仍清楚，因此保留原圖稿。",
+      "references": [
+        {
+          "name": "bars",
+          "library": "Lucide",
+          "repository": "lucide-icons/lucide",
+          "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+          "path": "icons/menu.svg",
+          "localPath": "references/ui-v1/lucide-menu.svg",
+          "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/menu.svg",
+          "sha256": "af6491988ac1ba30dc5414f485bc48713e957e1edb0fbef4a0dd8691c3c21598",
+          "license": "ISC AND MIT",
+          "sourceName": "menu",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "bars",
+          "library": "Tabler",
+          "repository": "tabler/tabler-icons",
+          "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+          "path": "icons/outline/menu.svg",
+          "localPath": "references/ui-v1/tabler-menu.svg",
+          "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/menu.svg",
+          "sha256": "a8c2b6e7184ae7abe1c1927355bd2e64f0855977753ff0ccccfac08f54498701",
+          "license": "MIT",
+          "sourceName": "menu",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "不採用；「選單」由連續輪廓、節點或實際斷開關係表意，沒有需虛線表示的隱藏／未完成邊界。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "不採用；「選單」的必要輪廓與狀態可以靠形狀、留白表達，淡化不提供額外語意。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "本期僅允許必要的逐筆透明度；未引入連續漸層或 mask。"
+        }
+      },
+      "change": {
+        "kind": "new",
+        "reason": "將原三線選單圖稿收在新名稱下，沿用原來的光學尺寸與筆畫位置。",
+        "before": null
+      },
+      "visualReview": {
+        "status": "visually-reviewed-candidate",
+        "reviewer": "Codex (AI)",
+        "date": "2026-11-20",
+        "skillVersion": "0.5.20",
+        "batch": "menu-01",
+        "variantsSha256": "8e771db03367b781bca454190653ec2b9c910104a5ffd281a0295dfc3b2e16c0",
+        "checks": [
+          "16/20/24",
+          "sharp/soft/rounded",
+          "light/dark",
+          "DPR 1/2",
+          "low-contrast text",
+          "pinned-source re-comparison"
+        ],
+        "evidence": [
+          {
+            "path": "docs/review/menu-01/comparison.png",
+            "sha256": "0d8d0b7aba17de7d6601f6ef8fcbe0620fcc53ad0bbd474b26bd6c3fd94fa50d"
+          },
+          {
+            "path": "docs/review/menu-01/comparison-dark.png",
+            "sha256": "def0f04608e89410ea5c7e38236ed69bc92fd509a4dac7abdfdb72d3ad81540e"
+          },
+          {
+            "path": "docs/review/menu-01/native.png",
+            "sha256": "e595f63e84e27f508e34c600a193f388d9b4a6d106246a1ed8d28932a20952eb"
+          },
+          {
+            "path": "docs/review/menu-01/native-dark.png",
+            "sha256": "a90fee40d7f9b3d935e0b12fbf8c95fed70cd12d71ec4fc368a37593e113f115"
+          },
+          {
+            "path": "docs/review/menu-01/native-light-2x.png",
+            "sha256": "ef40c87bba2d8224fb8fa82bf199b67329cc1720a5d4da575c492afdf3efa635"
+          },
+          {
+            "path": "docs/review/menu-01/native-dark-2x.png",
+            "sha256": "c25f910e15747e94fd1fba0970fa88a38d0df63b9f200939196d8779064ac788"
+          }
+        ]
+      },
+      "status": "visually-reviewed-candidate",
+      "userApproval": "pending",
+      "beforeHash": null,
+      "afterHash": "8e771db03367b781bca454190653ec2b9c910104a5ffd281a0295dfc3b2e16c0"
     }
   ],
   "additions": {

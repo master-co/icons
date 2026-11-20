@@ -139,7 +139,7 @@ test('craft-05 preserves its immutable baseline, final masters and individual re
   Object.assign(superseded,Object.fromEntries(records.map(r=>[r.name,r])));
  }
  const navigationHistory=JSON.parse(await readFile('references/navigation-01/ledger-before.json'));
- for(const name of ['chevrons-left','chevrons-right'])superseded[name]=navigationHistory.icons.find(r=>r.name===name);
+ for(const name of ['chevrons-left','chevrons-right','menu'])superseded[name]=navigationHistory.icons.find(r=>r.name===name);
  assert.equal(sha(raw),review.baselineSha256);
  const uiNames=Object.keys(baseline).sort();
  for(const name of uiNames)assert.ok(defs[name],name+': original drawing removed');

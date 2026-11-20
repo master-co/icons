@@ -1,0 +1,38 @@
+{
+  "reviewer": "Codex (AI)",
+  "role": "comparison-only",
+  "licenseFiles": [
+    "licenses/lucide.txt",
+    "licenses/tabler.txt"
+  ],
+  "references": [
+    {
+      "name": "bars",
+      "library": "Lucide",
+      "repository": "lucide-icons/lucide",
+      "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+      "path": "icons/menu.svg",
+      "localPath": "references/ui-v1/lucide-menu.svg",
+      "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/menu.svg",
+      "sha256": "af6491988ac1ba30dc5414f485bc48713e957e1edb0fbef4a0dd8691c3c21598",
+      "license": "ISC AND MIT",
+      "sourceName": "menu",
+      "match": "exact",
+      "role": "comparison-only"
+    },
+    {
+      "name": "bars",
+      "library": "Tabler",
+      "repository": "tabler/tabler-icons",
+      "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+      "path": "icons/outline/menu.svg",
+      "localPath": "references/ui-v1/tabler-menu.svg",
+      "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/menu.svg",
+      "sha256": "a8c2b6e7184ae7abe1c1927355bd2e64f0855977753ff0ccccfac08f54498701",
+      "license": "MIT",
+      "sourceName": "menu",
+      "match": "exact",
+      "role": "comparison-only"
+    }
+  ]
+}

@@ -30,7 +30,7 @@ export const conceptOf = {
   'pin-off':'pin','folder-tree':'list-tree','folder-search':'folder','folder-lock':'folder','file-search':'file','file-lock':'file',
   'arrow-left':'arrow-right','arrow-down':'arrow-right',
   'chevron-left':'chevron-right','chevron-up':'chevron-right','chevrons-left':'chevrons-right',redo:'undo',
-  'more-vertical':'more-horizontal','panel-right':'panel-left','panel-top':'panel-left','panel-bottom':'panel-left',
+  bars:'menu','more-vertical':'more-horizontal','panel-right':'panel-left','panel-top':'panel-left','panel-bottom':'panel-left',
   'layout-rows':'layout-columns',minimize:'maximize','grip-horizontal':'grip-vertical',
   'checkbox-checked':'checkbox','checkbox-indeterminate':'checkbox','radio-selected':'radio','toggle-on':'toggle-off',
   'eye-off':'eye','x-circle':'x','minus-circle':'minus',
