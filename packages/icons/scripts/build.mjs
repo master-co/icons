@@ -11,6 +11,7 @@ const repo=resolve(root,'../..');
 process.chdir(root);
 await lockGeneration(repo);
 const {sizes,corners,context,specifications,reviewedStroke}=await import('../src/geometry.mjs');
+const {publishedNodes}=await import('../src/simplify.mjs');
 const {draw}=await import('../src/drawings.mjs');
 const {catalog,pilot,categories,conceptCount}=await import('../src/catalog.mjs');
 const {renderSvg,strokeWidths,strokeRanges}=await import('../src/runtime.mjs');
@@ -51,14 +52,16 @@ if(!incremental)await rm(resolve(root,'dist'),{recursive:true,force:true});
 if(!incremental&&!archiveSvg)await rm(resolve(root,'icons'),{recursive:true,force:true});
 for(const entry of catalog){
   const variants={};
+  // Published geometry refits Boolean outlines to lines and arcs; review snapshots below keep the raw export.
+  const published=nodes=>publishedNodes(entry,nodes);
   for(const size of sizes){variants[size]={};for(const corner of corners){
     const ctx=context(size,corner);
     const strokes={};
     const [min,max]=strokeRanges[size];
     for(const stroke of strokeWidths.filter(width=>width>=min&&width<=max)){
-      strokes[stroke]={nodes:draw(entry.name,{...ctx,stroke,variableStroke:true}),strokeWidth:stroke};
+      strokes[stroke]={nodes:published(draw(entry.name,{...ctx,stroke,variableStroke:true})),strokeWidth:stroke};
     }
-    variants[size][corner]={nodes:draw(entry.name,ctx),strokeWidth:ctx.stroke,strokes};
+    variants[size][corner]={nodes:published(draw(entry.name,ctx)),strokeWidth:ctx.stroke,strokes};
   }}
   const definition={name:entry.name,direction:entry.direction,variants};
   // Review snapshots keep the masters' shape and hashes at the weights they were

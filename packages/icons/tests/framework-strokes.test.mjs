@@ -10,6 +10,8 @@ import {render as svelteSSR} from 'svelte/server';
 import {experimental_AstroContainer} from 'astro/container';
 import {context} from '../src/geometry.mjs';
 import {draw} from '../src/drawings.mjs';
+import {catalog} from '../src/catalog.mjs';
+import {publishedNodes} from '../src/simplify.mjs';
 import {renderSvg, resolveIcon, strokeRanges, strokeWidths} from '../dist/runtime.js';
 import {Search} from '../dist/index.js';
 import {bundle, importBundle} from './helpers/framework-build.mjs';
@@ -26,7 +28,7 @@ const oracle=new Map();
 function expected(name,size,corner,width){
   const key=`${name}/${size}/${corner}/${width}`;
   if(!oracle.has(key)){
-    const master={strokeWidth:width,nodes:draw(name,{...context(size,corner),stroke:width,variableStroke:true})};
+    const master={strokeWidth:width,nodes:publishedNodes(catalog.find(entry=>entry.name===name),draw(name,{...context(size,corner),stroke:width,variableStroke:true}))};
     oracle.set(key,normalizedGeometry(renderSvg({name,direction:'fixed',variants:{[size]:{[corner]:master}}},{size,corner})));
   }
   return oracle.get(key);
