@@ -7,11 +7,13 @@ import {catalog} from '../src/catalog.mjs';
 import * as icons from '@master/icons-react';
 import {renderSvg} from '../dist/runtime.js';
 const defs=JSON.parse(await readFile('packages/icons/dist/definitions.json'));
+// definitions.json holds the review snapshots; the published definitions carry the native stroke.
+const published=await import('../dist/index.js');
 const children=svg=>svg.slice(svg.indexOf('>')+1,svg.lastIndexOf('</svg>')).replace(/><\/(circle|line|path|rect|ellipse)>/g,'/>');
 test('all named React exports match authored SVG for every optical and corner master',()=>{
  for(const entry of catalog)for(const size of [16,20,24])for(const corner of ['sharp','soft','rounded']){
   const markup=renderToStaticMarkup(createElement(icons[entry.component],{size,corner}));
-  assert.equal(children(markup),children(renderSvg(defs[entry.name],{size,corner})),`${entry.name}/${size}/${corner}`);
+  assert.equal(children(markup),children(renderSvg(published[entry.component.replace(/Icon$/,'')],{size,corner})),`${entry.name}/${size}/${corner}`);
  }
 });
 test('RTL changes only the approved navigation set, preserving geometry transforms',()=>{

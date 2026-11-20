@@ -10,7 +10,7 @@ const root=resolve(dirname(fileURLToPath(import.meta.url)),'..');
 const repo=resolve(root,'../..');
 process.chdir(root);
 await lockGeneration(repo);
-const {sizes,corners,context,specifications}=await import('../src/geometry.mjs');
+const {sizes,corners,context,specifications,reviewedStroke}=await import('../src/geometry.mjs');
 const {draw}=await import('../src/drawings.mjs');
 const {catalog,pilot,categories,conceptCount}=await import('../src/catalog.mjs');
 const {renderSvg,strokeWidths,strokeRanges}=await import('../src/runtime.mjs');
@@ -61,10 +61,12 @@ for(const entry of catalog){
     variants[size][corner]={nodes:draw(entry.name,ctx),strokeWidth:ctx.stroke,strokes};
   }}
   const definition={name:entry.name,direction:entry.direction,variants};
-  // Review snapshots keep the original masters' shape and hashes. Framework
-  // modules carry the extra widths; adding support must not rewrite art evidence.
+  // Review snapshots keep the masters' shape and hashes at the weights they were
+  // reviewed at. The native stroke and the extra widths belong to the published
+  // modules; changing either must not rewrite art evidence.
   definitions[entry.name]={...definition,variants:Object.fromEntries(sizes.map(size=>[size,Object.fromEntries(corners.map(corner=>{
-    const {strokes,...master}=variants[size][corner];return [corner,master];
+    const stroke=reviewedStroke[size];
+    return [corner,{nodes:draw(entry.name,{...context(size,corner),stroke}),strokeWidth:stroke}];
   }))]))};
   const dataName=entry.component.replace(/Icon$/,'');
   // The dynamic definition assembles the nine fixed masters instead of repeating

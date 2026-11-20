@@ -2,12 +2,15 @@
 export const sizes = [16, 20, 24];
 export const corners = ['sharp', 'soft', 'rounded'];
 export const specifications = {
-  16: { stroke: 1.25, radius: 1, roundRadius: 2, inset: 2, gap: 1.5 },
-  20: { stroke: 1.5, radius: 1.25, roundRadius: 2.5, inset: 2.5, gap: 1.75 },
-  24: { stroke: 1.75, radius: 1.5, roundRadius: 3, inset: 3, gap: 2 },
+  16: { stroke: 1, radius: 1, roundRadius: 2, inset: 2, gap: 1.5 },
+  20: { stroke: 1.25, radius: 1.25, roundRadius: 2.5, inset: 2.5, gap: 1.75 },
+  24: { stroke: 1.5, radius: 1.5, roundRadius: 3, inset: 3, gap: 2 },
 };
-// Optical corrections apply only above the native weight in the explorer.
-export const weightDelta = g => g.variableStroke ? Math.max(0,g.stroke-specifications[g.s].stroke) : 0;
+// The drawings were tuned and visually reviewed at these weights, one step above
+// the native stroke. Review snapshots are still drawn at them, and optical
+// corrections apply only above them, so every custom width keeps its geometry.
+export const reviewedStroke = { 16: 1.25, 20: 1.5, 24: 1.75 };
+export const weightDelta = g => g.variableStroke ? Math.max(0,g.stroke-reviewedStroke[g.s]) : 0;
 export const n = value => Number(value.toFixed(4));
 const point = ([x, y]) => `${n(x)} ${n(y)}`;
 export const path = d => ['path', { d }];

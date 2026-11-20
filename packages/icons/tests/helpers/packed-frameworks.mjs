@@ -44,7 +44,7 @@ export async function checkPackedNativeFrameworks(consumer) {
     assert.equal(nativeMarkup, fixedMarkup, `${path} must produce the original drawing at its requested display size`);
     assert.match(nativeMarkup, /viewBox="0 0 16 16"/);
     assert.match(nativeMarkup, /aria-label="Search"/);
-    assert.match(nativeMarkup, /stroke-width="1.25"/);
+    assert.match(nativeMarkup, /stroke-width="1"/);
     assert.match(await renderers[framework](fixedModule.default, { ...props, strokeWidth: 1.5 }), /stroke-width="1.5"/);
     const gzipBytes = result => gzipSync(result.outputFiles[0].contents, { level: 9 }).length;
     const nativeBytes = gzipBytes(native);

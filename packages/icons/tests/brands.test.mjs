@@ -6,7 +6,7 @@ import {unzipSync,strFromU8} from 'fflate';
 import {brands,brandCatalog,brandEnvelopes} from '../src/brands.mjs';
 import {catalog} from '../src/catalog.mjs';
 import {draw} from '../src/drawings.mjs';
-import {context,specifications} from '../src/geometry.mjs';
+import {context,specifications,reviewedStroke} from '../src/geometry.mjs';
 import {renderSvg,strokeRanges} from '../src/runtime.mjs';
 const defs=JSON.parse(await readFile('packages/icons/dist/definitions.json'));
 
@@ -55,7 +55,7 @@ test('original marks stay fixed while outlines vary weight without changing bran
  for(const b of brands)for(const size of [16,20,24]){
   const expected=draw(b.name,context(size,'soft'));
   if(!b.styleOf)assert.deepEqual(expected.map(([,a])=>a.d),b.paths,b.name+': compact SVG number grammar must survive exactly');
-  assert.deepEqual(defs[b.name].variants[size].soft.nodes,expected,b.name+': generated native geometry must match the drawing');
+  assert.deepEqual(defs[b.name].variants[size].soft.nodes,draw(b.name,{...context(size,'soft'),stroke:reviewedStroke[size]}),b.name+': review snapshot must match the drawing at its reviewed weight');
   for(const corner of ['sharp','soft','rounded'])for(const stroke of [strokeRanges[size][0],specifications[size].stroke,strokeRanges[size][1]]){
    const actual=draw(b.name,{...context(size,corner),stroke,variableStroke:true});
    if(!b.styleOf||stroke===specifications[size].stroke)assert.deepEqual(actual,expected,`${b.name}/${size}/${corner}/${stroke}`);

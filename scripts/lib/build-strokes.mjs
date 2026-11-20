@@ -5,6 +5,7 @@ import {contentCache} from './content-cache.mjs';
 import {lockGeneration} from './generation-lock.mjs';
 import {zipSync, strToU8} from 'fflate';
 import {strokeWidths,strokeWidthsFor} from './stroke-width.mjs';
+import {nativeVariants} from './native-variants.mjs';
 const root=fileURLToPath(new URL('../../',import.meta.url));
 export async function buildStrokes({force=false}={}) {
   await lockGeneration(root);
@@ -26,6 +27,8 @@ export async function buildStrokes({force=false}={}) {
   for(const entry of catalog.icons){
     const data=await import(pathToFileURL(resolve(root,`packages/icons/dist/data/${entry.name}.js`)).href);
     strokeDefinitions[entry.name]=data[entry.component.replace(/Icon$/,'')];
+    // definitions.json holds the review snapshots; the site and the review tool show the published native masters.
+    definitions[entry.name]={...definitions[entry.name],variants:nativeVariants(strokeDefinitions[entry.name].variants)};
   }
   const license=await readFile(resolve(root,'LICENSE'),'utf8');
   // Every SVG of an icon leads with the same notice as its native file, which the core generator composes.

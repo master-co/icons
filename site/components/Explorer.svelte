@@ -55,7 +55,7 @@
  const visible=$derived(filtered.slice((current-1)*limit,current*limit))
  const opticalSize=$derived(getOpticalSize(size))
  const strokeRange=$derived(strokeRanges[opticalSize])
- const nativeStroke=$derived(({16:1.25,20:1.5,24:1.75})[opticalSize])
+ const nativeStroke=$derived(({16:1,20:1.25,24:1.5})[opticalSize])
  const strokeText=$derived(`${formatStroke(stroke??nativeStroke)} px`)
  const rawSvg=$derived(definition?renderSvg(strokeDefinition(definition,stroke),{size,corner}):'')
  const svg=$derived(artwork?.notice && rawSvg ? `<!--\n${artwork.notice.replaceAll('--','—')}\n-->\n${rawSvg}` : rawSvg)

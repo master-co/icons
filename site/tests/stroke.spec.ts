@@ -31,7 +31,7 @@ for(const locale of ['', '/tw'])test(`stroke slider exports matching geometry ${
  const entries=unzipSync(await readFile(new URL('../../work/stroke-assets/release/master-icons-16-strokes.zip',import.meta.url)))
  expect(strFromU8(entries['rounded/stroke-1.5/bell-off.svg'])).toBe(svg)
  await page.getByRole('button',{name:locale?'重設線寬':'Reset stroke',exact:true}).click()
- await expect(slider).toHaveValue('1.25');await expect(page).not.toHaveURL(/stroke=/)
+ await expect(slider).toHaveValue('1');await expect(page).not.toHaveURL(/stroke=/)
  await slider.press('Home');await slider.press('ArrowRight');await expect(slider).toHaveValue('1')
 })
 
@@ -58,13 +58,13 @@ test('the homepage stroke value shares the label row on narrow screens',async({p
 })
 test('invalid widths fall back to optical defaults and stroke survives navigation',async({page})=>{
  await page.goto('/icons?stroke=Infinity&size=20')
- await expect(page.getByRole('slider',{name:'Stroke width',exact:true})).toHaveValue('1.5')
+ await expect(page.getByRole('slider',{name:'Stroke width',exact:true})).toHaveValue('1.25')
  await page.getByRole('slider',{name:'Stroke width',exact:true}).press('ArrowRight')
  await page.getByRole('button',{name:'Size comparison',exact:true}).click()
  await expect(page.locator('.optical-row').first().locator('.explorer-icon')).toHaveCount(3)
  const category=page.getByRole('navigation',{name:'Category',exact:true}).getByRole('link').nth(1)
- await expect(category).toHaveAttribute('href',/stroke=1.75/)
- await category.click();await expect(page).toHaveURL(/stroke=1.75/)
+ await expect(category).toHaveAttribute('href',/stroke=1.5/)
+ await category.click();await expect(page).toHaveURL(/stroke=1.5/)
 })
 
 test('optical size bounds clamp URLs, size changes, comparisons and exports',async({page})=>{

@@ -8,7 +8,7 @@ import { unzipSync, strFromU8 } from 'fflate';
 import { catalog, conceptCount } from '../packages/icons/src/catalog.mjs';
 import { preservedNotices, adaptedSources } from '../packages/icons/src/provenance.mjs';
 import { drawings } from '../packages/icons/src/drawings.mjs';
-import {context} from '../packages/icons/src/geometry.mjs';
+import {context,reviewedStroke} from '../packages/icons/src/geometry.mjs';
 import {brandCatalog} from '../packages/icons/src/brands.mjs';
 import {brands as brandSources} from '../packages/icons/src/brands.mjs';
 const json = async file => JSON.parse(await readFile(file,'utf8'));
@@ -60,7 +60,7 @@ for(const item of manifest.inventory){
   const master = definitions[item.name].variants[item.opticalSize][item.corner];
   assert.ok(master.strokeWidth>0 && master.nodes.length>0);
   const brand=brandSources.find(b=>b.name===item.name);
-  if(brand?.styleOf)assert.deepEqual(master.nodes,drawings[item.name](context(item.opticalSize,item.corner)),item.path+': stale calibrated brand outline');
+  if(brand?.styleOf)assert.deepEqual(master.nodes,drawings[item.name]({...context(item.opticalSize,item.corner),stroke:reviewedStroke[item.opticalSize]}),item.path+': stale calibrated brand outline');
   for(const [tag,attrs] of master.nodes){
     assert.ok(validTags.has(tag),tag);
     if(tag==='path'&&item.name.startsWith('brand-')){
