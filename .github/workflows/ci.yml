@@ -19,14 +19,10 @@ concurrency:
   cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 
 jobs:
-  validate:
+  # One Node version, three jobs side by side: a run takes as long as its slowest job, not their sum.
+  packages:
     runs-on: ubuntu-latest
-    timeout-minutes: 60
-    strategy:
-      # Report both Node versions instead of cancelling one when the other fails.
-      fail-fast: false
-      matrix:
-        node: [24, 26]
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v6
         with:
@@ -34,11 +30,11 @@ jobs:
           persist-credentials: false
       - uses: ./.github/actions/setup
         with:
-          node-version: ${{ matrix.node }}
+          node-version: 26
       # The commit hook and the PR title check already apply the policy; a direct push can skip both,
       # so check every pushed commit again here.
       - name: Check pushed commits against the release policy
-        if: ${{ github.event_name == 'push' && matrix.node == 26 }}
+        if: ${{ github.event_name == 'push' }}
         env:
           BEFORE: ${{ github.event.before }}
           AFTER: ${{ github.sha }}
@@ -54,9 +50,9 @@ jobs:
       - uses: actions/cache@v4
         with:
           path: .turbo/cache
-          key: turbo-${{ runner.os }}-node${{ matrix.node }}-${{ hashFiles('bun.lock') }}-${{ github.sha }}
+          key: turbo-${{ runner.os }}-packages-${{ hashFiles('bun.lock') }}-${{ github.sha }}
           restore-keys: |
-            turbo-${{ runner.os }}-node${{ matrix.node }}-${{ hashFiles('bun.lock') }}-
+            turbo-${{ runner.os }}-packages-${{ hashFiles('bun.lock') }}-
       - run: bun run check:release
       - run: bun run test:turbo
       - run: bun run check
@@ -65,12 +61,60 @@ jobs:
       - if: ${{ !inputs.release }}
         run: bun run check:reproducible
       - run: bun run check:package
-      - run: bun x --no-install playwright install --with-deps chromium firefox webkit
+      - run: git diff --exit-code -- packages/icons/icons
+
+  # The browser jobs run in the Playwright image of the locked @playwright/test version: its browsers and
+  # their system libraries are already installed, so no job downloads them from a package mirror.
+  # scripts/release-config-check.mjs holds the tag to bun.lock.
+  review-browser:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    container:
+      image: mcr.microsoft.com/playwright:v1.65.1-noble
+    env:
+      HOME: /root # Firefox refuses a home directory that another user owns
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      - name: Install unzip for the Bun setup when the image lacks it
+        run: command -v unzip >/dev/null || (apt-get update && apt-get install --yes --no-install-recommends unzip)
+      - uses: ./.github/actions/setup
+        with:
+          node-version: 26
+      - uses: actions/cache@v4
+        with:
+          path: .turbo/cache
+          key: turbo-${{ runner.os }}-review-browser-${{ hashFiles('bun.lock') }}-${{ github.sha }}
+          restore-keys: |
+            turbo-${{ runner.os }}-review-browser-${{ hashFiles('bun.lock') }}-
       - run: bun run test:frameworks:browser
       - run: bun run test:browser
+
+  site-browser:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    container:
+      image: mcr.microsoft.com/playwright:v1.65.1-noble
+    env:
+      HOME: /root # Firefox refuses a home directory that another user owns
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      - name: Install unzip for the Bun setup when the image lacks it
+        run: command -v unzip >/dev/null || (apt-get update && apt-get install --yes --no-install-recommends unzip)
+      - uses: ./.github/actions/setup
+        with:
+          node-version: 26
+      - uses: actions/cache@v4
+        with:
+          path: .turbo/cache
+          key: turbo-${{ runner.os }}-site-browser-${{ hashFiles('bun.lock') }}-${{ github.sha }}
+          restore-keys: |
+            turbo-${{ runner.os }}-site-browser-${{ hashFiles('bun.lock') }}-
       - run: bun run test:site
       - if: ${{ !inputs.release }}
         run: bun run test:site:dev
       - if: ${{ !inputs.release }}
         run: bun run test:site:hmr
-      - run: git diff --exit-code -- packages/icons/icons

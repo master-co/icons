@@ -54,12 +54,25 @@ for (const name of ['icons', 'icons-react', 'icons-vue', 'icons-svelte', 'icons-
   assert.equal(manifest.repository?.directory, `packages/${name}`)
 }
 
-const validation = ciWorkflow.jobs.validate.steps.map(step => step.run ?? '').join('\n')
-for (const command of ['bun run check:release', 'bun run check:package', 'aronrepo check', 'bun run test:turbo', 'bun run check\n', 'bun run test:frameworks:browser', 'bun run test:browser', 'bun run test:site\n', 'git diff --exit-code -- packages/icons/icons']) assert.ok((validation + '\n').includes(command), `CI must run ${command.trim()}`)
+// CI validates on one Node version in parallel jobs; together they must still run every gate.
+const ciSteps = Object.values(ciWorkflow.jobs).flatMap(job => job.steps)
+const validation = ciSteps.map(step => step.run ?? '').join('\n')
+for (const command of ['bun run check:release', 'bun run check:package', 'aronrepo check', 'bun run test:turbo', 'bun run check\n', 'bun run test:frameworks:browser', 'bun run test:browser\n', 'bun run test:site\n', 'git diff --exit-code -- packages/icons/icons']) assert.ok((validation + '\n').includes(command), `CI must run ${command.trim()}`)
 // Release gates never skip on a release; only the development checks do.
-for (const step of ciWorkflow.jobs.validate.steps) {
+for (const step of ciSteps) {
   const development = /check:reproducible|test:site:dev|test:site:hmr/.test(step.run ?? '')
   assert.equal(step.if === '${{ !inputs.release }}', development, `${step.run ?? step.uses}: only development checks skip on a release`)
+}
+for (const [name, job] of Object.entries(ciWorkflow.jobs)) {
+  assert.equal(job.strategy, undefined, `${name}: CI validates on a single Node version`)
+  assert.ok(job['timeout-minutes'] <= 30, `${name}: a stalled job must not hold a release for an hour`)
+}
+// A browser job never installs browsers: its container is the Playwright image of the locked version.
+const playwright = read('bun.lock').match(/"@playwright\/test@(\d+\.\d+\.\d+)"/)[1]
+assert.doesNotMatch(validation, /playwright install/, 'Browser jobs use the Playwright image instead of installing browsers')
+for (const [name, job] of Object.entries(ciWorkflow.jobs)) {
+  if (!job.steps.some(step => /test:(frameworks:)?browser|test:site/.test(step.run ?? ''))) continue
+  assert.equal(job.container?.image, `mcr.microsoft.com/playwright:v${playwright}-noble`, `${name}: the Playwright image must match bun.lock`)
 }
 
 process.stdout.write('Validated provenance npm publication and gated pages-stable delivery without Cloudflare credentials.\n')

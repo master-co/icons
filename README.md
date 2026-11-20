@@ -95,7 +95,7 @@ bun run check:reproducible
 bun run check:package
 ```
 
-CI runs all of these on pull requests, on Node 24 and 26. A release runs every gate except `check:reproducible`, `test:site:dev` and `test:site:hmr`, which cover the build process and the local development experience rather than the published packages or the deployed site.
+CI runs all of these on pull requests, on Node 26, as three parallel jobs: the package checks, and the review and site browser suites in the Playwright container image. A release runs every gate except `check:reproducible`, `test:site:dev` and `test:site:hmr`, which cover the build process and the local development experience rather than the published packages or the deployed site.
 
 `build:icons`, `build:review` and `build:site` build one part; Turbo first runs the upstream tasks each needs. The site builds only the core, Svelte and Astro packages; `build:icons` builds all six. `dist/preview.html` is the offline review page, with sources and before/after comparisons; upstream comparison drawings never ship in the site or the packages.
 
