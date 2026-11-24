@@ -10,7 +10,10 @@ export const preservedNotices = Object.freeze(Object.fromEntries([
 // construction. Retain attribution conservatively despite rewritten geometry.
 import atlasSources from './atlas-provenance.json' with {type:'json'};
 import rebuildSources from './rebuild-provenance.json' with {type:'json'};
-export const adaptedSources=Object.freeze({...atlasSources,...rebuildSources,...Object.fromEntries(['megaphone','handshake','layers'].map(name=>[name,{
+export const adaptedSources=Object.freeze({...atlasSources,...rebuildSources,contract:{
+  ...rebuildSources.signature,
+  modifications:'The handwritten initial and shoulder are optically fitted and simplified to fit the folded document at native sizes.',
+},...Object.fromEntries(['megaphone','handshake','layers'].map(name=>[name,{
   kind:'adapted-redraw',author:'Lucide Icons and Contributors',license:'ISC',
   copyright:'Copyright (c) 2026 Lucide Icons and Contributors',
   commit:'55782beff3a0133df79c417eb68f96e8f19e2404',

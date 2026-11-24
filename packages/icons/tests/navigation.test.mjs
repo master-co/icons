@@ -16,11 +16,11 @@ test('navigation-01 preserves every previous drawing outside its exact reviewed 
   assert.equal(hash(raw),scope.baselineSha256);
   assert.deepEqual(scope.added.toSorted(),['chevrons-down','chevrons-up']);
   assert.deepEqual(scope.modified.toSorted(),['chevrons-left','chevrons-right']);
-  const followup=await json('docs/review/navigation-big-01/change-scope.json');
-  assert.deepEqual(Object.keys(defs).sort(),[...Object.keys(before),...scope.added,...followup.added,'bars'].sort());
-  assert.deepEqual(Object.keys(before).filter(n=>JSON.stringify(before[n].variants)!==JSON.stringify(defs[n].variants)).sort(),[...scope.modified,'menu'].sort());
+  const nextInventory=await json('references/navigation-big-01/inventory-before.json');
+  assert.deepEqual(Object.keys(nextInventory).sort(),[...Object.keys(before),...scope.added].sort());
+  assert.deepEqual(Object.keys(before).filter(n=>hash(JSON.stringify(before[n].variants))!==nextInventory[n]).sort(),scope.modified.toSorted());
   assert.equal(Object.keys(before).length,scope.previousCount);
-  assert.equal(Object.keys(defs).length,scope.currentCount+followup.added.length+1);
+  assert.equal(Object.keys(nextInventory).length,scope.currentCount);
   const evidence=new Set();
   for(const item of review.items){
     assert.equal(hash(JSON.stringify(defs[item.name].variants)),item.visualReview.variantsSha256,item.name);
@@ -61,11 +61,12 @@ test('wide arrows preserve the previous inventory and expose four reviewed physi
   const scope=await json(`${root}/change-scope.json`),raw=await readFile(scope.baselineInventory),before=JSON.parse(raw);
   assert.equal(hash(raw),scope.baselineSha256);
   assert.deepEqual(scope.added.toSorted(),['arrow-big-left','arrow-big-right']);
-  assert.deepEqual(Object.keys(defs).sort(),[...Object.keys(before),...scope.added,'bars'].sort());
-  for(const [name,sha] of Object.entries(before)){
-    const currentName=name==='menu'?'bars':name;
-    assert.equal(hash(JSON.stringify(defs[currentName].variants)),sha,currentName);
-  }
+  const readingBefore=await json('references/reading-documents-01/master-before.json');
+  assert.deepEqual(Object.keys(defs).sort(),[...Object.keys(before),...scope.added,'bars','book-read','contract'].sort());
+  const current=name=>name==='menu'?'bars':name;
+  const changed=Object.keys(before).filter(name=>hash(JSON.stringify(defs[current(name)].variants))!==before[name]);
+  assert.deepEqual(changed.sort(),['file-text','home','images']);
+  for(const name of changed)assert.equal(hash(JSON.stringify(readingBefore[name].variants)),before[name],name);
   const saved=await json(`${root}/01-wide-arrows-final/definitions.json`);
   const decisions=await json(`${root}/decisions.json`);
   const evidence=new Set();

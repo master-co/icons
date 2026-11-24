@@ -1,12 +1,12 @@
 {
   "schemaVersion": 2,
-  "date": "2026-11-20",
+  "date": "2026-11-24",
   "scope": "Craft 05 retained review plus individually reviewed Atlas additions",
-  "namedDrawings": 840,
-  "baseConcepts": 645,
+  "namedDrawings": 842,
+  "baseConcepts": 646,
   "statusMeaning": "工程檢查與 Codex 目視紀錄獨立；visually-reviewed-candidate 不等於使用者最終定案。",
   "userApproval": "pending",
-  "reviewCycle": "craft-05 + atlas-craft-01 + atlas-craft-02 + atlas-craft-03 + atlas-craft-04 + atlas-craft-06 soup form refinement + atlas-craft-05 + atlas-craft-07 + atlas-craft-08 + atlas-craft-09 + atlas-craft-10 + atlas-craft-11 + atlas-craft-12 sports simplicity refinement + atlas-craft-13 + atlas-craft-14 + atlas-craft-15 + atlas-craft-16 + atlas-craft-17 + atlas-craft-18 + atlas-craft-19 + atlas-craft-20 + atlas-craft-21 + atlas-craft-22 + atlas-craft-23 + atlas-craft-24 + atlas-craft-25 + atlas-craft-26 + atlas-craft-27 + atlas-craft-28 + atlas-craft-29 + atlas-craft-30 trumpet viewport correction + navigation-01 + menu-01",
+  "reviewCycle": "craft-05 + atlas-craft-01 + atlas-craft-02 + atlas-craft-03 + atlas-craft-04 + atlas-craft-06 soup form refinement + atlas-craft-05 + atlas-craft-07 + atlas-craft-08 + atlas-craft-09 + atlas-craft-10 + atlas-craft-11 + atlas-craft-12 sports simplicity refinement + atlas-craft-13 + atlas-craft-14 + atlas-craft-15 + atlas-craft-16 + atlas-craft-17 + atlas-craft-18 + atlas-craft-19 + atlas-craft-20 + atlas-craft-21 + atlas-craft-22 + atlas-craft-23 + atlas-craft-24 + atlas-craft-25 + atlas-craft-26 + atlas-craft-27 + atlas-craft-28 + atlas-craft-29 + atlas-craft-30 trumpet viewport correction + navigation-01 + menu-01 + reading-documents-01",
   "baselineCommit": "5413d054",
   "reviewedNames": [
     "arrow-right",
@@ -847,9 +847,11 @@
     "chevrons-up",
     "chevrons-down",
     "arrow-big-right",
-    "arrow-big-left"
+    "arrow-big-left",
+    "book-read",
+    "contract"
   ],
-  "reviewSummary": "本輪逐顆審查全部 392 個命名圖稿，59 顆修改（含共用母型修正與退化路徑清理），333 顆保留。每顆均重新比對兩份固定來源、九組尺寸／角型、明暗、文字旁及 55% 前景；不是沿用前輪目視標記。",
+  "reviewSummary": "本輪新增翻頁閱讀與合約文件，精修多張圖片、首頁及文字檔案。每顆比對兩份固定來源、三種光學尺寸及角型，並檢視明暗與線寬兩端。",
   "previousReview": "docs/refinement-ledger-before-craft-05.json",
   "icons": [
     {
@@ -2606,12 +2608,13 @@
     {
       "name": "file-text",
       "concept": "file",
-      "purpose": "檔案與內容：文字檔案",
-      "recognitionCues": "保留 16px 一行、較大尺寸兩行",
+      "purpose": "文件清單中的文字檔案。",
+      "recognitionCues": "折角下的兩條正文線，16px 上短下長。",
       "confusableWith": [
-        "invoice"
+        "file",
+        "contract"
       ],
-      "sourceObservation": "兩份原稿使用較多文字線；Master小尺寸減行降低密度，折頁仍遵守同一文件構造。",
+      "sourceObservation": "Lucide 與 Tabler 都用短橫表達正文。16px 的兩橫左對齊，縮短首行，讓折角與內容留足距離。",
       "references": [
         {
           "name": "file-text",
@@ -2658,53 +2661,55 @@
       },
       "change": {
         "kind": "modified",
-        "reason": "繼承file折角的外緣收口修正；16px單行、20／24px兩行均與折角及底邊有空間，修後文字內容不變。",
+        "reason": "16px 的兩個正文行各有獨立留白。20 及 24px 的內線位置與前稿一致。",
         "before": {
-          "path": "references/craft-05/master-before.json",
-          "variantsSha256": "cd8f9c23f4ea1d1d6636b2eb60566798ab27f36b4e118c26b60ee989b6afaf6b"
+          "path": "references/reading-documents-01/master-before.json",
+          "variantsSha256": "e2ee70cc6f3cdba2b41e538f7d30e9018287ca06473f66519f19ad05b024772f"
         }
       },
       "visualReview": {
-        "status": "modified-after-visual-review",
-        "reviewer": "root",
-        "date": "2026-11-16",
-        "skillVersion": "0.5.4",
-        "batch": "craft-05-03",
-        "variantsSha256": "e2ee70cc6f3cdba2b41e538f7d30e9018287ca06473f66519f19ad05b024772f",
+        "status": "visually-reviewed-candidate",
+        "reviewer": "Codex (AI)",
+        "date": "2026-11-24",
+        "batch": "reading-documents-01",
+        "skillVersion": "0.5.20",
+        "variantsSha256": "4bb26953a8e67391465bf207bf2c09c8664e8fc9894ca62109f06b7e9876d24d",
         "checks": [
-          "16/20/24",
+          "native-16/20/24",
           "sharp/soft/rounded",
           "light/dark",
-          "55-percent-foreground",
-          "adjacent-text",
-          "two-pinned-source-comparisons",
-          "true-before-after",
-          "painted-contour-and-cavity",
-          "semantic-effect-decision"
+          "DPR-1/2",
+          "minimum-and-maximum-strokes",
+          "two-pinned-sources",
+          "family-and-text"
         ],
         "evidence": [
           {
-            "path": "docs/review/craft-05/batch-03/comparison.png",
-            "sha256": "46b69b3408fa2ec40473b39e08b892a08c5c676c46f9861acea1e6a0fce967b4"
+            "path": "docs/review/reading-documents-01/light-1x.png",
+            "sha256": "0202296fb672b55342768a6c10b08863f3e29d1c2b53b6e81c4d3e73bf3df1af"
           },
           {
-            "path": "docs/review/craft-05/batch-03/native.png",
-            "sha256": "7a56e4e1c69468af724bbe90bf81cec9980695ff37eb61cc7ff52a75884ae233"
+            "path": "docs/review/reading-documents-01/dark-1x.png",
+            "sha256": "ee7ae4cdc169935942f898816178c5975523f566c288fb8f20c1a01c1cec20df"
           },
           {
-            "path": "docs/review/craft-05/batch-03/native-dark.png",
-            "sha256": "d11acc464ada14b7a8aee2a999424c17d6cab4eaf60c412e26db18b7cc68ff35"
+            "path": "docs/review/reading-documents-01/light-2x.png",
+            "sha256": "ef1769ffcd130cb29ddf4438a7b29dd8b0b283a2b5372e24a49a9637e9c52ff4"
           },
           {
-            "path": "docs/review/craft-05/batch-03/diagnostic.png",
-            "sha256": "a626a16e549ba6a5795fc7821534e74bbd5b1fe3a71c1c64620f891d5cfd66de"
+            "path": "docs/review/reading-documents-01/dark-2x.png",
+            "sha256": "f0e62e20b53033a46ecd8f09a3b6367cc9b3516950de3a5e96a73457e4e5b841"
+          },
+          {
+            "path": "docs/review/reading-documents-01/context.png",
+            "sha256": "b218576441abadc2269ea75e3240f6f8e24417959b1edd54a98885e40abc2b28"
           }
         ]
       },
       "status": "visually-reviewed-candidate",
       "userApproval": "pending",
-      "beforeHash": "cd8f9c23f4ea1d1d6636b2eb60566798ab27f36b4e118c26b60ee989b6afaf6b",
-      "afterHash": "e2ee70cc6f3cdba2b41e538f7d30e9018287ca06473f66519f19ad05b024772f"
+      "beforeHash": "e2ee70cc6f3cdba2b41e538f7d30e9018287ca06473f66519f19ad05b024772f",
+      "afterHash": "4bb26953a8e67391465bf207bf2c09c8664e8fc9894ca62109f06b7e9876d24d"
     },
     {
       "name": "folder",
@@ -4980,12 +4985,13 @@
     {
       "name": "home",
       "concept": "home",
-      "purpose": "產品介面：首頁",
-      "recognitionCues": "保留連續屋框與簡單門洞",
+      "purpose": "導覽列的首頁入口。",
+      "recognitionCues": "連續的對稱屋頂、直牆及正中門洞。",
       "confusableWith": [
-        "store"
+        "store",
+        "building"
       ],
-      "sourceObservation": "Tabler有出簷、Iconoir有分離屋頂；Master採連續簡屋及門洞，形狀熟悉且無不必要斷口。",
+      "sourceObservation": "Tabler 的屋簷和 Iconoir 的分離屋頂都提供寬肩。這次只微調連續外框寬度，門洞足以辨出房屋。",
       "references": [
         {
           "name": "home",
@@ -5031,54 +5037,56 @@
         }
       },
       "change": {
-        "kind": "retained",
-        "reason": "屋頂兩邊對稱，門框與底邊相接而不外溢；rounded底角未侵入門框，保留。",
+        "kind": "modified",
+        "reason": "16、20、24px 的兩側牆面各外移 0.25、0.4、0.5px，保留原來的屋脊、門寬及基線。",
         "before": {
-          "path": "references/craft-05/master-before.json",
+          "path": "references/reading-documents-01/master-before.json",
           "variantsSha256": "3f941cd38d09d7fb75dde130dcffc7d363fc757689dd4d85e376a59a53d2ce81"
         }
       },
       "visualReview": {
-        "status": "retained-after-visual-review",
-        "reviewer": "root",
-        "date": "2026-11-16",
-        "skillVersion": "0.5.4",
-        "batch": "craft-05-06",
-        "variantsSha256": "3f941cd38d09d7fb75dde130dcffc7d363fc757689dd4d85e376a59a53d2ce81",
+        "status": "visually-reviewed-candidate",
+        "reviewer": "Codex (AI)",
+        "date": "2026-11-24",
+        "batch": "reading-documents-01",
+        "skillVersion": "0.5.20",
+        "variantsSha256": "962de15239a0ee945de7cdba74295fcef2741983da7f49589fe84aeaed9d75a9",
         "checks": [
-          "16/20/24",
+          "native-16/20/24",
           "sharp/soft/rounded",
           "light/dark",
-          "55-percent-foreground",
-          "adjacent-text",
-          "two-pinned-source-comparisons",
-          "true-before-after",
-          "painted-contour-and-cavity",
-          "semantic-effect-decision"
+          "DPR-1/2",
+          "minimum-and-maximum-strokes",
+          "two-pinned-sources",
+          "family-and-text"
         ],
         "evidence": [
           {
-            "path": "docs/review/craft-05/batch-06/comparison.png",
-            "sha256": "f20c089ced0adc940a8497b2eee692d071dc1a06f077effaf70630c058adc736"
+            "path": "docs/review/reading-documents-01/light-1x.png",
+            "sha256": "0202296fb672b55342768a6c10b08863f3e29d1c2b53b6e81c4d3e73bf3df1af"
           },
           {
-            "path": "docs/review/craft-05/batch-06/native.png",
-            "sha256": "56b5634f8466e58433a6fc086061348bfaf08449d68c654a1a9e18a13db61cef"
+            "path": "docs/review/reading-documents-01/dark-1x.png",
+            "sha256": "ee7ae4cdc169935942f898816178c5975523f566c288fb8f20c1a01c1cec20df"
           },
           {
-            "path": "docs/review/craft-05/batch-06/native-dark.png",
-            "sha256": "9aa85efb09488fcdc22cff48f8fec222f1afcd37c74b60e688ae15dc713d23bf"
+            "path": "docs/review/reading-documents-01/light-2x.png",
+            "sha256": "ef1769ffcd130cb29ddf4438a7b29dd8b0b283a2b5372e24a49a9637e9c52ff4"
           },
           {
-            "path": "docs/review/craft-05/batch-06/diagnostic.png",
-            "sha256": "7ede5aad837ef9e87c8f625ea2c5293ba1d721d4323a95026fc3d5a1e66c7318"
+            "path": "docs/review/reading-documents-01/dark-2x.png",
+            "sha256": "f0e62e20b53033a46ecd8f09a3b6367cc9b3516950de3a5e96a73457e4e5b841"
+          },
+          {
+            "path": "docs/review/reading-documents-01/context.png",
+            "sha256": "b218576441abadc2269ea75e3240f6f8e24417959b1edd54a98885e40abc2b28"
           }
         ]
       },
       "status": "visually-reviewed-candidate",
       "userApproval": "pending",
       "beforeHash": "3f941cd38d09d7fb75dde130dcffc7d363fc757689dd4d85e376a59a53d2ce81",
-      "afterHash": "3f941cd38d09d7fb75dde130dcffc7d363fc757689dd4d85e376a59a53d2ce81"
+      "afterHash": "962de15239a0ee945de7cdba74295fcef2741983da7f49589fe84aeaed9d75a9"
     },
     {
       "name": "settings",
@@ -15572,12 +15580,14 @@
     {
       "name": "images",
       "concept": "image",
-      "purpose": "圖片與媒體：多張圖片",
-      "recognitionCues": "修正山線端點，避免穿出圓角框",
+      "purpose": "在媒體選擇器開啟相簿。",
+      "recognitionCues": "相反傾角的兩張照片，山線與日點只在前張出現。",
       "confusableWith": [
-        "copy"
+        "image",
+        "copy",
+        "layers"
       ],
-      "sourceObservation": "Lucide左下露背框、Hugeicons有更自由堆疊；Master維持規整同向框和清楚前後間隙，山景不跨到背片。",
+      "sourceObservation": "Lucide 的背張以平行邊露出；Hugeicons 保留較完整的前景照片。圖二的相反傾角能用更少露邊交代兩張獨立相片。",
       "references": [
         {
           "name": "images",
@@ -15624,53 +15634,55 @@
       },
       "change": {
         "kind": "modified",
-        "reason": "修改後通過：前片山形左右接框原有端帽凸出，現按前片外殼收口；後片露邊保持獨立，16px仍清楚讀成堆疊相片。",
+        "reason": "用同尺寸的兩個相框反向微傾，前張放低山峰並把日點移到右上。依前張實際墨線切出背張遮擋。",
         "before": {
-          "path": "references/craft-05/master-before.json",
-          "variantsSha256": "453a49df9945ff3ebbc875172a532a273a40ce69dc0dcc3bbea1634a4fc53708"
+          "path": "references/reading-documents-01/master-before.json",
+          "variantsSha256": "bdde4367a98afd40950204136b7d242c971f0e54446504dcfd34d65efda0767d"
         }
       },
       "visualReview": {
-        "status": "modified-after-visual-review",
-        "reviewer": "root",
-        "date": "2026-11-16",
-        "skillVersion": "0.5.4",
-        "batch": "craft-05-18",
-        "variantsSha256": "bdde4367a98afd40950204136b7d242c971f0e54446504dcfd34d65efda0767d",
+        "status": "visually-reviewed-candidate",
+        "reviewer": "Codex (AI)",
+        "date": "2026-11-24",
+        "batch": "reading-documents-01",
+        "skillVersion": "0.5.20",
+        "variantsSha256": "2e8cdb4bb27fd2c4ff63b2f0562ca0db75b581c59b4f6376681ce83bbbac96ea",
         "checks": [
-          "16/20/24",
+          "native-16/20/24",
           "sharp/soft/rounded",
           "light/dark",
-          "55-percent-foreground",
-          "adjacent-text",
-          "two-pinned-source-comparisons",
-          "true-before-after",
-          "painted-contour-and-cavity",
-          "semantic-effect-decision"
+          "DPR-1/2",
+          "minimum-and-maximum-strokes",
+          "two-pinned-sources",
+          "family-and-text"
         ],
         "evidence": [
           {
-            "path": "docs/review/craft-05/batch-18/comparison.png",
-            "sha256": "a97bd0bc78b9fcee49e080996e793c7ee834adc941a86a794b201bce805f4da1"
+            "path": "docs/review/reading-documents-01/light-1x.png",
+            "sha256": "0202296fb672b55342768a6c10b08863f3e29d1c2b53b6e81c4d3e73bf3df1af"
           },
           {
-            "path": "docs/review/craft-05/batch-18/native.png",
-            "sha256": "6dab07420755ba7c01661c0faf5b58f8f9bb0896f8ae09f8ce54c23192daaed8"
+            "path": "docs/review/reading-documents-01/dark-1x.png",
+            "sha256": "ee7ae4cdc169935942f898816178c5975523f566c288fb8f20c1a01c1cec20df"
           },
           {
-            "path": "docs/review/craft-05/batch-18/native-dark.png",
-            "sha256": "3fd361f642f7055511f02e285f5a63d0d1360bc78ca078e16b382cf603cca1e1"
+            "path": "docs/review/reading-documents-01/light-2x.png",
+            "sha256": "ef1769ffcd130cb29ddf4438a7b29dd8b0b283a2b5372e24a49a9637e9c52ff4"
           },
           {
-            "path": "docs/review/craft-05/batch-18/diagnostic.png",
-            "sha256": "7736c82219f2a55c113856c6dcff0524223e4b35231f44cbefdafa1e29a31159"
+            "path": "docs/review/reading-documents-01/dark-2x.png",
+            "sha256": "f0e62e20b53033a46ecd8f09a3b6367cc9b3516950de3a5e96a73457e4e5b841"
+          },
+          {
+            "path": "docs/review/reading-documents-01/context.png",
+            "sha256": "b218576441abadc2269ea75e3240f6f8e24417959b1edd54a98885e40abc2b28"
           }
         ]
       },
       "status": "visually-reviewed-candidate",
       "userApproval": "pending",
-      "beforeHash": "453a49df9945ff3ebbc875172a532a273a40ce69dc0dcc3bbea1634a4fc53708",
-      "afterHash": "bdde4367a98afd40950204136b7d242c971f0e54446504dcfd34d65efda0767d"
+      "beforeHash": "bdde4367a98afd40950204136b7d242c971f0e54446504dcfd34d65efda0767d",
+      "afterHash": "2e8cdb4bb27fd2c4ff63b2f0562ca0db75b581c59b4f6376681ce83bbbac96ea"
     },
     {
       "name": "camera",
@@ -94512,6 +94524,213 @@
       "userApproval": "pending",
       "beforeHash": null,
       "afterHash": "8e771db03367b781bca454190653ec2b9c910104a5ffd281a0295dfc3b2e16c0"
+    },
+    {
+      "name": "book-read",
+      "concept": "book",
+      "purpose": "進入閱讀模式，或從書庫繼續閱讀。",
+      "recognitionCues": "左頁尖高過封面，右頁弧線在中央書脊收合。",
+      "confusableWith": [
+        "book",
+        "book-open"
+      ],
+      "sourceObservation": "Material Design Icons 與 Material Symbols 都把被掀起的一頁放進剪影。依圖一把它放到左側，以原有右頁曲線穩住書身。",
+      "references": [
+        {
+          "library": "Material Design Icons",
+          "repository": "Templarian/MaterialDesign",
+          "commit": "2424e748e0cc63ab7b9c095a099b9fe239b737c0",
+          "path": "svg/book-open-page-variant-outline.svg",
+          "localPath": "references/writer-01/material-design-icons-book-open-page-variant-outline.svg",
+          "url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/book-open-page-variant-outline.svg",
+          "license": "Apache-2.0",
+          "name": "book-read",
+          "sourceName": "book-open-page-variant-outline",
+          "sha256": "89f6374319665be8d7034f7085a7cb8bca80f0f3beeb7aba7075db0480c62ee4",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "book-read",
+          "library": "Material Symbols",
+          "repository": "google/material-design-icons",
+          "commit": "10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7",
+          "path": "symbols/web/auto_stories/materialsymbolsoutlined/auto_stories_24px.svg",
+          "localPath": "references/reading-documents-01/material-symbols-auto_stories.svg",
+          "url": "https://github.com/google/material-design-icons/blob/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/symbols/web/auto_stories/materialsymbolsoutlined/auto_stories_24px.svg",
+          "sha256": "4908263e3784d9443d49728a33c30273627f9312a8934f14ea952c7e8c16ce7b",
+          "license": "Apache-2.0",
+          "sourceName": "auto_stories",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "書頁、紙面及手寫線條都是連續的實體邊界。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "辨識線索來自紙面輪廓及內部留白。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "使用單色墨線以維持小尺寸的局部對比。"
+        }
+      },
+      "change": {
+        "kind": "new",
+        "reason": "三尺寸共用右頁與書脊，在 16px 加寬左側翻頁與封面的通道。",
+        "before": null
+      },
+      "visualReview": {
+        "status": "visually-reviewed-candidate",
+        "reviewer": "Codex (AI)",
+        "date": "2026-11-24",
+        "batch": "reading-documents-01",
+        "skillVersion": "0.5.20",
+        "variantsSha256": "6236662ed631bff109ceb119a8dc9c235f0e8285a3cb768b053f0e88a9b412e4",
+        "checks": [
+          "native-16/20/24",
+          "sharp/soft/rounded",
+          "light/dark",
+          "DPR-1/2",
+          "minimum-and-maximum-strokes",
+          "two-pinned-sources",
+          "family-and-text"
+        ],
+        "evidence": [
+          {
+            "path": "docs/review/reading-documents-01/light-1x.png",
+            "sha256": "0202296fb672b55342768a6c10b08863f3e29d1c2b53b6e81c4d3e73bf3df1af"
+          },
+          {
+            "path": "docs/review/reading-documents-01/dark-1x.png",
+            "sha256": "ee7ae4cdc169935942f898816178c5975523f566c288fb8f20c1a01c1cec20df"
+          },
+          {
+            "path": "docs/review/reading-documents-01/light-2x.png",
+            "sha256": "ef1769ffcd130cb29ddf4438a7b29dd8b0b283a2b5372e24a49a9637e9c52ff4"
+          },
+          {
+            "path": "docs/review/reading-documents-01/dark-2x.png",
+            "sha256": "f0e62e20b53033a46ecd8f09a3b6367cc9b3516950de3a5e96a73457e4e5b841"
+          },
+          {
+            "path": "docs/review/reading-documents-01/context.png",
+            "sha256": "b218576441abadc2269ea75e3240f6f8e24417959b1edd54a98885e40abc2b28"
+          }
+        ]
+      },
+      "status": "visually-reviewed-candidate",
+      "userApproval": "pending",
+      "beforeHash": null,
+      "afterHash": "6236662ed631bff109ceb119a8dc9c235f0e8285a3cb768b053f0e88a9b412e4"
+    },
+    {
+      "name": "contract",
+      "concept": "contract",
+      "purpose": "合約清單中的文件類型。",
+      "recognitionCues": "折頁內保留手寫回環與向右收尾；較大尺寸另有條款短橫。",
+      "confusableWith": [
+        "file-text",
+        "file-check",
+        "signature"
+      ],
+      "sourceObservation": "Material Symbols 以長紙卷交代契約，Font Awesome 把簽名放在紙內。採用現有文件外框及簽名母型，保留合約文件的紙張與落款。",
+      "references": [
+        {
+          "name": "contract",
+          "library": "Material Symbols",
+          "repository": "google/material-design-icons",
+          "commit": "10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7",
+          "path": "symbols/web/contract/materialsymbolsoutlined/contract_24px.svg",
+          "localPath": "references/reading-documents-01/material-symbols-contract.svg",
+          "url": "https://github.com/google/material-design-icons/blob/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/symbols/web/contract/materialsymbolsoutlined/contract_24px.svg",
+          "sha256": "ec0ebea86eb9f6db35d6f873141fc377e92087716c7e7ea745c090533455e67d",
+          "license": "Apache-2.0",
+          "sourceName": "contract",
+          "match": "exact",
+          "role": "comparison-only"
+        },
+        {
+          "name": "contract",
+          "library": "Font Awesome Free",
+          "repository": "FortAwesome/Font-Awesome",
+          "commit": "af620534bfc3c2d4cbefcfeec29603bbe7809e64",
+          "path": "svgs/solid/file-contract.svg",
+          "localPath": "references/reading-documents-01/font-awesome-free-file-contract.svg",
+          "url": "https://github.com/FortAwesome/Font-Awesome/blob/af620534bfc3c2d4cbefcfeec29603bbe7809e64/svgs/solid/file-contract.svg",
+          "sha256": "8516915385c9d28d156d97ee55e97a3d6ec9de6ae2fe8f886c92ef7d7249c0d4",
+          "license": "CC-BY-4.0",
+          "sourceName": "file-contract",
+          "match": "exact",
+          "role": "comparison-only"
+        }
+      ],
+      "effects": {
+        "dashes": {
+          "used": false,
+          "reason": "書頁、紙面及手寫線條都是連續的實體邊界。"
+        },
+        "opacity": {
+          "used": false,
+          "reason": "辨識線索來自紙面輪廓及內部留白。"
+        },
+        "gradients": {
+          "used": false,
+          "reason": "使用單色墨線以維持小尺寸的局部對比。"
+        }
+      },
+      "change": {
+        "kind": "new",
+        "reason": "紙內保留簽名共享的回環起筆並減為一個肩部；16px 讓位給落款，較大尺寸加上依線寬補償的短條款線。",
+        "before": null
+      },
+      "visualReview": {
+        "status": "visually-reviewed-candidate",
+        "reviewer": "Codex (AI)",
+        "date": "2026-11-24",
+        "batch": "reading-documents-01",
+        "skillVersion": "0.5.20",
+        "variantsSha256": "8b39882222f7d97a31453d281f8c0d4c444da7b9616cbf67093c59a552967d04",
+        "checks": [
+          "native-16/20/24",
+          "sharp/soft/rounded",
+          "light/dark",
+          "DPR-1/2",
+          "minimum-and-maximum-strokes",
+          "two-pinned-sources",
+          "family-and-text"
+        ],
+        "evidence": [
+          {
+            "path": "docs/review/reading-documents-01/light-1x.png",
+            "sha256": "0202296fb672b55342768a6c10b08863f3e29d1c2b53b6e81c4d3e73bf3df1af"
+          },
+          {
+            "path": "docs/review/reading-documents-01/dark-1x.png",
+            "sha256": "ee7ae4cdc169935942f898816178c5975523f566c288fb8f20c1a01c1cec20df"
+          },
+          {
+            "path": "docs/review/reading-documents-01/light-2x.png",
+            "sha256": "ef1769ffcd130cb29ddf4438a7b29dd8b0b283a2b5372e24a49a9637e9c52ff4"
+          },
+          {
+            "path": "docs/review/reading-documents-01/dark-2x.png",
+            "sha256": "f0e62e20b53033a46ecd8f09a3b6367cc9b3516950de3a5e96a73457e4e5b841"
+          },
+          {
+            "path": "docs/review/reading-documents-01/context.png",
+            "sha256": "b218576441abadc2269ea75e3240f6f8e24417959b1edd54a98885e40abc2b28"
+          }
+        ]
+      },
+      "status": "visually-reviewed-candidate",
+      "userApproval": "pending",
+      "beforeHash": null,
+      "afterHash": "8b39882222f7d97a31453d281f8c0d4c444da7b9616cbf67093c59a552967d04"
     }
   ],
   "additions": {
@@ -95483,6 +95702,21 @@
       ],
       "decisions": "docs/review/navigation-big-01/decisions.json",
       "previousReview": "references/navigation-big-01/previous-reviews.json"
+    },
+    {
+      "cycle": "reading-documents-01",
+      "date": "2026-11-24",
+      "added": [
+        "book-read",
+        "contract"
+      ],
+      "modified": [
+        "file-text",
+        "home",
+        "images"
+      ],
+      "previousReview": "references/reading-documents-01/previous-reviews.json",
+      "evidence": "docs/review/reading-documents-01/index.html"
     }
   ],
   "rebuild": {

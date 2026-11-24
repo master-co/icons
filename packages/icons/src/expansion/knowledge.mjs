@@ -3,6 +3,25 @@ import {enclosedDetails} from '../occlusion.mjs';
 import {file} from '../families/core.mjs';
 import {files} from '../families/files.mjs';
 
+function openBook(g,turning=false){
+  const f=figure(g), k=g.corner==='sharp'?0:g.corner==='soft'?.45:.9;
+  const left=(y)=>`M3 ${y+k}`+(k?`Q3 ${y} ${3+k} ${y-k*.25}`:'');
+  const edge=g.v(7.25,7,6.8), tipY=g.v(1.9,1.95,2);
+  const top=turning
+    ? left(6.5)+`Q4.5 5.9 ${edge} 6V${tipY+k}`+
+      (k?`Q${edge} ${tipY} ${edge+k} ${tipY+k*.15}`:'')+
+      `C9.25 2.35 10.95 3.8 12 6`
+    : left(4.5)+'C6 3.5 9.5 4 12 6';
+  const shell=f.path(top+
+    `C14.5 4 18 3.5 ${21-k} ${4.5-k*.25}`+(k?`Q21 4.5 21 ${4.5+k}`:'')+
+    `V${19-k}`+(k?`Q21 19 ${21-k} ${19-k*.25}`:'')+`C18 18 14.5 18.5 12 20.5`+
+    `C9.5 18.5 6 18 ${3+k} ${19-k*.25}`+(k?`Q3 19 3 ${19-k}`:'')+'Z');
+  const seams=[f.line(12,6,12,20.5)];
+  if(turning)seams.push(f.path(`M${edge} 6V${15.6-k}`+
+    (k?`Q${edge} 15.6 ${edge+k} ${15.6+k*.3}`:'')+'C9 16.1 10.85 18.2 12 20.5'));
+  return enclosedDetails(shell,seams,g);
+}
+
 export const knowledge={
   book:g=>{
     const f=figure(g),k=g.corner==='sharp'?0:g.corner==='soft'?.6:1.2;
@@ -10,14 +29,8 @@ export const knowledge={
       `V${21-k}Q19.5 21 ${19.5-k} 21H7Q4.5 21 4.5 18.5Z`),
       f.path('M4.5 18.5Q4.5 16 7 16H19.5')];
   },
-  'book-open':g=>{
-    const f=figure(g),k=g.corner==='sharp'?0:g.corner==='soft'?.45:.9;
-    const shell=f.path(`M3 ${4.5+k}`+(k?`Q3 4.5 ${3+k} ${4.5-k*.25}`:'')+
-      `C6 3.5 9.5 4 12 6C14.5 4 18 3.5 ${21-k} ${4.5-k*.25}`+(k?`Q21 4.5 21 ${4.5+k}`:'')+
-      `V${19-k}`+(k?`Q21 19 ${21-k} ${19-k*.25}`:'')+`C18 18 14.5 18.5 12 20.5`+
-      `C9.5 18.5 6 18 ${3+k} ${19-k*.25}`+(k?`Q3 19 3 ${19-k}`:'')+'Z');
-    return enclosedDetails(shell,[f.line(12,6,12,20.5)],g);
-  },
+  'book-open':g=>openBook(g),
+  'book-read':g=>openBook(g,true),
   notebook:g=>{
     const f=figure(g),rings=g.s===16?[6.5,12,17.5]:[6,10,14,18];
     return [f.rect(5,3,15,18),f.line(16.5,3,16.5,21),...rings.map(y=>f.line(3,y,7,y))];

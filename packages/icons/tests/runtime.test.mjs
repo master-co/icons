@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import { renderToStaticMarkup } from 'react-dom/server';
 import { createElement } from 'react';
 import { build } from 'esbuild';
-import { renderSvg, resolveIcon, getOpticalSize, Search, ArrowRight, Calendar, FileText, Trash, Database, Square } from '../dist/index.js';
+import { renderSvg, resolveIcon, getOpticalSize, Search, ArrowRight, Calendar, File, FileText, Trash, Database, Square } from '../dist/index.js';
 import { SearchIcon } from '@master/icons-react';
 import { SearchIcon as SmallSearch } from '@master/icons-react/16/soft';
 import { SearchIcon as DirectSearch } from '@master/icons-react/icons/search';
@@ -18,7 +18,8 @@ test('optical selection has explicit boundaries and rejects invalid input',()=>{
   assert.throws(()=>renderSvg(Search,{direction:'auto'}));
 });
 test('dense small masters remove detail and corner profiles alter actual geometry',()=>{
-  for(const icon of [Calendar,FileText,Trash,Database])assert.ok(icon.variants[16].soft.nodes.length<icon.variants[24].soft.nodes.length,icon.name);
+  for(const icon of [Calendar,Trash,Database])assert.ok(icon.variants[16].soft.nodes.length<icon.variants[24].soft.nodes.length,icon.name);
+  for(const size of [16,20,24])assert.equal(FileText.variants[size].soft.nodes.length-File.variants[size].soft.nodes.length,2);
   assert.equal(Square.variants[24].sharp.nodes[0][1].rx,0);
   assert.ok(Square.variants[24].soft.nodes[0][1].rx<Square.variants[24].rounded.nodes[0][1].rx);
 });

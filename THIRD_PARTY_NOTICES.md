@@ -649,6 +649,8 @@ Unmodified LibreOffice Colibre `lc_pastetransposed.svg`, commit `afbbd0df0edb6d4
 
 `signature` is a fresh adapted redraw of Tabler Icons `icons/outline/signature.svg`, commit `4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35`, Copyright (c) 2020-2026 Paweł Kuna, MIT (`licenses/tabler.txt`). Master redraws the initial loop and trailing shoulders, widens the loop, and smooths the handwritten turns. This is recorded as an adaptation despite newly authored path coordinates. The fixed Lucide `signature` at commit `55782beff3a0133df79c417eb68f96e8f19e2404` is comparison-only. No rejected session drawing was retrieved.
 
+The handwritten mark in `contract` uses the same Tabler signature adaptation and MIT notice. Its loop and single trailing shoulder are fitted inside the folded page for small sizes.
+
 ## HTML5 · fresh brand integration
 
 HTML5 Logo by [W3C](https://www.w3.org/), [CC-BY-3.0](https://creativecommons.org/licenses/by/3.0/). Official source: https://www.w3.org/html/logo/downloads/HTML5_1Color_Black.svg (retrieved 2026-11-18; checksum in `packages/icons/src/brands.json`). Full license: `licenses/html5-CC-BY-3.0.txt`. Master omits the wordmark and numeral shading, combines the original shield paths in one opaque currentColor silhouette, and uniformly scales/centers it for small sizes. The original shield and numeral boundaries are retained. The mark is not a W3C conformance or validation badge. No affiliation or endorsement is implied. No rejected session geometry was retrieved.

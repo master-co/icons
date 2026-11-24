@@ -21,13 +21,29 @@ test('symmetric objects retain symmetric painted contours at their closing seams
   }
 });
 test('structural details preserve their enclosing silhouette',()=>{
-  for(const g of masters())for(const name of ['file','file-text','globe','image','images','mail-open','inbox','send','book-open']){
+  for(const g of masters())for(const name of ['file','file-text','globe','image','images','mail-open','inbox','send','book-open','book-read','contract']){
     // The rear image is intentionally outside the front frame; only its own
     // landscape and sun must be contained by the front frame.
     const nodes=draw(name,g).slice(name==='images'?1:0),[tag,attrs]=nodes[0];
     const shell=paintedRegion([[tag,{...attrs,fill:'currentColor'}]],g),ink=paintedRegion(nodes,g);
     try{contained(ink,shell,`${name}/${g.s}/${g.corner}: seam extends outside shell`);}
     finally{shell.delete();ink.delete();}
+  }
+});
+test('the 16px text file has two separate left-aligned lines with a shorter first line',()=>{
+  for(const corner of ['sharp','soft','rounded'])for(const stroke of [.75,1,1.25,1.5]){
+    const native=context(16,corner),g={...native,stroke,variableStroke:stroke!==native.stroke};
+    const text=draw('file-text',g).slice(draw('file',g).length);
+    assert.equal(text.length,2);
+    const bounds=text.map(node=>{
+      const ink=paintedRegion([node],g);
+      try{return ink.getBounds();}finally{ink.delete();}
+    });
+    const [upper,lower]=bounds;
+    assert.equal(upper.fLeft,lower.fLeft);
+    assert.ok(lower.fRight-upper.fRight>=1);
+    assert.ok(lower.fTop-upper.fBottom>=1);
+    assert.ok(upper.fRight-upper.fLeft>upper.fBottom-upper.fTop);
   }
 });
 test('radial chart partitions preserve both the outer ring and donut hole',()=>{

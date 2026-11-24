@@ -65,7 +65,11 @@ export function fileParts(g){
 function file(g,text=false){
   const {s,v}=g,l=v(3.5,4.5,5.5),rr=s-l,{shell,fold}=fileParts(g);
   const result=enclosedDetails(shell,[fold],g);
-  if(text) for(const y of (s===16?[10.5]:s===20?[11,14.5]:[12.5,17])) result.push(line(l+v(2.5,3,3.5),y,rr-v(2.5,3,3.5),y));
+  if(text){
+    const inset=v(2.5,3,3.5), start=l+inset, end=rr-inset;
+    const first=v(7.75,11,12.5), last=v(10.75,14.5,17);
+    result.push(line(start,first,s===16?end-1.5:end,first),line(start,last,end,last));
+  }
   return result;
 }
 function folder(g,plus=false){
@@ -156,7 +160,7 @@ export const coreDrawings={
   'check-circle':g=>[ring(g),enclosedCheck(g)],
   'alert-triangle':g=>{const {s,c,v,r}=g;return [contour([[c,v(2.25,3,3.5)],[v(14.25,17.5,21),v(13.5,17,20.5)],[v(1.75,2.5,3),v(13.5,17,20.5)]],Math.min(r,1.1),true),line(c,v(6.5,8,9),c,v(9,11.5,14)),dot(c,v(11.5,14.5,17.5),g)];},
   'loader':g=>{const {c,v}=g,r=v(5.5,7,8.5);return [path(`M${c+r} ${c}A${r} ${r} 0 1 1 ${c} ${c-r}`)];},
-  'home':g=>{const {s,c,v,r}=g,l=v(3,4,4.5),rr=s-l,t=v(2.25,2.75,3.5),roof=v(6.5,8,9.5),b=v(14,17.5,21),half=v(1.5,2,2.5),door=v(10,12.5,15);return [contour([[l,b],[l,roof],[c,t],[rr,roof],[rr,b]],r,true),contour([[c-half,b],[c-half,door],[c+half,door],[c+half,b]],Math.min(r,1))];},
+  'home':g=>{const {s,c,v,r}=g,l=v(2.75,3.6,4),rr=s-l,t=v(2.25,2.75,3.5),roof=v(6.5,8,9.5),b=v(14,17.5,21),half=v(1.5,2,2.5),door=v(10,12.5,15);return [contour([[l,b],[l,roof],[c,t],[rr,roof],[rr,b]],r,true),contour([[c-half,b],[c-half,door],[c+half,door],[c+half,b]],Math.min(r,1))];},
   'settings':g=>{const {c,v,corner}=g,outer=v(5.75,7.25,8.75),inner=v(4.5,5.5,6.75),spread=v(12,10,10),points=[];for(let i=0;i<6;i++){for(const [offset,r] of [[-24,inner],[-spread,outer],[spread,outer],[24,inner]]){const a=(i*60-90+offset)*Math.PI/180;points.push([c+Math.cos(a)*r,c+Math.sin(a)*r]);}}return [contour(points,corner==='sharp'?0:corner==='soft'?v(0.3,0.4,0.5):v(0.65,0.8,1),true),circle(c,c,v(1.65,2.25,2.75))];},
   'grid':g=>{const {s,v,r}=g,l=v(2.5,3,3.5),gap=v(3,3.5,4),w=(s-2*l-gap)/2;return [[l,l],[l+w+gap,l],[l,l+w+gap],[l+w+gap,l+w+gap]].map(([x,y])=>rect(x,y,w,w,Math.min(r,w*0.28)));},
   'list':g=>{const {s,v}=g,ys=[v(4,5,6),g.c,v(12,15,18)];return ys.flatMap(y=>[dot(v(3,3.5,4),y,g),line(v(6,7.5,9),y,v(13.5,17,20.5),y)]);},

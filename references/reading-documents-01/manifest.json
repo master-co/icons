@@ -1,0 +1,65 @@
+{
+  "role": "comparison-only",
+  "licenseFiles": [
+    "references/reading-documents-01/material-design-LICENSE.txt",
+    "references/reading-documents-01/font-awesome-LICENSE.txt"
+  ],
+  "references": [
+    {
+      "library": "Material Design Icons",
+      "repository": "Templarian/MaterialDesign",
+      "commit": "2424e748e0cc63ab7b9c095a099b9fe239b737c0",
+      "path": "svg/book-open-page-variant-outline.svg",
+      "localPath": "references/writer-01/material-design-icons-book-open-page-variant-outline.svg",
+      "url": "https://github.com/Templarian/MaterialDesign/blob/2424e748e0cc63ab7b9c095a099b9fe239b737c0/svg/book-open-page-variant-outline.svg",
+      "license": "Apache-2.0",
+      "name": "book-read",
+      "sourceName": "book-open-page-variant-outline",
+      "sha256": "89f6374319665be8d7034f7085a7cb8bca80f0f3beeb7aba7075db0480c62ee4",
+      "match": "exact",
+      "role": "comparison-only"
+    },
+    {
+      "name": "book-read",
+      "library": "Material Symbols",
+      "repository": "google/material-design-icons",
+      "commit": "10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7",
+      "path": "symbols/web/auto_stories/materialsymbolsoutlined/auto_stories_24px.svg",
+      "localPath": "references/reading-documents-01/material-symbols-auto_stories.svg",
+      "url": "https://github.com/google/material-design-icons/blob/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/symbols/web/auto_stories/materialsymbolsoutlined/auto_stories_24px.svg",
+      "sha256": "4908263e3784d9443d49728a33c30273627f9312a8934f14ea952c7e8c16ce7b",
+      "license": "Apache-2.0",
+      "sourceName": "auto_stories",
+      "match": "exact",
+      "role": "comparison-only"
+    },
+    {
+      "name": "contract",
+      "library": "Material Symbols",
+      "repository": "google/material-design-icons",
+      "commit": "10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7",
+      "path": "symbols/web/contract/materialsymbolsoutlined/contract_24px.svg",
+      "localPath": "references/reading-documents-01/material-symbols-contract.svg",
+      "url": "https://github.com/google/material-design-icons/blob/10ecc14790612ca8fd164e3f4ffe9c16fc50d5b7/symbols/web/contract/materialsymbolsoutlined/contract_24px.svg",
+      "sha256": "ec0ebea86eb9f6db35d6f873141fc377e92087716c7e7ea745c090533455e67d",
+      "license": "Apache-2.0",
+      "sourceName": "contract",
+      "match": "exact",
+      "role": "comparison-only"
+    },
+    {
+      "name": "contract",
+      "library": "Font Awesome Free",
+      "repository": "FortAwesome/Font-Awesome",
+      "commit": "af620534bfc3c2d4cbefcfeec29603bbe7809e64",
+      "path": "svgs/solid/file-contract.svg",
+      "localPath": "references/reading-documents-01/font-awesome-free-file-contract.svg",
+      "url": "https://github.com/FortAwesome/Font-Awesome/blob/af620534bfc3c2d4cbefcfeec29603bbe7809e64/svgs/solid/file-contract.svg",
+      "sha256": "8516915385c9d28d156d97ee55e97a3d6ec9de6ae2fe8f886c92ef7d7249c0d4",
+      "license": "CC-BY-4.0",
+      "sourceName": "file-contract",
+      "match": "exact",
+      "role": "comparison-only"
+    }
+  ]
+}

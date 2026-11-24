@@ -1,0 +1,311 @@
+[
+  {
+    "name": "file-text",
+    "concept": "file",
+    "purpose": "檔案與內容：文字檔案",
+    "recognitionCues": "保留 16px 一行、較大尺寸兩行",
+    "confusableWith": [
+      "invoice"
+    ],
+    "sourceObservation": "兩份原稿使用較多文字線；Master小尺寸減行降低密度，折頁仍遵守同一文件構造。",
+    "references": [
+      {
+        "name": "file-text",
+        "library": "Lucide",
+        "repository": "lucide-icons/lucide",
+        "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+        "path": "icons/file-text.svg",
+        "localPath": "references/ui-v1/lucide-file-text.svg",
+        "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/file-text.svg",
+        "sha256": "52ca55846c202335fb870c8aa23e9345630ec10489303756d62e750f7109605c",
+        "license": "ISC AND MIT",
+        "sourceName": "file-text",
+        "match": "exact",
+        "role": "comparison-only"
+      },
+      {
+        "name": "file-text",
+        "library": "Tabler",
+        "repository": "tabler/tabler-icons",
+        "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+        "path": "icons/outline/file-text.svg",
+        "localPath": "references/ui-v1/tabler-file-text.svg",
+        "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/file-text.svg",
+        "sha256": "afc807ae397fc2419ac5cbca6a1e085a5f761277397682cbad3d907ca78693f5",
+        "license": "MIT",
+        "sourceName": "file-text",
+        "match": "exact",
+        "role": "comparison-only"
+      }
+    ],
+    "effects": {
+      "dashes": {
+        "used": false,
+        "reason": "不採用；「文字檔」由連續輪廓、節點或實際斷開關係表意，沒有需虛線表示的隱藏／未完成邊界。"
+      },
+      "opacity": {
+        "used": false,
+        "reason": "不採用；「文字檔」的必要輪廓與狀態可以靠形狀、留白表達，淡化不提供額外語意。"
+      },
+      "gradients": {
+        "used": false,
+        "reason": "本期僅允許必要的逐筆透明度；未引入連續漸層或 mask。"
+      }
+    },
+    "change": {
+      "kind": "modified",
+      "reason": "繼承file折角的外緣收口修正；16px單行、20／24px兩行均與折角及底邊有空間，修後文字內容不變。",
+      "before": {
+        "path": "references/craft-05/master-before.json",
+        "variantsSha256": "cd8f9c23f4ea1d1d6636b2eb60566798ab27f36b4e118c26b60ee989b6afaf6b"
+      }
+    },
+    "visualReview": {
+      "status": "modified-after-visual-review",
+      "reviewer": "root",
+      "date": "2026-11-16",
+      "skillVersion": "0.5.4",
+      "batch": "craft-05-03",
+      "variantsSha256": "e2ee70cc6f3cdba2b41e538f7d30e9018287ca06473f66519f19ad05b024772f",
+      "checks": [
+        "16/20/24",
+        "sharp/soft/rounded",
+        "light/dark",
+        "55-percent-foreground",
+        "adjacent-text",
+        "two-pinned-source-comparisons",
+        "true-before-after",
+        "painted-contour-and-cavity",
+        "semantic-effect-decision"
+      ],
+      "evidence": [
+        {
+          "path": "docs/review/craft-05/batch-03/comparison.png",
+          "sha256": "46b69b3408fa2ec40473b39e08b892a08c5c676c46f9861acea1e6a0fce967b4"
+        },
+        {
+          "path": "docs/review/craft-05/batch-03/native.png",
+          "sha256": "7a56e4e1c69468af724bbe90bf81cec9980695ff37eb61cc7ff52a75884ae233"
+        },
+        {
+          "path": "docs/review/craft-05/batch-03/native-dark.png",
+          "sha256": "d11acc464ada14b7a8aee2a999424c17d6cab4eaf60c412e26db18b7cc68ff35"
+        },
+        {
+          "path": "docs/review/craft-05/batch-03/diagnostic.png",
+          "sha256": "a626a16e549ba6a5795fc7821534e74bbd5b1fe3a71c1c64620f891d5cfd66de"
+        }
+      ]
+    },
+    "status": "visually-reviewed-candidate",
+    "userApproval": "pending",
+    "beforeHash": "cd8f9c23f4ea1d1d6636b2eb60566798ab27f36b4e118c26b60ee989b6afaf6b",
+    "afterHash": "e2ee70cc6f3cdba2b41e538f7d30e9018287ca06473f66519f19ad05b024772f"
+  },
+  {
+    "name": "home",
+    "concept": "home",
+    "purpose": "產品介面：首頁",
+    "recognitionCues": "保留連續屋框與簡單門洞",
+    "confusableWith": [
+      "store"
+    ],
+    "sourceObservation": "Tabler有出簷、Iconoir有分離屋頂；Master採連續簡屋及門洞，形狀熟悉且無不必要斷口。",
+    "references": [
+      {
+        "name": "home",
+        "library": "Tabler",
+        "repository": "tabler/tabler-icons",
+        "commit": "4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35",
+        "path": "icons/outline/home.svg",
+        "localPath": "references/ui-v1/tabler-home.svg",
+        "url": "https://github.com/tabler/tabler-icons/blob/4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35/icons/outline/home.svg",
+        "sha256": "069600f461f3e967685765723a851af7b35f24b715e03d41a2928152cf75644c",
+        "license": "MIT",
+        "sourceName": "home",
+        "match": "exact",
+        "role": "comparison-only"
+      },
+      {
+        "name": "home",
+        "library": "Iconoir",
+        "repository": "iconoir-icons/iconoir",
+        "commit": "39834e3f193bc0cca2c36bebb6a650471977433d",
+        "path": "icons/regular/home.svg",
+        "localPath": "references/ui-v1/iconoir-home.svg",
+        "url": "https://github.com/iconoir-icons/iconoir/blob/39834e3f193bc0cca2c36bebb6a650471977433d/icons/regular/home.svg",
+        "sha256": "360a96ce45f0405be951a4655a55df1576fa2aa4b040d64d17180cb6648b4b11",
+        "license": "MIT",
+        "sourceName": "home",
+        "match": "exact",
+        "role": "comparison-only"
+      }
+    ],
+    "effects": {
+      "dashes": {
+        "used": false,
+        "reason": "不採用；「首頁」由連續輪廓、節點或實際斷開關係表意，沒有需虛線表示的隱藏／未完成邊界。"
+      },
+      "opacity": {
+        "used": false,
+        "reason": "不採用；「首頁」的必要輪廓與狀態可以靠形狀、留白表達，淡化不提供額外語意。"
+      },
+      "gradients": {
+        "used": false,
+        "reason": "本期僅允許必要的逐筆透明度；未引入連續漸層或 mask。"
+      }
+    },
+    "change": {
+      "kind": "retained",
+      "reason": "屋頂兩邊對稱，門框與底邊相接而不外溢；rounded底角未侵入門框，保留。",
+      "before": {
+        "path": "references/craft-05/master-before.json",
+        "variantsSha256": "3f941cd38d09d7fb75dde130dcffc7d363fc757689dd4d85e376a59a53d2ce81"
+      }
+    },
+    "visualReview": {
+      "status": "retained-after-visual-review",
+      "reviewer": "root",
+      "date": "2026-11-16",
+      "skillVersion": "0.5.4",
+      "batch": "craft-05-06",
+      "variantsSha256": "3f941cd38d09d7fb75dde130dcffc7d363fc757689dd4d85e376a59a53d2ce81",
+      "checks": [
+        "16/20/24",
+        "sharp/soft/rounded",
+        "light/dark",
+        "55-percent-foreground",
+        "adjacent-text",
+        "two-pinned-source-comparisons",
+        "true-before-after",
+        "painted-contour-and-cavity",
+        "semantic-effect-decision"
+      ],
+      "evidence": [
+        {
+          "path": "docs/review/craft-05/batch-06/comparison.png",
+          "sha256": "f20c089ced0adc940a8497b2eee692d071dc1a06f077effaf70630c058adc736"
+        },
+        {
+          "path": "docs/review/craft-05/batch-06/native.png",
+          "sha256": "56b5634f8466e58433a6fc086061348bfaf08449d68c654a1a9e18a13db61cef"
+        },
+        {
+          "path": "docs/review/craft-05/batch-06/native-dark.png",
+          "sha256": "9aa85efb09488fcdc22cff48f8fec222f1afcd37c74b60e688ae15dc713d23bf"
+        },
+        {
+          "path": "docs/review/craft-05/batch-06/diagnostic.png",
+          "sha256": "7ede5aad837ef9e87c8f625ea2c5293ba1d721d4323a95026fc3d5a1e66c7318"
+        }
+      ]
+    },
+    "status": "visually-reviewed-candidate",
+    "userApproval": "pending",
+    "beforeHash": "3f941cd38d09d7fb75dde130dcffc7d363fc757689dd4d85e376a59a53d2ce81",
+    "afterHash": "3f941cd38d09d7fb75dde130dcffc7d363fc757689dd4d85e376a59a53d2ce81"
+  },
+  {
+    "name": "images",
+    "concept": "image",
+    "purpose": "圖片與媒體：多張圖片",
+    "recognitionCues": "修正山線端點，避免穿出圓角框",
+    "confusableWith": [
+      "copy"
+    ],
+    "sourceObservation": "Lucide左下露背框、Hugeicons有更自由堆疊；Master維持規整同向框和清楚前後間隙，山景不跨到背片。",
+    "references": [
+      {
+        "name": "images",
+        "library": "Lucide",
+        "repository": "lucide-icons/lucide",
+        "commit": "55782beff3a0133df79c417eb68f96e8f19e2404",
+        "path": "icons/images.svg",
+        "localPath": "references/ui-v1/lucide-images.svg",
+        "url": "https://github.com/lucide-icons/lucide/blob/55782beff3a0133df79c417eb68f96e8f19e2404/icons/images.svg",
+        "sha256": "f853679adfac703296d71cf0a55945af93144927bc50c9ce72eac809300aad8c",
+        "license": "ISC AND MIT",
+        "sourceName": "images",
+        "match": "exact",
+        "role": "comparison-only"
+      },
+      {
+        "name": "images",
+        "library": "Hugeicons Free",
+        "repository": "hugeicons/hugeicons",
+        "commit": "834e28d965946c1ee60d080027fe9dae4adc58d0",
+        "path": "icons/images.svg",
+        "localPath": "references/ui-v1/hugeicons-free-images.svg",
+        "url": "https://github.com/hugeicons/hugeicons/blob/834e28d965946c1ee60d080027fe9dae4adc58d0/icons/images.svg",
+        "sha256": "29a4432c4ef51a7851c19e69e1ecb057348152d5e166f12762c8d4a420cd2151",
+        "license": "MIT",
+        "sourceName": "images",
+        "match": "exact",
+        "role": "comparison-only"
+      }
+    ],
+    "effects": {
+      "dashes": {
+        "used": false,
+        "reason": "不採用；多張圖片由後片露邊表達，不靠虛線暗示。"
+      },
+      "opacity": {
+        "used": false,
+        "reason": "不採用；後片已有清楚分離，不需要淡化來區分層次。"
+      },
+      "gradients": {
+        "used": false,
+        "reason": "本期僅允許必要的逐筆透明度；未引入連續漸層或 mask。"
+      }
+    },
+    "change": {
+      "kind": "modified",
+      "reason": "修改後通過：前片山形左右接框原有端帽凸出，現按前片外殼收口；後片露邊保持獨立，16px仍清楚讀成堆疊相片。",
+      "before": {
+        "path": "references/craft-05/master-before.json",
+        "variantsSha256": "453a49df9945ff3ebbc875172a532a273a40ce69dc0dcc3bbea1634a4fc53708"
+      }
+    },
+    "visualReview": {
+      "status": "modified-after-visual-review",
+      "reviewer": "root",
+      "date": "2026-11-16",
+      "skillVersion": "0.5.4",
+      "batch": "craft-05-18",
+      "variantsSha256": "bdde4367a98afd40950204136b7d242c971f0e54446504dcfd34d65efda0767d",
+      "checks": [
+        "16/20/24",
+        "sharp/soft/rounded",
+        "light/dark",
+        "55-percent-foreground",
+        "adjacent-text",
+        "two-pinned-source-comparisons",
+        "true-before-after",
+        "painted-contour-and-cavity",
+        "semantic-effect-decision"
+      ],
+      "evidence": [
+        {
+          "path": "docs/review/craft-05/batch-18/comparison.png",
+          "sha256": "a97bd0bc78b9fcee49e080996e793c7ee834adc941a86a794b201bce805f4da1"
+        },
+        {
+          "path": "docs/review/craft-05/batch-18/native.png",
+          "sha256": "6dab07420755ba7c01661c0faf5b58f8f9bb0896f8ae09f8ce54c23192daaed8"
+        },
+        {
+          "path": "docs/review/craft-05/batch-18/native-dark.png",
+          "sha256": "3fd361f642f7055511f02e285f5a63d0d1360bc78ca078e16b382cf603cca1e1"
+        },
+        {
+          "path": "docs/review/craft-05/batch-18/diagnostic.png",
+          "sha256": "7736c82219f2a55c113856c6dcff0524223e4b35231f44cbefdafa1e29a31159"
+        }
+      ]
+    },
+    "status": "visually-reviewed-candidate",
+    "userApproval": "pending",
+    "beforeHash": "453a49df9945ff3ebbc875172a532a273a40ce69dc0dcc3bbea1634a4fc53708",
+    "afterHash": "bdde4367a98afd40950204136b7d242c971f0e54446504dcfd34d65efda0767d"
+  }
+]

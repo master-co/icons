@@ -1,6 +1,6 @@
 // Direction and state variants remain named drawings, not extra base concepts.
 export const conceptOf = {
-  frown:'smile','thumbs-down':'thumbs-up','book-open':'book',notebook:'book',
+  frown:'smile','thumbs-down':'thumbs-up','book-open':'book','book-read':'book',notebook:'book',
   'bookmark-plus':'bookmark','bookmark-minus':'bookmark','file-question':'file','file-json':'file',
   'table-row-add':'table','table-column-add':'table','table-row-delete':'table','table-column-delete':'table',
   'table-cells-merge':'table','table-cells-split':'table',

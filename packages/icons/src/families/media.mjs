@@ -1,7 +1,25 @@
-import { contour, line } from '../geometry.mjs';
+import { circle, contour, line } from '../geometry.mjs';
 import { enclosedDetails, knockout } from '../occlusion.mjs';
 import { figure } from "./shared.mjs";
 export function imageFrame(g,{left=3,top=4,width=18,height=16,radius=g.r}={}){return figure(g).rect(left,top,width,height,radius);}
+// Use the same landscape coordinates for a full-size picture and its smaller
+// print. Rotate the centerlines before stroking so stacked frames keep their
+// native pen width and Boolean cutouts work in the same coordinate space.
+function photograph(g,frame,place,sunRadius,stacked=false){
+  const ridgePoints=stacked?[[3,17.2],[10.5,12.5],[19.25,20]]:[[7,20],[15,11],[21,17]];
+  const ridge=contour(ridgePoints.map(([x,y])=>place(x,y)),stacked?g.v(.8,1.1,1.5):g.tip);
+  const [cx,cy]=place(stacked?16.5:7.5,8.5);
+  return [...enclosedDetails(frame,[ridge],g),circle(cx,cy,sunRadius,{fill:'currentColor',stroke:'none'})];
+}
+function printFrame(g,cx,cy,side,degrees){
+  const angle=degrees*Math.PI/180, cos=Math.cos(angle), sin=Math.sin(angle);
+  const place=(x,y)=>{
+    const dx=(x-12)*side/18, dy=(y-12)*side/16, scale=g.s/24;
+    return [(cx+dx*cos-dy*sin)*scale,(cy+dx*sin+dy*cos)*scale];
+  };
+  const corners=[[3,4],[21,4],[21,20],[3,20]].map(([x,y])=>place(x,y));
+  return {frame:contour(corners,g.r,true),place};
+}
 function speaker(g) {
   return [figure(g).contour([[3, 9], [7, 9], [12, 4.5], [12, 19.5], [7, 15], [3, 15]], true, Math.min(g.r, 0.6))];
 }
@@ -52,17 +70,15 @@ const media = {
   },
   headphones,
   image: (g) => {
-    const f = figure(g);
-    const frame=imageFrame(g);
-    const landscape=f.contour([[7, 20], [15, 11], [21, 17]], false, g.tip);
-    return [...enclosedDetails(frame,[landscape],g), f.dot(7.5, 8.5, g.v(0.9, 1.1, 1.25))];
+    const f=figure(g);
+    return photograph(g,imageFrame(g),(x,y)=>[f.u(x),f.u(y)],g.v(.9,1.1,1.25));
   },
   images: (g) => {
-    const f = figure(g);
-    const frame=f.rect(7, 3, 14, 14);
-    const landscape=f.contour([[7, 14], [12.5, 9.5], [21, 14]], false, g.tip);
-    return [f.contour([[3, 7], [3, 21], [17, 21]], false, g.r),
-      ...enclosedDetails(frame,[landscape],g), f.dot(10.5, 6.5, g.v(0.75, 0.9, 1))];
+    const side=g.v(13,13.2,13.4);
+    const front=printFrame(g,9.65,14.45,side,-7);
+    const back=printFrame(g,14.65,9.4,side,8);
+    const [frame,...content]=photograph(g,front.frame,front.place,g.v(.72,.85,1),true);
+    return [...knockout([back.frame],[frame],g,{silhouettes:[frame]}),...content];
   },
   camera: (g) => {
     const f = figure(g);

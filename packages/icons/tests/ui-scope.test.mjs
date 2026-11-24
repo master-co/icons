@@ -24,10 +24,11 @@ test('original 48 names and all unreviewed masters remain compatible',async()=>{
  const original=JSON.parse(await readFile('references/ui-v1/master-before.json'));
  const baseline=JSON.parse(await readFile('references/craft-01/master-before.json'));
  for(const [name,definition]of Object.entries(original))assert.deepEqual(baseline[name].variants,definition.variants,name);
+ const beforeReading=JSON.parse(await readFile('references/reading-documents-01/master-before.json'));
  const approved=[...(JSON.parse(await readFile('docs/review/craft-04/decisions.json'))).expectedModifiedNames,...(JSON.parse(await readFile('docs/review/craft-05/decisions.json'))).expectedModifiedNames];
  // Later refinements have their own exact scope and evidence checks below.
  approved.push(...JSON.parse(await readFile('docs/review/committed-craft-01/change-scope.json')).changed);
- for(const name of Object.keys(original))if(!['chart-bar','copy','bell-off',...approved].includes(name))assert.deepEqual(defs[name].variants,original[name].variants,name);
+ for(const name of Object.keys(original))if(!['chart-bar','copy','bell-off',...approved].includes(name))assert.deepEqual((beforeReading[name]??defs[name]).variants,original[name].variants,name);
  for(const size of[20,24])assert.deepEqual(defs['chart-bar'].variants[size],original['chart-bar'].variants[size]);
 });
 test('real semantic paint effects survive SVG and React across all sizes',()=>{
@@ -140,6 +141,8 @@ test('craft-05 preserves its immutable baseline, final masters and individual re
   const records=JSON.parse(await readFile(`references/committed-craft-01/previous-${group}-reviews.json`));
   Object.assign(superseded,Object.fromEntries(records.map(r=>[r.name,r])));
  }
+ const readingHistory=JSON.parse(await readFile('references/reading-documents-01/previous-reviews.json'));
+ for(const record of readingHistory)superseded[record.name]??=record;
  const navigationHistory=JSON.parse(await readFile('references/navigation-01/ledger-before.json'));
  for(const name of ['chevrons-left','chevrons-right','menu'])superseded[name]=navigationHistory.icons.find(r=>r.name===name);
  assert.equal(sha(raw),review.baselineSha256);

@@ -2,7 +2,7 @@
 
 Softly rounded, minimal SVG icons drawn for dashboards, apps and web interfaces.
 
-Master Icons focuses on outline, proportion, white space and the trade-offs small sizes demand. It has **946 named icons and 8,514 SVG files**. Read the documentation and browse the collection at [icons.master.co](https://icons.master.co).
+Master Icons focuses on outline, proportion, white space and the trade-offs small sizes demand. It has **948 named icons and 8,532 SVG files**. Read the documentation and browse the collection at [icons.master.co](https://icons.master.co).
 
 ```sh
 npm install @master/icons-react   # or -vue, -svelte, -preact, -astro; @master/icons for plain SVG and JavaScript
