@@ -1,0 +1,22 @@
+---
+title: "无障碍"
+description: "为图标及其控件提供清晰的无障碍名称。"
+---
+
+## 为控件命名 \{#controls\}
+
+可见文本旁的图标属于装饰。省略 `label`，渲染器便会设置 `aria-hidden="true"`。只有图标的按钮应在按钮本身提供无障碍名称。
+
+```tsx
+<button aria-label="搜索"><SearchIcon size={20} /></button>
+```
+
+## 为独立图标命名 \{#standalone\}
+
+图标独自传达信息时，请提供 `label`。渲染器会加入 `role="img"` 与无障碍标签。
+
+```tsx
+<SearchIcon label="搜索" />
+```
+
+不要只靠颜色传达状态。保留清楚的键盘焦点、足够大的操作范围，并以文本提供必要说明。

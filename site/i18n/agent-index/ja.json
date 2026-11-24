@@ -1,0 +1,20 @@
+{
+  "intro": "React、Vue、Svelte、Preact、Astro、素の SVG に対応する光学サイズ別の UI アイコン。",
+  "website": "ウェブサイト",
+  "icons": "アイコン",
+  "full": "ガイド全文",
+  "names": "アイコン名",
+  "alias": "別名の参照先",
+  "directory": "アイコン名・コンポーネント・詳細ページ",
+  "catalog": "全アイコンのカタログ（JSON）",
+  "source": "出典",
+  "heading": "エージェント向けのルール",
+  "rules": [
+    "使用するフレームワークに対応するパッケージを `@master/icons-react`、`@master/icons-vue`、`@master/icons-svelte`、`@master/icons-preact`、`@master/icons-astro` からひとつだけ選んでください。素の SVG または JavaScript では `@master/icons` を使います。パッケージ名は正確に指定してください。",
+    "アイコン名は `node_modules/@master/icons/dist/catalog.json`（`@master/icons/catalog` からも参照可能）または `node node_modules/@master/icons/skills/master-icons/scripts/search.mjs <query>` で調べます。コンポーネント名には `SearchIcon` のように末尾に `Icon` が付きます。",
+    "`size`（16、20、24）で原図を選び、CSS でアイコンのサイズを変更しないでください。",
+    "`strokeWidth` は 0.25 刻みで、16 px は 0.75～1.5、20 px は 1～2、24 px は 1.25～2.5 に対応します。CSS で `stroke-width` を上書きしないでください。",
+    "文字の横にあるアイコンは装飾です。アイコンだけのボタンにはボタン自体に名前を付け、意味を持つ単独のアイコンには `label` を指定します。"
+  ],
+  "skill": "`@master/icons` はエージェント用のスキル `node_modules/@master/icons/skills/master-icons/SKILL.md` を同梱しています。スキルのフォルダーをエージェントの skills ディレクトリにコピーすると、これらのルールを読み込めます。"
+}

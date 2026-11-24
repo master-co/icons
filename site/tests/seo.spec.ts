@@ -2,6 +2,7 @@ import {test,expect} from '@playwright/test'
 import {readFile,readdir} from 'node:fs/promises'
 import {join} from 'node:path'
 import {fileURLToPath} from 'node:url'
+import {locales,languageOf} from '@master/internal-site/common/locales.js'
 import type {CatalogIcon} from '../components/catalog'
 
 const out=fileURLToPath(new URL('../out/',import.meta.url))
@@ -21,12 +22,13 @@ test('built sitemap, canonical URLs, language pairs, sharing images and name ind
  expect(sitemap.headers()['content-type']).toContain('xml')
  const urls=[...(await sitemap.text()).matchAll(/<loc>([^<]+)<\/loc>/g)].map(match=>match[1]).sort()
  const routes=['','/icons',...guideSlugs.map(slug=>'/guide/'+slug),...canonicalIcons.map(icon=>'/icons/'+icon.name)]
- const expected=routes.flatMap(route=>[origin+(route||'/'),origin+'/tw'+route]).sort()
+ const editions=locales.map(locale=>({lang:languageOf(locale),prefix:locale==='en'?'':'/'+locale}))
+ const expected=editions.flatMap(({prefix})=>routes.map(route=>origin+((prefix+route)||'/'))).sort()
  expect(urls).toEqual(expected)
 
  const redirects=(await readFile(join(out,'_redirects'),'utf8')).split(/\r?\n/)
  const pngs=new Set<string>()
- for(const prefix of ['','/tw']){
+ for(const {prefix} of editions){
   const explorer=await readFile(join(out,prefix,'icons.html'),'utf8')
   const directory=explorer.match(/<details\b[^>]*class="[^"]*\bspecimen-directory\b[^"]*"[^>]*>[\s\S]*?<\/details>/)?.[0]??''
   const links=[...directory.matchAll(/<a [^>]*href="([^"]+)"/g)].map(match=>match[1]).sort()
@@ -47,7 +49,8 @@ test('built sitemap, canonical URLs, language pairs, sharing images and name ind
    const html=await readFile(join(out,(path||'/index')+'.html'),'utf8')
    const head=html.slice(0,html.indexOf('</head>'))
    expect(head.includes(`rel="canonical" href="${origin}${path||'/'}"`),path).toBe(true)
-   for(const [lang,target] of [['en',route||'/'],['zh-TW','/tw'+route],['x-default',route||'/']]){
+   for(const {lang,prefix:other} of [...editions,{lang:'x-default',prefix:''}]){
+    const target=(other+route)||'/'
     expect(head.includes(`hreflang="${lang}" href="${origin}${target}"`),path).toBe(true)
    }
    const image=head.match(/property="og:image" content="([^"]+)"/)?.[1]

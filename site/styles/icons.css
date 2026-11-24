@@ -24,7 +24,7 @@
  .explorer-tile { display:flex; position:relative; flex-direction:column; align-items:center; justify-content:center; gap:var(--explorer-cell-gap); min-height:var(--explorer-cell-height); padding:.75rem .375rem; background:transparent; border:0; color:var(--color-text-strong); border-radius:0; box-shadow:1px 0 var(--color-line-hair),0 1px var(--color-line-hair); cursor:pointer; transition:background .15s; }
  .explorer-cell { display:grid; place-items:center; height:max(2rem,var(--display-size)); }
  .explorer-icon { display:grid; place-items:center; flex-shrink:0; }
- .explorer-name { font-size:.625rem; max-width:100%; overflow-wrap:anywhere; text-align:center; }
+ .explorer-name { font-size:.625rem; max-width:100%; overflow-wrap:anywhere; }
  .explorer-name, .detail-name { color:color-mix(in oklab,var(--color-text-muted) 75%,var(--color-text-disabled)); }
  .explorer-tile:focus-visible { outline:2px solid var(--color-focus); outline-offset:-3px; z-index:1; }
  .explorer-tile:active { background:var(--color-surface-inset); }

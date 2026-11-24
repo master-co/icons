@@ -1,4 +1,5 @@
 import {readFile} from 'node:fs/promises'
+import {iconLabel} from '../i18n/icon-label'
 import {createRequire} from 'node:module'
 
 export interface CatalogIcon {
@@ -23,7 +24,7 @@ export async function readCatalog():Promise<Catalog> {
  return JSON.parse(await readFile(createRequire(import.meta.url).resolve('@master/icons/catalog'),'utf8'))
 }
 
-// A build renders both languages from the same inventory. Development reads fresh generated data.
+// A build renders all languages from the same inventory. Development reads fresh generated data.
 let inventory:Promise<Map<string,CatalogIcon>> | undefined
 export async function iconInventory() {
  const load=async()=>new Map((await readCatalog()).icons.map(icon=>[icon.name,icon]))
@@ -31,7 +32,7 @@ export async function iconInventory() {
 }
 
 export function iconText(icon:CatalogIcon,locale:string,copy:Record<string,string>) {
- const name=locale==='tw'||icon.rendering ? icon.label : icon.name.replaceAll('-',' ').replace(/^./,c=>c.toUpperCase())
+ const name=iconLabel(icon,locale,copy)
  const category=copy['category:'+icon.category]
  const kind=icon.rendering==='brand-silhouette'?copy['Monochrome mark']:icon.rendering==='brand-outline'?copy['Outline']:'SVG'
  const title=`${name} SVG · ${icon.component}`

@@ -347,7 +347,7 @@ test('static page retains icons and download links without JavaScript',async({br
 test('shared language, theme and document search controls',async({page})=>{
  await page.goto('/guide/svg')
  const language=page.getByRole('combobox',{name:'Language',exact:true})
- await expect(language.locator('option')).toHaveCount(2)
+ await expect(language.locator('option')).toHaveText(['English','繁體中文（台灣）','日本語','한국어','简体中文'])
  await page.getByRole('combobox',{name:'Theme',exact:true}).selectOption('dark')
  await expect(page.locator('html')).toHaveClass(/dark/)
  await page.reload();await expect(page.locator('html')).toHaveClass(/dark/)

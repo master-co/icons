@@ -1,0 +1,42 @@
+---
+title: "線幅"
+description: "抜きや間隔を保ちながら線幅を調整します。"
+---
+
+## 線幅を設定する \{#set\}
+
+各フレームワーク用パッケージの動的・固定エントリーと JavaScript レンダラーでは、すべてのアイコンに `strokeWidth` を指定できます。
+
+```tsx
+import { SearchIcon } from '@master/icons-react/24/soft';
+<SearchIcon strokeWidth={2} />
+```
+
+```js
+import { Search, renderSvg } from '@master/icons';
+const svg = renderSvg(Search, { size: 20, strokeWidth: 1.75 });
+```
+
+省略すると原図の線幅になります。[コレクション](/icons)ではスライダーで全アイコンの線幅をプレビューでき、コピーしたコードとダウンロードにも反映されます。
+
+## 対応範囲 \{#ranges\}
+
+線幅は光学原図の viewBox の単位で指定し、0.25 刻みです。対応範囲はサイズごとに異なります。
+
+| 光学サイズ | 原図の線幅 | 対応範囲 |
+| --- | --- | --- |
+| 16 px | 1 | 0.75–1.5 |
+| 20 px | 1.25 | 1–2 |
+| 24 px | 1.5 | 1.25–2.5 |
+
+範囲外の値は、選んだ原図の最小値または最大値に補正されます。正の有限数でない値や 0.25 の倍数でない値はエラーになります。
+
+## 線幅ごとに描き直す \{#geometry\}
+
+SVG の `stroke-width` だけを変えると線がその場で太くなり、隙間や抜きがつぶれます。Master Icons は各線幅について抜き、マスク、間隔を再計算し、太くしても余白を保ちます。CSS で `stroke-width` を上書きしないでください。
+
+表示サイズ `size` は線も含めて全体を拡縮します。ブランドロゴは元の形を保持し、線幅の指定を無視します。`brand-github-outline` などのアウトライン版は線幅に対応します。
+
+## セットをダウンロードする \{#downloads\}
+
+光学サイズ別にすべての角と線幅を収録した ZIP があります。たとえば `master-icons-24-strokes.zip` 内には `soft/stroke-2/` などのフォルダーがあり、原寸セットと同じライセンス表示を含みます。[ダウンロード](/guide/download#sets)を参照してください。

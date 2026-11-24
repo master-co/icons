@@ -75,11 +75,11 @@ Development needs Node.js 24 or later and Bun 1.4.4. The icon packages need Node
 
 ```sh
 bun install --frozen-lockfile
-bun run dev              # bilingual site: http://127.0.0.1:4321
+bun run dev              # multilingual site: http://127.0.0.1:4321
 bun run dev:review       # review tool, in another terminal: http://127.0.0.1:4173
 ```
 
-The site has English and Traditional Chinese (`/tw`) editions with search, categories, size and corner previews, code copying and downloads; see the [site documentation](site/README.md).
+The site has English, Traditional Chinese (`/tw`), Japanese (`/ja`), Korean (`/ko`) and Simplified Chinese (`/cn`) editions with search, categories, size and corner previews, code copying and downloads; see the [site documentation](site/README.md).
 
 ```sh
 bun run build                  # packages, review tool and site

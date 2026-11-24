@@ -1,0 +1,20 @@
+{
+  "intro": "针对不同光学尺寸绘制的界面图标，支持 React、Vue、Svelte、Preact、Astro 和纯 SVG。",
+  "website": "网站",
+  "icons": "图标",
+  "full": "指南全文",
+  "names": "图标名称",
+  "alias": "别名指向",
+  "directory": "图标名称、组件和详情页",
+  "catalog": "完整图标目录（JSON）",
+  "source": "来源",
+  "heading": "智能体使用规则",
+  "rules": [
+    "从 `@master/icons-react`、`@master/icons-vue`、`@master/icons-svelte`、`@master/icons-preact`、`@master/icons-astro` 中选择与框架匹配的包，只安装一个。纯 SVG 或 JavaScript 使用 `@master/icons`。请使用准确的包名。",
+    "在 `node_modules/@master/icons/dist/catalog.json`（也可通过 `@master/icons/catalog` 访问）中查找图标名称，或运行 `node node_modules/@master/icons/skills/master-icons/scripts/search.mjs <query>`。组件名以 `Icon` 结尾，例如 `SearchIcon`。",
+    "通过 `size`（16、20 或 24）选择原稿。请勿使用 CSS 缩放图标。",
+    "`strokeWidth` 的步长为 0.25，16 px 支持 0.75–1.5，20 px 支持 1–2，24 px 支持 1.25–2.5。请勿使用 CSS 覆盖 `stroke-width`。",
+    "可见文字旁的图标作为装饰。仅含图标的按钮应在按钮上设置无障碍名称。单独传达信息的图标应设置 `label`。"
+  ],
+  "skill": "`@master/icons` 包含智能体技能 `node_modules/@master/icons/skills/master-icons/SKILL.md`。将技能文件夹复制到智能体的 skills 目录，即可加载这些规则。"
+}

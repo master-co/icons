@@ -1,0 +1,20 @@
+{
+  "intro": "依光學尺寸繪製的介面圖示，支援 React、Vue、Svelte、Preact、Astro 與純 SVG。",
+  "website": "網站",
+  "icons": "圖示",
+  "full": "指南全文",
+  "names": "圖示名稱",
+  "alias": "別名對應",
+  "directory": "圖示名稱、元件與內頁",
+  "catalog": "完整圖示目錄（JSON）",
+  "source": "來源",
+  "heading": "給代理程式的規則",
+  "rules": [
+    "選擇所用框架對應的套件，只安裝一個：`@master/icons-react`、`@master/icons-vue`、`@master/icons-svelte`、`@master/icons-preact`、`@master/icons-astro`。純 SVG 或 JavaScript 使用 `@master/icons`。請使用這些確切的套件名稱。",
+    "在 `node_modules/@master/icons/dist/catalog.json`（亦可匯入 `@master/icons/catalog`）查找圖示名稱，或執行 `node node_modules/@master/icons/skills/master-icons/scripts/search.mjs <query>`。元件名稱以 `Icon` 結尾，例如 `SearchIcon`。",
+    "以 `size`（16、20 或 24）選擇圖稿。請勿以 CSS 調整圖示尺寸。",
+    "`strokeWidth` 以 0.25 為級距，16 px 支援 0.75–1.5、20 px 支援 1–2、24 px 支援 1.25–2.5。請勿以 CSS 覆寫 `stroke-width`。",
+    "可見文字旁的圖示是裝飾。純圖示按鈕的無障礙名稱設在按鈕上，具獨立意義的圖示則設定 `label`。"
+  ],
+  "skill": "`@master/icons` 隨附代理程式技能 `node_modules/@master/icons/skills/master-icons/SKILL.md`。將技能資料夾複製到代理程式的 skills 目錄即可載入這些規則。"
+}

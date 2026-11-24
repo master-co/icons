@@ -62,7 +62,7 @@ try {
   times.coldIconsMs = Math.round(performance.now() - start)
   await expect(page.locator('.explorer-icon svg')).toHaveCount(96)
   // The explorer controls and the shared header's GitHub link import fixed artwork.
-  const controls = /\/data\/(?:native\/)?(?:16\/soft\/(?:x|copy|download|check)|20\/soft\/brand-github-outline)\.js(?:\?|$)/
+  const controls = /\/data\/(?:native\/)?(?:16\/soft\/(?:x|copy|download|check|chevron-down)|20\/soft\/brand-github-outline)\.js(?:\?|$)/
   const visibleModules = iconModules.filter(url => !controls.test(url))
   assert.ok(new Set(visibleModules.filter(url => url.includes('/data/') && url.endsWith('.json'))).size <= 96, 'Explorer must load only visible definitions')
   assert.deepEqual(visibleModules.filter(url => url.includes('/packages/icons/dist/data/')), [], 'Grid icons draw from definitions, never per-icon modules')

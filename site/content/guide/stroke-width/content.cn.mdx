@@ -1,0 +1,42 @@
+---
+title: "线宽"
+description: "调整线条粗细，同时保留镂空与间距。"
+---
+
+## 设置线宽 \{#set\}
+
+每个图标都接受 `strokeWidth`：各框架包的动态与固定入口，以及 JavaScript 渲染器均可使用。
+
+```tsx
+import { SearchIcon } from '@master/icons-react/24/soft';
+<SearchIcon strokeWidth={2} />
+```
+
+```js
+import { Search, renderSvg } from '@master/icons';
+const svg = renderSvg(Search, { size: 20, strokeWidth: 1.75 });
+```
+
+省略此选项即保留图稿的原生线宽。在[图标库](/icons)中，线宽滑块会在每个图标上预览所选线宽，复制的代码与下载文件也会应用它。
+
+## 范围 \{#ranges\}
+
+线宽采用光学原稿 viewBox 的原生单位，以 0.25 为步长。每个原稿各有支持范围：
+
+| 光学尺寸 | 原生线宽 | 范围 |
+| --- | --- | --- |
+| 16 px | 1 | 0.75–1.5 |
+| 20 px | 1.25 | 1–2 |
+| 24 px | 1.5 | 1.25–2.5 |
+
+超出所选原稿范围的值会限制在上下限。非正数、非有限数，以及不是 0.25 倍数的值会抛出错误。
+
+## 重新绘制的几何 \{#geometry\}
+
+修改 SVG 的 `stroke-width` 属性只会原地加粗线条，使缝隙、镂空与细节之间的空间被填满。Master Icons 则预先绘制每种支持的线宽：镂空、遮罩与间隙都会依线宽重新计算，因此较粗的图标仍保留间距。请勿使用 CSS 覆盖 `stroke-width`。
+
+显示尺寸 `size` 会缩放整个图稿，包括线宽。品牌标志维持原始形状，不受线宽影响；`brand-github-outline` 等线条版则支持线宽。
+
+## 整组下载 \{#downloads\}
+
+每个光学尺寸各有一个 ZIP 压缩包，收录全部圆角的每种支持线宽，例如 `master-icons-24-strokes.zip`，内含 `soft/stroke-2/` 等文件夹。其中的文件附有与原生线宽图标集相同的许可声明。参见[下载](/guide/download#sets)。

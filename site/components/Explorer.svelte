@@ -1,4 +1,5 @@
 <script lang="ts">
+ import {languageOf} from '@master/internal-site/common/locales.js'
  import {parseStroke, clampStroke, strokeRanges, strokeDefinition} from '../../scripts/lib/stroke-width.mjs'
  // Direct native modules keep development imports limited to these five controls.
  import XIcon from '@master/icons-svelte/16/soft/x'
@@ -19,9 +20,9 @@
  type Entry=Artwork & {label:string;category:string;keywords:string[];mark?:Artwork;outline?:Artwork;styleOf?:string}
  let {entries,categories,copy,locale,children,directory}:{entries:Entry[];categories:{id:string;label:string}[];copy:Record<string,string>;locale:string;children?:Snippet;directory?:Snippet}=$props()
  const t=(key:string)=>copy[key]??key
- const numberLocale=locale==='tw'?'zh-TW':'en'
- const formatCount=new Intl.NumberFormat(numberLocale).format
- const formatStroke=new Intl.NumberFormat(numberLocale,{minimumFractionDigits:2,maximumFractionDigits:2}).format
+ const numberLocale=$derived(languageOf(locale))
+ const formatCount=$derived(new Intl.NumberFormat(numberLocale).format)
+ const formatStroke=$derived(new Intl.NumberFormat(numberLocale,{minimumFractionDigits:2,maximumFractionDigits:2}).format)
  const instanceId=$props.id()
  const sizes=[16,20,24] as const
  const displaySizes=[16,20,24,32,48,64] as const
@@ -204,8 +205,8 @@
    <a href={`${locale==='en'?'':'/'+locale}/icons/${entry.name}`} class="explorer-tile" class:optical-tile={view==='optical'} onclick={(event)=>open(entry,event)} aria-label={label(entry)}>
     {#if view==='optical'}<span class="optical-row">{#each sizes as s}<span class="optical-cell"><CatalogIcon active={ready} name={entry.name} size={s} {corner} {stroke} /><span class="size-caption explorer-number">{s}{stroke===null?'':` · ${formatStroke(clampStroke(stroke,s)??stroke)}`}</span></span>{/each}</span>
     {:else}<span class="explorer-cell"><CatalogIcon active={ready} name={entry.name} {size} {corner} {stroke} /></span>{/if}
-    <span class="grid gap(2) max-w-full">
-     {#if translation(entry)}<span class="fg-text-body (font-size:.75rem)" lang="zh-TW">{translation(entry)}</span>{/if}
+    <span class="grid gap(2) max-w-full text-center">
+     {#if translation(entry)}<span class="fg-text-body (font-size:.75rem)" lang={numberLocale}>{translation(entry)}</span>{/if}
      <span class="explorer-name">{entry.name}</span>
     </span>
    </a>
@@ -220,7 +221,7 @@
   <h2 class="dialog-title" id="icon-title">
    {#if selected && artwork}
     <a class="link inline-block" href={`${locale==='en'?'':'/'+locale}/icons/${artwork.name}`}>
-     {#if translation(selected)}<span lang="zh-TW">{translation(selected)}</span><span class="detail-name">{selected.name}</span>{:else}{selected.category==='brands'?(artwork.label??selected.label):selected.name}{/if}
+     {#if translation(selected)}<span lang={numberLocale}>{translation(selected)}</span><span class="detail-name">{selected.name}</span>{:else}{selected.category==='brands'?(artwork.label??selected.label):selected.name}{/if}
     </a>
    {/if}
   </h2>

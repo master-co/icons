@@ -3,6 +3,7 @@ import {readFile} from 'node:fs/promises'
 import {createRequire} from 'node:module'
 import Footer from '@master/internal-site/components/Footer.svelte'
 import {iconInventory,iconText} from '../../../components/catalog'
+import {iconLabel} from '../../../i18n/icon-label'
 import {socialMetadata} from '../../../components/social'
 import IconWorkbench from '../../../components/IconWorkbench.svelte'
 import translations from '../../../i18n/translations'
@@ -40,8 +41,8 @@ const controls=Object.fromEntries(controlKeys.map(key=>[key,copy[key]??key]))
   <p>{copy['Use plain SVG or optical icon components for React, Vue, Svelte, Preact and Astro.']}</p>
  </header>
  <IconWorkbench client:load {name} component={icon.component} rendering={icon.rendering} {nativeFile} notice={icon.source.notice} copy={controls} />
- {paired && <p><a class="link" href={`${prefix}/icons/${paired.name}`}>{paired.label} · {copy[paired.styleOf?'Outline':'Monochrome mark']}</a></p>}
- {aliases.map(alias=><p>{alias.label} · <code>{alias.component}</code></p>)}
+ {paired && <p><a class="link" href={`${prefix}/icons/${paired.name}`}>{paired.styleOf ? inventory.get(paired.styleOf)?.label : paired.label} · {copy[paired.styleOf?'Outline':'Monochrome mark']}</a></p>}
+ {aliases.map(alias=><p>{iconLabel(alias,locale,copy)} · <code>{alias.component}</code></p>)}
  <section class="specimen-license">
   <h2>{copy.License}</h2>
   <p><a class="link" href={`${prefix}/guide/license`}>{icon.license}</a>{icon.source.author && <> · {icon.source.reference

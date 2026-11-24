@@ -7,7 +7,7 @@ import {readFileSync} from 'node:fs'
 export function setupPrompt(locale:string) {
  const file=locale==='en'?'content.mdx':`content.${locale}.mdx`
  const source=readFileSync(new URL(`../../content/guide/getting-started/${file}`,import.meta.url),'utf8')
- const text=/<DocumentPrompt\b[^>]*?\btitle="Set up Master Icons"[^>]*?\btext=\{`((?:\\.|[^`])*)`\}/.exec(source)?.[1]
- if(text===undefined||/(?<!\\)\$\{/.test(text))throw new Error(`The getting-started guide (${file}) has no static "Set up Master Icons" prompt.`)
+ const text=/<DocumentPrompt\b[^>]*?\btext=\{`((?:\\.|[^`])*)`\}/.exec(source)?.[1]
+ if(text===undefined||/(?<!\\)\$\{/.test(text))throw new Error(`The getting-started guide (${file}) has no static setup prompt.`)
  return text.replace(/\\([`\\$])/g,'$1')
 }

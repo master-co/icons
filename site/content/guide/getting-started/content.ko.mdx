@@ -1,0 +1,93 @@
+---
+title: "시작하기"
+description: "Master Icons를 설치하고 첫 아이콘을 표시하세요."
+---
+
+import DocumentPrompt from '@master/internal-site/components/DocumentPrompt.astro'
+
+## 설치 \{#install\}
+
+프레임워크에 맞는 패키지를 설치하세요. 각 패키지는 공통 코어인 `@master/icons`를 함께 설치하며 앱에 이미 설치된 프레임워크를 사용합니다.
+
+| 프레임워크 | 패키지 |
+| --- | --- |
+| React 18 또는 19 | `@master/icons-react` |
+| Vue 3.5 이상 | `@master/icons-vue` |
+| Svelte 5 | `@master/icons-svelte` |
+| Preact 11 | `@master/icons-preact` |
+| Astro 7 | `@master/icons-astro` |
+| 프레임워크 없음 | `@master/icons` |
+
+```sh
+npm install @master/icons-react
+```
+
+다른 패키지 관리자를 쓴다면 같은 패키지 이름으로 `bun add`, `pnpm add` 또는 `yarn add`를 실행하세요. 사용하는 프레임워크용 패키지 하나면 됩니다. Node.js 22 이상을 지원하며 Astro 패키지는 Node.js 24 이상이 필요합니다.
+
+## 아이콘 표시하기 \{#first-icon\}
+
+아이콘을 이름으로 가져오세요. 아이콘 컴포넌트 이름은 `Icon`으로 끝납니다.
+
+```tsx
+import { SearchIcon } from '@master/icons-react';
+
+<SearchIcon size={20} label="Search" />
+```
+
+색상은 `currentColor`로 주변 글자색을 따릅니다. 별도 옵션이 없으면 살짝 둥근 모서리의 24 px 원본을 표시합니다. [컬렉션](/icons)에서 모든 이름을 찾아보고 가져오기 코드를 복사하거나 SVG 파일을 다운로드하세요.
+
+## 진입점 선택하기 \{#entries\}
+
+각 패키지는 동일한 아이콘 이름을 사용하는 두 가지 진입점을 제공합니다.
+
+- **동적 진입점**(예: `@master/icons-react`). 각 아이콘은 원본 9종(크기 3가지 × 모서리 3가지)을 포함하며 `size`, `corner`, `strokeWidth`를 받습니다.
+- **고정 진입점**(예: `@master/icons-react/20/soft`). 각 아이콘은 원본 한 가지만 포함합니다. 인터페이스 전체에서 같은 크기와 모서리를 쓸 때 전송 용량을 줄일 수 있습니다.
+
+```tsx
+import { SearchIcon } from '@master/icons-react/20/soft';
+
+<button aria-label="Search"><SearchIcon /></button>
+```
+
+트리 셰이킹을 지원하는 번들러는 사용하지 않는 아이콘을 제거합니다. 환경에 맞는 [SVG와 JavaScript](/guide/svg), [React](/guide/react), [Vue](/guide/vue), [Svelte](/guide/svelte), [Preact](/guide/preact), [Astro](/guide/astro) 가이드로 이동하세요.
+
+## AI 에이전트로 설정하기 \{#set-up-with-an-ai-agent\}
+
+앱 루트에서 코딩 에이전트를 열고 아래 프롬프트를 붙여 넣으세요. 에이전트는 프로젝트를 점검하고 패키지, 기본 크기·모서리·선 두께, 기존 아이콘 라이브러리 처리 방식을 확인한 뒤 파일을 변경합니다. 이어서 패키지를 설치하고 첫 아이콘을 표시한 뒤 검증을 실행합니다.
+
+<DocumentPrompt title="Master Icons 설정하기" text={`기존 웹 앱에 Master Icons를 설치하고 동작 확인까지 진행해 주세요.
+가이드의 Markdown 문서는 https://icons.master.co/ko/llms.txt 문서에 정리되어 있습니다. getting-started, 선택한 프레임워크, optical-sizes, stroke-width, accessibility 문서와 설치한 패키지의 README를 읽어 주세요. 설치 후에는 node_modules/@master/icons/skills/master-icons/SKILL.md를 따라 주세요.
+
+npm에는 코어 @master/icons와 프레임워크별 패키지 @master/icons-react, @master/icons-vue, @master/icons-svelte, @master/icons-preact, @master/icons-astro가 배포되어 있습니다. 이 이름만 사용하고 비슷한 이름의 패키지는 설치하지 마세요.
+
+편집 전에 패키지 관리자와 잠금 파일, Node.js 버전, 프레임워크(React, Vue, Svelte, Preact, Astro 또는 없음)와 빌드 도구, 기존 아이콘 라이브러리와 가져오는 방법, dev/lint/build/test 명령, AGENTS.md 같은 지침 파일을 확인해 주세요.
+
+편집하기 전에 다음 항목을 질문하고 제 답변을 기다려 주세요. 임의로 결정하지 마세요.
+- 통합 방식: 감지된 프레임워크용 패키지 또는 순수 SVG와 JavaScript용 @master/icons 중 하나만 설치합니다.
+- 기본값: 광학 크기 16, 20, 24 중 하나(보통은 24, 조밀한 UI는 16 또는 20), 모서리 sharp, soft, rounded 중 하나(기본 soft), 원본 선 두께 유지 또는 단일 두께 지정 여부를 확인하세요. 16 px는 0.75~1.5, 20 px는 1~2, 24 px는 1.25~2.5이며 0.25 단위입니다.
+- 기존 아이콘: 다른 라이브러리가 있다면 그대로 두고 새 화면에만 Master Icons를 쓸지(기본), 제가 지정한 아이콘을 교체할지 확인하세요. 지정하지 않은 아이콘은 교체하지 마세요.
+
+답변을 받은 뒤 다음 순서로 적용해 주세요.
+1. package.json이 있는 앱 루트에서 프로젝트의 패키지 관리자로 선택한 패키지를 npm에서 설치하세요. 모든 명령은 이 디렉터리에서 실행하세요.
+2. 각 아이콘을 이름으로 가져오세요. 동적 진입점(import { SearchIcon } from '@master/icons-react')은 size, corner, strokeWidth를 받습니다. '@master/icons-react/20/soft' 같은 고정 진입점은 원본 하나만 포함해 더 작습니다. 앱 전체가 같은 설정이면 고정 진입점을 우선하세요.
+3. 원래 크기로 표시하세요. CSS width와 height로 늘이거나 줄이지 말고 size로 가장 가까운 광학 원본을 선택하세요. strokeWidth는 미리 계산한 도형을 선택하므로 CSS에서 stroke-width를 덮어쓰지 마세요.
+4. 보이는 텍스트 옆의 아이콘은 장식으로 두고, 아이콘만 있는 버튼은 버튼 자체에 접근 가능한 이름을 지정하며, 의미 있는 독립 아이콘에는 label을 지정하세요.
+5. 제가 지정한 아이콘을 교체한다면 node_modules/@master/icons/dist/catalog.json에서 가장 가까운 이름을 찾아 편집 전에 대응표를 보여 주세요. 각 컨트롤의 접근 가능한 이름을 유지하고, 이전 패키지를 가져오는 코드가 없어졌을 때만 의존성을 제거하세요.
+6. 기존 구조와 스타일을 보존하고 관련 없는 리팩터링은 피하세요.
+7. 사용자가 접근할 수 있는 페이지에 size가 20인 SearchIcon을 표시해 밝은 모드와 어두운 모드에서 글자색과 살짝 둥근 모서리로 그려지는지 확인하세요. 제가 보관을 요청하지 않으면 확인 후 제거하고 프로젝트의 lint, build, test를 실행하세요.
+
+완료 후 변경한 파일, 설치한 패키지, 선택한 기본값, 교체하거나 그대로 둔 아이콘, 검증 결과와 브라우저에서 확인하지 못한 사항을 정리해 주세요.`} />
+
+## AI 에이전트용 자료 \{#ai-agents\}
+
+실제 아이콘 이름과 사용 규칙을 확인할 수 있는 두 가지 자료가 있습니다.
+
+- **에이전트 스킬.** `@master/icons`에는 `node_modules/@master/icons/skills/master-icons/SKILL.md`가 포함되어 있습니다. `master-icons` 폴더를 `.claude/skills` 또는 `.agents/skills` 같은 스킬 디렉터리에 복사하세요. 패키지, 진입점, 크기, 선 두께, 접근성 설명과 설치된 카탈로그에서 실제 이름을 검색하는 스크립트가 들어 있습니다. 예: `node node_modules/@master/icons/skills/master-icons/scripts/search.mjs search`.
+- **llms.txt.** [/ko/llms.txt](/ko/llms.txt)는 모든 가이드의 Markdown 색인이며 [/ko/llms-full.txt](/ko/llms-full.txt)는 전문을 한 파일로 제공합니다. [/ko/guide/getting-started.md](/ko/guide/getting-started.md)처럼 각 가이드 주소에 `.md`를 붙여도 됩니다.
+
+## 다음 단계 \{#next\}
+
+- [크기와 모서리](/guide/optical-sizes)에서 공간에 맞는 도안을 고르세요.
+- [선 두께](/guide/stroke-width)를 조절하세요.
+- [접근성](/guide/accessibility)에서 아이콘과 컨트롤에 이름을 지정하는 방법을 알아보세요.
+- [비교](/guide/comparison)에서 다른 라이브러리와의 차이점을 살펴보세요.

@@ -1,4 +1,6 @@
 ---
+import {locales,languageOf} from '@master/internal-site/common/locales.js'
+const missing={en:'Page not found',tw:'找不到頁面',ja:'ページが見つかりません',ko:'페이지를 찾을 수 없습니다',cn:'找不到页面'}
 import translations from '../../i18n/translations'
 ---
 <!doctype html>
@@ -11,8 +13,7 @@ import translations from '../../i18n/translations'
  <body>
   <main>
    <h1>404</h1>
-   <p>Page not found <span lang="zh-TW">／找不到頁面</span></p>
-   <nav><a href="/icons">{translations.en['Browse Master Icons']}</a> · <a lang="zh-TW" href="/tw/icons">{translations.tw['Browse Master Icons']}</a></nav>
+   <nav>{locales.map(locale=><p lang={languageOf(locale)}>{missing[locale]} · <a href={`${locale==='en'?'':'/'+locale}/icons`}>{translations[locale]['Browse Master Icons']}</a></p>)}</nav>
   </main>
  </body>
 </html>

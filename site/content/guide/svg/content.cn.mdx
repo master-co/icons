@@ -1,0 +1,31 @@
+---
+title: "SVG 与 JavaScript"
+description: "不依赖框架即可使用图标。"
+---
+
+## SVG 文件 \{#svg\}
+
+可从[图标库](/icons)下载单个 SVG 文件，或下载某一尺寸与圆角的全部图标 ZIP 压缩包，其中包含许可证文件。[安装 `@master/icons`](/guide/getting-started#install) 后，同样的文件可通过包的子路径访问 `@master/icons/svg/{size}/{corner}/{name}.svg`，例如 `@master/icons/svg/20/soft/search.svg`。
+
+内联 SVG 使用 `currentColor`。通过 `<img>` 加载的外部 SVG 不会继承周围文本的颜色。
+
+## JavaScript 渲染器 \{#javascript\}
+
+```js
+import { Search, renderSvg } from '@master/icons';
+const svg = renderSvg(Search, { size: 20, corner: 'soft', label: '搜索' });
+```
+
+`renderSvg` 返回 SVG 标记，应配合本包提供的可信图标定义使用。图标定义的名称不含组件使用的 `Icon` 后缀。`size` 控制显示尺寸；`opticalSize` 可明确指定 16、20 或 24，默认选择最接近的光学图稿。
+
+| 选项 | 默认 | 行为 |
+| --- | --- | --- |
+| `size` | `24` | 显示尺寸，必须是有限正数 |
+| `opticalSize` | `'auto'` | 16、20 或 24 原稿；`auto` 取最接近者，18 与 22 取较大的原稿 |
+| `corner` | `'soft'` | `'sharp'`、`'soft'` 或 `'rounded'` |
+| `strokeWidth` | 原生 | [线宽](/guide/stroke-width)，使用原图的坐标单位，以 0.25 为步长 |
+| `color` | `'currentColor'` | 图稿的颜色 |
+| `label` | 无 | 未提供时 SVG 为 `aria-hidden`；提供时 SVG 添加 `role="img"` 与标签 |
+| `direction` | `'ltr'` | `'rtl'` 会水平翻转有方向性的图标 |
+
+当 `direction` 为 `rtl` 时，只有 `arrow-left`、`arrow-right`、`chevron-left`、`chevron-right`、`chevrons-left`、`chevrons-right`、`undo` 与 `redo` 会镜像。

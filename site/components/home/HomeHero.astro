@@ -1,4 +1,5 @@
 ---
+import {languageOf} from '@master/internal-site/common/locales.js'
 import {ArrowRightIcon} from '@master/icons-astro'
 import HomePlate,{type Specimen} from './HomePlate.svelte'
 import SetupPromptButton from './SetupPromptButton.astro'
@@ -7,7 +8,7 @@ import {islandCopy} from './island-copy'
 interface Props {locale:string;prefix:string;copy:Record<string,string>;count:number}
 const {locale,prefix,copy,count}=Astro.props
 const t=(key:string)=>copy[key]??key
-const number=new Intl.NumberFormat(locale==='tw'?'zh-TW':'en').format(count)
+const number=new Intl.NumberFormat(languageOf(locale)).format(count)
 /*
  * The plate's specimens, each at a setting of its own, so the loop walks the whole range: every size, every corner,
  * strokes from 1.25 to 2. Open constructions that read well large, each with a different geometry to build.

@@ -1,5 +1,6 @@
 ---
 import {readCatalog} from '../../components/catalog'
+import {iconLabel} from '../../i18n/icon-label'
 import {socialMetadata} from '../../components/social'
 import {collectionCards} from '../../../scripts/lib/collection-cards.mjs'
 import Explorer from '../../components/Explorer.svelte'
@@ -10,7 +11,7 @@ const copy=translations[locale]??translations.en
 const t=(key:string)=>copy[key]??key
 const catalog=await readCatalog()
 const prefix=locale==='en'?'':'/'+locale
-const entries=collectionCards(catalog.icons)
+const entries=collectionCards(catalog.icons.map(icon=>({...icon,label:locale==='en'?icon.label:iconLabel(icon,locale,copy)})))
  .sort((a,b)=>a.name.localeCompare(b.name,'en',{numeric:true}))
  .map(({name,component,label,category,keywords,outline,mark,styleOf,source}:any)=>({name,component,label,category,keywords,outline,mark,styleOf,notice:source?.notice}))
 const categories=catalog.categories.map(({id})=>({id,label:'category:'+id}))
@@ -27,7 +28,7 @@ export async function generateMetadata({params}:{params:{locale:string}}) {
   <Fragment slot="directory">
     {categories.map(({id,label})=><section>
      <h2>{t(label)}</h2>
-     <ul>{entries.filter(icon=>icon.category===id).map(icon=><li><a class="link" href={`${prefix}/icons/${icon.name}`}>{locale==='tw'?`${icon.label} · ${icon.name}`:icon.name}</a></li>)}</ul>
+     <ul>{entries.filter(icon=>icon.category===id).map(icon=><li><a class="link" href={`${prefix}/icons/${icon.name}`}>{locale!=='en'?`${icon.label} · ${icon.name}`:icon.name}</a></li>)}</ul>
     </section>)}
   </Fragment>
   <Footer client:load class="explorer-footer" />

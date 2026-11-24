@@ -1,4 +1,5 @@
 <script lang="ts">
+ import {languageOf} from '@master/internal-site/common/locales.js'
  import {onMount,tick} from 'svelte'
  import {cubicInOut} from 'svelte/easing'
  import PlayIcon from '@master/icons-svelte/16/soft/play'
@@ -14,7 +15,7 @@
  const sizes=[16,20,24] as const
  const corners=['sharp','soft','rounded'] as const
  const cornerNames:Record<Corner,string>={sharp:'Sharp',soft:'Soft',rounded:'Rounded'}
- const formatStroke=new Intl.NumberFormat(locale==='tw'?'zh-TW':'en',{minimumFractionDigits:2,maximumFractionDigits:2}).format
+ const formatStroke=$derived(new Intl.NumberFormat(languageOf(locale),{minimumFractionDigits:2,maximumFractionDigits:2}).format)
 
  /*
   * One setting, one interface in four styles, and a detail of the icon under inspection. Choosing a style also

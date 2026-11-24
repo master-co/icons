@@ -1,13 +1,13 @@
 # Master Icons
 
-Optically sized interface icons: a framework-neutral core (`packages/icons`), one adapter package per framework (`packages/icons-{react,vue,svelte,preact,astro}`), the bilingual website (`site/`, see `site/AGENTS.md`) and the review tool (`preview/`). Read `README.md` for commands, `docs/design-system.md` and `skills/master-icons/SKILL.md` before adding or refining icons.
+Optically sized interface icons: a framework-neutral core (`packages/icons`), one adapter package per framework (`packages/icons-{react,vue,svelte,preact,astro}`), the multilingual website (`site/`, see `site/AGENTS.md`) and the review tool (`preview/`). Read `README.md` for commands, `docs/design-system.md` and `skills/master-icons/SKILL.md` before adding or refining icons.
 
 Use Bun 1.4.4 and Node.js 24 or later. Run `bun run check` before committing; run the browser suites listed in `README.md` after site, review or framework changes.
 
 ## Agent resources
 
 - `.agents/skills/icon-craft/` is for contributors drawing, refining and reviewing icons in this repository; it never ships. `skills/master-icons/` is for agents using the packages in an application. Edit it at the repository root: the core build (`packages/icons/scripts/sync-svg.mjs`) copies it into `packages/icons/skills/` (ignored), it ships in `@master/icons`, and `bun run check:package` runs its catalog search from the packed package. Keep its rules in step with the guides.
-- `site/scripts/llms.ts` writes `llms.txt`, `llms-full.txt` and every guide as Markdown (English at the root, Traditional Chinese under `/tw/`) into `site/public/` during preparation. New guides are picked up from their metadata; only a new MDX component needs a rule there for its Markdown form.
+- `site/scripts/llms.ts` writes `llms.txt`, `llms-full.txt` and every guide as Markdown (English at the root, with translations under `/tw/`, `/ja/`, `/ko/` and `/cn/`) into `site/public/` during preparation. New guides are picked up from their metadata; only a new MDX component needs a rule there for its Markdown form.
 
 ## Generated files
 

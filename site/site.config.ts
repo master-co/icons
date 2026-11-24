@@ -1,11 +1,11 @@
 import { defineSite } from '@master/internal-site/config'
-import { hreflangOfLocale, nameOfLocale } from '@master/internal-site/common/locales.js'
+import { locales, hreflangOfLocale, nameOfLocale } from '@master/internal-site/common/locales.js'
 import translations from './i18n/translations'
 const section = (name: string) => new URL(import.meta.resolve(`@master/internal-site/sections/${name}.astro`))
 export default defineSite({
  id:'icons', name:'Master Icons', origin:process.env.PUBLIC_URL || 'http://localhost:4321',
  content:new URL('./content/',import.meta.url), app:new URL('./app-config.ts',import.meta.url),
- i18n:{defaultLocale:'en',locales:['en','tw'],hreflangOfLocale:{en:hreflangOfLocale.en,tw:hreflangOfLocale.tw},nameOfLocale:{en:nameOfLocale.en,tw:nameOfLocale.tw},localizablePathnameRoots:['icons','guide'],translations,
+ i18n:{defaultLocale:'en',locales,hreflangOfLocale,nameOfLocale,localizablePathnameRoots:['icons','guide'],translations,
  validation:{reviews:new URL('./i18n/reviews.json',import.meta.url),resources:new URL('./i18n/resources.ts',import.meta.url)}},
  sections:{home:section('home'),page:section('page'),icons:section('page'),guide:section('guide')},
  navigation:{guide:new URL('./.categories/guide.json',import.meta.url)},

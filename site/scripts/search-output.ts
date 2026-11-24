@@ -26,7 +26,7 @@ export function searchOutput(origin:string):AstroIntegration {
      const canonical=/<link rel="canonical" href="([^"]+)"/.exec(head)?.[1]
      if(canonical!==new URL('/'+pathname,origin).href)continue
      urls.add(canonical)
-     const guide=/^(?:tw\/)?(guide\/[\w-]+)$/.exec(pathname)
+     const guide=/(?:^|\/)(guide\/[\w-]+)$/.exec(pathname)
      if(guide){
       // Master Site emits a dynamic social URL; Pages serves our build-time PNG.
       const image=new URL('/social/'+guide[1]+'.png',origin).href

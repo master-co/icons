@@ -1,0 +1,49 @@
+---
+title: "ダウンロード"
+description: "SVG セットのダウンロード、パッケージのインストール、CDN からの個別ファイルの参照ができます。"
+---
+
+## パッケージ \{#packages\}
+
+フレームワーク用のパッケージを npm からインストールしてください。各パッケージとともに共通のコア `@master/icons` が入ります。
+
+| 用途 | インストール | ガイド |
+| --- | --- | --- |
+| SVG と JavaScript | `npm install @master/icons` | [SVG と JavaScript](/guide/svg) |
+| React | `npm install @master/icons-react` | [React](/guide/react) |
+| Vue | `npm install @master/icons-vue` | [Vue](/guide/vue) |
+| Svelte | `npm install @master/icons-svelte` | [Svelte](/guide/svelte) |
+| Preact | `npm install @master/icons-preact` | [Preact](/guide/preact) |
+| Astro | `npm install @master/icons-astro` | [Astro](/guide/astro) |
+
+## SVG セット \{#sets\}
+
+各 ZIP にはひとつの光学サイズと角の形で描いた全アイコンが、原図の線幅で収録されています。UI に合ったサイズと角を選んでください。
+
+| サイズ | シャープ | ソフト | ラウンド |
+| --- | --- | --- | --- |
+| 16 px | [シャープ](https://github.com/master-co/icons/releases/latest/download/master-icons-16-sharp.zip) | [ソフト](https://github.com/master-co/icons/releases/latest/download/master-icons-16-soft.zip) | [ラウンド](https://github.com/master-co/icons/releases/latest/download/master-icons-16-rounded.zip) |
+| 20 px | [シャープ](https://github.com/master-co/icons/releases/latest/download/master-icons-20-sharp.zip) | [ソフト](https://github.com/master-co/icons/releases/latest/download/master-icons-20-soft.zip) | [ラウンド](https://github.com/master-co/icons/releases/latest/download/master-icons-20-rounded.zip) |
+| 24 px | [シャープ](https://github.com/master-co/icons/releases/latest/download/master-icons-24-sharp.zip) | [ソフト](https://github.com/master-co/icons/releases/latest/download/master-icons-24-soft.zip) | [ラウンド](https://github.com/master-co/icons/releases/latest/download/master-icons-24-rounded.zip) |
+
+別の線幅を使う場合は、光学サイズ別のアーカイブをダウンロードしてください。`soft/stroke-2/search.svg` のように、角と線幅ごとにフォルダーが分かれています。
+
+- [`master-icons-16-strokes.zip`](https://github.com/master-co/icons/releases/latest/download/master-icons-16-strokes.zip)：16 px、線幅 0.75–1.5、全種類の角
+- [`master-icons-20-strokes.zip`](https://github.com/master-co/icons/releases/latest/download/master-icons-20-strokes.zip)：20 px、線幅 1–2、全種類の角
+- [`master-icons-24-strokes.zip`](https://github.com/master-co/icons/releases/latest/download/master-icons-24-strokes.zip)：24 px、線幅 1.25–2.5、全種類の角
+
+各 [GitHub リリース](https://github.com/master-co/icons/releases)にアーカイブが添付され、上のリンクから最新版を入手できます。個別の SVG は[コレクション](/icons)の詳細から好きなサイズ・線幅でダウンロードできます。
+
+## CDN のファイル \{#cdn\}
+
+`@master/icons` にはすべての原寸 SVG が含まれています。npm 対応の CDN からパスを指定して配信できます。
+
+```html
+<img src="https://cdn.jsdelivr.net/npm/@master/icons@1/icons/24/soft/search.svg" width="24" height="24" alt="検索">
+```
+
+パスは `icons/{size}/{corner}/{name}.svg` です。`<img>` 内の SVG は `currentColor` で周囲の文字色を継承できません。文字色に合わせるときはインライン SVG またはコンポーネントを使います。
+
+## ライセンス \{#license\}
+
+各アーカイブには `LICENSE`、`THIRD_PARTY_NOTICES.md`、`licenses/` フォルダーが含まれ、個々の SVG の先頭にも図案ごとの権利表示があります。アイコンを再配布する際は、これらの表示を残してください。ブランドのアイコンは各権利者の商標で、該当製品を示すために使います。[ライセンスとクレジット](/guide/license)を参照してください。

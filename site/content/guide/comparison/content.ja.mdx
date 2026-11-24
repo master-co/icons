@@ -1,0 +1,52 @@
+---
+title: "比較"
+description: "他のアイコンライブラリとの違いを紹介します。"
+---
+
+## 一覧 \{#overview\}
+
+多くのライブラリはひとつの図案を拡大縮小します。Master Icons はアイコンごとに 3 サイズと 3 種類の角で原図を作り、対応する線幅ごとに描き直しています。最大規模のライブラリに比べて点数は少なく、ダッシュボードやアプリ、ウェブサイトの UI に重点を置いています。
+
+| ライブラリ | アイコン数 | 原図のサイズ | スタイル | 線の太さ | 公式コンポーネント | ライセンス |
+| --- | --- | --- | --- | --- | --- | --- |
+| **Master Icons** | 948（ブランド 107 点を含む） | 16、20、24 px | シャープ・ソフト・ラウンド | 0.75～2.5、0.25 刻みで再描画 | React、Vue、Svelte、Preact、Astro | MIT。一部の図案には個別の権利表示あり |
+| Lucide | 2,091 | 24 px | 線画 | `strokeWidth` で SVG の線幅を設定 | React、Vue、Svelte、Preact、Solid、Angular など | ISC |
+| Heroicons | 324 | 24 px、塗りつぶしは 20・16 px もあり | 線画・塗りつぶし | — | React、Vue | MIT |
+| Phosphor | 1,512 | 原図 1 種 | 塗りつぶし・デュオトーンを含む 6 種 | 固定の 6 種 | React、Vue、Web Components など | MIT |
+| Tabler Icons | 線画 5,491、塗りつぶし 1,054 | 24 px | 線画・塗りつぶし | `stroke` で SVG の線幅を設定 | React、Vue、Svelte、Preact、Solid など | MIT |
+| Material Symbols | 各スタイル 7,890 | 光学サイズ軸 20～48 | Outlined・Rounded・Sharp、塗りつぶし軸 | ウェイト軸 100～700 | —（フォント・SVG） | Apache 2.0 |
+| Fluent UI System Icons | 約 3,000 | 10～48 px、最大 8 サイズ | 標準・塗りつぶし | — | React | MIT |
+| Font Awesome Free | 塗りつぶし 2,001、標準 273、ブランド 609 | 原図 1 種 | Solid・Regular・Brands | — | React、Vue、Angular | アイコンは CC BY 4.0、コードは MIT |
+
+数値は 2026 年 11 月公開の npm パッケージ（`lucide-static` 1.75、`heroicons` 2.2、`@phosphor-icons/core` 2.1、`@tabler/icons` 3.52、`@material-symbols/svg-400` 0.49、`@fluentui/svg-icons` 1.1.346、`@fortawesome/fontawesome-free` 7.3）によります。リリースごとに変わるため、最新の数値は各プロジェクトで確認してください。
+
+## 光学サイズ \{#optical-sizes\}
+
+24 px の図案を 16 px に縮めると細部が密集してぼやけます。Master Icons は 16・20 px の原図を別に作り、細部を簡略化したり配置し直したりします。`size` は最も近い原図を自動で選びます。Fluent UI と Heroicons も小サイズを別に描き、Material Symbols は可変フォントの光学サイズ軸で調整します。ほかの多くのライブラリは単一の図案を拡縮します。[サイズと角の形](/guide/optical-sizes)も参照してください。
+
+## 角の形 \{#corners\}
+
+3 つのスタイルは SVG の線の接合部に加え、輪郭と内側の余白も変えます。アイコン名を変えずに、端正な印象から柔らかな印象まで UI 全体を切り替えられます。Material Symbols にも Outlined・Rounded・Sharp の独立したシリーズがあります。
+
+## 線の太さ \{#line-weight\}
+
+線幅を指定できる多くのライブラリでは SVG の `stroke-width` 属性を変えると、線が同じ場所で太くなり、隙間や抜きが埋まります。Master Icons は対応する線幅ごとに抜きとマスクを計算して描き直し、太線でも間隔を保ちます。Phosphor は固定ウェイト、Material Symbols はフォント軸で、太さ別に設計した図案を提供します。[線幅](/guide/stroke-width)も参照してください。
+
+## 容量 \{#size\}
+
+`@master/icons-react/24/soft` の `SearchIcon` など固定エントリーを使うと、コードの最小化と gzip 圧縮後のバンドルの増加は共有レンダラーを含め約 1.5 KB です。動的エントリーは全 9 種の原図と各線幅を含むため、1 アイコンで約 2 KB 増えます。固定アイコン 10 個なら約 3 KB です。未使用のアイコンはツリーシェイキングで除去されます。
+
+インストールされるコアパッケージは全 9 種の SVG と事前計算済みの線幅を含むため、多くのアイコンパッケージより大きく、圧縮して約 20 MB あります。これは `node_modules` の容量に影響しますが、アプリのバンドルには含まれません。
+
+## 選び方 \{#choosing\}
+
+小さいアイコンを多用する場合、角や線幅を統一したい場合、React・Vue・Svelte・Preact・Astro で同じアイコンを共有する場合に Master Icons が適しています。
+
+次の用途では、ほかのライブラリも候補になります。
+
+- 幅広い概念をカバーするなら、数千点を収録する Material Symbols や Tabler Icons。
+- デュオトーンなどのウェイトやアイコンフォントには Phosphor や Material Symbols。
+- Microsoft Fluent や Material Design に準拠するインターフェース。
+- Angular・Solid・React Native・Flutter を使うなら、それらを公式サポートする Lucide、Tabler Icons、Phosphor など。
+
+Master Icons は他のライブラリと併用できます。新しい画面から使い始め、既存のアイコンは少しずつ置き換えられます。[セットアップ用プロンプト](/guide/getting-started#set-up-with-an-ai-agent)では変更前に最も近いアイコン名との対応を確認します。

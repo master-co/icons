@@ -1,0 +1,20 @@
+{
+  "intro": "Optically sized interface icons for React, Vue, Svelte, Preact, Astro and plain SVG.",
+  "website": "Website",
+  "icons": "Icons",
+  "full": "Full text",
+  "names": "Icon names",
+  "alias": "alias of",
+  "directory": "Icon names, components and pages",
+  "catalog": "Full icon catalog (JSON)",
+  "source": "Source",
+  "heading": "Rules for agents",
+  "rules": [
+    "Install one package for your framework: `@master/icons-react`, `@master/icons-vue`, `@master/icons-svelte`, `@master/icons-preact`, `@master/icons-astro`. For plain SVG or JavaScript use `@master/icons`. Use these exact package names.",
+    "Look up icon names in `node_modules/@master/icons/dist/catalog.json` (also `@master/icons/catalog`) or run `node node_modules/@master/icons/skills/master-icons/scripts/search.mjs <query>`. Component names end in `Icon`, as in `SearchIcon`.",
+    "Select the drawing with `size` (16, 20 or 24). Avoid resizing icons with CSS.",
+    "`strokeWidth` accepts 0.75–1.5 at 16 px, 1–2 at 20 px and 1.25–2.5 at 24 px in steps of 0.25. Never override `stroke-width` with CSS.",
+    "Icons beside visible text are decorative. Give an icon-only button its name on the button. Give a meaningful standalone icon `label`."
+  ],
+  "skill": "`@master/icons` ships an agent skill at `node_modules/@master/icons/skills/master-icons/SKILL.md`. Copy the skill folder into your agent’s skills directory to load these rules."
+}

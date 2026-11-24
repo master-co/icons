@@ -1,0 +1,49 @@
+---
+title: "다운로드"
+description: "SVG 세트를 다운로드하거나 패키지를 설치하거나 CDN에서 개별 파일을 연결하세요."
+---
+
+## 패키지 \{#packages\}
+
+npm에서 프레임워크에 맞는 패키지를 설치하세요. 각 패키지와 함께 공통 코어인 `@master/icons`가 설치됩니다.
+
+| 용도 | 설치 | 가이드 |
+| --- | --- | --- |
+| SVG와 JavaScript | `npm install @master/icons` | [SVG와 JavaScript](/guide/svg) |
+| React | `npm install @master/icons-react` | [React](/guide/react) |
+| Vue | `npm install @master/icons-vue` | [Vue](/guide/vue) |
+| Svelte | `npm install @master/icons-svelte` | [Svelte](/guide/svelte) |
+| Preact | `npm install @master/icons-preact` | [Preact](/guide/preact) |
+| Astro | `npm install @master/icons-astro` | [Astro](/guide/astro) |
+
+## SVG 세트 \{#sets\}
+
+각 ZIP 파일에는 하나의 광학 크기와 모서리 스타일로 그린 모든 아이콘이 원래 선 두께로 들어 있습니다. 인터페이스에 맞는 크기와 모서리를 고르세요.
+
+| 크기 | 각지게 | 살짝 둥글게 | 둥글게 |
+| --- | --- | --- | --- |
+| 16 px | [각지게](https://github.com/master-co/icons/releases/latest/download/master-icons-16-sharp.zip) | [살짝 둥글게](https://github.com/master-co/icons/releases/latest/download/master-icons-16-soft.zip) | [둥글게](https://github.com/master-co/icons/releases/latest/download/master-icons-16-rounded.zip) |
+| 20 px | [각지게](https://github.com/master-co/icons/releases/latest/download/master-icons-20-sharp.zip) | [살짝 둥글게](https://github.com/master-co/icons/releases/latest/download/master-icons-20-soft.zip) | [둥글게](https://github.com/master-co/icons/releases/latest/download/master-icons-20-rounded.zip) |
+| 24 px | [각지게](https://github.com/master-co/icons/releases/latest/download/master-icons-24-sharp.zip) | [살짝 둥글게](https://github.com/master-co/icons/releases/latest/download/master-icons-24-soft.zip) | [둥글게](https://github.com/master-co/icons/releases/latest/download/master-icons-24-rounded.zip) |
+
+다른 선 두께를 사용하려면 광학 크기별 압축 파일을 받으세요. `soft/stroke-2/search.svg`처럼 모서리와 두께에 따라 폴더가 나뉩니다.
+
+- [`master-icons-16-strokes.zip`](https://github.com/master-co/icons/releases/latest/download/master-icons-16-strokes.zip): 16 px, 선 두께 0.75–1.5, 모든 모서리 스타일
+- [`master-icons-20-strokes.zip`](https://github.com/master-co/icons/releases/latest/download/master-icons-20-strokes.zip): 20 px, 선 두께 1–2, 모든 모서리 스타일
+- [`master-icons-24-strokes.zip`](https://github.com/master-co/icons/releases/latest/download/master-icons-24-strokes.zip): 24 px, 선 두께 1.25–2.5, 모든 모서리 스타일
+
+압축 파일은 매 [GitHub 릴리스](https://github.com/master-co/icons/releases)에 첨부되며 위 링크는 항상 최신 버전을 가리킵니다. 개별 SVG는 [컬렉션](/icons)의 상세 보기에서 원하는 크기와 두께로 다운로드할 수 있습니다.
+
+## CDN 파일 \{#cdn\}
+
+`@master/icons`에는 모든 원본 SVG 파일이 들어 있어 npm CDN에서 경로로 제공할 수 있습니다.
+
+```html
+<img src="https://cdn.jsdelivr.net/npm/@master/icons@1/icons/24/soft/search.svg" width="24" height="24" alt="Search">
+```
+
+경로는 `icons/{size}/{corner}/{name}.svg`입니다. `<img>`로 불러온 SVG는 `currentColor`로 주변 글자색을 상속하지 못합니다. 색상을 상속하려면 인라인 SVG나 컴포넌트를 사용하세요.
+
+## 라이선스 \{#license\}
+
+모든 압축 파일에는 `LICENSE`, `THIRD_PARTY_NOTICES.md`와 `licenses/` 폴더가 포함되며 각 SVG 파일의 첫 부분에 개별 고지가 있습니다. 재배포 시 이를 보존하세요. 브랜드 아이콘은 각 소유자의 상표이며 해당 제품을 가리키는 데 사용합니다. [라이선스와 저작자 표시](/guide/license)를 참고하세요.

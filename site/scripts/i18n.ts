@@ -1,19 +1,27 @@
 import {readFile,writeFile} from 'node:fs/promises'
 import {auditTranslations,reviewTranslation} from '@master/internal-site/build/localization.ts'
+import {locales} from '@master/internal-site/common/locales.js'
 import resources from '../i18n/resources'
+
 const file=new URL('../i18n/reviews.json',import.meta.url)
 const reviews=JSON.parse(await readFile(file,'utf8'))
 const items=await resources()
-const [command,...ids]=process.argv.slice(2)
+const [command,...args]=process.argv.slice(2)
+
 if(command==='review'){
- if(!ids.length)throw new Error('Supply independently reviewed resource ids')
- for(const id of ids){const resource=items.find(x=>x.id===id);if(!resource)throw new Error(id);reviews.resources[id]={tw:reviewTranslation(resource,'tw')}}
+ // Existing review commands without a locale refer to the Traditional Chinese edition.
+ const locale=locales.find(id=>id===args[0])??'tw'
+ const ids=args[0]===locale?args.slice(1):args
+ if(locale==='en' || !ids.length)throw new Error('Supply a target locale and independently reviewed resource ids')
+ for(const id of ids){
+  const resource=items.find(item=>item.id===id)
+  if(!resource)throw new Error('Unknown translation resource: '+id)
+  const record=reviews.resources[id]??={}
+  record[locale]=reviewTranslation(resource,locale)
+ }
  await writeFile(file,JSON.stringify(reviews,null,2)+'\n')
 }else{
- const errors:unknown[]=auditTranslations(items,reviews,{locales:['en','tw']})
- // Every catalog category is shown by its translated label; a missing key would print the raw key.
- const catalog=JSON.parse(await readFile(new URL('../../packages/icons/dist/catalog.json',import.meta.url),'utf8'))
- const en=JSON.parse(await readFile(new URL('../i18n/en.json',import.meta.url),'utf8'))
- for(const {id} of catalog.categories)if(!en[`category:${id}`])errors.push({id:'ui/product',error:`Missing category label: category:${id}`})
- console.log(JSON.stringify(errors,null,2));if(errors.length)process.exitCode=1
+ const errors=auditTranslations(items,reviews,{locales})
+ console.log(JSON.stringify(errors,null,2))
+ if(errors.length)process.exitCode=1
 }

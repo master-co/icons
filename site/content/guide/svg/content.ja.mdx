@@ -1,0 +1,31 @@
+---
+title: "SVG と JavaScript"
+description: "フレームワークを使わずにアイコンを表示します。"
+---
+
+## SVG ファイル \{#svg\}
+
+[コレクション](/icons)では SVG を個別に、またはサイズと角を選んで全アイコンとライセンスをまとめた ZIP としてダウンロードできます。[`@master/icons` をインストール](/guide/getting-started#install)すると、`@master/icons/svg/20/soft/search.svg` など `@master/icons/svg/{size}/{corner}/{name}.svg` から同じファイルを参照できます。
+
+インライン SVG は `currentColor` を使用します。`<img>` で読み込む外部 SVG には周囲の文字色は継承されません。
+
+## JavaScript レンダラー \{#javascript\}
+
+```js
+import { Search, renderSvg } from '@master/icons';
+const svg = renderSvg(Search, { size: 20, corner: 'soft', label: '検索' });
+```
+
+`renderSvg` は SVG マークアップを返します。このパッケージに含まれる信頼できるアイコン定義と組み合わせて使ってください。定義名にコンポーネントの `Icon` 接尾辞は付きません。`size` は表示サイズで、通常は最も近い原図を使います。`opticalSize` で 16、20、24 を明示的に選べます。
+
+| オプション | 既定値 | 動作 |
+| --- | --- | --- |
+| `size` | `24` | 表示サイズ。正の有限数 |
+| `opticalSize` | `'auto'` | 16・20・24 の原図。`auto` は最も近いものを選び、18・22 では大きい方を優先 |
+| `corner` | `'soft'` | `'sharp'`、`'soft'`、`'rounded'` |
+| `strokeWidth` | 原図の線幅 | 原図の単位で 0.25 刻みの[線幅](/guide/stroke-width) |
+| `color` | `'currentColor'` | 図案の色 |
+| `label` | なし | 省略すると SVG は `aria-hidden`。指定すると `role="img"` とラベルを付与 |
+| `direction` | `'ltr'` | `'rtl'` で方向性のあるアイコンを反転 |
+
+`direction` が `rtl` のとき反転するのは `arrow-left`、`arrow-right`、`chevron-left`、`chevron-right`、`chevrons-left`、`chevrons-right`、`undo`、`redo` です。

@@ -1,0 +1,56 @@
+---
+title: "Vue"
+description: "Vue で動的または固定のアイコンを表示します。"
+---
+
+## 動的アイコン \{#dynamic\}
+
+Vue は必須のピア依存関係です。アプリに Vue 3.5 以降の 3.x を導入し、[`@master/icons-vue` をインストール](/guide/getting-started#install)してください。
+
+```vue
+<script setup lang="ts">
+import { SearchIcon } from '@master/icons-vue';
+</script>
+
+<template>
+  <SearchIcon :size="20" corner="rounded" label="検索" />
+</template>
+```
+
+動的エントリーには、インポートした各アイコンの光学サイズと角の形の全 9 通り、および各組み合わせに対応する線幅の図案が含まれます。SVG や他のフレームワークと共通の形状データを使います。`size` は最も近い原図を選び、`corner` の既定値は `soft` です。
+
+## 固定アイコン \{#fixed\}
+
+```vue
+<script setup lang="ts">
+import { SearchIcon } from '@master/icons-vue/16/soft';
+</script>
+
+<template>
+  <button aria-label="検索"><SearchIcon /></button>
+</template>
+```
+
+固定エントリーは光学サイズと角の形を 1 組だけ含みます。`16/soft` の代わりに `16`、`20`、`24` と `sharp`、`soft`、`rounded` の任意の組み合わせを指定できます。固定コンポーネントは `corner` と `opticalSize` を受け取らず、`size` は選択済みの原図を拡大・縮小します。
+
+## フレームワーク固有の動作 \{#behavior\}
+
+テンプレートでは `:optical-size="16"` のように `optical-size` を使います。SVG 属性とイベントリスナーは SVG ルートに渡ります。関数型コンポーネントのため、コンポーネントの ref は SVG 要素の ref ではありません。
+
+ラベルのないアイコンは装飾として扱います。意味を持つアイコンには `label`、`aria-label`、`aria-labelledby` のいずれかを指定するか、外側のボタンに名前を付けてください。[アクセシビリティ](/guide/accessibility)を参照してください。
+
+## 線幅を指定する \{#stroke-width\}
+
+どちらのエントリーでも `strokeWidth` に原図の単位で 0.25 刻みの値を指定できます。SVG の線幅属性を変更するのではなく、対応する線幅で描いた原図を選択します。
+
+```vue
+<script setup lang="ts">
+import { SearchIcon } from '@master/icons-vue/24/soft';
+</script>
+
+<template>
+  <SearchIcon :size="48" :stroke-width="2" />
+</template>
+```
+
+サイズ別の対応範囲と描画方法は[線幅](/guide/stroke-width)を参照してください。

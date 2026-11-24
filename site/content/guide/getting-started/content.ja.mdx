@@ -1,0 +1,93 @@
+---
+title: "はじめに"
+description: "Master Icons をインストールして最初のアイコンを表示します。"
+---
+
+import DocumentPrompt from '@master/internal-site/components/DocumentPrompt.astro'
+
+## インストール \{#install\}
+
+お使いのフレームワーク用パッケージをインストールします。各パッケージは共通のコア `@master/icons` を依存関係に持ち、アプリに導入済みのフレームワークを使います。
+
+| フレームワーク | パッケージ |
+| --- | --- |
+| React 18 または 19 | `@master/icons-react` |
+| Vue 3.5 以降 | `@master/icons-vue` |
+| Svelte 5 | `@master/icons-svelte` |
+| Preact 11 | `@master/icons-preact` |
+| Astro 7 | `@master/icons-astro` |
+| フレームワークなし | `@master/icons` |
+
+```sh
+npm install @master/icons-react
+```
+
+ほかのパッケージマネージャーでは、同じ名前で `bun add`、`pnpm add`、`yarn add` を使います。選んだフレームワーク用のパッケージひとつで十分です。Node.js 22 以降に対応し、Astro 用パッケージは Node.js 24 以降が必要です。
+
+## アイコンを表示する \{#first-icon\}
+
+アイコンを名前でインポートします。コンポーネント名の末尾は `Icon` です。
+
+```tsx
+import { SearchIcon } from '@master/icons-react';
+
+<SearchIcon size={20} label="検索" />
+```
+
+色は `currentColor` で周囲の文字色に合わせます。指定しなければソフトな角の 24 px の原図が表示されます。[コレクション](/icons)ではすべての名前を調べ、インポート文をコピーしたり SVG をダウンロードしたりできます。
+
+## エントリーを選ぶ \{#entries\}
+
+各パッケージには同じアイコン名を使う 2 種類のエントリーがあります。
+
+- **動的**（例：`@master/icons-react`）。各アイコンは 9 種の原図（3 サイズ × 3 種類の角）を含み、`size`、`corner`、`strokeWidth` を受け取ります。
+- **固定**（例：`@master/icons-react/20/soft`）。各アイコンの原図は 1 種類です。同じサイズと角で UI を統一するときに使うと、配信サイズが小さくなります。
+
+```tsx
+import { SearchIcon } from '@master/icons-react/20/soft';
+
+<button aria-label="検索"><SearchIcon /></button>
+```
+
+ツリーシェイキング対応のバンドラーは未使用のアイコンを除去します。環境に応じて [SVG と JavaScript](/guide/svg)、[React](/guide/react)、[Vue](/guide/vue)、[Svelte](/guide/svelte)、[Preact](/guide/preact)、[Astro](/guide/astro) に進んでください。
+
+## AI エージェントで設定する \{#set-up-with-an-ai-agent\}
+
+アプリのルートディレクトリでコーディングエージェントを開き、以下のプロンプトを貼り付けてください。エージェントはプロジェクトを調べ、パッケージ、既定のサイズ・角・線幅、既存のアイコンライブラリの扱いを確認してからファイルを変更します。その後、パッケージを導入して最初のアイコンを表示し、プロジェクトの検証を実行します。
+
+<DocumentPrompt title="Master Icons を設定する" text={`既存のウェブアプリに Master Icons を導入し、動作確認まで行ってください。
+https://icons.master.co/ja/llms.txt に各ガイドの Markdown へのリンクがあります。getting-started、対象フレームワーク、optical-sizes、stroke-width、accessibility の各ページと、インストールしたパッケージの README を読んでください。導入後は node_modules/@master/icons/skills/master-icons/SKILL.md に従ってください。
+
+npm にはコアの @master/icons と、フレームワーク別の @master/icons-react、@master/icons-vue、@master/icons-svelte、@master/icons-preact、@master/icons-astro が公開されています。これらの正確な名前を使い、似た名前のパッケージを入れないでください。
+
+編集前にパッケージマネージャーとロックファイル、Node.js のバージョン、フレームワーク（React、Vue、Svelte、Preact、Astro、またはなし）とビルドツール、既存のアイコンライブラリとインポート方法、dev・lint・build・test コマンド、AGENTS.md などの指示ファイルを確認してください。
+
+編集前に以下の項目を質問し、私の回答を待ってください。独断で決めないでください。
+- 導入方法：検出したフレームワーク用のパッケージ、または素の SVG・JavaScript 用の @master/icons をひとつだけ選びます。
+- 既定値：光学サイズは 16、20、24（一般的な UI は 24、情報量の多い UI は 16 または 20）、角は sharp、soft、rounded（既定は soft）です。原図ごとの線幅を保つか、特定の幅（16 px は 0.75～1.5、20 px は 1～2、24 px は 1.25～2.5、0.25 刻み）を使うかを確認してください。
+- 既存のアイコン：別のライブラリがある場合は残して新しい画面だけに Master Icons を使う（既定）か、私が指定したアイコンを置き換えるかを確認してください。未指定のアイコンは変更しないでください。
+
+回答を受けてから次の手順で導入してください。
+1. package.json があるアプリのルートで、プロジェクトのパッケージマネージャーを使い、選択したパッケージを npm からインストールしてください。すべてのコマンドはそのディレクトリで実行してください。
+2. 各アイコンは名前でインポートしてください。動的エントリー（import { SearchIcon } from '@master/icons-react'）は size、corner、strokeWidth を受け取ります。固定エントリー（例：'@master/icons-react/20/soft'）は原図ひとつだけで軽量です。全画面で同じ設定なら固定エントリーを優先してください。
+3. 原寸で表示し、size で最も近い光学原図を選んでください。CSS の width・height で拡縮しないでください。strokeWidth は事前計算した形状を選ぶため、CSS で stroke-width を上書きしないでください。
+4. テキストの横にあるアイコンは装飾として扱い、アイコンだけのボタンにはボタン自体にアクセシブルな名前を付け、意味を持つ単独のアイコンには label を指定してください。
+5. 指定したアイコンを置き換える場合は、node_modules/@master/icons/dist/catalog.json で最も近い名前を探し、変更前に対応表を見せてください。各操作要素の名前を保持し、旧依存関係はインポートがすべてなくなってから削除してください。
+6. 既存の設計とスタイルを維持し、無関係なリファクタリングは避けてください。
+7. 検証用に表示中のページに size 20 の SearchIcon を置き、ライト・ダークの両方で文字色とソフトな角になることを確認してください。私が残すよう指定しない限り、その後に削除し、プロジェクトの lint、build、test を実行してください。
+
+最後に変更ファイル、導入したパッケージ、選んだ既定値、置き換えたアイコンと残したアイコン、検証結果、ブラウザーで未確認の項目をまとめてください。`} />
+
+## AI エージェント向けの資料 \{#ai-agents\}
+
+実在するアイコン名と正しい使い方を確認できる資料が 2 つあります。
+
+- **エージェントスキル**： `@master/icons` は `node_modules/@master/icons/skills/master-icons/SKILL.md` を同梱します。`master-icons` フォルダーを `.claude/skills` や `.agents/skills` などのスキルディレクトリにコピーしてください。パッケージ、エントリー、サイズ、線幅、アクセシビリティの説明と、インストール済みカタログを検索するスクリプトが含まれます。例：`node node_modules/@master/icons/skills/master-icons/scripts/search.mjs search`。
+- **llms.txt**： [/ja/llms.txt](/ja/llms.txt) は全ガイドの Markdown 索引です。[/ja/llms-full.txt](/ja/llms-full.txt) には全文がまとまっています。[/ja/guide/getting-started.md](/ja/guide/getting-started.md) のように、各ガイドの URL に `.md` を付けても読めます。
+
+## 次のステップ \{#next\}
+
+- [サイズと角の形](/guide/optical-sizes)で表示スペースに合う原図を選びます。
+- [線幅](/guide/stroke-width)で線の太さを調整します。
+- [アクセシビリティ](/guide/accessibility)でアイコンと操作要素の名前の付け方を確認します。
+- [比較](/guide/comparison)で他のライブラリとの違いを調べます。

@@ -1,0 +1,43 @@
+---
+title: "Preact"
+description: "Preact で動的または固定のアイコンを表示します。"
+---
+
+## 動的アイコン \{#dynamic\}
+
+Preact は必須のピア依存関係です。アプリに Preact 11 を導入し、[`@master/icons-preact` をインストール](/guide/getting-started#install)してください。
+
+```tsx
+import { SearchIcon } from '@master/icons-preact';
+
+<SearchIcon size={20} corner="rounded" label="検索" />
+```
+
+動的エントリーには、インポートした各アイコンの光学サイズと角の形の全 9 通り、および各組み合わせに対応する線幅の図案が含まれます。SVG や他のフレームワークと共通の形状データを使います。`size` は最も近い原図を選び、`corner` の既定値は `soft` です。
+
+## 固定アイコン \{#fixed\}
+
+```tsx
+import { SearchIcon } from '@master/icons-preact/16/soft';
+
+<button aria-label="検索"><SearchIcon /></button>
+```
+
+固定エントリーは光学サイズと角の形を 1 組だけ含みます。`16/soft` の代わりに `16`、`20`、`24` と `sharp`、`soft`、`rounded` の任意の組み合わせを指定できます。固定コンポーネントは `corner` と `opticalSize` を受け取らず、`size` は選択済みの原図を拡大・縮小します。
+
+## フレームワーク固有の動作 \{#behavior\}
+
+アプリの Preact JSX 設定を使います。SVG の props、イベントハンドラー、SVG への ref に対応します。このエントリーは Preact を直接使用し、React は不要です。
+
+ラベルのないアイコンは装飾として扱います。意味を持つアイコンには `label`、`aria-label`、`aria-labelledby` のいずれかを指定するか、外側のボタンに名前を付けてください。[アクセシビリティ](/guide/accessibility)を参照してください。
+
+## 線幅を指定する \{#stroke-width\}
+
+どちらのエントリーでも `strokeWidth` に原図の単位で 0.25 刻みの値を指定できます。SVG の線幅属性を変更するのではなく、対応する線幅で描いた原図を選択します。
+
+```tsx
+import { SearchIcon } from '@master/icons-preact/24/soft';
+<SearchIcon size={48} strokeWidth={2} />
+```
+
+サイズ別の対応範囲と描画方法は[線幅](/guide/stroke-width)を参照してください。

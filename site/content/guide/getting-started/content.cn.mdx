@@ -1,0 +1,93 @@
+---
+title: "开始使用"
+description: "安装 Master Icons，显示你的第一个图标。"
+---
+
+import DocumentPrompt from '@master/internal-site/components/DocumentPrompt.astro'
+
+## 安装 \{#install\}
+
+安装对应框架的包。每个框架包都会一并安装共用的 `@master/icons` 核心，并使用应用程序中现有的框架。
+
+| 框架 | 包 |
+| --- | --- |
+| React 18 或 19 | `@master/icons-react` |
+| Vue 3.5 以上 | `@master/icons-vue` |
+| Svelte 5 | `@master/icons-svelte` |
+| Preact 11 | `@master/icons-preact` |
+| Astro 7 | `@master/icons-astro` |
+| 不使用框架 | `@master/icons` |
+
+```sh
+npm install @master/icons-react
+```
+
+使用其他包管理器时，以相同名称运行 `bun add`、`pnpm add` 或 `yarn add`。只需安装所用框架的包，不需要其他框架包。包支持 Node.js 22 及以上版本，Astro 包则需要 Node.js 24 及以上版本。
+
+## 显示图标 \{#first-icon\}
+
+按名称导入每个图标。图标组件名称以 `Icon` 结尾。
+
+```tsx
+import { SearchIcon } from '@master/icons-react';
+
+<SearchIcon size={20} label="搜索" />
+```
+
+图标以 `currentColor` 绘制，因此会采用周围文本的颜色。默认显示 24 px 的微圆角图稿。在[图标库](/icons)中可浏览所有名称、复制导入用法并下载 SVG 文件。
+
+## 选择入口 \{#entries\}
+
+每个包都有两种入口，图标名称相同：
+
+- **动态入口**，例如 `@master/icons-react`：每个图标包含全部九份图稿（三种光学尺寸与三种边角样式的组合），并接受 `size`、`corner` 与 `strokeWidth`。
+- **固定入口**，例如 `@master/icons-react/20/soft`：每个图标只包含一份图稿。如果整个界面使用相同的尺寸和边角样式，可选固定入口以减小打包体积。
+
+```tsx
+import { SearchIcon } from '@master/icons-react/20/soft';
+
+<button aria-label="搜索"><SearchIcon /></button>
+```
+
+支持 tree shaking 的打包工具会移除未使用的图标。接着请阅读所用框架的页面：[SVG 与 JavaScript](/guide/svg)、[React](/guide/react)、[Vue](/guide/vue)、[Svelte](/guide/svelte)、[Preact](/guide/preact) 或 [Astro](/guide/astro)。
+
+## 使用 AI 智能体配置 \{#set-up-with-an-ai-agent\}
+
+在应用根目录启动编程智能体，粘贴下方提示词即可开始配置。它会先检查项目，并在修改文件前询问框架包、默认尺寸、圆角与线宽，以及现有图标库的处理方式。接着安装包、显示第一个图标并运行项目检查。
+
+<DocumentPrompt title="设置 Master Icons" text={`你正在一个现有的 web 应用程序中工作。请完整设置 Master Icons。
+文档：https://icons.master.co/cn/llms.txt，其中以 Markdown 链接每篇指南（请阅读 getting-started、所选框架的页面、optical-sizes、stroke-width 与 accessibility），以及已安装包的 README。安装后依照 node_modules/@master/icons/skills/master-icons/SKILL.md 操作。
+
+Master Icons 已发布至 npm：核心为 @master/icons，每个框架各有一个包：@master/icons-react、@master/icons-vue、@master/icons-svelte、@master/icons-preact 与 @master/icons-astro。只安装这些名称，不要安装名称相似的包。
+
+修改前先检查项目：包管理器与锁文件、Node.js 版本、框架与构建工具（React、Vue、Svelte、Preact、Astro 或无框架）、目前使用的图标库及其导入方式、dev／lint／build／test 指令，以及 AGENTS.md 等智能体指引文件。
+
+修改前先问我以下问题并等待回答，不要自行决定：
+- 接入方式：依检测到的框架选择包，纯 SVG 与 JavaScript 则用 @master/icons。只安装一个包。
+- 默认值：光学尺寸（16、20 或 24；常规界面用 24，密集界面用 16 或 20）、圆角（sharp、soft 或 rounded；默认 soft），以及保留各原稿的原生线宽或指定单一线宽（16 px 为 0.75–1.5、20 px 为 1–2、24 px 为 1.25–2.5，以 0.25 为步长）。
+- 现有图标：若项目已使用其他图标库，要保留它（默认）并只在新界面使用 Master Icons，还是替换我指名的图标。请勿替换我未指定的图标。
+
+接着保守地导入 Master Icons：
+1. 每个指令都在应用程序根目录（package.json 所在处）以项目的包管理器运行，并从 npm 安装选定的包。
+2. 按名称导入每个图标。动态入口（import { SearchIcon } from '@master/icons-react'）接受 size、corner 与 strokeWidth；固定入口如 '@master/icons-react/20/soft' 只含一份原稿、体积更小。整个应用使用同一设置时优先使用固定入口。
+3. 按原始尺寸呈现图标。传入 size 以选择最接近的光学原稿，不要用 CSS width 与 height 缩放图标。strokeWidth 会选择预先计算的几何，因此绝不在 CSS 覆写 stroke-width。
+4. 保持无障碍：位于可见文本旁的图标维持装饰性；纯图标按钮的无障碍名称放在按钮上；为独立传达含义的图标设置 label。
+5. 如果我选择替换指定的图标，将每个图标对应到 node_modules/@master/icons/dist/catalog.json 中最接近的名称，修改前先给我看对照表，保留每个控件的无障碍名称，并在已无任何代码导入旧依赖后才移除它。
+6. 保留现有架构与样式，避免无关的重构。
+7. 验证：在可见页面呈现 size 20 的 SearchIcon，确认它在浅色与深色模式下都以文本色绘制、呈微圆角。之后除非我要保留，否则移除它，并运行项目的 lint、build 与 tests。
+
+完成后摘要：变更的文件、安装的包、选定的默认值、替换或刻意保留的图标、验证结果，以及未在浏览器验证的项目。`} />
+
+## AI 智能体资源 \{#ai-agents\}
+
+编程智能体可以通过以下两项资源查找实际存在的图标，并按上述规则使用：
+
+- **智能体技能。** `@master/icons` 附带智能体技能：`node_modules/@master/icons/skills/master-icons/SKILL.md`。将 `master-icons` 文件夹复制到智能体的 skills 文件夹，例如 `.claude/skills` 或 `.agents/skills`。内容涵盖包、入口、尺寸、线宽与无障碍，并附有用于搜索本地目录的脚本，让智能体不会编造图标名称：`node node_modules/@master/icons/skills/master-icons/scripts/search.mjs search`。
+- **llms.txt。** [/cn/llms.txt](/cn/llms.txt) 以 Markdown 列出每篇指南，[/cn/llms-full.txt](/cn/llms-full.txt) 则将全文合为一个文件。每篇指南的网址添加 `.md` 即可获取 Markdown 版，例如 [/cn/guide/getting-started.md](/cn/guide/getting-started.md)。
+
+## 下一步 \{#next\}
+
+- 在[尺寸与圆角](/guide/optical-sizes)依可用空间选择图稿。
+- 以[线宽](/guide/stroke-width)调整线条粗细。
+- 在[无障碍](/guide/accessibility)为图标与周围控件命名。
+- 在[比较](/guide/comparison)了解 Master Icons 与其他图标库的差异。

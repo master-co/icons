@@ -1,0 +1,42 @@
+---
+title: "선 두께"
+description: "빈 공간과 간격을 유지하면서 선 두께를 조절하세요."
+---
+
+## 선 두께 설정하기 \{#set\}
+
+각 프레임워크 패키지의 동적·고정 진입점과 JavaScript 렌더러에서 모든 아이콘에 `strokeWidth`를 지정할 수 있습니다.
+
+```tsx
+import { SearchIcon } from '@master/icons-react/24/soft';
+<SearchIcon strokeWidth={2} />
+```
+
+```js
+import { Search, renderSvg } from '@master/icons';
+const svg = renderSvg(Search, { size: 20, strokeWidth: 1.75 });
+```
+
+생략하면 원본 선 두께를 유지합니다. [컬렉션](/icons)에서 슬라이더로 모든 아이콘의 선 두께를 미리 볼 수 있으며 복사한 코드와 다운로드에도 반영됩니다.
+
+## 지원 범위 \{#ranges\}
+
+선 두께는 광학 원본의 viewBox 단위로 지정하며 0.25 간격입니다. 지원 범위는 크기에 따라 다릅니다.
+
+| 광학 크기 | 원본 선 두께 | 범위 |
+| --- | --- | --- |
+| 16 px | 1 | 0.75–1.5 |
+| 20 px | 1.25 | 1–2 |
+| 24 px | 1.5 | 1.25–2.5 |
+
+선택한 원본의 범위를 벗어나면 최솟값 또는 최댓값으로 제한됩니다. 양의 유한수가 아니거나 0.25의 배수가 아닌 값은 오류가 발생합니다.
+
+## 두께에 맞게 다시 그린 도형 \{#geometry\}
+
+SVG `stroke-width` 속성만 바꾸면 선이 제자리에서 굵어져 세부 요소 사이의 틈과 빈 공간이 사라집니다. Master Icons는 두께마다 빈 공간, 마스크, 간격을 미리 계산해 굵은 선에서도 여백을 유지합니다. CSS로 `stroke-width`를 덮어쓰지 마세요.
+
+표시 크기 `size`는 선을 포함한 도안 전체를 확대하거나 축소합니다. 브랜드 로고는 원래 모양을 유지하고 두께 설정을 무시합니다. `brand-github-outline` 같은 윤곽선 버전은 선 두께를 지원합니다.
+
+## 세트 다운로드하기 \{#downloads\}
+
+광학 크기마다 모든 모서리와 선 두께를 담은 ZIP이 있습니다. 예를 들어 `master-icons-24-strokes.zip`에는 `soft/stroke-2/` 같은 폴더가 있으며 원본 세트와 동일한 라이선스 고지를 포함합니다. [다운로드](/guide/download#sets)를 참고하세요.

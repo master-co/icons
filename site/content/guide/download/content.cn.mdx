@@ -1,0 +1,49 @@
+---
+title: "下载"
+description: "下载 SVG 图标集、安装软件包，或从 CDN 引用单个文件。"
+---
+
+## 软件包 \{#packages\}
+
+从 npm 安装适用于你的框架的软件包。它会自动安装各框架共用的 `@master/icons` 核心。
+
+| 用途 | 安装 | 指南 |
+| --- | --- | --- |
+| SVG 与 JavaScript | `npm install @master/icons` | [SVG 与 JavaScript](/guide/svg) |
+| React | `npm install @master/icons-react` | [React](/guide/react) |
+| Vue | `npm install @master/icons-vue` | [Vue](/guide/vue) |
+| Svelte | `npm install @master/icons-svelte` | [Svelte](/guide/svelte) |
+| Preact | `npm install @master/icons-preact` | [Preact](/guide/preact) |
+| Astro | `npm install @master/icons-astro` | [Astro](/guide/astro) |
+
+## SVG 图标集 \{#sets\}
+
+每个 ZIP 压缩包收录一种光学尺寸和边角样式下的全部图标，均使用原生线宽。请选择适合界面的尺寸和样式：
+
+| 尺寸 | 直角 | 微圆角 | 圆角 |
+| --- | --- | --- | --- |
+| 16 px | [sharp](https://github.com/master-co/icons/releases/latest/download/master-icons-16-sharp.zip) | [soft](https://github.com/master-co/icons/releases/latest/download/master-icons-16-soft.zip) | [rounded](https://github.com/master-co/icons/releases/latest/download/master-icons-16-rounded.zip) |
+| 20 px | [sharp](https://github.com/master-co/icons/releases/latest/download/master-icons-20-sharp.zip) | [soft](https://github.com/master-co/icons/releases/latest/download/master-icons-20-soft.zip) | [rounded](https://github.com/master-co/icons/releases/latest/download/master-icons-20-rounded.zip) |
+| 24 px | [sharp](https://github.com/master-co/icons/releases/latest/download/master-icons-24-sharp.zip) | [soft](https://github.com/master-co/icons/releases/latest/download/master-icons-24-soft.zip) | [rounded](https://github.com/master-co/icons/releases/latest/download/master-icons-24-rounded.zip) |
+
+若要使用其他线宽，请下载该光学尺寸的压缩包。其中每种圆角与线宽各有一个文件夹，例如 `soft/stroke-2/search.svg`：
+
+- [`master-icons-16-strokes.zip`](https://github.com/master-co/icons/releases/latest/download/master-icons-16-strokes.zip)：16 px，线宽 0.75–1.5，含全部圆角
+- [`master-icons-20-strokes.zip`](https://github.com/master-co/icons/releases/latest/download/master-icons-20-strokes.zip)：20 px，线宽 1–2，含全部圆角
+- [`master-icons-24-strokes.zip`](https://github.com/master-co/icons/releases/latest/download/master-icons-24-strokes.zip)：24 px，线宽 1.25–2.5，含全部圆角
+
+这些压缩包随每个 [GitHub 版本](https://github.com/master-co/icons/releases)一起发布，上述链接均指向最新版本。要按指定尺寸和线宽下载单个文件，请在[图标库](/icons)中打开相应图标的详情。
+
+## 从 CDN 获取文件 \{#cdn\}
+
+`@master/icons` 包收录所有原生 SVG 文件，可通过任意 npm CDN 按路径访问：
+
+```html
+<img src="https://cdn.jsdelivr.net/npm/@master/icons@1/icons/24/soft/search.svg" width="24" height="24" alt="搜索">
+```
+
+路径为 `icons/{size}/{corner}/{name}.svg`。放在 `<img>` 中的 SVG 不会通过 `currentColor` 继承文本颜色。需要继承颜色时，请使用内联 SVG 或图标组件。
+
+## 许可证 \{#license\}
+
+每个压缩包都包含 `LICENSE`、`THIRD_PARTY_NOTICES.md` 和 `licenses/` 目录，每个 SVG 文件的开头也有各自的声明。重新分发图标时，请保留这些文件和声明。品牌图标是各自所有者的商标，用于指代相应产品。参见[许可与署名](/guide/license)。

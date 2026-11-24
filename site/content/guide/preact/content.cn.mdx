@@ -1,0 +1,43 @@
+---
+title: "Preact"
+description: "在 Preact 中渲染动态或固定的光学尺寸图标。"
+---
+
+## 动态图标 \{#dynamic\}
+
+Preact 是必需的对等依赖。请在应用中安装 Preact 11，并[安装 `@master/icons-preact`](/guide/getting-started#install)。
+
+```tsx
+import { SearchIcon } from '@master/icons-preact';
+
+<SearchIcon size={20} corner="rounded" label="搜索" />
+```
+
+从动态入口导入的每个图标都包含九种光学尺寸与边角样式的组合，以及每种组合支持的线宽变体。各框架与 SVG 使用相同的图形数据。`size` 会选择最接近的光学图稿；`corner` 默认为 `soft`。
+
+## 固定图标 \{#fixed\}
+
+```tsx
+import { SearchIcon } from '@master/icons-preact/16/soft';
+
+<button aria-label="搜索"><SearchIcon /></button>
+```
+
+固定入口只包含一种光学尺寸和边角样式的组合。可将 `16/soft` 换成 `16`、`20`、`24` 与 `sharp`、`soft`、`rounded` 的任意组合。固定组件不接受 `corner` 或 `opticalSize`；`size` 只会缩放所选图稿。
+
+## 框架特性 \{#behavior\}
+
+请使用应用程序的 Preact JSX 设置。组件接受 SVG props、事件处理函数与 SVG ref。此入口直接使用 Preact，不需要安装 React。
+
+没有标签的图标会被视为装饰。对于需要表达含义的图标，可以使用 `label`、`aria-label` 或 `aria-labelledby`，也可以为外层按钮命名，详见[无障碍](/guide/accessibility)。
+
+## 自定义线宽 \{#stroke-width\}
+
+动态与固定入口都接受 `strokeWidth`，以原图坐标为单位，步长为 0.25。它会根据线宽选择单独绘制的图稿。
+
+```tsx
+import { SearchIcon } from '@master/icons-preact/24/soft';
+<SearchIcon size={48} strokeWidth={2} />
+```
+
+各光学尺寸支持的线宽范围和绘制方法，参见[线宽](/guide/stroke-width)。

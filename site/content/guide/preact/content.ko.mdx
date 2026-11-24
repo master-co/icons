@@ -1,0 +1,43 @@
+---
+title: "Preact"
+description: "Preact에서 동적 또는 고정 아이콘을 표시합니다."
+---
+
+## 동적 아이콘 \{#dynamic\}
+
+Preact 11은 필수 피어 의존성입니다. 앱에 해당 버전을 설치한 다음 [`@master/icons-preact` 패키지를 설치하세요](/guide/getting-started#install).
+
+```tsx
+import { SearchIcon } from '@master/icons-preact';
+
+<SearchIcon size={20} corner="rounded" label="Search" />
+```
+
+동적 진입점에는 가져온 각 아이콘의 광학 크기와 모서리 조합 9종 및 각 조합에서 지원하는 선 두께별 도안이 들어 있습니다. SVG 및 다른 프레임워크와 같은 도형 데이터를 사용합니다. `size`는 가장 가까운 원본을 선택하며 `corner`의 기본값은 `soft`입니다.
+
+## 고정 아이콘 \{#fixed\}
+
+```tsx
+import { SearchIcon } from '@master/icons-preact/16/soft';
+
+<button aria-label="Search"><SearchIcon /></button>
+```
+
+고정 진입점에는 광학 크기와 모서리 조합이 하나만 들어 있습니다. `16/soft`를 `16`, `20`, `24`와 `sharp`, `soft`, `rounded`의 조합으로 바꿀 수 있습니다. 고정 컴포넌트는 `corner`나 `opticalSize`를 받지 않으며 `size`는 선택된 원본의 표시 배율만 바꿉니다.
+
+## 프레임워크별 동작 \{#behavior\}
+
+앱의 Preact JSX 설정을 사용하세요. 컴포넌트는 SVG 속성, 이벤트 처리기, SVG ref를 받습니다. 이 진입점은 Preact를 직접 사용하므로 React가 필요하지 않습니다.
+
+레이블이 없는 아이콘은 장식으로 처리합니다. 의미를 전달하는 아이콘에는 `label`, `aria-label`, `aria-labelledby` 중 하나를 지정하거나 바깥쪽 버튼에 이름을 지정하세요. [접근성](/guide/accessibility)을 참고하세요.
+
+## 선 두께 지정하기 \{#stroke-width\}
+
+두 진입점 모두 `strokeWidth`에 원본 단위의 값을 0.25 간격으로 지정할 수 있습니다. SVG 선 속성을 변경하는 대신 해당 두께로 다시 그린 도안을 선택합니다.
+
+```tsx
+import { SearchIcon } from '@master/icons-preact/24/soft';
+<SearchIcon size={48} strokeWidth={2} />
+```
+
+크기별 지원 범위와 그리는 방식은 [선 두께](/guide/stroke-width)를 참고하세요.

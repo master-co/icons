@@ -1,0 +1,52 @@
+---
+title: "비교"
+description: "다른 아이콘 라이브러리와의 차이점을 알아봅니다."
+---
+
+## 한눈에 보기 \{#overview\}
+
+대부분의 라이브러리는 아이콘을 한 번 그린 뒤 크기를 조절합니다. Master Icons는 각 아이콘을 세 가지 광학 크기와 세 가지 모서리 스타일로 그린 뒤, 지원하는 선 두께에 맞춰 형태를 보정합니다. 대형 라이브러리보다 아이콘 수는 적지만 대시보드, 앱, 웹사이트 인터페이스에 집중합니다.
+
+| 라이브러리 | 아이콘 수 | 원본 크기 | 스타일 | 선 두께 | 공식 컴포넌트 | 라이선스 |
+| --- | --- | --- | --- | --- | --- | --- |
+| **Master Icons** | 948개(브랜드 107개 포함) | 16, 20, 24 px | 직각, 살짝 둥근 모서리, 둥근 모서리 | 0.75~2.5, 0.25 간격으로 다시 그림 | React, Vue, Svelte, Preact, Astro | MIT, 일부 도안은 개별 고지 적용 |
+| Lucide | 2,091 | 24 px | 윤곽선 | `strokeWidth`로 SVG 선 두께 설정 | React, Vue, Svelte, Preact, Solid, Angular 등 | ISC |
+| Heroicons | 324 | 24 px, 채우기형은 20 및 16 px도 제공 | 윤곽선과 채우기 | — | React, Vue | MIT |
+| Phosphor | 1,512 | 원본 1종 | 채우기와 듀오톤 포함 6종 | 고정 굵기 6종 | React, Vue, 웹 컴포넌트 등 | MIT |
+| Tabler Icons | 윤곽선 5,491, 채우기 1,054 | 24 px | 윤곽선과 채우기 | `stroke`로 SVG 선 두께 설정 | React, Vue, Svelte, Preact, Solid 등 | MIT |
+| Material Symbols | 스타일당 7,890 | 광학 크기 축 20~48 | Outlined, Rounded, Sharp 및 채우기 축 | 굵기 축 100~700 | — (글꼴 및 SVG 파일) | Apache 2.0 |
+| Fluent UI System Icons | 약 3,000 | 10~48 px, 최대 8종 | 기본형과 채우기 | — | React | MIT |
+| Font Awesome Free | 채우기 2,001, 기본형 273, 브랜드 609 | 원본 1종 | Solid, Regular, Brands | — | React, Vue, Angular | 아이콘은 CC BY 4.0, 코드는 MIT |
+
+수치는 2026년 11월에 공개된 npm 패키지 `lucide-static` 1.75, `heroicons` 2.2, `@phosphor-icons/core` 2.1, `@tabler/icons` 3.52, `@material-symbols/svg-400` 0.49, `@fluentui/svg-icons` 1.1.346, `@fortawesome/fontawesome-free` 7.3 기준입니다. 릴리스에 따라 달라지므로 최신 수치는 각 프로젝트에서 확인하세요.
+
+## 광학 크기 \{#optical-sizes\}
+
+24 px 도안을 16 px로 줄이면 세부 요소가 몰려 흐려집니다. Master Icons는 16, 20 px 원본을 따로 그리며 필요에 따라 세부 요소를 줄이거나 재배치합니다. `size`는 가장 가까운 원본을 자동으로 선택합니다. Fluent UI와 Heroicons도 작은 크기를 따로 그리고 Material Symbols는 가변 글꼴의 광학 크기 축으로 조정합니다. 다른 라이브러리 대부분은 하나의 도안을 확대하거나 축소합니다. [크기와 모서리](/guide/optical-sizes)를 참고하세요.
+
+## 모서리 \{#corners\}
+
+세 스타일은 SVG 선의 연결부와 도형의 윤곽, 내부 여백을 함께 바꿉니다. 아이콘 이름을 그대로 두고 화면 전체를 정밀하거나 부드러운 인상으로 전환할 수 있습니다. Material Symbols도 Outlined, Rounded, Sharp 세 제품군을 제공합니다.
+
+## 선 굵기 \{#line-weight\}
+
+일반적으로 SVG `stroke-width` 속성만 바꾸면 선이 제자리에서 굵어져 틈과 빈 공간이 메워집니다. Master Icons는 각 두께의 빈 공간과 마스크를 다시 계산해 굵은 선에서도 간격을 유지합니다. Phosphor는 고정 굵기로, Material Symbols는 글꼴 축으로 굵기별 디자인을 제공합니다. [선 두께](/guide/stroke-width)를 참고하세요.
+
+## 용량 \{#size\}
+
+`@master/icons-react/24/soft`의 `SearchIcon`처럼 고정 진입점에서 가져오면 최소화와 gzip 압축 후 번들 크기가 공유 렌더러를 포함해 약 1.5 KB 늘어납니다. 동적 진입점은 9종의 원본과 선 두께를 모두 포함해 아이콘 하나당 약 2 KB가 늘어납니다. 고정 아이콘 열 개는 약 3 KB입니다. 사용하지 않는 아이콘은 트리 셰이킹으로 제거됩니다.
+
+코어 패키지에는 원본 9종 전체의 SVG와 미리 계산한 선 두께가 들어 있어 대부분의 아이콘 패키지보다 크며 압축 용량은 약 20 MB입니다. 이 용량은 `node_modules`에만 영향을 주며 앱 번들에는 그대로 포함되지 않습니다.
+
+## 선택 기준 \{#choosing\}
+
+작은 크기의 아이콘이 많거나 모서리와 선 굵기를 통일해야 하거나 React, Vue, Svelte, Preact, Astro에서 같은 아이콘을 공유할 때 Master Icons가 적합합니다.
+
+다음과 같은 용도에는 다른 라이브러리도 고려할 수 있습니다.
+
+- 다양한 개념을 표현해야 한다면 수천 개를 수록한 Material Symbols와 Tabler Icons.
+- 듀오톤이나 아이콘 글꼴이 필요하다면 Phosphor와 Material Symbols.
+- Microsoft Fluent나 Material Design을 따르는 인터페이스.
+- Angular, Solid, React Native, Flutter를 사용한다면 공식 지원을 제공하는 Lucide, Tabler Icons, Phosphor 등.
+
+Master Icons는 다른 라이브러리와 함께 사용할 수 있습니다. 새 화면에 먼저 적용하고 기존 아이콘은 하나씩 교체하세요. [설정 프롬프트](/guide/getting-started#set-up-with-an-ai-agent)는 변경 전에 가장 가까운 아이콘 이름을 찾아 대응시킵니다.

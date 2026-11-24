@@ -1,3 +1,5 @@
+import {locales} from '@master/internal-site/common/locales.js'
+import {product} from '../i18n/translations'
 import { readFile, readdir, cp, rm, mkdir } from 'node:fs/promises'
 import { fileURLToPath } from 'node:url'
 import { join, dirname } from 'node:path'
@@ -41,7 +43,7 @@ console.log(`Site assets: ${assets.hit?'content cache hit':'copied'}`)
 const guideSlugs=(await readdir(join(site,'content/guide'),{withFileTypes:true})).filter(entry=>entry.isDirectory()).map(entry=>entry.name)
 const guides=await contentCache({
  inputs:[...common,join(site,'scripts/llms.ts'),join(site,'scripts/social-images.ts'),join(icons,'dist/catalog.json'),join(strokes,'key'),join(site,'assets/brand'),join(site,'content'),join(site,'i18n')],
- outputs:[join(site,'public/social'),join(site,'.categories/guide.json'),...['en','tw'].map(locale=>join(site,`public/search/${locale}.json`)),...llmsOutputs(guideSlugs).map(path=>join(site,'public',path))],
+ outputs:[join(site,'public/social'),join(site,'.categories/guide.json'),...locales.map(locale=>join(site,`public/search/${locale}.json`)),...llmsOutputs(guideSlugs).map(path=>join(site,'public',path))],
  file:join(repo,'work/cache/site-guides.json'),force
 })
 if(!guides.hit){
@@ -57,20 +59,25 @@ if(!guides.hit){
  const categories=groups.map(name=>({name,pages:pages.filter(page=>page.category===name).sort((a,b)=>a.order-b.order)}))
  await writeIfChanged(join(site,'.categories/guide.json'),JSON.stringify(categories,null,2)+'\n')
  const {generateSearchPages}=await import('@master/internal-site/utils/search-pages')
- const search=await generateSearchPages({cwd:site,defaultLocale:'en',locales:['en','tw'],dictionariesDir:join(site,'i18n'),write:false})
- for(const locale of ['en','tw'])await writeIfChanged(join(site,`public/search/${locale}.json`),JSON.stringify(search[locale]))
+ const search=await generateSearchPages({cwd:site,defaultLocale:'en',locales,dictionariesDir:join(site,'i18n'),write:false})
+ for(const locale of locales)await writeIfChanged(join(site,`public/search/${locale}.json`),JSON.stringify(search[locale]))
  // llms.txt and each guide as Markdown for coding agents; see scripts/llms.ts.
- const dictionary={en:{},tw:JSON.parse(await readFile(join(site,'i18n/tw.json'),'utf8'))} as Record<string,Record<string,string>>
- await rm(join(site,'public/guide'),{recursive:true,force:true});await rm(join(site,'public/tw/guide'),{recursive:true,force:true})
+ await Promise.all(locales.map(locale=>rm(join(site,'public',locale==='en'?'':locale,'guide'),{recursive:true,force:true})))
  await generateSocialImages(site,catalog.icons,categories.flatMap(group=>group.pages))
- await generateLlms(site,catalog.icons,categories,async(path,content)=>{await mkdir(dirname(join(site,'public',path)),{recursive:true});await writeIfChanged(join(site,'public',path),content)},(locale,text)=>dictionary[locale][text]??text)
+ await generateLlms(site,catalog.icons,categories,async(path,content)=>{
+  const target=join(site,'public',path)
+  await mkdir(dirname(target),{recursive:true})
+  // Static servers can omit the charset for text and Markdown downloads.
+  await writeIfChanged(target,'\uFEFF'+content)
+ },(locale,text)=>(product[locale] as Record<string,string>)[text]??text)
  await guides.commit()
 }
 // Tracked Master brand sources and the Pages redirects live outside the generated/ignored public tree.
 const redirects=await readFile(join(site,'assets/_redirects'),'utf8')
 const aliases=catalog.icons.filter((icon:{aliasOf?:string})=>icon.aliasOf)
-const aliasRedirects=aliases.flatMap((icon:{name:string;aliasOf:string})=>['','/tw'].map(prefix=>`${prefix}/icons/${icon.name} ${prefix}/icons/${icon.aliasOf} 301`))
+const prefixes=locales.map(locale=>locale==='en'?'':'/'+locale)
+const aliasRedirects=aliases.flatMap((icon:{name:string;aliasOf:string})=>prefixes.map(prefix=>`${prefix}/icons/${icon.name} ${prefix}/icons/${icon.aliasOf} 301`))
 await writeIfChanged(join(site,'public/_redirects'),[redirects.trimEnd(),...aliasRedirects,''].join('\n'))
 for(const name of ['favicon.svg','favicon.ico'])await writeIfChanged(join(site,'public',name),await readFile(join(site,'assets',name)))
 console.log(`Guides: ${guides.hit?'content cache hit':'generated'}`)
-console.log(`Prepared ${catalog.iconCount} icons and bilingual guides in ${((performance.now()-started)/1000).toFixed(2)}s`)
+console.log(`Prepared ${catalog.iconCount} icons and guides in ${locales.length} languages in ${((performance.now()-started)/1000).toFixed(2)}s`)

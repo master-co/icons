@@ -1,0 +1,31 @@
+---
+title: "SVG와 JavaScript"
+description: "프레임워크 없이 아이콘을 사용합니다."
+---
+
+## SVG 파일 \{#svg\}
+
+[컬렉션](/icons)에서 개별 SVG를 다운로드하거나 한 크기와 모서리 스타일의 모든 아이콘 및 라이선스를 ZIP으로 받을 수 있습니다. [`@master/icons`를 설치](/guide/getting-started#install)하면 `@master/icons/svg/20/soft/search.svg`처럼 `@master/icons/svg/{size}/{corner}/{name}.svg` 하위 경로에서 같은 파일을 사용할 수 있습니다.
+
+인라인 SVG는 `currentColor`를 사용합니다. `<img>`로 불러온 외부 SVG는 주변 글자색을 상속하지 않습니다.
+
+## JavaScript 렌더러 \{#javascript\}
+
+```js
+import { Search, renderSvg } from '@master/icons';
+const svg = renderSvg(Search, { size: 20, corner: 'soft', label: 'Search' });
+```
+
+`renderSvg`는 SVG 마크업을 반환합니다. 이 패키지에서 제공하는 신뢰할 수 있는 아이콘 정의와 함께 사용하세요. 정의 이름에는 컴포넌트에 붙는 `Icon` 접미사가 없습니다. `size`는 표시 크기를 설정하며 기본적으로 가장 가까운 광학 원본을 선택합니다. `opticalSize`로 16, 20, 24 중 하나를 명시할 수 있습니다.
+
+| 옵션 | 기본값 | 동작 |
+| --- | --- | --- |
+| `size` | `24` | 표시 크기. 양의 유한수 |
+| `opticalSize` | `'auto'` | 16, 20, 24 원본. `auto`는 가장 가까운 원본을 선택하고 18과 22에서는 큰 쪽을 선택 |
+| `corner` | `'soft'` | `'sharp'`, `'soft'` 또는 `'rounded'` |
+| `strokeWidth` | 원본 두께 | 원본 단위의 0.25 간격 [선 두께](/guide/stroke-width) |
+| `color` | `'currentColor'` | 도안 색상 |
+| `label` | 없음 | 생략하면 SVG에 `aria-hidden` 적용. 지정하면 `role="img"`와 레이블 추가 |
+| `direction` | `'ltr'` | `'rtl'`이면 방향성이 있는 아이콘을 좌우 반전 |
+
+`direction`이 `rtl`일 때는 `arrow-left`, `arrow-right`, `chevron-left`, `chevron-right`, `chevrons-left`, `chevrons-right`, `undo`, `redo`만 좌우로 뒤집힙니다.
