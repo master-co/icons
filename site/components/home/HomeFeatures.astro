@@ -1,5 +1,6 @@
 ---
 import '@master/ui/components/code.css'
+import '@master/ui/components/tabs.css'
 import {Settings} from '@master/icons/data/settings'
 import {Calendar} from '@master/icons/data/calendar'
 import {Sparkles} from '@master/icons/data/sparkles'
@@ -80,9 +81,53 @@ const directionFigure=(()=>{
  return svg
 })()
 
-/* The catalog: a sheet of icons at their native 20 px, as a list would show them. */
+/* The catalog: a sheet of icons at their native 20 px, as a list would show them, each a way into the collection. */
 const specimens=['Home','Search','Bell','Calendar','Folder','Camera','Heart','Star','Settings','User','Mail','Lock','Cloud','Clock','Compass','MapPin','Music','Image','Bookmark','Paperclip','Send','Layers','Sparkles','Zap','Sun','Moon','Inbox','Filter','Link','Pencil','Trash','Download']
- .map(name=>(Icons as Record<string,any>)[`${name}Icon`]).filter(Boolean)
+ .map(name=>({name:name.replace(/(?<=[a-z])(?=[A-Z])/g,'-').toLowerCase(),Icon:(Icons as Record<string,any>)[`${name}Icon`]})).filter(item=>item.Icon)
+
+/*
+ * The packages: the same icon at the same setting in each one's own syntax, then its smallest import. Every sample
+ * has the same lines, so the sheet keeps its height from tab to tab.
+ */
+const component=(name:string,usage:string)=>[
+ `// ${t('Any size, corner and stroke')}`,
+ `import { SearchIcon } from '@master/${name}'`,
+ '',
+ usage,
+ '',
+ `// ${t('One master, the smallest import')}`,
+ `import { SearchIcon } from '@master/${name}/20/soft'`,
+].join('\n')
+const jsx='<SearchIcon size={20} corner="rounded" strokeWidth={1.5} />'
+const packages=[
+ {id:'svg',name:'SVG',code:[
+  `// ${t('Any size, corner and stroke')}`,
+  `import { Search, renderSvg } from '@master/icons'`,
+  '',
+  `renderSvg(Search, { size: 20, corner: 'rounded', strokeWidth: 1.5 })`,
+  '',
+  `// ${t('One master, the smallest import')}`,
+  `import search from '@master/icons/svg/20/soft/search.svg'`,
+ ].join('\n')},
+ {id:'react',name:'React',code:component('icons-react',jsx)},
+ {id:'vue',name:'Vue',code:component('icons-vue','<SearchIcon :size="20" corner="rounded" :stroke-width="1.5" />')},
+ {id:'svelte',name:'Svelte',code:component('icons-svelte',jsx)},
+ {id:'preact',name:'Preact',code:component('icons-preact',jsx)},
+ {id:'astro',name:'Astro',code:component('icons-astro',jsx)},
+]
+const firstPackage='react'
+const escape=(text:string)=>text.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')
+/** Colors a sample: comments, strings, keywords, tags and attribute names, in that order of precedence. */
+const paint=(code:string)=>{
+ const token=/(\/\/.*$)|('[^']*'|"[^"]*")|\b(import|from)\b|(<\/?[A-Za-z]\w*|\/?>)|([:\w-]+)(?==)/gm
+ let html='',last=0
+ for(const match of code.matchAll(token)){
+  const kind=match[1]?'c':match[2]?'s':match[3]?'k':match[4]?'t':'a'
+  html+=escape(code.slice(last,match.index))+`<span class="icons-code-${kind}">${escape(match[0])}</span>`
+  last=match.index+match[0].length
+ }
+ return html+escape(code.slice(last))
+}
 ---
 
 {/*
@@ -129,29 +174,23 @@ const specimens=['Home','Search','Bell','Calendar','Folder','Camera','Heart','St
     </div>
    </article>
    <article class="icons-sheet icons-sheet-code">
-    <p class="icons-sheet-meta home-annotation"><span>04</span><span>SVG · React · Vue · Svelte · Preact · Astro</span></p>
+    <p class="icons-sheet-meta home-annotation"><span>04</span><span>@master/icons-*</span></p>
     <h3 class="icons-sheet-title">{t('One geometry, six packages')}</h3>
     <p class="icons-sheet-body">{t('Plain SVG, React, Vue, Svelte, Preact and Astro. Install only your framework’s adapter; a fixed entry ships one master.')}</p>
     <div class="icons-sheet-code">
-     <ul class="icons-frameworks" aria-label={t('Packages')}>
-      {['icons','icons-react','icons-vue','icons-svelte','icons-preact','icons-astro'].map(name=><li>@master/{name}</li>)}
-     </ul>
-     <pre class="code-block" tabindex="0" aria-label={t('Using an icon in Svelte')}><code><span class="icons-code-c">{'// '}{t('Any size, corner and stroke')}</span>
-<span class="icons-code-k">import</span> {'{'} SearchIcon {'}'} <span class="icons-code-k">from</span> <span class="icons-code-s">'@master/icons-svelte'</span>
-
-<span class="icons-code-t">&lt;SearchIcon</span> <span class="icons-code-a">size</span>={'{'}20{'}'} <span class="icons-code-a">corner</span>=<span class="icons-code-s">"rounded"</span> <span class="icons-code-a">strokeWidth</span>={'{'}1.5{'}'} <span class="icons-code-t">/&gt;</span>
-
-<span class="icons-code-c">{'// '}{t('One master, the smallest import')}</span>
-<span class="icons-code-k">import</span> {'{'} SearchIcon {'}'} <span class="icons-code-k">from</span> <span class="icons-code-s">'@master/icons-svelte/20/soft'</span></code></pre>
+     <div class="tabs tabs-sm icons-packages" role="tablist" aria-label={t('Packages')} data-packages>
+      {packages.map(item=><button type="button" class="tabs-item" role="tab" id={`package-tab-${item.id}`} aria-selected={item.id===firstPackage?'true':'false'} aria-controls={`package-${item.id}`} tabindex={item.id===firstPackage?0:-1}>{item.name}</button>)}
+     </div>
+     {packages.map(item=><pre class="code-block" role="tabpanel" id={`package-${item.id}`} aria-labelledby={`package-tab-${item.id}`} tabindex="0" hidden={item.id!==firstPackage}><code set:html={paint(item.code)} /></pre>)}
     </div>
    </article>
    <article class="icons-sheet icons-sheet-catalog">
     <p class="icons-sheet-meta home-annotation"><span>05</span><span>{number} · {categories}</span></p>
     <h3 class="icons-sheet-title">{t('{count} icons in {categories} categories').replace('{count}',number).replace('{categories}',String(categories))}</h3>
     <p class="icons-sheet-body">{t('Interface, editing, media, commerce and more, each reviewed at its native size.')}</p>
-    <div class="icons-specimens" aria-hidden="true">
-     {specimens.map(Icon=><span class="icons-specimen"><Icon size={20} /></span>)}
-    </div>
+    <ul class="icons-specimens" aria-label={t('Representative icons')}>
+     {specimens.map(({name,Icon})=><li><a class="icons-specimen" href={`${prefix}/icons?q=${name}`} aria-label={name} title={name}><Icon size={20} /></a></li>)}
+    </ul>
     <a class="home-section-link icons-sheet-link" href={`${prefix}/icons`}>{t('All icons')}<ArrowRightIcon size={16} /></a>
    </article>
    <article class="icons-sheet icons-sheet-direction">
@@ -167,3 +206,9 @@ const specimens=['Home','Search','Bell','Calendar','Folder','Camera','Heart','St
   <a class="home-section-link icons-features-link" href={`${prefix}/guide/optical-sizes`}>{t('Read about sizes and corners')}<ArrowRightIcon size={16} /></a>
  </div>
 </section>
+
+<script>
+ import {tabs} from '@master/ui/behaviors/tabs.js'
+ /** The packages' tablist takes the arrow keys and shows the sample of the selected package. */
+ for(const list of document.querySelectorAll<HTMLElement>('[data-packages]'))tabs(list)
+</script>

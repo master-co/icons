@@ -1124,24 +1124,8 @@
     }
   }
 
-  .icons-frameworks {
-    display: flex;
-    flex-wrap: wrap;
-    gap: .375rem;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-
-    & > li {
-      padding: .1875rem .5rem;
-      border-radius: var(--home-radius-chip);
-      font-family: var(--home-mono);
-      font-size: .6875rem;
-      color: var(--home-text-body);
-      background-color: var(--home-tray);
-      box-shadow: inset 0 0 0 .5px var(--home-rule);
-    }
-  }
+  /* The packages' tabs stand on the sheet without the row's own inset, level with the words above them. */
+  .icons-packages { margin-top: -.5rem; }
 
   .icons-code-c { color: var(--home-text-faint); }
   .icons-code-k { color: var(--home-code-tag); }
@@ -1152,17 +1136,40 @@
   .icons-specimens {
     display: grid;
     grid-template-columns: repeat(8, minmax(0, 1fr));
-    margin-top: auto;
-    padding-top: 1.5rem;
+    margin: auto 0 0;
+    padding: 1.5rem 0 0;
+    list-style: none;
     color: var(--home-text);
     mask-image: radial-gradient(ellipse 85% 90% at 50% 40%, black 45%, transparent);
+
+    /* Under the pointer or the keyboard the whole sheet comes forward, so no icon is reached through the fade. */
+    &:is(:hover, :focus-within) { mask-image: none; }
   }
 
+  /* Each icon is a way into the collection: its cell takes the tray's tone and the icon rises a little. */
   .icons-specimen {
     display: grid;
     place-items: center;
     aspect-ratio: 1;
+    color: inherit;
     box-shadow: 1px 0 var(--home-guide), 0 1px var(--home-guide);
+    transition: background-color var(--home-quick) var(--home-ease);
+
+    & > svg { transition: translate var(--home-base) var(--home-ease), scale var(--home-base) var(--home-ease); }
+
+    @media (hover: hover) {
+      &:hover {
+        background-color: var(--home-tray);
+
+        & > svg { translate: 0 -1px; scale: 1.1; }
+      }
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--home-ink);
+      outline-offset: -2px;
+      background-color: var(--home-tray);
+    }
   }
 
   .icons-sheet-link {
@@ -1205,7 +1212,11 @@
     justify-self: center;
     color: var(--plot-ink);
 
-    @media (width < 64rem) { display: none; }
+    /* In one column the drawing opens the close at a smaller size, on the words' own edge. */
+    @media (width < 64rem) {
+      width: min(62%, 15rem);
+      justify-self: start;
+    }
   }
 
   .icons-close-reading {
@@ -1257,6 +1268,8 @@
     .icons-prompt::after { display: none; }
 
     :is(.icons-start, .icons-hero-pill):is(:hover, :focus-visible) > svg { translate: none; }
+
+    .icons-specimen:hover > svg { translate: none; scale: none; }
 
     .home-glyph,
     .home-detail-stroke,
