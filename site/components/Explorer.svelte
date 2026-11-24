@@ -1,10 +1,11 @@
 <script lang="ts">
  import {parseStroke, clampStroke, strokeRanges, strokeDefinition} from '../../scripts/lib/stroke-width.mjs'
- // Direct native modules keep development imports limited to these four controls.
+ // Direct native modules keep development imports limited to these five controls.
  import XIcon from '@master/icons-svelte/16/soft/x'
  import CopyIcon from '@master/icons-svelte/16/soft/copy'
  import DownloadIcon from '@master/icons-svelte/16/soft/download'
  import CheckIcon from '@master/icons-svelte/16/soft/check'
+ import ChevronDownIcon from '@master/icons-svelte/16/soft/chevron-down'
  import CatalogIcon from './CatalogIcon.svelte'
  import InlineIcon from './InlineIcon.svelte'
  import {loadDefinition} from './icon-data'
@@ -191,7 +192,7 @@
   {#if directory && activeCategory==='all' && !searchTerm}
    <div class="accordion">
     <details class="accordion-item specimen-directory">
-     <summary class="accordion-trigger w-fit items-center gap(6) py(0)" title={t('All icons')}>{@render resultCount()}</summary>
+     <summary class="accordion-trigger w-fit items-center gap(6) py(0)" title={t('All icons')}>{@render resultCount()}<ChevronDownIcon class="icon accordion-chevron" /></summary>
      <div class="accordion-content">{@render directory()}</div>
     </details>
    </div>
