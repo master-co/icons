@@ -18,17 +18,17 @@ const figure=grid(placement)+centerlines+form(Sparkles,placement,'close')+dimens
 */}
 <section id="start" class="home-section icons-close" aria-labelledby="start-title">
  <div class="app-wrapper home-section-wrap icons-close-wrap">
-  <svg class="icons-plot icons-close-figure" viewBox="0 0 280 300" aria-hidden="true" set:html={figure} />
+  <svg class="icons-plot icons-close-figure home-reveal-item" viewBox="0 0 280 300" aria-hidden="true" set:html={figure} />
   <div class="icons-close-reading">
    <p class="home-eyebrow"><span class="home-eyebrow-index" aria-hidden="true">03</span><span>{t('Start')}</span></p>
-   <h2 id="start-title" class="home-section-heading">{t('Find the icon. Keep the drawing.')}</h2>
-   <p class="home-section-body">{t('Browse the collection at its native sizes, or install Master Icons in your framework. Your coding agent can do the setup and check the first icon for you.')}</p>
-   <div class="icons-hero-actions icons-close-actions">
+   <h2 id="start-title" class="home-section-heading home-reveal-item">{t('Find the icon. Keep the drawing.')}</h2>
+   <p class="home-section-body home-reveal-item">{t('Browse the collection at its native sizes, or install Master Icons in your framework. Your coding agent can do the setup and check the first icon for you.')}</p>
+   <div class="icons-hero-actions icons-close-actions home-reveal-item">
     <a class="icons-start" href={`${prefix}/icons`}>{t('Explore icons')}<ArrowRightIcon size={16} /></a>
     <SetupPromptButton {locale} {t} />
    </div>
-   <a class="home-section-link icons-close-guide" href={`${prefix}/guide/getting-started`}><BookOpenIcon size={16} />{t('Read the installation guide')}<ArrowRightIcon size={16} /></a>
-   <p class="icons-close-note">{t('Published on npm as @master/icons, with one package for each framework.')}</p>
+   <a class="home-section-link icons-close-guide home-reveal-item" href={`${prefix}/guide/getting-started`}><BookOpenIcon size={16} />{t('Read the installation guide')}<ArrowRightIcon size={16} /></a>
+   <p class="icons-close-note home-reveal-item">{t('Published on npm as @master/icons, with one package for each framework.')}</p>
   </div>
  </div>
 </section>

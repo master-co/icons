@@ -1118,14 +1118,56 @@
     padding-top: 1.25rem;
     font-size: var(--home-code);
 
-    & > .code-block {
+    & .code-block {
       margin: 0;
       white-space: pre;
     }
   }
 
   /* The packages' tabs stand on the sheet without the row's own inset, level with the words above them. */
-  .icons-packages { margin-top: -.5rem; }
+  .icons-packages {
+    margin-top: -.5rem;
+
+    /* Six tabs share a phone's row. */
+    @media (width < 40rem) { --tabs-gap: .75rem; }
+  }
+
+  /* The panel lays itself out as a column, which would show a hidden one; only the chosen package's sample stands. */
+  .icons-package[hidden] { display: none; }
+
+  /* The sample's copy button: the check stands where the copy glyph was for a moment. */
+  .icons-copy-glyph {
+    display: grid;
+    place-items: center;
+
+    & > * {
+      grid-area: 1 / 1;
+      transition: opacity var(--home-quick) var(--home-ease), scale var(--home-base) var(--home-ease);
+    }
+
+    & > .icons-copy-done { opacity: 0; }
+
+    .icons-copy[data-status='copied'] & > .icons-copy-idle { opacity: 0; }
+    .icons-copy[data-status='copied'] & > .icons-copy-done { opacity: 1; }
+
+    @media (prefers-reduced-motion: no-preference) {
+      & > .icons-copy-done,
+      .icons-copy[data-status='copied'] & > .icons-copy-idle { scale: .6; }
+
+      .icons-copy[data-status='copied'] & > .icons-copy-done { scale: 1; }
+    }
+  }
+
+  /* A newly chosen package's sample settles into the well instead of snapping. */
+  @media (prefers-reduced-motion: no-preference) {
+    .icons-package:not([hidden]) > .code-block > code,
+    .icons-package:not([hidden]) .code-title {
+      display: inline-block;
+      animation: icons-settle 360ms var(--home-ease) both;
+    }
+
+    .icons-package:not([hidden]) > .code-block > code { animation-delay: 40ms; }
+  }
 
   .icons-code-c { color: var(--home-text-faint); }
   .icons-code-k { color: var(--home-code-tag); }
@@ -1257,6 +1299,36 @@
 
       .icons-plot :is(.plot-wash, .plot-outline) { animation-range: cover 22% cover 38%; }
       .icons-plot :is(.plot-dimension, .plot-leader, text) { animation-range: cover 30% cover 45%; }
+
+      /* The stroke scale is ruled first, then each width is inked in turn, lightest to heaviest. */
+      .icons-plot :is(.plot-rule, .plot-tick),
+      .icons-plot .plot-ink {
+        animation: icons-appear linear both;
+        animation-timeline: view();
+        animation-range: cover 8% cover 20%;
+      }
+
+      .icons-plot .plot-ink {
+        animation-range: cover calc(14% + var(--i, 0) * 3%) cover calc(24% + var(--i, 0) * 3%);
+      }
+
+      /*
+       * The sheets rise into their tray as the shared reveal has every card do; the second sheet of a row follows
+       * the first. The catalog's icons arrive after their sheet, column by column.
+       */
+      .icons-sheet.home-reveal-item { animation-range: entry 24px entry 244px; }
+      .icons-sheet.home-reveal-item:nth-child(even) { animation-range: entry 72px entry 292px; }
+
+      .icons-specimen {
+        animation: icons-specimen linear both;
+        animation-timeline: view();
+        animation-range: entry calc(24px + var(--c, 0) * 12px) entry calc(104px + var(--c, 0) * 12px);
+      }
+
+      /* The close reads in order: the title, the words, the actions, the way to the guide. */
+      .icons-close-reading > .home-section-heading { animation-range: entry 24px entry 184px; }
+      .icons-close-reading > .home-section-body { animation-range: entry 48px entry 208px; }
+      .icons-close-reading > .icons-close-actions { animation-range: entry 72px entry 232px; }
     }
   }
 
@@ -1333,6 +1405,14 @@
 
 @keyframes icons-appear {
   from { opacity: 0; }
+}
+
+@keyframes icons-settle {
+  from { opacity: 0; translate: 0 .25rem; }
+}
+
+@keyframes icons-specimen {
+  from { opacity: 0; translate: 0 .5rem; }
 }
 
 @keyframes icons-draw {

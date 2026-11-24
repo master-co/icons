@@ -267,7 +267,7 @@
  </div>
 {/snippet}
 
-<figure class="home-bench" bind:this={bench} aria-label={t('The same icons in four interface styles')} data-motion={motion||undefined} data-rippled={rippled||undefined}>
+<figure class="home-bench home-reveal-item" bind:this={bench} aria-label={t('The same icons in four interface styles')} data-motion={motion||undefined} data-rippled={rippled||undefined}>
  <div class="home-bench-bar">
   <div class="home-bench-group">
    <span class="home-annotation" id={`${uid}-style`}>{t('Style')}</span>

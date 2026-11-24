@@ -7,7 +7,7 @@ import {Sparkles} from '@master/icons/data/sparkles'
 import {Undo} from '@master/icons/data/undo'
 import {resolveIcon,strokeRanges,strokeWidths} from '@master/icons/runtime'
 import * as Icons from '@master/icons-astro'
-import {ArrowRightIcon} from '@master/icons-astro'
+import {ArrowRightIcon,CopyIcon,CheckIcon} from '@master/icons-astro'
 import {form,grid,ink,dimension,label} from './plotter'
 interface Props {prefix:string;copy:Record<string,string>;count:number;categories:number;locale:string}
 const {prefix,copy,count,categories,locale}=Astro.props
@@ -62,7 +62,7 @@ const strokeFigure=(()=>{
  let svg=''
  widths.forEach((width,index)=>{
   const x=20+index*step
-  svg+=ink(Sparkles,{size:24,corner:'soft',stroke:width,x,y:16,scale},`stroke-${index}`)
+  svg+=ink(Sparkles,{size:24,corner:'soft',stroke:width,x,y:16,scale},`stroke-${index}`).replace('<g class="plot-ink"',`<g class="plot-ink" style="--i:${index}"`)
   svg+=`<path class="plot-tick" d="M${x+12*scale} 108v${index===0||index===widths.length-1?10:6}"/>`
   svg+=label(x+12*scale,134,String(width),'value','middle')
  })
@@ -100,7 +100,7 @@ const component=(name:string,usage:string)=>[
 ].join('\n')
 const jsx='<SearchIcon size={20} corner="rounded" strokeWidth={1.5} />'
 const packages=[
- {id:'svg',name:'SVG',code:[
+ {id:'svg',name:'SVG',package:'@master/icons',code:[
   `// ${t('Any size, corner and stroke')}`,
   `import { Search, renderSvg } from '@master/icons'`,
   '',
@@ -109,11 +109,11 @@ const packages=[
   `// ${t('One master, the smallest import')}`,
   `import search from '@master/icons/svg/20/soft/search.svg'`,
  ].join('\n')},
- {id:'react',name:'React',code:component('icons-react',jsx)},
- {id:'vue',name:'Vue',code:component('icons-vue','<SearchIcon :size="20" corner="rounded" :stroke-width="1.5" />')},
- {id:'svelte',name:'Svelte',code:component('icons-svelte',jsx)},
- {id:'preact',name:'Preact',code:component('icons-preact',jsx)},
- {id:'astro',name:'Astro',code:component('icons-astro',jsx)},
+ {id:'react',name:'React',package:'@master/icons-react',code:component('icons-react',jsx)},
+ {id:'vue',name:'Vue',package:'@master/icons-vue',code:component('icons-vue','<SearchIcon :size="20" corner="rounded" :stroke-width="1.5" />')},
+ {id:'svelte',name:'Svelte',package:'@master/icons-svelte',code:component('icons-svelte',jsx)},
+ {id:'preact',name:'Preact',package:'@master/icons-preact',code:component('icons-preact',jsx)},
+ {id:'astro',name:'Astro',package:'@master/icons-astro',code:component('icons-astro',jsx)},
 ]
 const firstPackage='react'
 const escape=(text:string)=>text.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')
@@ -143,13 +143,13 @@ const paint=(code:string)=>{
   </header>
 
   {/* One tray, as on the Master UI homepage: a caption row, then raised sheets, each a data sheet with its drawing. */}
-  <figure class="icons-library" aria-labelledby="features-title">
+  <figure class="icons-library home-reveal-item" aria-labelledby="features-title">
    <figcaption class="icons-library-bar">
     <span class="home-annotation">{t('Drawn from the package')}</span>
     <span class="icons-library-status home-annotation"><span class="icons-library-dot" aria-hidden="true"></span><span>{t('Every figure is the icons’ own geometry, rendered when this page was built')}</span></span>
    </figcaption>
    <div class="icons-library-grid">
-   <article class="icons-sheet icons-sheet-sizes">
+   <article class="icons-sheet home-reveal-item icons-sheet-sizes">
     <p class="icons-sheet-meta home-annotation"><span>01</span><span>16 · 20 · 24</span></p>
     <h3 class="icons-sheet-title">{t('Three sizes, three drawings')}</h3>
     <p class="icons-sheet-body">{t('16, 20 and 24 px each have a drawing of their own. A small master drops detail instead of shrinking it.')}</p>
@@ -157,7 +157,7 @@ const paint=(code:string)=>{
      <svg class="icons-plot" viewBox={`0 0 ${sizeFigure.width} 244`} role="img" aria-label={t('The settings icon drawn at 16, 20 and 24 px on its pixel grid.')} set:html={sizeFigure.svg} />
     </div>
    </article>
-   <article class="icons-sheet icons-sheet-corners">
+   <article class="icons-sheet home-reveal-item icons-sheet-corners">
     <p class="icons-sheet-meta home-annotation"><span>02</span><span>sharp · soft · rounded</span></p>
     <h3 class="icons-sheet-title">{t('Corners change the geometry')}</h3>
     <p class="icons-sheet-body">{t('Sharp, soft and rounded redraw the outline and the room inside it, not only the line joins.')}</p>
@@ -165,7 +165,7 @@ const paint=(code:string)=>{
      <svg class="icons-plot" viewBox={`0 0 ${cornerFigure.width} 172`} role="img" aria-label={t('The upper-left corner of the calendar icon with sharp, soft and rounded corners.')} set:html={cornerFigure.svg} />
     </div>
    </article>
-   <article class="icons-sheet icons-sheet-strokes">
+   <article class="icons-sheet home-reveal-item icons-sheet-strokes">
     <p class="icons-sheet-meta home-annotation"><span>03</span><span>0.75 – 2.5</span></p>
     <h3 class="icons-sheet-title">{t('Strokes in quarter steps')}</h3>
     <p class="icons-sheet-body">{t('From 0.75 to 2.5 units. Heavier widths take corrected geometry, so small counters stay open.')}</p>
@@ -173,7 +173,7 @@ const paint=(code:string)=>{
      <svg class="icons-plot" viewBox={`0 0 ${strokeFigure.width} 142`} role="img" aria-label={t('The sparkles icon at every stroke width from 1.25 to 2.5.')} set:html={strokeFigure.svg} />
     </div>
    </article>
-   <article class="icons-sheet icons-sheet-code">
+   <article class="icons-sheet home-reveal-item icons-sheet-code">
     <p class="icons-sheet-meta home-annotation"><span>04</span><span>@master/icons-*</span></p>
     <h3 class="icons-sheet-title">{t('One geometry, six packages')}</h3>
     <p class="icons-sheet-body">{t('Plain SVG, React, Vue, Svelte, Preact and Astro. Install only your framework’s adapter; a fixed entry ships one master.')}</p>
@@ -181,19 +181,30 @@ const paint=(code:string)=>{
      <div class="tabs tabs-sm icons-packages" role="tablist" aria-label={t('Packages')} data-packages>
       {packages.map(item=><button type="button" class="tabs-item" role="tab" id={`package-tab-${item.id}`} aria-selected={item.id===firstPackage?'true':'false'} aria-controls={`package-${item.id}`} tabindex={item.id===firstPackage?0:-1}>{item.name}</button>)}
      </div>
-     {packages.map(item=><pre class="code-block" role="tabpanel" id={`package-${item.id}`} aria-labelledby={`package-tab-${item.id}`} tabindex="0" hidden={item.id!==firstPackage}><code set:html={paint(item.code)} /></pre>)}
+     {packages.map(item=>
+      <div class="code-panel icons-package" role="tabpanel" id={`package-${item.id}`} aria-labelledby={`package-tab-${item.id}`} hidden={item.id!==firstPackage}>
+       <div class="code-header">
+        <span class="code-title">{item.package}</span>
+        <button type="button" class="btn btn-quiet btn-square icons-copy" data-copy-code data-copied={t('Copied')} data-failed={t('Copy failed')} aria-label={t(`Copy ${item.name}`)}>
+         <span class="icons-copy-glyph" aria-hidden="true"><CopyIcon class="icons-copy-idle" size={16} /><CheckIcon class="icons-copy-done" size={16} strokeWidth={1.75} /></span>
+        </button>
+       </div>
+       <pre class="code-block" tabindex="0"><code set:html={paint(item.code)} /></pre>
+      </div>
+     )}
+     <span class="sr-only" aria-live="polite" data-copy-status></span>
     </div>
    </article>
-   <article class="icons-sheet icons-sheet-catalog">
+   <article class="icons-sheet home-reveal-item icons-sheet-catalog">
     <p class="icons-sheet-meta home-annotation"><span>05</span><span>{number} · {categories}</span></p>
     <h3 class="icons-sheet-title">{t('{count} icons in {categories} categories').replace('{count}',number).replace('{categories}',String(categories))}</h3>
     <p class="icons-sheet-body">{t('Interface, editing, media, commerce and more, each reviewed at its native size.')}</p>
     <ul class="icons-specimens" aria-label={t('Representative icons')}>
-     {specimens.map(({name,Icon})=><li><a class="icons-specimen" href={`${prefix}/icons?q=${name}`} aria-label={name} title={name}><Icon size={20} /></a></li>)}
+     {specimens.map(({name,Icon},index)=><li><a class="icons-specimen" style={`--c:${index%8}`} href={`${prefix}/icons?q=${name}`} aria-label={name} title={name}><Icon size={20} /></a></li>)}
     </ul>
     <a class="home-section-link icons-sheet-link" href={`${prefix}/icons`}>{t('All icons')}<ArrowRightIcon size={16} /></a>
    </article>
-   <article class="icons-sheet icons-sheet-direction">
+   <article class="icons-sheet home-reveal-item icons-sheet-direction">
     <p class="icons-sheet-meta home-annotation"><span>06</span><span>ltr · rtl</span></p>
     <h3 class="icons-sheet-title">{t('Accessible and direction-aware')}</h3>
     <p class="icons-sheet-body">{t('Icons stay decorative until labeled. Directional icons mirror for right-to-left layouts; the rest keep their orientation.')}</p>
@@ -203,7 +214,7 @@ const paint=(code:string)=>{
    </article>
    </div>
   </figure>
-  <a class="home-section-link icons-features-link" href={`${prefix}/guide/optical-sizes`}>{t('Read about sizes and corners')}<ArrowRightIcon size={16} /></a>
+  <a class="home-section-link icons-features-link home-reveal-item" href={`${prefix}/guide/optical-sizes`}>{t('Read about sizes and corners')}<ArrowRightIcon size={16} /></a>
  </div>
 </section>
 
@@ -211,4 +222,22 @@ const paint=(code:string)=>{
  import {tabs} from '@master/ui/behaviors/tabs.js'
  /** The packages' tablist takes the arrow keys and shows the sample of the selected package. */
  for(const list of document.querySelectorAll<HTMLElement>('[data-packages]'))tabs(list)
+
+ /** A sample's copy button hands its code to the clipboard; a check stands in for a moment and the result is announced. */
+ for(const button of document.querySelectorAll<HTMLButtonElement>('[data-copy-code]')){
+  const status=button.closest('.icons-sheet-code')?.querySelector<HTMLElement>('[data-copy-status]')
+  let timer:ReturnType<typeof setTimeout>|undefined
+  button.addEventListener('click',async()=>{
+   const text=button.closest('.code-panel')?.querySelector('pre')?.textContent??''
+   let outcome:'copied'|'failed'
+   try{await navigator.clipboard.writeText(text);outcome='copied'}catch{outcome='failed'}
+   button.dataset.status=outcome
+   if(status)status.textContent=(outcome==='copied'?button.dataset.copied:button.dataset.failed)??''
+   clearTimeout(timer)
+   timer=setTimeout(()=>{
+    delete button.dataset.status
+    if(status)status.textContent=''
+   },1800)
+  })
+ }
 </script>
