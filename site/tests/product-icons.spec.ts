@@ -12,7 +12,7 @@ test('product controls open from their searchable names and expose all native ma
   const search=page.getByRole('searchbox',{name:'Search icons',exact:true})
   for(const {name} of scope){
     await search.fill(name)
-    await page.getByRole('button',{name:name.replaceAll('-',' '),exact:true}).click()
+    await page.getByTestId('icon-grid').getByRole('link',{name:name.replaceAll('-',' '),exact:true}).click()
     const dialog=page.getByRole('dialog')
     await expect(dialog.locator('.master-cell svg')).toHaveCount(9)
     const code=drawing(await dialog.locator('textarea').inputValue())
@@ -21,6 +21,6 @@ test('product controls open from their searchable names and expose all native ma
   }
   for(const [query,name] of [['chart-column-increasing','chart bar increasing'],['unfold-more','chevrons up down'],['corner-down-left','keyboard return'],['SourceCode','code']]){
     await search.fill(query)
-    await expect(page.getByRole('button',{name,exact:true})).toBeVisible()
+    await expect(page.getByTestId('icon-grid').getByRole('link',{name,exact:true})).toBeVisible()
   }
 })

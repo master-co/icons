@@ -4,7 +4,8 @@ import { join, dirname } from 'node:path'
 import {buildStrokes} from '../../scripts/lib/build-strokes.mjs'
 import {contentCache, writeIfChanged} from '../../scripts/lib/content-cache.mjs'
 import {lockGeneration} from '../../scripts/lib/generation-lock.mjs'
-import {generateLlms,llmsOutputs} from './llms.ts'
+import {generateSocialImages} from './social-images.ts'
+import {generateLlms,llmsOutputs,type GuidePage} from './llms.ts'
 
 const started=performance.now()
 const site=fileURLToPath(new URL('../',import.meta.url))
@@ -39,14 +40,14 @@ console.log(`Site assets: ${assets.hit?'content cache hit':'copied'}`)
 
 const guideSlugs=(await readdir(join(site,'content/guide'),{withFileTypes:true})).filter(entry=>entry.isDirectory()).map(entry=>entry.name)
 const guides=await contentCache({
- inputs:[...common,join(site,'scripts/llms.ts'),join(site,'content'),join(site,'i18n')],
- outputs:[join(site,'.categories/guide.json'),...['en','tw'].map(locale=>join(site,`public/search/${locale}.json`)),...llmsOutputs(guideSlugs).map(path=>join(site,'public',path))],
+ inputs:[...common,join(site,'scripts/llms.ts'),join(site,'scripts/social-images.ts'),join(icons,'dist/catalog.json'),join(strokes,'key'),join(site,'assets/brand'),join(site,'content'),join(site,'i18n')],
+ outputs:[join(site,'public/social'),join(site,'.categories/guide.json'),...['en','tw'].map(locale=>join(site,`public/search/${locale}.json`)),...llmsOutputs(guideSlugs).map(path=>join(site,'public',path))],
  file:join(repo,'work/cache/site-guides.json'),force
 })
 if(!guides.hit){
  // Every guide folder is a page; its metadata names the sidebar group and its order there.
  const groups=['Getting started','Frameworks','Design','Reference']
- const pages:{category:string;order:number}[]=[]
+ const pages:GuidePage[]=[]
  for(const entry of await readdir(join(site,'content/guide'),{withFileTypes:true})){
   if(!entry.isDirectory())continue
   const {default:metadata}=await import(new URL(`../content/guide/${entry.name}/metadata.ts`,import.meta.url).href)
@@ -61,10 +62,15 @@ if(!guides.hit){
  // llms.txt and each guide as Markdown for coding agents; see scripts/llms.ts.
  const dictionary={en:{},tw:JSON.parse(await readFile(join(site,'i18n/tw.json'),'utf8'))} as Record<string,Record<string,string>>
  await rm(join(site,'public/guide'),{recursive:true,force:true});await rm(join(site,'public/tw/guide'),{recursive:true,force:true})
- await generateLlms(site,categories as any,async(path,content)=>{await mkdir(dirname(join(site,'public',path)),{recursive:true});await writeIfChanged(join(site,'public',path),content)},(locale,text)=>dictionary[locale][text]??text)
+ await generateSocialImages(site,catalog.icons,categories.flatMap(group=>group.pages))
+ await generateLlms(site,catalog.icons,categories,async(path,content)=>{await mkdir(dirname(join(site,'public',path)),{recursive:true});await writeIfChanged(join(site,'public',path),content)},(locale,text)=>dictionary[locale][text]??text)
  await guides.commit()
 }
 // Tracked Master brand sources and the Pages redirects live outside the generated/ignored public tree.
-for(const name of ['favicon.svg','favicon.ico','_redirects'])await writeIfChanged(join(site,'public',name),await readFile(join(site,'assets',name)))
+const redirects=await readFile(join(site,'assets/_redirects'),'utf8')
+const aliases=catalog.icons.filter((icon:{aliasOf?:string})=>icon.aliasOf)
+const aliasRedirects=aliases.flatMap((icon:{name:string;aliasOf:string})=>['','/tw'].map(prefix=>`${prefix}/icons/${icon.name} ${prefix}/icons/${icon.aliasOf} 301`))
+await writeIfChanged(join(site,'public/_redirects'),[redirects.trimEnd(),...aliasRedirects,''].join('\n'))
+for(const name of ['favicon.svg','favicon.ico'])await writeIfChanged(join(site,'public',name),await readFile(join(site,'assets',name)))
 console.log(`Guides: ${guides.hit?'content cache hit':'generated'}`)
 console.log(`Prepared ${catalog.iconCount} icons and bilingual guides in ${((performance.now()-started)/1000).toFixed(2)}s`)

@@ -8,6 +8,7 @@
  import CatalogIcon from './CatalogIcon.svelte'
  import InlineIcon from './InlineIcon.svelte'
  import {loadDefinition} from './icon-data'
+ import {svgDownload,svgSnippet} from './svg-output'
  import {releaseDownloads} from './downloads'
  import {codeSnippet,formats,formatLabels,type CodeFormat} from './code-snippet'
  import {onMount, tick, type Snippet} from 'svelte'
@@ -15,7 +16,7 @@
  import {renderSvg, getOpticalSize, type IconDefinition} from '@master/icons/runtime'
  type Artwork={name:string;label?:string;component:string;notice?:string}
  type Entry=Artwork & {label:string;category:string;keywords:string[];mark?:Artwork;outline?:Artwork;styleOf?:string}
- let {entries,categories,copy,locale,children}:{entries:Entry[];categories:{id:string;label:string}[];copy:Record<string,string>;locale:string;children?:Snippet}=$props()
+ let {entries,categories,copy,locale,children,directory}:{entries:Entry[];categories:{id:string;label:string}[];copy:Record<string,string>;locale:string;children?:Snippet;directory?:Snippet}=$props()
  const t=(key:string)=>copy[key]??key
  const numberLocale=locale==='tw'?'zh-TW':'en'
  const formatCount=new Intl.NumberFormat(numberLocale).format
@@ -58,16 +59,16 @@
  const nativeStroke=$derived(({16:1,20:1.25,24:1.5})[opticalSize])
  const strokeText=$derived(`${formatStroke(stroke??nativeStroke)} px`)
  const rawSvg=$derived(definition?renderSvg(strokeDefinition(definition,stroke),{size,corner}):'')
- const svg=$derived(artwork?.notice && rawSvg ? `<!--\n${artwork.notice.replaceAll('--','—')}\n-->\n${rawSvg}` : rawSvg)
+ const svg=$derived(svgSnippet(rawSvg,artwork?.notice))
  const snippet=$derived(artwork?codeSnippet({format,component:artwork.component,size,opticalSize,corner,svg,strokeWidth:stroke}):'')
  // Download sets are assets of the newest GitHub release; custom weights come as one archive per optical size.
  const setURL=$derived(`${releaseDownloads}/master-icons-${opticalSize}-${stroke===null?corner:'strokes'}.zip`)
  // Every download is rendered here and leads with the published file's notice, so it equals that file
  // (or the same file in a weight's ZIP set); no SVG is requested from the site.
- const download=$derived(definition&&rawSvg?`data:image/svg+xml;charset=utf-8,${encodeURIComponent(`${(definition as IconDefinition&{header?:string}).header??''}${rawSvg}\n`)}`:undefined)
+ const download=$derived(definition&&rawSvg?svgDownload(`${(definition as IconDefinition&{header?:string}).header??''}${rawSvg}\n`):undefined)
  const cornerLabel=(c:string)=>t(c[0].toUpperCase()+c.slice(1))
  const categoryOptions=$derived([
-  {id:'all',label:t('All icons'),count:entries.length},
+  {id:'all',label:t('All'),count:entries.length},
   ...categories.map(c=>({id:c.id,label:t(c.label),count:entries.filter(entry=>entry.category===c.id).length}))
  ])
  function updateSearch(value:string){
@@ -116,7 +117,9 @@
   try{const data=await loadDefinition(entry.name);if(revision===request)definition=data}
   catch{if(revision===request)error=true}
  }
- async function open(entry:Entry,button:HTMLButtonElement){button.focus();useOutline=Boolean(entry.styleOf);selected=entry;format='svg';notice='';await tick();dialog.showModal();await load(entry)}
+ async function open(entry:Entry,event:MouseEvent & {currentTarget:HTMLAnchorElement}){
+  if(event.button!==0||event.metaKey||event.ctrlKey||event.shiftKey||event.altKey)return
+  event.preventDefault();event.currentTarget.focus();useOutline=Boolean(entry.styleOf);selected=entry;format='svg';notice='';await tick();dialog.showModal();await load(entry)}
  function chooseArtwork(outline:boolean){
   if(!selected || outline===useOutline)return
   useOutline=outline
@@ -159,7 +162,7 @@
    <div class="field"><span id={`${instanceId}-view`}>{t('View')}</span><div class="segmented w-full" role="group" aria-labelledby={`${instanceId}-view`}><button type="button" class="segmented-item" aria-pressed={view==='library'} onclick={()=>{view='library';page=1}}>{t('Collection')}</button><button type="button" class="segmented-item" aria-pressed={view==='optical'} onclick={()=>{view='optical';page=1}}>{t('Size comparison')}</button></div></div>
    <a class="btn btn-sm" href={setURL}>{t('Download set')}<span aria-hidden="true"> · {opticalSize} px</span></a>
   </div>
-  <label class="field explorer-category"><span>{t('Category')}</span><select class="select" value={activeCategory} onchange={(event)=>selectCategory(event.currentTarget.value)}><option class="select-option" value="all">{t('All icons')}</option>{#each categories as c}<option class="select-option" value={c.id}>{t(c.label)}</option>{/each}</select></label>
+  <label class="field explorer-category"><span>{t('Category')}</span><select class="select" value={activeCategory} onchange={(event)=>selectCategory(event.currentTarget.value)}><option class="select-option" value="all">{t('All')}</option>{#each categories as c}<option class="select-option" value={c.id}>{t(c.label)}</option>{/each}</select></label>
  </div>
  </div>
   <div class="field scroll-area explorer-categories">
@@ -182,17 +185,29 @@
  </aside>
  <div class="explorer-main">
  <div class="field">
-  <p class="explorer-result-count" aria-live="polite" data-testid="result-count"><strong class="explorer-number">{formatCount(filtered.length)}</strong> {t('icons')}</p>
+  {#snippet resultCount()}
+   <span class="explorer-result-count" data-testid="result-count"><strong class="explorer-number">{formatCount(filtered.length)}</strong> {t('icons')}</span>
+  {/snippet}
+  {#if directory && activeCategory==='all' && !searchTerm}
+   <div class="accordion">
+    <details class="accordion-item specimen-directory">
+     <summary class="accordion-trigger w-fit items-center gap(6) py(0)" title={t('All icons')}>{@render resultCount()}</summary>
+     <div class="accordion-content">{@render directory()}</div>
+    </details>
+   </div>
+  {:else}
+   <p aria-live="polite">{@render resultCount()}</p>
+  {/if}
  <div class:optical-grid={view==='optical'} class="sheet explorer-grid" style={`--display-size:${size}px`} data-testid="icon-grid">
   {#each visible as entry (entry.name)}
-   <button type="button" class="explorer-tile" class:optical-tile={view==='optical'} onclick={(event)=>open(entry,event.currentTarget)} aria-label={label(entry)}>
+   <a href={`${locale==='en'?'':'/'+locale}/icons/${entry.name}`} class="explorer-tile" class:optical-tile={view==='optical'} onclick={(event)=>open(entry,event)} aria-label={label(entry)}>
     {#if view==='optical'}<span class="optical-row">{#each sizes as s}<span class="optical-cell"><CatalogIcon active={ready} name={entry.name} size={s} {corner} {stroke} /><span class="size-caption explorer-number">{s}{stroke===null?'':` · ${formatStroke(clampStroke(stroke,s)??stroke)}`}</span></span>{/each}</span>
     {:else}<span class="explorer-cell"><CatalogIcon active={ready} name={entry.name} {size} {corner} {stroke} /></span>{/if}
     <span class="grid gap(2) max-w-full">
      {#if translation(entry)}<span class="fg-text-body (font-size:.75rem)" lang="zh-TW">{translation(entry)}</span>{/if}
      <span class="explorer-name">{entry.name}</span>
     </span>
-   </button>
+   </a>
   {:else}<p class="explorer-empty">{t('No icons found. Try another name or category.')}</p>{/each}
  </div>
  </div>
@@ -201,7 +216,13 @@
 </section>
 <dialog bind:this={dialog} class="dialog explorer-dialog" aria-labelledby="icon-title" oncancel={clearSelection}>
  <header class="dialog-header">
-  <h2 class="dialog-title" id="icon-title">{#if selected&&translation(selected)}<span lang="zh-TW">{translation(selected)}</span><span class="detail-name">{selected.name}</span>{:else}{selected?.category==='brands'?(artwork?.label??selected.label):selected?.name??t('Icon details')}{/if}</h2>
+  <h2 class="dialog-title" id="icon-title">
+   {#if selected && artwork}
+    <a class="link inline-block" href={`${locale==='en'?'':'/'+locale}/icons/${artwork.name}`}>
+     {#if translation(selected)}<span lang="zh-TW">{translation(selected)}</span><span class="detail-name">{selected.name}</span>{:else}{selected.category==='brands'?(artwork.label??selected.label):selected.name}{/if}
+    </a>
+   {/if}
+  </h2>
  </header>
  <button type="button" class="btn btn-quiet btn-square dialog-close" aria-label={t('Close')} onclick={close}><XIcon /></button>
  <div class="dialog-body">

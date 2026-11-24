@@ -27,7 +27,10 @@ try {
   }
   server = await dev({
     root: pathToFileURL(site + '/'), server: { host: '127.0.0.1', port: 0 }, logLevel: 'error',
-    vite: { cacheDir: join(fixture, 'vite-cache'), plugins: [{
+    vite: {
+      // FSEvents can coalesce edits in a newly copied fixture. Poll that fixture on macOS.
+      server: process.platform==='darwin'?{watch:{usePolling:true,useFsEvents:false}}:undefined,
+      cacheDir: join(fixture, 'vite-cache'), plugins: [{
       name: 'test:dev-updates', configureServer(current) {
         starts++
         const restart = current.restart.bind(current)
@@ -58,11 +61,11 @@ try {
   await visit('/icons')
   times.coldIconsMs = Math.round(performance.now() - start)
   await expect(page.locator('.explorer-icon svg')).toHaveCount(96)
-  // The explorer's four controls use fixed icons backed by shared native geometry.
-  const controls = /\/data\/(?:native\/)?16\/soft\/(?:x|copy|download|check)\.js(?:\?|$)/
+  // The explorer controls and the shared header's GitHub link import fixed artwork.
+  const controls = /\/data\/(?:native\/)?(?:16\/soft\/(?:x|copy|download|check)|20\/soft\/brand-github-outline)\.js(?:\?|$)/
   const visibleModules = iconModules.filter(url => !controls.test(url))
   assert.ok(new Set(visibleModules.filter(url => url.includes('/data/') && url.endsWith('.json'))).size <= 96, 'Explorer must load only visible definitions')
-  assert.equal(visibleModules.filter(url => url.includes('/packages/icons/dist/data/')).length, 0, 'Grid icons draw from definitions, never per-icon modules')
+  assert.deepEqual(visibleModules.filter(url => url.includes('/packages/icons/dist/data/')), [], 'Grid icons draw from definitions, never per-icon modules')
   // Let first-use dependency discovery settle before testing edits.
   await visit('/icons')
   await visit('/icons')

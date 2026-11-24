@@ -30,7 +30,7 @@ async function rebuild(){
 const changed=()=>{clearTimeout(timer);timer=setTimeout(rebuild,250)}
 const watchers=[
  ...['packages/icons/src','packages/icons/scripts','packages/icons-svelte/src','packages/icons-astro/src','scripts/lib','licenses','site/content','site/i18n','site/assets'].map(path=>watchSource(root+path,changed,true)),
- ...['LICENSE','THIRD_PARTY_NOTICES.md','references/manifest.json','bun.lock','turbo.json','packages/icons/package.json','packages/icons-svelte/package.json','packages/icons-astro/package.json','scripts/build-frameworks.mjs','scripts/build-strokes.mjs','site/scripts/prepare.ts','site/scripts/task.mjs'].map(path=>watchSource(root+path,changed))
+ ...['LICENSE','THIRD_PARTY_NOTICES.md','references/manifest.json','bun.lock','turbo.json','packages/icons/package.json','packages/icons-svelte/package.json','packages/icons-astro/package.json','scripts/build-frameworks.mjs','scripts/build-strokes.mjs','site/scripts/prepare.ts','site/scripts/llms.ts','site/scripts/social-images.ts','site/scripts/task.mjs'].map(path=>watchSource(root+path,changed))
 ]
 function stop(signal){stopping=true;clearTimeout(timer);for(const watcher of watchers)watcher.close();generator?.kill(signal);child?.kill(signal)}
 for(const signal of ['SIGINT','SIGTERM'])process.on(signal,()=>stop(signal))

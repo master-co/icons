@@ -7,6 +7,7 @@
 import { readFile } from 'node:fs/promises'
 import { existsSync } from 'node:fs'
 import { join } from 'node:path'
+import type {CatalogIcon} from '../components/catalog'
 
 export const origin='https://icons.master.co'
 export const locales=['en','tw'] as const
@@ -57,12 +58,18 @@ async function edition(site:string,page:GuidePage,locale:Locale){
 /** Every file this module writes, relative to public/, for the content cache. */
 export const llmsOutputs=(slugs:string[])=>locales.flatMap(locale=>{
  const at=locale==='en'?'':`${locale}/`
- return [`${at}llms.txt`,`${at}llms-full.txt`,...slugs.map(slug=>`${at}guide/${slug}.md`)]
+ return [`${at}icons.md`,`${at}llms.txt`,`${at}llms-full.txt`,...slugs.map(slug=>`${at}guide/${slug}.md`)]
 })
 
-export async function generateLlms(site:string,categories:{name:string;pages:GuidePage[]}[],write:(path:string,content:string)=>Promise<unknown>,t:(locale:Locale,text:string)=>string){
+export async function generateLlms(site:string,icons:CatalogIcon[],categories:{name:string;pages:GuidePage[]}[],write:(path:string,content:string)=>Promise<unknown>,t:(locale:Locale,text:string)=>string){
  for(const locale of locales){
   const at=prefix(locale)
+  const directory=icons.toSorted((a,b)=>a.name.localeCompare(b.name,'en')).map(icon=>{
+   const url=`${origin}${at}/icons/${icon.aliasOf??icon.name}`
+   const alias=icon.aliasOf?` · ${locale==='en'?'alias of':'別名對應'} \`${icon.aliasOf}\``:''
+   return `- [${icon.name}](${url}) · \`${icon.component}\`${locale==='tw'?' · '+icon.label:''}${alias}`
+  })
+  await write(`${locale==='en'?'':'tw/'}icons.md`,`# Master Icons · ${locale==='en'?'Icon names':'圖示名稱'}\n\n${directory.join('\n')}\n`)
   const sections:string[]=[],full:string[]=[]
   for(const category of categories){
    const items:string[]=[]
@@ -81,6 +88,9 @@ export async function generateLlms(site:string,categories:{name:string;pages:Gui
 > ${heading[locale].intro}
 
 Website: ${origin}${at}/ · Icons: ${origin}${at}/icons · Full text: ${origin}${at}/llms-full.txt${locale==='en'?` · 繁體中文: ${origin}/tw/llms.txt`:` · English: ${origin}/llms.txt`}
+
+- [${locale==='en'?'Icon names, components and pages':'圖示名稱、元件與內頁'}](${origin}${at}/icons.md)
+- [${locale==='en'?'Full icon catalog (JSON)':'完整圖示目錄（JSON）'}](${origin}/catalog.json)
 
 ## ${heading[locale].rules}
 

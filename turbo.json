@@ -69,6 +69,8 @@
       ],
       "inputs": [
         "scripts/prepare.ts",
+        "scripts/llms.ts",
+        "scripts/social-images.ts",
         "scripts/task.mjs",
         "content/**",
         "i18n/**",

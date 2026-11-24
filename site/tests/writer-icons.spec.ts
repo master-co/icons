@@ -20,7 +20,7 @@ for (const locale of ['', '/tw']) {
     const search = page.getByRole('searchbox', {name: locale ? '搜尋圖示' : 'Search icons', exact: true})
     for (const [query, name, label] of commands) {
       await search.fill(query)
-      await page.getByRole('button', {name: locale ? label : name.replaceAll('-', ' '), exact: true}).click()
+      await page.getByTestId('icon-grid').getByRole('link', {name: locale ? label : name.replaceAll('-', ' '), exact: true}).click()
       const dialog = page.getByRole('dialog')
       await expect(dialog.locator('.master-cell svg')).toHaveCount(9)
       const expected = drawing(await dialog.locator('textarea').inputValue())

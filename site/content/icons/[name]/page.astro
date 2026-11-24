@@ -1,0 +1,53 @@
+---
+import {readFile} from 'node:fs/promises'
+import {createRequire} from 'node:module'
+import Footer from '@master/internal-site/components/Footer.svelte'
+import {iconInventory,iconText} from '../../../components/catalog'
+import {socialMetadata} from '../../../components/social'
+import IconWorkbench from '../../../components/IconWorkbench.svelte'
+import translations from '../../../i18n/translations'
+
+export async function generateMetadata({params}:{params:{name:string;locale:string}}) {
+ const icon=(await iconInventory()).get(params.name)!
+ const {title,description}=iconText(icon,params.locale,translations[params.locale])
+ return {title,...socialMetadata(title,description,`/social/icons/${icon.name}.png`)}
+}
+const {name,locale}=Astro.props.params
+const prefix=locale==='en'?'':'/'+locale
+const inventory=await iconInventory()
+const icon=inventory.get(name)!
+const copy=translations[locale]
+const text=iconText(icon,locale,copy)
+const entries=[...inventory.values()]
+const aliases=entries.filter(entry=>entry.aliasOf===name)
+const paired=icon.styleOf?inventory.get(icon.styleOf):entries.find(entry=>entry.styleOf===name)
+const require=createRequire(import.meta.url)
+const nativeFile=await readFile(require.resolve(`@master/icons/svg/24/soft/${icon.name}.svg`),'utf8')
+const controlKeys=['Enlarged preview','Display size','Corners','Sharp','Soft','Rounded','Stroke width','Reset stroke','Code format','Code','Download SVG','Copied','Copy manually from the selected text.','Retry','Unable to load this icon. Please try again.','Copy SVG','Copy React','Copy Vue','Copy Svelte','Copy Preact','Copy Astro']
+const controls=Object.fromEntries(controlKeys.map(key=>[key,copy[key]??key]))
+---
+<main class="specimen-page icons-container">
+ <nav aria-label={copy.Breadcrumb}>
+  <ol class="breadcrumb">
+   <li class="breadcrumb-item"><a class="breadcrumb-link" href={`${prefix}/icons`}>{copy.Icons}</a></li>
+   <li class="breadcrumb-item"><a class="breadcrumb-link" href={`${prefix}/icons?category=${icon.category}`}>{text.category}</a></li>
+   <li class="breadcrumb-item"><a class="breadcrumb-link" href={`${prefix}/icons/${icon.name}`} aria-current="page">{text.name}</a></li>
+  </ol>
+ </nav>
+ <header class="specimen-page-heading">
+  <h1>{text.name}</h1>
+  <p><code>{icon.component}</code> · {text.kind} · 16 / 20 / 24 px</p>
+  <p>{copy['Use plain SVG or optical icon components for React, Vue, Svelte, Preact and Astro.']}</p>
+ </header>
+ <IconWorkbench client:load {name} component={icon.component} rendering={icon.rendering} {nativeFile} notice={icon.source.notice} copy={controls} />
+ {paired && <p><a class="link" href={`${prefix}/icons/${paired.name}`}>{paired.label} · {copy[paired.styleOf?'Outline':'Monochrome mark']}</a></p>}
+ {aliases.map(alias=><p>{alias.label} · <code>{alias.component}</code></p>)}
+ <section class="specimen-license">
+  <h2>{copy.License}</h2>
+  <p><a class="link" href={`${prefix}/guide/license`}>{icon.license}</a>{icon.source.author && <> · {icon.source.reference
+   ? <a class="link" href={icon.source.official??icon.source.reference}>{icon.source.author}</a>
+   : icon.source.author}</>}</p>
+  {icon.source.notice && <details><summary>{copy['License and attribution']??copy.License}</summary><pre>{icon.source.notice}</pre></details>}
+ </section>
+</main>
+<Footer client:load />

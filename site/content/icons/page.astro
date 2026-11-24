@@ -1,5 +1,6 @@
 ---
-import {readFile} from 'node:fs/promises'
+import {readCatalog} from '../../components/catalog'
+import {socialMetadata} from '../../components/social'
 import {collectionCards} from '../../../scripts/lib/collection-cards.mjs'
 import Explorer from '../../components/Explorer.svelte'
 import Footer from '@master/internal-site/components/Footer.svelte'
@@ -7,17 +8,28 @@ import translations from '../../i18n/translations'
 const locale=Astro.props.params?.locale??Astro.params.locale??'en'
 const copy=translations[locale]??translations.en
 const t=(key:string)=>copy[key]??key
-const catalog=JSON.parse(await readFile(new URL('../../../packages/icons/dist/catalog.json',import.meta.url),'utf8'))
-type Icon = {name:string;component:string;label:string;category:string;keywords:string[];source:{notice?:string}}
-const entries=collectionCards(catalog.icons as Icon[])
+const catalog=await readCatalog()
+const prefix=locale==='en'?'':'/'+locale
+const entries=collectionCards(catalog.icons)
  .sort((a,b)=>a.name.localeCompare(b.name,'en',{numeric:true}))
  .map(({name,component,label,category,keywords,outline,mark,styleOf,source}:any)=>({name,component,label,category,keywords,outline,mark,styleOf,notice:source?.notice}))
-const categories=catalog.categories.map(({id}:any)=>({id,label:'category:'+id}))
+const categories=catalog.categories.map(({id})=>({id,label:'category:'+id}))
 export const metadata={title:'Browse Master Icons',description:'Interface icons at their native size.'}
-export async function generateMetadata({params}:{params:{locale:string}}){const copy=translations[params.locale]??translations.en;return{title:copy['Browse Master Icons'],description:copy['Interface icons at their native size.']}}
+export async function generateMetadata({params}:{params:{locale:string}}) {
+ const copy=translations[params.locale]??translations.en
+ const title=copy['Browse Master Icons']
+ return {title:{absolute:title},...socialMetadata(title,copy['Search the full collection. Compare native sizes and choose your corners.'],'/social/master-icons.png')}
+}
 ---
 <main class="icons-container collection-container" aria-label={t('Browse Master Icons')}>
+ <h1 class="sr-only">{t('Browse Master Icons')}</h1>
  <Explorer client:load {entries} {categories} {copy} {locale}>
+  <Fragment slot="directory">
+    {categories.map(({id,label})=><section>
+     <h2>{t(label)}</h2>
+     <ul>{entries.filter(icon=>icon.category===id).map(icon=><li><a class="link" href={`${prefix}/icons/${icon.name}`}>{locale==='tw'?`${icon.label} · ${icon.name}`:icon.name}</a></li>)}</ul>
+    </section>)}
+  </Fragment>
   <Footer client:load class="explorer-footer" />
  </Explorer>
  <noscript><p>{t('Enable JavaScript for filtering and details. SVG and ZIP downloads remain available.')}</p><a href={`${locale==='en'?'':`/${locale}`}/guide/download`}>{t('Download')}</a></noscript>

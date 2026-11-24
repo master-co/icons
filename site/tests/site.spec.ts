@@ -44,6 +44,18 @@ test('sidebar dividers align with controls and scroll viewports preserve keyboar
  }
  const scroll=page.locator('.explorer-toolbar > .scroll-area')
  const search=page.getByRole('searchbox',{name:'Search icons',exact:true})
+ // The directory toggle and filtered count share the search label's row and gap.
+ const labelBox=(await page.locator('.explorer-search > span').boundingBox())!
+ const inputTop=(await search.boundingBox())!.y
+ for(const query of ['', 'search']){
+  await search.fill(query)
+  const row=page.locator(query ? '.explorer-main p[aria-live]' : '.specimen-directory summary')
+  const box=(await row.boundingBox())!
+  expect(box.y).toBeCloseTo(labelBox.y,1)
+  expect(box.height).toBeCloseTo(labelBox.height,1)
+  expect((await page.getByTestId('icon-grid').boundingBox())!.y).toBeCloseTo(inputTop,1)
+ }
+ await search.fill('')
  await search.focus();await page.keyboard.press('Tab');await page.keyboard.press('Shift+Tab')
  await expect(search).toBeFocused()
  const viewport=(await scroll.boundingBox())!
@@ -84,7 +96,7 @@ test('global search restores the browsing category on desktop and mobile',async(
  expect(new URL(page.url()).searchParams.has('page')).toBe(false)
  await expect(page.locator('input[name=size]')).toHaveAttribute('aria-valuetext','20 px')
  await expect(page.locator('input[name=corner][value=rounded]')).toBeChecked()
- const allIcons=sidebar.getByRole('link',{name:'All icons',exact:true})
+ const allIcons=sidebar.getByRole('link',{name:'All',exact:true})
  const search=page.getByRole('searchbox',{name:'Search icons',exact:true})
  const names=page.getByTestId('icon-grid').locator('.explorer-name')
  const navigationIcons=await names.allTextContents()
@@ -166,9 +178,9 @@ for(const [locale,search] of [['','Search icons'],['/tw','搜尋圖示']]){
   await expect(page.locator('input[name=corner][value=rounded]')).toBeChecked()
   await input.fill('no-icon-with-this-name')
   await expect(page.getByTestId('result-count')).toContainText('0')
-  await expect(page.getByTestId('icon-grid').locator('button')).toHaveCount(0)
+  await expect(page.getByTestId('icon-grid').getByRole('link')).toHaveCount(0)
   await input.fill('search')
-  await page.getByTestId('icon-grid').locator('button').filter({has:page.locator('.explorer-name',{hasText:/^search$/})}).click()
+  await page.getByTestId('icon-grid').getByRole('link').filter({has:page.locator('.explorer-name',{hasText:/^search$/})}).click()
   const dialog=page.locator('dialog.explorer-dialog')
   await expect(dialog).toBeVisible()
   await expect(dialog.locator('.master-cell svg')).toHaveCount(9)
@@ -178,7 +190,7 @@ for(const [locale,search] of [['','Search icons'],['/tw','搜尋圖示']]){
   await expect(dialog.locator('textarea')).toBeFocused()
   const download=page.waitForEvent('download');await dialog.getByRole('link',{name:locale?'下載 SVG':'Download SVG',exact:true}).click();expect((await download).suggestedFilename()).toBe('search.svg')
   await page.keyboard.press('Escape');await expect(dialog).not.toBeVisible()
-  await expect(page.getByTestId('icon-grid').locator('button').filter({has:page.locator('.explorer-name',{hasText:/^search$/})})).toBeFocused()
+  await expect(page.getByTestId('icon-grid').getByRole('link').filter({has:page.locator('.explorer-name',{hasText:/^search$/})})).toBeFocused()
   await expect(page.getByRole('link',{name:locale?'下載此組':'Download set',exact:true})).toHaveAttribute('href','https://github.com/master-co/icons/releases/latest/download/master-icons-20-rounded.zip')
   expect(errors).toEqual([])
  })
@@ -199,17 +211,17 @@ test('invalid URL, pagination, mobile, optical comparison and failed details',as
  await page.emulateMedia({colorScheme:'dark',reducedMotion:'reduce'})
  await page.goto('/icons?size=17&corner=invalid&page=Infinity&category=nope')
  await expect(page.locator('input[name=size]')).toHaveAttribute('aria-valuetext','24 px')
- await expect(page.getByTestId('icon-grid').locator('button')).toHaveCount(96)
+ await expect(page.getByTestId('icon-grid').getByRole('link')).toHaveCount(96)
  await page.getByRole('button',{name:'Next',exact:true}).click()
  await expect(page).toHaveURL(/page=2/)
  await page.getByRole('button',{name:'Size comparison',exact:true}).click()
- await expect(page.getByTestId('icon-grid').locator('button')).toHaveCount(24)
+ await expect(page.getByTestId('icon-grid').getByRole('link')).toHaveCount(24)
  expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true)
  await page.route('**/data/*.json',route=>route.fulfill({status:503,body:'Unavailable'}))
  // The grid and the dialog share cached definitions; open an icon whose definition has not loaded yet.
  await page.getByRole('searchbox',{name:'Search icons',exact:true}).fill('zoom')
  await expect(page.getByTestId('icon-grid').locator('[data-load-error]').first()).toBeAttached()
- await page.getByTestId('icon-grid').locator('button').first().click()
+ await page.getByTestId('icon-grid').getByRole('link').first().click()
  await expect(page.getByRole('alert')).toContainText('Unable to load')
  await page.unroute('**/data/*.json');await page.getByRole('button',{name:'Retry',exact:true}).click()
  await expect(page.locator('.master-cell svg')).toHaveCount(9)
@@ -228,7 +240,7 @@ test('larger display sizes use valid masters and export the selected dimensions'
  await slider.press('ArrowLeft');await expect(slider).toHaveAttribute('aria-valuetext','48 px')
  await slider.press('End');await expect(slider).toHaveAttribute('aria-valuetext','64 px')
  await expect(page.getByRole('link',{name:'Download set',exact:true})).toHaveAttribute('href','https://github.com/master-co/icons/releases/latest/download/master-icons-24-rounded.zip')
- await page.getByTestId('icon-grid').locator('button').filter({has:page.locator('.explorer-name',{hasText:/^search$/})}).click()
+ await page.getByTestId('icon-grid').getByRole('link').filter({has:page.locator('.explorer-name',{hasText:/^search$/})}).click()
  const dialog=page.locator('dialog.explorer-dialog')
  await expect(dialog.locator('textarea')).toHaveValue(/width="64" height="64" viewBox="0 0 24 24"/)
  await expect(dialog.locator('.master-cell svg')).toHaveCount(9)
@@ -296,7 +308,7 @@ test('larger icons reduce column density and retain room on narrow screens',asyn
  await expect(page.locator('astro-island[ssr]')).toHaveCount(0)
  const grid=page.getByTestId('icon-grid')
  const slider=page.getByRole('slider',{name:'Display size',exact:true})
- const measure=()=>grid.evaluate(e=>({columns:getComputedStyle(e).gridTemplateColumns.split(' ').length,height:e.querySelector('button')!.getBoundingClientRect().height}))
+ const measure=()=>grid.evaluate(e=>({columns:getComputedStyle(e).gridTemplateColumns.split(' ').length,height:e.querySelector('.explorer-tile')!.getBoundingClientRect().height}))
  const native=await measure()
  let previous=native
  for(const size of [32,48,64]){
@@ -316,7 +328,7 @@ test('larger icons reduce column density and retain room on narrow screens',asyn
  for(const width of [390,320]){
   await page.setViewportSize({width,height:844})
   expect(await page.evaluate(()=>document.documentElement.scrollWidth)).toBe(width)
-  const tile=(await grid.locator('button').first().boundingBox())!
+  const tile=(await grid.getByRole('link').first().boundingBox())!
   const icon=(await grid.locator('.explorer-icon').first().boundingBox())!
   expect(icon.x-tile.x).toBeGreaterThan(24)
  }
@@ -327,7 +339,7 @@ test('larger icons reduce column density and retain room on narrow screens',asyn
 test('static page retains icons and download links without JavaScript',async({browser,baseURL})=>{
  const context=await browser.newContext({javaScriptEnabled:false,baseURL})
  const page=await context.newPage();await page.goto('/icons')
- await expect(page.getByTestId('icon-grid').locator('button')).toHaveCount(96)
+ await expect(page.getByTestId('icon-grid').getByRole('link')).toHaveCount(96)
  await expect(page.getByRole('link',{name:'Download set',exact:true})).toBeVisible()
  expect(await page.locator('noscript').textContent()).toContain('Enable JavaScript')
  await context.close()

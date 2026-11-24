@@ -63,7 +63,25 @@ test('development explorer hydrates and filters in both languages',async({page})
   await input.fill('no-icon-with-this-name')
   await expect(page.getByTestId('result-count')).toContainText('0')
   await input.fill('search')
-  await expect(page.getByTestId('icon-grid').locator('button')).not.toHaveCount(0)
+  await expect(page.getByTestId('icon-grid').getByRole('link')).not.toHaveCount(0)
  }
  expect(errors).toEqual([])
+})
+
+test('icon aliases permanently redirect to the canonical page in both languages',async({request})=>{
+ for(const prefix of ['','/tw']){
+  const response=await request.get(prefix+'/icons/brand-chatgpt',{maxRedirects:0})
+  expect(response.status()).toBe(301)
+  expect(response.headers().location).toBe(prefix+'/icons/brand-openai')
+  expect((await request.get(prefix+'/icons/brand-openai')).status()).toBe(200)
+ }
+})
+
+test('development serves the crawl entrypoints and the guide share image',async({request})=>{
+ expect((await (await request.get('/robots.txt')).text())).toContain('/sitemap.xml')
+ const sitemap=await request.get('/sitemap.xml')
+ expect(sitemap.headers()['content-type']).toContain('xml')
+ expect(await sitemap.text()).toContain('/tw/icons/search</loc>')
+ const image=await request.get('/api/og-image?pathname=/guide/react')
+ expect(image.headers()['content-type']).toContain('image/png')
 })

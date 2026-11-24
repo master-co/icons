@@ -21,7 +21,7 @@ for (const {label, entries} of batches) {
     const search = page.getByRole('searchbox', {name: 'Search icons', exact: true})
     for (const {name} of entries) {
       await search.fill(name)
-      await page.getByRole('button', {name: name.replaceAll('-', ' '), exact: true}).click()
+      await page.getByTestId('icon-grid').getByRole('link', {name: name.replaceAll('-', ' '), exact: true}).click()
       const dialog = page.getByRole('dialog')
       await expect(dialog.locator('.master-cell svg')).toHaveCount(9)
       expect(await published(`16/soft/${name}.svg`)).toContain(drawing(await dialog.locator('textarea').inputValue()))
@@ -38,7 +38,7 @@ test('studio and operations synonyms open the same SVG in both explorer language
     ['/tw', '高優先度', '高優先', '下載 SVG', 'priority-high.svg'],
   ]) {
     await page.goto(`${base}/icons?size=16&q=${encodeURIComponent(query)}`)
-    await page.getByRole('button', {name: label, exact: true}).click()
+    await page.getByTestId('icon-grid').getByRole('link', {name: label, exact: true}).click()
     const dialog = page.getByRole('dialog')
     const pending = page.waitForEvent('download')
     await dialog.getByRole('link', {name: button, exact: true}).click()

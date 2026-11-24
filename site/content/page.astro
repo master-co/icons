@@ -10,6 +10,7 @@ import HomeHero from '../components/home/HomeHero.astro'
 import HomeStyles from '../components/home/HomeStyles.astro'
 import HomeFeatures from '../components/home/HomeFeatures.astro'
 import HomeClose from '../components/home/HomeClose.astro'
+import {socialMetadata} from '../components/social'
 import translations from '../i18n/translations'
 const locale=Astro.props.params?.locale??Astro.params.locale??'en'
 const copy=translations[locale]??translations.en
@@ -17,7 +18,7 @@ const prefix=locale==='en'?'':`/${locale}`
 const catalog=JSON.parse(await readFile(new URL('../../packages/icons/dist/catalog.json',import.meta.url),'utf8'))
 export const documentStyles=false
 export const metadata={title:{absolute:'Master Icons — Optical icons for interfaces'},description:'A softly geometric icon library, refined at 16, 20 and 24 pixels. Each size has its own drawing.'}
-export async function generateMetadata({params}:{params:{locale:string}}){const copy=translations[params.locale]??translations.en;return{title:{absolute:copy[metadata.title.absolute]},description:copy[metadata.description]}}
+export async function generateMetadata({params}:{params:{locale:string}}){const copy=translations[params.locale]??translations.en;const title=copy[metadata.title.absolute];return{title:{absolute:title},...socialMetadata(title,copy[metadata.description],'/social/master-icons.png')}}
 const footerNavGroups=[
  {name:'Library',links:[{name:'Icons',href:'/icons'},{name:'Getting started',href:'/guide/getting-started'},{name:'Sizes and corners',href:'/guide/optical-sizes'},{name:'Accessibility',href:'/guide/accessibility'}]},
  {name:'Frameworks',links:[{name:'SVG',href:'/guide/svg'},{name:'React',href:'/guide/react'},{name:'Vue',href:'/guide/vue'},{name:'Svelte',href:'/guide/svelte'},{name:'Preact',href:'/guide/preact'},{name:'Astro',href:'/guide/astro'}]},
