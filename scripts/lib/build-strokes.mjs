@@ -32,11 +32,11 @@ export async function buildStrokes({force=false}={}) {
   }
   const license=await readFile(resolve(root,'LICENSE'),'utf8');
   // Every SVG of an icon leads with the same notice as its native file, which the core generator composes.
-  const headers={};
   for(const entry of catalog.icons){
     const native=await readFile(resolve(root,`packages/icons/icons/24/soft/${entry.name}.svg`),'utf8');
-    if(!native.startsWith('<!--\n'))throw new Error(`Build core first: ${entry.name}.svg has no notice`);
-    headers[entry.name]=native.slice(0,native.indexOf('-->\n')+4);
+    const start=native.indexOf('<svg');
+    if(start<0)throw new Error(`Invalid native SVG for ${entry.name}`);
+    definitions[entry.name].header=native.slice(0,start);
   }
   const common={LICENSE:strToU8(license),'THIRD_PARTY_NOTICES.md':strToU8(await readFile(resolve(root,'THIRD_PARTY_NOTICES.md'),'utf8'))};
   for(const name of await readdir(resolve(root,'licenses')))common['licenses/'+name]=strToU8(await readFile(resolve(root,'licenses',name),'utf8'));
@@ -58,7 +58,7 @@ export async function buildStrokes({force=false}={}) {
       for(const size of sizes.filter(s=>strokeWidthsFor(s).includes(width)))for(const corner of corners) {
         // Custom weights ship only inside their ZIP sets; the site renders single
         // files in the browser, so 40k loose SVGs never reach disk or hosting.
-        const svg=`${headers[entry.name]}${renderSvg({...definition,variants},{size,corner})}\n`;
+        const svg=`${definition.header}${renderSvg({...definition,variants},{size,corner})}\n`;
         bundles[`${size}-${corner}`][entry.name+'.svg']=strToU8(svg);
         collections[size][`${corner}/stroke-${width}/${entry.name}.svg`]=bundles[`${size}-${corner}`][entry.name+'.svg'];
       }
@@ -68,7 +68,7 @@ export async function buildStrokes({force=false}={}) {
   }
   for(const [size,files] of Object.entries(collections))await put(`release/master-icons-${size}-strokes.zip`,zipSync(files,{level:9,mtime:new Date(2026,10,16)}));
   // The site renders and downloads from these; `header` makes a download identical to the published file.
-  for(const [name,definition] of Object.entries(definitions))await put(`data/${name}.json`,JSON.stringify({...definition,header:headers[name]}));
+  for(const [name,definition] of Object.entries(definitions))await put(`data/${name}.json`,JSON.stringify(definition));
   await put('definitions.json',JSON.stringify(definitions));
   await put('key',cache.key);
   await cache.commit();

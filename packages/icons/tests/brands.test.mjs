@@ -84,7 +84,8 @@ test('single SVGs, catalog and all nine downloadable archives preserve brand pro
    if(b.source.licenseFile)assert.equal(strFromU8(zip[b.source.licenseFile]),await readFile(b.source.licenseFile,'utf8'),b.name+': exact brand license in ZIP');
    const svg=await readFile(`packages/icons/icons/${size}/${corner}/${b.name}.svg`,'utf8');
    assert.equal(strFromU8(zip[b.name+'.svg']),svg);
-   assert.ok(svg.includes(b.source.reference));assert.match(svg,/does not grant trademark rights/);
+   if(b.source.notice)assert.ok(svg.includes(b.source.notice.replaceAll('--','—')),b.name);
+   else assert.ok(svg.startsWith('<svg'),b.name);
   }
  }
 });
@@ -92,11 +93,11 @@ test('single SVGs, catalog and all nine downloadable archives preserve brand pro
 test('new brand artwork terms and trace provenance survive single-file exports',async()=>{
  for(const name of ['javascript','github-copilot','vue-js','microsoft-teams','outlook','dcard']){
   const svg=await readFile('packages/icons/icons/16/soft/brand-'+name+'.svg','utf8');
-  assert.match(svg,/licenses\/brand-additions.txt/);
+  if(name==='microsoft-teams'||name==='outlook')assert.match(svg,/https:\/\/aka.ms\/fluentui-assets-license/);
   if(name==='javascript')assert.match(svg,/Christopher Williams/);
   if(name==='github-copilot')assert.match(svg,/Copyright/);
-  if(name==='vue-js')assert.match(svg,/Evan You/);
-  if(name==='dcard')assert.match(svg,/Not the original vector master/);
+  if(name==='vue-js'){assert.match(svg,/Evan You/);assert.match(svg,/creativecommons.org\/licenses\/by-nc-sa\/4.0/);}
+  if(name==='dcard')assert.match(svg,/traced from the archived 2021 artwork by Master/);
  }
 });
 

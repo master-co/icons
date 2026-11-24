@@ -12,7 +12,7 @@ test('requested brand additions can be found and opened at 16px',async({page})=>
   const dialog=page.getByRole('dialog'),code=dialog.locator('textarea')
   await expect(code).toHaveValue(/viewBox="0 0 16 16"/)
   const source=await published(`16/soft/brand-${slug}.svg`)
-  expect(source).toContain((await code.inputValue()).slice((await code.inputValue()).indexOf('<svg')))
+  expect(source).toBe(await code.inputValue()+'\n')
   await expect(dialog.locator('.master-cell svg')).toHaveCount(9)
   await page.keyboard.press('Escape')
  }
@@ -31,7 +31,7 @@ for(const locale of ['', '/tw'])test(`brands search, identity and download ${loc
  const code=dialog.locator('textarea');await expect(code).toHaveValue(/fill="currentColor" stroke="none"/)
  const download=page.waitForEvent('download');await dialog.getByRole('link',{name:locale?'下載 SVG':'Download SVG',exact:true}).click()
  const svg=await readFile((await(await download).path())!,'utf8')
- expect(svg).toContain('Brand artwork: Master');expect(svg).toContain((await code.inputValue()).slice((await code.inputValue()).indexOf('<svg')))
+ expect(svg.startsWith('<svg')).toBe(true);expect(svg).toBe(await code.inputValue()+'\n')
  await page.keyboard.press('Escape');await expect(dialog).not.toBeVisible()
  await search.fill('推特');await expect(page.locator('.explorer-tile')).toHaveCount(1)
  for(const [query,label]of [['蝦皮','Shopee'],['狄卡','Dcard'],['amazon web services','AWS']]){
@@ -141,7 +141,7 @@ for(const size of [16,20,24])test(`outline list, live weights and downloads agre
    const download=dialog.getByRole('link',{name:'Download SVG',exact:true})
    await expect(download).toHaveAttribute('href',/^data:image\/svg\+xml/)
    const pending=page.waitForEvent('download');await download.click()
-   const file=await readFile((await(await pending).path())!,'utf8');expect(file).toContain(current.slice(current.indexOf('<svg')).trim())
+   const file=await readFile((await(await pending).path())!,'utf8');expect(file).toBe(current+'\n')
    expect((await page.request.get(`/strokes/${width}/${size}/soft/brand-${name}-outline.svg`)).ok()).toBe(false)
   }
   const format=dialog.getByRole('combobox',{name:'Code format'})

@@ -136,12 +136,4 @@ node .agents/skills/icon-craft/scripts/render-review.mjs --repo . --icons user,u
 
 ## Sources and license
 
-The work studied open-source sets such as Lucide, Tabler, Heroicons, Phosphor, Radix, Feather, Iconoir and Hugeicons Free, and every icon is drawn and refined in Master's geometry system. Research comparisons and actual adaptations are recorded separately.
-
-Master's code and interface artwork are licensed under the [MIT License](LICENSE). Adapted drawings keep their upstream MIT, ISC or Apache 2.0 notices in each SVG, the packages and the ZIP sets; names, pinned versions, modifications and licenses are in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
-
-The `teapot` drawing adapts the lid of an OpenMoji emoji; it and its modifications are licensed under **CC BY-SA 4.0**, not MIT. See the [teapot notice](licenses/teapot-openmoji-CC-BY-SA-4.0.txt).
-
-Brand artwork comes from Simple Icons, official vectors, a documented Dcard trace and Master's own mark, under terms recorded apart from the code license; see the [brand sources](THIRD_PARTY_NOTICES.md#brand-silhouettes--brands-01) and [batch notes](docs/brands-03.md). Brand names and marks belong to their owners and the code license grants no trademark rights.
-
-Comparison drawings in `references/` belong to their upstream projects, keep their own licenses and are not in the packages. Master Icons is not affiliated with or endorsed by any referenced project.
+Master draws its interface icons for 16, 20 and 24 px, with design references including Lucide, Tabler, Heroicons, Phosphor, Radix, Feather, Iconoir and Hugeicons Free. Master's code and original drawings use the [MIT license](LICENSE). See the [third-party notices](THIRD_PARTY_NOTICES.md) for adapted drawings, brand artwork and research credits.

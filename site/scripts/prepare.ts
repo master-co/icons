@@ -21,15 +21,15 @@ const common=['site/scripts/prepare.ts','scripts/lib/content-cache.mjs','bun.loc
 
 // The stroke key covers geometry, metadata, generator code and licenses. Don't rehash the stroke sets.
 const assets=await contentCache({
- inputs:[...common,...['dist/catalog.json','LICENSE','THIRD_PARTY_NOTICES.md'].map(path=>join(icons,path)),join(strokes,'key')],
- outputs:['data','catalog.json','THIRD_PARTY_NOTICES.md','LICENSE.txt'].map(path=>join(site,'public',path)),
+ inputs:[...common,...['dist/catalog.json','LICENSE','THIRD_PARTY_NOTICES.md','licenses'].map(path=>join(icons,path)),join(strokes,'key')],
+ outputs:['data','catalog.json','THIRD_PARTY_NOTICES.md','LICENSE.txt','licenses'].map(path=>join(site,'public',path)),
  file:join(repo,'work/cache/site-assets.json'),force
 })
 // The explorer renders and downloads every SVG from data/ and download sets are GitHub release assets; older
 // checkouts copied SVG trees and archives into public/, and none of them may be published again.
 for(const retired of ['icons','strokes','downloads'])await rm(join(site,'public',retired),{recursive:true,force:true})
 if(!assets.hit){
- for(const [target,source] of [['data',join(strokes,'data')]]){
+ for(const [target,source] of [['data',join(strokes,'data')],['licenses',join(icons,'licenses')]]){
   await rm(join(site,'public',target),{recursive:true,force:true})
   await cp(source,join(site,'public',target),{recursive:true})
  }

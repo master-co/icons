@@ -40,15 +40,8 @@ const controls=Object.fromEntries(controlKeys.map(key=>[key,copy[key]??key]))
   <p><code>{icon.component}</code> · {text.kind} · 16 / 20 / 24 px</p>
   <p>{copy['Use plain SVG or optical icon components for React, Vue, Svelte, Preact and Astro.']}</p>
  </header>
- <IconWorkbench client:load {name} component={icon.component} rendering={icon.rendering} {nativeFile} notice={icon.source.notice} copy={controls} />
+ <IconWorkbench client:load {name} component={icon.component} rendering={icon.rendering} {nativeFile} copy={controls} />
  {paired && <p><a class="link" href={`${prefix}/icons/${paired.name}`}>{paired.styleOf ? inventory.get(paired.styleOf)?.label : paired.label} · {copy[paired.styleOf?'Outline':'Monochrome mark']}</a></p>}
  {aliases.map(alias=><p>{iconLabel(alias,locale,copy)} · <code>{alias.component}</code></p>)}
- <section class="specimen-license">
-  <h2>{copy.License}</h2>
-  <p><a class="link" href={`${prefix}/guide/license`}>{icon.license}</a>{icon.source.author && <> · {icon.source.reference
-   ? <a class="link" href={icon.source.official??icon.source.reference}>{icon.source.author}</a>
-   : icon.source.author}</>}</p>
-  {icon.source.notice && <details><summary>{copy['License and attribution']??copy.License}</summary><pre>{icon.source.notice}</pre></details>}
- </section>
 </main>
 <Footer client:load />

@@ -1,6 +1,6 @@
 # Master Icons
 
-Optically sized interface icons with 16, 20 and 24 px drawings and sharp, soft and rounded corners. MIT licensed; applicable upstream notices are included.
+Optically sized interface icons with 16, 20 and 24 px drawings and sharp, soft and rounded corners.
 
 Documentation and the full collection: [icons.master.co](https://icons.master.co).
 
@@ -119,10 +119,8 @@ This core package exports data, the SVG renderer, the catalog (`@master/icons/ca
 
 ## Brand icons
 
-Brand icons use the `brand-` prefix, for example `BrandMasterIcon`, `BrandGithubIcon`, and `BrandFigmaIcon`. Import them from the same framework and fixed-size entries as UI icons. OpenAI and ChatGPT expose two names for the same official Blossom. They inherit `currentColor`; corner and stroke settings preserve the original silhouette, while the 18 `-outline` versions, such as `BrandGithubOutlineIcon`, accept `strokeWidth`. The 16 / 20 / 24 masters adjust placement and occupied size, not the trademark geometry. Brand artwork provenance and applicable notices are in `dist/catalog.json` and `THIRD_PARTY_NOTICES.md`; the code license does not grant trademark rights.
-
-Vue, JavaScript, GitHub Copilot, Microsoft Teams / Outlook, and Dcard retain separate artwork terms in `licenses/brand-additions.txt`. Dcard is a documented vector trace of an archived app mark, not an original official vector; its original guide specifies a 48px minimum. The small optical previews do not claim brand-guideline compliance.
+Brand icons use the `brand-` prefix, for example `BrandMasterIcon`, `BrandGithubIcon`, and `BrandFigmaIcon`. Import them from the same framework and fixed-size entries as UI icons. OpenAI and ChatGPT expose two names for the same official Blossom. They inherit `currentColor`; corner and stroke settings preserve the original silhouette, while the 18 `-outline` versions, such as `BrandGithubOutlineIcon`, accept `strokeWidth`. The 16 / 20 / 24 masters adjust placement and occupied size, not the trademark geometry. Brand names and marks belong to their respective owners.
 
 ## License
 
-Master's own code and artwork are MIT licensed. Adapted drawings keep their upstream MIT, ISC or Apache 2.0 notices in each SVG file and in `THIRD_PARTY_NOTICES.md`. The `teapot` drawing is licensed under CC BY-SA 4.0. See [license and attribution](https://icons.master.co/guide/license).
+Master draws its interface icons for 16, 20 and 24 px, with design references including Lucide, Tabler, Heroicons, Phosphor, Radix, Feather, Iconoir and Hugeicons Free. Master's code and original drawings use the [MIT license](https://icons.master.co/LICENSE.txt). See the [third-party notices](https://icons.master.co/THIRD_PARTY_NOTICES.md) for adapted drawings, brand artwork and research credits.

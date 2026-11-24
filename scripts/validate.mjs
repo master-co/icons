@@ -53,7 +53,7 @@ const validTags = new Set(['path','line','rect','circle','ellipse']);
 for(const item of manifest.inventory){
   const source = await readFile('packages/icons/'+item.path,'utf8');
   assert.equal(sha(source),item.sha256,item.path);
-  assert.match(source,/Permission is hereby granted/);
+  assert.doesNotMatch(source,/Copyright \(c\) 2026 Master and contributors/);
   assert.match(source,/stroke="currentColor"/);
   assert.match(source,new RegExp(`viewBox="0 0 ${item.opticalSize} ${item.opticalSize}"`));
   assert.doesNotMatch(source,/NaN|Infinity|undefined|<script|<image|<foreignObject|\son\w+=|\shref=/);
@@ -76,7 +76,7 @@ for(const item of manifest.inventory){
     for(const value of Object.values(attrs))if(typeof value==='number')assert.ok(Number.isFinite(value));
   }
   if(preservedNotices[item.name])assert.ok(source.includes(preservedNotices[item.name]));
-  if(adaptedSources[item.name]){const ref=adaptedSources[item.name];assert.ok(source.includes(ref.copyright));assert.ok(source.includes((await readFile(ref.licenseFile,'utf8')).trim().replace(/--/g,'—')),item.name+': complete source license');}
+  if(adaptedSources[item.name]){const ref=adaptedSources[item.name];assert.ok(source.includes(ref.copyright));assert.ok(source.includes(ref.standaloneNotice??(await readFile(ref.licenseFile,'utf8')).trim().replace(/--/g,'—')),item.name+': complete source license');}
 }
 const references = await json('references/manifest.json');
 assert.equal(references.references.length,48);
@@ -155,7 +155,7 @@ for(const name of await readdir('dist/downloads')){
   }
   for(const [name,ref] of Object.entries(adaptedSources)){
     assert.ok(zip[ref.licenseFile],name+': missing bundled license');
-    assert.ok(strFromU8(zip[name+'.svg']).includes(strFromU8(zip[ref.licenseFile]).trim().replace(/--/g,'—')),name+': missing SVG source notice');
+    assert.ok(strFromU8(zip[name+'.svg']).includes(ref.standaloneNotice??strFromU8(zip[ref.licenseFile]).trim().replace(/--/g,'—')),name+': missing SVG source notice');
   }
 }
 console.log(`Validated ${conceptCount} base concepts / ${catalog.length} named drawings, ${total} SVG hashes, geometry, notices, 48 historical + ${uiRefs.references.length} current pinned references, and 9 licensed ZIPs.`);

@@ -14,7 +14,8 @@ test('source watching ignores Turbo logs and survives atomic editor saves',async
  const directory=watchSource(folder,()=>directoryChanges++,true);
  const file=watchSource(source,()=>fileChanges++);
  async function waitFor(predicate){
-  const deadline=Date.now()+3000;
+  // FSEvents can deliver a batch several seconds after a full SVG rebuild.
+  const deadline=Date.now()+(process.platform==='darwin'?15000:3000);
   while(!predicate()&&Date.now()<deadline)await delay(20);
   assert.ok(predicate(),'Expected source change to be observed');
  }

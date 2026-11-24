@@ -1,7 +1,5 @@
 import {test, expect} from '@playwright/test'
 import {readFile} from 'node:fs/promises'
-// A copied SVG leads with only its third-party notice; files carry the full license header. Compare drawings.
-const drawing=(text:string)=>text.slice(text.indexOf('<svg')).trim()
 
 const commands = [
   ['toggleHeaderCell', 'table', '表格'],
@@ -23,12 +21,12 @@ for (const locale of ['', '/tw']) {
       await page.getByTestId('icon-grid').getByRole('link', {name: locale ? label : name.replaceAll('-', ' '), exact: true}).click()
       const dialog = page.getByRole('dialog')
       await expect(dialog.locator('.master-cell svg')).toHaveCount(9)
-      const expected = drawing(await dialog.locator('textarea').inputValue())
+      const expected = await dialog.locator('textarea').inputValue()+'\n'
       const event = page.waitForEvent('download')
       await dialog.getByRole('link', {name: locale ? '下載 SVG' : 'Download SVG', exact: true}).click()
       const file = await event
       expect(file.suggestedFilename()).toBe(name + '.svg')
-      expect(await readFile((await file.path())!, 'utf8')).toContain(expected)
+      expect(await readFile((await file.path())!, 'utf8')).toBe(expected)
       await page.keyboard.press('Escape')
     }
   })

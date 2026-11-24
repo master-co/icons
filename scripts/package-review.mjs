@@ -11,7 +11,7 @@ for(const file of['preview.html','design-system.md','research.md'])await cp('dis
 await access('work/master-icons-alpha.tgz');await cp('work/master-icons-alpha.tgz',join(out,'master-icons-alpha.tgz'));
 async function files(dir){const result=[];for(const e of await readdir(dir,{withFileTypes:true})){if(e.name==='.DS_Store')continue;const p=join(dir,e.name);if(e.isDirectory())result.push(...await files(p));else if(e.isFile())result.push(p);}return result.sort();}
 const svg={};for(const p of await files('packages/icons/icons'))svg[p.replace('packages/icons/','')]=await readFile(p);
-for(const p of['LICENSE','THIRD_PARTY_NOTICES.md','licenses/hugeicons-MIT.txt','licenses/lucide.txt'])svg[p.replace('packages/icons/','')]=await readFile(p);
+for(const p of['LICENSE','THIRD_PARTY_NOTICES.md',...await files('licenses')])svg[p.replace('packages/icons/','')]=await readFile(p);
 const date=new Date('2026-11-16T00:00:00Z');await writeFile(join(out,'master-icons-all-svg.zip'),zipSync(svg,{level:9,mtime:date}));
 const ledger=JSON.parse(await readFile('docs/refinement-ledger.json')),cycle=ledger.reviewCycle;
 const handoff=`# Master Icons · ${cycle}

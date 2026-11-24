@@ -37,16 +37,31 @@ const upstream=references.references.filter(x=>x.library==='Hugeicons Free');
 const definitions={};
 const inventory=[];
 const license=await readFile(resolve(repo,'LICENSE'),'utf8');
-const hugeLicense=await readFile(resolve(repo,'licenses/hugeicons-MIT.txt'),'utf8');
-const lucideLicense=await readFile(resolve(repo,'licenses/lucide.txt'),'utf8');
-// XML comments cannot contain '--'; only normalize the license separator.
-const adaptedLicenses=Object.fromEntries(await Promise.all([...new Set(Object.values(adaptedSources).map(s=>s.licenseFile))].map(async path=>[path,await readFile(resolve(repo,path),'utf8')])));
-const sourceNotice=name=>adaptedLicenses[adaptedSources[name].licenseFile].replace(/--/g,'—');
-const notices=await readFile(resolve(repo,'THIRD_PARTY_NOTICES.md'),'utf8');
-const brandLicensePaths=new Set(['licenses/simple-icons-CC0.txt','licenses/simple-icons-DISCLAIMER.md','licenses/openai-brand.txt','licenses/brand-additions.txt',...catalog.filter(entry=>entry.category==='brands'&&entry.source.licenseFile).map(entry=>entry.source.licenseFile)]);
-const brandLicenses=Object.fromEntries(await Promise.all([...brandLicensePaths].map(async path=>[path,strToU8(await readFile(resolve(repo,path),'utf8'))])));
-const bundles=Object.fromEntries(sizes.flatMap(s=>corners.map(c=>[`${s}-${c}`,{'LICENSE':strToU8(license),'licenses/hugeicons-MIT.txt':strToU8(hugeLicense),'licenses/lucide.txt':strToU8(lucideLicense),'THIRD_PARTY_NOTICES.md':strToU8(notices)}])));
-for(const bundle of Object.values(bundles))Object.assign(bundle,brandLicenses,Object.fromEntries(Object.entries(adaptedLicenses).map(([path,body])=>[path,strToU8(body)])));
+const licenseFiles={};
+for(const name of (await readdir(resolve(repo,'licenses'))).sort()){
+  const path='licenses/'+name;
+  licenseFiles[path]=await readFile(resolve(repo,path),'utf8');
+}
+const sourceNotice=name=>licenseFiles[adaptedSources[name].licenseFile].replace(/--/g,'—');
+const bundleNotices={
+  LICENSE:strToU8(license),
+  'THIRD_PARTY_NOTICES.md':strToU8(await readFile(resolve(repo,'THIRD_PARTY_NOTICES.md'),'utf8')),
+  ...Object.fromEntries(Object.entries(licenseFiles).map(([path,body])=>[path,strToU8(body)])),
+};
+const bundles=Object.fromEntries(sizes.flatMap(size=>corners.map(corner=>[`${size}-${corner}`,{...bundleNotices}])));
+
+// npm CDNs serve these same SVG bytes individually. Carry the upstream terms
+// with the drawing when it needs them. Master’s general MIT license ships once.
+function artworkNotice(entry){
+  const adapted=adaptedSources[entry.name];
+  if(adapted){
+    if(adapted.standaloneNotice)return adapted.standaloneNotice;
+    const credit=adapted.license.includes('Apache') ? `${adapted.reference}\n${adapted.modifications}\n\n` : '';
+    return credit+sourceNotice(entry.name).trim();
+  }
+  if(preservedNotices[entry.name])return licenseFiles['licenses/hugeicons-MIT.txt'].trim();
+  return entry.source?.notice??'';
+}
 if(!incremental)await rm(resolve(root,'dist'),{recursive:true,force:true});
 // icons/ is generated and checked in for plain SVG consumers.
 if(!incremental&&!archiveSvg)await rm(resolve(root,'icons'),{recursive:true,force:true});
@@ -79,12 +94,13 @@ for(const entry of catalog){
   await put(`dist/data/${entry.name}.js`,masters.map(({size,corner,binding})=>`import { master as ${binding} } from './${size}/${corner}/${entry.name}.js';`).join('\n')+
     `\nconst v = ({ size, opticalSize, corner, ...master }) => master;\nexport const ${dataName} = /* @__PURE__ */ (() => (${assembled}))();\n`);
   await put(`dist/data/${entry.name}.d.ts`,`import type { IconDefinition } from '../runtime.js';\nexport const ${dataName}: IconDefinition;\n`);
+  const notice=artworkNotice(entry);
+  const header=notice ? `<!--\n${notice.replaceAll('--','—')}\n-->\n` : '';
   for(const size of sizes)for(const corner of corners){
-    const svg=renderSvg(definition,{size,opticalSize:size,corner});
-    const notice='<!--\n'+license.trim().replace('Copyright (c) 2026 Master and contributors','Copyright (c) 2026 Master and contributors'+(preservedNotices[entry.name]?'\n'+preservedNotices[entry.name]:''))+(adaptedSources[entry.name]?'\n\n'+sourceNotice(entry.name).trim():'')+(entry.category==='brands'?'\n\n'+brandNotice(entry):'')+'\n-->\n';
-    if(!archiveSvg)await put(`icons/${size}/${corner}/${entry.name}.svg`,notice+svg+'\n');
-    bundles[`${size}-${corner}`][`${entry.name}.svg`]=strToU8(notice+svg+'\n');
-    inventory.push({name:entry.name,opticalSize:size,corner,path:`icons/${size}/${corner}/${entry.name}.svg`,sha256:hash(notice+svg+'\n')});
+    const svg=header+renderSvg(definition,{size,opticalSize:size,corner})+'\n';
+    if(!archiveSvg)await put(`icons/${size}/${corner}/${entry.name}.svg`,svg);
+    bundles[`${size}-${corner}`][`${entry.name}.svg`]=strToU8(svg);
+    inventory.push({name:entry.name,opticalSize:size,corner,path:`icons/${size}/${corner}/${entry.name}.svg`,sha256:hash(svg)});
     const {strokes,...native}=variants[size][corner];
     const nativePath=`native/${size}/${corner}/${entry.name}`;
     await put(`dist/data/${nativePath}.js`,`export const master = ${JSON.stringify({...native,opticalSize:size,corner,size})};\n`);
@@ -101,7 +117,7 @@ await put('dist/runtime.d.ts',await readFile(resolve(root,'src/runtime.d.ts'),'u
 for(const extension of ['mjs','d.ts'])await put(`dist/presentation.${extension==='mjs'?'js':extension}`,await readFile(resolve(root,`src/presentation.${extension}`),'utf8'));
 const provenance=catalog.map(entry=>{
   if(entry.category==='brands')return {...entry,source:{...entry.source,notice:brandNotice(entry)},variants:9};
-  if(adaptedSources[entry.name])return {...entry,source:{...adaptedSources[entry.name],notice:sourceNotice(entry.name)},variants:9};
+  if(adaptedSources[entry.name])return {...entry,license:adaptedSources[entry.name].adapterLicense??entry.license,source:{...adaptedSources[entry.name],notice:sourceNotice(entry.name)},variants:9};
   const ref=preservedNotices[entry.name]?upstream.find(x=>x.name===entry.name):undefined;
   if(preservedNotices[entry.name]&&!ref)throw new Error(`Missing preserved source: ${entry.name}`);
   return {...entry,source:ref?{kind:'study-redraw',copyright:preservedNotices[entry.name],reference:ref.url,license:'MIT',author:'Hugeicons',commit:ref.commit,modifications:'Reconstructed native-size geometry, three corner profiles, optical spacing and detail reductions; not an automatic path conversion.'}:{kind:'authored',author:'Master and contributors'},variants:9};

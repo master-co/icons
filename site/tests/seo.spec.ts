@@ -59,6 +59,7 @@ test('built sitemap, canonical URLs, language pairs, sharing images and name ind
    pngs.add(new URL(image!).pathname)
    if(route.startsWith('/icons/')){
     expect(html.includes('data-icon-preview'),path).toBe(true)
+    expect(html.includes('class="specimen-license"'),path).toBe(false)
     expect(html.includes('class="explorer-tile"')||html.includes('/catalog.json'),path).toBe(false)
    }
   }
@@ -151,4 +152,27 @@ test('a brand alias and outline expose their own component and artwork capabilit
  await expect(page.getByRole('textbox',{name:'Code',exact:true})).toHaveValue(/BrandGithubOutlineIcon/)
  await page.getByRole('link',{name:/GitHub · Monochrome mark/}).click()
  await expect(page).toHaveURL(/\/icons\/brand-github$/)
+})
+
+test('detail SVG copy and download preserve just the applicable artwork notice',async({page})=>{
+ await page.addInitScript(()=>Object.defineProperty(navigator,'clipboard',{configurable:true,value:{
+  writeText:async(text:string)=>{document.documentElement.dataset.copied=text}
+ }}))
+ for(const name of ['plus','megaphone','teapot','brand-vue-js']){
+  await page.goto('/icons/'+name)
+  await page.getByRole('combobox',{name:'Code format'}).selectOption('svg')
+  const original=await published(name)
+  const copy=page.getByRole('button',{name:'Copy SVG',exact:true})
+  await copy.click()
+  await expect(page.locator('html')).toHaveAttribute('data-copied',original.trimEnd())
+  const link=page.getByRole('link',{name:'Download SVG',exact:true})
+  expect(decodeURIComponent((await link.getAttribute('href'))!.split(',')[1])).toBe(original)
+  if(name==='brand-vue-js')continue
+  await page.getByRole('slider',{name:/Stroke width/}).press('End')
+  await copy.click()
+  const custom=await page.locator('html').getAttribute('data-copied')
+  expect(custom).toContain('stroke-width="2.5"')
+  expect(custom!.slice(0,custom!.indexOf('<svg'))).toBe(original.slice(0,original.indexOf('<svg')))
+  expect(decodeURIComponent((await link.getAttribute('href'))!.split(',')[1])).toBe(custom+'\n')
+ }
 })

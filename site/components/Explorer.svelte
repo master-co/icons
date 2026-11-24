@@ -9,14 +9,14 @@
  import ChevronDownIcon from '@master/icons-svelte/16/soft/chevron-down'
  import CatalogIcon from './CatalogIcon.svelte'
  import InlineIcon from './InlineIcon.svelte'
- import {loadDefinition} from './icon-data'
- import {svgDownload,svgSnippet} from './svg-output'
+ import {loadDefinition,type DownloadDefinition} from './icon-data'
+ import {svgDownload,svgFile} from './svg-output'
  import {releaseDownloads} from './downloads'
  import {codeSnippet,formats,formatLabels,type CodeFormat} from './code-snippet'
  import {onMount, tick, type Snippet} from 'svelte'
  import '@master/internal-site/styles/system/sidebar.css'
- import {renderSvg, getOpticalSize, type IconDefinition} from '@master/icons/runtime'
- type Artwork={name:string;label?:string;component:string;notice?:string}
+ import {renderSvg, getOpticalSize} from '@master/icons/runtime'
+ type Artwork={name:string;label?:string;component:string}
  type Entry=Artwork & {label:string;category:string;keywords:string[];mark?:Artwork;outline?:Artwork;styleOf?:string}
  let {entries,categories,copy,locale,children,directory}:{entries:Entry[];categories:{id:string;label:string}[];copy:Record<string,string>;locale:string;children?:Snippet;directory?:Snippet}=$props()
  const t=(key:string)=>copy[key]??key
@@ -30,7 +30,7 @@
  const corners=['sharp','soft','rounded'] as const
  let query=$state(''),browseCategory=$state('all'),size=$state<DisplaySize>(24),corner=$state<'sharp'|'soft'|'rounded'>('soft'),page=$state(1),view=$state('library')
  let stroke=$state<number|null>(null)
- let ready=$state(false),selected=$state<Entry|null>(null),definition=$state<IconDefinition|null>(null),error=$state(false),notice=$state('')
+ let ready=$state(false),selected=$state<Entry|null>(null),definition=$state<DownloadDefinition|null>(null),error=$state(false),notice=$state('')
  let dialog:HTMLDialogElement
  let code=$state<HTMLTextAreaElement>()
  let request=0
@@ -61,13 +61,11 @@
  const nativeStroke=$derived(({16:1,20:1.25,24:1.5})[opticalSize])
  const strokeText=$derived(`${formatStroke(stroke??nativeStroke)} px`)
  const rawSvg=$derived(definition?renderSvg(strokeDefinition(definition,stroke),{size,corner}):'')
- const svg=$derived(svgSnippet(rawSvg,artwork?.notice))
- const snippet=$derived(artwork?codeSnippet({format,component:artwork.component,size,opticalSize,corner,svg,strokeWidth:stroke}):'')
+ const file=$derived(definition?svgFile(rawSvg,definition.header):'')
+ const snippet=$derived(artwork?codeSnippet({format,component:artwork.component,size,opticalSize,corner,svg:file.trimEnd(),strokeWidth:stroke}):'')
  // Download sets are assets of the newest GitHub release; custom weights come as one archive per optical size.
  const setURL=$derived(`${releaseDownloads}/master-icons-${opticalSize}-${stroke===null?corner:'strokes'}.zip`)
- // Every download is rendered here and leads with the published file's notice, so it equals that file
- // (or the same file in a weight's ZIP set); no SVG is requested from the site.
- const download=$derived(definition&&rawSvg?svgDownload(`${(definition as IconDefinition&{header?:string}).header??''}${rawSvg}\n`):undefined)
+ const download=$derived(file?svgDownload(file):undefined)
  const cornerLabel=(c:string)=>t(c[0].toUpperCase()+c.slice(1))
  const categoryOptions=$derived([
   {id:'all',label:t('All'),count:entries.length},

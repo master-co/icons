@@ -74,7 +74,14 @@ assert.match(renderToStaticMarkup(createElement(SearchIcon,{size:20,label:'Searc
 assert.match(renderToStaticMarkup(createElement(Fixed)), /viewBox="0 0 16 16"/);
 assert.match(renderToStaticMarkup(createElement(Fixed,{strokeWidth:2})), /stroke-width="1.5"/);
 assert.match(renderToStaticMarkup(createElement(SearchIcon,{strokeWidth:2})), /stroke-width="2"/);
-assert.match(readFileSync(new URL(import.meta.resolve('@master/icons/svg/16/soft/search.svg')),'utf8'), /MIT License/);
+const cdnSvg=name=>readFileSync(new URL(import.meta.resolve('@master/icons/svg/16/soft/'+name+'.svg')),'utf8');
+assert.match(cdnSvg('plus'), /^<svg/);
+assert.match(cdnSvg('search'), /Copyright [(]c[)] 2025 Hugeicons/);
+assert.match(cdnSvg('megaphone'), /ISC License/);
+assert.match(cdnSvg('teapot'), /creativecommons.org[/]licenses[/]by-sa[/]4.0/);
+assert.match(cdnSvg('brand-vue-js'), /Vue.js logo by Evan You/);
+const { BrandVueJsIcon }=await import('@master/icons-vue/16/soft/brand-vue-js');
+assert.equal(typeof BrandVueJsIcon,'function');
 console.log('Packed consumer: data, runtime, dynamic/static React, SVG subpath and notices passed.');
 `);
 execFileSync(process.execPath,[consumer+'/smoke.mjs'],{stdio:'inherit'});

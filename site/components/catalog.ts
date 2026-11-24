@@ -8,11 +8,9 @@ export interface CatalogIcon {
  component:string
  category:string
  keywords:string[]
- license:string
  rendering?:'brand-silhouette'|'brand-outline'
  styleOf?:string
  aliasOf?:string
- source:{author?:string;reference?:string;official?:string;notice?:string}
 }
 
 interface Catalog {

@@ -5,10 +5,10 @@
  import {loadDefinition,type DownloadDefinition} from './icon-data'
  import InlineIcon from './InlineIcon.svelte'
  import {codeSnippet,formats,formatLabels,type CodeFormat} from './code-snippet'
- import {svgDownload,svgSnippet} from './svg-output'
+ import {svgDownload,svgFile} from './svg-output'
 
- let {name,component,rendering,nativeFile,notice,copy}:{
-  name:string;component:string;rendering?:string;nativeFile:string;notice?:string;copy:Record<string,string>
+ let {name,component,rendering,nativeFile,copy}:{
+  name:string;component:string;rendering?:string;nativeFile:string;copy:Record<string,string>
  }=$props()
  let definition=$state.raw<DownloadDefinition>()
  let failed=$state(false)
@@ -19,8 +19,9 @@
  const range=$derived(strokeRanges[opticalSize])
  const width=$derived(stroke??(definition?resolveIcon(definition,{size,corner}).strokeWidth:1.75))
  const svg=$derived(definition?renderSvg(strokeDefinition(definition,stroke),{size,corner}):nativeFile.slice(nativeFile.indexOf('<svg')).trimEnd())
- const download=$derived(svgDownload(definition?`${definition.header}${svg}\n`:nativeFile))
- const snippet=$derived(codeSnippet({format,component,size,opticalSize,corner,strokeWidth:stroke,svg:svgSnippet(svg,notice)}))
+ const file=$derived(definition?svgFile(svg,definition.header):nativeFile)
+ const download=$derived(svgDownload(file))
+ const snippet=$derived(codeSnippet({format,component,size,opticalSize,corner,strokeWidth:stroke,svg:file.trimEnd()}))
  async function load() {
   failed=false
   try {definition=await loadDefinition(name)}

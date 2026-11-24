@@ -7,7 +7,6 @@ import {brandCatalog} from '../packages/icons/src/brands.mjs';
 import {renderSvg,escapeXml as esc} from '../packages/icons/src/runtime.mjs';
 const defs=JSON.parse(await readFile('packages/icons/dist/definitions.json'));
 const out=resolve('docs/review/brands-01');await mkdir(out,{recursive:true});
-const reviewDate=JSON.parse(await readFile(resolve(out,'decisions.json'),'utf8')).date;
 const batchCount=Math.ceil(brandCatalog.length/16);
 const sha=s=>createHash('sha256').update(s).digest('hex');
 const glyph=(name,size,corner='soft')=>renderSvg(defs[name],{size,corner});
@@ -21,7 +20,7 @@ for(let batch=0;batch<batchCount;batch++){
  }));
  await writeFile(`${out}/sheet-${batch+1}.html`,wrap(`Brand collection / ${String(batch+1).padStart(2,'0')}`,`<main class="grid">${cards.join('')}</main>`));
 }
-await writeFile(`${out}/index.html`,wrap('Master Icons / Brands',`<p>${brandCatalog.length} named brands & platforms · ${brandCatalog.length*9} SVG assets · ${reviewDate}</p><nav>${Array.from({length:batchCount},(_,i)=>i+1).map(i=>`<a href="sheet-${i}.html">Review ${i}</a>`).join('')}<a href="?theme=dark">Dark</a><a href="?theme=light">Light</a></nav><main class="hero">${brandCatalog.map(b=>`<div class="tile">${glyph(b.name,24)}<span>${esc(b.label)}</span></div>`).join('')}</main>`));
+await writeFile(`${out}/index.html`,wrap('Master Icons / Brands',`<p>${brandCatalog.length} named brands & platforms · ${brandCatalog.length*9} SVG assets · 2026-11-17</p><nav>${Array.from({length:batchCount},(_,i)=>i+1).map(i=>`<a href="sheet-${i}.html">Review ${i}</a>`).join('')}<a href="?theme=dark">Dark</a><a href="?theme=light">Light</a></nav><main class="hero">${brandCatalog.map(b=>`<div class="tile">${glyph(b.name,24)}<span>${esc(b.label)}</span></div>`).join('')}</main>`));
 const additions=brandCatalog.filter(b=>b.source.localPath.startsWith('references/brands-03/'));
 const additionsOut=resolve('docs/review/brands-03');await mkdir(additionsOut,{recursive:true});
 await writeFile(`${additionsOut}/index.html`,wrap('Master Icons / 16 additions',`<p>${brandCatalog.length} brands in the collection · native 16 / 20 / 24 · monochrome SVG</p><nav><a href="../brands-01/sheet-5.html">Native sizes / 1</a><a href="../brands-01/sheet-6.html">Native sizes / 2</a><a href="../brands-01/index.html">Full collection</a></nav><main class="hero">${additions.map(b=>`<div class="tile">${glyph(b.name,24)}<span>${esc(b.label)}</span></div>`).join('')}</main>`));
@@ -54,5 +53,5 @@ await page.setViewportSize({width:1200,height:450});await page.goto(pathToFileUR
 evidence.push({path:'docs/review/brands-03/overview.png',sha256:sha(await readFile(`${additionsOut}/overview.png`))});
 await browser.close();
 if(browserErrors.length)throw new Error(browserErrors.join('\n'));
-await writeFile(`${out}/evidence.json`,JSON.stringify({date:reviewDate,icons:brandCatalog.map(b=>({name:b.name,variantsSha256:sha(JSON.stringify(defs[b.name].variants)),sourceSha256:b.source.sha256,sheet:Math.floor(brandCatalog.indexOf(b)/16)+1})),evidence,checks:{clippedPaths:0,renderedCombinations:brandCatalog.length*9,themes:['light','dark'],dpr:[1,2]},visualDecisions:'decisions.json'},null,2)+'\n');
+await writeFile(`${out}/evidence.json`,JSON.stringify({date:'2026-11-17',icons:brandCatalog.map(b=>({name:b.name,variantsSha256:sha(JSON.stringify(defs[b.name].variants)),sourceSha256:b.source.sha256,sheet:Math.floor(brandCatalog.indexOf(b)/16)+1})),evidence,checks:{clippedPaths:0,renderedCombinations:brandCatalog.length*9,themes:['light','dark'],dpr:[1,2]},visualDecisions:'decisions.json'},null,2)+'\n');
 console.log(`Rendered ${brandCatalog.length} brands, ${batchCount*4} native-size comparison sheets, overview and hashed evidence.`);
