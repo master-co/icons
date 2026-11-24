@@ -1,0 +1,215 @@
+{
+  "date": "2026-11-17",
+  "checks": [
+    {
+      "command": "bun run build:icons",
+      "result": "passed",
+      "namedDrawings": 790,
+      "svgCount": 7110
+    },
+    {
+      "command": "bun run build:review",
+      "result": "passed"
+    },
+    {
+      "command": "bun run validate",
+      "result": "passed after preserving prior reviews and recording newly inspected geometry and corrected source comparison",
+      "namedDrawings": 790,
+      "svgHashes": 7110,
+      "pinnedCurrentReferences": 1407,
+      "licensedZips": 9
+    },
+    {
+      "command": "node --test packages/icons/tests/contours.test.mjs packages/icons/tests/junctions.test.mjs packages/icons/tests/paint.test.mjs packages/icons/tests/occlusion.test.mjs",
+      "result": "passed",
+      "tests": 14
+    },
+    {
+      "check": "volume and volume-low definitions differ in every native size/corner",
+      "result": "passed",
+      "variants": 9
+    },
+    {
+      "check": "16-23-native skill renderer",
+      "result": "36 raster cases, 0 empty/clipped; native light/dark, context-light and zoom-light actually viewed",
+      "evidence": "docs/review/committed-craft-01/16-23-native/report.json"
+    },
+    {
+      "command": "git diff --check",
+      "result": "passed"
+    },
+    {
+      "command": "node scripts/audit-committed-craft.mjs",
+      "result": "passed",
+      "reviewed": 392,
+      "refined": 15,
+      "retained": 377,
+      "reviewedBatches": 60,
+      "viewedComparisonImages": 92,
+      "nativeVariants": 3528,
+      "currentBuildNames": 790,
+      "originalSkippedSvgFilesChecked": 2250,
+      "originalSkippedSvgFilesChanged": 0,
+      "evidence": "docs/review/committed-craft-01/completion-audit.json"
+    }
+  ],
+  "scope": "Engineering checks cover the current build, including existing uncommitted additions; they do not assert those additions were visually reviewed. Current-task visual completion is 392 of 392 committed general icons: 15 refined and 377 retained.",
+  "history": [
+    {
+      "date": "2026-11-17",
+      "checks": [
+        {
+          "command": "bun run build:icons",
+          "result": "passed",
+          "namedDrawings": 740,
+          "svgCount": 6660
+        },
+        {
+          "command": "bun run build:review",
+          "result": "passed"
+        },
+        {
+          "command": "bun run validate",
+          "result": "passed after recording new visual review and preserving historical records",
+          "namedDrawings": 740,
+          "svgHashes": 6660,
+          "licensedZips": 9
+        },
+        {
+          "command": "node --test packages/icons/tests/contours.test.mjs packages/icons/tests/junctions.test.mjs packages/icons/tests/paint.test.mjs",
+          "result": "passed",
+          "tests": 12
+        },
+        {
+          "command": "git diff --check",
+          "result": "passed"
+        }
+      ],
+      "scope": "Engineering checks cover the current build, including existing uncommitted additions; they do not assert those additions were visually reviewed. Current-task visual completion remains 21 of 392 committed general icons."
+    },
+    {
+      "date": "2026-11-17",
+      "checks": [
+        {
+          "command": "bun run build:icons",
+          "result": "passed",
+          "namedDrawings": 750,
+          "svgCount": 6750
+        },
+        {
+          "command": "bun run build:review",
+          "result": "passed"
+        },
+        {
+          "command": "bun run validate",
+          "result": "passed after preserving prior reviews and recording newly inspected geometry",
+          "namedDrawings": 750,
+          "svgHashes": 6750,
+          "licensedZips": 9
+        },
+        {
+          "command": "node --test packages/icons/tests/contours.test.mjs packages/icons/tests/junctions.test.mjs packages/icons/tests/paint.test.mjs",
+          "result": "passed",
+          "tests": 12,
+          "detail": "Keyboard route baseline translated with the refinement; retained tip containment and continuity assertions; added >=1px painted bottom clearance."
+        },
+        {
+          "command": "git diff --check",
+          "result": "passed"
+        }
+      ],
+      "scope": "Engineering checks cover the current build, including existing uncommitted additions; they do not assert those additions were visually reviewed. Current-task visual completion is 62 of 392 committed general icons."
+    },
+    {
+      "date": "2026-11-17",
+      "checks": [
+        {
+          "command": "bun run build:icons",
+          "result": "passed",
+          "namedDrawings": 760,
+          "svgCount": 6840
+        },
+        {
+          "command": "bun run build:review",
+          "result": "passed"
+        },
+        {
+          "command": "bun run validate",
+          "result": "passed after preserving prior reviews and recording newly inspected geometry",
+          "namedDrawings": 760,
+          "svgHashes": 6840,
+          "licensedZips": 9
+        },
+        {
+          "command": "node --test packages/icons/tests/contours.test.mjs packages/icons/tests/junctions.test.mjs packages/icons/tests/paint.test.mjs packages/icons/tests/occlusion.test.mjs",
+          "result": "passed",
+          "tests": 14,
+          "detail": "List plus/minus included in foreground clearance checks across all native sizes and corners."
+        },
+        {
+          "command": "git diff --check",
+          "result": "passed"
+        }
+      ],
+      "scope": "Engineering checks cover the current build, including existing uncommitted additions; they do not assert those additions were visually reviewed. Current-task visual completion is 102 of 392 committed general icons."
+    },
+    {
+      "date": "2026-11-17",
+      "checks": [
+        {
+          "command": "bun run build:icons",
+          "result": "passed",
+          "namedDrawings": 770,
+          "svgCount": 6930
+        },
+        {
+          "command": "bun run build:review",
+          "result": "passed"
+        },
+        {
+          "command": "bun run validate",
+          "result": "passed after preserving prior reviews and recording newly inspected geometry",
+          "namedDrawings": 770,
+          "svgHashes": 6930,
+          "licensedZips": 9
+        },
+        {
+          "command": "node --test packages/icons/tests/contours.test.mjs packages/icons/tests/junctions.test.mjs packages/icons/tests/paint.test.mjs packages/icons/tests/occlusion.test.mjs",
+          "result": "passed",
+          "tests": 14
+        },
+        {
+          "command": "git diff --check",
+          "result": "passed"
+        },
+        {
+          "check": "folder-down painted tip to bottom frame",
+          "result": "measured",
+          "sharp": [
+            0.991,
+            1.148,
+            1.138
+          ],
+          "soft": [
+            1.333,
+            1.541,
+            1.583
+          ],
+          "rounded": [
+            1.478,
+            1.686,
+            1.728
+          ],
+          "sizes": [
+            16,
+            20,
+            24
+          ],
+          "units": "native px; measurement supports visual inspection, not a universal beauty score"
+        }
+      ],
+      "scope": "Engineering checks cover the current build, including existing uncommitted additions; they do not assert those additions were visually reviewed. Current-task visual completion is 139 of 392 committed general icons."
+    }
+  ],
+  "retainedAfterLatestBuild": "Batches 26–60 add 157 individually viewed retained decisions; editable geometry stayed unchanged after the passing build and tests. Completion audit confirms all current build definitions match editable geometry."
+}
