@@ -1,3 +1,4 @@
+import {weightDelta} from '../geometry.mjs';
 import {enclosedDetails} from '../occlusion.mjs';
 import {figure,rotate} from '../families/shared.mjs';
 
@@ -21,7 +22,7 @@ export const utilities={
   },
   zap:g=>{
     const f=figure(g);
-    return [f.contour([[13.5,3],[4,13],[11,13],[10,21],[20,10],[13,10]],true,g.tip)];
+    return [f.contour([[13.5,3+(weightDelta(g)?1:0)],[4,13],[11,13],[10,21-(weightDelta(g)?1:0)],[20,10],[13,10]],true,g.tip)];
   },
   lightbulb:g=>{
     const f=figure(g);

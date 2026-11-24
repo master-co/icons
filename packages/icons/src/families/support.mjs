@@ -1,3 +1,4 @@
+import {weightDelta} from '../geometry.mjs';
 import { enclosedDetails, knockout } from '../occlusion.mjs';
 import { figure } from "./shared.mjs";
 import { headphones } from "./media.mjs";
@@ -27,8 +28,8 @@ const support = {
   },
   send: (g) => {
     const f = figure(g);
-    const shell=f.contour([[3, 10], [21, 3], [14, 21], [10.5, 13.5]], true, g.tip);
-    return enclosedDetails(shell,[f.line(10.5, 13.5, 21, 3)],g);
+    const shell=f.contour([[3+(weightDelta(g)?.5:0), 10], [21-(weightDelta(g)?.5:0), 3+(weightDelta(g)?.5:0)], [14, 21-(weightDelta(g)?.5:0)], [10.5, 13.5]], true, g.tip);
+    return enclosedDetails(shell,[f.line(10.5, 13.5, 21-(weightDelta(g)?.5:0), 3+(weightDelta(g)?.5:0))],g);
   },
   messages: (g) => {
     const f = figure(g);

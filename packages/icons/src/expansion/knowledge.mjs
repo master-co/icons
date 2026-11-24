@@ -1,3 +1,4 @@
+import {weightDelta} from '../geometry.mjs';
 import {figure,mark} from '../families/shared.mjs';
 import {enclosedDetails} from '../occlusion.mjs';
 import {file} from '../families/core.mjs';
@@ -52,7 +53,7 @@ export const knowledge={
   'bookmark-minus':g=>[...files.bookmark(g),...mark(g,'minus',12,10)],
   'file-question':g=>{
     const f=figure(g);
-    return [...file(g),f.path('M10 12C10 9.8 14 9.8 14 12C14 13.5 12 13.2 12 14.5'),
+    return [...file(g),f.path(weightDelta(g)?'M10 12.5C10 10.75 14 10.75 14 12.5C14 13.5 12 13.5 12 14.5':'M10 12C10 9.8 14 9.8 14 12C14 13.5 12 13.2 12 14.5'),
       f.dot(12,17.7,g.v(.65,.75,.85))];
   },
 };

@@ -51,7 +51,7 @@ const media = {
     const f = figure(g);
     return [f.contour([[4, 5], [15.5, 12], [4, 19]], true, Math.min(g.r, 1)), f.line(20, 5, 20, 19)];
   },
-  "skip-back": (g) => media["skip-forward"](g).map(([t, a]) => [t, { ...a, transform: `translate(${g.s} 0) scale(-1 1)` }]),
+  "skip-back": (g) => media["skip-forward"](g).map(([t,a,children])=>[t,{ ...a, transform: `translate(${g.s} 0) scale(-1 1)` },...(children?[children]:[])]),
   volume: (g) => {
     const f = figure(g);
     return [...speaker(g), f.path("M15.5 9C17 10.5 17 13.5 15.5 15"), f.path("M18.5 5.5C22 9 22 15 18.5 18.5")];

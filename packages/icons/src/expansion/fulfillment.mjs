@@ -1,3 +1,4 @@
+import {weightDelta} from '../geometry.mjs';
 import {figure,mark} from '../families/shared.mjs';
 import {commerce} from '../families/commerce.mjs';
 import {knockout} from '../occlusion.mjs';
@@ -40,7 +41,7 @@ function packageOpen(g){
 function packageReturn(g){
   const f=figure(g),end=16+(g.corner==='sharp'?g.stroke*12/g.s:0);
   const arrow=[f.contour([[18.5,13.5],[16,16],[18.5,18.5]],false,g.tip),
-    f.path(`M ${end} 16 H 19.5 C 24 16 24 21.5 19.5 21.5 H 19`)];
+    f.path(`M ${end} 16 H 19.5 C ${weightDelta(g)?23:24} 16 ${weightDelta(g)?23:24} 21.5 19.5 21.5 H 19`)];
   return knockout(commerce.package(g),arrow,g);
 }
 

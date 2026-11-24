@@ -40,7 +40,7 @@ export const playback={
   subtitles:g=>{const f=figure(g);return [f.rect(3,4.5,18,15),
     f.line(7,10,9,10),f.line(13,10,17,10),f.line(7,14.5,11,14.5),f.line(15,14.5,17,14.5)];},
   'fast-forward':fastForward,
-  rewind:g=>fastForward(g).map(([tag,a])=>[tag,{...a,transform:`translate(${g.s} 0) scale(-1 1)`}]),
+  rewind:g=>fastForward(g).map(([tag,a,children])=>[tag,{...a,transform:`translate(${g.s} 0) scale(-1 1)`},...(children?[children]:[])]),
   shuffle,
   'repeat-one':g=>{const f=figure(g);return [...commerce.repeat(g),f.contour([[10.5,11],[12,9.5],[12,14.5]],false,g.tip)];},
   'volume-low':g=>{const f=figure(g);return [media.volume(g)[0],f.path('M15.5 9C17 10.5 17 13.5 15.5 15')];},

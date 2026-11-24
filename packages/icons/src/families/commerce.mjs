@@ -1,3 +1,4 @@
+import {weightDelta} from '../geometry.mjs';
 import { knockout, enclosedDetails } from '../occlusion.mjs';
 import { file } from "./core.mjs";
 import { figure } from "./shared.mjs";
@@ -43,7 +44,7 @@ const commerce = {
   },
   "shopping-cart": (g) => {
     const f = figure(g);
-    return [f.contour([[2.5, 3.5], [5, 3.5], [7.5, 16], [19, 16]], false, Math.min(g.r, 1)), f.contour([[5.7, 7], [21, 7], [19, 12.5], [7, 12.5]], false, Math.min(g.r, 1)), ...g.s === 16 ? [f.dot(9, 20, 1), f.dot(18, 20, 1)] : [f.circle(9, 20, 1.5), f.circle(18, 20, 1.5)]];
+    return [f.contour([[2.5, 3.5], [5, 3.5], [7.5, 16], [19, 16]], false, Math.min(g.r, 1)), f.contour([[5.7, 7], [21, 7], [19, 12.5], [7, 12.5]], false, Math.min(g.r, 1)), ...g.s === 16 ? [f.dot(9, 20, 1), f.dot(18, 20, 1)] : [9,18].map(x=>['circle',{...f.circle(x,20,1.5)[1],...(weightDelta(g)?{'stroke-width':g.stroke-weightDelta(g)*1.2}:{})}])];
   },
   "shopping-bag": (g) => {
     const f = figure(g);

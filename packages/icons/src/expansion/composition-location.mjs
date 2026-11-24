@@ -41,7 +41,7 @@ export const compositionLocation={
     // the painted needle keeps visible air from the dial, as the round tips do.
     return [f.circle(12,12,9),f.contour([[12+reach,12-reach],[14,14],[12-reach,12+reach],[10,10]],true,g.tip)];
   },
-  navigation:g=>{const f=figure(g);return [f.contour([[21,3],[14,21],[11,13],[3,10]],true,g.tip)];},
+  navigation:g=>{const f=figure(g);return [f.contour([[21-(weightDelta(g)?.75:0),3+(weightDelta(g)?.75:0)],[14,21-(weightDelta(g)?.5:0)],[11,13],[3+(weightDelta(g)?.5:0),10]],true,g.tip)];},
   route:g=>{const f=figure(g);return [f.circle(5,5,2.5),f.circle(19,19,2.5),f.path('M 7.5 5 H 17.5 C 22.2 5 22.2 12 17.5 12 H 6.5 C 1.8 12 1.8 19 6.5 19 H 16.5')];},
   signpost:g=>{const f=figure(g),r=Math.min(g.r,g.v(.5,.65,.8));return [f.contour([[3,6],[17,6],[21,10],[17,14],[3,14]],true,[r,r,g.tip,r,r]),f.line(10,3,10,6),f.line(10,14,10,21)];},
   'map-pinned':mapPinned,

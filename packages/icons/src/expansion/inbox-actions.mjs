@@ -17,7 +17,7 @@ function mailSearch(g){
 export const inboxActions={
   reply:g=>reply(g),
   'reply-all':g=>reply(g,true),
-  forward:g=>reply(g).map(([tag,a])=>[tag,{...a,transform:`translate(${g.s} 0) scale(-1 1)`}]),
+  forward:g=>reply(g).map(([tag,a,children])=>[tag,{...a,transform:`translate(${g.s} 0) scale(-1 1)`},...(children?[children]:[])]),
   rss:g=>{const f=figure(g);return [f.dot(5,19,g.v(1,1.15,1.3)),
     f.path('M 5 11 A 8 8 0 0 1 13 19'),f.path('M 5 4 A 15 15 0 0 1 20 19')];},
   'mail-plus':g=>knockout(coreDrawings.mail(g),mark(g,'plus',17.5,18),g),

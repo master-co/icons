@@ -2,7 +2,7 @@ import { knockout } from '../occlusion.mjs';
 import { line } from '../geometry.mjs';
 import { chevron, coreDrawings } from "./core.mjs";
 import { figure, rotate } from "./shared.mjs";
-const mirror = (nodes, g) => nodes.map(([tag, a]) => [tag, { ...a, transform: `translate(${g.s} 0) scale(-1 1)` }]);
+const mirror = (nodes, g) => nodes.map(([tag,a,children])=>[tag,{ ...a, transform: `translate(${g.s} 0) scale(-1 1)` },...(children?[children]:[])]);
 function doubleChevron(g) {
   const f = figure(g);
   // Match the single chevron's slight forward optical placement. Both arms

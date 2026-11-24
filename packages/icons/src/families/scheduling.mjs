@@ -1,4 +1,4 @@
-import {line} from '../geometry.mjs';
+import {weightDelta,line} from '../geometry.mjs';
 import { enclosedDetails, knockout } from '../occlusion.mjs';
 import { figure, mark } from './shared.mjs';
 import { coreDrawings } from './core.mjs';
@@ -13,8 +13,8 @@ function calendarWithClock(g) {
 // The lower barrel edge covers the clipboard corner including its sharp
 // painted miter, so the knockout cannot leave an isolated corner fragment.
 function clipboardPen(g) {
-  const f=figure(g),pencil=f.contour([[12.75,19],[19.25,12.5],[22.625,15.875],[16.125,22.375],[12.25,22.5]],true,g.tip);
-  const pen=g.s===16?[pencil]:enclosedDetails(pencil,[f.line(17.75,14,21.125,17.375)],g);
+  const f=figure(g),shift=weightDelta(g)*g.v(4,2,1.5),divider=weightDelta(g)*g.v(0,2,1.5),pencil=f.contour([[12.75,19],[19.25,12.5],[22.625,15.875],[16.125,22.375],[12.25,22.5]].map(([x,y])=>[x-shift,y-shift]),true,g.tip);
+  const pen=g.s===16?[pencil]:enclosedDetails(pencil,[f.line(17.75-shift-divider,14-shift+divider,21.125-shift-divider,17.375-shift+divider)],g);
   return knockout(coreDrawings.clipboard(g),pen,g,{silhouettes:[pencil]});
 }
 export const scheduling = {

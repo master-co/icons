@@ -1,4 +1,4 @@
-import {line} from '../geometry.mjs';
+import {line,weightDelta} from '../geometry.mjs';
 import { knockout } from '../occlusion.mjs';
 import { coreDrawings } from "./core.mjs";
 import { figure } from "./shared.mjs";
@@ -73,7 +73,7 @@ const editor = {
   "align-center": (g) => alignment(g, "center"),
   pencil: (g) => {
     const f = figure(g);
-    return [f.contour([[3.5, 20.5], [5, 15], [16.5, 3.5], [20.5, 7.5], [9, 19]], true, Math.min(g.r, 0.7)), f.line(14.5, 5.5, 18.5, 9.5)];
+    return [f.contour([[3.5, 20.5], [5, 15], [16.5, 3.5], [20.5, 7.5], [9, 19]], true, Math.min(g.r, 0.7)), f.line(14.5-weightDelta(g)*g.v(4,2,1.35), 5.5+weightDelta(g)*g.v(4,2,1.35), 18.5-weightDelta(g)*g.v(4,2,1.35), 9.5+weightDelta(g)*g.v(4,2,1.35))];
   },
   "pen-tool": (g) => {
     const f = figure(g);
@@ -87,7 +87,7 @@ const editor = {
     const f = figure(g);
     return f.arrow([f.path("M4 13A8 8 0 1 0 6.3 6.3L3.5 9")],[[3.5,3.5],[3.5,9],[9,9]]);
   },
-  "rotate-right": (g) => editor["rotate-left"](g).map(([t, a]) => [t, { ...a, transform: `translate(${g.s} 0) scale(-1 1)` }])
+  "rotate-right": (g) => editor["rotate-left"](g).map(([t,a,children])=>[t,{ ...a, transform: `translate(${g.s} 0) scale(-1 1)` },...(children?[children]:[])])
 };
 export {
   alignment,

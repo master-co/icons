@@ -1,3 +1,4 @@
+import {weightDelta} from '../geometry.mjs';
 import {enclosedDetails} from '../occlusion.mjs';
 import { figure, mark } from "./shared.mjs";
 import { person } from "./core.mjs";
@@ -41,6 +42,7 @@ const identity = {
   },
   fingerprint: (g) => {
     const f = figure(g);
+    if(weightDelta(g))return [f.path("M3 14V11A9 9 0 0 1 21 11V13"),f.path("M7 19C6.5 17 6.5 14 6.5 11A5.5 5.5 0 0 1 17.5 11C17.5 14.5 18 17 20 19"),f.path("M10.8 21C10 18 10 14 10 11A2 2 0 0 1 14 11C14 15 14.5 18 16.5 21")];
     return [
       f.path("M3.5 14V11A8.5 8.5 0 0 1 20.5 11V13"),
       f.path("M7 19C6.5 17 6.5 14 6.5 11A5.5 5.5 0 0 1 17.5 11C17.5 14.5 18 17 20 19"),
