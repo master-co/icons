@@ -34,6 +34,12 @@
       gap: clamp(3rem, 1rem + 4vw, 6rem);
       min-height: min(52rem, calc(100svh - 12rem));
     }
+
+    /* On the narrowest two-column screens the words take a little of the plate's room, so the two actions share a row. */
+    @media (64rem <= width < 72rem) {
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+      gap: 3rem;
+    }
   }
 
   .icons-hero-reading {
@@ -104,7 +110,8 @@
 
   .icons-hero-title {
     margin: 1.75rem 0 0;
-    font-size: clamp(2.75rem, 1.2rem + 3.2vw, 4.5rem);
+    /* A phone sets the title a little smaller, so each sentence keeps to one line. */
+    font-size: clamp(min(2.75rem, 10vw), 1.2rem + 3.2vw, 4.5rem);
     font-weight: var(--font-weight-regular);
     line-height: 1;
     letter-spacing: -.05em;
@@ -119,10 +126,8 @@
     overflow-wrap: anywhere;
   }
 
-  /* The title's two sentences sit on two lines where there is room for both. */
-  .icons-hero-break {
-    @media (width < 40rem) { display: none; }
-  }
+  /* Each of the title's sentences starts a line of its own, so a narrow screen never joins the two mid-line. */
+  .icons-hero-line { display: block; }
 
   .icons-hero-lead {
     max-width: 30rem;
@@ -152,6 +157,7 @@
   .icons-hero-figure { min-width: 0; }
 
   .icons-plate {
+    container: icons-plate / inline-size;
     display: grid;
     gap: 1.25rem;
     margin: 0;
@@ -170,10 +176,11 @@
     border-top: 1px solid var(--home-guide);
   }
 
+  /* The specimens keep one row and push the readout and the pause control to the far end. */
   .icons-plate-specimens {
     display: flex;
-    flex-wrap: wrap;
     gap: .125rem;
+    margin-inline-end: auto;
   }
 
   /* The specimen being drawn carries the drawing's progress as a line along its foot. */
@@ -196,15 +203,16 @@
   .icons-plate-caption {
     display: flex;
     gap: .75rem;
-    margin-inline-start: auto;
     font-variant-numeric: tabular-nums;
+    white-space: nowrap;
 
     & > * + * {
       padding-inline-start: .75rem;
       border-inline-start: 1px solid var(--home-rule);
     }
 
-    @media (width < 30rem) { display: none; }
+    /* Where the bar has no room for it, the readout goes: the sheet's legend or the specimen says the same. */
+    @container icons-plate (width < 30rem) { display: none; }
   }
 
   /* The carriage: two hairlines that cross at the pen, and the pen itself, a ring around its nib. */
@@ -559,7 +567,8 @@
 
     .home-bench-play {
       position: absolute;
-      inset: calc(var(--home-gap) + .5rem) calc(var(--home-gap) + .375rem) auto auto;
+      /* Centred on the first label's line, its glyph ending where the controls below it end. */
+      inset: var(--home-gap) calc(var(--home-gap) - .125rem) auto auto;
     }
   }
 
@@ -835,8 +844,10 @@
     .home-ui-side { display: none; }
   }
 
+  /* A phone's composer keeps the tools that fit one row. */
   @container home-ui (width < 30rem) {
     .home-ui-tools > .segmented { display: none; }
+    .home-ui-composer > .toolbar > :nth-child(n + 7) { display: none; }
   }
 
   /*
@@ -1154,7 +1165,21 @@
     box-shadow: 1px 0 var(--home-guide), 0 1px var(--home-guide);
   }
 
+  .icons-sheet-link {
+    align-self: start;
+    margin-top: 1.25rem;
+  }
+
   .icons-features-link { margin-top: 2rem; }
+
+  /*
+   * A phone shows the figures at about half their drawn size, so their lettering is set larger in the drawing's own
+   * units to stay readable on the sheet.
+   */
+  @media (width < 40rem) {
+    .icons-sheet-figure .plot-value { font-size: 18px; }
+    .icons-sheet-figure .plot-name { font-size: 19px; }
+  }
 
   /* The shared footer's wordmark is cut for nine letters; this one has twelve. */
   .home-footer-mark[data-mark="master icons"] { font-size: 16.2cqi; }
@@ -1235,13 +1260,12 @@
 
     .home-glyph,
     .home-detail-stroke,
+    .home-bench-callout,
     .home-bench-callout > circle,
-    .home-bench-tick {
-    stroke-width: 2;
-    transition: d 420ms var(--home-ease);
-  }
+    .home-bench-tick,
+    .home-bench-leader { transition: none; }
 
-  .home-bench-leader { transition: none; animation: none; }
+    .home-bench-leader { animation: none; }
   }
 
   @media (forced-colors: active) {
