@@ -128,6 +128,9 @@
       },
     },
   },
+  "patchedDependencies": {
+    "@master/internal-site@0.3.1": "patches/@master%2Finternal-site@0.3.1.patch",
+  },
   "packages": {
     "@astrojs/astro2tsx": ["@astrojs/astro2tsx@0.1.4", "", { "dependencies": { "@emnapi/core": "1.11.3", "@emnapi/runtime": "1.11.3", "@napi-rs/wasm-runtime": "1.2.4" } }, "sha512-5dJqY4i1AlXxcsSFHkaegnrgdVs9J4U93y/YF0xmvmSOcNYVQnf4db3IhvqHZ5v8biLPlPlFmlYsqHj0c4/ZSA=="],
 
