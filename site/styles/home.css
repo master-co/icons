@@ -183,11 +183,14 @@
     margin-inline-end: auto;
   }
 
-  /* The specimen being drawn carries the drawing's progress as a line along its foot. */
+  /*
+   * The specimen being drawn carries the drawing's progress as a line along its foot. It is drawn before the content:
+   * the button keeps its ::after for the reach of a finger.
+   */
   .icons-plate-pick {
     position: relative;
 
-    &::after {
+    &::before {
       position: absolute;
       inset: auto 25% 2px;
       height: 1px;
