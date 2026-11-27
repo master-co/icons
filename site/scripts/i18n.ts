@@ -1,5 +1,5 @@
 import {readFile,writeFile} from 'node:fs/promises'
-import {auditTranslations,reviewTranslation} from '@master/internal-site/build/localization.ts'
+import {auditTranslations,rehashTranslationReviews,reviewTranslation} from '@master/internal-site/build/localization.ts'
 import {locales} from '@master/internal-site/common/locales.js'
 import resources from '../i18n/resources'
 
@@ -20,6 +20,12 @@ if(command==='review'){
   record[locale]=reviewTranslation(resource,locale)
  }
  await writeFile(file,JSON.stringify(reviews,null,2)+'\n')
+}else if(command==='rehash'){
+ // A source fingerprint leaves out an imported component's own <style> block. Move each review whose source and
+ // translation are exactly as reviewed to the current fingerprint; no review is extended to content nobody read.
+ const {reviews:next,moved}=rehashTranslationReviews(items,reviews)
+ await writeFile(file,JSON.stringify(next,null,2)+'\n')
+ console.log(`Moved ${moved} unchanged reviews to the current source fingerprint.`)
 }else{
  const errors=auditTranslations(items,reviews,{locales})
  console.log(JSON.stringify(errors,null,2))
