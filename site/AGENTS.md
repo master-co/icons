@@ -11,7 +11,7 @@ This project builds its interface with Master UI: classes on native elements, ea
 
 The component contracts ship in `@master/ui`. Read the official site skills in `.agents/skills/master-ui/` for markup and `.agents/skills/master-css/` for utilities and CSS compilation. The repository-level `../.agents/skills/master-design/` covers layout, typography and interaction.
 
-For routes, localized pages and shared navigation, use `../.agents/skills/master-site/` and the installed `@master/internal-site/styles/site-contract.md`. From the repository root, `bun x -p @master/internal-skills@0.1.12 master-skills check` verifies the managed site skill. Use `sync` to restore it.
+For routes, localized pages and shared navigation, use `../.agents/skills/master-site/` and the installed `@master/internal-site/styles/site-contract.md`. From the repository root, `bun x -p @master/internal-skills@0.1.13 master-skills check` verifies the managed site skill. Use `sync` to restore it.
 
 ## Project commands and scope
 
