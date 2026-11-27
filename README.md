@@ -137,3 +137,5 @@ node .agents/skills/icon-craft/scripts/render-review.mjs --repo . --icons user,u
 ## Sources and license
 
 Master draws its interface icons for 16, 20 and 24 px, with design references including Lucide, Tabler, Heroicons, Phosphor, Radix, Feather, Iconoir and Hugeicons Free. Master's code and original drawings use the [MIT license](LICENSE). See the [third-party notices](THIRD_PARTY_NOTICES.md) for adapted drawings, brand artwork and research credits.
+
+Every npm package and downloadable SVG set includes a README that maps the artwork to its credits, along with the full licenses in `licenses/`. SVGs served individually through the website or npm CDN carry their applicable notices. When redistributing a single drawing extracted from a ZIP, include its notices from the enclosed README.

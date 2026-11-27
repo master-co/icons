@@ -1,3 +1,4 @@
+import {archiveHeader,loadArtworkNotices} from '../packages/icons/scripts/artwork-notices.mjs';
 import {comparisonReferences as loadComparisonReferences} from './lib/review-data.mjs';
 import {nativeVariants} from './lib/native-variants.mjs';
 import assert from 'node:assert/strict';
@@ -8,7 +9,8 @@ import { unzipSync, strFromU8 } from 'fflate';
 import { catalog, conceptCount } from '../packages/icons/src/catalog.mjs';
 import { preservedNotices, adaptedSources } from '../packages/icons/src/provenance.mjs';
 import { drawings } from '../packages/icons/src/drawings.mjs';
-import {context,reviewedStroke} from '../packages/icons/src/geometry.mjs';
+import {strokeWidthsFor} from './lib/stroke-width.mjs';
+import {context,reviewedStroke,sizes,corners} from '../packages/icons/src/geometry.mjs';
 import {brandCatalog} from '../packages/icons/src/brands.mjs';
 import {brands as brandSources} from '../packages/icons/src/brands.mjs';
 const json = async file => JSON.parse(await readFile(file,'utf8'));
@@ -37,6 +39,9 @@ assert.deepEqual(Object.keys(drawings).sort(),catalog.map(x=>x.name).sort());
 assert.equal(new Set(catalog.map(x=>x.name)).size,catalog.length);
 assert.equal(manifest.inventory.length,total);
 assert.equal((await readdir('packages/icons/icons',{recursive:true})).filter(x=>x.endsWith('.svg')).length,total);
+const {standaloneHeaders,credits,licenseFiles}=await loadArtworkNotices();
+const packageReadme=await readFile('packages/icons/README.md','utf8');
+assert.ok(packageReadme.includes(credits),'missing artwork credits in package README');
 const geometries=new Map();
 for(const entry of catalog){
   const key=JSON.stringify(definitions[entry.name].variants[24].sharp.nodes.map(n=>JSON.stringify(n)).sort());
@@ -76,7 +81,8 @@ for(const item of manifest.inventory){
     for(const value of Object.values(attrs))if(typeof value==='number')assert.ok(Number.isFinite(value));
   }
   if(preservedNotices[item.name])assert.ok(source.includes(preservedNotices[item.name]));
-  if(adaptedSources[item.name]){const ref=adaptedSources[item.name];assert.ok(source.includes(ref.copyright));assert.ok(source.includes(ref.standaloneNotice??(await readFile(ref.licenseFile,'utf8')).trim().replace(/--/g,'—')),item.name+': complete source license');}
+  if(adaptedSources[item.name])assert.ok(source.includes(adaptedSources[item.name].copyright),item.path);
+  assert.equal(source.slice(0,source.indexOf('<svg')),standaloneHeaders.get(item.name),item.path+': standalone header');
 }
 const references = await json('references/manifest.json');
 assert.equal(references.references.length,48);
@@ -141,21 +147,38 @@ for(const record of ledger.icons){
     verifiedEvidence.add(evidence.path+'#'+evidence.sha256);
   }
 }
-for(const name of await readdir('dist/downloads')){
-  const zip = unzipSync(await readFile('dist/downloads/'+name));
-  assert.equal(Object.keys(zip).filter(x=>x.endsWith('.svg')).length,catalog.length);
-  assert.match(strFromU8(zip['licenses/hugeicons-MIT.txt']),/MIT/);
-  assert.ok(zip.LICENSE && zip['THIRD_PARTY_NOTICES.md']);
-  assert.ok(zip['licenses/lucide.txt']);
-  assert.ok(zip['licenses/simple-icons-CC0.txt'] && zip['licenses/simple-icons-DISCLAIMER.md'] && zip['licenses/brand-additions.txt']);
-  for(const entry of brandCatalog.filter(entry=>entry.source.licenseFile)){
-    const path=entry.source.licenseFile;
-    assert.ok(zip[path],entry.name+': missing bundled brand license');
-    assert.equal(sha(zip[path]),sha(await readFile(path)),entry.name+': stale bundled brand license');
+const archiveHeaders = new Map(catalog.map(({name}) => [name, archiveHeader(name)]));
+const archiveDocs = {
+  'README.md': packageReadme,
+  LICENSE: await readFile('LICENSE','utf8'),
+  'THIRD_PARTY_NOTICES.md': await readFile('THIRD_PARTY_NOTICES.md','utf8'),
+  ...licenseFiles,
+};
+let archiveCount = 0;
+async function checkArchive(path, prefixes = ['']) {
+  const zip = unzipSync(await readFile(path));
+  for (const [name, text] of Object.entries(archiveDocs)) {
+    assert.ok(zip[name], path + ': missing ' + name);
+    assert.equal(strFromU8(zip[name]), text, path + ': ' + name);
   }
-  for(const [name,ref] of Object.entries(adaptedSources)){
-    assert.ok(zip[ref.licenseFile],name+': missing bundled license');
-    assert.ok(strFromU8(zip[name+'.svg']).includes(ref.standaloneNotice??strFromU8(zip[ref.licenseFile]).trim().replace(/--/g,'—')),name+': missing SVG source notice');
+  assert.equal(Object.keys(zip).filter(name => name.endsWith('.svg')).length, prefixes.length * catalog.length, path);
+  for (const prefix of prefixes) for (const [name, header] of archiveHeaders) {
+    const file = prefix + name + '.svg';
+    assert.ok(zip[file], path + ': missing ' + file);
+    const svg = strFromU8(zip[file]);
+    assert.equal(svg.indexOf('<svg'), header.length, path + ': unexpected header in ' + file);
+    assert.ok(svg.startsWith(header), path + ': incorrect header in ' + file);
   }
+  archiveCount++;
 }
-console.log(`Validated ${conceptCount} base concepts / ${catalog.length} named drawings, ${total} SVG hashes, geometry, notices, 48 historical + ${uiRefs.references.length} current pinned references, and 9 licensed ZIPs.`);
+for (const size of sizes) {
+  const widths = strokeWidthsFor(size);
+  for (const corner of corners) {
+    const path = 'dist/downloads/master-icons-' + size + '-' + corner;
+    await checkArchive(path + '.zip');
+    for (const width of widths) await checkArchive(path + '-stroke-' + width + '.zip');
+  }
+  const prefixes = corners.flatMap(corner => widths.map(width => corner + '/stroke-' + width + '/'));
+  await checkArchive('work/stroke-assets/release/master-icons-' + size + '-strokes.zip', prefixes);
+}
+console.log(`Validated ${conceptCount} base concepts / ${catalog.length} named drawings, ${total} SVG hashes, geometry, notices, 48 historical + ${uiRefs.references.length} current pinned references, and ${archiveCount} licensed ZIPs.`);

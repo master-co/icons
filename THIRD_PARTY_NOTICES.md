@@ -1,6 +1,6 @@
 # Third-party notices
 
-Master’s code and original drawings use the MIT license. The following records identify artwork used in published icons and originals kept for design research. The core package and SVG archives include the applicable license files.
+Master’s code and original drawings use the MIT license. The following records identify artwork used in published icons and originals kept for design research. Every npm package and downloadable SVG archive includes the applicable license files. Its README identifies the notices for each drawing. Individual SVG downloads carry their applicable notices, and archived Apache-licensed adaptations retain their modification statements.
 
 ## Adapted drawings
 
@@ -47,7 +47,7 @@ Other Atlas drawings use independent construction. Pinned originals, roles and c
 
 #### Atlas source re-comparison: cactus
 
-The revised `cactus` develops Phosphor's continuous, fleshy branch construction while retaining its earlier Tabler-derived proportions and staggered pose. The original Tabler attribution is retained alongside the added Phosphor attribution in `packages/icons/src/atlas-provenance.json`. Both complete MIT notices are included in `licenses/cactus-sources.txt` and embedded in each cactus SVG; the combined file is also shipped in the package and downloadable ZIPs.
+The revised `cactus` develops Phosphor's continuous, fleshy branch construction while retaining its earlier Tabler-derived proportions and staggered pose. The original Tabler attribution is retained alongside the added Phosphor attribution in `packages/icons/src/atlas-provenance.json`. Both complete MIT notices are included in `licenses/cactus-sources.txt` and travel with standalone cactus SVGs.
 
 - Tabler: `tabler/tabler-icons`, commit `4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35`, `icons/outline/cactus.svg`; Copyright (c) 2020-2026 Paweł Kuna.
 - Phosphor: `phosphor-icons/core`, commit `2b75f3ad12b420c9504ef05df8d2564a28f8500e`, `assets/regular/cactus.svg`; Copyright (c) 2023 Phosphor Icons.
@@ -61,7 +61,7 @@ The bee comparison additionally includes unmodified OpenMoji `1F41D.svg` by Open
 
 ### Atlas 06: produce
 
-Individual source observations and native-size decisions are in `docs/review/atlas-craft-02/ledger.json`. Adapted redraws retain the following notices in each SVG and ZIP:
+Individual source observations and native-size decisions are in `docs/review/atlas-craft-02/ledger.json`. The following sources were recorded for this round:
 
 - Lucide: `apple-fruit`, `carrot`. ISC, licenses/lucide.txt.
 - Tabler: `cherry`, `grape`, `banana`, `mushroom`, `wheat`. MIT, licenses/tabler.txt.
@@ -71,7 +71,7 @@ Individual source observations and native-size decisions are in `docs/review/atl
 
 #### Atlas source re-comparison: mushroom
 
-The revised `mushroom` develops Hugeicons Free's curved cap underside and flared stem while retaining the earlier Tabler-derived closed cap and stem construction. Both sources are recorded in `packages/icons/src/atlas-provenance.json`; the previous Tabler record remains preserved as `baseSource`. The combined `licenses/mushroom-sources.txt` contains both complete MIT notices and is embedded in each mushroom SVG and included in the package and downloadable ZIPs.
+The revised `mushroom` develops Hugeicons Free's curved cap underside and flared stem while retaining the earlier Tabler-derived closed cap and stem construction. Both sources are recorded in `packages/icons/src/atlas-provenance.json`; the previous Tabler record remains preserved as `baseSource`. The combined `licenses/mushroom-sources.txt` contains both complete MIT notices that accompany standalone mushroom SVGs.
 
 - Tabler: `tabler/tabler-icons`, commit `4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35`, `icons/outline/mushroom.svg`; Copyright (c) 2020-2026 Paweł Kuna.
 - Hugeicons Free: `hugeicons/hugeicons`, commit `834e28d965946c1ee60d080027fe9dae4adc58d0`, `icons/mushroom-01.svg`; Copyright (c) 2025 Hugeicons.
@@ -82,7 +82,7 @@ The source comparison records describe saved original assets; the current dual-s
 
 The current `wheat` is redrawn from Lucide's seven-grain, diagonal-ear construction, with Master optical strokes, actual small corner arcs in soft/rounded, and stem ink clipped outside the grain cavities. Lucide source: `lucide-icons/lucide`, commit `55782beff3a0133df79c417eb68f96e8f19e2404`, `icons/wheat.svg`; Copyright (c) 2026 Lucide Icons and Contributors, ISC.
 
-The earlier three-grain drawing was adapted from Tabler's `icons/outline/wheat.svg` at commit `4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35` (Copyright (c) 2020-2026 Paweł Kuna, MIT). Its geometry and attribution remain in the task baseline and `baseSource`; it is historical provenance, not the source of the current seven-grain arrangement. `licenses/wheat-sources.txt` includes the complete earlier Tabler and current Lucide notices, embedded in each wheat SVG and included in package and ZIP outputs.
+The earlier three-grain drawing was adapted from Tabler's `icons/outline/wheat.svg` at commit `4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35` (Copyright (c) 2020-2026 Paweł Kuna, MIT). Its geometry and attribution remain in the task baseline and `baseSource`; it is historical provenance, not the source of the current seven-grain arrangement. `licenses/wheat-sources.txt` includes the complete earlier Tabler and current Lucide notices and ships with the packages and ZIPs. The standalone wheat SVG carries the current Lucide notice.
 
 ### Atlas 07-drinks
 
@@ -331,7 +331,7 @@ Individual comparisons and changes: `docs/review/atlas-craft-29/ledger.json`. Pi
 
 ### Atlas running refinement
 
-The revised `running` develops Phosphor's curved arm swing and continuous stride while retaining the earlier Tabler-derived torso, head placement and overall proportions. Both sources are recorded in `packages/icons/src/atlas-provenance.json`; the earlier Tabler record is preserved as `baseSource`. Both complete MIT notices are included in `licenses/running-sources.txt`, embedded in the running SVGs and shipped in the core package and downloadable ZIPs.
+The revised `running` develops Phosphor's curved arm swing and continuous stride while retaining the earlier Tabler-derived torso, head placement and overall proportions. Both sources are recorded in `packages/icons/src/atlas-provenance.json`; the earlier Tabler record is preserved as `baseSource`. Both complete MIT notices are included in `licenses/running-sources.txt` and accompany standalone running SVGs.
 
 - Tabler: `tabler/tabler-icons`, commit `4581ad20d8d13e24f6c3be75caaea1c4ad6c4b35`, `icons/outline/run.svg`; Copyright (c) 2020-2026 Paweł Kuna.
 - Phosphor: `phosphor-icons/core`, commit `2b75f3ad12b420c9504ef05df8d2564a28f8500e`, `assets/regular/person-simple-run.svg`; Copyright (c) 2023 Phosphor Icons.
@@ -592,7 +592,7 @@ The optional WeChat outline uses Tencent TDesign Icons’ [logo-wechat-stroke](h
 
 ### Social brand outlines
 
-Optional outline artwork for GitHub, YouTube, Facebook, LinkedIn, Mastodon, Reddit, SoundCloud, Pinterest, TikTok, Twitch, Vimeo and Patreon adapts individual [Tabler Icons](https://github.com/tabler/tabler-icons/tree/85e870dbe8680c2d6deefd062122d30ef1544a41/icons/outline) at commit 85e870dbe8680c2d6deefd062122d30ef1544a41. Copyright (c) 2020-2026 Paweł Kuna. MIT; complete license: [licenses/tabler-brands-MIT.txt](licenses/tabler-brands-MIT.txt). Master refines native weights, placement, curves and proportions. The existing pinned Simple Icons brand contours also inform the outlines; `source.identitySource` records this reference separately from the Tabler construction source. Several outer boundaries are retained exactly with ink placed inside the silhouette. Stroke ink is baked into evenodd paths at each supported weight. The full notice travels with each distributed SVG.
+Optional outline artwork for GitHub, YouTube, Facebook, LinkedIn, Mastodon, Reddit, SoundCloud, Pinterest, TikTok, Twitch, Vimeo and Patreon adapts individual [Tabler Icons](https://github.com/tabler/tabler-icons/tree/85e870dbe8680c2d6deefd062122d30ef1544a41/icons/outline) at commit 85e870dbe8680c2d6deefd062122d30ef1544a41. Copyright (c) 2020-2026 Paweł Kuna. MIT; complete license: [licenses/tabler-brands-MIT.txt](licenses/tabler-brands-MIT.txt). Master refines native weights, placement, curves and proportions. The existing pinned Simple Icons brand contours also inform the outlines; `source.identitySource` records this reference separately from the Tabler construction source. Several outer boundaries are retained exactly with ink placed inside the silhouette. Stroke ink is baked into evenodd paths at each supported weight. The full notice travels with each standalone SVG and appears in the README of the downloadable sets.
 
 GitLab, Discord, Spotify, Telegram and LINE outlines are Master adaptations of the existing pinned Simple Icons CC0 artwork. GitLab retains its outer contour; Discord retains its head boundary and eye centers with reduced solid eyes; Spotify retains its three wave shapes inside an outlined circle; Telegram retains its plane inside an outlined circle; LINE retains the four letters and outlines the bubble. Unmodified upstream files, editable strokes, finished paths and SHA-256 values are retained in references/brand-outlines and packages/icons/src/brands.json. Master modifications are MIT; upstream CC0 terms remain included.
 

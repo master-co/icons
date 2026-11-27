@@ -35,11 +35,13 @@
         "!dist/**",
         "!LICENSE",
         "!THIRD_PARTY_NOTICES.md",
+        "!licenses/**",
         "!README.md"
       ],
       "outputs": [
         "dist/**",
         "skills/**",
+        "licenses/**",
         "LICENSE",
         "THIRD_PARTY_NOTICES.md"
       ]
@@ -310,6 +312,8 @@
       "inputs": [
         "src/**",
         "scripts/build.mjs",
+        "scripts/artwork-notices.mjs",
+        "$TURBO_ROOT$/scripts/lib/paths.mjs",
         "$TURBO_ROOT$/references/manifest.json",
         "$TURBO_ROOT$/scripts/lib/content-cache.mjs",
         "$TURBO_ROOT$/scripts/lib/generation-lock.mjs",
@@ -322,7 +326,7 @@
         "!THIRD_PARTY_NOTICES.md",
         "!licenses/**",
         "!tests/**",
-        "!README.md",
+        "README.md",
         "$TURBO_ROOT$/scripts/lib/brand-ink.mjs"
       ],
       "outputs": [

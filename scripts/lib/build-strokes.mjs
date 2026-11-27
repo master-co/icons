@@ -5,6 +5,7 @@ import {contentCache} from './content-cache.mjs';
 import {lockGeneration} from './generation-lock.mjs';
 import {zipSync, strToU8} from 'fflate';
 import {strokeWidths,strokeWidthsFor} from './stroke-width.mjs';
+import {archiveHeader} from '../../packages/icons/scripts/artwork-notices.mjs';
 import {nativeVariants} from './native-variants.mjs';
 const root=fileURLToPath(new URL('../../',import.meta.url));
 export async function buildStrokes({force=false}={}) {
@@ -14,7 +15,7 @@ export async function buildStrokes({force=false}={}) {
   const started=performance.now();
   const out=resolve(root,'work/stroke-assets');
   const cache=await contentCache({
-    inputs:['packages/icons/src','packages/icons/scripts/build.mjs','scripts/lib/build-strokes.mjs','scripts/lib/stroke-width.mjs','scripts/lib/content-cache.mjs','scripts/lib/generation-lock.mjs','packages/icons/dist/definitions.json','packages/icons/dist/catalog.json','LICENSE','THIRD_PARTY_NOTICES.md','licenses','bun.lock'].map(path=>resolve(root,path)),
+    inputs:['packages/icons/src','packages/icons/scripts','scripts/lib/build-strokes.mjs','scripts/lib/stroke-width.mjs','scripts/lib/content-cache.mjs','scripts/lib/generation-lock.mjs','packages/icons/dist/definitions.json','packages/icons/dist/catalog.json','packages/icons/README.md','LICENSE','THIRD_PARTY_NOTICES.md','licenses','bun.lock'].map(path=>resolve(root,path)),
     outputs:[out],file:resolve(root,'work/cache/strokes.json'),force
   });
   if(cache.hit){console.log(`Strokes: content cache hit (${Math.round(performance.now()-started)}ms)`);return out;}
@@ -31,14 +32,16 @@ export async function buildStrokes({force=false}={}) {
     definitions[entry.name]={...definitions[entry.name],variants:nativeVariants(strokeDefinitions[entry.name].variants)};
   }
   const license=await readFile(resolve(root,'LICENSE'),'utf8');
-  // Every SVG of an icon leads with the same notice as its native file, which the core generator composes.
+  // Individual downloads use the native file's notice at every stroke width.
   for(const entry of catalog.icons){
     const native=await readFile(resolve(root,`packages/icons/icons/24/soft/${entry.name}.svg`),'utf8');
     const start=native.indexOf('<svg');
     if(start<0)throw new Error(`Invalid native SVG for ${entry.name}`);
     definitions[entry.name].header=native.slice(0,start);
+    const bundled=archiveHeader(entry.name);
+    if(bundled)definitions[entry.name].archiveHeader=bundled;
   }
-  const common={LICENSE:strToU8(license),'THIRD_PARTY_NOTICES.md':strToU8(await readFile(resolve(root,'THIRD_PARTY_NOTICES.md'),'utf8'))};
+  const common={'README.md':new Uint8Array(await readFile(resolve(root,'packages/icons/README.md'))),LICENSE:strToU8(license),'THIRD_PARTY_NOTICES.md':strToU8(await readFile(resolve(root,'THIRD_PARTY_NOTICES.md'),'utf8'))};
   for(const name of await readdir(resolve(root,'licenses')))common['licenses/'+name]=strToU8(await readFile(resolve(root,'licenses',name),'utf8'));
   // One release asset per optical size gathers every corner and custom width: {corner}/stroke-{width}/{name}.svg.
   const collections=Object.fromEntries(sizes.map(size=>[size,{...common}]));
@@ -58,7 +61,7 @@ export async function buildStrokes({force=false}={}) {
       for(const size of sizes.filter(s=>strokeWidthsFor(s).includes(width)))for(const corner of corners) {
         // Custom weights ship only inside their ZIP sets; the site renders single
         // files in the browser, so 40k loose SVGs never reach disk or hosting.
-        const svg=`${definition.header}${renderSvg({...definition,variants},{size,corner})}\n`;
+        const svg=`${definition.archiveHeader??''}${renderSvg({...definition,variants},{size,corner})}\n`;
         bundles[`${size}-${corner}`][entry.name+'.svg']=strToU8(svg);
         collections[size][`${corner}/stroke-${width}/${entry.name}.svg`]=bundles[`${size}-${corner}`][entry.name+'.svg'];
       }

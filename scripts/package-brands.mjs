@@ -1,12 +1,14 @@
 import {readFile,writeFile,mkdir} from 'node:fs/promises';
 import {zipSync,strToU8,unzipSync} from 'fflate';
+import {archiveHeader,withSvgHeader} from '../packages/icons/scripts/artwork-notices.mjs';
 import assert from 'node:assert/strict';
 import {brandCatalog} from '../packages/icons/src/brands.mjs';
 const files={};
 for(const size of [16,20,24])for(const corner of ['sharp','soft','rounded'])for(const b of brandCatalog){
  const path=`${size}/${corner}/${b.name}.svg`;
- files[path]=new Uint8Array(await readFile(`packages/icons/icons/${path}`));
+ files[path]=strToU8(withSvgHeader(await readFile(`packages/icons/icons/${path}`,'utf8'),archiveHeader(b.name)));
 }
+files['README.md']=new Uint8Array(await readFile('packages/icons/README.md'));
 const licenseFiles = brandCatalog.map(entry => entry.source.licenseFile).filter(Boolean);
 for(const path of new Set(['LICENSE','THIRD_PARTY_NOTICES.md','licenses/simple-icons-CC0.txt','licenses/simple-icons-DISCLAIMER.md','licenses/openai-brand.txt',...licenseFiles]))files[path]=new Uint8Array(await readFile(path));
 files['README.txt']=strToU8(`Master Icons — ${brandCatalog.length} brand exports / ${brandCatalog.length*9} SVG assets\n\n16, 20 and 24 native sizes; sharp, soft and rounded preserve the same brand silhouette. Paths inherit currentColor. Original marks keep fixed geometry; outline components support calibrated stroke widths. This archive contains the native default weights.\n\nSource and brand notices: THIRD_PARTY_NOTICES.md\nBrand names and marks remain the property of their respective owners.\n`);

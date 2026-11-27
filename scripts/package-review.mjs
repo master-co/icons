@@ -1,7 +1,8 @@
 // Package a reviewable alpha workspace without publishing it.
 // Usage: node scripts/package-review.mjs /absolute/output/directory
+import {archiveHeader,withSvgHeader} from '../packages/icons/scripts/artwork-notices.mjs';
 import{access,cp,mkdir,readFile,readdir,writeFile}from'node:fs/promises';
-import{resolve,join,relative,isAbsolute}from'node:path';
+import{resolve,join,relative,isAbsolute,basename}from'node:path';
 import{createHash}from'node:crypto';import{zipSync}from'fflate';
 const out=process.argv[2];if(!out||!isAbsolute(out))throw new Error('Provide an absolute output directory.');
 await mkdir(out,{recursive:true});
@@ -10,8 +11,9 @@ for(const file of['package.json','bun.lock','bunfig.toml','.nvmrc','playwright.c
 for(const file of['preview.html','design-system.md','research.md'])await cp('dist/'+file,join(out,file));
 await access('work/master-icons-alpha.tgz');await cp('work/master-icons-alpha.tgz',join(out,'master-icons-alpha.tgz'));
 async function files(dir){const result=[];for(const e of await readdir(dir,{withFileTypes:true})){if(e.name==='.DS_Store')continue;const p=join(dir,e.name);if(e.isDirectory())result.push(...await files(p));else if(e.isFile())result.push(p);}return result.sort();}
-const svg={};for(const p of await files('packages/icons/icons'))svg[p.replace('packages/icons/','')]=await readFile(p);
+const svg={};for(const p of await files('packages/icons/icons'))svg[p.replace('packages/icons/','')]=Buffer.from(withSvgHeader(await readFile(p,'utf8'),archiveHeader(basename(p,'.svg'))));
 for(const p of['LICENSE','THIRD_PARTY_NOTICES.md',...await files('licenses')])svg[p.replace('packages/icons/','')]=await readFile(p);
+svg['README.md']=await readFile('packages/icons/README.md');
 const date=new Date('2026-11-16T00:00:00Z');await writeFile(join(out,'master-icons-all-svg.zip'),zipSync(svg,{level:9,mtime:date}));
 const ledger=JSON.parse(await readFile('docs/refinement-ledger.json')),cycle=ledger.reviewCycle;
 const handoff=`# Master Icons · ${cycle}

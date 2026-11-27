@@ -17,7 +17,9 @@ assert.ok(!entries.some(path=>/\/(react|vue|svelte|preact|astro)(\/|-runtime\.)/
 assert.equal(packages[0].manifest.peerDependencies,undefined,'Core must not install any framework');
 const consumer=await mkdtemp(resolve('work/package-consumer-'));
 await mkdir(consumer+'/node_modules/@master',{recursive:true});
+const licenses=await readdir('licenses');
 for(const pkg of packages){
+ for(const file of ['README.md','LICENSE','THIRD_PARTY_NOTICES.md'])assert.ok(pkg.entries.includes('package/'+file),pkg.name+': '+file);
  assert.ok(!pkg.entries.some(x=>/\/(src|references|preview|tests|work|node_modules)\//.test(x)));
  if(pkg.name!=='@master/icons'){
   const framework=pkg.name.replace('@master/icons-','');
@@ -39,6 +41,12 @@ for(const pkg of packages){
   for(const other of ['react','vue','svelte','preact','astro'].filter(name=>name!==framework))assert.ok(!pkg.entries.some(path=>path.endsWith('.'+other)),`Unexpected ${other} in ${pkg.name}`);
  }
  execFileSync('tar',['-xzf',pkg.archive,'-C',consumer]);
+ for(const file of licenses){
+  const packed=await readFile(resolve(consumer,'package/licenses',file));
+  assert.deepEqual(packed,await readFile(resolve('licenses',file)),pkg.name+': '+file);
+ }
+ const packedReadme=await readFile(resolve(consumer,'package/README.md'),'utf8');
+ for(const notice of ['`battery-full`','Copyright (c) 2026 Lucide Icons and Contributors','HTML5 Logo by W3C','Permission to use, copy, modify','CC BY-SA 4.0'])assert.ok(packedReadme.includes(notice),pkg.name+': missing README notice '+notice);
  await rename(consumer+'/package',consumer+'/node_modules/'+pkg.name);
 }
 await writeFile(consumer+'/package.json','{"private":true,"type":"module"}');
@@ -77,7 +85,15 @@ assert.match(renderToStaticMarkup(createElement(SearchIcon,{strokeWidth:2})), /s
 const cdnSvg=name=>readFileSync(new URL(import.meta.resolve('@master/icons/svg/16/soft/'+name+'.svg')),'utf8');
 assert.match(cdnSvg('plus'), /^<svg/);
 assert.match(cdnSvg('search'), /Copyright [(]c[)] 2025 Hugeicons/);
-assert.match(cdnSvg('megaphone'), /ISC License/);
+assert.match(cdnSvg('battery-full'), /ISC License/);
+assert.doesNotMatch(cdnSvg('battery-full'), /Cole Bemis|derived from the Feather/);
+assert.match(cdnSvg('tv'), /Copyright [(]c[)] 2013-present Cole Bemis/);
+assert.doesNotMatch(cdnSvg('wheat'), /Paweł Kuna/);
+assert.match(cdnSvg('wheat'), /Lucide Icons and Contributors/);
+assert.match(cdnSvg('vinyl-record'), /Lucide Icons and Contributors/);
+assert.match(cdnSvg('vinyl-record'), /Phosphor/);
+assert.match(cdnSvg('saw'), /Modified by Master Icons/);
+assert.match(cdnSvg('saw'), /Apache License/);
 assert.match(cdnSvg('teapot'), /creativecommons.org[/]licenses[/]by-sa[/]4.0/);
 assert.match(cdnSvg('brand-vue-js'), /Vue.js logo by Evan You/);
 const { BrandVueJsIcon }=await import('@master/icons-vue/16/soft/brand-vue-js');

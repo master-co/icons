@@ -4,6 +4,7 @@ import { fileURLToPath } from 'node:url';
 import { createHash } from 'node:crypto';
 import { zipSync, strToU8 } from 'fflate';
 import {contentCache,writeIfChanged} from '../../../scripts/lib/content-cache.mjs';
+import {archiveHeader, creditedReadme, loadArtworkNotices} from './artwork-notices.mjs';
 import {lockGeneration} from '../../../scripts/lib/generation-lock.mjs';
 
 const root=resolve(dirname(fileURLToPath(import.meta.url)),'..');
@@ -20,7 +21,7 @@ const {brandNotice}=await import('../src/brands.mjs');
 const started=performance.now();
 // Release/reproducibility builds remain unconditional; dev opts into this cache.
 const cache=process.argv.includes('--cache')&&!process.env.TURBO_HASH ? await contentCache({
-  inputs:['packages/icons/src','packages/icons/scripts','packages/icons/package.json','scripts/lib/content-cache.mjs','scripts/lib/generation-lock.mjs','scripts/lib/brand-ink.mjs','references/manifest.json','LICENSE','THIRD_PARTY_NOTICES.md','licenses','bun.lock'].map(path=>resolve(repo,path)),
+  inputs:['packages/icons/src','packages/icons/scripts','packages/icons/package.json','packages/icons/README.md','scripts/lib/content-cache.mjs','scripts/lib/generation-lock.mjs','scripts/lib/brand-ink.mjs','references/manifest.json','LICENSE','THIRD_PARTY_NOTICES.md','licenses','bun.lock'].map(path=>resolve(repo,path)),
   outputs:['dist','icons','LICENSE','THIRD_PARTY_NOTICES.md','licenses'].map(path=>resolve(root,path)),
   file:resolve(repo,'work/cache/icons.json'),force:process.argv.includes('--force')
 }) : undefined;
@@ -37,31 +38,17 @@ const upstream=references.references.filter(x=>x.library==='Hugeicons Free');
 const definitions={};
 const inventory=[];
 const license=await readFile(resolve(repo,'LICENSE'),'utf8');
-const licenseFiles={};
-for(const name of (await readdir(resolve(repo,'licenses'))).sort()){
-  const path='licenses/'+name;
-  licenseFiles[path]=await readFile(resolve(repo,path),'utf8');
-}
+const {licenseFiles,standaloneHeaders,credits}=await loadArtworkNotices();
+const readme=creditedReadme(await readFile(resolve(root,'README.md'),'utf8'),credits);
 const sourceNotice=name=>licenseFiles[adaptedSources[name].licenseFile].replace(/--/g,'—');
 const bundleNotices={
+  'README.md':strToU8(readme),
   LICENSE:strToU8(license),
   'THIRD_PARTY_NOTICES.md':strToU8(await readFile(resolve(repo,'THIRD_PARTY_NOTICES.md'),'utf8')),
   ...Object.fromEntries(Object.entries(licenseFiles).map(([path,body])=>[path,strToU8(body)])),
 };
 const bundles=Object.fromEntries(sizes.flatMap(size=>corners.map(corner=>[`${size}-${corner}`,{...bundleNotices}])));
 
-// npm CDNs serve these same SVG bytes individually. Carry the upstream terms
-// with the drawing when it needs them. Master’s general MIT license ships once.
-function artworkNotice(entry){
-  const adapted=adaptedSources[entry.name];
-  if(adapted){
-    if(adapted.standaloneNotice)return adapted.standaloneNotice;
-    const credit=adapted.license.includes('Apache') ? `${adapted.reference}\n${adapted.modifications}\n\n` : '';
-    return credit+sourceNotice(entry.name).trim();
-  }
-  if(preservedNotices[entry.name])return licenseFiles['licenses/hugeicons-MIT.txt'].trim();
-  return entry.source?.notice??'';
-}
 if(!incremental)await rm(resolve(root,'dist'),{recursive:true,force:true});
 // icons/ is generated and checked in for plain SVG consumers.
 if(!incremental&&!archiveSvg)await rm(resolve(root,'icons'),{recursive:true,force:true});
@@ -94,12 +81,13 @@ for(const entry of catalog){
   await put(`dist/data/${entry.name}.js`,masters.map(({size,corner,binding})=>`import { master as ${binding} } from './${size}/${corner}/${entry.name}.js';`).join('\n')+
     `\nconst v = ({ size, opticalSize, corner, ...master }) => master;\nexport const ${dataName} = /* @__PURE__ */ (() => (${assembled}))();\n`);
   await put(`dist/data/${entry.name}.d.ts`,`import type { IconDefinition } from '../runtime.js';\nexport const ${dataName}: IconDefinition;\n`);
-  const notice=artworkNotice(entry);
-  const header=notice ? `<!--\n${notice.replaceAll('--','—')}\n-->\n` : '';
+  const header=standaloneHeaders.get(entry.name);
+  const bundledHeader=archiveHeader(entry.name);
   for(const size of sizes)for(const corner of corners){
-    const svg=header+renderSvg(definition,{size,opticalSize:size,corner})+'\n';
+    const body=renderSvg(definition,{size,opticalSize:size,corner})+'\n';
+    const svg=header+body;
     if(!archiveSvg)await put(`icons/${size}/${corner}/${entry.name}.svg`,svg);
-    bundles[`${size}-${corner}`][`${entry.name}.svg`]=strToU8(svg);
+    bundles[`${size}-${corner}`][`${entry.name}.svg`]=strToU8(bundledHeader+body);
     inventory.push({name:entry.name,opticalSize:size,corner,path:`icons/${size}/${corner}/${entry.name}.svg`,sha256:hash(svg)});
     const {strokes,...native}=variants[size][corner];
     const nativePath=`native/${size}/${corner}/${entry.name}`;

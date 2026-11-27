@@ -1,4 +1,5 @@
 // Verify the files actually handed off, including file:// interaction.
+import {archiveHeader,withSvgHeader} from '../packages/icons/scripts/artwork-notices.mjs';
 import{readFile,writeFile,access}from'node:fs/promises';import{resolve,join,dirname}from'node:path';import{pathToFileURL}from'node:url';import{createHash}from'node:crypto';import assert from'node:assert/strict';
 import{chromium,webkit,expect}from'@playwright/test';import{unzipSync}from'fflate';import{execFileSync}from'node:child_process';
 const out=resolve(process.argv[2]||''),result=process.argv[3]||'work/delivery-check.json';if(!process.argv[2])throw new Error('Provide the delivered folder.');
@@ -8,8 +9,8 @@ for(const f of manifest.files){const b=await readFile(join(out,f.path));assert.e
 assert.deepEqual(await json(join(out,'dist/catalog.json')),catalog);
 assert.equal(hash(await readFile(join(out,'dist/definitions.json'))),hash(await readFile('dist/definitions.json')));
 for(const f of catalog.inventory)assert.equal(hash(await readFile(join(out,'packages/icons',f.path))),f.sha256,f.path);
-const zip=unzipSync(await readFile(join(out,'master-icons-all-svg.zip')));assert.equal(Object.keys(zip).filter(p=>p.endsWith('.svg')).length,3528);
-for(const f of catalog.inventory)assert.equal(hash(zip[f.path]),f.sha256,f.path+' zip');
+const zip=unzipSync(await readFile(join(out,'master-icons-all-svg.zip')));assert.equal(Object.keys(zip).filter(p=>p.endsWith('.svg')).length,catalog.inventory.length);
+for(const f of catalog.inventory)assert.equal(Buffer.from(zip[f.path]).toString(),withSvgHeader(await readFile(join(out,'packages/icons',f.path),'utf8'),archiveHeader(f.name)),f.path+' zip');
 assert.equal(hash(await readFile(join(out,'master-icons-alpha.tgz'))),hash(await readFile('work/master-icons-alpha.tgz')));
 const packageEntries=execFileSync('tar',['-tzf',join(out,'master-icons-alpha.tgz')],{encoding:'utf8'}).trim().split('\n');assert.ok(packageEntries.includes('package/dist/catalog.json'));
 const browsers=[];

@@ -156,9 +156,9 @@ $('#download-set').addEventListener('click',async event=>{
   button.setAttribute('aria-busy','true');announce('正在打包完整圖庫…');
   await new Promise(resolve=>setTimeout(resolve,40));
   try{
-    const files={LICENSE:strToU8(license),'THIRD_PARTY_NOTICES.md':strToU8(data.thirdPartyNotices)};
+    const files={'README.md':strToU8(data.readme),LICENSE:strToU8(license),'THIRD_PARTY_NOTICES.md':strToU8(data.thirdPartyNotices)};
     for(const [name,text]of Object.entries(data.upstreamLicenses))files['licenses/'+name]=strToU8(text);
-    for(const entry of catalog.icons)files[entry.name+'.svg']=strToU8(definitions[entry.name].header+renderSvg(strokeDefinition(definitions[entry.name],stroke),{size,opticalSize:size,corner})+'\n');
+    for(const entry of catalog.icons)files[entry.name+'.svg']=strToU8((definitions[entry.name].archiveHeader??'')+renderSvg(strokeDefinition(definitions[entry.name],stroke),{size,opticalSize:size,corner})+'\n');
     const url=URL.createObjectURL(new Blob([zipSync(files,{level:6,mtime:new Date(2026,10,16)})],{type:'application/zip'}));
     const a=document.createElement('a');a.href=url;a.download=`master-icons-${size}-${corner}${stroke===null?'':`-stroke-${stroke}`}.zip`;a.click();setTimeout(()=>URL.revokeObjectURL(url),60000);announce(`已打包 ${catalog.icons.length.toLocaleString()} 個 SVG`);
   }catch(error){announce('下載失敗：'+error.message);}finally{button.removeAttribute('aria-busy');}

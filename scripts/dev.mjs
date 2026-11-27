@@ -28,7 +28,7 @@ let timer;
 const changed=()=>{clearTimeout(timer);timer=setTimeout(()=>{try{runTurboSync(['run','build','--filter=@master/icons-review']);for(const client of clients)client.write('data: reload\n\n');}catch{console.error('Build failed; retaining server. Fix source and save again.');}},250);};
 const watchers=process.argv.includes('--serve-only')?[]:[
   ...['packages/icons/src','packages/icons/scripts','preview','references','licenses','scripts/lib'].map(path=>watchSource(resolve(root,path),changed,true)),
-  ...['LICENSE','THIRD_PARTY_NOTICES.md','docs/refinement-ledger.json','bun.lock','turbo.json','packages/icons/package.json','scripts/build-review.mjs','scripts/build-strokes.mjs','scripts/standalone.mjs'].map(path=>watchSource(resolve(root,path),changed))
+  ...['LICENSE','THIRD_PARTY_NOTICES.md','docs/refinement-ledger.json','packages/icons/README.md','bun.lock','turbo.json','packages/icons/package.json','scripts/build-review.mjs','scripts/build-strokes.mjs','scripts/standalone.mjs'].map(path=>watchSource(resolve(root,path),changed))
 ];
 server.listen(port,host,()=>console.log(`Local: http://${host}:${port}`));
 for(const signal of ['SIGINT','SIGTERM'])process.on(signal,()=>{clearTimeout(timer);for(const watcher of watchers)watcher.close();for(const client of clients)client.end();server.close(()=>process.exit());});

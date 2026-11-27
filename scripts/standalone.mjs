@@ -5,6 +5,7 @@ import { gzipSync, strToU8 } from 'fflate';
 // Run by build.mjs from the package root. A self-contained review file also
 // works over file://, without a running server or external fonts/scripts.
 const data = JSON.parse(await readFile('dist/preview/data.json', 'utf8'));
+data.readme = await readFile('packages/icons/README.md','utf8');
 data.thirdPartyNotices = await readFile('THIRD_PARTY_NOTICES.md','utf8');
 data.upstreamLicenses = Object.fromEntries(await Promise.all((await readdir('licenses')).sort().map(async name=>[name,await readFile('licenses/'+name,'utf8')])));
 data.inlineReferences = Object.fromEntries(await Promise.all(data.references.references.map(async ref => [ref.localPath,

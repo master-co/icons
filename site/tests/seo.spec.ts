@@ -158,7 +158,7 @@ test('detail SVG copy and download preserve just the applicable artwork notice',
  await page.addInitScript(()=>Object.defineProperty(navigator,'clipboard',{configurable:true,value:{
   writeText:async(text:string)=>{document.documentElement.dataset.copied=text}
  }}))
- for(const name of ['plus','megaphone','teapot','brand-vue-js']){
+ for(const name of ['plus','battery-full','saw','teapot','brand-vue-js','brand-openai']){
   await page.goto('/icons/'+name)
   await page.getByRole('combobox',{name:'Code format'}).selectOption('svg')
   const original=await published(name)
@@ -167,7 +167,7 @@ test('detail SVG copy and download preserve just the applicable artwork notice',
   await expect(page.locator('html')).toHaveAttribute('data-copied',original.trimEnd())
   const link=page.getByRole('link',{name:'Download SVG',exact:true})
   expect(decodeURIComponent((await link.getAttribute('href'))!.split(',')[1])).toBe(original)
-  if(name==='brand-vue-js')continue
+  if(name.startsWith('brand-'))continue
   await page.getByRole('slider',{name:/Stroke width/}).press('End')
   await copy.click()
   const custom=await page.locator('html').getAttribute('data-copied')

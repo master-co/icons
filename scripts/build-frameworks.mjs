@@ -17,8 +17,8 @@ const core=JSON.parse(await readFile(resolve(repo,'packages/icons/package.json')
 if(manifest.version!==core.version)throw new Error(`${manifest.name} must share @master/icons version ${core.version}`);
 const cacheFile=resolve(repo,`work/cache/icons-${framework}.json`);
 const cache=process.argv.includes('--cache')&&!process.env.TURBO_HASH?await contentCache({
-  inputs:[resolve(root,'src'),resolve(root,'package.json'),...['packages/icons/src','packages/icons/package.json','scripts/build-frameworks.mjs','scripts/lib/content-cache.mjs','scripts/lib/generation-lock.mjs','LICENSE','THIRD_PARTY_NOTICES.md','bun.lock'].map(path=>resolve(repo,path))],
-  outputs:[resolve(root,'dist'),resolve(root,'LICENSE'),resolve(root,'THIRD_PARTY_NOTICES.md')],file:cacheFile,force:process.argv.includes('--force')
+  inputs:[resolve(root,'src'),resolve(root,'package.json'),...['packages/icons/src','packages/icons/package.json','scripts/build-frameworks.mjs','scripts/lib/content-cache.mjs','scripts/lib/generation-lock.mjs','LICENSE','THIRD_PARTY_NOTICES.md','licenses','bun.lock'].map(path=>resolve(repo,path))],
+  outputs:[resolve(root,'dist'),resolve(root,'LICENSE'),resolve(root,'THIRD_PARTY_NOTICES.md'),resolve(root,'licenses')],file:cacheFile,force:process.argv.includes('--force')
 }):undefined;
 if(cache?.hit){console.log(`${manifest.name}: content cache hit (${Math.round(performance.now()-started)}ms)`);process.exit(0);}
 if(!cache){await rm(cacheFile,{force:true});if(!process.argv.includes('--incremental'))await rm(resolve(root,'dist'),{recursive:true,force:true});}
@@ -102,6 +102,8 @@ for(const entry of await readdir(resolve(root,'dist'),{recursive:true,withFileTy
   const path=join(entry.parentPath,entry.name);
   if(entry.isFile()&&!emitted.has(relative(resolve(root,'dist'),path)))await rm(path);
 }
+await rm(resolve(root,'licenses'),{recursive:true,force:true});
+await cp(resolve(repo,'licenses'),resolve(root,'licenses'),{recursive:true});
 for(const file of ['LICENSE','THIRD_PARTY_NOTICES.md'])await cp(resolve(repo,file),resolve(root,file));
 await cache?.commit();
 console.log(`Built ${manifest.name}: ${catalog.length} icons × 19 entries in ${((performance.now()-started)/1000).toFixed(2)}s`);

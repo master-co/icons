@@ -124,8 +124,12 @@ test('adapted redraw downloads preserve upstream notices in valid SVG and ZIP fi
   }
   const pending=page.waitForEvent('download');await page.locator('#download-set').click();
   const zip=unzipSync(await readFile(await(await pending).path()));
+  expect(strFromU8(zip['README.md'])).toContain('OpenAI Blossom');
+  expect(strFromU8(zip['brand-openai.svg'])).toMatch(/^<svg/);
   expect(strFromU8(zip['licenses/lucide.txt'])).toContain('ISC License');
-  for(const name of['megaphone','handshake'])expect(strFromU8(zip[name+'.svg'])).toContain('ISC License');
+  for(const name of['megaphone','handshake'])expect(strFromU8(zip[name+'.svg'])).toMatch(/^<svg/);
+  expect(strFromU8(zip['README.md'])).toContain('Copyright (c) 2026 Lucide Icons and Contributors');
+  expect(strFromU8(zip['saw.svg'])).toContain('Modified by Master Icons.');
  }
 });
 
